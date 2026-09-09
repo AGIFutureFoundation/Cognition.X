@@ -1,0 +1,291 @@
+{
+  "pack": "Digital Life, Data & AI",
+  "notes": "Community pack continuing the series after Neighbourhood, Safety & Civic Voice. 5 tracks x 10 themes x 5 grade bands = 250 blocks. Expanded by tools/generate_pack.py.",
+  "tracks": [
+    {
+      "name": "Devices, accounts and the keys you hold",
+      "prefix": "DV",
+      "credential": "Digital Keyholder",
+      "themes": [
+        {
+          "theme": "What a device knows about you",
+          "description": "The sensors, logs and identifiers a phone or laptop carries, and which of them keep working when the screen is off.",
+          "transfer_check": "Open the settings of a real device and list three things it records that you did not switch on."
+        },
+        {
+          "theme": "An account is a key, not a place",
+          "description": "What an account actually is, what the provider holds, and what you lose the day it is closed or locked.",
+          "transfer_check": "Pick one account you rely on and write down what would be lost if it vanished tonight, then export or copy the one thing that matters most."
+        },
+        {
+          "theme": "Passwords, passkeys and the second factor",
+          "description": "Why one strong secret per account beats one clever secret everywhere, and what a second factor actually defends against.",
+          "transfer_check": "Turn on a second factor for a real account and explain what attack it just blocked."
+        },
+        {
+          "theme": "Recovery: proving you are you",
+          "description": "Recovery emails, codes and trusted contacts — the quiet path attackers love and owners forget.",
+          "transfer_check": "Run the account-recovery path for one of your accounts before you need it and record where it broke or held."
+        },
+        {
+          "theme": "The shared device",
+          "description": "Profiles, guest modes and what a borrowed or family device remembers of the person who used it.",
+          "transfer_check": "Set up a shared device so two people can use it without reading each other's messages, and demonstrate it."
+        },
+        {
+          "theme": "Updates, backups and the boring habits",
+          "description": "What an update actually patches, what a backup actually restores, and the schedule that makes both invisible.",
+          "transfer_check": "Restore one real file from a backup you made yourself."
+        },
+        {
+          "theme": "When a device is lost or taken",
+          "description": "Remote lock, remote wipe and the order of phone calls in the first hour after a device disappears.",
+          "transfer_check": "Write the first-hour checklist for your own device, with the real account names, and test that you can trigger the lock."
+        },
+        {
+          "theme": "Scams that arrive as messages",
+          "description": "Phishing, smishing and the urgent-parcel text: the shapes these take and the two checks that defeat most of them.",
+          "transfer_check": "Take a real suspicious message you or your family received and show, step by step, how you decided what it was."
+        },
+        {
+          "theme": "Permissions: what an app may touch",
+          "description": "Camera, contacts, location, files — reading an app's permissions as a list of things it can do without asking again.",
+          "transfer_check": "Audit the permissions of three installed apps and revoke one grant that the app does not need to do its job."
+        },
+        {
+          "theme": "The account after a life change",
+          "description": "Moving out, breaking up, leaving a job, a death in the family — the accounts that must change hands or be closed, and how.",
+          "transfer_check": "For one real or rehearsed life change, list the accounts affected and complete the handover or closure steps for one of them."
+        }
+      ]
+    },
+    {
+      "name": "Information: what to trust and how to check",
+      "prefix": "SG",
+      "credential": "Signal Reader",
+      "themes": [
+        {
+          "theme": "Where a claim was born",
+          "description": "Tracing a screenshot, quote or statistic back to the first place it appeared, and what changes along the way.",
+          "transfer_check": "Take one claim from today's feed and trace it to its original source, noting each hop."
+        },
+        {
+          "theme": "Who is speaking and who is paying",
+          "description": "Bylines, about pages, sponsors and the difference between a newsroom, a marketer and a stranger with a logo.",
+          "transfer_check": "For one article you read this week, identify the author, the publisher and the likeliest source of money, with evidence."
+        },
+        {
+          "theme": "The picture that proves too much",
+          "description": "Old photos in new stories, crops that change meaning, and generated images — the checks that take under two minutes.",
+          "transfer_check": "Run a reverse-image search on a real image from your feed and report what it was originally."
+        },
+        {
+          "theme": "Numbers that feel true",
+          "description": "Percentages without denominators, axes that start at nine hundred, and averages that hide the person in front of you.",
+          "transfer_check": "Find one misleading number or chart in the wild and rewrite it so it says the honest version."
+        },
+        {
+          "theme": "The feed is an argument",
+          "description": "Ranking, recommendation and why two people searching the same words see different worlds.",
+          "transfer_check": "Compare the same search or topic across two accounts or devices and document three differences in what was shown."
+        },
+        {
+          "theme": "Headlines and the gap before the click",
+          "description": "What a headline is for, what it leaves out, and the habit of reading before sharing.",
+          "transfer_check": "Take three headlines, predict the substance of each story, then read them and score your predictions."
+        },
+        {
+          "theme": "Checking without an expert",
+          "description": "Lateral reading: leaving the page to see what others say about the source before believing the source about itself.",
+          "transfer_check": "Fact-check one unfamiliar site by lateral reading and deliver a verdict with two independent confirmations."
+        },
+        {
+          "theme": "When the truth is genuinely unsettled",
+          "description": "Live events, early science and rumours in a crisis — holding a question open without falling for the first confident answer.",
+          "transfer_check": "Pick one unsettled question in the news and write what is known, what is claimed, and what would settle it."
+        },
+        {
+          "theme": "Your own share button",
+          "description": "What resharing asserts, who inherits the correction when you are wrong, and the repair that actually works.",
+          "transfer_check": "Write and, where real, post the correction for something you or someone near you shared that turned out false."
+        },
+        {
+          "theme": "Archives, receipts and what persists",
+          "description": "Screenshots, archive links and edit histories — keeping evidence of what was said when it matters later.",
+          "transfer_check": "Capture one page with an archive service and explain when the archive, not the live page, is the record you want."
+        }
+      ]
+    },
+    {
+      "name": "Privacy and the trail you leave",
+      "prefix": "TR",
+      "credential": "Data Steward",
+      "themes": [
+        {
+          "theme": "The trail you cannot see",
+          "description": "Location history, search history, purchase records — the logs that accumulate by default and who can read them.",
+          "transfer_check": "Download or view one of your own data histories and name two things in it you did not expect."
+        },
+        {
+          "theme": "What 'free' is paid with",
+          "description": "Advertising, profiling and the trade behind a free service, read from the privacy policy's first honest paragraph.",
+          "transfer_check": "For one free service you use, state in two sentences what it collects and how it earns, citing its own policy."
+        },
+        {
+          "theme": "Settings that actually matter",
+          "description": "The five privacy switches worth finding on any service, and the many that are decoration.",
+          "transfer_check": "Change three privacy settings on a real account and explain what each now prevents."
+        },
+        {
+          "theme": "Other people's data in your hands",
+          "description": "The photo with someone else in it, the contact list you upload, the group chat you screenshot — being trustworthy with data about others.",
+          "transfer_check": "Before sharing one real photo or screenshot involving another person, run a consent check and record the outcome."
+        },
+        {
+          "theme": "Children, elders and the ones you manage",
+          "description": "Accounts you run for someone else: what protection looks like without surveillance, at every age.",
+          "transfer_check": "For one account you manage for another person, write the rules you follow and review them with that person at their level."
+        },
+        {
+          "theme": "What an employer or school may see",
+          "description": "Managed devices, monitored networks and the difference between your account and their account with your name on it.",
+          "transfer_check": "List which of your daily tools are managed by an institution and what each can log, then move one personal habit off them."
+        },
+        {
+          "theme": "Data breaches and what to do after",
+          "description": "Breach notices, credential stuffing and the reset-and-rotate routine that limits the damage.",
+          "transfer_check": "Check a real email address against a breach-notification service and complete the follow-up for anything found."
+        },
+        {
+          "theme": "Asking for your data back",
+          "description": "Access, export and deletion requests — the rights that exist where you live and the buttons that exercise them.",
+          "transfer_check": "Submit one real export or deletion request and report what came back and how long it took."
+        },
+        {
+          "theme": "Faces, voices and biometrics",
+          "description": "What is different about data you cannot change — face, voice, fingerprint — and where it is being collected.",
+          "transfer_check": "Identify two places your biometrics are held, and for one of them find the policy on how it is stored and removed."
+        },
+        {
+          "theme": "A smaller footprint on purpose",
+          "description": "Aliases, minimal sign-ups and deleting the account you no longer use — shrinking the trail without leaving modern life.",
+          "transfer_check": "Close one dormant account fully and document the steps so someone else could follow them."
+        }
+      ]
+    },
+    {
+      "name": "Working with AI: help, judgement and limits",
+      "prefix": "AI",
+      "credential": "AI Navigator",
+      "themes": [
+        {
+          "theme": "What the machine is actually doing",
+          "description": "Pattern, prediction and training data — a working model of how an AI system produces an answer, without the mathematics.",
+          "transfer_check": "Explain to someone else, with one concrete example, why an AI system can be fluent and wrong at the same time."
+        },
+        {
+          "theme": "The question shapes the answer",
+          "description": "Context, constraints and examples: asking in a way that gets useful work instead of confident filler.",
+          "transfer_check": "Take one real task, ask an AI twice — once vaguely, once well — and present both answers with the differences marked."
+        },
+        {
+          "theme": "Checking the machine's work",
+          "description": "Verification habits for facts, citations, code and arithmetic that come out of a model.",
+          "transfer_check": "Find and document one real error in an AI answer, and show the check that caught it."
+        },
+        {
+          "theme": "What not to paste into the box",
+          "description": "Secrets, other people's data and anything you could not stand to see again — what leaves your hands when you prompt.",
+          "transfer_check": "Write the do-not-paste list for your own life or workplace and apply it to three real prompts."
+        },
+        {
+          "theme": "Where AI already decides about you",
+          "description": "Feeds, prices, applications, moderation — the systems already scoring you, and which decisions you can appeal to a human.",
+          "transfer_check": "Identify two automated decisions that touched you this month and find the appeal or review path for one."
+        },
+        {
+          "theme": "Generated media and the shrinking proof",
+          "description": "Voices, faces and events that never happened — what deepfakes change about evidence, and the verification that still works.",
+          "transfer_check": "Given one suspect clip or image, run a provenance check and deliver a verdict with your reasoning."
+        },
+        {
+          "theme": "Doing your own work with the machine in the room",
+          "description": "The line between help and substitution in school and work, and how to use AI while still becoming good at the thing.",
+          "transfer_check": "For one real assignment or task, write the usage rule you followed and show what you did yourself and what the tool did."
+        },
+        {
+          "theme": "When the machine should not be alone",
+          "description": "Medical, legal, financial and safety calls: where AI output is a draft for a human, never the decision.",
+          "transfer_check": "Take one high-stakes question, get an AI answer, then show what a qualified human source added or corrected."
+        },
+        {
+          "theme": "The people inside the pipeline",
+          "description": "Data labellers, moderators, artists and authors — whose work trains a model and what fairness to them looks like.",
+          "transfer_check": "Trace one AI product to two kinds of human labour it depends on, with sources."
+        },
+        {
+          "theme": "Saying no to the tool",
+          "description": "Tasks where the honest answer is not to automate — and how to decline well when the pressure is to use it anyway.",
+          "transfer_check": "Name one real task you chose to do without AI, and defend the choice in a paragraph that convinces a sceptic."
+        }
+      ]
+    },
+    {
+      "name": "Being online together: conduct, harm and repair",
+      "prefix": "CN",
+      "credential": "Digital Neighbour",
+      "themes": [
+        {
+          "theme": "The person on the other end",
+          "description": "Why distance and screens loosen conduct, and the habits that keep a human in view when you type.",
+          "transfer_check": "Rewrite one real heated message — yours or a public one — so it could be said across a kitchen table."
+        },
+        {
+          "theme": "Groups, chats and the rules nobody wrote",
+          "description": "Norms in group chats, servers and comment sections: reading them fast and knowing which ones you can change.",
+          "transfer_check": "Write down the actual rules of one group you belong to, and confirm them against what happens there in practice."
+        },
+        {
+          "theme": "Harassment: naming it early",
+          "description": "The line between disagreement, pile-on and campaign, and why targets are told it is smaller than it is.",
+          "transfer_check": "Given one real or case-study thread, mark where it crossed the line and say what the first responder should have done."
+        },
+        {
+          "theme": "Blocking, muting, reporting",
+          "description": "The tools every platform hides in a different menu, what each one actually does, and when each is the right size.",
+          "transfer_check": "Demonstrate block, mute and report on a platform you use, and match each to a situation where it is the correct tool."
+        },
+        {
+          "theme": "Being the bystander who moves",
+          "description": "Documenting, checking on the target, refusing the amplification — what help looks like when the pile-on is happening.",
+          "transfer_check": "For one witnessed or case-study incident, carry out the bystander steps and record what you did and in what order."
+        },
+        {
+          "theme": "The mistake that is public forever",
+          "description": "Old posts, resurfaced jokes and the difference between accountability and permanent exile — for others and for your younger self.",
+          "transfer_check": "Audit your own oldest visible posts and decide, item by item, what stands, what goes, and what needs a public note."
+        },
+        {
+          "theme": "Arguing so it is worth it",
+          "description": "Steel-manning, asking one real question, and leaving a thread while it is still a conversation.",
+          "transfer_check": "Enter one genuine disagreement online and produce the exchange where you stated the other side to their satisfaction."
+        },
+        {
+          "theme": "Money, strangers and the long con",
+          "description": "Romance scams, fake marketplaces and investment 'friends' — the patience of online fraud and the tells across weeks.",
+          "transfer_check": "Map one documented long con onto a timeline and mark the three earliest moments it could have been caught."
+        },
+        {
+          "theme": "Time, attention and the design against you",
+          "description": "Streaks, autoplay and infinite scroll — mechanics built to keep you, and the counter-moves that give the hour back.",
+          "transfer_check": "Measure one week of your own use of one app, change one mechanic (off autoplay, no badges), and report the difference."
+        },
+        {
+          "theme": "Repairing harm you caused",
+          "description": "The apology that names the act, the correction that reaches the audience, and what repair looks like when deletion is not enough.",
+          "transfer_check": "For one real or rehearsed case where your post harmed someone, deliver the repair: named apology, correction to the same audience, and one changed habit."
+        }
+      ]
+    }
+  ]
+}
