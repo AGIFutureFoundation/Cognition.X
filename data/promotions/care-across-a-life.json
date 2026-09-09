@@ -1,0 +1,86 @@
+{
+  "pack": "Care Across a Life",
+  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names; only empty fields are filled.",
+  "tracks": [
+    {
+      "prefix": "IN",
+      "name": "The first years",
+      "themes": [
+        {"theme": "Holding a baby safely (IN)", "description": "Supporting the head, the safe carries and the safe sleep position — handling an infant with confidence."},
+        {"theme": "Why a baby cries (IN)", "description": "The short list behind crying — hunger, wind, tiredness, discomfort — worked through in order before despair."},
+        {"theme": "Feeding, without the argument (IN)", "description": "How infants are fed and the practicalities of each — hunger cues, hygiene, and support for the person feeding."},
+        {"theme": "Sleep in the first year (IN)", "description": "What infant sleep actually looks like, the safe sleep rules, and surviving the nights as a household."},
+        {"theme": "Talking to somebody who cannot talk back (IN)", "description": "Why narration, songs and responses build a brain — serving conversation before there are words."},
+        {"theme": "When a parent is not coping (IN)", "description": "Exhaustion and low mood after a baby — the signs, the words to use, and the help that exists."},
+        {"theme": "Play is the work (IN)", "description": "What play does for development at each stage, and playing with a baby using what a home already has."},
+        {"theme": "Immunisation, plainly (IN)", "description": "What vaccines do, the schedule where you live, and answering a worried question with the evidence."},
+        {"theme": "The home that is safe enough (IN)", "description": "The hazards at a crawling child's height — water, heat, poisons, falls — found and fixed room by room."},
+        {"theme": "Being the older sibling (IN)", "description": "What an older child can genuinely do for a baby, and the jobs that stay with adults."}
+      ]
+    },
+    {
+      "prefix": "CH",
+      "name": "Growing up beside them",
+      "themes": [
+        {"theme": "Growing, described honestly (CH)", "description": "The ordinary range of growing up — bodies, moods, abilities — and the changes worth a professional look."},
+        {"theme": "A child who is struggling at school (CH)", "description": "Reading the signs behind falling behind — sight, hearing, home, bullying — before concluding laziness."},
+        {"theme": "Screens and a young person (CH)", "description": "What screens give and take at each age, and household rules that are followed because they are fair."},
+        {"theme": "Friendship, and its absence (CH)", "description": "How friendships form and fail through childhood, and helping a lonely child without engineering their life."},
+        {"theme": "The body a teenager is getting used to (CH)", "description": "Puberty as it actually unfolds — timing, variation, feelings — and being askable when questions come."},
+        {"theme": "Risk, on purpose (CH)", "description": "Why adolescents seek risk, the difference between growth risks and harm, and steering without forbidding everything."},
+        {"theme": "A young person in trouble (CH)", "description": "When trouble arrives — school, police, substances — the adult response that helps in the first 24 hours."},
+        {"theme": "Money, at fifteen (CH)", "description": "First earnings and spending — helping a teenager run real money with real mistakes at a survivable size."},
+        {"theme": "Leaving home (CH)", "description": "The skills audit before independence — cooking, money, paperwork — and the leaving that keeps the door open."},
+        {"theme": "Being trusted with something real (CH)", "description": "Giving a young person genuine responsibility — sized to stretch, supervised lightly, and owned by them."}
+      ]
+    },
+    {
+      "prefix": "AD",
+      "name": "The middle of a life",
+      "themes": [
+        {"theme": "The health you postpone (AD)", "description": "The checks and symptoms adults defer — and the short list that should never wait for a quiet month."},
+        {"theme": "Working with a body that hurts (AD)", "description": "Working life with pain — pacing, adjustments and the difference between soreness and damage."},
+        {"theme": "Being the person everybody depends on (AD)", "description": "Carrying a household, a job and other people's needs — the load named honestly and shared deliberately."},
+        {"theme": "A partner, a household, a plan (AD)", "description": "Running a shared life on purpose — money, work, care and the conversations that keep them agreed."},
+        {"theme": "When work ends unexpectedly (AD)", "description": "Job loss handled in order — money triage, entitlements, the search — and the identity blow named as real."},
+        {"theme": "The friend who has stopped answering (AD)", "description": "Noticing withdrawal in an adult friend and reaching them without ambush or retreat."},
+        {"theme": "Grief, at any age (AD)", "description": "What grief does to a person and a household, what helps, and the support that fits each age."},
+        {"theme": "The paperwork of a life (AD)", "description": "The documents an adult life runs on — ID, insurance, wills, records — organised so someone else could find them."},
+        {"theme": "Changing direction at forty (AD)", "description": "Retraining and starting again mid-life — the routes that exist, the costs, and the transferable skills already held."},
+        {"theme": "Being somebody a young person can call (AD)", "description": "Mentoring without a program — being a safe, steady adult a young person can actually reach."}
+      ]
+    },
+    {
+      "prefix": "EL",
+      "name": "Later life, lived well",
+      "themes": [
+        {"theme": "The body at seventy (EL)", "description": "What ordinary ageing changes — strength, senses, speed — and what is illness rather than age."},
+        {"theme": "Falls (EL)", "description": "Why falls end independence, the home hazards behind most of them, and the strength work that prevents them."},
+        {"theme": "Staying in your own home (EL)", "description": "The adaptations, services and routines that keep an older person safely in their own home longer."},
+        {"theme": "Memory that is changing (EL)", "description": "Ordinary forgetting versus concerning change, the assessment path, and living well alongside dementia."},
+        {"theme": "Loneliness is a health risk (EL)", "description": "What isolation does to health, and the contact — visits, calls, groups — that measurably protects."},
+        {"theme": "Money in later life (EL)", "description": "Pensions, entitlements and the scams aimed at older people — later-life money protected and claimed."},
+        {"theme": "Being cared for, with dignity (EL)", "description": "Receiving care while keeping choice and privacy — what dignity in care concretely requires."},
+        {"theme": "The conversation about driving (EL)", "description": "Raising driving, safely and kindly, with evidence — and the alternatives that keep a life mobile."},
+        {"theme": "What an older person knows (EL)", "description": "Drawing out and recording the skills and stories an older person holds before they are lost."},
+        {"theme": "Still working (EL)", "description": "Working past pension age — the rights, the adjustments and the roles where experience outweighs speed."}
+      ]
+    },
+    {
+      "prefix": "CR",
+      "name": "The carer's craft",
+      "themes": [
+        {"theme": "Being an unpaid carer (CR)", "description": "Recognising yourself as a carer — the role named, the entitlements it unlocks, and the support registered for."},
+        {"theme": "Lifting and moving a person (CR)", "description": "Moving a person safely for both of you — technique, aids and the moves never done alone."},
+        {"theme": "Medication in a household (CR)", "description": "Managing another person's medicines — schedule, storage, records — and the errors the system must prevent."},
+        {"theme": "The carer who is not sleeping (CR)", "description": "Care that breaks the carer's nights — the risks of running empty and the fixes worth fighting for."},
+        {"theme": "Respite that is real (CR)", "description": "Breaks that actually restore — arranging cover you trust and taking the time without guilt."},
+        {"theme": "Caring for somebody who does not want it (CR)", "description": "Refusal, pride and risk — caring within another adult's right to decide, and when safety overrides."},
+        {"theme": "The end of a life (CR)", "description": "What dying looks like, what comfort care does, and being present in the last days without panic."},
+        {"theme": "After somebody dies (CR)", "description": "The first week's duties — certification, notification, the funeral — and the support for the person left."},
+        {"theme": "Care work as a job (CR)", "description": "Paid care as skilled work — the training, the standards and the routes into it locally."},
+        {"theme": "Who cares for the carer (CR)", "description": "The carer's own health, network and plan — kept deliberately, because the caring depends on it."}
+      ]
+    }
+  ]
+}

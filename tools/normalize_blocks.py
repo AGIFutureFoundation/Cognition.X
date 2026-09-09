@@ -29,6 +29,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "data" / "source" / "Cognition.X_all_blocks.csv"
 GENERATED = ROOT / "data" / "generated"
+PROMOTIONS = ROOT / "data" / "promotions"
 OUT_CSV = ROOT / "data" / "blocks.csv"
 OUT_MANIFEST = ROOT / "data" / "manifest.json"
 
@@ -89,8 +90,44 @@ def read_rows():
     return rows
 
 
+BANDS = ["K–2", "3–5", "6–8", "9–10", "11–12"]
+BAND_LEVEL = {"K–2": "Explorer", "3–5": "Explorer", "6–8": "Builder",
+              "9–10": "Practitioner", "11–12": "Lead"}
+
+
+def apply_promotions(rows):
+    """Fill empty track/code/level/description on legacy rows from
+    data/promotions/*.json. Promotions are keyed by exact theme text and
+    only ever fill empty fields — source values are never overwritten."""
+    if not PROMOTIONS.is_dir():
+        return
+    promos = {}
+    for path in sorted(PROMOTIONS.glob("*.json")):
+        spec = json.loads(path.read_text(encoding="utf-8"))
+        themap = {}
+        for track in spec["tracks"]:
+            for i, th in enumerate(track["themes"]):
+                themap[th["theme"]] = (track["name"], track["prefix"], i, th["description"])
+        promos[spec["pack"]] = themap
+    filled = 0
+    for r in rows:
+        themap = promos.get(r["pack"])
+        if not themap or r["track"] or r["theme"] not in themap or r["grade"] not in BAND_LEVEL:
+            continue
+        name, prefix, ti, desc = themap[r["theme"]]
+        bi = BANDS.index(r["grade"])
+        r["track"] = name
+        r["code"] = r["code"] or f"{prefix}-{ti*5 + bi + 1}"
+        r["level"] = r["level"] or BAND_LEVEL[r["grade"]]
+        r["description"] = r["description"] or f"{desc} — at {r['grade']}"
+        filled += 1
+    if filled:
+        print(f"promotions: filled {filled} legacy rows from {len(promos)} pack(s)")
+
+
 def main():
     rows = read_rows()
+    apply_promotions(rows)
     counters = {}
     for r in rows:
         slug = slug_for(r["pack"])

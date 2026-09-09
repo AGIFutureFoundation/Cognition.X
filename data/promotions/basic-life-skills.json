@@ -1,0 +1,86 @@
+{
+  "pack": "Basic Life Skills & Self-Reliance",
+  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names; only empty fields (track, code, level, description) are filled — source themes, credentials and transfer checks are untouched.",
+  "tracks": [
+    {
+      "prefix": "HH",
+      "name": "The household that works",
+      "themes": [
+        {"theme": "The bill that arrives (HH)", "description": "Reading a real utility or service bill line by line — what is owed, by when, and what happens if it is ignored."},
+        {"theme": "Water, power and the meter (HH)", "description": "Where water and electricity enter the home, how the meter counts them, and shutting either off safely."},
+        {"theme": "A room that can be cleaned (HH)", "description": "The order and method of cleaning a room so it stays clean — surfaces, floors, and the corners that get skipped."},
+        {"theme": "Fixing the thing that broke (HH)", "description": "The household repairs anyone can do — a washer, a fuse, a hinge — and recognising the ones that need a professional."},
+        {"theme": "Laundry, properly (HH)", "description": "Sorting, temperatures, dosing and drying so clothes come out clean and last — including washing by hand."},
+        {"theme": "Pests and damp (HH)", "description": "Reading the early signs of pests and damp, the causes behind them, and the response that stops them spreading."},
+        {"theme": "The household that runs on a list (HH)", "description": "Shopping lists, chore rotas and the weekly routine — running a household deliberately instead of by crisis."},
+        {"theme": "Sharing a space with people (HH)", "description": "The agreements that make shared kitchens, bathrooms and bills workable, and repairing them when they break."},
+        {"theme": "Emergency in the house (HH)", "description": "The household emergencies — leak, outage, lockout, gas smell — and the first correct move for each."},
+        {"theme": "Leaving a place properly (HH)", "description": "Moving out well: notice, cleaning, meter readings, key handover and getting the deposit back."}
+      ]
+    },
+    {
+      "prefix": "MY",
+      "name": "Money that lasts the month",
+      "themes": [
+        {"theme": "Where the money goes (MY)", "description": "Tracking a real month of spending until the pattern is visible, and naming the categories honestly."},
+        {"theme": "The account, the card and the fee (MY)", "description": "What a basic account does, what a card actually is, and the fees that quietly take from small balances."},
+        {"theme": "Borrowing, and what it costs (MY)", "description": "Interest as the price of borrowed money — comparing a loan, a card and an informal lender on total cost."},
+        {"theme": "Being paid correctly (MY)", "description": "Checking pay against hours and rate, reading the deductions, and querying a shortfall without drama."},
+        {"theme": "Saving where you cannot reach it (MY)", "description": "Why savings survive only when they are separated, and the vehicles — account, lockbox, club — that create distance."},
+        {"theme": "The scam aimed at you (MY)", "description": "The frauds that target ordinary money — prizes, urgent transfers, fake officials — and the checks that defeat them."},
+        {"theme": "Buying something that lasts (MY)", "description": "Cost per use, quality signals and timing — spending more once instead of less repeatedly."},
+        {"theme": "Tax, in the simplest form that is true (MY)", "description": "What tax is, which ones touch your life, and the difference between avoiding a form and owing a debt."},
+        {"theme": "Money between people (MY)", "description": "Lending to and borrowing from family and friends with terms said out loud, and what a gift is."},
+        {"theme": "Planning for the month that goes wrong (MY)", "description": "The buffer, the priority order of bills, and who to call first when income stops."}
+      ]
+    },
+    {
+      "prefix": "WK",
+      "name": "Getting and holding work",
+      "themes": [
+        {"theme": "The five documents (WK)", "description": "The identity and qualification papers work requires, where each comes from, and keeping copies that survive."},
+        {"theme": "Filling in a form that decides something (WK)", "description": "Reading a consequential form fully before writing, answering what is actually asked, and keeping the copy."},
+        {"theme": "Writing to somebody who can help (WK)", "description": "The short, specific letter or message — who you are, what you need, by when — that gets an answer."},
+        {"theme": "The interview, prepared (WK)", "description": "Researching the role, preparing three stories and two questions, and arriving early in the right clothes."},
+        {"theme": "Your first day (WK)", "description": "Names, rules, where things are and what to ask — the first day handled so the second is easier."},
+        {"theme": "Being paid to do a job well (WK)", "description": "Reliability, standards and finishing — the working habits that turn a job into a reference."},
+        {"theme": "When something goes wrong at work (WK)", "description": "Mistakes, conflicts and accidents at work — owning, reporting and repairing them in the right order."},
+        {"theme": "Your rights at work here (WK)", "description": "The minimum wage, hours, breaks and safety rules that apply where you live, and where to turn when they are broken."},
+        {"theme": "Being self-employed, honestly (WK)", "description": "Pricing, invoicing, records and tax when you are the business — the paperwork that keeps small work legitimate."},
+        {"theme": "Leaving a job well (WK)", "description": "Notice, handover and the reference — ending a job so the door stays open."}
+      ]
+    },
+    {
+      "prefix": "CM",
+      "name": "Getting things done in the world",
+      "themes": [
+        {"theme": "Reading a timetable and a map (CM)", "description": "Planning a real journey from timetable and map alone — connections, walking legs and the margin for error."},
+        {"theme": "The vehicle you depend on (CM)", "description": "The checks and small maintenance that keep a bicycle, motorbike or car dependable, and the costs of neglect."},
+        {"theme": "Being early (CM)", "description": "Working backwards from an appointment — preparation, travel and buffer — so arriving early becomes ordinary."},
+        {"theme": "Getting an appointment (CM)", "description": "Booking with a clinic, office or service: the information to have ready, the questions to ask, and the confirmation to keep."},
+        {"theme": "Speaking to an official (CM)", "description": "Stating your business to an official clearly and calmly — what to bring, what to ask for, and what to write down after."},
+        {"theme": "Keeping a record (CM)", "description": "Dates, names, reference numbers and copies — the personal record-keeping that wins disputes months later."},
+        {"theme": "Asking for help (CM)", "description": "Naming what you need, choosing who to ask, and accepting help in a way that keeps your dignity and theirs."},
+        {"theme": "Doing something for the first time (CM)", "description": "The method for any unfamiliar task — find someone who has done it, break it down, do the first small step today."},
+        {"theme": "When you are the responsible adult (CM)", "description": "Being the one in charge of children, elders or a situation — the duties that arrive with the role and the calls you must be ready to make."},
+        {"theme": "Teaching somebody else what you learned (CM)", "description": "Passing on a skill properly — showing, watching them try, and correcting without taking over."}
+      ]
+    },
+    {
+      "prefix": "SF",
+      "name": "The first minutes of an emergency",
+      "themes": [
+        {"theme": "The first sixty seconds (SF)", "description": "The look-assess-act habit at any emergency — danger first, then the person, then the call."},
+        {"theme": "Calling for help here (SF)", "description": "The emergency numbers where you live, what the call-taker will ask, and giving a location that can be found."},
+        {"theme": "Bleeding (SF)", "description": "Direct pressure, elevation and when a bleed is beyond home control — stopping blood loss with what is in reach."},
+        {"theme": "Choking (SF)", "description": "Recognising true choking and delivering back blows and thrusts, adapted for infants and adults."},
+        {"theme": "Burns and scalds (SF)", "description": "Cooling a burn long enough, covering it right, and the burns that must be seen by a clinician."},
+        {"theme": "Someone who has collapsed (SF)", "description": "Checking response and breathing, the recovery position, and staying until help takes over."},
+        {"theme": "Fire (SF)", "description": "Escape first, doors closed, smoke low — the household fire response, and the small fire you may fight."},
+        {"theme": "Water safety (SF)", "description": "The drowning risks around your own area, reach-and-throw rescue, and why swimmers drown trying to help."},
+        {"theme": "Road and vehicle safety (SF)", "description": "Crossing, riding and travelling defensively, and the first-on-scene basics at a road accident."},
+        {"theme": "After an emergency (SF)", "description": "The hours after — reporting, records, checking on people, and the reactions in yourself that are normal."}
+      ]
+    }
+  ]
+}

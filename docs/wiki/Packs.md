@@ -13,11 +13,11 @@ Catalog of all 33 packs — 8,750 blocks total. Machine-readable version: [`data
 | Language, Culture & Communication | `LANG` | 111 | — | 15 |
 | Empathy & Emotional Intelligence | `EMPATH` | 167 | — | 5 |
 | Community & Relationship Practice | `COMREL` | 167 | — | 5 |
-| Preventive Health & Everyday Care | `PREVCARE` | 250 | — | 3 |
-| Basic Life Skills & Self-Reliance | `LIFESKILL` | 250 | — | 1 |
-| Water, Land & Climate | `WLC` | 250 | — | 1 |
-| Care Across a Life | `CARELIFE` | 250 | — | 1 |
-| Making, Repair & Reuse | `MAKE` | 250 | — | 1 |
+| Preventive Health & Everyday Care | `PREVCARE` | 250 | 5 | 3 |
+| Basic Life Skills & Self-Reliance | `LIFESKILL` | 250 | 5 | 1 |
+| Water, Land & Climate | `WLC` | 250 | 5 | 1 |
+| Care Across a Life | `CARELIFE` | 250 | 5 | 1 |
+| Making, Repair & Reuse | `MAKE` | 250 | 5 | 1 |
 | Housing & Tenancy | `HOUSING` | 250 | 5 | 5 |
 | Money, Benefits & Entitlements | `MONEY` | 250 | 5 | 5 |
 | Reentry & Recovery Pathways | `REENTRY` | 250 | 5 | 5 |
@@ -39,6 +39,41 @@ Catalog of all 33 packs — 8,750 blocks total. Machine-readable version: [`data
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
 
 ## Tracks by pack
+
+**Preventive Health & Everyday Care**
+- The daily care of a body
+- The mouth, understood
+- Eyes and ears in a classroom and a life
+- Food and water that keep you well
+- A body and mind that recover
+
+**Basic Life Skills & Self-Reliance**
+- The household that works
+- Money that lasts the month
+- Getting and holding work
+- Getting things done in the world
+- The first minutes of an emergency
+
+**Water, Land & Climate**
+- Water: source to drain
+- The ground under you
+- Climate, read locally
+- Energy where you live
+- Resilience when it arrives
+
+**Care Across a Life**
+- The first years
+- Growing up beside them
+- The middle of a life
+- Later life, lived well
+- The carer's craft
+
+**Making, Repair & Reuse**
+- Making something that holds
+- Repair before replace
+- Reuse and what things are worth
+- Tools and the workshop
+- The trade and the living
 
 **Housing & Tenancy**
 - Housing and the room you live in

@@ -146,7 +146,13 @@
       "name": "Preventive Health & Everyday Care",
       "slug": "PREVCARE",
       "blocks": 250,
-      "tracks": [],
+      "tracks": [
+        "The daily care of a body",
+        "The mouth, understood",
+        "Eyes and ears in a classroom and a life",
+        "Food and water that keep you well",
+        "A body and mind that recover"
+      ],
       "credentials": 3,
       "grade_bands": [
         "K–2",
@@ -160,7 +166,13 @@
       "name": "Basic Life Skills & Self-Reliance",
       "slug": "LIFESKILL",
       "blocks": 250,
-      "tracks": [],
+      "tracks": [
+        "The household that works",
+        "Money that lasts the month",
+        "Getting and holding work",
+        "Getting things done in the world",
+        "The first minutes of an emergency"
+      ],
       "credentials": 1,
       "grade_bands": [
         "K–2",
@@ -174,7 +186,13 @@
       "name": "Water, Land & Climate",
       "slug": "WLC",
       "blocks": 250,
-      "tracks": [],
+      "tracks": [
+        "Water: source to drain",
+        "The ground under you",
+        "Climate, read locally",
+        "Energy where you live",
+        "Resilience when it arrives"
+      ],
       "credentials": 1,
       "grade_bands": [
         "K–2",
@@ -188,7 +206,13 @@
       "name": "Care Across a Life",
       "slug": "CARELIFE",
       "blocks": 250,
-      "tracks": [],
+      "tracks": [
+        "The first years",
+        "Growing up beside them",
+        "The middle of a life",
+        "Later life, lived well",
+        "The carer's craft"
+      ],
       "credentials": 1,
       "grade_bands": [
         "K–2",
@@ -202,7 +226,13 @@
       "name": "Making, Repair & Reuse",
       "slug": "MAKE",
       "blocks": 250,
-      "tracks": [],
+      "tracks": [
+        "Making something that holds",
+        "Repair before replace",
+        "Reuse and what things are worth",
+        "Tools and the workshop",
+        "The trade and the living"
+      ],
       "credentials": 1,
       "grade_bands": [
         "K–2",

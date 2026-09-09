@@ -4,6 +4,29 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.8.0] — 2026-09-09
+
+### Added
+- **Legacy backfill, first slice** (roadmap Phase 1): the five cleanly
+  banded legacy packs — Basic Life Skills & Self-Reliance, Preventive
+  Health & Everyday Care, Water Land & Climate, Care Across a Life,
+  Making Repair & Reuse — are promoted to the tracked schema. Their
+  track groups were already embedded in the source as `(XX)` theme
+  suffixes; promotion specs (`data/promotions/*.json`) supply track
+  names and 250 authored base descriptions, and the normalizer fills
+  the empty `track`/`code`/`level`/`description` fields (source values
+  are never overwritten; `block_id`s unchanged). 1,250 rows backfilled;
+  **155 tracks** now tracked; untracked foundation rows drop from
+  2,250 to 1,000 (K–12, Trade School, and the seven irregular thematic
+  packs remain).
+- Flow Hub rebuilt: the five promoted packs join the flow engine and
+  the community family.
+
+### Noted
+- New data-review finding: most legacy transfer checks are generic
+  placeholders ("Do it once, for real…"); authoring real per-theme
+  checks is the next backfill target (see `docs/DATA_REVIEW.md`).
+
 ## [0.7.0] — 2026-09-09
 
 ### Added
