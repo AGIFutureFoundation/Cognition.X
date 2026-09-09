@@ -1,0 +1,291 @@
+{
+  "pack": "Emergency Preparedness & First Response",
+  "notes": "Community pack, roadmap Phase 1 candidate. 5 tracks x 10 themes x 5 grade bands = 250 blocks. Expanded by tools/generate_pack.py.",
+  "tracks": [
+    {
+      "name": "The household that is ready",
+      "prefix": "HR",
+      "credential": "Household Ready",
+      "themes": [
+        {
+          "theme": "The risks where you actually live",
+          "description": "Flood maps, fault lines, storm tracks and the industrial site up the road — replacing generic fear with your address's real risk list.",
+          "transfer_check": "Build the ranked hazard list for your own address from official maps and records, with the evidence for each entry."
+        },
+        {
+          "theme": "Seventy-two hours on your own shelf",
+          "description": "Water, food, light, warmth, medication — the kit that keeps a household functional for three days, sized to the people actually in it.",
+          "transfer_check": "Assemble or audit a real 72-hour kit for your household's actual members, including the items lists always forget."
+        },
+        {
+          "theme": "The grab bag and the ninety seconds",
+          "description": "Documents, medications, chargers, cash — what leaves the house with you when there is no time to choose.",
+          "transfer_check": "Pack a real grab bag, stage it, and run the ninety-second evacuation drill with it twice."
+        },
+        {
+          "theme": "The family communication plan",
+          "description": "The out-of-area contact, the rally points, and how a separated household finds itself when networks are down or jammed.",
+          "transfer_check": "Write your household's communication plan on one card per person and test it with an unannounced check-in drill."
+        },
+        {
+          "theme": "Water when the taps stop",
+          "description": "Storage amounts per person, the sources hiding in a home, and making questionable water drinkable.",
+          "transfer_check": "Locate and quantify every emergency water source in a real dwelling, and demonstrate one purification method correctly."
+        },
+        {
+          "theme": "Power down, house still working",
+          "description": "Light, heat, cooking and phones through an outage — running the essentials safely without the grid, and the CO line never crossed.",
+          "transfer_check": "Run a two-hour household blackout drill covering light, one hot meal and phone charging, with every method used safely."
+        },
+        {
+          "theme": "Documents that survive the disaster",
+          "description": "IDs, deeds, policies, prescriptions — the copies, the cloud, the sealed pouch, and proving who you are when the originals burned.",
+          "transfer_check": "Create the full document backup for a real household — physical copies staged, digital copies encrypted and reachable."
+        },
+        {
+          "theme": "Pets and the beings who cannot pack",
+          "description": "Animals in evacuation: carriers, records, the shelters that take them and the ones that will not.",
+          "transfer_check": "Build the evacuation plan and kit for a real animal, and complete a timed load-and-go drill with it."
+        },
+        {
+          "theme": "The neighbours in your plan",
+          "description": "The street-level map of who has skills, tools and needs — preparedness as a shared asset rather than a private bunker.",
+          "transfer_check": "Map your immediate neighbours' relevant skills, equipment and vulnerabilities (with consent), and agree one mutual commitment."
+        },
+        {
+          "theme": "The drill calendar",
+          "description": "Why untested plans fail, rotating supplies before they expire, and the twice-yearly hour that keeps readiness real.",
+          "transfer_check": "Run a full household drill against your written plan, log every failure found, and fix the worst one the same week."
+        }
+      ]
+    },
+    {
+      "name": "First aid: the first ten minutes",
+      "prefix": "FA",
+      "credential": "First Responder (Lay)",
+      "themes": [
+        {
+          "theme": "The scene before the patient",
+          "description": "Danger, response, airway — why rescuers become casualties, and the look-around that comes before the kneel-down.",
+          "transfer_check": "Approach three staged casualty scenes, verbalising the hazard check and the decision to proceed, stage, or wait for each."
+        },
+        {
+          "theme": "The emergency call that works",
+          "description": "What the call-taker needs, in what order, and the location skills (addresses, apps, landmarks) that cut minutes off arrival.",
+          "transfer_check": "Complete a realistic mock emergency call scored against dispatch criteria, including conveying a precise location two ways."
+        },
+        {
+          "theme": "The unconscious person who is breathing",
+          "description": "Checking response and breathing, the recovery position, and staying until handover.",
+          "transfer_check": "Demonstrate the full assessment and recovery position on a live volunteer, including the monitoring you keep doing."
+        },
+        {
+          "theme": "CPR and the machine on the wall",
+          "description": "Compressions that are hard and fast enough, rescue breaths where trained, and using an AED with its voice as your guide.",
+          "transfer_check": "Perform two minutes of adequate-rate, adequate-depth compressions on a manikin and run a full AED sequence to shock/no-shock."
+        },
+        {
+          "theme": "Choking",
+          "description": "The universal sign, back blows and abdominal thrusts, and the differences for infants and the pregnant.",
+          "transfer_check": "Demonstrate the complete choking protocol on adult and infant manikins, adapting correctly for each."
+        },
+        {
+          "theme": "Bleeding you can see",
+          "description": "Pressure, elevation, packing and the tourniquet's honest place — stopping blood loss with what is in reach.",
+          "transfer_check": "Control three staged bleeds — minor, severe limb, junctional — choosing and applying the right technique for each."
+        },
+        {
+          "theme": "Burns, breaks and the injuries that wait badly",
+          "description": "Cooling burns properly, immobilising suspected fractures, and the do-nots that make each worse.",
+          "transfer_check": "Manage one staged burn and one staged fracture end to end, stating what you will not do and why."
+        },
+        {
+          "theme": "The medical emergencies",
+          "description": "Heart attack, stroke, seizure, severe allergy, diabetic collapse — recognising each fast and the one right action for each.",
+          "transfer_check": "From five scripted casualty presentations, identify each condition and perform or state its correct first response, including auto-injector use."
+        },
+        {
+          "theme": "Little patients",
+          "description": "Children and infants: the doses, ratios and signs that differ, and keeping a frightened child workable.",
+          "transfer_check": "Adapt three adult protocols correctly to a child or infant manikin, and demonstrate one calming approach while treating."
+        },
+        {
+          "theme": "The kit and the kit in your head",
+          "description": "Building a first-aid kit that matches your life, improvising when there is none, and the refresher rhythm that keeps skills alive.",
+          "transfer_check": "Assemble a first-aid kit for a named context (home, car, hike), justify every item, and treat one staged injury using improvised materials only."
+        }
+      ]
+    },
+    {
+      "name": "Fire: prevention, escape, fighting small",
+      "prefix": "FE",
+      "credential": "Fire Warden (Home)",
+      "themes": [
+        {
+          "theme": "How fires actually start at home",
+          "description": "Cooking, smoking, chargers, candles, heaters — the ignition league table and the habits behind each entry.",
+          "transfer_check": "Audit a real dwelling against the top ignition causes and eliminate or mitigate every finding, with photos."
+        },
+        {
+          "theme": "The alarms that buy the minutes",
+          "description": "Smoke and heat detector types, where each belongs, and the dead battery that undoes it all.",
+          "transfer_check": "Verify correct type, placement and function of every alarm in a real dwelling, and fix or specify what is missing."
+        },
+        {
+          "theme": "The escape plan with two ways out",
+          "description": "Routes, the smoke-low crawl, the closed-door discipline and the meeting point nobody re-enters from.",
+          "transfer_check": "Draw the two-route escape plan for a real dwelling and run the drill with its actual occupants, timed, including the meeting point."
+        },
+        {
+          "theme": "Fighting the small fire, fleeing the rest",
+          "description": "Extinguisher classes, the pan fire and the fire blanket, and the honest size limit where fighting stops and leaving starts.",
+          "transfer_check": "Match extinguisher types to five fire scenarios, demonstrate the technique (live or simulated), and state your personal stop-and-go line."
+        },
+        {
+          "theme": "Smoke: the actual killer",
+          "description": "What smoke does in minutes, why closed doors matter for hours, and surviving in a room you cannot leave.",
+          "transfer_check": "Demonstrate the trapped-in-room protocol — door checks, sealing, the window signal, the call — in a staged scenario."
+        },
+        {
+          "theme": "The building bigger than your door",
+          "description": "Apartment blocks: stay-put versus evacuate policies, alarm systems, dry risers and why the policy differs by construction.",
+          "transfer_check": "Find and explain your own building's fire strategy, and state exactly what you would do for an alarm at 3 a.m. under it."
+        },
+        {
+          "theme": "Wildfire at the edge of town",
+          "description": "Ember attack, defensible space, the leave-early principle and the go/no-go decision made before smoke is visible.",
+          "transfer_check": "Assess a real or case-study property's wildfire exposure, specify its defensible-space actions, and write its trigger-based leave plan."
+        },
+        {
+          "theme": "After the fire",
+          "description": "Re-entry dangers, insurance documentation, and the recovery sequence for a household that just lost its rooms.",
+          "transfer_check": "Produce the first-72-hours checklist for a post-fire household — safety, claims evidence, shelter, records — from a case study."
+        },
+        {
+          "theme": "Fire and the very young and very old",
+          "description": "Who dies in home fires and why — mobility, hearing, medication sleep — and adapting alarms, plans and drills to real occupants.",
+          "transfer_check": "Adapt a real dwelling's fire plan for a named occupant with impaired mobility, hearing or cognition, and test the adaptation."
+        },
+        {
+          "theme": "Being the workplace or venue warden",
+          "description": "Sweep duties, refuge points, roll calls and the authority a high-vis vest carries when everyone else is deciding to finish their coffee.",
+          "transfer_check": "Act as warden in a real or staged evacuation: complete the sweep, manage the reluctant, and deliver the roll-call report."
+        }
+      ]
+    },
+    {
+      "name": "When the ground, water or sky turns",
+      "prefix": "NH",
+      "credential": "Hazard Responder",
+      "themes": [
+        {
+          "theme": "Flood: the water that wins",
+          "description": "Flash versus river flood, the depths that move cars and people, and the property-level defences that actually help.",
+          "transfer_check": "Read your address's flood risk from official maps, and state the action sequence for a warning at each of three lead times."
+        },
+        {
+          "theme": "Storm and wind",
+          "description": "What wind speeds do to roofs, trees and driving, the pre-storm hour list, and the shelter spots inside a home.",
+          "transfer_check": "Complete a real pre-storm property walk-around — securing, clearing, charging — and identify the safest internal refuge with reasons."
+        },
+        {
+          "theme": "Earthquake: drop, cover, hold on",
+          "description": "What buildings do in shaking, the myths (doorways, running out), and the aftershock rules.",
+          "transfer_check": "Run the full drop-cover-hold drill in two different rooms, then perform the post-shake checks — gas, structure, exits — in order."
+        },
+        {
+          "theme": "Heat that kills quietly",
+          "description": "Heatwave physiology, the rooms and hours that matter, and the neighbours on the checking list.",
+          "transfer_check": "Write and rehearse a heatwave plan for a real household including one vulnerable person's specific arrangements."
+        },
+        {
+          "theme": "Cold, snow and the iced-in week",
+          "description": "Freezing pipes, stranded cars, carbon monoxide from improvised heating — the winter emergency's specific traps.",
+          "transfer_check": "Prepare a real car and home for a cold snap against a checklist, including the in-car survival kit demonstrated."
+        },
+        {
+          "theme": "Lightning and the thirty-thirty rule",
+          "description": "Where lightning actually strikes people, the timing rules, and the safe and unsafe shelters.",
+          "transfer_check": "Given three outdoor scenarios with a building storm, state and justify the correct action and shelter for each."
+        },
+        {
+          "theme": "Landslip, sinkhole and the moving ground",
+          "description": "Reading slopes and warning signs — cracks, leaning trees, sudden springs — and who to call before the road drops.",
+          "transfer_check": "Survey one real slope or cutting for instability indicators and file or draft the report to the responsible authority."
+        },
+        {
+          "theme": "The hazardous release",
+          "description": "The overturned tanker, the chemical smell, the plume — shelter-in-place done properly versus the instinct to drive through it.",
+          "transfer_check": "Demonstrate full shelter-in-place for a staged airborne release — sealing, ventilation off, information channel on — in your own home."
+        },
+        {
+          "theme": "Warnings and the words they use",
+          "description": "Watch versus warning, amber versus red, sirens and cell alerts — the official vocabulary and the action each word demands.",
+          "transfer_check": "Match your region's actual alert levels to required actions, and show where the warnings arrive on your own devices, tested."
+        },
+        {
+          "theme": "Evacuation: leaving well",
+          "description": "Routes, timing, the full tank rule, and the decision discipline that leaves before the road jams.",
+          "transfer_check": "Plan two evacuation routes from your home to defined refuges, drive or trace both, and state your pre-committed leave triggers."
+        }
+      ]
+    },
+    {
+      "name": "Community response and recovery",
+      "prefix": "CR",
+      "credential": "Community Responder",
+      "themes": [
+        {
+          "theme": "Who responds: the system revealed",
+          "description": "Emergency services, civil protection, utilities, charities — who does what in a disaster and where the citizen fits.",
+          "transfer_check": "Map the actual response structure for your area — agencies, roles, activation — and identify the citizen-facing entry point of each."
+        },
+        {
+          "theme": "The spontaneous volunteer problem",
+          "description": "Why untasked helpers clog disasters, and the registered, trained routes by which help actually helps.",
+          "transfer_check": "Identify and complete registration (or its full application) with one recognised local response or resilience group."
+        },
+        {
+          "theme": "Psychological first aid",
+          "description": "Look, listen, link — steadying frightened people without therapy or platitudes, and the referrals beyond your role.",
+          "transfer_check": "Demonstrate psychological first aid in three role-played encounters — the panicked, the numb, the searching — with correct referral for each."
+        },
+        {
+          "theme": "The rest centre",
+          "description": "Running the hall where evacuees arrive: registration, needs triage, families kept together, and the quiet corner that matters.",
+          "transfer_check": "Set up and run (or fully exercise) a rest-centre reception for a staged intake of ten, with registration and needs triage completed."
+        },
+        {
+          "theme": "Information in the chaos",
+          "description": "Rumour dynamics in disasters, official channels, and being the neighbour who relays what is true rather than what is loud.",
+          "transfer_check": "During an exercise or case study, verify three circulating claims against official sources and publish the corrected summary."
+        },
+        {
+          "theme": "The damage assessment walk",
+          "description": "Recording what happened — structures, utilities, needs — in the form responders and insurers can actually use.",
+          "transfer_check": "Complete a structured damage assessment of a staged or historical scene, producing the standard-format report."
+        },
+        {
+          "theme": "Vulnerable people in the emergency",
+          "description": "The registers, the door-knock lists and the housebound — how communities make sure the flood does not sort by mobility.",
+          "transfer_check": "Build the (consented) support map for one street's vulnerable residents and the check-in protocol that activates in an event."
+        },
+        {
+          "theme": "The recovery marathon",
+          "description": "After the cameras leave: claims, rebuilding, the long tail of displacement, and pacing a community's return.",
+          "transfer_check": "From one documented disaster, chart its recovery timeline against needs, and identify the two support gaps that appeared at month three."
+        },
+        {
+          "theme": "Learning from the event",
+          "description": "Debriefs without blame, the report that changes procedure, and the drill updated because of what actually happened.",
+          "transfer_check": "Run a structured debrief of a real drill or event, extract three actionable lessons, and change one written plan accordingly."
+        },
+        {
+          "theme": "Building the resilient community",
+          "description": "From prepared households to a prepared street to a town with a plan — the organising work between emergencies.",
+          "transfer_check": "Organise or advance one concrete community resilience action — a street meeting, a shared equipment list, a plan adopted — with evidence."
+        }
+      ]
+    }
+  ]
+}

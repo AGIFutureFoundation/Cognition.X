@@ -15,7 +15,7 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (7,250 blocks, 27 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (8,500 blocks, 32 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
 
@@ -48,11 +48,12 @@ Full details: [`data/schema.md`](data/schema.md) and the
 ## Packs at a glance
 
 Seven **Cognition.X OS editions** (Corporate, Science, Robotics, Global
-Health, Multilateral, Sapient, Non-Profit — 500 blocks each), eleven
+Health, Multilateral, Sapient, Non-Profit — 500 blocks each), sixteen
 **community packs** (250 each — housing, money, reentry, neighbourhood,
 preventive health, life skills, water/land/climate, care, making/repair,
-and the new *Digital Life, Data & AI* and *Food, Cooking & Nutrition*
-packs), plus the legacy K–12, Trade
+digital life & AI, food & nutrition, energy & the home, transport &
+mobility, emergency preparedness, arts & media, and law & everyday
+rights), plus the legacy K–12, Trade
 School and thematic packs. The generated
 [`data/manifest.json`](data/manifest.json) is the machine-readable index.
 

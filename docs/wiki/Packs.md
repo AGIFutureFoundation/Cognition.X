@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 27 packs — 7,250 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 32 packs — 8,500 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -29,8 +29,13 @@ Catalog of all 27 packs — 7,250 blocks total. Machine-readable version: [`data
 | Cognition.X : Multilateral OS | `MULTI` | 500 | 10 | 10 |
 | Cognition.X : Sapient OS | `SAPIENT` | 500 | 10 | 10 |
 | Non-Profit Practice | `NPO` | 500 | 10 | 10 |
+| Arts, Making Media & Performance | `ARTS` | 250 | 5 | 5 |
 | Digital Life, Data & AI | `DIGITAL` | 250 | 5 | 5 |
+| Emergency Preparedness & First Response | `EMERGENCY` | 250 | 5 | 5 |
+| Energy, Grid & the Home | `ENERGY` | 250 | 5 | 5 |
 | Food, Cooking & Nutrition | `FOOD` | 250 | 5 | 5 |
+| Law, Contracts & Everyday Rights | `LAW` | 250 | 5 | 5 |
+| Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
 
 ## Tracks by pack
 
@@ -146,6 +151,13 @@ Catalog of all 27 packs — 7,250 blocks total. Machine-readable version: [`data
 - Telling people about it
 - Risk and safeguarding
 
+**Arts, Making Media & Performance**
+- Drawing, colour and the seeing eye
+- Music: listening, playing, making together
+- The camera and the cut
+- The stage and the spoken word
+- Craft, design and the made object
+
 **Digital Life, Data & AI**
 - Devices, accounts and the keys you hold
 - Information: what to trust and how to check
@@ -153,10 +165,38 @@ Catalog of all 27 packs — 7,250 blocks total. Machine-readable version: [`data
 - Working with AI: help, judgement and limits
 - Being online together: conduct, harm and repair
 
+**Emergency Preparedness & First Response**
+- The household that is ready
+- First aid: the first ten minutes
+- Fire: prevention, escape, fighting small
+- When the ground, water or sky turns
+- Community response and recovery
+
+**Energy, Grid & the Home**
+- Electricity and the house that carries it
+- Heat, cold and the cost of comfort
+- The grid: where power comes from
+- Water, gas and the other pipes
+- Using less without living less
+
 **Food, Cooking & Nutrition**
 - The kitchen and the tools in it
 - What food is: nutrition without the noise
 - Feeding people: planning, budget and the shop
 - Safety: from market to plate
 - Food, culture and the wider system
+
+**Law, Contracts & Everyday Rights**
+- Law: the system you already live in
+- The contract: promises with teeth
+- The consumer: buying, returning, being made whole
+- Work: the deal behind the job
+- The citizen and the state
+
+**Transport & Mobility**
+- Moving through the city without a car
+- The bicycle and its cousins
+- The car: owning, running, letting go
+- Roads shared: safety for every user
+- Journeys: planning, rights and the wider world
 

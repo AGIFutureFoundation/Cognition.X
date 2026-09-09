@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 7250,
+  "total_blocks": 8500,
   "packs": [
     {
       "name": "K–12",
@@ -468,6 +468,26 @@
       ]
     },
     {
+      "name": "Arts, Making Media & Performance",
+      "slug": "ARTS",
+      "blocks": 250,
+      "tracks": [
+        "Drawing, colour and the seeing eye",
+        "Music: listening, playing, making together",
+        "The camera and the cut",
+        "The stage and the spoken word",
+        "Craft, design and the made object"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
       "name": "Digital Life, Data & AI",
       "slug": "DIGITAL",
       "blocks": 250,
@@ -488,6 +508,46 @@
       ]
     },
     {
+      "name": "Emergency Preparedness & First Response",
+      "slug": "EMERGENCY",
+      "blocks": 250,
+      "tracks": [
+        "The household that is ready",
+        "First aid: the first ten minutes",
+        "Fire: prevention, escape, fighting small",
+        "When the ground, water or sky turns",
+        "Community response and recovery"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Energy, Grid & the Home",
+      "slug": "ENERGY",
+      "blocks": 250,
+      "tracks": [
+        "Electricity and the house that carries it",
+        "Heat, cold and the cost of comfort",
+        "The grid: where power comes from",
+        "Water, gas and the other pipes",
+        "Using less without living less"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
       "name": "Food, Cooking & Nutrition",
       "slug": "FOOD",
       "blocks": 250,
@@ -497,6 +557,46 @@
         "Feeding people: planning, budget and the shop",
         "Safety: from market to plate",
         "Food, culture and the wider system"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Law, Contracts & Everyday Rights",
+      "slug": "LAW",
+      "blocks": 250,
+      "tracks": [
+        "Law: the system you already live in",
+        "The contract: promises with teeth",
+        "The consumer: buying, returning, being made whole",
+        "Work: the deal behind the job",
+        "The citizen and the state"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Transport & Mobility",
+      "slug": "TRANSPORT",
+      "blocks": 250,
+      "tracks": [
+        "Moving through the city without a car",
+        "The bicycle and its cousins",
+        "The car: owning, running, letting go",
+        "Roads shared: safety for every user",
+        "Journeys: planning, rights and the wider world"
       ],
       "credentials": 5,
       "grade_bands": [

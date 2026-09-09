@@ -40,8 +40,12 @@ it just blocked."
 The test: could an assessor watch the artifact or performance and say yes
 or no without asking a quiz question?
 
-## Candidate packs wanted (roadmap Phase 1)
+## Candidate packs wanted
 
-Energy, Grid & the Home · Transport &
-Mobility · Emergency Preparedness & First Response · Arts, Making Media &
-Performance · Law, Contracts & Everyday Rights
+The original Phase 1 candidate list (Food, Energy, Transport, Emergency
+Preparedness, Arts, Law) has shipped. Ideas that would extend coverage —
+open an issue proposing tracks before writing a full spec:
+
+Parenting & Early Years · Grief, Loss & Endings · Sport, Movement &
+Coaching · Faith, Meaning & Pluralism · Rural Skills & Land Craft ·
+Entrepreneurship & the Small Trade

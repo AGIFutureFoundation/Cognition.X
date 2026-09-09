@@ -63,6 +63,11 @@ PACK_SLUGS = {
     "Non-Profit Practice": "NPO",
     "Digital Life, Data & AI": "DIGITAL",
     "Food, Cooking & Nutrition": "FOOD",
+    "Energy, Grid & the Home": "ENERGY",
+    "Transport & Mobility": "TRANSPORT",
+    "Emergency Preparedness & First Response": "EMERGENCY",
+    "Arts, Making Media & Performance": "ARTS",
+    "Law, Contracts & Everyday Rights": "LAW",
 }
 
 
