@@ -1,0 +1,291 @@
+{
+  "pack": "Energy, Grid & the Home",
+  "notes": "Community pack, roadmap Phase 1 candidate. 5 tracks x 10 themes x 5 grade bands = 250 blocks. Expanded by tools/generate_pack.py.",
+  "tracks": [
+    {
+      "name": "Electricity and the house that carries it",
+      "prefix": "EL",
+      "credential": "Home Circuit Reader",
+      "themes": [
+        {
+          "theme": "The path from pole to plug",
+          "description": "Service line, meter, panel, circuit, outlet — the one-way street electricity takes into a home.",
+          "transfer_check": "Trace and sketch the actual path from your building's meter to one outlet, naming each stage you can safely observe."
+        },
+        {
+          "theme": "The breaker panel is a map",
+          "description": "What a breaker does, why it trips, and labelling the panel so 3 a.m. problems take one minute.",
+          "transfer_check": "Test and correctly label every breaker in a real panel, and demonstrate finding the right one for a named outlet."
+        },
+        {
+          "theme": "Watts, volts and the kettle that dims the lights",
+          "description": "Power as a rate, why some appliances are heavy loads, and what an overloaded circuit feels like before it fails.",
+          "transfer_check": "Rank five real household appliances by wattage from their plates, and identify which two must not share one circuit."
+        },
+        {
+          "theme": "Cords, plugs and the sockets that scorch",
+          "description": "Damaged leads, loose sockets, daisy-chained extension strips — the household electrical fires that announce themselves first.",
+          "transfer_check": "Inspect one real room's cords, plugs and strips against a checklist and remove or report every fault found."
+        },
+        {
+          "theme": "Water and electricity in the same room",
+          "description": "Why bathrooms and kitchens have special rules, and what a GFCI/RCD actually detects.",
+          "transfer_check": "Locate and test every GFCI/RCD protecting wet areas in a real home using its test button, and log the result."
+        },
+        {
+          "theme": "When the power goes out",
+          "description": "Reading whether it is your breaker, your building or your street, and the safe order of checks.",
+          "transfer_check": "Given a staged or real outage, run the diagnostic order — panel, neighbours, provider's outage map — and state the correct next call."
+        },
+        {
+          "theme": "The meter and the bill it writes",
+          "description": "Reading your own meter, kWh as the unit you are billed in, and matching a month's bill to a month's life.",
+          "transfer_check": "Read a real meter on two dates, compute the kWh used, and reconcile it against the bill for the same period."
+        },
+        {
+          "theme": "Batteries: small, large and dangerous",
+          "description": "From AA to power bank to e-bike pack — charging habits, swelling cells, and why some batteries must never meet the bin.",
+          "transfer_check": "Audit the batteries in one household, flag any damaged or swollen cell, and take one to a genuine recycling point."
+        },
+        {
+          "theme": "Generators, inverters and backup power",
+          "description": "What can run a fridge overnight, carbon monoxide and the generator that must stay outside, and sizing a backup honestly.",
+          "transfer_check": "Size a backup source for three named essentials in your home, from their real wattages, and state where it would safely run."
+        },
+        {
+          "theme": "Calling the professional",
+          "description": "The line between owner-safe work and licensed work, and describing an electrical problem so the electrician arrives prepared.",
+          "transfer_check": "Write the call-out description for one real or staged electrical fault — symptoms, location, panel photo — that a stranger could act on."
+        }
+      ]
+    },
+    {
+      "name": "Heat, cold and the cost of comfort",
+      "prefix": "HC",
+      "credential": "Comfort Keeper",
+      "themes": [
+        {
+          "theme": "Where the heat leaks out",
+          "description": "Draughts, glazing, loft and wall — the order in which a home loses heat and the cheap fixes that come first.",
+          "transfer_check": "Survey one real home for heat loss with hands, candle or camera, and rank the three worst leaks with a fix for each."
+        },
+        {
+          "theme": "The heating system you actually have",
+          "description": "Furnace, boiler, heat pump, resistive — identifying the system, its fuel and its one owner-serviceable part.",
+          "transfer_check": "Identify a real home's heating type, locate its filter or service point, and perform or schedule the due maintenance."
+        },
+        {
+          "theme": "Thermostats and the schedule that saves",
+          "description": "Setbacks, schedules and why heating an empty house is the quietest money leak in the home.",
+          "transfer_check": "Program a real thermostat with a weekly schedule matched to actual occupancy and estimate the saving from the setback."
+        },
+        {
+          "theme": "Hot water: the second-biggest bill",
+          "description": "Tank versus on-demand, the temperature that scalds versus the temperature that breeds legionella, and the shower's share.",
+          "transfer_check": "Measure a real tap's hot water temperature, compare it to the safe band, and adjust or report accordingly."
+        },
+        {
+          "theme": "Damp, mould and the air a home breathes",
+          "description": "Condensation versus penetration, extraction fans, and why sealing a home tight without ventilating it grows mould.",
+          "transfer_check": "Find and diagnose one real damp or condensation site, and apply or specify the ventilation-first remedy."
+        },
+        {
+          "theme": "Keeping cool without drowning the bill",
+          "description": "Shade, cross-ventilation, fans and when air conditioning earns its cost — heat management as a sequence, not a switch.",
+          "transfer_check": "Cool one real room through a hot day using a written non-AC sequence first, logging temperatures at each step."
+        },
+        {
+          "theme": "The cold snap and the heat wave",
+          "description": "Frozen pipes, overwhelmed grids and the people most at risk two doors away — extremes as household and neighbourhood events.",
+          "transfer_check": "Write your household's extreme-temperature plan — pipes, power, and the two neighbours you will check — and rehearse one part."
+        },
+        {
+          "theme": "Fuel poverty and the help that exists",
+          "description": "When heat competes with food: tariffs, grants, insulation schemes and the entitlements that go unclaimed.",
+          "transfer_check": "Map the energy-cost support available at your own address — programs, eligibility, application route — into a half-page guide."
+        },
+        {
+          "theme": "Reading an efficiency label",
+          "description": "Energy ratings on appliances and homes: what the letters measure, and lifetime cost versus sticker price.",
+          "transfer_check": "Compare two real appliances by projected lifetime energy cost and defend a purchase choice with the arithmetic shown."
+        },
+        {
+          "theme": "The retrofit, in the right order",
+          "description": "Insulate, seal, ventilate, then upgrade the heat source — why the order matters and what each step costs and saves.",
+          "transfer_check": "Draft a sequenced retrofit plan for a real dwelling with rough costs, and justify why your step one comes first."
+        }
+      ]
+    },
+    {
+      "name": "The grid: where power comes from",
+      "prefix": "GR",
+      "credential": "Grid Literate",
+      "themes": [
+        {
+          "theme": "The machine the size of a country",
+          "description": "Generation, transmission, distribution — the grid as one synchronised machine that must balance every second.",
+          "transfer_check": "Explain to someone else, with a drawing, why the grid must match supply to demand instantly and what happens when it cannot."
+        },
+        {
+          "theme": "The sources and their trade-offs",
+          "description": "Coal, gas, nuclear, hydro, wind, solar — what each costs, emits, and does when the wind drops or the river runs low.",
+          "transfer_check": "Build an honest one-page comparison of three generation sources using published capacity and emissions data."
+        },
+        {
+          "theme": "Your region's actual mix",
+          "description": "Finding the real-time generation mix where you live, and how it shifts by hour and season.",
+          "transfer_check": "Pull your region's live or published generation mix on two different days and explain one difference between them."
+        },
+        {
+          "theme": "Peak hours and the duck curve",
+          "description": "Why evening demand is expensive, what solar does to the daytime curve, and when a kWh is cheapest to use.",
+          "transfer_check": "Shift two real household loads off peak hours for a week and show the timing change (and saving, where tariffs allow)."
+        },
+        {
+          "theme": "Storage: the missing piece",
+          "description": "Batteries, pumped hydro and why storing electricity at scale is the grid's hardest problem.",
+          "transfer_check": "Calculate how long a named home battery could run your fridge and lights from their real wattages, and compare to a real outage duration."
+        },
+        {
+          "theme": "Blackouts, brownouts and how grids fail",
+          "description": "Cascading failure, load shedding and the famous outages — what actually went wrong and what changed after.",
+          "transfer_check": "Take one documented major blackout, map its failure chain, and identify the step where intervention could have stopped it."
+        },
+        {
+          "theme": "Rooftops that generate",
+          "description": "Home solar honestly: orientation, payback, export tariffs and the sales pitches that skip the denominator.",
+          "transfer_check": "Assess a real roof for solar — orientation, shading, rough yield — and produce a payback estimate you can defend."
+        },
+        {
+          "theme": "The electric vehicle and the house",
+          "description": "Charging levels, what an EV does to a home's load, and the car battery as future grid storage.",
+          "transfer_check": "Plan home charging for a named EV on a real electrical service — charger level, circuit, schedule — within the panel's capacity."
+        },
+        {
+          "theme": "Who pays for the wires",
+          "description": "Standing charges, network costs and why your bill has lines that are not energy — the grid as shared infrastructure.",
+          "transfer_check": "Decompose one real energy bill line by line and explain, in plain words, what each charge pays for."
+        },
+        {
+          "theme": "The transition, without the slogans",
+          "description": "Decarbonising a grid: what is genuinely hard, what is already solved, and how to read claims from every side.",
+          "transfer_check": "Take one energy-transition claim from current media, check it against grid data, and deliver a verdict with sources."
+        }
+      ]
+    },
+    {
+      "name": "Water, gas and the other pipes",
+      "prefix": "WG",
+      "credential": "Utilities Steward",
+      "themes": [
+        {
+          "theme": "The stopcock and the sixty seconds that matter",
+          "description": "Where water enters, how to shut it off, and why every household member should be able to do it in the dark.",
+          "transfer_check": "Locate and operate the main water shutoff in a real dwelling, then time a second household member doing it cold."
+        },
+        {
+          "theme": "The drip that becomes a flood",
+          "description": "Reading early leak signs — stains, warping, the spinning meter with everything off — and the escalation each deserves.",
+          "transfer_check": "Run a whole-home leak check including the meter-still test, and document findings with photos."
+        },
+        {
+          "theme": "Drains: what goes down and what must not",
+          "description": "Fats, wipes and the fatberg economy; the trap under every sink and the smell that means it has failed.",
+          "transfer_check": "Clear or demonstrate clearing a real trap safely, and write the household's what-not-to-flush rules on one card."
+        },
+        {
+          "theme": "Gas: the smell that is a command",
+          "description": "What natural gas smells like and why, the do-nots (switches, flames, phones indoors), and the evacuation-then-call order.",
+          "transfer_check": "Recite and walk the gas-leak response for your own home, including where the gas shutoff is and the number called from outside."
+        },
+        {
+          "theme": "Carbon monoxide: the one with no smell",
+          "description": "Where CO comes from, the symptoms mistaken for flu, and the alarm that is not optional.",
+          "transfer_check": "Verify working CO alarms in the right locations of a real home, test them, and fix or escalate any gap."
+        },
+        {
+          "theme": "Water heaters, boilers and the annual visit",
+          "description": "The service schedule that keeps combustion appliances safe, and the signs (soot, yellow flame, pilot outages) that cannot wait.",
+          "transfer_check": "Check a real combustion appliance for the visible warning signs and confirm or book its service record."
+        },
+        {
+          "theme": "Hard water, soft water and what scale does",
+          "description": "Mineral content, kettle fur, dying heating elements — and whether treatment is worth it where you live.",
+          "transfer_check": "Test or look up your local water hardness and inspect one real appliance for scale, recommending treat or tolerate with reasons."
+        },
+        {
+          "theme": "Sewage, septic and where it all goes",
+          "description": "Mains drainage versus septic, what a treatment plant does, and the household's end of the bargain.",
+          "transfer_check": "Trace where your own wastewater actually goes — to which works or tank — and list the two household behaviours that most protect it."
+        },
+        {
+          "theme": "The utility bill quartet",
+          "description": "Water, gas, electric, connectivity: metering, estimated bills, and catching the error that repeats every month.",
+          "transfer_check": "Audit a household's four utility bills for one quarter, verify each against meters or usage, and dispute or explain any anomaly."
+        },
+        {
+          "theme": "Turning a home off and on again",
+          "description": "The vacancy checklist: what gets shut, drained and unplugged before an absence, and the restart order that avoids surprises.",
+          "transfer_check": "Write and execute (or fully rehearse) the shutdown and restart checklist for a real dwelling before and after an absence."
+        }
+      ]
+    },
+    {
+      "name": "Using less without living less",
+      "prefix": "EF",
+      "credential": "Energy Saver",
+      "themes": [
+        {
+          "theme": "Finding the hogs",
+          "description": "Measuring what each appliance really draws — the heaters, dryers and always-on boxes that dominate a bill.",
+          "transfer_check": "Meter or plate-audit ten real appliances, rank them by monthly cost, and name the top three with figures."
+        },
+        {
+          "theme": "Standby: the load that never sleeps",
+          "description": "Phantom draw across a modern home — what it sums to over a year and which devices deserve a true off.",
+          "transfer_check": "Measure or estimate your home's total standby load, then eliminate part of it and show the before-and-after."
+        },
+        {
+          "theme": "Light: the solved problem",
+          "description": "LED economics, lumens versus watts, and the fixtures still burning money in most buildings.",
+          "transfer_check": "Survey one building's lighting, compute the payback of converting what remains, and convert at least one fixture."
+        },
+        {
+          "theme": "The laundry equation",
+          "description": "Temperature, load size and the dryer's outsized cost — the washing habits that halve the energy per clean shirt.",
+          "transfer_check": "Run one week's laundry under changed rules (full loads, lower temp, line-dry where possible) and quantify the difference."
+        },
+        {
+          "theme": "The kitchen's energy order",
+          "description": "Kettle, microwave, hob, oven — matching the tool to the job, and the lids, batch bakes and fridge habits that add up.",
+          "transfer_check": "Cook one meal twice — habitual versus energy-ordered — and compare the measured or estimated energy of each."
+        },
+        {
+          "theme": "One degree and one hour",
+          "description": "What a single thermostat degree and a single heating hour actually cost across a season — small levers, honestly sized.",
+          "transfer_check": "Compute, for your real home and tariff, the seasonal value of one degree of setback, and decide whether to take it."
+        },
+        {
+          "theme": "Reading your own usage curve",
+          "description": "Smart meter data and bill histories as a diary of the household — spotting the anomaly, the season and the habit in the graph.",
+          "transfer_check": "Chart a year of your real usage, annotate three features with their household causes, and flag one anomaly worth chasing."
+        },
+        {
+          "theme": "The tariff you are actually on",
+          "description": "Flat, time-of-use, prepay — what you are on, what you should be on, and switching without being switched.",
+          "transfer_check": "Identify your current tariff, price one realistic alternative against your real usage, and execute or justify declining the switch."
+        },
+        {
+          "theme": "The building you do not control",
+          "description": "Saving energy as a tenant or in a shared building: what you may change, what needs the landlord, and how to ask so it happens.",
+          "transfer_check": "Write and send (or fully draft) one well-evidenced efficiency request to a real landlord or building manager."
+        },
+        {
+          "theme": "The household energy budget",
+          "description": "Setting a target, assigning the levers, and reviewing monthly — energy as a managed budget rather than an arriving surprise.",
+          "transfer_check": "Set a costed reduction target for one real household, run it for a month, and publish the result against target."
+        }
+      ]
+    }
+  ]
+}

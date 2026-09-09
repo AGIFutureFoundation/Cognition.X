@@ -47,11 +47,14 @@ stable id. ✅
 
 **New packs (continue generating, same 250-block shape):**
 - [x] Food, Cooking & Nutrition — shipped in v0.4.0
-- Energy, Grid & the Home
-- Transport & Mobility
-- Emergency Preparedness & First Response
-- Arts, Making Media & Performance
-- Law, Contracts & Everyday Rights
+- [x] Energy, Grid & the Home — shipped in v0.5.0
+- [x] Transport & Mobility — shipped in v0.5.0
+- [x] Emergency Preparedness & First Response — shipped in v0.5.0
+- [x] Arts, Making Media & Performance — shipped in v0.5.0
+- [x] Law, Contracts & Everyday Rights — shipped in v0.5.0
+
+All Phase 1 candidate packs are shipped; further packs come through the
+community proposal route (see `docs/wiki/Authoring-Packs.md`).
 
 **Exit criteria:** zero empty fields dataset-wide; ≥2 packs
 standards-mapped; validator extended to rubric and mapping checks.

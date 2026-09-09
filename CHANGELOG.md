@@ -4,6 +4,24 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.5.0] — 2026-09-09
+
+### Added
+- Five new community packs (250 blocks each, 5 tracks × 10 themes × 5
+  bands), completing the roadmap Phase 1 candidate list:
+  - **Energy, Grid & the Home** — home electricity, heating/cooling,
+    grid literacy, water/gas utilities, energy efficiency
+  - **Transport & Mobility** — transit navigation, cycling & bike
+    mechanics, car ownership, road safety, journey planning
+  - **Emergency Preparedness & First Response** — household readiness,
+    lay first aid, fire safety, natural hazards, community response
+  - **Arts, Making Media & Performance** — drawing & visual craft,
+    music, camera & editing, stage & speech, design & making
+  - **Law, Contracts & Everyday Rights** — the legal system, contracts,
+    consumer rights, workplace rights, citizen & state
+- Canonical totals: **8,500 blocks · 32 packs · 125 tracks · 432
+  credentials**.
+
 ## [0.4.0] — 2026-09-09
 
 ### Added

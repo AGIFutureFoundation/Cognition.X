@@ -1,0 +1,291 @@
+{
+  "pack": "Law, Contracts & Everyday Rights",
+  "notes": "Community pack, roadmap Phase 1 candidate. 5 tracks x 10 themes x 5 grade bands = 250 blocks. Expanded by tools/generate_pack.py.",
+  "tracks": [
+    {
+      "name": "Law: the system you already live in",
+      "prefix": "LW",
+      "credential": "Legal Navigator",
+      "themes": [
+        {
+          "theme": "Where rules come from",
+          "description": "Constitutions, statutes, regulations, case law and bylaws — the layers of law and which one governs the thing in front of you.",
+          "transfer_check": "For one everyday rule that binds you, identify which layer of law it comes from and find its actual text."
+        },
+        {
+          "theme": "Civil versus criminal",
+          "description": "Who sues whom, who prosecutes, and why the same act can be both — the two systems' different players, standards and stakes.",
+          "transfer_check": "Sort five real scenarios into civil, criminal or both, naming the parties and the standard of proof for each."
+        },
+        {
+          "theme": "The courts, from the inside",
+          "description": "What courtrooms actually do all day — the hierarchy, who the people in it are, and what an ordinary hearing looks like.",
+          "transfer_check": "Observe a real public hearing (in person or official stream) and report who did what, in the correct terms."
+        },
+        {
+          "theme": "Finding the actual rule",
+          "description": "Legal research for civilians: official sources, current versions, and the difference between the law and a blog about the law.",
+          "transfer_check": "Answer one real legal question about your own life from primary official sources, citing the provision itself."
+        },
+        {
+          "theme": "Deadlines: the rights that expire",
+          "description": "Limitation periods, notice windows and appeal clocks — why being right runs out, and diarising the dates that matter.",
+          "transfer_check": "For three real claim types, find the applicable time limit where you live and compute the deadline from a given event date."
+        },
+        {
+          "theme": "Getting help you can afford",
+          "description": "Legal aid, law centres, pro bono, ombudsmen and fixed-fee clinics — the map of low-cost help and who qualifies.",
+          "transfer_check": "Map the free and low-cost legal help available for one problem type at your own address, with eligibility rules verified."
+        },
+        {
+          "theme": "The letter before action",
+          "description": "Setting out a grievance formally: facts, ask, deadline — the letter that resolves most disputes before any court sees them.",
+          "transfer_check": "Draft a complete letter before action for a real or realistic dispute, meeting the format a court would later respect."
+        },
+        {
+          "theme": "Small claims: court without the lawyers",
+          "description": "The small-claims track end to end — filing, fees, evidence bundles and the hearing where you speak for yourself.",
+          "transfer_check": "Prepare a complete mock small claim: forms filled, evidence bundled, and your three-minute case stated aloud."
+        },
+        {
+          "theme": "Mediation and the deal that beats the verdict",
+          "description": "Negotiated and mediated settlement — why most disputes should end in a room, not a courtroom, and how to settle well.",
+          "transfer_check": "Take one side of a role-played dispute through a structured mediation to a written settlement both sides sign."
+        },
+        {
+          "theme": "When the law itself is the problem",
+          "description": "Challenging rules: consultation responses, judicial review in outline, and the civic route from unjust rule to changed rule.",
+          "transfer_check": "Find one live consultation or proposed rule affecting you and submit (or fully draft) a reasoned formal response."
+        }
+      ]
+    },
+    {
+      "name": "The contract: promises with teeth",
+      "prefix": "CT",
+      "credential": "Contract Reader",
+      "themes": [
+        {
+          "theme": "When a promise becomes binding",
+          "description": "Offer, acceptance, consideration, intention — the ingredients that turn words into obligations, including the ones spoken aloud.",
+          "transfer_check": "Analyse five everyday exchanges and rule which formed a contract, naming the missing ingredient where none did."
+        },
+        {
+          "theme": "Reading before signing",
+          "description": "A method for real documents: parties, obligations, money, term, exit, liability — the six answers to extract from any contract.",
+          "transfer_check": "Extract the six-answer summary from a real contract you are actually subject to, in one page a friend could rely on."
+        },
+        {
+          "theme": "The clauses that bite",
+          "description": "Auto-renewal, unilateral change, arbitration, indemnity, liquidated damages — the standard traps and the flags they fly.",
+          "transfer_check": "Locate and explain three bite-clauses across real contracts or terms of service, and state what each costs you if triggered."
+        },
+        {
+          "theme": "Terms of service: the contract nobody reads",
+          "description": "What you actually agree to online — licences to your content, data terms, termination at will — and the summaries that surface it.",
+          "transfer_check": "Audit the terms of one service you use daily and report the three most consequential things you had agreed to unknowingly."
+        },
+        {
+          "theme": "Negotiating before ink",
+          "description": "What is negotiable (more than you think), asking in writing, and the walk-away number decided in advance.",
+          "transfer_check": "Negotiate one real agreement's term (price, date, clause) with the exchange documented, or run the full role-play to signed changes."
+        },
+        {
+          "theme": "Breach: when the other side fails",
+          "description": "Material versus minor breach, mitigation, and the remedies ladder from cure period to damages.",
+          "transfer_check": "For a real or case-study breach, classify it, state your mitigation duty, and draft the remedy demand in the right order."
+        },
+        {
+          "theme": "Getting out",
+          "description": "Cancellation rights, cooling-off periods, termination clauses and the exit executed cleanly versus the exit that costs you.",
+          "transfer_check": "Exit or mock-exit one real subscription or agreement using its own terms, on time, in writing, with proof retained."
+        },
+        {
+          "theme": "Deposits, guarantees and standing behind others",
+          "description": "Security deposits, guarantors and co-signing — the promises that activate when someone else fails.",
+          "transfer_check": "Explain a real guarantee or deposit's exact trigger and exposure, and advise a role-played friend asked to co-sign, with reasons."
+        },
+        {
+          "theme": "The informal deal with family and friends",
+          "description": "Loans to brothers, flats shared with friends — why the closest deals need the clearest writing, and the note that saves the relationship.",
+          "transfer_check": "Draft a fair one-page written agreement for a real or realistic informal arrangement between people who trust each other."
+        },
+        {
+          "theme": "Signing for the future: powers and wills",
+          "description": "Powers of attorney, advance decisions and wills — the documents that speak when you cannot, and what happens without them.",
+          "transfer_check": "Complete the will-and-powers checklist for a named adult: what exists, what is missing, and the exact route to fix one gap."
+        }
+      ]
+    },
+    {
+      "name": "The consumer: buying, returning, being made whole",
+      "prefix": "CO",
+      "credential": "Consumer Advocate",
+      "themes": [
+        {
+          "theme": "What you are owed when you buy",
+          "description": "Satisfactory quality, as described, fit for purpose — the rights attached to every purchase whether the shop likes it or not.",
+          "transfer_check": "For three real purchases, state the statutory rights attached to each and the remedy ladder if it fails."
+        },
+        {
+          "theme": "Returns: policy versus law",
+          "description": "The store's goodwill policy and your legal rights are different things — knowing which you are invoking and when each is stronger.",
+          "transfer_check": "Handle one real or staged return correctly, explicitly identifying whether you used policy or law, and why."
+        },
+        {
+          "theme": "The faulty thing",
+          "description": "Repair, replace, refund — the sequence, the burden of proof windows, and the evidence to gather before the second failure.",
+          "transfer_check": "Run a real or mock faulty-goods claim through the full sequence in writing, with the evidence file that wins it."
+        },
+        {
+          "theme": "Services that disappoint",
+          "description": "Reasonable care and skill — holding builders, salons, garages and installers to the standard, and pricing the put-right.",
+          "transfer_check": "Draft the complaint and remedy demand for a real or case-study substandard service, quantifying the cost to cure."
+        },
+        {
+          "theme": "Distance and doorstep buying",
+          "description": "Online, phone and doorstep purchases — the cooling-off rights, the return-shipping rules and the exceptions that surprise.",
+          "transfer_check": "Exercise (or fully mock) a cooling-off cancellation for an online purchase inside its window, with the notices done right."
+        },
+        {
+          "theme": "Chargebacks and paying protected",
+          "description": "Card protections, chargeback windows and why how you pay changes what you can recover when it goes wrong.",
+          "transfer_check": "File or fully draft one chargeback or card-protection claim with the transaction evidence assembled to standard."
+        },
+        {
+          "theme": "The complaint that gets results",
+          "description": "Escalation done properly: the right person, the factual timeline, the specific ask and the deadline — firm without fury.",
+          "transfer_check": "Write and send (or finalise) a real complaint with timeline, evidence, ask and deadline, and log the response against it."
+        },
+        {
+          "theme": "The ombudsman and the free referee",
+          "description": "Sector ombudsmen and ADR schemes — the free escalation most consumers never use, and how to hand them a winnable file.",
+          "transfer_check": "Identify the correct ombudsman for one real dispute type and prepare the complete referral file to its requirements."
+        },
+        {
+          "theme": "Scams dressed as sellers",
+          "description": "Fake shops, counterfeit goods, subscription traps and recovery scams — the purchase that was never a purchase.",
+          "transfer_check": "Autopsy one real scam listing or trap: mark its tells, state the reporting channels used, and the victim's actual recovery options."
+        },
+        {
+          "theme": "Debt collection and your actual obligations",
+          "description": "What collectors may and may not do, statute-barred debt, and the difference between owing and being harassed.",
+          "transfer_check": "Respond to a real or scripted collection letter correctly: verify the debt, know the rules the collector must follow, and draft the reply."
+        }
+      ]
+    },
+    {
+      "name": "Work: the deal behind the job",
+      "prefix": "WR",
+      "credential": "Workplace Rights Holder",
+      "themes": [
+        {
+          "theme": "Employee, worker, contractor",
+          "description": "The status categories, the rights attached to each, and the misclassification that quietly removes protections.",
+          "transfer_check": "Classify three real working arrangements (yours or case studies) by status and list two rights that change across them."
+        },
+        {
+          "theme": "The employment contract decoded",
+          "description": "Pay, hours, notice, probation, restrictive covenants — reading the job offer as the contract it is.",
+          "transfer_check": "Produce the six-answer summary of a real employment contract or offer, flagging any clause you would question before signing."
+        },
+        {
+          "theme": "Wages: getting what was promised",
+          "description": "Minimum wage arithmetic, payslip reading, unlawful deductions and the overtime that never appears.",
+          "transfer_check": "Audit a real payslip against contract and law — rate, hours, deductions — and draft the query for any discrepancy found."
+        },
+        {
+          "theme": "Hours, breaks and saying no",
+          "description": "Working time limits, rest rights and the pressure to be always available — the boundaries the law already drew.",
+          "transfer_check": "Compare one real working pattern to the applicable limits and rest rights, and script the conversation any breach requires."
+        },
+        {
+          "theme": "Leave: the time that is yours",
+          "description": "Holiday, sickness, parental and carer leave — what accrues, what needs notice and what cannot be refused.",
+          "transfer_check": "Compute a real worker's leave entitlement for the year and correctly process (or mock) one request and one sickness absence."
+        },
+        {
+          "theme": "Discrimination and the protected ground",
+          "description": "The protected characteristics, direct and indirect discrimination, and reasonable adjustment as a right rather than a favour.",
+          "transfer_check": "Analyse two case-study workplace scenarios: identify the protected ground, the discrimination type, and the remedy route for each."
+        },
+        {
+          "theme": "Harassment at work",
+          "description": "Naming it, logging it, reporting it — the evidence diary and the routes inside and beyond the employer.",
+          "transfer_check": "Build a correct incident log from a scripted harassment scenario and map its escalation route through and past the employer."
+        },
+        {
+          "theme": "Discipline and the fair process",
+          "description": "Investigations, hearings, accompaniment and appeals — what a fair procedure owes you when the employer moves against you.",
+          "transfer_check": "Role-play the employee side of a disciplinary hearing with a companion, exercising each procedural right at the correct moment."
+        },
+        {
+          "theme": "Losing the job",
+          "description": "Notice, redundancy rules, unfair dismissal and the settlement agreement — the endings, and the rights attached to each.",
+          "transfer_check": "For one real or case-study dismissal, determine its type, the entitlements owed, and the challenge deadline, with the first letter drafted."
+        },
+        {
+          "theme": "Organising: rights in numbers",
+          "description": "Unions, collective bargaining and protected activity — what workers may lawfully do together and how that changes the deal.",
+          "transfer_check": "Find the recognised union or body for one real workplace and explain what protected steps starting to organise there would involve."
+        }
+      ]
+    },
+    {
+      "name": "The citizen and the state",
+      "prefix": "CZ",
+      "credential": "Rights Bearer",
+      "themes": [
+        {
+          "theme": "Your rights have names",
+          "description": "The charter, constitution or convention where you live — the actual named rights, and what each does and does not protect.",
+          "transfer_check": "For your own jurisdiction, list the instrument and five named rights, matching each to one real situation it governs."
+        },
+        {
+          "theme": "Stopped by the police",
+          "description": "Stop, search and questioning — what officers may require, what you must provide, and the calm scripts that protect everyone.",
+          "transfer_check": "Role-play two police encounters correctly: state your actual obligations, exercise your actual rights, and note the record to make after."
+        },
+        {
+          "theme": "Arrest and the hours that follow",
+          "description": "The caution, the phone call, the duty lawyer and the custody clock — the rights that exist precisely when you are least able to look them up.",
+          "transfer_check": "Recite and apply the post-arrest rights sequence for your jurisdiction in a staged scenario, including invoking the duty lawyer."
+        },
+        {
+          "theme": "Protest and the public square",
+          "description": "Assembly and speech rights, notification rules, police powers at protests and the line where protection ends.",
+          "transfer_check": "Plan a lawful demonstration for a cause: the notifications, the rules on route and sound, and the legal-observer arrangements."
+        },
+        {
+          "theme": "Your file: what the state holds",
+          "description": "Records access rights — police records, agency files, credit and health data — and the request that opens them.",
+          "transfer_check": "Submit (or fully prepare) one real access request to a public body for your own records, to its formal requirements."
+        },
+        {
+          "theme": "The official decision against you",
+          "description": "Benefits refused, permits denied, fines issued — reading the decision letter, the reasons, and the review and appeal ladder.",
+          "transfer_check": "Take one real or case-study adverse decision and draft the first-stage challenge inside its deadline, addressing the stated reasons."
+        },
+        {
+          "theme": "Voting and the machinery of elections",
+          "description": "Registration, eligibility, the ballot's journey and the count — the process behind the cross in the box.",
+          "transfer_check": "Verify your own registration, explain your ballot's path from booth to count, and correctly handle one edge case (moving, absence, spoiled paper)."
+        },
+        {
+          "theme": "Jury service and the citizen's bench",
+          "description": "Selection, duties, deliberation and the juror's oath — the one week the justice system runs on you.",
+          "transfer_check": "From a case summary, deliberate in a mock jury to a verdict, applying the standard of proof and the judge's directions."
+        },
+        {
+          "theme": "The border and the status",
+          "description": "Citizenship, residence and visas in outline — what status determines, and helping someone find competent immigration help.",
+          "transfer_check": "For one case-study person, identify what their status allows and bars, and locate the regulated adviser route for their question."
+        },
+        {
+          "theme": "Holding power to account",
+          "description": "Freedom of information, public meetings, complaints against officials and the press — the accountability toolkit in civilian hands.",
+          "transfer_check": "File (or fully draft) one real freedom-of-information request on a matter you care about, scoped so it cannot be refused as too broad."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "pack": "Transport & Mobility",
+  "notes": "Community pack, roadmap Phase 1 candidate. 5 tracks x 10 themes x 5 grade bands = 250 blocks. Expanded by tools/generate_pack.py.",
+  "tracks": [
+    {
+      "name": "Moving through the city without a car",
+      "prefix": "TM",
+      "credential": "City Navigator",
+      "themes": [
+        {
+          "theme": "Reading a network map",
+          "description": "Lines, interchanges and frequency — a transit map as a graph of what is actually reachable, and what the map exaggerates.",
+          "transfer_check": "Plan and complete (or fully paper-run) a three-leg journey on a real network using only its map and timetable."
+        },
+        {
+          "theme": "Fares, passes and the cheapest way in",
+          "description": "Singles, caps, passes and concessions — pricing a month of real travel and the discounts people never claim.",
+          "transfer_check": "Price one month of your actual journeys three ways and identify the cheapest legitimate option, including any concession you qualify for."
+        },
+        {
+          "theme": "The timetable and the truth",
+          "description": "Scheduled versus real service, live trackers, and building the buffer that makes you on time without waiting your life away.",
+          "transfer_check": "Compare scheduled and actual arrivals for one route across five observations and derive the buffer you would actually use."
+        },
+        {
+          "theme": "The last mile",
+          "description": "The gap between the stop and the door — walking routes, shared bikes and scooters, and judging each option's real cost and risk.",
+          "transfer_check": "Solve one real last-mile problem two different ways and compare them on time, cost and safety."
+        },
+        {
+          "theme": "Travelling with wheels, bags and small people",
+          "description": "Buggies, luggage, wheelchairs and toddlers on transit — the accessible routes, the boarding rules and the etiquette that matters.",
+          "transfer_check": "Plan a fully step-free journey on a real network for a named passenger with a mobility constraint, verifying each link's accessibility."
+        },
+        {
+          "theme": "Night travel and the safety calculus",
+          "description": "Late services, lit routes, staffed stations and the trade-offs people quietly make — planning night moves deliberately.",
+          "transfer_check": "Plan a late-night journey home from a real venue with a primary and a fallback, and state the safety reasoning for each choice."
+        },
+        {
+          "theme": "When the service falls over",
+          "description": "Strikes, closures, stranded platforms — rerouting in the moment and knowing your rights to refunds and alternatives.",
+          "transfer_check": "Given a real or staged disruption, produce a reroute within ten minutes and file (or fully draft) the refund claim the rules allow."
+        },
+        {
+          "theme": "Intercity: coach, rail and the booking game",
+          "description": "Advance fares, split tickets, railcards and the hour when prices change — long-distance travel bought well.",
+          "transfer_check": "Price one real intercity trip three ways at two booking horizons and document the cheapest defensible combination."
+        },
+        {
+          "theme": "Taxis, rideshare and the meter",
+          "description": "When a cab is the right tool, estimating a fare before riding, surge pricing, and the licensed-versus-unlicensed line.",
+          "transfer_check": "Estimate a real taxi/rideshare fare before booking, compare the actual, and verify the vehicle and driver checks you should always make."
+        },
+        {
+          "theme": "Your personal mobility budget",
+          "description": "Time, money and energy across all modes — auditing how you actually move and redesigning the pattern on evidence.",
+          "transfer_check": "Log every journey for one week with time and cost, then redesign your default mode for one regular trip and trial it."
+        }
+      ]
+    },
+    {
+      "name": "The bicycle and its cousins",
+      "prefix": "BK",
+      "credential": "Rider Mechanic",
+      "themes": [
+        {
+          "theme": "The machine under you",
+          "description": "Frame, drivetrain, brakes, contact points — naming the parts and knowing which failures stop a ride versus end one.",
+          "transfer_check": "Identify every major component on a real bike and classify five common faults as ride-on, fix-first or walk-home."
+        },
+        {
+          "theme": "The M-check before you roll",
+          "description": "The two-minute pre-ride inspection — brakes, wheels, headset, drivetrain — that catches most mechanical surprises.",
+          "transfer_check": "Perform a full M-check on a real bike, find the planted or genuine fault, and fix or flag it correctly."
+        },
+        {
+          "theme": "Fixing the flat",
+          "description": "Removing a wheel, finding the cause, patching or replacing the tube, and getting the wheel back on straight.",
+          "transfer_check": "Repair a real puncture end to end, including finding what caused it, and ride the result."
+        },
+        {
+          "theme": "Brakes and gears that actually work",
+          "description": "Cable tension, pad wear and indexing — the two adjustments that transform most neglected bikes.",
+          "transfer_check": "Adjust the brakes and index the gears on a real bike until both pass a named performance test."
+        },
+        {
+          "theme": "Riding in traffic",
+          "description": "Road position, eye contact, the door zone and the left-turning lorry — the defensive craft of city cycling.",
+          "transfer_check": "Ride (or walk-and-narrate) a real urban route, calling out position choices and the two highest-risk conflict points."
+        },
+        {
+          "theme": "Locks, theft and keeping the bike",
+          "description": "Lock types, locking technique, registration and where bikes actually get stolen — defence in depth for a parked bike.",
+          "transfer_check": "Lock a real bike correctly in a public rack, register its frame number, and critique three locking jobs you find nearby."
+        },
+        {
+          "theme": "Carrying things and people",
+          "description": "Racks, panniers, trailers and child seats — turning a bike into a vehicle that does errands.",
+          "transfer_check": "Complete a real shopping or school-run trip by bike with the load properly mounted, and report what worked and what shifted."
+        },
+        {
+          "theme": "The electric assist",
+          "description": "E-bikes and e-scooters: motors, range reality, charging safely (the battery fire problem), and the laws that differ by vehicle.",
+          "transfer_check": "For one real e-vehicle, state its legal class and rules where you live, and demonstrate or describe its safe charging setup."
+        },
+        {
+          "theme": "Weather, night and the visible rider",
+          "description": "Lights, reflectives, rain technique and ice honesty — extending the riding year without extending the risk.",
+          "transfer_check": "Equip a real bike for legal, effective night riding and demonstrate the visibility difference from a driver's viewpoint."
+        },
+        {
+          "theme": "The service schedule",
+          "description": "What wears on a bike, the maintenance calendar, and the jobs worth paying a shop to do.",
+          "transfer_check": "Write and begin the twelve-month maintenance plan for a real bike, performing this month's items yourself."
+        }
+      ]
+    },
+    {
+      "name": "The car: owning, running, letting go",
+      "prefix": "CR",
+      "credential": "Car Custodian",
+      "themes": [
+        {
+          "theme": "What a car really costs",
+          "description": "Depreciation, insurance, fuel, maintenance, parking — total cost of ownership versus the sticker that gets all the attention.",
+          "transfer_check": "Compute the honest annual cost of one real car (or a planned one) and its cost per kilometre against the alternatives."
+        },
+        {
+          "theme": "Buying used without being had",
+          "description": "History checks, the walk-around, the test drive script and the seller's silences — inspecting value instead of paint.",
+          "transfer_check": "Run a full pre-purchase inspection on a real used car (or an accompanied case), including its documented history, and deliver a buy/walk verdict."
+        },
+        {
+          "theme": "The fluids and the five-minute check",
+          "description": "Oil, coolant, brake fluid, washer, tyres — the monthly bonnet-up routine that prevents the expensive surprise.",
+          "transfer_check": "Perform the complete fluid-and-tyre check on a real car and correct or top up at least one item found low."
+        },
+        {
+          "theme": "Tyres: the only part touching the road",
+          "description": "Pressure, tread, age and the legal limits — and what each says about how the car is being used.",
+          "transfer_check": "Measure pressure and tread on all tyres of a real car, adjust to specification, and judge each tyre's remaining life."
+        },
+        {
+          "theme": "Warning lights and the sounds of trouble",
+          "description": "Which dashboard lights mean stop now, which mean soon, and describing a noise so a mechanic can hear it too.",
+          "transfer_check": "Classify ten real warning lights by urgency from the handbook, and write one fault description a garage could diagnose from."
+        },
+        {
+          "theme": "The garage relationship",
+          "description": "Getting quotes, understanding the invoice, declining the upsell and knowing fair prices for common jobs.",
+          "transfer_check": "Obtain two quotes for one real repair or service, compare them line by line, and negotiate or choose with reasons stated."
+        },
+        {
+          "theme": "Insurance, claims and the day it goes wrong",
+          "description": "Cover levels, excesses, the at-the-scene checklist and the claim that gets paid because the evidence was gathered.",
+          "transfer_check": "Rehearse the full collision-scene procedure — safety, photos, details, admissions avoided — and file a complete mock claim."
+        },
+        {
+          "theme": "Breakdowns and the hard shoulder",
+          "description": "Where to stop, when to exit the vehicle, warning others and waiting safely — the breakdown as a safety event first.",
+          "transfer_check": "Walk through a staged breakdown on three road types and state the correct positioning, signals and calls for each."
+        },
+        {
+          "theme": "Sharing, renting, borrowing",
+          "description": "Car clubs, rentals and the borrowed car — insurance realities, damage walk-arounds and the deposits that vanish.",
+          "transfer_check": "Complete a real or mock rental including the documented walk-around, and identify the two contract clauses most likely to cost you."
+        },
+        {
+          "theme": "Do you even need it",
+          "description": "The annual review: kilometres driven, cost per trip, and the honest comparison against a life with fewer or no cars.",
+          "transfer_check": "Run the keep/replace/sell analysis for one real household car with a year's actual usage data, and present the recommendation."
+        }
+      ]
+    },
+    {
+      "name": "Roads shared: safety for every user",
+      "prefix": "RS",
+      "credential": "Road Guardian",
+      "themes": [
+        {
+          "theme": "Crossing as a skill",
+          "description": "Sightlines, parked-car screens, signal phases and the crossing choices that fail — pedestrian craft taken seriously at every age.",
+          "transfer_check": "Assess three real crossing points near a school or home, rank their risk with reasons, and demonstrate the safest use of the worst one."
+        },
+        {
+          "theme": "Speed and what it does",
+          "description": "Stopping distances, survival curves and why 30 versus 50 is the difference between an injury and a funeral.",
+          "transfer_check": "Compute stopping distances at three speeds for a real road and match each against its actual sightlines and crossings."
+        },
+        {
+          "theme": "The blind spots of big vehicles",
+          "description": "Trucks, buses and the zones where a person disappears — positioning around large vehicles as a survival rule.",
+          "transfer_check": "From a parked large vehicle's driver seat (or accurate diagram), map its blind zones and demonstrate the safe positions around it."
+        },
+        {
+          "theme": "Distraction: the phone in the hand",
+          "description": "What attention actually is on the road, the seconds a glance costs at speed, and the norms shifting around it.",
+          "transfer_check": "Measure reaction-time degradation under distraction in a safe simulated task and translate the result into metres at road speed."
+        },
+        {
+          "theme": "Impairment: alcohol, drugs, exhaustion",
+          "description": "What each does to driving, the limits and the myths, and stopping an impaired person from driving without a fight.",
+          "transfer_check": "Rehearse and script the intervention that takes keys from an impaired driver, and state the legal limits and alternatives where you live."
+        },
+        {
+          "theme": "Children near roads",
+          "description": "Why children misjudge speed and distance, the walking-bus and the taught routines that build safe pedestrians.",
+          "transfer_check": "Design and walk a safe school route for a real child, teaching them its three decision points and testing their recall."
+        },
+        {
+          "theme": "Seatbelts, helmets and child seats",
+          "description": "Restraints fitted right — the belt path, the helmet angle, the child seat stages — and the fittings that silently fail.",
+          "transfer_check": "Fit and verify one real restraint (child seat, helmet or belt) against its manual, and find the deliberate or genuine fitting error."
+        },
+        {
+          "theme": "First on scene",
+          "description": "Arriving at a road collision: scene safety, the call that gets the right response, and what to do and not do before help arrives.",
+          "transfer_check": "Run a full staged first-on-scene response — protect, assess, call, assist — narrating each decision in order."
+        },
+        {
+          "theme": "Reading a street's design",
+          "description": "Widths, corners, crossings and parking as decisions someone made — why some streets calm traffic and others invite it.",
+          "transfer_check": "Audit one real street for design-induced risk and propose two concrete changes with the evidence behind each."
+        },
+        {
+          "theme": "Getting a road fixed",
+          "description": "Reporting hazards, the authority responsible, and the campaign that turns a dangerous junction into an agenda item.",
+          "transfer_check": "Report one real road hazard through the official channel and draft the follow-up escalation to the responsible authority."
+        }
+      ]
+    },
+    {
+      "name": "Journeys: planning, rights and the wider world",
+      "prefix": "JP",
+      "credential": "Journey Planner",
+      "themes": [
+        {
+          "theme": "The trip as a project",
+          "description": "Route, timing, fallbacks and the single sheet that holds a journey together when the phone dies.",
+          "transfer_check": "Produce the one-page plan for a real multi-leg journey — times, references, fallbacks, contacts — and travel (or simulate) from it alone."
+        },
+        {
+          "theme": "Documents and the border",
+          "description": "Passports, visas, validity windows and the checks that happen before the airport — paperwork as the first leg of the trip.",
+          "transfer_check": "For a real or chosen destination, compile the full document checklist for a named traveller and verify each item's validity dates."
+        },
+        {
+          "theme": "Money on the move",
+          "description": "Cards abroad, exchange margins, the ATM decline at midnight — and the backup layer that keeps a trip alive.",
+          "transfer_check": "Design the payment setup for a real trip — primary, backup, emergency cash — and state the fees each choice carries."
+        },
+        {
+          "theme": "Luggage: what actually comes",
+          "description": "Packing lists, weight limits and the things you cannot carry — travelling with everything needed and nothing dragged.",
+          "transfer_check": "Pack for a defined real trip within an airline's actual limits, justify every item, and pass a prohibited-items check."
+        },
+        {
+          "theme": "Delays, cancellations and your rights",
+          "description": "Compensation regimes, rerouting duties and the difference between what carriers owe and what they offer.",
+          "transfer_check": "For one real or case-study disruption, determine the passenger's actual entitlement under the applicable rules and draft the claim."
+        },
+        {
+          "theme": "Health on the road",
+          "description": "Vaccinations, medication across borders, travel insurance that pays, and the clinic-finding skill in an unfamiliar place.",
+          "transfer_check": "Build the health plan for a real destination — jabs, meds paperwork, insurance terms verified, nearest care mapped."
+        },
+        {
+          "theme": "Arriving somewhere you cannot read",
+          "description": "Navigation without the language: scripts, transliteration, offline maps and the phrases that move you.",
+          "transfer_check": "Navigate a planned route using a map and transport system in a language you do not speak (real or faithfully simulated), documenting each solved obstacle."
+        },
+        {
+          "theme": "The risks worth planning for",
+          "description": "Petty theft, scams aimed at travellers, and the registered-itinerary habit — proportionate caution without paranoia.",
+          "transfer_check": "Write the risk plan for a real trip: top three realistic risks, the mitigation for each, and who holds your itinerary."
+        },
+        {
+          "theme": "Travelling lighter on the world",
+          "description": "The emissions ladder of travel modes, honest offsetting, and the trip design that trades little joy for much carbon.",
+          "transfer_check": "Compute the footprint of one real planned trip two ways (as planned, redesigned) and decide with the numbers in view."
+        },
+        {
+          "theme": "The journey you organise for others",
+          "description": "Leading a group move — the school trip, the family visit, the team away-day — where the planner owns everyone's contingencies.",
+          "transfer_check": "Plan and run (or fully rehearse) a group journey for four or more, including the briefing, the rally points and the lost-person procedure."
+        }
+      ]
+    }
+  ]
+}
