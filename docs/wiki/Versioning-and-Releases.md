@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.6.0** | First legacy-track localization: *Civic Leadership Legacy : Louisiana* (250 blocks, Willie L. Brown Jr. Institute model) — dataset at 8,750 blocks / 33 packs |
+| **v0.7.0** | Flow Hub app: flow-state engine, session agents, credential ledger — built from the dataset by the Phase 2 pipeline pattern |
+| v0.6.0 | First legacy-track localization: *Civic Leadership Legacy : Louisiana* (250 blocks, Willie L. Brown Jr. Institute model) — dataset at 8,750 blocks / 33 packs |
 | v0.5.0 | Five community packs (Energy, Transport, Emergency, Arts, Law — 1,250 blocks), completing the Phase 1 candidate list — dataset at 8,500 blocks / 32 packs |
 | v0.4.0 | *Food, Cooking & Nutrition* pack (250 blocks) — dataset at 7,250 blocks / 27 packs |
 | v0.3.0 | First repo release: structure, CI, canonical dataset (7,000 blocks) with stable ids, *Digital Life, Data & AI* pack, docs/roadmap/wiki, dual licensing |

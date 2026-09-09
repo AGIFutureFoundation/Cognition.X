@@ -17,6 +17,7 @@ The repository carries three things:
 |---|---|---|
 | The blocks dataset (8,750 blocks, 33 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
+| The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
 
 ## Quick start
@@ -28,9 +29,12 @@ python3 -c "import csv; rows=list(csv.DictReader(open('data/blocks.csv'))); prin
 # Validate it
 python3 tools/validate_blocks.py
 
-# Open the app (no server or network needed)
-open apps/education-os/index.html        # macOS
-xdg-open apps/education-os/index.html    # Linux
+# Open the apps (no server needed)
+open apps/education-os/index.html        # macOS (xdg-open on Linux)
+open apps/flow-hub/index.html            # flow engine + agents, built from the dataset
+
+# Rebuild Flow Hub after dataset changes
+python3 tools/build_flow_hub.py
 ```
 
 ## The data model in one paragraph
