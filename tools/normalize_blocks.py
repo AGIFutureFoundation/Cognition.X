@@ -62,6 +62,7 @@ PACK_SLUGS = {
     "Cognition.X : Sapient OS": "SAPIENT",
     "Non-Profit Practice": "NPO",
     "Digital Life, Data & AI": "DIGITAL",
+    "Food, Cooking & Nutrition": "FOOD",
 }
 
 

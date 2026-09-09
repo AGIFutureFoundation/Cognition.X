@@ -1,0 +1,291 @@
+{
+  "pack": "Food, Cooking & Nutrition",
+  "notes": "Community pack, roadmap Phase 1 candidate #1. 5 tracks x 10 themes x 5 grade bands = 250 blocks. Expanded by tools/generate_pack.py.",
+  "tracks": [
+    {
+      "name": "The kitchen and the tools in it",
+      "prefix": "KT",
+      "credential": "Kitchen Hand",
+      "themes": [
+        {
+          "theme": "A kitchen you can find things in",
+          "description": "Stations, storage and why every working kitchen puts the knife, the board and the bin within one step of each other.",
+          "transfer_check": "Reorganise one real kitchen work area so a named dish can be made without crossing the room, and show the before and after."
+        },
+        {
+          "theme": "The knife and the hand that holds it",
+          "description": "Grip, claw, board stability and the three cuts that cover most of cooking.",
+          "transfer_check": "Demonstrate the claw grip and produce even slices, dice and rough chop from real vegetables."
+        },
+        {
+          "theme": "Heat: what pans and ovens actually do",
+          "description": "Conduction, radiant heat and preheating — why the pan matters more than the recipe line that names it.",
+          "transfer_check": "Cook the same ingredient in a cold-start and a preheated pan and explain the difference you can see and taste."
+        },
+        {
+          "theme": "Fire, burns and the kitchen that bites",
+          "description": "Pan fires, steam, hot sugar and the responses that must be automatic before they are needed.",
+          "transfer_check": "Walk a real kitchen and state, for each hazard found, the correct first response — including why water never goes on an oil fire."
+        },
+        {
+          "theme": "Clean as you go",
+          "description": "The wash-rinse-sanitise order, cloths that spread rather than clean, and leaving a station ready for the next person.",
+          "transfer_check": "Cook one simple dish and finish with the station inspection-clean, narrating the order you cleaned in and why."
+        },
+        {
+          "theme": "Cold: the fridge as a system",
+          "description": "Cold chain, shelf order, and why raw meat lives at the bottom.",
+          "transfer_check": "Audit a real fridge against safe shelf order and temperature, fix what is wrong, and log what you changed."
+        },
+        {
+          "theme": "Measuring, tasting, adjusting",
+          "description": "Weights beat cups, tasting is a step not a treat, and salt-acid-fat-heat as the levers of adjustment.",
+          "transfer_check": "Season a bland base (soup or grain) to genuinely good by iterating taste-adjust-taste, recording each move you made."
+        },
+        {
+          "theme": "The recipe as a plan, not a script",
+          "description": "Reading a recipe once through, mise en place, and knowing which lines are law and which are suggestion.",
+          "transfer_check": "Prepare full mise en place for a new recipe, then cook it without re-reading, marking beforehand the two lines that must not be improvised."
+        },
+        {
+          "theme": "Tools you do not need",
+          "description": "What a knife, a pan and a pot replace, and how to judge a gadget before it takes the drawer.",
+          "transfer_check": "Cook a dish 'as seen' that normally uses a specialised gadget, using only basic tools, and compare results."
+        },
+        {
+          "theme": "A meal from a bare cupboard",
+          "description": "The pantry backbone — grain, allium, fat, acid, tinned protein — and building dinner when there is 'nothing in'.",
+          "transfer_check": "Cook a complete meal using only what is already in a real cupboard, listing what you used and what the meal cost."
+        }
+      ]
+    },
+    {
+      "name": "What food is: nutrition without the noise",
+      "prefix": "NU",
+      "credential": "Nutrition Reader",
+      "themes": [
+        {
+          "theme": "Energy, and where it hides",
+          "description": "Calories as fuel, portion reality versus package fiction, and the drinks that are meals.",
+          "transfer_check": "Estimate the energy in one of your own typical days, then check against labels and a reference and report where you were most wrong."
+        },
+        {
+          "theme": "Protein, and who needs how much",
+          "description": "What protein is for, the plant and animal sources, and need across childhood, training, pregnancy and old age.",
+          "transfer_check": "Plan one real day of meals that meets the protein need of a named person unlike yourself, with sources shown."
+        },
+        {
+          "theme": "Carbohydrates: the fast and the slow",
+          "description": "Whole versus refined, fibre as the difference, and why the same sugar behaves differently inside an apple and a soda.",
+          "transfer_check": "Swap one refined staple in your week for a whole version and record the swap's cost, taste and how it held your hunger."
+        },
+        {
+          "theme": "Fats: needed, chosen, hidden",
+          "description": "Cooking fats, essential fats and the fats that arrive uninvited in packaged food.",
+          "transfer_check": "Find the fat content and type in five packaged foods you actually eat and rank them against what you assumed."
+        },
+        {
+          "theme": "Reading a label in twenty seconds",
+          "description": "Per-100g versus per-portion, the ingredient list as a story told in descending order, and the claims on the front that mean nothing.",
+          "transfer_check": "Given two competing products, pick the better one using only the label, and defend the pick in four sentences."
+        },
+        {
+          "theme": "Vitamins, minerals and the short list that runs low",
+          "description": "Iron, iodine, B12, vitamin D and calcium — who actually runs short, and the foods that fix it before pills do.",
+          "transfer_check": "For a named diet (vegan, low-dairy, low-sun), identify the likely gap and plan a week of real foods that closes it."
+        },
+        {
+          "theme": "Water, caffeine and what you drink all day",
+          "description": "Hydration reality versus myth, caffeine's arc through a day, and the quiet calories in what pours.",
+          "transfer_check": "Log everything you drink for three days and redesign the pattern with one change you can keep."
+        },
+        {
+          "theme": "Ultra-processed: what the term actually marks",
+          "description": "The formulation-versus-food distinction, why these products are engineered to be easy to keep eating, and where the evidence stands.",
+          "transfer_check": "Sort a week of your own shopping into whole, processed and ultra-processed, and name the one swap with the best effort-to-benefit ratio."
+        },
+        {
+          "theme": "Diets, claims and who profits",
+          "description": "Reading a nutrition claim like a Signal Reader: the study behind the headline, the influencer's sponsor, the before-after photo.",
+          "transfer_check": "Take one current diet claim from your feed, trace its evidence, and deliver a verdict a friend could act on."
+        },
+        {
+          "theme": "Eating patterns that hold",
+          "description": "Why patterns beat rules: regular meals, plates built around plants and protein, and change that survives a bad week.",
+          "transfer_check": "Design one realistic weekly eating pattern for yourself, follow it for a week, and report what held and what needs redesign."
+        }
+      ]
+    },
+    {
+      "name": "Feeding people: planning, budget and the shop",
+      "prefix": "FP",
+      "credential": "Household Provisioner",
+      "themes": [
+        {
+          "theme": "The week on one page",
+          "description": "Meal planning that survives reality: anchor meals, flex nights and the leftovers written into the plan.",
+          "transfer_check": "Write a one-page plan for a real week, cook it, and mark what the plan got wrong for next time."
+        },
+        {
+          "theme": "The list, and the shop that follows it",
+          "description": "Building a list from the plan, the store's layout as persuasion, and endcaps designed to break your budget.",
+          "transfer_check": "Do one real shop from a written list, note every deviation and what triggered it, and total the cost of the deviations."
+        },
+        {
+          "theme": "Price per unit, not price per package",
+          "description": "Unit pricing, brand ladders and when the big pack is actually the expensive one.",
+          "transfer_check": "In a real aisle, find three cases where the obvious choice loses on unit price, with photos or figures."
+        },
+        {
+          "theme": "Feeding four for less",
+          "description": "The cheap backbone proteins and grains, stretching meat, and the cuisines that mastered low-cost cooking long ago.",
+          "transfer_check": "Cook a family-sized meal under a set per-head budget and publish the costed recipe."
+        },
+        {
+          "theme": "Cooking once, eating thrice",
+          "description": "Batch cooking, the fridge-freezer relay, and containers that make leftovers get eaten instead of feared.",
+          "transfer_check": "Batch-cook one base and serve it as three genuinely different meals across a week."
+        },
+        {
+          "theme": "Waste: the food you paid for and threw away",
+          "description": "Date labels decoded (use-by versus best-before), storage that extends life, and the bin audit that changes behaviour.",
+          "transfer_check": "Audit one week of a real household's discarded food, price it, and change two storage or planning habits in response."
+        },
+        {
+          "theme": "The seasons and the price of distance",
+          "description": "Why produce has a season and a price curve, and what freezing and tinning preserve of it.",
+          "transfer_check": "Compare the price and origin of one vegetable across fresh-in-season, fresh-out-of-season, frozen and tinned, and pick a policy for your household."
+        },
+        {
+          "theme": "Feeding people who eat differently",
+          "description": "Allergy, faith, choice and medical diets at one table — planning one meal that works for everyone without cooking four dinners.",
+          "transfer_check": "Plan and cook one meal that safely serves a real mixed table (including one allergy or restriction), and explain your cross-contact controls."
+        },
+        {
+          "theme": "When money runs short before the week does",
+          "description": "Food banks, community meals, benefits that cover food, and cooking through a genuinely empty stretch with dignity.",
+          "transfer_check": "Map the food support within reach of your own address — eligibility, hours, what to bring — into a half-page guide someone could use tomorrow."
+        },
+        {
+          "theme": "Hosting: the meal as an event",
+          "description": "Scaling a recipe, the timeline written backwards from sitting down, and the dishes that let the host be at their own table.",
+          "transfer_check": "Host a real meal for four or more: publish your backwards timeline and serve everything within fifteen minutes of plan."
+        }
+      ]
+    },
+    {
+      "name": "Safety: from market to plate",
+      "prefix": "FS",
+      "credential": "Food Safety Steward",
+      "themes": [
+        {
+          "theme": "The invisible passengers",
+          "description": "Bacteria, viruses and toxins in food — which ones cause most illness, and the four controls (clean, separate, cook, chill) that stop them.",
+          "transfer_check": "For one real meal you cook, name the hazard most likely present at each step and the control you applied."
+        },
+        {
+          "theme": "Temperature: the danger zone",
+          "description": "The 5–60°C band, safe internal temperatures by food, and why a thermometer beats every rule of thumb.",
+          "transfer_check": "Cook a protein to its safe internal temperature verified with a real thermometer, and chart the cooling of the leftovers into safe storage."
+        },
+        {
+          "theme": "Cross-contact and the separate board",
+          "description": "Raw-to-ready pathways: boards, cloths, hands and the sink itself as the crossing points.",
+          "transfer_check": "Prepare a raw-meat dish and a salad in one session with demonstrably zero cross-contact, narrating your controls."
+        },
+        {
+          "theme": "Hands, hair and being clean enough to cook",
+          "description": "When handwashing actually matters, gloves as false comfort, and cooking while ill.",
+          "transfer_check": "Demonstrate the full handwash at the moments that require it during one cooking session, and name the two moments people skip."
+        },
+        {
+          "theme": "Leftovers: the second life of a meal",
+          "description": "Cooling fast, reheating hot, the counting of days, and the foods that do not get a second chance (rice included).",
+          "transfer_check": "Take real leftovers through cool-store-reheat with times and temperatures logged, and bin-or-keep three fridge items with reasons."
+        },
+        {
+          "theme": "Allergens: the eight that matter most",
+          "description": "The major allergens, reading them off labels and menus, and why 'a little bit' is not safe.",
+          "transfer_check": "Screen a real packaged meal and a restaurant menu for a named allergen, including the may-contain judgement call."
+        },
+        {
+          "theme": "Preserving: the old technologies",
+          "description": "Salt, sugar, acid, heat and cold — how jam, pickles and tins actually work, and where home preserving goes dangerous (botulism and the low-acid jar).",
+          "transfer_check": "Make one safe high-acid preserve with correct process, and explain why the same jar of green beans would need a pressure canner."
+        },
+        {
+          "theme": "Water you can cook with",
+          "description": "When tap water is the standard, when it is not (advisories, travel, wells), and making water safe.",
+          "transfer_check": "Find your own water supplier's latest quality report, and demonstrate one field method of making questionable water safe."
+        },
+        {
+          "theme": "When food goes wrong anyway",
+          "description": "Recognising food poisoning, who is at real risk (pregnant, young, old, immunocompromised), and when it is a clinic call.",
+          "transfer_check": "Given three illness scenarios, decide home-care versus clinic versus emergency for each, and name the food rule that was likely broken."
+        },
+        {
+          "theme": "Feeding the vulnerable",
+          "description": "The stricter rules for infants, pregnancy and elders: the foods excluded, the temperatures raised, the dates hardened.",
+          "transfer_check": "Adapt one family recipe so it is safe for a named vulnerable eater, listing each change and the rule behind it."
+        }
+      ]
+    },
+    {
+      "name": "Food, culture and the wider system",
+      "prefix": "FC",
+      "credential": "Food Systems Citizen",
+      "themes": [
+        {
+          "theme": "Where dinner comes from",
+          "description": "The chain from farm to plate — growing, processing, moving, selling — and the hands it passes through.",
+          "transfer_check": "Trace one item from your own plate back to its origin as far as evidence allows, documenting each link you can verify."
+        },
+        {
+          "theme": "The dish that carries a people",
+          "description": "Food as heritage: why dishes migrate with people, and what a recipe preserves that a museum cannot.",
+          "transfer_check": "Learn one dish from someone of a tradition not your own, cook it to their approval, and record its story as they tell it."
+        },
+        {
+          "theme": "The family recipe as an archive",
+          "description": "Oral recipes, the pinch and the handful, and writing down what an elder cooks before it is lost.",
+          "transfer_check": "Document one real family or community recipe from its keeper — quantities, technique and story — into a form a stranger could cook from."
+        },
+        {
+          "theme": "The table as a practice",
+          "description": "Shared meals and what they measurably do for households, and the hospitality codes different cultures build around food.",
+          "transfer_check": "Run a device-free shared meal with real people, applying one hospitality practice from a culture you researched, and reflect on what changed."
+        },
+        {
+          "theme": "What food costs the planet",
+          "description": "Land, water and emissions by food type — the honest hierarchy, and why the biggest lever is usually waste, not the exotic swap.",
+          "transfer_check": "Rank five of your staple foods by environmental footprint using published data, and make one evidence-based change you can sustain."
+        },
+        {
+          "theme": "The people who grow and serve",
+          "description": "Farm labour, kitchen labour and delivery labour: the working conditions inside the price of a meal.",
+          "transfer_check": "Investigate the labour behind one food you buy weekly and present what its price does and does not pay for."
+        },
+        {
+          "theme": "Food deserts and food swamps",
+          "description": "Why some neighbourhoods have six chicken shops and no greengrocer, and what access actually determines about diet.",
+          "transfer_check": "Map real food access within walking distance of two different addresses in your area and compare what a week's healthy shop would take at each."
+        },
+        {
+          "theme": "Marketing on a plate",
+          "description": "How food is sold — to children especially: placement, packaging, cartoon spokesmen and the school-adjacent economy.",
+          "transfer_check": "Collect five food marketing techniques aimed at children from real shelves or screens and redesign one advert to sell the honest version."
+        },
+        {
+          "theme": "Growing something you eat",
+          "description": "One pot, one windowsill, one bed: the shortest possible supply chain and what tending it teaches.",
+          "transfer_check": "Grow one edible plant from start to harvest, log its care, and cook what you grew."
+        },
+        {
+          "theme": "Feeding the future",
+          "description": "How the food system might feed ten billion — precision agriculture, alternative proteins, redistribution — and how to judge each claim.",
+          "transfer_check": "Take one 'future of food' claim, examine the strongest evidence for and against, and stake a defensible position in one page."
+        }
+      ]
+    }
+  ]
+}
