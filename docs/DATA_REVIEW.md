@@ -26,13 +26,25 @@ sections; the only other diff is the fonts `<link>`).
    kept untouched. The validator now allows duplicate codes only across
    packs, never within one.
 
-2. **Two schemas in one file (documented, backfill scheduled).** 4,500
-   "tracked" rows carry `track`/`code`/`level`/`description`; 2,250
-   "legacy" rows (K–12, Trade School, Future-Work, Regional, Civic &
-   Leadership, Health & Community, Language/Culture, Empathy, Community &
-   Relationship) leave those empty and use per-grade rather than banded
-   grades. Kept verbatim; backfill is Phase 1 of the
+2. **Two schemas in one file (backfill in progress).** 4,500
+   "tracked" source rows carry `track`/`code`/`level`/`description`; 2,250
+   "legacy" rows left those empty. *Update (v0.8.0):* the five cleanly
+   banded 250-row packs (Basic Life Skills, Preventive Health,
+   Water/Land/Climate, Care Across a Life, Making/Repair/Reuse) carried
+   their track structure as `(XX)` suffixes in theme names and are now
+   promoted to the tracked schema via `data/promotions/*.json` — 1,250
+   rows backfilled, source values untouched. 1,000 irregular rows remain
+   (K–12, Trade School, and seven thematic packs); see the
    [roadmap](ROADMAP.md).
+
+2b. **Placeholder transfer checks (found during promotion, scheduled).**
+   Most pre-promotion legacy rows carry a generic check — "Demonstrate
+   it once, correctly, to somebody who will use it" / "Do it once, for
+   real, and show it to somebody who will use it" — rather than a
+   per-theme task; only Preventive Health & Everyday Care has ~35 real
+   ones. Authoring real checks (~440 themes) is the next backfill
+   target. Checks were deliberately **not** rewritten during promotion:
+   the promotion mechanism only fills empty fields.
 
 3. **Band descriptions are suffixed, not differentiated (scheduled).**
    Within a theme, all five grade bands share one description

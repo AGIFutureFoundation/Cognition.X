@@ -20,16 +20,22 @@ at one grade band, with a transfer check that proves it.
 
 - **Tracked pack** = N tracks × 10 themes × 5 bands. Community packs have
   5 tracks (250 blocks); OS editions have 10 tracks (500 blocks).
-- **Legacy packs** (K–12, Trade School, Future-Work, Regional, Civic &
-  Leadership, Health & Community, Language/Culture/Communication, Empathy
-  & EI, Community & Relationship) predate the tracked shape and keep
-  their original columns; backfill is roadmap Phase 1.
+- **Legacy packs** predate the tracked shape. Five of them (Basic Life
+  Skills, Preventive Health, Water/Land/Climate, Care Across a Life,
+  Making/Repair/Reuse) were promoted to the tracked schema in v0.8.0
+  via `data/promotions/*.json` (empty fields filled; source values
+  never overwritten). K–12, Trade School, Future-Work, Regional,
+  Civic & Leadership, Health & Community, Language/Culture, Empathy &
+  EI and Community & Relationship keep their original columns;
+  their backfill is roadmap Phase 1.
 
 ## Files
 
 - `source/Cognition.X_all_blocks.csv` — imported source (verbatim, 6,750 rows)
 - `pack_specs/*.json` — authorable pack specifications
 - `generated/*.csv` — packs expanded from specs by `tools/generate_pack.py`
+- `promotions/*.json` — legacy-pack promotions: track names and base
+  descriptions that fill empty fields during normalization
 - `blocks.csv` — canonical dataset: source + generated, with `block_id`
 - `manifest.json` — machine-readable per-pack index
 

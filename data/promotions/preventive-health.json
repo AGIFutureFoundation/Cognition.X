@@ -1,0 +1,86 @@
+{
+  "pack": "Preventive Health & Everyday Care",
+  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names; only empty fields are filled.",
+  "tracks": [
+    {
+      "prefix": "DC",
+      "name": "The daily care of a body",
+      "themes": [
+        {"theme": "Brushing that actually removes plaque (DC)", "description": "The two-minute method that reaches every surface — angle, motion and the places every mouth misses."},
+        {"theme": "Why the toothbrush matters more than the toothpaste (DC)", "description": "Bristles, replacement and technique as the working parts of oral care, with paste as the assistant."},
+        {"theme": "The tooth that hurts is already late (DC)", "description": "The decay timeline — white spot, cavity, ache — and the stages where it can still be stopped."},
+        {"theme": "Washing hands so it works (DC)", "description": "The full handwash and the four moments that actually transmit illness — before food, after the toilet, after care, after coming in."},
+        {"theme": "Clean water, safely (DC)", "description": "Your own household's water path from source to cup, and the points where it can be protected or contaminated."},
+        {"theme": "The nail, the cut, the scrape (DC)", "description": "Cleaning, dressing and watching a small wound — and the redness, heat and swelling that mean infection."},
+        {"theme": "Sleep is not optional (DC)", "description": "What sleep does for a body and mind, how much each age needs, and the habits that protect it."},
+        {"theme": "Sun, heat and cold (DC)", "description": "Protecting a body from your own climate — shade, water, layers — and reading heat exhaustion and hypothermia early."},
+        {"theme": "Shoes, feet and standing all day (DC)", "description": "Foot care for people who work on their feet — fit, hygiene, and the small problems that disable when ignored."},
+        {"theme": "Keeping a body clean without much water (DC)", "description": "Staying genuinely clean on a few litres — the priority areas, the method and the dignity of managing it."}
+      ]
+    },
+    {
+      "prefix": "MO",
+      "name": "The mouth, understood",
+      "themes": [
+        {"theme": "What a tooth is made of (MO)", "description": "Enamel, dentine and pulp — the layers of a tooth and what each one can and cannot repair."},
+        {"theme": "Sugar and time, not sugar alone (MO)", "description": "Why frequency of sugar exposure decays teeth faster than quantity, and what that changes about snacks and drinks."},
+        {"theme": "Gums bleed for a reason (MO)", "description": "Healthy versus inflamed gums, the plaque line that causes the difference, and reversing early gum disease."},
+        {"theme": "The permanent teeth arrive once (MO)", "description": "The eruption order of the adult teeth and the six-year molar that is so often mistaken for a baby tooth."},
+        {"theme": "Fluoride, plainly and without argument (MO)", "description": "What fluoride does to enamel, where it comes from, and the evidence stated plainly enough to repeat."},
+        {"theme": "The dental visit nobody has had (MO)", "description": "What actually happens in a dental check-up, step by step, for someone who has never been."},
+        {"theme": "Pain, swelling and the face (MO)", "description": "The dental emergencies — swelling, fever, a face changing shape — and how urgently each must be seen."},
+        {"theme": "A mouth after an injury (MO)", "description": "The knocked-out or broken tooth — correct handling, storage in milk or saliva, and the clock that decides if it survives."},
+        {"theme": "Tobacco, betel and the mouth (MO)", "description": "What smoking and chewing do to gums and tissue, and the visible changes that need a clinician's eye."},
+        {"theme": "Caring for somebody else’s mouth (MO)", "description": "Assisted brushing for a child, an elder or a patient — positioning, gentleness and doing it every day."}
+      ]
+    },
+    {
+      "prefix": "EE",
+      "name": "Eyes and ears in a classroom and a life",
+      "themes": [
+        {"theme": "The child who sits at the front (EE)", "description": "The classroom signs of unseen vision problems — squinting, copying, avoiding the board — and what to do about them."},
+        {"theme": "Screening is not diagnosis (EE)", "description": "What a screening can and cannot say, and why a failed screen is a referral, not a verdict."},
+        {"theme": "Glasses that never arrived (EE)", "description": "The gap between prescription and wearing — cost, teasing, loss — and the local paths that close it."},
+        {"theme": "“He ignores me” (EE)", "description": "Hearing loss mistaken for defiance — the behaviour pattern that should trigger a hearing referral instead of discipline."},
+        {"theme": "Noise that damages (EE)", "description": "The volumes and durations that permanently damage hearing, and the protection that actually gets worn."},
+        {"theme": "Ears, water and infection (EE)", "description": "Ear infections and swimmer's ear — the signs that pass at home and the signs that need a clinician."},
+        {"theme": "Light, reading and eye strain (EE)", "description": "Lighting, distance and breaks — the reading conditions that tire eyes and the cheap changes that fix them."},
+        {"theme": "The eye injury (EE)", "description": "The correct first response to a struck, cut or splashed eye — and the instinctive responses that make it worse."},
+        {"theme": "Living with a sense that works differently (EE)", "description": "Practical adjustments for low vision or hearing — seating, light, phrasing — that a household can make tomorrow."},
+        {"theme": "Explaining a referral to a family (EE)", "description": "Delivering a screening result to a family clearly and kindly — what was found, what it means, what happens next."}
+      ]
+    },
+    {
+      "prefix": "FW",
+      "name": "Food and water that keep you well",
+      "themes": [
+        {"theme": "What a body is doing with food (FW)", "description": "Energy, building and protection — the three jobs food does, and the foods that serve each."},
+        {"theme": "Cooking one meal properly (FW)", "description": "One complete meal cooked safely from start to plate — heat, timing, hygiene and serving."},
+        {"theme": "Food that does not spoil (FW)", "description": "Storage that extends food — cool, dry, sealed, rotated — matched to what your household actually keeps."},
+        {"theme": "Reading what is on the packet (FW)", "description": "Dates, ingredients and per-portion numbers — extracting the three facts that matter from any label."},
+        {"theme": "Water-borne illness (FW)", "description": "How dirty water makes people ill, the diarrhoea danger to small children, and rehydration done correctly."},
+        {"theme": "Eating when money is short (FW)", "description": "The cheap foods that still build a body, and stretching a food budget without losing the protein."},
+        {"theme": "Feeding a small child (FW)", "description": "What small children need at each stage, the foods that endanger them, and patience at the plate."},
+        {"theme": "The kitchen that makes people ill (FW)", "description": "Cross-contamination, temperature and the cloth that spreads — the kitchen habits behind most food poisoning."},
+        {"theme": "Growing something you eat (FW)", "description": "One food plant from planting to plate — soil, water, care and the harvest that teaches the chain."},
+        {"theme": "Sharing food safely at scale (FW)", "description": "Cooking for a crowd — the batch sizes, holding temperatures and serving hygiene that keep an event safe."}
+      ]
+    },
+    {
+      "prefix": "MR",
+      "name": "A body and mind that recover",
+      "themes": [
+        {"theme": "A body that is used (MR)", "description": "Movement as maintenance — what regular use does for muscles, joints, heart and mood at every age."},
+        {"theme": "Lifting without injuring yourself (MR)", "description": "The lift that spares the back — feet, knees, load close — and the loads that need two people or a tool."},
+        {"theme": "Getting up off the floor (MR)", "description": "Getting down to and up from the ground in stages — the ability that predicts independence in later life."},
+        {"theme": "Breathing, deliberately (MR)", "description": "Slow breathing as a tool — the technique, and when it genuinely helps with pain, panic and sleep."},
+        {"theme": "Rest that is not sleep (MR)", "description": "Pauses, days off and the difference between rest and collapse — recovering before the body forces it."},
+        {"theme": "When the mind is the thing that hurts (MR)", "description": "Recognising low mood, anxiety and overload in yourself, and the first steps that are actually available."},
+        {"theme": "Helping somebody who is struggling (MR)", "description": "Asking directly, listening without fixing, and connecting a struggling person to real help."},
+        {"theme": "Bodies change (MR)", "description": "Puberty, ageing and everything between — the changes that are normal and the ones worth a check."},
+        {"theme": "Pain that persists (MR)", "description": "The difference between new pain and persistent pain, what makes chronic pain worse, and pacing that helps."},
+        {"theme": "The habit that sticks (MR)", "description": "Building one health habit that survives — small, anchored to a routine, and tracked without punishment."}
+      ]
+    }
+  ]
+}

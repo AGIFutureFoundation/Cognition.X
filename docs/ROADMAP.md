@@ -27,10 +27,18 @@ stable id. ✅
 
 **Goal: every block is complete, reviewed, and standards-mapped.**
 
-- Backfill the 2,250 legacy rows (K–12, Trade School, Future-Work,
-  Regional, Civic & Leadership, Health & Community, Language/Culture,
-  Empathy, Community & Relationship) with `code`, `level` and
-  `description` so all 26 packs share one schema
+- Backfill the legacy rows with `code`, `level` and `description` so
+  every pack shares one schema:
+  - [x] The five banded 250-row packs (Basic Life Skills, Preventive
+    Health, Water/Land/Climate, Care Across a Life, Making/Repair/
+    Reuse) — promoted via `data/promotions/` in v0.8.0 (1,250 rows)
+  - Remaining 1,000 rows: K–12 (64), Trade School (47), Future-Work,
+    Regional, Civic & Leadership, Health & Community, Language/Culture
+    (111 each), Empathy & EI and Community & Relationship (167 each) —
+    irregular shapes needing per-pack design, not mechanical promotion
+- Replace the placeholder transfer checks surfaced by the v0.8.0
+  review ("Do it once, for real…" on most pre-promotion legacy rows)
+  with real per-theme checks — content authoring, ~440 themes
 - Convert legacy packs to pack-spec JSON so the entire dataset is
   regenerable from specs (single source of truth becomes `data/pack_specs/`)
 - De-duplicate `description` band suffixes: author genuinely
