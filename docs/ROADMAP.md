@@ -46,7 +46,7 @@ stable id. ✅
   status, reading-level lint)
 
 **New packs (continue generating, same 250-block shape):**
-- Food, Cooking & Nutrition
+- [x] Food, Cooking & Nutrition — shipped in v0.4.0
 - Energy, Grid & the Home
 - Transport & Mobility
 - Emergency Preparedness & First Response

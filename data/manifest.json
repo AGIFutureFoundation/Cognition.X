@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 7000,
+  "total_blocks": 7250,
   "packs": [
     {
       "name": "K–12",
@@ -477,6 +477,26 @@
         "Privacy and the trail you leave",
         "Working with AI: help, judgement and limits",
         "Being online together: conduct, harm and repair"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Food, Cooking & Nutrition",
+      "slug": "FOOD",
+      "blocks": 250,
+      "tracks": [
+        "The kitchen and the tools in it",
+        "What food is: nutrition without the noise",
+        "Feeding people: planning, budget and the shop",
+        "Safety: from market to plate",
+        "Food, culture and the wider system"
       ],
       "credentials": 5,
       "grade_bands": [

@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 26 packs — 7,000 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 27 packs — 7,250 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -30,6 +30,7 @@ Catalog of all 26 packs — 7,000 blocks total. Machine-readable version: [`data
 | Cognition.X : Sapient OS | `SAPIENT` | 500 | 10 | 10 |
 | Non-Profit Practice | `NPO` | 500 | 10 | 10 |
 | Digital Life, Data & AI | `DIGITAL` | 250 | 5 | 5 |
+| Food, Cooking & Nutrition | `FOOD` | 250 | 5 | 5 |
 
 ## Tracks by pack
 
@@ -151,4 +152,11 @@ Catalog of all 26 packs — 7,000 blocks total. Machine-readable version: [`data
 - Privacy and the trail you leave
 - Working with AI: help, judgement and limits
 - Being online together: conduct, harm and repair
+
+**Food, Cooking & Nutrition**
+- The kitchen and the tools in it
+- What food is: nutrition without the noise
+- Feeding people: planning, budget and the shop
+- Safety: from market to plate
+- Food, culture and the wider system
 

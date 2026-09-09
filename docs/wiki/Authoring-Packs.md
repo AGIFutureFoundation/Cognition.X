@@ -42,6 +42,6 @@ or no without asking a quiz question?
 
 ## Candidate packs wanted (roadmap Phase 1)
 
-Food, Cooking & Nutrition · Energy, Grid & the Home · Transport &
+Energy, Grid & the Home · Transport &
 Mobility · Emergency Preparedness & First Response · Arts, Making Media &
 Performance · Law, Contracts & Everyday Rights

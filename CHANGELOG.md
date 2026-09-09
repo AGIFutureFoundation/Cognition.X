@@ -4,6 +4,16 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.4.0] — 2026-09-09
+
+### Added
+- New community pack **Food, Cooking & Nutrition** (250 blocks, 5 tracks
+  × 10 themes × 5 bands): kitchen craft & tools, nutrition literacy,
+  planning/budget/shopping, food safety from market to plate, and food
+  culture & systems. First of the roadmap Phase 1 candidate packs.
+  Canonical totals: **7,250 blocks · 27 packs · 100 tracks · 407
+  credentials**.
+
 ## [0.3.0] — 2026-09-09
 
 First versioned release from this repository. Earlier versions (below)
