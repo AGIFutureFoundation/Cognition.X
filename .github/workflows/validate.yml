@@ -1,0 +1,21 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  dataset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild canonical dataset
+        run: python3 tools/normalize_blocks.py
+      - name: Dataset must be up to date with sources
+        run: git diff --exit-code data/blocks.csv data/manifest.json
+      - name: Validate dataset
+        run: python3 tools/validate_blocks.py

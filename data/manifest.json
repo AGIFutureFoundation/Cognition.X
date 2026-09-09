@@ -1,0 +1,491 @@
+{
+  "dataset": "Cognition.X blocks",
+  "total_blocks": 7000,
+  "packs": [
+    {
+      "name": "K–12",
+      "slug": "K12",
+      "blocks": 64,
+      "tracks": [],
+      "credentials": 64,
+      "grade_bands": [
+        "K",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "name": "Trade School",
+      "slug": "TRADE",
+      "blocks": 47,
+      "tracks": [],
+      "credentials": 47,
+      "grade_bands": [
+        "11–12 · adult"
+      ]
+    },
+    {
+      "name": "Future-Work",
+      "slug": "FWORK",
+      "blocks": 111,
+      "tracks": [],
+      "credentials": 108,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Regional",
+      "slug": "REGION",
+      "blocks": 111,
+      "tracks": [],
+      "credentials": 20,
+      "grade_bands": [
+        "K",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "9–12 · adult"
+      ]
+    },
+    {
+      "name": "Civic & Leadership",
+      "slug": "CIVIC",
+      "blocks": 111,
+      "tracks": [],
+      "credentials": 15,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Health & Community",
+      "slug": "HEALTH",
+      "blocks": 111,
+      "tracks": [],
+      "credentials": 31,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12",
+        "—"
+      ]
+    },
+    {
+      "name": "Language, Culture & Communication",
+      "slug": "LANG",
+      "blocks": 111,
+      "tracks": [],
+      "credentials": 15,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Empathy & Emotional Intelligence",
+      "slug": "EMPATH",
+      "blocks": 167,
+      "tracks": [],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Community & Relationship Practice",
+      "slug": "COMREL",
+      "blocks": 167,
+      "tracks": [],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Preventive Health & Everyday Care",
+      "slug": "PREVCARE",
+      "blocks": 250,
+      "tracks": [],
+      "credentials": 3,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Basic Life Skills & Self-Reliance",
+      "slug": "LIFESKILL",
+      "blocks": 250,
+      "tracks": [],
+      "credentials": 1,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Water, Land & Climate",
+      "slug": "WLC",
+      "blocks": 250,
+      "tracks": [],
+      "credentials": 1,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Care Across a Life",
+      "slug": "CARELIFE",
+      "blocks": 250,
+      "tracks": [],
+      "credentials": 1,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Making, Repair & Reuse",
+      "slug": "MAKE",
+      "blocks": 250,
+      "tracks": [],
+      "credentials": 1,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Housing & Tenancy",
+      "slug": "HOUSING",
+      "blocks": 250,
+      "tracks": [
+        "Housing and the room you live in",
+        "Tenancy: what a lease actually says",
+        "Habitability: heat, water, vermin, repair",
+        "Eviction: notice, answer, hearing, outcome",
+        "Moving: entry, transfer, exit, and what follows you"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Money, Benefits & Entitlements",
+      "slug": "MONEY",
+      "blocks": 250,
+      "tracks": [
+        "Income: what arrives, when, and from where",
+        "Benefits: the programmes and what each is for",
+        "Paying: rent, bills, and the order things get paid",
+        "Saving: keeping something when everything is claimed",
+        "Repair: arrears, debt, and getting back to level"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Reentry & Recovery Pathways",
+      "slug": "REENTRY",
+      "blocks": 250,
+      "tracks": [
+        "Arriving: the first thirty days out",
+        "Identity: the documents that unlock everything else",
+        "Work: what is open, what is barred, what is appealable",
+        "Support: the people who hold a plan with you",
+        "Forward: a year out, and the thing after that"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Neighbourhood, Safety & Civic Voice",
+      "slug": "NEIGH",
+      "blocks": 250,
+      "tracks": [
+        "The block: who is on it and what it holds",
+        "Safety: what is a call, what is a report, what is neither",
+        "Code enforcement: the complaint that actually moves",
+        "The city: departments, hearings, and where a decision is made",
+        "Voice: speaking at a meeting that decides something"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Cognition.X : Corporate OS",
+      "slug": "CORP",
+      "blocks": 500,
+      "tracks": [
+        "Arriving in a job",
+        "Skill at work",
+        "Safety and the line you do not cross",
+        "Voice and representation",
+        "Leading other people",
+        "Where the work happens",
+        "The public and the customer",
+        "Time, load and the limit",
+        "When the organisation changes",
+        "A working life"
+      ],
+      "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Cognition.X : Science OS",
+      "slug": "SCI",
+      "blocks": 500,
+      "tracks": [
+        "The question",
+        "Method and measurement",
+        "Data and its handling",
+        "Reproducibility",
+        "Community and consequence",
+        "The lab as a place",
+        "Writing it",
+        "Money and the grant",
+        "Working with people",
+        "From result to use"
+      ],
+      "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Cognition.X : Robotics OS",
+      "slug": "ROB",
+      "blocks": 500,
+      "tracks": [
+        "Machines and how they move",
+        "Safety around a robot",
+        "Control and autonomy",
+        "Data from the physical world",
+        "Work with machines",
+        "Electronics and power",
+        "Software on a machine",
+        "Bringing it into service",
+        "Fleets and machines far away",
+        "Materials, energy and afterwards"
+      ],
+      "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Cognition.X : Global Health OS",
+      "slug": "GHEALTH",
+      "blocks": 500,
+      "tracks": [
+        "Primary care at the community",
+        "Mothers and newborns",
+        "Infection and outbreak",
+        "Long conditions",
+        "The system around the worker",
+        "Food and nutrition",
+        "Water, sanitation and shelter",
+        "Adolescents and young people",
+        "Emergency and displacement",
+        "Ethics at the household door"
+      ],
+      "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Cognition.X : Multilateral OS",
+      "slug": "MULTI",
+      "blocks": 500,
+      "tracks": [
+        "Assessing need",
+        "Coordination",
+        "Accountability to people served",
+        "Programme practice",
+        "Staff and security",
+        "Law, mandate and status",
+        "Budgets, donors and audit",
+        "Getting things to people",
+        "Information, rumour and media",
+        "After the emergency"
+      ],
+      "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Cognition.X : Sapient OS",
+      "slug": "SAPIENT",
+      "blocks": 500,
+      "tracks": [
+        "Understanding a model",
+        "Using one at work or school",
+        "Harms, plainly",
+        "Governance",
+        "The next decades",
+        "Building with a model",
+        "Evaluating a system",
+        "Data and what trains it",
+        "Value, work and who captures it",
+        "Your own practice"
+      ],
+      "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Non-Profit Practice",
+      "slug": "NPO",
+      "blocks": 500,
+      "tracks": [
+        "Volunteers",
+        "Board & governance",
+        "Grants & funders",
+        "Outcomes & measurement",
+        "Staff & sustainability",
+        "Coalitions & the city",
+        "Programme design",
+        "The people served",
+        "Telling people about it",
+        "Risk and safeguarding"
+      ],
+      "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Digital Life, Data & AI",
+      "slug": "DIGITAL",
+      "blocks": 250,
+      "tracks": [
+        "Devices, accounts and the keys you hold",
+        "Information: what to trust and how to check",
+        "Privacy and the trail you leave",
+        "Working with AI: help, judgement and limits",
+        "Being online together: conduct, harm and repair"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    }
+  ]
+}
