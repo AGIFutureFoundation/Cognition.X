@@ -1,0 +1,667 @@
+<title>Cognition.X Flow Hub</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* ---------- tokens: dark-first console; light theme mirrors every token ---------- */
+  :root{
+    --bg:#131722; --surface:#1B2130; --surface-2:#232B3E; --line:#2E3750;
+    --ink:#E8EAF2; --muted:#9AA3B8; --faint:#6B7488;
+    --accent:#E8A33D; --accent-ink:#131722; --accent-soft:rgba(232,163,61,.14);
+    --os:#5580D6; --community:#3E9A72; --legacy:#A96FC9; --foundation:#8A93A8;
+    --good:#3E9A72; --warn:#E8A33D;
+    --ring:rgba(232,163,61,.55);
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#F2F3F7; --surface:#FFFFFF; --surface-2:#E9EBF2; --line:#D6DAE6;
+      --ink:#1C2130; --muted:#5A6376; --faint:#8A93A8;
+      --accent:#B87514; --accent-ink:#FFFFFF; --accent-soft:rgba(184,117,20,.12);
+      --os:#3B6FD4; --community:#2E8F63; --legacy:#9552BD; --foundation:#5A6376;
+      --good:#2E8F63; --warn:#B87514;
+      --ring:rgba(184,117,20,.45);
+      --shadow:0 10px 30px rgba(28,33,48,.12);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#F2F3F7; --surface:#FFFFFF; --surface-2:#E9EBF2; --line:#D6DAE6;
+    --ink:#1C2130; --muted:#5A6376; --faint:#8A93A8;
+    --accent:#B87514; --accent-ink:#FFFFFF; --accent-soft:rgba(184,117,20,.12);
+    --os:#3B6FD4; --community:#2E8F63; --legacy:#9552BD; --foundation:#5A6376;
+    --good:#2E8F63; --warn:#B87514;
+    --ring:rgba(184,117,20,.45);
+    --shadow:0 10px 30px rgba(28,33,48,.12);
+  }
+
+  *{box-sizing:border-box}
+  html{color-scheme:light dark}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:15px; line-height:1.55;
+  }
+  ::selection{background:var(--accent-soft)}
+  a{color:var(--accent)}
+  button{font:inherit; cursor:pointer}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+
+  .shell{display:grid; grid-template-columns:220px 1fr; min-height:100vh}
+  /* ---------- rail ---------- */
+  .rail{
+    border-right:1px solid var(--line); background:var(--surface);
+    padding:20px 14px; display:flex; flex-direction:column; gap:6px;
+    position:sticky; top:0; height:100vh;
+  }
+  .wordmark{font-family:Archivo,system-ui,sans-serif; font-weight:800; font-size:1.05rem; letter-spacing:.02em; padding:4px 10px 2px}
+  .wordmark .x{color:var(--accent)}
+  .wordsub{font-size:.72rem; color:var(--faint); text-transform:uppercase; letter-spacing:.14em; padding:0 10px 14px}
+  .navbtn{
+    display:flex; align-items:center; gap:10px; width:100%;
+    padding:9px 12px; border:0; border-radius:8px; background:none; color:var(--muted);
+    text-align:left; font-weight:500;
+  }
+  .navbtn:hover{background:var(--surface-2); color:var(--ink)}
+  .navbtn[aria-current="true"]{background:var(--accent-soft); color:var(--ink)}
+  .navbtn .dot{width:7px; height:7px; border-radius:50%; background:var(--faint); flex:none}
+  .navbtn[aria-current="true"] .dot{background:var(--accent)}
+  .navbtn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--ring); outline-offset:2px}
+  .railfoot{margin-top:auto; padding:10px; font-size:.72rem; color:var(--faint)}
+
+  /* ---------- main ---------- */
+  main{padding:28px clamp(16px,4vw,44px) 64px; min-width:0}
+  .view{display:none; max-width:1180px; margin:0 auto}
+  .view.active{display:block}
+  h1{font-family:Archivo,system-ui,sans-serif; font-weight:800; font-size:clamp(1.6rem,3vw,2.2rem); letter-spacing:-.01em; margin:0 0 6px; text-wrap:balance}
+  h2{font-family:Archivo,system-ui,sans-serif; font-weight:600; font-size:1.05rem; margin:34px 0 12px}
+  .lede{color:var(--muted); max-width:62ch; margin:0 0 24px}
+  .eyebrow{font-size:.72rem; text-transform:uppercase; letter-spacing:.14em; color:var(--accent); font-weight:600; margin:0 0 8px}
+
+  .tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:20px 0 8px}
+  .tile{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px}
+  .tile b{display:block; font-family:Archivo,system-ui,sans-serif; font-weight:800; font-size:1.7rem; font-variant-numeric:tabular-nums}
+  .tile span{font-size:.78rem; color:var(--muted)}
+
+  .famlegend{display:flex; flex-wrap:wrap; gap:14px; margin:10px 0 0; font-size:.8rem; color:var(--muted)}
+  .famlegend i{display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:6px; vertical-align:-1px}
+
+  .distbar{display:flex; height:26px; border-radius:7px; overflow:hidden; gap:2px; margin:14px 0 4px; background:var(--bg)}
+  .distbar div{min-width:6px}
+
+  .packgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; margin-top:14px}
+  .packcard{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:14px 15px; text-align:left; color:var(--ink); display:flex; flex-direction:column; gap:8px;
+  }
+  .packcard:hover{border-color:var(--faint)}
+  .packcard .fam{font-size:.68rem; text-transform:uppercase; letter-spacing:.12em; font-weight:600}
+  .packcard .nm{font-weight:600; line-height:1.3}
+  .packcard .meta{font-size:.76rem; color:var(--muted); font-variant-numeric:tabular-nums; margin-top:auto}
+
+  .chiprow{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0}
+  .chip{border:1px solid var(--line); background:var(--surface); color:var(--muted); border-radius:999px; padding:5px 13px; font-size:.8rem; font-weight:500}
+  .chip[aria-pressed="true"]{background:var(--accent-soft); border-color:var(--accent); color:var(--ink)}
+  input[type=search],select,textarea{
+    background:var(--surface); color:var(--ink); border:1px solid var(--line);
+    border-radius:8px; padding:8px 12px; font:inherit;
+  }
+  input[type=search]{width:min(340px,100%)}
+
+  .trackhead{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin:26px 0 10px}
+  .trackhead h3{font-family:Archivo,system-ui,sans-serif; font-weight:600; font-size:1rem; margin:0}
+  .cred{font-size:.74rem; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:2px 10px; white-space:nowrap}
+  .themelist{display:grid; gap:8px}
+  .theme{background:var(--surface); border:1px solid var(--line); border-radius:9px; padding:11px 14px}
+  .theme summary{cursor:pointer; display:flex; gap:10px; align-items:baseline; list-style:none}
+  .theme summary::-webkit-details-marker{display:none}
+  .theme .code{color:var(--faint); font-size:.74rem; flex:none}
+  .theme .tt{font-weight:500}
+  .theme .body{margin-top:8px; padding-top:8px; border-top:1px solid var(--line); font-size:.88rem; color:var(--muted); display:grid; gap:6px}
+  .theme .check{color:var(--ink)}
+  .theme .check b{color:var(--accent); font-weight:600}
+  .done-pill{margin-left:auto; flex:none; font-size:.7rem; color:var(--good); border:1px solid var(--good); border-radius:999px; padding:1px 8px}
+
+  table{border-collapse:collapse; width:100%; font-size:.86rem}
+  .tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface)}
+  th,td{padding:8px 12px; text-align:left; border-top:1px solid var(--line); vertical-align:top}
+  thead th{border-top:0; font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--faint)}
+
+  /* ---------- flow ---------- */
+  .flowgrid{display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:18px; align-items:start}
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 20px}
+  .panel h3{font-family:Archivo,system-ui,sans-serif; font-weight:600; font-size:.95rem; margin:0 0 12px}
+  .blockcard{border:1px solid var(--accent); border-radius:12px; padding:18px 20px; background:var(--surface); box-shadow:var(--shadow)}
+  .blockcard .bandline{display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:10px}
+  .band{font-size:.72rem; border:1px solid var(--line); border-radius:6px; padding:2px 8px; color:var(--muted)}
+  .band.cur{background:var(--accent); color:var(--accent-ink); border-color:var(--accent); font-weight:600}
+  .blockcard h4{font-family:Archivo,system-ui,sans-serif; margin:.1em 0 .4em; font-size:1.25rem}
+  .blockcard .desc{color:var(--muted); margin:0 0 12px}
+  .transfer{background:var(--accent-soft); border-radius:9px; padding:11px 14px; font-size:.92rem}
+  .transfer b{color:var(--accent)}
+  .outcomes{display:flex; gap:9px; margin-top:16px; flex-wrap:wrap}
+  .outcomes button{flex:1 1 120px; border-radius:9px; padding:11px 10px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink); font-weight:600}
+  .outcomes button small{display:block; font-weight:400; color:var(--muted); font-size:.72rem; margin-top:2px}
+  .outcomes button:hover{border-color:var(--accent)}
+  .btn{border-radius:9px; padding:9px 18px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink); font-weight:600}
+  .btn.primary{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+  .btn.primary:hover{filter:brightness(1.07)}
+  .meter{height:10px; border-radius:999px; background:var(--surface-2); overflow:hidden; margin-top:6px}
+  .meter i{display:block; height:100%; background:var(--accent); border-radius:999px; transition:width .4s ease}
+  @media (prefers-reduced-motion: reduce){ .meter i{transition:none} }
+  .kv{display:flex; justify-content:space-between; gap:10px; font-size:.85rem; padding:4px 0; color:var(--muted)}
+  .kv b{color:var(--ink); font-variant-numeric:tabular-nums}
+  label.lab{display:block; font-size:.76rem; text-transform:uppercase; letter-spacing:.1em; color:var(--faint); margin:14px 0 6px}
+  .flowsetup select{width:100%}
+  input[type=range]{width:100%; accent-color:var(--accent)}
+
+  /* ---------- agents ---------- */
+  .agentgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px}
+  .agent{background:var(--surface); border:1px solid var(--line); border-radius:11px; padding:16px}
+  .agent .role{font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); font-weight:600}
+  .agent h3{font-family:Archivo,system-ui,sans-serif; margin:.2em 0 .4em; font-size:1.02rem}
+  .agent p{font-size:.83rem; color:var(--muted); margin:0 0 12px}
+  .agent .st{display:flex; align-items:center; gap:8px; font-size:.78rem; color:var(--muted)}
+  .agent .st i{width:8px; height:8px; border-radius:50%; background:var(--good); flex:none}
+  .agent[data-off="1"] .st i{background:var(--faint)}
+  .feed{margin-top:18px}
+  .feed ul{list-style:none; margin:0; padding:0; display:grid; gap:6px}
+  .feed li{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:8px 12px; font-size:.83rem; display:flex; gap:10px; align-items:baseline}
+  .feed .who{color:var(--accent); font-weight:600; flex:none; font-size:.74rem; text-transform:uppercase; letter-spacing:.08em}
+  .feed .when{margin-left:auto; color:var(--faint); font-size:.72rem; flex:none}
+
+  /* ---------- ledger ---------- */
+  .ledgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px}
+  .ledcard{background:var(--surface); border:1px solid var(--line); border-radius:11px; padding:15px; display:flex; gap:14px; align-items:center}
+  .ledcard .txt{min-width:0}
+  .ledcard .nm{font-weight:600; font-size:.9rem; line-height:1.3}
+  .ledcard .sub{font-size:.75rem; color:var(--muted)}
+  .earned{color:var(--good); font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+
+  .footer-note{margin-top:44px; font-size:.76rem; color:var(--faint); border-top:1px solid var(--line); padding-top:14px; max-width:70ch}
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px){
+    .shell{grid-template-columns:1fr}
+    .rail{position:static; height:auto; flex-direction:row; flex-wrap:wrap; align-items:center; padding:12px 16px; gap:4px}
+    .wordsub,.railfoot{display:none}
+    .wordmark{padding:0 8px 0 0}
+    .navbtn{width:auto; padding:7px 11px}
+    .navbtn .dot{display:none}
+    .flowgrid{grid-template-columns:1fr}
+    main{padding:20px 16px 56px}
+  }
+</style>
+
+<div class="shell">
+  <nav class="rail" aria-label="Views">
+    <div class="wordmark">Cognition<span class="x">.X</span></div>
+    <div class="wordsub">Flow Hub</div>
+    <button class="navbtn" data-view="system" aria-current="true"><span class="dot"></span>System</button>
+    <button class="navbtn" data-view="packs"><span class="dot"></span>Packs</button>
+    <button class="navbtn" data-view="flow"><span class="dot"></span>Flow</button>
+    <button class="navbtn" data-view="agents"><span class="dot"></span>Agents</button>
+    <button class="navbtn" data-view="ledger"><span class="dot"></span>Ledger</button>
+    <div class="railfoot mono" id="railfoot"></div>
+  </nav>
+
+  <main>
+    <!-- ================= SYSTEM ================= -->
+    <section class="view active" id="view-system">
+      <p class="eyebrow">Flow Zone · learning operating systems</p>
+      <h1>One hub across every Cognition.X OS</h1>
+      <p class="lede">Every block in the Cognition.X series — the OS editions, the community packs and the legacy
+      tracks — connected to a flow engine that serves the next challenge just above your current skill,
+      and to agents that keep the session moving.</p>
+
+      <div class="tiles" id="tiles"></div>
+
+      <h2>The series, by family</h2>
+      <div class="distbar" id="distbar" role="img" aria-label="Blocks by pack family"></div>
+      <div class="famlegend" id="famlegend"></div>
+
+      <h2>Pack constellation</h2>
+      <div class="packgrid" id="constellation"></div>
+
+      <p class="footer-note">Built from the canonical dataset <span class="mono">data/blocks.csv</span> by
+      <span class="mono">tools/build_flow_hub.py</span> — every count on this page is computed from the
+      shipped blocks, not typed in. Progress and sessions live only in this browser.</p>
+    </section>
+
+    <!-- ================= PACKS ================= -->
+    <section class="view" id="view-packs">
+      <p class="eyebrow">Explorer</p>
+      <h1>Packs, tracks and blocks</h1>
+      <p class="lede">Ten themes per track, five grade bands per theme, one credential per track. Foundation
+      library packs keep their original per-grade shape.</p>
+      <input type="search" id="packsearch" placeholder="Search packs, tracks, themes…" aria-label="Search">
+      <div class="chiprow" id="famchips"></div>
+      <div id="packbody"></div>
+    </section>
+
+    <!-- ================= FLOW ================= -->
+    <section class="view" id="view-flow">
+      <p class="eyebrow">Flow engine</p>
+      <h1>The session that finds your channel</h1>
+      <p class="lede">Flow lives where the challenge sits just above your skill. Pick a track; the Pathfinder
+      serves blocks and adjusts the band from how each one lands.</p>
+
+      <div class="flowgrid">
+        <div>
+          <div class="panel flowsetup" id="flowsetup">
+            <h3>Start a session</h3>
+            <label class="lab" for="fs-pack">Pack</label>
+            <select id="fs-pack"></select>
+            <label class="lab" for="fs-track">Track</label>
+            <select id="fs-track"></select>
+            <label class="lab" for="fs-skill">Where is your skill today? <span id="fs-skill-lab"></span></label>
+            <input type="range" id="fs-skill" min="1" max="5" step="1" value="2">
+            <div style="margin-top:16px"><button class="btn primary" id="fs-start">Enter the flow</button></div>
+          </div>
+
+          <div id="flowlive" hidden>
+            <div class="blockcard" id="blockcard"></div>
+            <div class="outcomes">
+              <button id="oc-breezed">Breezed it<small>too easy — raise the band</small></button>
+              <button id="oc-flow">In the flow<small>hard but held — stay here</small></button>
+              <button id="oc-struggled">Struggled<small>too steep — ease off</small></button>
+            </div>
+            <div style="margin-top:12px; display:flex; gap:9px; flex-wrap:wrap">
+              <button class="btn" id="fs-complete">Mark transfer check complete</button>
+              <button class="btn" id="fs-end">End session</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <h3>Flow channel</h3>
+            <svg id="flowchart" viewBox="0 0 340 300" width="100%" role="img" aria-label="Session path on the skill–challenge plane"></svg>
+            <div class="kv"><span>Time in channel</span><b id="fm-pct">—</b></div>
+            <div class="meter"><i id="fm-bar" style="width:0%"></i></div>
+          </div>
+          <div class="panel" style="margin-top:14px">
+            <h3>Pacer</h3>
+            <div class="kv"><span>Focus interval</span><b class="mono" id="pace-clock">25:00</b></div>
+            <div class="meter"><i id="pace-bar" style="width:0%"></i></div>
+            <div style="margin-top:12px; display:flex; gap:8px">
+              <button class="btn" id="pace-toggle">Start focus</button>
+              <button class="btn" id="pace-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AGENTS ================= -->
+    <section class="view" id="view-agents">
+      <p class="eyebrow">Automation</p>
+      <h1>Four agents, one session</h1>
+      <p class="lede">Rule-based agents run the session machinery so your attention stays on the block in front
+      of you. Everything they do lands in the activity feed.</p>
+      <div class="agentgrid" id="agentgrid"></div>
+      <div class="feed">
+        <h2>Activity feed</h2>
+        <ul id="feedlist"></ul>
+      </div>
+    </section>
+
+    <!-- ================= LEDGER ================= -->
+    <section class="view" id="view-ledger">
+      <p class="eyebrow">Credentials</p>
+      <h1>Your ledger</h1>
+      <p class="lede">A track's credential is earned when all ten of its themes have a completed transfer check.
+      The ledger lives in this browser; the Archivist can hand you a copy to keep.</p>
+      <div class="ledgrid" id="ledgrid"></div>
+      <h2>Archivist — export & import</h2>
+      <p class="lede" style="margin-bottom:10px">Copy this JSON to move your ledger to another browser; paste a
+      ledger and load it to restore.</p>
+      <textarea id="ledio" rows="5" style="width:100%" spellcheck="false" aria-label="Ledger JSON"></textarea>
+      <div style="margin-top:10px; display:flex; gap:9px">
+        <button class="btn" id="led-copy">Copy ledger</button>
+        <button class="btn" id="led-load">Load pasted ledger</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script id="cxdata" type="application/json">__CXDATA__</script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("cxdata").textContent);
+const BANDS = DATA.bands, LEVELS = DATA.levels;
+const FAM = {
+  os:        {label:"OS editions",     color:"var(--os)"},
+  community: {label:"Community packs", color:"var(--community)"},
+  legacy:    {label:"Legacy tracks",   color:"var(--legacy)"},
+  foundation:{label:"Foundation library", color:"var(--foundation)"}
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- persistent state (per-browser convenience; may be unavailable) ---------- */
+const KEY = "cxflow.v1";
+let S = {done:{}, skills:{}, feed:[], flowPts:{}};
+try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(S, JSON.parse(raw)); } catch(e){}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
+
+/* ---------- agents ---------- */
+const AGENTS = [
+  {id:"pathfinder", name:"Pathfinder", role:"Selection", desc:"Chooses the next block: the least-visited theme in your track, served at the band your skill calls for."},
+  {id:"pacer", name:"Pacer", role:"Rhythm", desc:"Runs the focus interval and tells you when the interval turns, so the clock never lives in your head."},
+  {id:"assessor", name:"Assessor", role:"Evidence", desc:"Holds the transfer check in view and records the completion that actually earns credit."},
+  {id:"archivist", name:"Archivist", role:"Memory", desc:"Keeps the ledger in this browser and hands you a portable copy on request."}
+];
+function log(who, msg){
+  S.feed.unshift({who, msg, t: Date.now()});
+  S.feed = S.feed.slice(0, 60);
+  save(); renderFeed();
+}
+function renderFeed(){
+  const ul = $("#feedlist");
+  ul.innerHTML = S.feed.length ? S.feed.map(f =>
+    `<li><span class="who">${esc(f.who)}</span><span>${esc(f.msg)}</span>` +
+    `<span class="when mono">${new Date(f.t).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</span></li>`).join("")
+    : `<li><span>No activity yet — start a flow session and the agents will report here.</span></li>`;
+}
+function renderAgents(){
+  $("#agentgrid").innerHTML = AGENTS.map(a =>
+    `<div class="agent"><div class="role">${esc(a.role)}</div><h3>${esc(a.name)}</h3>` +
+    `<p>${esc(a.desc)}</p><div class="st"><i></i>active</div></div>`).join("");
+}
+
+/* ---------- derived stats ---------- */
+const FAMORDER = {os:0, community:1, legacy:2, foundation:3};
+DATA.packs.sort((a,b) => FAMORDER[a.kind]-FAMORDER[b.kind]);
+const tracked = DATA.packs.filter(p => p.tracks.length);
+const totals = {
+  blocks: DATA.packs.reduce((n,p)=>n+p.blocks,0),
+  packs: DATA.packs.length,
+  tracks: tracked.reduce((n,p)=>n+p.tracks.length,0),
+  creds: new Set(DATA.packs.flatMap(p => p.tracks.length ? p.tracks.map(t=>t.credential) : (p.loose||[]).map(r=>r[1]))).size
+};
+const trackKey = (p,t) => p.slug + "/" + t.prefix;
+
+/* ---------- SYSTEM view ---------- */
+function renderSystem(){
+  $("#tiles").innerHTML = [
+    [totals.blocks.toLocaleString(), "blocks"],
+    [totals.packs, "packs"],
+    [totals.tracks, "tracks"],
+    [totals.creds, "credentials"],
+    [BANDS.length, "grade bands"]
+  ].map(([v,l]) => `<div class="tile"><b>${v}</b><span>${l}</span></div>`).join("");
+
+  const fams = {};
+  DATA.packs.forEach(p => { fams[p.kind] = (fams[p.kind]||0) + p.blocks; });
+  $("#distbar").innerHTML = Object.keys(FAM).filter(k=>fams[k]).map(k =>
+    `<div style="flex:${fams[k]}; background:${FAM[k].color}" title="${FAM[k].label}: ${fams[k].toLocaleString()} blocks"></div>`).join("");
+  $("#famlegend").innerHTML = Object.keys(FAM).filter(k=>fams[k]).map(k =>
+    `<span><i style="background:${FAM[k].color}"></i>${FAM[k].label} · ${fams[k].toLocaleString()}</span>`).join("");
+
+  $("#constellation").innerHTML = DATA.packs.map((p,i) =>
+    `<button class="packcard" data-pack="${i}">` +
+    `<span class="fam" style="color:${FAM[p.kind].color}">${FAM[p.kind].label}</span>` +
+    `<span class="nm">${esc(p.name)}</span>` +
+    `<span class="meta mono">${p.blocks} blocks${p.tracks.length ? " · " + p.tracks.length + " tracks" : ""}</span></button>`).join("");
+  $("#constellation").querySelectorAll(".packcard").forEach(b =>
+    b.addEventListener("click", () => { openPack(+b.dataset.pack); go("packs"); }));
+
+  $("#railfoot").textContent = "v" + DATA.version + " · " + totals.blocks.toLocaleString() + " blocks";
+}
+
+/* ---------- PACKS view ---------- */
+let packFilter = {fam:"all", q:"", open:-1};
+function renderFamChips(){
+  const kinds = ["all", ...Object.keys(FAM)];
+  $("#famchips").innerHTML = kinds.map(k =>
+    `<button class="chip" data-fam="${k}" aria-pressed="${packFilter.fam===k}">` +
+    (k==="all" ? "All families" : FAM[k].label) + `</button>`).join("");
+  $("#famchips").querySelectorAll(".chip").forEach(c =>
+    c.addEventListener("click", () => { packFilter.fam = c.dataset.fam; packFilter.open=-1; renderFamChips(); renderPacks(); }));
+}
+function openPack(i){ packFilter = {fam:"all", q:"", open:i}; $("#packsearch").value=""; renderFamChips(); renderPacks(); }
+function matches(p, q){
+  if (!q) return true;
+  const hay = [p.name, ...p.tracks.flatMap(t=>[t.name,t.credential,...t.themes.map(x=>x[0])]),
+               ...(p.loose||[]).map(r=>r[2])].join(" ").toLowerCase();
+  return hay.includes(q);
+}
+function renderPacks(){
+  const q = packFilter.q.trim().toLowerCase();
+  const body = $("#packbody");
+  const list = DATA.packs.map((p,i)=>({p,i})).filter(({p}) =>
+    (packFilter.fam==="all" || p.kind===packFilter.fam) && matches(p,q));
+  if (!list.length){ body.innerHTML = `<p class="lede">Nothing matches — try a different word or family.</p>`; return; }
+  body.innerHTML = list.map(({p,i}) => {
+    const open = packFilter.open===i || (q && list.length<=3);
+    return `<div style="margin-bottom:10px">` +
+      `<button class="packcard" data-toggle="${i}" style="width:100%">` +
+      `<span class="fam" style="color:${FAM[p.kind].color}">${FAM[p.kind].label}</span>` +
+      `<span class="nm">${esc(p.name)}</span>` +
+      `<span class="meta mono">${p.blocks} blocks${p.tracks.length ? " · " + p.tracks.length + " tracks · CX-" + p.slug : ""}</span></button>` +
+      (open ? renderPackDetail(p) : "") + `</div>`;
+  }).join("");
+  body.querySelectorAll("[data-toggle]").forEach(b =>
+    b.addEventListener("click", () => { const i=+b.dataset.toggle; packFilter.open = packFilter.open===i ? -1 : i; renderPacks(); }));
+}
+function renderPackDetail(p){
+  if (p.tracks.length){
+    return p.tracks.map(t => {
+      const done = S.done[trackKey(p,t)] || {};
+      return `<div class="trackhead"><h3>${esc(t.name)}</h3><span class="cred">${esc(t.credential)}</span>` +
+      `<span class="meta mono" style="color:var(--faint); font-size:.74rem">${t.prefix}-1…${t.prefix}-50</span></div>` +
+      `<div class="themelist">` + t.themes.map((th,ti) =>
+        `<details class="theme"><summary><span class="code mono">${t.prefix}-${ti*5+1}</span>` +
+        `<span class="tt">${esc(th[0])}</span>` +
+        (done[ti]!=null ? `<span class="done-pill">✓ ${esc(BANDS[done[ti]])}</span>` : "") +
+        `</summary><div class="body"><div>${esc(th[1])}</div>` +
+        `<div class="check"><b>Transfer check:</b> ${esc(th[2])}</div>` +
+        `<div>Bands: ${BANDS.map((b,bi)=>`<span class="band">${b} · ${LEVELS[bi]}</span>`).join(" ")}</div>` +
+        `</div></details>`).join("") + `</div>`;
+    }).join("");
+  }
+  const rows = (p.loose||[]);
+  return `<div class="tablewrap" style="margin-top:10px"><table><thead><tr>` +
+    `<th>Grade</th><th>Credential</th><th>Theme</th><th>Transfer check</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td class="mono">${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`).join("") +
+    `</tbody></table></div>`;
+}
+$("#packsearch").addEventListener("input", e => { packFilter.q = e.target.value; renderPacks(); });
+
+/* ---------- FLOW view ---------- */
+let F = null;  // live session
+function fillFlowSelects(){
+  const sel = $("#fs-pack");
+  sel.innerHTML = tracked.map((p,i)=>`<option value="${i}">${esc(p.name)}</option>`).join("");
+  sel.addEventListener("change", fillTracks);
+  fillTracks();
+  const sk = $("#fs-skill");
+  const lab = () => { $("#fs-skill-lab").textContent = "· " + BANDS[sk.value-1] + " (" + LEVELS[sk.value-1] + ")"; };
+  sk.addEventListener("input", lab); lab();
+}
+function fillTracks(){
+  const p = tracked[+$("#fs-pack").value];
+  $("#fs-track").innerHTML = p.tracks.map((t,i)=>`<option value="${i}">${esc(t.name)}</option>`).join("");
+}
+$("#fs-start").addEventListener("click", () => {
+  const p = tracked[+$("#fs-pack").value];
+  const t = p.tracks[+$("#fs-track").value];
+  const skill = +$("#fs-skill").value;
+  F = {p, t, key:trackKey(p,t), skill, challenge:Math.min(5, skill), pts:[], theme:-1};
+  S.skills[F.key] = skill; save();
+  $("#flowsetup").hidden = true; $("#flowlive").hidden = false;
+  log("Pathfinder", `Session opened on “${t.name}” (${p.name}) at ${BANDS[skill-1]}.`);
+  nextBlock();
+});
+function pickTheme(){
+  const done = S.done[F.key] || {};
+  // least-recently served, preferring themes not yet completed at or above current band
+  const order = F.t.themes.map((_,i)=>i).sort((a,b)=>{
+    const da = done[a]==null ? -1 : done[a], db = done[b]==null ? -1 : done[b];
+    if (da !== db) return da - db;
+    return a - b;
+  });
+  const notLast = order.filter(i => i !== F.theme);
+  return (notLast.length ? notLast : order)[0];
+}
+function nextBlock(){
+  F.theme = pickTheme();
+  const th = F.t.themes[F.theme];
+  const bi = Math.round(F.challenge) - 1;
+  const code = F.t.prefix + "-" + (F.theme*5 + bi + 1);
+  $("#blockcard").innerHTML =
+    `<div class="bandline">` + BANDS.map((b,i)=>`<span class="band${i===bi?" cur":""}">${b}</span>`).join("") +
+    `<span class="band mono" style="margin-left:auto">${esc(code)} · ${esc(LEVELS[bi])}</span></div>` +
+    `<h4>${esc(th[0])}</h4>` +
+    `<p class="desc">${esc(th[1])} — at ${esc(BANDS[bi])}</p>` +
+    `<div class="transfer"><b>Transfer check:</b> ${esc(th[2])}</div>`;
+  log("Pathfinder", `Serving “${th[0]}” at ${BANDS[bi]} — challenge ${F.challenge.toFixed(1)} vs skill ${F.skill.toFixed(1)}.`);
+  drawFlow();
+}
+function outcome(kind){
+  if (!F) return;
+  if (kind==="breezed"){ F.skill = Math.min(5, F.skill + .45); F.challenge = Math.min(5, F.challenge + 1); }
+  if (kind==="flow"){ F.skill = Math.min(5, F.skill + .2); F.challenge = Math.min(5, Math.max(F.challenge, F.skill + .4)); }
+  if (kind==="struggled"){ F.skill = Math.max(1, F.skill - .1); F.challenge = Math.max(1, F.challenge - 1); }
+  F.pts.push({s:F.skill, c:F.challenge});
+  (S.flowPts[F.key] = F.pts.slice(-24)); save();
+  nextBlock();
+}
+$("#oc-breezed").addEventListener("click", ()=>outcome("breezed"));
+$("#oc-flow").addEventListener("click", ()=>outcome("flow"));
+$("#oc-struggled").addEventListener("click", ()=>outcome("struggled"));
+$("#fs-complete").addEventListener("click", () => {
+  if (!F) return;
+  const bi = Math.round(F.challenge)-1;
+  (S.done[F.key] = S.done[F.key] || {})[F.theme] = Math.max(S.done[F.key][F.theme] ?? -1, bi);
+  save();
+  const th = F.t.themes[F.theme];
+  log("Assessor", `Transfer check recorded: “${th[0]}” at ${BANDS[bi]}.`);
+  const n = Object.keys(S.done[F.key]).length;
+  if (n === 10) log("Assessor", `Credential earned: ${F.t.credential} — all ten themes checked.`);
+  renderLedger();
+  outcome("flow");
+});
+$("#fs-end").addEventListener("click", () => {
+  if (F) log("Archivist", `Session on “${F.t.name}” saved — ${F.pts.length} moves, skill now ${F.skill.toFixed(1)}.`);
+  F = null; $("#flowlive").hidden = true; $("#flowsetup").hidden = false; drawFlow();
+});
+
+/* flow chart: skill (x) vs challenge (y), flow channel band */
+function drawFlow(){
+  const svg = $("#flowchart");
+  const W=340, H=300, L=42, R=12, T=14, B=36;
+  const x = v => L + (v-0.5)/(5)* (W-L-R);
+  const y = v => H-B - (v-0.5)/(5) * (H-T-B);
+  const cs = getComputedStyle(document.documentElement);
+  const grid = [];
+  for (let i=1;i<=5;i++){
+    grid.push(`<line x1="${x(i)}" y1="${y(.5)}" x2="${x(i)}" y2="${y(5.5)}" stroke="var(--line)" stroke-width="1"/>`);
+    grid.push(`<text x="${x(i)}" y="${H-B+16}" text-anchor="middle" font-size="10" fill="var(--faint)">${i}</text>`);
+    grid.push(`<text x="${L-8}" y="${y(i)+3}" text-anchor="end" font-size="10" fill="var(--faint)">${i}</text>`);
+  }
+  // flow channel: challenge within [skill-0.6, skill+1.1]
+  const band = `<polygon points="${x(.5)},${y(-0.1+.5)} ${x(5.5)},${y(5.5-0.6)} ${x(5.5)},${y(5.5)} ${x(4.4)},${y(5.5)} ${x(.5)},${y(1.6)}"
+     fill="var(--accent)" opacity="0.13"/>`;
+  const pts = (F && F.pts.length ? F.pts : []).slice(-24);
+  let path = "", dots = "";
+  if (pts.length){
+    path = `<polyline fill="none" stroke="var(--accent)" stroke-width="2" points="${pts.map(p=>x(p.s)+","+y(p.c)).join(" ")}"/>`;
+    dots = pts.map((p,i) =>
+      `<circle cx="${x(p.s)}" cy="${y(p.c)}" r="${i===pts.length-1?6:3.5}" fill="var(--accent)"
+        stroke="var(--surface)" stroke-width="2"><title>move ${i+1}: skill ${p.s.toFixed(1)}, challenge ${p.c.toFixed(1)}</title></circle>`).join("");
+  }
+  const empty = pts.length ? "" :
+    `<text x="${(L+W-R)/2}" y="${(T+H-B)/2}" text-anchor="middle" font-size="11" fill="var(--faint)">Start a session — each move lands here</text>`;
+  svg.innerHTML =
+    `<rect x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" fill="none" stroke="var(--line)"/>` +
+    band + grid.join("") + path + dots + empty +
+    `<text x="${(L+W-R)/2}" y="${H-4}" text-anchor="middle" font-size="10" fill="var(--muted)">skill →</text>` +
+    `<text x="12" y="${(T+H-B)/2}" text-anchor="middle" font-size="10" fill="var(--muted)" transform="rotate(-90 12 ${(T+H-B)/2})">challenge →</text>`;
+  // flow meter
+  const inCh = pts.filter(p => p.c >= p.s-0.6 && p.c <= p.s+1.1).length;
+  const pct = pts.length ? Math.round(100*inCh/pts.length) : 0;
+  $("#fm-pct").textContent = pts.length ? pct + "%" : "—";
+  $("#fm-bar").style.width = pct + "%";
+}
+
+/* ---------- Pacer ---------- */
+let pace = {left:1500, total:1500, timer:null, mode:"focus"};
+function paceRender(){
+  const m = String(Math.floor(pace.left/60)).padStart(2,"0"), s = String(pace.left%60).padStart(2,"0");
+  $("#pace-clock").textContent = m+":"+s;
+  $("#pace-bar").style.width = (100*(1 - pace.left/pace.total)) + "%";
+}
+$("#pace-toggle").addEventListener("click", () => {
+  if (pace.timer){ clearInterval(pace.timer); pace.timer=null; $("#pace-toggle").textContent="Resume"; log("Pacer","Interval paused."); return; }
+  $("#pace-toggle").textContent = "Pause";
+  if (pace.left === pace.total) log("Pacer", pace.mode==="focus" ? "Focus interval started — 25 minutes." : "Break started — 5 minutes.");
+  pace.timer = setInterval(() => {
+    pace.left--;
+    if (pace.left <= 0){
+      clearInterval(pace.timer); pace.timer=null;
+      const was = pace.mode;
+      pace.mode = was==="focus" ? "break" : "focus";
+      pace.total = pace.mode==="focus" ? 1500 : 300;
+      pace.left = pace.total;
+      $("#pace-toggle").textContent = pace.mode==="focus" ? "Start focus" : "Start break";
+      log("Pacer", was==="focus" ? "Focus interval complete — take the 5-minute break." : "Break over — ready for the next focus interval.");
+    }
+    paceRender();
+  }, 1000);
+});
+$("#pace-reset").addEventListener("click", () => {
+  if (pace.timer) clearInterval(pace.timer);
+  pace = {left:1500, total:1500, timer:null, mode:"focus"};
+  $("#pace-toggle").textContent = "Start focus"; paceRender();
+});
+
+/* ---------- LEDGER view ---------- */
+function ring(pct){
+  const r=20, c=2*Math.PI*r, off=c*(1-pct);
+  return `<svg width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">` +
+    `<circle cx="26" cy="26" r="${r}" fill="none" stroke="var(--surface-2)" stroke-width="6"/>` +
+    `<circle cx="26" cy="26" r="${r}" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round"` +
+    ` stroke-dasharray="${c}" stroke-dashoffset="${off}" transform="rotate(-90 26 26)"/>` +
+    `<text x="26" y="30" text-anchor="middle" font-size="12" fill="var(--ink)" font-family="IBM Plex Mono,monospace">${Math.round(pct*10)}</text></svg>`;
+}
+function renderLedger(){
+  const cards = [];
+  tracked.forEach(p => p.tracks.forEach(t => {
+    const k = trackKey(p,t);
+    const n = Object.keys(S.done[k]||{}).length;
+    if (!n) return;
+    cards.push({p,t,n,k});
+  }));
+  cards.sort((a,b)=>b.n-a.n);
+  $("#ledgrid").innerHTML = cards.length ? cards.map(c =>
+    `<div class="ledcard">${ring(c.n/10)}<div class="txt">` +
+    `<div class="nm">${esc(c.t.credential)}</div>` +
+    `<div class="sub">${esc(c.t.name)} · ${esc(c.p.name)}</div>` +
+    (c.n>=10 ? `<div class="earned">Credential earned</div>` : `<div class="sub mono">${c.n}/10 themes checked</div>`) +
+    `</div></div>`).join("")
+    : `<p class="lede">No progress yet. Complete a transfer check in a flow session and the Assessor will post it here.</p>`;
+  try { $("#ledio").value = JSON.stringify({v:1, done:S.done, skills:S.skills}); } catch(e){}
+}
+$("#led-copy").addEventListener("click", async () => {
+  const ta = $("#ledio"); ta.select();
+  try { await navigator.clipboard.writeText(ta.value); log("Archivist","Ledger copied to clipboard."); }
+  catch(e){ document.execCommand && document.execCommand("copy"); log("Archivist","Ledger selected — copy it with the keyboard."); }
+});
+$("#led-load").addEventListener("click", () => {
+  try {
+    const inb = JSON.parse($("#ledio").value);
+    if (inb && inb.done){ S.done = inb.done; S.skills = inb.skills || {}; save(); renderLedger(); renderPacks(); log("Archivist","Ledger loaded from pasted copy."); }
+  } catch(e){ log("Archivist","That paste wasn't a ledger — expected the JSON exported above."); }
+});
+
+/* ---------- nav ---------- */
+function go(v){
+  document.querySelectorAll(".view").forEach(el => el.classList.toggle("active", el.id === "view-"+v));
+  document.querySelectorAll(".navbtn").forEach(b => b.setAttribute("aria-current", b.dataset.view===v ? "true" : "false"));
+  window.scrollTo({top:0});
+}
+document.querySelectorAll(".navbtn").forEach(b => b.addEventListener("click", () => go(b.dataset.view)));
+
+/* ---------- boot ---------- */
+renderSystem(); renderFamChips(); renderPacks(); fillFlowSelects();
+renderAgents(); renderFeed(); renderLedger(); drawFlow(); paceRender();
+</script>

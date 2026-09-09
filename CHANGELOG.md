@@ -4,6 +4,24 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.7.0] — 2026-09-09
+
+### Added
+- **Flow Hub** (`apps/flow-hub/`): a professional interactive app
+  connecting the whole Cognition.X series — System overview (live counts
+  and family distribution computed from the dataset), Packs explorer
+  (search/filter across all 33 packs down to block level), a **flow
+  engine** (challenge-vs-skill session loop with a flow-channel chart
+  and time-in-channel meter), four rule-based **session agents**
+  (Pathfinder selection, Pacer focus intervals, Assessor transfer-check
+  recording, Archivist ledger export/import), and a **credential
+  ledger** with per-track progress. Dark-first with a full light theme;
+  per-browser persistence.
+- First realization of the roadmap Phase 2 build pattern:
+  `tools/build_flow_hub.py` injects the canonical dataset into
+  `apps/flow-hub/template.html` — the app is a build product of
+  `data/blocks.csv`, never hand-edited.
+
 ## [0.6.0] — 2026-09-09
 
 ### Added

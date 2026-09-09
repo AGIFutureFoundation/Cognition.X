@@ -71,10 +71,12 @@ standards-mapped; validator extended to rubric and mapping checks.
 
 **Goal: the app becomes an installable product, not a single artifact.**
 
-- Split the 8 MB single-file app: build pipeline (data injected from
-  `blocks.csv` at build time), keep the *output* single-file and
-  offline-first — that constraint is a feature for low-connectivity
-  deployments
+- [x] Prove the build pattern (v0.7.0): **Flow Hub** is generated from
+  `blocks.csv` by `tools/build_flow_hub.py` — single-file output,
+  flow-state session engine, session agents, credential ledger
+- Split the 8 MB Education OS single-file app onto the same pipeline,
+  keeping the *output* single-file and offline-first — that constraint
+  is a feature for low-connectivity deployments
 - Learner state: local-first progress store (IndexedDB) with export/import;
   no account required
 - Credential ledger v1: signed completion records (W3C Verifiable

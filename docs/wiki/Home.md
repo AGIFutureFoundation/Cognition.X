@@ -14,6 +14,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [[Legacy Tracks]] — the legacy-track model and its localizations
 - [[Credential Framework]] — Explorer → Builder → Practitioner → Lead
 - [[Education OS App]] — the single-file application
+- [[Flow Hub]] — the dataset-built hub: flow engine, agents, ledger
 - [[Versioning and Releases]] — SemVer policy and history
 - [[Authoring Packs]] — how to write and generate new packs
 
