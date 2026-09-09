@@ -4,6 +4,26 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.6.0] — 2026-09-09
+
+### Added
+- First **legacy-track localization** in the dataset: pack **Civic
+  Leadership Legacy : Louisiana** (250 blocks, 5 tracks × 10 themes ×
+  5 bands) — the Willie L. Brown Jr. Institute civic-leadership model
+  (Education OS app iterations v28–v30) localized to Louisiana via the
+  app's v29 template (capital, legislature, **parish** unit, standards,
+  civic seal *verify*, anchor industries, placement ladder, fellowship
+  partner). Tracks: the Louisiana public-service ladder, parish
+  government, the Legislature & civil-law tradition, Louisiana
+  elections, and coastal civics (water, storm, levee boards, recovery).
+  Carries the app's not-affiliated proposal disclaimer; see
+  `docs/wiki/Legacy-Tracks.md`.
+- Wiki page `docs/wiki/Legacy-Tracks.md`: the legacy-track model, the
+  localization template, and the disclaimer rules for honouring named
+  public figures.
+- Canonical totals: **8,750 blocks · 33 packs · 130 tracks · 437
+  credentials**.
+
 ## [0.5.0] — 2026-09-09
 
 ### Added

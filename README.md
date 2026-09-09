@@ -15,7 +15,7 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (8,500 blocks, 32 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (8,750 blocks, 33 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
 
@@ -53,8 +53,10 @@ Health, Multilateral, Sapient, Non-Profit — 500 blocks each), sixteen
 preventive health, life skills, water/land/climate, care, making/repair,
 digital life & AI, food & nutrition, energy & the home, transport &
 mobility, emergency preparedness, arts & media, and law & everyday
-rights), plus the legacy K–12, Trade
-School and thematic packs. The generated
+rights), one **legacy-track localization** (*Civic Leadership Legacy :
+Louisiana*, in the Willie L. Brown Jr. Institute model carried by the
+app — see [`docs/wiki/Legacy-Tracks.md`](docs/wiki/Legacy-Tracks.md)),
+plus the legacy K–12, Trade School and thematic packs. The generated
 [`data/manifest.json`](data/manifest.json) is the machine-readable index.
 
 ## Regenerating and extending the data

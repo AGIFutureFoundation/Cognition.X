@@ -68,6 +68,7 @@ PACK_SLUGS = {
     "Emergency Preparedness & First Response": "EMERGENCY",
     "Arts, Making Media & Performance": "ARTS",
     "Law, Contracts & Everyday Rights": "LAW",
+    "Civic Leadership Legacy : Louisiana": "LEGACYLA",
 }
 
 
