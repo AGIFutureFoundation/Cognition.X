@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 8500,
+  "total_blocks": 8750,
   "packs": [
     {
       "name": "K–12",
@@ -477,6 +477,26 @@
         "The camera and the cut",
         "The stage and the spoken word",
         "Craft, design and the made object"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Civic Leadership Legacy : Louisiana",
+      "slug": "LEGACYLA",
+      "blocks": 250,
+      "tracks": [
+        "Public service as a craft: the Louisiana ladder",
+        "The parish: government closest to the door",
+        "Baton Rouge: the Legislature and the law",
+        "Elections, voice and the ballot in Louisiana",
+        "Water, storm and the civic machine"
       ],
       "credentials": 5,
       "grade_bands": [

@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 32 packs — 8,500 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 33 packs — 8,750 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -30,6 +30,7 @@ Catalog of all 32 packs — 8,500 blocks total. Machine-readable version: [`data
 | Cognition.X : Sapient OS | `SAPIENT` | 500 | 10 | 10 |
 | Non-Profit Practice | `NPO` | 500 | 10 | 10 |
 | Arts, Making Media & Performance | `ARTS` | 250 | 5 | 5 |
+| Civic Leadership Legacy : Louisiana | `LEGACYLA` | 250 | 5 | 5 |
 | Digital Life, Data & AI | `DIGITAL` | 250 | 5 | 5 |
 | Emergency Preparedness & First Response | `EMERGENCY` | 250 | 5 | 5 |
 | Energy, Grid & the Home | `ENERGY` | 250 | 5 | 5 |
@@ -157,6 +158,13 @@ Catalog of all 32 packs — 8,500 blocks total. Machine-readable version: [`data
 - The camera and the cut
 - The stage and the spoken word
 - Craft, design and the made object
+
+**Civic Leadership Legacy : Louisiana**
+- Public service as a craft: the Louisiana ladder
+- The parish: government closest to the door
+- Baton Rouge: the Legislature and the law
+- Elections, voice and the ballot in Louisiana
+- Water, storm and the civic machine
 
 **Digital Life, Data & AI**
 - Devices, accounts and the keys you hold

@@ -56,6 +56,12 @@ stable id. ✅
 All Phase 1 candidate packs are shipped; further packs come through the
 community proposal route (see `docs/wiki/Authoring-Packs.md`).
 
+**Legacy-track localizations** (the app's Willie L. Brown Jr. Institute
+model, v29 state template; see `docs/wiki/Legacy-Tracks.md`):
+- [x] Civic Leadership Legacy : Louisiana — shipped in v0.6.0
+- Further state/parish localizations on request, subject to the
+  disclaimer and partnership rules on the Legacy Tracks wiki page
+
 **Exit criteria:** zero empty fields dataset-wide; ≥2 packs
 standards-mapped; validator extended to rubric and mapping checks.
 
