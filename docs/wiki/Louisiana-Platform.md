@@ -49,6 +49,15 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   parent's family ledger and hall card, the homeschool co-op guild,
   the parish admin's five honest numbers and launch team, and the
   state admin's readiness rollup and Trade Hall launch load.
+- **The Trade Hall Network OS (v0.28.0)** — the Regions view as an
+  eight-section operating console: eight system automations (Flow
+  Keeper, Break Caller, Step Tuner, Credential Clerk, Cohort Watch,
+  Readiness Sentinel, Teacher Relief, Network Sync) computing live
+  from the browser's ledger, readiness boards and missions, each
+  showing its current call, on a 20-second pulse. Region cards carry
+  their live section state, and the teacher's Class flow board opens
+  with the teacher's own flow state and a concrete relief automation
+  — keeping teachers, not just learners, in the channel.
 - **Flow-state engine & access modules (v0.27.0)** — a per-learner
   flow model (warming up / in flow / cruising / overloaded / break
   called) whose automations steer the experience: shrink the step
