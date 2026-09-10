@@ -93,10 +93,15 @@ standards-mapped; validator extended to rubric and mapping checks.
 - [x] Reconcile the app's embedded sector master-block library into
   the dataset (v0.17.0): 5,200 practice blocks extracted, including
   the app-only Education OS edition — `tools/extract_app_blocks.py`
-- Split the 8 MB Education OS single-file app onto the same pipeline,
-  keeping the *output* single-file and offline-first — that constraint
-  is a feature for low-connectivity deployments (remaining: the app's
-  non-uniform early structures, then template-building the app)
+- [x] Education OS onto the pipeline, first stage (v0.19.0):
+  `index.html` is now built from `template.html` +
+  `tools/build_education_os.py`, with `DATA.sectorBlocks` sourced from
+  `data/blocks.csv` (the overlay also cures the template's duplicate
+  inflation: 11,520 raw rows → 5,200 canonical). Output stays one
+  offline file.
+- Remaining app-pipeline work: source the app's other data layers
+  (wlb course ladders, K–12 program, parish fact base) from canonical
+  files the same way, shrinking `template.html` over time
 - Learner state: local-first progress store (IndexedDB) with export/import;
   no account required
 - Credential ledger v1: signed completion records (W3C Verifiable

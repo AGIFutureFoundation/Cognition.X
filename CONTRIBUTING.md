@@ -32,8 +32,11 @@
 
 ## App and tooling changes
 
-- The app (`apps/education-os/index.html`) stays a single, offline-capable
-  file — no runtime network dependencies.
+- The Education OS app stays a single, offline-capable file — no
+  runtime network dependencies. Since v0.19.0 `index.html` is a build
+  product: edit `apps/education-os/template.html` (or the dataset) and
+  run `python3 tools/build_education_os.py` — never edit `index.html`
+  directly.
 - Superseded app builds move to `apps/education-os/versions/` rather than
   being overwritten silently; record the change in `CHANGELOG.md`.
 

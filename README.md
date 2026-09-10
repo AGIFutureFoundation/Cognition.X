@@ -37,6 +37,7 @@ open apps/flow-hub/index.html            # flow engine + agents, built from the 
 # Rebuild the apps after dataset changes
 python3 tools/build_flow_hub.py
 python3 tools/build_louisiana.py
+python3 tools/build_education_os.py   # sector library injected from blocks.csv
 ```
 
 ## The data model in one paragraph

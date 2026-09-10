@@ -121,7 +121,7 @@ def extract_fact_base():
     evaluate them with node (strings/numbers/booleans only) to get JSON."""
     import subprocess
     import tempfile
-    t = (ROOT / "apps" / "education-os" / "index.html").read_text(
+    t = (ROOT / "apps" / "education-os" / "template.html").read_text(
         encoding="utf-8", errors="replace")
 
     def grab(name):
