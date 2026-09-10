@@ -64,10 +64,21 @@ def extract_fact_base():
         j = t.find("];", i)
         return t[i + len(name) + 1: j + 1]
 
+    def grab_obj(name):
+        i = t.find(name + "=")
+        j1, j2 = t.find("];", i), t.find("};", i)
+        j = min(x for x in (j1, j2) if x > 0)
+        return t[i + len(name) + 1: j + 1]
+
     js = ("const regions=" + grab("DATA.regions") + ";"
           "const hubs=" + grab("DATA.regionHubs") + ";"
           "const parishes=" + grab("DATA.parishes") + ";"
-          "console.log(JSON.stringify({regions,hubs,parishes}));")
+          "const wlb=" + grab_obj("DATA.wlb") + ";"
+          "const principles=" + grab("DATA.wlbPrinciples") + ";"
+          "console.log(JSON.stringify({regions,hubs,parishes,"
+          "wlb:{org:wlb.org,disclaimer:wlb.disclaimer,mission:wlb.mission,"
+          "quote:wlb.quote,record:wlb.record},"
+          "principles:principles.map(x=>({p:x.p,src:x.src,teach:x.teach}))}));")
     with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as f:
         f.write(js)
         path = f.name
@@ -118,6 +129,8 @@ def main():
         "waveYears": WAVE_YEARS,
         "parishes": parishes,
         "curriculum": curriculum_stats(),
+        "wlb": fb["wlb"],
+        "principles": fb["principles"],
     }
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     template = (ROOT / "apps" / "louisiana" / "template.html").read_text(encoding="utf-8")

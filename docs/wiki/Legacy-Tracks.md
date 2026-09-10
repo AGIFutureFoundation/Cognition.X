@@ -35,6 +35,19 @@ elections, and the coastal civics of water and storm. Further state
 localizations follow the same template and the standard pack shape
 (5 tracks × 10 themes × 5 bands).
 
+## The flagship, for every state and country
+
+As of v0.10.0 the Louisiana platform carries the **Legacy Institute**
+view — the twelve Institute principles grouped as *Service & civic
+duty*, *Ethics & character*, and *Inclusion & the bridge*, each with
+its public source and how it is taught, plus the record behind them and
+an interactive localizer. The eight-slot template generalizes beyond
+U.S. states: for a **country edition** the slots resolve to national
+capital, national/provincial legislature, district/county/commune,
+national curriculum framework, civics certificate where one exists,
+anchor-industry region, ministry & municipal placement ladder, and a
+public-affairs university partner.
+
 ## Disclaimer (carried from the app, applies to every legacy track)
 
 > This track is a proposal built from the Willie L. Brown Jr. Institute

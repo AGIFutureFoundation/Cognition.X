@@ -16,6 +16,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [[Education OS App]] — the single-file application
 - [[Flow Hub]] — the dataset-built hub: flow engine, agents, ledger
 - [[Louisiana Platform]] — 64 independent parish dashboards
+- [Agent & robot learning](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/AGENT_LEARNING.md) — CX-Trace, flow-paced machine curricula, data principles
 - [[Versioning and Releases]] — SemVer policy and history
 - [[Authoring Packs]] — how to write and generate new packs
 
