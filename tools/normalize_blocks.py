@@ -97,10 +97,20 @@ BAND_LEVEL = {"K–2": "Explorer", "3–5": "Explorer", "6–8": "Builder",
               "9–10": "Practitioner", "11–12": "Lead"}
 
 
+# The two generic sentences the source uses where no real transfer check
+# was authored. These, and ONLY these, may be replaced by a promotion's
+# authored `transfer_check` — any other source check is real content and
+# is never overwritten.
+PLACEHOLDER_CHECKS = {
+    "Demonstrate it once, correctly, to somebody who will use it",
+    "Do it once, for real, and show it to somebody who will use it",
+}
+
+
 def apply_promotions(rows):
     """Fill empty track/code/level/description on legacy rows from
-    data/promotions/*.json. Promotions are keyed by exact theme text and
-    only ever fill empty fields — source values are never overwritten."""
+    data/promotions/*.json (keyed by exact theme text; empty fields only),
+    and replace known-placeholder transfer checks with authored ones."""
     if not PROMOTIONS.is_dir():
         return
     promos = {}
@@ -109,22 +119,27 @@ def apply_promotions(rows):
         themap = {}
         for track in spec["tracks"]:
             for i, th in enumerate(track["themes"]):
-                themap[th["theme"]] = (track["name"], track["prefix"], i, th["description"])
+                themap[th["theme"]] = (track["name"], track["prefix"], i,
+                                       th["description"], th.get("transfer_check"))
         promos[spec["pack"]] = themap
-    filled = 0
+    filled = checks = 0
     for r in rows:
         themap = promos.get(r["pack"])
         if not themap or r["track"] or r["theme"] not in themap or r["grade"] not in BAND_LEVEL:
             continue
-        name, prefix, ti, desc = themap[r["theme"]]
+        name, prefix, ti, desc, check = themap[r["theme"]]
         bi = BANDS.index(r["grade"])
         r["track"] = name
         r["code"] = r["code"] or f"{prefix}-{ti*5 + bi + 1}"
         r["level"] = r["level"] or BAND_LEVEL[r["grade"]]
         r["description"] = r["description"] or f"{desc} — at {r['grade']}"
         filled += 1
+        if check and r["transfer_check"] in PLACEHOLDER_CHECKS:
+            r["transfer_check"] = check
+            checks += 1
     if filled:
-        print(f"promotions: filled {filled} legacy rows from {len(promos)} pack(s)")
+        print(f"promotions: filled {filled} legacy rows from {len(promos)} pack(s)"
+              + (f"; replaced {checks} placeholder transfer checks" if checks else ""))
 
 
 def main():

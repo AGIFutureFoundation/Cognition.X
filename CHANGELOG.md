@@ -4,6 +4,20 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.13.0] — 2026-09-10
+
+### Changed
+- **Placeholder transfer checks eliminated.** Authored real, per-theme
+  transfer checks for all 217 themes that carried the source's generic
+  placeholder sentences (Basic Life Skills 50, Water Land & Climate 50,
+  Care Across a Life 50, Making Repair & Reuse 50, Preventive Health
+  17) — 1,085 rows updated. The replacement is guarded: the normalizer
+  substitutes an authored check **only** when the existing value is one
+  of the two known placeholder sentences (`PLACEHOLDER_CHECKS` in
+  `tools/normalize_blocks.py`); real source checks are never touched.
+  Zero placeholder checks remain dataset-wide. Closes the data-review
+  finding 2b and the roadmap item it opened.
+
 ## [0.12.0] — 2026-09-10
 
 ### Added

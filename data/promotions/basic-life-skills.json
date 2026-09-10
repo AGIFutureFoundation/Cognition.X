@@ -1,85 +1,285 @@
 {
   "pack": "Basic Life Skills & Self-Reliance",
-  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names; only empty fields (track, code, level, description) are filled — source themes, credentials and transfer checks are untouched.",
+  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names. Empty fields (track, code, level, description) are filled; authored transfer_check values replace ONLY the two known generic placeholder sentences — real source checks are never overwritten (guard in tools/normalize_blocks.py).",
   "tracks": [
     {
       "prefix": "HH",
       "name": "The household that works",
       "themes": [
-        {"theme": "The bill that arrives (HH)", "description": "Reading a real utility or service bill line by line — what is owed, by when, and what happens if it is ignored."},
-        {"theme": "Water, power and the meter (HH)", "description": "Where water and electricity enter the home, how the meter counts them, and shutting either off safely."},
-        {"theme": "A room that can be cleaned (HH)", "description": "The order and method of cleaning a room so it stays clean — surfaces, floors, and the corners that get skipped."},
-        {"theme": "Fixing the thing that broke (HH)", "description": "The household repairs anyone can do — a washer, a fuse, a hinge — and recognising the ones that need a professional."},
-        {"theme": "Laundry, properly (HH)", "description": "Sorting, temperatures, dosing and drying so clothes come out clean and last — including washing by hand."},
-        {"theme": "Pests and damp (HH)", "description": "Reading the early signs of pests and damp, the causes behind them, and the response that stops them spreading."},
-        {"theme": "The household that runs on a list (HH)", "description": "Shopping lists, chore rotas and the weekly routine — running a household deliberately instead of by crisis."},
-        {"theme": "Sharing a space with people (HH)", "description": "The agreements that make shared kitchens, bathrooms and bills workable, and repairing them when they break."},
-        {"theme": "Emergency in the house (HH)", "description": "The household emergencies — leak, outage, lockout, gas smell — and the first correct move for each."},
-        {"theme": "Leaving a place properly (HH)", "description": "Moving out well: notice, cleaning, meter readings, key handover and getting the deposit back."}
+        {
+          "theme": "The bill that arrives (HH)",
+          "description": "Reading a real utility or service bill line by line — what is owed, by when, and what happens if it is ignored.",
+          "transfer_check": "Read one real bill aloud line by line — amount, due date, consequence — and pay it or diarise its payment correctly."
+        },
+        {
+          "theme": "Water, power and the meter (HH)",
+          "description": "Where water and electricity enter the home, how the meter counts them, and shutting either off safely.",
+          "transfer_check": "Locate the water shutoff and electrical panel in a real dwelling and read both meters, logging the figures."
+        },
+        {
+          "theme": "A room that can be cleaned (HH)",
+          "description": "The order and method of cleaning a room so it stays clean — surfaces, floors, and the corners that get skipped.",
+          "transfer_check": "Clean one real room in the taught order and have somebody else verify it against a checklist, corners included."
+        },
+        {
+          "theme": "Fixing the thing that broke (HH)",
+          "description": "The household repairs anyone can do — a washer, a fuse, a hinge — and recognising the ones that need a professional.",
+          "transfer_check": "Complete one real household repair — washer, hinge, fuse or equivalent — and state which failures you would not attempt."
+        },
+        {
+          "theme": "Laundry, properly (HH)",
+          "description": "Sorting, temperatures, dosing and drying so clothes come out clean and last — including washing by hand.",
+          "transfer_check": "Sort, wash and dry one real mixed load correctly, including one item washed by hand, with nothing shrunk or stained."
+        },
+        {
+          "theme": "Pests and damp (HH)",
+          "description": "Reading the early signs of pests and damp, the causes behind them, and the response that stops them spreading.",
+          "transfer_check": "Inspect a real dwelling for pest and damp signs, identify any cause found, and apply or specify the first remedy."
+        },
+        {
+          "theme": "The household that runs on a list (HH)",
+          "description": "Shopping lists, chore rotas and the weekly routine — running a household deliberately instead of by crisis.",
+          "transfer_check": "Run one real week from a written shopping list and chore rota, and report what the lists caught that memory would have missed."
+        },
+        {
+          "theme": "Sharing a space with people (HH)",
+          "description": "The agreements that make shared kitchens, bathrooms and bills workable, and repairing them when they break.",
+          "transfer_check": "Draft house rules for a real shared space with those who share it, and mediate or rehearse one disagreement under them."
+        },
+        {
+          "theme": "Emergency in the house (HH)",
+          "description": "The household emergencies — leak, outage, lockout, gas smell — and the first correct move for each.",
+          "transfer_check": "Given three staged household emergencies — leak, outage, gas smell — perform the correct first move for each."
+        },
+        {
+          "theme": "Leaving a place properly (HH)",
+          "description": "Moving out well: notice, cleaning, meter readings, key handover and getting the deposit back.",
+          "transfer_check": "Produce a complete move-out file for a real or rehearsed departure: notice letter, meter readings, cleaning checklist, key handover."
+        }
       ]
     },
     {
       "prefix": "MY",
       "name": "Money that lasts the month",
       "themes": [
-        {"theme": "Where the money goes (MY)", "description": "Tracking a real month of spending until the pattern is visible, and naming the categories honestly."},
-        {"theme": "The account, the card and the fee (MY)", "description": "What a basic account does, what a card actually is, and the fees that quietly take from small balances."},
-        {"theme": "Borrowing, and what it costs (MY)", "description": "Interest as the price of borrowed money — comparing a loan, a card and an informal lender on total cost."},
-        {"theme": "Being paid correctly (MY)", "description": "Checking pay against hours and rate, reading the deductions, and querying a shortfall without drama."},
-        {"theme": "Saving where you cannot reach it (MY)", "description": "Why savings survive only when they are separated, and the vehicles — account, lockbox, club — that create distance."},
-        {"theme": "The scam aimed at you (MY)", "description": "The frauds that target ordinary money — prizes, urgent transfers, fake officials — and the checks that defeat them."},
-        {"theme": "Buying something that lasts (MY)", "description": "Cost per use, quality signals and timing — spending more once instead of less repeatedly."},
-        {"theme": "Tax, in the simplest form that is true (MY)", "description": "What tax is, which ones touch your life, and the difference between avoiding a form and owing a debt."},
-        {"theme": "Money between people (MY)", "description": "Lending to and borrowing from family and friends with terms said out loud, and what a gift is."},
-        {"theme": "Planning for the month that goes wrong (MY)", "description": "The buffer, the priority order of bills, and who to call first when income stops."}
+        {
+          "theme": "Where the money goes (MY)",
+          "description": "Tracking a real month of spending until the pattern is visible, and naming the categories honestly.",
+          "transfer_check": "Track every expense for one real week and present the categorised total with the one pattern that surprised you."
+        },
+        {
+          "theme": "The account, the card and the fee (MY)",
+          "description": "What a basic account does, what a card actually is, and the fees that quietly take from small balances.",
+          "transfer_check": "Read a real account's fee schedule and statement, and name every charge taken from it in the last month."
+        },
+        {
+          "theme": "Borrowing, and what it costs (MY)",
+          "description": "Interest as the price of borrowed money — comparing a loan, a card and an informal lender on total cost.",
+          "transfer_check": "Compute the true total cost of one real or advertised loan against paying cash, showing the interest arithmetic."
+        },
+        {
+          "theme": "Being paid correctly (MY)",
+          "description": "Checking pay against hours and rate, reading the deductions, and querying a shortfall without drama.",
+          "transfer_check": "Check one real payslip or payment against hours and agreed rate, and draft the query for any shortfall found."
+        },
+        {
+          "theme": "Saving where you cannot reach it (MY)",
+          "description": "Why savings survive only when they are separated, and the vehicles — account, lockbox, club — that create distance.",
+          "transfer_check": "Open or design a separated savings arrangement and make its first deposit, stating the barrier that protects it."
+        },
+        {
+          "theme": "The scam aimed at you (MY)",
+          "description": "The frauds that target ordinary money — prizes, urgent transfers, fake officials — and the checks that defeat them.",
+          "transfer_check": "Take one real scam message received by you or your family and demonstrate, step by step, the checks that expose it."
+        },
+        {
+          "theme": "Buying something that lasts (MY)",
+          "description": "Cost per use, quality signals and timing — spending more once instead of less repeatedly.",
+          "transfer_check": "Compare two real purchase options on cost per use and evidence of durability, and defend your choice with figures."
+        },
+        {
+          "theme": "Tax, in the simplest form that is true (MY)",
+          "description": "What tax is, which ones touch your life, and the difference between avoiding a form and owing a debt.",
+          "transfer_check": "Identify which taxes touch your own household and correctly read one real tax line on a payslip, receipt or bill."
+        },
+        {
+          "theme": "Money between people (MY)",
+          "description": "Lending to and borrowing from family and friends with terms said out loud, and what a gift is.",
+          "transfer_check": "Write a fair one-page note for a real or rehearsed loan between people who trust each other — amount, timing, and what happens if it fails."
+        },
+        {
+          "theme": "Planning for the month that goes wrong (MY)",
+          "description": "The buffer, the priority order of bills, and who to call first when income stops.",
+          "transfer_check": "Write your household's bad-month plan: the priority order of bills, the buffer target, and the first two calls made before missing a payment."
+        }
       ]
     },
     {
       "prefix": "WK",
       "name": "Getting and holding work",
       "themes": [
-        {"theme": "The five documents (WK)", "description": "The identity and qualification papers work requires, where each comes from, and keeping copies that survive."},
-        {"theme": "Filling in a form that decides something (WK)", "description": "Reading a consequential form fully before writing, answering what is actually asked, and keeping the copy."},
-        {"theme": "Writing to somebody who can help (WK)", "description": "The short, specific letter or message — who you are, what you need, by when — that gets an answer."},
-        {"theme": "The interview, prepared (WK)", "description": "Researching the role, preparing three stories and two questions, and arriving early in the right clothes."},
-        {"theme": "Your first day (WK)", "description": "Names, rules, where things are and what to ask — the first day handled so the second is easier."},
-        {"theme": "Being paid to do a job well (WK)", "description": "Reliability, standards and finishing — the working habits that turn a job into a reference."},
-        {"theme": "When something goes wrong at work (WK)", "description": "Mistakes, conflicts and accidents at work — owning, reporting and repairing them in the right order."},
-        {"theme": "Your rights at work here (WK)", "description": "The minimum wage, hours, breaks and safety rules that apply where you live, and where to turn when they are broken."},
-        {"theme": "Being self-employed, honestly (WK)", "description": "Pricing, invoicing, records and tax when you are the business — the paperwork that keeps small work legitimate."},
-        {"theme": "Leaving a job well (WK)", "description": "Notice, handover and the reference — ending a job so the door stays open."}
+        {
+          "theme": "The five documents (WK)",
+          "description": "The identity and qualification papers work requires, where each comes from, and keeping copies that survive.",
+          "transfer_check": "Assemble your own five work documents — or the plan to obtain each — with safe copies stored in two places."
+        },
+        {
+          "theme": "Filling in a form that decides something (WK)",
+          "description": "Reading a consequential form fully before writing, answering what is actually asked, and keeping the copy.",
+          "transfer_check": "Complete one real consequential form fully and correctly on the first pass, keeping the copy."
+        },
+        {
+          "theme": "Writing to somebody who can help (WK)",
+          "description": "The short, specific letter or message — who you are, what you need, by when — that gets an answer.",
+          "transfer_check": "Send one real letter or message of request — who you are, what you need, by when — and log the response it got."
+        },
+        {
+          "theme": "The interview, prepared (WK)",
+          "description": "Researching the role, preparing three stories and two questions, and arriving early in the right clothes.",
+          "transfer_check": "Complete a mock interview with three prepared stories and two questions, scored by the interviewer against a rubric."
+        },
+        {
+          "theme": "Your first day (WK)",
+          "description": "Names, rules, where things are and what to ask — the first day handled so the second is easier.",
+          "transfer_check": "After a real or simulated first day, produce the map: names learned, rules that matter, where things are, and your three questions."
+        },
+        {
+          "theme": "Being paid to do a job well (WK)",
+          "description": "Reliability, standards and finishing — the working habits that turn a job into a reference.",
+          "transfer_check": "Hold one real responsibility for two weeks — job, chore contract or role — with reliability logged and a reference obtained."
+        },
+        {
+          "theme": "When something goes wrong at work (WK)",
+          "description": "Mistakes, conflicts and accidents at work — owning, reporting and repairing them in the right order.",
+          "transfer_check": "Role-play owning a real-shaped workplace mistake: report it, propose the fix, and follow through in the right order."
+        },
+        {
+          "theme": "Your rights at work here (WK)",
+          "description": "The minimum wage, hours, breaks and safety rules that apply where you live, and where to turn when they are broken.",
+          "transfer_check": "Look up the actual minimum wage, break and safety rules where you live, and check one real job against them."
+        },
+        {
+          "theme": "Being self-employed, honestly (WK)",
+          "description": "Pricing, invoicing, records and tax when you are the business — the paperwork that keeps small work legitimate.",
+          "transfer_check": "Produce a correct quote, invoice and simple record page for one real or rehearsed piece of paid work."
+        },
+        {
+          "theme": "Leaving a job well (WK)",
+          "description": "Notice, handover and the reference — ending a job so the door stays open.",
+          "transfer_check": "Draft a proper notice letter and a one-page handover for a real or rehearsed departure that keeps the reference intact."
+        }
       ]
     },
     {
       "prefix": "CM",
       "name": "Getting things done in the world",
       "themes": [
-        {"theme": "Reading a timetable and a map (CM)", "description": "Planning a real journey from timetable and map alone — connections, walking legs and the margin for error."},
-        {"theme": "The vehicle you depend on (CM)", "description": "The checks and small maintenance that keep a bicycle, motorbike or car dependable, and the costs of neglect."},
-        {"theme": "Being early (CM)", "description": "Working backwards from an appointment — preparation, travel and buffer — so arriving early becomes ordinary."},
-        {"theme": "Getting an appointment (CM)", "description": "Booking with a clinic, office or service: the information to have ready, the questions to ask, and the confirmation to keep."},
-        {"theme": "Speaking to an official (CM)", "description": "Stating your business to an official clearly and calmly — what to bring, what to ask for, and what to write down after."},
-        {"theme": "Keeping a record (CM)", "description": "Dates, names, reference numbers and copies — the personal record-keeping that wins disputes months later."},
-        {"theme": "Asking for help (CM)", "description": "Naming what you need, choosing who to ask, and accepting help in a way that keeps your dignity and theirs."},
-        {"theme": "Doing something for the first time (CM)", "description": "The method for any unfamiliar task — find someone who has done it, break it down, do the first small step today."},
-        {"theme": "When you are the responsible adult (CM)", "description": "Being the one in charge of children, elders or a situation — the duties that arrive with the role and the calls you must be ready to make."},
-        {"theme": "Teaching somebody else what you learned (CM)", "description": "Passing on a skill properly — showing, watching them try, and correcting without taking over."}
+        {
+          "theme": "Reading a timetable and a map (CM)",
+          "description": "Planning a real journey from timetable and map alone — connections, walking legs and the margin for error.",
+          "transfer_check": "Plan and complete a real journey with one connection using only the timetable and map, arriving within your stated margin."
+        },
+        {
+          "theme": "The vehicle you depend on (CM)",
+          "description": "The checks and small maintenance that keep a bicycle, motorbike or car dependable, and the costs of neglect.",
+          "transfer_check": "Perform the full pre-use check on a real bicycle, motorbike or car and correct or report every fault found."
+        },
+        {
+          "theme": "Being early (CM)",
+          "description": "Working backwards from an appointment — preparation, travel and buffer — so arriving early becomes ordinary.",
+          "transfer_check": "Work backwards from a real appointment in writing — preparation, travel, buffer — and arrive early, showing the plan."
+        },
+        {
+          "theme": "Getting an appointment (CM)",
+          "description": "Booking with a clinic, office or service: the information to have ready, the questions to ask, and the confirmation to keep.",
+          "transfer_check": "Book one real appointment by phone or portal with the information ready, and keep the confirmation record."
+        },
+        {
+          "theme": "Speaking to an official (CM)",
+          "description": "Stating your business to an official clearly and calmly — what to bring, what to ask for, and what to write down after.",
+          "transfer_check": "Conduct one real or role-played official interaction: state your business in two sentences, ask your question, and write the record after."
+        },
+        {
+          "theme": "Keeping a record (CM)",
+          "description": "Dates, names, reference numbers and copies — the personal record-keeping that wins disputes months later.",
+          "transfer_check": "Build a record file for one real ongoing matter — dates, names, reference numbers, copies — complete enough to hand to a stranger."
+        },
+        {
+          "theme": "Asking for help (CM)",
+          "description": "Naming what you need, choosing who to ask, and accepting help in a way that keeps your dignity and theirs.",
+          "transfer_check": "Make one real, specific request for help — the need named, the person chosen — and report what asking well changed."
+        },
+        {
+          "theme": "Doing something for the first time (CM)",
+          "description": "The method for any unfamiliar task — find someone who has done it, break it down, do the first small step today.",
+          "transfer_check": "Take one real unfamiliar task through the method: find someone who has done it, break it down, complete the first step today."
+        },
+        {
+          "theme": "When you are the responsible adult (CM)",
+          "description": "Being the one in charge of children, elders or a situation — the duties that arrive with the role and the calls you must be ready to make.",
+          "transfer_check": "Run a rehearsed scenario as the responsible adult — a child, an elder, an incident — making each required call in order."
+        },
+        {
+          "theme": "Teaching somebody else what you learned (CM)",
+          "description": "Passing on a skill properly — showing, watching them try, and correcting without taking over.",
+          "transfer_check": "Teach one skill from this pack to another person, hands on their materials, until they perform it without you."
+        }
       ]
     },
     {
       "prefix": "SF",
       "name": "The first minutes of an emergency",
       "themes": [
-        {"theme": "The first sixty seconds (SF)", "description": "The look-assess-act habit at any emergency — danger first, then the person, then the call."},
-        {"theme": "Calling for help here (SF)", "description": "The emergency numbers where you live, what the call-taker will ask, and giving a location that can be found."},
-        {"theme": "Bleeding (SF)", "description": "Direct pressure, elevation and when a bleed is beyond home control — stopping blood loss with what is in reach."},
-        {"theme": "Choking (SF)", "description": "Recognising true choking and delivering back blows and thrusts, adapted for infants and adults."},
-        {"theme": "Burns and scalds (SF)", "description": "Cooling a burn long enough, covering it right, and the burns that must be seen by a clinician."},
-        {"theme": "Someone who has collapsed (SF)", "description": "Checking response and breathing, the recovery position, and staying until help takes over."},
-        {"theme": "Fire (SF)", "description": "Escape first, doors closed, smoke low — the household fire response, and the small fire you may fight."},
-        {"theme": "Water safety (SF)", "description": "The drowning risks around your own area, reach-and-throw rescue, and why swimmers drown trying to help."},
-        {"theme": "Road and vehicle safety (SF)", "description": "Crossing, riding and travelling defensively, and the first-on-scene basics at a road accident."},
-        {"theme": "After an emergency (SF)", "description": "The hours after — reporting, records, checking on people, and the reactions in yourself that are normal."}
+        {
+          "theme": "The first sixty seconds (SF)",
+          "description": "The look-assess-act habit at any emergency — danger first, then the person, then the call.",
+          "transfer_check": "Approach three staged emergencies verbalising the sequence — danger, response, call — and act correctly in each."
+        },
+        {
+          "theme": "Calling for help here (SF)",
+          "description": "The emergency numbers where you live, what the call-taker will ask, and giving a location that can be found.",
+          "transfer_check": "Complete a realistic mock emergency call: correct number, the call-taker's questions answered, your location given two ways."
+        },
+        {
+          "theme": "Bleeding (SF)",
+          "description": "Direct pressure, elevation and when a bleed is beyond home control — stopping blood loss with what is in reach.",
+          "transfer_check": "Control a staged severe bleed with correct direct pressure and escalation, narrating the decision points."
+        },
+        {
+          "theme": "Choking (SF)",
+          "description": "Recognising true choking and delivering back blows and thrusts, adapted for infants and adults.",
+          "transfer_check": "Demonstrate the complete choking response on adult and infant manikins, adapting correctly for each."
+        },
+        {
+          "theme": "Burns and scalds (SF)",
+          "description": "Cooling a burn long enough, covering it right, and the burns that must be seen by a clinician.",
+          "transfer_check": "Treat a staged burn with correct cooling time and covering, and state which burns must be seen by a clinician."
+        },
+        {
+          "theme": "Someone who has collapsed (SF)",
+          "description": "Checking response and breathing, the recovery position, and staying until help takes over.",
+          "transfer_check": "Assess a staged collapse — response, breathing — place the person in the recovery position, and maintain monitoring until handover."
+        },
+        {
+          "theme": "Fire (SF)",
+          "description": "Escape first, doors closed, smoke low — the household fire response, and the small fire you may fight.",
+          "transfer_check": "Run your dwelling's escape drill smoke-low with doors closed behind you, and state the one fire you might fight and the ones you never would."
+        },
+        {
+          "theme": "Water safety (SF)",
+          "description": "The drowning risks around your own area, reach-and-throw rescue, and why swimmers drown trying to help.",
+          "transfer_check": "Demonstrate reach-and-throw rescue with real materials and name the three drowning risks nearest your own area."
+        },
+        {
+          "theme": "Road and vehicle safety (SF)",
+          "description": "Crossing, riding and travelling defensively, and the first-on-scene basics at a road accident.",
+          "transfer_check": "Assess one real crossing or junction for its risks and walk a staged first-on-scene response — protect, assess, call."
+        },
+        {
+          "theme": "After an emergency (SF)",
+          "description": "The hours after — reporting, records, checking on people, and the reactions in yourself that are normal.",
+          "transfer_check": "From a staged incident, complete the after-actions: report filed, people checked, record written, and the normal reactions named."
+        }
       ]
     }
   ]

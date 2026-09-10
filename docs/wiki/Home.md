@@ -27,7 +27,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Licensing rationale](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/LICENSING.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.11.0)
+## Numbers (v0.13.0)
 
 **9,250 blocks · 35 packs · 165 tracks · 441 credentials**
 
