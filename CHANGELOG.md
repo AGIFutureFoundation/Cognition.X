@@ -4,6 +4,31 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.15.0] — 2026-09-10
+
+### Added
+- **Cognition.X : Louisiana OS** — the state's own full OS edition and
+  the deep Louisiana program curriculum: 500 blocks (10 tracks × 10
+  themes × 5 bands). The working state: *The river* (Old River
+  Control, spillways, gauges, sediment), *The working coast* (land
+  loss, the Master Plan, fisheries, stay-or-go), *The energy corridor*
+  (refineries, LNG, turnarounds, fence line, transition), *Ports and
+  the river highway* (grain, pilots, dredging, intermodal), and
+  *Agriculture* (rice, the crawfish rotation, sugarcane, extension).
+  The culture: *The Louisiana table* (roux, gumbo lineages, the boil,
+  boudin), *Music* (Congo Square, jazz, brass bands, zydeco, Cajun,
+  gospel, blues), *French, Creole and the languages of home* (Kouri-
+  Vini, the punishment generation, immersion, the elders' tapes),
+  *Krewes and festivals* (the krewe as organization, float craft,
+  social aid & pleasure clubs), and *The storm and the long memory*
+  (1927, Katrina from the investigations, the diaspora, oral history).
+  Every transfer check is phrased against the learner's own parish.
+- Louisiana OS joins the **core spine** of every parish module plan
+  (with K–12, the civic legacy pack, life skills and emergency
+  response).
+- Canonical totals: **9,750 blocks · 36 packs · 175 tracks · 451
+  credentials**.
+
 ## [0.14.0] — 2026-09-10
 
 ### Added

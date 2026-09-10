@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 9250,
+  "total_blocks": 9750,
   "packs": [
     {
       "name": "K–12",
@@ -669,6 +669,31 @@
         "The citizen and the state"
       ],
       "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Cognition.X : Louisiana OS",
+      "slug": "LAOS",
+      "blocks": 500,
+      "tracks": [
+        "The river: the Mississippi and its machinery",
+        "The working coast: wetlands and restoration",
+        "The energy corridor: from well to grid",
+        "Ports and the river highway",
+        "Agriculture: rice, cane and the crawfish pond",
+        "The Louisiana table",
+        "Music: the sound the state gave the world",
+        "French, Creole and the languages of home",
+        "Krewes, festivals and the craft of celebration",
+        "The storm and the long memory"
+      ],
+      "credentials": 10,
       "grade_bands": [
         "K–2",
         "3–5",

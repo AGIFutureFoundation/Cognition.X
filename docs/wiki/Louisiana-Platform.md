@@ -19,9 +19,12 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   and credential ladder, the Louisiana civic tracks, and per-parish
   notes saved in the browser.
 - **Parish module plans (v0.12.0)** — the deep integration: every
-  parish dashboard lists the core spine plus the packs matched to its
-  own anchor industries by the build-time rules engine, each with the
-  industry phrase that earned it; tracks deep-link into Flow Hub
+  parish dashboard lists the core spine — which since v0.15.0 includes
+  **Cognition.X : Louisiana OS**, the state's own 500-block edition
+  (river, coast, energy corridor, ports, agriculture, the Louisiana
+  table, music, heritage languages, krewes & festivals, storm memory) —
+  plus the packs matched to its own anchor industries by the build-time
+  rules engine, each with the industry phrase that earned it; tracks deep-link into Flow Hub
   sessions (`#track=<SLUG>/<PREFIX>`) when the apps sit together in
   the repository.
 - **Regions & Trade Halls** — the eight regions, each hall's hub city,
