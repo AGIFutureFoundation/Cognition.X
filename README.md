@@ -21,6 +21,7 @@ The repository carries three things:
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
 | Cognition.X Trades Network (222 union & trade entries, 6 regions) | [`apps/trades-network/`](apps/trades-network/) | HTML |
 | Cognition.X States (custom curriculum for all 50 states) | [`apps/states/`](apps/states/) | HTML |
+| Cognition.X Platform (the working model: system map + runnable loop) | [`apps/platform/`](apps/platform/) | HTML |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
 
 ## Quick start
@@ -42,6 +43,7 @@ python3 tools/build_louisiana.py
 python3 tools/build_education_os.py   # sector library injected from blocks.csv
 python3 tools/build_trades.py         # unions fact base × dataset
 python3 tools/build_states.py         # 50-state fact base × blueprint
+python3 tools/build_platform.py       # the platform working model
 ```
 
 ## The data model in one paragraph

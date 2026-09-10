@@ -18,6 +18,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [[Louisiana Platform]] — 64 independent parish dashboards
 - [[Trades Network]] — 222 union & trade entries across six regions on two coasts
 - [[States App]] — custom curriculum for all 50 states from one blueprint
+- [[Platform Model]] — the capstone working model: system map + runnable loop
 - [Agent & robot learning](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/AGENT_LEARNING.md) — CX-Trace, flow-paced machine curricula, data principles
 - [[Versioning and Releases]] — SemVer policy and history
 - [[Authoring Packs]] — how to write and generate new packs
@@ -31,7 +32,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.35.0)
+## Numbers (v0.37.0)
 
 **16,700 blocks · 44 packs · 210 tracks · 1,394 credentials**
 
