@@ -25,7 +25,10 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.23.0** | Trades Network app (111 union/trade entries across SF, Oakland & New Orleans, regional training sims, district compacts), Trades in the Classroom pack (flipped & gamified, 250 blocks), widgetized customizable role dashboards, three-persona human-like voice model — 15,950 blocks / 41 packs |
+| **v0.26.0** | City maps for all 111 union entries (three stylized region maps, click-through to filtered rosters), Trades Across School Subjects pack (250 blocks — trades inside math/science/ELA/civics from K–2), classroom hooks on every roster card — 16,200 blocks / 42 packs |
+| v0.25.0 | Working learner ledger (auto credential at 50 checks, recommendations, alerts, export/import, demo cohort) + comprehensive standing dashboards for all six roles |
+| v0.24.0 | Parish ↔ union integration (New Orleans-hall parishes surface their matched trade families); roadmap and wiki brought current |
+| v0.23.0 | Trades Network app (111 union/trade entries across SF, Oakland & New Orleans, regional training sims, district compacts), Trades in the Classroom pack (flipped & gamified, 250 blocks), widgetized customizable role dashboards, three-persona human-like voice model — 15,950 blocks / 41 packs |
 | v0.22.0 | Adopted two-year rollout (33 parishes in Wave 1 2026–27, statewide by 2027–28), Parish Launch & Scale pack (250 blocks), statewide Wave-1 readiness boards, five style templates with an Enterprise default; folds in the SmartCiti.X : New Orleans Trades pack — 15,700 blocks / 40 packs |
 | v0.21.0 | Tutor swarm (blackboard + priority arbitration), on-device voice agents, active Guide walkthroughs in both apps — flow loop verified end-to-end |
 | v0.20.0 | Recursive Voronoi cell graphics (state + curriculum), expansion-to-Wave-4 timelines, print program template |

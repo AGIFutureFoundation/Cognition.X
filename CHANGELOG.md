@@ -4,6 +4,34 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.26.0] — 2026-09-10
+
+### Added
+- **City maps for all 111 union entries** (Trades Network): each
+  region card is headed by a stylized, hand-placed city map — the
+  Golden Gate, the Bay and the Pacific for San Francisco; the Bay and
+  the East Bay hills for Oakland; Lake Pontchartrain and the
+  Mississippi crescent for New Orleans — with the nine
+  training-ground sites as clickable nodes carrying their
+  trade-family counts (the three maps sum to exactly 111 entries).
+  Clicking a node opens the Unions roster pre-filtered to that region
+  and category.
+- **Trades Across School Subjects pack** (`TRADESUBJ`, 250 blocks) —
+  the early-pathways curriculum: *Discovering the working world*
+  (K–2-up job and skill awareness), *The math on the jobsite*
+  (fractions on the cut list, the 3-4-5 triangle, load charts),
+  *The science in the craft* (circuits, siphons, heat paths, the
+  pendulum), *Reading and writing the working word* (labels, manuals,
+  logs, bids), and *Civics and the working city* (union history,
+  ports, permits, the apprentice's civic ladder). Dataset: **16,200
+  blocks · 42 packs · 200 tracks · 1,384 credentials**.
+- **Classroom hooks on every roster entry**: all 37 trade families in
+  the unions fact base now carry subject tags and one concrete
+  "In class" connection (Ohm's law as ratio, flat patterns as
+  unfolded geometry, cold chains as data…), shown on each of the 111
+  roster cards — so schools and regions can teach the jobs and
+  skills early, inside the subjects they already teach.
+
 ## [0.25.0] — 2026-09-10
 
 ### Added

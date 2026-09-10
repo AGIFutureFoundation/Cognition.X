@@ -1,5 +1,5 @@
 {
- "note": "Fact base for the Cognition.X Trades Network: 37 trade families crossed with 3 regions = 111 regional union/trade entries. International union names are real and public; LOCAL/CHAPTER NUMBERS ARE DELIBERATELY NOT LISTED — locals merge, renumber and redistrict, so every entry carries the same instruction: verify the current local with the regional building-trades or labor council before publishing. Simulation scenarios are training exercises phrased against real, publicly known sites; they teach control discipline and observation and never count as equipment certification or union credit.",
+ "note": "Fact base for the Cognition.X Trades Network: 37 trade families crossed with 3 regions = 111 regional union/trade entries. International union names are real and public; LOCAL/CHAPTER NUMBERS ARE DELIBERATELY NOT LISTED — locals merge, renumber and redistrict, so every entry carries the same instruction: verify the current local with the regional building-trades or labor council before publishing. Simulation scenarios are training exercises phrased against real, publicly known sites; they teach control discipline and observation and never count as equipment certification or union credit. Each family also carries a classroom hook — the school subjects it teaches through (math, science, ELA, civics) and one concrete in-class connection — feeding the Trades Across School Subjects pack.",
  "regions": [
   {
    "id": "sf",
@@ -54,42 +54,555 @@
   }
  ],
  "families": [
-  {"family": "Electricians (inside wire)", "intl": "International Brotherhood of Electrical Workers (IBEW)", "kind": "elec", "sim": "Trace a de-energized circuit from panel to device at {site}, narrating lockout-tagout at every step", "packs": ["ENERGY", "MAKE"]},
-  {"family": "Utility line workers", "intl": "International Brotherhood of Electrical Workers (IBEW, utility branch)", "kind": "elec", "sim": "Walk a storm-restoration switching order for {site} on paper, with the feeder map open and every hold point named", "packs": ["ENERGY", "EMERGENCY"]},
-  {"family": "Plumbers", "intl": "United Association (UA)", "kind": "water", "sim": "Chart supply, waste and vent for one fixture group serving {site}, then pressure-test the logic against the code table", "packs": ["MAKE", "PREVCARE"]},
-  {"family": "Pipefitters & steamfitters", "intl": "United Association (UA)", "kind": "mech", "sim": "Read an isometric spool drawing for a run at {site} and stage its fit-up sequence with tack points called in order", "packs": ["MAKE", "ENERGY"]},
-  {"family": "Sprinkler fitters", "intl": "United Association (UA)", "kind": "build", "sim": "Lay out sprinkler coverage for one floor plan drawn from {site}, then defend head spacing against the obstruction rules", "packs": ["EMERGENCY", "MAKE"]},
-  {"family": "Carpenters", "intl": "United Brotherhood of Carpenters (UBC)", "kind": "build", "sim": "Frame a scale wall section matched to details from {site} — layout, plumb, square — and hand a punch list to a partner", "packs": ["MAKE", "HOUSING"]},
-  {"family": "Millwrights", "intl": "United Brotherhood of Carpenters (UBC, millwright division)", "kind": "mech", "sim": "Level and align a motor-to-pump train on the bench as if installed at {site}, logging shim moves to the thousandth", "packs": ["MAKE", "ROB"]},
-  {"family": "Pile drivers", "intl": "United Brotherhood of Carpenters (UBC, pile drivers)", "kind": "port", "sim": "Model bearing versus friction piles in a sand box for ground like {site}, and read refusal from the blow count", "packs": ["MAKE", "WLC"]},
-  {"family": "Operating engineers", "intl": "International Union of Operating Engineers (IUOE)", "kind": "build", "sim": "Run a crane-simulator lift plan sized from {site}: pick radius, load chart, and the one call that stops the lift", "packs": ["ROB", "TRANSPORT"]},
-  {"family": "Ironworkers", "intl": "Iron Workers International (BSOIW)", "kind": "build", "sim": "Sequence steel erection for a bay of {site} — columns, beams, plumb-up — and name the connection each bolt-up needs", "packs": ["MAKE", "TRANSPORT"]},
-  {"family": "Laborers", "intl": "Laborers' International Union (LIUNA)", "kind": "build", "sim": "Plan trench protection for a utility cut near {site}: soil class, shoring choice, and the flagged line that stops the dig", "packs": ["EMERGENCY", "MAKE"]},
-  {"family": "Sheet metal workers", "intl": "SMART (Sheet Metal, Air, Rail & Transportation)", "kind": "mech", "sim": "Develop the flat pattern for a duct transition serving {site}, cut it in paper, and prove the fit by folding", "packs": ["MAKE", "ENERGY"]},
-  {"family": "Painters", "intl": "International Union of Painters and Allied Trades (IUPAT)", "kind": "build", "sim": "Write the surface-prep and coating schedule for an exposure like {site}, and justify each coat by what it stops", "packs": ["MAKE", "ARTS"]},
-  {"family": "Glaziers", "intl": "IUPAT (glaziers)", "kind": "build", "sim": "Plan a curtain-wall lite replacement at {site} on paper: glass handling, suction rig checks, and the wind call", "packs": ["MAKE", "EMERGENCY"]},
-  {"family": "Drywall finishers", "intl": "IUPAT (drywall finishers)", "kind": "build", "sim": "Take one wall from board to level-4 finish in a classroom mock-up matched to {site}, logging coats and dry times", "packs": ["MAKE", "HOUSING"]},
-  {"family": "Plasterers & cement masons", "intl": "Operative Plasterers' and Cement Masons' (OPCMIA)", "kind": "build", "sim": "Pour, screed and finish a slab sample as specified for {site}, and read the bull-float window from the sheen", "packs": ["MAKE", "HOUSING"]},
-  {"family": "Bricklayers & tile setters", "intl": "International Union of Bricklayers and Allied Craftworkers (BAC)", "kind": "build", "sim": "Lay a sample lead corner to a story pole drawn from {site}, keeping bond, level and plumb through six courses", "packs": ["MAKE", "HOUSING"]},
-  {"family": "Roofers & waterproofers", "intl": "United Union of Roofers, Waterproofers and Allied Workers", "kind": "build", "sim": "Detail the flashing at a wall-to-deck transition like {site}'s, and trace the water path that proves it dry", "packs": ["MAKE", "EMERGENCY"]},
-  {"family": "Heat & frost insulators", "intl": "International Association of Heat and Frost Insulators", "kind": "mech", "sim": "Size insulation for a chilled and a steam line at {site} and show the condensation math that picks the thickness", "packs": ["ENERGY", "MAKE"]},
-  {"family": "Boilermakers", "intl": "International Brotherhood of Boilermakers (IBB)", "kind": "mech", "sim": "Walk a confined-space entry plan for a vessel at {site}: permits, attendant, atmosphere checks, retrieval", "packs": ["ENERGY", "EMERGENCY"]},
-  {"family": "Elevator constructors", "intl": "International Union of Elevator Constructors (IUEC)", "kind": "build", "sim": "Map the safety chain of a traction elevator serving {site} — governor, safeties, buffers — and what trips each", "packs": ["MAKE", "ROB"]},
-  {"family": "Teamsters (construction & freight)", "intl": "International Brotherhood of Teamsters (IBT)", "kind": "transit", "sim": "Plan a permitted oversize delivery to {site}: route survey, escort points, and the hour the city allows the move", "packs": ["TRANSPORT", "CORP"]},
-  {"family": "Longshore workers", "intl": "ILWU (West Coast) / ILA (Gulf Coast)", "intl_by_region": {"sf": "International Longshore and Warehouse Union (ILWU)", "oak": "International Longshore and Warehouse Union (ILWU)", "nola": "International Longshoremen's Association (ILA)"}, "kind": "port", "sim": "Choreograph one container move at {site} — crane, hostler, stack — and call the pinch points a walker must never cross", "packs": ["TRANSPORT", "NOLATRADES"]},
-  {"family": "Machinists", "intl": "International Association of Machinists (IAM)", "kind": "mech", "sim": "Take a worn part from {site} from measurement to process plan: datum, tolerance, and the machine that holds it", "packs": ["MAKE", "ROB"]},
-  {"family": "Communications & broadband", "intl": "Communications Workers of America (CWA)", "kind": "elec", "sim": "Design the fiber path from street cabinet to classroom for {site}, and test-plan every splice you drew", "packs": ["DIGITAL", "ENERGY"]},
-  {"family": "Transit operators", "intl": "Amalgamated Transit Union (ATU)", "kind": "transit", "sim": "Run a blocking diagram for {site} through one service day, and recover the schedule after a simulated 20-minute gap", "packs": ["TRANSPORT", "CORP"]},
-  {"family": "Rail workers", "intl": "SMART Transportation Division", "kind": "transit", "sim": "Work a switching problem in a yard modeled on {site}: moves, shove protection, and the three-step protection rule", "packs": ["TRANSPORT", "EMERGENCY"]},
-  {"family": "Marine engineers", "intl": "Marine Engineers' Beneficial Association (MEBA)", "kind": "port", "sim": "Stand a simulated engine-room watch for a vessel working {site}: log readings, catch the one drifting gauge", "packs": ["TRANSPORT", "ENERGY"]},
-  {"family": "Sailors & deckhands", "intl": "Seafarers International Union (SIU)", "kind": "port", "sim": "Plan and narrate a mooring evolution at {site}: line order, winch commands, and the snap-back zones nobody stands in", "packs": ["TRANSPORT", "EMERGENCY"]},
-  {"family": "Firefighters", "intl": "International Association of Fire Fighters (IAFF)", "kind": "fire", "sim": "Build a pre-incident plan for {site}: access, water supply, hazards, and the first-alarm assignment that fits it", "packs": ["EMERGENCY", "PREVCARE"]},
-  {"family": "Stagehands & exhibition workers", "intl": "IATSE", "kind": "service", "sim": "Produce the rigging plot and load-in schedule for {site}, with every point's weight and the show-stop authority named", "packs": ["ARTS", "MAKE"]},
-  {"family": "Culinary & hospitality workers", "intl": "UNITE HERE", "kind": "service", "sim": "Run a banquet line simulation scaled to {site}: mise en place, allergy chain of custody, and the 200-cover clock", "packs": ["FOOD", "CORP"]},
-  {"family": "Food & commercial workers", "intl": "United Food and Commercial Workers (UFCW)", "kind": "service", "sim": "Trace cold chain from dock to case for a store serving {site}'s neighborhood, and log the two temperature gates", "packs": ["FOOD", "PREVCARE"]},
-  {"family": "Public works & service employees", "intl": "AFSCME", "kind": "civic", "sim": "Prioritize one storm's work orders for the crews serving {site} — trees, drains, signals — and defend the triage", "packs": ["EMERGENCY", "NEIGH"]},
-  {"family": "Teachers & classroom staff", "intl": "American Federation of Teachers (AFT)", "kind": "civic", "sim": "Co-plan one flipped trades lesson with a union mentor for {site}: the at-home watch, the in-class build, the check", "packs": ["K12", "EMPATH"]},
-  {"family": "School support employees", "intl": "Service Employees International Union (SEIU)", "kind": "civic", "sim": "Walk the plant of {site} with its custodial and food-service leads and chart one day's unseen work as a system", "packs": ["LIFESKILL", "NEIGH"]},
-  {"family": "Musicians", "intl": "American Federation of Musicians (AFM)", "kind": "service", "sim": "Contract, rehearse and run a three-tune set for {site} on union terms: the call, the book, the split, the encore", "packs": ["ARTS", "CORP"]}
+  {
+   "family": "Electricians (inside wire)",
+   "intl": "International Brotherhood of Electrical Workers (IBEW)",
+   "kind": "elec",
+   "sim": "Trace a de-energized circuit from panel to device at {site}, narrating lockout-tagout at every step",
+   "packs": [
+    "ENERGY",
+    "MAKE"
+   ],
+   "subjects": [
+    "math",
+    "science"
+   ],
+   "school": "Ohm's law as ratio and proportion; series vs. parallel circuits with battery and bulb."
+  },
+  {
+   "family": "Utility line workers",
+   "intl": "International Brotherhood of Electrical Workers (IBEW, utility branch)",
+   "kind": "elec",
+   "sim": "Walk a storm-restoration switching order for {site} on paper, with the feeder map open and every hold point named",
+   "packs": [
+    "ENERGY",
+    "EMERGENCY"
+   ],
+   "subjects": [
+    "science",
+    "civics"
+   ],
+   "school": "The grid as a system diagram; who restores power after a storm and in what order."
+  },
+  {
+   "family": "Plumbers",
+   "intl": "United Association (UA)",
+   "kind": "water",
+   "sim": "Chart supply, waste and vent for one fixture group serving {site}, then pressure-test the logic against the code table",
+   "packs": [
+    "MAKE",
+    "PREVCARE"
+   ],
+   "subjects": [
+    "science",
+    "math"
+   ],
+   "school": "Water pressure, gravity and the siphon; pipe volume and flow-rate arithmetic."
+  },
+  {
+   "family": "Pipefitters & steamfitters",
+   "intl": "United Association (UA)",
+   "kind": "mech",
+   "sim": "Read an isometric spool drawing for a run at {site} and stage its fit-up sequence with tack points called in order",
+   "packs": [
+    "MAKE",
+    "ENERGY"
+   ],
+   "subjects": [
+    "math",
+    "science"
+   ],
+   "school": "Reading isometric drawings; thermal expansion measured on a heated rod."
+  },
+  {
+   "family": "Sprinkler fitters",
+   "intl": "United Association (UA)",
+   "kind": "build",
+   "sim": "Lay out sprinkler coverage for one floor plan drawn from {site}, then defend head spacing against the obstruction rules",
+   "packs": [
+    "EMERGENCY",
+    "MAKE"
+   ],
+   "subjects": [
+    "math"
+   ],
+   "school": "Coverage circles and spacing on a floor plan — geometry with lives attached."
+  },
+  {
+   "family": "Carpenters",
+   "intl": "United Brotherhood of Carpenters (UBC)",
+   "kind": "build",
+   "sim": "Frame a scale wall section matched to details from {site} — layout, plumb, square — and hand a punch list to a partner",
+   "packs": [
+    "MAKE",
+    "HOUSING"
+   ],
+   "subjects": [
+    "math"
+   ],
+   "school": "Fractions on the tape measure; the 3-4-5 triangle that squares every corner."
+  },
+  {
+   "family": "Millwrights",
+   "intl": "United Brotherhood of Carpenters (UBC, millwright division)",
+   "kind": "mech",
+   "sim": "Level and align a motor-to-pump train on the bench as if installed at {site}, logging shim moves to the thousandth",
+   "packs": [
+    "MAKE",
+    "ROB"
+   ],
+   "subjects": [
+    "math",
+    "science"
+   ],
+   "school": "Alignment to the thousandth — tolerance, precision and measurement error made real."
+  },
+  {
+   "family": "Pile drivers",
+   "intl": "United Brotherhood of Carpenters (UBC, pile drivers)",
+   "kind": "port",
+   "sim": "Model bearing versus friction piles in a sand box for ground like {site}, and read refusal from the blow count",
+   "packs": [
+    "MAKE",
+    "WLC"
+   ],
+   "subjects": [
+    "science"
+   ],
+   "school": "Bearing vs. friction in a sand-box model; why the blow count is data."
+  },
+  {
+   "family": "Operating engineers",
+   "intl": "International Union of Operating Engineers (IUOE)",
+   "kind": "build",
+   "sim": "Run a crane-simulator lift plan sized from {site}: pick radius, load chart, and the one call that stops the lift",
+   "packs": [
+    "ROB",
+    "TRANSPORT"
+   ],
+   "subjects": [
+    "math",
+    "science"
+   ],
+   "school": "The load chart as a function of radius; the pendulum physics of a swinging load."
+  },
+  {
+   "family": "Ironworkers",
+   "intl": "Iron Workers International (BSOIW)",
+   "kind": "build",
+   "sim": "Sequence steel erection for a bay of {site} — columns, beams, plumb-up — and name the connection each bolt-up needs",
+   "packs": [
+    "MAKE",
+    "TRANSPORT"
+   ],
+   "subjects": [
+    "math",
+    "science"
+   ],
+   "school": "Triangles and bracing — why the truss holds; load paths traced through a frame."
+  },
+  {
+   "family": "Laborers",
+   "intl": "Laborers' International Union (LIUNA)",
+   "kind": "build",
+   "sim": "Plan trench protection for a utility cut near {site}: soil class, shoring choice, and the flagged line that stops the dig",
+   "packs": [
+    "EMERGENCY",
+    "MAKE"
+   ],
+   "subjects": [
+    "science",
+    "civics"
+   ],
+   "school": "Soil types and trench physics; the flagged utility line as public safety in the ground."
+  },
+  {
+   "family": "Sheet metal workers",
+   "intl": "SMART (Sheet Metal, Air, Rail & Transportation)",
+   "kind": "mech",
+   "sim": "Develop the flat pattern for a duct transition serving {site}, cut it in paper, and prove the fit by folding",
+   "packs": [
+    "MAKE",
+    "ENERGY"
+   ],
+   "subjects": [
+    "math"
+   ],
+   "school": "Flat-pattern development — 3-D shapes unfolded into 2-D geometry you can cut and fold."
+  },
+  {
+   "family": "Painters",
+   "intl": "International Union of Painters and Allied Trades (IUPAT)",
+   "kind": "build",
+   "sim": "Write the surface-prep and coating schedule for an exposure like {site}, and justify each coat by what it stops",
+   "packs": [
+    "MAKE",
+    "ARTS"
+   ],
+   "subjects": [
+    "math",
+    "science"
+   ],
+   "school": "Area take-offs for coverage; why coatings cure — evaporation vs. chemical change."
+  },
+  {
+   "family": "Glaziers",
+   "intl": "IUPAT (glaziers)",
+   "kind": "build",
+   "sim": "Plan a curtain-wall lite replacement at {site} on paper: glass handling, suction rig checks, and the wind call",
+   "packs": [
+    "MAKE",
+    "EMERGENCY"
+   ],
+   "subjects": [
+    "science",
+    "math"
+   ],
+   "school": "Wind load on a pane; thermal breaks and why glass and metal move differently."
+  },
+  {
+   "family": "Drywall finishers",
+   "intl": "IUPAT (drywall finishers)",
+   "kind": "build",
+   "sim": "Take one wall from board to level-4 finish in a classroom mock-up matched to {site}, logging coats and dry times",
+   "packs": [
+    "MAKE",
+    "HOUSING"
+   ],
+   "subjects": [
+    "science"
+   ],
+   "school": "Plaster's chemistry — hydration, working time and the cure you can watch."
+  },
+  {
+   "family": "Plasterers & cement masons",
+   "intl": "Operative Plasterers' and Cement Masons' (OPCMIA)",
+   "kind": "build",
+   "sim": "Pour, screed and finish a slab sample as specified for {site}, and read the bull-float window from the sheen",
+   "packs": [
+    "MAKE",
+    "HOUSING"
+   ],
+   "subjects": [
+    "science",
+    "math"
+   ],
+   "school": "Concrete as chemistry with a clock; mix ratios scaled like recipes."
+  },
+  {
+   "family": "Bricklayers & tile setters",
+   "intl": "International Union of Bricklayers and Allied Craftworkers (BAC)",
+   "kind": "build",
+   "sim": "Lay a sample lead corner to a story pole drawn from {site}, keeping bond, level and plumb through six courses",
+   "packs": [
+    "MAKE",
+    "HOUSING"
+   ],
+   "subjects": [
+    "math"
+   ],
+   "school": "Bond patterns, courses and the story pole — modular arithmetic on a wall."
+  },
+  {
+   "family": "Roofers & waterproofers",
+   "intl": "United Union of Roofers, Waterproofers and Allied Workers",
+   "kind": "build",
+   "sim": "Detail the flashing at a wall-to-deck transition like {site}'s, and trace the water path that proves it dry",
+   "packs": [
+    "MAKE",
+    "EMERGENCY"
+   ],
+   "subjects": [
+    "science",
+    "math"
+   ],
+   "school": "Slope as rise over run; tracing the water path that proves a detail dry."
+  },
+  {
+   "family": "Heat & frost insulators",
+   "intl": "International Association of Heat and Frost Insulators",
+   "kind": "mech",
+   "sim": "Size insulation for a chilled and a steam line at {site} and show the condensation math that picks the thickness",
+   "packs": [
+    "ENERGY",
+    "MAKE"
+   ],
+   "subjects": [
+    "science",
+    "math"
+   ],
+   "school": "Conduction, convection, radiation — R-value as measurable insulation math."
+  },
+  {
+   "family": "Boilermakers",
+   "intl": "International Brotherhood of Boilermakers (IBB)",
+   "kind": "mech",
+   "sim": "Walk a confined-space entry plan for a vessel at {site}: permits, attendant, atmosphere checks, retrieval",
+   "packs": [
+    "ENERGY",
+    "EMERGENCY"
+   ],
+   "subjects": [
+    "science"
+   ],
+   "school": "Pressure, temperature and the confined-space atmosphere — gas laws with rules attached."
+  },
+  {
+   "family": "Elevator constructors",
+   "intl": "International Union of Elevator Constructors (IUEC)",
+   "kind": "build",
+   "sim": "Map the safety chain of a traction elevator serving {site} — governor, safeties, buffers — and what trips each",
+   "packs": [
+    "MAKE",
+    "ROB"
+   ],
+   "subjects": [
+    "science",
+    "math"
+   ],
+   "school": "Counterweights and mechanical advantage; the safety chain as an engineered system."
+  },
+  {
+   "family": "Teamsters (construction & freight)",
+   "intl": "International Brotherhood of Teamsters (IBT)",
+   "kind": "transit",
+   "sim": "Plan a permitted oversize delivery to {site}: route survey, escort points, and the hour the city allows the move",
+   "packs": [
+    "TRANSPORT",
+    "CORP"
+   ],
+   "subjects": [
+    "math",
+    "civics"
+   ],
+   "school": "Route, weight and time arithmetic; who permits an oversize load through a city."
+  },
+  {
+   "family": "Longshore workers",
+   "intl": "ILWU (West Coast) / ILA (Gulf Coast)",
+   "intl_by_region": {
+    "sf": "International Longshore and Warehouse Union (ILWU)",
+    "oak": "International Longshore and Warehouse Union (ILWU)",
+    "nola": "International Longshoremen's Association (ILA)"
+   },
+   "kind": "port",
+   "sim": "Choreograph one container move at {site} — crane, hostler, stack — and call the pinch points a walker must never cross",
+   "packs": [
+    "TRANSPORT",
+    "NOLATRADES"
+   ],
+   "subjects": [
+    "math",
+    "civics"
+   ],
+   "school": "Container arithmetic at port scale; how trade through one wharf shapes a region's history."
+  },
+  {
+   "family": "Machinists",
+   "intl": "International Association of Machinists (IAM)",
+   "kind": "mech",
+   "sim": "Take a worn part from {site} from measurement to process plan: datum, tolerance, and the machine that holds it",
+   "packs": [
+    "MAKE",
+    "ROB"
+   ],
+   "subjects": [
+    "math"
+   ],
+   "school": "Datum, tolerance and measurement — decimals to the thousandth on real parts."
+  },
+  {
+   "family": "Communications & broadband",
+   "intl": "Communications Workers of America (CWA)",
+   "kind": "elec",
+   "sim": "Design the fiber path from street cabinet to classroom for {site}, and test-plan every splice you drew",
+   "packs": [
+    "DIGITAL",
+    "ENERGY"
+   ],
+   "subjects": [
+    "science",
+    "math"
+   ],
+   "school": "Light down a fiber; bandwidth and signal loss as rates and ratios."
+  },
+  {
+   "family": "Transit operators",
+   "intl": "Amalgamated Transit Union (ATU)",
+   "kind": "transit",
+   "sim": "Run a blocking diagram for {site} through one service day, and recover the schedule after a simulated 20-minute gap",
+   "packs": [
+    "TRANSPORT",
+    "CORP"
+   ],
+   "subjects": [
+    "math",
+    "civics"
+   ],
+   "school": "Headways and schedules as rate problems; transit as a public service the city votes on."
+  },
+  {
+   "family": "Rail workers",
+   "intl": "SMART Transportation Division",
+   "kind": "transit",
+   "sim": "Work a switching problem in a yard modeled on {site}: moves, shove protection, and the three-step protection rule",
+   "packs": [
+    "TRANSPORT",
+    "EMERGENCY"
+   ],
+   "subjects": [
+    "math",
+    "science"
+   ],
+   "school": "Switching puzzles as logic problems; momentum and stopping distance at train scale."
+  },
+  {
+   "family": "Marine engineers",
+   "intl": "Marine Engineers' Beneficial Association (MEBA)",
+   "kind": "port",
+   "sim": "Stand a simulated engine-room watch for a vessel working {site}: log readings, catch the one drifting gauge",
+   "packs": [
+    "TRANSPORT",
+    "ENERGY"
+   ],
+   "subjects": [
+    "science",
+    "math"
+   ],
+   "school": "The engine-room watch as data logging — reading gauges and catching the drift."
+  },
+  {
+   "family": "Sailors & deckhands",
+   "intl": "Seafarers International Union (SIU)",
+   "kind": "port",
+   "sim": "Plan and narrate a mooring evolution at {site}: line order, winch commands, and the snap-back zones nobody stands in",
+   "packs": [
+    "TRANSPORT",
+    "EMERGENCY"
+   ],
+   "subjects": [
+    "science"
+   ],
+   "school": "Lines under load — force, snap-back and why geometry keeps a deck crew alive."
+  },
+  {
+   "family": "Firefighters",
+   "intl": "International Association of Fire Fighters (IAFF)",
+   "kind": "fire",
+   "sim": "Build a pre-incident plan for {site}: access, water supply, hazards, and the first-alarm assignment that fits it",
+   "packs": [
+    "EMERGENCY",
+    "PREVCARE"
+   ],
+   "subjects": [
+    "science",
+    "civics"
+   ],
+   "school": "Fire triangle and water supply math; how a city plans its own protection."
+  },
+  {
+   "family": "Stagehands & exhibition workers",
+   "intl": "IATSE",
+   "kind": "service",
+   "sim": "Produce the rigging plot and load-in schedule for {site}, with every point's weight and the show-stop authority named",
+   "packs": [
+    "ARTS",
+    "MAKE"
+   ],
+   "subjects": [
+    "math",
+    "science"
+   ],
+   "school": "Rigging plots — point loads, angles and the arithmetic hanging over the stage."
+  },
+  {
+   "family": "Culinary & hospitality workers",
+   "intl": "UNITE HERE",
+   "kind": "service",
+   "sim": "Run a banquet line simulation scaled to {site}: mise en place, allergy chain of custody, and the 200-cover clock",
+   "packs": [
+    "FOOD",
+    "CORP"
+   ],
+   "subjects": [
+    "math",
+    "science"
+   ],
+   "school": "Scaling recipes as ratios; heat, time and food safety as applied chemistry."
+  },
+  {
+   "family": "Food & commercial workers",
+   "intl": "United Food and Commercial Workers (UFCW)",
+   "kind": "service",
+   "sim": "Trace cold chain from dock to case for a store serving {site}'s neighborhood, and log the two temperature gates",
+   "packs": [
+    "FOOD",
+    "PREVCARE"
+   ],
+   "subjects": [
+    "science",
+    "math"
+   ],
+   "school": "Cold-chain temperatures as data; inventory arithmetic from dock to shelf."
+  },
+  {
+   "family": "Public works & service employees",
+   "intl": "AFSCME",
+   "kind": "civic",
+   "sim": "Prioritize one storm's work orders for the crews serving {site} — trees, drains, signals — and defend the triage",
+   "packs": [
+    "EMERGENCY",
+    "NEIGH"
+   ],
+   "subjects": [
+    "civics"
+   ],
+   "school": "Work orders and triage after a storm — the civics of who fixes what first."
+  },
+  {
+   "family": "Teachers & classroom staff",
+   "intl": "American Federation of Teachers (AFT)",
+   "kind": "civic",
+   "sim": "Co-plan one flipped trades lesson with a union mentor for {site}: the at-home watch, the in-class build, the check",
+   "packs": [
+    "K12",
+    "EMPATH"
+   ],
+   "subjects": [
+    "ela",
+    "civics"
+   ],
+   "school": "The flipped lesson itself as a text — writing directions that cannot be misread."
+  },
+  {
+   "family": "School support employees",
+   "intl": "Service Employees International Union (SEIU)",
+   "kind": "civic",
+   "sim": "Walk the plant of {site} with its custodial and food-service leads and chart one day's unseen work as a system",
+   "packs": [
+    "LIFESKILL",
+    "NEIGH"
+   ],
+   "subjects": [
+    "civics",
+    "science"
+   ],
+   "school": "A school's plant as a living system — mapping one day of unseen work."
+  },
+  {
+   "family": "Musicians",
+   "intl": "American Federation of Musicians (AFM)",
+   "kind": "service",
+   "sim": "Contract, rehearse and run a three-tune set for {site} on union terms: the call, the book, the split, the encore",
+   "packs": [
+    "ARTS",
+    "CORP"
+   ],
+   "subjects": [
+    "math",
+    "ela"
+   ],
+   "school": "Time signatures and rhythm as fractions; the union contract as a working document."
+  }
  ]
 }

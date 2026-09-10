@@ -1,0 +1,291 @@
+{
+ "pack": "Trades Across School Subjects",
+ "notes": "The early-pathways curriculum for the Trades Network: the working world brought into the subjects a school already teaches, from K–2 up. Five tracks — discovering the trades early, the math on the jobsite, the science in the craft, reading and writing the working word, and civics through the working city — so a district can teach fractions on a cut list, energy on a live-wire hazard map (never a live wire), and civic history through its own port and union halls. Transfer checks stay on real material a classroom can hold: rulers, recipes, water, paper specs, public records and observation from safe, public ground. The honesty stances carry verbatim: no union local numbers (the regional council is the front door) and no classroom activity ever counts as equipment certification or union credit.",
+ "tracks": [
+  {
+   "name": "Discovering the working world",
+   "prefix": "DW",
+   "credential": "Working World Explorer",
+   "themes": [
+    {
+     "theme": "Who built this room?",
+     "description": "Every classroom is a finished jobsite — walls, wires, pipes, air, light — and each part was somebody's trade.",
+     "transfer_check": "Point out five things in your own classroom and name the trade that made each one work."
+    },
+    {
+     "theme": "Tools tell you the trade",
+     "description": "Reading a worker by what they carry — the gauge, the trowel, the sling, the meter — and what each tool says the job needs.",
+     "transfer_check": "Match ten real or pictured tools to their trades and explain one match to somebody using what the tool measures or moves."
+    },
+    {
+     "theme": "A day in the work",
+     "description": "What a working day actually holds for one trade — the start time, the crew, the tasks, the calls, the cleanup.",
+     "transfer_check": "Interview a working tradesperson (family, neighbor, or class visitor) and retell their day in order to somebody who wasn't there."
+    },
+    {
+     "theme": "The crew, not the hero",
+     "description": "Real work is done by crews — the lead, the safety eye, the new hand — and every trade has a way of teaching its next person.",
+     "transfer_check": "Do one real classroom job as a crew of three with named roles, then swap roles and do it again."
+    },
+    {
+     "theme": "The union and the hall",
+     "description": "What a union is in plain words — workers who band together, the hall where the trade gathers, the apprenticeship that pays you to learn.",
+     "transfer_check": "Explain to somebody, in your own words, what a union hall is and what an apprentice does there."
+    },
+    {
+     "theme": "The 37 families of work",
+     "description": "The network's trade families as a map of the working world — from the crane to the kitchen to the classroom itself.",
+     "transfer_check": "Sort fifteen trade families into groups you invent, and defend your grouping to somebody who grouped them differently."
+    },
+    {
+     "theme": "My city works somewhere",
+     "description": "Every region has its working ground — a port, a pump station, a rail yard — that a learner can see from public, safe ground.",
+     "transfer_check": "Find, on a real map of your region, three working sites from the network's city maps and name what moves or runs at each."
+    },
+    {
+     "theme": "Skills you already have",
+     "description": "Measuring, sorting, steady hands, clear directions — schoolwork skills that are already trade skills with different names.",
+     "transfer_check": "Name three things you can already do, match each to a trade that uses it, and demonstrate one of them."
+    },
+    {
+     "theme": "Safety is the first skill",
+     "description": "Why every trade teaches safety before tools — the flagged line, the rated tag, the call made out loud.",
+     "transfer_check": "Walk one room or yard and point out three things a tradesperson would check before starting work there."
+    },
+    {
+     "theme": "Trying it on",
+     "description": "The honest tryout — a cardboard sim, a bench task, a hall visit — and how it differs from the real, certified thing.",
+     "transfer_check": "Complete one tabletop trade simulation and tell somebody one thing it taught you and one thing it cannot teach you."
+    }
+   ]
+  },
+  {
+   "name": "The math on the jobsite",
+   "prefix": "TM",
+   "credential": "Jobsite Mathematician",
+   "themes": [
+    {
+     "theme": "Measure twice",
+     "description": "Length, width, depth with real rulers and tapes — the jobsite's first mathematics, where an error costs material.",
+     "transfer_check": "Measure a real object three ways, record the numbers, and have a partner check one measurement against yours."
+    },
+    {
+     "theme": "Fractions on the cut list",
+     "description": "Halves, quarters, eighths and sixteenths as carpenters actually use them — the tape measure as a fraction number line.",
+     "transfer_check": "Mark a strip of paper or wood at three fractional lengths from a cut list and prove one mark by folding or re-measuring."
+    },
+    {
+     "theme": "The ratio in the mix",
+     "description": "Mortar, concrete, dough and paint all obey ratios — scaling a recipe up and down without breaking it.",
+     "transfer_check": "Scale a real mix or recipe from four servings to ten, write both versions, and explain what stayed the same."
+    },
+    {
+     "theme": "Area, volume and the order",
+     "description": "How much paint, how much concrete, how much pipe — turning a room's numbers into a materials order.",
+     "transfer_check": "Compute the floor area and wall area of a real room and write the materials line for covering one of them."
+    },
+    {
+     "theme": "The right angle and the diagonal",
+     "description": "The 3-4-5 triangle the trades have used for millennia — squaring a corner with arithmetic instead of guesswork.",
+     "transfer_check": "Square a real corner or rectangle using the 3-4-5 rule and show the check that proves it square."
+    },
+    {
+     "theme": "Slope, grade and fall",
+     "description": "Roofs shed, ramps climb, drains fall — rise over run as the trades' working fraction.",
+     "transfer_check": "Measure the slope of a real ramp, roofline (from the ground) or drain and express it as rise over run."
+    },
+    {
+     "theme": "Load, span and the safe number",
+     "description": "Why the chart on the crane and the table in the code book are mathematics with lives attached — reading limits, never exceeding them.",
+     "transfer_check": "Read one real rated capacity (a ladder, a strap, an elevator plate) and compute how many of a real load stay under it."
+    },
+    {
+     "theme": "The estimate and the bid",
+     "description": "Materials plus labor plus the margin — how a tradesperson turns arithmetic into a price the customer can trust.",
+     "transfer_check": "Write a one-page estimate for a small real task — materials, time, total — and defend one number in it."
+    },
+    {
+     "theme": "The meter is a number over time",
+     "description": "Kilowatt-hours, gallons per minute, board feet per shift — rates as the mathematics of running work.",
+     "transfer_check": "Read a real meter (electric, water or gas) twice, a day apart, and compute the rate of use between readings."
+    },
+    {
+     "theme": "The tolerance",
+     "description": "Close enough, said precisely — plus-or-minus as the machinist's honest promise, and why some work allows a sixteenth and some a thousandth.",
+     "transfer_check": "Measure five copies of the same object, state the spread, and propose a tolerance the maker could promise."
+    }
+   ]
+  },
+  {
+   "name": "The science in the craft",
+   "prefix": "TS",
+   "credential": "Craft Scientist",
+   "themes": [
+    {
+     "theme": "Water goes where water wants",
+     "description": "Gravity, pressure and the siphon — the plumber's physics, from the P-trap under every sink to the pump station under the city.",
+     "transfer_check": "Demonstrate a working siphon or trap with tubing and water and explain why the water moves — or stays."
+    },
+    {
+     "theme": "The circuit is a loop",
+     "description": "Current, voltage and resistance in the electrician's terms — why the loop must close and why the breaker opens it.",
+     "transfer_check": "Build a battery-bulb-switch circuit, break it in two different places, and explain why the bulb dies both times."
+    },
+    {
+     "theme": "Heat moves three ways",
+     "description": "Conduction, convection, radiation — the insulator's science, from the wall's R-value to the coffee cup's sleeve.",
+     "transfer_check": "Wrap two identical containers of warm water differently, measure both after twenty minutes, and name the heat path you slowed."
+    },
+    {
+     "theme": "The lever, the pulley and the crane",
+     "description": "Mechanical advantage — how the rigger's block and the operator's boom multiply force, and what they pay for it in distance.",
+     "transfer_check": "Lift a real load with and without a simple pulley or lever and describe what got easier and what got longer."
+    },
+    {
+     "theme": "Materials have moods",
+     "description": "Wood moves, steel expands, concrete cures — the material science every trade respects, and the joints that forgive it.",
+     "transfer_check": "Find one real expansion joint, gap or cure date in your neighborhood and explain what it forgives."
+    },
+    {
+     "theme": "The chemistry of the cure",
+     "description": "Concrete hardening, paint drying, bread rising — chemical change on the jobsite, and why time is an ingredient.",
+     "transfer_check": "Run one safe cure or set (plaster, glue, dough) at two temperatures and report which finished first and why that fits."
+    },
+    {
+     "theme": "The pendulum and the swing",
+     "description": "The suspended load as physics — period, momentum, and why the crane operator's smooth hand is applied science.",
+     "transfer_check": "Swing a weight on a string at two lengths, time ten swings of each, and state what changed the period."
+    },
+    {
+     "theme": "Sound, light and the signal",
+     "description": "Why the signaller's hands beat shouting, how fiber carries light, and what the working world knows about noise.",
+     "transfer_check": "Send a short message across a noisy room two ways — voice and agreed hand signals — and report which survived."
+    },
+    {
+     "theme": "Weather is a jobsite fact",
+     "description": "Wind on the glass lift, rain on the pour, heat on the crew — reading a forecast the way a foreman does.",
+     "transfer_check": "Take a real three-day forecast and mark which day you would pour, lift or paint outdoors, with the reason."
+    },
+    {
+     "theme": "The experiment is a test fit",
+     "description": "Hypothesis, trial, measurement, revision — the scientific method as every tradesperson's dry fit before the glue.",
+     "transfer_check": "Design and run one fair test of a small working question (which tape holds more, which route drains faster) and report it honestly."
+    }
+   ]
+  },
+  {
+   "name": "Reading and writing the working word",
+   "prefix": "TW",
+   "credential": "Working-Word Communicator",
+   "themes": [
+    {
+     "theme": "The label is the law",
+     "description": "Rated tags, warning labels, ingredient lists — the short texts the working world obeys, and how to read one completely.",
+     "transfer_check": "Read one real safety or rating label aloud, then state what it permits, what it forbids, and what it never says."
+    },
+    {
+     "theme": "Directions that cannot be misread",
+     "description": "Writing steps the way the trades need them — one action per line, in order, testable — because ambiguity on a jobsite costs.",
+     "transfer_check": "Write instructions for a small real task and have somebody follow them exactly, without you speaking, to a working result."
+    },
+    {
+     "theme": "The drawing is a sentence",
+     "description": "Plans, symbols and the legend — reading a simple drawing the way a builder does, from title block to scale.",
+     "transfer_check": "Draw a labeled plan of a real room to a stated scale that lets somebody find one hidden object from it."
+    },
+    {
+     "theme": "The manual and the index",
+     "description": "Finding the one page that matters in a thick book — the tradesperson's fast reading: index, headings, diagrams first.",
+     "transfer_check": "Given a real manual (appliance, tool or car), find the answer to a stated question and cite the page you found it on."
+    },
+    {
+     "theme": "The log and the handover",
+     "description": "The steward's log, the watch log, the shift note — writing what happened so the next crew starts smart.",
+     "transfer_check": "Keep a log of one real activity, then hand it to somebody who continues the task using only what you wrote."
+    },
+    {
+     "theme": "Words of the trade",
+     "description": "Every craft's vocabulary is exact — joist and stud, live and neutral, port and starboard — and precision of word is precision of work.",
+     "transfer_check": "Teach somebody five exact terms from one trade, then have them use each correctly describing a real object."
+    },
+    {
+     "theme": "The estimate is persuasion with numbers",
+     "description": "The written bid as an argument — clear scope, honest price, plain terms — and why the clearest writer often wins the job.",
+     "transfer_check": "Write a five-sentence bid for a small task that states scope, price and one term, and have a reader say what they'd ask before signing."
+    },
+    {
+     "theme": "Interviewing the work",
+     "description": "Asking a working person real questions — open, specific, respectful — and listening for the detail worth writing down.",
+     "transfer_check": "Prepare five questions, interview somebody about their work, and write the one paragraph that captures what surprised you."
+    },
+    {
+     "theme": "The story of a build",
+     "description": "Narrating work honestly — beginning, struggle, fix, finish — the crew's story told so the next crew learns from it.",
+     "transfer_check": "Write or tell the true story of one thing you built or fixed, including the mistake, to an audience that asks questions."
+    },
+    {
+     "theme": "The public notice",
+     "description": "Permits in windows, meeting agendas, the posted schedule — the civic texts of the working city, and how to read what they commit.",
+     "transfer_check": "Find one real posted permit, notice or agenda in your area and explain to somebody what it authorizes and who granted it."
+    }
+   ]
+  },
+  {
+   "name": "Civics and the working city",
+   "prefix": "TC",
+   "credential": "Working-City Historian",
+   "themes": [
+    {
+     "theme": "The city is built work",
+     "description": "Streets, mains, wires, levees — a city as the sum of finished jobs, most of them invisible until they fail.",
+     "transfer_check": "Walk one block and list ten pieces of built work in order of what would be missed first if it stopped."
+    },
+    {
+     "theme": "Who decides what gets built",
+     "description": "Bonds, budgets, councils and boards — the civic machinery that turns taxes into pump stations and schools.",
+     "transfer_check": "Find one real public project in your parish or city budget and name the body that approved it and the money that funds it."
+    },
+    {
+     "theme": "A short history of the union",
+     "description": "Why workers organized — hours, safety, the wage — and what apprenticeship halls did for the people who built your city.",
+     "transfer_check": "Tell the story of one real historical labor milestone, from a source you can name, to somebody who hadn't heard it."
+    },
+    {
+     "theme": "The port made the city",
+     "description": "New Orleans on its river, Oakland on its bay, San Francisco on its gate — how working water shaped where people live.",
+     "transfer_check": "For one of the network's regions, explain from a map why the city stands where it does and what still moves through it."
+    },
+    {
+     "theme": "The strike, the deal and the contract",
+     "description": "How disagreement at work becomes negotiation — the contract as a civic document both sides sign and both sides keep.",
+     "transfer_check": "Role-play a two-side negotiation over a classroom rule to a written one-line agreement both sides initial."
+    },
+    {
+     "theme": "The inspector works for you",
+     "description": "Codes, permits and inspections as public promises — why the stamp on the drawing protects people who never read it.",
+     "transfer_check": "Explain, using one real example (an elevator plate, a restaurant grade, a permit), who inspected it and who is protected."
+    },
+    {
+     "theme": "The storm and the crews",
+     "description": "Who restores the grid, drains the street, reopens the school — the working city's emergency shape, from Gulf hurricanes to Bay quakes.",
+     "transfer_check": "Chart which crews, in what order, brought one real past storm's neighborhood back — from news or a firsthand account."
+    },
+    {
+     "theme": "Work that includes everybody",
+     "description": "Who historically got the good trades and who was kept out — and what halls, schools and laws have done to open the door.",
+     "transfer_check": "Compare an old and a new photograph or roster of the same trade and describe, with respect, what changed and what still should."
+    },
+    {
+     "theme": "The apprentice's civic ladder",
+     "description": "Apprenticeship as a public institution — registered programs, journey cards, and the taxes and codes that stand behind them.",
+     "transfer_check": "Chart the registered apprenticeship path for one trade in your region from the program's own public materials."
+    },
+    {
+     "theme": "Your seat in the working city",
+     "description": "The learner as a future voter, neighbor and maybe tradesperson — where to stand on the next bond, the next hall, the next storm.",
+     "transfer_check": "Attend or watch one real public meeting that touches built work and report the one decision you would have voted on, and how."
+    }
+   ]
+  }
+ ]
+}

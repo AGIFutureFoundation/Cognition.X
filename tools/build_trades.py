@@ -62,11 +62,13 @@ def main():
                 "sim": fam["sim"].replace("{site}", site),
                 "site": site,
                 "packs": fam["packs"],
+                "subjects": fam.get("subjects", []),
+                "school": fam.get("school", ""),
             })
     assert len(entries) == len(families) * len(regions), "roster shape drifted"
 
     catalog = pack_catalog()
-    used = sorted({s for fam in families for s in fam["packs"]} | {"TRADESCLASS"})
+    used = sorted({s for fam in families for s in fam["packs"]} | {"TRADESCLASS", "TRADESUBJ"})
     packmeta = {s: catalog[s] for s in used if s in catalog}
     missing = [s for s in used if s not in catalog]
     if missing:
@@ -80,6 +82,7 @@ def main():
         "entries": entries,
         "packmeta": packmeta,
         "flipped": packmeta["TRADESCLASS"],
+        "subjectsPack": packmeta["TRADESUBJ"],
     }
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     template = TEMPLATE.read_text(encoding="utf-8")
