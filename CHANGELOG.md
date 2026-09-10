@@ -4,6 +4,19 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+
+### Added
+- **SmartCiti.X : New Orleans Trades** (`NOLATRADES`, 250 blocks) — a
+  community pack supplementing the Louisiana OS edition as the
+  Cognition.X companion to the SmartCiti.X New Orleans Trades Edition.
+  Five tracks: the port and the crane, safe ground below the sea, water
+  in/water out, power back on, and the craft pathway. Control-discipline
+  themes mirror the SmartCiti.X simulator rubrics, and the honesty
+  stance is shared: a simulator teaches control discipline and never
+  counts as equipment certification. Transfer checks are phrased
+  against the learner's own parish and stay observation-safe.
+
 ## [0.21.0] — 2026-09-10
 
 ### Added
