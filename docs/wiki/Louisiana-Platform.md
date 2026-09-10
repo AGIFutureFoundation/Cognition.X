@@ -49,6 +49,15 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   parent's family ledger and hall card, the homeschool co-op guild,
   the parish admin's five honest numbers and launch team, and the
   state admin's readiness rollup and Trade Hall launch load.
+- **Learner ledger & standing (v0.25.0)** — a browser-local,
+  consent-first progress model over the 30 core-spine tracks with
+  working automations: automatic credential award at 50 recorded
+  checks, deterministic next-step recommendations, near-credential
+  and not-started alerts, export/import, and a one-tap demo cohort.
+  Every role sees standing at its own altitude: the student's meters
+  and suggested next step, the teacher's class bars + class×track
+  heatmap + one-tap crediting, the parent's child view, the parish
+  rollup, and the State Admin's complete-system overview.
 - **Parish ↔ union integration (v0.24.0)** — parish dashboards in the
   New Orleans Trade Hall region surface the trade families (from the
   [[Trades Network]] fact base) whose packs sit in that parish's own

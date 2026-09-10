@@ -1273,6 +1273,83 @@ function bandSelect(id){
 const BANDS = D.bands ? D.bands : ["K–2","3–5","6–8","9–10","11–12"];
 const LEVELS = ["Explorer","Explorer","Builder","Practitioner","Lead"];
 
+/* ---------- learner ledger: the working progress model ----------
+   Browser-local and consent-first: records live only in this browser,
+   travel only via the explicit export box, and are never sent anywhere.
+   Standing is measured on the core-spine tracks (each track = 50 blocks,
+   one credential). Automations: standing recomputes on every change, a
+   credential is awarded automatically at 50 recorded checks, the
+   next-step recommendation and alerts derive deterministically. */
+const LKEY = "cxla.ledger";
+const LTRACKS = (() => {
+  const out = [];
+  D.corePacks.forEach(s => { const pm = D.packmeta[s]; if (!pm) return;
+    (pm.tracks||[]).forEach(t => out.push({key: s+"|"+t.name, slug: s,
+      pack: pm.name, name: t.name, credential: t.credential})); });
+  return out;
+})();
+function llLoad(){
+  try { const r = store(LKEY); if (r){ const d = JSON.parse(r);
+    if (d && Array.isArray(d.learners)) return d; } } catch(e){}
+  return {learners: []};
+}
+function llSave(d){ store(LKEY, JSON.stringify(d)); }
+function llStanding(l){
+  const prog = l.prog || {};
+  const done = LTRACKS.reduce((s,t)=>s+(prog[t.key]||0), 0);
+  const creds = LTRACKS.filter(t=>(prog[t.key]||0)>=50);
+  const started = LTRACKS.filter(t=>{const n=prog[t.key]||0; return n>0&&n<50;});
+  return {done, creds, started, level: LEVELS[l.band]||LEVELS[2],
+          pct: Math.round(100*done/(LTRACKS.length*50))};
+}
+function llRecommend(l){
+  const prog = l.prog || {};
+  const near = LTRACKS.filter(t=>{const n=prog[t.key]||0; return n>0&&n<50;})
+    .sort((a,b)=>(prog[b.key]||0)-(prog[a.key]||0))[0];
+  if (near) return {t: near, why: (50-(prog[near.key]||0)) + " checks from the “" + near.credential + "” credential"};
+  const fresh = LTRACKS.find(t=>!(prog[t.key]||0));
+  return fresh ? {t: fresh, why: "a fresh spine track — start at " + (LEVELS[l.band]||"your band") + " level"} : null;
+}
+function llAlerts(ls){
+  const out = [];
+  ls.forEach(l => {
+    LTRACKS.forEach(t => { const n = (l.prog||{})[t.key]||0;
+      if (n>=45 && n<50) out.push(`⚑ ${l.name} is ${50-n} check${50-n>1?"s":""} from “${t.credential}”`); });
+    if (llStanding(l).done === 0)
+      out.push(`◌ ${l.name} has no recorded checks yet — serve the first block at ${LEVELS[l.band]||"their"} level`);
+  });
+  return out.slice(0, 8);
+}
+function llCredit(l, key, delta){
+  l.prog = l.prog || {};
+  const before = l.prog[key]||0;
+  l.prog[key] = Math.max(0, Math.min(50, before + delta));
+  return before < 50 && l.prog[key] >= 50;  // credential crossed
+}
+function llMeter(n){
+  return `<div class="meter" style="margin:2px 0 8px"><i style="width:${Math.round(100*n/50)}%"></i></div>`;
+}
+function mulberry32(a){ return function(){ a|=0; a=a+0x6D2B79F5|0;
+  let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t;
+  return ((t^t>>>14)>>>0)/4294967296; }; }
+function llSeedDemo(){
+  const d = llLoad();
+  for (let i=1; i<=12; i++){
+    const rnd = mulberry32(i*2654435761);
+    const l = {id:"demo-"+i, name:"Demo learner "+String(i).padStart(2,"0"),
+               band: i%5, demo:true, prog:{}};
+    LTRACKS.forEach((t,ti)=>{ const r = rnd();
+      if (r > 0.55) l.prog[t.key] = Math.min(50, Math.floor(rnd()*56)); });
+    if (!d.learners.some(x=>x.id===l.id)) d.learners.push(l);
+  }
+  llSave(d);
+}
+function llClearDemo(){
+  const d = llLoad();
+  d.learners = d.learners.filter(l=>!l.demo);
+  llSave(d);
+}
+
 /* Shared widget helpers */
 function wParishPick(el, id){
   const s = el.querySelector("#"+id);
@@ -1302,6 +1379,57 @@ function launchTrack(name){
    user can toggle and reorder — layout persisted per role in this browser. */
 const WIDGETS = {
  student: [
+  {id:"standing", t:"My standing", span:true, r:(p,el)=>{
+    const d = llLoad();
+    if (!R.me || !d.learners.some(l=>l.id===R.me)) R.me = (d.learners[0]||{}).id || "";
+    const me = d.learners.find(l=>l.id===R.me);
+    let html = `<p class="note">Your place in the whole system — recorded checks on the core-spine tracks,
+      credentials earned, and the automation's suggested next step. Records live only in this browser.</p>`;
+    if (d.learners.length)
+      html += `<div class="pickrow" style="margin:0 0 12px"><select id="ls-me">${d.learners.map(l=>
+        `<option value="${l.id}"${l.id===R.me?" selected":""}>${esc(l.name)}</option>`).join("")}</select></div>`;
+    html += `<div style="display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px">
+      <input type="search" id="ls-name" placeholder="Add me — name" style="min-width:160px">
+      <button class="btn" id="ls-add">Add learner</button></div>`;
+    if (me){
+      const st = llStanding(me), rec = llRecommend(me);
+      html += `<div class="tiles" style="margin:8px 0 4px">
+        <div class="tile t1"><b>${st.done}</b><span>checks recorded</span></div>
+        <div class="tile t2"><b>${st.creds.length}</b><span>credentials earned</span></div>
+        <div class="tile t3"><b>${st.level}</b><span>${BANDS[me.band]} band</span></div>
+        <div class="tile t1"><b>${st.pct}%</b><span>of the full spine</span></div></div>`;
+      if (rec) html += `<p class="note" style="margin:10px 0 4px"><b>Suggested next:</b> ${esc(rec.t.name)}
+        <span class="mono" style="font-size:.72rem; color:var(--faint)">${esc(rec.t.pack)}</span> — ${esc(rec.why)}.</p>`;
+      html += `<div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:10px 0 4px">
+        <select id="ls-track">${LTRACKS.map(t=>`<option value="${esc(t.key)}"${rec&&t.key===rec.t.key?" selected":""}>${esc(t.name)} · ${esc(t.pack)}</option>`).join("")}</select>
+        <button class="btn gold" id="ls-check">Record a passed check</button></div>
+        <p class="note" style="margin:2px 0 10px">An assessor witnesses the check; you record it. At 50 checks the track's credential is awarded automatically.</p>`;
+      const rows = st.started.concat(st.creds);
+      if (rows.length) html += rows.map(t=>{const n=(me.prog||{})[t.key]||0;
+        return `<div style="font-size:.85rem">${esc(t.name)} <span class="mono" style="font-size:.7rem; color:var(--faint)">${n}/50${n>=50?" · ✓ "+esc(t.credential):""}</span>${llMeter(n)}</div>`;}).join("");
+      if (st.creds.length) html += `<p class="note" style="margin-top:8px"><b>Credentials:</b> ${st.creds.map(t=>esc(t.credential)).join(" · ")}</p>`;
+    } else {
+      html += `<p class="note">No learners in this browser's ledger yet — add yourself above, or seed a demo cohort from the Teacher dashboard.</p>`;
+    }
+    el.innerHTML += html;
+    const sel = el.querySelector("#ls-me");
+    if (sel) sel.addEventListener("change", e=>{ R.me = e.target.value; saveR(); });
+    el.querySelector("#ls-add").addEventListener("click", ()=>{
+      const nm = (el.querySelector("#ls-name").value||"").trim(); if (!nm) return;
+      const d2 = llLoad(); const id = "l-"+Date.now();
+      d2.learners.push({id, name:nm, band:R.band, prog:{}}); llSave(d2);
+      R.me = id; saveR();
+    });
+    const btn = el.querySelector("#ls-check");
+    if (btn) btn.addEventListener("click", ()=>{
+      const d2 = llLoad(); const l = d2.learners.find(x=>x.id===R.me); if (!l) return;
+      const key = el.querySelector("#ls-track").value;
+      const earned = llCredit(l, key, 1); llSave(d2);
+      if (earned){ const t = LTRACKS.find(x=>x.key===key);
+        say("Credential earned. " + (t?t.credential:"")); }
+      setTimeout(renderRoles, 0);
+    });
+  }},
   {id:"missions", t:"My parish missions", span:true, r:(p,el)=>{
     el.innerHTML += `<div class="pickrow" style="margin:0 0 12px">${parishSelect("rs-parish")}</div>
       <p class="note">Your mission ladder — check rungs as your assessor confirms them.</p><div id="rs-missions"></div>`;
@@ -1336,6 +1464,83 @@ const WIDGETS = {
   }},
  ],
  teacher: [
+  {id:"class", t:"Class standing — every student at a glance", span:true, r:(p,el)=>{
+    const d = llLoad(), ls = d.learners;
+    const track = LTRACKS.some(t=>t.key===R.classTrack) ? R.classTrack : LTRACKS[0].key;
+    const alerts = llAlerts(ls);
+    let html = `<p class="note">The whole class on the whole spine: standing bars, the class heatmap, and a
+      one-tap check credit on the working unit. Credentials are awarded automatically at 50 checks; alerts
+      surface who is close and who hasn't started. Records live only in this browser.</p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 10px">
+        <input type="search" id="lc-name" placeholder="Add learner — name" style="min-width:150px">
+        <select id="lc-band">${BANDS.map((b,i)=>`<option value="${i}">${b}</option>`).join("")}</select>
+        <button class="btn" id="lc-add">Add</button>
+        <span style="flex:1"></span>
+        <button class="btn" id="lc-demo">Seed demo cohort</button>
+        <button class="btn" id="lc-cleardemo">Clear demo</button>
+        <button class="btn" id="lc-export">Export / import</button>
+      </div>
+      <textarea id="lc-io" rows="4" style="width:100%; display:none" spellcheck="false"></textarea>`;
+    if (!ls.length){
+      html += `<p class="note">No learners yet — add names above, or seed a clearly-labeled demo cohort to see
+        the model and its automations working end to end.</p>`;
+    } else {
+      html += `<div class="pickrow" style="margin:6px 0 10px"><label class="mono" style="font-size:.7rem; color:var(--faint)">working unit</label>
+        <select id="lc-track">${LTRACKS.map(t=>`<option value="${esc(t.key)}"${t.key===track?" selected":""}>${esc(t.name)} · ${esc(t.pack)}</option>`).join("")}</select></div>`;
+      html += ls.map(l=>{ const st = llStanding(l); const n = (l.prog||{})[track]||0;
+        return `<div class="hbar"><span class="lab" title="${esc(l.name)}">${esc(l.name)}${l.demo?" ·demo":""} · ${BANDS[l.band]}</span>`+
+          `<span class="bar" style="width:${Math.max(1.5,st.pct)}%; background:var(--chart)" title="${esc(l.name)}: ${st.done} checks · ${st.creds.length} credentials · ${st.pct}% of spine"></span>`+
+          `<span class="val">${st.pct}% · ${st.creds.length}🎓 · unit ${n}/50</span>`+
+          `<button class="btn" data-plus="${l.id}" title="Record a passed check on the working unit" style="padding:2px 9px">+1</button>`+
+          `<button data-del="${l.id}" title="Remove" style="border:0;background:none;color:var(--faint);cursor:pointer">✕</button></div>`;}).join("");
+      // class × track heatmap on tracks anyone has touched
+      const cols = LTRACKS.filter(t=>ls.some(l=>((l.prog||{})[t.key]||0)>0)).slice(0,14);
+      if (cols.length){
+        html += `<p class="note" style="margin:14px 0 4px"><b>Class heatmap</b> — depth of color = checks recorded (hover for numbers).</p>
+          <div style="overflow-x:auto"><table style="border-collapse:collapse; font-size:.7rem">
+          <tr><td></td>${cols.map(t=>`<td style="padding:2px 3px; color:var(--faint); writing-mode:vertical-rl; transform:rotate(200grad); max-height:110px" title="${esc(t.pack)}">${esc(t.name.slice(0,22))}</td>`).join("")}</tr>`+
+          ls.map(l=>`<tr><td style="padding:2px 8px 2px 0; color:var(--muted); white-space:nowrap">${esc(l.name)}</td>`+
+            cols.map(t=>{const n=(l.prog||{})[t.key]||0;
+              return `<td title="${esc(l.name)} — ${esc(t.name)}: ${n}/50"><div style="width:22px;height:16px;border-radius:3px;background:var(--chart);opacity:${n? (0.15+0.85*n/50).toFixed(2) : 0.04}"></div></td>`;}).join("")+`</tr>`).join("")+
+          `</table></div>`;
+      }
+      if (alerts.length) html += `<p class="note" style="margin:14px 0 2px"><b>Alerts</b></p>` +
+        alerts.map(a=>`<div style="font-size:.83rem; padding:3px 0; border-top:1px solid var(--line)">${esc(a)}</div>`).join("");
+    }
+    el.innerHTML += html;
+    el.querySelector("#lc-add").addEventListener("click", ()=>{
+      const nm = (el.querySelector("#lc-name").value||"").trim(); if (!nm) return;
+      const d2 = llLoad();
+      d2.learners.push({id:"l-"+Date.now(), name:nm, band:+el.querySelector("#lc-band").value, prog:{}});
+      llSave(d2); setTimeout(renderRoles, 0);
+    });
+    el.querySelector("#lc-demo").addEventListener("click", ()=>{ llSeedDemo(); setTimeout(renderRoles, 0); });
+    el.querySelector("#lc-cleardemo").addEventListener("click", ()=>{ llClearDemo(); setTimeout(renderRoles, 0); });
+    el.querySelector("#lc-export").addEventListener("click", ()=>{
+      const ta = el.querySelector("#lc-io");
+      if (ta.style.display === "none"){
+        ta.style.display = "block"; ta.value = JSON.stringify(llLoad());
+        ta.select();
+      } else {
+        try { const d2 = JSON.parse(ta.value);
+          if (d2 && Array.isArray(d2.learners)){ llSave(d2); setTimeout(renderRoles, 0); return; } } catch(e){}
+        ta.style.display = "none";
+      }
+    });
+    const ts = el.querySelector("#lc-track");
+    if (ts) ts.addEventListener("change", ()=>{ R.classTrack = ts.value; saveR(); });
+    el.querySelectorAll("[data-plus]").forEach(b=> b.addEventListener("click", ()=>{
+      const d2 = llLoad(); const l = d2.learners.find(x=>x.id===b.dataset.plus); if (!l) return;
+      const earned = llCredit(l, track, 1); llSave(d2);
+      if (earned){ const t = LTRACKS.find(x=>x.key===track);
+        say((t?t.credential:"Credential") + " earned by " + l.name + "."); }
+      setTimeout(renderRoles, 0);
+    }));
+    el.querySelectorAll("[data-del]").forEach(b=> b.addEventListener("click", ()=>{
+      const d2 = llLoad(); d2.learners = d2.learners.filter(x=>x.id!==b.dataset.del);
+      llSave(d2); setTimeout(renderRoles, 0);
+    }));
+  }},
   {id:"roster", t:"Class roster", r:(p,el)=>{
     el.innerHTML += `<p class="note">One learner per line — stays in this browser.</p>
       <textarea id="rt-roster" rows="6" style="width:100%" placeholder="First learner…">${esc(R.roster||"")}</textarea>`;
@@ -1382,6 +1587,26 @@ const WIDGETS = {
   }},
  ],
  parent: [
+  {id:"childstand", t:"Where my child stands", r:(p,el)=>{
+    const d = llLoad(), ls = d.learners;
+    if (!ls.length){
+      el.innerHTML += `<p class="note">No learners in this browser's ledger yet. Your child (or their teacher,
+        on a shared device) adds them from the Student or Teacher dashboard — records never leave this browser.</p>`;
+      return;
+    }
+    if (!R.child || !ls.some(l=>l.id===R.child)) R.child = ls[0].id;
+    const c = ls.find(l=>l.id===R.child), st = llStanding(c), rec = llRecommend(c);
+    el.innerHTML += `<div class="pickrow" style="margin:0 0 12px"><select id="lp-child">${ls.map(l=>
+        `<option value="${l.id}"${l.id===R.child?" selected":""}>${esc(l.name)}</option>`).join("")}</select></div>
+      <div class="tiles" style="margin:8px 0 4px">
+        <div class="tile t1"><b>${st.done}</b><span>checks recorded</span></div>
+        <div class="tile t2"><b>${st.creds.length}</b><span>credentials</span></div>
+        <div class="tile t3"><b>${st.level}</b><span>${BANDS[c.band]} band</span></div></div>` +
+      (st.started.length ? st.started.slice(0,4).map(t=>{const n=(c.prog||{})[t.key]||0;
+        return `<div style="font-size:.85rem">${esc(t.name)} <span class="mono" style="font-size:.7rem; color:var(--faint)">${n}/50</span>${llMeter(n)}</div>`;}).join("") : "") +
+      (rec ? `<p class="note" style="margin-top:8px"><b>Good next step at home:</b> ${esc(rec.t.name)} — ${esc(rec.why)}. Most transfer checks are doable at the kitchen table.</p>` : "");
+    el.querySelector("#lp-child").addEventListener("change", e=>{ R.child = e.target.value; saveR(); });
+  }},
   {id:"band", t:"My child's band", r:(p,el)=>{
     el.innerHTML += `<div class="pickrow" style="margin:0 0 12px">${bandSelect("rp-band")}</div>
       <p class="note">At <b>${BANDS[R.band]}</b> your child works at <b>${LEVELS[R.band]}</b> level: the same themes as every band,
@@ -1460,6 +1685,18 @@ const WIDGETS = {
     el.innerHTML += `<div id="ra-missions"></div>`;
     renderMissionLadder("#ra-missions", p, true);
   }},
+  {id:"standing", t:"Learner standing rollup", r:(p,el)=>{
+    const ls = llLoad().learners;
+    const done = ls.reduce((s,l)=>s+llStanding(l).done, 0);
+    const creds = ls.reduce((s,l)=>s+llStanding(l).creds.length, 0);
+    el.innerHTML += `<p class="note">The live ledger behind the five honest numbers — this browser's records.</p>
+      <div class="tiles" style="margin:8px 0 0">
+        <div class="tile t1"><b>${ls.length}</b><span>learners in the ledger</span></div>
+        <div class="tile t2"><b>${done}</b><span>checks recorded</span></div>
+        <div class="tile t3"><b>${creds}</b><span>credentials awarded</span></div></div>` +
+      (ls.length ? `<p class="note" style="margin-top:8px">Average spine progress:
+        ${Math.round(ls.reduce((s,l)=>s+llStanding(l).pct,0)/ls.length)}% · alerts pending: ${llAlerts(ls).length}</p>` : "");
+  }},
   {id:"fivenumbers", t:"The five honest numbers", r:(p,el)=>{
     el.innerHTML += `<p class="note">Enrolled · active · checks passed · credentials · trainers. The Friday count, written down before it is interpreted. Stays in this browser.</p>` +
       wNote(el, "pa.five."+p.slug, "Week of … — enrolled 0 · active 0 · checks 0 · credentials 0 · trainers 0"); wWireNotes(el);
@@ -1470,14 +1707,26 @@ const WIDGETS = {
   }},
  ],
  stateadmin: [
-  {id:"overview", t:"State administration", r:(p,el)=>{
+  {id:"overview", t:"The complete system", span:true, r:(p,el)=>{
     const recs = D.parishes.filter(x => missionState(x.slug).some(Boolean)).length;
-    el.innerHTML += `<div class="tiles" style="margin:8px 0 4px">
-        <div class="tile t1"><b>64</b><span>parishes</span></div>
-        <div class="tile t2"><b>${D.curriculum.blocks.toLocaleString()}</b><span>blocks in the ledger</span></div>
+    const ls = llLoad().learners;
+    const done = ls.reduce((s,l)=>s+llStanding(l).done, 0);
+    const creds = ls.reduce((s,l)=>s+llStanding(l).creds.length, 0);
+    el.innerHTML += `<p class="note">Everything in one view — the curriculum, the state, the adopted rollout,
+      and the live learner ledger (records in this section are this browser's).</p>
+      <div class="tiles" style="margin:8px 0 4px">
+        <div class="tile t1"><b>${D.curriculum.blocks.toLocaleString()}</b><span>blocks · ${D.curriculum.packs} packs</span></div>
+        <div class="tile t2"><b>${D.curriculum.tracks}</b><span>tracks · ${D.curriculum.credentials.toLocaleString()} credentials defined</span></div>
+        <div class="tile t3"><b>64</b><span>parishes · 8 Trade Halls</span></div>
+        <div class="tile t1"><b>${accN(1)}</b><span>Wave-1 parishes · ${accPopPct(1)}% of population ${D.accYears[0]}</span></div>
+        <div class="tile t2"><b>${D.parishes.filter(x=>readyState(x.slug).every(Boolean)).length}/64</b><span>parishes Wave-1 ready (this browser)</span></div>
         <div class="tile t3"><b>${recs}</b><span>parishes with mission records (this browser)</span></div>
-        <div class="tile t1"><b>${D.parishes.filter(x=>readyState(x.slug).every(Boolean)).length}/64</b><span>parishes Wave-1 ready (this browser)</span></div>
-      </div>`;
+        <div class="tile t1"><b>${ls.length}</b><span>learners in the ledger</span></div>
+        <div class="tile t2"><b>${done}</b><span>checks recorded</span></div>
+        <div class="tile t3"><b>${creds}</b><span>credentials awarded</span></div>
+      </div>
+      <p class="note" style="margin-top:6px">Four apps run from one dataset: Education OS, Flow Hub, this
+      platform, and the Trades Network — every number above regenerates from <span class="mono">blocks.csv</span>.</p>`;
   }},
   {id:"waves", t:"The adopted rollout", r:(p,el)=>{
     el.innerHTML += `<p class="note">Two years to the whole state — click through to any parish from The State's tile map.</p><div id="ra-waves"></div>`;
@@ -1623,7 +1872,7 @@ const TOUR = [
   {hash:"#/state", sel:"#tl-parishes", t:"Two-year expansion", m:"The adopted build-out: thirty-three parishes and most of the state's population in year one, all sixty-four in full run by year two."},
   {hash:"#/parish/east-baton-rouge", sel:"#pplan", t:"The parish module plan", m:"The core spine plus packs earned by this parish's own industries — each with the phrase that earned it."},
   {hash:"#/parish/east-baton-rouge", sel:"#pmissions", t:"The mission module", m:"Five rungs built from this parish's narrative world. Check rungs as an assessor confirms them."},
-  {hash:"#/roles", sel:"#rolechips", t:"Every seat's dashboard", m:"Student, teacher, parent, homeschool, parish and state admin — pick your role and the view is yours. And it really is yours: choose which panels show, and put them in your own order."},
+  {hash:"#/roles", sel:"#rolechips", t:"Every seat's dashboard", m:"Student, teacher, parent, homeschool, parish and state admin — pick your role and the view is yours: choose which panels show and order them. The learner ledger runs underneath, so every seat sees exactly where each student stands."},
   {hash:"#/institute", sel:"#arcs", t:"The Legacy Institute", m:"Twelve principles of leadership, ethics and civic duty — with the universal model localizable to any state or country."},
   {hash:"#/machines", sel:"#loopdiagram", t:"Agents and robots", m:"One block, two learners: humans earn credentials, and with consent, machines learn from how it was done."},
   {hash:"#/curriculum", sel:"#vorcurr", t:"The curriculum as cells", m:"Every pack in the ledger, tessellated by family, sized by blocks. That is the whole system on one canvas."},

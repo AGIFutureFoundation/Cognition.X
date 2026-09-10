@@ -112,8 +112,12 @@ standards-mapped; validator extended to rubric and mapping checks.
 - Remaining app-pipeline work: source the app's other data layers
   (wlb course ladders, K–12 program, parish fact base) from canonical
   files the same way, shrinking `template.html` over time
-- Learner state: local-first progress store (IndexedDB) with export/import;
-  no account required
+- [x] Learner state, first working version (v0.25.0): local-first
+  progress ledger in the Louisiana platform — per-learner check
+  records on the 30 core-spine tracks, automatic credential award at
+  50 checks, deterministic next-step recommendation and alerts,
+  export/import, demo-cohort seeding; no account required. (IndexedDB
+  migration and cross-app sync remain future work.)
 - Credential ledger v1: signed completion records (W3C Verifiable
   Credentials / Open Badges 3.0), issuable offline, verifiable online
 - Assessor mode: transfer-check queue, rubric display, evidence capture
