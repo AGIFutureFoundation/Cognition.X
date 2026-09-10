@@ -4,6 +4,35 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.36.0] — 2026-09-10
+
+### Added
+- **The Evidence Loop v1** — the roadmap's last Phase 3 build item,
+  consent-first end to end:
+  - **Opt-in aggregate export** (Louisiana State Admin): a live
+    preview and export of **cx-evidence/1** JSON — per-track counts
+    only (checks recorded, witnessed confirmed / not-yet, learners
+    as a count), no names, no ids, no per-learner rows. The export
+    button stays disabled until the consent box is checked, nothing
+    is ever transmitted by the page (the export box is the only
+    exit), and the consent object says so in the file itself.
+  - **`tools/evidence_triage.py`**: merges collected evidence files
+    into a review-board report — tracks with a high witnessed
+    not-yet rate (≥40% over ≥5 attempts) are flagged as revision
+    priorities ("the check may be mis-pitched, or the theme
+    under-taught"), with the explicit rule *evidence proposes; the
+    board disposes* — a supersession or teaching note, never an
+    automatic edit. A clearly-labeled synthetic sample under
+    `data/evidence/` demonstrates the tool.
+  - Governance gains the evidence-informed-priorities section; the
+    roadmap gains the **path-to-v1.0 operational checklist** (seat
+    the board → recruit a named cohort → exchange office keys →
+    collect evidence through one full track → cut v1.0).
+  - Verified end to end: the consent gate holds, aggregates are
+    correct (summed across learners), the export contains zero
+    learner names, and the real exported file round-trips through
+    the triage tool.
+
 ## [0.35.0] — 2026-09-10
 
 ### Added

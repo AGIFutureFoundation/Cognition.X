@@ -75,3 +75,17 @@ classroom-facing use first (K–12 spine adjacents, Access, Launch), then
 community packs, then OS editions. Until a pack clears review, the
 in-app scaffold labels stay, and adopters should treat its content as a
 draft for their own committee.
+
+## Evidence-informed revision priorities (v0.36.0)
+
+Sites may opt in to exporting **cx-evidence/1** aggregates from the
+Louisiana platform — per-track counts only (checks recorded, witnessed
+confirmed / not-yet, learners as a count), never names or per-learner
+rows, and never transmitted by the apps: the export box is the only
+exit, and sending the file is the exporter's own action.
+`tools/evidence_triage.py` merges collected files into a report for
+this board: tracks with a high witnessed not-yet rate are revision
+priorities (the check may be mis-pitched, or the theme under-taught);
+unused spine tracks are relevance reviews. **Evidence proposes; the
+board disposes** — the outcome is a supersession or a teaching note
+through the normal acceptance flow, never an automatic edit.

@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.35.0** | Pack Studio educator authoring (Flow Hub Author view: validated spec editor with generator round-trip) and the governance process (docs/GOVERNANCE.md: review board, checklist, supersede policy, review queue) |
+| **v0.36.0** | The Evidence Loop v1: opt-in aggregate cx-evidence/1 export (consent-gated, no names, never auto-sent) + evidence_triage.py revision priorities for the review board; the path-to-v1.0 operational checklist |
+| v0.35.0 | Pack Studio educator authoring (Flow Hub Author view: validated spec editor with generator round-trip) and the governance process (docs/GOVERNANCE.md: review board, checklist, supersede policy, review queue) |
 | v0.34.0 | Federation v1 (trusted-offices registry; three-grade record verification by office name) and PWA install metadata across all four apps |
 | v0.33.0 | Complete system review (docs/SYSTEM_REVIEW.md), data-review addendum, roadmap restructure with recommended order, and the accessibility first pass (skip links, lang, reduced motion, aria labels, live regions) across all four interactive apps |
 | v0.32.0 | Assessor Mode (witnessed-check queue, rubric, evidence capture, honest confirm/not-yet crediting) and printable per-track workbooks in Flow Hub for zero-device settings |
