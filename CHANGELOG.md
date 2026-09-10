@@ -4,6 +4,30 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.34.0] — 2026-09-10
+
+### Added
+- **Federation v1 — trusted offices** (Louisiana Records Office):
+  each hall publishes its `{recordsOffice, publicKey}` export;
+  another instance adds it to its browser-local **trusted-offices
+  registry** after confirming identity out-of-band, once. Verify now
+  grades every record three ways: **✗ invalid** (altered or
+  mismatched signature), **△ signature valid, key not trusted**
+  (unaltered, holder-signed, identity unconfirmed — the v0.29 honest
+  gap, now surfaced explicitly), and **✓ signed by trusted office
+  "X"** by name. Trusted keys are listed, removable, persisted, and
+  stored public-half only.
+- **PWA install metadata** in all four interactive apps: a runtime
+  blob web-app manifest (name, standalone display, SVG letter-mark
+  icon, theme color) plus theme-color and Apple metas, injected at
+  load with nothing fetched. Honest scope: installability depends on
+  the browser and https serving — the single offline file remains
+  the primary packaging.
+- Roadmap: the packaging line is closed (workbooks + install
+  metadata) and the federation line carries its first slice; the
+  remaining federation work (pack-version publishing, trust-list
+  exchange, revocation) is named.
+
 ## [0.33.0] — 2026-09-10
 
 ### Added

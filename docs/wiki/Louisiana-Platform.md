@@ -49,6 +49,11 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   parent's family ledger and hall card, the homeschool co-op guild,
   the parish admin's five honest numbers and launch team, and the
   state admin's readiness rollup and Trade Hall launch load.
+- **Federation v1 — trusted offices (v0.34.0)** — the Records Office
+  verifies records in three grades: invalid, valid-but-untrusted-key,
+  and *signed by trusted office "X"* by name, against a browser-local
+  registry of other halls' published public keys (added after one
+  out-of-band identity confirmation; public-half only; removable).
 - **Assessor Mode (v0.32.0)** — the seventh role dashboard: a
   witnessed-check queue fed by student requests, the three-line
   rubric (real material · independent at band · would transfer),

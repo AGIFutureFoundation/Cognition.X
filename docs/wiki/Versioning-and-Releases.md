@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.33.0** | Complete system review (docs/SYSTEM_REVIEW.md), data-review addendum, roadmap restructure with recommended order, and the accessibility first pass (skip links, lang, reduced motion, aria labels, live regions) across all four interactive apps |
+| **v0.34.0** | Federation v1 (trusted-offices registry; three-grade record verification by office name) and PWA install metadata across all four apps |
+| v0.33.0 | Complete system review (docs/SYSTEM_REVIEW.md), data-review addendum, roadmap restructure with recommended order, and the accessibility first pass (skip links, lang, reduced motion, aria labels, live regions) across all four interactive apps |
 | v0.32.0 | Assessor Mode (witnessed-check queue, rubric, evidence capture, honest confirm/not-yet crediting) and printable per-track workbooks in Flow Hub for zero-device settings |
 | v0.31.0 | Custom curriculum for all 50 states: the States OS blueprint pack (250 blocks), the 50-state fact base, and the Cognition.X States app (US tile cartogram, per-state localized courses, Institute Model in every capital) seeded from the Education OS fact base — 16,700 blocks / 44 packs |
 | v0.30.0 | Trades Network expansion: Baton Rouge–River Region, Houston–Gulf Coast and Los Angeles join — 37 families × 6 regions = 222 entries, three new city maps, Baton Rouge hall parishes gain union panels |
