@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 41 packs — 15,950 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 42 packs — 16,200 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -43,6 +43,7 @@ Catalog of all 41 packs — 15,950 blocks total. Machine-readable version: [`dat
 | Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
 | Parish Launch & Scale | `LAUNCH` | 250 | 5 | 5 |
 | SmartCiti.X : New Orleans Trades | `NOLATRADES` | 250 | 5 | 5 |
+| Trades Across School Subjects | `TRADESUBJ` | 250 | 5 | 5 |
 | Trades in the Classroom : Flipped & Gamified | `TRADESCLASS` | 250 | 5 | 5 |
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
 
@@ -295,6 +296,16 @@ walkable city layer)
 - Water in, water out: pumps, canals and the storm
 - Power back on: the grid after the wind
 - The craft pathway: from first tool to journey card
+
+**Trades Across School Subjects** — the early-pathways layer of the
+Trades Network: the working world taught inside math, science, ELA and
+civics from K–2 up, feeding the classroom hooks on all 111 roster
+entries
+- Discovering the working world
+- The math on the jobsite
+- The science in the craft
+- Reading and writing the working word
+- Civics and the working city
 
 **Trades in the Classroom : Flipped & Gamified** — the school-district
 integration curriculum for the Trades Network: the flipped model, the

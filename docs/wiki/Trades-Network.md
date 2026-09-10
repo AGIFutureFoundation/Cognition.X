@@ -18,8 +18,13 @@ plus the canonical dataset — never hand-edit `index.html`.
 - **The Network** — totals, the three-region arc map, the learner's
   five-step path (flipped lesson → simulation studio → bench & transfer
   check → the hall → the pathway is the learner's).
-- **Regions** — per-region cards: real training grounds, the labor
-  council (always the front door), and the school districts.
+- **Regions** — per-region cards, each headed by a **stylized city
+  map** (v0.26.0): approximate hand-placed geography — the Gate, the
+  Bay, the Lake and the river crescent — with the nine training-ground
+  sites as nodes carrying their trade-family counts; clicking a node
+  opens the roster filtered to that region and category, so all 111
+  entries are reachable from the maps. Below the map: the council
+  (always the front door) and the school districts.
 - **Unions & Trades** — the full 111-entry roster, searchable and
   filterable by region and category; every card names the international
   union, its localized training sim, and Flow Hub deep links into its
@@ -28,7 +33,11 @@ plus the canonical dataset — never hand-edit `index.html`.
   coasts, each under the studio law.
 - **Flipped Classroom** — the four-node flipped cycle and the honest
   game layer, with the *Trades in the Classroom : Flipped & Gamified*
-  pack's five tracks.
+  pack's five tracks, plus (v0.26.0) the **Trades Across School
+  Subjects** pack — the early-pathways layer that teaches the working
+  world inside math, science, ELA and civics from K–2 up. Every
+  roster card carries its own "In class" hook (subject chips + one
+  concrete classroom connection) into these tracks.
 - **Districts** — the district–council compact in six commitments,
   localized to SFUSD, OUSD and NOLA Public Schools.
 

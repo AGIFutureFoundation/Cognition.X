@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 15950,
+  "total_blocks": 16200,
   "packs": [
     {
       "name": "K–12",
@@ -769,6 +769,26 @@
         "Water in, water out: pumps, canals and the storm",
         "Power back on: the grid after the wind",
         "The craft pathway: from first tool to journey card"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Trades Across School Subjects",
+      "slug": "TRADESUBJ",
+      "blocks": 250,
+      "tracks": [
+        "Discovering the working world",
+        "The math on the jobsite",
+        "The science in the craft",
+        "Reading and writing the working word",
+        "Civics and the working city"
       ],
       "credentials": 5,
       "grade_bands": [

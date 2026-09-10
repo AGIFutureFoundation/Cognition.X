@@ -356,6 +356,14 @@
         <ul class="tracklist" id="flippedtracks"></ul>
       </div>
     </div>
+
+    <div class="panel" style="margin-top:14px">
+      <h3 id="subjpack"></h3>
+      <p class="note">The early-pathways layer: learn the jobs and skills from the earliest bands, <b>inside the
+      subjects a school already teaches</b> — fractions on the cut list, circuits in science, the manual in ELA,
+      the union hall in civics. Every roster card above carries its own "In class" hook into these tracks.</p>
+      <ul class="tracklist" id="subjtracks"></ul>
+    </div>
   </section>
 
   <!-- ================= DISTRICTS ================= -->
@@ -507,6 +515,74 @@ function renderNetwork(){
   });
 }
 
+/* ---------- stylized city maps: the 111 entries on real ground ----------
+   Approximate, hand-placed geography (like the Louisiana tile cartogram):
+   water shapes + the nine training-ground sites per region, each node
+   carrying that site's trade families. Click a site to open the roster
+   filtered to that region and category. */
+const KINDSHORT = {build:"Build", elec:"Power", water:"Water", port:"Port",
+  transit:"Transit", service:"Stage & table", civic:"Schools", mech:"Shops", fire:"Response"};
+const CITYGEO = {
+  sf: {
+    water: [
+      `<rect x="0" y="0" width="64" height="300"/>`,                                  // Pacific
+      `<path d="M396,0 L460,0 L460,300 L376,300 Q400,180 380,90 Q374,40 396,0 Z"/>`,  // the Bay
+      `<rect x="64" y="0" width="340" height="26"/>`,                                 // the Gate
+    ],
+    hint: [["The Golden Gate", 230, 18], ["San Francisco Bay", 416, 160, true], ["Pacific", 30, 150, true]],
+    sites: {build:[288,132], elec:[212,178], water:[148,118], port:[338,168], transit:[236,96],
+            service:[268,214], civic:[164,234], mech:[210,262], fire:[300,66]},
+  },
+  oak: {
+    water: [
+      `<path d="M0,0 L96,0 Q120,80 96,160 Q76,230 110,300 L0,300 Z"/>`,               // the Bay
+    ],
+    hint: [["San Francisco Bay", 44, 150, true], ["East Bay hills", 408, 40]],
+    sites: {port:[136,196], elec:[142,140], transit:[240,132], build:[262,192], water:[336,102],
+            civic:[218,232], service:[176,258], mech:[300,246], fire:[386,76]},
+  },
+  nola: {
+    water: [
+      `<rect x="60" y="0" width="340" height="52"/>`,                                  // Lake Pontchartrain
+      `<path d="M110,300 Q170,206 262,224 Q352,242 420,196 L460,196 L460,232 Q348,286 250,258 Q170,240 148,300 Z"/>`, // the crescent
+    ],
+    hint: [["Lake Pontchartrain", 230, 32], ["Mississippi River", 300, 250]],
+    sites: {build:[262,104], elec:[286,168], water:[186,156], port:[330,176], transit:[224,196],
+            service:[168,100], civic:[136,200], mech:[416,120], fire:[350,96]},
+  },
+};
+function cityMapSVG(r){
+  const g = CITYGEO[r.id]; if (!g) return "";
+  const sites = g.sites;
+  const nodes = Object.keys(sites).map(k => {
+    const [x,y] = sites[k];
+    const fams = D.entries.filter(e => e.region===r.id && e.kind===k);
+    return `<g class="csite" data-reg="${r.id}" data-kind="${k}" tabindex="0" role="button" style="cursor:pointer"
+      aria-label="${esc(KINDSHORT[k])} — ${fams.length} trade families">`+
+      `<circle cx="${x}" cy="${y}" r="15" fill="${REGCOL[r.id]}" stroke="var(--surface)" stroke-width="1.5"/>`+
+      `<text x="${x}" y="${y+4}" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">${fams.length}</text>`+
+      `<text x="${x}" y="${y+30}" text-anchor="middle" font-size="9.5" fill="var(--ink)">${esc(KINDSHORT[k])}</text>`+
+      `<title>${esc(r.sites[k])} — ${fams.length} trade families: ${fams.map(f=>f.family).join(", ")}</title></g>`;
+  }).join("");
+  return `<svg viewBox="0 0 460 300" width="100%" role="img" aria-label="Stylized city map of ${esc(r.name)}">`+
+    `<rect x="0" y="0" width="460" height="300" rx="10" fill="var(--surface-2)"/>`+
+    `<g fill="var(--chart)" opacity="0.18">${g.water.join("")}</g>`+
+    g.hint.map(([t,x,y,vert])=>`<text x="${x}" y="${y}" text-anchor="middle" font-size="9" fill="var(--faint)"`+
+      (vert?` transform="rotate(-90 ${x} ${y})"`:"")+`>${esc(t)}</text>`).join("")+
+    nodes + `</svg>`;
+}
+function wireCityMaps(scope){
+  scope.querySelectorAll(".csite").forEach(gr => {
+    const open = () => {
+      location.hash = "#/unions";
+      $("#uregion").value = gr.dataset.reg; $("#ukind").value = gr.dataset.kind;
+      $("#usearch").value = ""; renderRoster();
+    };
+    gr.addEventListener("click", open);
+    gr.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } });
+  });
+}
+
 /* ---------- regions view ---------- */
 function renderRegions(){
   $("#reggrid").innerHTML = D.regions.map(r=>{
@@ -516,6 +592,9 @@ function renderRegions(){
     return `<div class="panel regcard" style="border-top-color:${REGCOL[r.id]}">`+
       `<h3>${esc(r.name)}</h3>`+
       `<div class="hub">${es.length} union &amp; trade entries · front door: ${esc(r.council)}</div>`+
+      `<div style="margin:6px 0 10px">${cityMapSVG(r)}</div>`+
+      `<p class="note" style="margin:0 0 8px">The city map: every node is a real training ground — the number
+       is how many of the region's trade families train there. Click a node to open its roster.</p>`+
       `<div>${Object.entries(kinds).map(([k,n])=>`<span class="chip">${esc(KINDS[k])} · ${n}</span>`).join("")}</div>`+
       `<p class="note" style="margin-top:10px"><b>Training grounds</b> (public, real, observed from safe access):</p>`+
       `<ul class="sitelist">${Object.values(r.sites).map(s=>`<li>${esc(s)}</li>`).join("")}</ul>`+
@@ -525,6 +604,7 @@ function renderRegions(){
   $("#reggrid").querySelectorAll("[data-openreg]").forEach(b=> b.addEventListener("click", ()=>{
     location.hash = "#/unions"; $("#uregion").value = b.dataset.openreg; renderRoster();
   }));
+  wireCityMaps($("#reggrid"));
 }
 
 /* ---------- unions roster ---------- */
@@ -548,6 +628,8 @@ function renderRoster(){
       `<h4 style="margin-top:8px">${esc(e.family)}</h4>`+
       `<p class="intl">${esc(e.intl)}</p>`+
       `<div class="sim"><b>Training sim:</b> ${esc(e.sim)}.</div>`+
+      (e.school ? `<p style="font-size:.8rem; margin:8px 0"><b>In class:</b> ${esc(e.school)} `+
+        e.subjects.map(s=>`<span class="chip" style="font-size:.66rem; padding:1px 8px">${esc(s.toUpperCase())}</span>`).join("")+`</p>` : "")+
       `<div>${e.packs.map(s=>{const p=D.packmeta[s];
         return p?`<span class="chip link" data-pack="${s}" title="Open in Flow Hub">${esc(p.name)} · ${p.blocks}</span>`:"";}).join("")}</div>`+
       `<p class="council">Current local: verify with ${esc(r.council)}. Simulation ≠ certification.</p></div>`;
@@ -584,6 +666,12 @@ function renderFlipped(){
   $("#flippedpack").textContent = f.name + " — " + f.blocks + " blocks";
   $("#flippedtracks").innerHTML = f.tracks.map(t=>
     `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("");
+  const sp = D.subjectsPack;
+  if (sp){
+    $("#subjpack").textContent = sp.name + " — " + sp.blocks + " blocks";
+    $("#subjtracks").innerHTML = sp.tracks.map(t=>
+      `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("");
+  }
   const N = [["Watch at home","7 minutes, one concept, ends in a question","var(--w1)"],
              ["Build at the bench","stations, crews, the teacher's hours where the struggle is","var(--w2)"],
              ["Transfer check","real material, witnessed — the boss fight","var(--w3)"],
@@ -617,10 +705,10 @@ function renderDistricts(){
 const TOUR = [
   {hash:"#/network", sel:"#nettiles", t:"Welcome to the Trades Network", m:"Thirty-seven trade families, three regions, one hundred and eleven entries. Here's the shape of the whole thing at a glance."},
   {hash:"#/network", sel:"#netmap", t:"Two coasts, one model", m:"San Francisco, Oakland and New Orleans anchor the network. The crafts transfer between them; the ground never does."},
-  {hash:"#/regions", sel:"#reggrid", t:"Regions", m:"Each region card lists its real training grounds, its labor council — always the front door — and its school districts."},
+  {hash:"#/regions", sel:"#reggrid", t:"Regions and their city maps", m:"Each region now carries a stylized city map — every node is a real training ground, and the number on it counts the trade families who train there. Click a node and the roster opens already filtered."},
   {hash:"#/unions", sel:"#ugrid", t:"The roster", m:"All one hundred and eleven entries, searchable and filterable. Every card names the international union and carries a training simulation set on that region's own ground."},
   {hash:"#/sims", sel:"#simgrid", t:"The simulation studio", m:"Nine control-discipline categories on all three coasts. And the one law over all of it: a simulation never certifies."},
-  {hash:"#/flipped", sel:"#cyclesvg", t:"The flipped cycle", m:"Watch at home, build at the bench, prove it on real material, record it in the ledger. The game layer keeps every point honest."},
+  {hash:"#/flipped", sel:"#cyclesvg", t:"The flipped cycle", m:"Watch at home, build at the bench, prove it on real material, record it in the ledger. The game layer keeps every point honest — and the Trades Across School Subjects pack brings the jobs into math, science, reading and civics from the earliest grades."},
   {hash:"#/districts", sel:"#distgrid", t:"The district compact", m:"How this lands on a transcript: credit mapping, the studio law, mentors through the council, and five honest numbers to the board."},
 ];
 let tourAt = -1, tourEl = null;
