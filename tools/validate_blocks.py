@@ -21,7 +21,9 @@ from pathlib import Path
 BLOCKS = Path(__file__).resolve().parent.parent / "data" / "blocks.csv"
 BAND_LEVEL = {"K–2": "Explorer", "3–5": "Explorer", "6–8": "Builder",
               "9–10": "Practitioner", "11–12": "Lead"}
-REQUIRED = ["pack", "grade", "credential", "theme", "transfer_check"]
+# code and level are guaranteed dataset-wide since v0.14.0 (light fill);
+# description remains required on tracked rows only.
+REQUIRED = ["pack", "grade", "code", "level", "credential", "theme", "transfer_check"]
 
 errors = []
 

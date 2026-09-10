@@ -4,6 +4,22 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.14.0] — 2026-09-10
+
+### Added
+- **Structural backfill complete.** The 1,000 irregular foundation rows
+  (K–12, Trade School, Future-Work, Regional, Civic & Leadership,
+  Health & Community, Language/Culture, Empathy & EI, Community &
+  Relationship) now carry a `code` (`LB-<n>`, unique within pack) and a
+  `level` derived from their grade — including single grades (K→
+  Explorer … 12→Lead), adult bands (→Lead) and Trade School capstones.
+  These packs' shapes are genuinely irregular (per-grade ladders, adult
+  capstones, staggered themes), so they are deliberately **not** forced
+  into the 10×5 tracked shape; `track` and `description` on these rows
+  remain the last content-authoring item.
+- **Validator strengthened**: `code` and `level` are now required on
+  every row dataset-wide, locking in the guarantee.
+
 ## [0.13.0] — 2026-09-10
 
 ### Changed
