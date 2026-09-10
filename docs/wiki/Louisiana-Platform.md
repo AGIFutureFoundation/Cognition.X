@@ -27,6 +27,17 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   rules engine, each with the industry phrase that earned it; tracks deep-link into Flow Hub
   sessions (`#track=<SLUG>/<PREFIX>`) when the apps sit together in
   the repository.
+- **Parish mission modules (v0.16.0)** — the custom capstone layer:
+  each parish carries a five-rung ladder generated from its own
+  narrative world (Explorer observes it, Builder models it,
+  Practitioner works inside it, Lead proposes an improvement at the
+  Trade Hall, the capstone teaches it to a younger cohort). Generated
+  scaffolds, labeled for committee refinement; rural-tier parishes get
+  offline-evidence wording.
+- **Plan customizer & program export (v0.16.0)** — industry packs can
+  be set aside, any catalog pack added as a parish choice (persisted
+  per parish in the browser), and the whole program exported as
+  `cxla-program/1` JSON.
 - **Regions & Trade Halls** — the eight regions, each hall's hub city,
   wave-mix bars, the packs most assessed at each hall, and parish
   links.

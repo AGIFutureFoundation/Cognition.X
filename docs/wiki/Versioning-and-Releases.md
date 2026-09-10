@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.15.0** | Cognition.X : Louisiana OS (500 blocks, 10 tracks — river, coast, corridor, ports, agriculture, table, music, languages, festivals, storm memory), added to every parish's core spine |
+| **v0.16.0** | Parish mission modules (64 × 5 generated capstone ladders from each parish's narrative world), plan customizer, parish program export |
+| v0.15.0 | Cognition.X : Louisiana OS (500 blocks, 10 tracks — river, coast, corridor, ports, agriculture, table, music, languages, festivals, storm memory), added to every parish's core spine |
 | v0.14.0 | Structural backfill complete: code + level on all 9,250 rows (light fill for the 1,000 irregular foundation rows); validator requires both dataset-wide |
 | v0.13.0 | All 217 placeholder transfer checks replaced with authored per-theme checks (1,085 rows; guarded substitution) — zero placeholders remain |
 | v0.12.0 | Deep module↔system integration: per-parish module plans from an industry rules engine, Flow Hub track deep links, Trade Hall pack rosters |
