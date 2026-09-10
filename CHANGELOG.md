@@ -4,6 +4,25 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.20.0] — 2026-09-10
+
+### Added
+- **Recursive tessellating Voronoi graphics** (deterministic power-
+  diagram engine, no libraries, offline): *The state as cells* — the
+  eight regions partition the plane, each tessellated by its parishes,
+  **cell area ∝ population**, color by wave, stitched heavy borders
+  between regions, hover tooltips and click-through to parish
+  dashboards; and *The curriculum as cells* — families tessellated by
+  packs, area ∝ blocks. Both redraw on theme change; the State Admin
+  dashboard embeds the state Voronoi.
+- **Expansion to Wave 4 timelines**: cumulative step-area charts of
+  the build-out to full run — parishes live (5 → 21 → 40 → 64) and
+  population covered (27% → 76% → 92% → 100% by 2030–31).
+- **Print template**: a "Print program" button and print stylesheet
+  turn any parish dashboard into a clean program one-pager.
+- Ambiguous parish abbreviations disambiguated (LFR/SMY/SMT) across
+  the tile map, Voronoi and seals.
+
 ## [0.19.0] — 2026-09-10
 
 ### Changed
