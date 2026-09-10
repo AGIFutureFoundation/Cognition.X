@@ -4,6 +4,36 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.38.0] — 2026-09-10
+
+### Added
+- **Federation v2** (Louisiana Records Office) — the roadmap's named
+  remaining federation work:
+  - **Record ids & dataset versions**: every newly issued
+    cx-credential/1 payload carries a unique `rid` and the dataset
+    version it was issued under (`"Cognition.X v0.38.0"`) — additive,
+    so v1 records still verify.
+  - **Portable trust-list exchange** — `cx-trustlist/1`: export this
+    browser's trusted offices as one file; import another hall's.
+    Imported entries are stored and displayed as **second-hand**
+    ("via X's list — confirm out-of-band"), preserving the rule that
+    trust is granted after out-of-band identity confirmation;
+    malformed or private-key-bearing entries are skipped.
+  - **Revocation** — `cx-revocation/1`: an office revokes a record it
+    issued by its `rid` (with a reason shown to verifiers) and
+    exports the revocation list **signed with the same key its
+    records carry**. Importing verifies the list's signature first —
+    an altered or unsigned list is rejected — and replaces any
+    earlier list from the same key. Verification gains a fourth
+    outcome, **⊘ Revoked by issuing office**, which trumps trust;
+    other records from the same office are unaffected. No network:
+    lists travel the same out-of-band channel as the keys.
+  - Verified headlessly end to end: trust-list round-trip (export →
+    cleared registry → import → still verifies by name, now marked
+    second-hand), tampered revocation list rejected, revoked grade
+    with reason, fresh records unaffected, tamper detection intact,
+    everything persists across reload, zero page errors.
+
 ## [0.37.0] — 2026-09-10
 
 ### Added

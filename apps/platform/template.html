@@ -250,7 +250,7 @@ const NODES = [
   {id:"assess",x:520, y:200, w:150, c:"var(--w2)", label:"assessor loop", sub:"witnessed checks",
    d:"Request → queue → three-line rubric → evidence → honest credit. The practice log and the witnessed record are distinct on purpose."},
   {id:"records",x:520,y:280, w:150, c:"var(--w2)", label:"records office", sub:"signed credentials",
-   d:"ECDSA P-256 per browser. Signed cx-credential/1 records verify offline in three grades: invalid, valid-but-untrusted, or signed by a trusted office by name."},
+   d:"ECDSA P-256 per browser. Signed cx-credential/1 records verify offline: invalid, valid-but-untrusted, signed-by-trusted-office by name — or revoked, against the office's own signed cx-revocation/1 list. Trust lists exchange as portable cx-trustlist/1 files."},
   {id:"netos", x:280, y:200, w:150, c:"var(--w3)", label:"network OS", sub:"8 automations",
    d:"Flow Keeper, Break Caller, Step Tuner, Credential Clerk, Cohort Watch, Readiness Sentinel, Teacher Relief, Network Sync — computing live on a pulse; the human acts."},
   {id:"evidence",x:280,y:320, w:150, c:"var(--gold)", label:"evidence loop", sub:"opt-in, aggregate",

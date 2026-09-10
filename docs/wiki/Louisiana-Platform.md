@@ -55,11 +55,18 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   by the page; `tools/evidence_triage.py` turns collected files into
   block-revision priorities for the review board. Evidence proposes;
   the board disposes.
-- **Federation v1 — trusted offices (v0.34.0)** — the Records Office
-  verifies records in three grades: invalid, valid-but-untrusted-key,
-  and *signed by trusted office "X"* by name, against a browser-local
-  registry of other halls' published public keys (added after one
-  out-of-band identity confirmation; public-half only; removable).
+- **Federation v1 & v2 (v0.34.0, v0.38.0)** — the Records Office
+  verifies records in four grades: invalid, valid-but-untrusted-key,
+  *signed by trusted office "X"* by name (against a browser-local
+  registry of other halls' published public keys, added after one
+  out-of-band identity confirmation; public-half only; removable),
+  and *⊘ revoked by issuing office* — checked against
+  `cx-revocation/1` lists that the issuing office signs with the
+  same key its records carry and that are signature-verified before
+  import. Trusted-office registries exchange as portable
+  `cx-trustlist/1` files, with imported entries marked second-hand
+  until confirmed out-of-band; issued records carry a unique `rid`
+  and the dataset version.
 - **Assessor Mode (v0.32.0)** — the seventh role dashboard: a
   witnessed-check queue fed by student requests, the three-line
   rubric (real material · independent at band · would transfer),
