@@ -49,6 +49,14 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   parent's family ledger and hall card, the homeschool co-op guild,
   the parish admin's five honest numbers and launch team, and the
   state admin's readiness rollup and Trade Hall launch load.
+- **Credential Ledger v1 & launch budgets (v0.29.0)** — the Records
+  Office: a per-browser ECDSA P-256 keypair issues ledger-earned
+  credentials as portable, offline-verifiable `cx-credential/1` JSON
+  (tamper-detected; verification proves the record unaltered and
+  signed by that key's holder, with issuer identity confirmed via the
+  hall's published public key). Plus a deterministic per-parish
+  staffing / spaces / devices / materials budget sketch on the Parish
+  Admin dashboard and in the program export.
 - **The Trade Hall Network OS (v0.28.0)** — the Regions view as an
   eight-section operating console: eight system automations (Flow
   Keeper, Break Caller, Step Tuner, Credential Clerk, Cohort Watch,

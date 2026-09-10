@@ -902,6 +902,7 @@ function renderParish(p){
       parishChoices:cust.add.map(s=>(D.catalog[s]||{}).name||s),
       setAside:cust.off.map(s=>(D.catalog[s]||{}).name||s),
       wave1Readiness:READY_REQS.map(([t],i)=>({requirement:t, met:!!readyState(p.slug)[i]})),
+      budgetSketch:launchBudget(p),
       missions:p.missions};
     const ta2 = $("#progio"); ta2.style.display="block"; ta2.value = JSON.stringify(prog, null, 1); ta2.select();
     try { await navigator.clipboard.writeText(ta2.value); } catch(e){}
@@ -944,6 +945,69 @@ function renderRegions(){
   renderNetOS();
   const pb = $("#pulse-btn");
   if (pb && !pb.dataset.wired){ pb.dataset.wired = "1"; pb.addEventListener("click", renderNetOS); }
+}
+
+/* ---------- Credential Ledger v1: signed, portable records ----------
+   A per-browser Records Office holds an ECDSA P-256 keypair (WebCrypto,
+   created once, never leaves this browser except as its PUBLIC key). An
+   issued record is the credential payload + a signature + the public key.
+   Honest scope: verification proves the record was not altered and was
+   signed by the holder of that key — WHO holds the key is confirmed
+   out-of-band (the hall publishes its public key). v1 of the roadmap's
+   credential ledger; W3C VC / Open Badges alignment is later work. */
+const b64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
+const b64d = s => Uint8Array.from(atob(s), c=>c.charCodeAt(0));
+const cryptoOK = () => { try { return !!(window.crypto && crypto.subtle); } catch(e){ return false; } };
+async function issuerGet(){
+  try{
+    const raw = store("cxla.issuer");
+    if (!raw) return null;
+    const j = JSON.parse(raw);
+    const priv = await crypto.subtle.importKey("jwk", j.priv, {name:"ECDSA", namedCurve:"P-256"}, true, ["sign"]);
+    return {priv, pubJwk: j.pub, name: j.name};
+  }catch(e){ return null; }
+}
+async function issuerCreate(name){
+  const kp = await crypto.subtle.generateKey({name:"ECDSA", namedCurve:"P-256"}, true, ["sign","verify"]);
+  const priv = await crypto.subtle.exportKey("jwk", kp.privateKey);
+  const pub = await crypto.subtle.exportKey("jwk", kp.publicKey);
+  store("cxla.issuer", JSON.stringify({name, priv, pub}));
+}
+async function issueRecord(learner, track){
+  const ik = await issuerGet(); if (!ik) return null;
+  const payload = {
+    format: "cx-credential/1",
+    credential: track.credential, track: track.name, pack: track.pack,
+    blocks: 50, learner: learner.name, band: BANDS[learner.band]||"",
+    issuedAt: new Date().toISOString().slice(0,10),
+    note: "50 transfer checks recorded on real material; witnessed per the pack's checks.",
+  };
+  const bytes = new TextEncoder().encode(JSON.stringify(payload));
+  const sig = await crypto.subtle.sign({name:"ECDSA", hash:"SHA-256"}, ik.priv, bytes);
+  return {payload, signature: b64(sig), publicKey: ik.pubJwk, issuer: ik.name,
+    verify: "Signature proves the record is unaltered and signed by this key's holder; confirm who holds the key with the issuing hall."};
+}
+async function verifyRecord(obj){
+  const pub = await crypto.subtle.importKey("jwk", obj.publicKey, {name:"ECDSA", namedCurve:"P-256"}, false, ["verify"]);
+  const bytes = new TextEncoder().encode(JSON.stringify(obj.payload));
+  return crypto.subtle.verify({name:"ECDSA", hash:"SHA-256"}, pub, b64d(obj.signature), bytes);
+}
+
+/* ---------- launch budget sketch (deterministic, a scaffold to refine) ---------- */
+function launchBudget(p){
+  const assessors = Math.max(2, Math.round(p.pop/15));
+  const devices = Math.max(6, Math.min(40, Math.round(p.pop/4)));
+  return {
+    team: "5 core seats — launch lead, hall steward, trainer, enrollment lead, records keeper",
+    assessors: `${assessors} volunteer assessor seats (≈1 per 15k residents, min 2)`,
+    spaces: p.rural
+      ? "1 shared hall (borrowed public room, posted schedule) — sharing agreement with a neighbor parish allowed"
+      : "1 hall + 1 satellite room in the largest school",
+    devices: `${devices} shared devices at the hall (≈1 per 4k residents, 6–40); the apps run offline from one file`,
+    materials: p.rural
+      ? "printed per-track workbooks as the default; device sessions on hall days"
+      : "on-demand printing; device-first with printed fallback",
+  };
 }
 
 /* ---------- the Network OS: eight system automations ----------
@@ -1994,9 +2058,88 @@ const WIDGETS = {
     el.innerHTML += `<p class="note">Enrolled · active · checks passed · credentials · trainers. The Friday count, written down before it is interpreted. Stays in this browser.</p>` +
       wNote(el, "pa.five."+p.slug, "Week of … — enrolled 0 · active 0 · checks 0 · credentials 0 · trainers 0"); wWireNotes(el);
   }},
-  {id:"launchteam", t:"Launch team of five", r:(p,el)=>{
+  {id:"launchteam", t:"Launch team & budget sketch", r:(p,el)=>{
+    const b = launchBudget(p);
     el.innerHTML += `<p class="note">Lead · hall steward · trainer · enrollment lead · records keeper — named people or named open seats.</p>` +
-      wNote(el, "pa.team."+p.slug, "Lead — …\nHall steward — …\nTrainer — …\nEnrollment — …\nRecords — …"); wWireNotes(el);
+      wNote(el, "pa.team."+p.slug, "Lead — …\nHall steward — …\nTrainer — …\nEnrollment — …\nRecords — …") +
+      `<p class="note" style="margin-top:12px"><b>Budget sketch</b> — deterministic from the fact base; a scaffold the
+       parish refines, not a quote:</p>
+       <ul class="tracklist" style="font-size:.84rem">
+         <li>Staffing: ${esc(b.team)}</li><li>Assessors: ${esc(b.assessors)}</li>
+         <li>Spaces: ${esc(b.spaces)}</li><li>Devices: ${esc(b.devices)}</li>
+         <li>Materials: ${esc(b.materials)}</li></ul>`;
+    wWireNotes(el);
+  }},
+  {id:"records", t:"Records office — signed credentials", span:true, r:(p,el)=>{
+    if (!cryptoOK()){
+      el.innerHTML += `<p class="note">This browser does not expose WebCrypto here, so signing is unavailable —
+        credentials still live in the ledger; signed exports need a crypto-capable browser.</p>`;
+      return;
+    }
+    const ls = llLoad().learners;
+    const earned = ls.flatMap(l => llStanding(l).creds.map(t => ({l, t})));
+    el.innerHTML += `<p class="note">Credential Ledger v1: this browser holds a Records Office keypair (created
+      once; only the <b>public</b> key ever leaves). An issued record is the credential + a signature + the
+      public key — portable as plain JSON and verifiable offline. Verification proves the record is
+      <b>unaltered and signed by this key's holder</b>; who holds the key is confirmed with the hall, which
+      publishes its public key.</p>
+      <div id="ro-issuer" class="note" style="margin:0 0 10px"></div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 12px">
+        <input type="search" id="ro-name" placeholder="Records office name (e.g. ${esc(p.name)} Trade Hall)" style="min-width:240px">
+        <button class="btn" id="ro-create">Create office keys</button>
+        <button class="btn" id="ro-pub">Show public key</button>
+      </div>` +
+      (earned.length
+        ? `<div class="pickrow" style="margin:0 0 10px"><select id="ro-pick">${earned.map(({l,t},i)=>
+            `<option value="${i}">${esc(l.name)} — ${esc(t.credential)} (${esc(t.name)})</option>`).join("")}</select>
+           <button class="btn gold" id="ro-issue">Issue signed record</button></div>`
+        : `<p class="note">No earned credentials in the ledger yet — records are issued only for credentials the
+           ledger shows earned (50 checks).</p>`) +
+      `<textarea id="ro-out" rows="6" style="width:100%; display:none" spellcheck="false"></textarea>
+       <p class="note" style="margin:14px 0 4px"><b>Verify a record</b> — paste any cx-credential/1 JSON:</p>
+       <textarea id="ro-in" rows="4" style="width:100%" spellcheck="false" placeholder='{"payload":…,"signature":…,"publicKey":…}'></textarea>
+       <div style="margin-top:8px"><button class="btn" id="ro-verify">Verify</button>
+       <span id="ro-result" style="font-size:.88rem; margin-left:10px"></span></div>`;
+    const showIssuer = async () => {
+      const ik = await issuerGet();
+      $("#ro-issuer") && ($("#ro-issuer").innerHTML = ik
+        ? `Office: <b>${esc(ik.name)}</b> · keys ready (P-256). The public key below is safe to publish anywhere.`
+        : `No office keys in this browser yet — create them once below.`);
+    };
+    showIssuer();
+    el.querySelector("#ro-create").addEventListener("click", async ()=>{
+      const nm = (el.querySelector("#ro-name").value||"").trim() || (p.name + " Trade Hall records office");
+      await issuerCreate(nm); showIssuer();
+    });
+    el.querySelector("#ro-pub").addEventListener("click", async ()=>{
+      const ik = await issuerGet(); const ta = el.querySelector("#ro-out");
+      ta.style.display = "block";
+      ta.value = ik ? JSON.stringify({recordsOffice: ik.name, publicKey: ik.pubJwk}, null, 1)
+                    : "No office keys yet — create them first.";
+      ta.select();
+    });
+    const ib = el.querySelector("#ro-issue");
+    if (ib) ib.addEventListener("click", async ()=>{
+      const ik = await issuerGet();
+      const ta = el.querySelector("#ro-out"); ta.style.display = "block";
+      if (!ik){ ta.value = "Create the office keys first."; return; }
+      const {l, t} = earned[+el.querySelector("#ro-pick").value];
+      const rec = await issueRecord(l, t);
+      ta.value = JSON.stringify(rec, null, 1); ta.select();
+      say("Signed record issued. " + t.credential + ", " + l.name + ".");
+    });
+    el.querySelector("#ro-verify").addEventListener("click", async ()=>{
+      const out = el.querySelector("#ro-result");
+      try {
+        const obj = JSON.parse(el.querySelector("#ro-in").value);
+        const ok = await verifyRecord(obj);
+        out.innerHTML = ok
+          ? `<span style="color:var(--green); font-weight:600">✓ Signature valid</span> — “${esc(obj.payload.credential)}” for ${esc(obj.payload.learner)}, issued ${esc(obj.payload.issuedAt)} by “${esc(obj.issuer||"unnamed office")}”. Confirm the key with that office.`
+          : `<span style="color:var(--w4); font-weight:600">✗ Invalid</span> — the record was altered or the signature does not match this public key.`;
+      } catch(e){
+        out.innerHTML = `<span style="color:var(--w4)">Not a readable cx-credential record.</span>`;
+      }
+    });
   }},
  ],
  stateadmin: [
