@@ -4,6 +4,37 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.25.0] — 2026-09-10
+
+### Added
+- **Working learner ledger** (Louisiana): a browser-local,
+  consent-first progress model measured on the 30 core-spine tracks
+  (50 blocks / one credential each), with the automations running for
+  real — standing recomputes on every change, **a credential is
+  awarded automatically at 50 recorded checks**, the next-step
+  recommendation derives deterministically (nearest credential →
+  most-progressed track → first fresh track), and alerts surface who
+  is close to a credential and who hasn't started. Ledger
+  export/import via an explicit JSON box; a clearly-labeled,
+  deterministic 12-learner **demo cohort** can be seeded and cleared
+  in one tap to see the whole model working end to end. Records never
+  leave the browser.
+- **Comprehensive standing dashboards**: the Student view gains *My
+  standing* (standing tiles, per-track meters, suggested next step,
+  record-a-check with spoken credential award); the Teacher view
+  gains *Class standing* — every student at a glance (per-student
+  spine bars, one-tap check crediting on a working unit, a class ×
+  track heatmap, live alerts, roster management); Parent gains *Where
+  my child stands*; Parish Admin gains the *Learner standing rollup*
+  feeding its five honest numbers; and State Admin's overview becomes
+  **The complete system** — curriculum, parishes, the adopted
+  rollout, readiness, and the live ledger in one nine-tile view.
+
+### Changed
+- Roadmap: the Phase 2 "learner state" line is now real —
+  browser-local progress store with export/import, no account
+  required (IndexedDB migration stays future work).
+
 ## [0.24.0] — 2026-09-10
 
 ### Added
