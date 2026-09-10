@@ -44,6 +44,13 @@ Progress, skills and the agent feed persist per browser
 (`localStorage`); the Archivist's export makes them portable. Nothing
 leaves the machine.
 
+## Deep links
+
+`index.html#track=<PACKSLUG>/<PREFIX>` (e.g. `#track=ENERGY/EL`)
+preselects that pack and track and opens the Flow view — the
+integration point the Louisiana parish module plans use, and available
+to any external system.
+
 ## Rebuilding
 
 ```bash

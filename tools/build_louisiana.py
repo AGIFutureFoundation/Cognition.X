@@ -50,6 +50,44 @@ POS = {
 
 WAVE_YEARS = ["2027–28", "2028–29", "2029–30", "2030–31"]
 
+# Industry-phrase → curriculum-pack mapping. Each parish's anchor-industry
+# phrases (from the fact base) are matched against these rules to build its
+# module plan; the matching phrase is kept as the human-readable reason.
+CORE_PACKS = ["K12", "LEGACYLA", "LIFESKILL", "EMERGENCY"]
+INDUSTRY_RULES = [
+    (r"LNG|oil|gas|petrochemical|chemical|hydrogen|carbon|energy|hydro|refin|pipeline|grid",
+     ["ENERGY", "ROB"]),
+    (r"rice|sugar|agricult|ag-tech|poultry|catfish|timber|forestry|farm|aquaculture|food|seafood|fisher",
+     ["WLC", "FOOD"]),
+    (r"health", ["PREVCARE", "GHEALTH"]),
+    (r"cyber|logistics|aerospace|manufactur|film|automation|robot",
+     ["ROB", "DIGITAL"]),
+    (r"port|marine|river|coastal|shipbuild|terminal", ["TRANSPORT", "EMERGENCY"]),
+    (r"corrections", ["REENTRY"]),
+    (r"casino|hospitality|tourism|culture|music", ["CORP", "ARTS"]),
+    (r"military|Fort |AFB|Barksdale", ["EMERGENCY", "ROB"]),
+    (r"government|research|universit|LSU|Southern|SOWELA", ["SCI", "LEGACYLA"]),
+    (r"restoration", ["WLC", "EMERGENCY"]),
+]
+
+
+def match_packs(industries):
+    """Return [(slug, reason-phrase)] for a parish's industry text."""
+    out = []
+    seen = set()
+    # split on commas/semicolons, but never inside parentheses
+    for phrase in re.split(r"[,;]\s*(?![^()]*\))", industries):
+        phrase = phrase.strip()
+        if not phrase:
+            continue
+        for pat, slugs in INDUSTRY_RULES:
+            if re.search(pat, phrase, re.IGNORECASE):
+                for s in slugs:
+                    if s not in seen:
+                        seen.add(s)
+                        out.append([s, phrase])
+    return out
+
 
 def extract_fact_base():
     """The fact base lives as JS array literals inside the Education OS app;
@@ -86,6 +124,24 @@ def extract_fact_base():
     return json.loads(out.stdout)
 
 
+def pack_catalog():
+    """slug → {name, tracks:[{name,prefix,credential}]} for every pack,
+    from the canonical dataset (block_id carries the slug)."""
+    rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
+    cat = OrderedDict()
+    for r in rows:
+        slug = r["block_id"].split("-")[1]
+        p = cat.setdefault(slug, {"name": r["pack"], "blocks": 0, "tracks": OrderedDict()})
+        p["blocks"] += 1
+        if r["track"] and r["track"] not in p["tracks"]:
+            p["tracks"][r["track"]] = {"name": r["track"],
+                                       "prefix": r["code"].rsplit("-", 1)[0],
+                                       "credential": r["credential"]}
+    for p in cat.values():
+        p["tracks"] = list(p["tracks"].values())
+    return cat
+
+
 def curriculum_stats():
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
     packs = OrderedDict()
@@ -114,14 +170,20 @@ def main():
     if missing:
         raise SystemExit(f"parishes without tile positions: {missing}")
 
+    catalog = pack_catalog()
+    used_slugs = set(CORE_PACKS)
     parishes = []
     for name, region, seat, pop_k, wave, districts, industries, world, rural in fb["parishes"]:
         r, c = POS[name]
+        matched = match_packs(industries)
+        used_slugs.update(s for s, _ in matched)
         parishes.append({
             "name": name, "region": region, "seat": seat, "pop": pop_k,
             "wave": wave, "districts": districts, "industries": industries,
             "world": world, "rural": rural, "row": r, "col": c,
+            "packs": matched,
         })
+    packmeta = {s: catalog[s] for s in sorted(used_slugs) if s in catalog}
 
     payload = {
         "version": (ROOT / "VERSION").read_text().strip(),
@@ -131,6 +193,8 @@ def main():
         "curriculum": curriculum_stats(),
         "wlb": fb["wlb"],
         "principles": fb["principles"],
+        "corePacks": CORE_PACKS,
+        "packmeta": packmeta,
     }
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     template = (ROOT / "apps" / "louisiana" / "template.html").read_text(encoding="utf-8")

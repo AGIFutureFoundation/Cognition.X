@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.11.0** | California and Texas legacy localizations (500 blocks) — dataset at 9,250 blocks / 35 packs / 165 tracks |
+| **v0.12.0** | Deep module↔system integration: per-parish module plans from an industry rules engine, Flow Hub track deep links, Trade Hall pack rosters |
+| v0.11.0 | California and Texas legacy localizations (500 blocks) — dataset at 9,250 blocks / 35 packs / 165 tracks |
 | v0.10.0 | Legacy Institute flagship (12 principles, state/country localizer), Agents & Robots view + CX-Trace v1 export, style options across the platform |
 | v0.9.0 | Cognition.X Louisiana: 64 independent parish dashboards, tile cartogram, Trade Hall regions — built from the app's fact base + the dataset |
 | v0.8.0 | Legacy backfill, first slice: five banded packs promoted to the tracked schema (1,250 rows; 155 tracks); placeholder transfer checks documented |
