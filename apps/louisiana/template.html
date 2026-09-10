@@ -303,7 +303,16 @@
     }
   }
   :root[data-style="gallery"] .wordmark .la{background:none; color:var(--purple)}
+
+  /* accessibility: skip link + reduced motion (WCAG 2.2 first pass) */
+  .skiplink{position:absolute; left:-9999px; top:0; z-index:100; background:var(--surface);
+    color:var(--ink); border:2px solid var(--ring); border-radius:0 0 10px 0; padding:10px 18px; font-weight:600}
+  .skiplink:focus{left:0}
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+  }
 </style>
+<a class="skiplink" href="#main">Skip to content</a>
 
 <header class="masthead"><div class="wrap mast">
   <div class="wordmark">Cognition.X <span class="la">Louisiana</span></div>
@@ -337,7 +346,7 @@
   </div>
 </div></header>
 
-<main class="wrap">
+<main class="wrap" id="main" tabindex="-1">
 
   <!-- ================= STATE ================= -->
   <section class="view active" id="view-state">
@@ -585,6 +594,7 @@
 <script id="ladata" type="application/json">__LADATA__</script>
 <script>
 "use strict";
+document.documentElement.lang = "en";
 const D = JSON.parse(document.getElementById("ladata").textContent);
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -1852,8 +1862,8 @@ const WIDGETS = {
         return `<div class="hbar"><span class="lab" title="${esc(l.name)}">${esc(l.name)}${l.demo?" ·demo":""} · ${BANDS[l.band]}</span>`+
           `<span class="bar" style="width:${Math.max(1.5,st.pct)}%; background:var(--chart)" title="${esc(l.name)}: ${st.done} checks · ${st.creds.length} credentials · ${st.pct}% of spine"></span>`+
           `<span class="val">${st.pct}% · ${st.creds.length}🎓 · unit ${n}/50</span>`+
-          `<button class="btn" data-plus="${l.id}" title="Record a passed check on the working unit" style="padding:2px 9px">+1</button>`+
-          `<button data-del="${l.id}" title="Remove" style="border:0;background:none;color:var(--faint);cursor:pointer">✕</button></div>`;}).join("");
+          `<button class="btn" data-plus="${l.id}" title="Record a passed check on the working unit" aria-label="Record a passed check for ${esc(l.name)}" style="padding:2px 9px">+1</button>`+
+          `<button data-del="${l.id}" title="Remove" aria-label="Remove ${esc(l.name)} from the roster" style="border:0;background:none;color:var(--faint);cursor:pointer">✕</button></div>`;}).join("");
       // class × track heatmap on tracks anyone has touched
       const cols = LTRACKS.filter(t=>ls.some(l=>((l.prog||{})[t.key]||0)>0)).slice(0,14);
       if (cols.length){
@@ -2348,8 +2358,8 @@ function renderRoles(){
       return `<span class="chip" style="display:inline-flex; gap:6px; align-items:center; margin:3px 6px 3px 0">
         <label style="display:inline-flex; gap:5px; align-items:center; cursor:pointer">
           <input type="checkbox" data-w="${w.id}" ${on?"checked":""}> ${esc(w.t)}</label>` +
-        (on ? `<button data-mv="${w.id}|-1" title="Earlier" ${at===0?"disabled":""} style="border:0;background:none;padding:0;color:var(--faint)">◀</button>
-               <button data-mv="${w.id}|1" title="Later" ${at===layout.length-1?"disabled":""} style="border:0;background:none;padding:0;color:var(--faint)">▶</button>` : "") +
+        (on ? `<button data-mv="${w.id}|-1" title="Earlier" aria-label="Move ${esc(w.t)} earlier" ${at===0?"disabled":""} style="border:0;background:none;padding:0;color:var(--faint)">◀</button>
+               <button data-mv="${w.id}|1" title="Later" aria-label="Move ${esc(w.t)} later" ${at===layout.length-1?"disabled":""} style="border:0;background:none;padding:0;color:var(--faint)">▶</button>` : "") +
       `</span>`;}).join("")}</div></div>`;
 
   const body = $("#rolebody");

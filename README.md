@@ -110,6 +110,7 @@ in [`CHANGELOG.md`](CHANGELOG.md); the current version is in
 
 ## Roadmap · Wiki · Contributing
 
+- Complete system review: [`docs/SYSTEM_REVIEW.md`](docs/SYSTEM_REVIEW.md)
 - Deep roadmap: [`docs/ROADMAP.md`](docs/ROADMAP.md)
 - Wiki source (publishable to the GitHub wiki): [`docs/wiki/`](docs/wiki/)
 - Data review and known issues: [`docs/DATA_REVIEW.md`](docs/DATA_REVIEW.md)

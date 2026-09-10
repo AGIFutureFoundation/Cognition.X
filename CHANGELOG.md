@@ -4,6 +4,36 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.33.0] — 2026-09-10
+
+### Added
+- **Complete system review** (`docs/SYSTEM_REVIEW.md`): an honest
+  engineering assessment of the platform at v0.32.0 — the dataset and
+  pipeline, the six apps, the working models (ledger, flow engine,
+  access profiles, assessor loop, credential ledger, Network OS),
+  the verification methodology, and the named gaps and risks
+  (browser-local state, machine-authored packs awaiting the review
+  board, the Education OS baseline error, accessibility). The
+  no-network claim was re-verified by auditing every template: zero
+  fetch/XHR/WebSocket/beacon code paths; the fonts stylesheet is the
+  only external reference, and every app degrades without it.
+- **Data review addendum** (`docs/DATA_REVIEW.md`): current-state
+  status over the original import findings — backfills complete,
+  the foundation library as the standing content debt, and the fact
+  bases documented as reviewed content.
+- **Roadmap restructured**: a status-at-v0.32.0 summary and a
+  recommended order for the remaining work (a11y audit → PWA →
+  federation → educator authoring → governance → evidence loop →
+  the v1.0 external-cohort gate).
+- **Accessibility first pass** (all four interactive apps): skip-to-
+  content links (first tab stop, focusing the `main` landmark),
+  `document.documentElement.lang = "en"`, a `prefers-reduced-motion`
+  guard disabling animations/transitions/smooth scroll, descriptive
+  `aria-label`s on icon-only buttons (roster remove, +1 crediting,
+  widget reorder arrows), and `aria-live="polite"` on the Flow Hub
+  tutor strip. Marked honestly as a first pass — the full WCAG 2.2
+  AA audit remains the roadmap's next recommended step.
+
 ## [0.32.0] — 2026-09-10
 
 ### Added

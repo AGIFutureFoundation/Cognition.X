@@ -24,6 +24,7 @@ tenancy, reentry, global health field practice, and working with AI.
 
 ## Key repository documents
 
+- [Complete system review](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/SYSTEM_REVIEW.md)
 - [Deep roadmap](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/ROADMAP.md)
 - [Data review & known issues](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_REVIEW.md)
 - [Licensing rationale](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/LICENSING.md)

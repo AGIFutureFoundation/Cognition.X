@@ -196,7 +196,16 @@
     .flowgrid{grid-template-columns:1fr}
     main{padding:20px 16px 56px}
   }
+
+  /* accessibility: skip link + reduced motion (WCAG 2.2 first pass) */
+  .skiplink{position:absolute; left:-9999px; top:0; z-index:100; background:var(--surface);
+    color:var(--ink); border:2px solid var(--ring); border-radius:0 0 10px 0; padding:10px 18px; font-weight:600}
+  .skiplink:focus{left:0}
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+  }
 </style>
+<a class="skiplink" href="#main">Skip to content</a>
 
 <div class="shell">
   <nav class="rail" aria-label="Views">
@@ -225,7 +234,7 @@
     <div class="railfoot mono" id="railfoot"></div>
   </nav>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- ================= SYSTEM ================= -->
     <section class="view active" id="view-system">
       <p class="eyebrow">Flow Zone · learning operating systems</p>
@@ -286,7 +295,7 @@
               <button id="oc-flow">In the flow<small>hard but held — stay here</small></button>
               <button id="oc-struggled">Struggled<small>too steep — ease off</small></button>
             </div>
-            <div id="tutorstrip" hidden style="margin-top:12px; border:1px solid var(--accent); border-radius:9px; padding:10px 14px; font-size:.88rem; background:var(--accent-soft)"></div>
+            <div id="tutorstrip" hidden aria-live="polite" style="margin-top:12px; border:1px solid var(--accent); border-radius:9px; padding:10px 14px; font-size:.88rem; background:var(--accent-soft)"></div>
             <div style="margin-top:12px; display:flex; gap:9px; flex-wrap:wrap">
               <button class="btn" id="fs-complete">Mark transfer check complete</button>
               <button class="btn" id="fs-end">End session</button>
@@ -356,6 +365,7 @@
 <script id="cxdata" type="application/json">__CXDATA__</script>
 <script>
 "use strict";
+document.documentElement.lang = "en";
 const DATA = JSON.parse(document.getElementById("cxdata").textContent);
 const BANDS = DATA.bands, LEVELS = DATA.levels;
 const FAM = {
