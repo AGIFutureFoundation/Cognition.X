@@ -4,6 +4,33 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.28.0] — 2026-09-10
+
+### Added
+- **The Trade Hall Network OS** (Louisiana): the Regions view becomes
+  an eight-section operating console — **eight system automations**
+  running visibly over the real browser-local state and showing the
+  call each is making right now: *Flow Keeper* (channel positions and
+  overloads), *Break Caller* (profile cadences due), *Step Tuner*
+  (step-down and stretch calls pending), *Credential Clerk*
+  (auto-awards and the within-five-checks watch), *Cohort Watch*
+  (stall and near-credential alerts), *Readiness Sentinel* (the five
+  Wave-1 requirements statewide), *Teacher Relief* (the teacher's own
+  load), and *Network Sync* (the eight-hall rollup). A system pulse
+  re-runs the board every 20 seconds while the view is open, on
+  demand from the pulse button, and fresh on every navigation.
+- **Section-OS region cards**: each of the eight Trade Hall cards now
+  carries its live section state — parishes Wave-1 ready, parishes
+  preparing, and mission rungs logged — beside its Wave-1 launch
+  load.
+- **Teacher flow**: the Class flow board opens with the teacher's own
+  state (*in flow / stretched / overloaded*), computed from class
+  size, overload share and pending alerts, with a concrete relief
+  automation for each: bank the win, delegate to guild leads, or stop
+  triage and run a whole-class bench reset. Keeping the teacher in
+  flow is now a first-class automation, not a hope.
+- Guide tour gains the Network OS stop.
+
 ## [0.27.0] — 2026-09-10
 
 ### Added

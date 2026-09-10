@@ -414,10 +414,25 @@
 
   <!-- ================= REGIONS ================= -->
   <section class="view" id="view-regions">
-    <p class="eyebrow"><b>Eight regions</b> · <i>eight Trade Halls</i></p>
-    <h1>Regions and their halls</h1>
-    <p class="lede">Every region anchors a Trade Hall in its hub city — the shared workshop, assessment floor
-    and credential office its parishes plug into. Wave mix shows how soon each region comes online.</p>
+    <p class="eyebrow"><b>Eight regions</b> · <i>eight Trade Halls</i> · <em>one Network OS</em></p>
+    <h1>The Trade Hall Network OS</h1>
+    <p class="lede">Every region anchors a Trade Hall — the shared workshop, assessment floor and credential
+    office its parishes plug into. Eight sections, and over them <b>eight system automations</b> that watch the
+    live state of this browser's ledger, readiness boards and missions, and act to keep learners and teachers
+    in flow.</p>
+
+    <div class="panel" style="margin:0 0 16px">
+      <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap">
+        <h3 style="margin:0">System automations</h3>
+        <span class="mono" id="pulse-line" style="font-size:.72rem; color:var(--faint)"></span>
+        <span style="flex:1"></span>
+        <button class="btn" id="pulse-btn">Run system pulse</button>
+      </div>
+      <p class="note" style="margin:6px 0 4px">Each automation computes from real state and shows its current
+      call. While this view is open the pulse re-runs on its own every 20 seconds.</p>
+      <div id="autoboard"></div>
+    </div>
+
     <div class="reggrid" id="reggrid"></div>
   </section>
 
@@ -910,16 +925,105 @@ function renderRegions(){
     const counts = {};
     ps.forEach(p => p.packs.forEach(([s]) => { if(!D.corePacks.includes(s)) counts[s]=(counts[s]||0)+1; }));
     const top = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,4);
-    return `<div class="regcard"><h3>${esc(r)}</h3><div class="hub">Trade Hall · ${esc(D.hubs[i])}</div>`+
+    const ready = ps.filter(p=>readyState(p.slug).every(Boolean)).length;
+    const prepping = ps.filter(p=>readyState(p.slug).some(Boolean)).length;
+    const rungs = ps.reduce((s,p)=>s+missionState(p.slug).filter(Boolean).length, 0);
+    const osline = ready===ps.length ? "section ready" : (prepping ? "preparing" : "standing by");
+    return `<div class="regcard"><h3>${esc(r)}</h3><div class="hub">Trade Hall · ${esc(D.hubs[i])} ·
+        <span class="mono" style="font-size:.68rem">section OS: ${osline}</span></div>`+
       `<div class="mini">${mix.map((n,w)=> n?`<div style="flex:${n};background:${ACCCOL[w]}" title="Adopted Wave ${w+1}: ${n} parishes"></div>`:"").join("")}</div>`+
       `<p class="note" style="margin:0 0 8px">Wave-1 launch load (${D.accYears[0]}): <b>${mix[0]}</b> of ${ps.length} parishes open through this hall in year one.</p>`+
+      `<p class="note" style="margin:0 0 8px"><b>Live section state</b> (this browser): ${ready}/${ps.length} parishes
+        Wave-1 ready · ${prepping} preparing · ${rungs} mission rung${rungs===1?"":"s"} logged.</p>`+
       (top.length ? `<p class="note" style="margin:0 0 8px">Assessed at this hall: ${top.map(([s,n])=>
         `${esc((D.packmeta[s]||{}).name||s)} (${n})`).join(" · ")}</p>` : "")+
       `<div class="plinks">${ps.map(p=>`<button data-p="${p.slug}">${esc(p.name)}</button>`).join("")}</div></div>`;
   }).join("");
   $("#reggrid").querySelectorAll("[data-p]").forEach(b=>
     b.addEventListener("click", ()=> location.hash="#/parish/"+b.dataset.p));
+  renderNetOS();
+  const pb = $("#pulse-btn");
+  if (pb && !pb.dataset.wired){ pb.dataset.wired = "1"; pb.addEventListener("click", renderNetOS); }
 }
+
+/* ---------- the Network OS: eight system automations ----------
+   Eight sections (the Trade Hall regions), eight automations. Each one
+   computes from the real, browser-local state — the learner ledger, the
+   flow engine, the readiness boards, the mission records — and shows the
+   call it is making right now. The pulse re-runs while the view is open. */
+function teacherFlow(ls){
+  const n = ls.length;
+  if (!n) return {state:"idle", label:"No class yet",
+    advice:"Add learners or seed the demo cohort — the automations idle until there is a class."};
+  const over = ls.filter(l=>["overload","brk"].includes(flowOf(l).state)).length;
+  const alerts = llAlerts(ls).length;
+  const load = over / n;
+  if (load >= 0.34 || alerts >= 6) return {state:"overload", label:"Overloaded — regroup",
+    advice:`${over} of ${n} learners are overloaded or break-due. Automation: stop one-to-one triage — run a five-minute whole-class bench reset, then restart everyone on smaller steps.`};
+  if (load >= 0.15 || alerts >= 3) return {state:"stretch", label:"Stretched — delegate",
+    advice:`Automation: delegate — guild leads check their own crews this round while you take the ${Math.max(over, 1)} flagged learner${over>1?"s":""}.`};
+  return {state:"flow", label:"In flow",
+    advice:"The room is in the channel. Automation: bank it — name one concrete win aloud before the next block."};
+}
+const TFCOL = {overload:"var(--w4)", stretch:"var(--gold)", flow:"var(--green)", idle:"var(--faint)"};
+const AUTOMATIONS = [
+ {name:"Flow Keeper", watch:"every learner's channel position", run(ls){
+    const d = flowDist(ls);
+    return {status: d.overload ? "attention" : (ls.length ? "ok" : "idle"),
+      line: ls.length ? `${d.flow+d.cruising} in the channel · ${d.warming} warming · ${d.overload} overloaded` : "waiting for a class"};}},
+ {name:"Break Caller", watch:"each profile's break cadence", run(ls){
+    const due = ls.filter(l=>flowOf(l).state==="brk").length;
+    return {status: due ? "attention" : (ls.length ? "ok" : "idle"),
+      line: due ? `${due} learner${due>1?"s":""} at cadence — break before the next block` : "no breaks due"};}},
+ {name:"Step Tuner", watch:"struggle and cruise streaks", run(ls){
+    const shrink = ls.filter(l=>flowOf(l).state==="overload").length;
+    const stretch = ls.filter(l=>flowOf(l).state==="cruising").length;
+    return {status: (shrink||stretch) ? "ok" : "idle",
+      line: `${shrink} step-down call${shrink===1?"":"s"} · ${stretch} stretch call${stretch===1?"":"s"} pending`};}},
+ {name:"Credential Clerk", watch:"the 50-check line on every track", run(ls){
+    const creds = ls.reduce((s,l)=>s+llStanding(l).creds.length, 0);
+    const near = ls.reduce((s,l)=>s+LTRACKS.filter(t=>{const n=(l.prog||{})[t.key]||0; return n>=45&&n<50;}).length, 0);
+    return {status: ls.length ? "ok" : "idle",
+      line: `${creds} credential${creds===1?"":"s"} auto-awarded · ${near} within five checks`};}},
+ {name:"Cohort Watch", watch:"stalls and near-credentials", run(ls){
+    const a = llAlerts(ls);
+    return {status: a.length ? "attention" : (ls.length ? "ok" : "idle"),
+      line: a.length ? a[0] : "no alerts pending"};}},
+ {name:"Readiness Sentinel", watch:"the five Wave-1 requirements, statewide", run(){
+    const ready = D.parishes.filter(p=>readyState(p.slug).every(Boolean)).length;
+    const started = D.parishes.filter(p=>readyState(p.slug).some(Boolean)).length;
+    return {status: started ? "ok" : "idle",
+      line: `${ready}/64 parishes Wave-1 ready · ${started} in preparation`};}},
+ {name:"Teacher Relief", watch:"the teacher's own load", run(ls){
+    const tf = teacherFlow(ls);
+    return {status: tf.state==="overload" ? "attention" : (tf.state==="idle" ? "idle" : "ok"),
+      line: tf.label + " — " + tf.advice.replace(/^Automation: /, "")};}},
+ {name:"Network Sync", watch:"all eight halls", run(ls){
+    const rungs = D.parishes.reduce((s,p)=>s+missionState(p.slug).filter(Boolean).length, 0);
+    return {status: "ok",
+      line: `8 halls · ${accN(1)} Wave-1 parishes · ${rungs} mission rungs logged · ledger: ${ls.length} learner${ls.length===1?"":"s"}`};}},
+];
+const AUTOSTATUS = {ok:["running","var(--green)"], attention:["attention","var(--w4)"], idle:["idle","var(--faint)"]};
+let pulseCount = 0;
+function renderNetOS(){
+  const host = $("#autoboard"); if (!host) return;
+  const ls = llLoad().learners;
+  pulseCount++;
+  host.innerHTML = AUTOMATIONS.map(a=>{
+    let r; try { r = a.run(ls); } catch(e){ r = {status:"idle", line:"—"}; }
+    const [lab, col] = AUTOSTATUS[r.status];
+    return `<div style="display:flex; gap:12px; align-items:baseline; padding:8px 0; border-top:1px solid var(--line); font-size:.87rem; flex-wrap:wrap">
+      <span style="flex:0 0 150px"><b>${a.name}</b></span>
+      <span class="chip" style="border-color:${col}; color:${col}; font-size:.68rem">${lab}</span>
+      <span style="color:var(--muted); flex:1; min-width:220px">${esc(r.line)}</span>
+      <span class="mono" style="font-size:.66rem; color:var(--faint)">watches ${esc(a.watch)}</span></div>`;
+  }).join("");
+  const pl = $("#pulse-line");
+  if (pl) pl.textContent = `pulse #${pulseCount} · ${new Date().toLocaleTimeString()}`;
+}
+setInterval(()=>{ try{
+  if ($("#view-regions").classList.contains("active")) renderNetOS();
+}catch(e){} }, 20000);
 
 /* ---------- INSTITUTE ---------- */
 const ARCS = [
@@ -1691,7 +1795,11 @@ const WIDGETS = {
     const ls = llLoad().learners;
     if (!ls.length){ el.innerHTML += `<p class="note">Add learners (or seed the demo cohort) in Class standing — the flow board reads their live states.</p>`; return; }
     const dist = flowDist(ls);
-    el.innerHTML += `<p class="note">Each learner's flow state, computed from their recorded results, with the
+    const tf = teacherFlow(ls);
+    el.innerHTML += `<div style="border:1px solid ${TFCOL[tf.state]}; border-left-width:4px; border-radius:10px; padding:10px 14px; margin:0 0 12px">
+      <b>Your flow</b> <span class="chip" style="background:${TFCOL[tf.state]}; color:#fff; border:0; font-size:.68rem">${tf.label}</span>
+      <div style="font-size:.85rem; color:var(--muted); margin-top:4px">${esc(tf.advice)}</div></div>
+      <p class="note">Each learner's flow state, computed from their recorded results, with the
       automation's call and their chosen access profile's top supports. Overloaded and break-due learners float
       to the top.</p>
       <div style="display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px">${Object.entries(FLOWMETA).map(([k,[lab,col]])=>
@@ -2060,6 +2168,7 @@ const TOUR = [
   {hash:"#/state", sel:"#tl-parishes", t:"Two-year expansion", m:"The adopted build-out: thirty-three parishes and most of the state's population in year one, all sixty-four in full run by year two."},
   {hash:"#/parish/east-baton-rouge", sel:"#pplan", t:"The parish module plan", m:"The core spine plus packs earned by this parish's own industries — each with the phrase that earned it."},
   {hash:"#/parish/east-baton-rouge", sel:"#pmissions", t:"The mission module", m:"Five rungs built from this parish's narrative world. Check rungs as an assessor confirms them."},
+  {hash:"#/regions", sel:"#autoboard", t:"The Network OS", m:"Eight Trade Hall sections, and eight system automations running over them — watching the live ledger, calling the breaks, tuning the steps, awarding the credentials, and keeping teachers as well as learners in flow."},
   {hash:"#/roles", sel:"#rolechips", t:"Every seat's dashboard", m:"Student, teacher, parent, homeschool, parish and state admin — pick your role and the view is yours: choose which panels show and order them. The learner ledger runs underneath, so every seat sees exactly where each student stands."},
   {hash:"#/institute", sel:"#arcs", t:"The Legacy Institute", m:"Twelve principles of leadership, ethics and civic duty — with the universal model localizable to any state or country."},
   {hash:"#/machines", sel:"#loopdiagram", t:"Agents and robots", m:"One block, two learners: humans earn credentials, and with consent, machines learn from how it was done."},
@@ -2142,7 +2251,7 @@ function route(){
     view = "parish";
     const s = h.split("/")[1];
     renderParish(bySlug[s] || D.parishes[0]);
-  } else if (h==="regions") view="regions";
+  } else if (h==="regions"){ view="regions"; renderRegions(); }
   else if (h==="roles"){ view="roles"; renderRoles(); }
   else if (h==="institute") view="institute";
   else if (h==="machines") view="machines";
