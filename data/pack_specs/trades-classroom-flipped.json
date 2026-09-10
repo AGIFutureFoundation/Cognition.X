@@ -1,0 +1,291 @@
+{
+ "pack": "Trades in the Classroom : Flipped & Gamified",
+ "notes": "The school-district integration curriculum for the Trades Network: how a district brings the trades into its own classrooms through the flipped model (learn the concept at home, build with your hands in class) with an honest game layer (quests, guilds, points that mean something). Written for teachers, union partners and district staff working across the network's three anchor regions (San Francisco, Oakland–East Bay, New Orleans) and any district that adopts the model. Union locals are never named from this pack — every partnership check routes through the regional building-trades or labor council to find the current local. Simulations teach control discipline and observation; they never count as equipment certification, union credit, or apprenticeship standing.",
+ "tracks": [
+  {
+   "name": "The flipped lesson: learn at home, build in class",
+   "prefix": "FL",
+   "credential": "Flipped Classroom Lead",
+   "themes": [
+    {
+     "theme": "Why the hands get the classroom",
+     "description": "The core trade of the flipped model — lecture moves home so the teacher's live hours go to the bench, where struggle is visible and help is immediate.",
+     "transfer_check": "Take one lesson you know well, split it into an at-home watch and an in-class build, and say what the teacher now sees that lecturing hid."
+    },
+    {
+     "theme": "The seven-minute watch",
+     "description": "What an at-home segment must be — one concept, under ten minutes, ending in a question the class will answer at the bench.",
+     "transfer_check": "Script and record a seven-minute concept segment for one trade skill, ending on the question the next day's build answers."
+    },
+    {
+     "theme": "The bench is the lesson plan",
+     "description": "Designing the in-class build: stations, materials, the one skill each station proves, and the rotation that keeps every hand busy.",
+     "transfer_check": "Design a four-station bench plan for one class period, with the skill each station proves and the rotation timed on paper."
+    },
+    {
+     "theme": "When the watch doesn't happen",
+     "description": "The no-homework reality — the two-minute catch-up corner, the partner brief, and why the build must survive an unprepared third of the room.",
+     "transfer_check": "Add a catch-up path to a flipped lesson so a student who never saw the watch still builds meaningfully, and test it on someone cold."
+    },
+    {
+     "theme": "The transfer check closes the loop",
+     "description": "Every flipped cycle ends the Cognition.X way — a check on real material, witnessed, recorded — not a quiz about the video.",
+     "transfer_check": "Write the transfer check for one flipped cycle so it can only be passed at the bench, never by quoting the video."
+    },
+    {
+     "theme": "Flipping a trade versus flipping a subject",
+     "description": "What changes when the content is a craft — safety gates before tools, demonstration before description, and the mentor's eye on form.",
+     "transfer_check": "Take a safety-gated tool skill and show which parts may flip home (concept, hazard map) and which must never (first live use), with reasons."
+    },
+    {
+     "theme": "The teacher and the tradesperson teach together",
+     "description": "The co-taught bench — the teacher runs the room, the union mentor runs the craft, and the lesson plan names who owns which minute.",
+     "transfer_check": "Co-plan one bench session with a real or role-played trade mentor, the plan naming who leads each segment and why."
+    },
+    {
+     "theme": "Homework the family can join",
+     "description": "At-home segments designed for the kitchen table — a parent measures, a sibling times, the household becomes the first crew.",
+     "transfer_check": "Design one at-home segment that requires a second person in the household, and collect what that person noticed."
+    },
+    {
+     "theme": "Evidence over impressions",
+     "description": "Reading a flipped unit honestly — watch-completion is not learning; the bench record and the check ledger are the truth.",
+     "transfer_check": "Compare watch-completion data with bench outcomes for one unit (real or supplied) and name one student the video numbers misjudged."
+    },
+    {
+     "theme": "Scaling from one lesson to a course",
+     "description": "The term arc — sequencing flipped cycles so skills stack toward a credential, with review benches where the stack wobbles.",
+     "transfer_check": "Map a nine-week course as a chain of flipped cycles ending in one credential, marking the two review benches and what each re-proves."
+    }
+   ]
+  },
+  {
+   "name": "The game layer: quests, guilds and honest points",
+   "prefix": "GL",
+   "credential": "Learning Game Designer",
+   "themes": [
+    {
+     "theme": "Why games work when they work",
+     "description": "The honest core of gamification — visible progress, near-term goals, safe failure — and the flow channel between boredom and panic.",
+     "transfer_check": "Take one skill you coach and mark its flow channel: the version that bores, the version that panics, and the step between."
+    },
+    {
+     "theme": "Points that mean something",
+     "description": "XP tied to demonstrated blocks, never attendance — if a point can be earned without competence, it will be, and the currency dies.",
+     "transfer_check": "Design the point rule for one unit so every point maps to a passed transfer check, and show how a hollow point would be impossible."
+    },
+    {
+     "theme": "The quest is a project with a story",
+     "description": "Wrapping a real build in a narrative worth finishing — the quest's goal, obstacle, and artifact the learner keeps.",
+     "transfer_check": "Rewrite one classroom build as a quest card — goal, obstacle, artifact — and run it past a learner for the 'would you start it' test."
+    },
+    {
+     "theme": "Guilds: the crew as the unit",
+     "description": "Small mixed crews with rotating roles — lead, safety, scribe, quartermaster — because the trades work in crews and so should the class.",
+     "transfer_check": "Form (or design) a four-person guild with rotating roles for a two-week quest, and write the rotation that gives everyone every seat."
+    },
+    {
+     "theme": "Leaderboards that don't humiliate",
+     "description": "Ranking crews not children, celebrating gains not totals — the design line between motivation and public shame.",
+     "transfer_check": "Design the unit's progress display so a struggling learner is never bottom of a public list, and explain what is celebrated instead."
+    },
+    {
+     "theme": "Badges are credentials in costume",
+     "description": "Mapping the game's badges one-to-one onto the credential ladder — Explorer to Lead — so the fun layer and the real ledger agree.",
+     "transfer_check": "Map a unit's badge set onto real credential levels so earning the badge and earning the level are the same event, shown on one page."
+    },
+    {
+     "theme": "The boss fight is a transfer check",
+     "description": "The unit's climax as its assessment — a timed, witnessed, real-material challenge the whole quest trained for.",
+     "transfer_check": "Design a boss-fight assessment for one unit that is exactly its transfer check staged with stakes, and name the witness role."
+    },
+    {
+     "theme": "Failure costs a retry, not a record",
+     "description": "Lives, respawns and the retry loop — failure priced in time and another attempt, never carried as a permanent mark.",
+     "transfer_check": "Write the retry rule for one boss fight: what a failed attempt costs, what it never costs, and when the next attempt opens."
+    },
+    {
+     "theme": "The economy stays honest",
+     "description": "Auditing the game — point inflation, badge farming, the shortcut a clever twelve-year-old will find in week two.",
+     "transfer_check": "Red-team your own game design: find two exploits a clever learner would find, and patch the rules to close both."
+    },
+    {
+     "theme": "The game ends, the craft continues",
+     "description": "Graduating from the game layer — the moment the artifact, the crew and the credential matter more than the points, by design.",
+     "transfer_check": "Interview a learner finishing a gamified unit and record, in their words, what they would keep doing with no points at all."
+    }
+   ]
+  },
+  {
+   "name": "The union partnership: halls, mentors, pathways",
+   "prefix": "UP",
+   "credential": "Pathway Partnership Lead",
+   "themes": [
+    {
+     "theme": "What a union is, in one class period",
+     "description": "The union explained straight — the hall, the local, the apprenticeship, the dispatch — as civic institutions a student can walk into.",
+     "transfer_check": "Teach a ten-minute plain-language explainer of hall, local, apprenticeship and dispatch, and take three student questions live."
+    },
+    {
+     "theme": "Finding the current local",
+     "description": "Why this curriculum never hard-codes local numbers — locals merge and renumber — and how the regional council is always the front door.",
+     "transfer_check": "For one trade in your region, contact or look up the building-trades or labor council listing and record the current local's name and hall."
+    },
+    {
+     "theme": "The mentor in the room",
+     "description": "What a working tradesperson brings to a classroom bench — form, war stories, the standard of done — and how to make their hour count.",
+     "transfer_check": "Host (or fully plan) one mentor bench hour: the skill they demonstrate, the three questions students ask, the thank-you that brings them back."
+    },
+    {
+     "theme": "The hall visit",
+     "description": "Taking a class to a training center — what to watch on the apprentices' floor, and the etiquette of a working hall.",
+     "transfer_check": "Plan a hall or training-center visit end to end: the request through the council, the floor rules briefed, and the one thing each student must observe."
+    },
+    {
+     "theme": "Apprenticeship: earn while you learn",
+     "description": "The apprenticeship pathway as it really works — application windows, aptitude tests, the wage ladder, the journey card at the end.",
+     "transfer_check": "Chart the real apprenticeship pathway for one trade in your region — application to journey card — from the program's own published materials."
+    },
+    {
+     "theme": "111 doors: reading the network roster",
+     "description": "Using the Trades Network's regional roster — 37 trade families across three regions — to match a student's bench evidence to trades worth visiting.",
+     "transfer_check": "Take one student's bench record and shortlist three trade families from the network roster with the evidence line that suggests each."
+    },
+    {
+     "theme": "What the simulation is and is not",
+     "description": "The honesty stance, verbatim and non-negotiable — a simulator teaches control discipline; it is never equipment certification, union credit, or standing.",
+     "transfer_check": "Write the one-paragraph honesty notice for a classroom simulation station, and have a trade mentor confirm it claims nothing false."
+    },
+    {
+     "theme": "The employer and the hall together",
+     "description": "How signatory contractors, the hall and the school triangle — who provides material, who provides witnesses, who provides the first job.",
+     "transfer_check": "Map the triangle for one local project: the signatory contractor, the hall, and the school, with what each contributes named."
+    },
+    {
+     "theme": "Two coasts, one model",
+     "description": "What transfers between the Gulf and the Bay — the crafts and the model — and what stays local: the sites, the councils, the locals.",
+     "transfer_check": "Compare one trade family's entry across two network regions and write what a student moving between them keeps and must redo."
+    },
+    {
+     "theme": "The pathway is a person's",
+     "description": "Consent and ownership at the door — a student's bench record travels to a hall only when the student sends it.",
+     "transfer_check": "Write the consent sentence a student reads before their record goes to any hall, and the exact steps that happen only after they agree."
+    }
+   ]
+  },
+  {
+   "name": "The simulation studio: the jobsite in the classroom",
+   "prefix": "SS",
+   "credential": "Simulation Studio Steward",
+   "themes": [
+    {
+     "theme": "The studio's one law",
+     "description": "Safety and honesty fused — nothing energized, suspended or moving is practiced live in a classroom studio, and no sim claims to certify.",
+     "transfer_check": "Write the studio's one-page law — what may be simulated, what must never be live, what no sim claims — and post it where the stations stand."
+    },
+    {
+     "theme": "Choosing what to simulate",
+     "description": "The selection test — simulate what is dangerous, expensive or rare in real life, and practice live what is safe, cheap and common.",
+     "transfer_check": "Sort ten trade skills into simulate versus practice-live using the dangerous/expensive/rare test, defending the two hardest calls."
+    },
+    {
+     "theme": "Cardboard first",
+     "description": "Low-fidelity simulation as the honest start — the crane from string and weight, the circuit on paper — fidelity earned, never assumed.",
+     "transfer_check": "Build a sub-$20 tabletop simulation of one control discipline (swing, sequence, pressure) and show a partner what it truly teaches."
+    },
+    {
+     "theme": "The regional scenario",
+     "description": "Localizing every sim to the region's real sites — the port berth, the pump station, the transit yard — so the classroom faces its own city.",
+     "transfer_check": "Adapt one network simulation scenario to a real site in your own region, changing only the local facts and keeping the discipline."
+    },
+    {
+     "theme": "The control discipline rubric",
+     "description": "Scoring a sim run the way the trades do — smoothness, order, calls made aloud — the rubrics the SmartCiti.X simulators share.",
+     "transfer_check": "Score two learners on the same sim with a three-line control-discipline rubric and defend the difference with observed moments."
+    },
+    {
+     "theme": "Failure drills",
+     "description": "Simulating the day it goes wrong — the drifted gauge, the failed lift, the flagged line — because judgment is trained on bad days.",
+     "transfer_check": "Insert one realistic failure into a sim scenario and record how a learner detects, calls and recovers it, against the drill card."
+    },
+    {
+     "theme": "The debrief is half the sim",
+     "description": "The after-action habit — what happened, what was called, what changes next run — in the crew's own words within five minutes.",
+     "transfer_check": "Run a five-minute structured debrief after a sim and produce the crew's own three-line change list for the next run."
+    },
+    {
+     "theme": "Sim to bench to site",
+     "description": "The graduation chain — simulation proves discipline, the bench proves hands, the supervised site visit proves the world — in that order.",
+     "transfer_check": "Chart one skill's chain from sim through bench to supervised observation, naming the gate that opens each stage."
+    },
+    {
+     "theme": "The studio's logbook",
+     "description": "Recording runs like a working site — who ran, what scenario, what score, what failed — the studio's own five honest numbers.",
+     "transfer_check": "Design the studio logbook page and keep it faithfully for one full session, then read one improvement out of your own data."
+    },
+    {
+     "theme": "Machines in the studio",
+     "description": "Where agents and robots join honestly — a tutor that watches for the missed call, a sim that adapts its difficulty to keep flow — under the consent-first data rules.",
+     "transfer_check": "Specify one adaptive behavior for a sim station (what it watches, how it adjusts) and the consent line covering what it records."
+    }
+   ]
+  },
+  {
+   "name": "The district compact: trades on the transcript",
+   "prefix": "DC",
+   "credential": "District Trades Integrator",
+   "themes": [
+    {
+     "theme": "The case to the board",
+     "description": "Making the district case in the district's own terms — engagement, completion, pathways to wages — with the evidence lines that carry a board vote.",
+     "transfer_check": "Draft the one-page board memo proposing a flipped trades program, with three evidence lines and the specific vote requested."
+    },
+    {
+     "theme": "Credit where credit is due",
+     "description": "Getting bench hours onto the transcript — CTE credit, elective credit, the credential ladder mapped to the district's own units.",
+     "transfer_check": "Map one trades course onto your district's actual credit structure, naming the credit type and the policy that permits it."
+    },
+    {
+     "theme": "The master schedule fight",
+     "description": "Where the bench hours live — block scheduling, the double period, the after-school hall hour — and what each choice costs.",
+     "transfer_check": "Place a trades course into a real bell schedule from your district and name the two conflicts it creates and your resolution of each."
+    },
+    {
+     "theme": "The classroom becomes a studio",
+     "description": "Facilities honestly assessed — power, ventilation, storage, sight lines — and the shop a school already has hiding in it.",
+     "transfer_check": "Survey one real school space for studio conversion and produce the gap list: what it has, what it needs, what it can never host."
+    },
+    {
+     "theme": "Insurance, liability and the permission slip",
+     "description": "The risk paperwork done right — district counsel, the mentor's clearances, the studio law attached to the consent form.",
+     "transfer_check": "Assemble the permission packet for a sim studio unit — activities, supervision, the honesty notice — ready for a counsel read."
+    },
+    {
+     "theme": "Finding the teachers",
+     "description": "Staffing the model — the CTE teacher, the crossover academic, the tradesperson-in-residence — and the certification path each rides.",
+     "transfer_check": "Identify the three staffing routes your state actually permits for trades instruction and match a real course to the one that fits."
+    },
+    {
+     "theme": "The district and the council sign",
+     "description": "The formal compact — district and regional labor council, mentor pipelines, hall visits, the annual review both sides attend.",
+     "transfer_check": "Draft the two-page district-council compact with the five commitments each side makes and the annual review clause."
+    },
+    {
+     "theme": "Equity is a roster question",
+     "description": "Who is in the room — recruiting the students the trades have historically missed, and reading the roster honestly each term.",
+     "transfer_check": "Compare a trades course roster (real or supplied) to the school's population shape, name the gap, and write the outreach step for next term."
+    },
+    {
+     "theme": "Measuring what matters",
+     "description": "The program's five honest numbers — enrolled, benched, checked, credentialed, placed-into-pathway — reported to the board unvarnished.",
+     "transfer_check": "Build the five-number report card for one term of a trades program and present it, bad number included, in a three-minute board brief."
+    },
+    {
+     "theme": "From one school to the district, to the network",
+     "description": "Scaling the compact — the second school copies the playbook, the district joins the regional network, the network trades lessons across coasts.",
+     "transfer_check": "Write the adoption memo that takes your pilot to a second named school, listing what transfers verbatim and what the new school must localize."
+    }
+   ]
+  }
+ ]
+}

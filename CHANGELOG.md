@@ -4,6 +4,47 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.23.0] — 2026-09-10
+
+### Added
+- **Cognition.X Trades Network** (`apps/trades-network/`, built by
+  `tools/build_trades.py`): 37 trade families × 3 regions (San
+  Francisco, Oakland–East Bay, New Orleans) = **111 regional union &
+  trade entries**, each naming its real international union (with
+  per-coast overrides — ILWU West, ILA Gulf), a training simulation
+  set on its region's own publicly known ground, and Flow Hub deep
+  links into its backing packs. Views: the three-region network map,
+  region cards (training grounds, councils, districts), the
+  searchable/filterable 111-entry roster, nine simulation categories,
+  the flipped cycle, and the district compact (SFUSD / OUSD / NOLA
+  Public Schools). Two hard rules carried throughout: **no union
+  local numbers** (the regional council is always the front door) and
+  **simulation ≠ certification**.
+- **Trades in the Classroom : Flipped & Gamified pack**
+  (`TRADESCLASS`, 250 blocks) — the district integration curriculum:
+  the flipped lesson, the honest game layer (points map one-to-one to
+  passed transfer checks; the boss fight *is* the transfer check),
+  union partnerships, the simulation studio and its law, and the
+  district compact. Dataset: **15,950 blocks · 41 packs · 195 tracks
+  · 1,379 credentials**.
+- **Deep customizable role dashboards** (Louisiana): all six
+  perspectives (student / teacher / parent / homeschool / parish
+  admin / state admin) rebuilt on a widget system — 30 widgets in
+  all, each dashboard composable (toggle panels, reorder them),
+  persisted per role in the browser. New full-view widgets include
+  the student's flow-session launcher and learning journal, the
+  teacher's trainer track, flipped-units card and parish readiness
+  board, the parent's family ledger and parish/hall card, the
+  homeschool co-op guild, the parish admin's five honest numbers and
+  launch team of five, and the state admin's per-requirement
+  readiness rollup and Trade Hall launch-load chart.
+- **Human-like voice model** in all three interactive apps: three
+  personas (Warm / Steady / Brisk), a natural-voice preference list
+  (Google/natural/neural voices first, graceful fallback),
+  sentence-level utterances with slight prosody drift, and warmer
+  conversational guide phrasing — still fully on-device, off by
+  default, nothing leaves the page.
+
 ## [0.22.0] — 2026-09-10
 
 ### Added

@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 40 packs — 15,700 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 41 packs — 15,950 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -43,6 +43,7 @@ Catalog of all 40 packs — 15,700 blocks total. Machine-readable version: [`dat
 | Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
 | Parish Launch & Scale | `LAUNCH` | 250 | 5 | 5 |
 | SmartCiti.X : New Orleans Trades | `NOLATRADES` | 250 | 5 | 5 |
+| Trades in the Classroom : Flipped & Gamified | `TRADESCLASS` | 250 | 5 | 5 |
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
 
 ## Tracks by pack
@@ -294,6 +295,16 @@ walkable city layer)
 - Water in, water out: pumps, canals and the storm
 - Power back on: the grid after the wind
 - The craft pathway: from first tool to journey card
+
+**Trades in the Classroom : Flipped & Gamified** — the school-district
+integration curriculum for the Trades Network: the flipped model, the
+honest game layer, union partnerships (always through the regional
+council), the simulation studio, and the district compact
+- The flipped lesson: learn at home, build in class
+- The game layer: quests, guilds and honest points
+- The union partnership: halls, mentors, pathways
+- The simulation studio: the jobsite in the classroom
+- The district compact: trades on the transcript
 
 **Transport & Mobility**
 - Moving through the city without a car
