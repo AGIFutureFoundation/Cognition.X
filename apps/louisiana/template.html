@@ -776,6 +776,11 @@ function renderParish(p){
      </div>
 
      <div class="panel span2">
+       <h3>Trade unions &amp; training sims</h3>
+       <div id="punions"></div>
+     </div>
+
+     <div class="panel span2">
        <h3>Parish mission module — custom to this parish</h3>
        <p class="note">A five-rung capstone ladder generated from <i>this parish's</i> narrative world in the fact
        base — the custom layer over the universal dataset. Generated scaffolds: a parish committee refines them
@@ -859,6 +864,7 @@ function renderParish(p){
   // mission module: the parish-custom capstone ladder — in full run
   renderMissionLadder("#pmissions", p, true);
   renderReady(p);
+  renderParishUnions(p);
 
   // customizer picker: every catalog pack not already in the plan
   const inPlan = new Set(plan.map(([s])=>s));
@@ -1182,6 +1188,38 @@ function renderReady(p, sel){
     store("cxla.ready."+p.slug, JSON.stringify(s2));
     setTimeout(()=>renderReady(p, sel), 0);
   }));
+}
+
+/* ---------- parish ↔ trade-union integration ---------- */
+function renderParishUnions(p){
+  const host = $("#punions"); if (!host || !D.unions) return;
+  const hub = D.hubs[p.region];
+  if (hub !== "New Orleans"){
+    host.innerHTML = `<p class="note" style="margin:0">The regional union layer currently anchors the
+      <b>New Orleans</b> Trade Hall — ${esc(p.name)}'s hall is ${esc(hub)}. The full network
+      (111 union &amp; trade entries across New Orleans, San Francisco and Oakland–East Bay) is in the
+      <a href="../trades-network/index.html" target="_blank" rel="noopener">Cognition.X Trades Network</a>
+      alongside this file.</p>`;
+    return;
+  }
+  const mine = new Set(D.corePacks.concat(p.packs.map(([s])=>s)));
+  const matched = D.unions.entries.filter(e => e.packs.some(s => mine.has(s)));
+  const rest = D.unions.entries.length - matched.length;
+  host.innerHTML =
+    `<p class="note">${esc(p.name)} is served by the <b>New Orleans</b> Trade Hall, so the regional union
+     layer applies directly: ${matched.length} of ${D.unions.entries.length} trade families back packs in
+     this parish's own plan. Front door for the current local: ${esc(D.unions.council)}.
+     Simulation ≠ certification.</p>` +
+    `<div class="themelist">` + matched.map(e =>
+      `<div class="theme" style="border-left:4px solid var(--w3)">`+
+      `<div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap"><b>${esc(e.family)}</b>`+
+      `<span style="font-size:.78rem; color:var(--muted)">${esc(e.intl)}</span></div>`+
+      `<div class="body" style="border-top:0; padding-top:4px"><div class="check"><b>Training sim:</b> ${esc(e.sim)}.</div>`+
+      `<div style="margin-top:6px">${e.packs.filter(s=>mine.has(s)).map(s=>
+        `<span class="chip">${esc((D.catalog[s]||{}).name||s)}</span>`).join("")}</div></div></div>`).join("") + `</div>` +
+    `<p class="note" style="margin-top:10px">${rest} more trade families, plus the San Francisco and
+     Oakland–East Bay rosters, are in the
+     <a href="../trades-network/index.html" target="_blank" rel="noopener">Trades Network</a>.</p>`;
 }
 
 /* ---------- mission run-state (browser-local, per parish) ---------- */

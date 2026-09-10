@@ -215,6 +215,25 @@ def curriculum_stats():
     }
 
 
+def nola_unions():
+    """The New Orleans-region slice of the Trades Network fact base —
+    37 union/trade entries with sims localized to New Orleans ground —
+    for the parish dashboards served by the New Orleans Trade Hall."""
+    fb = json.loads((ROOT / "data" / "unions" / "trade_unions.json")
+                    .read_text(encoding="utf-8"))
+    reg = next(r for r in fb["regions"] if r["id"] == "nola")
+    entries = []
+    for fam in fb["families"]:
+        intl = fam.get("intl_by_region", {}).get("nola", fam["intl"])
+        entries.append({
+            "family": fam["family"], "intl": intl, "kind": fam["kind"],
+            "sim": fam["sim"].replace("{site}", reg["sites"][fam["kind"]]),
+            "packs": fam["packs"],
+        })
+    return {"region": reg["name"], "council": reg["council"],
+            "districts": reg["districts"], "entries": entries}
+
+
 def main():
     fb = extract_fact_base()
     missing = [p[0] for p in fb["parishes"] if p[0] not in POS]
@@ -253,6 +272,7 @@ def main():
         "corePacks": CORE_PACKS,
         "packmeta": packmeta,
         "catalog": catalog_light,
+        "unions": nola_unions(),
     }
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     template = (ROOT / "apps" / "louisiana" / "template.html").read_text(encoding="utf-8")
