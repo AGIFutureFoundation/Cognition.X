@@ -1,0 +1,659 @@
+<title>Cognition.X Trades Network</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* ---------- tokens: enterprise-first; full dark mirror; 5 style templates ---------- */
+  :root{
+    --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#E9EDF1; --line:#D5DBE2;
+    --ink:#1B2431; --muted:#4E5A6B; --faint:#7E8898;
+    --purple:#2456A6; --gold:#946900; --green:#1F7A5C;
+    --gold-soft:rgba(148,105,0,.10); --purple-soft:rgba(36,86,166,.10);
+    --w1:#3B6FD4; --w2:#2E8F63; --w3:#9552BD; --w4:#C25A3A;
+    --chart:#2456A6; --ring:rgba(36,86,166,.45);
+    --shadow:0 8px 22px rgba(27,36,49,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
+      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+      --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
+      --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
+      --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+      --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
+      --shadow:0 12px 32px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
+    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+    --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
+    --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
+    --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+    --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
+    --shadow:0 12px 32px rgba(0,0,0,.4);
+  }
+  /* Parade — the platform's celebratory palette */
+  :root[data-style="parade"]{
+    --bg:#F7F5F0; --surface-2:#EFECE4; --line:#DCD8CD;
+    --ink:#221F33; --muted:#5B566E; --faint:#8B879B;
+    --purple:#6B3FA0; --gold:#B87514; --green:#2E8F63;
+    --purple-soft:rgba(107,63,160,.10); --gold-soft:rgba(184,117,20,.12);
+    --chart:#3B6FD4; --ring:rgba(107,63,160,.45);
+  }
+  :root[data-style="parade"][data-theme="dark"]{
+    --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
+    --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+    --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
+    --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
+    --chart:#5580D6; --ring:rgba(232,163,61,.5);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="parade"]:not([data-theme="light"]){
+      --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
+      --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+      --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
+      --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
+      --chart:#5580D6; --ring:rgba(232,163,61,.5);
+    }
+  }
+  /* Classic — parade structure, quiet color */
+  :root[data-style="classic"]{
+    --bg:#F7F5F0; --surface-2:#EFECE4; --line:#DCD8CD;
+    --purple:#4B4667; --gold:#7A6B4A; --green:#4E6B5E;
+    --purple-soft:rgba(75,70,103,.10); --gold-soft:rgba(122,107,74,.10);
+    --chart:#4B4667; --ring:rgba(75,70,103,.45);
+  }
+  :root[data-style="classic"][data-theme="dark"]{
+    --bg:#17161D; --surface:#201F28; --surface-2:#2B2A35; --line:#3C3B48;
+    --purple:#A9A2C9; --gold:#C0B08A; --green:#8FA99C;
+    --purple-soft:rgba(169,162,201,.13); --gold-soft:rgba(192,176,138,.13);
+    --chart:#A9A2C9; --ring:rgba(169,162,201,.5);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="classic"]:not([data-theme="light"]){
+      --bg:#17161D; --surface:#201F28; --surface-2:#2B2A35; --line:#3C3B48;
+      --purple:#A9A2C9; --gold:#C0B08A; --green:#8FA99C;
+      --purple-soft:rgba(169,162,201,.13); --gold-soft:rgba(192,176,138,.13);
+      --chart:#A9A2C9; --ring:rgba(169,162,201,.5);
+    }
+  }
+  /* Bayou — moss, cypress and river light */
+  :root[data-style="bayou"]{
+    --bg:#F4F5EC; --surface-2:#EAEBDD; --line:#D8DAC6;
+    --purple:#3E6B34; --gold:#A0621B; --green:#2E8F63;
+    --purple-soft:rgba(62,107,52,.11); --gold-soft:rgba(160,98,27,.11);
+    --chart:#3E7A4F; --ring:rgba(62,107,52,.45);
+  }
+  :root[data-style="bayou"][data-theme="dark"]{
+    --bg:#141811; --surface:#1C2318; --surface-2:#273022; --line:#3A4632;
+    --purple:#8FBF6B; --gold:#D9A252; --green:#4EA57F;
+    --purple-soft:rgba(143,191,107,.14); --gold-soft:rgba(217,162,82,.14);
+    --chart:#8FBF6B; --ring:rgba(143,191,107,.5);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="bayou"]:not([data-theme="light"]){
+      --bg:#141811; --surface:#1C2318; --surface-2:#273022; --line:#3A4632;
+      --purple:#8FBF6B; --gold:#D9A252; --green:#4EA57F;
+      --purple-soft:rgba(143,191,107,.14); --gold-soft:rgba(217,162,82,.14);
+      --chart:#8FBF6B; --ring:rgba(143,191,107,.5);
+    }
+  }
+  /* Gallery — editorial near-monochrome with a wine accent */
+  :root[data-style="gallery"]{
+    --bg:#FAFAF7; --surface-2:#F0EFEA; --line:#DEDDD5;
+    --purple:#8A1E33; --gold:#6E6046; --green:#4A6B5F;
+    --purple-soft:rgba(138,30,51,.09); --gold-soft:rgba(110,96,70,.10);
+    --chart:#8A1E33; --ring:rgba(138,30,51,.4);
+  }
+  :root[data-style="gallery"][data-theme="dark"]{
+    --bg:#171514; --surface:#201D1C; --surface-2:#2B2726; --line:#403A38;
+    --purple:#E08498; --gold:#BFAE8C; --green:#7FA394;
+    --purple-soft:rgba(224,132,152,.13); --gold-soft:rgba(191,174,140,.13);
+    --chart:#E08498; --ring:rgba(224,132,152,.5);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="gallery"]:not([data-theme="light"]){
+      --bg:#171514; --surface:#201D1C; --surface-2:#2B2726; --line:#403A38;
+      --purple:#E08498; --gold:#BFAE8C; --green:#7FA394;
+      --purple-soft:rgba(224,132,152,.13); --gold-soft:rgba(191,174,140,.13);
+      --chart:#E08498; --ring:rgba(224,132,152,.5);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html{color-scheme:light dark}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:15.5px; line-height:1.6}
+  a{color:var(--purple)}
+  button{font:inherit; cursor:pointer}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+  :focus-visible{outline:2px solid var(--ring); outline-offset:2px}
+  .wrap{max-width:1160px; margin:0 auto; padding-inline:clamp(16px,4vw,40px)}
+
+  header.masthead{border-bottom:1px solid var(--line); background:var(--surface); position:sticky; top:0; z-index:5}
+  .mast{display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding-block:12px}
+  .wordmark{font-family:Fraunces,Georgia,serif; font-weight:800; font-size:1.15rem; white-space:nowrap}
+  .wordmark .tn{color:var(--purple)}
+  nav.tabs{display:flex; gap:4px; flex-wrap:wrap}
+  .tab{border:0; background:none; color:var(--muted); padding:7px 12px; border-radius:999px; font-weight:500}
+  .tab:hover{color:var(--ink); background:var(--surface-2)}
+  .tab[aria-current="true"]{background:var(--purple-soft); color:var(--purple); font-weight:600}
+  .mastctl{margin-left:auto; display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+  .mastctl label{font-size:.7rem; color:var(--faint); font-family:"IBM Plex Mono",monospace}
+  .mastctl select{padding:4px 8px; font-size:.78rem}
+
+  main{padding-block:34px 70px}
+  .view{display:none}
+  .view.active{display:block}
+  .eyebrow{font-size:.72rem; text-transform:uppercase; letter-spacing:.16em; font-weight:600; margin:0 0 10px; color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif; font-weight:800; font-size:clamp(1.8rem,4vw,2.8rem);
+     line-height:1.12; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance}
+  h2{font-family:Fraunces,Georgia,serif; font-weight:600; font-size:1.3rem; margin:38px 0 6px}
+  .lede{color:var(--muted); max-width:66ch; margin:0 0 24px; font-size:1.02rem}
+  .note{font-size:.82rem; color:var(--muted); margin:2px 0 12px}
+
+  .tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:22px 0}
+  .tile{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px}
+  .tile b{display:block; font-family:Fraunces,Georgia,serif; font-size:1.5rem; line-height:1.1}
+  .tile span{font-size:.76rem; color:var(--muted)}
+  .tile.t1 b{color:var(--purple)} .tile.t2 b{color:var(--gold)} .tile.t3 b{color:var(--green)}
+
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 20px; box-shadow:var(--shadow)}
+  .panel h3{margin:0 0 4px; font-family:Fraunces,Georgia,serif; font-size:1.05rem}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; margin-top:14px}
+  .grid3{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; margin-top:14px}
+
+  .chip{display:inline-block; border:1px solid var(--line); background:var(--surface-2); color:var(--muted);
+    border-radius:999px; padding:2px 11px; font-size:.74rem; margin:2px 4px 2px 0}
+  .chip.link{cursor:pointer}
+  .chip.link:hover{border-color:var(--purple); color:var(--purple)}
+  .kbadge{display:inline-block; border-radius:6px; padding:1px 8px; font-size:.68rem; font-weight:600; color:#fff}
+
+  .regcard{border-top:4px solid var(--chart)}
+  .regcard .hub{font-size:.78rem; color:var(--faint); margin-bottom:8px}
+  .sitelist{margin:8px 0 0; padding-left:18px; font-size:.83rem; color:var(--muted)}
+  .sitelist li{margin:3px 0}
+
+  .filters{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:16px 0 4px}
+  .filters input[type=search]{padding:7px 12px; border:1px solid var(--line); border-radius:9px;
+    background:var(--surface); color:var(--ink); font:inherit; min-width:200px}
+  .filters select{padding:6px 10px; font-size:.83rem}
+  .ucard{border-left:4px solid var(--chart)}
+  .ucard h4{margin:0 0 2px; font-family:Fraunces,Georgia,serif; font-size:1rem}
+  .ucard .intl{font-size:.8rem; color:var(--muted); margin:0 0 8px}
+  .ucard .sim{font-size:.82rem; color:var(--ink); background:var(--surface-2); border-radius:8px; padding:8px 11px; margin:8px 0}
+  .ucard .council{font-size:.74rem; color:var(--faint); margin-top:8px}
+
+  .honesty{border:1px dashed var(--gold); border-radius:11px; padding:13px 16px; font-size:.84rem;
+    color:var(--muted); margin:18px 0; background:var(--gold-soft)}
+  .honesty b{color:var(--ink)}
+
+  .cycle{overflow-x:auto; margin-top:10px}
+  .tracklist{list-style:none; margin:8px 0 0; padding:0}
+  .tracklist li{padding:8px 0; border-top:1px solid var(--line); font-size:.9rem; display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap}
+  .tracklist .cred{color:var(--gold); font-size:.76rem; white-space:nowrap}
+
+  .steps{counter-reset:st; margin:14px 0 0; padding:0; list-style:none}
+  .steps li{counter-increment:st; display:flex; gap:14px; padding:12px 0; border-top:1px solid var(--line); font-size:.9rem}
+  .steps li::before{content:counter(st); flex:0 0 30px; height:30px; border-radius:999px; background:var(--purple-soft);
+    color:var(--purple); font-weight:700; display:grid; place-items:center; font-family:"IBM Plex Mono",monospace; font-size:.85rem}
+
+  .hbar{display:flex; align-items:center; gap:10px; margin:6px 0}
+  .hbar .lab{flex:0 0 200px; font-size:.78rem; color:var(--muted); text-align:right}
+  .hbar .bar{height:14px; border-radius:7px; min-width:3px}
+  .hbar .val{font-size:.75rem; color:var(--faint); font-family:"IBM Plex Mono",monospace}
+
+  /* guide */
+  #tourbox{position:fixed; z-index:60; max-width:340px; background:var(--surface); border:1px solid var(--line);
+    border-radius:13px; box-shadow:var(--shadow); padding:16px 18px; bottom:20px; right:20px}
+  #tourbox h4{margin:0 0 4px; font-family:Fraunces,Georgia,serif}
+  #tourbox p{margin:0 0 12px; font-size:.85rem; color:var(--muted)}
+  #tourbox .row{display:flex; gap:8px; justify-content:flex-end}
+  #tourbox button{border:1px solid var(--line); background:var(--surface-2); color:var(--ink); border-radius:8px; padding:5px 13px; font-size:.8rem}
+  #tourbox button.primary{background:var(--purple); border-color:var(--purple); color:#fff}
+  .tourhl{outline:3px solid var(--gold) !important; outline-offset:3px; border-radius:8px}
+  .btn{border:1px solid var(--line); background:var(--surface-2); color:var(--ink); border-radius:9px; padding:6px 14px}
+  .btn.gold{background:var(--gold); border-color:var(--gold); color:#fff}
+
+  .foot{border-top:1px solid var(--line); margin-top:60px; padding:22px 0 40px; font-size:.78rem; color:var(--faint)}
+  @media(max-width:640px){ .hbar .lab{flex-basis:120px} }
+</style>
+
+<header class="masthead"><div class="wrap mast">
+  <div class="wordmark">Cognition.X <span class="tn">Trades Network</span></div>
+  <nav class="tabs" aria-label="Views">
+    <button class="tab" data-r="network" aria-current="true">The Network</button>
+    <button class="tab" data-r="regions">Regions</button>
+    <button class="tab" data-r="unions">Unions &amp; Trades</button>
+    <button class="tab" data-r="sims">Simulations</button>
+    <button class="tab" data-r="flipped">Flipped Classroom</button>
+    <button class="tab" data-r="districts">Districts</button>
+  </nav>
+  <div class="mastctl">
+    <label for="themepick">theme</label>
+    <select id="themepick"><option value="">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+    <label for="stylepick">style</label>
+    <select id="stylepick">
+      <option value="enterprise">Enterprise</option><option value="parade">Parade</option>
+      <option value="classic">Classic</option><option value="bayou">Bayou</option>
+      <option value="gallery">Gallery</option>
+    </select>
+    <label for="voicepick">voice</label>
+    <select id="voicepick">
+      <option value="">Off</option><option value="warm">Warm</option>
+      <option value="steady">Steady</option><option value="brisk">Brisk</option>
+    </select>
+    <button class="btn gold" id="guidebtn">🧭 Guide</button>
+    <span class="mono" id="verline" style="font-size:.72rem; color:var(--faint)"></span>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+  <!-- ================= NETWORK ================= -->
+  <section class="view active" id="view-network">
+    <p class="eyebrow">Two coasts · one model · the regional council is always the front door</p>
+    <h1>The trades, the halls, and the classroom between them</h1>
+    <p class="lede">A regional training network across <b>San Francisco</b>, <b>Oakland–East Bay</b> and
+    <b>New Orleans</b>: 37 trade families × 3 regions = <b>111 union &amp; trade entries</b>, each with a
+    training simulation set on its region's own ground, curriculum packs behind it, and a flipped, gamified
+    classroom model that brings the trades into school districts on honest terms.</p>
+    <div class="tiles" id="nettiles"></div>
+
+    <div class="panel">
+      <h3>The network map</h3>
+      <p class="note">Three anchor regions, one shared model. Click a region to open it.</p>
+      <div id="netmap" class="cycle"></div>
+    </div>
+
+    <div class="honesty"><b>The honesty stance, carried verbatim:</b> a simulator teaches control
+    discipline and observation. It never counts as equipment certification, union credit, or
+    apprenticeship standing. And this network never hard-codes union local numbers — locals merge and
+    renumber, so every entry routes through the regional building-trades or labor council to find the
+    current local.</div>
+
+    <div class="panel">
+      <h3>How a learner moves through it</h3>
+      <ol class="steps">
+        <li><b>Flipped lesson</b> — the concept travels home as a short watch; the classroom hours go to the bench.</li>
+        <li><b>Simulation studio</b> — control discipline on a scenario set at the region's own port, grid, yard or pump station.</li>
+        <li><b>Bench &amp; transfer check</b> — hands on real material, witnessed and recorded in the learner's ledger.</li>
+        <li><b>The hall</b> — mentor hours, a training-center visit, and the apprenticeship pathway found through the council.</li>
+        <li><b>The pathway is the learner's</b> — a bench record travels to a hall only when the learner sends it.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= REGIONS ================= -->
+  <section class="view" id="view-regions">
+    <p class="eyebrow">Three regions · real ground</p>
+    <h1>Regions</h1>
+    <p class="lede">Each region localizes the same 37 trade families to its own sites, councils and school
+    districts — the crafts transfer; the ground never does.</p>
+    <div class="grid3" id="reggrid"></div>
+  </section>
+
+  <!-- ================= UNIONS ================= -->
+  <section class="view" id="view-unions">
+    <p class="eyebrow">The roster · 111 entries</p>
+    <h1>Unions &amp; trades</h1>
+    <p class="lede">Every entry names its international union and its region, carries its localized training
+    simulation, and links the curriculum packs behind it. To reach the actual local:
+    <b>always through the regional council</b>.</p>
+    <div class="filters">
+      <input type="search" id="usearch" placeholder="Search trades, unions, sims…" aria-label="Search roster">
+      <select id="uregion"><option value="">All regions</option></select>
+      <select id="ukind"><option value="">All categories</option></select>
+      <span class="note" id="ucount" style="margin:0"></span>
+    </div>
+    <div class="grid3" id="ugrid"></div>
+  </section>
+
+  <!-- ================= SIMULATIONS ================= -->
+  <section class="view" id="view-sims">
+    <p class="eyebrow">Regional training simulations</p>
+    <h1>The simulation studio</h1>
+    <p class="lede">Nine control-discipline categories, each grounded on real sites in all three regions.
+    Simulate what is dangerous, expensive or rare; practice live what is safe, cheap and common; debrief
+    every run.</p>
+    <div class="honesty"><b>Every station posts the same law:</b> nothing energized, suspended or moving is
+    practiced live in a classroom studio, and no simulation claims to certify.</div>
+    <div class="panel">
+      <h3>Category coverage across the regions</h3>
+      <p class="note">Regional entries per category — every category is taught on all three coasts' ground.</p>
+      <div id="simchart"></div>
+    </div>
+    <div class="grid3" id="simgrid"></div>
+  </section>
+
+  <!-- ================= FLIPPED ================= -->
+  <section class="view" id="view-flipped">
+    <p class="eyebrow">Learn at home · build in class · check on real material</p>
+    <h1>The flipped, gamified classroom</h1>
+    <p class="lede">The district integration model: lecture moves home as a seven-minute watch, the teacher's
+    live hours go to the bench, and an honest game layer — quests, guilds, points that map one-to-one onto
+    passed transfer checks — keeps the room in the flow channel.</p>
+
+    <div class="panel">
+      <h3>The flipped cycle</h3>
+      <div class="cycle" id="cyclesvg"></div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h3>The game layer, honestly</h3>
+        <ol class="steps">
+          <li><b>Points mean blocks</b> — every XP maps to a passed transfer check; a point that can be earned without competence kills the currency.</li>
+          <li><b>Guilds are crews</b> — four learners, rotating roles (lead, safety, scribe, quartermaster), because the trades work in crews.</li>
+          <li><b>The boss fight is the transfer check</b> — the unit's climax is its assessment, staged with stakes and a witness.</li>
+          <li><b>Failure costs a retry, not a record</b> — priced in time and another attempt, never carried as a mark.</li>
+          <li><b>Badges are credentials in costume</b> — the badge set maps onto Explorer → Builder → Practitioner → Lead exactly.</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h3 id="flippedpack"></h3>
+        <p class="note">Five tracks, 10 themes each, taught across the five grade bands — one credential per track.</p>
+        <ul class="tracklist" id="flippedtracks"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DISTRICTS ================= -->
+  <section class="view" id="view-districts">
+    <p class="eyebrow">The district compact</p>
+    <h1>Working with school districts</h1>
+    <p class="lede">Bringing the trades onto the transcript — the compact between a district and its regional
+    labor council, with the flipped model as the classroom engine and the network roster as the pathway map.</p>
+    <div class="grid3" id="distgrid"></div>
+    <div class="panel" style="margin-top:14px">
+      <h3>The compact in six commitments</h3>
+      <ol class="steps">
+        <li><b>The board memo</b> — the case in the district's own terms: engagement, completion, pathways to wages.</li>
+        <li><b>Credit where credit is due</b> — bench hours mapped to CTE and elective credit; the credential ladder mapped to the district's units.</li>
+        <li><b>The classroom becomes a studio</b> — facilities surveyed honestly; the studio law posted; counsel reads the permission packet.</li>
+        <li><b>Mentors through the council</b> — tradespeople in the room and hall visits, arranged through the regional council, never a cold call to a local.</li>
+        <li><b>The five honest numbers</b> — enrolled, benched, checked, credentialed, placed-into-pathway; reported to the board unvarnished.</li>
+        <li><b>Equity is a roster question</b> — the course roster read against the school's population shape every term, with the outreach step named.</li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="foot wrap" style="padding-inline:0">
+    Cognition.X Trades Network — built from the canonical dataset and the unions fact base.
+    Code Apache-2.0 · content CC BY 4.0. International union names are public identifiers of the
+    organizations named; this project is independent and not affiliated with, endorsed by, or reviewed
+    by any union, council, port, district or agency named. Simulation ≠ certification.
+  </div>
+</main>
+
+<div id="tourbox" hidden role="dialog" aria-label="Guide">
+  <h4 id="tourtitle"></h4><p id="tourmsg"></p>
+  <div class="row"><button id="tourback">Back</button><button id="tourend">End</button>
+  <button class="primary" id="tournext">Next</button></div>
+</div>
+
+<script>
+const D = __TNDATA__;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){ return null; } }
+$("#verline").textContent = "v"+D.version;
+
+const REGCOL = {sf:"var(--w1)", oak:"var(--w2)", nola:"var(--w3)"};
+const KINDS = {
+  build:"Structures & finishes", elec:"Power & signal", water:"Water systems",
+  port:"Port & maritime", transit:"Transit & rail", service:"Service & stagecraft",
+  civic:"Public & schools", mech:"Machines & metal", fire:"Fire & response"};
+const regById = Object.fromEntries(D.regions.map(r=>[r.id,r]));
+
+/* ---------- voice: three personas, natural voice, sentence pacing ---------- */
+const PERSONAS = { warm:{rate:.97,pitch:1.03,drift:.05}, steady:{rate:1.0,pitch:1.0,drift:.03}, brisk:{rate:1.12,pitch:1.02,drift:.02} };
+let voiceMode = ["warm","steady","brisk"].includes(store("cxtn.voice")) ? store("cxtn.voice") : "";
+let pickedVoice = null;
+const VOICE_PREF = [/Google US English/i, /\bNatural\b/i, /\bNeural\b/i, /Samantha/i, /Aria/i, /Jenny/i, /Allison/i, /Karen/i, /Daniel/i];
+function chooseVoice(){
+  try{
+    const vs = speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang));
+    for (const re of VOICE_PREF){ const v = vs.find(x=>re.test(x.name)); if (v) return v; }
+    return vs.find(v=>v.default) || vs[0] || null;
+  }catch(e){ return null; }
+}
+try{ if ("speechSynthesis" in window){
+  pickedVoice = chooseVoice();
+  speechSynthesis.onvoiceschanged = () => { pickedVoice = chooseVoice(); };
+}}catch(e){}
+function say(text){
+  if (!voiceMode) return;
+  try{
+    if (!("speechSynthesis" in window)) return;
+    const P = PERSONAS[voiceMode] || PERSONAS.steady;
+    speechSynthesis.cancel();
+    // sentence-level utterances with slight prosody drift read far more
+    // human than one flat utterance; all on-device, nothing leaves the page
+    const parts = String(text).match(/[^.!?…]+[.!?…]*/g) || [String(text)];
+    parts.forEach((s,i)=>{
+      const u = new SpeechSynthesisUtterance(s.trim());
+      if (pickedVoice) u.voice = pickedVoice;
+      u.rate  = Math.max(.5, P.rate + (i%2 ? -P.drift : P.drift)/2);
+      u.pitch = Math.max(.5, P.pitch + (i===0 ? P.drift : 0));
+      speechSynthesis.speak(u);
+    });
+  }catch(e){}
+}
+
+/* ---------- theme / style / voice controls ---------- */
+(function(){
+  const th=$("#themepick"), st=$("#stylepick"), vp=$("#voicepick");
+  th.value = store("cxtn.theme") || "";
+  st.value = ["enterprise","parade","classic","bayou","gallery"].includes(store("cxtn.style")) ? store("cxtn.style") : "enterprise";
+  vp.value = voiceMode;
+  const apply = () => {
+    if (th.value) document.documentElement.dataset.theme = th.value;
+    else delete document.documentElement.dataset.theme;
+    document.documentElement.dataset.style = st.value;
+    voiceMode = vp.value;
+    store("cxtn.theme", th.value); store("cxtn.style", st.value); store("cxtn.voice", vp.value);
+  };
+  th.addEventListener("change", apply); st.addEventListener("change", apply);
+  vp.addEventListener("change", ()=>{ apply(); if (voiceMode) say("Voice on. I'll read the guide aloud as we go."); });
+  apply();
+})();
+
+/* ---------- router ---------- */
+const VIEWS = ["network","regions","unions","sims","flipped","districts"];
+function route(){
+  const r = (location.hash.replace(/^#\/?/,"") || "network").split("/")[0];
+  const v = VIEWS.includes(r) ? r : "network";
+  VIEWS.forEach(x=>{
+    $("#view-"+x).classList.toggle("active", x===v);
+    document.querySelector(`.tab[data-r="${x}"]`).setAttribute("aria-current", x===v ? "true" : "false");
+  });
+}
+document.querySelectorAll(".tab").forEach(t=> t.addEventListener("click", ()=> location.hash = "#/"+t.dataset.r));
+window.addEventListener("hashchange", route);
+
+/* ---------- network view ---------- */
+function renderNetwork(){
+  const packBlocks = Object.values(D.packmeta).reduce((s,p)=>s+p.blocks,0);
+  $("#nettiles").innerHTML = [
+    ["111","regional union & trade entries","t1"],
+    [String(D.families),"trade families","t2"],
+    ["3","anchor regions","t3"],
+    [packBlocks.toLocaleString(),"curriculum blocks behind them","t1"],
+    [String(Object.keys(D.packmeta).length),"packs linked","t2"],
+  ].map(([v,l,t])=>`<div class="tile ${t}"><b>${v}</b><span>${l}</span></div>`).join("");
+
+  // arc map: three region nodes on one line of longitude-ish layout
+  const P = {sf:[110,150], oak:[190,110], nola:[560,180]};
+  const arcs = [["sf","oak"],["oak","nola"],["sf","nola"]];
+  const svg =
+    `<svg viewBox="0 0 680 250" width="100%" style="max-width:680px" role="img" aria-label="Network map of the three regions">`+
+    arcs.map(([a,b])=>{const[x1,y1]=P[a],[x2,y2]=P[b];
+      return `<path d="M${x1},${y1} Q${(x1+x2)/2},${Math.min(y1,y2)-70} ${x2},${y2}" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="6 5"/>`;}).join("")+
+    D.regions.map(r=>{const[x,y]=P[r.id];
+      const n = D.entries.filter(e=>e.region===r.id).length;
+      return `<g class="regnode" data-reg="${r.id}" tabindex="0" role="button" style="cursor:pointer" aria-label="${esc(r.name)}">`+
+        `<circle cx="${x}" cy="${y}" r="34" fill="${REGCOL[r.id]}"/>`+
+        `<text x="${x}" y="${y-2}" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">${r.id.toUpperCase()}</text>`+
+        `<text x="${x}" y="${y+14}" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.9)">${n} entries</text>`+
+        `<text x="${x}" y="${y+52}" text-anchor="middle" font-size="12" fill="var(--ink)">${esc(r.name)}</text>`+
+        `<title>${esc(r.name)} — ${n} union & trade entries</title></g>`;}).join("")+
+    `</svg>`;
+  $("#netmap").innerHTML = svg;
+  $("#netmap").querySelectorAll(".regnode").forEach(g=>{
+    const open = ()=>{ location.hash = "#/regions"; };
+    g.addEventListener("click", open);
+    g.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } });
+  });
+}
+
+/* ---------- regions view ---------- */
+function renderRegions(){
+  $("#reggrid").innerHTML = D.regions.map(r=>{
+    const es = D.entries.filter(e=>e.region===r.id);
+    const kinds = {};
+    es.forEach(e=>{ kinds[e.kind]=(kinds[e.kind]||0)+1; });
+    return `<div class="panel regcard" style="border-top-color:${REGCOL[r.id]}">`+
+      `<h3>${esc(r.name)}</h3>`+
+      `<div class="hub">${es.length} union &amp; trade entries · front door: ${esc(r.council)}</div>`+
+      `<div>${Object.entries(kinds).map(([k,n])=>`<span class="chip">${esc(KINDS[k])} · ${n}</span>`).join("")}</div>`+
+      `<p class="note" style="margin-top:10px"><b>Training grounds</b> (public, real, observed from safe access):</p>`+
+      `<ul class="sitelist">${Object.values(r.sites).map(s=>`<li>${esc(s)}</li>`).join("")}</ul>`+
+      `<p class="note" style="margin-top:10px"><b>School districts:</b> ${esc(r.districts)}</p>`+
+      `<button class="btn" data-openreg="${r.id}">Open the roster →</button></div>`;
+  }).join("");
+  $("#reggrid").querySelectorAll("[data-openreg]").forEach(b=> b.addEventListener("click", ()=>{
+    location.hash = "#/unions"; $("#uregion").value = b.dataset.openreg; renderRoster();
+  }));
+}
+
+/* ---------- unions roster ---------- */
+function fillFilters(){
+  $("#uregion").innerHTML = `<option value="">All regions</option>`+
+    D.regions.map(r=>`<option value="${r.id}">${esc(r.name)}</option>`).join("");
+  $("#ukind").innerHTML = `<option value="">All categories</option>`+
+    Object.entries(KINDS).map(([k,l])=>`<option value="${k}">${esc(l)}</option>`).join("");
+}
+function renderRoster(){
+  const q = ($("#usearch").value||"").toLowerCase(), reg = $("#uregion").value, kind = $("#ukind").value;
+  const es = D.entries.filter(e =>
+    (!reg || e.region===reg) && (!kind || e.kind===kind) &&
+    (!q || (e.family+" "+e.intl+" "+e.sim).toLowerCase().includes(q)));
+  $("#ucount").textContent = es.length + " of " + D.entries.length + " entries";
+  $("#ugrid").innerHTML = es.map(e=>{
+    const r = regById[e.region];
+    return `<div class="panel ucard" style="border-left-color:${REGCOL[e.region]}">`+
+      `<span class="kbadge" style="background:${REGCOL[e.region]}">${esc(r.name)}</span> `+
+      `<span class="chip">${esc(KINDS[e.kind])}</span>`+
+      `<h4 style="margin-top:8px">${esc(e.family)}</h4>`+
+      `<p class="intl">${esc(e.intl)}</p>`+
+      `<div class="sim"><b>Training sim:</b> ${esc(e.sim)}.</div>`+
+      `<div>${e.packs.map(s=>{const p=D.packmeta[s];
+        return p?`<span class="chip link" data-pack="${s}" title="Open in Flow Hub">${esc(p.name)} · ${p.blocks}</span>`:"";}).join("")}</div>`+
+      `<p class="council">Current local: verify with ${esc(r.council)}. Simulation ≠ certification.</p></div>`;
+  }).join("");
+  $("#ugrid").querySelectorAll("[data-pack]").forEach(c=> c.addEventListener("click", ()=>{
+    // deep link into the repository's Flow Hub when it sits alongside this file
+    window.open("../flow-hub/index.html#track="+c.dataset.pack, "_blank");
+  }));
+}
+
+/* ---------- simulations view ---------- */
+function renderSims(){
+  const counts = Object.keys(KINDS).map(k=>[k, D.entries.filter(e=>e.kind===k).length]);
+  const max = Math.max(...counts.map(([,n])=>n));
+  $("#simchart").innerHTML = counts.map(([k,n])=>
+    `<div class="hbar"><span class="lab">${esc(KINDS[k])}</span>`+
+    `<span class="bar" style="width:${100*n/max}%; background:var(--chart)" title="${esc(KINDS[k])}: ${n} regional entries"></span>`+
+    `<span class="val">${n}</span></div>`).join("");
+  $("#simgrid").innerHTML = Object.keys(KINDS).map(k=>{
+    return `<div class="panel"><h3>${esc(KINDS[k])}</h3>`+
+      D.regions.map(r=>{
+        const es = D.entries.filter(e=>e.kind===k && e.region===r.id);
+        if (!es.length) return "";
+        return `<p class="note" style="margin:10px 0 2px"><span class="kbadge" style="background:${REGCOL[r.id]}">${esc(r.name)}</span> `+
+          `<span style="color:var(--faint)">${esc(r.sites[k])}</span></p>`+
+          `<ul class="sitelist">${es.map(e=>`<li><b>${esc(e.family)}</b> — ${esc(e.sim)}.</li>`).join("")}</ul>`;
+      }).join("")+`</div>`;
+  }).join("");
+}
+
+/* ---------- flipped view ---------- */
+function renderFlipped(){
+  const f = D.flipped;
+  $("#flippedpack").textContent = f.name + " — " + f.blocks + " blocks";
+  $("#flippedtracks").innerHTML = f.tracks.map(t=>
+    `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("");
+  const N = [["Watch at home","7 minutes, one concept, ends in a question","var(--w1)"],
+             ["Build at the bench","stations, crews, the teacher's hours where the struggle is","var(--w2)"],
+             ["Transfer check","real material, witnessed — the boss fight","var(--w3)"],
+             ["Ledger & badge","the point maps to the passed check, the badge to the level","var(--w4)"]];
+  const cx=[110,320,530,320], cy=[95,45,95,175];
+  $("#cyclesvg").innerHTML =
+    `<svg viewBox="0 0 660 230" width="100%" style="max-width:660px" role="img" aria-label="The flipped cycle">`+
+    `<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--faint)"/></marker></defs>`+
+    [[0,1],[1,2],[2,3],[3,0]].map(([a,b])=>
+      `<line x1="${cx[a]}" y1="${cy[a]}" x2="${cx[b]}" y2="${cy[b]}" stroke="var(--faint)" stroke-width="1.6" marker-end="url(#arr)"/>`).join("")+
+    N.map(([t,d,c],i)=>
+      `<g><circle cx="${cx[i]}" cy="${cy[i]}" r="30" fill="${c}"/>`+
+      `<text x="${cx[i]}" y="${cy[i]+4}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fff">${i+1}</text>`+
+      `<text x="${cx[i]}" y="${cy[i]+(cy[i]>120?50:-40)}" text-anchor="middle" font-size="11.5" font-weight="600" fill="var(--ink)">${t}</text>`+
+      `<title>${t} — ${d}</title></g>`).join("")+
+    `</svg>`;
+}
+
+/* ---------- districts view ---------- */
+function renderDistricts(){
+  $("#distgrid").innerHTML = D.regions.map(r=>
+    `<div class="panel regcard" style="border-top-color:${REGCOL[r.id]}"><h3>${esc(r.name)}</h3>`+
+    `<p class="note">${esc(r.districts)}</p>`+
+    `<p class="note">Partnership front door: ${esc(r.council)}.</p>`+
+    `<p style="font-size:.85rem; margin:0">Flipped trades units run on the district's own campuses — `+
+    `<i>${esc(r.sites.civic)}</i> is the model's home ground — with mentors and hall visits arranged `+
+    `through the council and every simulation under the studio law.</p></div>`).join("");
+}
+
+/* ---------- guide ---------- */
+const TOUR = [
+  {hash:"#/network", sel:"#nettiles", t:"Welcome to the Trades Network", m:"Thirty-seven trade families, three regions, one hundred and eleven entries. Here's the shape of the whole thing at a glance."},
+  {hash:"#/network", sel:"#netmap", t:"Two coasts, one model", m:"San Francisco, Oakland and New Orleans anchor the network. The crafts transfer between them; the ground never does."},
+  {hash:"#/regions", sel:"#reggrid", t:"Regions", m:"Each region card lists its real training grounds, its labor council — always the front door — and its school districts."},
+  {hash:"#/unions", sel:"#ugrid", t:"The roster", m:"All one hundred and eleven entries, searchable and filterable. Every card names the international union and carries a training simulation set on that region's own ground."},
+  {hash:"#/sims", sel:"#simgrid", t:"The simulation studio", m:"Nine control-discipline categories on all three coasts. And the one law over all of it: a simulation never certifies."},
+  {hash:"#/flipped", sel:"#cyclesvg", t:"The flipped cycle", m:"Watch at home, build at the bench, prove it on real material, record it in the ledger. The game layer keeps every point honest."},
+  {hash:"#/districts", sel:"#distgrid", t:"The district compact", m:"How this lands on a transcript: credit mapping, the studio law, mentors through the council, and five honest numbers to the board."},
+];
+let tourAt = -1, tourEl = null;
+function tourShow(i){
+  if (tourEl) tourEl.classList.remove("tourhl");
+  if (i < 0 || i >= TOUR.length){ tourEnd(); return; }
+  tourAt = i;
+  const s = TOUR[i];
+  if (location.hash !== s.hash) location.hash = s.hash;
+  setTimeout(()=>{
+    tourEl = document.querySelector(s.sel);
+    if (tourEl){ tourEl.classList.add("tourhl"); tourEl.scrollIntoView({block:"center", behavior:"smooth"}); }
+    $("#tourtitle").textContent = s.t; $("#tourmsg").textContent = s.m;
+    $("#tourbox").hidden = false;
+    say(s.t + ". " + s.m);
+  }, 120);
+}
+function tourEnd(){
+  if (tourEl) tourEl.classList.remove("tourhl");
+  tourEl = null; tourAt = -1; $("#tourbox").hidden = true;
+  try{ speechSynthesis.cancel(); }catch(e){}
+}
+$("#guidebtn").addEventListener("click", ()=> tourShow(0));
+$("#tournext").addEventListener("click", ()=> tourShow(tourAt+1));
+$("#tourback").addEventListener("click", ()=> tourShow(tourAt-1));
+$("#tourend").addEventListener("click", tourEnd);
+
+/* ---------- boot ---------- */
+fillFilters();
+renderNetwork(); renderRegions(); renderRoster(); renderSims(); renderFlipped(); renderDistricts();
+["usearch","uregion","ukind"].forEach(id => {
+  $("#"+id).addEventListener("input", renderRoster);
+  $("#"+id).addEventListener("change", renderRoster);
+});
+route();
+</script>

@@ -77,6 +77,7 @@ PACK_SLUGS = {
     "Civic Leadership Legacy : The Institute Model": "LEGACYMODEL",
     "SmartCiti.X : New Orleans Trades": "NOLATRADES",
     "Parish Launch & Scale": "LAUNCH",
+    "Trades in the Classroom : Flipped & Gamified": "TRADESCLASS",
 }
 
 

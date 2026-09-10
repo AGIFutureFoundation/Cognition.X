@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 15700,
+  "total_blocks": 15950,
   "packs": [
     {
       "name": "K–12",
@@ -769,6 +769,26 @@
         "Water in, water out: pumps, canals and the storm",
         "Power back on: the grid after the wind",
         "The craft pathway: from first tool to journey card"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Trades in the Classroom : Flipped & Gamified",
+      "slug": "TRADESCLASS",
+      "blocks": 250,
+      "tracks": [
+        "The flipped lesson: learn at home, build in class",
+        "The game layer: quests, guilds and honest points",
+        "The union partnership: halls, mentors, pathways",
+        "The simulation studio: the jobsite in the classroom",
+        "The district compact: trades on the transcript"
       ],
       "credentials": 5,
       "grade_bands": [

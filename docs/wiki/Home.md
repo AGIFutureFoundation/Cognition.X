@@ -10,12 +10,13 @@ tenancy, reentry, global health field practice, and working with AI.
 ## Pages
 
 - [[Data Model]] — blocks, tracks, bands, levels, ids
-- [[Packs]] — catalog of all 40 packs
+- [[Packs]] — catalog of all 41 packs
 - [[Legacy Tracks]] — the legacy-track model and its localizations
 - [[Credential Framework]] — Explorer → Builder → Practitioner → Lead
 - [[Education OS App]] — the single-file application
 - [[Flow Hub]] — the dataset-built hub: flow engine, agents, ledger
 - [[Louisiana Platform]] — 64 independent parish dashboards
+- [[Trades Network]] — 111 union & trade entries across SF, Oakland & New Orleans
 - [Agent & robot learning](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/AGENT_LEARNING.md) — CX-Trace, flow-paced machine curricula, data principles
 - [[Versioning and Releases]] — SemVer policy and history
 - [[Authoring Packs]] — how to write and generate new packs
@@ -27,9 +28,9 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Licensing rationale](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/LICENSING.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.22.0)
+## Numbers (v0.23.0)
 
-**15,700 blocks · 40 packs · 190 tracks · 1,374 credentials**
+**15,950 blocks · 41 packs · 195 tracks · 1,379 credentials**
 
 ---
 

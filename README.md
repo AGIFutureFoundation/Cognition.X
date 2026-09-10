@@ -15,10 +15,11 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (15,700 blocks, 40 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (15,950 blocks, 41 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
+| Cognition.X Trades Network (111 union & trade entries, 3 regions) | [`apps/trades-network/`](apps/trades-network/) | HTML |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
 
 ## Quick start
@@ -38,6 +39,7 @@ open apps/flow-hub/index.html            # flow engine + agents, built from the 
 python3 tools/build_flow_hub.py
 python3 tools/build_louisiana.py
 python3 tools/build_education_os.py   # sector library injected from blocks.csv
+python3 tools/build_trades.py         # unions fact base × dataset
 ```
 
 ## The data model in one paragraph
@@ -67,8 +69,10 @@ blocks of port, ground, water, power and craft-pathway curriculum —
 the Cognition.X companion to the SmartCiti.X New Orleans Trades
 Edition), the **Parish Launch & Scale** rollout pack (250 blocks that
 train each parish's own launch team for the adopted two-year, two-wave
-statewide adoption — 33 parishes in Wave 1), three **legacy-track
-localizations** (*Civic Leadership
+statewide adoption — 33 parishes in Wave 1), the **Trades in the
+Classroom : Flipped & Gamified** pack (250 blocks behind the Trades
+Network's flipped-classroom, union-partnership and simulation-studio
+model), three **legacy-track localizations** (*Civic Leadership
 Legacy : Louisiana / California / Texas*, in the Willie L. Brown Jr.
 Institute model carried by the app — see
 [`docs/wiki/Legacy-Tracks.md`](docs/wiki/Legacy-Tracks.md)), plus the
