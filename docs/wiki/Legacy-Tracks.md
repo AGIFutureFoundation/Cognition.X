@@ -40,6 +40,12 @@ shape (5 tracks × 10 themes × 5 bands), all under
   bridge (Mineola, 1934): 254 counties and commissioners courts, the
   biennial Legislature, Texas elections, storm/grid/coast civics.
 
+- **Civic Leadership Legacy : The Institute Model** (v0.18.0) — the
+  universal, state-agnostic edition for every state and country:
+  leadership as service, coalition craft, a full **emotional
+  intelligence** track, civic duty through the eight slots, and ethics
+  under pressure. The state editions localize it; this pack *is* it.
+
 Further state and country localizations follow the same template.
 
 ## The flagship, for every state and country

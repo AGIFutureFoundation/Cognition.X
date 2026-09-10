@@ -15,7 +15,7 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (14,950 blocks, 37 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (15,200 blocks, 38 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |

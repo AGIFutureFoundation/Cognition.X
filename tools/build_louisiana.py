@@ -179,6 +179,11 @@ def curriculum_stats():
     for r in la:
         if r["track"] and r["track"] not in la_tracks:
             la_tracks[r["track"]] = r["credential"]
+    model = packs.get("Civic Leadership Legacy : The Institute Model", [])
+    model_tracks = OrderedDict()
+    for r in model:
+        if r["track"] and r["track"] not in model_tracks:
+            model_tracks[r["track"]] = r["credential"]
     tracked_tracks = len({(r["pack"], r["track"]) for r in rows if r["track"]})
     return {
         "blocks": len(rows),
@@ -186,6 +191,7 @@ def curriculum_stats():
         "tracks": tracked_tracks,
         "credentials": len({r["credential"] for r in rows}),
         "laTracks": [{"name": k, "credential": v} for k, v in la_tracks.items()],
+        "modelTracks": [{"name": k, "credential": v} for k, v in model_tracks.items()],
         "communityPacks": [p for p, pr in packs.items()
                            if pr[0]["track"] and len(pr) == 250 and not p.startswith("Civic Leadership")],
     }

@@ -74,6 +74,7 @@ PACK_SLUGS = {
     "Civic Leadership Legacy : Texas": "LEGACYTX",
     "Cognition.X : Louisiana OS": "LAOS",
     "Cognition.X : Education OS": "EDUOS",
+    "Civic Leadership Legacy : The Institute Model": "LEGACYMODEL",
 }
 
 

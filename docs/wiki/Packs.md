@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 37 packs — 14,950 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 38 packs — 15,200 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -31,6 +31,7 @@ Catalog of all 37 packs — 14,950 blocks total. Machine-readable version: [`dat
 | Non-Profit Practice | `NPO` | 1150 | 10 | 122 |
 | Cognition.X : Education OS | `EDUOS` | 660 | — | 115 |
 | Arts, Making Media & Performance | `ARTS` | 250 | 5 | 5 |
+| Civic Leadership Legacy : The Institute Model | `LEGACYMODEL` | 250 | 5 | 5 |
 | Civic Leadership Legacy : California | `LEGACYCA` | 250 | 5 | 5 |
 | Civic Leadership Legacy : Louisiana | `LEGACYLA` | 250 | 5 | 5 |
 | Civic Leadership Legacy : Texas | `LEGACYTX` | 250 | 5 | 5 |
@@ -197,6 +198,13 @@ Catalog of all 37 packs — 14,950 blocks total. Machine-readable version: [`dat
 - The camera and the cut
 - The stage and the spoken word
 - Craft, design and the made object
+
+**Civic Leadership Legacy : The Institute Model**
+- Leadership as service: the twelve principles in practice
+- The room and the count: coalition, negotiation, consensus
+- Emotional intelligence for public life
+- Civic duty, anywhere
+- Ethics under pressure
 
 **Civic Leadership Legacy : California**
 - The Fellowship ladder: service as a career

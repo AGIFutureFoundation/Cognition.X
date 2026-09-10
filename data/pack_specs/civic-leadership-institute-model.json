@@ -1,0 +1,291 @@
+{
+  "pack": "Civic Leadership Legacy : The Institute Model",
+  "notes": "The universal, state-agnostic edition of the Willie L. Brown Jr. Institute legacy training — leadership, civic duty, ethics AND emotional intelligence as one model, usable in any state or country via the eight-slot localizer (see docs/wiki/Legacy-Tracks.md). Where the state editions (Louisiana, California, Texas) localize, this pack teaches the model itself. DISCLAIMER, carried from the app: this track is a proposal built from the Willie L. Brown Jr. Institute of Politics and Public Service's public mission and the Fellowship Program at San Francisco State University. It is not affiliated with, endorsed by, or reviewed by the Institute, SF State, or Mayor Brown. 5 tracks x 10 themes x 5 grade bands = 250 blocks. Expanded by tools/generate_pack.py.",
+  "tracks": [
+    {
+      "name": "Leadership as service: the twelve principles in practice",
+      "prefix": "LP",
+      "credential": "Servant Leader",
+      "themes": [
+        {
+          "theme": "The most noble of professions",
+          "description": "Public service taught as a craft with roles, crews, evidence and credentials — the founding principle, practiced rather than recited.",
+          "transfer_check": "Complete one documented act of public service where you live and present it to a real audience beyond your classroom or family."
+        },
+        {
+          "theme": "The leader's story as a text",
+          "description": "Reading a real public servant's record — the wins, the compromises, the record — as curriculum, not hagiography.",
+          "transfer_check": "Record a leader's-story interview with an experienced public servant and present its two most teachable decisions."
+        },
+        {
+          "theme": "Bringing everyone along",
+          "description": "The principle that a win that leaves people behind is unfinished — coalition maintenance as daily leadership work.",
+          "transfer_check": "For one real group decision you were part of, name who was at risk of being left behind and show what brought them along — or what should have."
+        },
+        {
+          "theme": "Decisions that account for lives",
+          "description": "Impact thinking: tracing who a decision touches before making it, with the wide-ranging-impacts principle as the discipline.",
+          "transfer_check": "Take one live local decision and map every group it touches, presenting the impact map before stating your own position."
+        },
+        {
+          "theme": "The mentorship chain",
+          "description": "Being mentored and mentoring in both directions — the legacy chain as the model's transmission system.",
+          "transfer_check": "Establish one real mentoring link in each direction: a session where you learn from someone ahead, and one where you pass a skill behind."
+        },
+        {
+          "theme": "The placement principle",
+          "description": "Hands inside a real institution — why the model insists on placements, seminars and stipends rather than classroom civics alone.",
+          "transfer_check": "Complete a placement, shadow day or structured volunteer shift with a real public body, confirmed by a supervisor."
+        },
+        {
+          "theme": "The seminar circle",
+          "description": "The weekly cohort habit — field experience brought to a circle that questions it, reflection as part of the work.",
+          "transfer_check": "Run or take a speaking role in a seminar circle on a live local issue, presenting field evidence and taking questions on it."
+        },
+        {
+          "theme": "The record you build",
+          "description": "The service ledger — hours, artifacts, references, credentials — evidence that opens doors, kept from the first act of service.",
+          "transfer_check": "Assemble your own service ledger to date in a form a scholarship or employer could verify."
+        },
+        {
+          "theme": "Leading without the title",
+          "description": "Influence before office — organizing, convening and counting votes as a private citizen, where most leadership actually happens.",
+          "transfer_check": "Move one real small change without holding any position — document who you convened, what you asked, and what moved."
+        },
+        {
+          "theme": "Living large: joy as a leadership discipline",
+          "description": "The twelfth principle — enjoying the work and sharing the joy — as sustainability, not indulgence.",
+          "transfer_check": "Identify what genuinely sustains you in service, schedule it into one real month of commitments, and report whether the work improved."
+        }
+      ]
+    },
+    {
+      "name": "The room and the count: coalition, negotiation, consensus",
+      "prefix": "RC",
+      "credential": "Coalition Builder",
+      "themes": [
+        {
+          "theme": "Counting before the vote",
+          "description": "The Speaker's craft generalized — knowing where every stakeholder stands before the meeting that decides.",
+          "transfer_check": "Before one real group decision, produce the written count — who is for, against, movable — and compare it to the outcome."
+        },
+        {
+          "theme": "What the other side needs",
+          "description": "Interests under positions — finding what an opponent must have, as distinct from what they say they want.",
+          "transfer_check": "In one real or role-played negotiation, state the other side's underlying interests to their satisfaction before proposing terms."
+        },
+        {
+          "theme": "The trade that makes the deal",
+          "description": "Log-rolling honestly — trading across issues so both sides win something they value more than what they give.",
+          "transfer_check": "Construct and close one real or simulated two-issue trade where both parties confirm they gained."
+        },
+        {
+          "theme": "Opposing ideas strengthen consensus",
+          "description": "The tolerance principle — running a room where dissent improves the outcome instead of fracturing it.",
+          "transfer_check": "Chair one real discussion with genuine disagreement, and show where an opposing idea changed the final text."
+        },
+        {
+          "theme": "The agenda is the power",
+          "description": "What gets discussed, in what order, decided by whom — agenda-setting as the quietest form of control, used transparently.",
+          "transfer_check": "Draft the agenda for one real meeting and annotate each ordering choice with the outcome it serves, shared openly with the group."
+        },
+        {
+          "theme": "The coalition map",
+          "description": "Allies, opponents, persuadables and the unengaged — mapping a real issue's landscape before spending effort.",
+          "transfer_check": "Produce a coalition map for one concrete local change and have one person on it confirm their placement is accurate."
+        },
+        {
+          "theme": "Holding a fragile majority",
+          "description": "Keeping a coalition together under pressure — the maintenance calls, the credit sharing, the defection you see coming.",
+          "transfer_check": "For one real or case-study coalition, identify its most likely defector and design the specific move that keeps them."
+        },
+        {
+          "theme": "Losing well",
+          "description": "The vote you lose — conceding without burning the room, and positioning for the next round.",
+          "transfer_check": "After a real or simulated loss, deliver the concession that keeps relationships and names the condition under which you return."
+        },
+        {
+          "theme": "The public negotiation",
+          "description": "Negotiating with an audience watching — what changes when the room has cameras, and what must never change.",
+          "transfer_check": "Run one negotiation twice — private and with observers — and report what the audience changed and what you refused to let it change."
+        },
+        {
+          "theme": "The deal that holds",
+          "description": "Writing agreements that survive — specificity, verification and the follow-through that makes the next deal possible.",
+          "transfer_check": "Draft one real agreement's terms so both sides can verify compliance, and check it against what actually happened after."
+        }
+      ]
+    },
+    {
+      "name": "Emotional intelligence for public life",
+      "prefix": "EQ",
+      "credential": "EQ Practitioner",
+      "themes": [
+        {
+          "theme": "Reading yourself first",
+          "description": "Self-awareness under pressure — naming what you feel in the moment it starts steering you, before it speaks for you.",
+          "transfer_check": "Keep a one-week trigger log of real moments emotion started steering you, naming each feeling and what it wanted you to do."
+        },
+        {
+          "theme": "The pause that saves the meeting",
+          "description": "Self-regulation — the practiced beat between provocation and response, and the techniques that create it.",
+          "transfer_check": "Demonstrate your pause technique in one real provocation — what you felt, what you did instead — verified by someone present."
+        },
+        {
+          "theme": "Reading the room",
+          "description": "Attunement at group scale — energy, alliances and unspoken objections read from faces, seating and silence.",
+          "transfer_check": "After one real meeting, write the room-read — who was with, against, checked out — and verify it with a participant."
+        },
+        {
+          "theme": "Empathy without surrender",
+          "description": "Feeling with someone while still disagreeing — empathy as understanding, not capitulation.",
+          "transfer_check": "In one real disagreement, restate the other person's feeling and position to their satisfaction, then still state your own."
+        },
+        {
+          "theme": "The de-escalation",
+          "description": "Bringing a hot person down — tone, space, acknowledgment — the sequence that works and the responses that inflame.",
+          "transfer_check": "Demonstrate the de-escalation sequence in one real or role-played confrontation through to a lowered temperature."
+        },
+        {
+          "theme": "Anger, used well",
+          "description": "The emotion that signals injustice — feeling anger, extracting its information, and choosing its expression.",
+          "transfer_check": "Take one real thing that angers you, name the injustice inside it, and channel it into one constructive act, documented."
+        },
+        {
+          "theme": "Receiving the blow",
+          "description": "Criticism, defeat and public embarrassment — absorbing hits without either collapse or counterattack.",
+          "transfer_check": "After one real piece of hard criticism, produce the sorted response: what was true, what was not, what you changed."
+        },
+        {
+          "theme": "The apology that repairs",
+          "description": "Naming the act, feeling its cost, changing the behavior — apology as repair work, not performance.",
+          "transfer_check": "Deliver one real apology that names the act and the cost, and report the changed behavior two weeks on."
+        },
+        {
+          "theme": "Emotional labor, shared fairly",
+          "description": "Who calms, who comforts, who absorbs — seeing the invisible emotional work in any team and distributing it deliberately.",
+          "transfer_check": "Map the emotional labor in one real group and redistribute one recurring piece of it, with the group's agreement."
+        },
+        {
+          "theme": "The steady presence",
+          "description": "The capstone: being the person a room stabilizes around in difficulty — composure as a practiced public skill.",
+          "transfer_check": "Hold the steady role through one real difficult event — meeting, emergency drill, hard conversation — with a witness's account of what you did."
+        }
+      ]
+    },
+    {
+      "name": "Civic duty, anywhere",
+      "prefix": "CD",
+      "credential": "Civic Duty Bearer",
+      "themes": [
+        {
+          "theme": "The eight slots of any place",
+          "description": "The localizer as literacy — capital, legislature, local unit, standards, seal, industries, placements, partner — resolved for wherever you stand.",
+          "transfer_check": "Resolve all eight localization slots for your own state or country from official sources, on one page."
+        },
+        {
+          "theme": "Your three governments",
+          "description": "Local, state/provincial, national — what each actually does for the block you live on, wherever that is.",
+          "transfer_check": "For your own address, produce the who-does-what card: six common public matters each matched to the correct level and office."
+        },
+        {
+          "theme": "The meeting that is open to you",
+          "description": "Open-meeting rules exist almost everywhere — finding the local body's schedule and taking the citizen's seat.",
+          "transfer_check": "Attend or watch one real public meeting of your local body and report one decision, who voted how, and who it affects."
+        },
+        {
+          "theme": "The record you may request",
+          "description": "Public-records rights in your jurisdiction — what is requestable, how, and the request done correctly.",
+          "transfer_check": "Submit or fully prepare one real public-records request under your jurisdiction's actual rules."
+        },
+        {
+          "theme": "The vote, wherever you are",
+          "description": "Registration, the ballot's shape and the down-ballot lines — your jurisdiction's actual voting machinery mastered.",
+          "transfer_check": "Verify a real registration and produce a plain-language guide to every line of your actual ballot's next election."
+        },
+        {
+          "theme": "Speaking to power, on the record",
+          "description": "Public comment, testimony and the letter that gets answered — the citizen's formal voice in any system.",
+          "transfer_check": "Deliver (or fully rehearse to real rules) one formal public comment or submission to a real body on a live matter."
+        },
+        {
+          "theme": "The duty of accurate speech",
+          "description": "Civic information hygiene — verifying before repeating, correcting your own errors, and the transparency principle in daily speech.",
+          "transfer_check": "Fact-check three circulating civic claims against primary sources and publish the corrected versions where you first saw them."
+        },
+        {
+          "theme": "Jury, census, service",
+          "description": "The duties that arrive by mail — jury service, the census, selective obligations — met as the system's load-bearing acts.",
+          "transfer_check": "For your jurisdiction, explain each summons-borne duty and simulate one — a mock deliberation to verdict, or a census-style enumeration done right."
+        },
+        {
+          "theme": "The office you could hold",
+          "description": "The lowest rungs of elected and appointed office where you live — what they decide, what running requires.",
+          "transfer_check": "Identify three real entry-level offices or appointed seats open to someone like you, with each one's actual filing requirements."
+        },
+        {
+          "theme": "The ceiling you push past",
+          "description": "The affirmative principle localized — who has been blocked where you live, the data that shows it, and the push that is yours to make.",
+          "transfer_check": "Identify one barrier data shows still standing in your own community and complete one documented act that pushes against it."
+        }
+      ]
+    },
+    {
+      "name": "Ethics under pressure",
+      "prefix": "EP",
+      "credential": "Ethical Practitioner",
+      "themes": [
+        {
+          "theme": "What you see is what you get",
+          "description": "The transparency principle — removing the liability of hidden positions and moving on to the work.",
+          "transfer_check": "For one real matter where you hold an unpopular view, state it plainly to the relevant group and document what transparency cost and bought."
+        },
+        {
+          "theme": "The hopeless case",
+          "description": "Taking on what others dismiss — why the model insists on the cases nobody wants, and what taking one actually requires.",
+          "transfer_check": "Take one real dismissed case — a person, a request, a cause written off — and carry it one documented step further than anyone had."
+        },
+        {
+          "theme": "The conflict of interest",
+          "description": "Seeing your own conflicts before others do — disclosure, recusal and the appearance that matters as much as the fact.",
+          "transfer_check": "Audit your own real roles for conflicts, disclose one properly in its actual setting, and state where recusal would be required."
+        },
+        {
+          "theme": "The gift and the favor",
+          "description": "What may be accepted, what obligates, and the favor economy that corrupts by inches.",
+          "transfer_check": "For three real scenarios from your own context, rule accept/decline/disclose with reasons, and check them against any written code that applies."
+        },
+        {
+          "theme": "Loyalty's limit",
+          "description": "The friend, the boss, the party — where loyalty ends and complicity begins, decided before the moment arrives.",
+          "transfer_check": "Write your own loyalty lines for your real roles — what you would refuse whom — and test one against a case study honestly."
+        },
+        {
+          "theme": "Dissent inside the team",
+          "description": "Disagreeing upward and inward — the loyal dissent that improves decisions, delivered so it can be heard.",
+          "transfer_check": "Deliver one real dissent to a decision your own group favors — in the room, on the record — and report its reception and result."
+        },
+        {
+          "theme": "The whistle",
+          "description": "When internal dissent is exhausted — the escalation ladder, its protections where you live, and its real costs.",
+          "transfer_check": "For a case-study wrong, map the full escalation ladder in your jurisdiction — internal to external — with each step's protections and risks."
+        },
+        {
+          "theme": "Power used for the blocked",
+          "description": "The affirmative-push principle as ethics — spending your own access on those the ceiling still holds down.",
+          "transfer_check": "Spend one real unit of your own access — an introduction, a nomination, a platform — on someone blocked, documented with their consent."
+        },
+        {
+          "theme": "The account you owe",
+          "description": "Accountability as practice — reporting back to the people affected, in their room, before they ask.",
+          "transfer_check": "After one real responsibility you held, deliver the unprompted account to those affected — what you did, what went wrong, what changes."
+        },
+        {
+          "theme": "The examined career",
+          "description": "The capstone: your own record read the way you read a leader's — honestly, with the principles as the measure.",
+          "transfer_check": "Write the honest review of your own service record to date against the twelve principles, and set one measurable correction."
+        }
+      ]
+    }
+  ]
+}
