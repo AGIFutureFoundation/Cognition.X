@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 39 packs — 15,450 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 40 packs — 15,700 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -41,6 +41,7 @@ Catalog of all 39 packs — 15,450 blocks total. Machine-readable version: [`dat
 | Food, Cooking & Nutrition | `FOOD` | 250 | 5 | 5 |
 | Law, Contracts & Everyday Rights | `LAW` | 250 | 5 | 5 |
 | Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
+| Parish Launch & Scale | `LAUNCH` | 250 | 5 | 5 |
 | SmartCiti.X : New Orleans Trades | `NOLATRADES` | 250 | 5 | 5 |
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
 
@@ -274,6 +275,16 @@ Catalog of all 39 packs — 15,450 blocks total. Machine-readable version: [`dat
 - French, Creole and the languages of home
 - Krewes, festivals and the craft of celebration
 - The storm and the long memory
+
+**Parish Launch & Scale** — the rollout curriculum for the adopted
+two-year plan: 33 parishes in Wave 1 (2026–27), statewide by Wave 2
+(2027–28); every parish trains its own launch team on its own real
+material
+- The first ninety days
+- Standing up the Trade Hall
+- Training the trainers
+- Enrolling the community
+- Measure, report, scale
 
 **SmartCiti.X : New Orleans Trades** — the Cognition.X companion to the
 SmartCiti.X New Orleans Trades Edition (the Crescent Works campus and its

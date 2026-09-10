@@ -9,8 +9,13 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
 ## Surfaces
 
 - **The State** — live totals, an interactive **stylized tile
-  cartogram** of the 64 parishes colored by rollout wave (click any
-  tile), and parishes-per-wave / parishes-per-region charts.
+  cartogram** of the 64 parishes colored by adopted rollout wave (click
+  any tile), parishes-per-wave / parishes-per-region charts, and the
+  statewide Wave-1 readiness rollup. The adopted plan is a **two-year,
+  two-wave rollout** — 33 parishes (≈88% of population) in Wave 1
+  2026–27, all 64 by 2027–28 — computed deterministically from the fact
+  base; the original four-wave proposal is retained per parish as
+  provenance.
 - **Parish Dashboards** — one per parish, deep-linkable
   (`#/parish/east-baton-rouge`): parish seal, seat, region and Trade
   Hall, wave timeline with the parish's cohort highlighted, school

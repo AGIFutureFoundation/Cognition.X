@@ -4,9 +4,38 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
-## [Unreleased]
+## [0.22.0] — 2026-09-10
 
 ### Added
+- **Accelerated two-year adoption plan**: the four-wave proposal is
+  superseded by an adopted two-wave rollout — **33 parishes launch in
+  Wave 1 (2026–27)**, reaching ~88% of the state's population in year
+  one; the remaining 31 follow in Wave 2 (2027–28). Deterministic
+  cohort rule in `tools/build_louisiana.py` (original proposal wave,
+  then population, then name); the original 4-wave phasing is retained
+  on every parish as provenance. Tile map, Voronoi state map, legends,
+  cohort timelines, expansion charts, region cards (with per-hall
+  Wave-1 launch load) and role dashboards all present the adopted plan
+  as primary.
+- **Parish Launch & Scale pack** (`LAUNCH`, 250 blocks) — the rollout
+  curriculum for the growth: five tracks (the first ninety days /
+  standing up the Trade Hall / training the trainers / enrolling the
+  community / measure, report, scale), every transfer check performed
+  on the learner's own parish. Added to the core spine every parish
+  runs, so all 64 parish module plans now carry their own launch
+  curriculum.
+- **Statewide Wave-1 readiness**: every parish dashboard gains an
+  interactive five-requirement readiness board (one requirement per
+  Launch & Scale track; browser-local record), the state view rolls
+  readiness up across all 64 parishes, the State Admin dashboard
+  counts Wave-1-ready parishes, and the parish program export includes
+  readiness state — the whole state prepares to the Wave-1 standard
+  now.
+- **Five style templates** with a professional **Enterprise** default
+  (slate ground, corporate blue, toned-down ornament) alongside
+  Parade, Classic, Bayou and Gallery — all five carry full light/dark
+  variants with WCAG-checked accents; stored style choices are
+  validated against the list.
 - **SmartCiti.X : New Orleans Trades** (`NOLATRADES`, 250 blocks) — a
   community pack supplementing the Louisiana OS edition as the
   Cognition.X companion to the SmartCiti.X New Orleans Trades Edition.
@@ -16,6 +45,8 @@ All notable changes to Cognition.X are documented here. The format follows
   stance is shared: a simulator teaches control discipline and never
   counts as equipment certification. Transfer checks are phrased
   against the learner's own parish and stay observation-safe.
+
+Dataset: **15,700 blocks · 40 packs · 190 tracks · 1,374 credentials.**
 
 ## [0.21.0] — 2026-09-10
 

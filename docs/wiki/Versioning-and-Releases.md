@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.21.0** | Tutor swarm (blackboard + priority arbitration), on-device voice agents, active Guide walkthroughs in both apps — flow loop verified end-to-end |
+| **v0.22.0** | Adopted two-year rollout (33 parishes in Wave 1 2026–27, statewide by 2027–28), Parish Launch & Scale pack (250 blocks), statewide Wave-1 readiness boards, five style templates with an Enterprise default; folds in the SmartCiti.X : New Orleans Trades pack — 15,700 blocks / 40 packs |
+| v0.21.0 | Tutor swarm (blackboard + priority arbitration), on-device voice agents, active Guide walkthroughs in both apps — flow loop verified end-to-end |
 | v0.20.0 | Recursive Voronoi cell graphics (state + curriculum), expansion-to-Wave-4 timelines, print program template |
 | v0.19.0 | Education OS onto the pipeline: index.html built from template + blocks.csv overlay (sector library canonical; duplicate inflation cured) |
 | v0.18.0 | Runnable parish missions, the universal Institute Model pack (leadership + civics + EQ, all states), six role dashboards (student/teacher/parent/homeschool/parish/state) |
