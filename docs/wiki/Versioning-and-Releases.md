@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.39.0** | Education OS pipeline stage two: the Louisiana parish fact base and WLB Institute fact base become canonical data files (data/louisiana/, data/wlb/); the Louisiana and States builders read them instead of evaluating the app template — round-trip verified byte-identical |
+| **v0.40.0** | Granular Network OS: every one of the eight section automations expands into a drill-down board with its exact thresholds, the per-learner/per-parish rows it computed from, and a pulse log of recent calls — expansion state kept across the 20-second pulse |
+| v0.39.0 | Education OS pipeline stage two: the Louisiana parish fact base and WLB Institute fact base become canonical data files (data/louisiana/, data/wlb/); the Louisiana and States builders read them instead of evaluating the app template — round-trip verified byte-identical |
 | v0.38.0 | Federation v2: portable cx-trustlist/1 trust-list exchange (second-hand entries marked until confirmed out-of-band), cx-revocation/1 signed revocation lists with the new ⊘ revoked verification outcome, and record ids + dataset versions in every issued credential payload |
 | v0.37.0 | Cognition.X Platform — the capstone working model: a clickable ten-node system map and a six-stage runnable learning loop executing the platform's real mechanics (flow machine, 50-check credential, WebCrypto-signed records, three-grade verification, evidence aggregate) on labeled demo data |
 | v0.36.0 | The Evidence Loop v1: opt-in aggregate cx-evidence/1 export (consent-gated, no names, never auto-sent) + evidence_triage.py revision priorities for the review board; the path-to-v1.0 operational checklist |
