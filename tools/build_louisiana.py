@@ -89,6 +89,33 @@ def match_packs(industries):
     return out
 
 
+def parish_missions(name, seat, world, hub, rural):
+    """Generate the parish's custom mission module: a five-rung ladder
+    localized to its narrative world from the fact base. These are
+    generated scaffolds (deterministic, template-based) — the parish's
+    custom capstone layer over the universal dataset, labeled as such
+    in the app."""
+    offline = (" The module runs fully offline — paper logs and physical models count as evidence."
+               if rural else "")
+    return [
+        {"band": "K–2 · 3–5", "level": "Explorer",
+         "title": f"The {world}, seen whole",
+         "task": f"Visit or study the {world} setting near {seat}; name its five working parts and draw its flow from arrival to output."},
+        {"band": "6–8", "level": "Builder",
+         "title": f"Model the {world}",
+         "task": f"Build or simulate a working model of the {world} and demonstrate one measured improvement over your first version." + offline},
+        {"band": "9–10", "level": "Practitioner",
+         "title": f"Inside the real {world}",
+         "task": f"Complete a supervised visit, placement or data collection connected to the {world}, and keep a real observation log a stranger could learn from."},
+        {"band": "11–12", "level": "Lead",
+         "title": f"Improving the {world}",
+         "task": f"Propose one evidenced improvement to the {world} operation and present it to a real audience at the parish hall or the {hub} Trade Hall."},
+        {"band": "12 · capstone", "level": "Lead",
+         "title": f"Teaching the {world}",
+         "task": f"Teach this module's core process to a younger {name} Parish cohort, with their demonstration as your evidence."},
+    ]
+
+
 def extract_fact_base():
     """The fact base lives as JS array literals inside the Education OS app;
     evaluate them with node (strings/numbers/booleans only) to get JSON."""
@@ -182,8 +209,12 @@ def main():
             "wave": wave, "districts": districts, "industries": industries,
             "world": world, "rural": rural, "row": r, "col": c,
             "packs": matched,
+            "missions": parish_missions(name, seat, world, fb["hubs"][region], rural),
         })
     packmeta = {s: catalog[s] for s in sorted(used_slugs) if s in catalog}
+    # full catalog (light) so the plan customizer can offer every pack
+    catalog_light = {s: {"name": c["name"], "blocks": c["blocks"],
+                         "ntracks": len(c["tracks"])} for s, c in catalog.items()}
 
     payload = {
         "version": (ROOT / "VERSION").read_text().strip(),
@@ -195,6 +226,7 @@ def main():
         "principles": fb["principles"],
         "corePacks": CORE_PACKS,
         "packmeta": packmeta,
+        "catalog": catalog_light,
     }
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     template = (ROOT / "apps" / "louisiana" / "template.html").read_text(encoding="utf-8")

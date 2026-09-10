@@ -585,6 +585,26 @@ function renderParish(p){
      </div>
 
      <div class="panel span2">
+       <h3>Parish mission module — custom to this parish</h3>
+       <p class="note">A five-rung capstone ladder generated from <i>this parish's</i> narrative world in the fact
+       base — the custom layer over the universal dataset. Generated scaffolds: a parish committee refines them
+       before use.</p>
+       <div id="pmissions"></div>
+     </div>
+
+     <div class="panel span2">
+       <h3>Customize this parish's plan</h3>
+       <p class="note">The core spine is fixed; industry packs can be set aside and any pack in the catalog added.
+       Choices are saved in this browser, per parish, and travel with the exported program.</p>
+       <div class="pickrow" style="margin:0 0 12px">
+         <select id="custpick" style="min-width:min(320px,100%)"></select>
+         <button class="btn" id="custadd">Add to plan</button>
+         <button class="btn gold" id="progcopy">Copy parish program</button>
+       </div>
+       <textarea id="progio" rows="3" style="width:100%; display:none" spellcheck="false" aria-label="Parish program JSON"></textarea>
+     </div>
+
+     <div class="panel span2">
        <h3>Parish notes</h3>
        <p class="note">Local contacts, pilots, decisions — saved only in this browser, per parish.</p>
        <textarea id="pnotes" rows="4" style="width:100%" placeholder="Notes for ${esc(p.name)} Parish…"></textarea>
@@ -597,15 +617,31 @@ function renderParish(p){
      <button class="btn" id="pnext">${esc(D.parishes[(idx+1)%64].name)} →</button>
    </div>`;
 
-  // module plan: core spine + industry-matched packs with reasons
+  // per-parish customization (browser-local)
+  const custKey = "cxla.custom." + p.slug;
+  let cust = {add: [], off: []};
+  try { const raw = store(custKey); if (raw) cust = Object.assign(cust, JSON.parse(raw)); } catch(e){}
+  const saveCust = () => { store(custKey, JSON.stringify(cust)); renderParish(p); };
+
+  // module plan: core spine + industry-matched packs + parish additions
   const isFile = location.protocol === "file:";
   const plan = [...D.corePacks.map(s=>[s,null]),
-                ...p.packs.filter(([s])=>!D.corePacks.includes(s))];
+                ...p.packs.filter(([s])=>!D.corePacks.includes(s) && !cust.off.includes(s)),
+                ...cust.add.filter(s=>!D.corePacks.includes(s) && !p.packs.some(([x])=>x===s)).map(s=>[s,"parish choice"])];
   $("#pplan").innerHTML = plan.map(([s, reason]) => {
-    const pk = D.packmeta[s]; if (!pk) return "";
-    const why = reason
-      ? `<span class="chip gold" style="font-weight:500">because: ${esc(reason)}</span>`
-      : `<span class="chip" style="font-weight:500">core spine</span>`;
+    const pk = D.packmeta[s] || D.catalog[s]; if (!pk) return "";
+    const isCore = !reason;
+    const isChoice = reason === "parish choice";
+    const why = isCore
+      ? `<span class="chip" style="font-weight:500">core spine</span>`
+      : isChoice
+        ? `<span class="chip green" style="font-weight:500">parish choice</span><button class="chip" data-uncust="${esc(s)}" style="cursor:pointer">remove</button>`
+        : `<span class="chip gold" style="font-weight:500">because: ${esc(reason)}</span><button class="chip" data-setaside="${esc(s)}" style="cursor:pointer">set aside</button>`;
+    if (!pk.tracks){
+      return `<details style="margin-bottom:10px"><summary style="cursor:pointer; display:flex; gap:10px; align-items:center; flex-wrap:wrap">` +
+        `<b>${esc(pk.name)}</b><span class="mono" style="font-size:.74rem; color:var(--faint)">${pk.blocks} blocks · CX-${esc(s)}</span>${why}</summary>` +
+        `<p class="note" style="margin:8px 0 0">${pk.ntracks ? pk.ntracks + " tracks — browse them in the Curriculum view." : "Foundation library — per-grade blocks."}</p></details>`;
+    }
     const tracks = pk.tracks.length
       ? `<ul class="tracklist" style="margin-top:10px">` + pk.tracks.map(t =>
           `<li><span class="mono" style="color:var(--faint); font-size:.74rem">${esc(t.prefix)}</span> ${esc(t.name)}` +
@@ -615,6 +651,51 @@ function renderParish(p){
     return `<details style="margin-bottom:10px"><summary style="cursor:pointer; display:flex; gap:10px; align-items:center; flex-wrap:wrap">` +
       `<b>${esc(pk.name)}</b><span class="mono" style="font-size:.74rem; color:var(--faint)">${pk.blocks} blocks · CX-${esc(s)}</span>${why}</summary>${tracks}</details>`;
   }).join("");
+
+  // set-aside restore row
+  if (cust.off.length){
+    $("#pplan").innerHTML += `<p class="note" style="margin-top:6px">Set aside: ` +
+      cust.off.map(s=>`<button class="chip" data-restore="${esc(s)}" style="cursor:pointer">${esc((D.catalog[s]||{}).name||s)} — restore</button>`).join(" ") + `</p>`;
+  }
+  $("#pplan").querySelectorAll("[data-setaside]").forEach(b=>b.addEventListener("click", e=>{
+    e.preventDefault(); cust.off.push(b.dataset.setaside); saveCust(); }));
+  $("#pplan").querySelectorAll("[data-uncust]").forEach(b=>b.addEventListener("click", e=>{
+    e.preventDefault(); cust.add = cust.add.filter(x=>x!==b.dataset.uncust); saveCust(); }));
+  $("#pplan").querySelectorAll("[data-restore]").forEach(b=>b.addEventListener("click", ()=>{
+    cust.off = cust.off.filter(x=>x!==b.dataset.restore); saveCust(); }));
+
+  // mission module: the parish-custom capstone ladder
+  const MCOL = ["var(--w1)","var(--w2)","var(--w3)","var(--w4)","var(--gold)"];
+  $("#pmissions").innerHTML = `<div class="themelist">` + p.missions.map((m,i)=>
+    `<div class="theme" style="border-left:4px solid ${MCOL[i]}">` +
+    `<div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">` +
+    `<span class="band" style="border-color:${MCOL[i]}">${esc(m.band)} · ${esc(m.level)}</span>` +
+    `<b>${esc(m.title)}</b></div>` +
+    `<div class="body" style="border-top:0; padding-top:4px"><div class="check"><b>Mission:</b> ${esc(m.task)}</div></div></div>`).join("") + `</div>`;
+
+  // customizer picker: every catalog pack not already in the plan
+  const inPlan = new Set(plan.map(([s])=>s));
+  $("#custpick").innerHTML = Object.entries(D.catalog)
+    .filter(([s])=>!inPlan.has(s))
+    .sort((a,b)=>a[1].name.localeCompare(b[1].name))
+    .map(([s,c])=>`<option value="${esc(s)}">${esc(c.name)} (${c.blocks})</option>`).join("");
+  $("#custadd").onclick = () => { const s = $("#custpick").value; if(!s) return;
+    cust.off = cust.off.filter(x=>x!==s);
+    if (!cust.add.includes(s)) cust.add.push(s);
+    saveCust(); };
+
+  // program export
+  $("#progcopy").onclick = async () => {
+    const prog = {format:"cxla-program/1", parish:p.name, seat:p.seat, region:D.regions[p.region],
+      wave:p.wave, waveYears:D.waveYears[p.wave-1],
+      spine:D.corePacks.map(s=>(D.catalog[s]||{}).name||s),
+      industryPacks:p.packs.filter(([s])=>!cust.off.includes(s)).map(([s,r])=>({pack:(D.catalog[s]||{}).name||s, because:r})),
+      parishChoices:cust.add.map(s=>(D.catalog[s]||{}).name||s),
+      setAside:cust.off.map(s=>(D.catalog[s]||{}).name||s),
+      missions:p.missions};
+    const ta2 = $("#progio"); ta2.style.display="block"; ta2.value = JSON.stringify(prog, null, 1); ta2.select();
+    try { await navigator.clipboard.writeText(ta2.value); } catch(e){}
+  };
 
   const ta = $("#pnotes");
   ta.value = store(notesKey) || "";

@@ -4,6 +4,26 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.16.0] — 2026-09-10
+
+### Added
+- **Parish mission modules** — the custom layer over the universal
+  dataset: every parish dashboard now carries a five-rung capstone
+  ladder (Explorer→Builder→Practitioner→Lead→capstone) generated at
+  build time from *that parish's* narrative world in the fact base —
+  Acadia models its rice-mill automation line, Cameron its LNG loading
+  arm — with Lead presenting at the parish's own Trade Hall, the
+  capstone teaching a younger parish cohort, and rural-tier parishes
+  getting offline-evidence wording. 64 parishes × 5 missions = 320
+  generated scaffolds, labeled as such for committee refinement.
+- **Plan customizer**: each parish's module plan can now be locally
+  tailored — industry packs can be set aside (and restored), any pack
+  in the full catalog added as a "parish choice" — persisted per
+  parish in the browser.
+- **Parish program export**: one button produces the complete parish
+  program (`cxla-program/1` JSON — spine, industry packs with reasons,
+  parish choices, set-asides, missions) for sharing with a committee.
+
 ## [0.15.0] — 2026-09-10
 
 ### Added
