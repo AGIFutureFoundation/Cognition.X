@@ -4,6 +4,35 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.39.0] — 2026-09-10
+
+### Changed
+- **Education OS pipeline, stage two — canonical fact bases.** The
+  Louisiana region/parish fact base and the Willie L. Brown Jr.
+  Institute fact base, which downstream builders extracted at build
+  time by evaluating JS literals inside
+  `apps/education-os/template.html`, are now canonical repository
+  data:
+  - `data/louisiana/fact_base.json` — 9 regions, region hubs, all 64
+    parish rows (name, region, seat, population, proposed wave,
+    districts, industries, narrative world, rural tier), with the
+    provenance note that the adopted two-wave plan is computed at
+    build time.
+  - `data/wlb/institute.json` — org, mission, quote, record, the
+    disclaimer (carried verbatim), and the 12 principles with source
+    attributions.
+  - `tools/extract_fact_bases.py` performed the one-time extraction
+    and remains as the documented, deterministic re-extraction path
+    should the app's own copy ever be edited.
+  - `tools/build_louisiana.py` and `tools/build_states.py` now read
+    the canonical files — no builder except the Education OS's own
+    evaluates the app template anymore. **Round-trip proven**: with
+    the same version, both apps rebuild byte-identical to the
+    app-extracted builds; re-running the extractor reproduces the
+    canonical files byte-for-byte. (Shrinking the Education OS
+    template itself by injecting these layers back is the remaining
+    stage of this roadmap item.)
+
 ## [0.38.0] — 2026-09-10
 
 ### Added

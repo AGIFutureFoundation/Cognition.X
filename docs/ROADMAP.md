@@ -139,9 +139,16 @@ standards-mapped; validator extended to rubric and mapping checks.
   full light/dark variants (v0.22.0)
 - [x] Widgetized, deeply customizable role dashboards — six
   perspectives, 30 widgets, per-role layouts persisted (v0.23.0)
-- Remaining app-pipeline work: source the app's other data layers
-  (wlb course ladders, K–12 program, parish fact base) from canonical
-  files the same way, shrinking `template.html` over time
+- [x] App-pipeline work, stage two (v0.39.0): the Louisiana
+  region/parish fact base and the WLB Institute fact base are
+  canonical repository data (`data/louisiana/fact_base.json`,
+  `data/wlb/institute.json`, extracted once by
+  `tools/extract_fact_bases.py`); the Louisiana and States builders
+  read the canonical files and no longer evaluate the app template —
+  round-trip verified byte-identical. Remaining: source the app's
+  other display layers (wlb course ladders, K–12 program) the same
+  way and inject the canonicalized layers back, shrinking
+  `template.html` over time
 - [x] Learner state, first working version (v0.25.0): local-first
   progress ledger in the Louisiana platform — per-learner check
   records on the 30 core-spine tracks, automatic credential award at

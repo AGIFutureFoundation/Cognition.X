@@ -134,39 +134,22 @@ def parish_missions(name, seat, world, hub, rural):
     ]
 
 
-def extract_fact_base():
-    """The fact base lives as JS array literals inside the Education OS app;
-    evaluate them with node (strings/numbers/booleans only) to get JSON."""
-    import subprocess
-    import tempfile
-    t = (ROOT / "apps" / "education-os" / "template.html").read_text(
-        encoding="utf-8", errors="replace")
-
-    def grab(name):
-        i = t.find(name + "=")
-        j = t.find("];", i)
-        return t[i + len(name) + 1: j + 1]
-
-    def grab_obj(name):
-        i = t.find(name + "=")
-        j1, j2 = t.find("];", i), t.find("};", i)
-        j = min(x for x in (j1, j2) if x > 0)
-        return t[i + len(name) + 1: j + 1]
-
-    js = ("const regions=" + grab("DATA.regions") + ";"
-          "const hubs=" + grab("DATA.regionHubs") + ";"
-          "const parishes=" + grab("DATA.parishes") + ";"
-          "const wlb=" + grab_obj("DATA.wlb") + ";"
-          "const principles=" + grab("DATA.wlbPrinciples") + ";"
-          "console.log(JSON.stringify({regions,hubs,parishes,"
-          "wlb:{org:wlb.org,disclaimer:wlb.disclaimer,mission:wlb.mission,"
-          "quote:wlb.quote,record:wlb.record},"
-          "principles:principles.map(x=>({p:x.p,src:x.src,teach:x.teach}))}));")
-    with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as f:
-        f.write(js)
-        path = f.name
-    out = subprocess.run(["node", path], capture_output=True, text=True, check=True)
-    return json.loads(out.stdout)
+def load_fact_base():
+    """The Louisiana and Institute fact bases, canonical in data/ since
+    v0.39.0 (extracted once from the Education OS app by
+    tools/extract_fact_bases.py; re-run that tool if the app's copy is
+    ever edited)."""
+    fb = json.loads((ROOT / "data" / "louisiana" / "fact_base.json")
+                    .read_text(encoding="utf-8"))
+    w = json.loads((ROOT / "data" / "wlb" / "institute.json")
+                   .read_text(encoding="utf-8"))
+    return {
+        "regions": fb["regions"], "hubs": fb["regionHubs"],
+        "parishes": fb["parishes"],
+        "wlb": {k: w[k] for k in ("org", "disclaimer", "mission", "quote", "record")},
+        "principles": [{"p": x["p"], "src": x["src"], "teach": x["teach"]}
+                       for x in w["principles"]],
+    }
 
 
 def pack_catalog():
@@ -246,7 +229,7 @@ def learner_types():
 
 
 def main():
-    fb = extract_fact_base()
+    fb = load_fact_base()
     missing = [p[0] for p in fb["parishes"] if p[0] not in POS]
     if missing:
         raise SystemExit(f"parishes without tile positions: {missing}")
