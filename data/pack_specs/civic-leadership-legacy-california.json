@@ -1,0 +1,291 @@
+{
+  "pack": "Civic Leadership Legacy : California",
+  "notes": "California localization of the civic-leadership legacy model — the original edition: the Willie L. Brown Jr. Institute Track's home state (app iterations v28-v30). DISCLAIMER, carried from the app: this track is a proposal built from the Willie L. Brown Jr. Institute of Politics and Public Service's public mission and the Fellowship Program at San Francisco State University. It is not affiliated with, endorsed by, or reviewed by the Institute, SF State, or Mayor Brown. A named track would be offered under a partnership agreement and the Institute's review of every course. 5 tracks x 10 themes x 5 grade bands = 250 blocks. Expanded by tools/generate_pack.py.",
+  "tracks": [
+    {
+      "name": "The Fellowship ladder: service as a career",
+      "prefix": "PS",
+      "credential": "Public Service Fellow",
+      "themes": [
+        {
+          "theme": "Service as a craft, not a slogan",
+          "description": "The founding principle taught as practice: public service with roles, crews, evidence and credentials, every course ending before a real audience.",
+          "transfer_check": "Complete one documented act of public service in your city or county and present it to a real audience beyond your classroom."
+        },
+        {
+          "theme": "The public servants of your city",
+          "description": "Mapping who serves within reach — the librarian, the transit operator, the caseworker, the inspector — and what each actually does all day.",
+          "transfer_check": "Interview one working public servant about a typical day and present their real duties against what you had assumed."
+        },
+        {
+          "theme": "Who is missing from the room",
+          "description": "Inclusion as a design decision: reading any civic room for who is absent and naming the barrier that kept them out.",
+          "transfer_check": "Observe one real public meeting and report who was present, who was affected but absent, and one barrier that plausibly explains the gap."
+        },
+        {
+          "theme": "The placement inside a real agency",
+          "description": "The Fellowship pattern at every age — shadow days, junior placements and supervised hours inside city halls, libraries and public programs.",
+          "transfer_check": "Complete a placement, shadow day or structured volunteer shift with a real public body, confirmed by a supervisor."
+        },
+        {
+          "theme": "The seminar circle",
+          "description": "The weekly cohort habit the Fellowship runs on — field experience brought back to a circle that questions it.",
+          "transfer_check": "Run or take a speaking role in a seminar circle on a live local issue, presenting field evidence and taking questions."
+        },
+        {
+          "theme": "Mentorship in both directions",
+          "description": "The legacy chain: being mentored by someone ahead and mentoring someone behind, with the leader's-story interview as a core text.",
+          "transfer_check": "Record a leader's-story interview with an experienced public servant, and lead one session passing a skill to a younger learner."
+        },
+        {
+          "theme": "Pushing past the ceiling",
+          "description": "First-generation pathways and the blocked door as history, law and practice — from segregated Mineola to the Speaker's chair, debate included.",
+          "transfer_check": "Research one Californian who broke a civic ceiling, and identify one barrier data shows still standing in your county, with the numbers."
+        },
+        {
+          "theme": "The stipend question",
+          "description": "Why unpaid service filters who serves — stipends, scheduling and the economics of showing up, treated as program design.",
+          "transfer_check": "Cost out four weeks of a real volunteer or placement role and propose the support that would let a working student hold it."
+        },
+        {
+          "theme": "The record you build",
+          "description": "The service ledger — hours, artifacts, references, credentials — as a portfolio that opens doors.",
+          "transfer_check": "Assemble your own service ledger to date in a form a scholarship or employer could verify."
+        },
+        {
+          "theme": "The on-ramp: from classroom to Fellowship",
+          "description": "The grade-12 pathway toward public-affairs study and programs like the SF State Fellowship — requirements, timing, and the first application.",
+          "transfer_check": "Map three real next-step routes into California public service — requirements, deadlines, first application step completed or drafted."
+        }
+      ]
+    },
+    {
+      "name": "The county and the city: government closest to the door",
+      "prefix": "CG",
+      "credential": "Local Government Navigator",
+      "themes": [
+        {
+          "theme": "Fifty-eight counties, hundreds of cities",
+          "description": "California's local layers — county, city, special district, school district — and which one governs the block you live on.",
+          "transfer_check": "Produce the one-page profile of your own county and city — population, governing bodies, three services each actually runs — from official sources."
+        },
+        {
+          "theme": "Supervisors and councils",
+          "description": "The county board of supervisors and the city council — what each decides, and finding the member whose district holds your address.",
+          "transfer_check": "Identify your actual supervisor and councilmember by district lookup and summarise one recent vote each has cast."
+        },
+        {
+          "theme": "The general plan and the zoning map",
+          "description": "How California cities decide what gets built — the general plan, zoning, and the housing-element fights that fill every chamber.",
+          "transfer_check": "Find your parcel's zoning on the real map and explain what could and could not lawfully be built there."
+        },
+        {
+          "theme": "The school board and the schoolhouse",
+          "description": "School districts as the education government — boards, superintendents, budgets, and the meeting where your school's fate is set.",
+          "transfer_check": "Attend or watch one real school board meeting and report one decision, who voted how, and who it affects."
+        },
+        {
+          "theme": "Special districts and the water under everything",
+          "description": "Water, transit, fire and utility districts — the boards that tax and decide, largely unwatched, in the state where water is politics.",
+          "transfer_check": "Identify three special districts covering your own address, and for one find its board, budget and next public meeting."
+        },
+        {
+          "theme": "The county budget, followed to the sidewalk",
+          "description": "Where county and city money comes from — property tax under Proposition 13, sales tax, fees — and following one line to a visible outcome.",
+          "transfer_check": "From your county's actual budget, trace one revenue source to one service and check that service's condition where you live."
+        },
+        {
+          "theme": "The permit, the complaint, the record",
+          "description": "The resident's three transactions — asking permission, reporting a problem, requesting a record under the Public Records Act — done correctly.",
+          "transfer_check": "Complete one real local-government transaction (permit lookup, 311 request, or public-records request) and document the outcome."
+        },
+        {
+          "theme": "Public comment that gets heard",
+          "description": "The Brown Act's open meetings, the speaker card, the two minutes — putting a comment on the record so it moves someone.",
+          "transfer_check": "Deliver (or fully rehearse to the real rules) a public comment to a local body on a live agenda item, structured for the record."
+        },
+        {
+          "theme": "City and county: who does what",
+          "description": "The services that switch at the city limit — and the consolidated exception of San Francisco, city and county in one.",
+          "transfer_check": "For your own address, produce the who-fixes-what card: five common problems each matched to the correct government and office."
+        },
+        {
+          "theme": "When local government fails you",
+          "description": "Escalation above the local — grand juries, state oversight, the courts and the press — the accountability ladder.",
+          "transfer_check": "Take one real or case-study local failure and map its escalation ladder in order, drafting the first escalation document."
+        }
+      ]
+    },
+    {
+      "name": "Sacramento: the Legislature and the law",
+      "prefix": "LG",
+      "credential": "Capitol Navigator",
+      "themes": [
+        {
+          "theme": "The capitol and the two chambers",
+          "description": "The Assembly and Senate, districts and leadership — including the Speaker's chair and what four decades there can build.",
+          "transfer_check": "Identify your actual Assembly member and state Senator by district lookup and summarise one bill each has authored recently."
+        },
+        {
+          "theme": "The session and its deadlines",
+          "description": "California's two-year session rhythm — introduction deadlines, house-of-origin deadlines, the August crush — and why timing decides outcomes.",
+          "transfer_check": "Find the current session's actual calendar and explain which deadlines a new idea introduced today would face."
+        },
+        {
+          "theme": "A bill's actual journey",
+          "description": "Filing, policy committee, appropriations, floor, the other house, the Governor's desk — following one real bill, including where bills die quietly.",
+          "transfer_check": "Track one real bill through each stage on the Legislature's own site and state where it stalled or how it became law."
+        },
+        {
+          "theme": "The committee room is the real floor",
+          "description": "Testimony, amendment and the suspense file — where bills actually live and die, and the citizen's seat at the microphone.",
+          "transfer_check": "Watch one real committee hearing (live or archived) and report the arguments, amendments and vote as the record shows."
+        },
+        {
+          "theme": "The budget: the biggest bill of all",
+          "description": "The May Revise, the budget act and the trailer bills — how the state's money is actually decided and who watches it.",
+          "transfer_check": "From official budget documents, chart the state's five largest spending areas and follow one down to a program in your county."
+        },
+        {
+          "theme": "Speaker, caucus and the art of counting",
+          "description": "How a chamber is actually run — leadership, caucuses and counting votes before the vote, the craft the Speaker's era made famous.",
+          "transfer_check": "For one real close vote, reconstruct the coalition: who moved, what they traded, and how the count was made."
+        },
+        {
+          "theme": "The agencies that carry out the words",
+          "description": "Departments, boards and the administrative code — how a passed law becomes a rule, a form and an inspector.",
+          "transfer_check": "Pick one state rule that touches your life, find it in the code of regulations, and trace it to the statute that authorised it."
+        },
+        {
+          "theme": "Testifying and the citizen's bill",
+          "description": "The routes from resident to lawmaking — contacting members, testifying, and the idea that becomes a filed bill.",
+          "transfer_check": "Draft a one-page bill proposal on a real local problem and deliver it (or rehearsed testimony for it) in proper form."
+        },
+        {
+          "theme": "The courts above the county",
+          "description": "Superior courts, courts of appeal and the Supreme Court — how an ordinary case climbs, and how judges reach the bench.",
+          "transfer_check": "Map one real California case's path from filing to final ruling, naming each court correctly."
+        },
+        {
+          "theme": "Working across the aisle and the decades",
+          "description": "Governing across administrations and parties — consensus that tolerates opposing ideas, taught from the record.",
+          "transfer_check": "Take one real bipartisan Californian achievement, identify what each side conceded and gained, and present the deal's anatomy."
+        }
+      ]
+    },
+    {
+      "name": "Elections, initiatives and the direct voice",
+      "prefix": "EV",
+      "credential": "Election Steward",
+      "themes": [
+        {
+          "theme": "Registering and staying registered",
+          "description": "Who may vote in California, same-day registration, and the habit of checking your own record.",
+          "transfer_check": "Verify a real registration (yours or a consenting adult's) through the state's official portal and correct any detail found wrong."
+        },
+        {
+          "theme": "The top-two primary",
+          "description": "California's top-two system — every candidate on one ballot, two advance — and what it changes about strategy and choice.",
+          "transfer_check": "For two offices on a real ballot, explain the rules that currently govern each, citing the Secretary of State's guidance."
+        },
+        {
+          "theme": "The initiative: writing law at the ballot box",
+          "description": "Direct democracy — initiative, referendum and recall — the signature thresholds, the money behind measures, and reading a proposition honestly.",
+          "transfer_check": "Take one real past or pending proposition, translate its ballot language into plain words, and present the strongest case each way with its funders named."
+        },
+        {
+          "theme": "The ballot below the headlines",
+          "description": "Judges, school boards, special-district seats and local measures — the down-ballot lines that move your money and your block.",
+          "transfer_check": "Obtain your actual sample ballot for a real election and produce a plain-language guide for every line below the top race."
+        },
+        {
+          "theme": "Voting by mail, early and in person",
+          "description": "Universal mail ballots, drop boxes, vote centers and curing a rejected signature — the mechanics of actually being counted.",
+          "transfer_check": "Build the complete voting plan for two different real voters — one straightforward, one facing a barrier such as mobility, language or absence."
+        },
+        {
+          "theme": "Working the election",
+          "description": "Poll workers, observers and the county elections office — the trained neighbours who run the machinery, and how to join them.",
+          "transfer_check": "Find your county's actual requirements and application to serve as an election worker and submit or fully prepare it."
+        },
+        {
+          "theme": "Money in the open",
+          "description": "Campaign finance disclosure and the FPPC — following the money in one real race or measure through the public filings.",
+          "transfer_check": "Pull the actual campaign finance filings for one recent race or measure and report its top contributors and spending, with sources."
+        },
+        {
+          "theme": "The organized ask",
+          "description": "Coalitions, petitions and the packed chamber — moving an issue between elections, counting votes before the vote.",
+          "transfer_check": "Organize or fully plan an issue campaign for one concrete local change: the decision-maker, the coalition map, the count you need."
+        },
+        {
+          "theme": "Rumor season",
+          "description": "Election misinformation in California's channels — the claims that recur, and the official sources that settle them.",
+          "transfer_check": "Fact-check three circulating election claims against the Secretary of State and county officials' records and publish the corrected version."
+        },
+        {
+          "theme": "After the count",
+          "description": "Canvass, the thirty-day certification, recounts and challenges — how results become final and what a citizen can lawfully question.",
+          "transfer_check": "Trace one real California race or measure from election night to certification, naming each step and any challenge lodged."
+        }
+      ]
+    },
+    {
+      "name": "Fire, water and the fault line",
+      "prefix": "FW",
+      "credential": "Resilience Civics Lead",
+      "themes": [
+        {
+          "theme": "A state built on faults and watersheds",
+          "description": "California's geography as its permanent civic agenda — quake, fire, drought and flood, and the institutions each has built.",
+          "transfer_check": "Map the hazards that shape your own county — fault zones, fire severity zones, flood maps — from official sources."
+        },
+        {
+          "theme": "The fire season that got longer",
+          "description": "Wildfire as governance — defensible space law, red-flag warnings, utility shutoffs, and the evacuation decided before smoke.",
+          "transfer_check": "Assess a real or case-study property's wildfire exposure, specify its defensible-space actions, and write its trigger-based leave plan."
+        },
+        {
+          "theme": "The earthquake everyone expects",
+          "description": "Building codes, retrofits, early-warning systems and the drill — living on the fault line as civic practice.",
+          "transfer_check": "Run the full drop-cover-hold drill in two rooms, then complete the post-shake checklist — gas, structure, exits — in order."
+        },
+        {
+          "theme": "Water: who gets it and who decides",
+          "description": "The projects, the rights, the districts and the drought rules — the century-long argument that runs the state.",
+          "transfer_check": "Trace your own tap water to its actual sources and name the two decision-making bodies with the most power over it."
+        },
+        {
+          "theme": "The grid and the shutoff",
+          "description": "Public-safety power shutoffs, the duck curve and the batteries — keeping a household and a block running when the grid blinks.",
+          "transfer_check": "Prepare a real household for a planned outage — essentials, medical needs, neighbours checked — and run a two-hour drill."
+        },
+        {
+          "theme": "Housing and the ground it stands on",
+          "description": "The housing shortage as civic machinery — RHNA numbers, the housing element, and the hearing where units are won or lost.",
+          "transfer_check": "Attend or watch one real housing hearing, and report the project, the arguments on each side and the outcome."
+        },
+        {
+          "theme": "The coast and the king tide",
+          "description": "Sea-level rise on a 840-mile coast — the commissions, the managed-retreat argument, and the neighbourhoods already deciding.",
+          "transfer_check": "For one real coastal community, summarise its current adaptation plan and the hardest trade-off inside it."
+        },
+        {
+          "theme": "Mutual aid: the neighbour system",
+          "description": "CERT teams, community fire brigades and the block-level networks that carry the first seventy-two hours.",
+          "transfer_check": "Complete or map enrolment in one recognised local response group, and build the (consented) support map for one street."
+        },
+        {
+          "theme": "Recovery and who gets rebuilt",
+          "description": "After the fire or quake — insurance, the FAIR plan, rebuilding permits, and why the same event lands unequally.",
+          "transfer_check": "From one documented California disaster, chart the recovery programs and identify, with evidence, one group the paperwork left behind."
+        },
+        {
+          "theme": "Leading through the long emergency",
+          "description": "The capstone: civic leadership where fire, water and ground are all in motion — weighing protection, retreat and cost with real neighbours in the room.",
+          "transfer_check": "Run or present a structured deliberation on one real local resilience decision — options, trade-offs, affected voices — and deliver the recommendation you would defend in public."
+        }
+      ]
+    }
+  ]
+}

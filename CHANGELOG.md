@@ -4,6 +4,27 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.11.0] — 2026-09-10
+
+### Added
+- Two more legacy-track localizations, extending the flagship across
+  states (250 blocks each, 5 tracks × 10 themes × 5 bands):
+  - **Civic Leadership Legacy : California** — the original edition:
+    the Fellowship ladder, counties & cities (Brown Act, Prop 13,
+    general plans), the Sacramento Legislature (including the craft of
+    counting votes), elections with the top-two primary and the
+    initiative system, and fire/water/fault-line resilience civics.
+  - **Civic Leadership Legacy : Texas** — the edition of the bridge
+    (Mineola, 1934): education as the bridge across barriers, the 254
+    counties and commissioners courts, the biennial Austin Legislature,
+    Texas elections, and storm/grid/coast resilience civics (Harvey,
+    Uri, the aquifers).
+  Both carry the Institute's not-affiliated disclaimer in their specs.
+- The Institute localizer in the Louisiana platform gains a **Texas**
+  edition row.
+- Canonical totals: **9,250 blocks · 35 packs · 165 tracks · 441
+  credentials**.
+
 ## [0.10.0] — 2026-09-10
 
 ### Added
