@@ -259,6 +259,14 @@
         <div id="regionchart"></div>
       </div>
     </div>
+
+    <div class="panel" style="margin-top:16px">
+      <h3>Modules matched to parish industries</h3>
+      <p class="note">How many of the 64 parishes each curriculum pack serves through their anchor industries —
+      the deep integration between the dataset and the parish dashboards. Every parish also runs the core spine
+      (K–12, the Louisiana civic pack, life skills, emergency response).</p>
+      <div id="industrychart"></div>
+    </div>
   </section>
 
   <!-- ================= PARISH ================= -->
@@ -469,6 +477,16 @@ function renderState(){
     `<div class="hbar"><span class="lab">${esc(r)}</span>`+
     `<span class="bar" style="width:${100*counts[i]/rmax}%" title="${esc(r)}: ${counts[i]} parishes"></span>`+
     `<span class="val">${counts[i]}</span></div>` : "").join("");
+
+  // industry-pack chart
+  const pc = {};
+  D.parishes.forEach(p => p.packs.forEach(([s]) => { if(!D.corePacks.includes(s)) pc[s]=(pc[s]||0)+1; }));
+  const rowsI = Object.entries(pc).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const imax = Math.max(...rowsI.map(([,n])=>n));
+  $("#industrychart").innerHTML = rowsI.map(([s,n]) =>
+    `<div class="hbar" style="grid-template-columns:220px 1fr 44px"><span class="lab">${esc((D.packmeta[s]||{}).name||s)}</span>`+
+    `<span class="bar" style="width:${100*n/imax}%" title="${esc((D.packmeta[s]||{}).name||s)}: ${n} parishes"></span>`+
+    `<span class="val">${n}</span></div>`).join("");
 }
 
 /* ---------- PARISH ---------- */
@@ -559,6 +577,14 @@ function renderParish(p){
      </div>
 
      <div class="panel span2">
+       <h3>Parish module plan — the deep integration</h3>
+       <p class="note">The core spine every parish runs, plus the packs matched to <i>this</i> parish's anchor
+       industries — each with the phrase that earned it. Tracks open a flow session when the repository's
+       Flow Hub sits alongside this file.</p>
+       <div id="pplan"></div>
+     </div>
+
+     <div class="panel span2">
        <h3>Parish notes</h3>
        <p class="note">Local contacts, pilots, decisions — saved only in this browser, per parish.</p>
        <textarea id="pnotes" rows="4" style="width:100%" placeholder="Notes for ${esc(p.name)} Parish…"></textarea>
@@ -570,6 +596,25 @@ function renderParish(p){
      <button class="btn gold" id="pmap">Back to the map</button>
      <button class="btn" id="pnext">${esc(D.parishes[(idx+1)%64].name)} →</button>
    </div>`;
+
+  // module plan: core spine + industry-matched packs with reasons
+  const isFile = location.protocol === "file:";
+  const plan = [...D.corePacks.map(s=>[s,null]),
+                ...p.packs.filter(([s])=>!D.corePacks.includes(s))];
+  $("#pplan").innerHTML = plan.map(([s, reason]) => {
+    const pk = D.packmeta[s]; if (!pk) return "";
+    const why = reason
+      ? `<span class="chip gold" style="font-weight:500">because: ${esc(reason)}</span>`
+      : `<span class="chip" style="font-weight:500">core spine</span>`;
+    const tracks = pk.tracks.length
+      ? `<ul class="tracklist" style="margin-top:10px">` + pk.tracks.map(t =>
+          `<li><span class="mono" style="color:var(--faint); font-size:.74rem">${esc(t.prefix)}</span> ${esc(t.name)}` +
+          (isFile ? ` <a href="../flow-hub/index.html#track=${esc(s)}/${esc(t.prefix)}" style="font-size:.76rem; white-space:nowrap">flow session →</a>` : "") +
+          `<span class="cred">${esc(t.credential)}</span></li>`).join("") + `</ul>`
+      : `<p class="note" style="margin:8px 0 0">Foundation library — per-grade blocks, browsable in the Curriculum view.</p>`;
+    return `<details style="margin-bottom:10px"><summary style="cursor:pointer; display:flex; gap:10px; align-items:center; flex-wrap:wrap">` +
+      `<b>${esc(pk.name)}</b><span class="mono" style="font-size:.74rem; color:var(--faint)">${pk.blocks} blocks · CX-${esc(s)}</span>${why}</summary>${tracks}</details>`;
+  }).join("");
 
   const ta = $("#pnotes");
   ta.value = store(notesKey) || "";
@@ -585,8 +630,13 @@ function renderRegions(){
     if(!i) return "";
     const ps = D.parishes.filter(p=>p.region===i);
     const mix = [1,2,3,4].map(w=>ps.filter(p=>p.wave===w).length);
+    const counts = {};
+    ps.forEach(p => p.packs.forEach(([s]) => { if(!D.corePacks.includes(s)) counts[s]=(counts[s]||0)+1; }));
+    const top = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,4);
     return `<div class="regcard"><h3>${esc(r)}</h3><div class="hub">Trade Hall · ${esc(D.hubs[i])}</div>`+
       `<div class="mini">${mix.map((n,w)=> n?`<div style="flex:${n};background:${WAVECOL[w]}" title="Wave ${w+1}: ${n}"></div>`:"").join("")}</div>`+
+      (top.length ? `<p class="note" style="margin:0 0 8px">Assessed at this hall: ${top.map(([s,n])=>
+        `${esc((D.packmeta[s]||{}).name||s)} (${n})`).join(" · ")}</p>` : "")+
       `<div class="plinks">${ps.map(p=>`<button data-p="${p.slug}">${esc(p.name)}</button>`).join("")}</div></div>`;
   }).join("");
   $("#reggrid").querySelectorAll("[data-p]").forEach(b=>

@@ -701,4 +701,19 @@ document.querySelectorAll(".navbtn").forEach(b => b.addEventListener("click", ()
 /* ---------- boot ---------- */
 renderSystem(); renderFamChips(); renderPacks(); fillFlowSelects();
 renderAgents(); renderFeed(); renderLedger(); drawFlow(); paceRender();
+
+/* deep-link integration: #track=SLUG/PREFIX preselects a track and opens Flow
+   (used by the Louisiana parish module plans, and any external system). */
+(function(){
+  const m = location.hash.match(/^#track=([A-Z0-9]+)\/([A-Za-z0-9]+)$/);
+  if (!m) return;
+  const pi = tracked.findIndex(p => p.slug === m[1]);
+  if (pi < 0) return;
+  $("#fs-pack").value = String(pi); fillTracks();
+  const p = tracked[pi];
+  const ti = p.tracks.findIndex(t => t.prefix === m[2]);
+  if (ti >= 0) $("#fs-track").value = String(ti);
+  go("flow");
+  log("Pathfinder", `Arrived via deep link — “${(p.tracks[ti]||p.tracks[0]).name}” (${p.name}) is loaded and ready.`);
+})();
 </script>

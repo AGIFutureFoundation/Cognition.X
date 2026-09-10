@@ -4,6 +4,25 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.12.0] — 2026-09-10
+
+### Added
+- **Deep module ↔ system integration, Louisiana first.** Each parish
+  dashboard now carries a **Parish module plan**: the core spine every
+  parish runs (K–12, the Louisiana civic pack, Basic Life Skills,
+  Emergency Preparedness) plus curriculum packs matched to that
+  parish's own anchor industries by a rules engine in
+  `tools/build_louisiana.py` — every match labeled with the industry
+  phrase that earned it ("because: LNG terminals (Sabine Pass…)").
+  All 64 parishes match at least one industry pack.
+- **Flow Hub deep links**: `#track=<PACKSLUG>/<PREFIX>` preselects a
+  pack and track and opens the Flow view; parish module plans link
+  each track straight into a flow session when the apps sit together
+  in the repository.
+- Trade Hall cards now list the packs most assessed at each hall
+  (union of member-parish plans); the State view gains a
+  **modules-matched-to-industries** chart across the 64 parishes.
+
 ## [0.11.0] — 2026-09-10
 
 ### Added

@@ -18,8 +18,15 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   region population context (parish emphasized), the curriculum ledger
   and credential ladder, the Louisiana civic tracks, and per-parish
   notes saved in the browser.
+- **Parish module plans (v0.12.0)** — the deep integration: every
+  parish dashboard lists the core spine plus the packs matched to its
+  own anchor industries by the build-time rules engine, each with the
+  industry phrase that earned it; tracks deep-link into Flow Hub
+  sessions (`#track=<SLUG>/<PREFIX>`) when the apps sit together in
+  the repository.
 - **Regions & Trade Halls** — the eight regions, each hall's hub city,
-  wave-mix bars, and parish links.
+  wave-mix bars, the packs most assessed at each hall, and parish
+  links.
 - **Curriculum** — dataset totals, the series-by-family bar, the
   *Civic Leadership Legacy : Louisiana* tracks, and the community packs
   every parish plan draws from.
