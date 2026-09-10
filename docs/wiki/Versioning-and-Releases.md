@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.18.0** | Runnable parish missions, the universal Institute Model pack (leadership + civics + EQ, all states), six role dashboards (student/teacher/parent/homeschool/parish/state) |
+| **v0.19.0** | Education OS onto the pipeline: index.html built from template + blocks.csv overlay (sector library canonical; duplicate inflation cured) |
+| v0.18.0 | Runnable parish missions, the universal Institute Model pack (leadership + civics + EQ, all states), six role dashboards (student/teacher/parent/homeschool/parish/state) |
 | v0.17.0 | App reconciliation slice one: 5,200 sector master blocks extracted into the dataset, revealing the Education OS edition — 14,950 blocks / 37 packs |
 | v0.16.0 | Parish mission modules (64 × 5 generated capstone ladders from each parish's narrative world), plan customizer, parish program export |
 | v0.15.0 | Cognition.X : Louisiana OS (500 blocks, 10 tracks — river, coast, corridor, ports, agriculture, table, music, languages, festivals, storm memory), added to every parish's core spine |

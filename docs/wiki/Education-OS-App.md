@@ -25,6 +25,16 @@ A single-file, offline-capable HTML application:
 | v0.2.0 (current) | `index.html` ("gov") | Internal iteration v227: Sector Specialization, +120 master blocks; Google Fonts dependency removed — fully offline |
 | v0.1.0 | `versions/v0.1.0-education-os.html` | Earlier build; fetches Inter from Google Fonts |
 
+## On the pipeline (v0.19.0)
+
+`index.html` is now **built**: the hand-grown "gov" build lives on as
+`template.html` (shell + legacy content), and
+`tools/build_education_os.py` appends a canonical overlay sourcing
+`DATA.sectorBlocks` from `data/blocks.csv` — dataset edits flow into
+the app, and the overlay cures the template's accumulated duplicate
+inflation (11,520 raw rows → 5,200 canonical). Never edit `index.html`
+directly.
+
 ## Constraint that is a feature
 
 The app must remain deployable as **one file on a USB stick**. Roadmap

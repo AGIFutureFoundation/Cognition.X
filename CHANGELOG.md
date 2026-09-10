@@ -4,6 +4,27 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.19.0] — 2026-09-10
+
+### Changed
+- **The Education OS app is now a build product** (roadmap Phase 2
+  finale, first stage). The hand-grown "gov" build becomes
+  `apps/education-os/template.html` (kept verbatim as the shell and
+  legacy content); `tools/build_education_os.py` produces `index.html`
+  by appending a canonical overlay that replaces `DATA.sectorBlocks`
+  with the sector master-block library **as it stands in
+  `data/blocks.csv`** — dataset edits now flow into the app, and the
+  sector library has one source of truth. Field fidelity is preserved
+  via the extraction sidecar (`app-master-blocks.map.json`): original
+  task/outcome fields re-emitted where the dataset is unchanged, the
+  dataset winning where edited.
+- Side effect measured in the browser: the template's accumulated
+  library had inflated to **11,520 rows with duplicates** across
+  rounds; the canonical overlay serves the clean **5,200**. The app's
+  single pre-existing page error is unchanged (template baseline).
+- The extractor and the Louisiana fact-base reader now read
+  `template.html`; the output remains one offline file.
+
 ## [0.18.0] — 2026-09-10
 
 ### Added

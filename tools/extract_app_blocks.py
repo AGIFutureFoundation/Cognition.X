@@ -34,8 +34,9 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-APP = ROOT / "apps" / "education-os" / "index.html"
+APP = ROOT / "apps" / "education-os" / "template.html"
 OUT = ROOT / "data" / "generated" / "app-master-blocks.csv"
+MAP = ROOT / "data" / "generated" / "app-master-blocks.map.json"
 
 SECTOR_PACK = {
     "corp": "Cognition.X : Corporate OS",
@@ -62,8 +63,10 @@ def unesc(s):
 def main():
     t = APP.read_text(encoding="utf-8", errors="replace")
     rows = {}
+    parts = {}
     for m in ROW_RE.finditer(t):
         sector, track, code, theme, task, outcome = m.groups()
+        parts[code] = [unesc(task), unesc(outcome)]
         rows[code] = {
             "pack": SECTOR_PACK[sector],
             "track": "",
@@ -81,6 +84,10 @@ def main():
                                           "credential", "theme", "description", "transfer_check"])
         w.writeheader()
         w.writerows(out_rows)
+    import json
+    with open(MAP, "w", encoding="utf-8") as f:
+        json.dump(parts, f, ensure_ascii=False, indent=0, sort_keys=True)
+        f.write("\n")
     packs = {}
     for r in out_rows:
         packs[r["pack"]] = packs.get(r["pack"], 0) + 1
