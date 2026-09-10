@@ -118,8 +118,12 @@ standards-mapped; validator extended to rubric and mapping checks.
   50 checks, deterministic next-step recommendation and alerts,
   export/import, demo-cohort seeding; no account required. (IndexedDB
   migration and cross-app sync remain future work.)
-- Credential ledger v1: signed completion records (W3C Verifiable
-  Credentials / Open Badges 3.0), issuable offline, verifiable online
+- [x] Credential ledger v1 (v0.29.0): signed completion records — a
+  per-browser Records Office (ECDSA P-256 via WebCrypto), records
+  issued offline as portable `cx-credential/1` JSON and verified
+  offline against the office's published public key, with tamper
+  detection. Alignment with W3C Verifiable Credentials / Open Badges
+  3.0 envelopes remains follow-on work.
 - Assessor mode: transfer-check queue, rubric display, evidence capture
 - Mission simulator: promote from demo to configurable engine driven by
   pack data
@@ -158,8 +162,11 @@ complete a track and hold a verifiable credential file.
 - [x] Parish ↔ union integration (v0.24.0): New Orleans-hall parish
   dashboards surface the trade families whose packs sit in their own
   module plans, sims localized to New Orleans ground
-- Staffing, space and device budgets attached to the launch playbook's
-  checklists (the operational-numbers layer the packs describe)
+- [x] Staffing, space and device budgets (v0.29.0): a deterministic
+  per-parish budget sketch (core team seats, assessor seats by
+  population, hall spaces, device count, materials posture for the
+  rural tier) on the Parish Admin dashboard and in the program
+  export — a scaffold each parish refines, not a quote
 - Network expansion: further regions join the Trades Network on the
   same fact-base pattern (families × regions, councils as front doors)
 - Instance federation: an instance publishes its pack versions and

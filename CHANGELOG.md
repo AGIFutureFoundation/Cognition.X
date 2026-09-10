@@ -4,6 +4,30 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.29.0] — 2026-09-10
+
+### Added
+- **Credential Ledger v1 — signed, portable records** (Louisiana):
+  the Parish Admin dashboard gains a **Records Office** — a
+  per-browser ECDSA P-256 keypair (WebCrypto; created once, only the
+  public key ever leaves), *Issue signed record* for any
+  ledger-earned credential producing a portable `cx-credential/1`
+  JSON (payload + signature + public key + office label), a *Show
+  public key* export, and a *Verify* panel that checks any pasted
+  record offline — tampering is detected. Honest scope stated in the
+  UI: verification proves the record is unaltered and signed by that
+  key's holder; who holds the key is confirmed with the hall, which
+  publishes its public key. Graceful fallback where WebCrypto is
+  absent. (Roadmap credential-ledger v1 checked; W3C VC / Open
+  Badges alignment is follow-on.)
+- **Launch budget layer**: a deterministic per-parish budget sketch —
+  the five core seats, assessor seats scaled by population, hall
+  spaces (with the rural sharing pattern), shared device count, and
+  materials posture (printed workbooks by default on the rural
+  tier) — on the Parish Admin *Launch team & budget* widget and in
+  the `cxla-program/1` export. A scaffold each parish refines, not a
+  quote.
+
 ## [0.28.0] — 2026-09-10
 
 ### Added
