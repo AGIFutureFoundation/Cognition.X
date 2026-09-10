@@ -215,8 +215,15 @@ complete a track and hold a verifiable credential file.
   out-of-band identity confirmation) to its **trusted-offices
   registry**, and verification then grades records three ways —
   invalid, valid-but-untrusted-key, or *signed by trusted office
-  "X"* by name. Remaining federation work: publishing pack versions,
-  a portable trust-list exchange format, and revocation.
+  "X"* by name.
+- [x] Federation v2 (v0.38.0): record ids and dataset versions in
+  every issued payload, the portable `cx-trustlist/1` exchange
+  format (imported entries marked second-hand until confirmed
+  out-of-band), and revocation — `cx-revocation/1` lists signed by
+  the issuing office's own key, verified before import, adding the
+  fourth verification outcome *revoked by issuing office*.
+  Remaining federation work: W3C VC / Open Badges 3.0 envelope
+  alignment.
 - [x] Educator authoring, first slice (v0.35.0): the **Pack Studio**
   (Flow Hub's Author view) — a form-driven spec editor with live
   generator-grade validation, a worked example, import-to-edit,

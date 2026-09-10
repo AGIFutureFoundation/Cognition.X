@@ -1001,13 +1001,19 @@ async function issuerCreate(name){
   const pub = await crypto.subtle.exportKey("jwk", kp.publicKey);
   store("cxla.issuer", JSON.stringify({name, priv, pub}));
 }
+function newRid(){
+  try { if (crypto.randomUUID) return crypto.randomUUID(); } catch(e){}
+  return "r-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,10);
+}
 async function issueRecord(learner, track){
   const ik = await issuerGet(); if (!ik) return null;
   const payload = {
     format: "cx-credential/1",
+    rid: newRid(),
     credential: track.credential, track: track.name, pack: track.pack,
     blocks: 50, learner: learner.name, band: BANDS[learner.band]||"",
     issuedAt: new Date().toISOString().slice(0,10),
+    dataset: "Cognition.X v" + D.version,
     note: "50 transfer checks recorded on real material; witnessed per the pack's checks.",
   };
   const bytes = new TextEncoder().encode(JSON.stringify(payload));
@@ -1035,6 +1041,51 @@ function jwkEq(a,b){ return !!(a && b && a.kty===b.kty && a.crv===b.crv && a.x==
 function trustedName(jwk){
   const t = trustLoad().find(o => jwkEq(o.publicKey, jwk));
   return t ? t.recordsOffice : null;
+}
+
+/* Federation v2 — portable trust lists and revocation.
+   A trust list (cx-trustlist/1) carries office name + public key pairs;
+   importing one records WHO vouched (the "via" provenance) — second-hand
+   trust until the importer confirms out-of-band, and the display says so.
+   A revocation list (cx-revocation/1) is a document the issuing office
+   SIGNS with the same key its records carry; a verifier that has imported
+   it grades matching records ⊘ revoked. There is no network: both travel
+   the same out-of-band channel as the keys themselves. */
+function revokedLoad(){
+  try { const r = store("cxla.revoked"); if (r){ const l = JSON.parse(r);
+    if (Array.isArray(l)) return l; } } catch(e){}
+  return [];
+}
+function revokedSave(l){ store("cxla.revoked", JSON.stringify(l)); }
+function revlistsLoad(){
+  try { const r = store("cxla.revlists"); if (r){ const l = JSON.parse(r);
+    if (Array.isArray(l)) return l; } } catch(e){}
+  return [];
+}
+function revlistsSave(l){ store("cxla.revlists", JSON.stringify(l)); }
+async function signRevocationList(){
+  const ik = await issuerGet(); if (!ik) return null;
+  const payload = { format: "cx-revocation/1", office: ik.name,
+    updatedAt: new Date().toISOString().slice(0,10), revoked: revokedLoad() };
+  const sig = await crypto.subtle.sign({name:"ECDSA", hash:"SHA-256"}, ik.priv,
+    new TextEncoder().encode(JSON.stringify(payload)));
+  return {payload, signature: b64(sig), publicKey: ik.pubJwk};
+}
+async function revocationOf(rec){
+  const rid = rec && rec.payload && rec.payload.rid;
+  if (!rid) return null;   // v1 records carry no id and cannot be list-revoked
+  for (const rl of revlistsLoad()){
+    if (jwkEq(rl.publicKey, rec.publicKey)){
+      const hit = (rl.payload.revoked||[]).find(x => x.rid === rid);
+      if (hit) return {reason: hit.reason||"", office: rl.payload.office||""};
+    }
+  }
+  const ik = await issuerGet();
+  if (ik && jwkEq(ik.pubJwk, rec.publicKey)){
+    const hit = revokedLoad().find(x => x.rid === rid);
+    if (hit) return {reason: hit.reason||"", office: ik.name};
+  }
+  return null;
 }
 
 /* ---------- launch budget sketch (deterministic, a scaffold to refine) ---------- */
@@ -2271,7 +2322,31 @@ const WIDGETS = {
        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:flex-start">
          <textarea id="ro-trust-in" rows="2" style="flex:1; min-width:240px" spellcheck="false" placeholder='{"recordsOffice":"…","publicKey":{…}}'></textarea>
          <button class="btn" id="ro-trust-add">Add trusted office</button></div>
-       <div id="ro-trust-list" style="margin-top:8px"></div>`;
+       <div id="ro-trust-list" style="margin-top:8px"></div>
+       <p class="note" style="margin:16px 0 4px"><b>Trust-list exchange — federation v2.</b> Export this
+       browser's trusted offices as a portable <span class="mono">cx-trustlist/1</span> file, or import
+       another hall's list. Imported entries are <b>second-hand</b> — the list only records who vouched;
+       confirm each key out-of-band before relying on it, exactly as for a direct add.</p>
+       <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:flex-start">
+         <button class="btn" id="ro-tl-export">Export trust list</button>
+         <textarea id="ro-tl-in" rows="2" style="flex:1; min-width:240px" spellcheck="false" placeholder='{"format":"cx-trustlist/1","offices":[…]}'></textarea>
+         <button class="btn" id="ro-tl-import">Import trust list</button></div>
+       <div id="ro-tl-msg" class="note" style="margin-top:6px"></div>
+       <p class="note" style="margin:16px 0 4px"><b>Revocation — federation v2.</b> An office can revoke a
+       record it issued (a correction, a duplicate, an error) by its record id
+       (<span class="mono">rid</span>) and publish the revocation list <b>signed with the same key its
+       records carry</b>. A verifier that imports the list grades matching records revoked. No network:
+       the list travels the same out-of-band channel as the key.</p>
+       <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center">
+         <input type="search" id="ro-rev-id" placeholder="record id (rid)" style="min-width:200px">
+         <input type="search" id="ro-rev-reason" placeholder="reason (shown to verifiers)" style="min-width:200px">
+         <button class="btn" id="ro-rev-add">Revoke</button>
+         <button class="btn" id="ro-rev-export">Export signed revocation list</button></div>
+       <div id="ro-rev-own" class="note" style="margin-top:6px"></div>
+       <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:flex-start; margin-top:8px">
+         <textarea id="ro-rev-in" rows="2" style="flex:1; min-width:240px" spellcheck="false" placeholder='paste a signed cx-revocation/1 document'></textarea>
+         <button class="btn" id="ro-rev-import">Import revocation list</button></div>
+       <div id="ro-rev-msg" class="note" style="margin-top:6px"></div>`;
     const showIssuer = async () => {
       const ik = await issuerGet();
       $("#ro-issuer") && ($("#ro-issuer").innerHTML = ik
@@ -2308,6 +2383,11 @@ const WIDGETS = {
         if (!ok){
           out.innerHTML = `<span style="color:var(--w4); font-weight:600">✗ Invalid</span> — the record was altered or the signature does not match this public key.`;
         } else {
+          const rev = await revocationOf(obj);
+          if (rev){
+            out.innerHTML = `<span style="color:var(--w4); font-weight:600">⊘ Revoked by issuing office${rev.office?` “${esc(rev.office)}”`:""}</span> — the signature is genuine, but this record id is on the office's signed revocation list${rev.reason?` (“${esc(rev.reason)}”)`:""}.`;
+            return;
+          }
           const who = trustedName(obj.publicKey);
           out.innerHTML = who
             ? `<span style="color:var(--green); font-weight:600">✓ Signed by trusted office “${esc(who)}”</span> — “${esc(obj.payload.credential)}” for ${esc(obj.payload.learner)}, issued ${esc(obj.payload.issuedAt)}. Record unaltered.`
@@ -2322,7 +2402,8 @@ const WIDGETS = {
       const l = trustLoad();
       host.innerHTML = l.length
         ? l.map((o,i)=>`<div style="font-size:.84rem; padding:5px 0; border-top:1px solid var(--line)">
-            <b>${esc(o.recordsOffice)}</b> <span class="mono" style="font-size:.66rem; color:var(--faint)">P-256 · x:${esc((o.publicKey.x||"").slice(0,12))}…</span>
+            <b>${esc(o.recordsOffice)}</b> <span class="mono" style="font-size:.66rem; color:var(--faint)">P-256 · x:${esc((o.publicKey.x||"").slice(0,12))}…</span>${
+            o.via ? ` <span style="font-size:.72rem; color:var(--gold)">via ${esc(o.via)}'s list — confirm out-of-band</span>` : ""}
             <button data-untrust="${i}" aria-label="Remove ${esc(o.recordsOffice)} from trusted offices" style="border:0;background:none;color:var(--faint);cursor:pointer">✕</button></div>`).join("")
         : `<p class="note" style="margin:0">No trusted offices yet — this browser verifies integrity only until you add one.</p>`;
       host.querySelectorAll("[data-untrust]").forEach(b=> b.addEventListener("click", ()=>{
@@ -2344,6 +2425,82 @@ const WIDGETS = {
       } catch(e){
         say("That doesn't read as a records-office public key export.");
       }
+    });
+    /* federation v2: trust-list exchange */
+    el.querySelector("#ro-tl-export").addEventListener("click", async ()=>{
+      const ik = await issuerGet();
+      const ta = el.querySelector("#ro-out"); ta.style.display = "block";
+      ta.value = JSON.stringify({format:"cx-trustlist/1",
+        exportedBy: ik ? ik.name : "(unnamed browser)",
+        exportedAt: new Date().toISOString().slice(0,10),
+        offices: trustLoad().map(o=>({recordsOffice:o.recordsOffice, publicKey:o.publicKey}))}, null, 1);
+      ta.select();
+    });
+    el.querySelector("#ro-tl-import").addEventListener("click", ()=>{
+      const msg = el.querySelector("#ro-tl-msg");
+      try {
+        const o = JSON.parse(el.querySelector("#ro-tl-in").value);
+        if (!o || o.format !== "cx-trustlist/1" || !Array.isArray(o.offices)) throw new Error("shape");
+        const l = trustLoad();
+        let added = 0, skipped = 0;
+        for (const e of o.offices){
+          if (!e || typeof e.recordsOffice !== "string" || !e.publicKey ||
+              e.publicKey.kty !== "EC" || e.publicKey.d){ skipped++; continue; }
+          if (l.some(x=>jwkEq(x.publicKey, e.publicKey))){ skipped++; continue; }
+          l.push({recordsOffice: e.recordsOffice.slice(0,120),
+                  publicKey: {kty:e.publicKey.kty, crv:e.publicKey.crv, x:e.publicKey.x, y:e.publicKey.y},
+                  via: String(o.exportedBy||"another hall").slice(0,120)});
+          added++;
+        }
+        trustSave(l);
+        el.querySelector("#ro-tl-in").value = "";
+        msg.innerHTML = `Imported: <b>${added}</b> added as second-hand · ${skipped} skipped (already trusted or malformed). Confirm each new key out-of-band.`;
+        renderTrust();
+      } catch(e){ msg.textContent = "Not a readable cx-trustlist/1 file."; }
+    });
+    /* federation v2: revocation */
+    const renderRevOwn = () => {
+      const host = el.querySelector("#ro-rev-own"); if (!host) return;
+      const own = revokedLoad(); const imported = revlistsLoad();
+      host.innerHTML = (own.length
+        ? `This office's revoked ids: ${own.map(x=>`<span class="mono" style="font-size:.7rem">${esc(x.rid.slice(0,13))}…</span>`).join(" · ")}. `
+        : `This office has revoked nothing. `) +
+        (imported.length
+        ? `Imported revocation lists: ${imported.map(r=>`<b>${esc(r.payload.office||"unnamed")}</b> (${(r.payload.revoked||[]).length})`).join(" · ")}.`
+        : `No imported revocation lists.`);
+    };
+    renderRevOwn();
+    el.querySelector("#ro-rev-add").addEventListener("click", ()=>{
+      const rid = (el.querySelector("#ro-rev-id").value||"").trim();
+      if (!rid){ say("A record id is needed — it is the rid field inside the record's payload."); return; }
+      const l = revokedLoad();
+      if (!l.some(x=>x.rid===rid))
+        l.push({rid, reason:(el.querySelector("#ro-rev-reason").value||"").trim().slice(0,200),
+                at:new Date().toISOString().slice(0,10)});
+      revokedSave(l);
+      el.querySelector("#ro-rev-id").value = ""; el.querySelector("#ro-rev-reason").value = "";
+      renderRevOwn();
+    });
+    el.querySelector("#ro-rev-export").addEventListener("click", async ()=>{
+      const ta = el.querySelector("#ro-out"); ta.style.display = "block";
+      const doc = await signRevocationList();
+      ta.value = doc ? JSON.stringify(doc, null, 1) : "Create the office keys first — the list must be signed.";
+      if (doc) ta.select();
+    });
+    el.querySelector("#ro-rev-import").addEventListener("click", async ()=>{
+      const msg = el.querySelector("#ro-rev-msg");
+      try {
+        const doc = JSON.parse(el.querySelector("#ro-rev-in").value);
+        if (!doc || !doc.payload || doc.payload.format !== "cx-revocation/1" ||
+            !Array.isArray(doc.payload.revoked) || !doc.publicKey) throw new Error("shape");
+        const ok = await verifyRecord(doc);
+        if (!ok){ msg.innerHTML = `<span style="color:var(--w4)">✗ Rejected</span> — the list's signature does not verify against its own key; an unsigned or altered revocation list is not honored.`; return; }
+        const ls = revlistsLoad().filter(x=>!jwkEq(x.publicKey, doc.publicKey));
+        ls.push(doc); revlistsSave(ls);
+        el.querySelector("#ro-rev-in").value = "";
+        msg.innerHTML = `✓ Signed revocation list from <b>${esc(doc.payload.office||"unnamed office")}</b> stored (${doc.payload.revoked.length} id${doc.payload.revoked.length===1?"":"s"}; replaces any earlier list from the same key).`;
+        renderRevOwn();
+      } catch(e){ msg.textContent = "Not a readable cx-revocation/1 document."; }
     });
   }},
  ],
