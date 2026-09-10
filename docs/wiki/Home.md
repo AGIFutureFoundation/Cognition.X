@@ -28,9 +28,10 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Deep roadmap](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/ROADMAP.md)
 - [Data review & known issues](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_REVIEW.md)
 - [Licensing rationale](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/LICENSING.md)
+- [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.31.0)
+## Numbers (v0.35.0)
 
 **16,700 blocks · 44 packs · 210 tracks · 1,394 credentials**
 

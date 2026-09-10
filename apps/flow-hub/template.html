@@ -216,6 +216,7 @@
     <button class="navbtn" data-view="flow"><span class="dot"></span>Flow</button>
     <button class="navbtn" data-view="agents"><span class="dot"></span>Agents</button>
     <button class="navbtn" data-view="ledger"><span class="dot"></span>Ledger</button>
+    <button class="navbtn" data-view="author"><span class="dot"></span>Author</button>
     <div style="padding:10px 10px 0">
       <label class="mono" for="themepick" style="font-size:.68rem; color:var(--faint); display:block; margin-bottom:4px">theme</label>
       <select id="themepick" style="width:100%; background:var(--surface-2); color:var(--ink); border:1px solid var(--line); border-radius:7px; padding:5px 8px; font-size:.8rem">
@@ -358,6 +359,43 @@
       record of your sessions — flow moves on the skill–challenge plane and completed checks, no identity. It exists so
       that, <b>only if you choose to export and share it</b>, agents and robots can learn from how humans actually move
       through these blocks. Nothing leaves this page on its own.</p>
+    </section>
+
+    <section class="view" id="view-author">
+      <p class="eyebrow">Pack Studio · educator authoring</p>
+      <h1>Author a pack</h1>
+      <p class="lede">Write a pack spec the pipeline can build: tracks of ten themes, each theme with a
+      description and a <b>transfer check on real material</b>. The Studio validates as the generator would,
+      previews the block count, and exports the spec JSON. Your draft stays in this browser.</p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin:0 0 14px">
+        <button class="chip" id="ps-example">Load a worked example</button>
+        <button class="chip" id="ps-import">Import a spec to edit</button>
+        <button class="chip" id="ps-clear">Clear draft</button>
+      </div>
+      <div class="panel" style="margin-bottom:12px">
+        <label for="ps-pack" style="font-weight:600">Pack name</label>
+        <input type="search" id="ps-pack" style="width:100%; margin:6px 0 12px" placeholder="e.g. Gardens, Yards &amp; Growing Things">
+        <label for="ps-notes" style="font-weight:600">Notes — the pack's stance and sourcing</label>
+        <textarea id="ps-notes" rows="3" style="width:100%; margin-top:6px" placeholder="What this pack teaches, whose knowledge it honors, and how its checks stay real and safe…"></textarea>
+      </div>
+      <div id="ps-tracks"></div>
+      <div style="display:flex; gap:9px; flex-wrap:wrap; margin:12px 0">
+        <button class="chip" id="ps-addtrack">+ Add track</button>
+        <span style="flex:1"></span>
+        <span class="lede" id="ps-count" style="margin:0; font-size:.85rem"></span>
+        <button class="chip" id="ps-export" style="border-color:var(--accent); color:var(--accent)">Validate &amp; export spec</button>
+      </div>
+      <div id="ps-errors" style="color:var(--warn); font-size:.86rem"></div>
+      <textarea id="ps-out" rows="8" style="width:100%; display:none; margin-top:8px" spellcheck="false" aria-label="Exported pack spec JSON"></textarea>
+      <div class="panel" style="margin-top:14px">
+        <h3 style="margin:0 0 6px; font-family:Archivo,system-ui,sans-serif; font-size:1rem">Submitting — GitHub is the review pipeline</h3>
+        <ol style="margin:0; padding-left:20px; font-size:.88rem; line-height:1.7">
+          <li>Save the exported JSON as <span class="mono">data/pack_specs/&lt;your-pack&gt;.json</span> in a fork of the repository.</li>
+          <li>Run <span class="mono">python3 tools/generate_pack.py</span> → <span class="mono">normalize_blocks.py</span> → <span class="mono">validate_blocks.py</span> (or let CI do it on your pull request).</li>
+          <li>Open the pull request. The curriculum review board (see <span class="mono">docs/GOVERNANCE.md</span>) reviews for accuracy, safety, honest transfer checks and respectful terminology before merge.</li>
+        </ol>
+        <p class="lede" style="margin:10px 0 0; font-size:.8rem">This offline file can't open the pull request for you — the spec export plus the repository is the whole pipeline, and the review board is the quality gate.</p>
+      </div>
     </section>
   </main>
 </div>
@@ -863,6 +901,137 @@ $("#led-load").addEventListener("click", () => {
   } catch(e){ log("Archivist","That paste wasn't a ledger — expected the JSON exported above."); }
 });
 
+
+/* ---------- Pack Studio: educator authoring ---------- */
+const PSKEY = "cxflow.draft";
+function psLoad(){
+  try { const r = localStorage.getItem(PSKEY); if (r){ const d = JSON.parse(r);
+    if (d && Array.isArray(d.tracks)) return d; } } catch(e){}
+  return {pack:"", notes:"", tracks:[]};
+}
+let PS = psLoad();
+function psSave(){ try{ localStorage.setItem(PSKEY, JSON.stringify(PS)); }catch(e){} }
+function psNewTrack(){
+  return {name:"", prefix:"", credential:"",
+    themes: Array.from({length:10}, ()=>({theme:"", description:"", transfer_check:""}))};
+}
+function psValidate(){
+  const errs = [];
+  if (!PS.pack.trim()) errs.push("The pack needs a name.");
+  if (!PS.tracks.length) errs.push("Add at least one track (a full community pack has five).");
+  PS.tracks.forEach((tr,i)=>{
+    const n = i+1;
+    if (!tr.name.trim()) errs.push(`Track ${n}: needs a name.`);
+    if (!/^[A-Z]{2,3}$/.test(tr.prefix.trim())) errs.push(`Track ${n}: prefix must be 2–3 capital letters (e.g. GY).`);
+    if (!tr.credential.trim()) errs.push(`Track ${n}: needs a credential name.`);
+    const seen = new Set();
+    tr.themes.forEach((th,j)=>{
+      const m = `Track ${n}, theme ${j+1}`;
+      if (!th.theme.trim()) errs.push(`${m}: needs a theme title.`);
+      else if (seen.has(th.theme.trim())) errs.push(`${m}: duplicate theme title — themes must be unique within a track.`);
+      else seen.add(th.theme.trim());
+      if (!th.description.trim()) errs.push(`${m}: needs a description.`);
+      if (!th.transfer_check.trim()) errs.push(`${m}: needs a transfer check — a concrete task on real material.`);
+    });
+  });
+  const px = new Set();
+  PS.tracks.forEach((tr,i)=>{ const p2 = tr.prefix.trim();
+    if (p2 && px.has(p2)) errs.push(`Track ${i+1}: prefix ${p2} is reused — prefixes must be unique within the pack.`);
+    px.add(p2); });
+  return errs;
+}
+function psBind(scope){
+  scope.querySelectorAll("[data-ps]").forEach(el => el.addEventListener("input", ()=>{
+    const path = el.dataset.ps.split(".");
+    if (path[0] === "pack") PS.pack = el.value;
+    else if (path[0] === "notes") PS.notes = el.value;
+    else {
+      const tr = PS.tracks[+path[1]];
+      if (path[0] === "t") tr[path[2]] = el.value;
+      else tr.themes[+path[2]][path[3]] = el.value;
+    }
+    psSave(); psCount();
+  }));
+}
+function psCount(){
+  const el = $("#ps-count"); if (!el) return;
+  el.textContent = PS.tracks.length
+    ? `${PS.tracks.length} track${PS.tracks.length>1?"s":""} × 50 = ${PS.tracks.length*50} blocks`
+    : "";
+}
+function renderStudio(){
+  $("#ps-pack").value = PS.pack; $("#ps-notes").value = PS.notes;
+  $("#ps-tracks").innerHTML = PS.tracks.map((tr,i)=>`
+    <details class="panel" style="margin-bottom:10px" ${PS.tracks.length===1?"open":""}>
+      <summary style="cursor:pointer; font-weight:600">Track ${i+1}: ${tr.name ? tr.name.replace(/[&<>"]/g,"") : "(untitled)"}
+        <button class="chip" data-psdel="${i}" aria-label="Remove track ${i+1}" style="float:right">Remove</button></summary>
+      <div style="display:grid; grid-template-columns:2fr 90px 1.4fr; gap:8px; margin:12px 0">
+        <input type="search" data-ps="t.${i}.name" placeholder="Track name" value="${tr.name.replace(/"/g,"&quot;")}" aria-label="Track ${i+1} name">
+        <input type="search" data-ps="t.${i}.prefix" placeholder="XX" maxlength="3" value="${tr.prefix.replace(/"/g,"&quot;")}" aria-label="Track ${i+1} prefix">
+        <input type="search" data-ps="t.${i}.credential" placeholder="Credential name" value="${tr.credential.replace(/"/g,"&quot;")}" aria-label="Track ${i+1} credential">
+      </div>
+      ${tr.themes.map((th,j)=>`
+        <div style="border-top:1px solid var(--line); padding:10px 0">
+          <input type="search" data-ps="th.${i}.${j}.theme" placeholder="Theme ${j+1} title" value="${th.theme.replace(/"/g,"&quot;")}" style="width:100%" aria-label="Track ${i+1} theme ${j+1} title">
+          <textarea data-ps="th.${i}.${j}.description" rows="2" placeholder="What this theme teaches…" style="width:100%; margin-top:6px" aria-label="Track ${i+1} theme ${j+1} description">${th.description.replace(/</g,"&lt;")}</textarea>
+          <textarea data-ps="th.${i}.${j}.transfer_check" rows="2" placeholder="Transfer check — a concrete task on real material…" style="width:100%; margin-top:6px" aria-label="Track ${i+1} theme ${j+1} transfer check">${th.transfer_check.replace(/</g,"&lt;")}</textarea>
+        </div>`).join("")}
+    </details>`).join("");
+  $("#ps-tracks").querySelectorAll("[data-psdel]").forEach(b => b.addEventListener("click", (e)=>{
+    e.preventDefault(); PS.tracks.splice(+b.dataset.psdel, 1); psSave(); renderStudio();
+  }));
+  psBind($("#view-author")); psCount();
+}
+$("#ps-addtrack").addEventListener("click", ()=>{ PS.tracks.push(psNewTrack()); psSave(); renderStudio(); });
+$("#ps-clear").addEventListener("click", ()=>{ PS = {pack:"", notes:"", tracks:[]}; psSave(); renderStudio();
+  $("#ps-out").style.display = "none"; $("#ps-errors").textContent = ""; });
+$("#ps-example").addEventListener("click", ()=>{
+  const tr = psNewTrack();
+  tr.name = "The garden bed"; tr.prefix = "GB"; tr.credential = "Bed Builder";
+  tr.themes[0] = {theme:"Soil you can hold",
+    description:"What living soil is — texture, smell, life — and why a handful tells you more than a label.",
+    transfer_check:"Take a handful of real soil from two different spots, compare texture and smell, and say which a seedling would prefer and why."};
+  for (let j=1;j<10;j++) tr.themes[j] = {theme:`(theme ${j+1} — replace me)`,
+    description:"(what this theme teaches)", transfer_check:"(a concrete task on real material)"};
+  PS = {pack:"Gardens, Yards & Growing Things",
+    notes:"A worked example: replace every placeholder. Checks stay on real soil, seeds and seasons; nothing here requires purchases beyond seeds.",
+    tracks:[tr]};
+  psSave(); renderStudio();
+});
+$("#ps-import").addEventListener("click", ()=>{
+  const ta = $("#ps-out");
+  if (ta.style.display === "none"){ ta.style.display = "block"; ta.value = ""; ta.placeholder = "Paste a pack-spec JSON here, then press Import a spec to edit again."; ta.focus(); return; }
+  try {
+    const d = JSON.parse(ta.value);
+    if (!d || typeof d.pack !== "string" || !Array.isArray(d.tracks)) throw new Error("shape");
+    PS = {pack: d.pack, notes: d.notes || "", tracks: d.tracks.map(tr => ({
+      name: tr.name||"", prefix: tr.prefix||"", credential: tr.credential||"",
+      themes: Array.from({length:10}, (_,j) => (tr.themes && tr.themes[j])
+        ? {theme: tr.themes[j].theme||"", description: tr.themes[j].description||"", transfer_check: tr.themes[j].transfer_check||""}
+        : {theme:"", description:"", transfer_check:""})}))};
+    psSave(); renderStudio(); ta.style.display = "none"; $("#ps-errors").textContent = "";
+  } catch(e){ $("#ps-errors").textContent = "That paste wasn't a pack spec — expected {pack, notes, tracks:[…]}."; }
+});
+$("#ps-export").addEventListener("click", ()=>{
+  const errs = psValidate();
+  const eh = $("#ps-errors");
+  if (errs.length){
+    eh.innerHTML = errs.slice(0,12).map(x=>"• "+x.replace(/</g,"&lt;")).join("<br>") +
+      (errs.length>12 ? `<br>…and ${errs.length-12} more.` : "");
+    $("#ps-out").style.display = "none";
+    return;
+  }
+  eh.innerHTML = `<span style="color:var(--good)">✓ Valid — ${PS.tracks.length*50} blocks. Save as data/pack_specs/&lt;name&gt;.json and open a pull request.</span>`;
+  const spec = {pack: PS.pack.trim(), notes: PS.notes.trim(),
+    tracks: PS.tracks.map(tr => ({name: tr.name.trim(), prefix: tr.prefix.trim(),
+      credential: tr.credential.trim(),
+      themes: tr.themes.map(th => ({theme: th.theme.trim(), description: th.description.trim(),
+        transfer_check: th.transfer_check.trim()}))}))};
+  const ta = $("#ps-out"); ta.style.display = "block";
+  ta.value = JSON.stringify(spec, null, 1); ta.select();
+});
+renderStudio();
+
 /* ---------- nav ---------- */
 function go(v){
   document.querySelectorAll(".view").forEach(el => el.classList.toggle("active", el.id === "view-"+v));
@@ -877,6 +1046,7 @@ const TOUR = [
   {view:"system", sel:"#constellation", t:"The pack constellation", m:"Every pack in the series. Click any card to open it in the explorer."},
   {view:"packs", sel:"#packsearch", t:"Find anything", m:"Search across every pack, track and theme. The family chips filter by series."},
   {view:"flow", sel:"#flowsetup", t:"Start a flow session", m:"Pick a track and where your skill sits today. The engine serves blocks just above it."},
+  {view:"author", sel:"#ps-tracks", t:"Author a pack", m:"The Pack Studio: write tracks of ten themes with real transfer checks, validate as the generator would, and export the spec. GitHub and the review board carry it from there."},
   {view:"flow", sel:"#flowchart", t:"The flow channel", m:"Every move lands on this skill-versus-challenge plane. Staying in the gold band is flow state."},
   {view:"flow", sel:"#pace-toggle", t:"The Pacer", m:"Twenty-five minutes of focus, five of rest. The swarm calls the break before burnout."},
   {view:"agents", sel:"#agentgrid", t:"The agent swarm", m:"Eight agents share one blackboard of your session; exactly one intervenes per move. Turn voice on and the acting agent speaks."},

@@ -49,3 +49,14 @@ open an issue proposing tracks before writing a full spec:
 Parenting & Early Years · Grief, Loss & Endings · Sport, Movement &
 Coaching · Faith, Meaning & Pluralism · Rural Skills & Land Craft ·
 Entrepreneurship & the Small Trade
+
+## The Pack Studio (v0.35.0)
+
+Flow Hub's **Author** view is a form-driven spec editor: tracks of ten
+themes with live generator-grade validation, a worked example,
+import-to-edit, browser-local drafts, and a validated JSON export that
+round-trips through `tools/generate_pack.py` unchanged. Export the spec,
+save it under `data/pack_specs/`, and open a pull request — CI validates
+mechanically and the [curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
+reviews for accuracy, safety, honest transfer checks and respectful
+terminology before merge.

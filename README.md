@@ -114,6 +114,7 @@ in [`CHANGELOG.md`](CHANGELOG.md); the current version is in
 - Deep roadmap: [`docs/ROADMAP.md`](docs/ROADMAP.md)
 - Wiki source (publishable to the GitHub wiki): [`docs/wiki/`](docs/wiki/)
 - Data review and known issues: [`docs/DATA_REVIEW.md`](docs/DATA_REVIEW.md)
+- Governance (curriculum review board): [`docs/GOVERNANCE.md`](docs/GOVERNANCE.md)
 - How to contribute: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 ## License
