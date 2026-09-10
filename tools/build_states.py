@@ -18,15 +18,12 @@ Output: apps/states/index.html from apps/states/template.html
 
 import csv
 import json
-import subprocess
-import tempfile
 from collections import OrderedDict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 STATES = ROOT / "data" / "states" / "states.json"
 BLOCKS = ROOT / "data" / "blocks.csv"
-EDU = ROOT / "apps" / "education-os" / "template.html"
 TEMPLATE = ROOT / "apps" / "states" / "template.html"
 OUT = ROOT / "apps" / "states" / "index.html"
 
@@ -48,32 +45,16 @@ def pack_catalog():
     return cat
 
 
-def wlb_from_education_os():
-    """Extract the Institute fact base from the Education OS template via
-    node (the JS literals are not JSON)."""
-    t = EDU.read_text(encoding="utf-8")
-
-    def grab(name):
-        i = t.find(name + "=")
-        j = t.find("];", i)
-        return t[i + len(name) + 1: j + 1]
-
-    def grab_obj(name):
-        i = t.find(name + "=")
-        j1, j2 = t.find("];", i), t.find("};", i)
-        j = min(x for x in (j1, j2) if x > 0)
-        return t[i + len(name) + 1: j + 1]
-
-    js = ("const wlb=" + grab_obj("DATA.wlb") + ";"
-          "const principles=" + grab("DATA.wlbPrinciples") + ";"
-          "console.log(JSON.stringify({wlb:{org:wlb.org,disclaimer:wlb.disclaimer,"
-          "mission:wlb.mission,quote:wlb.quote},"
-          "principles:principles.map(x=>({p:x.p,teach:x.teach}))}));")
-    with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as f:
-        f.write(js)
-        path = f.name
-    out = subprocess.run(["node", path], capture_output=True, text=True, check=True)
-    return json.loads(out.stdout)
+def wlb_fact_base():
+    """The Institute fact base, canonical in data/wlb/institute.json since
+    v0.39.0 (extracted once from the Education OS app by
+    tools/extract_fact_bases.py)."""
+    w = json.loads((ROOT / "data" / "wlb" / "institute.json")
+                   .read_text(encoding="utf-8"))
+    return {
+        "wlb": {k: w[k] for k in ("org", "disclaimer", "mission", "quote")},
+        "principles": [{"p": x["p"], "teach": x["teach"]} for x in w["principles"]],
+    }
 
 
 def main():
@@ -83,7 +64,7 @@ def main():
     for slug in ["STATEOS", "LEGACYMODEL"] + CORE_PACKS:
         if slug not in catalog:
             raise SystemExit(f"missing pack in dataset: {slug}")
-    wlb = wlb_from_education_os()
+    wlb = wlb_fact_base()
 
     payload = {
         "version": (ROOT / "VERSION").read_text().strip(),

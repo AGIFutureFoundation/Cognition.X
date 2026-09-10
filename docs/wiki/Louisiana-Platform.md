@@ -140,13 +140,21 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
 
 ## Data provenance
 
-Built by `tools/build_louisiana.py` from two sources, never hand-edited:
+Built by `tools/build_louisiana.py` from canonical sources, never
+hand-edited:
 
-1. **The Louisiana fact base embedded in the Education OS app** —
-   regions, hub cities, and per-parish name/seat/region/population/
-   wave/districts/industries/narrative-world/rural-tier.
-2. **`data/blocks.csv`** — curriculum totals and the Louisiana legacy
+1. **`data/louisiana/fact_base.json`** — regions, hub cities, and
+   per-parish name/seat/region/population/wave/districts/industries/
+   narrative-world/rural-tier (canonical since v0.39.0; originally
+   extracted from the Education OS app by
+   `tools/extract_fact_bases.py`).
+2. **`data/wlb/institute.json`** — the Institute fact base, with the
+   disclaimer carried verbatim.
+3. **`data/blocks.csv`** — curriculum totals and the Louisiana legacy
    pack's tracks, computed at build time.
+4. **`data/unions/trade_unions.json`** and
+   **`data/learners/learner_types.json`** — the trade-hall union
+   slices and the 20 access profiles.
 
 Waves are the proposal's planned rollout (2027–28 → 2030–31), not an
 adopted schedule; the tile map is a stylized cartogram with approximate
