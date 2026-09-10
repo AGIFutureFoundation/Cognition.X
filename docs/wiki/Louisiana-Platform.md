@@ -49,6 +49,12 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   parent's family ledger and hall card, the homeschool co-op guild,
   the parish admin's five honest numbers and launch team, and the
   state admin's readiness rollup and Trade Hall launch load.
+- **Assessor Mode (v0.32.0)** — the seventh role dashboard: a
+  witnessed-check queue fed by student requests, the three-line
+  rubric (real material · independent at band · would transfer),
+  per-learner access-profile check formats, evidence capture, and
+  confirm / not-yet outcomes that credit the ledger honestly — the
+  witnessed record being what the Records Office signs.
 - **Credential Ledger v1 & launch budgets (v0.29.0)** — the Records
   Office: a per-browser ECDSA P-256 keypair issues ledger-earned
   credentials as portable, offline-verifiable `cx-credential/1` JSON

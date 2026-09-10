@@ -124,13 +124,18 @@ standards-mapped; validator extended to rubric and mapping checks.
   offline against the office's published public key, with tamper
   detection. Alignment with W3C Verifiable Credentials / Open Badges
   3.0 envelopes remains follow-on work.
-- Assessor mode: transfer-check queue, rubric display, evidence capture
+- [x] Assessor mode (v0.32.0): witnessed-check queue (students request,
+  assessors work oldest-first), three-line rubric display, per-learner
+  access-profile check formats, evidence capture, and confirm /
+  not-yet outcomes that credit the ledger honestly
 - Mission simulator: promote from demo to configurable engine driven by
   pack data
 - Accessibility: WCAG 2.2 AA audit and fixes; keyboard-complete; screen-
   reader labels on all interactive panels
-- Packaging: PWA install, and a printable per-track workbook generator
-  (PDF) for zero-device settings
+- Packaging: PWA install still open; the printable per-track workbook
+  generator shipped in v0.32.0 (Flow Hub's 🖨 Workbook button — 10
+  themes × 5 band sign-off lines per track, via the browser's print
+  dialog, for zero-device settings)
 
 **Exit criteria:** app builds reproducibly from the dataset; a learner can
 complete a track and hold a verifiable credential file.

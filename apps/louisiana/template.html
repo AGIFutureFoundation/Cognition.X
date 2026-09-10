@@ -1421,7 +1421,7 @@ function renderMissionLadder(sel, p, interactive){
 
 /* ---------- ROLE DASHBOARDS — widgetized, deeply customizable ---------- */
 const ROLES = [
-  ["student","Student"],["teacher","Teacher"],["parent","Parent"],
+  ["student","Student"],["teacher","Teacher"],["assessor","Assessor"],["parent","Parent"],
   ["homeschool","Homeschool"],["parishadmin","Parish Admin"],["stateadmin","State Admin"]
 ];
 function roleState(){
@@ -1526,6 +1526,40 @@ function llClearDemo(){
   d.learners = d.learners.filter(l=>!l.demo);
   llSave(d);
 }
+
+/* ---------- assessor queue: witnessed transfer checks ----------
+   Students request a witnessed check; assessors work the queue with a
+   rubric and capture evidence. A confirmation credits the ledger (and can
+   auto-award the credential); "not yet" records an honest debrief and no
+   credit. Self-recorded checks remain the learner's practice log — the
+   witnessed record is what the Records Office signs. */
+function qLoad(){ const d = llLoad(); if (!Array.isArray(d.queue)) d.queue = []; return d; }
+function qRequest(learnerId, trackKey){
+  const d = qLoad();
+  if (d.queue.some(q=>q.learner===learnerId && q.track===trackKey && q.status==="waiting")) return false;
+  d.queue.push({id:"q-"+Date.now(), learner:learnerId, track:trackKey,
+                at:new Date().toISOString().slice(0,10), status:"waiting"});
+  llSave(d); return true;
+}
+function qResolve(qid, result, by, note){
+  const d = qLoad();
+  const q = d.queue.find(x=>x.id===qid); if (!q) return null;
+  const l = d.learners.find(x=>x.id===q.learner); if (!l) { q.status="orphaned"; llSave(d); return null; }
+  const t = LTRACKS.find(x=>x.key===q.track);
+  let earned = false;
+  if (result === "confirmed") earned = llCredit(l, q.track, 1);
+  l.evidence = (l.evidence||[]).slice(-29);
+  l.evidence.push({at:new Date().toISOString().slice(0,10), track:t?t.name:q.track,
+                   by:by||"assessor", note:(note||"").slice(0,400), result});
+  q.status = result;
+  llSave(d);
+  return {learner:l, track:t, earned};
+}
+const RUBRIC = [
+  ["Real material","The check was performed on real material — not a worksheet about it."],
+  ["Independent at band","The learner carried the moves themselves, at their band's level of independence."],
+  ["Would transfer","Asked one step sideways — a novel case, a why — the learner still stood on solid ground."],
+];
 
 /* ---------- flow-state engine ----------
    Per-learner flow model driving the experience: state is computed from the
@@ -1646,8 +1680,11 @@ const WIDGETS = {
         <span class="mono" style="font-size:.72rem; color:var(--faint)">${esc(rec.t.pack)}</span> — ${esc(rec.why)}.</p>`;
       html += `<div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:10px 0 4px">
         <select id="ls-track">${LTRACKS.map(t=>`<option value="${esc(t.key)}"${rec&&t.key===rec.t.key?" selected":""}>${esc(t.name)} · ${esc(t.pack)}</option>`).join("")}</select>
-        <button class="btn gold" id="ls-check">Record a passed check</button></div>
-        <p class="note" style="margin:2px 0 10px">An assessor witnesses the check; you record it. At 50 checks the track's credential is awarded automatically.</p>`;
+        <button class="btn gold" id="ls-check">Record a practice check</button>
+        <button class="btn" id="ls-witness">Request a witnessed check</button></div>
+        <p class="note" style="margin:2px 0 10px">Practice checks build your own log; a <b>witnessed</b> check goes
+        to the Assessor queue and is what the Records Office signs. At 50 checks the track's credential is
+        awarded automatically.</p>`;
       const rows = st.started.concat(st.creds);
       if (rows.length) html += rows.map(t=>{const n=(me.prog||{})[t.key]||0;
         return `<div style="font-size:.85rem">${esc(t.name)} <span class="mono" style="font-size:.7rem; color:var(--faint)">${n}/50${n>=50?" · ✓ "+esc(t.credential):""}</span>${llMeter(n)}</div>`;}).join("");
@@ -1673,6 +1710,15 @@ const WIDGETS = {
         say("Credential earned. " + (t?t.credential:"")); }
       setTimeout(renderRoles, 0);
     });
+    const wbtn = el.querySelector("#ls-witness");
+    if (wbtn) wbtn.addEventListener("click", ()=>{
+      if (!R.me) return;
+      const ok = qRequest(R.me, el.querySelector("#ls-track").value);
+      say(ok ? "Request sent. An assessor will find you in the queue." : "That request is already waiting in the queue.");
+      setTimeout(renderRoles, 0);
+    });
+    const waiting = qLoad().queue.filter(q=>q.learner===R.me && q.status==="waiting").length;
+    if (waiting) el.innerHTML += `<p class="note" style="margin-top:8px">⏳ ${waiting} witnessed-check request${waiting>1?"s":""} waiting in the Assessor queue.</p>`;
   }},
   {id:"flowsession", t:"Flow session — the automations at work", span:true, r:(p,el)=>{
     const d = llLoad();
@@ -1924,6 +1970,80 @@ const WIDGETS = {
   {id:"notes", t:"Planning notes", r:(p,el)=>{
     el.innerHTML += `<p class="note">Bench plans, catch-up corners, mentor asks. Stays in this browser.</p>` +
       wNote(el, "teacher.notes", "Next bench session…"); wWireNotes(el);
+  }},
+ ],
+ assessor: [
+  {id:"queue", t:"The transfer-check queue", span:true, r:(p,el)=>{
+    const d = qLoad();
+    const waiting = d.queue.filter(q=>q.status==="waiting");
+    let html = `<p class="note">Witnessed-check requests, oldest first. Open one to see the rubric, the
+      learner's check format, and the evidence form. <b>Confirmed</b> credits the ledger (the credential is
+      awarded automatically at 50); <b>Not yet</b> records an honest debrief and no credit — the retry costs
+      an attempt, never a record.</p>
+      <div class="pickrow" style="margin:0 0 12px">
+        <label class="mono" style="font-size:.7rem; color:var(--faint)">assessor name</label>
+        <input type="search" id="aq-name" value="${esc(R.assessorName||"")}" placeholder="Your name — appears on the evidence line" style="min-width:240px"></div>`;
+    if (!waiting.length){
+      html += `<p class="note">The queue is empty. Learners send requests from <b>My standing → Request a witnessed check</b>.</p>`;
+      el.innerHTML += html;
+    } else {
+      if (!waiting.some(q=>q.id===R.qOpen)) R.qOpen = waiting[0].id;
+      html += waiting.map(q=>{
+        const l = d.learners.find(x=>x.id===q.learner);
+        const t = LTRACKS.find(x=>x.key===q.track);
+        const open = q.id===R.qOpen;
+        return `<div style="border:1px solid var(--line); ${open?"border-color:var(--purple);":""} border-radius:10px; padding:10px 14px; margin:0 0 8px">
+          <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; cursor:pointer" data-qopen="${q.id}">
+            <b>${esc(l?l.name:"(removed)")}</b>
+            <span style="color:var(--muted); font-size:.86rem">${esc(t?t.name:q.track)} · ${esc(t?t.credential:"")}</span>
+            <span class="mono" style="font-size:.7rem; color:var(--faint)">requested ${esc(q.at)}</span></div>` +
+          (open && l ? `
+            ${(accessOf(l).alts.length ? `<p class="note" style="margin:8px 0 4px"><b>Check format for this learner:</b> ${esc(accessOf(l).alts[0])}.</p>` : "")}
+            <div style="margin:8px 0 6px">${RUBRIC.map(([h,d2])=>
+              `<div style="font-size:.85rem; padding:4px 0; border-top:1px solid var(--line)"><b>${h}</b> — <span style="color:var(--muted)">${d2}</span></div>`).join("")}</div>
+            <textarea id="aq-note" rows="3" style="width:100%" placeholder="Evidence: the material used, where, and what was demonstrated…"></textarea>
+            <div style="display:flex; gap:9px; margin-top:8px">
+              <button class="btn gold" data-qres="confirmed|${q.id}">✓ Confirmed</button>
+              <button class="btn" data-qres="not yet|${q.id}">↺ Not yet</button></div>` : "") +
+          `</div>`;
+      }).join("");
+      el.innerHTML += html;
+      el.querySelectorAll("[data-qopen]").forEach(h=> h.addEventListener("click", ()=>{
+        R.qOpen = h.dataset.qopen; saveR(); }));
+      el.querySelectorAll("[data-qres]").forEach(b=> b.addEventListener("click", ()=>{
+        const [result, qid] = b.dataset.qres.split("|");
+        const note = (el.querySelector("#aq-note")||{}).value || "";
+        const r = qResolve(qid, result, R.assessorName||"assessor", note);
+        if (r && result==="confirmed") say(r.earned
+          ? "Confirmed — and that completes the track. " + (r.track?r.track.credential:"") + " earned."
+          : "Confirmed and recorded.");
+        if (r && result!=="confirmed") say("Recorded as not yet. Set the smaller step and the retry date together.");
+        setTimeout(renderRoles, 0);
+      }));
+    }
+    const nameEl = el.querySelector("#aq-name");
+    if (nameEl) nameEl.addEventListener("change", ()=>{ R.assessorName = nameEl.value; store("cxla.roles", JSON.stringify(R)); });
+  }},
+  {id:"rubric", t:"The honest witness", r:(p,el)=>{
+    el.innerHTML += `<p class="note">What an assessor certifies — that the check happened, on real material,
+      and transferred. A soft yes today costs the learner later.</p>
+      <ul class="tracklist" style="font-size:.86rem">
+        ${RUBRIC.map(([h,d2])=>`<li><span><b>${h}</b> — ${d2}</span></li>`).join("")}</ul>
+      <p class="note" style="margin-top:10px">The learner's access profile sets the <b>format</b> (oral,
+      demonstrated, directed, scaffolded) — never the bar. The capability is the constant; the format is
+      the variable. Trainer track: <b>Training the trainers</b> in Parish Launch &amp; Scale.</p>`;
+  }},
+  {id:"evidence", t:"Recent evidence log", r:(p,el)=>{
+    const ls = llLoad().learners;
+    const ev = ls.flatMap(l=>(l.evidence||[]).map(e=>({...e, name:l.name}))).slice(-10).reverse();
+    el.innerHTML += ev.length
+      ? `<p class="note">The last witnessed checks, newest first — this browser's record.</p>` +
+        ev.map(e=>`<div style="font-size:.84rem; padding:6px 0; border-top:1px solid var(--line)">
+          <b>${esc(e.name)}</b> · ${esc(e.track)} ·
+          <span style="color:${e.result==="confirmed"?"var(--green)":"var(--w4)"}">${esc(e.result)}</span>
+          <span class="mono" style="font-size:.68rem; color:var(--faint)">${esc(e.at)} · ${esc(e.by)}</span>
+          ${e.note?`<div style="color:var(--muted)">${esc(e.note)}</div>`:""}</div>`).join("")
+      : `<p class="note">No witnessed checks recorded yet.</p>`;
   }},
  ],
  parent: [
