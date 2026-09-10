@@ -1,0 +1,291 @@
+{
+ "pack": "Parish Launch & Scale",
+ "notes": "The rollout curriculum for the accelerated two-year adoption plan: 33 parishes launch in Wave 1 (2026–27), the remaining 31 in Wave 2 (2027–28). Written for the people who will actually carry a launch — parish launch leads, Trade Hall stewards, assessor trainers, enrollment leads and scale operators — so every transfer check is performed on the learner's own parish: its school board minutes, its hall, its roster, its numbers. The pack teaches the launch as a repeatable craft, because a plan that 33 parishes run in one year only works if the playbook survives contact with all 33. Wave-2 parishes study the same pack a year early, using a Wave-1 neighbor as their real material.",
+ "tracks": [
+  {
+   "name": "The first ninety days",
+   "prefix": "LN",
+   "credential": "Parish Launch Lead",
+   "themes": [
+    {
+     "theme": "The launch is a promise with a date",
+     "description": "What adopting the platform actually commits a parish to — the named lead, the hall, the first cohort — and why a launch date written down changes everything that comes before it.",
+     "transfer_check": "Write your parish's one-page launch promise — lead, site, first cohort, date — and have the person who must keep it sign it."
+    },
+    {
+     "theme": "Reading your own parish first",
+     "description": "The fact base before the plan: enrollment, districts, industries, the seat and the distances — what the launch has to fit, not the other way round.",
+     "transfer_check": "Fill in the parish fact sheet from public sources — population, districts, three real employers, travel time from the farthest school to the seat — and mark the one fact that most constrains the launch."
+    },
+    {
+     "theme": "The ninety-day clock",
+     "description": "The launch broken into three thirty-day blocks — secure, staff, open — and what done looks like at each gate.",
+     "transfer_check": "Lay your parish's launch onto the ninety-day clock and name the single task in each block that, if late, slips the date."
+    },
+    {
+     "theme": "Who signs: the adoption decision",
+     "description": "School board, police jury, superintendent — whose signature the launch actually needs in this parish, and how the decision gets on an agenda.",
+     "transfer_check": "Find, in your parish's real public meeting minutes or agenda, where an adoption item would appear, and draft the one-paragraph agenda item."
+    },
+    {
+     "theme": "The launch team of five",
+     "description": "The smallest team that can open a parish — lead, hall steward, trainer, enrollment lead, records keeper — and why each seat must be a named person before day one.",
+     "transfer_check": "Name five real people (or five real open seats with the office that fills them) for your parish's launch team and one line on why each fits."
+    },
+    {
+     "theme": "Money that already exists",
+     "description": "Launching on the budget the parish already has — the school system, the library, workforce funds — before asking for a dollar of new money.",
+     "transfer_check": "List three funding lines that already exist in your parish's public budget documents that a launch could lawfully draw on, with the office that controls each."
+    },
+    {
+     "theme": "The risk register nobody reads",
+     "description": "The five ways parish launches actually fail — no named lead, no site, trainer burnout, empty first cohort, records chaos — and the early warning for each.",
+     "transfer_check": "Write your parish's five-line risk register and, for each risk, the week on the ninety-day clock when its warning sign would first show."
+    },
+    {
+     "theme": "Borrowing a neighbor's launch",
+     "description": "The Wave-1 cohort as each other's teachers — what to copy from a parish that opened last month, and what never transfers across a parish line.",
+     "transfer_check": "Interview someone from another parish's launch (or study its public record) and write down two things you will copy and one thing that will not survive your parish line."
+    },
+    {
+     "theme": "Opening day is a rehearsal you already ran",
+     "description": "The dry run: walking the first cohort's first day — arrival, roster, first block, first check — a week before it happens.",
+     "transfer_check": "Script your parish's opening-day run of show, hour by hour, and walk it physically in the real space with at least one other person."
+    },
+    {
+     "theme": "Handing the launch to the parish",
+     "description": "Day ninety-one: the launch lead's job ends and the parish's own steady operation begins — what gets handed over, in writing, to whom.",
+     "transfer_check": "Write the one-page handover memo for your parish — what runs weekly, who owns each piece, where the records live — addressed to a real office."
+    }
+   ]
+  },
+  {
+   "name": "Standing up the Trade Hall",
+   "prefix": "TH",
+   "credential": "Trade Hall Steward",
+   "themes": [
+    {
+     "theme": "A hall is a schedule, not a building",
+     "description": "What makes a Trade Hall real — hours, a steward, a posted week — and why a borrowed cafeteria with a schedule beats an empty dedicated building.",
+     "transfer_check": "Draft a one-week posted schedule for a hall in your parish — open hours, who stewards each block — that a real space you name could run next week."
+    },
+    {
+     "theme": "Finding the room the parish already owns",
+     "description": "Libraries, school shops, community centers, fairgrounds — surveying the public rooms a parish already has before renting one.",
+     "transfer_check": "Walk or map three publicly owned spaces in your parish that could host hall hours, and rank them by access, safety and cost with a sentence each."
+    },
+    {
+     "theme": "The steward's week",
+     "description": "The recurring rhythm of hall stewardship — open, log, check, close — and why the same person at the same door builds the habit a parish keeps.",
+     "transfer_check": "Shadow or simulate one full hall session end to end and produce the steward's log for it: who came, what ran, what broke, what's needed."
+    },
+    {
+     "theme": "Tools, benches and the safety line",
+     "description": "Outfitting a hall from the trade tracks it will actually run — and the safety rule that no station opens without its named safe practice posted.",
+     "transfer_check": "For one trade track your parish plans to run, list the stations it needs, and write the posted safe-practice card for one station."
+    },
+    {
+     "theme": "The pack roster on the wall",
+     "description": "The hall's visible curriculum — which packs and tracks this parish runs, posted where a walk-in can read them — drawn from the parish's own module plan.",
+     "transfer_check": "Produce the wall roster for your parish's hall from its actual module plan: packs, tracks, and the credential each track ends in, on one printable page."
+    },
+    {
+     "theme": "Hosting a transfer check",
+     "description": "The hall as the place checks happen — setting up real material, witnessing honestly, recording the outcome — without turning it into an exam room.",
+     "transfer_check": "Set up and host one real transfer check from any track for one learner, with the material, the witness and the record all real."
+    },
+    {
+     "theme": "The hub and the spokes",
+     "description": "How a parish hall relates to its regional Trade Hall hub — what travels to the hub (rare equipment, capstones) and what must stay in the parish (the weekly habit).",
+     "transfer_check": "Name your parish's regional hub and list two activities that belong at the hub and two that must never leave the parish, with reasons."
+    },
+    {
+     "theme": "Sharing the hall across a parish line",
+     "description": "Rural reality: two small parishes, one hall, alternating days — the sharing agreements that keep both parishes owners rather than guests.",
+     "transfer_check": "Draft the half-page sharing agreement for a hall serving your parish and a real neighbor: days, stewardship, records, and what ends the deal."
+    },
+    {
+     "theme": "When the storm comes to the hall",
+     "description": "The hall in emergency posture — the same room as shelter support, charging point, information post — and the switch-over checklist.",
+     "transfer_check": "Write the one-page storm posture checklist for a hall in your parish — what it becomes, who opens it, what gets moved — grounded in your parish's real hazard."
+    },
+    {
+     "theme": "The hall's first hundred visitors",
+     "description": "Reading the early logbook — who is coming, who is missing, which hours die — and adjusting the schedule before habits set.",
+     "transfer_check": "Take a real or simulated month of hall logs, find the emptiest hour and the missing audience, and propose one schedule change with the evidence."
+    }
+   ]
+  },
+  {
+   "name": "Training the trainers",
+   "prefix": "TT",
+   "credential": "Assessor Trainer",
+   "themes": [
+    {
+     "theme": "The block is the unit of teaching",
+     "description": "Reading a block like a trainer — one capability, one band, one check — and why a trainer who teaches the check first teaches backwards on purpose.",
+     "transfer_check": "Pick one real block from your parish's plan, teach it to one person starting from its transfer check, and have them attempt the check."
+    },
+    {
+     "theme": "The honest witness",
+     "description": "What an assessor actually certifies — that the check happened, on real material, and transferred — and why a soft yes today costs the learner later.",
+     "transfer_check": "Witness someone attempt a transfer check and write the two-line honest record: what was demonstrated, and what — if anything — was not."
+    },
+    {
+     "theme": "Recruiting trainers the parish already has",
+     "description": "Retired tradespeople, coaches, librarians, line supervisors — the parish's existing bench, and the pitch that respects their time.",
+     "transfer_check": "Name three real categories of people in your parish who could assess one named track each, and write the three-sentence ask for one of them."
+    },
+    {
+     "theme": "The trainer's first cohort of one",
+     "description": "Certifying a new trainer by having them take a learner through one full theme — five bands, five checks — under observation.",
+     "transfer_check": "Take one learner through one full theme across its bands (or a compressed adult run) while an observer scores your teaching against the checks."
+    },
+    {
+     "theme": "Banding without shaming",
+     "description": "Placing an adult learner at Explorer without insult and a fast child at Lead without ceremony — the band as a description of the material, never the person.",
+     "transfer_check": "Place two very different real or role-played learners onto bands for the same theme and explain each placement in one sentence that names the material, not the person."
+    },
+    {
+     "theme": "The check that fails well",
+     "description": "What to do when a transfer check fails — the debrief, the smaller step, the retry date — and why a failed check recorded honestly is a working system.",
+     "transfer_check": "Run a debrief for a failed (real or staged) check: name what transferred, what didn't, and set the smaller step and the retry date in writing."
+    },
+    {
+     "theme": "Ten trainers by week six",
+     "description": "The multiplication schedule — each certified trainer certifies two more — and the quality gate that keeps speed from hollowing the credential.",
+     "transfer_check": "Draw your parish's trainer multiplication tree from one seed trainer to ten by week six, and mark the gate every new trainer must pass."
+    },
+    {
+     "theme": "The swarm at the trainer's side",
+     "description": "Using the platform's tutor agents as the trainer's assistant — what the Coach, Scholar and Examiner catch — while the human keeps the witness role the machine never takes.",
+     "transfer_check": "Run one session with the app's tutor strip active, and afterwards name one thing an agent surfaced that you missed and one call that stayed rightly human."
+    },
+    {
+     "theme": "Cross-parish calibration",
+     "description": "Two assessors, two parishes, one check — trading recorded checks across a parish line so a credential means the same thing in both.",
+     "transfer_check": "Exchange one recorded check with an assessor from another parish (or another school), independently score it, and reconcile any difference in writing."
+    },
+    {
+     "theme": "The trainer's own ledger",
+     "description": "Trainers as learners — keeping your own credential ledger current, because the parish watches whether the trainers believe the system enough to use it.",
+     "transfer_check": "Complete and record one block yourself, in any pack outside your own trade, in your own ledger where your cohort can see it."
+    }
+   ]
+  },
+  {
+   "name": "Enrolling the community",
+   "prefix": "CF",
+   "credential": "Community Enrollment Lead",
+   "themes": [
+    {
+     "theme": "The first cohort is chosen, not found",
+     "description": "Why a launch enrolls a deliberate first cohort — mixed ages, visible trades, likely finishers — instead of waiting for walk-ins.",
+     "transfer_check": "Design your parish's first cohort of twenty on paper — who they are, why each was chosen, who asks them — and get one real person to say yes."
+    },
+    {
+     "theme": "Speaking parish, not platform",
+     "description": "Translating the system into the parish's own words — the shrimper's, the teacher's, the pastor's — and retiring every acronym at the door.",
+     "transfer_check": "Rewrite the platform's one-paragraph pitch in your parish's own voice for two different audiences you name, and test one version on a real listener."
+    },
+    {
+     "theme": "The six doors into the parish",
+     "description": "Schools, churches, employers, the library, the ballpark, the feed store — mapping where this parish actually gathers and who holds each door.",
+     "transfer_check": "Map six real gathering places in your parish with the named person or role who holds each door, and secure one standing five-minute slot."
+    },
+    {
+     "theme": "Enrolling the homeschool network",
+     "description": "The homeschool families as a launch's readiest audience — what the platform gives them, what they teach the launch about self-paced learning.",
+     "transfer_check": "Meet (or correspond with) one real homeschool family or co-op in your region and record what they would use first and what they would never use, verbatim."
+    },
+    {
+     "theme": "The employer's fifteen minutes",
+     "description": "The pitch to a parish employer — which tracks feed their floor, what a credential proves, what they give back (material, witnesses, a bench).",
+     "transfer_check": "Deliver the fifteen-minute employer pitch for one real employer in your parish's industry list, and leave with one named thing they would contribute."
+    },
+    {
+     "theme": "Signing up without a form fortress",
+     "description": "Enrollment that takes five minutes and no login — the paper card, the hall visit, the record made afterwards — because friction at the door is a policy choice.",
+     "transfer_check": "Design the five-minute enrollment path for your hall — the card, the questions, where the record goes — and time a real person through it."
+    },
+    {
+     "theme": "The family ledger",
+     "description": "Enrolling households rather than individuals — the parent at Practitioner, the child at Explorer, the same theme at two bands on one kitchen table.",
+     "transfer_check": "Enroll (or design the enrollment of) one real household onto one shared theme at two different bands, and write what each will demonstrate."
+    },
+    {
+     "theme": "Keeping the ones who stop coming",
+     "description": "The re-engagement call — reading why a learner went quiet, the check-in that isn't a summons, and when to let a pause be a pause.",
+     "transfer_check": "Draft the three-sentence re-engagement message for a real reason a learner in your parish would go quiet, and the one signal that says don't send it."
+    },
+    {
+     "theme": "The waitlist as a wave-two asset",
+     "description": "Demand a launch can't seat yet — recording it honestly, feeding it to the next cohort, and using a Wave-1 waitlist to justify a neighbor's Wave-2 case.",
+     "transfer_check": "Design the waitlist record for your hall — what is captured, what is promised, what is never promised — and write the sentence that tells a waitlisted person the truth."
+    },
+    {
+     "theme": "Enrollment tells the truth about the launch",
+     "description": "Reading enrollment as the launch's honest gauge — who the parish is reaching, who it is missing, and the month-two correction that evidence demands.",
+     "transfer_check": "Take real or simulated month-one enrollment, compare it against the parish's actual population shape, name the missing audience, and propose the correction."
+    }
+   ]
+  },
+  {
+   "name": "Measure, report, scale",
+   "prefix": "MS",
+   "credential": "Scale Operations Lead",
+   "themes": [
+    {
+     "theme": "Five numbers that cannot lie",
+     "description": "The launch dashboard reduced to five honest counts — enrolled, active, checks passed, credentials, trainers — and why every added metric is a place to hide.",
+     "transfer_check": "Produce your parish's five-number card for a real or simulated week, and defend to a listener why no sixth number belongs on it."
+    },
+    {
+     "theme": "The weekly count",
+     "description": "The steward's Friday ritual — counting the week from the logs, not from memory — and the discipline of writing the number down before interpreting it.",
+     "transfer_check": "Run the weekly count from one week of real or simulated hall logs, write the five numbers first, and only then write the two-sentence reading."
+    },
+    {
+     "theme": "Local records, learner's consent",
+     "description": "Where the numbers live — in the parish, on paper or local files — and the consent rule: a learner's record travels only when the learner sends it.",
+     "transfer_check": "Write your hall's one-page records policy — what is kept, where, who sees it, and the exact sentence a learner reads before anything is shared."
+    },
+    {
+     "theme": "Reporting up without dressing up",
+     "description": "The monthly parish-to-state report — the five numbers, the one problem, the one ask — and why a report that admits the bad week earns the next year's budget.",
+     "transfer_check": "Write one honest monthly report for your parish including a genuinely bad number, its plain cause, and the one specific ask."
+    },
+    {
+     "theme": "Comparing parishes without ranking them",
+     "description": "Reading 33 launches side by side — rates not raw counts, cohorts not league tables — and why ranking parishes kills the honest reporting that scale depends on.",
+     "transfer_check": "Take five parishes' numbers (real or supplied), convert them to honest per-capita rates, and write one comparison sentence that helps without ranking."
+    },
+    {
+     "theme": "The wave-one review gate",
+     "description": "The end-of-year review that Wave 2 depends on — what evidence the 33 must show, who reviews it, and what an honest 'not ready' buys.",
+     "transfer_check": "Draft the review-gate checklist your own parish would have to pass at the end of Wave 1, and mark the item your parish would find hardest today."
+    },
+    {
+     "theme": "Twinning: every wave-two parish gets a teacher",
+     "description": "The 33-to-31 pairing — each Wave-2 parish twinned with a Wave-1 neighbor, visits both ways, and the playbook annotated in the margins by someone who ran it.",
+     "transfer_check": "Propose the twin for one real Wave-2 parish — which Wave-1 parish, why (distance, size, industry) — and list the three visits the pairing needs."
+    },
+    {
+     "theme": "What breaks at scale",
+     "description": "The failure modes that only appear past twenty parishes — trainer poaching, hub congestion, report fatigue, the fork in the curriculum — and the early countermeasure for each.",
+     "transfer_check": "Pick one scale failure mode, find its earliest measurable signal in the five-number cards, and write the countermeasure that triggers on that signal."
+    },
+    {
+     "theme": "The playbook is a living document",
+     "description": "Versioning the launch playbook itself — every parish's corrections merged monthly — so parish 64 launches on the lessons of the first 33.",
+     "transfer_check": "Write one real playbook amendment from your parish's experience — what the playbook said, what actually worked, the replacement text — in a form another parish could adopt."
+    },
+    {
+     "theme": "Beyond the parish line",
+     "description": "The two-year plan as a model — what another state would need to change (and what it must not touch) to run its own two-wave adoption.",
+     "transfer_check": "Write the one-page adaptation memo for a neighboring state: three things it must localize, two invariants it must keep, grounded in the Louisiana rollout's evidence."
+    }
+   ]
+  }
+ ]
+}

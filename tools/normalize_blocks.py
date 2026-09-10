@@ -76,6 +76,7 @@ PACK_SLUGS = {
     "Cognition.X : Education OS": "EDUOS",
     "Civic Leadership Legacy : The Institute Model": "LEGACYMODEL",
     "SmartCiti.X : New Orleans Trades": "NOLATRADES",
+    "Parish Launch & Scale": "LAUNCH",
 }
 
 

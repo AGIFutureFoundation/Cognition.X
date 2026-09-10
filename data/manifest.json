@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 15450,
+  "total_blocks": 15700,
   "packs": [
     {
       "name": "K–12",
@@ -731,6 +731,26 @@
         "The storm and the long memory"
       ],
       "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Parish Launch & Scale",
+      "slug": "LAUNCH",
+      "blocks": 250,
+      "tracks": [
+        "The first ninety days",
+        "Standing up the Trade Hall",
+        "Training the trainers",
+        "Enrolling the community",
+        "Measure, report, scale"
+      ],
+      "credentials": 5,
       "grade_bands": [
         "K–2",
         "3–5",

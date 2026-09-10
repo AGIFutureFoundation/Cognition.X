@@ -50,10 +50,28 @@ POS = {
 
 WAVE_YEARS = ["2027–28", "2028–29", "2029–30", "2030–31"]
 
+# The adopted rollout: a two-year, two-wave plan. Wave 1 (2026–27) takes 33
+# parishes — every parish from the original proposal's waves 1–2 plus the
+# largest wave-3 parishes — reaching ~88% of the state's population in year
+# one; Wave 2 (2027–28) takes the remaining 31. The original 4-wave phasing
+# above is kept as proposal provenance on every parish.
+ACC_YEARS = ["2026–27", "2027–28"]
+ACC_WAVE1_SIZE = 33
+
+
+def adopted_waves(parishes):
+    """Assign each parish dict an accWave (1 or 2) under the adopted plan.
+
+    Deterministic rule: order by (original proposal wave, population desc,
+    name); the first 33 launch in Wave 1. Mutates in place."""
+    order = sorted(parishes, key=lambda p: (p["wave"], -p["pop"], p["name"]))
+    for i, p in enumerate(order):
+        p["accWave"] = 1 if i < ACC_WAVE1_SIZE else 2
+
 # Industry-phrase → curriculum-pack mapping. Each parish's anchor-industry
 # phrases (from the fact base) are matched against these rules to build its
 # module plan; the matching phrase is kept as the human-readable reason.
-CORE_PACKS = ["K12", "LAOS", "LEGACYLA", "LIFESKILL", "EMERGENCY"]
+CORE_PACKS = ["K12", "LAOS", "LEGACYLA", "LIFESKILL", "EMERGENCY", "LAUNCH"]
 INDUSTRY_RULES = [
     (r"LNG|oil|gas|petrochemical|chemical|hydrogen|carbon|energy|hydro|refin|pipeline|grid",
      ["ENERGY", "ROB"]),
@@ -217,6 +235,7 @@ def main():
             "packs": matched,
             "missions": parish_missions(name, seat, world, fb["hubs"][region], rural),
         })
+    adopted_waves(parishes)
     packmeta = {s: catalog[s] for s in sorted(used_slugs) if s in catalog}
     # full catalog (light) so the plan customizer can offer every pack
     catalog_light = {s: {"name": c["name"], "blocks": c["blocks"],
@@ -226,6 +245,7 @@ def main():
         "version": (ROOT / "VERSION").read_text().strip(),
         "regions": fb["regions"], "hubs": fb["hubs"],
         "waveYears": WAVE_YEARS,
+        "accYears": ACC_YEARS,
         "parishes": parishes,
         "curriculum": curriculum_stats(),
         "wlb": fb["wlb"],
