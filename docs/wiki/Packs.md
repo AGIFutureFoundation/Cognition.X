@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 43 packs — 16,450 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 44 packs — 16,700 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -44,6 +44,7 @@ Catalog of all 43 packs — 16,450 blocks total. Machine-readable version: [`dat
 | Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
 | Parish Launch & Scale | `LAUNCH` | 250 | 5 | 5 |
 | SmartCiti.X : New Orleans Trades | `NOLATRADES` | 250 | 5 | 5 |
+| Cognition.X : States OS | `STATEOS` | 250 | 5 | 5 |
 | Trades Across School Subjects | `TRADESUBJ` | 250 | 5 | 5 |
 | Trades in the Classroom : Flipped & Gamified | `TRADESCLASS` | 250 | 5 | 5 |
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
@@ -288,6 +289,16 @@ profiles are chosen supports, never diagnoses
 - Language, literacy and communication access
 - Attention, memory and processing access
 - Body, senses and health access
+
+**Cognition.X : States OS** — the universal state-curriculum blueprint
+(the Louisiana OS generalized): five tracks localized per state by the
+50-state fact base's water / corridor / table / culture / storm anchors,
+rendered as each state's custom courses in the States app
+- Water and the land
+- The working corridor
+- The state's table
+- Culture, language and celebration
+- Seasons, storms and memory
 
 **Parish Launch & Scale** — the rollout curriculum for the adopted
 two-year plan: 33 parishes in Wave 1 (2026–27), statewide by Wave 2

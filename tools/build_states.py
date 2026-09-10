@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+"""Build the Cognition.X States app: custom curriculum for all 50 states.
+
+Crosses the 50-state fact base (data/states/states.json) with:
+  - the Cognition.X : States OS blueprint pack (five universal tracks,
+    localized per state by its water / corridor / table / culture / storm
+    anchors),
+  - the Civic Leadership Legacy : The Institute Model pack (the universal
+    leadership + civics + EQ tracks, localized by capital and legislature),
+  - the Willie L. Brown Jr. Institute principles carried by the Education
+    OS app's fact base (extracted from apps/education-os/template.html,
+    exactly as the Louisiana build does) — the Education OS remains the
+    seed of the state model.
+
+Output: apps/states/index.html from apps/states/template.html
+(placeholder __STDATA__). A build product — never hand-edited.
+"""
+
+import csv
+import json
+import subprocess
+import tempfile
+from collections import OrderedDict
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+STATES = ROOT / "data" / "states" / "states.json"
+BLOCKS = ROOT / "data" / "blocks.csv"
+EDU = ROOT / "apps" / "education-os" / "template.html"
+TEMPLATE = ROOT / "apps" / "states" / "template.html"
+OUT = ROOT / "apps" / "states" / "index.html"
+
+CORE_PACKS = ["K12", "LIFESKILL", "EMERGENCY", "LAUNCH", "ACCESS"]
+
+
+def pack_catalog():
+    cat = OrderedDict()
+    with open(BLOCKS, newline="", encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            slug = r["block_id"].split("-")[1]
+            p = cat.setdefault(slug, {"name": r["pack"], "blocks": 0,
+                                      "tracks": OrderedDict()})
+            p["blocks"] += 1
+            if r["track"] and r["track"] not in p["tracks"]:
+                p["tracks"][r["track"]] = r["credential"]
+    for p in cat.values():
+        p["tracks"] = [{"name": n, "credential": c} for n, c in p["tracks"].items()]
+    return cat
+
+
+def wlb_from_education_os():
+    """Extract the Institute fact base from the Education OS template via
+    node (the JS literals are not JSON)."""
+    t = EDU.read_text(encoding="utf-8")
+
+    def grab(name):
+        i = t.find(name + "=")
+        j = t.find("];", i)
+        return t[i + len(name) + 1: j + 1]
+
+    def grab_obj(name):
+        i = t.find(name + "=")
+        j1, j2 = t.find("];", i), t.find("};", i)
+        j = min(x for x in (j1, j2) if x > 0)
+        return t[i + len(name) + 1: j + 1]
+
+    js = ("const wlb=" + grab_obj("DATA.wlb") + ";"
+          "const principles=" + grab("DATA.wlbPrinciples") + ";"
+          "console.log(JSON.stringify({wlb:{org:wlb.org,disclaimer:wlb.disclaimer,"
+          "mission:wlb.mission,quote:wlb.quote},"
+          "principles:principles.map(x=>({p:x.p,teach:x.teach}))}));")
+    with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as f:
+        f.write(js)
+        path = f.name
+    out = subprocess.run(["node", path], capture_output=True, text=True, check=True)
+    return json.loads(out.stdout)
+
+
+def main():
+    fb = json.loads(STATES.read_text(encoding="utf-8"))
+    assert len(fb["states"]) == 50, "fact base must carry all 50 states"
+    catalog = pack_catalog()
+    for slug in ["STATEOS", "LEGACYMODEL"] + CORE_PACKS:
+        if slug not in catalog:
+            raise SystemExit(f"missing pack in dataset: {slug}")
+    wlb = wlb_from_education_os()
+
+    payload = {
+        "version": (ROOT / "VERSION").read_text().strip(),
+        "note": fb["note"],
+        "states": fb["states"],
+        "blueprint": catalog["STATEOS"],
+        "model": catalog["LEGACYMODEL"],
+        "corePacks": {s: {"name": catalog[s]["name"], "blocks": catalog[s]["blocks"]}
+                      for s in CORE_PACKS},
+        "wlb": wlb["wlb"],
+        "principles": wlb["principles"],
+        "curriculum": {
+            "blocks": sum(1 for _ in csv.DictReader(open(BLOCKS, newline="", encoding="utf-8"))),
+            "packs": len(catalog),
+        },
+    }
+    data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    template = TEMPLATE.read_text(encoding="utf-8")
+    if "__STDATA__" not in template:
+        raise SystemExit("template.html is missing the __STDATA__ placeholder")
+    OUT.write_text(template.replace("__STDATA__", data), encoding="utf-8")
+    print(f"wrote {OUT.relative_to(ROOT)}: {OUT.stat().st_size/1e3:.0f} KB "
+          f"(50 states, {len(payload['blueprint']['tracks'])} blueprint tracks, "
+          f"{len(payload['model']['tracks'])} civic tracks)")
+
+
+if __name__ == "__main__":
+    main()

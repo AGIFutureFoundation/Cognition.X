@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 16450,
+  "total_blocks": 16700,
   "packs": [
     {
       "name": "K–12",
@@ -789,6 +789,26 @@
         "Water in, water out: pumps, canals and the storm",
         "Power back on: the grid after the wind",
         "The craft pathway: from first tool to journey card"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Cognition.X : States OS",
+      "slug": "STATEOS",
+      "blocks": 250,
+      "tracks": [
+        "Water and the land",
+        "The working corridor",
+        "The state's table",
+        "Culture, language and celebration",
+        "Seasons, storms and memory"
       ],
       "credentials": 5,
       "grade_bands": [

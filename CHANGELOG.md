@@ -4,6 +4,38 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.31.0] — 2026-09-10
+
+### Added
+- **Custom curriculum for all 50 states.** Three pieces:
+  - **Cognition.X : States OS** (`STATEOS`, 250 blocks) — the
+    universal state-curriculum blueprint, the Louisiana OS
+    generalized: *Water and the land*, *The working corridor*, *The
+    state's table*, *Culture, language and celebration*, *Seasons,
+    storms and memory* — every transfer check phrased on the
+    learner's own state's real material. Dataset: **16,700 blocks ·
+    44 packs · 210 tracks · 1,394 credentials**.
+  - **The 50-state fact base** (`data/states/states.json`): every
+    state with capital, region, a stylized US tile-grid position and
+    five localization anchors (water / corridor / table / culture /
+    storm) of public general knowledge — door-openers for local
+    study, not exhaustive claims.
+  - **The Cognition.X States app** (`apps/states/`, built by
+    `tools/build_states.py`): a 50-tile US cartogram, the searchable
+    catalog of catalogs, deep-linkable per-state pages rendering the
+    five blueprint courses localized by that state's anchors
+    ("Water and the land — *the Rio Grande border and the Gulf's
+    chest*") plus the Institute Model civic tracks in that state's
+    capital and the core spine with Flow Hub links, the blueprint
+    and Institute reference views, and an Adoption view mapping the
+    Louisiana pattern for any state. Platform-standard styles, voice
+    personas and Guide included.
+- **Education OS as the seed**: the States build extracts the Willie
+  L. Brown Jr. Institute principles, mission and disclaimer directly
+  from the Education OS app's fact base at build time (as the
+  Louisiana build does) — the Education OS remains the model's
+  source, rebuilt on the refreshed pipeline this release.
+
 ## [0.30.0] — 2026-09-10
 
 ### Added

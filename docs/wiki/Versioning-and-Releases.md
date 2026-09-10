@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.30.0** | Trades Network expansion: Baton Rouge–River Region, Houston–Gulf Coast and Los Angeles join — 37 families × 6 regions = 222 entries, three new city maps, Baton Rouge hall parishes gain union panels |
+| **v0.31.0** | Custom curriculum for all 50 states: the States OS blueprint pack (250 blocks), the 50-state fact base, and the Cognition.X States app (US tile cartogram, per-state localized courses, Institute Model in every capital) seeded from the Education OS fact base — 16,700 blocks / 44 packs |
+| v0.30.0 | Trades Network expansion: Baton Rouge–River Region, Houston–Gulf Coast and Los Angeles join — 37 families × 6 regions = 222 entries, three new city maps, Baton Rouge hall parishes gain union panels |
 | v0.29.0 | Credential Ledger v1: per-browser Records Office (ECDSA P-256), signed portable cx-credential/1 records with offline verification and tamper detection; deterministic per-parish launch budget sketches |
 | v0.28.0 | The Trade Hall Network OS: eight system automations on a live pulse (flow, breaks, steps, credentials, alerts, readiness, teacher relief, network sync), section-OS region cards, teacher flow state with relief automations |
 | v0.27.0 | Flow-state engine driving the experience (profile-aware break calls, shrink/stretch automations, alternative check formats), 20 learner-type access modules (chosen supports, never diagnoses), Learning States & Universal Access pack — 16,450 blocks / 43 packs |

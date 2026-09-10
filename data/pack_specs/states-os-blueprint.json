@@ -1,0 +1,291 @@
+{
+ "pack": "Cognition.X : States OS",
+ "notes": "The universal state-curriculum blueprint, generalized from the Louisiana OS: five tracks every U.S. state can run, each localized by the States app through the state fact base (data/states/states.json) — the water anchor, the working corridor, the table, the culture, and the storm memory of the learner's own state. Every transfer check is phrased against 'your state' and performed on its real material: its rivers, its industries, its harvest, its music, its disaster history. The blueprint is the constant; the state is the variable — exactly the pattern the Willie L. Brown Jr. Institute localizer established for the civic tracks.",
+ "tracks": [
+  {
+   "name": "Water and the land",
+   "prefix": "WL",
+   "credential": "State Waters Steward",
+   "themes": [
+    {
+     "theme": "The water that made your state",
+     "description": "Every state is shaped by one water story — a river, a coast, a lake, an aquifer — and the map of the state is the map of that water.",
+     "transfer_check": "On a real map, trace your state's defining water body and mark three towns that exist where they do because of it."
+    },
+    {
+     "theme": "The watershed you stand in",
+     "description": "Rain that lands on your roof goes somewhere — reading your own watershed from ridge to river to outlet.",
+     "transfer_check": "Follow a drop of rain from your own roof to the sea (or basin) on a map, naming each stream and river it joins."
+    },
+    {
+     "theme": "Who owns the water",
+     "description": "Water rights, districts and compacts — the law that moves your state's water, and the neighbors it is shared with.",
+     "transfer_check": "Name the body that governs water where you live and one real agreement or rule it enforces, from its own public materials."
+    },
+    {
+     "theme": "The land in four surfaces",
+     "description": "Your state as farmland, forest, range and city — reading the land-use map and what each surface asks of its stewards.",
+     "transfer_check": "From a land-use or satellite map, estimate your state's four surfaces in rough proportions and check one against a published figure."
+    },
+    {
+     "theme": "The soil underneath",
+     "description": "What your state's ground grows and carries — soil, bedrock and the reason the farms and the cities sit where they sit.",
+     "transfer_check": "Dig or examine one real soil sample from your area and match it to your state's soil story in one paragraph."
+    },
+    {
+     "theme": "The species that means home",
+     "description": "Every state names its animals and plants — and behind each symbol is a habitat with a condition worth knowing.",
+     "transfer_check": "Pick one official state species, find its real habitat status from a public source, and tell somebody what it needs."
+    },
+    {
+     "theme": "Water in, water out",
+     "description": "Your town's intake and outfall — where drinking water enters and treated water leaves, the two pipes every citizen should be able to point to.",
+     "transfer_check": "Locate (publicly) your community's water source and its treatment outfall and explain the journey between them."
+    },
+    {
+     "theme": "The working water",
+     "description": "Barges, irrigation, cooling, fisheries — the jobs your state's water does beyond drinking.",
+     "transfer_check": "Identify two real working uses of water in your state and one place each can be safely observed from public ground."
+    },
+    {
+     "theme": "When the water turns",
+     "description": "Flood, drought, freeze or surge — your state's water in its dangerous mood, and the systems built to answer it.",
+     "transfer_check": "Find one real flood-control or drought structure in your region and explain what it holds back or holds in."
+    },
+    {
+     "theme": "Stewardship is local",
+     "description": "The cleanup, the gauge, the planting — one real act of water stewardship a learner can join where they live.",
+     "transfer_check": "Take part in (or concretely plan) one real local stewardship act — a cleanup, a monitoring day, a planting — and log what was done."
+    }
+   ]
+  },
+  {
+   "name": "The working corridor",
+   "prefix": "WC",
+   "credential": "State Industry Reader",
+   "themes": [
+    {
+     "theme": "What your state makes",
+     "description": "Every state has a working spine — the industries that pay its wages — and a map of where that work actually happens.",
+     "transfer_check": "Name your state's three largest real industries from a public source and place each on the map where it concentrates."
+    },
+    {
+     "theme": "The corridor with a name",
+     "description": "The ship channel, the tech valley, the auto alley, the corn belt — your state's famous working corridor and why it runs where it runs.",
+     "transfer_check": "Identify your state's best-known working corridor and explain, from geography, why it is there and not elsewhere."
+    },
+    {
+     "theme": "The jobs behind the product",
+     "description": "One product your state is known for, unfolded into the trades and professions that touch it from raw to sold.",
+     "transfer_check": "Take one real product of your state and list eight distinct jobs it passes through, checking two with someone who works one."
+    },
+    {
+     "theme": "The port, the rail and the road",
+     "description": "How your state's goods leave — the freight map of ports, railheads and interstates a working state depends on.",
+     "transfer_check": "Trace one real export of your state from its origin to its exit point (port, railhead or highway) on a map."
+    },
+    {
+     "theme": "The paycheck geography",
+     "description": "Where your state's wages are high and low, and the honest reasons — industry mix, cost, distance — behind the pattern.",
+     "transfer_check": "Compare median pay in two real counties of your state from public data and give one grounded reason for the gap."
+    },
+    {
+     "theme": "The old industry's shadow",
+     "description": "The mill, the mine, the plant that closed — what your state's last economic turn left behind, and what grew in its place.",
+     "transfer_check": "Find one real former industrial site in your region and record what it was, what it is, and who remembers it."
+    },
+    {
+     "theme": "The next industry's seed",
+     "description": "What your state is betting on next — the announced plants, grants and training programs, read critically.",
+     "transfer_check": "Find one real announced investment or program in your state and state what it promises, who funds it, and what would prove it worked."
+    },
+    {
+     "theme": "The trades behind the corridor",
+     "description": "The union halls and training centers that staff your state's working spine — the pathway map from school to corridor.",
+     "transfer_check": "Identify the regional labor or trades council serving your area and one real apprenticeship program it can point you to."
+    },
+    {
+     "theme": "Small works too",
+     "description": "The shop, the farm, the crew of five — counting the small enterprises that carry most of your state's working life.",
+     "transfer_check": "Interview one real small-business owner or worker in your area about what their week actually holds, and retell it fairly."
+    },
+    {
+     "theme": "Your seat in the corridor",
+     "description": "Matching your own bench evidence to your state's working spine — the honest shortlist of where you could stand in it.",
+     "transfer_check": "From your own ledger or portfolio, shortlist two real state industries you could serve and the next concrete step toward each."
+    }
+   ]
+  },
+  {
+   "name": "The state's table",
+   "prefix": "ST",
+   "credential": "State Table Keeper",
+   "themes": [
+    {
+     "theme": "What your state grows",
+     "description": "The crops and herds your state actually raises — the agriculture map behind the grocery shelf.",
+     "transfer_check": "Name your state's three largest real farm products from a public source and find one of them raised within a day's drive."
+    },
+    {
+     "theme": "The dish that names you",
+     "description": "Every state has a table identity — the dish, the harvest, the festival food — and a history of who brought it.",
+     "transfer_check": "Cook or help cook one dish your state is known for and tell its real origin story while it's eaten."
+    },
+    {
+     "theme": "From field to shelf",
+     "description": "One local food followed all the way — grower, hauler, processor, grader, grocer — the chain made visible.",
+     "transfer_check": "Trace one real local food from its farm or dock to a shelf you can touch, naming each hand it passed through."
+    },
+    {
+     "theme": "The market and the season",
+     "description": "What is actually in season in your state, month by month — eating the calendar instead of the freight.",
+     "transfer_check": "Build your state's real 12-month harvest calendar for five foods and shop one week from what is in season now."
+    },
+    {
+     "theme": "The waters' harvest",
+     "description": "Fish, shellfish and the working boats — or the lakes and rivers' catch — as part of your state's table.",
+     "transfer_check": "Identify one real caught-or-farmed water food of your state and where it lands, and prepare or observe it prepared."
+    },
+    {
+     "theme": "Feeding everyone",
+     "description": "Food banks, school meals, markets that take benefits — how your state's table reaches the people the market misses.",
+     "transfer_check": "Locate two real programs that feed people in your area and record how a family actually reaches each."
+    },
+    {
+     "theme": "The kitchen as a lab",
+     "description": "Ratios, heat, cure and rise — the science and math of your state's cooking, at the stove.",
+     "transfer_check": "Scale one real recipe up by half, execute it, and record where the math held and where the cook's judgment took over."
+    },
+    {
+     "theme": "The table as history",
+     "description": "Migration written in menus — which peoples brought which dishes to your state, and what the food remembers.",
+     "transfer_check": "Pick one dish on your state's table and trace, from real sources, the community that carried it there."
+    },
+    {
+     "theme": "Waste not",
+     "description": "What your state's table throws away — and the compost, gleaning and recovery systems that close the loop.",
+     "transfer_check": "Run one week of your own household food-waste log and make one change that measurably shrinks it."
+    },
+    {
+     "theme": "Host a table",
+     "description": "The capstone: plan, source and serve one meal that is your state on a plate — seasonal, local where possible, storied.",
+     "transfer_check": "Host a real meal for others built from your state's foods, and tell each dish's story before it is served."
+    }
+   ]
+  },
+  {
+   "name": "Culture, language and celebration",
+   "prefix": "CL",
+   "credential": "State Culture Carrier",
+   "themes": [
+    {
+     "theme": "The sound of your state",
+     "description": "Every state has a sound — a music it gave or keeps — and the halls, porches and stations where it lives.",
+     "transfer_check": "Listen to one musical tradition your state is known for, live where possible, and name two of its real makers past or present."
+    },
+    {
+     "theme": "The languages of home",
+     "description": "The languages actually spoken in your state's homes — indigenous, settler, immigrant — and where each is heard today.",
+     "transfer_check": "From public data, name the three most-spoken home languages in your state besides English and learn a real greeting in one."
+    },
+    {
+     "theme": "The peoples first here",
+     "description": "The Native nations of your state's ground — their names, their present-day governments, and the places that carry their words.",
+     "transfer_check": "Name the Native nations historically and presently connected to your area, from their own or public sources, and one place-name that keeps their language."
+    },
+    {
+     "theme": "The festival calendar",
+     "description": "What your state gathers to celebrate — the fairs, feasts and parades — and the crews of real work behind each.",
+     "transfer_check": "Attend or study one real festival of your state and list five kinds of work that made it happen."
+    },
+    {
+     "theme": "The story your state tells",
+     "description": "The founding tales, the tall tales, and the truths underneath — reading state legend with respect and honesty.",
+     "transfer_check": "Take one famous story your state tells about itself and check it against a historical source, reporting what held and what grew."
+    },
+    {
+     "theme": "The makers' craft",
+     "description": "The craft your state is known for — quilts, boats, pottery, saddles, instruments — and the hands still making it.",
+     "transfer_check": "Find one living practitioner of a craft your state is known for and document one piece from their hands, with permission."
+    },
+    {
+     "theme": "The writers and the games",
+     "description": "The books set in your state and the teams it cheers — culture as the shared calendar of a place.",
+     "transfer_check": "Read one work set in your state (or follow one storied team's season) and explain to somebody what it shows about home."
+    },
+    {
+     "theme": "The quiet cultures",
+     "description": "The communities your state's brochure forgets — and the food, faith and festivals they keep anyway.",
+     "transfer_check": "Identify one community tradition in your area that gets little attention and document it respectfully, with its keepers' consent."
+    },
+    {
+     "theme": "Culture is taught",
+     "description": "How your state's culture actually passes on — the aunties, the youth krewes, the apprentice pipelines of art.",
+     "transfer_check": "Learn one small cultural skill from an elder or keeper — a step, a stitch, a verse — and perform or produce it for them."
+    },
+    {
+     "theme": "Add your verse",
+     "description": "The capstone: make one thing — a song, a dish, a piece, a recorded story — that adds honestly to your state's culture.",
+     "transfer_check": "Create and share one original piece rooted in your state's tradition, and record one keeper's response to it."
+    }
+   ]
+  },
+  {
+   "name": "Seasons, storms and memory",
+   "prefix": "SM",
+   "credential": "State Resilience Lead",
+   "themes": [
+    {
+     "theme": "Your state's hazard, by name",
+     "description": "Hurricane, tornado, wildfire, blizzard, quake, flood — every state has a signature hazard, and naming it is the first preparation.",
+     "transfer_check": "Name your state's principal natural hazard from its own emergency agency's materials and the season or sign it comes with."
+    },
+    {
+     "theme": "The storm your state remembers",
+     "description": "The named disaster your state still talks about — what happened, who answered, and what changed after.",
+     "transfer_check": "Interview someone who remembers your state's defining disaster (or study firsthand accounts) and retell it accurately in five minutes."
+    },
+    {
+     "theme": "The warning and the watch",
+     "description": "How the alert actually reaches you — the sirens, phones, radios and neighbors of your state's warning chain.",
+     "transfer_check": "Map the real warning chain for your household — every channel an alert would arrive by — and test one of them."
+    },
+    {
+     "theme": "The family plan",
+     "description": "Go or stay, meet where, carry what — the one-page household plan your state's hazard demands.",
+     "transfer_check": "Write and rehearse your household's real one-page plan for your state's hazard, with every member holding a role."
+    },
+    {
+     "theme": "The kit that fits your state",
+     "description": "Not a generic kit — yours: the water, warmth, cooling, documents and days-of-supply your state's hazard actually requires.",
+     "transfer_check": "Assemble the real kit your state's hazard calls for, and defend two items you added and one you left out."
+    },
+    {
+     "theme": "The crews that answer",
+     "description": "Who moves when it hits — utility crews, guard units, mutual aid, church kitchens — your state's response in order.",
+     "transfer_check": "Chart which crews restored one real past event in your state, in order, from news or firsthand accounts."
+    },
+    {
+     "theme": "The built defenses",
+     "description": "Levees, snow fences, firebreaks, surge gates, safe rooms — the structures your state built against its weather.",
+     "transfer_check": "Visit or locate one real defensive structure in your region and explain what it defends against and its limits."
+    },
+    {
+     "theme": "The season's rhythm",
+     "description": "Planting, harvest, first freeze, fire season — reading your state's year the way its farmers and foresters do.",
+     "transfer_check": "Build your state's real seasonal calendar of six working dates and verify two against a farmer, forecaster or almanac."
+    },
+    {
+     "theme": "Neighbor is a verb",
+     "description": "The block-level truth of every disaster — the checklist of doors to knock, and the neighbors who need the first knock.",
+     "transfer_check": "Make the real check-on list for your street or building — who needs the first knock and why — and agree it with one neighbor."
+    },
+    {
+     "theme": "Memory into readiness",
+     "description": "The capstone: turn your state's disaster memory into one durable readiness artifact for the people around you.",
+     "transfer_check": "Produce one real readiness artifact — a laminated plan, a kit day, a recorded elder interview — and put it in use where you live."
+    }
+   ]
+  }
+ ]
+}
