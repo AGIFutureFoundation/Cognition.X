@@ -1125,58 +1125,165 @@ function teacherFlow(ls){
     advice:"The room is in the channel. Automation: bank it — name one concrete win aloud before the next block."};
 }
 const TFCOL = {overload:"var(--w4)", stretch:"var(--gold)", flow:"var(--green)", idle:"var(--faint)"};
+/* Granular section boards (v0.40.0): every automation carries its live
+   thresholds and a detail() of the exact rows it computed from — per
+   learner or per parish — so each section call is inspectable, never a
+   black box. Row shape: {k, v, col?}. */
+function fkRows(ls){
+  return ls.map(l=>{ const f = flowOf(l); const [lab, col] = FLOWMETA[f.state];
+    return {k:l.name, v:`${lab} · last-3 ${f.last3>=0?"+":""}${f.last3} · ${f.fs.moves} move${f.fs.moves===1?"":"s"}`, col}; });
+}
 const AUTOMATIONS = [
- {name:"Flow Keeper", watch:"every learner's channel position", run(ls){
+ {name:"Flow Keeper", watch:"every learner's channel position",
+  thresholds:"last-3 events ≤ −2 → overloaded · ≥ +3 (or +2 with a profile step-bias) → cruising · no events → warming",
+  run(ls){
     const d = flowDist(ls);
     return {status: d.overload ? "attention" : (ls.length ? "ok" : "idle"),
-      line: ls.length ? `${d.flow+d.cruising} in the channel · ${d.warming} warming · ${d.overload} overloaded` : "waiting for a class"};}},
- {name:"Break Caller", watch:"each profile's break cadence", run(ls){
+      line: ls.length ? `${d.flow+d.cruising} in the channel · ${d.warming} warming · ${d.overload} overloaded` : "waiting for a class"};},
+  detail(ls){ return fkRows(ls); }},
+ {name:"Break Caller", watch:"each profile's break cadence",
+  thresholds:"break called when moves-since-break reaches the learner's own cadence — the profile minimum wins (default 8)",
+  run(ls){
     const due = ls.filter(l=>flowOf(l).state==="brk").length;
     return {status: due ? "attention" : (ls.length ? "ok" : "idle"),
-      line: due ? `${due} learner${due>1?"s":""} at cadence — break before the next block` : "no breaks due"};}},
- {name:"Step Tuner", watch:"struggle and cruise streaks", run(ls){
+      line: due ? `${due} learner${due>1?"s":""} at cadence — break before the next block` : "no breaks due"};},
+  detail(ls){ return ls.map(l=>{ const f = flowOf(l);
+    return {k:l.name, v:`${f.fs.sinceBreak}/${f.a.breakEvery} since break${f.state==="brk" ? " · due now" : ""}`,
+            col: f.state==="brk" ? "var(--gold)" : null}; }); }},
+ {name:"Step Tuner", watch:"struggle and cruise streaks",
+  thresholds:"overloaded → step down (split the check; offer the profile's alternative format) · cruising → stretch (raise the band or serve a fresh theme)",
+  run(ls){
     const shrink = ls.filter(l=>flowOf(l).state==="overload").length;
     const stretch = ls.filter(l=>flowOf(l).state==="cruising").length;
     return {status: (shrink||stretch) ? "ok" : "idle",
-      line: `${shrink} step-down call${shrink===1?"":"s"} · ${stretch} stretch call${stretch===1?"":"s"} pending`};}},
- {name:"Credential Clerk", watch:"the 50-check line on every track", run(ls){
+      line: `${shrink} step-down call${shrink===1?"":"s"} · ${stretch} stretch call${stretch===1?"":"s"} pending`};},
+  detail(ls){
+    const out = [];
+    ls.forEach(l=>{ const f = flowOf(l);
+      if (f.state==="overload") out.push({k:l.name, v:`step down — split the current check (last-3 ${f.last3})`, col:"var(--w4)"});
+      if (f.state==="cruising") out.push({k:l.name, v:`stretch — raise the band (last-3 +${f.last3})`, col:"var(--w1)"}); });
+    return out.length ? out : [{k:"—", v:"no step calls pending: everyone holds their current step size"}]; }},
+ {name:"Credential Clerk", watch:"the 50-check line on every track",
+  thresholds:"the credential fires at exactly the 50th recorded check — nothing awards it directly, and no button overrides it",
+  run(ls){
     const creds = ls.reduce((s,l)=>s+llStanding(l).creds.length, 0);
     const near = ls.reduce((s,l)=>s+LTRACKS.filter(t=>{const n=(l.prog||{})[t.key]||0; return n>=45&&n<50;}).length, 0);
     return {status: ls.length ? "ok" : "idle",
-      line: `${creds} credential${creds===1?"":"s"} auto-awarded · ${near} within five checks`};}},
- {name:"Cohort Watch", watch:"stalls and near-credentials", run(ls){
+      line: `${creds} credential${creds===1?"":"s"} auto-awarded · ${near} within five checks`};},
+  detail(ls){
+    const out = [];
+    ls.forEach(l=> LTRACKS.forEach(t=>{ const n = (l.prog||{})[t.key]||0;
+      if (n>=45 && n<50) out.push({k:l.name, v:`${t.name} — ${n}/50 · ${50-n} to “${t.credential}”`, col:"var(--gold)"}); }));
+    const creds = ls.reduce((s,l)=>s+llStanding(l).creds.length, 0);
+    out.push({k:"ledger", v:`${creds} credential${creds===1?"":"s"} already earned at the 50-check line`});
+    return out; }},
+ {name:"Cohort Watch", watch:"stalls and near-credentials",
+  thresholds:"flags a learner at 45–49/50 on any track, and any learner with zero recorded checks",
+  run(ls){
     const a = llAlerts(ls);
     return {status: a.length ? "attention" : (ls.length ? "ok" : "idle"),
-      line: a.length ? a[0] : "no alerts pending"};}},
- {name:"Readiness Sentinel", watch:"the five Wave-1 requirements, statewide", run(){
+      line: a.length ? a[0] : "no alerts pending"};},
+  detail(ls){
+    const out = [];   // the full list — the dashboard widget caps at 8, the section board does not
+    ls.forEach(l => {
+      LTRACKS.forEach(t => { const n = (l.prog||{})[t.key]||0;
+        if (n>=45 && n<50) out.push({k:l.name, v:`${50-n} check${50-n>1?"s":""} from “${t.credential}” (${t.name})`, col:"var(--gold)"}); });
+      if (llStanding(l).done === 0)
+        out.push({k:l.name, v:`no recorded checks yet — serve the first block at ${LEVELS[l.band]||"their"} level`});
+    });
+    return out.length ? out : [{k:"—", v:"no alerts pending"}]; }},
+ {name:"Readiness Sentinel", watch:"the five Wave-1 requirements, statewide",
+  thresholds:"ready = all five Parish Launch & Scale requirements checked in this browser's record; the sentinel names each parish's next missing one",
+  run(){
     const ready = D.parishes.filter(p=>readyState(p.slug).every(Boolean)).length;
     const started = D.parishes.filter(p=>readyState(p.slug).some(Boolean)).length;
     return {status: started ? "ok" : "idle",
-      line: `${ready}/64 parishes Wave-1 ready · ${started} in preparation`};}},
- {name:"Teacher Relief", watch:"the teacher's own load", run(ls){
+      line: `${ready}/64 parishes Wave-1 ready · ${started} in preparation`};},
+  detail(){
+    const prep = D.parishes.map(p=>({p, st: readyState(p.slug)}))
+      .filter(x=>x.st.some(Boolean)).sort((a,b)=>b.st.filter(Boolean).length - a.st.filter(Boolean).length);
+    if (!prep.length) return [{k:"—", v:"no parish has started its readiness record in this browser — open any parish's Wave-1 board to begin"}];
+    const rows = prep.slice(0,12).map(({p,st})=>{
+      const n = st.filter(Boolean).length;
+      const next = READY_REQS.findIndex((_,i)=>!st[i]);
+      return {k:p.name, v: n===5 ? "5/5 · Wave-1 ready" : `${n}/5 · next: ${READY_REQS[next][0]}`,
+              col: n===5 ? "var(--green)" : null}; });
+    if (prep.length > 12) rows.push({k:"…", v:`+${prep.length-12} more parishes preparing`});
+    return rows; }},
+ {name:"Teacher Relief", watch:"the teacher's own load",
+  thresholds:"overloaded at ≥34% of the class overloaded/break-due or ≥6 open alerts · stretched at ≥15% or ≥3 — the automation relieves the teacher, not just the learners",
+  run(ls){
     const tf = teacherFlow(ls);
     return {status: tf.state==="overload" ? "attention" : (tf.state==="idle" ? "idle" : "ok"),
-      line: tf.label + " — " + tf.advice.replace(/^Automation: /, "")};}},
- {name:"Network Sync", watch:"all eight halls", run(ls){
+      line: tf.label + " — " + tf.advice.replace(/^Automation: /, "")};},
+  detail(ls){
+    if (!ls.length) return [{k:"—", v:"no class yet"}];
+    const over = ls.filter(l=>["overload","brk"].includes(flowOf(l).state)).length;
+    const alerts = llAlerts(ls).length;
+    const tf = teacherFlow(ls);
+    return [
+      {k:"class size", v:`${ls.length} learner${ls.length===1?"":"s"}`},
+      {k:"overloaded / break-due", v:`${over} (${Math.round(100*over/ls.length)}% load)`, col: over ? "var(--w4)" : null},
+      {k:"open alerts", v:String(alerts), col: alerts>=3 ? "var(--gold)" : null},
+      {k:"teacher state", v: tf.label, col: TFCOL[tf.state]},
+      {k:"relief", v: tf.advice.replace(/^Automation: /, "")},
+    ]; }},
+ {name:"Network Sync", watch:"all eight halls",
+  thresholds:"re-reads every hall's live section state — parishes, Wave-1 cohort, this browser's readiness and mission records — on each pulse",
+  run(ls){
     const rungs = D.parishes.reduce((s,p)=>s+missionState(p.slug).filter(Boolean).length, 0);
     return {status: "ok",
-      line: `8 halls · ${accN(1)} Wave-1 parishes · ${rungs} mission rungs logged · ledger: ${ls.length} learner${ls.length===1?"":"s"}`};}},
+      line: `8 halls · ${accN(1)} Wave-1 parishes · ${rungs} mission rungs logged · ledger: ${ls.length} learner${ls.length===1?"":"s"}`};},
+  detail(){
+    return D.regions.map((r,i)=>{
+      const ps = D.parishes.filter(p=>p.region===i);
+      if (!ps.length) return null;
+      const w1 = ps.filter(p=>p.accWave===1).length;
+      const ready = ps.filter(p=>readyState(p.slug).every(Boolean)).length;
+      const rungs = ps.reduce((s,p)=>s+missionState(p.slug).filter(Boolean).length, 0);
+      return {k:`${r} · ${D.hubs[i]}`, v:`${ps.length} parishes · ${w1} in Wave 1 · ${ready} ready (this browser) · ${rungs} rung${rungs===1?"":"s"}`};
+    }).filter(Boolean); }},
 ];
 const AUTOSTATUS = {ok:["running","var(--green)"], attention:["attention","var(--w4)"], idle:["idle","var(--faint)"]};
 let pulseCount = 0;
+const netOpen = new Set();
+const netLog = {};
 function renderNetOS(){
   const host = $("#autoboard"); if (!host) return;
   const ls = llLoad().learners;
   pulseCount++;
+  const at = new Date().toLocaleTimeString();
   host.innerHTML = AUTOMATIONS.map(a=>{
     let r; try { r = a.run(ls); } catch(e){ r = {status:"idle", line:"—"}; }
+    const log = netLog[a.name] = netLog[a.name] || [];
+    if (!log.length || log[log.length-1].line !== r.line) log.push({at, line:r.line});
+    if (log.length > 4) log.shift();
     const [lab, col] = AUTOSTATUS[r.status];
+    const open = netOpen.has(a.name);
+    let detail = "";
+    if (open){
+      let rows; try { rows = a.detail(ls); } catch(e){ rows = [{k:"—", v:"—"}]; }
+      detail = `<div class="netdetail" data-sec="${esc(a.name)}" style="flex-basis:100%; padding:6px 0 10px 12px; border-left:3px solid ${col}; margin-left:4px">
+        <p class="mono" style="font-size:.68rem; color:var(--faint); margin:0 0 6px">thresholds: ${esc(a.thresholds)}</p>`+
+        rows.map(x=>`<div style="display:flex; gap:10px; font-size:.8rem; padding:2px 0">
+          <span style="flex:0 0 190px; color:var(--muted)">${esc(x.k)}</span>
+          <span${x.col?` style="color:${x.col}"`:""}>${esc(x.v)}</span></div>`).join("")+
+        (log.length > 1 ? `<p class="mono" style="font-size:.66rem; color:var(--faint); margin:8px 0 0">recent calls: ${
+          log.slice(0,-1).map(e=>`[${e.at}] ${esc(e.line)}`).join(" · ")}</p>` : "")+
+        `</div>`;
+    }
     return `<div style="display:flex; gap:12px; align-items:baseline; padding:8px 0; border-top:1px solid var(--line); font-size:.87rem; flex-wrap:wrap">
-      <span style="flex:0 0 150px"><b>${a.name}</b></span>
+      <button data-sec="${esc(a.name)}" aria-expanded="${open}" style="flex:0 0 170px; border:0; background:none; color:var(--ink); text-align:left; padding:0; font-size:inherit">
+        ${open?"▾":"▸"} <b>${a.name}</b></button>
       <span class="chip" style="border-color:${col}; color:${col}; font-size:.68rem">${lab}</span>
       <span style="color:var(--muted); flex:1; min-width:220px">${esc(r.line)}</span>
-      <span class="mono" style="font-size:.66rem; color:var(--faint)">watches ${esc(a.watch)}</span></div>`;
+      <span class="mono" style="font-size:.66rem; color:var(--faint)">watches ${esc(a.watch)}</span>${detail}</div>`;
   }).join("");
+  host.querySelectorAll("button[data-sec]").forEach(b=> b.addEventListener("click", ()=>{
+    const s = b.dataset.sec;
+    if (netOpen.has(s)) netOpen.delete(s); else netOpen.add(s);
+    renderNetOS();
+  }));
   const pl = $("#pulse-line");
   if (pl) pl.textContent = `pulse #${pulseCount} · ${new Date().toLocaleTimeString()}`;
 }

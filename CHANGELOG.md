@@ -4,6 +4,36 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.40.0] — 2026-09-10
+
+### Changed
+- **Granular Network OS** — a deep, granular update of each of the
+  eight section automations (Louisiana, Regions view). Every section
+  row now expands into its own drill-down board
+  (keyboard-operable, `aria-expanded`, state kept across the
+  20-second pulse), showing three things no section showed before:
+  - **Its live thresholds, stated exactly** — the flow-state cut
+    lines, each profile's own break cadence, the 34%/15% and 6/3
+    teacher-relief trip points, the never-overridden 50-check
+    credential line, the five readiness requirements.
+  - **The exact rows it computed from**: Flow Keeper lists every
+    learner's channel position with the last-3 sum; Break Caller
+    every learner's moves-since-break against their own cadence
+    ("due now" flagged); Step Tuner the pending step-down and
+    stretch calls by name; Credential Clerk each near-credential
+    learner with track and count (49/50 · 1 to go); Cohort Watch
+    the full uncapped alert list (the dashboard widget still caps
+    at 8); Readiness Sentinel each preparing parish's n/5 with its
+    *next missing requirement named*; Teacher Relief its actual
+    inputs (class size, load %, open alerts → state → relief);
+    Network Sync all eight halls' live counts (parishes, Wave-1
+    cohort, browser-local readiness and mission rungs).
+  - **A per-section pulse log** of recent distinct calls.
+  - Verified headlessly: all eight drill-downs render the expected
+    granular rows from a seeded cohort (including a crafted 49/50,
+    break-due learner and a 3/5 parish), all eight stay open through
+    a pulse re-render, collapse works, zero page errors.
+
 ## [0.39.0] — 2026-09-10
 
 ### Changed

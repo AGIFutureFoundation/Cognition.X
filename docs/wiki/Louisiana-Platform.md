@@ -81,15 +81,24 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   hall's published public key). Plus a deterministic per-parish
   staffing / spaces / devices / materials budget sketch on the Parish
   Admin dashboard and in the program export.
-- **The Trade Hall Network OS (v0.28.0)** — the Regions view as an
-  eight-section operating console: eight system automations (Flow
-  Keeper, Break Caller, Step Tuner, Credential Clerk, Cohort Watch,
-  Readiness Sentinel, Teacher Relief, Network Sync) computing live
-  from the browser's ledger, readiness boards and missions, each
-  showing its current call, on a 20-second pulse. Region cards carry
-  their live section state, and the teacher's Class flow board opens
-  with the teacher's own flow state and a concrete relief automation
-  — keeping teachers, not just learners, in the channel.
+- **The Trade Hall Network OS (v0.28.0; granular v0.40.0)** — the
+  Regions view as an eight-section operating console: eight system
+  automations (Flow Keeper, Break Caller, Step Tuner, Credential
+  Clerk, Cohort Watch, Readiness Sentinel, Teacher Relief, Network
+  Sync) computing live from the browser's ledger, readiness boards
+  and missions, each showing its current call, on a 20-second pulse.
+  Since v0.40.0 every section expands into its own **granular
+  drill-down board**: the automation's exact thresholds stated in
+  plain terms, the per-learner or per-parish rows it computed from
+  (channel positions with last-3 sums, moves-since-break against
+  each profile's own cadence, pending step calls by name,
+  near-credential counts like 49/50, the full alert list, each
+  preparing parish's next missing requirement, the teacher-relief
+  inputs, all eight halls' live counts), and a pulse log of recent
+  calls — nothing the console says is a black box. Region cards
+  carry their live section state, and the teacher's Class flow board
+  opens with the teacher's own flow state and a concrete relief
+  automation — keeping teachers, not just learners, in the channel.
 - **Flow-state engine & access modules (v0.27.0)** — a per-learner
   flow model (warming up / in flow / cruising / overloaded / break
   called) whose automations steer the experience: shrink the step
