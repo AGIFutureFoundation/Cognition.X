@@ -15,7 +15,7 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (9,250 blocks, 35 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (9,750 blocks, 36 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
@@ -53,7 +53,8 @@ Full details: [`data/schema.md`](data/schema.md) and the
 
 ## Packs at a glance
 
-Seven **Cognition.X OS editions** (Corporate, Science, Robotics, Global
+Eight **Cognition.X OS editions** (Louisiana — the state's own, 500
+blocks of river, coast, corridor, table and storm — plus Corporate, Science, Robotics, Global
 Health, Multilateral, Sapient, Non-Profit — 500 blocks each), sixteen
 **community packs** (250 each — housing, money, reentry, neighbourhood,
 preventive health, life skills, water/land/climate, care, making/repair,

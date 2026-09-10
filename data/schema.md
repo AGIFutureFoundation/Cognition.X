@@ -6,7 +6,7 @@ at one grade band, with a transfer check that proves it.
 | Column | Required | Description |
 |---|---|---|
 | `block_id` | always | Globally unique, stable id: `CX-<PACK>-<NNNN>` (pack slug + 1-based row number within the pack, source order). Never reused, never renumbered. Assigned by `tools/normalize_blocks.py`. |
-| `pack` | always | Curriculum pack (35 today; see `manifest.json`). |
+| `pack` | always | Curriculum pack (36 today; see `manifest.json`). |
 | `track` | tracked packs | Named journey inside a pack; one credential per track. Empty on legacy packs. |
 | `code` | always | `<PREFIX>-<n>`, unique **within its pack only** (prefixes are reused across packs — always join on `block_id`). Foundation-library rows carry light-fill codes `LB-<n>`. |
 | `grade` | always | Grade band `K–2 / 3–5 / 6–8 / 9–10 / 11–12` on tracked packs; single grades, bridge or adult bands on legacy packs. |

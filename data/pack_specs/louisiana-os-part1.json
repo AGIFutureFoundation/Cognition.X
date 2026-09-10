@@ -1,0 +1,291 @@
+{
+  "pack": "Cognition.X : Louisiana OS",
+  "notes": "PART 1 of 2 — merged by tools/generate_pack.py being run on both parts (same pack name; codes continue by track prefix). The state's own OS edition: Louisiana's river, coast, energy, ports and agriculture taught as curriculum, joined by part 2's culture tracks. Facts are public-record Louisiana; transfer checks are phrased against the learner's own parish so they stay true everywhere in the state. 10 tracks x 10 themes x 5 grade bands = 500 blocks total across both parts.",
+  "tracks": [
+    {
+      "name": "The river: the Mississippi and its machinery",
+      "prefix": "MS",
+      "credential": "River Systems Reader",
+      "themes": [
+        {
+          "theme": "A continent's drain runs past your door",
+          "description": "The Mississippi's watershed — how water from thirty-one states arrives at Louisiana, and what that makes the river carry.",
+          "transfer_check": "Trace, on a real map, the path rain falling in two distant states takes to pass Louisiana, and name what it picks up on the way."
+        },
+        {
+          "theme": "The levee line",
+          "description": "The mainline levees from the river's own banks — what they protect, what they stopped, and what confining a river costs downstream.",
+          "transfer_check": "Visit or study the levee section nearest your parish and report who maintains it, its height history, and what sits behind it."
+        },
+        {
+          "theme": "The structures that hold the river in place",
+          "description": "Old River Control and the spillways — the machinery that keeps the Mississippi in its channel and away from the Atchafalaya's shorter path.",
+          "transfer_check": "Explain, with a drawing, what Old River Control does and what would change downstream if it failed, verified against an authoritative source."
+        },
+        {
+          "theme": "Opening the spillway",
+          "description": "Bonnet Carré and Morganza — when a spillway opens, who decides, and what the fresh water does to the basins it enters.",
+          "transfer_check": "From records of one real spillway opening, chart the trigger, the decision-maker, and two documented downstream effects."
+        },
+        {
+          "theme": "Reading the gauge",
+          "description": "River stages, flood stage and the forecast — reading the river's actual numbers the way river communities do.",
+          "transfer_check": "Read the current stage at the gauge nearest your parish, compare it to flood stage and the record, and state what today's number means."
+        },
+        {
+          "theme": "The sediment the coast is starving for",
+          "description": "Mud as treasure — how the leveed river sends land-building sediment off the shelf, and the diversions meant to reclaim it.",
+          "transfer_check": "Explain the sediment argument for and against one real diversion project, citing each side's own documents."
+        },
+        {
+          "theme": "The river as a working road",
+          "description": "Tows, barges and pilots — what actually moves on the river, and why one barge tow replaces dozens of trucks.",
+          "transfer_check": "Observe or study one real stretch of river traffic and report what was moving, in what, and roughly what it would take by road."
+        },
+        {
+          "theme": "Drinking the river",
+          "description": "The intakes, treatment and saltwater wedge — the communities that drink the Mississippi and what threatens the tap.",
+          "transfer_check": "Determine whether your own parish drinks river water, and for one that does, trace the intake-to-tap path and its named risks."
+        },
+        {
+          "theme": "The Atchafalaya: the other river",
+          "description": "America's largest river swamp — the basin, its floodway job, and the crawfish economy inside it.",
+          "transfer_check": "Map the Atchafalaya Basin's floodway role and profile one real livelihood that depends on the basin staying wet."
+        },
+        {
+          "theme": "Living in the shadow of the river",
+          "description": "The capstone: river decisions as parish decisions — levees, diversions, traffic and water, argued with real neighbours.",
+          "transfer_check": "Run or present a structured deliberation on one real river decision affecting your region, and deliver the recommendation you would defend."
+        }
+      ]
+    },
+    {
+      "name": "The working coast: wetlands and restoration",
+      "prefix": "WC",
+      "credential": "Coastal Steward",
+      "themes": [
+        {
+          "theme": "The land that is water",
+          "description": "Marsh, swamp, ridge and bayou — reading the coastal landscape's parts and what each does for the state behind it.",
+          "transfer_check": "Identify marsh, swamp and ridge on real imagery of the Louisiana coast and state one protective job each performs."
+        },
+        {
+          "theme": "A football field an hour",
+          "description": "Coastal land loss — the causes stacked together (subsidence, channels, levees, storms, sea rise) and the honest arithmetic of what is going.",
+          "transfer_check": "Compare historical and current imagery of one real coastal spot and quantify what has gone, attributing causes from published analysis."
+        },
+        {
+          "theme": "Why the marsh matters inland",
+          "description": "Surge protection, nurseries and livelihoods — what a mile of marsh is worth to a town it fronts.",
+          "transfer_check": "For one real coastal community, explain what the fronting wetlands do for it in a storm, citing the protection estimates."
+        },
+        {
+          "theme": "The Coastal Master Plan",
+          "description": "The state's fifty-year plan — how projects are chosen, funded and ranked, and how to read it as a citizen.",
+          "transfer_check": "From the current Master Plan's own documents, summarise the project nearest your parish — type, cost, purpose, status."
+        },
+        {
+          "theme": "Building land on purpose",
+          "description": "Dredge, diversion and terrace — the restoration toolbox, what each technique builds, and what each costs.",
+          "transfer_check": "Match three real restoration projects to their techniques and report what each has measurably built so far."
+        },
+        {
+          "theme": "The fisheries on the line",
+          "description": "Shrimp, oyster, crab and finfish — the working coast's harvest, and how restoration and salinity decisions land on the deck.",
+          "transfer_check": "Profile one real Louisiana fishery — season, method, landing figures — and one live decision currently affecting it, from both sides."
+        },
+        {
+          "theme": "The oyster and the salinity line",
+          "description": "The oyster as an animal with an address — why fresh and salt must balance, and what moves the line.",
+          "transfer_check": "Explain what a named freshwater event did to a real oyster area, using landings or lease records as evidence."
+        },
+        {
+          "theme": "Communities deciding to stay or go",
+          "description": "The hardest coastal question — elevation, buyouts and relocation, told through the communities already deciding.",
+          "transfer_check": "Study one documented Louisiana community's stay-or-move decision and present the options it faced and the choice it made, fairly."
+        },
+        {
+          "theme": "Working in restoration",
+          "description": "The restoration economy — the trades, sciences and boats the Master Plan employs, and the local routes into them.",
+          "transfer_check": "Map three real jobs on one restoration project — what each does, what it requires — from the project's own records or employers."
+        },
+        {
+          "theme": "The coast in fifty years",
+          "description": "The capstone: reading the projections honestly and arguing what your parish should ask of the plan.",
+          "transfer_check": "Using the Master Plan's own future maps, describe your region's projected coast and draft your parish's one-page ask of the plan."
+        }
+      ]
+    },
+    {
+      "name": "The energy corridor: from well to grid",
+      "prefix": "EC",
+      "credential": "Energy Corridor Technician",
+      "themes": [
+        {
+          "theme": "Why the plants are here",
+          "description": "River, feedstock and deep water — the geography that lined the Mississippi with refineries and chemical plants.",
+          "transfer_check": "For one real corridor facility, explain in a paragraph why it sits where it sits — river, pipeline, port — with evidence."
+        },
+        {
+          "theme": "What a refinery actually does",
+          "description": "Crude in, products out — distillation and units explained at working depth, without the mystery.",
+          "transfer_check": "Diagram a refinery's main flow from crude to three named products and explain one unit's job to somebody else."
+        },
+        {
+          "theme": "LNG: the cold ships",
+          "description": "Liquefaction, the terminals and the cryogenic chain — why Louisiana became an export coast and what a loading arm does.",
+          "transfer_check": "Explain the LNG chain from pipeline gas to loaded ship, and locate the terminals on a real map with their parishes named."
+        },
+        {
+          "theme": "The pipeline under the parish",
+          "description": "The buried network — how pipelines are marked, mapped and struck, and the call made before any digging.",
+          "transfer_check": "Use the official locator process for a real or staged dig on a real parcel, and read the pipeline markers nearest your parish."
+        },
+        {
+          "theme": "Turnaround: the corridor's harvest season",
+          "description": "The maintenance surges that employ thousands — what a turnaround is, the crafts it calls, and how workers plug in.",
+          "transfer_check": "Profile one real turnaround's scale and crafts from public sources, and map how a qualified local worker actually gets hired onto one."
+        },
+        {
+          "theme": "The fence line",
+          "description": "Living next to industry — monitoring, alerts, shelter-in-place, and the community's lawful levers on permits.",
+          "transfer_check": "For one real fence-line community, find its monitoring data and alert system, and demonstrate the shelter-in-place response."
+        },
+        {
+          "theme": "The safety culture that keeps hands",
+          "description": "Process safety, permits-to-work and the refusal that is a duty — the corridor's safety systems as working practice.",
+          "transfer_check": "Walk a staged permit-to-work for a simple task — hazards named, isolations listed, sign-offs in order — and name the stop-work right."
+        },
+        {
+          "theme": "The grid the plants and parishes share",
+          "description": "Generation, the big substations and hurricane hardening — Louisiana's electricity from plant to parish line.",
+          "transfer_check": "Trace your parish's power from its likely generation source through one named substation, and report the utility's storm-hardening work there."
+        },
+        {
+          "theme": "The transition on the corridor",
+          "description": "Hydrogen, carbon capture and offshore wind — the projects actually proposed here, read without slogans.",
+          "transfer_check": "Take one real announced transition project in Louisiana and examine its claims, funding and status from primary documents."
+        },
+        {
+          "theme": "A corridor career",
+          "description": "The capstone: process tech, crafts and the two-year path — mapping a real corridor career from a parish high school.",
+          "transfer_check": "Map one complete real route from your parish's high school to a named corridor job — program, cost, credential, starting pay — from the providers' own information."
+        }
+      ]
+    },
+    {
+      "name": "Ports and the river highway",
+      "prefix": "PT",
+      "credential": "Port & Logistics Operator",
+      "themes": [
+        {
+          "theme": "The port complex nobody sees whole",
+          "description": "From Baton Rouge to the Gulf — the string of ports that together move more tonnage than almost anywhere, and what each handles.",
+          "transfer_check": "Name the major Louisiana ports on a real map with each one's main cargo, citing the ports' own figures."
+        },
+        {
+          "theme": "Grain: the harvest passing through",
+          "description": "The elevators — how the Midwest's grain arrives by barge and leaves by ship, and why this stretch of river feeds the world.",
+          "transfer_check": "Explain the barge-to-elevator-to-ship chain for grain with real tonnage figures from one named elevator or port."
+        },
+        {
+          "theme": "The container and the box economy",
+          "description": "What a container changes, how a terminal works, and where Louisiana's boxes come from and go.",
+          "transfer_check": "Follow one real imported product from ship to shelf through a Louisiana gateway, naming each handling step."
+        },
+        {
+          "theme": "The pilot takes the ship",
+          "description": "Bar pilots and river pilots — why deep-draft ships change hands at the mouth, and what the pilot actually does on the bridge.",
+          "transfer_check": "Describe the pilotage handoffs a ship makes from the Gulf to Baton Rouge and what each pilot group's charge covers."
+        },
+        {
+          "theme": "The channel and the dredge",
+          "description": "Draft, shoaling and the dredges that keep the river open — depth as a thing that must be bought continuously.",
+          "transfer_check": "Report the current controlling depth of the river channel and what one real dredging campaign cost and achieved."
+        },
+        {
+          "theme": "Port jobs and the union hall",
+          "description": "Longshore work, warehousing, trucking and the halls and schools that fill them — the waterfront as employer.",
+          "transfer_check": "Map three real port-adjacent jobs — entry route, credential, starting pay — from the actual employers, halls or programs."
+        },
+        {
+          "theme": "The intermodal moment",
+          "description": "Barge to rail to truck — where cargo changes modes, and why the yard is where logistics is won or lost.",
+          "transfer_check": "For one real Louisiana intermodal facility, diagram a load's path across modes and identify the step most likely to delay it."
+        },
+        {
+          "theme": "The port in the storm",
+          "description": "Closing the river — hurricane port condition stages, the fleet's refuge, and restarting commerce after landfall.",
+          "transfer_check": "From records of one real storm, chart the port's condition stages, closure and reopening timeline, and what backed up meanwhile."
+        },
+        {
+          "theme": "Customs, cargo and the paper river",
+          "description": "Manifests, inspections and free-trade zones — the documents that move with every ton.",
+          "transfer_check": "Trace the paperwork one real import or export requires through a Louisiana port, naming each document and who files it."
+        },
+        {
+          "theme": "The port and the parish",
+          "description": "The capstone: port authorities as public bodies — their boards, their taxes, and the parish's seat at the table.",
+          "transfer_check": "Profile your nearest port authority — board, budget, current expansion — and draft the public comment your parish's interest calls for."
+        }
+      ]
+    },
+    {
+      "name": "Agriculture: rice, cane and the crawfish pond",
+      "prefix": "AG",
+      "credential": "Working Lands Producer",
+      "themes": [
+        {
+          "theme": "The crops the water chose",
+          "description": "Why rice, sugarcane, soybeans and cotton grow where they do in Louisiana — soil, water and the map they make.",
+          "transfer_check": "Map Louisiana's main crop belts against soil and water on real maps, and name the crops actually grown in your own parish."
+        },
+        {
+          "theme": "Rice: the flooded field",
+          "description": "The rice year — water in, water out, harvest — and the pumps, levees and mills that make a crop of a flood.",
+          "transfer_check": "Chart a real rice season's calendar from planting to mill, from a grower, extension source or farm record."
+        },
+        {
+          "theme": "The crawfish rotation",
+          "description": "The same field twice — rice then crawfish — and the traps, boats and boils of a uniquely Louisiana aquaculture.",
+          "transfer_check": "Explain the rice-crawfish rotation's annual cycle and profile one real operation's season with its actual numbers."
+        },
+        {
+          "theme": "Sugarcane: the year the grinding comes",
+          "description": "Cane's long season — planting, the autumn harvest rush, and the mills that must grind around the clock.",
+          "transfer_check": "Chart the cane year through grinding season for one real mill area, and explain why the harvest cannot wait."
+        },
+        {
+          "theme": "The machinery of the modern farm",
+          "description": "Combines, laser levels, pumps and monitors — the equipment fleet, its costs, and the skills that keep it running.",
+          "transfer_check": "Inventory the equipment one real rice or cane operation runs, with rough costs, and demonstrate or describe one machine's field check."
+        },
+        {
+          "theme": "Water rights and the pump",
+          "description": "Irrigation, the aquifer and drainage districts — the water arrangements under every field.",
+          "transfer_check": "For one real farming area, identify where its irrigation water comes from and the body that governs the drainage, from records."
+        },
+        {
+          "theme": "The farm economy's arithmetic",
+          "description": "Input costs, futures prices and the margin — why a good crop can still lose money, read from real numbers.",
+          "transfer_check": "Build a one-page budget for an acre of one real Louisiana crop from published costs and prices, and state its break-even."
+        },
+        {
+          "theme": "Extension and the science on the tailgate",
+          "description": "The land-grant system — research stations, extension agents and the trial plots that change practice.",
+          "transfer_check": "Contact or study your parish's actual extension service and report two current recommendations it is making to local producers."
+        },
+        {
+          "theme": "Weather, insurance and the year that fails",
+          "description": "Freeze, flood and hurricane on a farm — crop insurance, disaster programs and surviving the failed year.",
+          "transfer_check": "From one documented bad year, chart what a real crop lost and which programs actually paid, from the records."
+        },
+        {
+          "theme": "The next generation on the land",
+          "description": "The capstone: getting into farming — land access, lending, young-farmer programs — mapped honestly.",
+          "transfer_check": "Map one realistic route for a young person in your parish into producing — land, capital, program support — from real sources, with its hardest obstacle named."
+        }
+      ]
+    }
+  ]
+}

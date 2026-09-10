@@ -53,7 +53,7 @@ WAVE_YEARS = ["2027–28", "2028–29", "2029–30", "2030–31"]
 # Industry-phrase → curriculum-pack mapping. Each parish's anchor-industry
 # phrases (from the fact base) are matched against these rules to build its
 # module plan; the matching phrase is kept as the human-readable reason.
-CORE_PACKS = ["K12", "LEGACYLA", "LIFESKILL", "EMERGENCY"]
+CORE_PACKS = ["K12", "LAOS", "LEGACYLA", "LIFESKILL", "EMERGENCY"]
 INDUSTRY_RULES = [
     (r"LNG|oil|gas|petrochemical|chemical|hydrogen|carbon|energy|hydro|refin|pipeline|grid",
      ["ENERGY", "ROB"]),

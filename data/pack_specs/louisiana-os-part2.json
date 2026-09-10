@@ -1,0 +1,291 @@
+{
+  "pack": "Cognition.X : Louisiana OS",
+  "notes": "PART 2 of 2 — culture, language, food, festival and memory tracks of the Louisiana OS (part 1 carries river, coast, energy, ports, agriculture). Same pack name; generate_pack.py is run on both parts and the normalizer merges rows under one pack. Cultural facts are public record; checks are phrased against the learner's own parish and elders so they stay true statewide.",
+  "tracks": [
+    {
+      "name": "The Louisiana table",
+      "prefix": "FD",
+      "credential": "Louisiana Cook",
+      "themes": [
+        {
+          "theme": "First you make a roux",
+          "description": "The roux as the foundation — flour, fat, patience — and the colors that decide what dish it becomes.",
+          "transfer_check": "Make a roux to a stated color without burning it, and say which dish each of three colors belongs to."
+        },
+        {
+          "theme": "The trinity and the pot",
+          "description": "Onion, celery, bell pepper — the base of the cuisine, and the pot cookery built on it.",
+          "transfer_check": "Prepare the trinity correctly and build one real pot dish on it, narrating what each stage contributes."
+        },
+        {
+          "theme": "Gumbo: one word, many households",
+          "description": "Okra, filé, roux — the gumbo lineages, why no two families agree, and the respect owed to each version.",
+          "transfer_check": "Cook one gumbo in a named lineage and document a second household's differing version without ruling either wrong."
+        },
+        {
+          "theme": "The boil as a public event",
+          "description": "Crawfish and shrimp boils — the seasoning, the timing, the table covered in newspaper — cooking as gathering.",
+          "transfer_check": "Plan and run (or fully rehearse) a boil for a real group — quantities, seasoning, timing, safe handling — through to the table."
+        },
+        {
+          "theme": "Boudin, andouille and the smokehouse",
+          "description": "The sausage craft of the prairies and the German Coast — what goes in, how it is smoked, and where to find the real thing.",
+          "transfer_check": "Make or closely document one batch of boudin or andouille at a real kitchen or shop, recording the method start to finish."
+        },
+        {
+          "theme": "Cajun and Creole are not the same word",
+          "description": "Two cuisines with tangled roots — country and city, prairie and port — told through their dishes and histories.",
+          "transfer_check": "Present one dish in its Cajun and its Creole expression, explaining the historical reason for each difference, with sources."
+        },
+        {
+          "theme": "The seafood counter",
+          "description": "Shrimp, oysters, catfish and the gulf catch — buying Louisiana seafood knowledgeably and handling it safely.",
+          "transfer_check": "At a real counter or dock, identify the local catch, judge its freshness, and prepare one item with correct safe handling."
+        },
+        {
+          "theme": "Rice at every meal",
+          "description": "Why rice anchors the plate — from the fields of the prairie to jambalaya, étouffée and red beans on Monday.",
+          "transfer_check": "Cook rice properly at scale and serve it under one classic preparation, explaining the Monday red beans tradition while it simmers."
+        },
+        {
+          "theme": "The recipe an elder holds",
+          "description": "Documenting family foodways — the pinch and the handful written down before they are lost.",
+          "transfer_check": "Record one real family or community recipe from its keeper — quantities, technique, story — into a form a stranger could cook from."
+        },
+        {
+          "theme": "Feeding the parish",
+          "description": "The capstone: church suppers, benefit plate lunches and disaster kitchens — Louisiana cooking as civic infrastructure.",
+          "transfer_check": "Help run or fully plan one real community feed — the plates, the batch math, the safe service — and account for what it raised or delivered."
+        }
+      ]
+    },
+    {
+      "name": "Music: the sound the state gave the world",
+      "prefix": "MU",
+      "credential": "Louisiana Musician",
+      "themes": [
+        {
+          "theme": "Congo Square and the root of it",
+          "description": "The Sunday gatherings in New Orleans where African rhythm kept its public voice — and what grew from that ground.",
+          "transfer_check": "Present the documented history of Congo Square and trace one musical line from it to a form you can play or play back."
+        },
+        {
+          "theme": "Jazz: the city's invention",
+          "description": "Collective improvisation, the second line beat and the horns — how New Orleans assembled jazz from its neighborhoods.",
+          "transfer_check": "Identify the parts of one early New Orleans jazz recording by ear — lead, harmony, rhythm — and clap or play its second-line figure."
+        },
+        {
+          "theme": "The brass band and the street",
+          "description": "Parade bands from funeral dirge to street celebration — the repertoire, the instrumentation, the roles.",
+          "transfer_check": "March or perform one piece in a brass-band arrangement, holding your part, or direct a recorded analysis of a real parade performance."
+        },
+        {
+          "theme": "Zydeco and the Creole dancehall",
+          "description": "Accordion, rubboard and the southwest Louisiana Saturday night — zydeco's Creole roots and living circuit.",
+          "transfer_check": "Learn zydeco's basic rhythm on any instrument or rubboard and identify two living artists on the real regional circuit."
+        },
+        {
+          "theme": "Cajun music: the ballads of the prairie",
+          "description": "Fiddle, accordion and French singing — the Cajun repertoire and the dance halls that keep it working music.",
+          "transfer_check": "Perform or accompany one Cajun standard, or document a real dance-hall night — the band, the steps, the sung French."
+        },
+        {
+          "theme": "Gospel and the church house",
+          "description": "The choirs and quartets — gospel as the training ground of Louisiana voices, sacred music as community practice.",
+          "transfer_check": "Sing in or closely document one real choir or quartet rehearsal, mapping the parts and the call-and-response at work."
+        },
+        {
+          "theme": "The blues highway through the north",
+          "description": "North Louisiana's blues and its highways — the juke joints, the labels, the artists who carried it out.",
+          "transfer_check": "Profile one documented north Louisiana blues artist and learn a twelve-bar form well enough to play or analyze their recording."
+        },
+        {
+          "theme": "The studio and the business",
+          "description": "From Cosimo's rooms to the streaming ledger — how Louisiana records got made and who got paid, then and now.",
+          "transfer_check": "Trace one classic Louisiana recording's business story — studio, label, songwriter credit — and compare it to a streaming payout today."
+        },
+        {
+          "theme": "Playing for a living here",
+          "description": "The working musician's Louisiana — gigs, festivals, sideman work and the arithmetic of a music year.",
+          "transfer_check": "Interview or study one real working Louisiana musician and chart their actual year — gigs, income streams, the hardest month."
+        },
+        {
+          "theme": "Passing the horn",
+          "description": "The capstone: the tradition's transmission — school bands, church, family — and taking your own place in it.",
+          "transfer_check": "Prepare and give one real performance in any Louisiana tradition, and teach its basic figure to a younger learner."
+        }
+      ]
+    },
+    {
+      "name": "French, Creole and the languages of home",
+      "prefix": "LC",
+      "credential": "Heritage Language Keeper",
+      "themes": [
+        {
+          "theme": "Who speaks what, and why",
+          "description": "Louisiana French, Kouri-Vini (Louisiana Creole), Spanish, Vietnamese and the rest — the state's language map and the histories under it.",
+          "transfer_check": "Map the languages historically and currently spoken in your own parish, with one documented source per language."
+        },
+        {
+          "theme": "The punishment generation",
+          "description": "When French was punished in schools — the generation that stopped speaking, told from documented accounts.",
+          "transfer_check": "Record or study one firsthand account of school-era language punishment and present its effect across that family's generations."
+        },
+        {
+          "theme": "Hearing the difference",
+          "description": "Louisiana French and Kouri-Vini side by side — what distinguishes them, and why the difference deserves respect.",
+          "transfer_check": "From recordings, distinguish Louisiana French from Kouri-Vini on three features, and say each variety's name correctly."
+        },
+        {
+          "theme": "A hundred words of home",
+          "description": "A working vocabulary — greetings, kitchen, weather, kin — in Louisiana French or Kouri-Vini, learned aloud.",
+          "transfer_check": "Hold a one-minute exchange — greeting, three questions, farewell — in Louisiana French or Kouri-Vini with a speaker or teacher."
+        },
+        {
+          "theme": "The table is a classroom",
+          "description": "Language living in food, music and prayer — learning through the domains where it never fully left.",
+          "transfer_check": "Collect ten living heritage-language terms from a real kitchen, song or blessing in your region, with meanings from a speaker."
+        },
+        {
+          "theme": "The immersion school",
+          "description": "French immersion in Louisiana public schools and CODOFIL's work — how the revival actually runs.",
+          "transfer_check": "Profile the nearest real immersion program — where, what grades, how enrolled — and interview or study one family's experience of it."
+        },
+        {
+          "theme": "The elders' tapes",
+          "description": "Recording speakers properly — consent, equipment, transcription — so a voice outlives its speaker.",
+          "transfer_check": "Record one heritage-language speaker with consent, transcribe two minutes, and archive the recording where family can reach it."
+        },
+        {
+          "theme": "New Louisianians, new languages",
+          "description": "Vietnamese on the coast, Spanish across the state, and the newest arrivals — the language map still being drawn.",
+          "transfer_check": "Document one newer language community in Louisiana — where it settled, why, what it built — from its own institutions."
+        },
+        {
+          "theme": "Signs, songs and public French",
+          "description": "The public face of revival — bilingual signage, French media, festival stages — and what visibility does for a language.",
+          "transfer_check": "Inventory the real public presence of French or Creole in one town — signs, radio, mass, stage — and propose one addition to it."
+        },
+        {
+          "theme": "Keeping it alive in your house",
+          "description": "The capstone: a household language practice — small, daily, sustainable — designed and actually begun.",
+          "transfer_check": "Design and run two weeks of a real household heritage-language practice — the daily moment, the phrases — and report what stuck."
+        }
+      ]
+    },
+    {
+      "name": "Krewes, festivals and the craft of celebration",
+      "prefix": "FK",
+      "credential": "Festival Craftsperson",
+      "themes": [
+        {
+          "theme": "The krewe is an organization",
+          "description": "Behind the parade — dues, committees, captains and a year of work for a night of joy; the krewe as civic machinery.",
+          "transfer_check": "Profile one real krewe or parading club — its structure, calendar and budget scale — from its own materials or members."
+        },
+        {
+          "theme": "Carnival's calendar",
+          "description": "Twelfth Night to Fat Tuesday — the season's actual structure, and why the date moves.",
+          "transfer_check": "Compute Mardi Gras's date for three different years and lay out one real community's carnival calendar across a season."
+        },
+        {
+          "theme": "The float in the barn",
+          "description": "Float building — structure, papier-mâché and paint, the artists' year — celebration as fabrication trade.",
+          "transfer_check": "Build one small float or prop element with sound structure and finish, or document a real float barn's build process start to parade."
+        },
+        {
+          "theme": "Costume, mask and beadwork",
+          "description": "The sewing year — from krewe costumes to the hand-beaded suits of the Black Masking Indians, honored as the masterworks they are.",
+          "transfer_check": "Complete one real costume or beadwork piece to wearable standard, or closely document a suit's making with its maker's consent."
+        },
+        {
+          "theme": "The parade as logistics",
+          "description": "Routes, permits, bands, throws and cleanup — the operational craft that moves a parade through a town.",
+          "transfer_check": "Produce the full logistics plan for a real or modeled small parade — route, permits, order, safety, cleanup — to a standard an official could approve."
+        },
+        {
+          "theme": "The festival economy",
+          "description": "From Jazz Fest to the smallest church fair — what festivals earn, who they pay, and the volunteer hours underneath.",
+          "transfer_check": "For one real Louisiana festival, chart attendance, economics and staffing from published figures, and work or shadow one real shift."
+        },
+        {
+          "theme": "Every parish has a festival",
+          "description": "The small-town circuit — rice, strawberry, gumbo, pirogue — celebration as the parish's mirror of what it grows and makes.",
+          "transfer_check": "Document your own parish's festival — its history, its committee, what it celebrates — and take one working role in it, real or planned."
+        },
+        {
+          "theme": "The second line and the social aid club",
+          "description": "Social aid and pleasure clubs — mutual aid societies whose parades are the visible edge of year-round care.",
+          "transfer_check": "Present the documented history and present work of one real social aid and pleasure club, parade and aid function both."
+        },
+        {
+          "theme": "Safety in the crowd",
+          "description": "Route medicine, lost children, weather calls and the barricade line — keeping a celebration safe without killing it.",
+          "transfer_check": "Draft the safety annex for a real or modeled parade day — medical points, lost-person protocol, weather triggers — and walk its route."
+        },
+        {
+          "theme": "Throwing the party that binds the town",
+          "description": "The capstone: producing one real community celebration end to end — the committee, the money, the day itself.",
+          "transfer_check": "Serve on or simulate the production of one real community event through its full cycle, delivering your role's checklist complete."
+        }
+      ]
+    },
+    {
+      "name": "The storm and the long memory",
+      "prefix": "HM",
+      "credential": "Resilience Historian",
+      "themes": [
+        {
+          "theme": "The hurricanes with names we still say",
+          "description": "Betsy, Camille, Katrina, Rita, Laura, Ida — the storms as history, each one's lesson named.",
+          "transfer_check": "Build a documented timeline of the major storms that struck your own region, with each storm's principal lesson stated."
+        },
+        {
+          "theme": "1927: the flood that changed the rules",
+          "description": "The Great Flood — the crevasses, the displacement, and how it rewrote river policy and politics.",
+          "transfer_check": "Present the 1927 flood's course and consequences for one real community, from documented accounts, including what policy changed."
+        },
+        {
+          "theme": "Katrina: what failed and what held",
+          "description": "The levee failures, the flooded city, the response — told precisely, from the investigations, without myth.",
+          "transfer_check": "Using the official investigations, explain what actually failed in 2005 — where, why — and one reform that directly followed."
+        },
+        {
+          "theme": "The diaspora and the return",
+          "description": "Displacement after the great storms — who left, who returned, and how neighborhoods rebuilt or didn't.",
+          "transfer_check": "Trace one documented neighborhood's or family's displacement-and-return arc after a named storm, with the numbers that frame it."
+        },
+        {
+          "theme": "The house that survives here",
+          "description": "Elevation, tie-downs, fortified roofs — Louisiana building lessons written into codes and grants.",
+          "transfer_check": "Assess one real house against current wind-and-water lessons and specify its three highest-value hardening steps, roughly costed."
+        },
+        {
+          "theme": "The evacuation, remembered and rehearsed",
+          "description": "Contraflow, the phased zones and the lessons of the hard evacuations — leaving as a practiced civic skill.",
+          "transfer_check": "Build your household's evacuation plan on the parish's actual zones and routes, and rehearse the leave decision against a real storm's timeline."
+        },
+        {
+          "theme": "The neighbors with boats",
+          "description": "The volunteer rescues — citizen response in the floods, and how it organized itself alongside the official one.",
+          "transfer_check": "Document one real volunteer rescue effort from a named event — how it organized, what it did — and map how you would lawfully plug in today."
+        },
+        {
+          "theme": "Insurance and the rebuilt house",
+          "description": "Wind, flood and the recovery programs — the paperwork history of getting rebuilt, and its documented unfairnesses.",
+          "transfer_check": "From one documented recovery, chart which programs and policies actually paid for one rebuilt home, and where the gaps fell."
+        },
+        {
+          "theme": "Telling the storm",
+          "description": "Oral history of disaster — interviewing survivors with care, and archiving the account for the parish record.",
+          "transfer_check": "Record one consented oral history of a named storm from someone who lived it, and archive it where the community can reach it."
+        },
+        {
+          "theme": "The next one",
+          "description": "The capstone: applying the long memory — reading a live forecast season with history in hand and the household ready.",
+          "transfer_check": "Present your household's and street's readiness against the lessons of the last three regional storms, gaps named and one closed."
+        }
+      ]
+    }
+  ]
+}

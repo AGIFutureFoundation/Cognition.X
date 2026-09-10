@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 35 packs — 9,250 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 36 packs — 9,750 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -38,6 +38,7 @@ Catalog of all 35 packs — 9,250 blocks total. Machine-readable version: [`data
 | Energy, Grid & the Home | `ENERGY` | 250 | 5 | 5 |
 | Food, Cooking & Nutrition | `FOOD` | 250 | 5 | 5 |
 | Law, Contracts & Everyday Rights | `LAW` | 250 | 5 | 5 |
+| Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
 
 ## Tracks by pack
@@ -251,6 +252,18 @@ Catalog of all 35 packs — 9,250 blocks total. Machine-readable version: [`data
 - The consumer: buying, returning, being made whole
 - Work: the deal behind the job
 - The citizen and the state
+
+**Cognition.X : Louisiana OS**
+- The river: the Mississippi and its machinery
+- The working coast: wetlands and restoration
+- The energy corridor: from well to grid
+- Ports and the river highway
+- Agriculture: rice, cane and the crawfish pond
+- The Louisiana table
+- Music: the sound the state gave the world
+- French, Creole and the languages of home
+- Krewes, festivals and the craft of celebration
+- The storm and the long memory
 
 **Transport & Mobility**
 - Moving through the city without a car
