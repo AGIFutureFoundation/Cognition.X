@@ -455,7 +455,11 @@ function renderPacks(){
 }
 function renderPackDetail(p){
   if (p.tracks.length){
-    return p.tracks.map(t => {
+    const practice = (p.loose && p.loose.length)
+      ? `<p class="lede" style="margin:14px 0 0; font-size:.84rem"><b>+ ${p.loose.length} master practice blocks</b> — the
+         adult practice library reconciled from the Education OS app (${new Set(p.loose.map(r=>r[1])).size} practice tracks);
+         search above to find them.</p>` : "";
+    return practice + p.tracks.map(t => {
       const done = S.done[trackKey(p,t)] || {};
       return `<div class="trackhead"><h3>${esc(t.name)}</h3><span class="cred">${esc(t.credential)}</span>` +
       `<span class="meta mono" style="color:var(--faint); font-size:.74rem">${t.prefix}-1…${t.prefix}-50</span></div>` +

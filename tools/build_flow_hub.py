@@ -30,12 +30,12 @@ LEVELS = ["Explorer", "Explorer", "Builder", "Practitioner", "Lead"]
 
 
 def kind_of(pack, has_tracks, blocks):
-    if not has_tracks:
-        return "foundation"
     if pack.startswith("Civic Leadership Legacy"):
         return "legacy"
-    if pack.startswith("Cognition.X :") or blocks == 500:
+    if pack.startswith("Cognition.X :") or pack == "Non-Profit Practice":
         return "os"
+    if not has_tracks:
+        return "foundation"
     return "community"
 
 

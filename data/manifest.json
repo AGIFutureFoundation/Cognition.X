@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 9750,
+  "total_blocks": 14950,
   "packs": [
     {
       "name": "K–12",
@@ -325,7 +325,7 @@
     {
       "name": "Cognition.X : Corporate OS",
       "slug": "CORP",
-      "blocks": 500,
+      "blocks": 1160,
       "tracks": [
         "Arriving in a job",
         "Skill at work",
@@ -338,19 +338,20 @@
         "When the organisation changes",
         "A working life"
       ],
-      "credentials": 10,
+      "credentials": 124,
       "grade_bands": [
         "K–2",
         "3–5",
         "6–8",
         "9–10",
-        "11–12"
+        "11–12",
+        "11–12 · adult"
       ]
     },
     {
       "name": "Cognition.X : Science OS",
       "slug": "SCI",
-      "blocks": 500,
+      "blocks": 1160,
       "tracks": [
         "The question",
         "Method and measurement",
@@ -363,19 +364,20 @@
         "Working with people",
         "From result to use"
       ],
-      "credentials": 10,
+      "credentials": 124,
       "grade_bands": [
         "K–2",
         "3–5",
         "6–8",
         "9–10",
-        "11–12"
+        "11–12",
+        "11–12 · adult"
       ]
     },
     {
       "name": "Cognition.X : Robotics OS",
       "slug": "ROB",
-      "blocks": 500,
+      "blocks": 1140,
       "tracks": [
         "Machines and how they move",
         "Safety around a robot",
@@ -388,19 +390,20 @@
         "Fleets and machines far away",
         "Materials, energy and afterwards"
       ],
-      "credentials": 10,
+      "credentials": 122,
       "grade_bands": [
         "K–2",
         "3–5",
         "6–8",
         "9–10",
-        "11–12"
+        "11–12",
+        "11–12 · adult"
       ]
     },
     {
       "name": "Cognition.X : Global Health OS",
       "slug": "GHEALTH",
-      "blocks": 500,
+      "blocks": 1160,
       "tracks": [
         "Primary care at the community",
         "Mothers and newborns",
@@ -413,19 +416,20 @@
         "Emergency and displacement",
         "Ethics at the household door"
       ],
-      "credentials": 10,
+      "credentials": 127,
       "grade_bands": [
         "K–2",
         "3–5",
         "6–8",
         "9–10",
-        "11–12"
+        "11–12",
+        "11–12 · adult"
       ]
     },
     {
       "name": "Cognition.X : Multilateral OS",
       "slug": "MULTI",
-      "blocks": 500,
+      "blocks": 1150,
       "tracks": [
         "Assessing need",
         "Coordination",
@@ -438,19 +442,20 @@
         "Information, rumour and media",
         "After the emergency"
       ],
-      "credentials": 10,
+      "credentials": 126,
       "grade_bands": [
         "K–2",
         "3–5",
         "6–8",
         "9–10",
-        "11–12"
+        "11–12",
+        "11–12 · adult"
       ]
     },
     {
       "name": "Cognition.X : Sapient OS",
       "slug": "SAPIENT",
-      "blocks": 500,
+      "blocks": 1120,
       "tracks": [
         "Understanding a model",
         "Using one at work or school",
@@ -463,19 +468,20 @@
         "Value, work and who captures it",
         "Your own practice"
       ],
-      "credentials": 10,
+      "credentials": 119,
       "grade_bands": [
         "K–2",
         "3–5",
         "6–8",
         "9–10",
-        "11–12"
+        "11–12",
+        "11–12 · adult"
       ]
     },
     {
       "name": "Non-Profit Practice",
       "slug": "NPO",
-      "blocks": 500,
+      "blocks": 1150,
       "tracks": [
         "Volunteers",
         "Board & governance",
@@ -488,13 +494,24 @@
         "Telling people about it",
         "Risk and safeguarding"
       ],
-      "credentials": 10,
+      "credentials": 122,
       "grade_bands": [
         "K–2",
         "3–5",
         "6–8",
         "9–10",
-        "11–12"
+        "11–12",
+        "11–12 · adult"
+      ]
+    },
+    {
+      "name": "Cognition.X : Education OS",
+      "slug": "EDUOS",
+      "blocks": 660,
+      "tracks": [],
+      "credentials": 115,
+      "grade_bands": [
+        "11–12 · adult"
       ]
     },
     {

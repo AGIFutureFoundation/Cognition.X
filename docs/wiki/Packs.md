@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 36 packs — 9,750 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 37 packs — 14,950 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -22,13 +22,14 @@ Catalog of all 36 packs — 9,750 blocks total. Machine-readable version: [`data
 | Money, Benefits & Entitlements | `MONEY` | 250 | 5 | 5 |
 | Reentry & Recovery Pathways | `REENTRY` | 250 | 5 | 5 |
 | Neighbourhood, Safety & Civic Voice | `NEIGH` | 250 | 5 | 5 |
-| Cognition.X : Corporate OS | `CORP` | 500 | 10 | 10 |
-| Cognition.X : Science OS | `SCI` | 500 | 10 | 10 |
-| Cognition.X : Robotics OS | `ROB` | 500 | 10 | 10 |
-| Cognition.X : Global Health OS | `GHEALTH` | 500 | 10 | 10 |
-| Cognition.X : Multilateral OS | `MULTI` | 500 | 10 | 10 |
-| Cognition.X : Sapient OS | `SAPIENT` | 500 | 10 | 10 |
-| Non-Profit Practice | `NPO` | 500 | 10 | 10 |
+| Cognition.X : Corporate OS | `CORP` | 1160 | 10 | 124 |
+| Cognition.X : Science OS | `SCI` | 1160 | 10 | 124 |
+| Cognition.X : Robotics OS | `ROB` | 1140 | 10 | 122 |
+| Cognition.X : Global Health OS | `GHEALTH` | 1160 | 10 | 127 |
+| Cognition.X : Multilateral OS | `MULTI` | 1150 | 10 | 126 |
+| Cognition.X : Sapient OS | `SAPIENT` | 1120 | 10 | 119 |
+| Non-Profit Practice | `NPO` | 1150 | 10 | 122 |
+| Cognition.X : Education OS | `EDUOS` | 660 | — | 115 |
 | Arts, Making Media & Performance | `ARTS` | 250 | 5 | 5 |
 | Civic Leadership Legacy : California | `LEGACYCA` | 250 | 5 | 5 |
 | Civic Leadership Legacy : Louisiana | `LEGACYLA` | 250 | 5 | 5 |
