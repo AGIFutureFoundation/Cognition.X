@@ -2,11 +2,13 @@
 
 **Cognition.X Trades Network** ([`apps/trades-network/`](https://github.com/AGIFutureFoundation/Cognition.X/tree/main/apps/trades-network))
 is the platform's regional union-and-trades layer: **37 trade families ×
-3 regions = 111 regional union & trade entries** across **San Francisco**,
-**Oakland–East Bay** and **New Orleans**, each carrying a training
-simulation set on its region's own publicly known ground, the curriculum
-packs behind it, and the flipped, gamified classroom model that brings the
-trades into school districts.
+6 regions = 222 regional union & trade entries** on two working coasts —
+**San Francisco**, **Oakland–East Bay** and **Los Angeles** on the
+Pacific; **New Orleans**, **Baton Rouge–River Region** and
+**Houston–Gulf Coast** on the Gulf (expanded from 3 regions in
+v0.30.0) — each carrying a training simulation set on its region's own
+publicly known ground, the curriculum packs behind it, and the flipped,
+gamified classroom model that brings the trades into school districts.
 
 Built by [`tools/build_trades.py`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/tools/build_trades.py)
 from the unions fact base
@@ -22,10 +24,12 @@ plus the canonical dataset — never hand-edit `index.html`.
   map** (v0.26.0): approximate hand-placed geography — the Gate, the
   Bay, the Lake and the river crescent — with the nine training-ground
   sites as nodes carrying their trade-family counts; clicking a node
-  opens the roster filtered to that region and category, so all 111
-  entries are reachable from the maps. Below the map: the council
-  (always the front door) and the school districts.
-- **Unions & Trades** — the full 111-entry roster, searchable and
+  opens the roster filtered to that region and category, so all 222
+  entries are reachable from the maps (six maps since v0.30.0 — the
+  Mississippi through Baton Rouge, the Houston Ship Channel, the
+  Pacific under Los Angeles). Below the map: the council (always the
+  front door) and the school districts.
+- **Unions & Trades** — the full 222-entry roster, searchable and
   filterable by region and category; every card names the international
   union, its localized training sim, and Flow Hub deep links into its
   backing packs.

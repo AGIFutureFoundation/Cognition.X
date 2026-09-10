@@ -4,6 +4,30 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.30.0] — 2026-09-10
+
+### Added
+- **Trades Network expansion — six regions, 222 entries**: three new
+  regions join on the fact-base pattern (families × regions,
+  councils as front doors): **Baton Rouge – River Region** (the
+  Port of Greater Baton Rouge, the petrochemical corridor's grid, a
+  Mississippi river-intake…), **Houston – Gulf Coast** (a Port
+  Houston terminal on the ship channel, a bayou flood-control
+  station, a METRO yard…), and **Los Angeles** (a San Pedro Bay
+  berth, an LADWP receiving station, the Aqueduct terminus, a
+  Hollywood soundstage…). Each carries its real council front door,
+  its districts, nine public training-ground sites, its own
+  **stylized city map** (the river through Baton Rouge, the Houston
+  Ship Channel, the Pacific under LA), and the coast-correct
+  longshore split (ILWU Pacific, ILA Gulf). The network map becomes
+  a two-coast, six-node diagram; roster, simulations, flipped and
+  district views scale automatically.
+- **Baton Rouge hall parishes join the union layer** (Louisiana):
+  the parish↔union integration generalizes to every Trade Hall that
+  anchors a network region — East Baton Rouge and its hall's
+  parishes now get their own matched-trade-family panels with
+  River-Region-localized sims, alongside New Orleans.
+
 ## [0.29.0] — 2026-09-10
 
 ### Added

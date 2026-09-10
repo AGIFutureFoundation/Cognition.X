@@ -167,8 +167,12 @@ complete a track and hold a verifiable credential file.
   population, hall spaces, device count, materials posture for the
   rural tier) on the Parish Admin dashboard and in the program
   export — a scaffold each parish refines, not a quote
-- Network expansion: further regions join the Trades Network on the
-  same fact-base pattern (families × regions, councils as front doors)
+- [x] Network expansion, first round (v0.30.0): Baton Rouge–River
+  Region, Houston–Gulf Coast and Los Angeles join on the fact-base
+  pattern — 37 families × 6 regions = 222 entries, each new region
+  with its own council front door, districts, sites and city map;
+  the Baton Rouge Trade Hall's parishes gain their own union panels.
+  Further regions continue on the same pattern.
 - Instance federation: an instance publishes its pack versions and
   credential issuer keys; credentials verify across instances
 - Educator authoring: in-app pack-spec editor producing PRs against

@@ -215,23 +215,27 @@ def curriculum_stats():
     }
 
 
-def nola_unions():
-    """The New Orleans-region slice of the Trades Network fact base —
-    37 union/trade entries with sims localized to New Orleans ground —
-    for the parish dashboards served by the New Orleans Trade Hall."""
+def hall_unions():
+    """Trade-union slices of the Trades Network fact base for the Louisiana
+    Trade Halls that anchor a network region — keyed by hub city name, with
+    sims localized to that region's ground."""
     fb = json.loads((ROOT / "data" / "unions" / "trade_unions.json")
                     .read_text(encoding="utf-8"))
-    reg = next(r for r in fb["regions"] if r["id"] == "nola")
-    entries = []
-    for fam in fb["families"]:
-        intl = fam.get("intl_by_region", {}).get("nola", fam["intl"])
-        entries.append({
-            "family": fam["family"], "intl": intl, "kind": fam["kind"],
-            "sim": fam["sim"].replace("{site}", reg["sites"][fam["kind"]]),
-            "packs": fam["packs"],
-        })
-    return {"region": reg["name"], "council": reg["council"],
-            "districts": reg["districts"], "entries": entries}
+    hubs = {"New Orleans": "nola", "Baton Rouge": "br"}
+    out = {}
+    for hub, rid in hubs.items():
+        reg = next(r for r in fb["regions"] if r["id"] == rid)
+        entries = []
+        for fam in fb["families"]:
+            intl = fam.get("intl_by_region", {}).get(rid, fam["intl"])
+            entries.append({
+                "family": fam["family"], "intl": intl, "kind": fam["kind"],
+                "sim": fam["sim"].replace("{site}", reg["sites"][fam["kind"]]),
+                "packs": fam["packs"],
+            })
+        out[hub] = {"region": reg["name"], "council": reg["council"],
+                    "districts": reg["districts"], "entries": entries}
+    return out
 
 
 def learner_types():
@@ -279,7 +283,7 @@ def main():
         "corePacks": CORE_PACKS,
         "packmeta": packmeta,
         "catalog": catalog_light,
-        "unions": nola_unions(),
+        "unions": hall_unions(),
         "access": learner_types(),
     }
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")

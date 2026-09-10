@@ -254,15 +254,17 @@
   <section class="view active" id="view-network">
     <p class="eyebrow">Two coasts · one model · the regional council is always the front door</p>
     <h1>The trades, the halls, and the classroom between them</h1>
-    <p class="lede">A regional training network across <b>San Francisco</b>, <b>Oakland–East Bay</b> and
-    <b>New Orleans</b>: 37 trade families × 3 regions = <b>111 union &amp; trade entries</b>, each with a
-    training simulation set on its region's own ground, curriculum packs behind it, and a flipped, gamified
-    classroom model that brings the trades into school districts on honest terms.</p>
+    <p class="lede">A regional training network on two working coasts — <b>San Francisco</b>,
+    <b>Oakland–East Bay</b> and <b>Los Angeles</b> on the Pacific; <b>New Orleans</b>,
+    <b>Baton Rouge–River Region</b> and <b>Houston–Gulf Coast</b> on the Gulf: 37 trade families ×
+    6 regions = <b>222 union &amp; trade entries</b>, each with a training simulation set on its region's own
+    ground, curriculum packs behind it, and a flipped, gamified classroom model that brings the trades into
+    school districts on honest terms.</p>
     <div class="tiles" id="nettiles"></div>
 
     <div class="panel">
       <h3>The network map</h3>
-      <p class="note">Three anchor regions, one shared model. Click a region to open it.</p>
+      <p class="note">Six anchor regions on two coasts, one shared model. Click a region to open it.</p>
       <div id="netmap" class="cycle"></div>
     </div>
 
@@ -295,7 +297,7 @@
 
   <!-- ================= UNIONS ================= -->
   <section class="view" id="view-unions">
-    <p class="eyebrow">The roster · 111 entries</p>
+    <p class="eyebrow">The roster · 37 families · 6 regions</p>
     <h1>Unions &amp; trades</h1>
     <p class="lede">Every entry names its international union and its region, carries its localized training
     simulation, and links the curriculum packs behind it. To reach the actual local:
@@ -313,7 +315,7 @@
   <section class="view" id="view-sims">
     <p class="eyebrow">Regional training simulations</p>
     <h1>The simulation studio</h1>
-    <p class="lede">Nine control-discipline categories, each grounded on real sites in all three regions.
+    <p class="lede">Nine control-discipline categories, each grounded on real sites in all six regions.
     Simulate what is dangerous, expensive or rare; practice live what is safe, cheap and common; debrief
     every run.</p>
     <div class="honesty"><b>Every station posts the same law:</b> nothing energized, suspended or moving is
@@ -407,7 +409,8 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">"
 function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){ return null; } }
 $("#verline").textContent = "v"+D.version;
 
-const REGCOL = {sf:"var(--w1)", oak:"var(--w2)", nola:"var(--w3)"};
+const REGCOL = {sf:"var(--w1)", oak:"var(--w2)", nola:"var(--w3)",
+                br:"var(--gold)", hou:"var(--w4)", lax:"var(--purple)"};
 const KINDS = {
   build:"Structures & finishes", elec:"Power & signal", water:"Water systems",
   port:"Port & maritime", transit:"Transit & rail", service:"Service & stagecraft",
@@ -484,18 +487,20 @@ window.addEventListener("hashchange", route);
 function renderNetwork(){
   const packBlocks = Object.values(D.packmeta).reduce((s,p)=>s+p.blocks,0);
   $("#nettiles").innerHTML = [
-    ["111","regional union & trade entries","t1"],
+    [String(D.entries.length),"regional union & trade entries","t1"],
     [String(D.families),"trade families","t2"],
-    ["3","anchor regions","t3"],
+    [String(D.regions.length),"anchor regions","t3"],
     [packBlocks.toLocaleString(),"curriculum blocks behind them","t1"],
     [String(Object.keys(D.packmeta).length),"packs linked","t2"],
   ].map(([v,l,t])=>`<div class="tile ${t}"><b>${v}</b><span>${l}</span></div>`).join("");
 
-  // arc map: three region nodes on one line of longitude-ish layout
-  const P = {sf:[110,150], oak:[190,110], nola:[560,180]};
-  const arcs = [["sf","oak"],["oak","nola"],["sf","nola"]];
+  // arc map: two coasts of region nodes, longitude-ish layout
+  const P = {sf:[100,120], oak:[185,78], lax:[150,215], nola:[560,190], br:[500,110], hou:[420,225]};
+  const arcs = [["sf","oak"],["oak","lax"],["sf","lax"],["nola","br"],["br","hou"],["nola","hou"],["oak","br"],["lax","hou"]];
   const svg =
-    `<svg viewBox="0 0 680 250" width="100%" style="max-width:680px" role="img" aria-label="Network map of the three regions">`+
+    `<svg viewBox="0 0 680 290" width="100%" style="max-width:680px" role="img" aria-label="Network map of the six regions">`+
+    `<text x="140" y="22" text-anchor="middle" font-size="10" fill="var(--faint)">PACIFIC COAST</text>`+
+    `<text x="500" y="22" text-anchor="middle" font-size="10" fill="var(--faint)">GULF COAST</text>`+
     arcs.map(([a,b])=>{const[x1,y1]=P[a],[x2,y2]=P[b];
       return `<path d="M${x1},${y1} Q${(x1+x2)/2},${Math.min(y1,y2)-70} ${x2},${y2}" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="6 5"/>`;}).join("")+
     D.regions.map(r=>{const[x,y]=P[r.id];
@@ -515,7 +520,7 @@ function renderNetwork(){
   });
 }
 
-/* ---------- stylized city maps: the 111 entries on real ground ----------
+/* ---------- stylized city maps: every entry on real ground ----------
    Approximate, hand-placed geography (like the Louisiana tile cartogram):
    water shapes + the nine training-ground sites per region, each node
    carrying that site's trade families. Click a site to open the roster
@@ -549,6 +554,31 @@ const CITYGEO = {
     hint: [["Lake Pontchartrain", 230, 32], ["Mississippi River", 300, 250]],
     sites: {build:[262,104], elec:[286,168], water:[186,156], port:[330,176], transit:[224,196],
             service:[168,100], civic:[136,200], mech:[416,120], fire:[350,96]},
+  },
+  br: {
+    water: [
+      `<path d="M150,0 Q120,80 156,150 Q192,220 150,300 L98,300 Q140,220 104,150 Q70,80 98,0 Z"/>`, // the Mississippi
+    ],
+    hint: [["Mississippi River", 128, 150, true], ["the petrochemical corridor", 340, 26]],
+    sites: {port:[186,224], water:[184,120], build:[212,168], elec:[330,70], mech:[392,110],
+            transit:[268,210], service:[224,96], civic:[310,190], fire:[386,160]},
+  },
+  hou: {
+    water: [
+      `<path d="M460,120 L250,150 Q180,160 120,140 L120,168 Q180,188 252,178 L460,150 Z"/>`, // the ship channel
+      `<path d="M0,60 Q90,72 160,54 L160,74 Q90,92 0,80 Z"/>`,                                // a bayou
+    ],
+    hint: [["the Houston Ship Channel", 320, 112], ["Buffalo Bayou", 70, 50]],
+    sites: {port:[366,164], elec:[300,196], water:[116,84], build:[150,240], transit:[220,250],
+            service:[92,180], civic:[190,110], mech:[420,220], fire:[300,60]},
+  },
+  lax: {
+    water: [
+      `<path d="M0,190 Q120,214 240,262 Q340,300 460,290 L460,300 L0,300 Z"/>`,               // the Pacific
+    ],
+    hint: [["Pacific Ocean", 150, 282], ["the San Gabriels", 350, 26]],
+    sites: {port:[300,246], water:[382,84], build:[214,136], elec:[280,100], mech:[186,206],
+            transit:[254,176], service:[130,96], civic:[120,160], fire:[404,140]},
   },
 };
 function cityMapSVG(r){
@@ -703,8 +733,8 @@ function renderDistricts(){
 
 /* ---------- guide ---------- */
 const TOUR = [
-  {hash:"#/network", sel:"#nettiles", t:"Welcome to the Trades Network", m:"Thirty-seven trade families, three regions, one hundred and eleven entries. Here's the shape of the whole thing at a glance."},
-  {hash:"#/network", sel:"#netmap", t:"Two coasts, one model", m:"San Francisco, Oakland and New Orleans anchor the network. The crafts transfer between them; the ground never does."},
+  {hash:"#/network", sel:"#nettiles", t:"Welcome to the Trades Network", m:"Thirty-seven trade families, six regions on two coasts, two hundred and twenty-two entries. Here's the shape of the whole thing at a glance."},
+  {hash:"#/network", sel:"#netmap", t:"Two coasts, one model", m:"San Francisco, Oakland and Los Angeles on the Pacific; New Orleans, Baton Rouge and Houston on the Gulf. The crafts transfer between them; the ground never does."},
   {hash:"#/regions", sel:"#reggrid", t:"Regions and their city maps", m:"Each region now carries a stylized city map — every node is a real training ground, and the number on it counts the trade families who train there. Click a node and the roster opens already filtered."},
   {hash:"#/unions", sel:"#ugrid", t:"The roster", m:"All one hundred and eleven entries, searchable and filterable. Every card names the international union and carries a training simulation set on that region's own ground."},
   {hash:"#/sims", sel:"#simgrid", t:"The simulation studio", m:"Nine control-discipline categories on all three coasts. And the one law over all of it: a simulation never certifies."},

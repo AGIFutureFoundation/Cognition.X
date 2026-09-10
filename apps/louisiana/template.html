@@ -393,8 +393,8 @@
       <p class="note">How many of the 64 parishes each curriculum pack serves through their anchor industries —
       the deep integration between the dataset and the parish dashboards. Every parish also runs the core spine
       (K–12, the Louisiana OS, the Louisiana civic pack, life skills, emergency response, and the Parish Launch
-      &amp; Scale rollout curriculum). For the trade-union side — 111 union &amp; trade entries with regional
-      training simulations, New Orleans included — see the
+      &amp; Scale rollout curriculum). For the trade-union side — 222 union &amp; trade entries across six
+      regions with regional training simulations, New Orleans and Baton Rouge included — see the
       <a href="../trades-network/index.html" target="_blank" rel="noopener">Cognition.X Trades Network</a>
       alongside this file.</p>
       <div id="industrychart"></div>
@@ -1362,22 +1362,23 @@ function renderReady(p, sel){
 function renderParishUnions(p){
   const host = $("#punions"); if (!host || !D.unions) return;
   const hub = D.hubs[p.region];
-  if (hub !== "New Orleans"){
+  const U = D.unions[hub];
+  if (!U){
     host.innerHTML = `<p class="note" style="margin:0">The regional union layer currently anchors the
-      <b>New Orleans</b> Trade Hall — ${esc(p.name)}'s hall is ${esc(hub)}. The full network
-      (111 union &amp; trade entries across New Orleans, San Francisco and Oakland–East Bay) is in the
+      <b>New Orleans</b> and <b>Baton Rouge</b> Trade Halls — ${esc(p.name)}'s hall is ${esc(hub)}. The full
+      network (222 union &amp; trade entries across six regions on two coasts) is in the
       <a href="../trades-network/index.html" target="_blank" rel="noopener">Cognition.X Trades Network</a>
       alongside this file.</p>`;
     return;
   }
   const mine = new Set(D.corePacks.concat(p.packs.map(([s])=>s)));
-  const matched = D.unions.entries.filter(e => e.packs.some(s => mine.has(s)));
-  const rest = D.unions.entries.length - matched.length;
+  const matched = U.entries.filter(e => e.packs.some(s => mine.has(s)));
+  const rest = U.entries.length - matched.length;
   host.innerHTML =
-    `<p class="note">${esc(p.name)} is served by the <b>New Orleans</b> Trade Hall, so the regional union
-     layer applies directly: ${matched.length} of ${D.unions.entries.length} trade families back packs in
-     this parish's own plan. Front door for the current local: ${esc(D.unions.council)}.
-     Simulation ≠ certification.</p>` +
+    `<p class="note">${esc(p.name)} is served by the <b>${esc(hub)}</b> Trade Hall — a Trades Network anchor
+     (${esc(U.region)}) — so the regional union layer applies directly: ${matched.length} of
+     ${U.entries.length} trade families back packs in this parish's own plan. Front door for the current
+     local: ${esc(U.council)}. Simulation ≠ certification.</p>` +
     `<div class="themelist">` + matched.map(e =>
       `<div class="theme" style="border-left:4px solid var(--w3)">`+
       `<div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap"><b>${esc(e.family)}</b>`+
