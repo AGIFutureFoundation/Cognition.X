@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 15200,
+  "total_blocks": 15450,
   "packs": [
     {
       "name": "K–12",
@@ -731,6 +731,26 @@
         "The storm and the long memory"
       ],
       "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "SmartCiti.X : New Orleans Trades",
+      "slug": "NOLATRADES",
+      "blocks": 250,
+      "tracks": [
+        "The port and the crane: cargo across the levee",
+        "Safe ground: digging in a city below the sea",
+        "Water in, water out: pumps, canals and the storm",
+        "Power back on: the grid after the wind",
+        "The craft pathway: from first tool to journey card"
+      ],
+      "credentials": 5,
       "grade_bands": [
         "K–2",
         "3–5",

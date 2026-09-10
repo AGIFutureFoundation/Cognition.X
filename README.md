@@ -15,7 +15,7 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (15,200 blocks, 38 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (15,450 blocks, 39 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
@@ -62,7 +62,10 @@ Health, Multilateral, Sapient, Non-Profit — 500 blocks each), sixteen
 preventive health, life skills, water/land/climate, care, making/repair,
 digital life & AI, food & nutrition, energy & the home, transport &
 mobility, emergency preparedness, arts & media, and law & everyday
-rights), three **legacy-track localizations** (*Civic Leadership
+rights), the **SmartCiti.X : New Orleans Trades** supplement (250
+blocks of port, ground, water, power and craft-pathway curriculum —
+the Cognition.X companion to the SmartCiti.X New Orleans Trades
+Edition), three **legacy-track localizations** (*Civic Leadership
 Legacy : Louisiana / California / Texas*, in the Willie L. Brown Jr.
 Institute model carried by the app — see
 [`docs/wiki/Legacy-Tracks.md`](docs/wiki/Legacy-Tracks.md)), plus the

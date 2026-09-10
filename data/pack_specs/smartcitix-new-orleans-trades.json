@@ -1,0 +1,291 @@
+{
+ "pack": "SmartCiti.X : New Orleans Trades",
+ "notes": "The Cognition.X companion to the SmartCiti.X New Orleans Trades Edition (the Crescent Works campus and its walkable city layer). Five tracks of port, ground, water, power and pathway — the trades as New Orleans actually works them. Control-discipline themes mirror the SmartCiti.X simulator rubrics (crane swing management, the trench's flagged utility, ordered procedure), and the honesty stance is shared verbatim: a simulator teaches control discipline and never counts as equipment certification. Facts are public-record Louisiana; transfer checks are phrased against the learner's own parish or home, and every check stays safe — observation from public ground, rated tags and paper trails, never contact with energized, suspended or moving equipment.",
+ "tracks": [
+  {
+   "name": "The port and the crane: cargo across the levee",
+   "prefix": "PC",
+   "credential": "Port & Lift Reader",
+   "themes": [
+    {
+     "theme": "A city that works by water",
+     "description": "Why New Orleans exists where it does — the river trade above it, the Gulf below it, and what a port city's work looks like from the levee.",
+     "transfer_check": "Find, on a real map, the port facility nearest your parish and name two things that actually move through it."
+    },
+    {
+     "theme": "The crane above the wharf",
+     "description": "What the operator of a wharf crane really controls — slew, trolley and hoist — and why every lift is three motions managed at once.",
+     "transfer_check": "Watch a real container or cargo lift, from public ground or on film, and narrate the three motions by name as they happen."
+    },
+    {
+     "theme": "Rigging: the load speaks through the sling",
+     "description": "Slings, hitches and rated hardware — how a load's weight and balance decide the rig, and why the tag on the strap is the law of the lift.",
+     "transfer_check": "Examine a real ratchet strap or lifting sling, find its rated tag, and explain to someone why a frayed one is retired on the spot."
+    },
+    {
+     "theme": "The signal hand",
+     "description": "The standard crane hand signals — one signaller, one language, no shouting over the wind.",
+     "transfer_check": "Learn five standard crane hand signals and demonstrate them to a partner who writes down what each one commands."
+    },
+    {
+     "theme": "Swing is the enemy",
+     "description": "A suspended load is a pendulum: why smooth starts and stops tame the swing, and why a hurried operator makes the load dangerous.",
+     "transfer_check": "Hang a small weight on a string, move your hand like a crane, and show how a slow start keeps the swing small while a jerk makes it wild."
+    },
+    {
+     "theme": "The box that ate the waterfront",
+     "description": "Containerization — how one steel box remade longshore work, the wharves, and what a New Orleans dock job is today.",
+     "transfer_check": "Compare a photograph of a New Orleans wharf before containers with one today, and name three kinds of work that changed."
+    },
+    {
+     "theme": "Weather rules the river",
+     "description": "Fog on the water, wind limits on the boom, and the river's stage — the conditions that stop a lift no matter the schedule.",
+     "transfer_check": "Look up today's Mississippi River stage at New Orleans on the public gauge and state what that number means for the docks."
+    },
+    {
+     "theme": "Who works the port",
+     "description": "Longshore workers, operating engineers, teamsters and their halls — the crafts a single ship call brings to the wharf together.",
+     "transfer_check": "From one real job posting or union page for port work in Louisiana, list the craft, the hall, and one requirement for the seat."
+    },
+    {
+     "theme": "From ship to shelf",
+     "description": "The intermodal chain — wharf to rail yard to truck to warehouse — and where the port's work touches your own parish.",
+     "transfer_check": "Pick one product in your home and trace, in writing, a plausible path it took from a ship's hold to your shelf."
+    },
+    {
+     "theme": "The paper trail of a lift",
+     "description": "Manifests, tallies and inspection logs — why the count must match, and how paper protects both the cargo and the crew.",
+     "transfer_check": "Receive a real delivery of any kind, check the packing note against what arrived, and record one discrepancy or a clean count."
+    }
+   ]
+  },
+  {
+   "name": "Safe ground: digging in a city below the sea",
+   "prefix": "SG",
+   "credential": "Safe Ground Steward",
+   "themes": [
+    {
+     "theme": "Call before you dig",
+     "description": "Louisiana 811 — the one call that finds every buried line before a shovel does, and the waiting time the law demands.",
+     "transfer_check": "Find Louisiana 811 and write down the exact steps and the waiting period a real dig at your own address would require."
+    },
+    {
+     "theme": "The flags and their colours",
+     "description": "The marking code painted on the street — red for electric, yellow for gas, blue for water — a public language anyone can read.",
+     "transfer_check": "Find real locate marks or flags in your neighbourhood and decode at least two colours for someone who never noticed them."
+    },
+    {
+     "theme": "A trench is not a hole",
+     "description": "Why trench walls fail without warning, what a cubic metre of soil weighs, and why nobody enters an unprotected cut — ever.",
+     "transfer_check": "Weigh a small bucket of damp soil, scale the number up to a collapsed trench wall, and state the weight that would land on a worker."
+    },
+    {
+     "theme": "Shoring, shielding, sloping",
+     "description": "The three protections that make a trench survivable, and how the depth and the soil pick between them.",
+     "transfer_check": "From photographs of three real excavations, identify which protection each one uses — or flag the one using none."
+    },
+    {
+     "theme": "Water under everything",
+     "description": "New Orleans digs into a high water table: why cuts flood from below, and what dewatering means before the real work starts.",
+     "transfer_check": "After a rain, note how long water stands in the lowest spot near your home, and explain what that says about digging there."
+    },
+    {
+     "theme": "The line you did not expect",
+     "description": "Striking a buried utility — what the alarm moment is, why all work stops at once, and who must be called before anything moves again.",
+     "transfer_check": "Write the stop-work steps for a struck gas line as five short commands, and have someone read them back correctly."
+    },
+    {
+     "theme": "Grade means exactly",
+     "description": "A trench is cut to a number, not a feeling — levels, lasers and string lines, and why half a bucket too deep is rework.",
+     "transfer_check": "With a string and a line level, set a level line across a real span at home and prove it with a second measurement."
+    },
+    {
+     "theme": "Soil tells its story",
+     "description": "Clay, sand and fill — reading what comes out of the ground, and why the spoil pile stands back from the edge it came from.",
+     "transfer_check": "Sample soil from two spots near home, compare how each holds together when damp, and say which would stand in a wall longer."
+    },
+    {
+     "theme": "The competent person",
+     "description": "One named person inspects the trench each shift and after every rain — what that duty covers and why it cannot be shared.",
+     "transfer_check": "Write the checklist a trench inspection must walk through after a Louisiana thunderstorm, and defend each line."
+    },
+    {
+     "theme": "Backfill and the street you leave",
+     "description": "Compaction in lifts, restoring the surface, and why a shortcut under the pavement becomes everyone's pothole.",
+     "transfer_check": "Find one patched utility cut in a real street, judge how the patch is holding, and explain what was done well or poorly."
+    }
+   ]
+  },
+  {
+   "name": "Water in, water out: pumps, canals and the storm",
+   "prefix": "WW",
+   "credential": "Drainage & Storm Crew",
+   "themes": [
+    {
+     "theme": "A bowl between levee and lake",
+     "description": "The city's shape — below sea level, ringed by levees, drained by machines — and why every drop of rain must be lifted out.",
+     "transfer_check": "On a real elevation map, find your own ground height relative to the river and the lake, and state where your rain goes."
+    },
+    {
+     "theme": "The pump stations",
+     "description": "The drainage pump stations and their giant screws — machinery a century old still working every storm, and the crews who run it.",
+     "transfer_check": "Locate the drainage pump station nearest your parish on a public map and report what area it drains and where the water lands."
+    },
+    {
+     "theme": "The catch basin on your corner",
+     "description": "The street's first drain — where it leads, why leaves defeat it, and what a blocked basin does to the block above it.",
+     "transfer_check": "Find the nearest storm drain, inspect it from above without entering the street, and report whether it is clear and where its water goes."
+    },
+    {
+     "theme": "Canals seen and unseen",
+     "description": "Outfall canals in the open air and culverts under the neutral ground — the hidden second city that carries the water away.",
+     "transfer_check": "Trace, on a map, the path a storm's water takes from your street to open water, naming each canal or culvert it uses."
+    },
+    {
+     "theme": "The storm's schedule",
+     "description": "Hurricane season's rhythm, watch against warning, and the days-before timeline on which real preparation runs.",
+     "transfer_check": "Build a 72-hour countdown checklist for your own household from the public parish guidance, and post it where it can be read."
+    },
+    {
+     "theme": "Secure the machine, then leave",
+     "description": "How crews prepare equipment for a storm they will not stay to watch — fuel, elevation, tie-down, records — and why people leave on time.",
+     "transfer_check": "Write the shutdown-and-secure list for one real machine you have access to — a mower, a generator, a vehicle — before a named storm."
+    },
+    {
+     "theme": "After the wind: reading a damaged site",
+     "description": "Walking a site after a storm — what to photograph, what to report, and the one rule that never bends: a downed line is untouchable.",
+     "transfer_check": "From photographs of storm damage, list the hazards in the order a crew must treat them, putting any wire first."
+    },
+    {
+     "theme": "Mould, muck and the gut-out",
+     "description": "Flood recovery labour — what wet walls become, the protective gear the work demands, and why speed matters in the first week.",
+     "transfer_check": "List the protective equipment a gut-out crew wears and match each item to the specific hazard it answers."
+    },
+    {
+     "theme": "The generator's place",
+     "description": "Temporary power after a storm — and the placement rule that decides between help and tragedy: outdoors, away from windows, always.",
+     "transfer_check": "Find a real generator's rating plate, in person or in its manual, and mark on a sketch of your home the one safe place it could run."
+    },
+    {
+     "theme": "Rebuild higher",
+     "description": "Base flood elevation, elevation certificates, and why the rebuilt house stands on piers its neighbour lacks.",
+     "transfer_check": "Look up whether your address sits in a mapped flood zone and report the base flood elevation the maps assign it."
+    }
+   ]
+  },
+  {
+   "name": "Power back on: the grid after the wind",
+   "prefix": "PB",
+   "credential": "Restoration Ready",
+   "themes": [
+    {
+     "theme": "The grid you can see from the street",
+     "description": "Poles, transformers, service drops and the meter — the last mile of the grid, readable from your own kerb.",
+     "transfer_check": "From the ground and eyes only, sketch the path power takes from the nearest pole to your meter, naming each piece."
+    },
+    {
+     "theme": "Why the lights go out in Louisiana",
+     "description": "Wind, water and trees against wires — what actually breaks in a storm, and why the same corners go dark first.",
+     "transfer_check": "After any outage in your parish, find the utility's public cause statement and restate it in one plain sentence."
+    },
+    {
+     "theme": "The line crew's ladder of safety",
+     "description": "De-energize, test, ground — the fixed order a crew works through before touching anything, and why the order never varies.",
+     "transfer_check": "Explain the three steps and their order to someone else, and have them tell you what goes wrong if step two is skipped."
+    },
+    {
+     "theme": "Downed line discipline",
+     "description": "Every downed wire is live until the utility says otherwise — the distance rule and the shuffle-step exit that keep bystanders alive.",
+     "transfer_check": "Teach a family member the keep-back rule and the feet-together shuffle exit, and have them repeat both back correctly."
+    },
+    {
+     "theme": "The order of restoration",
+     "description": "Hospitals and pump stations first, the biggest lines before the smallest — why restoration is a triage and your block may wait.",
+     "transfer_check": "Rank six fictional outage sites in restoration order and defend the ranking the way a utility would."
+    },
+    {
+     "theme": "Mutual aid: crews from far away",
+     "description": "The convoys after a hurricane — how utilities lend crews across states, and what it takes to work a grid you have never seen.",
+     "transfer_check": "Find one news account of mutual-aid crews working a Louisiana storm and report where they came from and what they restored."
+    },
+    {
+     "theme": "The meter and what it meters",
+     "description": "Reading your own meter — kilowatt-hours as a number you can watch, and what the reading says about the house behind it.",
+     "transfer_check": "Read your real meter twice, a day apart, and turn the difference into the cost of that day at your utility's rate."
+    },
+    {
+     "theme": "Solar, batteries and the island question",
+     "description": "Why rooftop solar goes dark in an outage unless it can island — the safety reason lineworkers insist on it.",
+     "transfer_check": "Explain to someone why a solar roof alone does not power the house in a blackout, and what equipment changes that."
+    },
+    {
+     "theme": "Tools that keep you alive",
+     "description": "Insulated tools, tested gloves and cover-up — awareness of the equipment that stands between a lineworker and the voltage.",
+     "transfer_check": "From a supplier's real catalogue page, identify the voltage class printed on a lineworker's glove and what the date stamp means."
+    },
+    {
+     "theme": "From apprentice to lineworker",
+     "description": "The pathway up the pole — apprenticeship years, climbing school, storm rotations — a career built one certified step at a time.",
+     "transfer_check": "Find one real lineworker apprenticeship serving Louisiana and write its entry requirements and its length."
+    }
+   ]
+  },
+  {
+   "name": "The craft pathway: from first tool to journey card",
+   "prefix": "CP",
+   "credential": "Craft Pathway Navigator",
+   "themes": [
+    {
+     "theme": "What a union hall is",
+     "description": "The hiring hall — dispatch lists, locals and the difference between looking for a job and being sent to one.",
+     "transfer_check": "Find one real trades local serving your parish and report what work it dispatches and how a new name gets on its list."
+    },
+    {
+     "theme": "Apprenticeship: earn while you learn",
+     "description": "Registered apprenticeship — paid hours on real work, classroom hours beside them, and a wage that steps up on schedule.",
+     "transfer_check": "Find one registered apprenticeship in Louisiana on the public registry and write down its entry requirements and starting wage."
+    },
+    {
+     "theme": "The journey card",
+     "description": "What journey-level status certifies — verified hours and verified skill — and why the card travels wherever the craft is worked.",
+     "transfer_check": "Interview or read an account of one journeyworker and report what their card required and where it has taken them."
+    },
+    {
+     "theme": "Hours that count",
+     "description": "On-the-job hours and related instruction — the ledger an apprentice keeps, and why unlogged work is work that never happened.",
+     "transfer_check": "Keep a one-week log of your own practice at any skill, in apprentice form: date, hours, task, and who could verify it."
+    },
+    {
+     "theme": "The simulator and the seat",
+     "description": "What a training simulator honestly teaches — smooth inputs, swing management, ordered procedure — and the line it never crosses: no simulator hour counts as equipment certification.",
+     "transfer_check": "After any simulator or game that models real work, write two skills it truly built and two claims it could never certify, and say why."
+    },
+    {
+     "theme": "Credentials that travel",
+     "description": "OSHA cards, craft certifications and the port's TWIC — which papers real Louisiana postings ask for, by name.",
+     "transfer_check": "From one real Louisiana trades posting, list every credential it names and where each one is actually obtained."
+    },
+    {
+     "theme": "Tools of your own",
+     "description": "The starter toolbox — what a first-year actually needs, the care that makes tools last, and the inventory habit that keeps them.",
+     "transfer_check": "Inventory the real tools in your home, mark each one's condition, and restore one neglected tool to working order."
+    },
+    {
+     "theme": "The safety culture you join",
+     "description": "Stop-work authority and the near-miss report — why the newest person on site can halt it, and why writing up the close call is craft, not weakness.",
+     "transfer_check": "Write up one real near-miss you have witnessed anywhere, in report form: what happened, what almost happened, what changes."
+    },
+    {
+     "theme": "Money of the trade",
+     "description": "Prevailing wage, overtime and per diem — reading a trades paycheque, and the arithmetic of a storm week's hours.",
+     "transfer_check": "Given a real prevailing-wage rate for one Louisiana craft, compute a 50-hour storm week's gross pay with overtime, on paper."
+    },
+    {
+     "theme": "Your parish, your work",
+     "description": "The projects around you — port expansions, drainage work, restoration contracts — and which crafts each one is hiring right now.",
+     "transfer_check": "Name two active construction, port or drainage projects in your parish and, from public sources, list the crafts working each."
+    }
+   ]
+  }
+ ]
+}

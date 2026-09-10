@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 38 packs — 15,200 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 39 packs — 15,450 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -41,6 +41,7 @@ Catalog of all 38 packs — 15,200 blocks total. Machine-readable version: [`dat
 | Food, Cooking & Nutrition | `FOOD` | 250 | 5 | 5 |
 | Law, Contracts & Everyday Rights | `LAW` | 250 | 5 | 5 |
 | Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
+| SmartCiti.X : New Orleans Trades | `NOLATRADES` | 250 | 5 | 5 |
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
 
 ## Tracks by pack
@@ -273,6 +274,15 @@ Catalog of all 38 packs — 15,200 blocks total. Machine-readable version: [`dat
 - French, Creole and the languages of home
 - Krewes, festivals and the craft of celebration
 - The storm and the long memory
+
+**SmartCiti.X : New Orleans Trades** — the Cognition.X companion to the
+SmartCiti.X New Orleans Trades Edition (the Crescent Works campus and its
+walkable city layer)
+- The port and the crane: cargo across the levee
+- Safe ground: digging in a city below the sea
+- Water in, water out: pumps, canals and the storm
+- Power back on: the grid after the wind
+- The craft pathway: from first tool to journey card
 
 **Transport & Mobility**
 - Moving through the city without a car
