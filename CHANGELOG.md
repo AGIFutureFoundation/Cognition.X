@@ -4,6 +4,29 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.35.0] — 2026-09-10
+
+### Added
+- **Pack Studio — educator authoring** (Flow Hub's new *Author*
+  view): a form-driven pack-spec editor — pack name and stance
+  notes, tracks with name / 2–3-letter prefix / credential, ten
+  themes each with description and a transfer check on real
+  material — with live validation mirroring the generator's rules
+  (empty fields, duplicate themes, reused prefixes), a live block
+  count, a worked example, import-to-edit, browser-local drafts,
+  and a **Validate & export** step whose output was verified to
+  round-trip through `tools/generate_pack.py` unchanged. Submission
+  instructions are built in; honest scope stated: the offline file
+  exports the spec — GitHub and the review board carry it from
+  there.
+- **Governance** (`docs/GOVERNANCE.md`): the curriculum review board
+  — composition, the six-point checklist (accuracy, real transfer
+  checks, honesty stances intact, respectful terminology,
+  shape/provenance, access), the acceptance flow (CI + two board
+  approvals), the supersede-never-rewrite breaking-change policy,
+  and the standing review queue over the ~9,950 machine-authored
+  blocks with its priority order.
+
 ## [0.34.0] — 2026-09-10
 
 ### Added

@@ -217,11 +217,21 @@ complete a track and hold a verifiable credential file.
   invalid, valid-but-untrusted-key, or *signed by trusted office
   "X"* by name. Remaining federation work: publishing pack versions,
   a portable trust-list exchange format, and revocation.
-- Educator authoring: in-app pack-spec editor producing PRs against
-  `data/pack_specs/` (GitHub is the review pipeline)
-- Governance: curriculum review board process for accepting new packs and
-  breaking changes to existing blocks (documented in the wiki; block ids
-  are never reused)
+- [x] Educator authoring, first slice (v0.35.0): the **Pack Studio**
+  (Flow Hub's Author view) — a form-driven spec editor with live
+  generator-grade validation, a worked example, import-to-edit,
+  browser-local drafts, and spec export verified to round-trip
+  through `generate_pack.py`. Honest scope: the offline file exports
+  the spec and the submit instructions; GitHub remains the review
+  pipeline (the page cannot open the PR itself).
+- [x] Governance (v0.35.0): the curriculum review board process is
+  documented in [`docs/GOVERNANCE.md`](GOVERNANCE.md) — board
+  composition, the six-point review checklist (accuracy, real checks,
+  honesty stances, respectful terminology, shape/provenance, access),
+  the acceptance flow, the supersede-never-rewrite breaking-change
+  policy, and the standing review queue over the machine-authored
+  packs. Seating the board itself is operational work outside the
+  repository.
 - Evidence loop: anonymised, opt-in transfer-check pass/fail telemetry
   feeding back into block revision priorities
 - v1.0 is cut when a named external cohort has completed credentials on an
