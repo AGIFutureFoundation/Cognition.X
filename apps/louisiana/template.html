@@ -2393,6 +2393,55 @@ const WIDGETS = {
       <div class="vorwrap" id="ra-vormap"></div>`;
     try{ renderStateVoronoi("#ra-vormap"); }catch(e){}
   }},
+  {id:"evidence", t:"The evidence loop — opt-in export", span:true, r:(p,el)=>{
+    const ls = llLoad().learners;
+    const agg = {};
+    ls.forEach(l => {
+      LTRACKS.forEach(t => { const n = (l.prog||{})[t.key]||0;
+        if (n > 0){ const a = agg[t.key] = agg[t.key] || {pack:t.pack, track:t.name,
+          checksRecorded:0, witnessedConfirmed:0, witnessedNotYet:0, learners:0};
+          a.checksRecorded += n; a.learners++; } });
+      (l.evidence||[]).forEach(e => {
+        const t = LTRACKS.find(x=>x.name===e.track); if (!t) return;
+        const a = agg[t.key] = agg[t.key] || {pack:t.pack, track:t.name,
+          checksRecorded:0, witnessedConfirmed:0, witnessedNotYet:0, learners:0};
+        if (e.result === "confirmed") a.witnessedConfirmed++;
+        else a.witnessedNotYet++;
+      });
+    });
+    const rows = Object.values(agg);
+    el.innerHTML += `<p class="note">The roadmap's evidence loop, consent-first: an <b>aggregate, per-track</b>
+      export — checks recorded, witnessed outcomes, learners touched as a count — with <b>no names, no ids, no
+      per-learner rows</b>. Nothing is ever sent anywhere by this page: the box below is the only exit, and you
+      choose where the file goes (typically: to the curriculum review board, where
+      <span class="mono">tools/evidence_triage.py</span> turns collected files into block-revision priorities).</p>
+      <label style="display:flex; gap:9px; align-items:flex-start; font-size:.88rem; margin:0 0 10px; cursor:pointer">
+        <input type="checkbox" id="ev-consent" style="margin-top:4px">
+        <span>I choose to export this aggregate. I understand it carries per-track counts only, and that
+        sharing it is my action, not the platform's.</span></label>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 10px">
+        <input type="search" id="ev-site" placeholder="Optional site label (e.g. a hall or district — or leave blank)" style="min-width:280px">
+        <button class="btn gold" id="ev-export" disabled>Export cx-evidence/1</button></div>` +
+      (rows.length
+        ? `<p class="note" style="margin:0 0 4px"><b>Preview</b> — ${rows.length} track${rows.length>1?"s":""} with activity:</p>` +
+          rows.slice(0,6).map(a=>`<div style="font-size:.82rem; padding:4px 0; border-top:1px solid var(--line)">
+            ${esc(a.track)} <span class="mono" style="font-size:.68rem; color:var(--faint)">${a.checksRecorded} checks ·
+            ${a.witnessedConfirmed}✓ / ${a.witnessedNotYet}↺ witnessed · ${a.learners} learner${a.learners===1?"":"s"}</span></div>`).join("") +
+          (rows.length>6 ? `<p class="note" style="margin:4px 0 0">…and ${rows.length-6} more in the export.</p>` : "")
+        : `<p class="note" style="margin:0">No activity in the ledger yet — the export idles until there is real evidence.</p>`) +
+      `<textarea id="ev-out" rows="6" style="width:100%; display:none; margin-top:10px" spellcheck="false" aria-label="Exported evidence JSON"></textarea>`;
+    const cb = el.querySelector("#ev-consent"), btn = el.querySelector("#ev-export");
+    cb.addEventListener("change", ()=>{ btn.disabled = !cb.checked; });
+    btn.addEventListener("click", ()=>{
+      const out = {format:"cx-evidence/1",
+        site: (el.querySelector("#ev-site").value||"").trim().slice(0,80) || undefined,
+        exportedAt: new Date().toISOString().slice(0,10),
+        consent: {optIn:true, anonymized:true, aggregateOnly:true, sentBy:"the person exporting, never the page"},
+        tracks: rows};
+      const ta = el.querySelector("#ev-out"); ta.style.display = "block";
+      ta.value = JSON.stringify(out, null, 1); ta.select();
+    });
+  }},
   {id:"hallload", t:"Trade Hall launch load", r:(p,el)=>{
     const rows = D.regions.map((r,i)=> i ? {n:r, hub:D.hubs[i],
       w1: D.parishes.filter(x=>x.region===i && x.accWave===1).length,

@@ -232,8 +232,27 @@ complete a track and hold a verifiable credential file.
   policy, and the standing review queue over the machine-authored
   packs. Seating the board itself is operational work outside the
   repository.
-- Evidence loop: anonymised, opt-in transfer-check pass/fail telemetry
-  feeding back into block revision priorities
+- [x] Evidence loop, first slice (v0.36.0): opt-in **cx-evidence/1**
+  aggregate export (per-track counts only, no names, nothing ever
+  auto-sent — the export box is the only exit) plus
+  `tools/evidence_triage.py`, which merges collected files into
+  block-revision priorities for the review board (high witnessed
+  not-yet rates flag mis-pitched checks; unused tracks flag
+  relevance reviews). Evidence proposes; the board disposes.
+
+### The path to v1.0 (operational checklist)
+
+The remaining v1.0 work is operational, not code:
+
+1. **Seat the curriculum review board** (docs/GOVERNANCE.md) and
+   begin the standing review queue, classroom-facing packs first.
+2. **Recruit a named external cohort** — one hall, one class, one
+   co-op — running an unmodified release.
+3. **Exchange records-office keys** with that cohort (federation v1)
+   and collect their opt-in evidence exports through one full track.
+4. **Cut v1.0** when the cohort's learners hold verifiable
+   credentials and the board has reviewed at least the packs that
+   cohort used.
 - v1.0 is cut when a named external cohort has completed credentials on an
   unmodified release
 

@@ -1,0 +1,15 @@
+{
+ "format": "cx-evidence/1",
+ "site": "SYNTHETIC SAMPLE — generated for tool demonstration, not real learner data",
+ "exportedAt": "2026-09-10",
+ "consent": {"optIn": true, "anonymized": true, "aggregateOnly": true,
+             "sentBy": "the person exporting, never the page"},
+ "tracks": [
+  {"pack": "Cognition.X : Louisiana OS", "track": "The river: highway, border, teacher",
+   "checksRecorded": 84, "witnessedConfirmed": 11, "witnessedNotYet": 2, "learners": 9},
+  {"pack": "Parish Launch & Scale", "track": "Training the trainers",
+   "checksRecorded": 41, "witnessedConfirmed": 3, "witnessedNotYet": 4, "learners": 6},
+  {"pack": "Basic Life Skills & Self-Reliance", "track": "Water in the home",
+   "checksRecorded": 57, "witnessedConfirmed": 8, "witnessedNotYet": 1, "learners": 7}
+ ]
+}

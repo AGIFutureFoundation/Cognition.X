@@ -49,6 +49,12 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   parent's family ledger and hall card, the homeschool co-op guild,
   the parish admin's five honest numbers and launch team, and the
   state admin's readiness rollup and Trade Hall launch load.
+- **The Evidence Loop (v0.36.0)** — an opt-in, consent-gated
+  cx-evidence/1 export on the State Admin dashboard: per-track
+  aggregates only (no names, no per-learner rows), never transmitted
+  by the page; `tools/evidence_triage.py` turns collected files into
+  block-revision priorities for the review board. Evidence proposes;
+  the board disposes.
 - **Federation v1 — trusted offices (v0.34.0)** — the Records Office
   verifies records in three grades: invalid, valid-but-untrusted-key,
   and *signed by trusted office "X"* by name, against a browser-local
