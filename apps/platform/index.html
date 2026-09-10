@@ -1,0 +1,472 @@
+<title>Cognition.X Platform</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#E9EDF1; --line:#D5DBE2;
+    --ink:#1B2431; --muted:#4E5A6B; --faint:#7E8898;
+    --purple:#2456A6; --gold:#946900; --green:#1F7A5C; --red:#B3352C;
+    --gold-soft:rgba(148,105,0,.10); --purple-soft:rgba(36,86,166,.10);
+    --w1:#3B6FD4; --w2:#2E8F63; --w3:#9552BD; --w4:#C25A3A;
+    --ring:rgba(36,86,166,.45); --shadow:0 8px 22px rgba(27,36,49,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
+      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+      --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E; --red:#E07A72;
+      --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
+      --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+      --ring:rgba(122,167,234,.5); --shadow:0 12px 32px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
+    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+    --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E; --red:#E07A72;
+    --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
+    --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+    --ring:rgba(122,167,234,.5); --shadow:0 12px 32px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box}
+  html{color-scheme:light dark}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:15.5px; line-height:1.6}
+  a{color:var(--purple)}
+  button{font:inherit; cursor:pointer}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+  :focus-visible{outline:2px solid var(--ring); outline-offset:2px}
+  .wrap{max-width:1160px; margin:0 auto; padding-inline:clamp(16px,4vw,40px)}
+  .skiplink{position:absolute; left:-9999px; top:0; z-index:100; background:var(--surface);
+    color:var(--ink); border:2px solid var(--ring); border-radius:0 0 10px 0; padding:10px 18px; font-weight:600}
+  .skiplink:focus{left:0}
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+  }
+  header.masthead{border-bottom:1px solid var(--line); background:var(--surface); position:sticky; top:0; z-index:5}
+  .mast{display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding-block:12px}
+  .wordmark{font-family:Fraunces,Georgia,serif; font-weight:800; font-size:1.15rem; white-space:nowrap}
+  .wordmark .px{color:var(--purple)}
+  nav.tabs{display:flex; gap:4px; flex-wrap:wrap}
+  .tab{border:0; background:none; color:var(--muted); padding:7px 12px; border-radius:999px; font-weight:500}
+  .tab:hover{color:var(--ink); background:var(--surface-2)}
+  .tab[aria-current="true"]{background:var(--purple-soft); color:var(--purple); font-weight:600}
+  .mastctl{margin-left:auto; display:flex; gap:8px; align-items:center}
+  .mastctl label{font-size:.7rem; color:var(--faint); font-family:"IBM Plex Mono",monospace}
+  .mastctl select{padding:4px 8px; font-size:.78rem}
+  main{padding-block:34px 70px}
+  .view{display:none} .view.active{display:block}
+  .eyebrow{font-size:.72rem; text-transform:uppercase; letter-spacing:.16em; font-weight:600; margin:0 0 10px; color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif; font-weight:800; font-size:clamp(1.8rem,4vw,2.8rem);
+     line-height:1.12; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance}
+  .lede{color:var(--muted); max-width:68ch; margin:0 0 24px; font-size:1.02rem}
+  .note{font-size:.82rem; color:var(--muted); margin:2px 0 12px}
+  .tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:22px 0}
+  .tile{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px}
+  .tile b{display:block; font-family:Fraunces,Georgia,serif; font-size:1.5rem; line-height:1.1}
+  .tile span{font-size:.76rem; color:var(--muted)}
+  .tile.t1 b{color:var(--purple)} .tile.t2 b{color:var(--gold)} .tile.t3 b{color:var(--green)}
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 20px; box-shadow:var(--shadow)}
+  .panel h3{margin:0 0 4px; font-family:Fraunces,Georgia,serif; font-size:1.05rem}
+  .grid3{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; margin-top:14px}
+  .chip{display:inline-block; border:1px solid var(--line); background:var(--surface-2); color:var(--muted);
+    border-radius:999px; padding:2px 11px; font-size:.74rem; margin:2px 4px 2px 0}
+  .btn{border:1px solid var(--line); background:var(--surface-2); color:var(--ink); border-radius:9px; padding:6px 14px}
+  .btn.gold{background:var(--gold); border-color:var(--gold); color:#fff}
+  .btn:disabled{opacity:.45; cursor:not-allowed}
+  .mapwrap{overflow-x:auto}
+  .sysnode{cursor:pointer}
+  .sysnode:hover rect, .sysnode:focus rect{filter:brightness(1.08)}
+  .stage{border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:0 0 12px; background:var(--surface)}
+  .stage.done{border-left:4px solid var(--green)}
+  .stage.active{border-left:4px solid var(--gold)}
+  .stage h3{margin:0; font-family:Fraunces,Georgia,serif; font-size:1.02rem}
+  .stage .body{margin-top:10px}
+  .artifact{background:var(--surface-2); border:1px solid var(--line); border-radius:9px; padding:10px 13px;
+    font-family:"IBM Plex Mono",monospace; font-size:.73rem; overflow-x:auto; white-space:pre-wrap; margin-top:10px; max-height:260px; overflow-y:auto}
+  .statechip{display:inline-block; border-radius:999px; padding:2px 12px; font-size:.74rem; font-weight:600; color:#fff}
+  .foot{border-top:1px solid var(--line); margin-top:60px; padding:22px 0 40px; font-size:.78rem; color:var(--faint)}
+  .stances li{margin:6px 0}
+</style>
+<a class="skiplink" href="#main">Skip to content</a>
+
+<header class="masthead"><div class="wrap mast">
+  <div class="wordmark">Cognition.X <span class="px">Platform</span></div>
+  <nav class="tabs" aria-label="Views">
+    <button class="tab" data-r="model" aria-current="true">The Model</button>
+    <button class="tab" data-r="loop">Run the Loop</button>
+    <button class="tab" data-r="apps">The Apps</button>
+    <button class="tab" data-r="stack">The Stack</button>
+  </nav>
+  <div class="mastctl">
+    <label for="themepick">theme</label>
+    <select id="themepick"><option value="">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+    <span class="mono" id="verline" style="font-size:.72rem; color:var(--faint)"></span>
+  </div>
+</div></header>
+
+<main class="wrap" id="main" tabindex="-1">
+
+  <section class="view active" id="view-model">
+    <p class="eyebrow">One dataset · six apps · a loop that closes</p>
+    <h1>The working model of Cognition.X</h1>
+    <p class="lede">Everything in the platform is one system: a validated dataset of small, verifiable
+    learning blocks; a deterministic pipeline that regenerates six offline apps from it; working models
+    that run in the learner's own browser — flow, access, witnessed checks, signed credentials — and a
+    consent-first evidence loop that feeds what happened back into what gets revised. Click any node.</p>
+    <div class="tiles" id="pxtiles"></div>
+    <div class="panel">
+      <h3>The system map</h3>
+      <p class="note">Solid arrows are the build; the dashed arc is the evidence loop closing back on the
+      dataset — through people, never automatically.</p>
+      <div class="mapwrap" id="sysmap"></div>
+      <div id="nodedetail" class="note" style="margin-top:12px; font-size:.9rem" aria-live="polite">
+        Click a node to read what it is and how it is verified.</div>
+    </div>
+  </section>
+
+  <section class="view" id="view-loop">
+    <p class="eyebrow">Demo data · real mechanics · nothing stored, nothing sent</p>
+    <h1>Run the loop</h1>
+    <p class="lede">The complete learning loop, executed here with the platform's <b>real mechanics</b> —
+    the flow state machine, the 50-check credential threshold, genuine ECDSA signing via your browser's
+    WebCrypto, the three-grade verification, the aggregate evidence format. The learner is demo data,
+    seeded at 47 of 50 checks so one run reaches a credential; everything that happens to them is the
+    real rule. This run lives only in this page's memory — reload and it is gone.</p>
+    <div style="display:flex; gap:9px; margin:0 0 16px">
+      <button class="btn" id="loop-reset">Reset the run</button>
+      <span class="note" style="margin:0" id="loop-status" aria-live="polite"></span>
+    </div>
+    <div id="stages"></div>
+  </section>
+
+  <section class="view" id="view-apps">
+    <p class="eyebrow">Six doors into one system</p>
+    <h1>The apps</h1>
+    <p class="lede">Every app is a single offline HTML file regenerated from the dataset — open them from
+    this repository and they link to each other; none is ever hand-edited.</p>
+    <div class="grid3" id="appgrid"></div>
+  </section>
+
+  <section class="view" id="view-stack">
+    <p class="eyebrow">Data · pipeline · principles</p>
+    <h1>The stack</h1>
+    <div class="grid3">
+      <div class="panel"><h3>Regenerate everything</h3>
+        <p class="note">The whole platform rebuilds from one CSV:</p>
+        <div class="artifact">python3 tools/generate_pack.py spec.json > out.csv
+python3 tools/normalize_blocks.py
+python3 tools/validate_blocks.py      # CI runs this
+python3 tools/build_flow_hub.py
+python3 tools/build_louisiana.py
+python3 tools/build_education_os.py
+python3 tools/build_trades.py
+python3 tools/build_states.py
+python3 tools/build_platform.py       # this page
+python3 tools/evidence_triage.py      # the loop's return path</div></div>
+      <div class="panel"><h3>The honesty stances</h3>
+        <ul class="stances" style="margin:6px 0 0; padding-left:18px; font-size:.86rem">
+          <li>Every block ends in a <b>transfer check on real material</b>.</li>
+          <li><b>Simulation ≠ certification</b> — carried verbatim, everywhere.</li>
+          <li><b>No union local numbers</b> — the regional council is the front door.</li>
+          <li>Access profiles are <b>chosen supports, never diagnoses</b>.</li>
+          <li>The capability is the constant; <b>the format is the variable</b>.</li>
+          <li><b>Nothing leaves any page on its own</b> — export boxes are the only exits.</li>
+          <li>A signature proves integrity and key possession; <b>identity is confirmed out-of-band</b>.</li>
+          <li><b>Evidence proposes; the board disposes</b> — ids are never rewritten, only superseded.</li>
+        </ul></div>
+      <div class="panel"><h3>Read the record</h3>
+        <p class="note">The platform documents itself:</p>
+        <ul style="margin:0; padding-left:18px; font-size:.86rem; line-height:1.9">
+          <li><a href="https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/SYSTEM_REVIEW.md">Complete system review</a></li>
+          <li><a href="https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/ROADMAP.md">Deep roadmap &amp; the path to v1.0</a></li>
+          <li><a href="https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md">Governance — the review board</a></li>
+          <li><a href="https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/AGENT_LEARNING.md">Agent &amp; robot learning principles</a></li>
+          <li><a href="https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CHANGELOG.md">Changelog — every release</a></li>
+        </ul>
+        <p class="note" style="margin-top:10px">Code Apache-2.0 · content CC BY 4.0.</p></div>
+    </div>
+  </section>
+
+  <div class="foot wrap" style="padding-inline:0">
+    Cognition.X Platform — the working model, built by <span class="mono">tools/build_platform.py</span>
+    from the canonical dataset. Independent of every organization named anywhere in the platform.
+  </div>
+</main>
+
+<script>
+document.documentElement.lang = "en";
+const D = {"version":"0.37.0","totals":{"blocks":16700,"packs":44,"tracks":210,"credentials":1394},"demoTrack":{"pack":"Cognition.X : Louisiana OS","name":"The river: the Mississippi and its machinery","credential":"River Systems Reader","blocks":50,"sampleTheme":"A continent's drain runs past your door","sampleCheck":"Trace, on a real map, the path rain falling in two distant states takes to pass Louisiana, and name what it picks up on the way."}};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+$("#verline").textContent = "v" + D.version;
+
+(function(){
+  const th = $("#themepick");
+  try { th.value = localStorage.getItem("cxpx.theme") || ""; } catch(e){}
+  const apply = () => {
+    if (th.value) document.documentElement.dataset.theme = th.value;
+    else delete document.documentElement.dataset.theme;
+    try { localStorage.setItem("cxpx.theme", th.value); } catch(e){}
+  };
+  th.addEventListener("change", apply); apply();
+})();
+
+/* router */
+const VIEWS = ["model","loop","apps","stack"];
+function route(){
+  const r = (location.hash.replace(/^#\/?/,"") || "model");
+  const v = VIEWS.includes(r) ? r : "model";
+  VIEWS.forEach(x=>{
+    $("#view-"+x).classList.toggle("active", x===v);
+    document.querySelector(`.tab[data-r="${x}"]`).setAttribute("aria-current", x===v ? "true" : "false");
+  });
+  window.scrollTo({top:0});
+}
+document.querySelectorAll(".tab").forEach(t=> t.addEventListener("click", ()=> location.hash = "#/"+t.dataset.r));
+window.addEventListener("hashchange", route);
+
+/* ---------- the model view ---------- */
+$("#pxtiles").innerHTML = [
+  [D.totals.blocks.toLocaleString(), "blocks, one CSV", "t1"],
+  [String(D.totals.packs), "packs", "t2"],
+  [String(D.totals.tracks), "tracks", "t3"],
+  [D.totals.credentials.toLocaleString(), "credentials defined", "t1"],
+  ["6", "apps, all regenerated", "t2"],
+  ["0", "network calls in any app", "t3"],
+].map(([v,l,t])=>`<div class="tile ${t}"><b>${v}</b><span>${l}</span></div>`).join("");
+
+const NODES = [
+  {id:"data",  x:60,  y:150, w:120, c:"var(--purple)", label:"blocks.csv", sub:"the dataset",
+   d:"16,700+ verifiable blocks with permanent ids. Source rows untouched; everything added arrives through authored specs, guarded promotions or documented fact bases. CI validates every push."},
+  {id:"pipe",  x:60,  y:260, w:120, c:"var(--purple)", label:"pipeline", sub:"generate · validate",
+   d:"generate_pack → normalize_blocks → validate_blocks, then one builder per app. Deterministic: same inputs, same outputs, forever."},
+  {id:"apps",  x:280, y:80,  w:150, c:"var(--w1)", label:"six apps", sub:"offline, single-file",
+   d:"Education OS, Flow Hub, Louisiana, Trades Network, States, and this page — each one HTML file, regenerated from the dataset, zero network calls (fonts aside, degraded gracefully)."},
+  {id:"ledger",x:520, y:40,  w:150, c:"var(--w2)", label:"learner ledger", sub:"browser-local",
+   d:"Per-learner check counts on the core spine; a credential is awarded automatically at the 50th recorded check. Recommendations and alerts derive deterministically."},
+  {id:"flow",  x:520, y:120, w:150, c:"var(--w2)", label:"flow engine", sub:"+ 20 access profiles",
+   d:"Warming up / in flow / cruising / overloaded / break called — computed from recorded events. Access profiles (chosen supports, never diagnoses) tune cadence, step and check format."},
+  {id:"assess",x:520, y:200, w:150, c:"var(--w2)", label:"assessor loop", sub:"witnessed checks",
+   d:"Request → queue → three-line rubric → evidence → honest credit. The practice log and the witnessed record are distinct on purpose."},
+  {id:"records",x:520,y:280, w:150, c:"var(--w2)", label:"records office", sub:"signed credentials",
+   d:"ECDSA P-256 per browser. Signed cx-credential/1 records verify offline in three grades: invalid, valid-but-untrusted, or signed by a trusted office by name."},
+  {id:"netos", x:280, y:200, w:150, c:"var(--w3)", label:"network OS", sub:"8 automations",
+   d:"Flow Keeper, Break Caller, Step Tuner, Credential Clerk, Cohort Watch, Readiness Sentinel, Teacher Relief, Network Sync — computing live on a pulse; the human acts."},
+  {id:"evidence",x:280,y:320, w:150, c:"var(--gold)", label:"evidence loop", sub:"opt-in, aggregate",
+   d:"cx-evidence/1 exports (per-track counts, no names, never auto-sent) merge through evidence_triage.py into revision priorities. Evidence proposes; the review board disposes."},
+  {id:"board", x:60,  y:370, w:120, c:"var(--gold)", label:"review board", sub:"governance",
+   d:"The human gate: six-point checklist, two approvals, supersede-never-rewrite. The machine-authored packs are its standing queue."},
+];
+const EDGES = [["data","pipe"],["pipe","apps"],["apps","ledger"],["apps","flow"],["apps","assess"],["apps","records"],["apps","netos"]];
+function renderMap(){
+  const arrows = EDGES.map(([a,b])=>{
+    const A = NODES.find(n=>n.id===a), B = NODES.find(n=>n.id===b);
+    return `<line x1="${A.x+A.w}" y1="${A.y+22}" x2="${B.x}" y2="${B.y+22}" stroke="var(--faint)" stroke-width="1.6" marker-end="url(#pxarr)"/>`;
+  }).join("");
+  const loop = `<path d="M 560,330 Q 470,400 355,368 M 275,352 Q 150,368 130,392" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#pxarrg)"/>
+    <path d="M 120,362 Q 90,330 90,300" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#pxarrg)"/>
+    <text x="420" y="405" font-size="10" fill="var(--gold)">what happened, by consent → what gets revised, by review</text>`;
+  $("#sysmap").innerHTML =
+    `<svg viewBox="0 0 700 420" width="100%" style="max-width:760px" role="img" aria-label="System map of the Cognition.X platform">
+      <defs>
+        <marker id="pxarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--faint)"/></marker>
+        <marker id="pxarrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--gold)"/></marker>
+      </defs>` +
+    arrows + loop +
+    NODES.map(n=>`<g class="sysnode" data-n="${n.id}" tabindex="0" role="button" aria-label="${esc(n.label)}">
+      <rect x="${n.x}" y="${n.y}" width="${n.w}" height="46" rx="10" fill="${n.c}"/>
+      <text x="${n.x+n.w/2}" y="${n.y+20}" text-anchor="middle" font-size="12.5" font-weight="700" fill="#fff">${esc(n.label)}</text>
+      <text x="${n.x+n.w/2}" y="${n.y+35}" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.85)">${esc(n.sub)}</text>
+      <title>${esc(n.label)} — click for detail</title></g>`).join("") +
+    `</svg>`;
+  $("#sysmap").querySelectorAll(".sysnode").forEach(g=>{
+    const show = ()=>{ const n = NODES.find(x=>x.id===g.dataset.n);
+      $("#nodedetail").innerHTML = `<b>${esc(n.label)}</b> — ${esc(n.d)}`; };
+    g.addEventListener("click", show);
+    g.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); show(); } });
+  });
+}
+renderMap();
+
+/* ---------- run the loop: real mechanics, demo data, in-memory ---------- */
+const T = D.demoTrack;
+let M = null;
+function freshRun(){
+  return { stage: 0, learner: null, fs: null, queue: [], evidenceLog: [],
+           office: null, record: null, trusted: false, tampered: false };
+}
+function flowOf(fs){
+  const last3 = fs.events.slice(-3).reduce((s,x)=>s+x,0);
+  let state, advice;
+  if (!fs.events.length){ state=["Warming up","var(--faint)"]; advice="Serve one familiar block to open the session."; }
+  else if (last3 <= -2){ state=["Overloaded — shrink","var(--w4)"]; advice="Automation: split the current check into its smallest honest piece."; }
+  else if (last3 >= 3){ state=["Cruising — stretch","var(--w1)"]; advice="Automation: raise the band or serve a fresh theme."; }
+  else { state=["In flow","var(--green)"]; advice="Hold the line — same step size, same pace."; }
+  if (fs.sinceBreak >= 8){ state=["Break called","var(--gold)"]; advice="Automation: the 8-move cadence is reached — movement or rest before the next block."; }
+  return {state, advice};
+}
+const b64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
+const b64d = s => Uint8Array.from(atob(s), c=>c.charCodeAt(0));
+
+const STAGES = [
+ {t:"1 · Enroll a learner", ready:()=>true, done:()=>!!M.learner, r(el){
+   el.innerHTML = M.learner
+     ? `<p class="note" style="margin:0">✓ <b>${esc(M.learner.name)}</b> (demo data) enrolled at band 9–10, seeded at
+        <b>${M.learner.prog}/50</b> checks on the real track “${esc(T.name)}” [${esc(T.pack)}] — so this run can reach the
+        credential. Every rule from here is the real mechanic.</p>`
+     : `<p class="note">The run starts with one learner on one genuine dataset track — “${esc(T.name)}”, credential
+        “${esc(T.credential)}”. Sample theme from the dataset: <i>${esc(T.sampleTheme)}</i>.</p>
+        <button class="btn gold" id="s1go">Enroll the demo learner</button>`;
+   const b = el.querySelector("#s1go");
+   if (b) b.addEventListener("click", ()=>{ M.learner = {name:"Demo Learner", prog:47, creds:[]};
+     M.fs = {events:[], sinceBreak:0, moves:0}; render(); });
+ }},
+ {t:"2 · A flow session", ready:()=>!!M.learner, done:()=>M.fs && M.fs.moves >= 3, r(el){
+   if (!M.learner){ el.innerHTML = `<p class="note" style="margin:0">Waiting on stage 1.</p>`; return; }
+   const f = flowOf(M.fs);
+   el.innerHTML = `<p class="note">The real state machine: each result moves the channel position; the
+     automations answer. Record at least three moves.</p>
+     <p style="margin:6px 0"><span class="statechip" style="background:${f.state[1]}">${f.state[0]}</span>
+     <span class="mono" style="font-size:.72rem; color:var(--faint)"> ${M.fs.moves} moves · ${M.fs.sinceBreak}/8 to break</span></p>
+     <p style="font-size:.88rem; margin:6px 0"><b>Guide:</b> ${esc(f.advice)}</p>
+     <div style="display:flex; gap:8px; flex-wrap:wrap">
+       <button class="btn gold" id="s2p">✓ Passed</button>
+       <button class="btn" id="s2s">↺ Struggled</button>
+       <button class="btn" id="s2b">☕ Break taken</button></div>`;
+   const act = v => { if (v===0){ M.fs.sinceBreak = 0; } else { M.fs.events = M.fs.events.slice(-11).concat([v]); M.fs.moves++; M.fs.sinceBreak++; } render(); };
+   el.querySelector("#s2p").addEventListener("click", ()=>act(1));
+   el.querySelector("#s2s").addEventListener("click", ()=>act(-1));
+   el.querySelector("#s2b").addEventListener("click", ()=>act(0));
+ }},
+ {t:"3 · Witnessed checks — to the credential", ready:()=>M.fs && M.fs.moves>=3, done:()=>M.learner && M.learner.prog>=50, r(el){
+   if (!(M.fs && M.fs.moves>=3)){ el.innerHTML = `<p class="note" style="margin:0">Waiting on stage 2.</p>`; return; }
+   const l = M.learner;
+   if (l.prog >= 50){
+     el.innerHTML = `<p class="note" style="margin:0">✓ <b>${l.prog}/50</b> — the credential
+       <b>“${esc(T.credential)}”</b> fired automatically at exactly the 50th check (the real threshold).
+       Witnessed log: ${M.evidenceLog.filter(e=>e.result==="confirmed").length} confirmed ·
+       ${M.evidenceLog.filter(e=>e.result!=="confirmed").length} not-yet.</p>`;
+     return;
+   }
+   el.innerHTML = `<p class="note">The assessor works the queue with the real rubric; each confirmation
+     credits the ledger. At 50, the credential fires — no button awards it directly.</p>
+     <p style="margin:4px 0"><b>${l.prog}/50</b> checks on “${esc(T.name)}”. Rubric:
+     <i>real material · independent at band · would transfer</i>. Sample check from the dataset:
+     “${esc(T.sampleCheck)}”</p>
+     <div style="display:flex; gap:8px; flex-wrap:wrap">
+       <button class="btn gold" id="s3c">✓ Confirm as assessor</button>
+       <button class="btn" id="s3n">↺ Not yet (honest debrief, no credit)</button></div>`;
+   el.querySelector("#s3c").addEventListener("click", ()=>{
+     l.prog = Math.min(50, l.prog+1);
+     M.evidenceLog.push({result:"confirmed"});
+     if (l.prog>=50) l.creds.push(T.credential);
+     render(); });
+   el.querySelector("#s3n").addEventListener("click", ()=>{ M.evidenceLog.push({result:"not yet"}); render(); });
+ }},
+ {t:"4 · Sign the record — real cryptography", ready:()=>M.learner && M.learner.prog>=50, done:()=>!!M.record, r(el){
+   if (!(M.learner && M.learner.prog>=50)){ el.innerHTML = `<p class="note" style="margin:0">Waiting on stage 3 — records are signed only for earned credentials.</p>`; return; }
+   if (M.record){
+     el.innerHTML = `<p class="note" style="margin:0">✓ Signed by <b>${esc(M.office.name)}</b> — a genuine ECDSA P-256
+       signature from your browser's WebCrypto (only the public key is in the record).</p>
+       <div class="artifact">${esc(JSON.stringify(M.record, null, 1))}</div>`;
+     return;
+   }
+   el.innerHTML = `<p class="note">A Records Office keypair is generated in this page's memory, and the earned
+     credential is issued as a portable cx-credential/1 record.</p>
+     <button class="btn gold" id="s4go">Create office keys &amp; sign the record</button>
+     <p class="note" id="s4err" style="margin-top:8px"></p>`;
+   el.querySelector("#s4go").addEventListener("click", async ()=>{
+     try {
+       const kp = await crypto.subtle.generateKey({name:"ECDSA", namedCurve:"P-256"}, true, ["sign","verify"]);
+       const pub = await crypto.subtle.exportKey("jwk", kp.publicKey);
+       M.office = {name:"Demo Hall Records Office", priv: kp.privateKey,
+                   pubJwk: {kty:pub.kty, crv:pub.crv, x:pub.x, y:pub.y}};
+       const payload = {format:"cx-credential/1", credential:T.credential, track:T.name, pack:T.pack,
+         blocks:50, learner:M.learner.name, band:"9–10", issuedAt:new Date().toISOString().slice(0,10),
+         note:"DEMO RUN — real mechanics on demo data."};
+       const sig = await crypto.subtle.sign({name:"ECDSA", hash:"SHA-256"}, kp.privateKey,
+         new TextEncoder().encode(JSON.stringify(payload)));
+       M.record = {payload, signature:b64(sig), publicKey:M.office.pubJwk, issuer:M.office.name};
+       render();
+     } catch(e){ el.querySelector("#s4err").textContent = "WebCrypto unavailable in this browser — the signing stage needs it."; }
+   });
+ }},
+ {t:"5 · Verify — three grades", ready:()=>!!M.record, done:()=>M.trusted, r(el){
+   if (!M.record){ el.innerHTML = `<p class="note" style="margin:0">Waiting on stage 4.</p>`; return; }
+   el.innerHTML = `<p class="note">Anyone with this JSON can verify it offline. Try all three grades.</p>
+     <div style="display:flex; gap:8px; flex-wrap:wrap; margin:0 0 8px">
+       <button class="btn" id="s5v">Verify as-is</button>
+       <button class="btn" id="s5t">Verify a tampered copy</button>
+       <button class="btn gold" id="s5tr" ${M.trusted?"disabled":""}>Trust this office, then verify</button></div>
+     <p id="s5out" style="font-size:.9rem; margin:6px 0" aria-live="polite">${M.trusted ? '✓ <b style="color:var(--green)">Signed by trusted office “Demo Hall Records Office”</b> — verified by name.' : ""}</p>`;
+   const verify = async (rec) => {
+     const pub = await crypto.subtle.importKey("jwk", rec.publicKey, {name:"ECDSA", namedCurve:"P-256"}, false, ["verify"]);
+     return crypto.subtle.verify({name:"ECDSA", hash:"SHA-256"}, pub, b64d(rec.signature),
+       new TextEncoder().encode(JSON.stringify(rec.payload)));
+   };
+   el.querySelector("#s5v").addEventListener("click", async ()=>{
+     const ok = await verify(M.record);
+     $("#s5out").innerHTML = ok
+       ? `<b style="color:var(--gold)">△ Signature valid, key not yet trusted</b> — unaltered and holder-signed; identity is confirmed out-of-band.`
+       : `✗ unexpected failure`; });
+   el.querySelector("#s5t").addEventListener("click", async ()=>{
+     const bad = JSON.parse(JSON.stringify(M.record)); bad.payload.learner = "Impostor";
+     const ok = await verify(bad);
+     $("#s5out").innerHTML = ok ? "✗ tamper missed (unexpected)" :
+       `<b style="color:var(--red)">✗ Invalid</b> — one changed character in the payload and the signature no longer matches. That is the tamper detection working.`; });
+   el.querySelector("#s5tr").addEventListener("click", async ()=>{
+     const ok = await verify(M.record);
+     if (ok){ M.trusted = true; render(); } });
+ }},
+ {t:"6 · Close the loop — evidence", ready:()=>M.trusted, done:()=>false, r(el){
+   if (!M.trusted){ el.innerHTML = `<p class="note" style="margin:0">Waiting on stage 5.</p>`; return; }
+   const conf = M.evidenceLog.filter(e=>e.result==="confirmed").length;
+   const ny = M.evidenceLog.length - conf;
+   const ev = {format:"cx-evidence/1", site:"DEMO RUN",
+     exportedAt:new Date().toISOString().slice(0,10),
+     consent:{optIn:true, anonymized:true, aggregateOnly:true, sentBy:"the person exporting, never the page"},
+     tracks:[{pack:T.pack, track:T.name, checksRecorded:M.learner.prog,
+              witnessedConfirmed:conf, witnessedNotYet:ny, learners:1}]};
+   el.innerHTML = `<p class="note">The run's aggregate — per-track counts only, no names — in the same
+     cx-evidence/1 format the review board's <span class="mono">evidence_triage.py</span> reads. In the real
+     platform this exports only behind a consent checkbox and is sent by a person, never a page.</p>
+     <div class="artifact">${esc(JSON.stringify(ev, null, 1))}</div>
+     <p class="note" style="margin-top:10px"><b>The loop is closed:</b> a learner moved through flow, was
+     witnessed honestly, holds a verifiable credential, and what happened is on its way — by consent, through
+     people — to shaping what gets revised. That is the working model of Cognition.X.</p>`;
+ }},
+];
+function render(){
+  const host = $("#stages");
+  host.innerHTML = "";
+  STAGES.forEach((s,i)=>{
+    const div = document.createElement("div");
+    const isDone = s.done();
+    const isReady = s.ready();
+    div.className = "stage" + (isDone ? " done" : (isReady ? " active" : ""));
+    div.innerHTML = `<h3>${isDone ? "✓ " : ""}${esc(s.t)}</h3><div class="body"></div>`;
+    host.appendChild(div);
+    try { s.r(div.querySelector(".body")); } catch(e){}
+  });
+  const doneCount = STAGES.filter(s=>s.done()).length;
+  $("#loop-status").textContent = M.trusted
+    ? "Run complete — the whole loop, on real mechanics."
+    : `${doneCount} of 5 gates passed.`;
+}
+$("#loop-reset").addEventListener("click", ()=>{ M = freshRun(); render(); });
+M = freshRun(); render();
+
+/* ---------- apps view ---------- */
+$("#appgrid").innerHTML = [
+  ["Education OS","../education-os/index.html","The imported flagship — 94 views, the sector library injected canonically from the dataset."],
+  ["Flow Hub","../flow-hub/index.html","The curriculum engine: flow sessions, the tutor swarm, the credential ledger, printable workbooks, and the Pack Studio for authors."],
+  ["Cognition.X Louisiana","../louisiana/index.html","The working state: 64 parish dashboards, the adopted two-wave plan, the learner ledger, flow engine, Network OS, Assessor Mode and Records Office."],
+  ["Trades Network","../trades-network/index.html","222 union & trade entries across six regions on two coasts, city maps, simulations and the flipped classroom."],
+  ["Cognition.X States","../states/index.html","The 50-state localizer: every state's custom courses from one blueprint, with the Institute Model in every capital."],
+  ["Cognition.X Platform","index.html","This page — the working model, regenerated like everything else."],
+].map(([n,href,d])=>`<div class="panel"><h3>${esc(n)}</h3><p class="note" style="margin:6px 0 10px">${esc(d)}</p>
+  <a class="btn" style="text-decoration:none; display:inline-block" href="${href}">Open →</a></div>`).join("");
+
+route();
+</script>

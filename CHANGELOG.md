@@ -4,6 +4,42 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.37.0] — 2026-09-10
+
+### Added
+- **Cognition.X Platform — the working model** (`apps/platform/`, built
+  by the new `tools/build_platform.py`): a single-file capstone app
+  that models the whole platform as one system, in four views:
+  - **The Model**: live totals from the manifest and a clickable
+    ten-node system map — dataset → pipeline → six apps → the working
+    models (ledger, flow engine, assessor loop, records office) →
+    Network OS → the evidence loop arcing back, dashed, through the
+    review board to the dataset ("through people, never
+    automatically"). Every node explains what it is and how it is
+    verified.
+  - **Run the Loop**: the complete learning loop executed in-page
+    with the platform's **real mechanics on labeled demo data** —
+    six gated stages: enroll a demo learner (seeded at 47/50 on a
+    genuine Louisiana OS track), a live flow session on the real
+    state machine (overload → shrink, cruise → stretch, the 8-move
+    break cadence), witnessed checks where three assessor
+    confirmations reach the real 50-check threshold and the
+    credential fires only at exactly 50 (not-yet debriefs credit
+    nothing), a genuinely signed cx-credential/1 record via the
+    browser's own WebCrypto (ECDSA P-256, public key only), the
+    three-grade verification (tampered copy ✗, valid-untrusted △,
+    trusted-by-name ✓), and the closing cx-evidence/1 aggregate.
+    The run lives only in page memory; reset restores a fresh run.
+  - **The Apps**: doors into all six apps by relative link.
+  - **The Stack**: the full regeneration command list, the eight
+    honesty stances in one place, and the documentation record.
+  - Verified headlessly end to end: stage gates hold in sequence,
+    the credential is absent at 49 and fires at 50, the signature is
+    a real 88-character P-256 signature with no private key in the
+    record, tamper detection and trust-by-name behave, the evidence
+    aggregate carries counts and no names, and the page loads with
+    zero errors.
+
 ## [0.36.0] — 2026-09-10
 
 ### Added
