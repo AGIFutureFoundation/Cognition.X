@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 42 packs — 16,200 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 43 packs — 16,450 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -40,6 +40,7 @@ Catalog of all 42 packs — 16,200 blocks total. Machine-readable version: [`dat
 | Energy, Grid & the Home | `ENERGY` | 250 | 5 | 5 |
 | Food, Cooking & Nutrition | `FOOD` | 250 | 5 | 5 |
 | Law, Contracts & Everyday Rights | `LAW` | 250 | 5 | 5 |
+| Learning States & Universal Access | `ACCESS` | 250 | 5 | 5 |
 | Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
 | Parish Launch & Scale | `LAUNCH` | 250 | 5 | 5 |
 | SmartCiti.X : New Orleans Trades | `NOLATRADES` | 250 | 5 | 5 |
@@ -277,6 +278,16 @@ Catalog of all 42 packs — 16,200 blocks total. Machine-readable version: [`dat
 - French, Creole and the languages of home
 - Krewes, festivals and the craft of celebration
 - The storm and the long memory
+
+**Learning States & Universal Access** — the access curriculum behind
+the platform's 20 learner-type modules: reading learning states,
+universal design, and communication / cognitive / whole-body access;
+profiles are chosen supports, never diagnoses
+- Reading the learning states
+- Access by design
+- Language, literacy and communication access
+- Attention, memory and processing access
+- Body, senses and health access
 
 **Parish Launch & Scale** — the rollout curriculum for the adopted
 two-year plan: 33 parishes in Wave 1 (2026–27), statewide by Wave 2

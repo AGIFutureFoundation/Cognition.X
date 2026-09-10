@@ -4,6 +4,46 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.27.0] — 2026-09-10
+
+### Added
+- **Flow-state engine** (Louisiana): a per-learner flow model —
+  *warming up / in flow / cruising / overloaded / break called* —
+  computed from recorded pass-struggle events, with the automations
+  actually steering the experience: the step shrinks under overload
+  (with an alternative check format offered), stretches when
+  cruising, and the break is called on the learner's own cadence.
+  The student **Flow Session** panel runs it live (channel meter,
+  guide line, three buttons — passes also credit the ledger and can
+  still auto-award credentials); the teacher gains a **Class flow
+  board** (states sorted worst-first with the automation's call and
+  each profile's top supports); the parent gains **What helps my
+  child**; parish and state rollups show live state distributions.
+- **20 learner-type access modules**
+  (`data/learners/learner_types.json`): dyslexia, dysgraphia,
+  dyscalculia, ADHD, autistic learners, auditory & visual processing,
+  speech & language, Deaf/HoH, blind/low-vision, mobility & motor,
+  chronic illness & fatigue, anxiety-affected, trauma-affected,
+  intellectual disability, gifted & twice-exceptional, multilingual
+  learners, executive function & working memory, sensory processing,
+  and deliberate processing pace — each with strengths, what-helps,
+  home and classroom moves, and flow parameters (break cadence, step
+  bias, alternative check formats). **Profiles are chosen supports,
+  never diagnoses**: combined, changed or removed anytime,
+  browser-local, never gating content; families are pointed to their
+  school's own evaluation process for formal services.
+- **Learning States & Universal Access pack** (`ACCESS`, 250 blocks):
+  reading the learning states, access by design (the capability is
+  the constant, the format is the variable), and communication /
+  cognitive / whole-body access — the educator curriculum behind the
+  modules. Dataset: **16,450 blocks · 43 packs · 205 tracks · 1,389
+  credentials**.
+- **Flow Hub access profile**: an optional profile select that
+  retunes the session automations — focus-interval length and break
+  cadence from the profile (ADHD: 15-minute focus, break every 5
+  moves), and the Coach easing the band after a single struggle for
+  gentler profiles — persisted, removable, never shared.
+
 ## [0.26.0] — 2026-09-10
 
 ### Added

@@ -1,0 +1,291 @@
+{
+ "pack": "Learning States & Universal Access",
+ "notes": "The access curriculum behind the platform's 20 learner-type modules: how teachers, parents, stewards and assessors read learning states (flow, stretch, overload, shutdown, recovery) and design access so every learner reaches the same real transfer checks. Grounded in universal-design practice: the capability is the constant, the format is the variable; profiles are supports chosen by the learner and family, never diagnoses or labels; nothing here is medical advice, and families are always pointed to their school's own evaluation and support processes for formal services. Transfer checks are performed on the adult's own classroom, home or hall — real rooms, real learners (with consent), real materials.",
+ "tracks": [
+  {
+   "name": "Reading the learning states",
+   "prefix": "RL",
+   "credential": "Learning-State Reader",
+   "themes": [
+    {
+     "theme": "The flow channel",
+     "description": "The band between boredom and overwhelm where learning compounds — what flow looks like in a real learner, at any age, in any subject.",
+     "transfer_check": "Observe one learner (with consent) for ten minutes and note two visible signs that placed them in, above, or below the flow channel."
+    },
+    {
+     "theme": "Warming up is a state, not a delay",
+     "description": "The entry ramp — why the first minutes of a session look like struggle and aren't, and what shortens the ramp without forcing it.",
+     "transfer_check": "Redesign the first five minutes of one real session as a deliberate warm-up, run it, and note what changed at minute six."
+    },
+    {
+     "theme": "Stretch: hard but holding",
+     "description": "The productive edge — visible effort with forward motion — and how it differs from the first minute of drowning.",
+     "transfer_check": "Catch one real moment of stretch and one of overload in the same session and name the observable difference you used."
+    },
+    {
+     "theme": "Overload has a face",
+     "description": "The early signals — the stalled pencil, the third re-read, the sudden joke — that arrive before frustration does.",
+     "transfer_check": "List the three earliest overload signals of one learner you know well, confirmed with the learner where possible."
+    },
+    {
+     "theme": "Shutdown is protection",
+     "description": "When a learner goes quiet or refuses — reading it as the nervous system's brake, not defiance, and what reopens the door.",
+     "transfer_check": "Describe one real shutdown you have seen, what preceded it, and the one move that would have helped earlier — then the move that helped after."
+    },
+    {
+     "theme": "Recovery counts as learning",
+     "description": "The break, the walk, the reset — why recovery is inside the session's design, not a failure of it.",
+     "transfer_check": "Build one real recovery option into a session plan (place, length, signal) and record whether it was used and what followed."
+    },
+    {
+     "theme": "The step size dial",
+     "description": "The one lever that moves every state — making the next step smaller under overload and larger in cruise, without ceremony.",
+     "transfer_check": "Take one task a learner is stuck on and cut it into three smaller honest steps; record which step restarted motion."
+    },
+    {
+     "theme": "The break call",
+     "description": "Calling the break before the crash — cadences that fit different learners, and why the timer beats willpower.",
+     "transfer_check": "Agree a break cadence with one learner, run a session on it with a visible timer, and compare the ending to a session without it."
+    },
+    {
+     "theme": "State is not trait",
+     "description": "Today's overload is not tomorrow's identity — keeping state observations about sessions, never about the person.",
+     "transfer_check": "Rewrite three trait sentences ('she's lazy', 'he can't focus') as state sentences about a specific session, honestly."
+    },
+    {
+     "theme": "The learner reads themselves",
+     "description": "Handing the gauges over — teaching a learner to name their own state and ask for the step, the break, or the format they need.",
+     "transfer_check": "Teach one learner the state names and record the first time they name their own state and ask for what fits it."
+    }
+   ]
+  },
+  {
+   "name": "Access by design",
+   "prefix": "AD",
+   "credential": "Universal Access Designer",
+   "themes": [
+    {
+     "theme": "The capability is the constant",
+     "description": "The platform's access law: every transfer check proves a capability; the format — spoken, written, signed, demonstrated, directed — is the variable.",
+     "transfer_check": "Take one real transfer check and write three format variants that prove the same capability, defending each."
+    },
+    {
+     "theme": "Ramps help everyone",
+     "description": "The curb-cut effect — captions, checklists and clear layouts built for some learners improve the room for all of them.",
+     "transfer_check": "Add one universal support (captions, posted steps, decluttered page) to a real activity and note who used it beyond its intended learner."
+    },
+    {
+     "theme": "Profiles, not labels",
+     "description": "The 20 access profiles as chosen supports — combined, edited, dropped at will — and why the platform never diagnoses, gates or shares.",
+     "transfer_check": "Walk a learner or family through choosing (or declining) a profile, and write the sentence you used to explain what it is and is not."
+    },
+    {
+     "theme": "Multiple ways in",
+     "description": "Presenting every concept at least two ways — seen and heard, told and touched — as design habit, not remediation.",
+     "transfer_check": "Teach one small concept twice in one session through two channels and record which landed for which learners."
+    },
+    {
+     "theme": "Multiple ways through",
+     "description": "Pacing, chunking and sequence as adjustable rails — the same destination reached by sprints, marathons, or many short walks.",
+     "transfer_check": "Offer one real task in two pacing structures and let learners choose; record the choices and the finishes."
+    },
+    {
+     "theme": "Multiple ways to show it",
+     "description": "The demonstration menu — building the check's format options in advance so no learner has to ask for an exception.",
+     "transfer_check": "Publish the format menu for one upcoming check before anyone asks, and record which formats were chosen."
+    },
+    {
+     "theme": "The environment is curriculum",
+     "description": "Noise, light, seating, layout — auditing a room the way an access designer does, before auditing any learner.",
+     "transfer_check": "Audit one real learning space against a ten-point sensory and access checklist and fix the two cheapest failures found."
+    },
+    {
+     "theme": "Dignity is non-negotiable",
+     "description": "Supports offered without spectacle — the same tone for the wheelchair desk, the fidget, and the extra time as for anyone's chair.",
+     "transfer_check": "Script and practice the two-sentence, zero-drama way you will offer one support publicly, and use it once for real."
+    },
+    {
+     "theme": "When to bring in the professionals",
+     "description": "The honest boundary — what a teacher, parent or steward adapts, and when to point the family to the school's evaluation and support processes for formal services.",
+     "transfer_check": "Write the referral sentence for your setting — who a family contacts for formal evaluation — and confirm it against the school or district's actual published process."
+    },
+    {
+     "theme": "Access is a team sport",
+     "description": "Learner, family, teacher, steward — reviewing what's working on a rhythm, with the learner's own report weighted first.",
+     "transfer_check": "Run one fifteen-minute access review with a learner (and family where right): keep, change, drop — recorded in their words."
+    }
+   ]
+  },
+  {
+   "name": "Language, literacy and communication access",
+   "prefix": "LA",
+   "credential": "Communication Access Lead",
+   "themes": [
+    {
+     "theme": "Decoding is not comprehension",
+     "description": "Separating the mechanics of reading from the understanding of ideas — and assessing each on its own terms.",
+     "transfer_check": "Assess one learner's comprehension of a text they heard read aloud, and note what a print-only assessment would have missed."
+    },
+    {
+     "theme": "The read-aloud is a legitimate door",
+     "description": "Audio, read-alouds and text-to-speech as full access to content — not a lesser path.",
+     "transfer_check": "Set up one real text in an audio or read-aloud form and have a learner use it to pass a real comprehension task."
+    },
+    {
+     "theme": "Writing without the pen",
+     "description": "Dictation, typing, scribing and diagrams as complete forms of composition.",
+     "transfer_check": "Capture one learner's composed thinking by voice or keyboard and compare its quality to their handwritten baseline."
+    },
+    {
+     "theme": "Plain language, full content",
+     "description": "Simplifying the sentence, never the idea — instruction language tuned to the listener without lowering the ceiling.",
+     "transfer_check": "Rewrite one real set of task instructions in plain language and test both versions on two different learners."
+    },
+    {
+     "theme": "Every voice is a voice",
+     "description": "AAC devices, signing, pointing and writing as full speech — practical etiquette for classrooms and halls.",
+     "transfer_check": "Learn the basics of one learner's communication mode (with their consent) and hold a real two-minute exchange in it."
+    },
+    {
+     "theme": "Captions always",
+     "description": "Captioning and transcripts as defaults for every video and recording — set once, benefiting many.",
+     "transfer_check": "Turn on or produce captions for one real teaching video and verify their accuracy against the audio."
+    },
+    {
+     "theme": "The first language is an asset",
+     "description": "Multilingual learners thinking, drafting and checking in their strongest language while English develops alongside.",
+     "transfer_check": "Let one multilingual learner complete a real task's thinking in their first language, then present it in English, and record what each stage showed."
+    },
+    {
+     "theme": "Vocabulary before the lesson",
+     "description": "Pre-teaching the five words a text or bench session turns on — with objects and pictures, not definitions alone.",
+     "transfer_check": "Pre-teach five key terms for one real lesson with objects or images, and check retention at the lesson's end."
+    },
+    {
+     "theme": "Wait time is access",
+     "description": "The silent ten seconds that lets deliberate processors, translators and word-finders arrive — and how rarely rooms allow it.",
+     "transfer_check": "Teach one session holding a full ten-second wait after every question, and record who answered who never had before."
+    },
+    {
+     "theme": "The reading room audit",
+     "description": "Fonts, spacing, contrast, clutter — making printed and screen materials readable for the widest band of eyes and brains.",
+     "transfer_check": "Reformat one real worksheet against a readability checklist and A/B it with learners; keep the winner."
+    }
+   ]
+  },
+  {
+   "name": "Attention, memory and processing access",
+   "prefix": "AT",
+   "credential": "Cognitive Access Lead",
+   "themes": [
+    {
+     "theme": "The working-memory budget",
+     "description": "Why four instructions become one lost learner — the small, honest budget every design must live inside.",
+     "transfer_check": "Count the simultaneous demands in one real task, cut them to fit a three-item budget, and record the difference."
+    },
+    {
+     "theme": "Externalize the dashboard",
+     "description": "Checklists, posted schedules and visible timers as the working memory the task carries so the head doesn't have to.",
+     "transfer_check": "Build the external checklist for one real multi-step task and watch a learner run it start to finish from the list."
+    },
+    {
+     "theme": "One thing at a time",
+     "description": "Serial instructions — said, written, done, then next — and the discipline of not stacking steps.",
+     "transfer_check": "Deliver one real task purely serially to a learner who usually loses the thread, and record where it held."
+    },
+    {
+     "theme": "The sprint and the timer",
+     "description": "Short, visible work intervals with legal movement between — attention structured as intervals, not endurance.",
+     "transfer_check": "Run one session in agreed sprints with a visible timer and movement breaks, and compare output to a continuous session."
+    },
+    {
+     "theme": "Interest is the on-switch",
+     "description": "Attention follows interest — hooking required content to the learner's live obsessions without apology.",
+     "transfer_check": "Reframe one required task through one learner's actual interest and record the change in time-to-start."
+    },
+    {
+     "theme": "Spaced beats massed",
+     "description": "Little and often — why five short practices across days beat one long one, for every memory but especially the fragile ones.",
+     "transfer_check": "Convert one massed practice into a five-touch spaced schedule and compare recall a week later."
+    },
+    {
+     "theme": "Retrieval is the workout",
+     "description": "Low-stakes recall — the learner producing the knowledge — as the strongest memory builder, kept shame-free.",
+     "transfer_check": "Run three two-minute retrieval warm-ups across a week and record what stuck versus what re-reading alone held."
+    },
+    {
+     "theme": "The scaffold is the skill",
+     "description": "Using the checklist, the calculator, the formula card in the check itself — because the professional uses them too.",
+     "transfer_check": "Let a learner pass one real check with their scaffold in hand, and defend in one paragraph why the capability was still proven."
+    },
+    {
+     "theme": "Untimed by default",
+     "description": "What speed limits actually measure — and where genuine time pressure belongs (safety calls) versus where it is habit.",
+     "transfer_check": "Identify one timed element in your setting that measures habit, remove it, and record who newly succeeded."
+    },
+    {
+     "theme": "The launch pad",
+     "description": "One place for the materials, one list for the day, one routine for starting — executive function built as environment.",
+     "transfer_check": "Build a launch pad (place + list + routine) with one learner and record a week of its use in their words."
+    }
+   ]
+  },
+  {
+   "name": "Body, senses and health access",
+   "prefix": "BH",
+   "credential": "Whole-Learner Access Lead",
+   "themes": [
+    {
+     "theme": "Regulation before curriculum",
+     "description": "A flooded nervous system cannot learn — reading the body's state first and treating regulation as lesson zero.",
+     "transfer_check": "Add a two-minute regulation start (breath, movement, quiet) to one real session and record what the first task looked like after."
+    },
+    {
+     "theme": "The sensory audit",
+     "description": "Hum, flicker, echo, smell, crowding — walking a room with different senses and fixing the cheap offenders.",
+     "transfer_check": "Audit one real room for five sensory loads, fix the two cheapest, and ask its most sensitive user what changed."
+    },
+    {
+     "theme": "Tools without stigma",
+     "description": "Headphones, fidgets, wobble seats, sunglasses — normalized for anyone, so the learner who needs them isn't marked.",
+     "transfer_check": "Introduce one sensory tool to a whole group as ordinary equipment and record who adopts it beyond its intended user."
+    },
+    {
+     "theme": "Movement is legal",
+     "description": "Standing work, pacing lanes, jobs that carry things — motion designed into the room instead of policed out of it.",
+     "transfer_check": "Add one legitimate movement channel to a real learning space and record its effect on one learner who needed it."
+    },
+    {
+     "theme": "The bench is the great equalizer",
+     "description": "Hands-on work as the setting where many profiles shine — and adapting stations so every body can work them.",
+     "transfer_check": "Adapt one real bench station (height, grip, position, role) so a learner who couldn't work it can, and record their first task."
+    },
+    {
+     "theme": "Energy accounting",
+     "description": "Spoons and flares — planning sessions with variable-capacity learners around their honest energy, not the timetable's.",
+     "transfer_check": "Co-plan one week with a variable-energy learner using their own energy forecast, and compare plan to reality without blame."
+    },
+    {
+     "theme": "Absence-proof design",
+     "description": "Recorded benches, catch-up paths and split checks — so illness interrupts progress without erasing it.",
+     "transfer_check": "Make one real unit absence-proof (record it, chunk it, split its check) and walk a returning learner through the catch-up."
+    },
+    {
+     "theme": "The exit and the return",
+     "description": "The agreed signal, the reset space, and the shame-free way back in — designed before it's needed.",
+     "transfer_check": "Agree an exit-and-return protocol with one learner and rehearse it once calmly before any real use."
+    },
+    {
+     "theme": "Direct the hands",
+     "description": "The learner who cannot perform the motion directing another's hands step by step — full mastery, different muscles.",
+     "transfer_check": "Have one learner pass a real hands-on check entirely by directing a partner's hands, and score the direction's precision."
+    },
+    {
+     "theme": "The whole team around the learner",
+     "description": "Family, school supports, and where they exist the learner's own care plans — the platform as one voice in a chorus, never a replacement for it.",
+     "transfer_check": "Map the real support team around one learner (with the family) and mark what this platform carries and what belongs to others."
+    }
+   ]
+  }
+ ]
+}

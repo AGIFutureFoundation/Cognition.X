@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.26.0** | City maps for all 111 union entries (three stylized region maps, click-through to filtered rosters), Trades Across School Subjects pack (250 blocks — trades inside math/science/ELA/civics from K–2), classroom hooks on every roster card — 16,200 blocks / 42 packs |
+| **v0.27.0** | Flow-state engine driving the experience (profile-aware break calls, shrink/stretch automations, alternative check formats), 20 learner-type access modules (chosen supports, never diagnoses), Learning States & Universal Access pack — 16,450 blocks / 43 packs |
+| v0.26.0 | City maps for all 111 union entries (three stylized region maps, click-through to filtered rosters), Trades Across School Subjects pack (250 blocks — trades inside math/science/ELA/civics from K–2), classroom hooks on every roster card — 16,200 blocks / 42 packs |
 | v0.25.0 | Working learner ledger (auto credential at 50 checks, recommendations, alerts, export/import, demo cohort) + comprehensive standing dashboards for all six roles |
 | v0.24.0 | Parish ↔ union integration (New Orleans-hall parishes surface their matched trade families); roadmap and wiki brought current |
 | v0.23.0 | Trades Network app (111 union/trade entries across SF, Oakland & New Orleans, regional training sims, district compacts), Trades in the Classroom pack (flipped & gamified, 250 blocks), widgetized customizable role dashboards, three-persona human-like voice model — 15,950 blocks / 41 packs |
