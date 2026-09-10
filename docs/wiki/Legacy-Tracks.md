@@ -26,14 +26,21 @@ The model localizes to any state edition by resolving eight slots:
 
 ## In the dataset
 
-The first dataset-side legacy localization is the pack
-**Civic Leadership Legacy : Louisiana**
-([spec](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/pack_specs/civic-leadership-legacy-louisiana.json),
-250 blocks): the Louisiana ladder of public service, parish government,
-the Legislature and the civil-law tradition, Louisiana's distinctive
-elections, and the coastal civics of water and storm. Further state
-localizations follow the same template and the standard pack shape
-(5 tracks × 10 themes × 5 bands).
+Three legacy localizations ship today, each 250 blocks in the standard
+shape (5 tracks × 10 themes × 5 bands), all under
+[`data/pack_specs/`](https://github.com/AGIFutureFoundation/Cognition.X/tree/main/data/pack_specs):
+
+- **Civic Leadership Legacy : Louisiana** (v0.6.0) — parish government,
+  the civil-law Legislature, Louisiana elections, coastal civics.
+- **Civic Leadership Legacy : California** (v0.11.0) — the original
+  edition: the Fellowship ladder, counties & the Brown Act, Sacramento
+  and the craft of counting votes, the top-two primary and the
+  initiative, fire/water/fault-line civics.
+- **Civic Leadership Legacy : Texas** (v0.11.0) — the edition of the
+  bridge (Mineola, 1934): 254 counties and commissioners courts, the
+  biennial Legislature, Texas elections, storm/grid/coast civics.
+
+Further state and country localizations follow the same template.
 
 ## The flagship, for every state and country
 

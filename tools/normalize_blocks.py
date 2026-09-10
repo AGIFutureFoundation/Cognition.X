@@ -70,6 +70,8 @@ PACK_SLUGS = {
     "Arts, Making Media & Performance": "ARTS",
     "Law, Contracts & Everyday Rights": "LAW",
     "Civic Leadership Legacy : Louisiana": "LEGACYLA",
+    "Civic Leadership Legacy : California": "LEGACYCA",
+    "Civic Leadership Legacy : Texas": "LEGACYTX",
 }
 
 

@@ -15,7 +15,7 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (8,750 blocks, 33 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (9,250 blocks, 35 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
@@ -59,10 +59,11 @@ Health, Multilateral, Sapient, Non-Profit — 500 blocks each), sixteen
 preventive health, life skills, water/land/climate, care, making/repair,
 digital life & AI, food & nutrition, energy & the home, transport &
 mobility, emergency preparedness, arts & media, and law & everyday
-rights), one **legacy-track localization** (*Civic Leadership Legacy :
-Louisiana*, in the Willie L. Brown Jr. Institute model carried by the
-app — see [`docs/wiki/Legacy-Tracks.md`](docs/wiki/Legacy-Tracks.md)),
-plus the legacy K–12, Trade School and thematic packs. The generated
+rights), three **legacy-track localizations** (*Civic Leadership
+Legacy : Louisiana / California / Texas*, in the Willie L. Brown Jr.
+Institute model carried by the app — see
+[`docs/wiki/Legacy-Tracks.md`](docs/wiki/Legacy-Tracks.md)), plus the
+legacy K–12, Trade School and thematic packs. The generated
 [`data/manifest.json`](data/manifest.json) is the machine-readable index.
 
 ## Regenerating and extending the data

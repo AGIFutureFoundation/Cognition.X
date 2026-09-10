@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 8750,
+  "total_blocks": 9250,
   "packs": [
     {
       "name": "K–12",
@@ -518,6 +518,26 @@
       ]
     },
     {
+      "name": "Civic Leadership Legacy : California",
+      "slug": "LEGACYCA",
+      "blocks": 250,
+      "tracks": [
+        "The Fellowship ladder: service as a career",
+        "The county and the city: government closest to the door",
+        "Sacramento: the Legislature and the law",
+        "Elections, initiatives and the direct voice",
+        "Fire, water and the fault line"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
       "name": "Civic Leadership Legacy : Louisiana",
       "slug": "LEGACYLA",
       "blocks": 250,
@@ -527,6 +547,26 @@
         "Baton Rouge: the Legislature and the law",
         "Elections, voice and the ballot in Louisiana",
         "Water, storm and the civic machine"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Civic Leadership Legacy : Texas",
+      "slug": "LEGACYTX",
+      "blocks": 250,
+      "tracks": [
+        "The bridge from Mineola: service as a way out and a way back",
+        "The county: two hundred and fifty-four courthouses",
+        "Austin: the biennial Legislature",
+        "Elections and the Texas voter",
+        "Storm, grid and the long border of water"
       ],
       "credentials": 5,
       "grade_bands": [

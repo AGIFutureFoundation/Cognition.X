@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 33 packs — 8,750 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 35 packs — 9,250 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -30,7 +30,9 @@ Catalog of all 33 packs — 8,750 blocks total. Machine-readable version: [`data
 | Cognition.X : Sapient OS | `SAPIENT` | 500 | 10 | 10 |
 | Non-Profit Practice | `NPO` | 500 | 10 | 10 |
 | Arts, Making Media & Performance | `ARTS` | 250 | 5 | 5 |
+| Civic Leadership Legacy : California | `LEGACYCA` | 250 | 5 | 5 |
 | Civic Leadership Legacy : Louisiana | `LEGACYLA` | 250 | 5 | 5 |
+| Civic Leadership Legacy : Texas | `LEGACYTX` | 250 | 5 | 5 |
 | Digital Life, Data & AI | `DIGITAL` | 250 | 5 | 5 |
 | Emergency Preparedness & First Response | `EMERGENCY` | 250 | 5 | 5 |
 | Energy, Grid & the Home | `ENERGY` | 250 | 5 | 5 |
@@ -194,12 +196,26 @@ Catalog of all 33 packs — 8,750 blocks total. Machine-readable version: [`data
 - The stage and the spoken word
 - Craft, design and the made object
 
+**Civic Leadership Legacy : California**
+- The Fellowship ladder: service as a career
+- The county and the city: government closest to the door
+- Sacramento: the Legislature and the law
+- Elections, initiatives and the direct voice
+- Fire, water and the fault line
+
 **Civic Leadership Legacy : Louisiana**
 - Public service as a craft: the Louisiana ladder
 - The parish: government closest to the door
 - Baton Rouge: the Legislature and the law
 - Elections, voice and the ballot in Louisiana
 - Water, storm and the civic machine
+
+**Civic Leadership Legacy : Texas**
+- The bridge from Mineola: service as a way out and a way back
+- The county: two hundred and fifty-four courthouses
+- Austin: the biennial Legislature
+- Elections and the Texas voter
+- Storm, grid and the long border of water
 
 **Digital Life, Data & AI**
 - Devices, accounts and the keys you hold

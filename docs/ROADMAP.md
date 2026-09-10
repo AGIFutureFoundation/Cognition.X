@@ -67,7 +67,11 @@ community proposal route (see `docs/wiki/Authoring-Packs.md`).
 **Legacy-track localizations** (the app's Willie L. Brown Jr. Institute
 model, v29 state template; see `docs/wiki/Legacy-Tracks.md`):
 - [x] Civic Leadership Legacy : Louisiana — shipped in v0.6.0
-- Further state/parish localizations on request, subject to the
+- [x] Civic Leadership Legacy : California (the original edition) —
+  shipped in v0.11.0
+- [x] Civic Leadership Legacy : Texas (the bridge begins) — shipped in
+  v0.11.0
+- Further state/country localizations on request, subject to the
   disclaimer and partnership rules on the Legacy Tracks wiki page
 
 **Exit criteria:** zero empty fields dataset-wide; ≥2 packs
