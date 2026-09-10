@@ -34,6 +34,10 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   Trade Hall, the capstone teaches it to a younger cohort). Generated
   scaffolds, labeled for committee refinement; rural-tier parishes get
   offline-evidence wording.
+- **Role dashboards (v0.18.0)** — the *Dashboards* view: Student,
+  Teacher (roster + transfer-check roll), Parent, Homeschool (weekly
+  planner), Parish Admin and State Admin, each browser-local; mission
+  ladders are runnable with per-rung completion.
 - **Plan customizer & program export (v0.16.0)** — industry packs can
   be set aside, any catalog pack added as a parish choice (persisted
   per parish in the browser), and the whole program exported as

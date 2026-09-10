@@ -4,6 +4,34 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.18.0] — 2026-09-10
+
+### Added
+- **Parish curriculum in full run.** Parish review passed (all 64
+  parishes: 5/5 missions, matched plans, worlds, waves), and mission
+  modules are now *runnable*: each rung has a completion checkbox with
+  a progress meter, persisted per parish in the browser and rolled up
+  into the admin dashboards.
+- **The Institute Model — the universal all-states pack.**
+  *Civic Leadership Legacy : The Institute Model* (250 blocks, 5
+  tracks): leadership as service (the twelve principles in practice),
+  the room and the count (coalition/negotiation/consensus), **emotional
+  intelligence for public life** (a full EQ track — self-awareness,
+  de-escalation, empathy without surrender, the steady presence), civic
+  duty anywhere (the eight slots as literacy), and ethics under
+  pressure. State-agnostic, localizable through the eight-slot
+  template; the Institute view now presents it as the universal
+  training model. Disclaimer carried.
+- **Six role dashboards** (new *Dashboards* view): **Student** (parish
+  + runnable mission ladder), **Teacher** (class roster, Louisiana OS
+  unit picker, transfer-check roll), **Parent** (band explainer with
+  ladder highlight, home log), **Homeschool** (band picker, weekly
+  planner, spine chips, home-study note), **Parish Admin** (plan/
+  mission/wave tiles, districts, hall), **State Admin** (totals, wave
+  rollout, mission-record count). All records browser-local, stated
+  plainly.
+- Canonical totals: **15,200 blocks · 38 packs · 180 tracks**.
+
 ## [0.17.0] — 2026-09-10
 
 ### Added

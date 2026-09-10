@@ -211,6 +211,7 @@
     <button class="tab" data-r="state" aria-current="true">The State</button>
     <button class="tab" data-r="parish">Parish Dashboards</button>
     <button class="tab" data-r="regions">Regions &amp; Trade Halls</button>
+    <button class="tab" data-r="roles">Dashboards</button>
     <button class="tab" data-r="institute">The Institute</button>
     <button class="tab" data-r="machines">Agents &amp; Robots</button>
     <button class="tab" data-r="curriculum">Curriculum</button>
@@ -289,6 +290,16 @@
     <div class="reggrid" id="reggrid"></div>
   </section>
 
+  <!-- ================= ROLE DASHBOARDS ================= -->
+  <section class="view" id="view-roles">
+    <p class="eyebrow"><b>Custom dashboards</b> · <i>one per seat at the table</i></p>
+    <h1>Every role, its own dashboard</h1>
+    <p class="lede">Student, teacher, parent, homeschool, parish and state administration — each seat gets the view
+    it works from. Everything entered here stays in this browser; a deployed instance holds its own records.</p>
+    <div class="chiprow" id="rolechips"></div>
+    <div id="rolebody"></div>
+  </section>
+
   <!-- ================= INSTITUTE (flagship) ================= -->
   <section class="view" id="view-institute">
     <p class="eyebrow"><b>The flagship</b> · <i>leadership · ethics · civic duty</i> · <em>for every state and country</em></p>
@@ -302,6 +313,12 @@
     <h2>The record behind the principles</h2>
     <p class="sub">Four decades of public life, read as curriculum.</p>
     <div class="pgrid" id="recordgrid"></div>
+
+    <h2>The universal training model — for every state</h2>
+    <p class="sub">New in v0.18.0: the model itself as a pack — leadership, coalition craft, <b>emotional
+    intelligence</b>, civic duty and ethics — state-agnostic, ready to run anywhere and localize through the
+    eight slots below. The Empathy &amp; Emotional Intelligence foundation library deepens the EQ track.</p>
+    <ul class="tracklist" id="modeltracks"></ul>
 
     <h2>One template, every edition</h2>
     <p class="sub">The eight slots that localize the Institute model anywhere — pick an edition to see them resolve.</p>
@@ -664,14 +681,8 @@ function renderParish(p){
   $("#pplan").querySelectorAll("[data-restore]").forEach(b=>b.addEventListener("click", ()=>{
     cust.off = cust.off.filter(x=>x!==b.dataset.restore); saveCust(); }));
 
-  // mission module: the parish-custom capstone ladder
-  const MCOL = ["var(--w1)","var(--w2)","var(--w3)","var(--w4)","var(--gold)"];
-  $("#pmissions").innerHTML = `<div class="themelist">` + p.missions.map((m,i)=>
-    `<div class="theme" style="border-left:4px solid ${MCOL[i]}">` +
-    `<div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">` +
-    `<span class="band" style="border-color:${MCOL[i]}">${esc(m.band)} · ${esc(m.level)}</span>` +
-    `<b>${esc(m.title)}</b></div>` +
-    `<div class="body" style="border-top:0; padding-top:4px"><div class="check"><b>Mission:</b> ${esc(m.task)}</div></div></div>`).join("") + `</div>`;
+  // mission module: the parish-custom capstone ladder — in full run
+  renderMissionLadder("#pmissions", p, true);
 
   // customizer picker: every catalog pack not already in the plan
   const inPlan = new Set(plan.map(([s])=>s));
@@ -757,6 +768,8 @@ function renderInstitute(){
       SLOTS.map((s,i)=>`<tr><td>${s}</td><td>${esc(vals[i])}</td></tr>`).join("")+`</tbody>`;
   };
   sel.addEventListener("change", draw); draw();
+  $("#modeltracks").innerHTML = (D.curriculum.modelTracks||[]).map(t=>
+    `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("");
   $("#wlbdisc").innerHTML = `<b>Disclaimer</b> — ${esc(D.wlb.disclaimer)}`;
 }
 
@@ -786,6 +799,158 @@ function renderLoop(){
     `<text x="${cx}" y="${cy-6}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--purple)">one block,</text>`+
     `<text x="${cx}" y="${cy+12}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--purple)">two learners</text>`+
     arrows + boxes + `</svg>`;
+}
+
+/* ---------- mission run-state (browser-local, per parish) ---------- */
+const MCOL = ["var(--w1)","var(--w2)","var(--w3)","var(--w4)","var(--gold)"];
+function missionState(slug){
+  try { const raw = store("cxla.missions."+slug); if (raw) return JSON.parse(raw); } catch(e){}
+  return [false,false,false,false,false];
+}
+function renderMissionLadder(sel, p, interactive){
+  const done = missionState(p.slug);
+  const n = done.filter(Boolean).length;
+  const host = $(sel);
+  host.innerHTML =
+    `<div class="kv" style="margin-bottom:8px"><span>Module progress — this browser's record</span><b>${n}/5 rungs</b></div>` +
+    `<div class="meter" style="margin:0 0 12px"><i style="width:${n*20}%"></i></div>` +
+    `<div class="themelist">` + p.missions.map((m,i)=>
+    `<div class="theme" style="border-left:4px solid ${MCOL[i]}; ${done[i]?'opacity:.75':''}">` +
+    `<div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">` +
+    (interactive ? `<input type="checkbox" id="ms-${p.slug}-${i}" data-mi="${i}" ${done[i]?"checked":""} aria-label="Mark rung complete">` : "") +
+    `<span class="band" style="border-color:${MCOL[i]}">${esc(m.band)} · ${esc(m.level)}</span>` +
+    `<b>${esc(m.title)}</b>` + (done[i]?`<span class="done-pill">✓ complete</span>`:"") + `</div>` +
+    `<div class="body" style="border-top:0; padding-top:4px"><div class="check"><b>Mission:</b> ${esc(m.task)}</div></div></div>`).join("") + `</div>`;
+  if (interactive) host.querySelectorAll("input[data-mi]").forEach(cb =>
+    cb.addEventListener("change", () => {
+      const d = missionState(p.slug); d[+cb.dataset.mi] = cb.checked;
+      store("cxla.missions."+p.slug, JSON.stringify(d));
+      renderMissionLadder(sel, p, interactive);
+    }));
+}
+
+/* ---------- ROLE DASHBOARDS ---------- */
+const ROLES = [
+  ["student","Student"],["teacher","Teacher"],["parent","Parent"],
+  ["homeschool","Homeschool"],["parishadmin","Parish Admin"],["stateadmin","State Admin"]
+];
+function roleState(){
+  try { const raw = store("cxla.roles"); if (raw) return JSON.parse(raw); } catch(e){}
+  return {role:"student", parish:"east-baton-rouge", band:2, roster:"", unit:"", checks:{}, planner:{}, home:""};
+}
+let R = roleState();
+function saveR(){ store("cxla.roles", JSON.stringify(R)); setTimeout(renderRoles, 0); }
+function parishSelect(id){
+  return `<select id="${id}">` + D.parishes.slice().sort((a,b)=>a.name.localeCompare(b.name))
+    .map(p=>`<option value="${p.slug}" ${p.slug===R.parish?"selected":""}>${esc(p.name)}</option>`).join("") + `</select>`;
+}
+function bandSelect(id){
+  return `<select id="${id}">` + BANDS.map((b,i)=>`<option value="${i}" ${i===R.band?"selected":""}>${b} · ${LEVELS[i]}</option>`).join("") + `</select>`;
+}
+const BANDS = D.bands ? D.bands : ["K–2","3–5","6–8","9–10","11–12"];
+const LEVELS = ["Explorer","Explorer","Builder","Practitioner","Lead"];
+function renderRoles(){
+  const p = bySlug[R.parish] || D.parishes[0];
+  $("#rolechips").innerHTML = ROLES.map(([k,l]) =>
+    `<button class="chip" data-role="${k}" aria-pressed="${R.role===k}">${l}</button>`).join("");
+  $("#rolechips").querySelectorAll("[data-role]").forEach(b =>
+    b.addEventListener("click", ()=>{ R.role = b.dataset.role; saveR(); }));
+  const body = $("#rolebody");
+
+  if (R.role === "student"){
+    body.innerHTML = `<div class="panel"><h3>My parish</h3><div class="pickrow" style="margin:0 0 12px">${parishSelect("rs-parish")}</div>
+      <p class="note">Your mission ladder — check rungs as your assessor confirms them. Flow sessions and credentials live in the Flow Hub alongside this file.</p>
+      <div id="rs-missions"></div></div>`;
+    renderMissionLadder("#rs-missions", p, true);
+  }
+
+  if (R.role === "teacher"){
+    const roster = (R.roster||"").split("\n").map(s=>s.trim()).filter(Boolean);
+    const pk = D.packmeta.LAOS || {tracks:[]};
+    const unit = R.unit || (pk.tracks[0]||{}).name || "";
+    body.innerHTML = `<div class="dashgrid">
+      <div class="panel"><h3>Class roster</h3><p class="note">One learner per line — stays in this browser.</p>
+        <textarea id="rt-roster" rows="6" style="width:100%" placeholder="First learner…">${esc(R.roster||"")}</textarea></div>
+      <div class="panel"><h3>Current unit</h3><p class="note">Pick the Louisiana OS track your class is on.</p>
+        <select id="rt-unit" style="width:100%">${pk.tracks.map(t=>`<option ${t.name===unit?"selected":""}>${esc(t.name)}</option>`).join("")}</select>
+        <p class="note" style="margin-top:12px">Transfer-check roll — tick a learner when their check is confirmed for this unit:</p>
+        <div id="rt-roll">${roster.length ? roster.map(nm => { const k = unit+"|"+nm;
+          return `<label style="display:flex; gap:8px; align-items:center; padding:4px 0; font-size:.9rem">
+            <input type="checkbox" data-rk="${esc(k)}" ${R.checks[k]?"checked":""}> ${esc(nm)}</label>`;}).join("")
+          : `<p class="note">Add learners to the roster to build the roll.</p>`}</div></div></div>`;
+    $("#rt-roster").addEventListener("change", e=>{ R.roster = e.target.value; saveR(); });
+    $("#rt-unit").addEventListener("change", e=>{ R.unit = e.target.value; saveR(); });
+    body.querySelectorAll("[data-rk]").forEach(cb => cb.addEventListener("change", ()=>{
+      R.checks[cb.dataset.rk] = cb.checked; store("cxla.roles", JSON.stringify(R)); }));
+  }
+
+  if (R.role === "parent"){
+    body.innerHTML = `<div class="panel"><h3>My child's band</h3>
+      <div class="pickrow" style="margin:0 0 12px">${bandSelect("rp-band")}</div>
+      <p class="note">At <b>${BANDS[R.band]}</b> your child works at <b>${LEVELS[R.band]}</b> level: the same themes as every band,
+      at ${["observation and naming","guided real tasks","independent practice on familiar material","novel real-world application","ownership, teaching back and exceptions"][R.band]}.
+      Every block ends in a transfer check on real material — most are doable at home.</p>
+      <div class="ladder">${BANDS.map((b,i)=>`<div style="${i===R.band?"border-bottom-color:var(--purple); background:var(--purple-soft)":""}"><b>${LEVELS[i]}</b>${b}</div>`).join("")}</div>
+      <h3 style="margin-top:20px">Home log</h3><p class="note">Checks you saw completed at home — evidence for the teacher. Stays in this browser.</p>
+      <textarea id="rp-home" rows="5" style="width:100%" placeholder="Mon — read the water meter together; …">${esc(R.home||"")}</textarea></div>`;
+    $("#rp-band").addEventListener("change", e=>{ R.band = +e.target.value; saveR(); });
+    $("#rp-home").addEventListener("change", e=>{ R.home = e.target.value; saveR(); });
+  }
+
+  if (R.role === "homeschool"){
+    const days = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
+    body.innerHTML = `<div class="panel"><h3>Homeschool planner</h3>
+      <div class="pickrow" style="margin:0 0 12px">${bandSelect("rh-band")}</div>
+      <p class="note">The full ${D.curriculum.blocks.toLocaleString()}-block ledger is yours — the spine below plus anything in the
+      Curriculum view. Louisiana families: verify current home-study registration rules with the state education department.</p>
+      <div class="chips">${D.corePacks.map(s=>`<span class="chip">${esc((D.catalog[s]||{}).name||s)}</span>`).join("")}</div>
+      <h3 style="margin-top:16px">This week</h3>
+      ${days.map(d=>`<label class="lab" for="rh-${d}">${d}</label>
+        <input type="search" id="rh-${d}" data-day="${d}" style="width:100%" placeholder="Track · theme · the check planned"
+          value="${esc((R.planner||{})[d]||"")}">`).join("")}</div>`;
+    $("#rh-band").addEventListener("change", e=>{ R.band = +e.target.value; saveR(); });
+    body.querySelectorAll("[data-day]").forEach(inp => inp.addEventListener("change", ()=>{
+      R.planner[inp.dataset.day] = inp.value; store("cxla.roles", JSON.stringify(R)); }));
+  }
+
+  if (R.role === "parishadmin"){
+    const done = missionState(p.slug).filter(Boolean).length;
+    body.innerHTML = `<div class="panel"><h3>Parish administration — ${esc(p.name)}</h3>
+      <div class="pickrow" style="margin:0 0 12px">${parishSelect("ra-parish")}</div>
+      <div class="tiles" style="margin:8px 0 4px">
+        <div class="tile t1"><b>${p.packs.length + D.corePacks.length}</b><span>packs in plan</span></div>
+        <div class="tile t2"><b>${done}/5</b><span>mission rungs (this browser)</span></div>
+        <div class="tile t3"><b>W${p.wave}</b><span>${D.waveYears[p.wave-1]} cohort</span></div>
+      </div>
+      <p class="note">School systems: ${esc(p.name)} Parish district${p.districts? " · "+esc(p.districts):""} · Trade Hall: ${esc(D.hubs[p.region])}</p>
+      <div style="display:flex; gap:9px; flex-wrap:wrap; margin-top:8px">
+        <button class="btn gold" id="ra-open">Open parish dashboard</button>
+      </div>
+      <p class="note" style="margin-top:12px">Mission and roll records shown here are this browser's only — a deployed
+      parish instance holds its own.</p></div>`;
+    $("#ra-open").addEventListener("click", ()=> location.hash="#/parish/"+p.slug);
+  }
+
+  if (R.role === "stateadmin"){
+    const recs = D.parishes.filter(x => missionState(x.slug).some(Boolean)).length;
+    body.innerHTML = `<div class="panel"><h3>State administration</h3>
+      <div class="tiles" style="margin:8px 0 4px">
+        <div class="tile t1"><b>64</b><span>parishes</span></div>
+        <div class="tile t2"><b>${D.curriculum.blocks.toLocaleString()}</b><span>blocks in the ledger</span></div>
+        <div class="tile t3"><b>${recs}</b><span>parishes with mission records (this browser)</span></div>
+      </div>
+      <p class="note">Rollout by wave — click through to any parish from The State's tile map.</p>
+      <div id="ra-waves"></div></div>`;
+    const wmax = Math.max(...[1,2,3,4].map(w=>D.parishes.filter(x=>x.wave===w).length));
+    $("#ra-waves").innerHTML = [1,2,3,4].map(w=>{
+      const nn = D.parishes.filter(x=>x.wave===w).length;
+      return `<div class="hbar"><span class="lab">Wave ${w} · ${D.waveYears[w-1]}</span>`+
+        `<span class="bar" style="width:${100*nn/wmax}%; background:${WAVECOL[w-1]}" title="Wave ${w}: ${nn} parishes"></span>`+
+        `<span class="val">${nn}</span></div>`;}).join("");
+  }
+
+  const sel = $("#rs-parish") || $("#ra-parish");
+  if (sel) sel.addEventListener("change", e=>{ R.parish = e.target.value; saveR(); });
 }
 
 /* ---------- style options ---------- */
@@ -824,6 +989,7 @@ function route(){
     const s = h.split("/")[1];
     renderParish(bySlug[s] || D.parishes[0]);
   } else if (h==="regions") view="regions";
+  else if (h==="roles"){ view="roles"; renderRoles(); }
   else if (h==="institute") view="institute";
   else if (h==="machines") view="machines";
   else if (h==="curriculum") view="curriculum";
@@ -839,7 +1005,7 @@ $("#prand").addEventListener("click", ()=> location.hash="#/parish/"+D.parishes[
 window.addEventListener("hashchange", route);
 
 renderState(); renderParishPicker(); renderRegions(); renderCurriculum();
-renderInstitute(); renderLoop(); initStyles();
+renderInstitute(); renderLoop(); initStyles(); renderRoles();
 renderParish(bySlug["east-baton-rouge"] || D.parishes[0]);
 route();
 </script>
