@@ -105,6 +105,14 @@
   }
   input[type=search]{width:min(340px,100%)}
 
+  /* printable workbook: on screen hidden; when printing, it is the page */
+  #wbprint{display:none}
+  @media print{
+    body.printing-wb > *:not(#wbprint){display:none !important}
+    body.printing-wb #wbprint{display:block !important; color:#000; background:#fff}
+    body.printing-wb{background:#fff}
+  }
+
   .trackhead{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin:26px 0 10px}
   .trackhead h3{font-family:Archivo,system-ui,sans-serif; font-weight:600; font-size:1rem; margin:0}
   .cred{font-size:.74rem; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:2px 10px; white-space:nowrap}
@@ -562,6 +570,38 @@ function renderPacks(){
   }).join("");
   body.querySelectorAll("[data-toggle]").forEach(b =>
     b.addEventListener("click", () => { const i=+b.dataset.toggle; packFilter.open = packFilter.open===i ? -1 : i; renderPacks(); }));
+  body.querySelectorAll("[data-wb]").forEach(b =>
+    b.addEventListener("click", e => { e.stopPropagation();
+      const [pi, ti] = b.dataset.wb.split("|").map(Number);
+      printWorkbook(DATA.packs[pi], DATA.packs[pi].tracks[ti]); }));
+}
+
+/* ---------- printable per-track workbook (zero-device settings) ---------- */
+function printWorkbook(p, t){
+  let host = $("#wbprint");
+  if (!host){ host = document.createElement("div"); host.id = "wbprint"; document.body.appendChild(host); }
+  host.innerHTML =
+    `<h1 style="font-family:Georgia,serif; margin:0 0 2px">${esc(t.name)}</h1>
+     <p style="margin:0 0 4px">${esc(p.name)} · credential: <b>${esc(t.credential)}</b> · ${t.prefix}-1…${t.prefix}-50</p>
+     <p style="font-size:.85rem; margin:0 0 14px">Cognition.X workbook — one theme per section, five grade bands each.
+     A check counts when it is demonstrated on real material and witnessed; the witness signs the line.
+     (Blocks: CX-${p.slug}. Content CC BY 4.0.)</p>` +
+    t.themes.map((th,ti) =>
+      `<div style="page-break-inside:avoid; border-top:2px solid #000; padding:8px 0 14px; margin-top:8px">
+        <h2 style="font-size:1.05rem; margin:0">${ti+1}. ${esc(th[0])} <span style="font-weight:400; font-size:.8rem">(${t.prefix}-${ti*5+1}…${t.prefix}-${ti*5+5})</span></h2>
+        <p style="margin:4px 0 6px; font-size:.9rem">${esc(th[1])}</p>
+        <p style="margin:0 0 8px; font-size:.9rem"><b>Transfer check:</b> ${esc(th[2])}</p>
+        <table style="width:100%; border-collapse:collapse; font-size:.82rem">
+          ${BANDS.map((b,bi)=>`<tr>
+            <td style="border:1px solid #000; padding:5px 8px; width:110px">${b} · ${LEVELS[bi]}</td>
+            <td style="border:1px solid #000; padding:5px 8px">Witnessed by ______________________ &nbsp; date ____________</td>
+          </tr>`).join("")}
+        </table>
+      </div>`).join("");
+  document.body.classList.add("printing-wb");
+  const done = () => { document.body.classList.remove("printing-wb"); window.removeEventListener("afterprint", done); };
+  window.addEventListener("afterprint", done);
+  window.print();
 }
 function renderPackDetail(p){
   if (p.tracks.length){
@@ -569,10 +609,11 @@ function renderPackDetail(p){
       ? `<p class="lede" style="margin:14px 0 0; font-size:.84rem"><b>+ ${p.loose.length} master practice blocks</b> — the
          adult practice library reconciled from the Education OS app (${new Set(p.loose.map(r=>r[1])).size} practice tracks);
          search above to find them.</p>` : "";
-    return practice + p.tracks.map(t => {
+    return practice + p.tracks.map((t, tj) => {
       const done = S.done[trackKey(p,t)] || {};
       return `<div class="trackhead"><h3>${esc(t.name)}</h3><span class="cred">${esc(t.credential)}</span>` +
-      `<span class="meta mono" style="color:var(--faint); font-size:.74rem">${t.prefix}-1…${t.prefix}-50</span></div>` +
+      `<span class="meta mono" style="color:var(--faint); font-size:.74rem">${t.prefix}-1…${t.prefix}-50</span>` +
+      `<button class="chip" data-wb="${DATA.packs.indexOf(p)}|${tj}" title="Print this track as a paper workbook">🖨 Workbook</button></div>` +
       `<div class="themelist">` + t.themes.map((th,ti) =>
         `<details class="theme"><summary><span class="code mono">${t.prefix}-${ti*5+1}</span>` +
         `<span class="tt">${esc(th[0])}</span>` +

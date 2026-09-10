@@ -4,6 +4,30 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.32.0] — 2026-09-10
+
+### Added
+- **Assessor Mode** (Louisiana) — the seventh role dashboard, closing
+  the witnessed-check loop: students send *Request a witnessed check*
+  from My standing (self-recorded checks are reframed as the
+  practice log; the witnessed record is what the Records Office
+  signs), and assessors work **the transfer-check queue** oldest
+  first — each request showing the learner's access-profile check
+  format, the three-line rubric (*real material · independent at
+  band · would transfer*), and an evidence form. **Confirmed**
+  credits the ledger (auto-awarding the credential at 50, spoken
+  when voice is on); **Not yet** records an honest debrief and no
+  credit — a retry costs an attempt, never a record. Duplicate
+  requests are blocked; a recent-evidence log and an honest-witness
+  rubric widget round out the dashboard. (Roadmap assessor-mode line
+  checked.)
+- **Printable per-track workbooks** (Flow Hub): a 🖨 Workbook button
+  on every tracked track prints a clean paper workbook — the ten
+  themes with descriptions and transfer checks, each with five
+  band-level witness/date sign-off lines — through the browser's
+  print dialog, for zero-device settings. (The packaging roadmap
+  line's workbook half is done; PWA install remains open.)
+
 ## [0.31.0] — 2026-09-10
 
 ### Added
