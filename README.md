@@ -15,11 +15,12 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (16,450 blocks, 43 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (16,700 blocks, 44 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
 | Cognition.X Trades Network (222 union & trade entries, 6 regions) | [`apps/trades-network/`](apps/trades-network/) | HTML |
+| Cognition.X States (custom curriculum for all 50 states) | [`apps/states/`](apps/states/) | HTML |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
 
 ## Quick start
@@ -40,6 +41,7 @@ python3 tools/build_flow_hub.py
 python3 tools/build_louisiana.py
 python3 tools/build_education_os.py   # sector library injected from blocks.csv
 python3 tools/build_trades.py         # unions fact base × dataset
+python3 tools/build_states.py         # 50-state fact base × blueprint
 ```
 
 ## The data model in one paragraph
@@ -56,7 +58,9 @@ Full details: [`data/schema.md`](data/schema.md) and the
 
 ## Packs at a glance
 
-Nine **Cognition.X OS editions** (Louisiana — the state's own, 500
+Ten **Cognition.X OS editions** (States OS — the universal 250-block
+state blueprint the States app localizes for all fifty states —
+Louisiana — the state's own, 500
 blocks of river, coast, corridor, table and storm — Education, reconciled
 from the app in v0.17.0, plus Corporate, Science, Robotics, Global
 Health, Multilateral, Sapient, Non-Profit — 500 blocks each), sixteen

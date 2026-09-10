@@ -1,0 +1,575 @@
+<title>Cognition.X States</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* tokens: enterprise-first; full dark mirror; 5 style templates (platform standard) */
+  :root{
+    --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#E9EDF1; --line:#D5DBE2;
+    --ink:#1B2431; --muted:#4E5A6B; --faint:#7E8898;
+    --purple:#2456A6; --gold:#946900; --green:#1F7A5C;
+    --gold-soft:rgba(148,105,0,.10); --purple-soft:rgba(36,86,166,.10);
+    --w1:#3B6FD4; --w2:#2E8F63; --w3:#9552BD; --w4:#C25A3A;
+    --chart:#2456A6; --ring:rgba(36,86,166,.45);
+    --shadow:0 8px 22px rgba(27,36,49,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
+      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+      --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
+      --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
+      --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+      --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
+      --shadow:0 12px 32px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
+    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+    --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
+    --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
+    --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+    --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
+    --shadow:0 12px 32px rgba(0,0,0,.4);
+  }
+  :root[data-style="parade"]{
+    --bg:#F7F5F0; --surface-2:#EFECE4; --line:#DCD8CD; --ink:#221F33; --muted:#5B566E; --faint:#8B879B;
+    --purple:#6B3FA0; --gold:#B87514; --green:#2E8F63;
+    --purple-soft:rgba(107,63,160,.10); --gold-soft:rgba(184,117,20,.12);
+    --chart:#3B6FD4; --ring:rgba(107,63,160,.45);
+  }
+  :root[data-style="parade"][data-theme="dark"], :root[data-style="parade"]:not([data-theme="light"]) { }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="parade"]:not([data-theme="light"]){
+      --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
+      --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+      --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
+      --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
+      --chart:#5580D6; --ring:rgba(232,163,61,.5);
+    }
+  }
+  :root[data-style="parade"][data-theme="dark"]{
+    --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
+    --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+    --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
+    --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
+    --chart:#5580D6; --ring:rgba(232,163,61,.5);
+  }
+  :root[data-style="classic"]{
+    --bg:#F7F5F0; --surface-2:#EFECE4; --line:#DCD8CD;
+    --purple:#4B4667; --gold:#7A6B4A; --green:#4E6B5E;
+    --purple-soft:rgba(75,70,103,.10); --gold-soft:rgba(122,107,74,.10);
+    --chart:#4B4667; --ring:rgba(75,70,103,.45);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="classic"]:not([data-theme="light"]){
+      --bg:#17161D; --surface:#201F28; --surface-2:#2B2A35; --line:#3C3B48;
+      --purple:#A9A2C9; --gold:#C0B08A; --green:#8FA99C;
+      --purple-soft:rgba(169,162,201,.13); --gold-soft:rgba(192,176,138,.13);
+      --chart:#A9A2C9; --ring:rgba(169,162,201,.5);
+    }
+  }
+  :root[data-style="classic"][data-theme="dark"]{
+    --bg:#17161D; --surface:#201F28; --surface-2:#2B2A35; --line:#3C3B48;
+    --purple:#A9A2C9; --gold:#C0B08A; --green:#8FA99C;
+    --purple-soft:rgba(169,162,201,.13); --gold-soft:rgba(192,176,138,.13);
+    --chart:#A9A2C9; --ring:rgba(169,162,201,.5);
+  }
+  :root[data-style="bayou"]{
+    --bg:#F4F5EC; --surface-2:#EAEBDD; --line:#D8DAC6;
+    --purple:#3E6B34; --gold:#A0621B; --green:#2E8F63;
+    --purple-soft:rgba(62,107,52,.11); --gold-soft:rgba(160,98,27,.11);
+    --chart:#3E7A4F; --ring:rgba(62,107,52,.45);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="bayou"]:not([data-theme="light"]){
+      --bg:#141811; --surface:#1C2318; --surface-2:#273022; --line:#3A4632;
+      --purple:#8FBF6B; --gold:#D9A252; --green:#4EA57F;
+      --purple-soft:rgba(143,191,107,.14); --gold-soft:rgba(217,162,82,.14);
+      --chart:#8FBF6B; --ring:rgba(143,191,107,.5);
+    }
+  }
+  :root[data-style="bayou"][data-theme="dark"]{
+    --bg:#141811; --surface:#1C2318; --surface-2:#273022; --line:#3A4632;
+    --purple:#8FBF6B; --gold:#D9A252; --green:#4EA57F;
+    --purple-soft:rgba(143,191,107,.14); --gold-soft:rgba(217,162,82,.14);
+    --chart:#8FBF6B; --ring:rgba(143,191,107,.5);
+  }
+  :root[data-style="gallery"]{
+    --bg:#FAFAF7; --surface-2:#F0EFEA; --line:#DEDDD5;
+    --purple:#8A1E33; --gold:#6E6046; --green:#4A6B5F;
+    --purple-soft:rgba(138,30,51,.09); --gold-soft:rgba(110,96,70,.10);
+    --chart:#8A1E33; --ring:rgba(138,30,51,.4);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="gallery"]:not([data-theme="light"]){
+      --bg:#171514; --surface:#201D1C; --surface-2:#2B2726; --line:#403A38;
+      --purple:#E08498; --gold:#BFAE8C; --green:#7FA394;
+      --purple-soft:rgba(224,132,152,.13); --gold-soft:rgba(191,174,140,.13);
+      --chart:#E08498; --ring:rgba(224,132,152,.5);
+    }
+  }
+  :root[data-style="gallery"][data-theme="dark"]{
+    --bg:#171514; --surface:#201D1C; --surface-2:#2B2726; --line:#403A38;
+    --purple:#E08498; --gold:#BFAE8C; --green:#7FA394;
+    --purple-soft:rgba(224,132,152,.13); --gold-soft:rgba(191,174,140,.13);
+    --chart:#E08498; --ring:rgba(224,132,152,.5);
+  }
+
+  *{box-sizing:border-box}
+  html{color-scheme:light dark}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:15.5px; line-height:1.6}
+  a{color:var(--purple)}
+  button{font:inherit; cursor:pointer}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+  :focus-visible{outline:2px solid var(--ring); outline-offset:2px}
+  .wrap{max-width:1160px; margin:0 auto; padding-inline:clamp(16px,4vw,40px)}
+
+  header.masthead{border-bottom:1px solid var(--line); background:var(--surface); position:sticky; top:0; z-index:5}
+  .mast{display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding-block:12px}
+  .wordmark{font-family:Fraunces,Georgia,serif; font-weight:800; font-size:1.15rem; white-space:nowrap}
+  .wordmark .st{color:var(--purple)}
+  nav.tabs{display:flex; gap:4px; flex-wrap:wrap}
+  .tab{border:0; background:none; color:var(--muted); padding:7px 12px; border-radius:999px; font-weight:500}
+  .tab:hover{color:var(--ink); background:var(--surface-2)}
+  .tab[aria-current="true"]{background:var(--purple-soft); color:var(--purple); font-weight:600}
+  .mastctl{margin-left:auto; display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+  .mastctl label{font-size:.7rem; color:var(--faint); font-family:"IBM Plex Mono",monospace}
+  .mastctl select{padding:4px 8px; font-size:.78rem}
+
+  main{padding-block:34px 70px}
+  .view{display:none}
+  .view.active{display:block}
+  .eyebrow{font-size:.72rem; text-transform:uppercase; letter-spacing:.16em; font-weight:600; margin:0 0 10px; color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif; font-weight:800; font-size:clamp(1.8rem,4vw,2.8rem);
+     line-height:1.12; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance}
+  h2{font-family:Fraunces,Georgia,serif; font-weight:600; font-size:1.3rem; margin:38px 0 6px}
+  .lede{color:var(--muted); max-width:66ch; margin:0 0 24px; font-size:1.02rem}
+  .note{font-size:.82rem; color:var(--muted); margin:2px 0 12px}
+
+  .tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:22px 0}
+  .tile{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px}
+  .tile b{display:block; font-family:Fraunces,Georgia,serif; font-size:1.5rem; line-height:1.1}
+  .tile span{font-size:.76rem; color:var(--muted)}
+  .tile.t1 b{color:var(--purple)} .tile.t2 b{color:var(--gold)} .tile.t3 b{color:var(--green)}
+
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 20px; box-shadow:var(--shadow)}
+  .panel h3{margin:0 0 4px; font-family:Fraunces,Georgia,serif; font-size:1.05rem}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; margin-top:14px}
+  .grid3{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; margin-top:14px}
+
+  .chip{display:inline-block; border:1px solid var(--line); background:var(--surface-2); color:var(--muted);
+    border-radius:999px; padding:2px 11px; font-size:.74rem; margin:2px 4px 2px 0}
+  .chip.link{cursor:pointer}
+  .chip.link:hover{border-color:var(--purple); color:var(--purple)}
+
+  .legend{display:flex; flex-wrap:wrap; gap:14px; margin:12px 0 0; font-size:.8rem; color:var(--muted)}
+  .legend i{display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:6px; vertical-align:-1px}
+  .mapwrap{overflow-x:auto}
+  .map .tile:hover rect, .map .tile:focus rect{filter:brightness(1.12)}
+  .map .tile{cursor:pointer}
+
+  .filters{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:16px 0 4px}
+  .filters input[type=search]{padding:7px 12px; border:1px solid var(--line); border-radius:9px;
+    background:var(--surface); color:var(--ink); font:inherit; min-width:200px}
+  .filters select{padding:6px 10px; font-size:.83rem}
+
+  .statecard{border-left:4px solid var(--chart); cursor:pointer}
+  .statecard:hover{border-color:var(--purple)}
+  .statecard h4{margin:0 0 2px; font-family:Fraunces,Georgia,serif; font-size:1rem}
+  .statecard .cap{font-size:.76rem; color:var(--faint)}
+
+  .course{background:var(--surface); border:1px solid var(--line); border-radius:11px; padding:14px 17px; margin-top:10px}
+  .course h4{margin:0; font-family:Fraunces,Georgia,serif; font-size:1rem}
+  .course .anchor{color:var(--purple); font-style:italic}
+  .course .meta{font-size:.76rem; color:var(--muted); margin-top:4px}
+  .cred{font-size:.74rem; color:var(--gold); border:1px solid var(--gold); border-radius:999px; padding:1px 9px; white-space:nowrap}
+  .tracklist{list-style:none; margin:8px 0 0; padding:0}
+  .tracklist li{padding:8px 0; border-top:1px solid var(--line); font-size:.9rem; display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap}
+
+  blockquote.big{margin:14px 0; padding:14px 18px; border-left:4px solid var(--gold); background:var(--gold-soft);
+    border-radius:0 10px 10px 0; font-family:Fraunces,Georgia,serif; font-size:1.05rem}
+  .disc{border:1px dashed var(--line); border-radius:11px; padding:13px 16px; font-size:.8rem; color:var(--muted); margin-top:22px}
+  .steps{counter-reset:st; margin:14px 0 0; padding:0; list-style:none}
+  .steps li{counter-increment:st; display:flex; gap:14px; padding:12px 0; border-top:1px solid var(--line); font-size:.9rem}
+  .steps li::before{content:counter(st); flex:0 0 30px; height:30px; border-radius:999px; background:var(--purple-soft);
+    color:var(--purple); font-weight:700; display:grid; place-items:center; font-family:"IBM Plex Mono",monospace; font-size:.85rem}
+  .btn{border:1px solid var(--line); background:var(--surface-2); color:var(--ink); border-radius:9px; padding:6px 14px}
+  .btn.gold{background:var(--gold); border-color:var(--gold); color:#fff}
+  .pnav{display:flex; gap:10px; margin:18px 0 0}
+  .foot{border-top:1px solid var(--line); margin-top:60px; padding:22px 0 40px; font-size:.78rem; color:var(--faint)}
+</style>
+
+<header class="masthead"><div class="wrap mast">
+  <div class="wordmark">Cognition.X <span class="st">States</span></div>
+  <nav class="tabs" aria-label="Views">
+    <button class="tab" data-r="nation" aria-current="true">The Nation</button>
+    <button class="tab" data-r="states">All 50 States</button>
+    <button class="tab" data-r="state">State Curriculum</button>
+    <button class="tab" data-r="blueprint">The Blueprint</button>
+    <button class="tab" data-r="institute">The Institute Model</button>
+    <button class="tab" data-r="adoption">Adoption</button>
+  </nav>
+  <div class="mastctl">
+    <label for="themepick">theme</label>
+    <select id="themepick"><option value="">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+    <label for="stylepick">style</label>
+    <select id="stylepick">
+      <option value="enterprise">Enterprise</option><option value="parade">Parade</option>
+      <option value="classic">Classic</option><option value="bayou">Bayou</option>
+      <option value="gallery">Gallery</option>
+    </select>
+    <label for="voicepick">voice</label>
+    <select id="voicepick">
+      <option value="">Off</option><option value="warm">Warm</option>
+      <option value="steady">Steady</option><option value="brisk">Brisk</option>
+    </select>
+    <button class="btn gold" id="guidebtn">🧭 Guide</button>
+    <span class="mono" id="verline" style="font-size:.72rem; color:var(--faint)"></span>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+  <section class="view active" id="view-nation">
+    <p class="eyebrow">Fifty states · one blueprint · every course on home ground</p>
+    <h1>Custom curriculum for every state</h1>
+    <p class="lede">The Louisiana pattern, generalized: a universal five-track <b>States OS blueprint</b>
+    (water, the working corridor, the table, culture, storm memory) plus the universal
+    <b>Institute Model</b> civic tracks — localized for each of the fifty states by its own fact base,
+    so every course is taught and checked on the learner's home ground.</p>
+    <div class="tiles" id="nattiles"></div>
+    <div class="panel">
+      <h3>The nation as tiles</h3>
+      <p class="note">A stylized tile cartogram — approximate geography, colored by region. Click any state
+      to open its custom curriculum.</p>
+      <div class="mapwrap" id="usmap"></div>
+      <div class="legend" id="uslegend"></div>
+    </div>
+  </section>
+
+  <section class="view" id="view-states">
+    <p class="eyebrow">The catalog of catalogs</p>
+    <h1>All fifty states</h1>
+    <p class="lede">Each card is a door into that state's custom course set — its own water, corridor,
+    table, culture and storm, on the shared blueprint.</p>
+    <div class="filters">
+      <input type="search" id="ssearch" placeholder="Search states, capitals, anchors…" aria-label="Search states">
+      <select id="sregion"><option value="">All regions</option>
+        <option>Northeast</option><option>Midwest</option><option>South</option><option>West</option></select>
+      <span class="note" id="scount" style="margin:0"></span>
+    </div>
+    <div class="grid3" id="sgrid"></div>
+  </section>
+
+  <section class="view" id="view-state">
+    <div id="statebody"></div>
+  </section>
+
+  <section class="view" id="view-blueprint">
+    <p class="eyebrow">Cognition.X : States OS · 250 blocks</p>
+    <h1>The blueprint</h1>
+    <p class="lede">Five universal tracks, ten themes each, taught across the five grade bands — every
+    transfer check phrased on <i>your state's</i> real material. The blueprint is the constant; the state
+    is the variable.</p>
+    <div id="bpbody"></div>
+  </section>
+
+  <section class="view" id="view-institute">
+    <p class="eyebrow">Leadership · ethics · civic duty · emotional intelligence</p>
+    <h1>The Institute Model, for every state</h1>
+    <p class="lede" id="wlbmission"></p>
+    <blockquote class="big" id="wlbquote"></blockquote>
+    <div class="grid2" id="prin"></div>
+    <div class="panel" style="margin-top:14px">
+      <h3>The universal civic tracks</h3>
+      <p class="note">From the Civic Leadership Legacy : The Institute Model pack — localized on every
+      state page by that state's capital and legislature.</p>
+      <ul class="tracklist" id="modeltracks"></ul>
+    </div>
+    <div class="disc" id="wlbdisc"></div>
+  </section>
+
+  <section class="view" id="view-adoption">
+    <p class="eyebrow">From blueprint to running system</p>
+    <h1>How a state adopts</h1>
+    <p class="lede">The Louisiana platform is the working reference: a two-wave adoption plan computed from
+    the state's own fact base, regional Trade Halls, launch curriculum, readiness boards, budgets, a learner
+    ledger with signed credentials, and the flow automations over all of it.</p>
+    <ol class="steps">
+      <li><b>Seed the fact base</b> — the state's subdivisions (counties, parishes, boroughs), hubs, industries and narrative worlds, on the Louisiana pattern.</li>
+      <li><b>Adopt the spine</b> — K–12, life skills, emergency response, the Parish Launch &amp; Scale rollout pack and universal access, plus this blueprint localized.</li>
+      <li><b>Plan two waves</b> — the largest-reach cohort first (Louisiana: 33 of 64 parishes, ~88% of population in year one), statewide in year two.</li>
+      <li><b>Stand up the halls</b> — regional Trade Halls with the Network OS automations keeping learners and teachers in flow.</li>
+      <li><b>Run the ledger</b> — browser-local learner records, standing dashboards for every seat, and signed portable credentials from each hall's Records Office.</li>
+    </ol>
+    <p class="note" style="margin-top:14px">Working reference implementation:
+      <a href="../louisiana/index.html" target="_blank" rel="noopener">Cognition.X Louisiana</a> ·
+      curriculum engine: <a href="../flow-hub/index.html" target="_blank" rel="noopener">Flow Hub</a> ·
+      trades layer: <a href="../trades-network/index.html" target="_blank" rel="noopener">Trades Network</a>.</p>
+  </section>
+
+  <div class="foot wrap" style="padding-inline:0">
+    Cognition.X States — built from the canonical dataset, the 50-state fact base, and the Education OS
+    app's Institute fact base. Code Apache-2.0 · content CC BY 4.0. Anchors are door-openers of public
+    general knowledge, not exhaustive claims; communities named are the keepers of their own stories.
+  </div>
+</main>
+
+<script>
+const D = {"version":"0.31.0","note":"Fact base for the 50-state curriculum layer: every state with its capital, census-style region, a stylized US tile-grid position (approximate geography, like the parish and city maps), and five localization anchors — water, working corridor, table, culture, storm memory — of public general knowledge. The States app crosses these with the Cognition.X : States OS blueprint pack (and the Institute Model civic tracks) to generate each state's custom course catalog. Anchors are door-openers for local study, not exhaustive claims; every course's transfer checks are performed on the learner's own state's real material, and communities named are honored as the keepers of their own stories.","states":[{"abbr":"AK","name":"Alaska","capital":"Juneau","region":"West","grid":[0,0],"water":"the Yukon and the Inside Passage","corridor":"the North Slope oil fields and the fisheries","table":"wild salmon and the subsistence harvest","culture":"Alaska Native cultures and the iditarod trail's working dogs","storm":"the winter dark and the Good Friday earthquake of 1964"},{"abbr":"ME","name":"Maine","capital":"Augusta","region":"Northeast","grid":[0,10],"water":"the rocky Atlantic coast and Penobscot Bay","corridor":"the working waterfront and the timberlands","table":"the lobster boat's catch and wild blueberries","culture":"downeast boatbuilding and the town meeting","storm":"the nor'easter and the ice storm of 1998"},{"abbr":"WA","name":"Washington","capital":"Olympia","region":"West","grid":[1,0],"water":"Puget Sound and the Columbia","corridor":"the ports of Seattle-Tacoma and the aerospace plants","table":"apples, wheat and the salmon runs","culture":"coast Salish carving and the grunge sound of Seattle","storm":"the Cascadia quake risk and Mount St. Helens, 1980"},{"abbr":"ID","name":"Idaho","capital":"Boise","region":"West","grid":[1,1],"water":"the Snake River plain","corridor":"the farms and the semiconductor fabs of the Treasure Valley","table":"the famous potato harvest","culture":"basque festivals and the backcountry outfitters","storm":"wildfire season in the high desert"},{"abbr":"MT","name":"Montana","capital":"Helena","region":"West","grid":[1,2],"water":"the Missouri headwaters","corridor":"the ranches and the copper legacy of Butte","table":"beef cattle and winter wheat","culture":"cowboy poetry and Crow and Blackfeet nations' gatherings","storm":"the hard winter and the fire summer"},{"abbr":"ND","name":"North Dakota","capital":"Bismarck","region":"Midwest","grid":[1,3],"water":"the Missouri and Lake Sakakawea","corridor":"the Bakken oil patch and the wheat belt","table":"durum wheat for the nation's pasta","culture":"powwows of the Mandan, Hidatsa and Arikara and Norwegian lefse suppers","storm":"the blizzard and the Red River flood of 1997"},{"abbr":"MN","name":"Minnesota","capital":"St. Paul","region":"Midwest","grid":[1,4],"water":"the Mississippi headwaters and ten thousand lakes","corridor":"the Iron Range and the Twin Cities' mills-turned-tech","table":"wild rice, corn and the state fair's butter","culture":"the Ojibwe and Dakota nations and the North Star's hockey rinks","storm":"the deep freeze and the Halloween blizzard of 1991"},{"abbr":"WI","name":"Wisconsin","capital":"Madison","region":"Midwest","grid":[1,5],"water":"the Great Lakes shore and the Wisconsin River","corridor":"the dairy belt and the machine shops of Milwaukee","table":"cheese, brats and the Friday fish fry","culture":"polka halls and the Green Bay stands in winter","storm":"lake-effect snow and the derecho winds"},{"abbr":"MI","name":"Michigan","capital":"Lansing","region":"Midwest","grid":[1,6],"water":"four Great Lakes and the Soo Locks","corridor":"the auto plants of Detroit and the parts corridor","table":"cherries of Traverse City and the pasty of the U.P.","culture":"Motown and the Anishinaabe nations of the lakes","storm":"the lake gales that took the Edmund Fitzgerald, 1975"},{"abbr":"NY","name":"New York","capital":"Albany","region":"Northeast","grid":[1,8],"water":"the Hudson and the Erie Canal","corridor":"the harbor, the subway and the money markets of the city","table":"apples upstate and the delis of the five boroughs","culture":"Broadway, hip-hop's birth in the Bronx, and the Haudenosaunee confederacy","storm":"the blizzard and the surge of Sandy, 2012"},{"abbr":"VT","name":"Vermont","capital":"Montpelier","region":"Northeast","grid":[1,9],"water":"Lake Champlain and the Green Mountain brooks","corridor":"the dairy hills and the granite sheds of Barre","table":"maple syrup from the sugarbush","culture":"town meeting day and the contra dance","storm":"mud season and the flood of Irene, 2011"},{"abbr":"NH","name":"New Hampshire","capital":"Concord","region":"Northeast","grid":[1,10],"water":"the Merrimack and the White Mountain notches","corridor":"the old mill towns turned tech and the tourist notches","table":"apple orchards and the sugar houses","culture":"the first-in-the-nation town halls","storm":"the Mount Washington wind and the ice storm"},{"abbr":"OR","name":"Oregon","capital":"Salem","region":"West","grid":[2,0],"water":"the Columbia Gorge and the Willamette","corridor":"the ports of Portland and the chip fabs of the Silicon Forest","table":"pinot vineyards, hazelnuts and the salmon","culture":"Oregon Trail memory and the powwows of the Columbia Plateau nations","storm":"wildfire season and the Cascadia quake risk"},{"abbr":"NV","name":"Nevada","capital":"Carson City","region":"West","grid":[2,1],"water":"the Truckee, the Colorado and Lake Mead","corridor":"the Strip's service floor and the lithium and gold mines","table":"basque family-style tables and the ranch beef","culture":"the neon workshops of Las Vegas and the Paiute and Shoshone nations","storm":"drought and the desert flash flood"},{"abbr":"WY","name":"Wyoming","capital":"Cheyenne","region":"West","grid":[2,2],"water":"the headwaters of the Yellowstone and the Platte","corridor":"the coal, gas and wind of the high plains","table":"beef cattle off the open range","culture":"frontier days rodeo and the Eastern Shoshone and Northern Arapaho of Wind River","storm":"the ground blizzard on the interstate"},{"abbr":"SD","name":"South Dakota","capital":"Pierre","region":"Midwest","grid":[2,3],"water":"the Missouri's great lakes","corridor":"the ranches, the rail and the Black Hills visitors","table":"bison, beef and chislic","culture":"the Oceti Sakowin nations and the Sturgis rally's roar","storm":"the prairie blizzard and the derecho"},{"abbr":"IA","name":"Iowa","capital":"Des Moines","region":"Midwest","grid":[2,4],"water":"the Mississippi and Missouri between them","corridor":"the corn-soy belt and the wind turbine plants","table":"corn, pork and the state fair's food on a stick","culture":"RAGBRAI's ride and the county fair","storm":"the derecho of 2020 and the spring flood"},{"abbr":"IL","name":"Illinois","capital":"Springfield","region":"Midwest","grid":[2,5],"water":"Lake Michigan and the Illinois waterway","corridor":"the rail hub of Chicago and the corn-soy downstate","table":"deep dish, the Maxwell Street polish, and the harvest","culture":"the blues and house music of Chicago and Lincoln's prairie towns","storm":"the lake-effect winter and the tornado alley's edge"},{"abbr":"IN","name":"Indiana","capital":"Indianapolis","region":"Midwest","grid":[2,6],"water":"the Wabash and the dunes shore","corridor":"the steel of the Calumet and the auto and parts plants","table":"corn, pork tenderloins and the sugar cream pie","culture":"the 500's race crews and the high-school gym on Friday","storm":"the tornado outbreak and the ice storm"},{"abbr":"OH","name":"Ohio","capital":"Columbus","region":"Midwest","grid":[2,7],"water":"Lake Erie and the Ohio River","corridor":"the machine shops, the rubber legacy of Akron and the new fabs","table":"corn, tomatoes and the chili of Cincinnati","culture":"the rock and roll hall's city and the county fair circuit","storm":"the lake gale and the river flood of 1937"},{"abbr":"PA","name":"Pennsylvania","capital":"Harrisburg","region":"Northeast","grid":[2,8],"water":"the Delaware, the Susquehanna and three rivers at Pittsburgh","corridor":"the steel legacy, the gas fields and the pharma corridor","table":"the mushroom houses of Kennett Square and the Philly market stalls","culture":"the Mummers, the polka belt and Penn's woods' hunting camps","storm":"the Johnstown flood memory and the nor'easter"},{"abbr":"NJ","name":"New Jersey","capital":"Trenton","region":"Northeast","grid":[2,9],"water":"the shore and the Delaware","corridor":"the port of Newark-Elizabeth and the pharma labs","table":"the Jersey tomato and the boardwalk stand","culture":"the diner counter and the shore town's summer","storm":"the surge of Sandy, 2012"},{"abbr":"MA","name":"Massachusetts","capital":"Boston","region":"Northeast","grid":[2,10],"water":"the harbor and the Cape's arm","corridor":"the labs and hospitals of the knowledge corridor","table":"the cranberry bog and the clam shack","culture":"the marathon, the town green and the fishing fleet's memory","storm":"the blizzard of '78 and the hurricane of '38"},{"abbr":"RI","name":"Rhode Island","capital":"Providence","region":"Northeast","grid":[2,11],"water":"Narragansett Bay","corridor":"the design mills of Providence and the working bay","table":"quahogs, stuffies and coffee milk","culture":"WaterFire's braziers and the Gilded Age cottages' crews","storm":"the hurricane of 1938's surge"},{"abbr":"CA","name":"California","capital":"Sacramento","region":"West","grid":[3,0],"water":"the Sierra snowpack and the Central Valley aqueducts","corridor":"the ports of LA-Long Beach, the studios and the valley of silicon","table":"the Central Valley's fruit and the taco truck's genius","culture":"Hollywood's crafts, the missions' bells and the Chumash, Miwok and many nations","storm":"wildfire season and the San Andreas quake risk"},{"abbr":"UT","name":"Utah","capital":"Salt Lake City","region":"West","grid":[3,1],"water":"the Great Salt Lake and the Colorado's canyons","corridor":"the Wasatch Front's tech benches and the copper pit","table":"fry sauce, funeral potatoes and the orchard bench","culture":"the Tabernacle's choir and the red-rock guides","storm":"drought and the inversion's winter air"},{"abbr":"CO","name":"Colorado","capital":"Denver","region":"West","grid":[3,2],"water":"the headwaters of four great rivers","corridor":"the Front Range labs and the mountain resorts' lift crews","table":"Palisade peaches and the green chile argument with New Mexico","culture":"the Ute nations and the mountain town's powder mornings","storm":"wildfire and the flash flood in the canyons"},{"abbr":"NE","name":"Nebraska","capital":"Lincoln","region":"Midwest","grid":[3,3],"water":"the Platte and the Ogallala aquifer","corridor":"the feedlots, the rail of North Platte and the insurance towers of Omaha","table":"corn-fed beef and the runza","culture":"the sandhill cranes' migration and the sea of red on Saturdays","storm":"the tornado and the hailstorm"},{"abbr":"MO","name":"Missouri","capital":"Jefferson City","region":"Midwest","grid":[3,4],"water":"the Missouri meeting the Mississippi","corridor":"the crossroads freight hub and the bootheel's cotton","table":"barbecue burnt ends and the toasted ravioli","culture":"the Gateway Arch's builders and the Ozark string bands","storm":"the Joplin tornado of 2011 and the New Madrid quake memory"},{"abbr":"KY","name":"Kentucky","capital":"Frankfort","region":"South","grid":[3,5],"water":"the Ohio's southern bank and the limestone springs","corridor":"the bourbon rickhouses and the auto plants","table":"burgoo, hot browns and the bourbon barrel","culture":"the Derby's backside workers and the bluegrass string bands","storm":"the December 2021 tornado outbreak and the eastern floods"},{"abbr":"WV","name":"West Virginia","capital":"Charleston","region":"South","grid":[3,6],"water":"the New and the Kanawha in their gorges","corridor":"the coal legacy and the chemical valley","table":"ramps in spring and the pepperoni roll","culture":"the mine wars' memory and the mountain fiddle","storm":"the flood in the hollows"},{"abbr":"VA","name":"Virginia","capital":"Richmond","region":"South","grid":[3,7],"water":"the Chesapeake and the James","corridor":"the naval yards of Hampton Roads and the data centers of the north","table":"country ham, oysters and the peanut harvest","culture":"the crooked road's old-time music and the tribes of the tidewater","storm":"the hurricane remnant floods and the derecho"},{"abbr":"MD","name":"Maryland","capital":"Annapolis","region":"South","grid":[3,8],"water":"the Chesapeake Bay","corridor":"the port of Baltimore and the federal labs","table":"blue crabs and Old Bay on everything","culture":"the skipjack fleet's memory and the Preakness barns","storm":"the bay surge and the Ellicott City floods"},{"abbr":"DE","name":"Delaware","capital":"Dover","region":"South","grid":[3,9],"water":"the Delaware Bay and its marshes","corridor":"the chemical labs' legacy and the corporate registry","table":"peach memory, scrapple and the blue hen","culture":"return day in Georgetown and the beach towns' season","storm":"the nor'easter on the low coast"},{"abbr":"CT","name":"Connecticut","capital":"Hartford","region":"Northeast","grid":[3,10],"water":"the Connecticut River and the Sound","corridor":"the submarine yards of Groton and the insurance towers","table":"the apizza of New Haven and the shoreline lobster roll","culture":"the town green and the whaling memory of Mystic","storm":"the hurricane of 1938 and the ice storm"},{"abbr":"AZ","name":"Arizona","capital":"Phoenix","region":"West","grid":[4,1],"water":"the Colorado in the Grand Canyon and the CAP canals","corridor":"the chip fabs of Phoenix and the copper mines","table":"chiles, citrus and the Sonoran dog","culture":"the Navajo, Hopi, Tohono O'odham and many nations, and the mariachi mass","storm":"the haboob, the heat and the wildfire"},{"abbr":"NM","name":"New Mexico","capital":"Santa Fe","region":"West","grid":[4,2],"water":"the Rio Grande through the desert","corridor":"the national labs and the chile fields","table":"red or green — the state question","culture":"the pueblos' feast days and the luminarias of Christmas","storm":"drought and the Hermits Peak fire of 2022"},{"abbr":"KS","name":"Kansas","capital":"Topeka","region":"Midwest","grid":[4,3],"water":"the Arkansas and the Ogallala underneath","corridor":"the wheat belt, the aircraft plants of Wichita and the feedlots","table":"hard red winter wheat — the nation's breadbasket","culture":"the Flint Hills burning in spring and the county fair","storm":"tornado alley's heart — Greensburg, 2007, rebuilt green"},{"abbr":"AR","name":"Arkansas","capital":"Little Rock","region":"South","grid":[4,4],"water":"the Arkansas and the White River bottoms","corridor":"the retail giant's home offices, the poultry belt and the rice fields","table":"rice, catfish and the church potluck","culture":"the Ozark folk center and the King Biscuit blues","storm":"the tornado outbreak and the ice storm"},{"abbr":"TN","name":"Tennessee","capital":"Nashville","region":"South","grid":[4,5],"water":"the Tennessee looping through and the Mississippi at Memphis","corridor":"the auto corridor and the logistics hub of Memphis","table":"hot chicken, dry-rub ribs and the meat-and-three","culture":"Beale Street, the Opry and the mountain ballads","storm":"the Nashville flood of 2010 and the tornado outbreaks"},{"abbr":"NC","name":"North Carolina","capital":"Raleigh","region":"South","grid":[4,6],"water":"the Outer Banks and the rivers to the sound","corridor":"the research triangle and the furniture-turned-fintech piedmont","table":"whole-hog barbecue east and west of the fight","culture":"the bluegrass of the Blue Ridge and the Lumbee and Cherokee nations","storm":"the hurricanes up the sounds — Floyd, Florence, Helene's mountains"},{"abbr":"SC","name":"South Carolina","capital":"Columbia","region":"South","grid":[4,7],"water":"the lowcountry marshes and the Santee","corridor":"the port of Charleston and the upstate auto plants","table":"shrimp and grits and the mustard-gold barbecue","culture":"the Gullah Geechee corridor and the sweetgrass baskets","storm":"the hurricane of 1989, Hugo, and the thousand-year flood of 2015"},{"abbr":"OK","name":"Oklahoma","capital":"Oklahoma City","region":"South","grid":[5,3],"water":"the Arkansas and the red dirt rivers","corridor":"the oil patch and the aerospace depots","table":"chicken-fried steak and the fried-onion burger","culture":"thirty-nine tribal nations' capitals and the red dirt music","storm":"the May 3rd and Moore tornadoes — the storm-shelter state"},{"abbr":"LA","name":"Louisiana","capital":"Baton Rouge","region":"South","grid":[5,4],"water":"the Mississippi's delta and the working coast","corridor":"the river ports, the energy corridor and the petrochemical alley","table":"gumbo, crawfish and the boucherie","culture":"Mardi Gras krewes, second lines and the French and Creole tongues","storm":"Katrina's memory and every August's watch"},{"abbr":"MS","name":"Mississippi","capital":"Jackson","region":"South","grid":[5,5],"water":"the great river's east bank and the Delta's flat black land","corridor":"the shipyards of the coast and the catfish ponds","table":"catfish, tamales of the Delta and the juke joint's plate","culture":"the Delta blues' birthplace and the Choctaw nation","storm":"Katrina on the coast and the river flood of 1927"},{"abbr":"AL","name":"Alabama","capital":"Montgomery","region":"South","grid":[5,6],"water":"the Tennessee in the north and Mobile Bay below","corridor":"the rocket city's aerospace and the auto plants","table":"white barbecue sauce and the Gulf oyster","culture":"the civil rights trail and the Muscle Shoals sound","storm":"the April 27, 2011 tornado outbreak"},{"abbr":"GA","name":"Georgia","capital":"Atlanta","region":"South","grid":[5,7],"water":"the Chattahoochee and the Okefenokee","corridor":"the world's busiest airport, the port of Savannah and the film stages","table":"peaches, pecans, and Vidalia onions","culture":"the civil rights movement's pulpits and the trap sound of Atlanta","storm":"the hurricane inland — Michael's pecan groves, 2018"},{"abbr":"HI","name":"Hawaii","capital":"Honolulu","region":"West","grid":[6,0],"water":"the Pacific around every shore","corridor":"the harbors, the bases and the visitors' economy","table":"poke, kalo and the plate lunch","culture":"hula, the Hawaiian language's revival and the outrigger crews","storm":"the hurricane watch, the tsunami sirens and Lahaina's fire, 2023"},{"abbr":"TX","name":"Texas","capital":"Austin","region":"South","grid":[6,3],"water":"the Rio Grande border and the Gulf's chest","corridor":"the Permian's energy, the ports of Houston and the silicon hills","table":"brisket, breakfast tacos and the chili with no beans","culture":"Friday night lights, conjunto and the rodeo circuit","storm":"the hurricane on the coast and the freeze of 2021"},{"abbr":"FL","name":"Florida","capital":"Tallahassee","region":"South","grid":[6,8],"water":"the Everglades' river of grass and two coasts","corridor":"the ports, the launch pads of the Space Coast and the visitors' gates","table":"citrus, stone crabs and the Cuban sandwich","culture":"the conga lines of Miami and the springs' mermaid towns","storm":"the hurricane season lived annually — Andrew, Ian, Michael"}],"blueprint":{"name":"Cognition.X : States OS","blocks":250,"tracks":[{"name":"Water and the land","credential":"State Waters Steward"},{"name":"The working corridor","credential":"State Industry Reader"},{"name":"The state's table","credential":"State Table Keeper"},{"name":"Culture, language and celebration","credential":"State Culture Carrier"},{"name":"Seasons, storms and memory","credential":"State Resilience Lead"}]},"model":{"name":"Civic Leadership Legacy : The Institute Model","blocks":250,"tracks":[{"name":"Leadership as service: the twelve principles in practice","credential":"Servant Leader"},{"name":"The room and the count: coalition, negotiation, consensus","credential":"Coalition Builder"},{"name":"Emotional intelligence for public life","credential":"EQ Practitioner"},{"name":"Civic duty, anywhere","credential":"Civic Duty Bearer"},{"name":"Ethics under pressure","credential":"Ethical Practitioner"}]},"corePacks":{"K12":{"name":"K–12","blocks":64},"LIFESKILL":{"name":"Basic Life Skills & Self-Reliance","blocks":250},"EMERGENCY":{"name":"Emergency Preparedness & First Response","blocks":250},"LAUNCH":{"name":"Parish Launch & Scale","blocks":250},"ACCESS":{"name":"Learning States & Universal Access","blocks":250}},"wlb":{"org":"The Willie L. Brown Jr. Institute of Politics and Public Service (wlbinstitute.org), San Francisco","disclaimer":"This track is a proposal built from the Institute's public mission and the Willie L. Brown Jr. Fellowship Program at San Francisco State University. It is not affiliated with, endorsed by, or reviewed by the Institute, SF State, or Mayor Brown; the \"Willie Brown Foundation\" name in the brief refers to this Institute. A named track would be offered under a partnership agreement and the Institute's review of every course.","mission":"The Institute provides education and training for emerging leaders while fostering civic engagement, leadership development and effective governance, with an emphasis on inclusivity and diversity — preparing next-generation leaders to address complex societal challenges.","quote":"Public service is the most noble of professions. It provides the opportunity to give back to your community, to ensure the next generation has opportunities to lead better lives."},"principles":[{"p":"Public service is the most noble of professions","teach":"Service is taught as a craft with roles, crews, evidence and credentials — not as a slogan. Every course ends with a real audience."},{"p":"Recruit and include students of diverse racial, cultural and economic backgrounds","teach":"Who is in the room is a design decision. Every course asks who is missing and why; accommodation profiles, four-language signals and Tier 0 parity apply; barriers are named, not hidden."},{"p":"Hands-on learning inside real public agencies, with a cohort, a seminar and a stipend","teach":"A junior placement at every grade band and a weekly seminar circle from grade 3; in 11–12 a supervised, FLSA-compliant placement mirrors the Fellowship itself."},{"p":"Share knowledge and skills with a new generation of leaders","teach":"Mentorship is a strand and a bridge: alumni and public servants as mentors and panelists; older students mentor younger cohorts; the leader's-story module in every course."},{"p":"Eagerly, aggressively and affirmatively push for those who have been blocked by the ceiling","teach":"Affirmative action, first-generation pathways and opportunity data are taught as history, law and practice — with the debate included, not avoided."},{"p":"Take on the cases others dismiss as hopeless","teach":"Civil-rights law, housing discrimination (the 1960 sit-in), the Free Speech Movement defense: courses on standing up when the odds are long, with moot courts and rights cases to argue."},{"p":"Tolerate diverse viewpoints; some opposing ideas strengthen consensus","teach":"Negotiation, coalition and consensus are practiced every week in the seminar circle and in mock legislatures; the fifteen-year Speakership is the case study."},{"p":"What you see is what you get — transparency removes the liability and lets you move on to substance","teach":"Ethics, transparency and accountability strand: public records, conflicts of interest, the investigator's question, saying the hard thing first."},{"p":"Bringing everyone along with you","teach":"Inclusive decision-making and relationship-building are taught as skills with evidence: stakeholder maps, crew hand-offs, the \"who did we forget\" check before every presentation."},{"p":"Decisions in the public sector must account for the wide-ranging impacts on people's lives","teach":"Every policy-design course carries an impact analysis: who pays, who benefits, who is displaced — in real numbers from the state's own data."},{"p":"From segregated Mineola to San Francisco State: education as the bridge across barriers","teach":"The first-generation strand and the Mineola-to-City bridge: oral histories, the story of one's own family's barrier-crossing, and the concrete map from a K–12 credential to a state university and a public-service career."},{"p":"Living large: enjoy the work and share the joy","teach":"Presence, confidence and joy in service are taught age-appropriately — public speaking, presentation, the civic celebration — because a leader who dreads the room cannot bring anyone along."}],"curriculum":{"blocks":16700,"packs":44}};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){ return null; } }
+$("#verline").textContent = "v"+D.version;
+
+const REGIONCOL = {"Northeast":"var(--w1)","Midwest":"var(--w2)","South":"var(--w3)","West":"var(--w4)"};
+const byAbbr = Object.fromEntries(D.states.map(s=>[s.abbr, s]));
+const ANCHORS = ["water","corridor","table","culture","storm"];  // blueprint track order
+
+/* voice: three personas (platform standard) */
+const PERSONAS = { warm:{rate:.97,pitch:1.03,drift:.05}, steady:{rate:1.0,pitch:1.0,drift:.03}, brisk:{rate:1.12,pitch:1.02,drift:.02} };
+let voiceMode = ["warm","steady","brisk"].includes(store("cxst.voice")) ? store("cxst.voice") : "";
+let pickedVoice = null;
+const VOICE_PREF = [/Google US English/i, /\bNatural\b/i, /\bNeural\b/i, /Samantha/i, /Aria/i, /Jenny/i, /Allison/i, /Karen/i, /Daniel/i];
+function chooseVoice(){
+  try{
+    const vs = speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang));
+    for (const re of VOICE_PREF){ const v = vs.find(x=>re.test(x.name)); if (v) return v; }
+    return vs.find(v=>v.default) || vs[0] || null;
+  }catch(e){ return null; }
+}
+try{ if ("speechSynthesis" in window){
+  pickedVoice = chooseVoice();
+  speechSynthesis.onvoiceschanged = () => { pickedVoice = chooseVoice(); };
+}}catch(e){}
+function say(text){
+  if (!voiceMode) return;
+  try{
+    if (!("speechSynthesis" in window)) return;
+    const P = PERSONAS[voiceMode] || PERSONAS.steady;
+    speechSynthesis.cancel();
+    const parts = String(text).match(/[^.!?…]+[.!?…]*/g) || [String(text)];
+    parts.forEach((s,i)=>{
+      const u = new SpeechSynthesisUtterance(s.trim());
+      if (pickedVoice) u.voice = pickedVoice;
+      u.rate  = Math.max(.5, P.rate + (i%2 ? -P.drift : P.drift)/2);
+      u.pitch = Math.max(.5, P.pitch + (i===0 ? P.drift : 0));
+      speechSynthesis.speak(u);
+    });
+  }catch(e){}
+}
+
+/* theme / style / voice */
+(function(){
+  const th=$("#themepick"), st=$("#stylepick"), vp=$("#voicepick");
+  th.value = store("cxst.theme") || "";
+  st.value = ["enterprise","parade","classic","bayou","gallery"].includes(store("cxst.style")) ? store("cxst.style") : "enterprise";
+  vp.value = voiceMode;
+  const apply = () => {
+    if (th.value) document.documentElement.dataset.theme = th.value;
+    else delete document.documentElement.dataset.theme;
+    document.documentElement.dataset.style = st.value;
+    voiceMode = vp.value;
+    store("cxst.theme", th.value); store("cxst.style", st.value); store("cxst.voice", vp.value);
+  };
+  th.addEventListener("change", apply); st.addEventListener("change", apply);
+  vp.addEventListener("change", ()=>{ apply(); if (voiceMode) say("Voice on. Pick any state and I'll walk its curriculum with you."); });
+  apply();
+})();
+
+/* router */
+let curState = store("cxst.state") || "LA";
+function route(){
+  const h = location.hash.replace(/^#\/?/,"");
+  let view = "nation";
+  if (h.startsWith("state/")){ view = "state"; curState = (h.split("/")[1]||curState).toUpperCase();
+    store("cxst.state", curState); renderState(); }
+  else if (h==="states") view="states";
+  else if (h==="state"){ view="state"; renderState(); }
+  else if (h==="blueprint") view="blueprint";
+  else if (h==="institute") view="institute";
+  else if (h==="adoption") view="adoption";
+  document.querySelectorAll(".view").forEach(el=>el.classList.toggle("active", el.id==="view-"+view));
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-current", t.dataset.r===view ? "true":"false"));
+  window.scrollTo({top:0});
+}
+document.querySelectorAll(".tab").forEach(t=> t.addEventListener("click", ()=>
+  location.hash = t.dataset.r==="state" ? "#/state/"+curState : "#/"+t.dataset.r));
+window.addEventListener("hashchange", route);
+
+/* nation */
+function renderNation(){
+  $("#nattiles").innerHTML = [
+    ["50","states, each with a custom catalog","t1"],
+    [String(D.blueprint.tracks.length),"blueprint tracks · "+D.blueprint.blocks+" blocks","t2"],
+    [String(D.model.tracks.length),"universal civic tracks","t3"],
+    [D.curriculum.blocks.toLocaleString(),"blocks in the shared ledger","t1"],
+    [String(D.curriculum.packs),"packs behind it all","t2"],
+  ].map(([v,l,t])=>`<div class="tile ${t}"><b>${v}</b><span>${l}</span></div>`).join("");
+
+  const T=54, G=5, PAD=4;
+  const cols = Math.max(...D.states.map(s=>s.grid[1]))+1, rows = Math.max(...D.states.map(s=>s.grid[0]))+1;
+  const W = PAD*2+cols*(T+G), H = PAD*2+rows*(T+G);
+  $("#usmap").innerHTML =
+    `<svg class="map" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="img" aria-label="Tile map of the fifty states">`+
+    D.states.map(s=>{
+      const x=PAD+s.grid[1]*(T+G), y=PAD+s.grid[0]*(T+G);
+      return `<g class="tile" tabindex="0" role="button" data-st="${s.abbr}" aria-label="${esc(s.name)}">`+
+        `<rect x="${x}" y="${y}" width="${T}" height="${T}" rx="9" fill="${REGIONCOL[s.region]}" stroke="var(--surface)" stroke-width="1"/>`+
+        `<text x="${x+T/2}" y="${y+T/2+5}" text-anchor="middle" font-size="14" font-weight="600" fill="#fff">${s.abbr}</text>`+
+        `<title>${esc(s.name)} — capital ${esc(s.capital)} · ${esc(s.region)} · click for its custom curriculum</title></g>`;
+    }).join("")+`</svg>`;
+  $("#usmap").querySelectorAll("g.tile").forEach(g=>{
+    const open = ()=> location.hash = "#/state/"+g.dataset.st;
+    g.addEventListener("click", open);
+    g.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } });
+  });
+  $("#uslegend").innerHTML = Object.entries(REGIONCOL).map(([r,c])=>
+    `<span><i style="background:${c}"></i>${r} · ${D.states.filter(s=>s.region===r).length}</span>`).join("");
+}
+
+/* states list */
+function renderStatesList(){
+  const q = ($("#ssearch").value||"").toLowerCase(), reg = $("#sregion").value;
+  const ss = D.states.filter(s => (!reg || s.region===reg) &&
+    (!q || (s.name+" "+s.capital+" "+ANCHORS.map(a=>s[a]).join(" ")).toLowerCase().includes(q)));
+  $("#scount").textContent = ss.length + " of 50 states";
+  $("#sgrid").innerHTML = ss.map(s=>
+    `<div class="panel statecard" style="border-left-color:${REGIONCOL[s.region]}" data-st="${s.abbr}" tabindex="0" role="button">
+      <h4>${esc(s.name)}</h4><div class="cap">Capital: ${esc(s.capital)} · ${esc(s.region)}</div>
+      <p class="note" style="margin:8px 0 0">${esc(s.water)} · ${esc(s.corridor)}</p></div>`).join("");
+  $("#sgrid").querySelectorAll("[data-st]").forEach(c=>{
+    const open = ()=> location.hash = "#/state/"+c.dataset.st;
+    c.addEventListener("click", open);
+    c.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } });
+  });
+}
+
+/* state page: the custom curriculum */
+function renderState(){
+  const s = byAbbr[curState] || byAbbr.LA; curState = s.abbr;
+  const i = D.states.indexOf(s);
+  const prev = D.states[(i+49)%50], next = D.states[(i+1)%50];
+  $("#statebody").innerHTML = `
+    <p class="eyebrow" style="color:${REGIONCOL[s.region]}">${esc(s.region)} · capital: ${esc(s.capital)}</p>
+    <h1>${esc(s.name)} — the custom curriculum</h1>
+    <p class="lede">The universal blueprint, taught on ${esc(s.name)}'s own ground. Every course below ends in
+    transfer checks performed on the state's real material; tracks open a flow session when the repository's
+    Flow Hub sits alongside this file.</p>
+
+    <div class="panel">
+      <h3>The five ${esc(s.name)} courses</h3>
+      <p class="note">Cognition.X : States OS, localized — the anchor after the dash is this state's own.</p>
+      ${D.blueprint.tracks.map((t,ti)=>`
+        <div class="course"><div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+          <h4>${esc(t.name)} — <span class="anchor">${esc(s[ANCHORS[ti]])}</span></h4>
+          <span class="cred">${esc(t.credential)}</span></div>
+          <div class="meta">10 themes × 5 bands · 50 blocks ·
+            <button class="chip link" data-fh="STATEOS">open in Flow Hub →</button></div>
+        </div>`).join("")}
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h3>Civic leadership — the Institute Model in ${esc(s.name)}</h3>
+        <p class="note">The universal tracks, localized: placements in ${esc(s.capital)}, the state
+        legislature, and this state's own districts and councils. Civic-seal and standards names:
+        verify with the state education department.</p>
+        <ul class="tracklist">${D.model.tracks.map(t=>
+          `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("")}</ul>
+      </div>
+      <div class="panel">
+        <h3>The core spine here</h3>
+        <p class="note">Every adopting state runs the same spine beneath its custom courses.</p>
+        <div>${Object.entries(D.corePacks).map(([slug,p])=>
+          `<button class="chip link" data-fh="${slug}">${esc(p.name)} · ${p.blocks} →</button>`).join("")}</div>
+        <p class="note" style="margin-top:12px"><b>Storm memory anchor:</b> ${esc(s.storm)}.</p>
+        <p class="note"><b>Culture anchor:</b> ${esc(s.culture)}.</p>
+        <p class="note"><b>Table anchor:</b> ${esc(s.table)}.</p>
+      </div>
+    </div>
+    <div class="pnav">
+      <button class="btn" id="stprev">← ${esc(prev.name)}</button>
+      <button class="btn" id="stnext">${esc(next.name)} →</button>
+      <button class="btn" id="stmap" style="margin-left:auto">Back to the map</button>
+    </div>`;
+  $("#stprev").addEventListener("click", ()=> location.hash="#/state/"+prev.abbr);
+  $("#stnext").addEventListener("click", ()=> location.hash="#/state/"+next.abbr);
+  $("#stmap").addEventListener("click", ()=> location.hash="#/nation");
+  $("#statebody").querySelectorAll("[data-fh]").forEach(b=> b.addEventListener("click",
+    ()=> window.open("../flow-hub/index.html#track="+b.dataset.fh, "_blank")));
+}
+
+/* blueprint + institute */
+function renderBlueprint(){
+  $("#bpbody").innerHTML = `<div class="panel"><h3>${esc(D.blueprint.name)} — ${D.blueprint.blocks} blocks</h3>
+    <ul class="tracklist">${D.blueprint.tracks.map((t,ti)=>
+      `<li>${esc(t.name)} <span class="mono" style="font-size:.7rem; color:var(--faint)">localized by each state's ${ANCHORS[ti]} anchor</span>
+        <span class="cred">${esc(t.credential)}</span></li>`).join("")}</ul></div>`;
+}
+function renderInstitute(){
+  $("#wlbmission").textContent = D.wlb.mission;
+  $("#wlbquote").textContent = "“" + D.wlb.quote + "” — Willie L. Brown, Jr.";
+  $("#prin").innerHTML = D.principles.map(p=>
+    `<div class="panel"><h3 style="font-size:.95rem">${esc(p.p)}</h3>
+     <p class="note" style="margin:4px 0 0">${esc(p.teach)}</p></div>`).join("");
+  $("#modeltracks").innerHTML = D.model.tracks.map(t=>
+    `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("");
+  $("#wlbdisc").textContent = D.wlb.disclaimer;
+}
+
+/* guide */
+const TOUR = [
+  {hash:"#/nation", sel:"#usmap", t:"Fifty states, one blueprint", m:"The tile map of the nation — click any state and its own custom curriculum opens, built from its own water, corridor, table, culture and storms."},
+  {hash:"#/state/LA", sel:"#statebody", t:"A state's custom courses", m:"Louisiana's page, for example: the five blueprint courses localized to its delta, its river ports, its gumbo, its krewes and its storm memory — plus the Institute's civic tracks in Baton Rouge."},
+  {hash:"#/blueprint", sel:"#bpbody", t:"The blueprint", m:"Five universal tracks, two hundred and fifty blocks. The blueprint is the constant; the state is the variable."},
+  {hash:"#/institute", sel:"#prin", t:"The Institute Model", m:"Leadership, ethics, civic duty and emotional intelligence — the universal model, localized to every capital."},
+  {hash:"#/adoption", sel:".steps", t:"How a state adopts", m:"Fact base, spine, two waves, halls, ledger — the Louisiana platform is the working reference for all fifty."},
+];
+let tourAt = -1, tourEl = null;
+function tourShow(i){
+  if (tourEl){ tourEl.style.outline=""; tourEl.style.outlineOffset=""; }
+  if (i < 0 || i >= TOUR.length){ tourEnd(); return; }
+  tourAt = i;
+  const s = TOUR[i];
+  if (location.hash !== s.hash) location.hash = s.hash;
+  setTimeout(()=>{
+    tourEl = document.querySelector(s.sel);
+    if (tourEl){ tourEl.style.outline = "3px solid var(--gold)"; tourEl.style.outlineOffset = "4px";
+      tourEl.scrollIntoView({block:"center", behavior:"smooth"}); }
+    let box = $("#tourbox");
+    if (!box){
+      box = document.createElement("div"); box.id = "tourbox";
+      box.setAttribute("role","dialog");
+      box.style.cssText = "position:fixed; bottom:18px; left:50%; transform:translateX(-50%); z-index:60; background:var(--surface); border:1px solid var(--gold); border-radius:12px; padding:14px 18px; max-width:460px; width:calc(100% - 32px); box-shadow:var(--shadow); font-size:.9rem";
+      document.body.appendChild(box);
+    }
+    box.innerHTML = `<b style="color:var(--gold)">Guide · ${i+1} of ${TOUR.length}</b>
+      <div style="margin:.35em 0 .1em; font-weight:600">${esc(s.t)}</div>
+      <div style="color:var(--muted)">${esc(s.m)}</div>
+      <div style="display:flex; gap:8px; margin-top:12px">
+        <button class="btn" id="tour-prev" ${i===0?"disabled":""}>Back</button>
+        <button class="btn gold" id="tour-next">${i===TOUR.length-1?"Done":"Next"}</button>
+        <button class="btn" id="tour-x" style="margin-left:auto">End</button></div>`;
+    $("#tour-next").addEventListener("click", ()=> i===TOUR.length-1 ? tourEnd() : tourShow(i+1));
+    $("#tour-prev").addEventListener("click", ()=> tourShow(i-1));
+    $("#tour-x").addEventListener("click", tourEnd);
+    say(s.t + ". " + s.m);
+  }, 240);
+}
+function tourEnd(){
+  if (tourEl){ tourEl.style.outline=""; tourEl.style.outlineOffset=""; tourEl = null; }
+  const box = $("#tourbox"); if (box) box.remove();
+  tourAt = -1;
+  try{ speechSynthesis.cancel(); }catch(e){}
+}
+$("#guidebtn").addEventListener("click", ()=> tourShow(0));
+
+/* boot */
+renderNation(); renderStatesList(); renderBlueprint(); renderInstitute();
+["ssearch","sregion"].forEach(id => { $("#"+id).addEventListener("input", renderStatesList);
+  $("#"+id).addEventListener("change", renderStatesList); });
+route();
+</script>

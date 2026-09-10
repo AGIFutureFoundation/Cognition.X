@@ -1,0 +1,575 @@
+<title>Cognition.X States</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* tokens: enterprise-first; full dark mirror; 5 style templates (platform standard) */
+  :root{
+    --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#E9EDF1; --line:#D5DBE2;
+    --ink:#1B2431; --muted:#4E5A6B; --faint:#7E8898;
+    --purple:#2456A6; --gold:#946900; --green:#1F7A5C;
+    --gold-soft:rgba(148,105,0,.10); --purple-soft:rgba(36,86,166,.10);
+    --w1:#3B6FD4; --w2:#2E8F63; --w3:#9552BD; --w4:#C25A3A;
+    --chart:#2456A6; --ring:rgba(36,86,166,.45);
+    --shadow:0 8px 22px rgba(27,36,49,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
+      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+      --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
+      --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
+      --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+      --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
+      --shadow:0 12px 32px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
+    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+    --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
+    --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
+    --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+    --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
+    --shadow:0 12px 32px rgba(0,0,0,.4);
+  }
+  :root[data-style="parade"]{
+    --bg:#F7F5F0; --surface-2:#EFECE4; --line:#DCD8CD; --ink:#221F33; --muted:#5B566E; --faint:#8B879B;
+    --purple:#6B3FA0; --gold:#B87514; --green:#2E8F63;
+    --purple-soft:rgba(107,63,160,.10); --gold-soft:rgba(184,117,20,.12);
+    --chart:#3B6FD4; --ring:rgba(107,63,160,.45);
+  }
+  :root[data-style="parade"][data-theme="dark"], :root[data-style="parade"]:not([data-theme="light"]) { }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="parade"]:not([data-theme="light"]){
+      --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
+      --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+      --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
+      --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
+      --chart:#5580D6; --ring:rgba(232,163,61,.5);
+    }
+  }
+  :root[data-style="parade"][data-theme="dark"]{
+    --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
+    --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+    --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
+    --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
+    --chart:#5580D6; --ring:rgba(232,163,61,.5);
+  }
+  :root[data-style="classic"]{
+    --bg:#F7F5F0; --surface-2:#EFECE4; --line:#DCD8CD;
+    --purple:#4B4667; --gold:#7A6B4A; --green:#4E6B5E;
+    --purple-soft:rgba(75,70,103,.10); --gold-soft:rgba(122,107,74,.10);
+    --chart:#4B4667; --ring:rgba(75,70,103,.45);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="classic"]:not([data-theme="light"]){
+      --bg:#17161D; --surface:#201F28; --surface-2:#2B2A35; --line:#3C3B48;
+      --purple:#A9A2C9; --gold:#C0B08A; --green:#8FA99C;
+      --purple-soft:rgba(169,162,201,.13); --gold-soft:rgba(192,176,138,.13);
+      --chart:#A9A2C9; --ring:rgba(169,162,201,.5);
+    }
+  }
+  :root[data-style="classic"][data-theme="dark"]{
+    --bg:#17161D; --surface:#201F28; --surface-2:#2B2A35; --line:#3C3B48;
+    --purple:#A9A2C9; --gold:#C0B08A; --green:#8FA99C;
+    --purple-soft:rgba(169,162,201,.13); --gold-soft:rgba(192,176,138,.13);
+    --chart:#A9A2C9; --ring:rgba(169,162,201,.5);
+  }
+  :root[data-style="bayou"]{
+    --bg:#F4F5EC; --surface-2:#EAEBDD; --line:#D8DAC6;
+    --purple:#3E6B34; --gold:#A0621B; --green:#2E8F63;
+    --purple-soft:rgba(62,107,52,.11); --gold-soft:rgba(160,98,27,.11);
+    --chart:#3E7A4F; --ring:rgba(62,107,52,.45);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="bayou"]:not([data-theme="light"]){
+      --bg:#141811; --surface:#1C2318; --surface-2:#273022; --line:#3A4632;
+      --purple:#8FBF6B; --gold:#D9A252; --green:#4EA57F;
+      --purple-soft:rgba(143,191,107,.14); --gold-soft:rgba(217,162,82,.14);
+      --chart:#8FBF6B; --ring:rgba(143,191,107,.5);
+    }
+  }
+  :root[data-style="bayou"][data-theme="dark"]{
+    --bg:#141811; --surface:#1C2318; --surface-2:#273022; --line:#3A4632;
+    --purple:#8FBF6B; --gold:#D9A252; --green:#4EA57F;
+    --purple-soft:rgba(143,191,107,.14); --gold-soft:rgba(217,162,82,.14);
+    --chart:#8FBF6B; --ring:rgba(143,191,107,.5);
+  }
+  :root[data-style="gallery"]{
+    --bg:#FAFAF7; --surface-2:#F0EFEA; --line:#DEDDD5;
+    --purple:#8A1E33; --gold:#6E6046; --green:#4A6B5F;
+    --purple-soft:rgba(138,30,51,.09); --gold-soft:rgba(110,96,70,.10);
+    --chart:#8A1E33; --ring:rgba(138,30,51,.4);
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-style="gallery"]:not([data-theme="light"]){
+      --bg:#171514; --surface:#201D1C; --surface-2:#2B2726; --line:#403A38;
+      --purple:#E08498; --gold:#BFAE8C; --green:#7FA394;
+      --purple-soft:rgba(224,132,152,.13); --gold-soft:rgba(191,174,140,.13);
+      --chart:#E08498; --ring:rgba(224,132,152,.5);
+    }
+  }
+  :root[data-style="gallery"][data-theme="dark"]{
+    --bg:#171514; --surface:#201D1C; --surface-2:#2B2726; --line:#403A38;
+    --purple:#E08498; --gold:#BFAE8C; --green:#7FA394;
+    --purple-soft:rgba(224,132,152,.13); --gold-soft:rgba(191,174,140,.13);
+    --chart:#E08498; --ring:rgba(224,132,152,.5);
+  }
+
+  *{box-sizing:border-box}
+  html{color-scheme:light dark}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:15.5px; line-height:1.6}
+  a{color:var(--purple)}
+  button{font:inherit; cursor:pointer}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+  :focus-visible{outline:2px solid var(--ring); outline-offset:2px}
+  .wrap{max-width:1160px; margin:0 auto; padding-inline:clamp(16px,4vw,40px)}
+
+  header.masthead{border-bottom:1px solid var(--line); background:var(--surface); position:sticky; top:0; z-index:5}
+  .mast{display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding-block:12px}
+  .wordmark{font-family:Fraunces,Georgia,serif; font-weight:800; font-size:1.15rem; white-space:nowrap}
+  .wordmark .st{color:var(--purple)}
+  nav.tabs{display:flex; gap:4px; flex-wrap:wrap}
+  .tab{border:0; background:none; color:var(--muted); padding:7px 12px; border-radius:999px; font-weight:500}
+  .tab:hover{color:var(--ink); background:var(--surface-2)}
+  .tab[aria-current="true"]{background:var(--purple-soft); color:var(--purple); font-weight:600}
+  .mastctl{margin-left:auto; display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+  .mastctl label{font-size:.7rem; color:var(--faint); font-family:"IBM Plex Mono",monospace}
+  .mastctl select{padding:4px 8px; font-size:.78rem}
+
+  main{padding-block:34px 70px}
+  .view{display:none}
+  .view.active{display:block}
+  .eyebrow{font-size:.72rem; text-transform:uppercase; letter-spacing:.16em; font-weight:600; margin:0 0 10px; color:var(--muted)}
+  h1{font-family:Fraunces,Georgia,serif; font-weight:800; font-size:clamp(1.8rem,4vw,2.8rem);
+     line-height:1.12; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance}
+  h2{font-family:Fraunces,Georgia,serif; font-weight:600; font-size:1.3rem; margin:38px 0 6px}
+  .lede{color:var(--muted); max-width:66ch; margin:0 0 24px; font-size:1.02rem}
+  .note{font-size:.82rem; color:var(--muted); margin:2px 0 12px}
+
+  .tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:22px 0}
+  .tile{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px}
+  .tile b{display:block; font-family:Fraunces,Georgia,serif; font-size:1.5rem; line-height:1.1}
+  .tile span{font-size:.76rem; color:var(--muted)}
+  .tile.t1 b{color:var(--purple)} .tile.t2 b{color:var(--gold)} .tile.t3 b{color:var(--green)}
+
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 20px; box-shadow:var(--shadow)}
+  .panel h3{margin:0 0 4px; font-family:Fraunces,Georgia,serif; font-size:1.05rem}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; margin-top:14px}
+  .grid3{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; margin-top:14px}
+
+  .chip{display:inline-block; border:1px solid var(--line); background:var(--surface-2); color:var(--muted);
+    border-radius:999px; padding:2px 11px; font-size:.74rem; margin:2px 4px 2px 0}
+  .chip.link{cursor:pointer}
+  .chip.link:hover{border-color:var(--purple); color:var(--purple)}
+
+  .legend{display:flex; flex-wrap:wrap; gap:14px; margin:12px 0 0; font-size:.8rem; color:var(--muted)}
+  .legend i{display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:6px; vertical-align:-1px}
+  .mapwrap{overflow-x:auto}
+  .map .tile:hover rect, .map .tile:focus rect{filter:brightness(1.12)}
+  .map .tile{cursor:pointer}
+
+  .filters{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:16px 0 4px}
+  .filters input[type=search]{padding:7px 12px; border:1px solid var(--line); border-radius:9px;
+    background:var(--surface); color:var(--ink); font:inherit; min-width:200px}
+  .filters select{padding:6px 10px; font-size:.83rem}
+
+  .statecard{border-left:4px solid var(--chart); cursor:pointer}
+  .statecard:hover{border-color:var(--purple)}
+  .statecard h4{margin:0 0 2px; font-family:Fraunces,Georgia,serif; font-size:1rem}
+  .statecard .cap{font-size:.76rem; color:var(--faint)}
+
+  .course{background:var(--surface); border:1px solid var(--line); border-radius:11px; padding:14px 17px; margin-top:10px}
+  .course h4{margin:0; font-family:Fraunces,Georgia,serif; font-size:1rem}
+  .course .anchor{color:var(--purple); font-style:italic}
+  .course .meta{font-size:.76rem; color:var(--muted); margin-top:4px}
+  .cred{font-size:.74rem; color:var(--gold); border:1px solid var(--gold); border-radius:999px; padding:1px 9px; white-space:nowrap}
+  .tracklist{list-style:none; margin:8px 0 0; padding:0}
+  .tracklist li{padding:8px 0; border-top:1px solid var(--line); font-size:.9rem; display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap}
+
+  blockquote.big{margin:14px 0; padding:14px 18px; border-left:4px solid var(--gold); background:var(--gold-soft);
+    border-radius:0 10px 10px 0; font-family:Fraunces,Georgia,serif; font-size:1.05rem}
+  .disc{border:1px dashed var(--line); border-radius:11px; padding:13px 16px; font-size:.8rem; color:var(--muted); margin-top:22px}
+  .steps{counter-reset:st; margin:14px 0 0; padding:0; list-style:none}
+  .steps li{counter-increment:st; display:flex; gap:14px; padding:12px 0; border-top:1px solid var(--line); font-size:.9rem}
+  .steps li::before{content:counter(st); flex:0 0 30px; height:30px; border-radius:999px; background:var(--purple-soft);
+    color:var(--purple); font-weight:700; display:grid; place-items:center; font-family:"IBM Plex Mono",monospace; font-size:.85rem}
+  .btn{border:1px solid var(--line); background:var(--surface-2); color:var(--ink); border-radius:9px; padding:6px 14px}
+  .btn.gold{background:var(--gold); border-color:var(--gold); color:#fff}
+  .pnav{display:flex; gap:10px; margin:18px 0 0}
+  .foot{border-top:1px solid var(--line); margin-top:60px; padding:22px 0 40px; font-size:.78rem; color:var(--faint)}
+</style>
+
+<header class="masthead"><div class="wrap mast">
+  <div class="wordmark">Cognition.X <span class="st">States</span></div>
+  <nav class="tabs" aria-label="Views">
+    <button class="tab" data-r="nation" aria-current="true">The Nation</button>
+    <button class="tab" data-r="states">All 50 States</button>
+    <button class="tab" data-r="state">State Curriculum</button>
+    <button class="tab" data-r="blueprint">The Blueprint</button>
+    <button class="tab" data-r="institute">The Institute Model</button>
+    <button class="tab" data-r="adoption">Adoption</button>
+  </nav>
+  <div class="mastctl">
+    <label for="themepick">theme</label>
+    <select id="themepick"><option value="">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+    <label for="stylepick">style</label>
+    <select id="stylepick">
+      <option value="enterprise">Enterprise</option><option value="parade">Parade</option>
+      <option value="classic">Classic</option><option value="bayou">Bayou</option>
+      <option value="gallery">Gallery</option>
+    </select>
+    <label for="voicepick">voice</label>
+    <select id="voicepick">
+      <option value="">Off</option><option value="warm">Warm</option>
+      <option value="steady">Steady</option><option value="brisk">Brisk</option>
+    </select>
+    <button class="btn gold" id="guidebtn">🧭 Guide</button>
+    <span class="mono" id="verline" style="font-size:.72rem; color:var(--faint)"></span>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+  <section class="view active" id="view-nation">
+    <p class="eyebrow">Fifty states · one blueprint · every course on home ground</p>
+    <h1>Custom curriculum for every state</h1>
+    <p class="lede">The Louisiana pattern, generalized: a universal five-track <b>States OS blueprint</b>
+    (water, the working corridor, the table, culture, storm memory) plus the universal
+    <b>Institute Model</b> civic tracks — localized for each of the fifty states by its own fact base,
+    so every course is taught and checked on the learner's home ground.</p>
+    <div class="tiles" id="nattiles"></div>
+    <div class="panel">
+      <h3>The nation as tiles</h3>
+      <p class="note">A stylized tile cartogram — approximate geography, colored by region. Click any state
+      to open its custom curriculum.</p>
+      <div class="mapwrap" id="usmap"></div>
+      <div class="legend" id="uslegend"></div>
+    </div>
+  </section>
+
+  <section class="view" id="view-states">
+    <p class="eyebrow">The catalog of catalogs</p>
+    <h1>All fifty states</h1>
+    <p class="lede">Each card is a door into that state's custom course set — its own water, corridor,
+    table, culture and storm, on the shared blueprint.</p>
+    <div class="filters">
+      <input type="search" id="ssearch" placeholder="Search states, capitals, anchors…" aria-label="Search states">
+      <select id="sregion"><option value="">All regions</option>
+        <option>Northeast</option><option>Midwest</option><option>South</option><option>West</option></select>
+      <span class="note" id="scount" style="margin:0"></span>
+    </div>
+    <div class="grid3" id="sgrid"></div>
+  </section>
+
+  <section class="view" id="view-state">
+    <div id="statebody"></div>
+  </section>
+
+  <section class="view" id="view-blueprint">
+    <p class="eyebrow">Cognition.X : States OS · 250 blocks</p>
+    <h1>The blueprint</h1>
+    <p class="lede">Five universal tracks, ten themes each, taught across the five grade bands — every
+    transfer check phrased on <i>your state's</i> real material. The blueprint is the constant; the state
+    is the variable.</p>
+    <div id="bpbody"></div>
+  </section>
+
+  <section class="view" id="view-institute">
+    <p class="eyebrow">Leadership · ethics · civic duty · emotional intelligence</p>
+    <h1>The Institute Model, for every state</h1>
+    <p class="lede" id="wlbmission"></p>
+    <blockquote class="big" id="wlbquote"></blockquote>
+    <div class="grid2" id="prin"></div>
+    <div class="panel" style="margin-top:14px">
+      <h3>The universal civic tracks</h3>
+      <p class="note">From the Civic Leadership Legacy : The Institute Model pack — localized on every
+      state page by that state's capital and legislature.</p>
+      <ul class="tracklist" id="modeltracks"></ul>
+    </div>
+    <div class="disc" id="wlbdisc"></div>
+  </section>
+
+  <section class="view" id="view-adoption">
+    <p class="eyebrow">From blueprint to running system</p>
+    <h1>How a state adopts</h1>
+    <p class="lede">The Louisiana platform is the working reference: a two-wave adoption plan computed from
+    the state's own fact base, regional Trade Halls, launch curriculum, readiness boards, budgets, a learner
+    ledger with signed credentials, and the flow automations over all of it.</p>
+    <ol class="steps">
+      <li><b>Seed the fact base</b> — the state's subdivisions (counties, parishes, boroughs), hubs, industries and narrative worlds, on the Louisiana pattern.</li>
+      <li><b>Adopt the spine</b> — K–12, life skills, emergency response, the Parish Launch &amp; Scale rollout pack and universal access, plus this blueprint localized.</li>
+      <li><b>Plan two waves</b> — the largest-reach cohort first (Louisiana: 33 of 64 parishes, ~88% of population in year one), statewide in year two.</li>
+      <li><b>Stand up the halls</b> — regional Trade Halls with the Network OS automations keeping learners and teachers in flow.</li>
+      <li><b>Run the ledger</b> — browser-local learner records, standing dashboards for every seat, and signed portable credentials from each hall's Records Office.</li>
+    </ol>
+    <p class="note" style="margin-top:14px">Working reference implementation:
+      <a href="../louisiana/index.html" target="_blank" rel="noopener">Cognition.X Louisiana</a> ·
+      curriculum engine: <a href="../flow-hub/index.html" target="_blank" rel="noopener">Flow Hub</a> ·
+      trades layer: <a href="../trades-network/index.html" target="_blank" rel="noopener">Trades Network</a>.</p>
+  </section>
+
+  <div class="foot wrap" style="padding-inline:0">
+    Cognition.X States — built from the canonical dataset, the 50-state fact base, and the Education OS
+    app's Institute fact base. Code Apache-2.0 · content CC BY 4.0. Anchors are door-openers of public
+    general knowledge, not exhaustive claims; communities named are the keepers of their own stories.
+  </div>
+</main>
+
+<script>
+const D = __STDATA__;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){ return null; } }
+$("#verline").textContent = "v"+D.version;
+
+const REGIONCOL = {"Northeast":"var(--w1)","Midwest":"var(--w2)","South":"var(--w3)","West":"var(--w4)"};
+const byAbbr = Object.fromEntries(D.states.map(s=>[s.abbr, s]));
+const ANCHORS = ["water","corridor","table","culture","storm"];  // blueprint track order
+
+/* voice: three personas (platform standard) */
+const PERSONAS = { warm:{rate:.97,pitch:1.03,drift:.05}, steady:{rate:1.0,pitch:1.0,drift:.03}, brisk:{rate:1.12,pitch:1.02,drift:.02} };
+let voiceMode = ["warm","steady","brisk"].includes(store("cxst.voice")) ? store("cxst.voice") : "";
+let pickedVoice = null;
+const VOICE_PREF = [/Google US English/i, /\bNatural\b/i, /\bNeural\b/i, /Samantha/i, /Aria/i, /Jenny/i, /Allison/i, /Karen/i, /Daniel/i];
+function chooseVoice(){
+  try{
+    const vs = speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang));
+    for (const re of VOICE_PREF){ const v = vs.find(x=>re.test(x.name)); if (v) return v; }
+    return vs.find(v=>v.default) || vs[0] || null;
+  }catch(e){ return null; }
+}
+try{ if ("speechSynthesis" in window){
+  pickedVoice = chooseVoice();
+  speechSynthesis.onvoiceschanged = () => { pickedVoice = chooseVoice(); };
+}}catch(e){}
+function say(text){
+  if (!voiceMode) return;
+  try{
+    if (!("speechSynthesis" in window)) return;
+    const P = PERSONAS[voiceMode] || PERSONAS.steady;
+    speechSynthesis.cancel();
+    const parts = String(text).match(/[^.!?…]+[.!?…]*/g) || [String(text)];
+    parts.forEach((s,i)=>{
+      const u = new SpeechSynthesisUtterance(s.trim());
+      if (pickedVoice) u.voice = pickedVoice;
+      u.rate  = Math.max(.5, P.rate + (i%2 ? -P.drift : P.drift)/2);
+      u.pitch = Math.max(.5, P.pitch + (i===0 ? P.drift : 0));
+      speechSynthesis.speak(u);
+    });
+  }catch(e){}
+}
+
+/* theme / style / voice */
+(function(){
+  const th=$("#themepick"), st=$("#stylepick"), vp=$("#voicepick");
+  th.value = store("cxst.theme") || "";
+  st.value = ["enterprise","parade","classic","bayou","gallery"].includes(store("cxst.style")) ? store("cxst.style") : "enterprise";
+  vp.value = voiceMode;
+  const apply = () => {
+    if (th.value) document.documentElement.dataset.theme = th.value;
+    else delete document.documentElement.dataset.theme;
+    document.documentElement.dataset.style = st.value;
+    voiceMode = vp.value;
+    store("cxst.theme", th.value); store("cxst.style", st.value); store("cxst.voice", vp.value);
+  };
+  th.addEventListener("change", apply); st.addEventListener("change", apply);
+  vp.addEventListener("change", ()=>{ apply(); if (voiceMode) say("Voice on. Pick any state and I'll walk its curriculum with you."); });
+  apply();
+})();
+
+/* router */
+let curState = store("cxst.state") || "LA";
+function route(){
+  const h = location.hash.replace(/^#\/?/,"");
+  let view = "nation";
+  if (h.startsWith("state/")){ view = "state"; curState = (h.split("/")[1]||curState).toUpperCase();
+    store("cxst.state", curState); renderState(); }
+  else if (h==="states") view="states";
+  else if (h==="state"){ view="state"; renderState(); }
+  else if (h==="blueprint") view="blueprint";
+  else if (h==="institute") view="institute";
+  else if (h==="adoption") view="adoption";
+  document.querySelectorAll(".view").forEach(el=>el.classList.toggle("active", el.id==="view-"+view));
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-current", t.dataset.r===view ? "true":"false"));
+  window.scrollTo({top:0});
+}
+document.querySelectorAll(".tab").forEach(t=> t.addEventListener("click", ()=>
+  location.hash = t.dataset.r==="state" ? "#/state/"+curState : "#/"+t.dataset.r));
+window.addEventListener("hashchange", route);
+
+/* nation */
+function renderNation(){
+  $("#nattiles").innerHTML = [
+    ["50","states, each with a custom catalog","t1"],
+    [String(D.blueprint.tracks.length),"blueprint tracks · "+D.blueprint.blocks+" blocks","t2"],
+    [String(D.model.tracks.length),"universal civic tracks","t3"],
+    [D.curriculum.blocks.toLocaleString(),"blocks in the shared ledger","t1"],
+    [String(D.curriculum.packs),"packs behind it all","t2"],
+  ].map(([v,l,t])=>`<div class="tile ${t}"><b>${v}</b><span>${l}</span></div>`).join("");
+
+  const T=54, G=5, PAD=4;
+  const cols = Math.max(...D.states.map(s=>s.grid[1]))+1, rows = Math.max(...D.states.map(s=>s.grid[0]))+1;
+  const W = PAD*2+cols*(T+G), H = PAD*2+rows*(T+G);
+  $("#usmap").innerHTML =
+    `<svg class="map" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="img" aria-label="Tile map of the fifty states">`+
+    D.states.map(s=>{
+      const x=PAD+s.grid[1]*(T+G), y=PAD+s.grid[0]*(T+G);
+      return `<g class="tile" tabindex="0" role="button" data-st="${s.abbr}" aria-label="${esc(s.name)}">`+
+        `<rect x="${x}" y="${y}" width="${T}" height="${T}" rx="9" fill="${REGIONCOL[s.region]}" stroke="var(--surface)" stroke-width="1"/>`+
+        `<text x="${x+T/2}" y="${y+T/2+5}" text-anchor="middle" font-size="14" font-weight="600" fill="#fff">${s.abbr}</text>`+
+        `<title>${esc(s.name)} — capital ${esc(s.capital)} · ${esc(s.region)} · click for its custom curriculum</title></g>`;
+    }).join("")+`</svg>`;
+  $("#usmap").querySelectorAll("g.tile").forEach(g=>{
+    const open = ()=> location.hash = "#/state/"+g.dataset.st;
+    g.addEventListener("click", open);
+    g.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } });
+  });
+  $("#uslegend").innerHTML = Object.entries(REGIONCOL).map(([r,c])=>
+    `<span><i style="background:${c}"></i>${r} · ${D.states.filter(s=>s.region===r).length}</span>`).join("");
+}
+
+/* states list */
+function renderStatesList(){
+  const q = ($("#ssearch").value||"").toLowerCase(), reg = $("#sregion").value;
+  const ss = D.states.filter(s => (!reg || s.region===reg) &&
+    (!q || (s.name+" "+s.capital+" "+ANCHORS.map(a=>s[a]).join(" ")).toLowerCase().includes(q)));
+  $("#scount").textContent = ss.length + " of 50 states";
+  $("#sgrid").innerHTML = ss.map(s=>
+    `<div class="panel statecard" style="border-left-color:${REGIONCOL[s.region]}" data-st="${s.abbr}" tabindex="0" role="button">
+      <h4>${esc(s.name)}</h4><div class="cap">Capital: ${esc(s.capital)} · ${esc(s.region)}</div>
+      <p class="note" style="margin:8px 0 0">${esc(s.water)} · ${esc(s.corridor)}</p></div>`).join("");
+  $("#sgrid").querySelectorAll("[data-st]").forEach(c=>{
+    const open = ()=> location.hash = "#/state/"+c.dataset.st;
+    c.addEventListener("click", open);
+    c.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } });
+  });
+}
+
+/* state page: the custom curriculum */
+function renderState(){
+  const s = byAbbr[curState] || byAbbr.LA; curState = s.abbr;
+  const i = D.states.indexOf(s);
+  const prev = D.states[(i+49)%50], next = D.states[(i+1)%50];
+  $("#statebody").innerHTML = `
+    <p class="eyebrow" style="color:${REGIONCOL[s.region]}">${esc(s.region)} · capital: ${esc(s.capital)}</p>
+    <h1>${esc(s.name)} — the custom curriculum</h1>
+    <p class="lede">The universal blueprint, taught on ${esc(s.name)}'s own ground. Every course below ends in
+    transfer checks performed on the state's real material; tracks open a flow session when the repository's
+    Flow Hub sits alongside this file.</p>
+
+    <div class="panel">
+      <h3>The five ${esc(s.name)} courses</h3>
+      <p class="note">Cognition.X : States OS, localized — the anchor after the dash is this state's own.</p>
+      ${D.blueprint.tracks.map((t,ti)=>`
+        <div class="course"><div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap">
+          <h4>${esc(t.name)} — <span class="anchor">${esc(s[ANCHORS[ti]])}</span></h4>
+          <span class="cred">${esc(t.credential)}</span></div>
+          <div class="meta">10 themes × 5 bands · 50 blocks ·
+            <button class="chip link" data-fh="STATEOS">open in Flow Hub →</button></div>
+        </div>`).join("")}
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <h3>Civic leadership — the Institute Model in ${esc(s.name)}</h3>
+        <p class="note">The universal tracks, localized: placements in ${esc(s.capital)}, the state
+        legislature, and this state's own districts and councils. Civic-seal and standards names:
+        verify with the state education department.</p>
+        <ul class="tracklist">${D.model.tracks.map(t=>
+          `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("")}</ul>
+      </div>
+      <div class="panel">
+        <h3>The core spine here</h3>
+        <p class="note">Every adopting state runs the same spine beneath its custom courses.</p>
+        <div>${Object.entries(D.corePacks).map(([slug,p])=>
+          `<button class="chip link" data-fh="${slug}">${esc(p.name)} · ${p.blocks} →</button>`).join("")}</div>
+        <p class="note" style="margin-top:12px"><b>Storm memory anchor:</b> ${esc(s.storm)}.</p>
+        <p class="note"><b>Culture anchor:</b> ${esc(s.culture)}.</p>
+        <p class="note"><b>Table anchor:</b> ${esc(s.table)}.</p>
+      </div>
+    </div>
+    <div class="pnav">
+      <button class="btn" id="stprev">← ${esc(prev.name)}</button>
+      <button class="btn" id="stnext">${esc(next.name)} →</button>
+      <button class="btn" id="stmap" style="margin-left:auto">Back to the map</button>
+    </div>`;
+  $("#stprev").addEventListener("click", ()=> location.hash="#/state/"+prev.abbr);
+  $("#stnext").addEventListener("click", ()=> location.hash="#/state/"+next.abbr);
+  $("#stmap").addEventListener("click", ()=> location.hash="#/nation");
+  $("#statebody").querySelectorAll("[data-fh]").forEach(b=> b.addEventListener("click",
+    ()=> window.open("../flow-hub/index.html#track="+b.dataset.fh, "_blank")));
+}
+
+/* blueprint + institute */
+function renderBlueprint(){
+  $("#bpbody").innerHTML = `<div class="panel"><h3>${esc(D.blueprint.name)} — ${D.blueprint.blocks} blocks</h3>
+    <ul class="tracklist">${D.blueprint.tracks.map((t,ti)=>
+      `<li>${esc(t.name)} <span class="mono" style="font-size:.7rem; color:var(--faint)">localized by each state's ${ANCHORS[ti]} anchor</span>
+        <span class="cred">${esc(t.credential)}</span></li>`).join("")}</ul></div>`;
+}
+function renderInstitute(){
+  $("#wlbmission").textContent = D.wlb.mission;
+  $("#wlbquote").textContent = "“" + D.wlb.quote + "” — Willie L. Brown, Jr.";
+  $("#prin").innerHTML = D.principles.map(p=>
+    `<div class="panel"><h3 style="font-size:.95rem">${esc(p.p)}</h3>
+     <p class="note" style="margin:4px 0 0">${esc(p.teach)}</p></div>`).join("");
+  $("#modeltracks").innerHTML = D.model.tracks.map(t=>
+    `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("");
+  $("#wlbdisc").textContent = D.wlb.disclaimer;
+}
+
+/* guide */
+const TOUR = [
+  {hash:"#/nation", sel:"#usmap", t:"Fifty states, one blueprint", m:"The tile map of the nation — click any state and its own custom curriculum opens, built from its own water, corridor, table, culture and storms."},
+  {hash:"#/state/LA", sel:"#statebody", t:"A state's custom courses", m:"Louisiana's page, for example: the five blueprint courses localized to its delta, its river ports, its gumbo, its krewes and its storm memory — plus the Institute's civic tracks in Baton Rouge."},
+  {hash:"#/blueprint", sel:"#bpbody", t:"The blueprint", m:"Five universal tracks, two hundred and fifty blocks. The blueprint is the constant; the state is the variable."},
+  {hash:"#/institute", sel:"#prin", t:"The Institute Model", m:"Leadership, ethics, civic duty and emotional intelligence — the universal model, localized to every capital."},
+  {hash:"#/adoption", sel:".steps", t:"How a state adopts", m:"Fact base, spine, two waves, halls, ledger — the Louisiana platform is the working reference for all fifty."},
+];
+let tourAt = -1, tourEl = null;
+function tourShow(i){
+  if (tourEl){ tourEl.style.outline=""; tourEl.style.outlineOffset=""; }
+  if (i < 0 || i >= TOUR.length){ tourEnd(); return; }
+  tourAt = i;
+  const s = TOUR[i];
+  if (location.hash !== s.hash) location.hash = s.hash;
+  setTimeout(()=>{
+    tourEl = document.querySelector(s.sel);
+    if (tourEl){ tourEl.style.outline = "3px solid var(--gold)"; tourEl.style.outlineOffset = "4px";
+      tourEl.scrollIntoView({block:"center", behavior:"smooth"}); }
+    let box = $("#tourbox");
+    if (!box){
+      box = document.createElement("div"); box.id = "tourbox";
+      box.setAttribute("role","dialog");
+      box.style.cssText = "position:fixed; bottom:18px; left:50%; transform:translateX(-50%); z-index:60; background:var(--surface); border:1px solid var(--gold); border-radius:12px; padding:14px 18px; max-width:460px; width:calc(100% - 32px); box-shadow:var(--shadow); font-size:.9rem";
+      document.body.appendChild(box);
+    }
+    box.innerHTML = `<b style="color:var(--gold)">Guide · ${i+1} of ${TOUR.length}</b>
+      <div style="margin:.35em 0 .1em; font-weight:600">${esc(s.t)}</div>
+      <div style="color:var(--muted)">${esc(s.m)}</div>
+      <div style="display:flex; gap:8px; margin-top:12px">
+        <button class="btn" id="tour-prev" ${i===0?"disabled":""}>Back</button>
+        <button class="btn gold" id="tour-next">${i===TOUR.length-1?"Done":"Next"}</button>
+        <button class="btn" id="tour-x" style="margin-left:auto">End</button></div>`;
+    $("#tour-next").addEventListener("click", ()=> i===TOUR.length-1 ? tourEnd() : tourShow(i+1));
+    $("#tour-prev").addEventListener("click", ()=> tourShow(i-1));
+    $("#tour-x").addEventListener("click", tourEnd);
+    say(s.t + ". " + s.m);
+  }, 240);
+}
+function tourEnd(){
+  if (tourEl){ tourEl.style.outline=""; tourEl.style.outlineOffset=""; tourEl = null; }
+  const box = $("#tourbox"); if (box) box.remove();
+  tourAt = -1;
+  try{ speechSynthesis.cancel(); }catch(e){}
+}
+$("#guidebtn").addEventListener("click", ()=> tourShow(0));
+
+/* boot */
+renderNation(); renderStatesList(); renderBlueprint(); renderInstitute();
+["ssearch","sregion"].forEach(id => { $("#"+id).addEventListener("input", renderStatesList);
+  $("#"+id).addEventListener("change", renderStatesList); });
+route();
+</script>
