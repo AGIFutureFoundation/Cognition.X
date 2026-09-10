@@ -39,18 +39,31 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   Trade Hall, the capstone teaches it to a younger cohort). Generated
   scaffolds, labeled for committee refinement; rural-tier parishes get
   offline-evidence wording.
-- **Role dashboards (v0.18.0)** — the *Dashboards* view: Student,
-  Teacher (roster + transfer-check roll), Parent, Homeschool (weekly
-  planner), Parish Admin and State Admin, each browser-local; mission
-  ladders are runnable with per-rung completion.
+- **Role dashboards (v0.18.0; widgetized v0.23.0)** — the *Dashboards*
+  view: Student, Teacher, Parent, Homeschool, Parish Admin and State
+  Admin, each rebuilt on a widget system (30 widgets in all): every
+  perspective composes its own dashboard — toggle panels, reorder
+  them — with the layout persisted per role in the browser. Full-view
+  widgets include the student's flow launcher and journal, the
+  teacher's trainer track / flipped units / parish readiness, the
+  parent's family ledger and hall card, the homeschool co-op guild,
+  the parish admin's five honest numbers and launch team, and the
+  state admin's readiness rollup and Trade Hall launch load.
+- **Parish ↔ union integration (v0.24.0)** — parish dashboards in the
+  New Orleans Trade Hall region surface the trade families (from the
+  [[Trades Network]] fact base) whose packs sit in that parish's own
+  module plan, each with its New Orleans-localized training sim;
+  other parishes link across to the network.
 - **Plan customizer & program export (v0.16.0)** — industry packs can
   be set aside, any catalog pack added as a parish choice (persisted
   per parish in the browser), and the whole program exported as
   `cxla-program/1` JSON.
-- **Guide & voice (v0.21.0)** — the 🧭 Guide button walks users
-  through all nine surfaces (helper-agent tour with Back/Next,
-  navigating views itself); the voice option narrates via on-device
-  speech synthesis.
+- **Guide & voice (v0.21.0; humanized v0.23.0)** — the 🧭 Guide button
+  walks users through all nine surfaces (helper-agent tour with
+  Back/Next, navigating views itself); the voice option narrates via
+  on-device speech synthesis with three personas (Warm / Steady /
+  Brisk), a natural-voice preference list and sentence-level prosody —
+  off by default, nothing leaves the page.
 - **Voronoi cells & expansion timelines (v0.20.0)** — a recursive
   tessellating Voronoi of the state (regions → parishes, area ∝
   population, wave-colored, clickable) and of the curriculum

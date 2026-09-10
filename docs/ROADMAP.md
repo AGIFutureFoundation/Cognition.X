@@ -99,6 +99,16 @@ standards-mapped; validator extended to rubric and mapping checks.
   `data/blocks.csv` (the overlay also cures the template's duplicate
   inflation: 11,520 raw rows → 5,200 canonical). Output stays one
   offline file.
+- [x] Enterprise-grade visualization layer (v0.20.0): deterministic
+  recursive Voronoi engine (state + curriculum), expansion timelines,
+  print program template
+- [x] Tutor swarm, voice agents and the active Guide (v0.21.0);
+  human-like three-persona voice model across all interactive apps
+  (v0.23.0) — on-device only, off by default
+- [x] Five style templates with a professional Enterprise default,
+  full light/dark variants (v0.22.0)
+- [x] Widgetized, deeply customizable role dashboards — six
+  perspectives, 30 widgets, per-role layouts persisted (v0.23.0)
 - Remaining app-pipeline work: source the app's other data layers
   (wlb course ladders, K–12 program, parish fact base) from canonical
   files the same way, shrinking `template.html` over time
@@ -126,8 +136,28 @@ complete a track and hold a verifiable credential file.
 - [x] Parish-level platform (v0.9.0): **Cognition.X Louisiana** —
   independent dashboards for all 64 parishes, built from the app's
   fact base and the dataset (`tools/build_louisiana.py`)
-- Pilot playbook: the parish/Trade-Hall implementation plans in the app
-  become operational checklists with staffing, space and device budgets
+- [x] Adopted rollout plan (v0.22.0): the two-year, two-wave statewide
+  adoption — 33 parishes (~88% of population) in Wave 1 2026–27, all
+  64 by 2027–28 — computed deterministically, with the original
+  four-wave proposal kept as provenance
+- [x] Pilot playbook as curriculum (v0.22.0): the **Parish Launch &
+  Scale** pack (250 blocks — the first ninety days, the Trade Hall,
+  training the trainers, enrollment, measure/report/scale) plus
+  interactive per-parish Wave-1 readiness boards and a statewide
+  rollup — every parish prepares to the Wave-1 standard now
+- [x] Regional trades network (v0.23.0): **Cognition.X Trades
+  Network** — 111 union & trade entries across San Francisco,
+  Oakland–East Bay and New Orleans, regional training simulations,
+  the flipped & gamified district model (`TRADESCLASS` pack), and
+  district compacts; no union local numbers (councils are the front
+  door), simulation never counts as certification
+- [x] Parish ↔ union integration (v0.24.0): New Orleans-hall parish
+  dashboards surface the trade families whose packs sit in their own
+  module plans, sims localized to New Orleans ground
+- Staffing, space and device budgets attached to the launch playbook's
+  checklists (the operational-numbers layer the packs describe)
+- Network expansion: further regions join the Trades Network on the
+  same fact-base pattern (families × regions, councils as front doors)
 - Instance federation: an instance publishes its pack versions and
   credential issuer keys; credentials verify across instances
 - Educator authoring: in-app pack-spec editor producing PRs against

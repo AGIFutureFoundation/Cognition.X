@@ -29,7 +29,9 @@ directly — change the template or the data and rebuild.
   **Examiner** and **Motivator** share one session blackboard, each
   proposes an intervention per move, and priority arbitration lets
   exactly one act — the right nudge, never a chorus. With **voice** on
-  (on-device speech synthesis, no network), the acting agent speaks.
+  (on-device speech synthesis, no network; three personas — Warm /
+  Steady / Brisk — with a natural-voice preference list and
+  sentence-level prosody since v0.23.0), the acting agent speaks.
 - **Guide** — the 🧭 button starts a helper-agent walkthrough of every
   surface, with spoken narration when voice is on.
 - **Ledger** — per-track credential progress (10 themes → credential),

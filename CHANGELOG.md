@@ -4,6 +4,30 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.24.0] — 2026-09-10
+
+### Added
+- **Parish ↔ union integration**: `tools/build_louisiana.py` embeds
+  the New Orleans-region slice of the Trades Network fact base, and
+  every parish dashboard served by the **New Orleans Trade Hall**
+  gains a *Trade unions & training sims* panel listing the trade
+  families whose packs sit in that parish's own module plan — each
+  with its international union, its New Orleans-localized training
+  simulation, and the matching pack chips; the council remains the
+  front door and simulation ≠ certification is restated in place.
+  Parishes on other halls link across to the full network.
+
+### Changed
+- `docs/ROADMAP.md` brought current: v0.20–v0.24 milestones checked
+  into Phases 2–3 (visualization layer, tutor swarm/voice, style
+  templates, widget dashboards, adopted rollout, launch playbook as
+  curriculum, the Trades Network, parish↔union integration), with the
+  operational-budgets and network-expansion lines as the next
+  Phase 3 work.
+- Wiki refreshed: [[Louisiana Platform]] documents the widgetized
+  dashboards, the three-persona voice model and the union panel;
+  [[Flow Hub]] notes the humanized voice.
+
 ## [0.23.0] — 2026-09-10
 
 ### Added
