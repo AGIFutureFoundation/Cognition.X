@@ -4,6 +4,26 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.9.0] — 2026-09-10
+
+### Added
+- **Cognition.X Louisiana** (`apps/louisiana/`): a parish-level
+  education platform modeled on Louisiana's real structure — an
+  **independent, deep-linkable dashboard for each of the 64 parishes**
+  (seal, seat, region & Trade Hall, rollout wave timeline, school
+  systems, anchor industries and narrative world, region population
+  context, curriculum ledger, Louisiana civic tracks, per-parish notes),
+  plus a State overview with an interactive **stylized tile cartogram**
+  of the 64 parishes colored by rollout wave, wave and region charts,
+  a Regions & Trade Halls view, and a Curriculum view. Light-first
+  civic design with a Mardi Gras (purple/gold/green) identity, Fraunces
+  display type, a validated 4-wave chart palette, and a full dark theme.
+- `tools/build_louisiana.py`: builds the platform from the Louisiana
+  fact base embedded in the Education OS app (regions, hubs, 64
+  parishes with seats/population/waves/industries) plus curriculum
+  stats computed from `data/blocks.csv` — same Phase 2 pattern as
+  Flow Hub: a build product, never hand-edited.
+
 ## [0.8.0] — 2026-09-09
 
 ### Added
