@@ -36,9 +36,9 @@ stable id. ✅
     Regional, Civic & Leadership, Health & Community, Language/Culture
     (111 each), Empathy & EI and Community & Relationship (167 each) —
     irregular shapes needing per-pack design, not mechanical promotion
-- Replace the placeholder transfer checks surfaced by the v0.8.0
-  review ("Do it once, for real…" on most pre-promotion legacy rows)
-  with real per-theme checks — content authoring, ~440 themes
+- [x] Replace the placeholder transfer checks surfaced by the v0.8.0
+  review with real per-theme checks — shipped in v0.13.0 (217 themes /
+  1,085 rows; guarded replacement, zero placeholders remain)
 - Convert legacy packs to pack-spec JSON so the entire dataset is
   regenerable from specs (single source of truth becomes `data/pack_specs/`)
 - De-duplicate `description` band suffixes: author genuinely

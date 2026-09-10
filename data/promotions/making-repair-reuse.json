@@ -1,85 +1,285 @@
 {
   "pack": "Making, Repair & Reuse",
-  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names; only empty fields are filled.",
+  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names. Empty fields (track, code, level, description) are filled; authored transfer_check values replace ONLY the two known generic placeholder sentences — real source checks are never overwritten (guard in tools/normalize_blocks.py).",
   "tracks": [
     {
       "prefix": "MK",
       "name": "Making something that holds",
       "themes": [
-        {"theme": "Measure twice (MK)", "description": "Marking out and measuring before cutting — the discipline that decides whether parts fit."},
-        {"theme": "The first joint (MK)", "description": "Joining two pieces of wood so they stay joined — the basic joints and choosing between them."},
-        {"theme": "Cutting metal (MK)", "description": "Hacksaw, snips and files — cutting and finishing metal safely at the bench."},
-        {"theme": "Sewing something that lasts (MK)", "description": "The stitches and seams that survive washing and wearing — sewing as construction, not decoration."},
-        {"theme": "Working with clay or concrete (MK)", "description": "Mixing, forming and curing — the wet materials that become permanent, and the timing that governs them."},
-        {"theme": "Drawing what you will build (MK)", "description": "The working drawing — dimensions, views, materials list — good enough that someone else could build it."},
-        {"theme": "Finishing (MK)", "description": "Sanding, sealing, painting and edges — the last ten percent that makes a made thing look meant."},
-        {"theme": "Making for somebody specific (MK)", "description": "Building to a real person's need and measurements, checked with them before, during and after."},
-        {"theme": "The prototype that failed (MK)", "description": "Reading a failure for its lesson — what broke, why, and the change the next version carries."},
-        {"theme": "Costing what you made (MK)", "description": "Materials, time and overhead totalled honestly — what the thing actually cost to make."}
+        {
+          "theme": "Measure twice (MK)",
+          "description": "Marking out and measuring before cutting — the discipline that decides whether parts fit.",
+          "transfer_check": "Mark out and cut a piece to a stated dimension within tolerance, showing the marking before the cut."
+        },
+        {
+          "theme": "The first joint (MK)",
+          "description": "Joining two pieces of wood so they stay joined — the basic joints and choosing between them.",
+          "transfer_check": "Make one wood joint that holds under load, and name where you would use it and where you would not."
+        },
+        {
+          "theme": "Cutting metal (MK)",
+          "description": "Hacksaw, snips and files — cutting and finishing metal safely at the bench.",
+          "transfer_check": "Cut and file a piece of metal to a line safely, finishing the edge so it passes a finger test."
+        },
+        {
+          "theme": "Sewing something that lasts (MK)",
+          "description": "The stitches and seams that survive washing and wearing — sewing as construction, not decoration.",
+          "transfer_check": "Sew one seam and one fastening that survive a wash and a pull test, by hand or machine."
+        },
+        {
+          "theme": "Working with clay or concrete (MK)",
+          "description": "Mixing, forming and curing — the wet materials that become permanent, and the timing that governs them.",
+          "transfer_check": "Mix and form one small piece in clay or concrete with correct proportions, and cure it to a sound result."
+        },
+        {
+          "theme": "Drawing what you will build (MK)",
+          "description": "The working drawing — dimensions, views, materials list — good enough that someone else could build it.",
+          "transfer_check": "Produce a dimensioned working drawing with a materials list that another maker builds from without asking you anything."
+        },
+        {
+          "theme": "Finishing (MK)",
+          "description": "Sanding, sealing, painting and edges — the last ten percent that makes a made thing look meant.",
+          "transfer_check": "Take one made piece through sanding, sealing or painting to a finish somebody would put in their home."
+        },
+        {
+          "theme": "Making for somebody specific (MK)",
+          "description": "Building to a real person's need and measurements, checked with them before, during and after.",
+          "transfer_check": "Build one object to a real person's stated need and measurements, checked with them before, during, and at handover."
+        },
+        {
+          "theme": "The prototype that failed (MK)",
+          "description": "Reading a failure for its lesson — what broke, why, and the change the next version carries.",
+          "transfer_check": "Break or find the failure in a prototype, diagnose why, and show the change the next version carries."
+        },
+        {
+          "theme": "Costing what you made (MK)",
+          "description": "Materials, time and overhead totalled honestly — what the thing actually cost to make.",
+          "transfer_check": "Cost one real made object honestly — materials, time, overhead — and state the price it would need to be worth making."
+        }
       ]
     },
     {
       "prefix": "RP",
       "name": "Repair before replace",
       "themes": [
-        {"theme": "Diagnose before you open it (RP)", "description": "The questions and checks that find a fault before a screwdriver moves — symptom, history, most likely cause."},
-        {"theme": "The four repairs every household needs (RP)", "description": "The repeating household repairs — leaks, sticking, wobbles, blockages — mastered as standard procedures."},
-        {"theme": "Fixing clothes (RP)", "description": "Buttons, hems, tears and zips — the clothing repairs that keep garments in service for years."},
-        {"theme": "Small engines (RP)", "description": "The small engine's usual failures — fuel, spark, air — diagnosed in order on a real machine."},
-        {"theme": "Electronics that can be fixed (RP)", "description": "The electronic repairs still open to a careful amateur — connections, batteries, switches — and the line where danger starts."},
-        {"theme": "Furniture (RP)", "description": "Loose joints, broken legs and worn surfaces — bringing real furniture back to use."},
-        {"theme": "Bicycles (RP)", "description": "The bicycle as the repairable machine — punctures, brakes and gears serviced with basic tools."},
-        {"theme": "Repair as a public act (RP)", "description": "Repair cafés and fix-it events — repairing in public so the skill and the habit spread."},
-        {"theme": "When not to repair (RP)", "description": "Judging repair against replacement honestly — safety, parts, cost and the repair that throws good money after bad."},
-        {"theme": "Teaching a repair (RP)", "description": "Walking somebody else through a repair with their hands on the tools, not yours."}
+        {
+          "theme": "Diagnose before you open it (RP)",
+          "description": "The questions and checks that find a fault before a screwdriver moves — symptom, history, most likely cause.",
+          "transfer_check": "Diagnose one real fault to a most-likely cause using questions and checks alone, before any tool touches it."
+        },
+        {
+          "theme": "The four repairs every household needs (RP)",
+          "description": "The repeating household repairs — leaks, sticking, wobbles, blockages — mastered as standard procedures.",
+          "transfer_check": "Complete two of the four standard household repairs on real faults, following the taught procedure."
+        },
+        {
+          "theme": "Fixing clothes (RP)",
+          "description": "Buttons, hems, tears and zips — the clothing repairs that keep garments in service for years.",
+          "transfer_check": "Repair a real garment — button, hem, tear or zip — so the repair survives a wash and the garment returns to use."
+        },
+        {
+          "theme": "Small engines (RP)",
+          "description": "The small engine's usual failures — fuel, spark, air — diagnosed in order on a real machine.",
+          "transfer_check": "Work the fuel-spark-air sequence on a real non-starting small engine and get it running or isolate the failed system."
+        },
+        {
+          "theme": "Electronics that can be fixed (RP)",
+          "description": "The electronic repairs still open to a careful amateur — connections, batteries, switches — and the line where danger starts.",
+          "transfer_check": "Complete one safe electronics repair — connection, battery, switch — and state exactly where the amateur line is and why."
+        },
+        {
+          "theme": "Furniture (RP)",
+          "description": "Loose joints, broken legs and worn surfaces — bringing real furniture back to use.",
+          "transfer_check": "Bring one real piece of furniture back to use — joint, leg or surface — with before and after evidence."
+        },
+        {
+          "theme": "Bicycles (RP)",
+          "description": "The bicycle as the repairable machine — punctures, brakes and gears serviced with basic tools.",
+          "transfer_check": "Fix a real puncture and adjust brakes or gears to a working standard, then ride the result."
+        },
+        {
+          "theme": "Repair as a public act (RP)",
+          "description": "Repair cafés and fix-it events — repairing in public so the skill and the habit spread.",
+          "transfer_check": "Take part in or stage a repair event: fix one item in front of others and talk one person through what you did."
+        },
+        {
+          "theme": "When not to repair (RP)",
+          "description": "Judging repair against replacement honestly — safety, parts, cost and the repair that throws good money after bad.",
+          "transfer_check": "Judge three real broken items repair-versus-replace with safety, parts and cost stated, and defend each verdict."
+        },
+        {
+          "theme": "Teaching a repair (RP)",
+          "description": "Walking somebody else through a repair with their hands on the tools, not yours.",
+          "transfer_check": "Teach one repair with the learner's hands on the tools throughout, until they complete it without you."
+        }
       ]
     },
     {
       "prefix": "RU",
       "name": "Reuse and what things are worth",
       "themes": [
-        {"theme": "Where a thing goes when you throw it (RU)", "description": "Following real waste from your bin to its end — landfill, export, recycling — and what actually happens there."},
-        {"theme": "What a material is worth (RU)", "description": "Metals, textiles, timber and plastic as materials with prices — reading value in what others discard."},
-        {"theme": "Designed to fail (RU)", "description": "Recognising designed-in failure — glued batteries, unavailable parts — and buying against it."},
-        {"theme": "Taking apart to use again (RU)", "description": "Disassembly as harvesting — recovering fasteners, timber, motors and parts without destroying them."},
-        {"theme": "Plastics, honestly (RU)", "description": "The plastic types, which are genuinely recycled where you live, and reducing the ones that are not."},
-        {"theme": "Building from what exists (RU)", "description": "Designing from the salvage pile — letting available materials shape what gets made."},
-        {"theme": "Food that would be wasted (RU)", "description": "Rescuing edible surplus safely — gleaning, sharing and preserving what would have been thrown."},
-        {"theme": "Water and materials in a workshop (RU)", "description": "Running a workshop lean — offcuts, solvents and water managed so little is wasted or dumped."},
-        {"theme": "The lifetime of a thing (RU)", "description": "An object's whole life traced — materials, use, repairs, afterlife — and the choices that lengthen it."},
-        {"theme": "Selling something second-hand (RU)", "description": "Pricing, describing and selling used goods honestly — the second-hand transaction done well from both sides."}
+        {
+          "theme": "Where a thing goes when you throw it (RU)",
+          "description": "Following real waste from your bin to its end — landfill, export, recycling — and what actually happens there.",
+          "transfer_check": "Follow one real discarded item's actual path — bin to end — as far as evidence allows, documenting each stage."
+        },
+        {
+          "theme": "What a material is worth (RU)",
+          "description": "Metals, textiles, timber and plastic as materials with prices — reading value in what others discard.",
+          "transfer_check": "Price three salvageable materials at real local buyers and identify one discarded item near you worth recovering."
+        },
+        {
+          "theme": "Designed to fail (RU)",
+          "description": "Recognising designed-in failure — glued batteries, unavailable parts — and buying against it.",
+          "transfer_check": "Tear down or research one product for designed-in failure — glued cells, absent parts — and name the buying rule that avoids it."
+        },
+        {
+          "theme": "Taking apart to use again (RU)",
+          "description": "Disassembly as harvesting — recovering fasteners, timber, motors and parts without destroying them.",
+          "transfer_check": "Disassemble one real discarded object without destroying it, harvesting and sorting its usable parts."
+        },
+        {
+          "theme": "Plastics, honestly (RU)",
+          "description": "The plastic types, which are genuinely recycled where you live, and reducing the ones that are not.",
+          "transfer_check": "Sort a week of your real plastic by type, verify which types your locality genuinely recycles, and cut one that it does not."
+        },
+        {
+          "theme": "Building from what exists (RU)",
+          "description": "Designing from the salvage pile — letting available materials shape what gets made.",
+          "transfer_check": "Design and build one useful object from salvage only, letting the found materials shape the design."
+        },
+        {
+          "theme": "Food that would be wasted (RU)",
+          "description": "Rescuing edible surplus safely — gleaning, sharing and preserving what would have been thrown.",
+          "transfer_check": "Rescue real surplus food safely — glean, share or preserve — and account for what was saved and how it stayed safe."
+        },
+        {
+          "theme": "Water and materials in a workshop (RU)",
+          "description": "Running a workshop lean — offcuts, solvents and water managed so little is wasted or dumped.",
+          "transfer_check": "Audit one real workshop's offcuts, solvents and water for a week and change one practice that cuts the waste."
+        },
+        {
+          "theme": "The lifetime of a thing (RU)",
+          "description": "An object's whole life traced — materials, use, repairs, afterlife — and the choices that lengthen it.",
+          "transfer_check": "Trace one owned object's whole life — materials, use, repairs, likely afterlife — and name the choice that most lengthens it."
+        },
+        {
+          "theme": "Selling something second-hand (RU)",
+          "description": "Pricing, describing and selling used goods honestly — the second-hand transaction done well from both sides.",
+          "transfer_check": "Sell one real used item honestly — condition described, fair price researched — through to a completed handover."
+        }
       ]
     },
     {
       "prefix": "TL",
       "name": "Tools and the workshop",
       "themes": [
-        {"theme": "The tool that will hurt you (TL)", "description": "Each tool's specific danger named before first use — and the habits that keep hands whole."},
-        {"theme": "Sharpening (TL)", "description": "Restoring an edge — knives, chisels, blades — and why a sharp tool is the safer one."},
-        {"theme": "Setting up a bench (TL)", "description": "A working bench arranged for real work — height, light, holding, and everything findable."},
-        {"theme": "Borrowing rather than buying (TL)", "description": "Tool libraries, lending and sharing — getting capability without owning everything."},
-        {"theme": "Maintaining what you use (TL)", "description": "Cleaning, oiling and storing tools so they outlive their owner."},
-        {"theme": "Power tools, properly (TL)", "description": "The power tools' rules — guards, grip, workpiece held, cord managed — demonstrated before speed."},
-        {"theme": "Measuring instruments (TL)", "description": "Squares, levels, gauges and calipers — reading them truly and checking them against themselves."},
-        {"theme": "The workshop that others use (TL)", "description": "Shared workshop discipline — induction, booking, leaving the machine as found — so the space survives its users."},
-        {"theme": "Dust, fumes and noise (TL)", "description": "The slow injuries of a workshop — extraction, masks and ear protection actually used."},
-        {"theme": "Making a jig (TL)", "description": "Building the helper that makes repetition accurate — the jig as stored precision."}
+        {
+          "theme": "The tool that will hurt you (TL)",
+          "description": "Each tool's specific danger named before first use — and the habits that keep hands whole.",
+          "transfer_check": "Name each tool's specific danger before using three of them, and demonstrate the habit that guards each."
+        },
+        {
+          "theme": "Sharpening (TL)",
+          "description": "Restoring an edge — knives, chisels, blades — and why a sharp tool is the safer one.",
+          "transfer_check": "Restore a real edge — knife, chisel or blade — to a working sharpness test, safely."
+        },
+        {
+          "theme": "Setting up a bench (TL)",
+          "description": "A working bench arranged for real work — height, light, holding, and everything findable.",
+          "transfer_check": "Arrange a real work area for a named job — height, light, holding, findability — and complete the job at it."
+        },
+        {
+          "theme": "Borrowing rather than buying (TL)",
+          "description": "Tool libraries, lending and sharing — getting capability without owning everything.",
+          "transfer_check": "Source one needed tool without buying — library, loan or share — and return it on time in the condition received."
+        },
+        {
+          "theme": "Maintaining what you use (TL)",
+          "description": "Cleaning, oiling and storing tools so they outlive their owner.",
+          "transfer_check": "Clean, oil and correctly store the tools after a real session, and fix one neglected tool found in the box."
+        },
+        {
+          "theme": "Power tools, properly (TL)",
+          "description": "The power tools' rules — guards, grip, workpiece held, cord managed — demonstrated before speed.",
+          "transfer_check": "Demonstrate one power tool's full safe operation — guards, grip, workpiece held, cord managed — under observation."
+        },
+        {
+          "theme": "Measuring instruments (TL)",
+          "description": "Squares, levels, gauges and calipers — reading them truly and checking them against themselves.",
+          "transfer_check": "Use a square, level and caliper or gauge on real work, and check one instrument against itself for truth."
+        },
+        {
+          "theme": "The workshop that others use (TL)",
+          "description": "Shared workshop discipline — induction, booking, leaving the machine as found — so the space survives its users.",
+          "transfer_check": "Complete a shared-workshop session by its rules — induction, booking, machine left as found — with the log signed."
+        },
+        {
+          "theme": "Dust, fumes and noise (TL)",
+          "description": "The slow injuries of a workshop — extraction, masks and ear protection actually used.",
+          "transfer_check": "Set up and actually use the right extraction, mask and ear protection for one real dusty or loud task."
+        },
+        {
+          "theme": "Making a jig (TL)",
+          "description": "Building the helper that makes repetition accurate — the jig as stored precision.",
+          "transfer_check": "Design and build a jig for one repetitive task and show it producing identical results across five repetitions."
+        }
       ]
     },
     {
       "prefix": "TR",
       "name": "The trade and the living",
       "themes": [
-        {"theme": "Charging for your work (TR)", "description": "Pricing labour and materials so the work pays — the quote, the day rate and the job that loses money."},
-        {"theme": "The first customer (TR)", "description": "The first paid job end to end — agreement, delivery, payment and the review that brings the second."},
-        {"theme": "A workshop as a business (TR)", "description": "The numbers under a small workshop — costs, throughput, break-even — read from a real or modelled month."},
-        {"theme": "Apprenticeship here (TR)", "description": "The apprenticeship routes where you live — trades, entry, pay during training — mapped from real providers."},
-        {"theme": "Certification that raises a wage (TR)", "description": "The tickets and certificates that measurably raise pay in a trade, and the cheapest path to each."},
-        {"theme": "Working for somebody else (TR)", "description": "Being employed in a trade — the site rules, the expectations and the reputation that follows you."},
-        {"theme": "Teaching your trade (TR)", "description": "Passing a trade on — breaking skills into teachable steps and supervising early work without doing it."},
-        {"theme": "The trade that is disappearing (TR)", "description": "A local trade in decline studied honestly — why it is fading and what its skills still transfer to."},
-        {"theme": "The trade that is arriving (TR)", "description": "The new trades appearing locally — solar, e-bikes, retrofit — and the earliest route in."},
-        {"theme": "A career that lasts thirty years (TR)", "description": "A trade career mapped across decades — the body, the tools, the moves into teaching, inspecting or owning."}
+        {
+          "theme": "Charging for your work (TR)",
+          "description": "Pricing labour and materials so the work pays — the quote, the day rate and the job that loses money.",
+          "transfer_check": "Produce a real quote for a defined job — labour, materials, margin — and defend the number line by line."
+        },
+        {
+          "theme": "The first customer (TR)",
+          "description": "The first paid job end to end — agreement, delivery, payment and the review that brings the second.",
+          "transfer_check": "Complete one real paid or barter job end to end: agreement, delivery, payment and the review asked for."
+        },
+        {
+          "theme": "A workshop as a business (TR)",
+          "description": "The numbers under a small workshop — costs, throughput, break-even — read from a real or modelled month.",
+          "transfer_check": "Model one real or hypothetical workshop's month — costs, throughput, break-even — and state what it must charge to live."
+        },
+        {
+          "theme": "Apprenticeship here (TR)",
+          "description": "The apprenticeship routes where you live — trades, entry, pay during training — mapped from real providers.",
+          "transfer_check": "Map the actual apprenticeship routes for one trade where you live — entry, pay, duration — from the real providers."
+        },
+        {
+          "theme": "Certification that raises a wage (TR)",
+          "description": "The tickets and certificates that measurably raise pay in a trade, and the cheapest path to each.",
+          "transfer_check": "Identify one certification with documented wage impact in a local trade and lay out its cheapest real path."
+        },
+        {
+          "theme": "Working for somebody else (TR)",
+          "description": "Being employed in a trade — the site rules, the expectations and the reputation that follows you.",
+          "transfer_check": "Hold or simulate one week under trade-site rules — timekeeping, standards, instructions taken — with the supervisor's assessment."
+        },
+        {
+          "theme": "Teaching your trade (TR)",
+          "description": "Passing a trade on — breaking skills into teachable steps and supervising early work without doing it.",
+          "transfer_check": "Break one trade skill into teachable steps and supervise a learner's first real attempt without taking over."
+        },
+        {
+          "theme": "The trade that is disappearing (TR)",
+          "description": "A local trade in decline studied honestly — why it is fading and what its skills still transfer to.",
+          "transfer_check": "Document one declining local trade from a practitioner interview and name where its skills still transfer."
+        },
+        {
+          "theme": "The trade that is arriving (TR)",
+          "description": "The new trades appearing locally — solar, e-bikes, retrofit — and the earliest route in.",
+          "transfer_check": "Investigate one arriving trade locally — solar, e-bikes, retrofit — and map its earliest real entry route."
+        },
+        {
+          "theme": "A career that lasts thirty years (TR)",
+          "description": "A trade career mapped across decades — the body, the tools, the moves into teaching, inspecting or owning.",
+          "transfer_check": "Chart one real tradesperson's actual career across decades from an interview, marking the moves that saved their body and pay."
+        }
       ]
     }
   ]

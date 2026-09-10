@@ -1,85 +1,285 @@
 {
   "pack": "Water, Land & Climate",
-  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names; only empty fields are filled.",
+  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names. Empty fields (track, code, level, description) are filled; authored transfer_check values replace ONLY the two known generic placeholder sentences — real source checks are never overwritten (guard in tools/normalize_blocks.py).",
   "tracks": [
     {
       "prefix": "WA",
       "name": "Water: source to drain",
       "themes": [
-        {"theme": "Where your water comes from (WA)", "description": "Tracing your own water back — river, well, tank or main — and who keeps it safe along the way."},
-        {"theme": "Where it goes afterwards (WA)", "description": "The path of used water from your drain — sewer, septic or ground — and your household's end of that bargain."},
-        {"theme": "When the water is not safe (WA)", "description": "The signs and notices of unsafe water, and the boil, filter and treat options ranked by what they remove."},
-        {"theme": "Carrying water (WA)", "description": "Moving and storing water without contaminating it — clean containers, covered storage and the ladle rule."},
-        {"theme": "Too much water (WA)", "description": "Flooding where you live — where it comes from, what it touches first, and the household moves before and after."},
-        {"theme": "Too little water (WA)", "description": "Drought and scarcity — rationing a household honestly, and the uses that go first."},
-        {"theme": "Testing what you drink (WA)", "description": "The simple tests and observations that say something real about water, and reading an official quality report."},
-        {"theme": "The pipe that leaks (WA)", "description": "Finding a leak with the meter-still test, the repairs within reach, and what a slow drip costs over a year."},
-        {"theme": "Water and money (WA)", "description": "What water costs where you live — the bill, the tariff, the subsidy — and using the price to find the waste."},
-        {"theme": "Water that is shared (WA)", "description": "Wells, standpipes and irrigation shared by many — the rules, rotas and disputes of a common source."}
+        {
+          "theme": "Where your water comes from (WA)",
+          "description": "Tracing your own water back — river, well, tank or main — and who keeps it safe along the way.",
+          "transfer_check": "Trace your own tap or well water to its actual source and draw the path, naming who safeguards each stage."
+        },
+        {
+          "theme": "Where it goes afterwards (WA)",
+          "description": "The path of used water from your drain — sewer, septic or ground — and your household's end of that bargain.",
+          "transfer_check": "Trace your own wastewater to its actual destination — works, tank or ground — and state your household's two protective behaviours."
+        },
+        {
+          "theme": "When the water is not safe (WA)",
+          "description": "The signs and notices of unsafe water, and the boil, filter and treat options ranked by what they remove.",
+          "transfer_check": "Demonstrate one correct treatment method — boil, filter or disinfect — and match three contamination types to the method that removes each."
+        },
+        {
+          "theme": "Carrying water (WA)",
+          "description": "Moving and storing water without contaminating it — clean containers, covered storage and the ladle rule.",
+          "transfer_check": "Collect, carry and store water for one day's household use without contaminating it, narrating the rules you followed."
+        },
+        {
+          "theme": "Too much water (WA)",
+          "description": "Flooding where you live — where it comes from, what it touches first, and the household moves before and after.",
+          "transfer_check": "Read your address's flood exposure from official maps and state the household action sequence at three warning lead times."
+        },
+        {
+          "theme": "Too little water (WA)",
+          "description": "Drought and scarcity — rationing a household honestly, and the uses that go first.",
+          "transfer_check": "Ration a real or simulated day on a fixed water budget, allocating by priority and logging where every litre went."
+        },
+        {
+          "theme": "Testing what you drink (WA)",
+          "description": "The simple tests and observations that say something real about water, and reading an official quality report.",
+          "transfer_check": "Perform one simple water test or observation on a real source and correctly read an official quality report for your supply."
+        },
+        {
+          "theme": "The pipe that leaks (WA)",
+          "description": "Finding a leak with the meter-still test, the repairs within reach, and what a slow drip costs over a year.",
+          "transfer_check": "Run the meter-still leak test on a real dwelling and repair or precisely specify one leak found, with its yearly cost computed."
+        },
+        {
+          "theme": "Water and money (WA)",
+          "description": "What water costs where you live — the bill, the tariff, the subsidy — and using the price to find the waste.",
+          "transfer_check": "Read one real water bill against the meter and tariff, and identify the household's most expensive water habit with figures."
+        },
+        {
+          "theme": "Water that is shared (WA)",
+          "description": "Wells, standpipes and irrigation shared by many — the rules, rotas and disputes of a common source.",
+          "transfer_check": "Document the rules of one real shared water source — who may take, when, who maintains — and how one past dispute was settled."
+        }
       ]
     },
     {
       "prefix": "LD",
       "name": "The ground under you",
       "themes": [
-        {"theme": "What this ground is made of (LD)", "description": "Reading your local soil and rock — what drains, what slips, what grows — from a hole you dug yourself."},
-        {"theme": "Who owns the ground you stand on (LD)", "description": "Titles, tenancies and commons — the ownership map of your own area and where it is recorded."},
-        {"theme": "Land that is losing itself (LD)", "description": "Erosion and degradation — the signs of ground leaving, and the plantings and barriers that hold it."},
-        {"theme": "Growing something on purpose (LD)", "description": "Preparing a bed, choosing what suits the soil and season, and tending one deliberate crop to harvest."},
-        {"theme": "The land nobody uses (LD)", "description": "Vacant lots and margins — who actually owns them, and the lawful routes to putting them to use."},
-        {"theme": "Mapping what is here (LD)", "description": "Making a real map of a real place — boundaries, water, slopes, uses — accurate enough for someone else to follow."},
-        {"theme": "Land and the law here (LD)", "description": "The land rules that bind where you live — zoning, building, clearing — and where a decision can be looked up."},
-        {"theme": "Restoring a piece of ground (LD)", "description": "Taking one degraded patch back — clearing, soil, planting, protection — and keeping it alive past the first season."},
-        {"theme": "What lives here (LD)", "description": "Surveying the species of one real place, and what their presence or absence says about its health."},
-        {"theme": "The land under a city (LD)", "description": "Sealed ground, drains and heat — what paving does to water and temperature, and the green that repairs it."}
+        {
+          "theme": "What this ground is made of (LD)",
+          "description": "Reading your local soil and rock — what drains, what slips, what grows — from a hole you dug yourself.",
+          "transfer_check": "Dig or expose one real soil profile, classify what you find, and state what it means for drainage and growing."
+        },
+        {
+          "theme": "Who owns the ground you stand on (LD)",
+          "description": "Titles, tenancies and commons — the ownership map of your own area and where it is recorded.",
+          "transfer_check": "Find the recorded ownership of one real parcel through the official registry and explain the record to somebody else."
+        },
+        {
+          "theme": "Land that is losing itself (LD)",
+          "description": "Erosion and degradation — the signs of ground leaving, and the plantings and barriers that hold it.",
+          "transfer_check": "Survey one real site for erosion signs and install or specify the planting or barrier that would hold it."
+        },
+        {
+          "theme": "Growing something on purpose (LD)",
+          "description": "Preparing a bed, choosing what suits the soil and season, and tending one deliberate crop to harvest.",
+          "transfer_check": "Prepare a bed, plant a crop suited to your soil and season, and tend it to harvest with a care log."
+        },
+        {
+          "theme": "The land nobody uses (LD)",
+          "description": "Vacant lots and margins — who actually owns them, and the lawful routes to putting them to use.",
+          "transfer_check": "Identify one real vacant parcel, find its actual owner through records, and outline the lawful route to a community use."
+        },
+        {
+          "theme": "Mapping what is here (LD)",
+          "description": "Making a real map of a real place — boundaries, water, slopes, uses — accurate enough for someone else to follow.",
+          "transfer_check": "Produce a real map of one place — boundaries, water, slope, uses — accurate enough for a stranger to navigate by."
+        },
+        {
+          "theme": "Land and the law here (LD)",
+          "description": "The land rules that bind where you live — zoning, building, clearing — and where a decision can be looked up.",
+          "transfer_check": "Look up the actual rules governing one real land question where you live and state what is allowed, forbidden and permitted-with-approval."
+        },
+        {
+          "theme": "Restoring a piece of ground (LD)",
+          "description": "Taking one degraded patch back — clearing, soil, planting, protection — and keeping it alive past the first season.",
+          "transfer_check": "Take one small degraded patch through clearing, soil work and planting, and keep it alive past a season with evidence."
+        },
+        {
+          "theme": "What lives here (LD)",
+          "description": "Surveying the species of one real place, and what their presence or absence says about its health.",
+          "transfer_check": "Conduct a species survey of one real place and interpret what two presences or absences say about its health."
+        },
+        {
+          "theme": "The land under a city (LD)",
+          "description": "Sealed ground, drains and heat — what paving does to water and temperature, and the green that repairs it.",
+          "transfer_check": "Map sealed and green ground on one real block and measure or estimate the difference it makes to runoff or heat."
+        }
       ]
     },
     {
       "prefix": "CL",
       "name": "Climate, read locally",
       "themes": [
-        {"theme": "What the elders describe (CL)", "description": "Collecting older residents' accounts of past seasons and comparing them honestly to the record."},
-        {"theme": "Keeping a record (CL)", "description": "A simple weather log kept properly — instrument, time, place — until it becomes data."},
-        {"theme": "Heat (CL)", "description": "Extreme heat where you live — who it endangers, the hours that matter, and cooling a body and a room."},
-        {"theme": "Cold (CL)", "description": "Cold snaps — the household risks from pipes to lungs, and protecting the people heating one room."},
-        {"theme": "The season that moved (CL)", "description": "Shifting rains and growing seasons — reading the change in local planting, prices and water."},
-        {"theme": "Storms (CL)", "description": "The storms your region actually gets, their warning signs, and the before-during-after sequence for a household."},
-        {"theme": "Air (CL)", "description": "What is in the air you breathe — smoke, dust, exhaust — reading an air quality index and acting on a bad day."},
-        {"theme": "Reading a forecast properly (CL)", "description": "Probability, timing and range in a real forecast — what it promises, what it cannot, and planning with it."},
-        {"theme": "Adaptation that is affordable (CL)", "description": "The cheap adaptations first — shade, storage, drainage, timing — ranked by cost against protection."},
-        {"theme": "Arguing about it honestly (CL)", "description": "Disagreeing about climate with evidence and respect — the claims, the sources, and the difference between the two."}
+        {
+          "theme": "What the elders describe (CL)",
+          "description": "Collecting older residents' accounts of past seasons and comparing them honestly to the record.",
+          "transfer_check": "Record one elder's account of past seasons and check two of its specifics against the instrumental record, reporting honestly."
+        },
+        {
+          "theme": "Keeping a record (CL)",
+          "description": "A simple weather log kept properly — instrument, time, place — until it becomes data.",
+          "transfer_check": "Keep a daily weather log — instrument, time, place — for two weeks and present it as usable data."
+        },
+        {
+          "theme": "Heat (CL)",
+          "description": "Extreme heat where you live — who it endangers, the hours that matter, and cooling a body and a room.",
+          "transfer_check": "Write and rehearse a heat-day plan for a real household naming the dangerous hours, the cooling method and the person checked on."
+        },
+        {
+          "theme": "Cold (CL)",
+          "description": "Cold snaps — the household risks from pipes to lungs, and protecting the people heating one room.",
+          "transfer_check": "Prepare a real dwelling and household for a cold snap against a checklist — pipes, heating, the one warm room — and demonstrate it."
+        },
+        {
+          "theme": "The season that moved (CL)",
+          "description": "Shifting rains and growing seasons — reading the change in local planting, prices and water.",
+          "transfer_check": "Document one local seasonal shift — planting date, rain arrival, price curve — from two independent local sources."
+        },
+        {
+          "theme": "Storms (CL)",
+          "description": "The storms your region actually gets, their warning signs, and the before-during-after sequence for a household.",
+          "transfer_check": "Run the before-during-after sequence for your region's storm type in a household drill, with the kit and refuge demonstrated."
+        },
+        {
+          "theme": "Air (CL)",
+          "description": "What is in the air you breathe — smoke, dust, exhaust — reading an air quality index and acting on a bad day.",
+          "transfer_check": "Read today's actual air quality for your location, name its dominant source, and state the action the level calls for."
+        },
+        {
+          "theme": "Reading a forecast properly (CL)",
+          "description": "Probability, timing and range in a real forecast — what it promises, what it cannot, and planning with it.",
+          "transfer_check": "Take one real multi-day forecast, explain its probabilities and limits, and make one genuine plan that uses it correctly."
+        },
+        {
+          "theme": "Adaptation that is affordable (CL)",
+          "description": "The cheap adaptations first — shade, storage, drainage, timing — ranked by cost against protection.",
+          "transfer_check": "Rank three low-cost adaptations for a real dwelling by cost against protection, and implement the first."
+        },
+        {
+          "theme": "Arguing about it honestly (CL)",
+          "description": "Disagreeing about climate with evidence and respect — the claims, the sources, and the difference between the two.",
+          "transfer_check": "Hold a structured disagreement on one climate claim using cited evidence on both sides, and state what would change your mind."
+        }
       ]
     },
     {
       "prefix": "EN",
       "name": "Energy where you live",
       "themes": [
-        {"theme": "Where the power comes from (EN)", "description": "Your own electricity traced to its sources — the plants, lines and fuels behind the local socket."},
-        {"theme": "When the power is out (EN)", "description": "Running the essentials through an outage — light, food, phones — safely and in the right order."},
-        {"theme": "Reading a meter and a bill (EN)", "description": "The kilowatt-hour as the unit you buy — reading your meter and reconciling it with the bill."},
-        {"theme": "Heat that escapes (EN)", "description": "Finding where warmth leaves a dwelling and the sealing and insulation that pay for themselves first."},
-        {"theme": "Cooking fuel (EN)", "description": "The fuels people cook with — their cost, smoke and danger — and the safest option a household can reach."},
-        {"theme": "Sun and wind on this site (EN)", "description": "Reading one real site for solar and wind potential — orientation, shading, exposure — before believing a brochure."},
-        {"theme": "Storing energy (EN)", "description": "Batteries and other stores — what they hold, what they cost, and matching a store to a real need."},
-        {"theme": "The energy in a thing (EN)", "description": "The energy embedded in objects and food — why making, moving and wasting things is an energy question."},
-        {"theme": "Working on the grid (EN)", "description": "The jobs that keep power flowing — lines, plants, meters — and the training routes into them locally."},
-        {"theme": "Energy and who decides (EN)", "description": "Tariffs, subsidies and siting — where energy decisions are made near you and how a resident is heard."}
+        {
+          "theme": "Where the power comes from (EN)",
+          "description": "Your own electricity traced to its sources — the plants, lines and fuels behind the local socket.",
+          "transfer_check": "Trace your own electricity to its actual generation mix from published data and present the chain socket-to-source."
+        },
+        {
+          "theme": "When the power is out (EN)",
+          "description": "Running the essentials through an outage — light, food, phones — safely and in the right order.",
+          "transfer_check": "Run a two-hour household blackout drill covering light, one hot meal and phone charging, every method used safely."
+        },
+        {
+          "theme": "Reading a meter and a bill (EN)",
+          "description": "The kilowatt-hour as the unit you buy — reading your meter and reconciling it with the bill.",
+          "transfer_check": "Read your real meter on two dates, compute the kilowatt-hours used, and reconcile them against the bill."
+        },
+        {
+          "theme": "Heat that escapes (EN)",
+          "description": "Finding where warmth leaves a dwelling and the sealing and insulation that pay for themselves first.",
+          "transfer_check": "Survey a real dwelling for heat loss and implement or specify the two cheapest effective fixes, payback estimated."
+        },
+        {
+          "theme": "Cooking fuel (EN)",
+          "description": "The fuels people cook with — their cost, smoke and danger — and the safest option a household can reach.",
+          "transfer_check": "Compare the real cooking fuels available to your household on cost, smoke and safety, and demonstrate the safest setup."
+        },
+        {
+          "theme": "Sun and wind on this site (EN)",
+          "description": "Reading one real site for solar and wind potential — orientation, shading, exposure — before believing a brochure.",
+          "transfer_check": "Assess one real site's solar or wind potential — orientation, shading, exposure — and deliver a defensible yes/no with reasons."
+        },
+        {
+          "theme": "Storing energy (EN)",
+          "description": "Batteries and other stores — what they hold, what they cost, and matching a store to a real need.",
+          "transfer_check": "Size a battery or store for one named real need from actual wattages, and show the arithmetic."
+        },
+        {
+          "theme": "The energy in a thing (EN)",
+          "description": "The energy embedded in objects and food — why making, moving and wasting things is an energy question.",
+          "transfer_check": "Estimate the embedded energy of one everyday object from its materials and transport, and present the chain."
+        },
+        {
+          "theme": "Working on the grid (EN)",
+          "description": "The jobs that keep power flowing — lines, plants, meters — and the training routes into them locally.",
+          "transfer_check": "Map two real local routes into energy work — the roles, the training, the entry requirements — from actual providers."
+        },
+        {
+          "theme": "Energy and who decides (EN)",
+          "description": "Tariffs, subsidies and siting — where energy decisions are made near you and how a resident is heard.",
+          "transfer_check": "Identify where one real energy decision near you is made — tariff, siting, subsidy — and submit or draft a resident's input to it."
+        }
       ]
     },
     {
       "prefix": "RS",
       "name": "Resilience when it arrives",
       "themes": [
-        {"theme": "The hazard map of here (RS)", "description": "The ranked, evidenced list of what can actually happen at your address — flood, storm, fire, slide."},
-        {"theme": "The household plan (RS)", "description": "One written plan a household has rehearsed — contacts, rally points, kit and the leave triggers."},
-        {"theme": "The building you are in (RS)", "description": "Reading a building's weak points against local hazards — roof, openings, exits — and the fixes in reach."},
-        {"theme": "Warning that arrives in time (RS)", "description": "The official warning channels where you live, tested on your own devices, and what each level demands."},
-        {"theme": "The first seventy-two hours (RS)", "description": "Water, food, light, warmth and information for three days on your own shelf."},
-        {"theme": "After the water goes down (RS)", "description": "Re-entry done safely — structure, power, contamination — and the documentation that starts recovery."},
-        {"theme": "Insurance and what it does not cover (RS)", "description": "Reading a policy for the hazard exclusions, and the public help that exists where insurance does not."},
-        {"theme": "Rebuilding differently (RS)", "description": "Building back against the next event — elevation, materials, siting — instead of repeating the loss."},
-        {"theme": "Who is hardest hit (RS)", "description": "Why the same event lands unequally — age, money, mobility, location — and planning for the street, not just the house."},
-        {"theme": "Recording it for next time (RS)", "description": "The event log — what happened, when, what worked — kept so the next response starts smarter."}
+        {
+          "theme": "The hazard map of here (RS)",
+          "description": "The ranked, evidenced list of what can actually happen at your address — flood, storm, fire, slide.",
+          "transfer_check": "Build the ranked, evidenced hazard list for your own address from official maps and records."
+        },
+        {
+          "theme": "The household plan (RS)",
+          "description": "One written plan a household has rehearsed — contacts, rally points, kit and the leave triggers.",
+          "transfer_check": "Write the household emergency plan — contacts, rally points, kit, leave triggers — and run its drill with the real occupants."
+        },
+        {
+          "theme": "The building you are in (RS)",
+          "description": "Reading a building's weak points against local hazards — roof, openings, exits — and the fixes in reach.",
+          "transfer_check": "Assess one real building's weak points against your local hazards and fix or specify the two worst, with photos."
+        },
+        {
+          "theme": "Warning that arrives in time (RS)",
+          "description": "The official warning channels where you live, tested on your own devices, and what each level demands.",
+          "transfer_check": "Verify every official warning channel for your area on your own devices, tested, and state what each alert level demands."
+        },
+        {
+          "theme": "The first seventy-two hours (RS)",
+          "description": "Water, food, light, warmth and information for three days on your own shelf.",
+          "transfer_check": "Assemble or audit a real 72-hour kit for your household's actual members and gaps found made good."
+        },
+        {
+          "theme": "After the water goes down (RS)",
+          "description": "Re-entry done safely — structure, power, contamination — and the documentation that starts recovery.",
+          "transfer_check": "Walk a staged or documented re-entry — structure, power, contamination checks in order — and start the claim documentation."
+        },
+        {
+          "theme": "Insurance and what it does not cover (RS)",
+          "description": "Reading a policy for the hazard exclusions, and the public help that exists where insurance does not.",
+          "transfer_check": "Read one real policy against your hazard list and report every exclusion that matters, with the public backstops named."
+        },
+        {
+          "theme": "Rebuilding differently (RS)",
+          "description": "Building back against the next event — elevation, materials, siting — instead of repeating the loss.",
+          "transfer_check": "For one real or documented damaged dwelling, specify the build-back changes that beat the next event, roughly costed."
+        },
+        {
+          "theme": "Who is hardest hit (RS)",
+          "description": "Why the same event lands unequally — age, money, mobility, location — and planning for the street, not just the house.",
+          "transfer_check": "Map, with consent, the vulnerable households on one street and agree the check-in protocol that activates in an event."
+        },
+        {
+          "theme": "Recording it for next time (RS)",
+          "description": "The event log — what happened, when, what worked — kept so the next response starts smarter.",
+          "transfer_check": "Write the event log of one real drill or incident — what happened, when, what worked — and change one plan because of it."
+        }
       ]
     }
   ]

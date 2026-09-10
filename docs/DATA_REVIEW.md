@@ -37,14 +37,16 @@ sections; the only other diff is the fonts `<link>`).
    (K–12, Trade School, and seven thematic packs); see the
    [roadmap](ROADMAP.md).
 
-2b. **Placeholder transfer checks (found during promotion, scheduled).**
-   Most pre-promotion legacy rows carry a generic check — "Demonstrate
-   it once, correctly, to somebody who will use it" / "Do it once, for
-   real, and show it to somebody who will use it" — rather than a
-   per-theme task; only Preventive Health & Everyday Care has ~35 real
-   ones. Authoring real checks (~440 themes) is the next backfill
-   target. Checks were deliberately **not** rewritten during promotion:
-   the promotion mechanism only fills empty fields.
+2b. **Placeholder transfer checks (found during promotion — resolved
+   in v0.13.0).** Most pre-promotion legacy rows carried a generic
+   check — "Demonstrate it once, correctly, to somebody who will use
+   it" / "Do it once, for real, and show it to somebody who will use
+   it" — rather than a per-theme task (217 themes / 1,085 rows across
+   the five promoted packs). *Resolution:* real per-theme checks were
+   authored in the promotion specs, and the normalizer replaces a
+   source check **only** when it is one of the two known placeholder
+   sentences — real source checks are never overwritten. Zero
+   placeholder checks remain dataset-wide.
 
 3. **Band descriptions are suffixed, not differentiated (scheduled).**
    Within a theme, all five grade bands share one description
