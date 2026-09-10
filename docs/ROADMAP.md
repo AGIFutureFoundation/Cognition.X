@@ -162,10 +162,12 @@ standards-mapped; validator extended to rubric and mapping checks.
   pack data
 - Accessibility: WCAG 2.2 AA audit and fixes; keyboard-complete; screen-
   reader labels on all interactive panels
-- Packaging: PWA install still open; the printable per-track workbook
-  generator shipped in v0.32.0 (Flow Hub's 🖨 Workbook button — 10
-  themes × 5 band sign-off lines per track, via the browser's print
-  dialog, for zero-device settings)
+- [x] Packaging (v0.32.0–v0.34.0): printable per-track workbooks
+  (Flow Hub's 🖨 button) and PWA install metadata in all four apps
+  (runtime manifest + theme metas). Honest scope: installability
+  depends on the browser and https serving — the single offline file
+  itself remains the primary packaging; a service-worker build is
+  possible later work if the apps gain first-party hosting.
 
 **Exit criteria:** app builds reproducibly from the dataset; a learner can
 complete a track and hold a verifiable credential file.
@@ -208,8 +210,13 @@ complete a track and hold a verifiable credential file.
   with its own council front door, districts, sites and city map;
   the Baton Rouge Trade Hall's parishes gain their own union panels.
   Further regions continue on the same pattern.
-- Instance federation: an instance publishes its pack versions and
-  credential issuer keys; credentials verify across instances
+- [x] Instance federation, first slice (v0.34.0): each Records Office
+  publishes its public key; another instance adds it (after one
+  out-of-band identity confirmation) to its **trusted-offices
+  registry**, and verification then grades records three ways —
+  invalid, valid-but-untrusted-key, or *signed by trusted office
+  "X"* by name. Remaining federation work: publishing pack versions,
+  a portable trust-list exchange format, and revocation.
 - Educator authoring: in-app pack-spec editor producing PRs against
   `data/pack_specs/` (GitHub is the review pipeline)
 - Governance: curriculum review board process for accepting new packs and

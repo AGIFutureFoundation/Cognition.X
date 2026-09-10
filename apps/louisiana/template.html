@@ -595,6 +595,24 @@
 <script>
 "use strict";
 document.documentElement.lang = "en";
+/* PWA install metadata: a runtime blob manifest + metas. Honest scope —
+   installability depends on the browser and https serving; the single
+   file itself remains the offline packaging. Nothing is fetched. */
+try {
+  const icon = "data:image/svg+xml," + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="#6B3FA0"/><text x="50" y="63" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="26" fill="#fff">CX·LA</text></svg>');
+  const man = { name: "Cognition.X Louisiana", short_name: "CX·LA", start_url: ".",
+    display: "standalone", background_color: "#F3F5F8", theme_color: "#6B3FA0",
+    icons: [{ src: icon, sizes: "any", type: "image/svg+xml" }] };
+  const l = document.createElement("link"); l.rel = "manifest";
+  l.href = URL.createObjectURL(new Blob([JSON.stringify(man)], {type: "application/manifest+json"}));
+  document.head.appendChild(l);
+  const m = document.createElement("meta"); m.name = "theme-color"; m.content = "#6B3FA0";
+  document.head.appendChild(m);
+  const a = document.createElement("meta"); a.name = "apple-mobile-web-app-title"; a.content = "CX·LA";
+  document.head.appendChild(a);
+} catch(e){}
+
 const D = JSON.parse(document.getElementById("ladata").textContent);
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -1001,6 +1019,22 @@ async function verifyRecord(obj){
   const pub = await crypto.subtle.importKey("jwk", obj.publicKey, {name:"ECDSA", namedCurve:"P-256"}, false, ["verify"]);
   const bytes = new TextEncoder().encode(JSON.stringify(obj.payload));
   return crypto.subtle.verify({name:"ECDSA", hash:"SHA-256"}, pub, b64d(obj.signature), bytes);
+}
+
+/* Federation v1 — the trusted-offices registry. Each hall publishes its
+   public key; adding it here (after confirming identity out-of-band, once)
+   upgrades verification from "signed by this key's holder" to "signed by
+   the office I trust as X". Trust is browser-local and removable. */
+function trustLoad(){
+  try { const r = store("cxla.trust"); if (r){ const l = JSON.parse(r);
+    if (Array.isArray(l)) return l; } } catch(e){}
+  return [];
+}
+function trustSave(l){ store("cxla.trust", JSON.stringify(l)); }
+function jwkEq(a,b){ return !!(a && b && a.kty===b.kty && a.crv===b.crv && a.x===b.x && a.y===b.y); }
+function trustedName(jwk){
+  const t = trustLoad().find(o => jwkEq(o.publicKey, jwk));
+  return t ? t.recordsOffice : null;
 }
 
 /* ---------- launch budget sketch (deterministic, a scaffold to refine) ---------- */
@@ -2230,7 +2264,14 @@ const WIDGETS = {
        <p class="note" style="margin:14px 0 4px"><b>Verify a record</b> — paste any cx-credential/1 JSON:</p>
        <textarea id="ro-in" rows="4" style="width:100%" spellcheck="false" placeholder='{"payload":…,"signature":…,"publicKey":…}'></textarea>
        <div style="margin-top:8px"><button class="btn" id="ro-verify">Verify</button>
-       <span id="ro-result" style="font-size:.88rem; margin-left:10px"></span></div>`;
+       <span id="ro-result" style="font-size:.88rem; margin-left:10px"></span></div>
+       <p class="note" style="margin:16px 0 4px"><b>Trusted offices — federation v1.</b> Paste another hall's
+       published <span class="mono">{recordsOffice, publicKey}</span> export (after confirming, once and
+       out-of-band, that the key really is theirs). Records signed by a trusted office verify by name.</p>
+       <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:flex-start">
+         <textarea id="ro-trust-in" rows="2" style="flex:1; min-width:240px" spellcheck="false" placeholder='{"recordsOffice":"…","publicKey":{…}}'></textarea>
+         <button class="btn" id="ro-trust-add">Add trusted office</button></div>
+       <div id="ro-trust-list" style="margin-top:8px"></div>`;
     const showIssuer = async () => {
       const ik = await issuerGet();
       $("#ro-issuer") && ($("#ro-issuer").innerHTML = ik
@@ -2264,11 +2305,44 @@ const WIDGETS = {
       try {
         const obj = JSON.parse(el.querySelector("#ro-in").value);
         const ok = await verifyRecord(obj);
-        out.innerHTML = ok
-          ? `<span style="color:var(--green); font-weight:600">✓ Signature valid</span> — “${esc(obj.payload.credential)}” for ${esc(obj.payload.learner)}, issued ${esc(obj.payload.issuedAt)} by “${esc(obj.issuer||"unnamed office")}”. Confirm the key with that office.`
-          : `<span style="color:var(--w4); font-weight:600">✗ Invalid</span> — the record was altered or the signature does not match this public key.`;
+        if (!ok){
+          out.innerHTML = `<span style="color:var(--w4); font-weight:600">✗ Invalid</span> — the record was altered or the signature does not match this public key.`;
+        } else {
+          const who = trustedName(obj.publicKey);
+          out.innerHTML = who
+            ? `<span style="color:var(--green); font-weight:600">✓ Signed by trusted office “${esc(who)}”</span> — “${esc(obj.payload.credential)}” for ${esc(obj.payload.learner)}, issued ${esc(obj.payload.issuedAt)}. Record unaltered.`
+            : `<span style="color:var(--gold); font-weight:600">△ Signature valid, key not trusted</span> — the record is unaltered and signed by the holder of this key (claims to be “${esc(obj.issuer||"unnamed office")}”), but the key is not in your trusted offices. Confirm identity with the issuing hall, then add its published key below.`;
+        }
       } catch(e){
         out.innerHTML = `<span style="color:var(--w4)">Not a readable cx-credential record.</span>`;
+      }
+    });
+    const renderTrust = () => {
+      const host = el.querySelector("#ro-trust-list"); if (!host) return;
+      const l = trustLoad();
+      host.innerHTML = l.length
+        ? l.map((o,i)=>`<div style="font-size:.84rem; padding:5px 0; border-top:1px solid var(--line)">
+            <b>${esc(o.recordsOffice)}</b> <span class="mono" style="font-size:.66rem; color:var(--faint)">P-256 · x:${esc((o.publicKey.x||"").slice(0,12))}…</span>
+            <button data-untrust="${i}" aria-label="Remove ${esc(o.recordsOffice)} from trusted offices" style="border:0;background:none;color:var(--faint);cursor:pointer">✕</button></div>`).join("")
+        : `<p class="note" style="margin:0">No trusted offices yet — this browser verifies integrity only until you add one.</p>`;
+      host.querySelectorAll("[data-untrust]").forEach(b=> b.addEventListener("click", ()=>{
+        const l2 = trustLoad(); l2.splice(+b.dataset.untrust, 1); trustSave(l2); renderTrust();
+      }));
+    };
+    renderTrust();
+    el.querySelector("#ro-trust-add").addEventListener("click", ()=>{
+      try {
+        const o = JSON.parse(el.querySelector("#ro-trust-in").value);
+        if (!o || typeof o.recordsOffice !== "string" || !o.publicKey || o.publicKey.kty !== "EC" || o.publicKey.d)
+          throw new Error("shape");
+        const l = trustLoad();
+        if (!l.some(x=>jwkEq(x.publicKey, o.publicKey)))
+          l.push({recordsOffice: o.recordsOffice.slice(0,120), publicKey: {kty:o.publicKey.kty, crv:o.publicKey.crv, x:o.publicKey.x, y:o.publicKey.y}});
+        trustSave(l);
+        el.querySelector("#ro-trust-in").value = "";
+        renderTrust();
+      } catch(e){
+        say("That doesn't read as a records-office public key export.");
       }
     });
   }},
