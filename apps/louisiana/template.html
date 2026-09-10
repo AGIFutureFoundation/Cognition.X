@@ -162,6 +162,27 @@
 
   .foot{border-top:1px solid var(--line); margin-top:56px; padding-block:18px 8px; font-size:.76rem; color:var(--faint); max-width:76ch}
 
+  /* ---------- Voronoi cells & timelines ---------- */
+  .vorwrap{position:relative}
+  .vorwrap canvas{width:100%; height:auto; display:block; border-radius:10px; cursor:pointer}
+  .vortip{position:absolute; pointer-events:none; background:var(--surface); border:1px solid var(--line);
+    border-radius:8px; padding:6px 11px; font-size:.78rem; box-shadow:var(--shadow); display:none; z-index:4; max-width:240px}
+  .vortip b{display:block}
+  .tlrow{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  @media(max-width:820px){ .tlrow{grid-template-columns:1fr} }
+
+  /* ---------- print template: the parish program one-pager ---------- */
+  @media print{
+    .masthead, .pickrow, .outcomes, .pnav, .foot, #custpick, #custadd, #progcopy,
+    .styles, nav.tabs, textarea, .btn, input[type=checkbox]{display:none !important}
+    body{background:#fff; color:#111}
+    .view{display:none !important}
+    .view.active{display:block !important}
+    .panel,.blockcard,.theme{box-shadow:none; border-color:#ccc; break-inside:avoid}
+    .dashgrid{display:block}
+    .dashgrid > *{margin-bottom:12px}
+  }
+
   /* ---------- Institute (flagship) ---------- */
   .arc{margin-top:26px}
   .archead{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
@@ -258,6 +279,25 @@
         <h3>Parishes per region</h3>
         <p class="note">Each region anchors a Trade Hall in its hub city.</p>
         <div id="regionchart"></div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:16px">
+      <h3>The state as cells — recursive Voronoi</h3>
+      <p class="note">A tessellating two-level Voronoi: the eight regions partition the plane, each region
+      tessellated by its parishes — <b>cell area ∝ population</b>, color by rollout wave, heavy borders between
+      regions. Hover for the numbers; click a cell to open its parish. Stylized geometry, seeded from the map.</p>
+      <div class="vorwrap" id="vormap"></div>
+      <div class="legend" id="vorlegend"></div>
+    </div>
+
+    <div class="panel" style="margin-top:16px">
+      <h3>Expansion to Wave 4 — every parish in full run</h3>
+      <p class="note">The proposal's cumulative build-out: 5 → 21 → 40 → all 64 parishes, reaching 100% of the
+      state's population by 2030–31.</p>
+      <div class="tlrow">
+        <div><p class="note" style="margin:0 0 4px"><b>Parishes live</b> (cumulative of 64)</p><div id="tl-parishes"></div></div>
+        <div><p class="note" style="margin:0 0 4px"><b>Population covered</b> (cumulative %)</p><div id="tl-pop"></div></div>
       </div>
     </div>
 
@@ -415,6 +455,14 @@
       <div class="distbar" id="fambar"></div>
       <div class="legend" id="famlegend"></div>
     </div>
+
+    <div class="panel" style="margin-top:16px">
+      <h3>The curriculum as cells — recursive Voronoi</h3>
+      <p class="note">Families tessellated by their packs, <b>cell area ∝ blocks</b>. Hover for each pack's
+      figures; the heavy borders separate the four families.</p>
+      <div class="vorwrap" id="vorcurr"></div>
+      <div class="legend" id="vorcurrlegend"></div>
+    </div>
     <h2>Civic Leadership Legacy : Louisiana</h2>
     <p class="sub">The state-localized legacy pack — five tracks, five credentials, every transfer check on Louisiana ground.</p>
     <ul class="tracklist" id="latracks"></ul>
@@ -440,7 +488,9 @@ D.parishes.forEach(p => p.slug = slug(p.name));
 const bySlug = Object.fromEntries(D.parishes.map(p=>[p.slug,p]));
 $("#verline").textContent = "v"+D.version+" · fact base: Education OS";
 
+const ABBR_FIX = {"Lafourche":"LFR","St. Mary":"SMY","St. Martin":"SMT"};
 function abbr(name){
+  if (ABBR_FIX[name]) return ABBR_FIX[name];
   const w = name.replace(/[.']/g,"").split(/\s+/);
   if (w.length > 1) return w.map(x=>x[0]).join("").toUpperCase().slice(0,3);
   return name.slice(0,3).toUpperCase();
@@ -631,6 +681,7 @@ function renderParish(p){
    <div class="pnav">
      <button class="btn" id="pprev">← ${esc(D.parishes[(idx+63)%64].name)}</button>
      <button class="btn gold" id="pmap">Back to the map</button>
+     <button class="btn" id="pprint">Print program</button>
      <button class="btn" id="pnext">${esc(D.parishes[(idx+1)%64].name)} →</button>
    </div>`;
 
@@ -711,6 +762,7 @@ function renderParish(p){
   const ta = $("#pnotes");
   ta.value = store(notesKey) || "";
   ta.addEventListener("input", () => store(notesKey, ta.value));
+  $("#pprint").addEventListener("click", ()=> window.print());
   $("#pprev").addEventListener("click", ()=> location.hash="#/parish/"+D.parishes[(idx+63)%64].slug);
   $("#pnext").addEventListener("click", ()=> location.hash="#/parish/"+D.parishes[(idx+1)%64].slug);
   $("#pmap").addEventListener("click", ()=> location.hash="#/state");
@@ -799,6 +851,177 @@ function renderLoop(){
     `<text x="${cx}" y="${cy-6}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--purple)">one block,</text>`+
     `<text x="${cx}" y="${cy+12}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--purple)">two learners</text>`+
     arrows + boxes + `</svg>`;
+}
+
+/* ---------- recursive Voronoi engine (deterministic power diagram) ----------
+   Two-level tessellation on a raster grid: level-1 groups partition the
+   rectangle, each group's mask tessellated by its members. Areas converge to
+   the weight shares by adaptive power weights + Lloyd relaxation (fixed
+   iteration count — no randomness, same input → same picture). */
+function voronoiTessellate(groups, W, H, iters){
+  // groups: [{id, weight, seeds:[{id, weight, x, y}]}] with x,y in [0,1]
+  const gw = 132, gh = Math.round(gw*H/W);
+  const total = groups.reduce((s,g)=>s+g.weight,0);
+  function relax(seeds, mask, maskId, assign){
+    const tw = seeds.reduce((s,x)=>s+x.weight,0);
+    seeds.forEach(s=>{ s.px = s.x*gw; s.py = s.y*gh; s.pw = 0; });
+    for (let it=0; it<iters; it++){
+      const area = new Array(seeds.length).fill(0);
+      const cx = new Array(seeds.length).fill(0);
+      const cy = new Array(seeds.length).fill(0);
+      for (let y=0; y<gh; y++) for (let x=0; x<gw; x++){
+        const gi = y*gw+x;
+        if (mask && mask[gi] !== maskId) continue;
+        let best=0, bd=Infinity;
+        for (let s=0; s<seeds.length; s++){
+          const dx=x-seeds[s].px, dy=y-seeds[s].py;
+          const d=dx*dx+dy*dy-seeds[s].pw;
+          if (d<bd){bd=d; best=s;}
+        }
+        assign[gi]=seeds[best].id; area[best]++; cx[best]+=x; cy[best]+=y;
+      }
+      const cells = area.reduce((s,a)=>s+a,0)||1;
+      for (let s=0; s<seeds.length; s++){
+        if (area[s]>0){ seeds[s].px = cx[s]/area[s]; seeds[s].py = cy[s]/area[s]; }
+        const target = cells*seeds[s].weight/tw;
+        seeds[s].pw += 0.45*(target-area[s]);
+      }
+    }
+  }
+  const gAssign = new Array(gw*gh).fill(-1);
+  const gSeeds = groups.map(g=>({id:g.id, weight:g.weight,
+    x:g.seeds.reduce((s,m)=>s+m.x*m.weight,0)/g.weight,
+    y:g.seeds.reduce((s,m)=>s+m.y*m.weight,0)/g.weight}));
+  relax(gSeeds, null, null, gAssign);
+  const mAssign = new Array(gw*gh).fill(-1);
+  groups.forEach(g=>relax(g.seeds.map(s=>({...s})), gAssign, g.id, mAssign));
+  return {gw, gh, gAssign, mAssign};
+}
+function drawVoronoi(hostSel, tess, cellMeta, W, H, onClick){
+  // cellMeta: id -> {color, label, tip}
+  const host = $(hostSel);
+  host.innerHTML = `<canvas width="${W*2}" height="${H*2}" aria-label="Voronoi cell diagram" role="img"></canvas><div class="vortip"></div>`;
+  const cv = host.querySelector("canvas"), tip = host.querySelector(".vortip");
+  const ctx = cv.getContext("2d");
+  const {gw, gh, gAssign, mAssign} = tess;
+  const css = getComputedStyle(document.documentElement);
+  const resolve = c => c.startsWith("var(") ? css.getPropertyValue(c.slice(4,-1)).trim() : c;
+  const sx = W*2/gw, sy = H*2/gh;
+  const surface = css.getPropertyValue("--surface").trim() || "#fff";
+  const ink = css.getPropertyValue("--ink").trim() || "#222";
+  for (let y=0; y<gh; y++) for (let x=0; x<gw; x++){
+    const gi=y*gw+x, id=mAssign[gi], m=cellMeta[id];
+    ctx.fillStyle = m ? resolve(m.color) : surface;
+    ctx.fillRect(x*sx, y*sy, sx+1, sy+1);
+  }
+  // borders: thin between cells, thick between groups
+  ctx.fillStyle = surface;
+  for (let y=1; y<gh; y++) for (let x=1; x<gw; x++){
+    const gi=y*gw+x;
+    if (mAssign[gi]!==mAssign[gi-1] || mAssign[gi]!==mAssign[gi-gw]){
+      const thick = (gAssign[gi]!==gAssign[gi-1] || gAssign[gi]!==gAssign[gi-gw]);
+      const b = thick? 3.4 : 1.4;
+      ctx.fillRect(x*sx-b/2, y*sy-b/2, b, b*1.6); ctx.fillRect(x*sx-b/2, y*sy-b/2, b*1.6, b);
+    }
+  }
+  // labels at centroids of large cells
+  const acc={};
+  for (let y=0; y<gh; y++) for (let x=0; x<gw; x++){
+    const id=mAssign[y*gw+x]; if(id<0) continue;
+    (acc[id]=acc[id]||{n:0,x:0,y:0}); acc[id].n++; acc[id].x+=x; acc[id].y+=y;
+  }
+  ctx.textAlign="center"; ctx.textBaseline="middle";
+  Object.entries(acc).forEach(([id,a])=>{
+    const m = cellMeta[id]; if(!m || a.n < gw*gh*0.008) return;
+    ctx.font = `600 ${a.n > gw*gh*0.03 ? 26 : 18}px "IBM Plex Mono",monospace`;
+    ctx.fillStyle = "rgba(255,255,255,.92)";
+    ctx.fillText(m.label, a.x/a.n*sx, a.y/a.n*sy);
+  });
+  const cellAt = ev => {
+    const r = cv.getBoundingClientRect();
+    const x = Math.floor((ev.clientX-r.left)/r.width*gw);
+    const y = Math.floor((ev.clientY-r.top)/r.height*gh);
+    return mAssign[Math.max(0,Math.min(gh-1,y))*gw + Math.max(0,Math.min(gw-1,x))];
+  };
+  cv.addEventListener("mousemove", ev=>{
+    const m = cellMeta[cellAt(ev)];
+    if(!m){ tip.style.display="none"; return; }
+    const r = host.getBoundingClientRect();
+    tip.style.display="block"; tip.innerHTML = m.tip;
+    tip.style.left = Math.min(ev.clientX-r.left+14, r.width-250)+"px";
+    tip.style.top = (ev.clientY-r.top+14)+"px";
+  });
+  cv.addEventListener("mouseleave", ()=> tip.style.display="none");
+  if (onClick) cv.addEventListener("click", ev=>{ const id=cellAt(ev); if(cellMeta[id]) onClick(id); });
+  ctx.strokeStyle = ink; // keep ink referenced for theme redraw parity
+}
+let voronoiRedraws = [];
+function renderStateVoronoi(hostSel){
+  const groups = D.regions.map((r,ri)=> ri ? {
+    id: "R"+ri,
+    weight: D.parishes.filter(p=>p.region===ri).reduce((s,p)=>s+p.pop,0),
+    seeds: D.parishes.filter(p=>p.region===ri).map(p=>({
+      id: p.slug, weight: Math.max(p.pop,4), x: (p.col+0.5)/11, y: (p.row+0.5)/9 }))
+  } : null).filter(Boolean);
+  const tess = voronoiTessellate(groups, 560, 380, 24);
+  const meta = {};
+  D.parishes.forEach(p=>{ meta[p.slug] = {
+    color: WAVECOL[p.wave-1], label: abbr(p.name),
+    tip: `<b>${esc(p.name)} Parish</b>${esc(D.regions[p.region])} · ≈${p.pop}k residents<br>Wave ${p.wave} · ${D.waveYears[p.wave-1]}` };});
+  drawVoronoi(hostSel, tess, meta, 560, 380, id=> location.hash="#/parish/"+id);
+  $("#vorlegend") && ($("#vorlegend").innerHTML = D.waveYears.map((y,i)=>
+    `<span><i style="background:${WAVECOL[i]}"></i>Wave ${i+1} · ${y}</span>`).join("") +
+    `<span style="color:var(--faint)">cell area ∝ population · heavy borders = regions</span>`);
+}
+function renderCurrVoronoi(){
+  const FAMS = [["os","OS editions","var(--w1)"],["community","Community","var(--w2)"],
+                ["legacy","Legacy tracks","var(--w3)"],["foundation","Foundation","var(--faint)"]];
+  const kindOf = s => { const n = (D.catalog[s]||{}).name||"";
+    if (n.startsWith("Civic Leadership Legacy")) return "legacy";
+    if (n.startsWith("Cognition.X :") || n === "Non-Profit Practice") return "os";
+    return (D.catalog[s]||{}).ntracks ? "community" : "foundation"; };
+  const entries = Object.entries(D.catalog);
+  const groups = FAMS.map(([k,label,col],fi)=>{
+    const members = entries.filter(([s])=>kindOf(s)===k);
+    return { id:"F"+k, weight: members.reduce((s,[,c])=>s+c.blocks,0),
+      seeds: members.map(([s,c],i)=>({ id:s, weight:c.blocks,
+        x: (fi%2)*0.5 + 0.25 + 0.18*Math.cos(i*2.4), y: Math.floor(fi/2)*0.5 + 0.25 + 0.18*Math.sin(i*2.4) })) };
+  }).filter(g=>g.weight>0);
+  const tess = voronoiTessellate(groups, 560, 380, 24);
+  const meta = {};
+  FAMS.forEach(([k,label,col])=> entries.filter(([s])=>kindOf(s)===k).forEach(([s,c])=>{
+    meta[s] = {color: col, label: s.length>7 ? s.slice(0,6) : s,
+      tip: `<b>${esc(c.name)}</b>${c.blocks.toLocaleString()} blocks · ${label}`};}));
+  drawVoronoi("#vorcurr", tess, meta, 560, 380, null);
+  $("#vorcurrlegend").innerHTML = FAMS.map(([k,l,c])=>`<span><i style="background:${c}"></i>${l}</span>`).join("") +
+    `<span style="color:var(--faint)">cell area ∝ blocks</span>`;
+}
+/* expansion-to-wave-4 timelines: cumulative step-areas */
+function renderExpansion(){
+  const tot = D.parishes.reduce((s,p)=>s+p.pop,0);
+  let c=0, n=0;
+  const pts = [ {label:"start", parishes:0, pop:0} ].concat([1,2,3,4].map(w=>{
+    c += D.parishes.filter(p=>p.wave===w).length;
+    n += D.parishes.filter(p=>p.wave===w).reduce((s,p)=>s+p.pop,0);
+    return {label:"W"+w+" · "+D.waveYears[w-1], parishes:c, pop:Math.round(100*n/tot)};
+  }));
+  const draw = (sel, key, max, unit) => {
+    const W=520,H=190,L=40,R=10,T=12,B=34;
+    const x=i=>L+i*(W-L-R)/(pts.length-1), y=v=>H-B-(v/max)*(H-T-B);
+    let steps="M"+x(0)+","+y(0);
+    pts.forEach((p,i)=>{ if(i){ steps+=" L"+x(i)+","+y(pts[i-1][key])+" L"+x(i)+","+y(p[key]); }});
+    const area = steps + ` L${x(pts.length-1)},${y(0)} Z`;
+    $(sel).innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Cumulative ${key} by wave">`+
+      `<line x1="${L}" y1="${y(0)}" x2="${W-R}" y2="${y(0)}" stroke="var(--line)"/>`+
+      `<path d="${area}" fill="var(--gold-soft)"/>`+
+      `<path d="${steps}" fill="none" stroke="var(--gold)" stroke-width="2.5"/>`+
+      pts.map((p,i)=> i?`<circle cx="${x(i)}" cy="${y(p[key])}" r="4.5" fill="var(--gold)" stroke="var(--surface)" stroke-width="2"><title>${p.label}: ${p[key]}${unit}</title></circle>`+
+        `<text x="${x(i)}" y="${y(p[key])-10}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--ink)">${p[key]}${unit}</text>`+
+        `<text x="${x(i)}" y="${H-10}" text-anchor="middle" font-size="10" fill="var(--muted)">${p.label}</text>`:"").join("")+
+      `</svg>`;
+  };
+  draw("#tl-parishes","parishes",64,"");
+  draw("#tl-pop","pop",100,"%");
 }
 
 /* ---------- mission run-state (browser-local, per parish) ---------- */
@@ -940,13 +1163,16 @@ function renderRoles(){
         <div class="tile t3"><b>${recs}</b><span>parishes with mission records (this browser)</span></div>
       </div>
       <p class="note">Rollout by wave — click through to any parish from The State's tile map.</p>
-      <div id="ra-waves"></div></div>`;
+      <div id="ra-waves"></div>
+      <p class="note" style="margin-top:14px"><b>The state as cells</b> — population-weighted recursive Voronoi, colored by wave; click a cell for its parish.</p>
+      <div class="vorwrap" id="ra-vormap"></div></div>`;
     const wmax = Math.max(...[1,2,3,4].map(w=>D.parishes.filter(x=>x.wave===w).length));
     $("#ra-waves").innerHTML = [1,2,3,4].map(w=>{
       const nn = D.parishes.filter(x=>x.wave===w).length;
       return `<div class="hbar"><span class="lab">Wave ${w} · ${D.waveYears[w-1]}</span>`+
         `<span class="bar" style="width:${100*nn/wmax}%; background:${WAVECOL[w-1]}" title="Wave ${w}: ${nn} parishes"></span>`+
         `<span class="val">${nn}</span></div>`;}).join("");
+    try{ renderStateVoronoi("#ra-vormap"); }catch(e){}
   }
 
   const sel = $("#rs-parish") || $("#ra-parish");
@@ -963,6 +1189,7 @@ function initStyles(){
     else delete document.documentElement.dataset.theme;
     document.documentElement.dataset.style = st.value;
     store("cxla.theme", th.value); store("cxla.style", st.value);
+    setTimeout(()=>{ try{ renderStateVoronoi("#vormap"); renderCurrVoronoi(); }catch(e){} }, 30);
   };
   th.addEventListener("change", apply); st.addEventListener("change", apply); apply();
 }
@@ -1006,6 +1233,7 @@ window.addEventListener("hashchange", route);
 
 renderState(); renderParishPicker(); renderRegions(); renderCurriculum();
 renderInstitute(); renderLoop(); initStyles(); renderRoles();
+renderStateVoronoi("#vormap"); renderCurrVoronoi(); renderExpansion();
 renderParish(bySlug["east-baton-rouge"] || D.parishes[0]);
 route();
 </script>
