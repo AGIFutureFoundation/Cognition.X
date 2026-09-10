@@ -23,9 +23,15 @@ directly — change the template or the data and rebuild.
   plots every move on the skill–challenge plane with the channel
   shaded; a meter tracks time-in-channel. A Pacer runs 25/5 focus
   intervals.
-- **Agents** — the four rule-based session agents and their activity
-  feed: **Pathfinder** (selection), **Pacer** (rhythm), **Assessor**
-  (evidence), **Archivist** (memory).
+- **Agents** — eight rule-based agents: **Pathfinder** (selection),
+  **Pacer** (rhythm), **Assessor** (evidence), **Archivist** (memory),
+  plus the **tutor swarm** (v0.21.0): **Coach**, **Scholar**,
+  **Examiner** and **Motivator** share one session blackboard, each
+  proposes an intervention per move, and priority arbitration lets
+  exactly one act — the right nudge, never a chorus. With **voice** on
+  (on-device speech synthesis, no network), the acting agent speaks.
+- **Guide** — the 🧭 button starts a helper-agent walkthrough of every
+  surface, with spoken narration when voice is on.
 - **Ledger** — per-track credential progress (10 themes → credential),
   with copy/paste JSON export and import via the Archivist.
 

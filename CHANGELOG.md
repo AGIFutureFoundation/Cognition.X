@@ -4,6 +4,29 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.21.0] — 2026-09-10
+
+### Added
+- **Tutor swarm for flow-state optimization** (Flow Hub). Four new
+  tutor agents — Coach (scaffolds after consecutive struggles),
+  Scholar (context on each fresh theme), Examiner (evidence challenge
+  on every claimed check), Motivator (flow-streak recognition and the
+  break call every ten moves) — join the original four and operate as
+  a **swarm**: a shared session blackboard, every tutor proposes each
+  move, priority arbitration lets exactly one act. Interventions
+  appear in a tutor strip on the block card and in the feed.
+- **Voice agents** — on-device speech synthesis (no network): with
+  voice on, the acting tutor and the guide speak. Off by default;
+  toggle persisted; fully guarded where the API is absent.
+- **Active Guide** in both apps: a 🧭 button starts a helper-agent
+  walkthrough — 8 stops across Flow Hub, 9 across the Louisiana
+  platform — highlighting each feature with Back/Next/End, navigating
+  views itself, and narrating aloud when voice is on.
+- **System run verified end-to-end** headlessly: a full flow session
+  (Scholar on serve → Coach after two struggles → Motivator on a
+  three-move flow streak → Examiner on a claimed check), both guides
+  walked start to finish, zero page errors in both apps.
+
 ## [0.20.0] — 2026-09-10
 
 ### Added

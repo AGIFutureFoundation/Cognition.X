@@ -42,6 +42,10 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   be set aside, any catalog pack added as a parish choice (persisted
   per parish in the browser), and the whole program exported as
   `cxla-program/1` JSON.
+- **Guide & voice (v0.21.0)** — the 🧭 Guide button walks users
+  through all nine surfaces (helper-agent tour with Back/Next,
+  navigating views itself); the voice option narrates via on-device
+  speech synthesis.
 - **Voronoi cells & expansion timelines (v0.20.0)** — a recursive
   tessellating Voronoi of the state (regions → parishes, area ∝
   population, wave-colored, clickable) and of the curriculum
