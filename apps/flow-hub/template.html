@@ -204,6 +204,11 @@
       <select id="themepick" style="width:100%; background:var(--surface-2); color:var(--ink); border:1px solid var(--line); border-radius:7px; padding:5px 8px; font-size:.8rem">
         <option value="">System</option><option value="light">Light</option><option value="dark">Dark</option>
       </select>
+      <label class="mono" for="voicepick" style="font-size:.68rem; color:var(--faint); display:block; margin:8px 0 4px">voice agents</label>
+      <select id="voicepick" style="width:100%; background:var(--surface-2); color:var(--ink); border:1px solid var(--line); border-radius:7px; padding:5px 8px; font-size:.8rem">
+        <option value="">Off</option><option value="on">Speak</option>
+      </select>
+      <button class="btn primary" id="guidebtn" style="width:100%; margin-top:10px">🧭 Guide me</button>
     </div>
     <div class="railfoot mono" id="railfoot"></div>
   </nav>
@@ -269,6 +274,7 @@
               <button id="oc-flow">In the flow<small>hard but held — stay here</small></button>
               <button id="oc-struggled">Struggled<small>too steep — ease off</small></button>
             </div>
+            <div id="tutorstrip" hidden style="margin-top:12px; border:1px solid var(--accent); border-radius:9px; padding:10px 14px; font-size:.88rem; background:var(--accent-soft)"></div>
             <div style="margin-top:12px; display:flex; gap:9px; flex-wrap:wrap">
               <button class="btn" id="fs-complete">Mark transfer check complete</button>
               <button class="btn" id="fs-end">End session</button>
@@ -299,9 +305,11 @@
     <!-- ================= AGENTS ================= -->
     <section class="view" id="view-agents">
       <p class="eyebrow">Automation</p>
-      <h1>Four agents, one session</h1>
+      <h1>Eight agents, one swarm</h1>
       <p class="lede">Rule-based agents run the session machinery so your attention stays on the block in front
-      of you. Everything they do lands in the activity feed.</p>
+      of you. The four tutors operate as a <b>swarm</b>: they watch one shared blackboard of your session,
+      each proposes an intervention, and priority arbitration lets exactly one act per move — so you get the
+      right nudge, never a chorus. With voice on, the acting agent speaks. Everything lands in the feed.</p>
       <div class="agentgrid" id="agentgrid"></div>
       <div class="feed">
         <h2>Activity feed</h2>
@@ -353,13 +361,70 @@ let S = {done:{}, skills:{}, feed:[], flowPts:{}};
 try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(S, JSON.parse(raw)); } catch(e){}
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
 
-/* ---------- agents ---------- */
+/* ---------- voice (on-device speech synthesis; no network) ---------- */
+let voiceOn = false;
+try { voiceOn = localStorage.getItem("cxflow.voice") === "on"; } catch(e){}
+function say(text){
+  if (!voiceOn) return;
+  try {
+    if (!("speechSynthesis" in window)) return;
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = 1.04; speechSynthesis.cancel(); speechSynthesis.speak(u);
+  } catch(e){}
+}
+
+/* ---------- agents & the tutor swarm ---------- */
 const AGENTS = [
   {id:"pathfinder", name:"Pathfinder", role:"Selection", desc:"Chooses the next block: the least-visited theme in your track, served at the band your skill calls for."},
   {id:"pacer", name:"Pacer", role:"Rhythm", desc:"Runs the focus interval and tells you when the interval turns, so the clock never lives in your head."},
   {id:"assessor", name:"Assessor", role:"Evidence", desc:"Holds the transfer check in view and records the completion that actually earns credit."},
-  {id:"archivist", name:"Archivist", role:"Memory", desc:"Keeps the ledger in this browser and hands you a portable copy on request."}
+  {id:"archivist", name:"Archivist", role:"Memory", desc:"Keeps the ledger in this browser and hands you a portable copy on request."},
+  {id:"coach", name:"Coach", role:"Swarm · Scaffold", desc:"Watches for consecutive struggles and steps in with the smaller first step before frustration wins."},
+  {id:"scholar", name:"Scholar", role:"Swarm · Context", desc:"On a fresh theme, gives the one line of why-this-matters before you start."},
+  {id:"examiner", name:"Examiner", role:"Swarm · Evidence", desc:"When you claim a check, reminds you what counts as real evidence for it."},
+  {id:"motivator", name:"Motivator", role:"Swarm · Flow", desc:"Marks flow streaks, calls the break before burnout, and keeps the channel honest."}
 ];
+/* Swarm blackboard: shared session state every tutor reads. Each tick every
+   tutor proposes (or passes); the highest-priority proposal acts — one voice
+   per move. Deterministic, rule-based, fully local. */
+const BB = {outcomes:[], lastTheme:-1, seenThemes:new Set(), moves:0, ticks:0};
+function tutorStrip(who, msg){
+  const el = $("#tutorstrip");
+  el.hidden = false;
+  el.innerHTML = `<b style="color:var(--accent)">${esc(who)}:</b> ${esc(msg)}`;
+  log(who, msg); say(who + " says: " + msg);
+}
+const SWARM_RULES = [
+  {who:"Coach", pri:1, fire(){
+    const o = BB.outcomes;
+    if (o.length>=2 && o[o.length-1]==="struggled" && o[o.length-2]==="struggled")
+      return "Two steep ones in a row — I have eased the band. Do only the first small step of this check, then stop and look.";
+  }},
+  {who:"Motivator", pri:2, fire(){
+    const o = BB.outcomes;
+    if (o.length>=3 && o.slice(-3).every(x=>x==="flow"))
+      return "Three moves in the channel — that is flow state. Hold this pace; do not raise the stakes yourself.";
+    if (BB.moves>0 && BB.moves%10===0)
+      return "Ten moves this session. Take the Pacer's break before the next block — flow survives rest, not grind.";
+  }},
+  {who:"Scholar", pri:3, fire(){
+    if (F && F.theme!==BB.lastTheme && !BB.seenThemes.has(F.theme)){
+      BB.seenThemes.add(F.theme);
+      const th = F.t.themes[F.theme];
+      return "New theme. " + th[1].split("—")[0].trim() + " — that is what this block is really about.";
+    }
+  }},
+];
+function swarmTick(){
+  if (!F) return;
+  BB.ticks++;
+  for (const r of SWARM_RULES.sort((a,b)=>a.pri-b.pri)){
+    const msg = r.fire();
+    if (msg){ tutorStrip(r.who, msg); BB.lastTheme = F.theme; return; }
+  }
+  BB.lastTheme = F.theme;
+  $("#tutorstrip").hidden = true;
+}
 function log(who, msg){
   S.feed.unshift({who, msg, t: Date.now()});
   S.feed = S.feed.slice(0, 60);
@@ -537,8 +602,10 @@ function outcome(kind){
   if (kind==="flow"){ F.skill = Math.min(5, F.skill + .2); F.challenge = Math.min(5, Math.max(F.challenge, F.skill + .4)); }
   if (kind==="struggled"){ F.skill = Math.max(1, F.skill - .1); F.challenge = Math.max(1, F.challenge - 1); }
   F.pts.push({s:F.skill, c:F.challenge});
+  BB.outcomes.push(kind); BB.moves++;
   (S.flowPts[F.key] = F.pts.slice(-24)); save();
   nextBlock();
+  swarmTick();
 }
 $("#oc-breezed").addEventListener("click", ()=>outcome("breezed"));
 $("#oc-flow").addEventListener("click", ()=>outcome("flow"));
@@ -554,6 +621,7 @@ $("#fs-complete").addEventListener("click", () => {
   if (n === 10) log("Assessor", `Credential earned: ${F.t.credential} — all ten themes checked.`);
   renderLedger();
   outcome("flow");
+  tutorStrip("Examiner", "Recorded — but a check is only as good as its evidence. Could a stranger verify what you just did from what exists?");
 });
 $("#fs-end").addEventListener("click", () => {
   if (F) log("Archivist", `Session on “${F.t.name}” saved — ${F.pts.length} moves, skill now ${F.skill.toFixed(1)}.`);
@@ -688,6 +756,58 @@ function go(v){
   window.scrollTo({top:0});
 }
 document.querySelectorAll(".navbtn").forEach(b => b.addEventListener("click", () => go(b.dataset.view)));
+
+/* ---------- guide: the helper agent tour ---------- */
+const TOUR = [
+  {view:"system", sel:".tiles", t:"The system at a glance", m:"Every number here is computed live from the dataset — blocks, packs, tracks, credentials."},
+  {view:"system", sel:"#constellation", t:"The pack constellation", m:"Every pack in the series. Click any card to open it in the explorer."},
+  {view:"packs", sel:"#packsearch", t:"Find anything", m:"Search across every pack, track and theme. The family chips filter by series."},
+  {view:"flow", sel:"#flowsetup", t:"Start a flow session", m:"Pick a track and where your skill sits today. The engine serves blocks just above it."},
+  {view:"flow", sel:"#flowchart", t:"The flow channel", m:"Every move lands on this skill-versus-challenge plane. Staying in the gold band is flow state."},
+  {view:"flow", sel:"#pace-toggle", t:"The Pacer", m:"Twenty-five minutes of focus, five of rest. The swarm calls the break before burnout."},
+  {view:"agents", sel:"#agentgrid", t:"The agent swarm", m:"Eight agents share one blackboard of your session; exactly one intervenes per move. Turn voice on and the acting agent speaks."},
+  {view:"ledger", sel:"#ledgrid", t:"Your ledger", m:"Ten themes checked earns the credential. The Archivist exports your ledger and an anonymized training trace — nothing leaves this page on its own."},
+];
+let tourStep = -1, tourBox = null;
+function tourEnd(){
+  tourStep = -1;
+  if (tourBox){ tourBox.remove(); tourBox = null; }
+  document.querySelectorAll(".tour-hl").forEach(e=>{ e.classList.remove("tour-hl"); e.style.outline=""; e.style.outlineOffset=""; });
+  try{ speechSynthesis && speechSynthesis.cancel(); }catch(e){}
+}
+function tourShow(i){
+  tourEnd(); tourStep = i;
+  const s = TOUR[i]; if (!s) return;
+  go(s.view);
+  const el = document.querySelector(s.sel); if (!el) return;
+  el.classList.add("tour-hl"); el.style.outline = "3px solid var(--accent)"; el.style.outlineOffset = "4px";
+  el.scrollIntoView({block:"center"});
+  tourBox = document.createElement("div");
+  tourBox.setAttribute("role","dialog");
+  tourBox.style.cssText = "position:fixed; bottom:18px; left:50%; transform:translateX(-50%); z-index:60; background:var(--surface); border:1px solid var(--accent); border-radius:12px; padding:14px 18px; max-width:440px; width:calc(100% - 32px); box-shadow:var(--shadow); font-size:.9rem";
+  tourBox.innerHTML = `<b style="color:var(--accent)">Guide · step ${i+1} of ${TOUR.length}</b><div style="margin:.35em 0 .1em; font-weight:600">${esc(s.t)}</div><div style="color:var(--muted)">${esc(s.m)}</div>
+    <div style="display:flex; gap:8px; margin-top:12px">
+      <button class="btn" id="tour-prev" ${i===0?"disabled":""}>Back</button>
+      <button class="btn primary" id="tour-next">${i===TOUR.length-1?"Done":"Next"}</button>
+      <button class="btn" id="tour-x" style="margin-left:auto">End tour</button></div>`;
+  document.body.appendChild(tourBox);
+  tourBox.querySelector("#tour-next").addEventListener("click", ()=> i===TOUR.length-1 ? tourEnd() : tourShow(i+1));
+  tourBox.querySelector("#tour-prev").addEventListener("click", ()=> tourShow(i-1));
+  tourBox.querySelector("#tour-x").addEventListener("click", tourEnd);
+  say(s.t + ". " + s.m);
+}
+$("#guidebtn").addEventListener("click", ()=>{ log("Guide","Walkthrough started — eight stops across the hub."); tourShow(0); });
+
+/* ---------- voice option ---------- */
+(function(){
+  const vp = $("#voicepick");
+  vp.value = voiceOn ? "on" : "";
+  vp.addEventListener("change", ()=>{
+    voiceOn = vp.value === "on";
+    try{ localStorage.setItem("cxflow.voice", vp.value||"off"); }catch(e){}
+    if (voiceOn) say("Voice agents on. I am the guide; the tutor swarm will speak when it steps in.");
+  });
+})();
 
 /* ---------- theme option ---------- */
 (function(){

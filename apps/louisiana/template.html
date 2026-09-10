@@ -246,6 +246,11 @@
     <select id="stylepick" style="padding:4px 8px; font-size:.78rem">
       <option value="parade">Parade</option><option value="classic">Classic</option>
     </select>
+    <label class="mono" for="voicepick" style="font-size:.7rem; color:var(--faint)">voice</label>
+    <select id="voicepick" style="padding:4px 8px; font-size:.78rem">
+      <option value="">Off</option><option value="on">Speak</option>
+    </select>
+    <button class="btn gold" id="guidebtn" style="padding:5px 14px; font-size:.8rem">🧭 Guide</button>
     <span class="mono" id="verline" style="font-size:.72rem; color:var(--faint)"></span>
   </div>
 </div></header>
@@ -1179,6 +1184,66 @@ function renderRoles(){
   if (sel) sel.addEventListener("change", e=>{ R.parish = e.target.value; saveR(); });
 }
 
+/* ---------- voice + the guide agent ---------- */
+let voiceOn = false;
+try { voiceOn = store("cxla.voice") === "on"; } catch(e){}
+function say(text){
+  if (!voiceOn) return;
+  try { if (!("speechSynthesis" in window)) return;
+    const u = new SpeechSynthesisUtterance(text); u.rate = 1.04;
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  } catch(e){}
+}
+const TOUR = [
+  {hash:"#/state", sel:"#mapbox", t:"Sixty-four parishes", m:"The tile map — click any parish to open its independent dashboard. Colors are the four rollout waves."},
+  {hash:"#/state", sel:"#vormap", t:"The state as cells", m:"The recursive Voronoi: regions tessellated by parishes, cell area proportional to population. Hover for the numbers."},
+  {hash:"#/state", sel:"#tl-parishes", t:"Expansion to Wave 4", m:"The cumulative build-out: five, then twenty-one, forty, and all sixty-four parishes in full run by 2030."},
+  {hash:"#/parish/east-baton-rouge", sel:"#pplan", t:"The parish module plan", m:"The core spine plus packs earned by this parish's own industries — each with the phrase that earned it."},
+  {hash:"#/parish/east-baton-rouge", sel:"#pmissions", t:"The mission module", m:"Five rungs built from this parish's narrative world. Check rungs as an assessor confirms them."},
+  {hash:"#/roles", sel:"#rolechips", t:"Every seat's dashboard", m:"Student, teacher, parent, homeschool, parish and state admin — pick your role and work from your own view."},
+  {hash:"#/institute", sel:"#arcs", t:"The Legacy Institute", m:"Twelve principles of leadership, ethics and civic duty — with the universal model localizable to any state or country."},
+  {hash:"#/machines", sel:"#loopdiagram", t:"Agents and robots", m:"One block, two learners: humans earn credentials, and with consent, machines learn from how it was done."},
+  {hash:"#/curriculum", sel:"#vorcurr", t:"The curriculum as cells", m:"Every pack in the ledger, tessellated by family, sized by blocks. That is the whole system on one canvas."},
+];
+let tourBox = null;
+function tourEnd(){
+  if (tourBox){ tourBox.remove(); tourBox = null; }
+  document.querySelectorAll(".tour-hl").forEach(e=>{ e.classList.remove("tour-hl"); e.style.outline=""; e.style.outlineOffset=""; });
+  try{ speechSynthesis && speechSynthesis.cancel(); }catch(e){}
+}
+function tourShow(i){
+  tourEnd();
+  const s = TOUR[i]; if (!s) return;
+  location.hash = s.hash;
+  setTimeout(()=>{
+    const el = document.querySelector(s.sel); if (!el) return;
+    el.classList.add("tour-hl"); el.style.outline = "3px solid var(--gold)"; el.style.outlineOffset = "4px";
+    el.scrollIntoView({block:"center"});
+    tourBox = document.createElement("div");
+    tourBox.setAttribute("role","dialog");
+    tourBox.style.cssText = "position:fixed; bottom:18px; left:50%; transform:translateX(-50%); z-index:60; background:var(--surface); border:1px solid var(--gold); border-radius:12px; padding:14px 18px; max-width:460px; width:calc(100% - 32px); box-shadow:var(--shadow); font-size:.9rem";
+    tourBox.innerHTML = `<b style="color:var(--gold)">Guide · ${i+1} of ${TOUR.length}</b><div style="margin:.35em 0 .1em; font-weight:600">${esc(s.t)}</div><div style="color:var(--muted)">${esc(s.m)}</div>
+      <div style="display:flex; gap:8px; margin-top:12px">
+        <button class="btn" id="tour-prev" ${i===0?"disabled":""}>Back</button>
+        <button class="btn gold" id="tour-next">${i===TOUR.length-1?"Done":"Next"}</button>
+        <button class="btn" id="tour-x" style="margin-left:auto">End</button></div>`;
+    document.body.appendChild(tourBox);
+    tourBox.querySelector("#tour-next").addEventListener("click", ()=> i===TOUR.length-1 ? tourEnd() : tourShow(i+1));
+    tourBox.querySelector("#tour-prev").addEventListener("click", ()=> tourShow(i-1));
+    tourBox.querySelector("#tour-x").addEventListener("click", tourEnd);
+    say(s.t + ". " + s.m);
+  }, 220);
+}
+function initGuide(){
+  $("#guidebtn").addEventListener("click", ()=> tourShow(0));
+  const vp = $("#voicepick");
+  vp.value = voiceOn ? "on" : "";
+  vp.addEventListener("change", ()=>{
+    voiceOn = vp.value === "on"; store("cxla.voice", vp.value || "off");
+    if (voiceOn) say("Voice on. Press Guide and I will walk you through the platform.");
+  });
+}
+
 /* ---------- style options ---------- */
 function initStyles(){
   const th = $("#themepick"), st = $("#stylepick");
@@ -1232,7 +1297,7 @@ $("#prand").addEventListener("click", ()=> location.hash="#/parish/"+D.parishes[
 window.addEventListener("hashchange", route);
 
 renderState(); renderParishPicker(); renderRegions(); renderCurriculum();
-renderInstitute(); renderLoop(); initStyles(); renderRoles();
+renderInstitute(); renderLoop(); initStyles(); renderRoles(); initGuide();
 renderStateVoronoi("#vormap"); renderCurrVoronoi(); renderExpansion();
 renderParish(bySlug["east-baton-rouge"] || D.parishes[0]);
 route();
