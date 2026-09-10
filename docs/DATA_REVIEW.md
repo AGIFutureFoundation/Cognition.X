@@ -65,12 +65,17 @@ sections; the only other diff is the fonts `<link>`).
    plus bridge rows. All legitimate on inspection; the validator treats
    them as legacy-pack shapes.
 
-5. **App data vs. CSV (documented).** The app embeds its own master-block
-   library, which by v227 has grown past the CSV export (the CSV predates
-   the last app rounds, e.g. the 120 Sector Specialization blocks and an
-   Education OS edition present in the app but absent from the CSV).
-   Reconciling app-embedded data with `blocks.csv` — one source of truth,
-   injected at build time — is Phase 2 of the roadmap.
+5. **App data vs. CSV (reconciliation underway).** The app embeds its
+   own master-block library, which by v227 had grown past the CSV
+   export. *Update (v0.17.0):* the app's uniform sector master-block
+   library (`DATA.sectorBlocks` — 5,200 practice blocks, codes
+   `T0A…T0Z`, including the app-only **Education OS** edition) is now
+   extracted into the dataset by `tools/extract_app_blocks.py`,
+   mapped as adult `Lead`-level practice rows (task + outcome joined
+   as the transfer check; descriptions deferred with the other
+   foundation authoring). Remaining Phase 2 work: the app's
+   non-uniform earlier structures (wlb courses, K-12 program layers)
+   and rebuilding the app itself from `blocks.csv`.
 
 ## Continuation
 

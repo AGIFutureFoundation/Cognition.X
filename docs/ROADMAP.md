@@ -90,9 +90,13 @@ standards-mapped; validator extended to rubric and mapping checks.
 - [x] Prove the build pattern (v0.7.0): **Flow Hub** is generated from
   `blocks.csv` by `tools/build_flow_hub.py` — single-file output,
   flow-state session engine, session agents, credential ledger
+- [x] Reconcile the app's embedded sector master-block library into
+  the dataset (v0.17.0): 5,200 practice blocks extracted, including
+  the app-only Education OS edition — `tools/extract_app_blocks.py`
 - Split the 8 MB Education OS single-file app onto the same pipeline,
   keeping the *output* single-file and offline-first — that constraint
-  is a feature for low-connectivity deployments
+  is a feature for low-connectivity deployments (remaining: the app's
+  non-uniform early structures, then template-building the app)
 - Learner state: local-first progress store (IndexedDB) with export/import;
   no account required
 - Credential ledger v1: signed completion records (W3C Verifiable

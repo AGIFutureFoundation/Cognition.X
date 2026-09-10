@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.16.0** | Parish mission modules (64 × 5 generated capstone ladders from each parish's narrative world), plan customizer, parish program export |
+| **v0.17.0** | App reconciliation slice one: 5,200 sector master blocks extracted into the dataset, revealing the Education OS edition — 14,950 blocks / 37 packs |
+| v0.16.0 | Parish mission modules (64 × 5 generated capstone ladders from each parish's narrative world), plan customizer, parish program export |
 | v0.15.0 | Cognition.X : Louisiana OS (500 blocks, 10 tracks — river, coast, corridor, ports, agriculture, table, music, languages, festivals, storm memory), added to every parish's core spine |
 | v0.14.0 | Structural backfill complete: code + level on all 9,250 rows (light fill for the 1,000 irregular foundation rows); validator requires both dataset-wide |
 | v0.13.0 | All 217 placeholder transfer checks replaced with authored per-theme checks (1,085 rows; guarded substitution) — zero placeholders remain |

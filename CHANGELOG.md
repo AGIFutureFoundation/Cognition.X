@@ -4,6 +4,26 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.17.0] — 2026-09-10
+
+### Added
+- **App reconciliation, first slice (roadmap Phase 2).** The Education
+  OS app's embedded **sector master-block library** — 5,200 uniform
+  practice blocks (`DATA.sectorBlocks`, codes `T0A…T0Z`) accumulated
+  across the app's internal rounds and never present in the CSV
+  export — is now extracted into the canonical dataset by the new
+  `tools/extract_app_blocks.py` (deterministic; later-round
+  redefinitions win). 909 adult practice tracks land as `Lead`-level
+  micro-blocks (task + outcome as the transfer check) across the seven
+  existing OS editions and Non-Profit Practice — and reveal a whole
+  new edition: **Cognition.X : Education OS** (660 blocks), previously
+  app-only.
+- Flow Hub surfaces each OS edition's practice library ("+660 master
+  practice blocks…") alongside its banded tracks; pack-family
+  classification now keys on names so grown OS packs stay OS.
+- Canonical totals: **14,950 blocks · 37 packs · 175 tracks · 1,360
+  credentials**.
+
 ## [0.16.0] — 2026-09-10
 
 ### Added
