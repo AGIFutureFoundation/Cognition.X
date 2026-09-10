@@ -33,9 +33,14 @@ sections; the only other diff is the fonts `<link>`).
    Water/Land/Climate, Care Across a Life, Making/Repair/Reuse) carried
    their track structure as `(XX)` suffixes in theme names and are now
    promoted to the tracked schema via `data/promotions/*.json` — 1,250
-   rows backfilled, source values untouched. 1,000 irregular rows remain
-   (K–12, Trade School, and seven thematic packs); see the
-   [roadmap](ROADMAP.md).
+   rows backfilled, source values untouched. *Update (v0.14.0):* the
+   1,000 irregular rows (K–12, Trade School, and seven thematic packs)
+   received a structural light fill — deterministic `code` (`LB-<n>`)
+   and grade-derived `level` on every row, with the validator now
+   requiring both dataset-wide. Their shapes are irregular by design
+   and are not forced into 10×5; authored `description` (and `track`
+   where genuine groupings exist) is the remaining content work — see
+   the [roadmap](ROADMAP.md).
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

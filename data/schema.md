@@ -8,9 +8,9 @@ at one grade band, with a transfer check that proves it.
 | `block_id` | always | Globally unique, stable id: `CX-<PACK>-<NNNN>` (pack slug + 1-based row number within the pack, source order). Never reused, never renumbered. Assigned by `tools/normalize_blocks.py`. |
 | `pack` | always | Curriculum pack (35 today; see `manifest.json`). |
 | `track` | tracked packs | Named journey inside a pack; one credential per track. Empty on legacy packs. |
-| `code` | tracked packs | Source code `<PREFIX>-<n>`, unique **within its pack only** (prefixes are reused across packs — always join on `block_id`). |
+| `code` | always | `<PREFIX>-<n>`, unique **within its pack only** (prefixes are reused across packs — always join on `block_id`). Foundation-library rows carry light-fill codes `LB-<n>`. |
 | `grade` | always | Grade band `K–2 / 3–5 / 6–8 / 9–10 / 11–12` on tracked packs; single grades, bridge or adult bands on legacy packs. |
-| `level` | tracked packs | Depth tier bound to the band: K–2 & 3–5 → `Explorer`, 6–8 → `Builder`, 9–10 → `Practitioner`, 11–12 → `Lead`. |
+| `level` | always | Depth tier: K–2 & 3–5 → `Explorer`, 6–8 → `Builder`, 9–10 → `Practitioner`, 11–12 → `Lead`; single grades map into those bands, adult/capstone rows → `Lead`. |
 | `credential` | always | Credential the block counts toward (the track credential on tracked packs; per-row credentials on legacy packs). |
 | `theme` | always | The block's topic. Tracked packs: exactly 10 themes per track, each appearing once per band (track = 50 blocks). |
 | `description` | tracked packs | What the block teaches, suffixed `— at <band>`. |

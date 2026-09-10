@@ -32,10 +32,14 @@ stable id. ✅
   - [x] The five banded 250-row packs (Basic Life Skills, Preventive
     Health, Water/Land/Climate, Care Across a Life, Making/Repair/
     Reuse) — promoted via `data/promotions/` in v0.8.0 (1,250 rows)
-  - Remaining 1,000 rows: K–12 (64), Trade School (47), Future-Work,
-    Regional, Civic & Leadership, Health & Community, Language/Culture
-    (111 each), Empathy & EI and Community & Relationship (167 each) —
-    irregular shapes needing per-pack design, not mechanical promotion
+  - [x] Structural fill for the irregular remainder (v0.14.0): all
+    1,000 rows now carry `code` and `level`; validator requires both
+    dataset-wide
+  - Remaining content work on those 1,000 rows: authored `description`
+    per row and, where genuine groupings exist (the credential groups
+    in Civic & Leadership, Language/Culture, Empathy & EI, Community &
+    Relationship, Regional), named `track` values — their shapes are
+    irregular by design and will not be forced into 10×5
 - [x] Replace the placeholder transfer checks surfaced by the v0.8.0
   review with real per-theme checks — shipped in v0.13.0 (217 themes /
   1,085 rows; guarded replacement, zero placeholders remain)

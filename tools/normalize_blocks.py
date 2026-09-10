@@ -142,9 +142,45 @@ def apply_promotions(rows):
               + (f"; replaced {checks} placeholder transfer checks" if checks else ""))
 
 
+# Level derivation for foundation-library rows that use single grades,
+# adult bands, or capstone markers instead of the five standard bands.
+GRADE_LEVEL = {
+    **BAND_LEVEL,
+    "K": "Explorer", "1": "Explorer", "2": "Explorer",
+    "3": "Explorer", "4": "Explorer", "5": "Explorer",
+    "6": "Builder", "7": "Builder", "8": "Builder",
+    "9": "Practitioner", "10": "Practitioner",
+    "11": "Lead", "12": "Lead",
+    "9–12 · adult": "Lead", "11–12 · adult": "Lead",
+    "—": "Lead",  # Trade School capstones
+}
+
+
+def light_fill(rows):
+    """Structural completion for the irregular foundation packs: every row
+    gets a code (LB-<n>, unique within its pack) and a level derived from
+    its grade. track and description are content work and stay deferred —
+    empty fields only; nothing is overwritten."""
+    counters = {}
+    coded = leveled = 0
+    for r in rows:
+        if not r["code"]:
+            counters[r["pack"]] = counters.get(r["pack"], 0) + 1
+            r["code"] = f"LB-{counters[r['pack']]}"
+            coded += 1
+        if not r["level"]:
+            level = GRADE_LEVEL.get(r["grade"])
+            if level:
+                r["level"] = level
+                leveled += 1
+    if coded or leveled:
+        print(f"light fill: assigned {coded} codes and {leveled} levels on foundation rows")
+
+
 def main():
     rows = read_rows()
     apply_promotions(rows)
+    light_fill(rows)
     counters = {}
     for r in rows:
         slug = slug_for(r["pack"])
