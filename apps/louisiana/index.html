@@ -161,6 +161,48 @@
   .distbar{display:flex; height:24px; border-radius:7px; overflow:hidden; gap:2px; margin:12px 0 4px; background:var(--bg)}
 
   .foot{border-top:1px solid var(--line); margin-top:56px; padding-block:18px 8px; font-size:.76rem; color:var(--faint); max-width:76ch}
+
+  /* ---------- Institute (flagship) ---------- */
+  .arc{margin-top:26px}
+  .archead{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+  .archead h2{margin:0}
+  .arctag{font-size:.7rem; text-transform:uppercase; letter-spacing:.14em; font-weight:700; border-radius:999px; padding:3px 12px; color:#fff}
+  .pgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; margin-top:14px}
+  .pcard{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:15px 17px; border-top:3px solid var(--arc,var(--purple))}
+  .pcard .pn{font-family:"IBM Plex Mono",monospace; font-size:.7rem; color:var(--faint)}
+  .pcard h4{font-family:Fraunces,Georgia,serif; font-weight:600; font-size:1.02rem; margin:.25em 0 .45em; line-height:1.3}
+  .pcard .teach{font-size:.84rem; color:var(--muted); margin:0 0 8px}
+  .pcard .src{font-size:.72rem; color:var(--faint)}
+  blockquote.big{font-family:Fraunces,Georgia,serif; font-size:clamp(1.15rem,2.4vw,1.5rem); line-height:1.4; margin:26px 0;
+    padding:18px 22px; border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 12px 12px 0}
+  blockquote.big footer{font-family:"Instrument Sans",sans-serif; font-size:.8rem; color:var(--muted); margin-top:8px}
+  .disc{border:1px dashed var(--line); border-radius:11px; padding:13px 16px; font-size:.8rem; color:var(--muted); margin-top:26px}
+  .loctable{width:100%; border-collapse:collapse; font-size:.88rem}
+  .loctable th,.loctable td{padding:9px 12px; text-align:left; border-top:1px solid var(--line); vertical-align:top}
+  .loctable thead th{border-top:0; font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; color:var(--faint)}
+  .loctable td:first-child{color:var(--muted); white-space:nowrap}
+  .locwrap{overflow-x:auto}
+
+  /* ---------- Agents & Robots ---------- */
+  .loopwrap{overflow-x:auto; margin-top:8px}
+  .ecogrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; margin-top:14px}
+  .eco{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:15px 17px}
+  .eco .k{font-size:.68rem; text-transform:uppercase; letter-spacing:.13em; color:var(--gold); font-weight:700}
+  .eco h4{font-family:Fraunces,Georgia,serif; margin:.2em 0 .35em; font-size:1.02rem}
+  .eco p{font-size:.83rem; color:var(--muted); margin:0 0 10px}
+  .eco ul{margin:0; padding-left:18px; font-size:.78rem; color:var(--muted)}
+  pre.trace{background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:14px 16px;
+    font-family:"IBM Plex Mono",monospace; font-size:.76rem; overflow-x:auto; line-height:1.5; color:var(--ink)}
+  .sig{display:grid; gap:8px; margin-top:12px}
+  .sig div{display:flex; gap:10px; align-items:baseline; border:1px solid var(--line); border-radius:9px; padding:9px 13px; background:var(--surface); font-size:.86rem}
+  .sig b{color:var(--purple); white-space:nowrap}
+
+  /* ---------- Classic style tones the parade down ---------- */
+  :root[data-style="classic"] .wordmark .la{background:none; color:var(--purple)}
+  :root[data-style="classic"] .worldcard{background:var(--surface)}
+  :root[data-style="classic"] blockquote.big{background:var(--surface); border-left-color:var(--line)}
+  :root[data-style="classic"] .eyebrow b,:root[data-style="classic"] .eyebrow i,:root[data-style="classic"] .eyebrow em{color:var(--muted)}
+  :root[data-style="classic"] .tile.t1 b,:root[data-style="classic"] .tile.t2 b,:root[data-style="classic"] .tile.t3 b{color:var(--ink)}
 </style>
 
 <header class="masthead"><div class="wrap mast">
@@ -169,9 +211,21 @@
     <button class="tab" data-r="state" aria-current="true">The State</button>
     <button class="tab" data-r="parish">Parish Dashboards</button>
     <button class="tab" data-r="regions">Regions &amp; Trade Halls</button>
+    <button class="tab" data-r="institute">The Institute</button>
+    <button class="tab" data-r="machines">Agents &amp; Robots</button>
     <button class="tab" data-r="curriculum">Curriculum</button>
   </nav>
-  <span class="mono" id="verline" style="margin-left:auto; font-size:.72rem; color:var(--faint)"></span>
+  <div class="styles" style="margin-left:auto; display:flex; gap:8px; align-items:center">
+    <label class="mono" for="themepick" style="font-size:.7rem; color:var(--faint)">theme</label>
+    <select id="themepick" style="padding:4px 8px; font-size:.78rem">
+      <option value="">System</option><option value="light">Light</option><option value="dark">Dark</option>
+    </select>
+    <label class="mono" for="stylepick" style="font-size:.7rem; color:var(--faint)">style</label>
+    <select id="stylepick" style="padding:4px 8px; font-size:.78rem">
+      <option value="parade">Parade</option><option value="classic">Classic</option>
+    </select>
+    <span class="mono" id="verline" style="font-size:.72rem; color:var(--faint)"></span>
+  </div>
 </div></header>
 
 <main class="wrap">
@@ -227,6 +281,101 @@
     <div class="reggrid" id="reggrid"></div>
   </section>
 
+  <!-- ================= INSTITUTE (flagship) ================= -->
+  <section class="view" id="view-institute">
+    <p class="eyebrow"><b>The flagship</b> · <i>leadership · ethics · civic duty</i> · <em>for every state and country</em></p>
+    <h1>The Legacy Institute</h1>
+    <p class="lede">The civic-leadership cornerstone of every Cognition.X edition, built on the public record and
+    published principles of the Willie L. Brown Jr. Institute of Politics and Public Service — twelve principles
+    taught as craft, localized through one template to any state or country.</p>
+    <blockquote class="big" id="wlbquote"></blockquote>
+    <div id="arcs"></div>
+
+    <h2>The record behind the principles</h2>
+    <p class="sub">Four decades of public life, read as curriculum.</p>
+    <div class="pgrid" id="recordgrid"></div>
+
+    <h2>One template, every edition</h2>
+    <p class="sub">The eight slots that localize the Institute model anywhere — pick an edition to see them resolve.</p>
+    <div class="pickrow"><label for="locpick" style="font-weight:600">Edition</label><select id="locpick"></select></div>
+    <div class="panel locwrap"><table class="loctable" id="loctable"></table></div>
+    <div class="disc" id="wlbdisc"></div>
+  </section>
+
+  <!-- ================= AGENTS & ROBOTS ================= -->
+  <section class="view" id="view-machines">
+    <p class="eyebrow"><b>Machine learners</b> · <i>every module teaches twice</i></p>
+    <h1>Agents and robots in the loop</h1>
+    <p class="lede">Every Cognition.X block ends in a human doing something real. Done with consent and care, those
+    interactions are also the highest-grade training signal a learning agent or robot can get — and the flow-state
+    engine that paces a human learner paces a machine curriculum just as well.</p>
+
+    <div class="panel">
+      <h3>The learning loop</h3>
+      <p class="note">One block, two learners: the human earns the credential; the machine, with consent, learns from how it was done.</p>
+      <div class="loopwrap" id="loopdiagram"></div>
+    </div>
+
+    <div class="chartrow">
+      <div class="panel">
+        <h3>What one module teaches a machine</h3>
+        <p class="note">The machine-learnable signals inside every transfer check.</p>
+        <div class="sig">
+          <div><b>Demonstration</b><span>The human's step order, grip, phrasing and corrections on real material — imitation-learning gold.</span></div>
+          <div><b>Correction</b><span>Where a learner or assessor says "not like that" — the negative examples models rarely get.</span></div>
+          <div><b>Pacing</b><span>How long each band actually takes a human — the ground truth for curriculum difficulty.</span></div>
+          <div><b>Boundaries</b><span>The steps humans refuse or escalate — safety limits learned from practice, not just rules.</span></div>
+          <div><b>Flow telemetry</b><span>Breezed / in-flow / struggled outcomes on the skill–challenge plane — the reward shape itself.</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Flow state for machines</h3>
+        <p class="note">The same channel that paces a person paces an agent.</p>
+        <p style="font-size:.9rem; margin:0 0 10px">Curriculum learning is the flow channel by another name: serve the
+        machine tasks just above its demonstrated competence, ease off on failure, advance on mastery. The Flow Hub's
+        engine — challenge within <span class="mono">skill −0.6 … +1.1</span> — is the scheduler for both learners.</p>
+        <p style="font-size:.9rem; margin:0 0 10px">A robot trained on module traces climbs the same ladder a learner
+        does: <b>Explorer</b> (observe &amp; classify) → <b>Builder</b> (assist on subtasks) → <b>Practitioner</b>
+        (perform under supervision) → <b>Lead</b> (teach back, flag exceptions).</p>
+        <p class="note" style="margin:0">Sample trace (CX-Trace v1 — what the Flow Hub Archivist exports):</p>
+        <pre class="trace">{ "format": "cx-trace/1",
+  "block": "CX-HOUSING-0003",
+  "band": "6–8", "level": "Builder",
+  "moves": [{"skill": 2.4, "challenge": 3, "outcome": "flow"}],
+  "check": {"completed": true, "evidence": "local"},
+  "consent": {"share": false, "anonymized": true} }</pre>
+      </div>
+    </div>
+
+    <h2>Ecosystem options</h2>
+    <p class="sub">Candidate destinations for consented, exported traces — named for evaluation, with no affiliation or
+    integration implied. Every option is judged on the same four questions.</p>
+    <div class="ecogrid">
+      <div class="eco"><span class="k">Open AGI</span><h4>Sentient Foundation</h4>
+        <p>Community-built, open-source AGI models. Fit: contributing anonymized skill traces to open training commons.</p>
+        <ul><li>Open weights: yes (community)</li><li>Consent controls: to verify</li><li>On-device option: to verify</li><li>Trace ownership: to negotiate</li></ul></div>
+      <div class="eco"><span class="k">Agent economy</span><h4>Virtuals Protocol</h4>
+        <p>Tokenized AI agents (virtuals.io). Fit: publishing credentialed skill agents; requires care on data rights and speculation risk.</p>
+        <ul><li>Open weights: partial</li><li>Consent controls: to verify</li><li>On-device option: no</li><li>Trace ownership: contract-dependent</li></ul></div>
+      <div class="eco"><span class="k">Open robotics</span><h4>Hugging Face LeRobot</h4>
+        <p>Open robot-learning stack and datasets. Fit: demonstration traces from Making/Repair and Robotics OS modules.</p>
+        <ul><li>Open weights: yes</li><li>Consent controls: dataset-level</li><li>On-device option: yes</li><li>Trace ownership: contributor licence</li></ul></div>
+      <div class="eco"><span class="k">Middleware</span><h4>ROS 2</h4>
+        <p>The robot operating system the Robotics OS pack already teaches around. Fit: replaying traces on real rigs in Trade Halls.</p>
+        <ul><li>Open weights: n/a (middleware)</li><li>Consent controls: local</li><li>On-device option: yes</li><li>Trace ownership: stays local</li></ul></div>
+    </div>
+
+    <div class="panel" style="margin-top:16px">
+      <h3>Data principles — non-negotiable</h3>
+      <div class="sig">
+        <div><b>Local first</b><span>Traces are recorded and stored only in the learner's browser; nothing on this page transmits anywhere.</span></div>
+        <div><b>Opt-in export</b><span>Data reaches any training pipeline only when the learner exports it themselves, per session, eyes open.</span></div>
+        <div><b>Anonymized by default</b><span>Exports carry skill signals, never identity; the ledger and the trace are separable.</span></div>
+        <div><b>The learner is paid in capability</b><span>Any machine trained on community traces must serve back into the same community's classrooms and Trade Halls.</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= CURRICULUM ================= -->
   <section class="view" id="view-curriculum">
     <p class="eyebrow"><b>The ledger</b> · <em>every parish draws from the same blocks</em></p>
@@ -254,7 +403,7 @@
   <span class="mono">data/blocks.csv</span> at build time. Parish notes are saved only in this browser.</p>
 </main>
 
-<script id="ladata" type="application/json">{"version":"0.9.0","regions":[null,"Greater New Orleans","Capital Region","Bayou Region","Acadiana","Southwest","Central","Northwest","Northeast"],"hubs":[null,"New Orleans","Baton Rouge","Houma","Lafayette","Lake Charles","Alexandria","Shreveport","Monroe"],"waveYears":["2027–28","2028–29","2029–30","2030–31"],"parishes":[{"name":"Acadia","region":4,"seat":"Crowley","pop":57,"wave":3,"districts":"","industries":"Rice & ag-tech, oilfield services, food processing","world":"Rice-mill automation line","rural":true,"row":5,"col":2},{"name":"Allen","region":5,"seat":"Oberlin","pop":23,"wave":4,"districts":"","industries":"Forestry, casino & hospitality, corrections","world":"Timber sort & kiln control","rural":true,"row":4,"col":1},{"name":"Ascension","region":2,"seat":"Donaldsonville","pop":127,"wave":2,"districts":"","industries":"Chemical corridor, blue hydrogen & carbon capture, LNG-adjacent fabrication","world":"Ascension hydrogen plant control room","rural":false,"row":6,"col":5},{"name":"Assumption","region":3,"seat":"Napoleonville","pop":21,"wave":4,"districts":"","industries":"Sugar, oil & gas services, marine","world":"Sugar-mill conveyor & boiler house","rural":true,"row":7,"col":4},{"name":"Avoyelles","region":6,"seat":"Marksville","pop":40,"wave":3,"districts":"","industries":"Agriculture, healthcare, hospitality","world":"Cold-chain packing line","rural":true,"row":4,"col":3},{"name":"Beauregard","region":5,"seat":"DeRidder","pop":37,"wave":3,"districts":"","industries":"Forestry & paper, military logistics (Fort Johnson)","world":"Paper-mill instrumentation","rural":true,"row":4,"col":0},{"name":"Bienville","region":7,"seat":"Arcadia","pop":13,"wave":4,"districts":"","industries":"Timber, poultry, small manufacturing","world":"Poultry-plant robotics","rural":true,"row":1,"col":2},{"name":"Bossier","region":7,"seat":"Benton","pop":128,"wave":2,"districts":"","industries":"Cyber (Cyber Innovation Center), Barksdale AFB, logistics","world":"Cyber-physical security ops center","rural":false,"row":0,"col":1},{"name":"Caddo","region":7,"seat":"Shreveport","pop":238,"wave":1,"districts":"","industries":"Advanced manufacturing, aerospace, healthcare, film","world":"Shreveport aerospace assembly cell","rural":false,"row":0,"col":0},{"name":"Calcasieu","region":5,"seat":"Lake Charles","pop":216,"wave":1,"districts":"","industries":"LNG export, petrochemical, smart logistics, SOWELA","world":"Calcasieu Smart Logistics Terminal (reference)","rural":false,"row":5,"col":0},{"name":"Caldwell","region":8,"seat":"Columbia","pop":10,"wave":4,"districts":"","industries":"Forestry, agriculture","world":"Sawmill scanner & optimizer","rural":true,"row":2,"col":4},{"name":"Cameron","region":5,"seat":"Cameron","pop":6,"wave":2,"districts":"","industries":"LNG terminals (Sabine Pass, Cameron LNG, Calcasieu Pass), coastal restoration","world":"LNG cryogenic loading arm","rural":true,"row":6,"col":0},{"name":"Catahoula","region":6,"seat":"Harrisonburg","pop":9,"wave":4,"districts":"","industries":"Agriculture, aquaculture","world":"Catfish-farm aeration & sensor grid","rural":true,"row":3,"col":4},{"name":"Claiborne","region":7,"seat":"Homer","pop":15,"wave":4,"districts":"","industries":"Timber, oil & gas, agriculture","world":"Well-site telemetry","rural":true,"row":0,"col":3},{"name":"Concordia","region":6,"seat":"Vidalia","pop":19,"wave":4,"districts":"","industries":"Agriculture, hydro power (Sidney A. Murray), river logistics","world":"Hydro turbine governor twin","rural":true,"row":3,"col":5},{"name":"DeSoto","region":7,"seat":"Mansfield","pop":27,"wave":3,"districts":"","industries":"Natural gas (Haynesville), ag-tech, logistics","world":"Gas-compressor station diagnostics","rural":true,"row":1,"col":0},{"name":"East Baton Rouge","region":2,"seat":"Baton Rouge","pop":457,"wave":1,"districts":"Baker City · Central Community · Zachary Community","industries":"Chemical corridor, LSU/Southern research, healthcare, state government","world":"River Chemical Corridor control room","rural":false,"row":5,"col":5},{"name":"East Carroll","region":8,"seat":"Lake Providence","pop":7,"wave":4,"districts":"","industries":"Row-crop agriculture, river port","world":"Grain-elevator automation","rural":true,"row":0,"col":7},{"name":"East Feliciana","region":2,"seat":"Clinton","pop":19,"wave":4,"districts":"","industries":"Healthcare, agriculture, corrections","world":"Hospital device calibration lab","rural":true,"row":4,"col":6},{"name":"Evangeline","region":4,"seat":"Ville Platte","pop":33,"wave":3,"districts":"","industries":"Agriculture, oilfield services","world":"Pump-station SCADA","rural":true,"row":4,"col":2},{"name":"Franklin","region":8,"seat":"Winnsboro","pop":20,"wave":4,"districts":"","industries":"Agriculture, food processing","world":"Sweet-potato packing robotics","rural":true,"row":2,"col":5},{"name":"Grant","region":6,"seat":"Colfax","pop":22,"wave":4,"districts":"","industries":"Forestry, Kisatchie recreation","world":"Forestry drone survey","rural":true,"row":3,"col":2},{"name":"Iberia","region":4,"seat":"New Iberia","pop":70,"wave":2,"districts":"","industries":"Port of Iberia fabrication, offshore services, Acadiana Regional Airport, salt & sugar","world":"Port of Iberia fabrication yard","rural":false,"row":7,"col":2},{"name":"Iberville","region":2,"seat":"Plaquemine","pop":30,"wave":3,"districts":"","industries":"Chemical plants, sugar, river logistics","world":"Chlor-alkali process control","rural":true,"row":6,"col":4},{"name":"Jackson","region":8,"seat":"Jonesboro","pop":15,"wave":4,"districts":"","industries":"Timber, paper","world":"Paper-machine drive alignment","rural":true,"row":1,"col":4},{"name":"Jefferson","region":1,"seat":"Gretna","pop":440,"wave":2,"districts":"","industries":"Port logistics, healthcare, shipbuilding, Avondale redevelopment","world":"Port crane & container sorter (6–8 world)","rural":false,"row":7,"col":8},{"name":"Jefferson Davis","region":5,"seat":"Jennings","pop":33,"wave":3,"districts":"","industries":"Rice, oil & gas, wind-turbine components","world":"Rice-dryer thermal control","rural":true,"row":5,"col":1},{"name":"Lafayette","region":4,"seat":"Lafayette","pop":242,"wave":1,"districts":"","industries":"Energy technology, software, healthcare, ag-tech, UL Lafayette","world":"Ag-robotics & pump-station world","rural":false,"row":6,"col":2},{"name":"Lafourche","region":3,"seat":"Thibodaux","pop":98,"wave":2,"districts":"","industries":"Port Fourchon offshore logistics, shipbuilding, Fletcher TCC","world":"Port Fourchon offshore actuator yard","rural":false,"row":7,"col":5},{"name":"LaSalle","region":6,"seat":"Jena","pop":15,"wave":4,"districts":"","industries":"Timber, oil & gas","world":"Well-pad automation","rural":true,"row":3,"col":3},{"name":"Lincoln","region":8,"seat":"Ruston","pop":48,"wave":2,"districts":"","industries":"Louisiana Tech research, cyber, manufacturing","world":"Ruston cyber-manufacturing lab","rural":false,"row":1,"col":3},{"name":"Livingston","region":2,"seat":"Livingston","pop":143,"wave":2,"districts":"","industries":"Construction trades, LIGO observatory, logistics","world":"LIGO vacuum & precision systems","rural":false,"row":5,"col":6},{"name":"Madison","region":8,"seat":"Tallulah","pop":10,"wave":4,"districts":"","industries":"Agriculture, logistics","world":"Cotton-gin sensor network","rural":true,"row":1,"col":7},{"name":"Morehouse","region":8,"seat":"Bastrop","pop":26,"wave":4,"districts":"","industries":"Agriculture, paper (legacy), Meta data-center adjacency","world":"Data-center cooling plant","rural":true,"row":0,"col":5},{"name":"Natchitoches","region":7,"seat":"Natchitoches","pop":38,"wave":2,"districts":"","industries":"NSU, healthcare, meat processing, tourism","world":"Meat-plant robotics & cold chain","rural":true,"row":2,"col":1},{"name":"Orleans","region":1,"seat":"New Orleans","pop":384,"wave":2,"districts":"NOLA Public Schools (charter portfolio)","industries":"Port of New Orleans, Michoud/NASA aerospace, healthcare, hospitality tech","world":"Michoud assembly & port operations","rural":false,"row":6,"col":9},{"name":"Ouachita","region":8,"seat":"Monroe","pop":160,"wave":2,"districts":"Monroe City","industries":"Healthcare, CenturyLink/Lumen tech, Louisiana Delta CC, ag-tech","world":"Monroe telecom & data operations","rural":false,"row":1,"col":5},{"name":"Plaquemines","region":1,"seat":"Pointe à la Hache","pop":23,"wave":3,"districts":"","industries":"Plaquemines LNG, seafood, river port, coastal restoration","world":"Plaquemines LNG train control","rural":true,"row":7,"col":9},{"name":"Pointe Coupee","region":2,"seat":"New Roads","pop":21,"wave":4,"districts":"","industries":"Agriculture, chemical (Big Cajun power)","world":"Power-plant turbine diagnostics","rural":true,"row":4,"col":4},{"name":"Rapides","region":6,"seat":"Alexandria","pop":130,"wave":2,"districts":"","industries":"Healthcare, forestry, CLTCC, England Airpark","world":"Central Louisiana medical-device lab","rural":false,"row":3,"col":1},{"name":"Red River","region":7,"seat":"Coushatta","pop":8,"wave":4,"districts":"","industries":"Agriculture, Haynesville gas","world":"Gas-well telemetry","rural":true,"row":1,"col":1},{"name":"Richland","region":8,"seat":"Rayville","pop":20,"wave":3,"districts":"","industries":"Meta Holly Ridge data center, agriculture","world":"Hyperscale data-center electrical & HVAC","rural":true,"row":1,"col":6},{"name":"Sabine","region":7,"seat":"Many","pop":23,"wave":4,"districts":"","industries":"Timber, Toledo Bend recreation","world":"Sawmill optimizer","rural":true,"row":2,"col":0},{"name":"St. Bernard","region":1,"seat":"Chalmette","pop":44,"wave":3,"districts":"","industries":"Refining (Chalmette), port, seafood","world":"Refinery instrumentation","rural":false,"row":6,"col":10},{"name":"St. Charles","region":1,"seat":"Hahnville","pop":52,"wave":2,"districts":"","industries":"Petrochemical, Waterford nuclear, river port","world":"Nuclear-plant simulator & safety culture","rural":false,"row":6,"col":8},{"name":"St. Helena","region":2,"seat":"Greensburg","pop":10,"wave":4,"districts":"","industries":"Timber, agriculture","world":"Timber harvest telematics","rural":true,"row":4,"col":7},{"name":"St. James","region":1,"seat":"Convent","pop":21,"wave":3,"districts":"","industries":"Chemical, river port, sugar","world":"Ammonia plant process control","rural":true,"row":6,"col":6},{"name":"St. John the Baptist","region":1,"seat":"Edgard","pop":43,"wave":3,"districts":"","industries":"Refining, grain export, River Parishes CC","world":"Grain-export terminal automation","rural":false,"row":6,"col":7},{"name":"St. Landry","region":4,"seat":"Opelousas","pop":83,"wave":2,"districts":"","industries":"Ag-tech, healthcare, manufacturing","world":"Feed-mill automation","rural":false,"row":5,"col":3},{"name":"St. Martin","region":4,"seat":"St. Martinville","pop":52,"wave":3,"districts":"","industries":"Oilfield fabrication, sugar, crawfish aquaculture","world":"Fabrication-shop weld cell","rural":true,"row":6,"col":3},{"name":"St. Mary","region":3,"seat":"Franklin","pop":50,"wave":3,"districts":"","industries":"Shipbuilding, offshore fabrication, carbon black, sugar","world":"Morgan City shipyard robotics","rural":true,"row":7,"col":3},{"name":"St. Tammany","region":1,"seat":"Covington","pop":264,"wave":2,"districts":"","industries":"Healthcare, professional services, Northshore TCC, logistics","world":"Northshore healthcare-device & logistics lab","rural":false,"row":5,"col":8},{"name":"Tangipahoa","region":2,"seat":"Amite","pop":133,"wave":2,"districts":"","industries":"SLU, logistics, healthcare, dairy & ag-tech","world":"Hammond distribution-center robotics","rural":false,"row":4,"col":8},{"name":"Tensas","region":8,"seat":"St. Joseph","pop":4,"wave":4,"districts":"","industries":"Agriculture","world":"Precision-ag drone & irrigation","rural":true,"row":2,"col":6},{"name":"Terrebonne","region":3,"seat":"Houma","pop":110,"wave":1,"districts":"","industries":"Offshore energy, shipbuilding, Fletcher TCC, coastal restoration","world":"Houma floodgate & offshore actuator yard","rural":false,"row":8,"col":4},{"name":"Union","region":8,"seat":"Farmerville","pop":22,"wave":4,"districts":"","industries":"Timber, poultry, agriculture","world":"Poultry-plant automation","rural":true,"row":0,"col":4},{"name":"Vermilion","region":4,"seat":"Abbeville","pop":58,"wave":3,"districts":"","industries":"Rice, offshore services, coastal restoration","world":"Marsh-restoration dredge telemetry","rural":true,"row":6,"col":1},{"name":"Vernon","region":6,"seat":"Leesville","pop":49,"wave":3,"districts":"","industries":"Fort Johnson (JRTC), forestry","world":"Military vehicle maintenance twin","rural":true,"row":3,"col":0},{"name":"Washington","region":2,"seat":"Franklinton","pop":46,"wave":3,"districts":"Bogalusa City","industries":"Paper (Bogalusa mill), timber, healthcare","world":"Paper-mill automation","rural":true,"row":4,"col":9},{"name":"Webster","region":7,"seat":"Minden","pop":37,"wave":3,"districts":"","industries":"Ammunition plant legacy, timber, manufacturing","world":"Precision-manufacturing cell","rural":true,"row":0,"col":2},{"name":"West Baton Rouge","region":2,"seat":"Port Allen","pop":27,"wave":3,"districts":"","industries":"Port of Greater Baton Rouge, chemical, sugar","world":"Port bulk-terminal automation","rural":false,"row":5,"col":4},{"name":"West Carroll","region":8,"seat":"Oak Grove","pop":10,"wave":4,"districts":"","industries":"Agriculture","world":"Irrigation pivot control","rural":true,"row":0,"col":6},{"name":"West Feliciana","region":2,"seat":"St. Francisville","pop":15,"wave":4,"districts":"","industries":"River Bend nuclear, tourism, corrections","world":"Nuclear-plant safety systems","rural":true,"row":4,"col":5},{"name":"Winn","region":6,"seat":"Winnfield","pop":14,"wave":4,"districts":"","industries":"Timber, salt mining","world":"Salt-mine conveyor & ventilation","rural":true,"row":2,"col":2}],"curriculum":{"blocks":8750,"packs":33,"tracks":155,"credentials":437,"laTracks":[{"name":"Public service as a craft: the Louisiana ladder","credential":"Parish Service Fellow"},{"name":"The parish: government closest to the door","credential":"Parish Government Navigator"},{"name":"Baton Rouge: the Legislature and the law","credential":"Capitol Navigator"},{"name":"Elections, voice and the ballot in Louisiana","credential":"Election Steward"},{"name":"Water, storm and the civic machine","credential":"Coastal Civics Lead"}],"communityPacks":["Preventive Health & Everyday Care","Basic Life Skills & Self-Reliance","Water, Land & Climate","Care Across a Life","Making, Repair & Reuse","Housing & Tenancy","Money, Benefits & Entitlements","Reentry & Recovery Pathways","Neighbourhood, Safety & Civic Voice","Arts, Making Media & Performance","Digital Life, Data & AI","Emergency Preparedness & First Response","Energy, Grid & the Home","Food, Cooking & Nutrition","Law, Contracts & Everyday Rights","Transport & Mobility"]}}</script>
+<script id="ladata" type="application/json">{"version":"0.10.0","regions":[null,"Greater New Orleans","Capital Region","Bayou Region","Acadiana","Southwest","Central","Northwest","Northeast"],"hubs":[null,"New Orleans","Baton Rouge","Houma","Lafayette","Lake Charles","Alexandria","Shreveport","Monroe"],"waveYears":["2027–28","2028–29","2029–30","2030–31"],"parishes":[{"name":"Acadia","region":4,"seat":"Crowley","pop":57,"wave":3,"districts":"","industries":"Rice & ag-tech, oilfield services, food processing","world":"Rice-mill automation line","rural":true,"row":5,"col":2},{"name":"Allen","region":5,"seat":"Oberlin","pop":23,"wave":4,"districts":"","industries":"Forestry, casino & hospitality, corrections","world":"Timber sort & kiln control","rural":true,"row":4,"col":1},{"name":"Ascension","region":2,"seat":"Donaldsonville","pop":127,"wave":2,"districts":"","industries":"Chemical corridor, blue hydrogen & carbon capture, LNG-adjacent fabrication","world":"Ascension hydrogen plant control room","rural":false,"row":6,"col":5},{"name":"Assumption","region":3,"seat":"Napoleonville","pop":21,"wave":4,"districts":"","industries":"Sugar, oil & gas services, marine","world":"Sugar-mill conveyor & boiler house","rural":true,"row":7,"col":4},{"name":"Avoyelles","region":6,"seat":"Marksville","pop":40,"wave":3,"districts":"","industries":"Agriculture, healthcare, hospitality","world":"Cold-chain packing line","rural":true,"row":4,"col":3},{"name":"Beauregard","region":5,"seat":"DeRidder","pop":37,"wave":3,"districts":"","industries":"Forestry & paper, military logistics (Fort Johnson)","world":"Paper-mill instrumentation","rural":true,"row":4,"col":0},{"name":"Bienville","region":7,"seat":"Arcadia","pop":13,"wave":4,"districts":"","industries":"Timber, poultry, small manufacturing","world":"Poultry-plant robotics","rural":true,"row":1,"col":2},{"name":"Bossier","region":7,"seat":"Benton","pop":128,"wave":2,"districts":"","industries":"Cyber (Cyber Innovation Center), Barksdale AFB, logistics","world":"Cyber-physical security ops center","rural":false,"row":0,"col":1},{"name":"Caddo","region":7,"seat":"Shreveport","pop":238,"wave":1,"districts":"","industries":"Advanced manufacturing, aerospace, healthcare, film","world":"Shreveport aerospace assembly cell","rural":false,"row":0,"col":0},{"name":"Calcasieu","region":5,"seat":"Lake Charles","pop":216,"wave":1,"districts":"","industries":"LNG export, petrochemical, smart logistics, SOWELA","world":"Calcasieu Smart Logistics Terminal (reference)","rural":false,"row":5,"col":0},{"name":"Caldwell","region":8,"seat":"Columbia","pop":10,"wave":4,"districts":"","industries":"Forestry, agriculture","world":"Sawmill scanner & optimizer","rural":true,"row":2,"col":4},{"name":"Cameron","region":5,"seat":"Cameron","pop":6,"wave":2,"districts":"","industries":"LNG terminals (Sabine Pass, Cameron LNG, Calcasieu Pass), coastal restoration","world":"LNG cryogenic loading arm","rural":true,"row":6,"col":0},{"name":"Catahoula","region":6,"seat":"Harrisonburg","pop":9,"wave":4,"districts":"","industries":"Agriculture, aquaculture","world":"Catfish-farm aeration & sensor grid","rural":true,"row":3,"col":4},{"name":"Claiborne","region":7,"seat":"Homer","pop":15,"wave":4,"districts":"","industries":"Timber, oil & gas, agriculture","world":"Well-site telemetry","rural":true,"row":0,"col":3},{"name":"Concordia","region":6,"seat":"Vidalia","pop":19,"wave":4,"districts":"","industries":"Agriculture, hydro power (Sidney A. Murray), river logistics","world":"Hydro turbine governor twin","rural":true,"row":3,"col":5},{"name":"DeSoto","region":7,"seat":"Mansfield","pop":27,"wave":3,"districts":"","industries":"Natural gas (Haynesville), ag-tech, logistics","world":"Gas-compressor station diagnostics","rural":true,"row":1,"col":0},{"name":"East Baton Rouge","region":2,"seat":"Baton Rouge","pop":457,"wave":1,"districts":"Baker City · Central Community · Zachary Community","industries":"Chemical corridor, LSU/Southern research, healthcare, state government","world":"River Chemical Corridor control room","rural":false,"row":5,"col":5},{"name":"East Carroll","region":8,"seat":"Lake Providence","pop":7,"wave":4,"districts":"","industries":"Row-crop agriculture, river port","world":"Grain-elevator automation","rural":true,"row":0,"col":7},{"name":"East Feliciana","region":2,"seat":"Clinton","pop":19,"wave":4,"districts":"","industries":"Healthcare, agriculture, corrections","world":"Hospital device calibration lab","rural":true,"row":4,"col":6},{"name":"Evangeline","region":4,"seat":"Ville Platte","pop":33,"wave":3,"districts":"","industries":"Agriculture, oilfield services","world":"Pump-station SCADA","rural":true,"row":4,"col":2},{"name":"Franklin","region":8,"seat":"Winnsboro","pop":20,"wave":4,"districts":"","industries":"Agriculture, food processing","world":"Sweet-potato packing robotics","rural":true,"row":2,"col":5},{"name":"Grant","region":6,"seat":"Colfax","pop":22,"wave":4,"districts":"","industries":"Forestry, Kisatchie recreation","world":"Forestry drone survey","rural":true,"row":3,"col":2},{"name":"Iberia","region":4,"seat":"New Iberia","pop":70,"wave":2,"districts":"","industries":"Port of Iberia fabrication, offshore services, Acadiana Regional Airport, salt & sugar","world":"Port of Iberia fabrication yard","rural":false,"row":7,"col":2},{"name":"Iberville","region":2,"seat":"Plaquemine","pop":30,"wave":3,"districts":"","industries":"Chemical plants, sugar, river logistics","world":"Chlor-alkali process control","rural":true,"row":6,"col":4},{"name":"Jackson","region":8,"seat":"Jonesboro","pop":15,"wave":4,"districts":"","industries":"Timber, paper","world":"Paper-machine drive alignment","rural":true,"row":1,"col":4},{"name":"Jefferson","region":1,"seat":"Gretna","pop":440,"wave":2,"districts":"","industries":"Port logistics, healthcare, shipbuilding, Avondale redevelopment","world":"Port crane & container sorter (6–8 world)","rural":false,"row":7,"col":8},{"name":"Jefferson Davis","region":5,"seat":"Jennings","pop":33,"wave":3,"districts":"","industries":"Rice, oil & gas, wind-turbine components","world":"Rice-dryer thermal control","rural":true,"row":5,"col":1},{"name":"Lafayette","region":4,"seat":"Lafayette","pop":242,"wave":1,"districts":"","industries":"Energy technology, software, healthcare, ag-tech, UL Lafayette","world":"Ag-robotics & pump-station world","rural":false,"row":6,"col":2},{"name":"Lafourche","region":3,"seat":"Thibodaux","pop":98,"wave":2,"districts":"","industries":"Port Fourchon offshore logistics, shipbuilding, Fletcher TCC","world":"Port Fourchon offshore actuator yard","rural":false,"row":7,"col":5},{"name":"LaSalle","region":6,"seat":"Jena","pop":15,"wave":4,"districts":"","industries":"Timber, oil & gas","world":"Well-pad automation","rural":true,"row":3,"col":3},{"name":"Lincoln","region":8,"seat":"Ruston","pop":48,"wave":2,"districts":"","industries":"Louisiana Tech research, cyber, manufacturing","world":"Ruston cyber-manufacturing lab","rural":false,"row":1,"col":3},{"name":"Livingston","region":2,"seat":"Livingston","pop":143,"wave":2,"districts":"","industries":"Construction trades, LIGO observatory, logistics","world":"LIGO vacuum & precision systems","rural":false,"row":5,"col":6},{"name":"Madison","region":8,"seat":"Tallulah","pop":10,"wave":4,"districts":"","industries":"Agriculture, logistics","world":"Cotton-gin sensor network","rural":true,"row":1,"col":7},{"name":"Morehouse","region":8,"seat":"Bastrop","pop":26,"wave":4,"districts":"","industries":"Agriculture, paper (legacy), Meta data-center adjacency","world":"Data-center cooling plant","rural":true,"row":0,"col":5},{"name":"Natchitoches","region":7,"seat":"Natchitoches","pop":38,"wave":2,"districts":"","industries":"NSU, healthcare, meat processing, tourism","world":"Meat-plant robotics & cold chain","rural":true,"row":2,"col":1},{"name":"Orleans","region":1,"seat":"New Orleans","pop":384,"wave":2,"districts":"NOLA Public Schools (charter portfolio)","industries":"Port of New Orleans, Michoud/NASA aerospace, healthcare, hospitality tech","world":"Michoud assembly & port operations","rural":false,"row":6,"col":9},{"name":"Ouachita","region":8,"seat":"Monroe","pop":160,"wave":2,"districts":"Monroe City","industries":"Healthcare, CenturyLink/Lumen tech, Louisiana Delta CC, ag-tech","world":"Monroe telecom & data operations","rural":false,"row":1,"col":5},{"name":"Plaquemines","region":1,"seat":"Pointe à la Hache","pop":23,"wave":3,"districts":"","industries":"Plaquemines LNG, seafood, river port, coastal restoration","world":"Plaquemines LNG train control","rural":true,"row":7,"col":9},{"name":"Pointe Coupee","region":2,"seat":"New Roads","pop":21,"wave":4,"districts":"","industries":"Agriculture, chemical (Big Cajun power)","world":"Power-plant turbine diagnostics","rural":true,"row":4,"col":4},{"name":"Rapides","region":6,"seat":"Alexandria","pop":130,"wave":2,"districts":"","industries":"Healthcare, forestry, CLTCC, England Airpark","world":"Central Louisiana medical-device lab","rural":false,"row":3,"col":1},{"name":"Red River","region":7,"seat":"Coushatta","pop":8,"wave":4,"districts":"","industries":"Agriculture, Haynesville gas","world":"Gas-well telemetry","rural":true,"row":1,"col":1},{"name":"Richland","region":8,"seat":"Rayville","pop":20,"wave":3,"districts":"","industries":"Meta Holly Ridge data center, agriculture","world":"Hyperscale data-center electrical & HVAC","rural":true,"row":1,"col":6},{"name":"Sabine","region":7,"seat":"Many","pop":23,"wave":4,"districts":"","industries":"Timber, Toledo Bend recreation","world":"Sawmill optimizer","rural":true,"row":2,"col":0},{"name":"St. Bernard","region":1,"seat":"Chalmette","pop":44,"wave":3,"districts":"","industries":"Refining (Chalmette), port, seafood","world":"Refinery instrumentation","rural":false,"row":6,"col":10},{"name":"St. Charles","region":1,"seat":"Hahnville","pop":52,"wave":2,"districts":"","industries":"Petrochemical, Waterford nuclear, river port","world":"Nuclear-plant simulator & safety culture","rural":false,"row":6,"col":8},{"name":"St. Helena","region":2,"seat":"Greensburg","pop":10,"wave":4,"districts":"","industries":"Timber, agriculture","world":"Timber harvest telematics","rural":true,"row":4,"col":7},{"name":"St. James","region":1,"seat":"Convent","pop":21,"wave":3,"districts":"","industries":"Chemical, river port, sugar","world":"Ammonia plant process control","rural":true,"row":6,"col":6},{"name":"St. John the Baptist","region":1,"seat":"Edgard","pop":43,"wave":3,"districts":"","industries":"Refining, grain export, River Parishes CC","world":"Grain-export terminal automation","rural":false,"row":6,"col":7},{"name":"St. Landry","region":4,"seat":"Opelousas","pop":83,"wave":2,"districts":"","industries":"Ag-tech, healthcare, manufacturing","world":"Feed-mill automation","rural":false,"row":5,"col":3},{"name":"St. Martin","region":4,"seat":"St. Martinville","pop":52,"wave":3,"districts":"","industries":"Oilfield fabrication, sugar, crawfish aquaculture","world":"Fabrication-shop weld cell","rural":true,"row":6,"col":3},{"name":"St. Mary","region":3,"seat":"Franklin","pop":50,"wave":3,"districts":"","industries":"Shipbuilding, offshore fabrication, carbon black, sugar","world":"Morgan City shipyard robotics","rural":true,"row":7,"col":3},{"name":"St. Tammany","region":1,"seat":"Covington","pop":264,"wave":2,"districts":"","industries":"Healthcare, professional services, Northshore TCC, logistics","world":"Northshore healthcare-device & logistics lab","rural":false,"row":5,"col":8},{"name":"Tangipahoa","region":2,"seat":"Amite","pop":133,"wave":2,"districts":"","industries":"SLU, logistics, healthcare, dairy & ag-tech","world":"Hammond distribution-center robotics","rural":false,"row":4,"col":8},{"name":"Tensas","region":8,"seat":"St. Joseph","pop":4,"wave":4,"districts":"","industries":"Agriculture","world":"Precision-ag drone & irrigation","rural":true,"row":2,"col":6},{"name":"Terrebonne","region":3,"seat":"Houma","pop":110,"wave":1,"districts":"","industries":"Offshore energy, shipbuilding, Fletcher TCC, coastal restoration","world":"Houma floodgate & offshore actuator yard","rural":false,"row":8,"col":4},{"name":"Union","region":8,"seat":"Farmerville","pop":22,"wave":4,"districts":"","industries":"Timber, poultry, agriculture","world":"Poultry-plant automation","rural":true,"row":0,"col":4},{"name":"Vermilion","region":4,"seat":"Abbeville","pop":58,"wave":3,"districts":"","industries":"Rice, offshore services, coastal restoration","world":"Marsh-restoration dredge telemetry","rural":true,"row":6,"col":1},{"name":"Vernon","region":6,"seat":"Leesville","pop":49,"wave":3,"districts":"","industries":"Fort Johnson (JRTC), forestry","world":"Military vehicle maintenance twin","rural":true,"row":3,"col":0},{"name":"Washington","region":2,"seat":"Franklinton","pop":46,"wave":3,"districts":"Bogalusa City","industries":"Paper (Bogalusa mill), timber, healthcare","world":"Paper-mill automation","rural":true,"row":4,"col":9},{"name":"Webster","region":7,"seat":"Minden","pop":37,"wave":3,"districts":"","industries":"Ammunition plant legacy, timber, manufacturing","world":"Precision-manufacturing cell","rural":true,"row":0,"col":2},{"name":"West Baton Rouge","region":2,"seat":"Port Allen","pop":27,"wave":3,"districts":"","industries":"Port of Greater Baton Rouge, chemical, sugar","world":"Port bulk-terminal automation","rural":false,"row":5,"col":4},{"name":"West Carroll","region":8,"seat":"Oak Grove","pop":10,"wave":4,"districts":"","industries":"Agriculture","world":"Irrigation pivot control","rural":true,"row":0,"col":6},{"name":"West Feliciana","region":2,"seat":"St. Francisville","pop":15,"wave":4,"districts":"","industries":"River Bend nuclear, tourism, corrections","world":"Nuclear-plant safety systems","rural":true,"row":4,"col":5},{"name":"Winn","region":6,"seat":"Winnfield","pop":14,"wave":4,"districts":"","industries":"Timber, salt mining","world":"Salt-mine conveyor & ventilation","rural":true,"row":2,"col":2}],"curriculum":{"blocks":8750,"packs":33,"tracks":155,"credentials":437,"laTracks":[{"name":"Public service as a craft: the Louisiana ladder","credential":"Parish Service Fellow"},{"name":"The parish: government closest to the door","credential":"Parish Government Navigator"},{"name":"Baton Rouge: the Legislature and the law","credential":"Capitol Navigator"},{"name":"Elections, voice and the ballot in Louisiana","credential":"Election Steward"},{"name":"Water, storm and the civic machine","credential":"Coastal Civics Lead"}],"communityPacks":["Preventive Health & Everyday Care","Basic Life Skills & Self-Reliance","Water, Land & Climate","Care Across a Life","Making, Repair & Reuse","Housing & Tenancy","Money, Benefits & Entitlements","Reentry & Recovery Pathways","Neighbourhood, Safety & Civic Voice","Arts, Making Media & Performance","Digital Life, Data & AI","Emergency Preparedness & First Response","Energy, Grid & the Home","Food, Cooking & Nutrition","Law, Contracts & Everyday Rights","Transport & Mobility"]},"wlb":{"org":"The Willie L. Brown Jr. Institute of Politics and Public Service (wlbinstitute.org), San Francisco","disclaimer":"This track is a proposal built from the Institute's public mission and the Willie L. Brown Jr. Fellowship Program at San Francisco State University. It is not affiliated with, endorsed by, or reviewed by the Institute, SF State, or Mayor Brown; the \"Willie Brown Foundation\" name in the brief refers to this Institute. A named track would be offered under a partnership agreement and the Institute's review of every course.","mission":"The Institute provides education and training for emerging leaders while fostering civic engagement, leadership development and effective governance, with an emphasis on inclusivity and diversity — preparing next-generation leaders to address complex societal challenges.","quote":"Public service is the most noble of professions. It provides the opportunity to give back to your community, to ensure the next generation has opportunities to lead better lives.","record":[["Four decades in California public life","Assembly Speaker and two-term Mayor of San Francisco; worked across administrations from Pat Brown to Arnold Schwarzenegger"],["Transit","Revitalized public transit as mayor — the civic machine every child rides"],["Housing","Advanced affordable housing through bond measures — money, votes and buildings"],["Juvenile justice","Reformed juvenile justice — second chances as public policy"],["Mission Bay","Developed UCSF's Mission Bay campus as a biotech hub — science, jobs and a neighborhood"],["Focus areas","Civil rights, education reform, tax policy, economic development, healthcare, affirmative action"]]},"principles":[{"p":"Public service is the most noble of professions","src":"Institute vision statement (wlbinstitute.org)","teach":"Service is taught as a craft with roles, crews, evidence and credentials — not as a slogan. Every course ends with a real audience."},{"p":"Recruit and include students of diverse racial, cultural and economic backgrounds","src":"Willie L. Brown Jr., on the Fellowship (SF State News)","teach":"Who is in the room is a design decision. Every course asks who is missing and why; accommodation profiles, four-language signals and Tier 0 parity apply; barriers are named, not hidden."},{"p":"Hands-on learning inside real public agencies, with a cohort, a seminar and a stipend","src":"The Fellowship Program (SF State ICCE): 16 hours a week, 15 weeks, Friday seminars, cohort focused on equity and social change","teach":"A junior placement at every grade band and a weekly seminar circle from grade 3; in 11–12 a supervised, FLSA-compliant placement mirrors the Fellowship itself."},{"p":"Share knowledge and skills with a new generation of leaders","src":"Institute mission; Claremont McKenna Athenaeum description of Brown's mentoring role","teach":"Mentorship is a strand and a bridge: alumni and public servants as mentors and panelists; older students mentor younger cohorts; the leader's-story module in every course."},{"p":"Eagerly, aggressively and affirmatively push for those who have been blocked by the ceiling","src":"Willie L. Brown Jr., NPR interview on Basic Brown (2008)","teach":"Affirmative action, first-generation pathways and opportunity data are taught as history, law and practice — with the debate included, not avoided."},{"p":"Take on the cases others dismiss as hopeless","src":"Brown's early law career (Claremont McKenna Athenaeum)","teach":"Civil-rights law, housing discrimination (the 1960 sit-in), the Free Speech Movement defense: courses on standing up when the odds are long, with moot courts and rights cases to argue."},{"p":"Tolerate diverse viewpoints; some opposing ideas strengthen consensus","src":"NPR summary of Basic Brown's political lessons","teach":"Negotiation, coalition and consensus are practiced every week in the seminar circle and in mock legislatures; the fifteen-year Speakership is the case study."},{"p":"What you see is what you get — transparency removes the liability and lets you move on to substance","src":"NPR interview on Basic Brown","teach":"Ethics, transparency and accountability strand: public records, conflicts of interest, the investigator's question, saying the hard thing first."},{"p":"Bringing everyone along with you","src":"Larry Berry, Fellowship alumnus (SF State PACE alumni spotlight)","teach":"Inclusive decision-making and relationship-building are taught as skills with evidence: stakeholder maps, crew hand-offs, the \"who did we forget\" check before every presentation."},{"p":"Decisions in the public sector must account for the wide-ranging impacts on people's lives","src":"Larry Berry, Fellowship alumnus","teach":"Every policy-design course carries an impact analysis: who pays, who benefits, who is displaced — in real numbers from the state's own data."},{"p":"From segregated Mineola to San Francisco State: education as the bridge across barriers","src":"Biography (HistoryMakers; African American Registry): born 1934, Mineola, Texas; moved to San Francisco in 1951; SF State 1955; Hastings 1958","teach":"The first-generation strand and the Mineola-to-City bridge: oral histories, the story of one's own family's barrier-crossing, and the concrete map from a K–12 credential to a state university and a public-service career."},{"p":"Living large: enjoy the work and share the joy","src":"Willie L. Brown Jr., NPR interview","teach":"Presence, confidence and joy in service are taught age-appropriately — public speaking, presentation, the civic celebration — because a leader who dreads the room cannot bring anyone along."}]}</script>
 <script>
 "use strict";
 const D = JSON.parse(document.getElementById("ladata").textContent);
@@ -444,6 +593,83 @@ function renderRegions(){
     b.addEventListener("click", ()=> location.hash="#/parish/"+b.dataset.p));
 }
 
+/* ---------- INSTITUTE ---------- */
+const ARCS = [
+  {tag:"Service & civic duty", col:"var(--purple)", idx:[0,2,3,8,9]},
+  {tag:"Ethics & character", col:"var(--gold)", idx:[5,6,7,11]},
+  {tag:"Inclusion & the bridge", col:"var(--green)", idx:[1,4,10]},
+];
+const EDITIONS = {
+  "Louisiana (this platform)": ["Baton Rouge","Louisiana Legislature","Parish (64)","Louisiana student standards","Civic seal: verify","Ports, energy corridor, the working coast","Parish offices, school boards, levee & special districts","State public-affairs school — to be agreed"],
+  "California (the original)": ["Sacramento","California Legislature","County (58)","California state standards","State Seal of Civic Engagement","Mission Bay biotech","City & county agencies","San Francisco State (the Fellowship itself)"],
+  "Any U.S. state": ["State capital","State legislature","County / borough / parish","State standards framework","State civic seal, where one exists","The state's anchor industry hub","State & local agency placement ladder","A public-affairs school partner"],
+  "Any country": ["National capital","National or provincial legislature","District / county / commune","National curriculum framework","National civics certificate, where one exists","The region's anchor industries","Ministry & municipal placement ladder","A public-affairs university partner"],
+};
+const SLOTS = ["Capital","Legislature","Local unit","Standards framework","Civic seal","Anchor-industry hub","Placement ladder","Fellowship partner"];
+function renderInstitute(){
+  $("#wlbquote").innerHTML = `“${esc(D.wlb.quote)}”<footer>— Willie L. Brown Jr., Institute vision statement</footer>`;
+  $("#arcs").innerHTML = ARCS.map(a =>
+    `<div class="arc"><div class="archead"><span class="arctag" style="background:${a.col}">${a.tag}</span>
+     <h2 style="font-size:1.15rem">${a.idx.length} principles</h2></div>
+     <div class="pgrid">${a.idx.map(i => { const p = D.principles[i]; return (
+       `<div class="pcard" style="--arc:${a.col}"><span class="pn">P${String(i+1).padStart(2,"0")}</span>
+        <h4>${esc(p.p)}</h4><p class="teach">${esc(p.teach)}</p>
+        <div class="src">Source: ${esc(p.src)}</div></div>`);}).join("")}</div></div>`).join("");
+  $("#recordgrid").innerHTML = D.wlb.record.map(([k,v]) =>
+    `<div class="pcard" style="--arc:var(--gold)"><span class="pn">${esc(k)}</span><p class="teach" style="margin-top:.4em">${esc(v)}</p></div>`).join("");
+  const sel = $("#locpick");
+  sel.innerHTML = Object.keys(EDITIONS).map(k=>`<option>${esc(k)}</option>`).join("");
+  const draw = () => {
+    const vals = EDITIONS[sel.value];
+    $("#loctable").innerHTML = `<thead><tr><th>Slot</th><th>${esc(sel.value)}</th></tr></thead><tbody>`+
+      SLOTS.map((s,i)=>`<tr><td>${s}</td><td>${esc(vals[i])}</td></tr>`).join("")+`</tbody>`;
+  };
+  sel.addEventListener("change", draw); draw();
+  $("#wlbdisc").innerHTML = `<b>Disclaimer</b> — ${esc(D.wlb.disclaimer)}`;
+}
+
+/* ---------- AGENTS & ROBOTS ---------- */
+function renderLoop(){
+  const W=760, H=340, cx=W/2, cy=H/2, R=118;
+  const nodes = [
+    ["Human learner","earns the credential"],
+    ["Transfer check","real material, real audience"],
+    ["Consented trace","CX-Trace v1 · local first"],
+    ["Agent / robot curriculum","flow-paced, band by band"],
+    ["Assistance returned","in class & Trade Hall"],
+  ];
+  const pos = nodes.map((_,i)=>{ const a = -Math.PI/2 + i*2*Math.PI/nodes.length;
+    return [cx + Math.cos(a)*(R+120), cy + Math.sin(a)*R]; });
+  const boxes = nodes.map((n,i)=>{ const [x,y]=pos[i]; return (
+    `<g><rect x="${x-92}" y="${y-27}" width="184" height="54" rx="10" fill="var(--surface-2)" stroke="var(--line)"/>`+
+    `<text x="${x}" y="${y-5}" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">${n[0]}</text>`+
+    `<text x="${x}" y="${y+13}" text-anchor="middle" font-size="10" fill="var(--muted)">${n[1]}</text></g>`);}).join("");
+  const arrows = nodes.map((_,i)=>{ const [x1,y1]=pos[i], [x2,y2]=pos[(i+1)%nodes.length];
+    const mx=(x1+x2)/2 + (cx-(x1+x2)/2)*-0.25, my=(y1+y2)/2 + (cy-(y1+y2)/2)*-0.25;
+    return `<path d="M${x1},${y1} Q${mx},${my} ${x2},${y2}" fill="none" stroke="var(--gold)" stroke-width="2" marker-end="url(#arr)" opacity=".8"/>`;}).join("");
+  $("#loopdiagram").innerHTML =
+    `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="img" aria-label="The human-machine learning loop">`+
+    `<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">`+
+    `<path d="M0,0 L10,5 L0,10 z" fill="var(--gold)"/></marker></defs>`+
+    `<text x="${cx}" y="${cy-6}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--purple)">one block,</text>`+
+    `<text x="${cx}" y="${cy+12}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--purple)">two learners</text>`+
+    arrows + boxes + `</svg>`;
+}
+
+/* ---------- style options ---------- */
+function initStyles(){
+  const th = $("#themepick"), st = $("#stylepick");
+  const savedT = store("cxla.theme") || "", savedS = store("cxla.style") || "parade";
+  th.value = savedT; st.value = savedS;
+  const apply = () => {
+    if (th.value) document.documentElement.dataset.theme = th.value;
+    else delete document.documentElement.dataset.theme;
+    document.documentElement.dataset.style = st.value;
+    store("cxla.theme", th.value); store("cxla.style", st.value);
+  };
+  th.addEventListener("change", apply); st.addEventListener("change", apply); apply();
+}
+
 /* ---------- CURRICULUM ---------- */
 function renderCurriculum(){
   const c = D.curriculum;
@@ -466,6 +692,8 @@ function route(){
     const s = h.split("/")[1];
     renderParish(bySlug[s] || D.parishes[0]);
   } else if (h==="regions") view="regions";
+  else if (h==="institute") view="institute";
+  else if (h==="machines") view="machines";
   else if (h==="curriculum") view="curriculum";
   document.querySelectorAll(".view").forEach(el=>el.classList.toggle("active", el.id==="view-"+view));
   document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-current", t.dataset.r===view ? "true":"false"));
@@ -479,6 +707,7 @@ $("#prand").addEventListener("click", ()=> location.hash="#/parish/"+D.parishes[
 window.addEventListener("hashchange", route);
 
 renderState(); renderParishPicker(); renderRegions(); renderCurriculum();
+renderInstitute(); renderLoop(); initStyles();
 renderParish(bySlug["east-baton-rouge"] || D.parishes[0]);
 route();
 </script>

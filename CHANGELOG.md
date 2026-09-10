@@ -4,6 +4,30 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.10.0] — 2026-09-10
+
+### Added
+- **Legacy Institute flagship** in the Louisiana platform: the twelve
+  Willie L. Brown Jr. Institute principles rendered as leadership /
+  ethics / civic-duty arcs with sources and teaching notes, the record
+  behind them, the vision-statement quote, and an interactive
+  **eight-slot localizer** resolving the model for Louisiana,
+  California, any U.S. state and any country — the cornerstone for
+  every edition. The app's not-affiliated disclaimer travels with it.
+- **Agents & Robots view**: the one-block-two-learners loop diagram,
+  the five machine-learnable signals per module, flow-state as machine
+  curriculum (Explorer→Lead for robots), the **CX-Trace v1** format,
+  four named ecosystem candidates (Sentient Foundation, Virtuals
+  Protocol, Hugging Face LeRobot, ROS 2 — evaluation only, no
+  affiliation), and the four non-negotiable data principles.
+  Architecture doc: `docs/AGENT_LEARNING.md`.
+- **Style options** across the platform: theme (System/Light/Dark) and
+  style (Parade/Classic) switchers in Louisiana; theme switcher in
+  Flow Hub. Preferences persist per browser.
+- **Flow Hub trace export**: the Archivist's *Copy training trace*
+  produces CX-Trace v1 (anonymized, `share:false` by default) from the
+  local session data.
+
 ## [0.9.0] — 2026-09-10
 
 ### Added

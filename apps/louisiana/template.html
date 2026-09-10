@@ -161,6 +161,48 @@
   .distbar{display:flex; height:24px; border-radius:7px; overflow:hidden; gap:2px; margin:12px 0 4px; background:var(--bg)}
 
   .foot{border-top:1px solid var(--line); margin-top:56px; padding-block:18px 8px; font-size:.76rem; color:var(--faint); max-width:76ch}
+
+  /* ---------- Institute (flagship) ---------- */
+  .arc{margin-top:26px}
+  .archead{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+  .archead h2{margin:0}
+  .arctag{font-size:.7rem; text-transform:uppercase; letter-spacing:.14em; font-weight:700; border-radius:999px; padding:3px 12px; color:#fff}
+  .pgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; margin-top:14px}
+  .pcard{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:15px 17px; border-top:3px solid var(--arc,var(--purple))}
+  .pcard .pn{font-family:"IBM Plex Mono",monospace; font-size:.7rem; color:var(--faint)}
+  .pcard h4{font-family:Fraunces,Georgia,serif; font-weight:600; font-size:1.02rem; margin:.25em 0 .45em; line-height:1.3}
+  .pcard .teach{font-size:.84rem; color:var(--muted); margin:0 0 8px}
+  .pcard .src{font-size:.72rem; color:var(--faint)}
+  blockquote.big{font-family:Fraunces,Georgia,serif; font-size:clamp(1.15rem,2.4vw,1.5rem); line-height:1.4; margin:26px 0;
+    padding:18px 22px; border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 12px 12px 0}
+  blockquote.big footer{font-family:"Instrument Sans",sans-serif; font-size:.8rem; color:var(--muted); margin-top:8px}
+  .disc{border:1px dashed var(--line); border-radius:11px; padding:13px 16px; font-size:.8rem; color:var(--muted); margin-top:26px}
+  .loctable{width:100%; border-collapse:collapse; font-size:.88rem}
+  .loctable th,.loctable td{padding:9px 12px; text-align:left; border-top:1px solid var(--line); vertical-align:top}
+  .loctable thead th{border-top:0; font-size:.7rem; text-transform:uppercase; letter-spacing:.1em; color:var(--faint)}
+  .loctable td:first-child{color:var(--muted); white-space:nowrap}
+  .locwrap{overflow-x:auto}
+
+  /* ---------- Agents & Robots ---------- */
+  .loopwrap{overflow-x:auto; margin-top:8px}
+  .ecogrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; margin-top:14px}
+  .eco{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:15px 17px}
+  .eco .k{font-size:.68rem; text-transform:uppercase; letter-spacing:.13em; color:var(--gold); font-weight:700}
+  .eco h4{font-family:Fraunces,Georgia,serif; margin:.2em 0 .35em; font-size:1.02rem}
+  .eco p{font-size:.83rem; color:var(--muted); margin:0 0 10px}
+  .eco ul{margin:0; padding-left:18px; font-size:.78rem; color:var(--muted)}
+  pre.trace{background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:14px 16px;
+    font-family:"IBM Plex Mono",monospace; font-size:.76rem; overflow-x:auto; line-height:1.5; color:var(--ink)}
+  .sig{display:grid; gap:8px; margin-top:12px}
+  .sig div{display:flex; gap:10px; align-items:baseline; border:1px solid var(--line); border-radius:9px; padding:9px 13px; background:var(--surface); font-size:.86rem}
+  .sig b{color:var(--purple); white-space:nowrap}
+
+  /* ---------- Classic style tones the parade down ---------- */
+  :root[data-style="classic"] .wordmark .la{background:none; color:var(--purple)}
+  :root[data-style="classic"] .worldcard{background:var(--surface)}
+  :root[data-style="classic"] blockquote.big{background:var(--surface); border-left-color:var(--line)}
+  :root[data-style="classic"] .eyebrow b,:root[data-style="classic"] .eyebrow i,:root[data-style="classic"] .eyebrow em{color:var(--muted)}
+  :root[data-style="classic"] .tile.t1 b,:root[data-style="classic"] .tile.t2 b,:root[data-style="classic"] .tile.t3 b{color:var(--ink)}
 </style>
 
 <header class="masthead"><div class="wrap mast">
@@ -169,9 +211,21 @@
     <button class="tab" data-r="state" aria-current="true">The State</button>
     <button class="tab" data-r="parish">Parish Dashboards</button>
     <button class="tab" data-r="regions">Regions &amp; Trade Halls</button>
+    <button class="tab" data-r="institute">The Institute</button>
+    <button class="tab" data-r="machines">Agents &amp; Robots</button>
     <button class="tab" data-r="curriculum">Curriculum</button>
   </nav>
-  <span class="mono" id="verline" style="margin-left:auto; font-size:.72rem; color:var(--faint)"></span>
+  <div class="styles" style="margin-left:auto; display:flex; gap:8px; align-items:center">
+    <label class="mono" for="themepick" style="font-size:.7rem; color:var(--faint)">theme</label>
+    <select id="themepick" style="padding:4px 8px; font-size:.78rem">
+      <option value="">System</option><option value="light">Light</option><option value="dark">Dark</option>
+    </select>
+    <label class="mono" for="stylepick" style="font-size:.7rem; color:var(--faint)">style</label>
+    <select id="stylepick" style="padding:4px 8px; font-size:.78rem">
+      <option value="parade">Parade</option><option value="classic">Classic</option>
+    </select>
+    <span class="mono" id="verline" style="font-size:.72rem; color:var(--faint)"></span>
+  </div>
 </div></header>
 
 <main class="wrap">
@@ -225,6 +279,101 @@
     <p class="lede">Every region anchors a Trade Hall in its hub city — the shared workshop, assessment floor
     and credential office its parishes plug into. Wave mix shows how soon each region comes online.</p>
     <div class="reggrid" id="reggrid"></div>
+  </section>
+
+  <!-- ================= INSTITUTE (flagship) ================= -->
+  <section class="view" id="view-institute">
+    <p class="eyebrow"><b>The flagship</b> · <i>leadership · ethics · civic duty</i> · <em>for every state and country</em></p>
+    <h1>The Legacy Institute</h1>
+    <p class="lede">The civic-leadership cornerstone of every Cognition.X edition, built on the public record and
+    published principles of the Willie L. Brown Jr. Institute of Politics and Public Service — twelve principles
+    taught as craft, localized through one template to any state or country.</p>
+    <blockquote class="big" id="wlbquote"></blockquote>
+    <div id="arcs"></div>
+
+    <h2>The record behind the principles</h2>
+    <p class="sub">Four decades of public life, read as curriculum.</p>
+    <div class="pgrid" id="recordgrid"></div>
+
+    <h2>One template, every edition</h2>
+    <p class="sub">The eight slots that localize the Institute model anywhere — pick an edition to see them resolve.</p>
+    <div class="pickrow"><label for="locpick" style="font-weight:600">Edition</label><select id="locpick"></select></div>
+    <div class="panel locwrap"><table class="loctable" id="loctable"></table></div>
+    <div class="disc" id="wlbdisc"></div>
+  </section>
+
+  <!-- ================= AGENTS & ROBOTS ================= -->
+  <section class="view" id="view-machines">
+    <p class="eyebrow"><b>Machine learners</b> · <i>every module teaches twice</i></p>
+    <h1>Agents and robots in the loop</h1>
+    <p class="lede">Every Cognition.X block ends in a human doing something real. Done with consent and care, those
+    interactions are also the highest-grade training signal a learning agent or robot can get — and the flow-state
+    engine that paces a human learner paces a machine curriculum just as well.</p>
+
+    <div class="panel">
+      <h3>The learning loop</h3>
+      <p class="note">One block, two learners: the human earns the credential; the machine, with consent, learns from how it was done.</p>
+      <div class="loopwrap" id="loopdiagram"></div>
+    </div>
+
+    <div class="chartrow">
+      <div class="panel">
+        <h3>What one module teaches a machine</h3>
+        <p class="note">The machine-learnable signals inside every transfer check.</p>
+        <div class="sig">
+          <div><b>Demonstration</b><span>The human's step order, grip, phrasing and corrections on real material — imitation-learning gold.</span></div>
+          <div><b>Correction</b><span>Where a learner or assessor says "not like that" — the negative examples models rarely get.</span></div>
+          <div><b>Pacing</b><span>How long each band actually takes a human — the ground truth for curriculum difficulty.</span></div>
+          <div><b>Boundaries</b><span>The steps humans refuse or escalate — safety limits learned from practice, not just rules.</span></div>
+          <div><b>Flow telemetry</b><span>Breezed / in-flow / struggled outcomes on the skill–challenge plane — the reward shape itself.</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Flow state for machines</h3>
+        <p class="note">The same channel that paces a person paces an agent.</p>
+        <p style="font-size:.9rem; margin:0 0 10px">Curriculum learning is the flow channel by another name: serve the
+        machine tasks just above its demonstrated competence, ease off on failure, advance on mastery. The Flow Hub's
+        engine — challenge within <span class="mono">skill −0.6 … +1.1</span> — is the scheduler for both learners.</p>
+        <p style="font-size:.9rem; margin:0 0 10px">A robot trained on module traces climbs the same ladder a learner
+        does: <b>Explorer</b> (observe &amp; classify) → <b>Builder</b> (assist on subtasks) → <b>Practitioner</b>
+        (perform under supervision) → <b>Lead</b> (teach back, flag exceptions).</p>
+        <p class="note" style="margin:0">Sample trace (CX-Trace v1 — what the Flow Hub Archivist exports):</p>
+        <pre class="trace">{ "format": "cx-trace/1",
+  "block": "CX-HOUSING-0003",
+  "band": "6–8", "level": "Builder",
+  "moves": [{"skill": 2.4, "challenge": 3, "outcome": "flow"}],
+  "check": {"completed": true, "evidence": "local"},
+  "consent": {"share": false, "anonymized": true} }</pre>
+      </div>
+    </div>
+
+    <h2>Ecosystem options</h2>
+    <p class="sub">Candidate destinations for consented, exported traces — named for evaluation, with no affiliation or
+    integration implied. Every option is judged on the same four questions.</p>
+    <div class="ecogrid">
+      <div class="eco"><span class="k">Open AGI</span><h4>Sentient Foundation</h4>
+        <p>Community-built, open-source AGI models. Fit: contributing anonymized skill traces to open training commons.</p>
+        <ul><li>Open weights: yes (community)</li><li>Consent controls: to verify</li><li>On-device option: to verify</li><li>Trace ownership: to negotiate</li></ul></div>
+      <div class="eco"><span class="k">Agent economy</span><h4>Virtuals Protocol</h4>
+        <p>Tokenized AI agents (virtuals.io). Fit: publishing credentialed skill agents; requires care on data rights and speculation risk.</p>
+        <ul><li>Open weights: partial</li><li>Consent controls: to verify</li><li>On-device option: no</li><li>Trace ownership: contract-dependent</li></ul></div>
+      <div class="eco"><span class="k">Open robotics</span><h4>Hugging Face LeRobot</h4>
+        <p>Open robot-learning stack and datasets. Fit: demonstration traces from Making/Repair and Robotics OS modules.</p>
+        <ul><li>Open weights: yes</li><li>Consent controls: dataset-level</li><li>On-device option: yes</li><li>Trace ownership: contributor licence</li></ul></div>
+      <div class="eco"><span class="k">Middleware</span><h4>ROS 2</h4>
+        <p>The robot operating system the Robotics OS pack already teaches around. Fit: replaying traces on real rigs in Trade Halls.</p>
+        <ul><li>Open weights: n/a (middleware)</li><li>Consent controls: local</li><li>On-device option: yes</li><li>Trace ownership: stays local</li></ul></div>
+    </div>
+
+    <div class="panel" style="margin-top:16px">
+      <h3>Data principles — non-negotiable</h3>
+      <div class="sig">
+        <div><b>Local first</b><span>Traces are recorded and stored only in the learner's browser; nothing on this page transmits anywhere.</span></div>
+        <div><b>Opt-in export</b><span>Data reaches any training pipeline only when the learner exports it themselves, per session, eyes open.</span></div>
+        <div><b>Anonymized by default</b><span>Exports carry skill signals, never identity; the ledger and the trace are separable.</span></div>
+        <div><b>The learner is paid in capability</b><span>Any machine trained on community traces must serve back into the same community's classrooms and Trade Halls.</span></div>
+      </div>
+    </div>
   </section>
 
   <!-- ================= CURRICULUM ================= -->
@@ -444,6 +593,83 @@ function renderRegions(){
     b.addEventListener("click", ()=> location.hash="#/parish/"+b.dataset.p));
 }
 
+/* ---------- INSTITUTE ---------- */
+const ARCS = [
+  {tag:"Service & civic duty", col:"var(--purple)", idx:[0,2,3,8,9]},
+  {tag:"Ethics & character", col:"var(--gold)", idx:[5,6,7,11]},
+  {tag:"Inclusion & the bridge", col:"var(--green)", idx:[1,4,10]},
+];
+const EDITIONS = {
+  "Louisiana (this platform)": ["Baton Rouge","Louisiana Legislature","Parish (64)","Louisiana student standards","Civic seal: verify","Ports, energy corridor, the working coast","Parish offices, school boards, levee & special districts","State public-affairs school — to be agreed"],
+  "California (the original)": ["Sacramento","California Legislature","County (58)","California state standards","State Seal of Civic Engagement","Mission Bay biotech","City & county agencies","San Francisco State (the Fellowship itself)"],
+  "Any U.S. state": ["State capital","State legislature","County / borough / parish","State standards framework","State civic seal, where one exists","The state's anchor industry hub","State & local agency placement ladder","A public-affairs school partner"],
+  "Any country": ["National capital","National or provincial legislature","District / county / commune","National curriculum framework","National civics certificate, where one exists","The region's anchor industries","Ministry & municipal placement ladder","A public-affairs university partner"],
+};
+const SLOTS = ["Capital","Legislature","Local unit","Standards framework","Civic seal","Anchor-industry hub","Placement ladder","Fellowship partner"];
+function renderInstitute(){
+  $("#wlbquote").innerHTML = `“${esc(D.wlb.quote)}”<footer>— Willie L. Brown Jr., Institute vision statement</footer>`;
+  $("#arcs").innerHTML = ARCS.map(a =>
+    `<div class="arc"><div class="archead"><span class="arctag" style="background:${a.col}">${a.tag}</span>
+     <h2 style="font-size:1.15rem">${a.idx.length} principles</h2></div>
+     <div class="pgrid">${a.idx.map(i => { const p = D.principles[i]; return (
+       `<div class="pcard" style="--arc:${a.col}"><span class="pn">P${String(i+1).padStart(2,"0")}</span>
+        <h4>${esc(p.p)}</h4><p class="teach">${esc(p.teach)}</p>
+        <div class="src">Source: ${esc(p.src)}</div></div>`);}).join("")}</div></div>`).join("");
+  $("#recordgrid").innerHTML = D.wlb.record.map(([k,v]) =>
+    `<div class="pcard" style="--arc:var(--gold)"><span class="pn">${esc(k)}</span><p class="teach" style="margin-top:.4em">${esc(v)}</p></div>`).join("");
+  const sel = $("#locpick");
+  sel.innerHTML = Object.keys(EDITIONS).map(k=>`<option>${esc(k)}</option>`).join("");
+  const draw = () => {
+    const vals = EDITIONS[sel.value];
+    $("#loctable").innerHTML = `<thead><tr><th>Slot</th><th>${esc(sel.value)}</th></tr></thead><tbody>`+
+      SLOTS.map((s,i)=>`<tr><td>${s}</td><td>${esc(vals[i])}</td></tr>`).join("")+`</tbody>`;
+  };
+  sel.addEventListener("change", draw); draw();
+  $("#wlbdisc").innerHTML = `<b>Disclaimer</b> — ${esc(D.wlb.disclaimer)}`;
+}
+
+/* ---------- AGENTS & ROBOTS ---------- */
+function renderLoop(){
+  const W=760, H=340, cx=W/2, cy=H/2, R=118;
+  const nodes = [
+    ["Human learner","earns the credential"],
+    ["Transfer check","real material, real audience"],
+    ["Consented trace","CX-Trace v1 · local first"],
+    ["Agent / robot curriculum","flow-paced, band by band"],
+    ["Assistance returned","in class & Trade Hall"],
+  ];
+  const pos = nodes.map((_,i)=>{ const a = -Math.PI/2 + i*2*Math.PI/nodes.length;
+    return [cx + Math.cos(a)*(R+120), cy + Math.sin(a)*R]; });
+  const boxes = nodes.map((n,i)=>{ const [x,y]=pos[i]; return (
+    `<g><rect x="${x-92}" y="${y-27}" width="184" height="54" rx="10" fill="var(--surface-2)" stroke="var(--line)"/>`+
+    `<text x="${x}" y="${y-5}" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">${n[0]}</text>`+
+    `<text x="${x}" y="${y+13}" text-anchor="middle" font-size="10" fill="var(--muted)">${n[1]}</text></g>`);}).join("");
+  const arrows = nodes.map((_,i)=>{ const [x1,y1]=pos[i], [x2,y2]=pos[(i+1)%nodes.length];
+    const mx=(x1+x2)/2 + (cx-(x1+x2)/2)*-0.25, my=(y1+y2)/2 + (cy-(y1+y2)/2)*-0.25;
+    return `<path d="M${x1},${y1} Q${mx},${my} ${x2},${y2}" fill="none" stroke="var(--gold)" stroke-width="2" marker-end="url(#arr)" opacity=".8"/>`;}).join("");
+  $("#loopdiagram").innerHTML =
+    `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="img" aria-label="The human-machine learning loop">`+
+    `<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">`+
+    `<path d="M0,0 L10,5 L0,10 z" fill="var(--gold)"/></marker></defs>`+
+    `<text x="${cx}" y="${cy-6}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--purple)">one block,</text>`+
+    `<text x="${cx}" y="${cy+12}" text-anchor="middle" font-size="12" font-weight="600" fill="var(--purple)">two learners</text>`+
+    arrows + boxes + `</svg>`;
+}
+
+/* ---------- style options ---------- */
+function initStyles(){
+  const th = $("#themepick"), st = $("#stylepick");
+  const savedT = store("cxla.theme") || "", savedS = store("cxla.style") || "parade";
+  th.value = savedT; st.value = savedS;
+  const apply = () => {
+    if (th.value) document.documentElement.dataset.theme = th.value;
+    else delete document.documentElement.dataset.theme;
+    document.documentElement.dataset.style = st.value;
+    store("cxla.theme", th.value); store("cxla.style", st.value);
+  };
+  th.addEventListener("change", apply); st.addEventListener("change", apply); apply();
+}
+
 /* ---------- CURRICULUM ---------- */
 function renderCurriculum(){
   const c = D.curriculum;
@@ -466,6 +692,8 @@ function route(){
     const s = h.split("/")[1];
     renderParish(bySlug[s] || D.parishes[0]);
   } else if (h==="regions") view="regions";
+  else if (h==="institute") view="institute";
+  else if (h==="machines") view="machines";
   else if (h==="curriculum") view="curriculum";
   document.querySelectorAll(".view").forEach(el=>el.classList.toggle("active", el.id==="view-"+view));
   document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-current", t.dataset.r===view ? "true":"false"));
@@ -479,6 +707,7 @@ $("#prand").addEventListener("click", ()=> location.hash="#/parish/"+D.parishes[
 window.addEventListener("hashchange", route);
 
 renderState(); renderParishPicker(); renderRegions(); renderCurriculum();
+renderInstitute(); renderLoop(); initStyles();
 renderParish(bySlug["east-baton-rouge"] || D.parishes[0]);
 route();
 </script>

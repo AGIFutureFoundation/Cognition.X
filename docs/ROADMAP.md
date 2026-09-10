@@ -129,6 +129,9 @@ complete a track and hold a verifiable credential file.
 
 **Goal: adaptive delivery without losing verifiability.**
 
+- [x] Machine-learning architecture (v0.10.0): CX-Trace v1 format,
+  flow-state as machine curriculum, ecosystem evaluation criteria and
+  the four data principles (`docs/AGENT_LEARNING.md`)
 - Adaptive sequencing: recommend next block from prior transfer-check
   outcomes (the mission simulator's difficulty model, generalised)
 - AI study partner: block-scoped tutoring with the *Working with AI*

@@ -199,6 +199,12 @@
     <button class="navbtn" data-view="flow"><span class="dot"></span>Flow</button>
     <button class="navbtn" data-view="agents"><span class="dot"></span>Agents</button>
     <button class="navbtn" data-view="ledger"><span class="dot"></span>Ledger</button>
+    <div style="padding:10px 10px 0">
+      <label class="mono" for="themepick" style="font-size:.68rem; color:var(--faint); display:block; margin-bottom:4px">theme</label>
+      <select id="themepick" style="width:100%; background:var(--surface-2); color:var(--ink); border:1px solid var(--line); border-radius:7px; padding:5px 8px; font-size:.8rem">
+        <option value="">System</option><option value="light">Light</option><option value="dark">Dark</option>
+      </select>
+    </div>
     <div class="railfoot mono" id="railfoot"></div>
   </nav>
 
@@ -314,10 +320,15 @@
       <p class="lede" style="margin-bottom:10px">Copy this JSON to move your ledger to another browser; paste a
       ledger and load it to restore.</p>
       <textarea id="ledio" rows="5" style="width:100%" spellcheck="false" aria-label="Ledger JSON"></textarea>
-      <div style="margin-top:10px; display:flex; gap:9px">
+      <div style="margin-top:10px; display:flex; gap:9px; flex-wrap:wrap">
         <button class="btn" id="led-copy">Copy ledger</button>
         <button class="btn" id="led-load">Load pasted ledger</button>
+        <button class="btn" id="led-trace">Copy training trace (CX-Trace v1)</button>
       </div>
+      <p class="lede" style="margin-top:14px; font-size:.83rem">The training trace is the anonymized, machine-readable
+      record of your sessions — flow moves on the skill–challenge plane and completed checks, no identity. It exists so
+      that, <b>only if you choose to export and share it</b>, agents and robots can learn from how humans actually move
+      through these blocks. Nothing leaves this page on its own.</p>
     </section>
   </main>
 </div>
@@ -646,6 +657,19 @@ $("#led-copy").addEventListener("click", async () => {
   try { await navigator.clipboard.writeText(ta.value); log("Archivist","Ledger copied to clipboard."); }
   catch(e){ document.execCommand && document.execCommand("copy"); log("Archivist","Ledger selected — copy it with the keyboard."); }
 });
+$("#led-trace").addEventListener("click", async () => {
+  const sessions = Object.entries(S.flowPts || {}).map(([k, pts]) => ({
+    track: k, moves: pts.map(p => ({skill:+p.s.toFixed(2), challenge:+p.c.toFixed(2)}))
+  }));
+  const checks = Object.entries(S.done || {}).flatMap(([k, m]) =>
+    Object.entries(m).map(([ti, bi]) => ({track:k, theme:+ti, band:BANDS[bi]})));
+  const trace = {format:"cx-trace/1", version:DATA.version, sessions, checks,
+    consent:{share:false, anonymized:true, note:"set share:true only when deliberately contributing this trace"}};
+  const ta = $("#ledio"); ta.value = JSON.stringify(trace, null, 1);
+  ta.select();
+  try { await navigator.clipboard.writeText(ta.value); log("Archivist","Training trace copied — anonymized, share:false until you say otherwise."); }
+  catch(e){ log("Archivist","Training trace ready in the box — copy it with the keyboard."); }
+});
 $("#led-load").addEventListener("click", () => {
   try {
     const inb = JSON.parse($("#ledio").value);
@@ -660,6 +684,19 @@ function go(v){
   window.scrollTo({top:0});
 }
 document.querySelectorAll(".navbtn").forEach(b => b.addEventListener("click", () => go(b.dataset.view)));
+
+/* ---------- theme option ---------- */
+(function(){
+  const th = $("#themepick");
+  let saved=""; try{ saved = localStorage.getItem("cxflow.theme")||""; }catch(e){}
+  th.value = saved;
+  const apply = () => {
+    if (th.value) document.documentElement.dataset.theme = th.value;
+    else delete document.documentElement.dataset.theme;
+    try{ localStorage.setItem("cxflow.theme", th.value); }catch(e){}
+  };
+  th.addEventListener("change", apply); apply();
+})();
 
 /* ---------- boot ---------- */
 renderSystem(); renderFamChips(); renderPacks(); fillFlowSelects();
