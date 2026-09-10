@@ -1,5 +1,5 @@
 {
- "note": "Fact base for the Cognition.X Trades Network: 37 trade families crossed with 3 regions = 111 regional union/trade entries. International union names are real and public; LOCAL/CHAPTER NUMBERS ARE DELIBERATELY NOT LISTED — locals merge, renumber and redistrict, so every entry carries the same instruction: verify the current local with the regional building-trades or labor council before publishing. Simulation scenarios are training exercises phrased against real, publicly known sites; they teach control discipline and observation and never count as equipment certification or union credit. Each family also carries a classroom hook — the school subjects it teaches through (math, science, ELA, civics) and one concrete in-class connection — feeding the Trades Across School Subjects pack.",
+ "note": "Fact base for the Cognition.X Trades Network: 37 trade families crossed with 6 regions = 222 regional union/trade entries (San Francisco, Oakland–East Bay, Los Angeles on the West Coast; New Orleans, Baton Rouge–River Region, Houston–Gulf Coast on the Gulf). International union names are real and public; LOCAL/CHAPTER NUMBERS ARE DELIBERATELY NOT LISTED — locals merge, renumber and redistrict, so every entry carries the same instruction: verify the current local with the regional building-trades or labor council before publishing. Simulation scenarios are training exercises phrased against real, publicly known sites; they teach control discipline and observation and never count as equipment certification or union credit. Each family also carries a classroom hook — the school subjects it teaches through (math, science, ELA, civics) and one concrete in-class connection — feeding the Trades Across School Subjects pack.",
  "regions": [
   {
    "id": "sf",
@@ -50,6 +50,57 @@
     "civic": "a NOLA Public Schools campus",
     "mech": "the floor of the NASA Michoud Assembly Facility",
     "fire": "a hurricane-season readiness plan"
+   }
+  },
+  {
+   "id": "br",
+   "name": "Baton Rouge – River Region",
+   "council": "the Baton Rouge Building & Construction Trades Council and the Greater Baton Rouge AFL-CIO",
+   "districts": "the East Baton Rouge Parish School System and the surrounding river-parish districts",
+   "sites": {
+    "build": "a levee-top build-out on the downtown riverfront",
+    "elec": "a substation feeding the petrochemical corridor's grid",
+    "water": "a Mississippi river-intake and treatment plant",
+    "port": "the Port of Greater Baton Rouge's deep-water docks",
+    "transit": "a CATS bus yard and the river-bridge corridor",
+    "service": "a downtown river-stage festival build",
+    "civic": "an East Baton Rouge Parish schools campus",
+    "mech": "an industrial fabrication shop on the corridor",
+    "fire": "a refinery-corridor mutual-aid plan"
+   }
+  },
+  {
+   "id": "hou",
+   "name": "Houston – Gulf Coast",
+   "council": "the Houston Gulf Coast Building & Construction Trades Council and the Texas Gulf Coast Area Labor Federation",
+   "districts": "Houston ISD and the surrounding Gulf Coast districts",
+   "sites": {
+    "build": "a hospital-district tower build in the Texas Medical Center area",
+    "elec": "a grid substation feeding the ship channel",
+    "water": "a bayou pump and flood-control station",
+    "port": "a Port Houston container terminal on the ship channel",
+    "transit": "a METRO light-rail yard",
+    "service": "a downtown convention-center show load-in",
+    "civic": "a Houston ISD campus",
+    "mech": "a ship-channel fabrication yard",
+    "fire": "a hurricane-and-refinery mutual-aid plan"
+   }
+  },
+  {
+   "id": "lax",
+   "name": "Los Angeles",
+   "council": "the Los Angeles/Orange Counties Building & Construction Trades Council and the LA County Federation of Labor",
+   "districts": "the Los Angeles Unified School District (LAUSD) and neighboring districts",
+   "sites": {
+    "build": "a transit-oriented tower rising over a Metro station",
+    "elec": "an LADWP receiving station",
+    "water": "the LA Aqueduct terminus and a spreading grounds",
+    "port": "a San Pedro Bay container berth (the Ports of LA and Long Beach)",
+    "transit": "a Metro rail yard",
+    "service": "a Hollywood soundstage load-in",
+    "civic": "an LAUSD campus",
+    "mech": "an aerospace machine shop in the South Bay",
+    "fire": "a wildland-urban interface plan in the hills"
    }
   }
  ],
@@ -383,7 +434,10 @@
    "intl_by_region": {
     "sf": "International Longshore and Warehouse Union (ILWU)",
     "oak": "International Longshore and Warehouse Union (ILWU)",
-    "nola": "International Longshoremen's Association (ILA)"
+    "nola": "International Longshoremen's Association (ILA)",
+    "lax": "International Longshore and Warehouse Union (ILWU)",
+    "hou": "International Longshoremen's Association (ILA)",
+    "br": "International Longshoremen's Association (ILA)"
    },
    "kind": "port",
    "sim": "Choreograph one container move at {site} — crane, hostler, stack — and call the pinch points a walker must never cross",

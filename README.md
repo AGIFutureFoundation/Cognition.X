@@ -19,7 +19,7 @@ The repository carries three things:
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
-| Cognition.X Trades Network (111 union & trade entries, 3 regions) | [`apps/trades-network/`](apps/trades-network/) | HTML |
+| Cognition.X Trades Network (222 union & trade entries, 6 regions) | [`apps/trades-network/`](apps/trades-network/) | HTML |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
 
 ## Quick start
