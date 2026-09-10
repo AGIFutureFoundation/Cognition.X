@@ -106,6 +106,9 @@ complete a track and hold a verifiable credential file.
 
 **Goal: real cohorts run on it; instances interoperate.**
 
+- [x] Parish-level platform (v0.9.0): **Cognition.X Louisiana** —
+  independent dashboards for all 64 parishes, built from the app's
+  fact base and the dataset (`tools/build_louisiana.py`)
 - Pilot playbook: the parish/Trade-Hall implementation plans in the app
   become operational checklists with staffing, space and device budgets
 - Instance federation: an instance publishes its pack versions and
