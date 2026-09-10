@@ -79,7 +79,10 @@ def main():
             entry["loose"] = loose
         out_packs.append(entry)
 
-    payload = {"version": version, "bands": BANDS, "levels": LEVELS, "packs": out_packs}
+    access = json.loads((ROOT / "data" / "learners" / "learner_types.json")
+                        .read_text(encoding="utf-8"))
+    payload = {"version": version, "bands": BANDS, "levels": LEVELS, "packs": out_packs,
+               "access": access}
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
     # keep the JSON safe inside a <script> block
     data = data.replace("</", "<\\/")

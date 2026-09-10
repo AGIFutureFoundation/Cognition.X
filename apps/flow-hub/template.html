@@ -209,6 +209,9 @@
         <option value="">Off</option><option value="warm">Warm</option>
         <option value="steady">Steady</option><option value="brisk">Brisk</option>
       </select>
+      <label class="mono" for="accesspick" style="font-size:.68rem; color:var(--faint); display:block; margin:8px 0 4px">access profile</label>
+      <select id="accesspick" style="width:100%; background:var(--surface-2); color:var(--ink); border:1px solid var(--line); border-radius:7px; padding:5px 8px; font-size:.8rem"></select>
+      <p class="mono" id="accessline" style="font-size:.66rem; color:var(--faint); margin:6px 0 0; line-height:1.5"></p>
       <button class="btn primary" id="guidebtn" style="width:100%; margin-top:10px">🧭 Guide me</button>
     </div>
     <div class="railfoot mono" id="railfoot"></div>
@@ -403,6 +406,15 @@ function say(text){
   } catch(e){}
 }
 
+/* ---------- access profile: a chosen support, never a diagnosis ----------
+   Tunes the session's pacing automations — focus-interval length, break
+   cadence and coach sensitivity. Optional, browser-local, removable. */
+let AC = null;
+try { const id = localStorage.getItem("cxflow.access");
+  AC = (DATA.access.types || []).find(t=>t.id===id) || null; } catch(e){}
+function focusSecs(){ return AC ? AC.flow.breakEvery*180 : 1500; }
+function breakMoves(){ return AC ? AC.flow.breakEvery : 10; }
+
 /* ---------- agents & the tutor swarm ---------- */
 const AGENTS = [
   {id:"pathfinder", name:"Pathfinder", role:"Selection", desc:"Chooses the next block: the least-visited theme in your track, served at the band your skill calls for."},
@@ -427,15 +439,18 @@ function tutorStrip(who, msg){
 const SWARM_RULES = [
   {who:"Coach", pri:1, fire(){
     const o = BB.outcomes;
-    if (o.length>=2 && o[o.length-1]==="struggled" && o[o.length-2]==="struggled")
-      return "Two steep ones in a row — I have eased the band. Do only the first small step of this check, then stop and look.";
+    const need = (AC && AC.flow.stepBias < 0) ? 1 : 2;   // gentler profiles ease sooner
+    if (o.length>=need && o.slice(-need).every(x=>x==="struggled"))
+      return (need===1 ? "That one was steep — with your profile I ease early. " :
+        "Two steep ones in a row — I have eased the band. ") +
+        "Do only the first small step of this check, then stop and look.";
   }},
   {who:"Motivator", pri:2, fire(){
     const o = BB.outcomes;
     if (o.length>=3 && o.slice(-3).every(x=>x==="flow"))
       return "Three moves in the channel — that is flow state. Hold this pace; do not raise the stakes yourself.";
-    if (BB.moves>0 && BB.moves%10===0)
-      return "Ten moves this session. Take the Pacer's break before the next block — flow survives rest, not grind.";
+    if (BB.moves>0 && BB.moves%breakMoves()===0)
+      return breakMoves() + " moves this session — your cadence is reached. Take the Pacer's break before the next block; flow survives rest, not grind.";
   }},
   {who:"Scholar", pri:3, fire(){
     if (F && F.theme!==BB.lastTheme && !BB.seenThemes.has(F.theme)){
@@ -697,7 +712,7 @@ function drawFlow(){
 }
 
 /* ---------- Pacer ---------- */
-let pace = {left:1500, total:1500, timer:null, mode:"focus"};
+let pace = {left:focusSecs(), total:focusSecs(), timer:null, mode:"focus"};
 function paceRender(){
   const m = String(Math.floor(pace.left/60)).padStart(2,"0"), s = String(pace.left%60).padStart(2,"0");
   $("#pace-clock").textContent = m+":"+s;
@@ -706,14 +721,14 @@ function paceRender(){
 $("#pace-toggle").addEventListener("click", () => {
   if (pace.timer){ clearInterval(pace.timer); pace.timer=null; $("#pace-toggle").textContent="Resume"; log("Pacer","Interval paused."); return; }
   $("#pace-toggle").textContent = "Pause";
-  if (pace.left === pace.total) log("Pacer", pace.mode==="focus" ? "Focus interval started — 25 minutes." : "Break started — 5 minutes.");
+  if (pace.left === pace.total) log("Pacer", pace.mode==="focus" ? `Focus interval started — ${Math.round(focusSecs()/60)} minutes.` : "Break started — 5 minutes.");
   pace.timer = setInterval(() => {
     pace.left--;
     if (pace.left <= 0){
       clearInterval(pace.timer); pace.timer=null;
       const was = pace.mode;
       pace.mode = was==="focus" ? "break" : "focus";
-      pace.total = pace.mode==="focus" ? 1500 : 300;
+      pace.total = pace.mode==="focus" ? focusSecs() : 300;
       pace.left = pace.total;
       $("#pace-toggle").textContent = pace.mode==="focus" ? "Start focus" : "Start break";
       log("Pacer", was==="focus" ? "Focus interval complete — take the 5-minute break." : "Break over — ready for the next focus interval.");
@@ -723,7 +738,7 @@ $("#pace-toggle").addEventListener("click", () => {
 });
 $("#pace-reset").addEventListener("click", () => {
   if (pace.timer) clearInterval(pace.timer);
-  pace = {left:1500, total:1500, timer:null, mode:"focus"};
+  pace = {left:focusSecs(), total:focusSecs(), timer:null, mode:"focus"};
   $("#pace-toggle").textContent = "Start focus"; paceRender();
 });
 
@@ -837,6 +852,30 @@ $("#guidebtn").addEventListener("click", ()=>{ log("Guide","Walkthrough started 
     try{ localStorage.setItem("cxflow.voice", vp.value||"off"); }catch(e){}
     if (voiceMode) say("Voice agents on. I'm your guide, and the tutor swarm will speak up when it steps in.");
   });
+
+  // access profile — a chosen support (never a diagnosis or label); tunes
+  // interval length, break cadence and how early the Coach eases the band
+  const ap = $("#accesspick");
+  ap.innerHTML = `<option value="">None</option>` + (DATA.access.types||[]).map(t=>
+    `<option value="${t.id}">${t.name}</option>`).join("");
+  ap.value = AC ? AC.id : "";
+  const accessLine = () => {
+    $("#accessline").textContent = AC
+      ? `${Math.round(focusSecs()/60)}-min focus · break every ${breakMoves()} moves · checks: ${AC.flow.checkAlt}`
+      : "Optional. A profile tunes pacing and check formats — chosen by you, changeable anytime, never shared.";
+  };
+  ap.addEventListener("change", ()=>{
+    try{ localStorage.setItem("cxflow.access", ap.value); }catch(e){}
+    AC = (DATA.access.types||[]).find(t=>t.id===ap.value) || null;
+    if (pace.timer) clearInterval(pace.timer);
+    pace = {left:focusSecs(), total:focusSecs(), timer:null, mode:"focus"};
+    $("#pace-toggle").textContent = "Start focus"; paceRender();
+    accessLine();
+    if (AC){ log("Guide", `${AC.name} profile on — ${AC.helps[0]}. Pacing retuned: ${Math.round(focusSecs()/60)}-minute focus, break every ${breakMoves()} moves.`);
+      say(`Profile on. ${AC.helps[0]}.`); }
+    else log("Guide", "Access profile off — standard pacing restored.");
+  });
+  accessLine();
 })();
 
 /* ---------- theme option ---------- */

@@ -49,6 +49,16 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   parent's family ledger and hall card, the homeschool co-op guild,
   the parish admin's five honest numbers and launch team, and the
   state admin's readiness rollup and Trade Hall launch load.
+- **Flow-state engine & access modules (v0.27.0)** — a per-learner
+  flow model (warming up / in flow / cruising / overloaded / break
+  called) whose automations steer the experience: shrink the step
+  under overload, stretch when cruising, call the break on the
+  learner's own cadence. Twenty learner-type access modules —
+  **chosen supports, never diagnoses** — tune the cadence, the step
+  bias and the check formats; the student runs a live Flow Session,
+  the teacher reads the Class flow board, the parent sees What helps
+  my child, and the admins see state distributions. Backed by the
+  Learning States & Universal Access pack.
 - **Learner ledger & standing (v0.25.0)** — a browser-local,
   consent-first progress model over the 30 core-spine tracks with
   working automations: automatic credential award at 50 recorded

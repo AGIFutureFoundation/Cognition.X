@@ -234,6 +234,13 @@ def nola_unions():
             "districts": reg["districts"], "entries": entries}
 
 
+def learner_types():
+    """The 20 access profiles (support preferences, never diagnoses) that
+    drive the flow-state automations and access guidance."""
+    return json.loads((ROOT / "data" / "learners" / "learner_types.json")
+                      .read_text(encoding="utf-8"))
+
+
 def main():
     fb = extract_fact_base()
     missing = [p[0] for p in fb["parishes"] if p[0] not in POS]
@@ -273,6 +280,7 @@ def main():
         "packmeta": packmeta,
         "catalog": catalog_light,
         "unions": nola_unions(),
+        "access": learner_types(),
     }
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     template = (ROOT / "apps" / "louisiana" / "template.html").read_text(encoding="utf-8")

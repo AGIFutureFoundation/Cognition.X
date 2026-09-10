@@ -10,7 +10,7 @@ tenancy, reentry, global health field practice, and working with AI.
 ## Pages
 
 - [[Data Model]] — blocks, tracks, bands, levels, ids
-- [[Packs]] — catalog of all 42 packs
+- [[Packs]] — catalog of all 43 packs
 - [[Legacy Tracks]] — the legacy-track model and its localizations
 - [[Credential Framework]] — Explorer → Builder → Practitioner → Lead
 - [[Education OS App]] — the single-file application
@@ -28,9 +28,9 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Licensing rationale](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/LICENSING.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.26.0)
+## Numbers (v0.27.0)
 
-**16,200 blocks · 42 packs · 200 tracks · 1,384 credentials**
+**16,450 blocks · 43 packs · 205 tracks · 1,389 credentials**
 
 ---
 

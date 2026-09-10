@@ -15,7 +15,7 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (16,200 blocks, 42 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (16,450 blocks, 43 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
@@ -74,7 +74,9 @@ Classroom : Flipped & Gamified** pack (250 blocks behind the Trades
 Network's flipped-classroom, union-partnership and simulation-studio
 model), the **Trades Across School Subjects** pack (250 blocks teaching
 the working world inside math, science, ELA and civics from the
-earliest bands), three **legacy-track localizations** (*Civic Leadership
+earliest bands), the **Learning States & Universal Access** pack (250
+blocks behind the platform's 20 learner-type access modules — chosen
+supports, never diagnoses), three **legacy-track localizations** (*Civic Leadership
 Legacy : Louisiana / California / Texas*, in the Willie L. Brown Jr.
 Institute model carried by the app — see
 [`docs/wiki/Legacy-Tracks.md`](docs/wiki/Legacy-Tracks.md)), plus the

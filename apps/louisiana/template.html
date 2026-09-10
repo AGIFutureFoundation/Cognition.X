@@ -1340,6 +1340,14 @@ function llSeedDemo(){
                band: i%5, demo:true, prog:{}};
     LTRACKS.forEach((t,ti)=>{ const r = rnd();
       if (r > 0.55) l.prog[t.key] = Math.min(50, Math.floor(rnd()*56)); });
+    if (rnd() > 0.45){
+      l.types = [D.access.types[Math.floor(rnd()*D.access.types.length)].id];
+      if (rnd() > 0.75) l.types.push(D.access.types[Math.floor(rnd()*D.access.types.length)].id);
+      l.types = [...new Set(l.types)];
+    }
+    const ev = []; const n = Math.floor(rnd()*8);
+    for (let e=0; e<n; e++) ev.push(rnd() > 0.35 ? 1 : -1);
+    l.fs = {events: ev, sinceBreak: Math.floor(rnd()*9), moves: n};
     if (!d.learners.some(x=>x.id===l.id)) d.learners.push(l);
   }
   llSave(d);
@@ -1348,6 +1356,73 @@ function llClearDemo(){
   const d = llLoad();
   d.learners = d.learners.filter(l=>!l.demo);
   llSave(d);
+}
+
+/* ---------- flow-state engine ----------
+   Per-learner flow model driving the experience: state is computed from the
+   last recorded pass/struggle events; access profiles (chosen supports,
+   never diagnoses) tune the automations — break cadence, step bias, and
+   alternative check formats. All browser-local. */
+function accessOf(l){
+  const types = (l.types||[]).map(id => D.access.types.find(t=>t.id===id)).filter(Boolean);
+  const fd = D.access.flow_defaults;
+  return {
+    types,
+    breakEvery: types.length ? Math.min(...types.map(t=>t.flow.breakEvery)) : fd.breakEvery,
+    stepBias:  types.length ? Math.min(...types.map(t=>t.flow.stepBias))  : fd.stepBias,
+    alts: types.map(t=>t.flow.checkAlt).filter(Boolean),
+  };
+}
+const FLOWMETA = {
+  warming:  ["Warming up", "var(--faint)"],
+  flow:     ["In flow", "var(--green)"],
+  cruising: ["Cruising — stretch", "var(--w1)"],
+  overload: ["Overloaded — shrink", "var(--w4)"],
+  brk:      ["Break called", "var(--gold)"],
+};
+function flowOf(l){
+  const fs = l.fs || {events:[], sinceBreak:0, moves:0};
+  const a = accessOf(l);
+  const last3 = fs.events.slice(-3).reduce((s,x)=>s+x, 0);
+  let state, advice;
+  if (!fs.events.length){
+    state = "warming"; advice = "Serve one familiar block to open the session — the ramp is part of the design.";
+  } else if (last3 <= -2){
+    state = "overload";
+    advice = "Automation: shrink the step — split the current check into its smallest honest piece" +
+      (a.alts.length ? ", or switch format: " + a.alts[0] : "") + ".";
+  } else if (last3 >= 3 || (last3 >= 2 && a.stepBias > 0)){
+    state = "cruising"; advice = "Automation: stretch — raise the band or serve a fresh theme; the channel is under-filled.";
+  } else {
+    state = "flow"; advice = "Hold the line — same step size, same pace. This is the channel.";
+  }
+  if (fs.sinceBreak >= a.breakEvery){
+    state = "brk";
+    advice = `Automation: break called — the ${a.breakEvery}-move cadence for this profile is reached. Movement or rest before the next block.`;
+  }
+  return {state, advice, a, fs, last3};
+}
+function flowEvent(l, v){
+  l.fs = l.fs || {events:[], sinceBreak:0, moves:0};
+  if (v === 0){ l.fs.sinceBreak = 0; }
+  else { l.fs.events = l.fs.events.slice(-11).concat([v]); l.fs.moves++; l.fs.sinceBreak++; }
+}
+function flowChannelSVG(last3){
+  const x = 20 + ((last3 + 3) / 6) * 320;  // -3..+3 across the channel
+  return `<svg viewBox="0 0 360 46" width="100%" style="max-width:360px" role="img" aria-label="Flow channel position">
+    <rect x="20" y="14" width="106" height="14" rx="7" fill="var(--w4)" opacity=".35"/>
+    <rect x="126" y="14" width="108" height="14" rx="7" fill="var(--green)" opacity=".5"/>
+    <rect x="234" y="14" width="106" height="14" rx="7" fill="var(--w1)" opacity=".35"/>
+    <text x="73" y="42" text-anchor="middle" font-size="9" fill="var(--faint)">overload</text>
+    <text x="180" y="42" text-anchor="middle" font-size="9" fill="var(--faint)">the channel</text>
+    <text x="287" y="42" text-anchor="middle" font-size="9" fill="var(--faint)">under-filled</text>
+    <circle cx="${x.toFixed(0)}" cy="21" r="9" fill="var(--ink)" stroke="var(--surface)" stroke-width="2.5"/>
+  </svg>`;
+}
+function flowDist(ls){
+  const dist = {warming:0, flow:0, cruising:0, overload:0, brk:0};
+  ls.forEach(l => dist[flowOf(l).state]++);
+  return dist;
 }
 
 /* Shared widget helpers */
@@ -1429,6 +1504,77 @@ const WIDGETS = {
         say("Credential earned. " + (t?t.credential:"")); }
       setTimeout(renderRoles, 0);
     });
+  }},
+  {id:"flowsession", t:"Flow session — the automations at work", span:true, r:(p,el)=>{
+    const d = llLoad();
+    const me = d.learners.find(l=>l.id===R.me);
+    if (!me){ el.innerHTML += `<p class="note">Add yourself in <b>My standing</b> first — the flow engine runs per learner.</p>`; return; }
+    const fl = flowOf(me);
+    const [label, col] = FLOWMETA[fl.state];
+    const rec = llRecommend(me);
+    const key = LTRACKS.some(t=>t.key===R.meTrack) ? R.meTrack : (rec ? rec.t.key : LTRACKS[0].key);
+    el.innerHTML += `<p class="note">Two buttons drive the whole experience: each result moves your position
+      in the flow channel, and the automations answer — smaller steps under overload, a stretch when cruising,
+      the break called on your profile's cadence. Passes also credit your ledger.</p>
+      <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin:4px 0 10px">
+        <span class="chip" style="background:${col}; color:#fff; border:0; font-weight:600">${label}</span>
+        <span class="mono" style="font-size:.72rem; color:var(--faint)">${fl.fs.moves} moves · ${fl.fs.sinceBreak}/${fl.a.breakEvery} to break</span>
+      </div>
+      ${flowChannelSVG(fl.last3)}
+      <p style="font-size:.88rem; margin:10px 0"><b>Guide:</b> ${esc(fl.advice)}</p>
+      <div class="pickrow" style="margin:0 0 10px"><select id="fs-track">${LTRACKS.map(t=>
+        `<option value="${esc(t.key)}"${t.key===key?" selected":""}>${esc(t.name)} · ${esc(t.pack)}</option>`).join("")}</select></div>
+      <div style="display:flex; gap:9px; flex-wrap:wrap">
+        <button class="btn gold" id="fs-pass">✓ Passed the check</button>
+        <button class="btn" id="fs-strug">↺ Struggled</button>
+        <button class="btn" id="fs-break">☕ Break taken</button>
+      </div>` +
+      (fl.a.types.length ? `<p class="note" style="margin-top:10px">Tuned by your access profile: ${fl.a.types.map(t=>esc(t.name)).join(" · ")}.</p>` : "");
+    el.querySelector("#fs-track").addEventListener("change", e=>{ R.meTrack = e.target.value; store("cxla.roles", JSON.stringify(R)); });
+    const act = v => {
+      const d2 = llLoad(); const l = d2.learners.find(x=>x.id===R.me); if (!l) return;
+      flowEvent(l, v);
+      if (v === 1){
+        const earned = llCredit(l, el.querySelector("#fs-track").value, 1);
+        if (earned){ const t = LTRACKS.find(x=>x.key===el.querySelector("#fs-track").value);
+          say("Credential earned. " + (t?t.credential:"")); }
+      }
+      llSave(d2);
+      const nf = flowOf(l);
+      if (v !== 1 || nf.state !== "flow") say(nf.advice);
+      setTimeout(renderRoles, 0);
+    };
+    el.querySelector("#fs-pass").addEventListener("click", ()=>act(1));
+    el.querySelector("#fs-strug").addEventListener("click", ()=>act(-1));
+    el.querySelector("#fs-break").addEventListener("click", ()=>act(0));
+  }},
+  {id:"access", t:"My access profile", span:true, r:(p,el)=>{
+    const d = llLoad();
+    const me = d.learners.find(l=>l.id===R.me);
+    if (!me){ el.innerHTML += `<p class="note">Add yourself in <b>My standing</b> first.</p>`; return; }
+    const mine = me.types || [];
+    el.innerHTML += `<p class="note">${esc(D.access.types.length)} learner types — learning differences,
+      disabilities and learning states. A profile is a <b>support you choose</b>, never a diagnosis or a label:
+      combine any, change or remove them anytime, and they never leave this browser or gate any content.
+      The capability is the constant; the format is the variable. (Backed by the Learning States &amp;
+      Universal Access pack. For formal services, your school's own evaluation process is the door.)</p>
+      <div id="ac-chips">${D.access.types.map(t=>
+        `<label class="chip" style="cursor:pointer; ${mine.includes(t.id)?'border-color:var(--purple); color:var(--purple); font-weight:600':''}">
+          <input type="checkbox" data-ac="${t.id}"${mine.includes(t.id)?" checked":""} style="margin-right:5px">${esc(t.name)}</label>`).join("")}</div>` +
+      (mine.length ? accessOf(me).types.map(t =>
+        `<div style="border-top:1px solid var(--line); padding:10px 0 2px; font-size:.87rem">
+          <b>${esc(t.name)}</b> — <span style="color:var(--muted)">${esc(t.lens)}</span>
+          <p style="margin:6px 0 2px"><b>Strengths:</b> ${t.strengths.map(esc).join(" · ")}</p>
+          <p style="margin:2px 0"><b>What helps:</b> ${t.helps.map(esc).join(" · ")}</p>
+          <p class="note" style="margin:2px 0 6px"><b>Checks:</b> ${esc(t.flow.checkAlt)}.</p>
+        </div>`).join("") : "");
+    el.querySelectorAll("input[data-ac]").forEach(cb => cb.addEventListener("change", ()=>{
+      const d2 = llLoad(); const l = d2.learners.find(x=>x.id===R.me); if (!l) return;
+      l.types = l.types || [];
+      if (cb.checked && !l.types.includes(cb.dataset.ac)) l.types.push(cb.dataset.ac);
+      if (!cb.checked) l.types = l.types.filter(x=>x!==cb.dataset.ac);
+      llSave(d2); setTimeout(renderRoles, 0);
+    }));
   }},
   {id:"missions", t:"My parish missions", span:true, r:(p,el)=>{
     el.innerHTML += `<div class="pickrow" style="margin:0 0 12px">${parishSelect("rs-parish")}</div>
@@ -1541,6 +1687,27 @@ const WIDGETS = {
       llSave(d2); setTimeout(renderRoles, 0);
     }));
   }},
+  {id:"flowboard", t:"Class flow board — the states, live", span:true, r:(p,el)=>{
+    const ls = llLoad().learners;
+    if (!ls.length){ el.innerHTML += `<p class="note">Add learners (or seed the demo cohort) in Class standing — the flow board reads their live states.</p>`; return; }
+    const dist = flowDist(ls);
+    el.innerHTML += `<p class="note">Each learner's flow state, computed from their recorded results, with the
+      automation's call and their chosen access profile's top supports. Overloaded and break-due learners float
+      to the top.</p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px">${Object.entries(FLOWMETA).map(([k,[lab,col]])=>
+        `<span class="chip"><i style="display:inline-block; width:10px; height:10px; border-radius:3px; background:${col}; margin-right:6px"></i>${lab} · ${dist[k]}</span>`).join("")}</div>` +
+      ls.slice().sort((a,b)=>{
+        const rank = {overload:0, brk:1, warming:2, cruising:3, flow:4};
+        return rank[flowOf(a).state] - rank[flowOf(b).state];
+      }).map(l=>{
+        const fl = flowOf(l); const [lab,col] = FLOWMETA[fl.state];
+        return `<div style="border-top:1px solid var(--line); padding:8px 0; font-size:.87rem">
+          <b>${esc(l.name)}</b> <span class="chip" style="background:${col}; color:#fff; border:0; font-size:.68rem">${lab}</span>
+          ${fl.a.types.length ? `<span class="mono" style="font-size:.68rem; color:var(--faint)"> ${fl.a.types.map(t=>esc(t.name)).join(" · ")}</span>` : ""}
+          ${fl.state!=="flow" ? `<div style="color:var(--muted); margin-top:3px">${esc(fl.advice)}</div>` : ""}
+          ${fl.state==="overload" && fl.a.types.length ? `<div class="note" style="margin:3px 0 0"><b>What helps:</b> ${fl.a.types[0].helps.slice(0,2).map(esc).join(" · ")}</div>` : ""}
+        </div>`;}).join("");
+  }},
   {id:"roster", t:"Class roster", r:(p,el)=>{
     el.innerHTML += `<p class="note">One learner per line — stays in this browser.</p>
       <textarea id="rt-roster" rows="6" style="width:100%" placeholder="First learner…">${esc(R.roster||"")}</textarea>`;
@@ -1606,6 +1773,22 @@ const WIDGETS = {
         return `<div style="font-size:.85rem">${esc(t.name)} <span class="mono" style="font-size:.7rem; color:var(--faint)">${n}/50</span>${llMeter(n)}</div>`;}).join("") : "") +
       (rec ? `<p class="note" style="margin-top:8px"><b>Good next step at home:</b> ${esc(rec.t.name)} — ${esc(rec.why)}. Most transfer checks are doable at the kitchen table.</p>` : "");
     el.querySelector("#lp-child").addEventListener("change", e=>{ R.child = e.target.value; saveR(); });
+  }},
+  {id:"whathelps", t:"What helps my child", r:(p,el)=>{
+    const ls = llLoad().learners;
+    const c = ls.find(l=>l.id===R.child) || ls[0];
+    if (!c){ el.innerHTML += `<p class="note">No learners in this browser's ledger yet.</p>`; return; }
+    const a = accessOf(c); const fl = flowOf(c); const [lab,col] = FLOWMETA[fl.state];
+    el.innerHTML += `<p class="note">${esc(c.name)}'s chosen access profile — supports, not labels, picked
+      together and changeable anytime.</p>
+      <p style="margin:4px 0 10px">Current state: <span class="chip" style="background:${col}; color:#fff; border:0">${lab}</span></p>` +
+      (a.types.length ? a.types.map(t=>
+        `<div style="border-top:1px solid var(--line); padding:8px 0; font-size:.87rem">
+          <b>${esc(t.name)}</b>
+          <p style="margin:4px 0 2px"><b>At home:</b> ${esc(t.home)}</p>
+          <p class="note" style="margin:2px 0"><b>Strengths to name out loud:</b> ${t.strengths.map(esc).join(" · ")}</p>
+        </div>`).join("")
+        : `<p class="note">No profile chosen — that's a fine choice too. Profiles can be explored together in the Student view's <b>My access profile</b> panel.</p>`);
   }},
   {id:"band", t:"My child's band", r:(p,el)=>{
     el.innerHTML += `<div class="pickrow" style="margin:0 0 12px">${bandSelect("rp-band")}</div>
@@ -1695,7 +1878,9 @@ const WIDGETS = {
         <div class="tile t2"><b>${done}</b><span>checks recorded</span></div>
         <div class="tile t3"><b>${creds}</b><span>credentials awarded</span></div></div>` +
       (ls.length ? `<p class="note" style="margin-top:8px">Average spine progress:
-        ${Math.round(ls.reduce((s,l)=>s+llStanding(l).pct,0)/ls.length)}% · alerts pending: ${llAlerts(ls).length}</p>` : "");
+        ${Math.round(ls.reduce((s,l)=>s+llStanding(l).pct,0)/ls.length)}% · alerts pending: ${llAlerts(ls).length}</p>
+        <p class="note" style="margin-top:4px"><b>Flow states now:</b> ${Object.entries(flowDist(ls))
+          .filter(([,n])=>n).map(([k,n])=>`${FLOWMETA[k][0]} ${n}`).join(" · ")}</p>` : "");
   }},
   {id:"fivenumbers", t:"The five honest numbers", r:(p,el)=>{
     el.innerHTML += `<p class="note">Enrolled · active · checks passed · credentials · trainers. The Friday count, written down before it is interpreted. Stays in this browser.</p>` +
@@ -1726,7 +1911,10 @@ const WIDGETS = {
         <div class="tile t3"><b>${creds}</b><span>credentials awarded</span></div>
       </div>
       <p class="note" style="margin-top:6px">Four apps run from one dataset: Education OS, Flow Hub, this
-      platform, and the Trades Network — every number above regenerates from <span class="mono">blocks.csv</span>.</p>`;
+      platform, and the Trades Network — every number above regenerates from <span class="mono">blocks.csv</span>.</p>` +
+      (ls.length ? `<p class="note" style="margin-top:2px"><b>Flow states across the ledger:</b> ${Object.entries(flowDist(ls))
+        .filter(([,n])=>n).map(([k,n])=>`${FLOWMETA[k][0]} ${n}`).join(" · ")} · access profiles in use:
+        ${new Set(ls.flatMap(l=>l.types||[])).size} of ${D.access.types.length} types</p>` : "");
   }},
   {id:"waves", t:"The adopted rollout", r:(p,el)=>{
     el.innerHTML += `<p class="note">Two years to the whole state — click through to any parish from The State's tile map.</p><div id="ra-waves"></div>`;
