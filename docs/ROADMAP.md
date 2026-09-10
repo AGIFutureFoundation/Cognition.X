@@ -1,13 +1,43 @@
 # Cognition.X — Deep Roadmap
 
-Direction of travel: from a curriculum **dataset + demo app** (today) to a
-verifiable, federated **learning operating system** that a school, parish,
-ministry or employer can run. Phases are sequential but overlapping;
-versions follow SemVer and are cut when a phase's exit criteria pass.
+Direction of travel: from a curriculum **dataset + demo app** (the
+start) to a verifiable, federated **learning operating system** that a
+school, parish, ministry or employer can run. Phases are sequential but
+overlapping; versions follow SemVer and are cut when a phase's exit
+criteria pass.
+
+## Status at v0.32.0 (system review: [`SYSTEM_REVIEW.md`](SYSTEM_REVIEW.md))
+
+- **Phase 0 — Foundation: complete.**
+- **Phase 1 — Data completeness: complete** except the foundation
+  library's authored tracks/descriptions (the standing content debt).
+- **Phase 2 — Platform: nearly complete.** Shipped: Flow Hub, Education
+  OS on the pipeline, learner state, credential ledger v1, assessor
+  mode, printable workbooks, tutor swarm/voice/guide, styles, widget
+  dashboards. Open: PWA install, the full WCAG 2.2 AA audit (first-pass
+  fixes shipped v0.33.0), sourcing the Education OS's remaining data
+  layers canonically.
+- **Phase 3 — Deployment: well underway.** Shipped: Louisiana platform
+  + adopted 2-wave plan + launch curriculum/budgets/readiness, Trades
+  Network (6 regions), States app (50 states), Network OS automations.
+  Open: federation, educator authoring, governance, the evidence loop,
+  the v1.0 external-cohort gate.
+- **Phase 4 — Intelligence: architecture shipped** (CX-Trace, flow
+  model, data principles); adaptive sequencing exists in first working
+  form (the ledger's recommendation + flow automations); the rest is
+  post-1.0.
+
+**Recommended order of next work:** ① finish the WCAG 2.2 AA audit →
+② PWA packaging → ③ instance federation (cross-hall credential
+verification on the Records Office key model) → ④ educator authoring
+(pack-spec editor → PRs) → ⑤ governance (curriculum review board over
+the machine-authored packs) → ⑥ the opt-in evidence loop → ⑦ cut v1.0
+when a named external cohort completes credentials on an unmodified
+release.
 
 ---
 
-## Phase 0 — Foundation (v0.3.x) ✅ *this release*
+## Phase 0 — Foundation (v0.3.x) ✅
 
 **Goal: one canonical, validated source of truth.**
 

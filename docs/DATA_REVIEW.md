@@ -85,3 +85,39 @@ community pack **Digital Life, Data & AI** (250 blocks; spec at
 the canonical dataset — the domain most conspicuously missing from the 25
 existing packs. Canonical totals: **7,000 blocks · 26 packs · 95 tracks ·
 402 credentials**, all green under the validator.
+
+---
+
+## Current-state addendum (v0.32.0 review, 2026-09-10)
+
+The findings above cover the original import. As of v0.32.0 the dataset
+stands at **16,700 blocks · 44 packs · 210 tracks · 1,394 credentials**;
+the full platform assessment now lives in
+[`docs/SYSTEM_REVIEW.md`](SYSTEM_REVIEW.md). Data-specific status:
+
+1. **Backfill complete** where it was promised: all tracked-shape gaps
+   from finding 2 were closed by v0.14.0 (codes + levels dataset-wide);
+   the 217 placeholder transfer checks from finding 3 were replaced
+   with authored per-theme checks by v0.13.0 (guarded substitution —
+   the two exact generic sentences only). Zero placeholders remain.
+2. **Foundation library still deferred**: the 1,000 irregular rows
+   (Empathy, Community Practice, Future-Work, Regional, Civic,
+   Health, Language) carry structural `LB-<n>` codes and derived
+   levels but no authored tracks/descriptions. This is the largest
+   remaining content debt, unchanged since v0.14.0 and still honest.
+3. **Machine-authored packs await the review board**: everything
+   added since import (~9,950 blocks across community, legacy, OS,
+   trades, access and states packs) is validator-clean and
+   internally consistent but has not been reviewed by subject-matter
+   educators. The roadmap's curriculum review board is the intended
+   gate before classroom use; in-app scaffold labels (parish
+   missions, state anchors) are correct and must stay.
+4. **App-reconciled rows**: the 5,200 sector master blocks keep
+   task/outcome fidelity through `app-master-blocks.map.json`;
+   editing such a row in the dataset intentionally degrades to
+   full-check-as-task in the Education OS overlay (dataset wins).
+5. **Fact bases are data too**: parishes (from the Education OS app),
+   unions (37 families × 6 regions), learner types (20), and states
+   (50 × 5 anchors) are reviewed content with the same stance —
+   public general knowledge, door-openers not exhaustive claims, no
+   union local numbers, profiles never diagnoses.

@@ -1,0 +1,125 @@
+# Complete System Review — Cognition.X at v0.32.0
+
+*Reviewed 2026-09-10, covering releases v0.1.0 → v0.32.0 (31 merged PRs,
+all CI-green). This is an honest engineering review: what works, what is
+scaffolding, and what is known to be incomplete. It complements the
+[deep roadmap](ROADMAP.md) (what's next) and the
+[data review](DATA_REVIEW.md) (the imported artifacts and dataset
+findings).*
+
+---
+
+## 1. The dataset and pipeline — solid
+
+**16,700 blocks · 44 packs · 210 tracks · 1,394 credentials**, one CSV,
+one manifest, one validator, regenerated deterministically.
+
+- **Provenance is clean.** Source rows (6,750) are untouched; everything
+  added since arrives through authored pack specs
+  (`data/pack_specs/*.json` → `generate_pack.py`), guarded promotions
+  (empty fields only; the two exact placeholder sentences are the only
+  replaceable transfer checks), light fill (structural codes/levels
+  only), or the app-reconciliation extractor. `block_id`s are
+  deterministic and never renumbered.
+- **CI enforces it.** Every push runs `validate_blocks.py`: required
+  fields, tracked-shape (50 rows / 10 themes per tracked track), code
+  uniqueness per pack. The validator has only ever gotten stricter.
+- **Honest limits.** The 1,000 foundation-library rows carry light-fill
+  `LB-<n>` codes and derived levels but still lack authored tracks and
+  descriptions — deferred content work, documented, not hidden. The
+  5,200 sector master blocks extracted from the Education OS app keep
+  task/outcome fidelity through a sidecar map; a dataset-edited row falls
+  back to full-check-as-task by design.
+- **Generated content needs human review.** All post-import packs
+  (~9,950 blocks) were machine-authored against real-world knowledge.
+  They are internally consistent and validator-clean, but the roadmap's
+  curriculum review board is the intended quality gate — the packs
+  should be read by subject-matter educators before classroom use. The
+  parish missions and state anchors are labeled in-app as scaffolds for
+  committee refinement; that labeling is correct and should stay.
+
+## 2. The six apps — build products, verified
+
+Every app is a single offline HTML file regenerated from the dataset +
+fact bases; none is hand-edited (CI-adjacent rule in CONTRIBUTING).
+
+| App | State | Notes |
+|---|---|---|
+| **Education OS** | stable, legacy | Verbatim "gov" build + canonical sector-library overlay (11,520 raw → 5,200 canonical). One pre-existing page error in the template baseline (documented; not introduced by the pipeline). Remaining data layers (wlb ladders, K–12 program, parish fact base) still live in the template — the long-term plan is to source them from canonical files. |
+| **Flow Hub** | strong | Flow engine, 8 agents + tutor swarm (blackboard, priority arbitration), CX-Trace v1 export, access-profile pacing, printable workbooks. Largest payload (~1.9 MB) — acceptable for one offline file. |
+| **Louisiana** | flagship | 64 parish dashboards, adopted 2-wave plan, readiness, missions, budgets, learner ledger, flow engine + 20 access profiles, Network OS automations, 7 role dashboards (widgetized), Assessor Mode, Records Office (signed credentials). The deepest surface; also the most JS — kept maintainable by the widget architecture. |
+| **Trades Network** | strong | 222 entries / 6 regions / 6 city maps, classroom hooks, flipped model. Fact base carries the two hard rules (no local numbers; simulation ≠ certification) — verified present in every rendering path. |
+| **States** | new, sound | 50-state localizer over the States OS blueprint + Institute Model; seeded from the Education OS fact base at build time. Anchors are labeled door-openers, not exhaustive claims. |
+| **Archived builds** | frozen | `apps/education-os/versions/` — never overwritten. |
+
+**Verification methodology** (applied every release): headless Chromium
+drives each changed app — zero `pageerror` tolerance, plus
+feature-specific assertions (e.g. credential fires exactly at check 50;
+the three city maps sum to exactly 111, then six to 222; a tampered
+signed record fails verification). Palette and contrast checks run
+against the categorical-color validator or direct WCAG ratios.
+
+## 3. The working models — real, browser-local, honest
+
+- **Learner ledger**: per-learner check counts on the 30 core-spine
+  tracks; credential auto-award at 50; recommendations and alerts derive
+  deterministically. **Limit:** browser-local only — no sync, no backup
+  beyond the explicit export box. This is a privacy stance *and* a
+  durability limitation; both are stated in the UI.
+- **Flow engine + access profiles**: state machine over recorded events;
+  20 profiles tune cadence/step/format. Profiles are chosen supports,
+  never diagnoses — the framing is enforced in every surface that
+  renders them.
+- **Assessor loop**: request → queue → rubric → evidence → honest
+  credit. The practice-log / witnessed-record distinction is now
+  explicit and correct.
+- **Credential Ledger v1**: ECDSA P-256 signed records, offline
+  verification, tamper detection. **Honest scope, stated in the UI:**
+  a signature proves integrity and key possession — not issuer
+  identity, which is confirmed out-of-band. Not yet W3C VC / Open
+  Badges envelopes; not yet cross-instance trust (that is the
+  federation work).
+- **Network OS**: eight automations computing from real state on a
+  pulse. They *surface* calls; the human acts. That division is
+  deliberate.
+- **Agent/robot learning layer**: still names ecosystems as evaluation
+  candidates only; CX-Trace export remains consent-first, anonymized,
+  local. No data leaves any page on its own anywhere in the platform —
+  re-verified this review by grepping every template for network calls
+  (fonts CDN aside, which each app degrades without).
+
+## 4. Cross-cutting risks and gaps
+
+1. **Single-browser state.** Ledger, readiness, missions, queue,
+   issuer keys — all `localStorage`. A cleared browser loses
+   everything not exported. Mitigations exist (export boxes, signed
+   records held by learners); a deliberate sync/backup design is the
+   next architectural decision, and should stay consent-first.
+2. **Template size and duplication.** The five style templates and
+   voice module are duplicated across four app templates. Acceptable at
+   this scale; a shared-fragment build step would reduce drift risk.
+3. **Accessibility.** Strong foundations (semantic controls, focus
+   rings, keyboard paths on maps, contrast-validated palettes, reduced
+   reliance on color alone) but **no completed WCAG 2.2 AA audit**.
+   First-pass fixes ship with this review (skip links, `lang`,
+   reduced-motion, icon-button labels, a live region for the tutor
+   strip); a full audit remains open on the roadmap.
+4. **Education OS baseline error.** One page error pre-exists in the
+   imported template. Harmless in practice; worth fixing when the
+   template's data layers are canonicalized.
+5. **Real-world adoption claims.** The adopted two-wave plan, budgets,
+   councils and districts are *models and door-openers* built on public
+   facts — no actual district, council, union or agency has reviewed or
+   endorsed any of it. Every app carries an independence disclaimer;
+   keep them.
+
+## 5. Review verdict
+
+The platform does what it says: one validated dataset, six regenerable
+apps, and a working, honest, consent-first model of flow-paced,
+transfer-checked learning — from a single parish bench to a 50-state
+blueprint. The scaffolding is labeled as scaffolding. The recommended
+order of next work is in the [roadmap](ROADMAP.md): accessibility
+audit → PWA packaging → federation → educator authoring → governance →
+the evidence loop → the v1.0 gate (a named external cohort completing
+credentials on an unmodified release).

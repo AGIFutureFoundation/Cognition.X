@@ -217,7 +217,16 @@
 
   .foot{border-top:1px solid var(--line); margin-top:60px; padding:22px 0 40px; font-size:.78rem; color:var(--faint)}
   @media(max-width:640px){ .hbar .lab{flex-basis:120px} }
+
+  /* accessibility: skip link + reduced motion (WCAG 2.2 first pass) */
+  .skiplink{position:absolute; left:-9999px; top:0; z-index:100; background:var(--surface);
+    color:var(--ink); border:2px solid var(--ring); border-radius:0 0 10px 0; padding:10px 18px; font-weight:600}
+  .skiplink:focus{left:0}
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+  }
 </style>
+<a class="skiplink" href="#main">Skip to content</a>
 
 <header class="masthead"><div class="wrap mast">
   <div class="wordmark">Cognition.X <span class="tn">Trades Network</span></div>
@@ -248,7 +257,7 @@
   </div>
 </div></header>
 
-<main class="wrap">
+<main class="wrap" id="main" tabindex="-1">
 
   <!-- ================= NETWORK ================= -->
   <section class="view active" id="view-network">
@@ -403,6 +412,7 @@
 </div>
 
 <script>
+document.documentElement.lang = "en";
 const D = __TNDATA__;
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
