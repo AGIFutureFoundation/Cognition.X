@@ -272,6 +272,43 @@ def test_education_os_shell():
     check("education-os: hidden-unless-active rule present", ".view.active" in t)
 
 
+# The classes the app's 143 renderers actually emit, by usage. Each needs a
+# rule or the view renders as unstyled markup — which is how the app shipped
+# for 44 releases. Ordered as in the builder's stylesheet.
+EDU_REQUIRED_RULES = [
+    ".view{", ".view.active{", ".card{", ".eyebrow{", ".section{", ".vhead{",
+    ".grid{", ".grid.g2{", ".grid.g3{", ".grid.g4{", ".stat{", ".stat .v{",
+    ".stat .l{", ".btn{", ".tabs{", ".tab{", ".pill{", ".field{", ".slider{",
+    ".check{", ".term{", ".bar{", ".flagrow{", ".tl{", ".heat{", ".note{",
+    ".tablewrap{", ".legend{", "dl.kv{", ".small{",
+]
+# Tokens the renderers reference inline as var(--x); an undefined one renders
+# as an invalid value and the element loses its colour entirely.
+EDU_REQUIRED_TOKENS = [
+    "--ink", "--ink2", "--bg", "--bg2", "--bg3", "--card", "--line", "--line2",
+    "--gold", "--gold2", "--gold-soft", "--teal", "--ok", "--good", "--warn",
+    "--crit", "--radius", "--display", "--body", "--mono", "--osa", "--osw",
+]
+
+
+def test_education_os_design_system():
+    """The generated stylesheet must cover what the renderers emit, in both
+    themes. (--seq*, --seq-ink, --seq-wash, --gold-ink and --mark-line are
+    defined by the app's own injected stylesheet and are not redefined.)"""
+    t = app_html("education-os")
+    missing = [r for r in EDU_REQUIRED_RULES if r not in t]
+    check("education-os: every emitted class has a rule", not missing, f"missing {missing}")
+    undefined = [tok for tok in EDU_REQUIRED_TOKENS if f"{tok}:" not in t]
+    check("education-os: every referenced token is defined", not undefined, f"missing {undefined}")
+    # both dark paths: the media query for system preference and the explicit
+    # override, exactly as the other five apps do it
+    check("education-os: dark theme via prefers-color-scheme",
+          'prefers-color-scheme:dark' in t or 'prefers-color-scheme: dark' in t)
+    check("education-os: dark theme via explicit data-theme",
+          ':root[data-theme="dark"]' in t)
+    check("education-os: reduced motion honoured", "prefers-reduced-motion" in t)
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
