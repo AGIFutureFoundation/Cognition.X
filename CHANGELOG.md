@@ -4,6 +4,34 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.42.0] — 2026-09-11
+
+### Added
+- **Dashboard agent swarms** (Louisiana, all seven role dashboards):
+  every perspective now opens with its own crew of agents on a
+  shared blackboard — 24 agents in all — each computing a **priority
+  (0–100) and a concrete call from the browser's real state** (the
+  ledger, the flow engine, the witness queue, the readiness boards,
+  the budgets, the missions), with priority arbitration surfacing
+  **one call as the swarm's**, spoken on demand by the voice model.
+  Everything stays inspectable: each agent's own call, its priority
+  and what it watches are always listed under the arbitrated call —
+  *agents propose; the person disposes*.
+  - Student: Coach, Motivator, Pathfinder, Credential Watch, Access
+    Ally. Teacher: Class Keeper, Triage, Relief, Witness Router.
+    Assessor: Queue Agent, Format Agent (serves the next learner's
+    chosen check formats), Evidence Scribe. Parent: Home Coach,
+    Family Watch, Break Keeper. Homeschool: Co-op Planner, Witness
+    Router, Pace Setter. Parish Admin: Readiness, Records, Budget,
+    Mission agents. State Admin: Rollout, Evidence, Network agents.
+  - Recomputed on a 10-second pulse while the view is open; a
+    default-on widget, toggleable and orderable like any other.
+  - Verified headlessly against seeded state: arbitration correct
+    (a break-due call at priority 95 out-ranks a 49/50 credential
+    watch at 90), every role's crew renders its granular rows, the
+    pulse re-render is stable, the widget toggles off cleanly, zero
+    page errors.
+
 ## [0.41.0] — 2026-09-11
 
 ### Added

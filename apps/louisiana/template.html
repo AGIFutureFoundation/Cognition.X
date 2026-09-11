@@ -1857,6 +1857,182 @@ function launchTrack(name){
 
 /* The widget catalog: every perspective's full view, composed of panels the
    user can toggle and reorder — layout persisted per role in this browser. */
+/* ---------- the dashboard agent swarm ----------
+   Every role dashboard opens with its own crew of agents on a shared
+   blackboard: each agent computes a priority (0–100) and a concrete
+   call from the browser's real state — the ledger, the flow engine,
+   the queue, the readiness boards — and priority arbitration surfaces
+   ONE call as the swarm's. Everything is shown: each agent's own call,
+   its priority, and why. Agents propose; the person disposes. All
+   browser-local, re-computed on a 10-second pulse while the view is
+   open. */
+function swarmMe(){
+  const d = llLoad();
+  return d.learners.find(l=>l.id===R.me) || d.learners[0] || null;
+}
+const SWARMS = {
+ student: [
+  {name:"Coach", watch:"the flow channel", run(c){
+    if (!c.me) return {pri:0, call:"waiting for a learner — add one or seed the demo cohort"};
+    const f = flowOf(c.me);
+    const pri = {overload:88, brk:12, cruising:62, warming:45, flow:30}[f.state];
+    return {pri, call: f.advice.replace(/^Automation: /,"")};}},
+  {name:"Motivator", watch:"the break cadence", run(c){
+    if (!c.me) return {pri:0, call:"—"};
+    const f = flowOf(c.me);
+    return f.state==="brk"
+      ? {pri:95, call:`break now — ${f.fs.sinceBreak}/${f.a.breakEvery} moves on your own cadence; the next block waits`}
+      : {pri:10+Math.min(30,f.fs.sinceBreak*3), call:`${f.fs.sinceBreak}/${f.a.breakEvery} moves toward your break`};}},
+  {name:"Pathfinder", watch:"the next best step", run(c){
+    if (!c.me) return {pri:0, call:"—"};
+    const rec = llRecommend(c.me);
+    return rec ? {pri:55, call:`next: “${rec.t.name}” — ${rec.why}`}
+               : {pri:5, call:"every spine track complete — choose a new pack with your teacher"};}},
+  {name:"Credential Watch", watch:"the 50-check line", run(c){
+    if (!c.me) return {pri:0, call:"—"};
+    const near = LTRACKS.map(t=>({t, n:(c.me.prog||{})[t.key]||0})).filter(x=>x.n>=45&&x.n<50)
+      .sort((a,b)=>b.n-a.n)[0];
+    if (near) return {pri:90, call:`${near.n}/50 on “${near.t.name}” — ${50-near.n} witnessed check${50-near.n>1?"s":""} from “${near.t.credential}”. Request the witness.`};
+    const creds = llStanding(c.me).creds.length;
+    return {pri:15, call:`${creds} credential${creds===1?"":"s"} held at the 50-check line`};}},
+  {name:"Access Ally", watch:"chosen supports", run(c){
+    if (!c.me) return {pri:0, call:"—"};
+    const a = accessOf(c.me);
+    return a.types.length
+      ? {pri:20, call:`supports on: ${a.types.map(t=>t.name).join(", ")} — cadence ${a.breakEvery}, formats: ${a.alts.length? a.alts.join(" · ") : "standard"}`}
+      : {pri:8, call:"no supports chosen — the Access panel offers 20, chosen freely, never diagnoses"};}},
+ ],
+ teacher: [
+  {name:"Class Keeper", watch:"the room's channel", run(c){
+    if (!c.ls.length) return {pri:0, call:"no class yet"};
+    const d = flowDist(c.ls);
+    return {pri: d.overload ? 85 : 35, call:`${d.flow+d.cruising} in the channel · ${d.warming} warming · ${d.overload} overloaded · ${d.brk} on break${d.overload?" — start with the overloaded":""}`};}},
+  {name:"Triage", watch:"the alert board", run(c){
+    const a = llAlerts(c.ls);
+    return a.length ? {pri:60+Math.min(25,a.length*4), call:`${a.length} alert${a.length>1?"s":""} — first: ${a[0]}`}
+                    : {pri:10, call:"no alerts pending"};}},
+  {name:"Relief", watch:"your own load", run(c){
+    const tf = teacherFlow(c.ls);
+    const pri = {overload:92, stretch:65, flow:25, idle:0}[tf.state];
+    return {pri, call: tf.advice.replace(/^Automation: /,"")};}},
+  {name:"Witness Router", watch:"the check queue", run(c){
+    const waiting = qLoad().queue.filter(q=>q.status==="waiting").length;
+    return waiting ? {pri:50+Math.min(30,waiting*6), call:`${waiting} witnessed check${waiting>1?"s":""} waiting — route the assessor before the requests go stale`}
+                   : {pri:5, call:"the witness queue is clear"};}},
+ ],
+ assessor: [
+  {name:"Queue Agent", watch:"oldest request first", run(c){
+    const q = qLoad(), w = q.queue.filter(x=>x.status==="waiting");
+    if (!w.length) return {pri:5, call:"the queue is clear — practice logs keep accruing without you; witnessed records cannot"};
+    const first = w[0], l = q.learners.find(x=>x.id===first.learner);
+    const t = LTRACKS.find(x=>x.key===first.track);
+    return {pri:80+Math.min(15,w.length*3), call:`${w.length} waiting — next: ${l?l.name:"?"} on “${t?t.name:first.track}” (requested ${first.at})`};}},
+  {name:"Format Agent", watch:"the next learner's chosen formats", run(c){
+    const q = qLoad(), w = q.queue.filter(x=>x.status==="waiting");
+    if (!w.length) return {pri:0, call:"—"};
+    const l = q.learners.find(x=>x.id===w[0].learner);
+    const a = l ? accessOf(l) : null;
+    return a && a.alts.length
+      ? {pri:70, call:`offer the check as: ${a.alts.join(" · ")} — the capability is the constant, the format is the variable`}
+      : {pri:20, call:"standard format — no alternative formats chosen for the next learner"};}},
+  {name:"Evidence Scribe", watch:"the record behind each outcome", run(c){
+    const n = c.ls.reduce((s,l)=>s+((l.evidence||[]).length),0);
+    return {pri:15, call:`${n} witnessed outcome${n===1?"":"s"} on record — one honest line each; “not yet” debriefs credit nothing and say why`};}},
+ ],
+ parent: [
+  {name:"Home Coach", watch:"what helps at home", run(c){
+    if (!c.me) return {pri:0, call:"link your child in the family panel"};
+    const a = accessOf(c.me);
+    return a.types.length
+      ? {pri:55, call:`what helps ${c.me.name} at home: ${a.types.map(t=>t.home).filter(Boolean).slice(0,2).join(" · ") || a.types.map(t=>t.name).join(", ")}`}
+      : {pri:25, call:"no supports chosen yet — chosen together, they tune pace and format, never label"};}},
+  {name:"Family Watch", watch:"your child's standing", run(c){
+    if (!c.me) return {pri:0, call:"—"};
+    const s = llStanding(c.me);
+    const near = LTRACKS.map(t=>({t, n:(c.me.prog||{})[t.key]||0})).filter(x=>x.n>=45&&x.n<50)[0];
+    return near ? {pri:75, call:`${c.me.name} is ${50-near.n} check${50-near.n>1?"s":""} from “${near.t.credential}” — a good week to cheer`}
+                : {pri:30, call:`${c.me.name}: ${s.done} checks recorded · ${s.creds.length} credential${s.creds.length===1?"":"s"} · ${s.pct}% of the spine`};}},
+  {name:"Break Keeper", watch:"the home cadence", run(c){
+    if (!c.me) return {pri:0, call:"—"};
+    const f = flowOf(c.me);
+    return f.state==="brk" ? {pri:85, call:"cadence reached — movement or rest before more work tonight"}
+                           : {pri:12, call:`${f.fs.sinceBreak}/${f.a.breakEvery} moves on the home cadence`};}},
+ ],
+ homeschool: [
+  {name:"Co-op Planner", watch:"the week's spine", run(c){
+    if (!c.me) return {pri:0, call:"add your learners to plan the co-op week"};
+    const rec = llRecommend(c.me);
+    return rec ? {pri:60, call:`plan the week around “${rec.t.name}” — ${rec.why}`}
+               : {pri:10, call:"spine complete — pick a community pack for the co-op"};}},
+  {name:"Witness Router", watch:"outside witnessing", run(c){
+    const waiting = qLoad().queue.filter(q=>q.status==="waiting").length;
+    return waiting ? {pri:70, call:`${waiting} check${waiting>1?"s":""} awaiting a witness — co-op day or the parish hall both count`}
+                   : {pri:15, call:"no checks waiting — the hall's assessor witnesses what the co-op can't"};}},
+  {name:"Pace Setter", watch:"each learner's own cadence", run(c){
+    if (!c.ls.length) return {pri:0, call:"—"};
+    const d = flowDist(c.ls);
+    return {pri: d.overload?80:20, call:`${d.overload} overloaded · ${d.brk} at cadence — home pace follows the learner, not the clock`};}},
+ ],
+ parishadmin: [
+  {name:"Readiness Agent", watch:"the five Wave-1 requirements", run(c){
+    const st = readyState(c.p.slug), n = st.filter(Boolean).length;
+    if (n===5) return {pri:20, call:`${c.p.name} is Wave-1 ready — hold the standard and help a neighbor parish`};
+    const next = READY_REQS[st.findIndex(x=>!x)];
+    return {pri:70+n*4, call:`${n}/5 — next requirement: ${next[0]} (${next[2]})`};}},
+  {name:"Records Agent", watch:"earned but unsigned credentials", run(c){
+    const earned = c.ls.reduce((s,l)=>s+llStanding(l).creds.length,0);
+    return earned ? {pri:55, call:`${earned} earned credential${earned===1?"":"s"} in the ledger — issue signed records so they travel`}
+                  : {pri:10, call:"no earned credentials yet — records follow the 50th check"};}},
+  {name:"Budget Agent", watch:"the launch sketch", run(c){
+    const b = launchBudget(c.p);
+    return {pri:30, call:`${c.p.name}: ${b.assessors.split(" (")[0]} · ${b.devices.split(" (")[0]} — a scaffold to refine, not a quote`};}},
+  {name:"Mission Agent", watch:"the parish capstone ladder", run(c){
+    const m = missionState(c.p.slug), n = m.filter(Boolean).length;
+    return n ? {pri:35, call:`${n}/5 mission rungs logged — the next rung is the plan`}
+             : {pri:25, call:"no mission rungs yet — Explorer observes the parish's own world first"};}},
+ ],
+ stateadmin: [
+  {name:"Rollout Agent", watch:"Wave-1 statewide", run(c){
+    const ready = D.parishes.filter(p=>readyState(p.slug).every(Boolean)).length;
+    return {pri: ready<accN(1)?65:30, call:`${ready}/${accN(1)} Wave-1 parishes ready in this browser's record (${accN(1)} adopted for ${D.accYears[0]})`};}},
+  {name:"Evidence Agent", watch:"the consent-first loop", run(c){
+    const n = c.ls.reduce((s,l)=>s+((l.evidence||[]).length),0);
+    return n ? {pri:50, call:`${n} witnessed outcomes aggregable — export runs only behind the consent box, sent by a person, never the page`}
+             : {pri:15, call:"no witnessed outcomes yet — the loop closes on real evidence, not projections"};}},
+  {name:"Network Agent", watch:"the eight halls", run(c){
+    const rungs = D.parishes.reduce((s,p)=>s+missionState(p.slug).filter(Boolean).length, 0);
+    return {pri:25, call:`8 halls · ${D.parishes.length} parishes · ${rungs} mission rungs · ${c.ls.length} learner${c.ls.length===1?"":"s"} in this browser's ledger`};}},
+ ],
+};
+function swarmPriCol(pri){ return pri>=80 ? "var(--w4)" : (pri>=50 ? "var(--gold)" : "var(--green)"); }
+function renderSwarm(p, el){
+  const ls = llLoad().learners;
+  const c = {me: swarmMe(), ls, p};
+  const agents = SWARMS[R.role] || [];
+  const rows = agents.map(a=>{ let r; try { r = a.run(c); } catch(e){ r = {pri:0, call:"—"}; }
+    return {name:a.name, watch:a.watch, pri:r.pri, call:r.call}; });
+  const top = rows.slice().sort((a,b)=>b.pri-a.pri)[0];
+  let box = el.querySelector(".swbox");
+  if (!box){ box = document.createElement("div"); box.className = "swbox"; el.appendChild(box); }
+  box.innerHTML = `<p class="note" style="margin:0 0 8px">Each agent computes from this browser's real state;
+    arbitration surfaces one call. Agents propose; you dispose.</p>` +
+    (top ? `<div style="border-left:4px solid ${swarmPriCol(top.pri)}; padding:6px 12px; margin:0 0 10px; background:var(--surface-2); border-radius:0 8px 8px 0">
+      <b>The swarm's call</b> — <b>${esc(top.name)}</b> (priority ${top.pri}):<br>${esc(top.call)}
+      <button class="btn" id="sw-say" style="margin-left:8px; font-size:.72rem; padding:2px 10px">🔊</button></div>` : "") +
+    rows.map(r=>`<div style="display:flex; gap:10px; align-items:baseline; padding:6px 0; border-top:1px solid var(--line); font-size:.84rem; flex-wrap:wrap">
+      <span style="flex:0 0 130px"><b>${esc(r.name)}</b></span>
+      <span class="mono" style="flex:0 0 66px; color:${swarmPriCol(r.pri)}">pri ${r.pri}</span>
+      <span style="color:var(--muted); flex:1; min-width:200px">${esc(r.call)}</span>
+      <span class="mono" style="font-size:.64rem; color:var(--faint)">watches ${esc(r.watch)}</span></div>`).join("");
+  const sb = box.querySelector("#sw-say");
+  if (sb && top) sb.addEventListener("click", ()=> say(top.name + " says: " + top.call));
+}
+setInterval(()=>{ try{
+  if (!$("#view-roles").classList.contains("active")) return;
+  document.querySelectorAll('[data-widget="swarm"]').forEach(host=>
+    renderSwarm(bySlug[R.parish] || D.parishes[0], host));
+}catch(e){} }, 10000);
+
 const WIDGETS = {
  student: [
   {id:"standing", t:"My standing", span:true, r:(p,el)=>{
@@ -2718,6 +2894,12 @@ const WIDGETS = {
   }},
  ],
 };
+
+/* the swarm opens every role's dashboard (toggleable like any widget) */
+ROLES.forEach(([k])=>{
+  if (SWARMS[k] && !WIDGETS[k].some(w=>w.id==="swarm"))
+    WIDGETS[k].unshift({id:"swarm", t:"Agent swarm", span:true, r:renderSwarm});
+});
 
 function roleLayout(role){
   const all = WIDGETS[role].map(w=>w.id);

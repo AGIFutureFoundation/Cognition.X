@@ -39,6 +39,16 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   Trade Hall, the capstone teaches it to a younger cohort). Generated
   scaffolds, labeled for committee refinement; rural-tier parishes get
   offline-evidence wording.
+- **Dashboard agent swarms (v0.42.0)** — every role dashboard opens
+  with its own crew of agents on a shared blackboard (24 agents
+  across the seven roles): each computes a priority and a concrete
+  call from the browser's real state — the ledger, the flow engine,
+  the witness queue, readiness boards, budgets and missions — and
+  priority arbitration surfaces **one call as the swarm's**, spoken
+  on demand by the voice model. Every agent's own call, priority
+  and watch stay listed under the arbitrated call: *agents propose;
+  the person disposes*. Recomputed on a 10-second pulse; a
+  default-on widget, toggleable like any other.
 - **Role dashboards (v0.18.0; widgetized v0.23.0)** — the *Dashboards*
   view: Student, Teacher, Parent, Homeschool, Parish Admin and State
   Admin, each rebuilt on a widget system (30 widgets in all): every
