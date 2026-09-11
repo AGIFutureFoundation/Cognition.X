@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.44.0** | The Louisiana K–12 program canonicalized (13 grades × 6 LDOE-coded threads + 8 policy threads, rendered grade-by-grade in the Curriculum view) and the CI-generated data-quality dashboard (docs/DATA_QUALITY.md, regenerated and drift-checked on every push) |
+| **v0.45.0** | The Education OS runs for the first time (its HTML shell, missing since the v0.1.0 import, is now generated from the app's own VIEWS array); committed test suites — 121 Python invariants in CI and 60 browser assertions over the working models; the 1,228-row credential-naming defect documented and pinned; documentation corrected against the code; ten ranked next-step briefs |
+| v0.44.0 | The Louisiana K–12 program canonicalized (13 grades × 6 LDOE-coded threads + 8 policy threads, rendered grade-by-grade in the Curriculum view) and the CI-generated data-quality dashboard (docs/DATA_QUALITY.md, regenerated and drift-checked on every push) |
 | v0.43.0 | The Leadership Ladder: the WLB Institute's full leadership program (5 strands × 5 eras × 125 courses, ten-module method, bridge, standards, graduation seal, Fellowship pattern) canonicalized into the dataset and rendered in the Louisiana and States Institute views |
 | v0.42.0 | Dashboard agent swarms: all seven role dashboards open with a blackboard crew of agents (24 in all) computing priority + call from real browser state, with arbitration surfacing the swarm's one call — agents propose; the person disposes |
 | v0.41.0 | Reproducible build guaranteed in CI: a fresh clone + Python 3 regenerates the whole platform byte-for-byte, and the new CI apps job rebuilds all six apps on every push, failing on any drift from their sources |

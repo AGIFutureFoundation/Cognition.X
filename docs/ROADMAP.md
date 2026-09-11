@@ -6,7 +6,7 @@ school, parish, ministry or employer can run. Phases are sequential but
 overlapping; versions follow SemVer and are cut when a phase's exit
 criteria pass.
 
-## Status at v0.32.0 (system review: [`SYSTEM_REVIEW.md`](SYSTEM_REVIEW.md))
+## Status at v0.45.0 (system review: [`SYSTEM_REVIEW.md`](SYSTEM_REVIEW.md))
 
 - **Phase 0 — Foundation: complete.**
 - **Phase 1 — Data completeness: complete** except the foundation
@@ -14,26 +14,37 @@ criteria pass.
 - **Phase 2 — Platform: nearly complete.** Shipped: Flow Hub, Education
   OS on the pipeline, learner state, credential ledger v1, assessor
   mode, printable workbooks, tutor swarm/voice/guide, styles, widget
-  dashboards. Open: PWA install, the full WCAG 2.2 AA audit (first-pass
-  fixes shipped v0.33.0), sourcing the Education OS's remaining data
-  layers canonically.
+  dashboards, PWA install metadata (v0.34.0), the accessibility first
+  pass (v0.33.0), and all four canonical fact-base layers (v0.39.0,
+  v0.43.0, v0.44.0). Open: the full WCAG 2.2 AA audit, restoring the
+  Education OS's imported design system, and injecting the canonical
+  layers back to shrink `template.html`.
 - **Phase 3 — Deployment: well underway.** Shipped: Louisiana platform
   + adopted 2-wave plan + launch curriculum/budgets/readiness, Trades
-  Network (6 regions), States app (50 states), Network OS automations.
-  Open: federation, educator authoring, governance, the evidence loop,
-  the v1.0 external-cohort gate.
+  Network (6 regions), States app (50 states), Network OS automations
+  with granular per-section boards (v0.40.0), dashboard agent swarms
+  (v0.42.0), federation v1–v2 (v0.34.0, v0.38.0), educator authoring
+  (v0.35.0), governance (v0.35.0) and the evidence loop (v0.36.0).
+  Open: the v1.0 external-cohort gate (operational, below) and W3C
+  Verifiable Credentials / Open Badges 3.0 envelope alignment.
 - **Phase 4 — Intelligence: architecture shipped** (CX-Trace, flow
   model, data principles); adaptive sequencing exists in first working
   form (the ledger's recommendation + flow automations); the rest is
   post-1.0.
+- **Engineering integrity (v0.41.0, v0.45.0):** a fresh clone plus
+  Python 3 reproduces every app byte-for-byte, and CI enforces it;
+  `tests/test_platform.py` holds the standing stances mechanically on
+  every push, with `tests/browser/smoke.js` exercising the working
+  models before an app ships.
 
-**Recommended order of next work:** ① finish the WCAG 2.2 AA audit →
-② PWA packaging → ③ instance federation (cross-hall credential
-verification on the Records Office key model) → ④ educator authoring
-(pack-spec editor → PRs) → ⑤ governance (curriculum review board over
-the machine-authored packs) → ⑥ the opt-in evidence loop → ⑦ cut v1.0
-when a named external cohort completes credentials on an unmodified
-release.
+**Recommended order of next work** — the ranked, self-contained
+sessions are written out in
+[`docs/NEXT_STEPS_OPUS5.md`](NEXT_STEPS_OPUS5.md). In short: ① restore
+the Education OS design system → ② author the 24 missing credential
+names (review board) → ③ finish the WCAG 2.2 AA audit → ④ close the
+remaining verified review findings → ⑤ standards mapping and rubrics →
+⑥ W3C VC / Open Badges alignment → ⑦ cut v1.0 when a named external
+cohort completes credentials on an unmodified release.
 
 ---
 

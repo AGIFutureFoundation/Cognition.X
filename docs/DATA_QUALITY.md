@@ -11,51 +11,63 @@ share one sentence across bands with an “— at ‹band›” suffix; the
 irregular foundation rows carry structural `code`/`level` but await
 authored descriptions. Neither is hidden — both are counted here.
 
-| Pack | Blocks | Tracks | Desc % | Band-suffix % | Code+level % | Min check len |
-|---|---:|---:|---:|---:|---:|---:|
-| K–12 | 64 | 0 | 0% | 0% | 100% | 34 |
-| Trade School | 47 | 0 | 0% | 0% | 100% | 17 |
-| Future-Work | 111 | 0 | 0% | 0% | 100% | 14 |
-| Regional | 111 | 0 | 0% | 0% | 100% | 18 |
-| Civic & Leadership | 111 | 0 | 0% | 0% | 100% | 49 |
-| Health & Community | 111 | 0 | 0% | 0% | 100% | 45 |
-| Language, Culture & Communication | 111 | 0 | 0% | 0% | 100% | 43 |
-| Empathy & Emotional Intelligence | 167 | 0 | 0% | 0% | 100% | 37 |
-| Community & Relationship Practice | 167 | 0 | 0% | 0% | 100% | 32 |
-| Preventive Health & Everyday Care | 250 | 5 | 100% | 100% | 100% | 30 |
-| Basic Life Skills & Self-Reliance | 250 | 5 | 100% | 100% | 100% | 93 |
-| Water, Land & Climate | 250 | 5 | 100% | 100% | 100% | 92 |
-| Care Across a Life | 250 | 5 | 100% | 100% | 100% | 92 |
-| Making, Repair & Reuse | 250 | 5 | 100% | 100% | 100% | 83 |
-| Housing & Tenancy | 250 | 5 | 100% | 100% | 100% | 39 |
-| Money, Benefits & Entitlements | 250 | 5 | 100% | 100% | 100% | 27 |
-| Reentry & Recovery Pathways | 250 | 5 | 100% | 100% | 100% | 21 |
-| Neighbourhood, Safety & Civic Voice | 250 | 5 | 100% | 100% | 100% | 23 |
-| Cognition.X : Corporate OS | 1160 | 10 | 43% | 43% | 100% | 26 |
-| Cognition.X : Science OS | 1160 | 10 | 43% | 43% | 100% | 25 |
-| Cognition.X : Robotics OS | 1140 | 10 | 43% | 43% | 100% | 26 |
-| Cognition.X : Global Health OS | 1160 | 10 | 43% | 43% | 100% | 28 |
-| Cognition.X : Multilateral OS | 1150 | 10 | 43% | 43% | 100% | 28 |
-| Cognition.X : Sapient OS | 1120 | 10 | 44% | 44% | 100% | 25 |
-| Non-Profit Practice | 1150 | 10 | 43% | 43% | 100% | 25 |
-| Cognition.X : Education OS | 660 | 0 | 0% | 0% | 100% | 113 |
-| Arts, Making Media & Performance | 250 | 5 | 100% | 100% | 100% | 82 |
-| Civic Leadership Legacy : The Institute Model | 250 | 5 | 100% | 100% | 100% | 90 |
-| Civic Leadership Legacy : California | 250 | 5 | 100% | 100% | 100% | 90 |
-| Civic Leadership Legacy : Louisiana | 250 | 5 | 100% | 100% | 100% | 117 |
-| Civic Leadership Legacy : Texas | 250 | 5 | 100% | 100% | 100% | 88 |
-| Digital Life, Data & AI | 250 | 5 | 100% | 100% | 100% | 54 |
-| Emergency Preparedness & First Response | 250 | 5 | 100% | 100% | 100% | 89 |
-| Energy, Grid & the Home | 250 | 5 | 100% | 100% | 100% | 94 |
-| Food, Cooking & Nutrition | 250 | 5 | 100% | 100% | 100% | 82 |
-| Law, Contracts & Everyday Rights | 250 | 5 | 100% | 100% | 100% | 104 |
-| Learning States & Universal Access | 250 | 5 | 100% | 100% | 100% | 94 |
-| Cognition.X : Louisiana OS | 500 | 10 | 100% | 100% | 100% | 101 |
-| Parish Launch & Scale | 250 | 5 | 100% | 100% | 100% | 120 |
-| SmartCiti.X : New Orleans Trades | 250 | 5 | 100% | 100% | 100% | 100 |
-| Cognition.X : States OS | 250 | 5 | 100% | 100% | 100% | 96 |
-| Trades Across School Subjects | 250 | 5 | 100% | 100% | 100% | 87 |
-| Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 100% | 100% | 112 |
-| Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 89 |
+| Pack | Blocks | Tracks | Desc % | Band-suffix % | Code+level % | Level-word cred % | Min check len |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| K–12 | 64 | 0 | 0% | 0% | 100% | 0% | 34 |
+| Trade School | 47 | 0 | 0% | 0% | 100% | 0% | 17 |
+| Future-Work | 111 | 0 | 0% | 0% | 100% | 0% | 14 |
+| Regional | 111 | 0 | 0% | 0% | 100% | 0% | 18 |
+| Civic & Leadership | 111 | 0 | 0% | 0% | 100% | 0% | 49 |
+| Health & Community | 111 | 0 | 0% | 0% | 100% | 0% | 45 |
+| Language, Culture & Communication | 111 | 0 | 0% | 0% | 100% | 0% | 43 |
+| Empathy & Emotional Intelligence | 167 | 0 | 0% | 0% | 100% | 19% | 37 |
+| Community & Relationship Practice | 167 | 0 | 0% | 0% | 100% | 0% | 32 |
+| Preventive Health & Everyday Care | 250 | 5 | 100% | 100% | 100% | 78% | 30 |
+| Basic Life Skills & Self-Reliance | 250 | 5 | 100% | 100% | 100% | 100% | 93 |
+| Water, Land & Climate | 250 | 5 | 100% | 100% | 100% | 100% | 92 |
+| Care Across a Life | 250 | 5 | 100% | 100% | 100% | 100% | 92 |
+| Making, Repair & Reuse | 250 | 5 | 100% | 100% | 100% | 100% | 83 |
+| Housing & Tenancy | 250 | 5 | 100% | 100% | 100% | 0% | 39 |
+| Money, Benefits & Entitlements | 250 | 5 | 100% | 100% | 100% | 0% | 27 |
+| Reentry & Recovery Pathways | 250 | 5 | 100% | 100% | 100% | 0% | 21 |
+| Neighbourhood, Safety & Civic Voice | 250 | 5 | 100% | 100% | 100% | 0% | 23 |
+| Cognition.X : Corporate OS | 1160 | 10 | 43% | 43% | 100% | 0% | 26 |
+| Cognition.X : Science OS | 1160 | 10 | 43% | 43% | 100% | 0% | 25 |
+| Cognition.X : Robotics OS | 1140 | 10 | 43% | 43% | 100% | 0% | 26 |
+| Cognition.X : Global Health OS | 1160 | 10 | 43% | 43% | 100% | 0% | 28 |
+| Cognition.X : Multilateral OS | 1150 | 10 | 43% | 43% | 100% | 0% | 28 |
+| Cognition.X : Sapient OS | 1120 | 10 | 44% | 44% | 100% | 0% | 25 |
+| Non-Profit Practice | 1150 | 10 | 43% | 43% | 100% | 0% | 25 |
+| Cognition.X : Education OS | 660 | 0 | 0% | 0% | 100% | 0% | 113 |
+| Arts, Making Media & Performance | 250 | 5 | 100% | 100% | 100% | 0% | 82 |
+| Civic Leadership Legacy : The Institute Model | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
+| Civic Leadership Legacy : California | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
+| Civic Leadership Legacy : Louisiana | 250 | 5 | 100% | 100% | 100% | 0% | 117 |
+| Civic Leadership Legacy : Texas | 250 | 5 | 100% | 100% | 100% | 0% | 88 |
+| Digital Life, Data & AI | 250 | 5 | 100% | 100% | 100% | 0% | 54 |
+| Emergency Preparedness & First Response | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
+| Energy, Grid & the Home | 250 | 5 | 100% | 100% | 100% | 0% | 94 |
+| Food, Cooking & Nutrition | 250 | 5 | 100% | 100% | 100% | 0% | 82 |
+| Law, Contracts & Everyday Rights | 250 | 5 | 100% | 100% | 100% | 0% | 104 |
+| Learning States & Universal Access | 250 | 5 | 100% | 100% | 100% | 0% | 94 |
+| Cognition.X : Louisiana OS | 500 | 10 | 100% | 100% | 100% | 0% | 101 |
+| Parish Launch & Scale | 250 | 5 | 100% | 100% | 100% | 0% | 120 |
+| SmartCiti.X : New Orleans Trades | 250 | 5 | 100% | 100% | 100% | 0% | 100 |
+| Cognition.X : States OS | 250 | 5 | 100% | 100% | 100% | 0% | 96 |
+| Trades Across School Subjects | 250 | 5 | 100% | 100% | 100% | 0% | 87 |
+| Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 100% | 100% | 0% | 112 |
+| Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
 **Dataset-wide:** descriptions 62% · band-suffix 62% · code+level 100% · shortest transfer check 14 chars.
+
+## Credential naming
+
+A credential should name an accomplishment (“Oral Health Peer”), not a
+band level. The v0.1.0 legacy import left rows whose `credential` is the
+bare word “Practitioner”, so the headline credential count includes it as
+if it were a credential. Authoring real names for these tracks is review-
+board work (see `docs/GOVERNANCE.md`); `tests/test_platform.py` pins the
+scope so it can only shrink.
+
+- Rows whose credential is a bare level word: **1,228** (7% of the dataset), across **24 tracks** in 5 packs.
+- Distinct credential strings: **1,394** — of which **1** is a level word (Practitioner), leaving **1,393** real credentials.

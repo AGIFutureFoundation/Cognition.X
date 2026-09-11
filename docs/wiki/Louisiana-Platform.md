@@ -4,7 +4,7 @@
 structure — 64 parishes, 8 regions, 8 Trade Halls — with an
 **independent dashboard for every parish**:
 [`apps/louisiana/index.html`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/apps/louisiana/index.html)
-(~42 KB single file; opens locally).
+(~410 KB single file; opens locally).
 
 ## Surfaces
 
@@ -51,7 +51,8 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   default-on widget, toggleable like any other.
 - **Role dashboards (v0.18.0; widgetized v0.23.0)** — the *Dashboards*
   view: Student, Teacher, Parent, Homeschool, Parish Admin and State
-  Admin, each rebuilt on a widget system (30 widgets in all): every
+  Admin — seven in all, Assessor included — each rebuilt on a widget
+  system (52 widgets): every
   perspective composes its own dashboard — toggle panels, reorder
   them — with the layout persisted per role in the browser. Full-view
   widgets include the student's flow launcher and journal, the

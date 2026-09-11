@@ -4,6 +4,73 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.45.0] — 2026-09-11
+
+### Fixed
+- **The Education OS runs.** The flagship app had never rendered. The
+  v0.1.0 import captured its JavaScript — 149 view definitions and 143
+  renderers, ~8 MB — but neither its HTML shell nor its stylesheet, so
+  it threw on boot at `buildNav()` (no `#nav`), had no `.view` element
+  for `route()` to activate, and printed a stray unwrapped
+  `var DATA = {…}` block as visible page text. No version in the
+  repository, including the v0.1.0 archive, ever contained the shell.
+  `tools/build_education_os.py` now **generates the shell from the
+  app's own `VIEWS` array** — nav, crumb, edition picker, toast, and one
+  container per view — replacing the vestigial stub page and closing the
+  document. The app boots with zero errors and renders its views. Its
+  imported visual design is still missing; the generated shell carries
+  only the layout rules the app's own code requires (see prompt 1 of
+  `docs/NEXT_STEPS_OPUS5.md`).
+
+### Added
+- **Committed tests — the standing rules, enforced.** Every release
+  since v0.22.0 was verified by throwaway scripts that never entered the
+  repository; CI could prove the apps *rebuilt*, never that they
+  *worked*.
+  - `tests/test_platform.py` — 121 checks, Python 3 only, no browser and
+    no packages, wired into the CI `apps` job: build integrity, no
+    network call syntax in any app (distinguishing calls from the
+    Education OS's own security-audit prose), no undocumented external
+    hosts, `block_id` uniqueness and shape, manifest agreement, the
+    50-block track shape, the honesty stances (no union local numbers,
+    profiles never diagnoses, the WLB disclaimer verbatim, simulation
+    ≠ certification), the 50-check threshold, the consent gate, and the
+    generated Education OS shell.
+  - `tests/browser/smoke.js` — 60 assertions over the working models:
+    the credential firing at exactly 50 and never twice, genuine ECDSA
+    signing with the private half never leaving, all four verification
+    grades including a rejected forged revocation list, the consent gate
+    and a name-free export, the flow state machine's four transitions,
+    swarm arbitration, Network OS drill-downs, the Platform loop end to
+    end, and the Education OS booting.
+- **`docs/NEXT_STEPS_OPUS5.md`** — ten ranked, self-contained briefs for
+  the next sessions, each with its evidence, files, acceptance criteria
+  and verification commands.
+
+### Changed
+- **Credential-naming defect documented and pinned.** 1,228 rows — 7% of
+  the dataset, 24 tracks across five community packs — name their
+  credential with the bare band level “Practitioner”; the headline
+  “1,394 credentials” counts it as one, leaving 1,393 real. Found by the
+  new suite, traced to the v0.1.0 source import, and correct behaviour
+  by the pipeline (non-empty source fields are never overwritten).
+  Authoring 24 names is review-board work, so instead:
+  `docs/DATA_REVIEW.md` gains Finding 6 with full scope,
+  `docs/DATA_QUALITY.md` gains a per-pack *Level-word cred %* column and
+  a Credential-naming section, and `tests/test_platform.py` pins the
+  scope as a ratchet — it can only shrink, and no pack outside the
+  legacy import may ever contain one.
+- **Documentation corrected against the code**: the OS editions are
+  1,120–1,160 blocks each (8,040 in all), not “500 blocks each”; the
+  roadmap status block was frozen at v0.32.0 and listed shipped work as
+  open; `SYSTEM_REVIEW.md` §2 was titled “the six apps” while listing
+  five (Platform added) and described the Education OS as having “one
+  pre-existing page error” when it had no shell at all; the Louisiana
+  wiki said six roles and 30 widgets (seven and 52) and “~42 KB” for a
+  410 KB app; the Trades Network guide still told users “one hundred and
+  eleven entries” when it renders 222; `build_trades.py`'s docstring
+  still claimed 3 regions and 111 entries.
+
 ## [0.44.0] — 2026-09-11
 
 ### Added

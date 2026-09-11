@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs" / "DATA_QUALITY.md"
 
 SUFFIX = re.compile(r"— at .{1,20}$")  # "— at K–2" style band suffixes
+LEVEL_WORDS = {"Explorer", "Builder", "Practitioner", "Lead"}  # not credential names
 
 
 def main():
@@ -49,8 +50,8 @@ def main():
         "irregular foundation rows carry structural `code`/`level` but await",
         "authored descriptions. Neither is hidden — both are counted here.",
         "",
-        "| Pack | Blocks | Tracks | Desc % | Band-suffix % | Code+level % | Min check len |",
-        "|---|---:|---:|---:|---:|---:|---:|",
+        "| Pack | Blocks | Tracks | Desc % | Band-suffix % | Code+level % | Level-word cred % | Min check len |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for name, pr in packs.items():
         n = len(pr)
@@ -58,20 +59,41 @@ def main():
         desc = sum(1 for r in pr if r["description"].strip())
         suff = sum(1 for r in pr if SUFFIX.search(r["description"].strip()))
         cl = sum(1 for r in pr if r["code"].strip() and r["level"].strip())
+        lw = sum(1 for r in pr if r["credential"].strip() in LEVEL_WORDS)
         minchk = min(len(r["transfer_check"]) for r in pr)
         lines.append(
             f"| {name} | {n} | {tracks} | {100*desc//n}% | {100*suff//n}% "
-            f"| {100*cl//n}% | {minchk} |")
+            f"| {100*cl//n}% | {100*lw//n}% | {minchk} |")
 
     desc_all = sum(1 for r in rows if r["description"].strip())
     suff_all = sum(1 for r in rows if SUFFIX.search(r["description"].strip()))
     cl_all = sum(1 for r in rows if r["code"].strip() and r["level"].strip())
+    lw_rows = [r for r in rows if r["credential"].strip() in LEVEL_WORDS]
+    lw_tracks = {(r["pack"], r["track"]) for r in lw_rows if r["track"]}
+    creds = {r["credential"] for r in rows}
     lines += [
         "",
         f"**Dataset-wide:** descriptions {100*desc_all//len(rows)}% · "
         f"band-suffix {100*suff_all//len(rows)}% · code+level "
         f"{100*cl_all//len(rows)}% · shortest transfer check "
         f"{min(len(r['transfer_check']) for r in rows)} chars.",
+        "",
+        "## Credential naming",
+        "",
+        "A credential should name an accomplishment (“Oral Health Peer”), not a",
+        "band level. The v0.1.0 legacy import left rows whose `credential` is the",
+        "bare word “Practitioner”, so the headline credential count includes it as",
+        "if it were a credential. Authoring real names for these tracks is review-",
+        "board work (see `docs/GOVERNANCE.md`); `tests/test_platform.py` pins the",
+        "scope so it can only shrink.",
+        "",
+        f"- Rows whose credential is a bare level word: **{len(lw_rows):,}** "
+        f"({100*len(lw_rows)//len(rows)}% of the dataset), across "
+        f"**{len(lw_tracks)} tracks** in {len({p for p, _ in lw_tracks})} packs.",
+        f"- Distinct credential strings: **{len(creds):,}** — of which "
+        f"**{len(creds & LEVEL_WORDS)}** {'is a level word' if len(creds & LEVEL_WORDS) == 1 else 'are level words'} "
+        f"({', '.join(sorted(creds & LEVEL_WORDS)) or 'none'}), leaving "
+        f"**{len(creds - LEVEL_WORDS):,}** real credentials.",
         "",
     ]
     text = "\n".join(lines)

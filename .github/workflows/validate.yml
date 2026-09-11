@@ -45,3 +45,5 @@ jobs:
           python3 tools/build_platform.py
       - name: Apps must be byte-identical to their committed builds
         run: git diff --exit-code apps/
+      - name: Platform invariants (no network, honesty stances, dataset shape)
+        run: python3 tests/test_platform.py
