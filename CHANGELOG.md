@@ -4,6 +4,22 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.41.0] — 2026-09-11
+
+### Added
+- **Reproducible build from the repository, guaranteed in CI.**
+  Verified first by hand: a fresh `git clone` of the GitHub
+  repository plus Python 3 regenerates the entire platform —
+  `normalize_blocks.py` reproduces the dataset with no diff,
+  `validate_blocks.py` passes, and all six app builders reproduce
+  every committed `index.html` **byte-for-byte** (no node, no
+  package installs, no network beyond the clone). Then locked in:
+  the `validate` workflow gains an **`apps` job** that rebuilds all
+  six apps from their sources on every push and pull request and
+  fails on any drift — mechanically enforcing the two standing
+  rules that build products are never hand-edited and that apps are
+  always current with their dataset, templates and fact bases.
+
 ## [0.40.0] — 2026-09-10
 
 ### Changed

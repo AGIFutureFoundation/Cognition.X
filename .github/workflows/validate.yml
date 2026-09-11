@@ -19,3 +19,25 @@ jobs:
         run: git diff --exit-code data/blocks.csv data/manifest.json
       - name: Validate dataset
         run: python3 tools/validate_blocks.py
+
+  apps:
+    # Build products are never hand-edited: rebuild all six apps from
+    # their sources and fail on any drift. This is the reproducible-build
+    # guarantee — a fresh clone + Python 3 regenerates the platform
+    # byte-for-byte.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild all six apps from sources
+        run: |
+          python3 tools/build_flow_hub.py
+          python3 tools/build_louisiana.py
+          python3 tools/build_education_os.py
+          python3 tools/build_trades.py
+          python3 tools/build_states.py
+          python3 tools/build_platform.py
+      - name: Apps must be byte-identical to their committed builds
+        run: git diff --exit-code apps/
