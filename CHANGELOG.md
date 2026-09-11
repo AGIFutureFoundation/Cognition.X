@@ -4,6 +4,104 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.47.0] — 2026-09-11
+
+The adversarial multi-agent review of v0.44.0 finished: 116 agents, 36
+findings, each put to three independent refuters — **24 confirmed, 12
+refuted**. This release closes the confirmed ones.
+
+### Fixed — correctness
+- **The Student standing panel went dead as soon as a witnessed check was
+  waiting.** `el.innerHTML +=` ran *after* four listeners were bound,
+  re-parsing the panel and discarding the nodes they were attached to; the
+  learner picker, Add learner, Record a practice check and Request a
+  witnessed check all stopped working, silently, until an assessor cleared
+  the queue. The waiting note is now part of the single write that happens
+  before binding.
+- **A refused save looked like a saved one.** `store()` swallowed every
+  localStorage failure, so trust-list imports, revocations and ledger
+  credits reported success while persisting nothing. A refusal now says so
+  once, plainly, in an alert the page cannot hide.
+- **Every re-render stole the control you were using.** `saveR()` rebuilds
+  the whole dashboard, and the Network OS (20s) and swarm (10s) pulses
+  replace their boards wholesale. Focus and caret are now restored by
+  element id, and a pulse skips any board the user is currently inside.
+- **Flow Hub's Pack Studio could never be submitted**: the *Pack name* and
+  *Notes* fields carried no `data-ps` attribute, so `psBind()` never bound
+  them and the validator rejected every hand-authored pack for a missing
+  name.
+- **Every cross-app "open in Flow Hub" chip landed nowhere.** The deep-link
+  regex required `SLUG/PREFIX`; the Trades Network and States apps emit a
+  bare slug. Both forms now work.
+- **The Parent swarm described a different child** than the panels beside
+  it — it read the Student's `R.me` while every Parent widget reads
+  `R.child`.
+- A pasted Flow Hub ledger with a non-object `done` made the next completed
+  check throw and silently drop the save; the shape is checked first.
+
+### Fixed — honesty
+- **A signed credential asserted witnessing it could not see.** Practice
+  checks and witnessed checks credit the same counter, yet every
+  `cx-credential/1` payload read *"witnessed per the pack's checks"* — and
+  the Records Office would sign that over a randomly-seeded demo learner.
+  The payload now carries the **witnessed count the evidence log actually
+  supports**, marks demo learners `demo: true` on their face, and says
+  plainly how much of the 50 is the learner's own practice log. A signature
+  over a false claim is worse than no signature.
+- The Platform app's headline tile read **"0 network calls in any app"**
+  while that very page loads a Google Fonts stylesheet. It now reads
+  *"0 data calls — fonts only"*.
+- `tools/evidence_triage.py` documented an **UNUSED** category `main()`
+  never computed. It is now computed against the dataset and renamed
+  **UNREPORTED**, with the distinction stated: no submitting site reported
+  activity is not the same as nobody used it.
+- The Packs wiki still said classroom hooks feed "all 111 roster entries";
+  the fact base has had 222 since v0.30.0.
+
+### Fixed — the pipeline
+- **CI never re-derived 60% of the dataset.** 9,950 of 16,700 blocks are
+  generated from `data/pack_specs/`, and every fact base is extracted from
+  the Education OS app, but CI checked neither — both were committed
+  artifacts nothing verified. The `dataset` job now regenerates **every
+  pack from its spec** and **re-extracts every fact base**, failing on any
+  drift. (All 19 specs were confirmed to reproduce their CSVs
+  byte-identically before the gate was added.)
+- **A slug collision would have merged two packs silently.** `slug_for`'s
+  acronym fallback can map two pack names to one slug; `block_id`s stay
+  unique so every validator passes, while all four slug-keyed builders
+  quietly treat the two packs as one. A collision is now a build error
+  naming both packs.
+- **The validator checked half the shape it documents.** "10 themes × 5
+  bands" was enforced as "50 rows and 10 themes", so a track could pass
+  with one band taught twice and another missing. Band coverage is now
+  verified per theme, and an unknown grade band is an error rather than a
+  silently skipped level check. All 210 tracks pass the stricter rule.
+
+### Fixed — accessibility
+- The **Assessor queue header** was a click-only `<div>`: a keyboard or
+  screen-reader assessor could never open any request but the first. It is
+  now a real control with `role`, `tabindex`, `aria-expanded` and Enter/Space.
+- **Trades Network pack chips** were mouse-only `<span>`s; they now carry
+  `role="link"`, `tabindex` and key handling.
+- The **Records Office verdict** is announced (`role="status"`,
+  `aria-live`) — a screen-reader user pressing Verify previously got
+  nothing at all.
+
+### Security
+- **Imported ledgers are validated, not trusted.** Learner and queue ids
+  reach HTML attributes and object keys; a pasted ledger is third-party
+  data. Ids are now constrained to a safe alphabet, names/bands/progress
+  coerced to the expected shape, unknown track keys dropped, and queue rows
+  referencing unknown learners discarded — plus `esc()` on every id that
+  reaches an attribute.
+
+### Verified
+126 Python invariants and **72 browser assertions**, twelve of them new
+regressions written directly against these fixes: the standing panel stays
+live after a request, a hostile imported id is neutralised, a signed record
+states its witnessed basis, a demo record says so, the assessor queue opens
+by keyboard, and a bare-slug deep link resolves.
+
 ## [0.46.0] — 2026-09-11
 
 ### Added

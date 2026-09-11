@@ -13,6 +13,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      # 9,950 of 16,700 blocks are generated from pack specs, and every fact
+      # base is extracted from the Education OS app. Until v0.47.0 CI checked
+      # neither, so both were committed artifacts nothing re-derived. Now the
+      # chain is verified from its actual sources: spec -> generated CSV ->
+      # blocks.csv.
+      - name: Regenerate every pack from its spec
+        run: |
+          for spec in data/pack_specs/*.json; do
+            out="data/generated/$(basename "$spec" .json).csv"
+            python3 tools/generate_pack.py "$spec" > "$out"
+          done
+      - name: Generated packs must match their specs
+        run: git diff --exit-code data/generated/
+      - name: Re-extract the canonical fact bases from the app
+        run: python3 tools/extract_fact_bases.py
+      - name: Fact bases must match the app they came from
+        run: git diff --exit-code data/louisiana/ data/wlb/
       - name: Rebuild canonical dataset
         run: python3 tools/normalize_blocks.py
       - name: Dataset must be up to date with sources

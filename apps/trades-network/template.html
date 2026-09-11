@@ -689,13 +689,17 @@ function renderRoster(){
       (e.school ? `<p style="font-size:.8rem; margin:8px 0"><b>In class:</b> ${esc(e.school)} `+
         e.subjects.map(s=>`<span class="chip" style="font-size:.66rem; padding:1px 8px">${esc(s.toUpperCase())}</span>`).join("")+`</p>` : "")+
       `<div>${e.packs.map(s=>{const p=D.packmeta[s];
-        return p?`<span class="chip link" data-pack="${s}" title="Open in Flow Hub">${esc(p.name)} · ${p.blocks}</span>`:"";}).join("")}</div>`+
+        return p?`<span class="chip link" role="link" tabindex="0" data-pack="${esc(s)}" title="Open in Flow Hub" aria-label="Open ${esc(p.name)} in Flow Hub">${esc(p.name)} · ${p.blocks}</span>`:"";}).join("")}</div>`+
       `<p class="council">Current local: verify with ${esc(r.council)}. Simulation ≠ certification.</p></div>`;
   }).join("");
-  $("#ugrid").querySelectorAll("[data-pack]").forEach(c=> c.addEventListener("click", ()=>{
-    // deep link into the repository's Flow Hub when it sits alongside this file
-    window.open("../flow-hub/index.html#track="+c.dataset.pack, "_blank");
-  }));
+  $("#ugrid").querySelectorAll("[data-pack]").forEach(c=>{
+      // deep link into the repository's Flow Hub when it sits alongside this file
+      const go = ()=> window.open("../flow-hub/index.html#track="+c.dataset.pack, "_blank");
+      c.addEventListener("click", go);
+      c.addEventListener("keydown", e=>{
+        if (e.key === "Enter" || e.key === " "){ e.preventDefault(); go(); }
+      });
+    });
 }
 
 /* ---------- simulations view ---------- */

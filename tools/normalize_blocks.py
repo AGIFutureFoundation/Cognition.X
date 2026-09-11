@@ -92,6 +92,24 @@ def slug_for(pack):
     return ("".join(w[0] for w in words).upper() or "PACK")[:8]
 
 
+def assert_unique_slugs(rows):
+    """The slug is the key four builders group by, and the middle field of
+    every block_id. Two packs sharing one would keep ids unique — so every
+    validator would pass — while silently merging the two packs into one
+    everywhere downstream. Names are the source of truth; collisions are a
+    build error, not a warning."""
+    by_slug = {}
+    for r in rows:
+        by_slug.setdefault(slug_for(r["pack"]), set()).add(r["pack"])
+    clashes = {s: sorted(p) for s, p in by_slug.items() if len(p) > 1}
+    if clashes:
+        lines = "; ".join(f"{s} <- {' + '.join(p)}" for s, p in sorted(clashes.items()))
+        raise SystemExit(
+            "slug collision: two packs would share one slug and merge silently "
+            f"in every slug-keyed builder ({lines}). Give each an explicit entry "
+            "in PACK_SLUGS.")
+
+
 def read_rows():
     paths = [SOURCE] + sorted(GENERATED.glob("*.csv")) if GENERATED.is_dir() else [SOURCE]
     rows = []
@@ -188,6 +206,7 @@ def light_fill(rows):
 
 def main():
     rows = read_rows()
+    assert_unique_slugs(rows)
     apply_promotions(rows)
     light_fill(rows)
     counters = {}

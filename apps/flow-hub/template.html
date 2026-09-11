@@ -374,9 +374,9 @@
       </div>
       <div class="panel" style="margin-bottom:12px">
         <label for="ps-pack" style="font-weight:600">Pack name</label>
-        <input type="search" id="ps-pack" style="width:100%; margin:6px 0 12px" placeholder="e.g. Gardens, Yards &amp; Growing Things">
+        <input type="search" id="ps-pack" data-ps="pack" style="width:100%; margin:6px 0 12px" placeholder="e.g. Gardens, Yards &amp; Growing Things">
         <label for="ps-notes" style="font-weight:600">Notes — the pack's stance and sourcing</label>
-        <textarea id="ps-notes" rows="3" style="width:100%; margin-top:6px" placeholder="What this pack teaches, whose knowledge it honors, and how its checks stay real and safe…"></textarea>
+        <textarea id="ps-notes" data-ps="notes" rows="3" style="width:100%; margin-top:6px" placeholder="What this pack teaches, whose knowledge it honors, and how its checks stay real and safe…"></textarea>
       </div>
       <div id="ps-tracks"></div>
       <div style="display:flex; gap:9px; flex-wrap:wrap; margin:12px 0">
@@ -897,7 +897,16 @@ $("#led-trace").addEventListener("click", async () => {
 $("#led-load").addEventListener("click", () => {
   try {
     const inb = JSON.parse($("#ledio").value);
-    if (inb && inb.done){ S.done = inb.done; S.skills = inb.skills || {}; save(); renderLedger(); renderPacks(); log("Archivist","Ledger loaded from pasted copy."); }
+    // `done` is read as an object of block ids everywhere below; a string or
+    // array here made the next completed check throw and silently drop the save
+    const ok = inb && typeof inb.done === "object" && !Array.isArray(inb.done);
+    if (ok){
+      S.done = inb.done;
+      S.skills = (inb.skills && typeof inb.skills === "object" && !Array.isArray(inb.skills)) ? inb.skills : {};
+      save(); renderLedger(); renderPacks(); log("Archivist","Ledger loaded from pasted copy.");
+    } else {
+      log("Archivist","That paste wasn't a ledger — expected the JSON exported above.");
+    }
   } catch(e){ log("Archivist","That paste wasn't a ledger — expected the JSON exported above."); }
 });
 
@@ -1134,16 +1143,18 @@ $("#guidebtn").addEventListener("click", ()=>{ log("Guide","Walkthrough started 
 renderSystem(); renderFamChips(); renderPacks(); fillFlowSelects();
 renderAgents(); renderFeed(); renderLedger(); drawFlow(); paceRender();
 
-/* deep-link integration: #track=SLUG/PREFIX preselects a track and opens Flow
-   (used by the Louisiana parish module plans, and any external system). */
+/* deep-link integration: #track=SLUG/PREFIX opens that track; #track=SLUG
+   opens the pack at its first track — the form the Trades Network and States
+   apps emit. Both are supported because both are in use. */
 (function(){
-  const m = location.hash.match(/^#track=([A-Z0-9]+)\/([A-Za-z0-9]+)$/);
+  const m = location.hash.match(/^#track=([A-Za-z0-9]+)(?:\/([A-Za-z0-9]+))?$/);
   if (!m) return;
-  const pi = tracked.findIndex(p => p.slug === m[1]);
+  const slug = m[1].toUpperCase();
+  const pi = tracked.findIndex(p => p.slug === slug);
   if (pi < 0) return;
   $("#fs-pack").value = String(pi); fillTracks();
   const p = tracked[pi];
-  const ti = p.tracks.findIndex(t => t.prefix === m[2]);
+  const ti = m[2] ? p.tracks.findIndex(t => t.prefix === m[2]) : 0;
   if (ti >= 0) $("#fs-track").value = String(ti);
   go("flow");
   log("Pathfinder", `Arrived via deep link — “${(p.tracks[ti]||p.tracks[0]).name}” (${p.name}) is loaded and ready.`);
