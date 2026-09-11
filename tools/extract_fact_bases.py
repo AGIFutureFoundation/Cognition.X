@@ -52,8 +52,11 @@ def extract():
           "const wlb=" + grab_obj("DATA.wlb") + ";"
           "const principles=" + grab("DATA.wlbPrinciples") + ";"
           "console.log(JSON.stringify({regions,hubs,parishes,"
-          "wlb:{org:wlb.org,disclaimer:wlb.disclaimer,mission:wlb.mission,"
-          "quote:wlb.quote,record:wlb.record},"
+          "wlb:{name:wlb.name,org:wlb.org,disclaimer:wlb.disclaimer,mission:wlb.mission,"
+          "quote:wlb.quote,fellowshipQuote:wlb.fellowshipQuote,record:wlb.record,"
+          "fellowship:wlb.fellowship,k12:wlb.k12,strands:wlb.strands,eras:wlb.eras,"
+          "courses:wlb.courses,bridge:wlb.bridge,modules:wlb.modules,"
+          "standards:wlb.standards,seal:wlb.seal},"
           "principles:principles.map(x=>({p:x.p,src:x.src,teach:x.teach}))}));")
     with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as f:
         f.write(js)
@@ -87,8 +90,10 @@ def main():
     write(ROOT / "data" / "wlb" / "institute.json", {
         "note": ("Willie L. Brown Jr. Institute fact base — extracted from the "
                  "Education OS app by tools/extract_fact_bases.py and canonical "
-                 "here since v0.39.0. The disclaimer travels verbatim with every "
-                 "use; principles carry their source attribution."),
+                 "here since v0.39.0; the full leadership curriculum (strands, "
+                 "eras, course ladders, bridge, modules, standards, seal) since "
+                 "v0.43.0. The disclaimer travels verbatim with every use; "
+                 "principles carry their source attribution."),
         **fb["wlb"],
         "principles": fb["principles"],
     })

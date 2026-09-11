@@ -149,6 +149,10 @@ def load_fact_base():
         "wlb": {k: w[k] for k in ("org", "disclaimer", "mission", "quote", "record")},
         "principles": [{"p": x["p"], "src": x["src"], "teach": x["teach"]}
                        for x in w["principles"]],
+        # the Institute's full leadership curriculum (canonical since v0.43.0)
+        "leadership": {k: w[k] for k in ("name", "fellowshipQuote", "fellowship",
+                                         "k12", "strands", "eras", "courses",
+                                         "bridge", "modules", "standards", "seal")},
     }
 
 
@@ -263,6 +267,7 @@ def main():
         "curriculum": curriculum_stats(),
         "wlb": fb["wlb"],
         "principles": fb["principles"],
+        "leadership": fb["leadership"],
         "corePacks": CORE_PACKS,
         "packmeta": packmeta,
         "catalog": catalog_light,

@@ -469,6 +469,32 @@
     <p class="sub">Four decades of public life, read as curriculum.</p>
     <div class="pgrid" id="recordgrid"></div>
 
+    <h2>The Leadership Ladder — kindergarten to the seal</h2>
+    <p class="sub">The Institute's full course program, canonical in the dataset since v0.43.0: five strands,
+    five eras, 125 courses, the ten-module method every course runs on, the bridge of public milestones, and
+    the graduation seal. Course titles carry the model's original San Francisco ground; every edition
+    localizes them through the slots below, and the standards column shows the original California mapping —
+    each edition re-maps through its own standards slot.</p>
+    <div class="pickrow"><label for="strandpick" style="font-weight:600">Strand</label><select id="strandpick"></select></div>
+    <p class="note" id="stranddesc" style="max-width:70ch"></p>
+    <div class="panel locwrap"><table class="loctable" id="laddertable"></table></div>
+    <div class="chartrow">
+      <div class="panel"><h3>The ten-module method</h3>
+        <p class="note">Every course, every era, runs the same ten moves — the craft is constant, the ground grows.</p>
+        <div id="wlbmodules"></div></div>
+      <div class="panel"><h3>The bridge &amp; the graduation seal</h3>
+        <p class="note">Public milestones on the way up, and the five things the seal certifies.</p>
+        <div id="wlbbridge"></div></div>
+    </div>
+    <div class="chartrow">
+      <div class="panel"><h3>The junior placement ladder</h3>
+        <p class="note">Every grade band has an age-appropriate "agency".</p>
+        <div id="wlbk12"></div></div>
+      <div class="panel"><h3>The Fellowship pattern</h3>
+        <p class="note" id="wlbfquote"></p>
+        <div id="wlbfellow"></div></div>
+    </div>
+
     <h2>The universal training model — for every state</h2>
     <p class="sub">New in v0.18.0: the model itself as a pack — leadership, coalition craft, <b>emotional
     intelligence</b>, civic duty and ethics — state-agnostic, ready to run anywhere and localize through the
@@ -1327,6 +1353,43 @@ function renderInstitute(){
   $("#modeltracks").innerHTML = (D.curriculum.modelTracks||[]).map(t=>
     `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("");
   $("#wlbdisc").innerHTML = `<b>Disclaimer</b> — ${esc(D.wlb.disclaimer)}`;
+
+  /* the Leadership Ladder (canonical leadership curriculum, v0.43.0) */
+  const L = D.leadership;
+  if (L){
+    const STRANDCOL = {gold:"var(--gold)", purple:"var(--purple)", green:"var(--green)"};
+    const sp = $("#strandpick");
+    sp.innerHTML = L.strands.map(s=>`<option value="${s.id}">${esc(s.id)} · ${esc(s.t)}</option>`).join("");
+    const eraKeys = Object.keys(L.eras);
+    const drawLadder = () => {
+      const s = L.strands.find(x=>x.id===sp.value) || L.strands[0];
+      $("#stranddesc").textContent = s.d;
+      $("#laddertable").innerHTML =
+        `<thead><tr><th>Era</th><th>Courses — ${esc(s.t)}</th><th>Standards (original CA mapping)</th></tr></thead><tbody>`+
+        eraKeys.map(e=>`<tr><td style="white-space:nowrap"><b>${esc(L.eras[e])}</b></td>
+          <td>${(L.courses[s.id][e]||[]).map(c=>`<span class="chip">${esc(c)}</span>`).join(" ")}</td>
+          <td style="font-size:.78rem; color:var(--muted)">${(L.standards[e]||[]).map(esc).join(" · ")}</td></tr>`).join("")+
+        `</tbody>`;
+    };
+    sp.addEventListener("change", drawLadder); drawLadder();
+    $("#wlbmodules").innerHTML = L.modules.map(([id,t,d])=>
+      `<div style="display:flex; gap:10px; padding:6px 0; border-top:1px solid var(--line); font-size:.85rem">
+       <span class="mono" style="flex:0 0 34px; color:var(--purple); font-weight:600">${esc(id)}</span>
+       <span><b>${esc(t)}</b> — <span style="color:var(--muted)">${esc(d)}</span></span></div>`).join("");
+    $("#wlbbridge").innerHTML =
+      L.bridge.map(b=>`<div style="display:flex; gap:10px; padding:5px 0; border-top:1px solid var(--line); font-size:.83rem">
+        <span class="mono" style="flex:0 0 42px; color:var(--gold); font-weight:600">${esc(b[0])}</span>
+        <span><b>${esc(b[1])}</b> — <span style="color:var(--muted)">${esc(b[2])}</span></span></div>`).join("")+
+      `<p style="margin:12px 0 4px"><b>The seal certifies:</b></p>`+
+      L.seal.map((s,i)=>`<div style="font-size:.84rem; padding:3px 0">✓ ${esc(s)}</div>`).join("");
+    $("#wlbk12").innerHTML = L.k12.map(([k,v])=>
+      `<div style="padding:6px 0; border-top:1px solid var(--line); font-size:.84rem"><b>${esc(k)}</b> —
+       <span style="color:var(--muted)">${esc(v)}</span></div>`).join("");
+    $("#wlbfquote").innerHTML = `“${esc(L.fellowshipQuote)}”`;
+    $("#wlbfellow").innerHTML = L.fellowship.map(([k,v])=>
+      `<div style="padding:6px 0; border-top:1px solid var(--line); font-size:.84rem"><b>${esc(k)}</b> —
+       <span style="color:var(--muted)">${esc(v)}</span></div>`).join("");
+  }
 }
 
 /* ---------- AGENTS & ROBOTS ---------- */

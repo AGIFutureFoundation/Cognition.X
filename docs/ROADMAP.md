@@ -145,10 +145,12 @@ standards-mapped; validator extended to rubric and mapping checks.
   `data/wlb/institute.json`, extracted once by
   `tools/extract_fact_bases.py`); the Louisiana and States builders
   read the canonical files and no longer evaluate the app template —
-  round-trip verified byte-identical. Remaining: source the app's
-  other display layers (wlb course ladders, K–12 program) the same
-  way and inject the canonicalized layers back, shrinking
-  `template.html` over time
+  round-trip verified byte-identical. The WLB leadership curriculum
+  (strands, eras, 125 course ladders, modules, bridge, standards,
+  seal) joined the canonical file in v0.43.0 and renders in the
+  Louisiana and States Institute views. Remaining: source the K–12
+  program layer the same way and inject the canonicalized layers
+  back, shrinking `template.html` over time
 - [x] Learner state, first working version (v0.25.0): local-first
   progress ledger in the Louisiana platform — per-learner check
   records on the 30 core-spine tracks, automatic credential award at

@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.42.0** | Dashboard agent swarms: all seven role dashboards open with a blackboard crew of agents (24 in all) computing priority + call from real browser state, with arbitration surfacing the swarm's one call — agents propose; the person disposes |
+| **v0.43.0** | The Leadership Ladder: the WLB Institute's full leadership program (5 strands × 5 eras × 125 courses, ten-module method, bridge, standards, graduation seal, Fellowship pattern) canonicalized into the dataset and rendered in the Louisiana and States Institute views |
+| v0.42.0 | Dashboard agent swarms: all seven role dashboards open with a blackboard crew of agents (24 in all) computing priority + call from real browser state, with arbitration surfacing the swarm's one call — agents propose; the person disposes |
 | v0.41.0 | Reproducible build guaranteed in CI: a fresh clone + Python 3 regenerates the whole platform byte-for-byte, and the new CI apps job rebuilds all six apps on every push, failing on any drift from their sources |
 | v0.40.0 | Granular Network OS: every one of the eight section automations expands into a drill-down board with its exact thresholds, the per-learner/per-parish rows it computed from, and a pulse log of recent calls — expansion state kept across the 20-second pulse |
 | v0.39.0 | Education OS pipeline stage two: the Louisiana parish fact base and WLB Institute fact base become canonical data files (data/louisiana/, data/wlb/); the Louisiana and States builders read them instead of evaluating the app template — round-trip verified byte-identical |

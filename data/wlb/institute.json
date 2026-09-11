@@ -1,9 +1,11 @@
 {
- "note": "Willie L. Brown Jr. Institute fact base — extracted from the Education OS app by tools/extract_fact_bases.py and canonical here since v0.39.0. The disclaimer travels verbatim with every use; principles carry their source attribution.",
+ "note": "Willie L. Brown Jr. Institute fact base — extracted from the Education OS app by tools/extract_fact_bases.py and canonical here since v0.39.0; the full leadership curriculum (strands, eras, course ladders, bridge, modules, standards, seal) since v0.43.0. The disclaimer travels verbatim with every use; principles carry their source attribution.",
+ "name": "Willie L. Brown Jr. Institute Track",
  "org": "The Willie L. Brown Jr. Institute of Politics and Public Service (wlbinstitute.org), San Francisco",
  "disclaimer": "This track is a proposal built from the Institute's public mission and the Willie L. Brown Jr. Fellowship Program at San Francisco State University. It is not affiliated with, endorsed by, or reviewed by the Institute, SF State, or Mayor Brown; the \"Willie Brown Foundation\" name in the brief refers to this Institute. A named track would be offered under a partnership agreement and the Institute's review of every course.",
  "mission": "The Institute provides education and training for emerging leaders while fostering civic engagement, leadership development and effective governance, with an emphasis on inclusivity and diversity — preparing next-generation leaders to address complex societal challenges.",
  "quote": "Public service is the most noble of professions. It provides the opportunity to give back to your community, to ensure the next generation has opportunities to lead better lives.",
+ "fellowshipQuote": "inspire and prepare SF State students from all majors to pursue a career in public service",
  "record": [
   [
    "Four decades in California public life",
@@ -29,6 +31,417 @@
    "Focus areas",
    "Civil rights, education reform, tax policy, economic development, healthcare, affirmative action"
   ]
+ ],
+ "fellowship": [
+  [
+   "Who",
+   "SF State students who faced barriers to higher education — financial hardship, first-generation, formerly incarcerated, homelessness, veterans"
+  ],
+  [
+   "What",
+   "Paid internships in City and County of San Francisco agencies on projects matched to the student's skills, 16 hours a week for 15 weeks"
+  ],
+  [
+   "Seminar",
+   "Friday-morning professional-development seminars; a cohort focused on equity and social change"
+  ],
+  [
+   "Since",
+   "2008; more than $1 million raised for the program"
+  ],
+  [
+   "Why it matters here",
+   "It is a working model of the flipped, mastery, crew-based classroom applied to public service: real agencies, real projects, a cohort, a mentor, evidence — the same shape as a G2FC mission"
+  ]
+ ],
+ "k12": [
+  [
+   "Junior placements",
+   "Every grade band has an age-appropriate \"agency\": the classroom council in K–2, the school in 3–5, the neighborhood and city hall in 6–8, a public agency project in 9–10, a supervised placement in 11–12 (FLSA-compliant, no hazardous work)"
+  ],
+  [
+   "Friday seminar circles",
+   "A weekly cohort circle from grade 3: what did you see, who decided, who was left out, what would you change — the Institute's seminar, scaled down"
+  ],
+  [
+   "Barriers named, not hidden",
+   "The Fellowship serves students who faced barriers; the track keeps that lens — every course asks who is missing from the room and why, and the accommodation profiles and four-language signals apply"
+  ],
+  [
+   "Evidence and credentials",
+   "Missions end in agent-free transfer checks and a civic portfolio; credentials stack toward the California State Seal of Civic Engagement and, in 11–12, a Fellowship On-Ramp that maps to the Institute's eligibility"
+  ],
+  [
+   "Public service as a trade",
+   "Public service is taught the way the platform teaches a trade: roles, crews, safety (ethics, privacy, the law), practicums, validators — the \"noble profession\" made concrete"
+  ]
+ ],
+ "strands": [
+  {
+   "id": "PS",
+   "t": "Public Service & Civic Leadership",
+   "d": "How a city works and how a person serves it: councils, agencies, budgets, the people who run transit, water, parks and schools",
+   "color": "gold"
+  },
+  {
+   "id": "DR",
+   "t": "Democracy, Law & Rights",
+   "d": "Voting, courts, civil rights, the constitution, juvenile justice reform — how rules are made, changed and enforced fairly",
+   "color": "teal"
+  },
+  {
+   "id": "EO",
+   "t": "Economic Development & Opportunity",
+   "d": "Housing, transit, tax policy, jobs, Mission Bay — how public decisions build an economy and who benefits",
+   "color": ""
+  },
+  {
+   "id": "CH",
+   "t": "Community Health & Wellbeing",
+   "d": "Public health, healthcare access, safety, food, parks — the services that keep a neighborhood well",
+   "color": ""
+  },
+  {
+   "id": "EI",
+   "t": "Equity, Inclusion & Access",
+   "d": "Barriers to education and opportunity, affirmative action, first-generation paths, who is in the room and who is not",
+   "color": ""
+  }
+ ],
+ "eras": {
+  "k2": "K–2",
+  "e35": "3–5",
+  "ms": "6–8",
+  "hs1": "9–10",
+  "hs2": "11–12"
+ },
+ "courses": {
+  "PS": {
+   "k2": [
+    "Helpers of the City",
+    "Our Classroom Council",
+    "Who Keeps the Lights On",
+    "A Day at City Hall",
+    "The Bus, the Park, the Library"
+   ],
+   "e35": [
+    "How a City Works",
+    "The School Budget Game",
+    "Meet Your Supervisor",
+    "Public Servants Around Us",
+    "Run for Class Office"
+   ],
+   "ms": [
+    "City Hall: Follow a Decision",
+    "The Neighborhood Agency Project",
+    "Public Budgets in Real Numbers",
+    "Transit for Everyone",
+    "Leading a Crew for the Public Good"
+   ],
+   "hs1": [
+    "Agency Project I: Scope and Stakeholders",
+    "Public Management and Ethics",
+    "The Mayor's Desk: Case Studies",
+    "Data for Public Decisions",
+    "Public Speaking for Public Service"
+   ],
+   "hs2": [
+    "Agency Placement: Supervised Practicum",
+    "Governance Capstone",
+    "Policy Memo Writing",
+    "Leading Under Pressure",
+    "Fellowship On-Ramp Seminar"
+   ]
+  },
+  "DR": {
+   "k2": [
+    "Fair Rules",
+    "Taking Turns and Voting",
+    "Who Decides?",
+    "Rights in Our Room",
+    "Say Sorry, Make It Right"
+   ],
+   "e35": [
+    "The Constitution for Kids",
+    "How a Law Is Made",
+    "Courts and Fairness",
+    "Civil Rights Stories of California",
+    "Second Chances: Why We Repair"
+   ],
+   "ms": [
+    "Voting: How and Why",
+    "The Bill of Rights in Your Neighborhood",
+    "Juvenile Justice: A Reform Story",
+    "Civil Rights in California History",
+    "Mock Legislature"
+   ],
+   "hs1": [
+    "Constitutional Law Cases",
+    "Civil Rights Movement and California",
+    "Criminal Justice and Reform",
+    "Legislative Process Lab",
+    "Rights, Privacy and Technology"
+   ],
+   "hs2": [
+    "Election Law and Campaigns",
+    "Moot Court",
+    "Justice Reform Policy Design",
+    "Comparative Democracy",
+    "Rights Capstone: A Case to Argue"
+   ]
+  },
+  "EO": {
+   "k2": [
+    "Needs, Wants and the Town",
+    "Where Do Roads Come From?",
+    "Homes for Everyone",
+    "Jobs in Our City",
+    "Money for the Park"
+   ],
+   "e35": [
+    "Taxes: What They Pay For",
+    "Building a Bridge, Building a Budget",
+    "Housing: Who Lives Where",
+    "Transit Math",
+    "The Story of Mission Bay"
+   ],
+   "ms": [
+    "Public Money: Bonds and Budgets",
+    "Affordable Housing Design Challenge",
+    "Transit Networks and Data",
+    "Jobs and the Local Economy",
+    "Tax Policy Simulations"
+   ],
+   "hs1": [
+    "Urban Economics",
+    "Housing Policy and Finance",
+    "Infrastructure Projects",
+    "Economic Development Strategy",
+    "Tax Policy and Fairness"
+   ],
+   "hs2": [
+    "Public Finance Capstone",
+    "Development Deal Simulation",
+    "Regional Economy Analysis",
+    "Workforce and Apprenticeship Policy",
+    "Economics of Opportunity"
+   ]
+  },
+  "CH": {
+   "k2": [
+    "Healthy Neighborhood",
+    "Clean Water, Clean Air",
+    "Safe Streets",
+    "Food for All",
+    "Helpers in Health"
+   ],
+   "e35": [
+    "Public Health Heroes",
+    "Hospitals, Clinics and Who Pays",
+    "Parks and Wellbeing",
+    "Emergency Services",
+    "Health Data Detectives"
+   ],
+   "ms": [
+    "Community Health Mapping",
+    "Healthcare Access Project",
+    "Mental Health and Community",
+    "Environmental Justice",
+    "Public Safety and Trust"
+   ],
+   "hs1": [
+    "Public Health Systems",
+    "Healthcare Policy",
+    "Epidemiology for Citizens",
+    "Environmental Health Lab",
+    "Health Equity Data"
+   ],
+   "hs2": [
+    "Health Policy Capstone",
+    "Innovation and the City (Mission Bay)",
+    "Crisis Response Simulation",
+    "Community Health Practicum",
+    "Health Systems Leadership"
+   ]
+  },
+  "EI": {
+   "k2": [
+    "Everyone Belongs",
+    "Different Paths, Same Room",
+    "Helping a Friend Join",
+    "Our Many Languages",
+    "Fair Chances"
+   ],
+   "e35": [
+    "Barriers and Bridges",
+    "First in the Family",
+    "Stories of Access",
+    "Inclusion Design Challenge",
+    "Who Is Missing?"
+   ],
+   "ms": [
+    "Equity Audit of Our School",
+    "Affirmative Action: History and Debate",
+    "First-Generation Pathways",
+    "Access to Opportunity Data",
+    "Inclusive Leadership Crew"
+   ],
+   "hs1": [
+    "Equity Policy Analysis",
+    "Education Reform in California",
+    "Opportunity Gaps: Data and Action",
+    "Inclusive Program Design",
+    "Leadership from the Margins"
+   ],
+   "hs2": [
+    "Equity Capstone",
+    "Education Policy Design",
+    "Access Program Practicum",
+    "Diversity in Public Institutions",
+    "Mentoring the Next Cohort"
+   ]
+  }
+ },
+ "bridge": [
+  [
+   "B-5",
+   "Grade 5 Civic Expo",
+   "Present a neighborhood improvement plan to a real public official; portfolio sealed",
+   "5"
+  ],
+  [
+   "B-8",
+   "Grade 8 Junior Fellowship",
+   "A four-week project with a city or county department, with a seminar circle and a mentor",
+   "8"
+  ],
+  [
+   "B-10",
+   "Grade 10 Agency Project",
+   "A crew solves a scoped problem for a public agency and defends it before a review board",
+   "10"
+  ],
+  [
+   "B-12",
+   "Grade 12 Fellowship On-Ramp",
+   "A supervised placement (FLSA-compliant), the policy memo, and a mapped application path to the Institute's Fellowship",
+   "12"
+  ],
+  [
+   "B-F",
+   "Family Civic Night",
+   "Families see the seminar circle, the portfolio and the override path; in twenty-one languages",
+   "Families"
+  ],
+  [
+   "B-S",
+   "Summer Public Service Bridge",
+   "A two-week summer crew placement with a public agency or nonprofit; Summer Bridge pacing",
+   "6–12"
+  ],
+  [
+   "B-T",
+   "Educator Civic Steward",
+   "Teacher module: running seminar circles, agency partnerships, ethics and privacy in civic projects",
+   "Teachers"
+  ],
+  [
+   "B-A",
+   "Alumni & Mentor Network",
+   "Fellowship alumni and public servants as mentors and panelists; recorded interviews as Story Circuits",
+   "All"
+  ]
+ ],
+ "modules": [
+  [
+   "M1",
+   "Brief",
+   "The mission, the role, the standard, the agency; what \"done\" looks like"
+  ],
+  [
+   "M2",
+   "Leader's story",
+   "A page from a public servant's record — Mayor Brown's transit, housing, juvenile-justice and Mission Bay work among them — read for the decision, not the biography"
+  ],
+  [
+   "M3",
+   "Investigate",
+   "Real public data for the grade: a budget line, a transit map, a census table, a court case summary"
+  ],
+  [
+   "M4",
+   "Field",
+   "The junior placement: classroom council, school, neighborhood, city hall or agency, by grade band"
+  ],
+  [
+   "M5",
+   "Build",
+   "A proposal, a service project, a memo, a map or a model"
+  ],
+  [
+   "M6",
+   "Seminar circle",
+   "The Friday circle: who decided, who was left out, what would you change"
+  ],
+  [
+   "M7",
+   "Verify",
+   "Agent-free transfer check on a novel case; the self-explanation gate"
+  ],
+  [
+   "M8",
+   "Present",
+   "To a real audience — a class, a family night, an official, a panel"
+  ],
+  [
+   "M9",
+   "Reflect",
+   "Portfolio entry; calibration; what changed in your view of public service"
+  ],
+  [
+   "M10",
+   "Credential",
+   "Evidence sealed; the strand credential and the Seal of Civic Engagement map updated"
+  ]
+ ],
+ "standards": {
+  "k2": [
+   "CA HSS K–2 (community, rules, helpers)",
+   "CA CCSS RL/RI.K–2",
+   "CA ELD",
+   "SEL"
+  ],
+  "e35": [
+   "CA HSS 3–5 (local government, California history, U.S. founding)",
+   "CA CCSS RI/W.3–5",
+   "CA CCSS Math (data, money)",
+   "CA ELD"
+  ],
+  "ms": [
+   "CA HSS 6–8 (civics, world and U.S. history)",
+   "CA CCSS W.6–8 argument",
+   "CA CCSS 6–8 statistics",
+   "CA HSS Framework inquiry"
+  ],
+  "hs1": [
+   "CA HSS 9–10 (world history, geography)",
+   "CA CCSS W.9–10",
+   "CA CCSS S-ID",
+   "Principles of Democracy (12th) previewed"
+  ],
+  "hs2": [
+   "CA HSS 11–12 (U.S. history; Principles of American Democracy; Economics)",
+   "CA CCSS W.11–12",
+   "State Seal of Civic Engagement criteria",
+   "Fellowship eligibility map"
+  ]
+ },
+ "seal": [
+  "Engaged in academic work in a productive way",
+  "Demonstrated competent and responsible citizenship",
+  "Participated in one or more informed civic engagement projects",
+  "Demonstrated civic knowledge, skills and dispositions through self-reflection",
+  "Exhibited character traits that reflect civic-mindedness"
  ],
  "principles": [
   {
