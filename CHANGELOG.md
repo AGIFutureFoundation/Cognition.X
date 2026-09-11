@@ -4,6 +4,31 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.44.0] — 2026-09-11
+
+### Added
+- **The Louisiana K–12 program, canonical** — the last named layer of
+  the app-pipeline roadmap item: `data/louisiana/k12_program.json`
+  (via the same deterministic extractor) carries the thirteen grade
+  rows — each with an age-appropriate role inside a narrative world
+  and six threads (literacy, numeracy, science, computer science,
+  safety, assessment) citing Louisiana LDOE standard codes — plus
+  the eight policy threads (Act 108 science-of-reading training, the
+  Act 422 grade-3 gate, and the rest) the design is built around.
+  The Louisiana **Curriculum view** renders it grade by grade with a
+  grade picker, carrying the caveat verbatim: a design mapped
+  against public LDOE documents — verify each code against the
+  current documents before classroom use.
+- **The data-quality dashboard, generated in CI** — the roadmap's
+  Phase 1 item: `tools/data_quality.py` writes
+  `docs/DATA_QUALITY.md`, a per-pack completeness table (blocks,
+  tracks, description %, band-suffix %, code+level %, shortest
+  transfer check) with the known content debt counted, not hidden
+  (the irregular foundation packs' unauthored descriptions and the
+  generated packs' band-suffix duplicates both show plainly). The
+  CI `dataset` job regenerates it on every push and fails on drift,
+  the same pattern as the dataset and the apps.
+
 ## [0.43.0] — 2026-09-11
 
 ### Added

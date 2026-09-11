@@ -609,6 +609,18 @@
     <ul class="tracklist" id="latracks"></ul>
     <h2>Community packs in every parish plan</h2>
     <div class="packgrid" id="commpacks"></div>
+
+    <h2>The Louisiana K–12 program — grade by grade</h2>
+    <p class="sub">Canonical in the dataset since v0.44.0: thirteen grades, each with an age-appropriate
+    role inside a narrative world and six threads — literacy, numeracy, science, computer science, safety
+    and assessment — citing Louisiana LDOE standard codes. A design mapped against the public LDOE
+    documents; verify each code against the current documents before classroom use.</p>
+    <div class="pickrow"><label for="k12pick" style="font-weight:600">Grade</label><select id="k12pick"></select></div>
+    <div class="panel" id="k12grade"></div>
+    <div class="panel" style="margin-top:14px">
+      <h3>The policy threads the program is built around</h3>
+      <div id="k12threads"></div>
+    </div>
   </section>
 
   <p class="foot">Parish facts (seats, regions, populations, industries, waves, narrative worlds) come from the
@@ -3147,6 +3159,33 @@ function renderCurriculum(){
   $("#famlegend").innerHTML = fams.map(([l,n,col])=>`<span><i style="background:${col}"></i>${l} · ${n.toLocaleString()}</span>`).join("");
   $("#latracks").innerHTML = c.laTracks.map(t=>`<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("");
   $("#commpacks").innerHTML = c.communityPacks.map(p=>`<div class="packchip">${esc(p)}</div>`).join("");
+
+  /* the Louisiana K-12 program (canonical, v0.44.0) */
+  const K = D.k12program;
+  if (K){
+    const THL = {lit:"Literacy", num:"Numeracy", sci:"Science", cs:"Computer science",
+                 safety:"Safety", assess:"Assessment"};
+    const kp = $("#k12pick");
+    kp.innerHTML = K.grades.map((r,i)=>
+      `<option value="${i}">Grade ${esc(r.g)} — ${esc(r.role)}</option>`).join("");
+    const drawGrade = () => {
+      const r = K.grades[+kp.value] || K.grades[0];
+      $("#k12grade").innerHTML =
+        `<h3>Grade ${esc(r.g)} · ${esc(r.role)}</h3>
+         <p class="note" style="margin:2px 0 10px"><b>World:</b> ${esc(r.world)}</p>`+
+        Object.keys(THL).map(k=> r.threads[k] ?
+          `<div style="display:flex; gap:10px; padding:6px 0; border-top:1px solid var(--line); font-size:.85rem">
+           <span style="flex:0 0 130px"><b>${THL[k]}</b></span>
+           <span style="color:var(--muted)">${esc(r.threads[k])}</span></div>` : "").join("")+
+        (r.week ? `<div style="display:flex; gap:10px; padding:6px 0; border-top:1px solid var(--line); font-size:.85rem">
+           <span style="flex:0 0 130px"><b>The week</b></span>
+           <span style="color:var(--muted)">${(Array.isArray(r.week)?r.week:[r.week]).map(esc).join(" · ")}</span></div>` : "");
+    };
+    kp.addEventListener("change", drawGrade); drawGrade();
+    $("#k12threads").innerHTML = K.threads.map(([t,d])=>
+      `<div style="padding:7px 0; border-top:1px solid var(--line); font-size:.85rem">
+       <b>${esc(t)}</b> — <span style="color:var(--muted)">${esc(d)}</span></div>`).join("");
+  }
 }
 
 /* ---------- routing: every parish dashboard is deep-linkable ---------- */
