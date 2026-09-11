@@ -46,6 +46,11 @@ python3 tools/build_states.py         # 50-state fact base × blueprint
 python3 tools/build_platform.py       # the platform working model
 ```
 
+A fresh clone plus Python 3 regenerates the whole platform
+byte-for-byte — CI rebuilds the dataset **and all six apps** on every
+push and fails on any drift, so the committed builds are always
+exactly what the sources produce.
+
 ## The data model in one paragraph
 
 Every row of [`data/blocks.csv`](data/blocks.csv) is a block with a globally
