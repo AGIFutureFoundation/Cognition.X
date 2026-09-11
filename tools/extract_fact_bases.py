@@ -57,7 +57,9 @@ def extract():
           "fellowship:wlb.fellowship,k12:wlb.k12,strands:wlb.strands,eras:wlb.eras,"
           "courses:wlb.courses,bridge:wlb.bridge,modules:wlb.modules,"
           "standards:wlb.standards,seal:wlb.seal},"
-          "principles:principles.map(x=>({p:x.p,src:x.src,teach:x.teach}))}));")
+          "principles:principles.map(x=>({p:x.p,src:x.src,teach:x.teach})),"
+          "k12:{grades:" + grab("DATA.lak12") + ","
+          "threads:" + grab("DATA.lak12Threads") + "}}));")
     with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as f:
         f.write(js)
         path = f.name
@@ -86,6 +88,20 @@ def main():
         "regions": fb["regions"],
         "regionHubs": fb["hubs"],
         "parishes": fb["parishes"],
+    })
+    write(ROOT / "data" / "louisiana" / "k12_program.json", {
+        "note": ("Louisiana K-12 program — extracted from the Education OS app "
+                 "by tools/extract_fact_bases.py and canonical here since "
+                 "v0.44.0. Thirteen grade rows (K-12), each with an "
+                 "age-appropriate role and narrative world and six threads "
+                 "(literacy, numeracy, science, computer science, safety, "
+                 "assessment) citing Louisiana LDOE standard codes; the policy "
+                 "threads name the LDOE acts and gates the program is built "
+                 "around. A design mapped against public LDOE documents — "
+                 "verify each code against the current documents before "
+                 "classroom use."),
+        "grades": fb["k12"]["grades"],
+        "threads": fb["k12"]["threads"],
     })
     write(ROOT / "data" / "wlb" / "institute.json", {
         "note": ("Willie L. Brown Jr. Institute fact base — extracted from the "

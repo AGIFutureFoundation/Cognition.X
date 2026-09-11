@@ -19,6 +19,10 @@ jobs:
         run: git diff --exit-code data/blocks.csv data/manifest.json
       - name: Validate dataset
         run: python3 tools/validate_blocks.py
+      - name: Regenerate the data-quality dashboard
+        run: python3 tools/data_quality.py
+      - name: Dashboard must be current with the dataset
+        run: git diff --exit-code docs/DATA_QUALITY.md
 
   apps:
     # Build products are never hand-edited: rebuild all six apps from

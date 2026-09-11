@@ -153,6 +153,9 @@ def load_fact_base():
         "leadership": {k: w[k] for k in ("name", "fellowshipQuote", "fellowship",
                                          "k12", "strands", "eras", "courses",
                                          "bridge", "modules", "standards", "seal")},
+        # the Louisiana K-12 program (canonical since v0.44.0)
+        "k12program": json.loads((ROOT / "data" / "louisiana" / "k12_program.json")
+                                 .read_text(encoding="utf-8")),
     }
 
 
@@ -268,6 +271,7 @@ def main():
         "wlb": fb["wlb"],
         "principles": fb["principles"],
         "leadership": fb["leadership"],
+        "k12program": fb["k12program"],
         "corePacks": CORE_PACKS,
         "packmeta": packmeta,
         "catalog": catalog_light,

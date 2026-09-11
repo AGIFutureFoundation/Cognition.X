@@ -1,0 +1,1260 @@
+{
+ "note": "Louisiana K-12 program — extracted from the Education OS app by tools/extract_fact_bases.py and canonical here since v0.44.0. Thirteen grade rows (K-12), each with an age-appropriate role and narrative world and six threads (literacy, numeracy, science, computer science, safety, assessment) citing Louisiana LDOE standard codes; the policy threads name the LDOE acts and gates the program is built around. A design mapped against public LDOE documents — verify each code against the current documents before classroom use.",
+ "grades": [
+  {
+   "g": "K",
+   "era": "k5",
+   "role": "Depot Cadet",
+   "world": "Bayou Robotics Depot — the cadet kennel",
+   "threads": {
+    "lit": "Phonemic awareness, print concepts, letter-sound correspondence (RF.K.1–3); read-aloud content-rich depot stories; screener three times a year.",
+    "num": "Counting and cardinality to 20, comparing, composing and decomposing to 10 (K.CC, K.OA).",
+    "sci": "Pushes and pulls, sunlight, needs of living things, weather (K-PS2, K-PS3, K-LS1, K-ESS2).",
+    "cs": "Bulletin 104 K-2: sequences of steps; unplugged bot commands.",
+    "safety": "Safety Cadet level 0: ask before touch; PPE names.",
+    "assess": "K-3 literacy screener (beginning, middle, end of year); depot inspection each block."
+   },
+   "blocks": [
+    [
+     "Counting the Depot",
+     [
+      "K.CC.A.1–3",
+      "K.CC.B.4–5"
+     ],
+     [
+      "RF.K.1",
+      "RF.K.2"
+     ],
+     [
+      "K-PS2-1"
+     ],
+     "Count the bots into the depot and set the door counter",
+     "Count a novel set of 12 mixed parts and match the numeral",
+     "Cadet: Counter"
+    ],
+    [
+     "Shapes that Roll",
+     [
+      "K.G.A.1–3",
+      "K.G.B.4–6"
+     ],
+     [
+      "RF.K.3",
+      "L.K.1"
+     ],
+     [
+      "K-PS3-1"
+     ],
+     "Sort wheels, blocks and cones so the bot can roll",
+     "Build a bot base from named shapes",
+     "Cadet: Shape Sorter"
+    ],
+    [
+     "More or Fewer",
+     [
+      "K.CC.C.6–7",
+      "K.OA.A.1–5"
+     ],
+     [
+      "RF.K.3",
+      "RL.K.1"
+     ],
+     [
+      "K-LS1-1"
+     ],
+     "Feed the depot animals: who needs more?",
+     "Solve two add/subtract-within-10 stories about the depot",
+     "Cadet: Feeder"
+    ],
+    [
+     "Measure and Compare",
+     [
+      "K.MD.A.1–2",
+      "K.MD.B.3"
+     ],
+     [
+      "RF.K.4",
+      "W.K.1–3"
+     ],
+     [
+      "K-ESS2-1"
+     ],
+     "Bayou weather cadet: which bucket is heavier, which day was wetter?",
+     "Compare two objects on two attributes and explain in a drawing",
+     "Depot Cadet"
+    ]
+   ],
+   "week": [
+    "Home 5 min: one cadet mission on the family tablet or paper-plus-QR pack",
+    "Class: read-aloud, phonics block, gear-kit play",
+    "Class: counting stations, cadet story circle",
+    "Class: shape build, weather chart",
+    "Depot inspection: cadets explain one machine to a partner; parent signal sent"
+   ]
+  },
+  {
+   "g": "1",
+   "era": "k5",
+   "role": "Gear Cadet",
+   "world": "Bayou Robotics Depot — the gear room",
+   "threads": {
+    "lit": "Phonics and decoding, high-frequency words, fluency begins (RF.1.2–4); informational depot texts; screener.",
+    "num": "Addition and subtraction within 20, place value to 120, measurement with units (1.OA, 1.NBT, 1.MD).",
+    "sci": "Sound and light, structure of living things, sun and moon patterns (1-PS4, 1-LS1, 1-ESS1).",
+    "cs": "Bulletin 104 K-2: algorithms as ordered steps; debugging a bot path on a grid.",
+    "safety": "Safety Cadet level 1: hazard spotting in the gear room.",
+    "assess": "Screener; block transfer checks; portfolio observation 2 per year."
+   },
+   "blocks": [
+    [
+     "Adding to Ten",
+     [
+      "1.OA.A.1–2",
+      "1.OA.B.3–4",
+      "1.OA.C.5–6"
+     ],
+     [
+      "RF.1.2",
+      "RF.1.3"
+     ],
+     [
+      "1-PS4-1"
+     ],
+     "Gear Tooth Operations I: count the teeth that pass the pointer",
+     "Solve three novel add/subtract-within-20 gear stories",
+     "Gear Cadet: Counter"
+    ],
+    [
+     "Place Value at the Depot",
+     [
+      "1.NBT.A.1",
+      "1.NBT.B.2–3",
+      "1.NBT.C.4–6"
+     ],
+     [
+      "RF.1.3",
+      "RI.1.1–2"
+     ],
+     [
+      "1-LS1-1"
+     ],
+     "Sort bots by tens and ones for the inventory",
+     "Represent a two-digit inventory count two ways",
+     "Gear Cadet: Inventory"
+    ],
+    [
+     "Measuring with Bots",
+     [
+      "1.MD.A.1–2",
+      "1.MD.B.3",
+      "1.MD.C.4"
+     ],
+     [
+      "W.1.1–3",
+      "L.1.1"
+     ],
+     [
+      "1-ESS1-1"
+     ],
+     "Bot race: measure the track in bot-lengths and chart the results",
+     "Measure a novel object with a non-standard unit and read a clock to the half hour",
+     "Gear Cadet: Measurer"
+    ],
+    [
+     "Shapes and Halves",
+     [
+      "1.G.A.1–3"
+     ],
+     [
+      "RF.1.4",
+      "L.1.2"
+     ],
+     [
+      "1-LS3-1"
+     ],
+     "Split the belt into halves and quarters so the boxes land evenly",
+     "Partition a shape into halves and describe it in writing",
+     "Gear Cadet"
+    ]
+   ],
+   "week": [
+    "Home 5 min: cadet mission",
+    "Class: phonics block, gear kits",
+    "Class: measuring stations",
+    "Class: bot-path grid debugging",
+    "Depot inspection and family signal"
+   ]
+  },
+  {
+   "g": "2",
+   "era": "k5",
+   "role": "Belt Cadet",
+   "world": "Bayou Robotics Depot — the conveyor hall",
+   "threads": {
+    "lit": "Fluency and morphology (RF.2.3–4); paragraph writing; content-rich science and Louisiana texts; screener.",
+    "num": "Add and subtract within 1000, place value, measurement, time and money, arrays (2.OA, 2.NBT, 2.MD, 2.G).",
+    "sci": "Properties of matter, Earth's surface, habitats (2-PS1, 2-ESS1/2, 2-LS2/4).",
+    "cs": "Bulletin 104 K-2: loops in block code; the belt-stop program.",
+    "safety": "Safety Cadet level 2: machine on/off protocol.",
+    "assess": "Screener; transfer checks; family conference with the action plan."
+   },
+   "blocks": [
+    [
+     "Gear Tooth Operations II",
+     [
+      "2.OA.A.1",
+      "2.OA.B.2",
+      "2.OA.C.3–4"
+     ],
+     [
+      "RF.2.3",
+      "RI.2.1–3"
+     ],
+     [
+      "2-PS1-1"
+     ],
+     "Two gears mesh: how many teeth pass in three turns?",
+     "Solve a two-step gear story within 100",
+     "Belt Cadet: Operator"
+    ],
+    [
+     "Depot Inventory to 1,000",
+     [
+      "2.NBT.A.1–4",
+      "2.NBT.B.5–9"
+     ],
+     [
+      "RF.2.4",
+      "W.2.2"
+     ],
+     [
+      "2-ESS1-1",
+      "2-ESS2-1"
+     ],
+     "Count the depot inventory by hundreds, tens and ones",
+     "Add and subtract three-digit inventory totals with explanation",
+     "Belt Cadet: Inventory"
+    ],
+    [
+     "The Repair Log",
+     [
+      "2.MD.A.1–4",
+      "2.MD.B.5–6",
+      "2.MD.C.7–8",
+      "2.MD.D.9–10"
+     ],
+     [
+      "W.2.1",
+      "L.2.1–2"
+     ],
+     [
+      "2-LS2-1"
+     ],
+     "Measure the repair, log the time, chart the parts",
+     "Produce a repair log with measurement, time and a bar graph",
+     "Belt Cadet: Log Keeper"
+    ],
+    [
+     "Belt Sections",
+     [
+      "2.G.A.1–3"
+     ],
+     [
+      "W.2.3",
+      "RL.2.1–3"
+     ],
+     [
+      "2-LS4-1"
+     ],
+     "Cut the belt into equal sections for four pallets",
+     "Partition a rectangle into rows and columns and count the squares",
+     "Belt Cadet"
+    ]
+   ],
+   "week": [
+    "Home 5 min: cadet mission",
+    "Class: fluency block, belt kits",
+    "Class: repair-log stations",
+    "Class: block-code loops",
+    "Depot inspection and family signal"
+   ]
+  },
+  {
+   "g": "3",
+   "era": "k5",
+   "role": "Sequencer",
+   "world": "Bayou Robotics Depot — the sorting floor",
+   "threads": {
+    "lit": "Comprehension of literary and informational text (RL/RI.3.1–3), fluency (RF.3.3–4); cursive begins (statute: grades 3–12; revised ELA 2027-28); repair logs hand-written in cursive.",
+    "num": "Multiplication and division, fractions as numbers, area and perimeter (3.OA, 3.NF, 3.MD, 3.G).",
+    "sci": "Forces and motion, life cycles, weather and climate hazards (3-PS2, 3-LS1, 3-ESS2/3).",
+    "cs": "Bulletin 104 3-5: sequences, loops and conditionals in block code.",
+    "safety": "Safety Cadet certificate: three hazards spotted before switch-on.",
+    "assess": "K-3 literacy screener with the Act 422 promotion gate (two retakes, good-cause exemptions); LEAP 2025 grade 3 ELA and math (science moves to grades 4 and 7 under Act 472 of 2025)."
+   },
+   "blocks": [
+    [
+     "Pattern & Sequence Bots",
+     [
+      "3.OA.A.1–4",
+      "3.OA.B.5–6",
+      "3.OA.D.9"
+     ],
+     [
+      "RF.3.3",
+      "RL.3.1–3"
+     ],
+     [
+      "3-LS1-1"
+     ],
+     "Arrange four block-code cards so the sorting bot repeats the right pattern",
+     "Extend and explain a novel multiplication pattern",
+     "Sequencer: Patterns"
+    ],
+    [
+     "Fractions on the Conveyor I",
+     [
+      "3.NF.A.1–3"
+     ],
+     [
+      "RI.3.1–3",
+      "L.3.1"
+     ],
+     [
+      "3-PS2-1",
+      "3-PS2-2"
+     ],
+     "Set the belt to ¾ speed so boxes land on the right pallet",
+     "Place fractions on a number line and compare two belt speeds",
+     "Sequencer: Belt Operator"
+    ],
+    [
+     "Gauge Reader",
+     [
+      "3.MD.A.1–2",
+      "3.MD.B.3–4",
+      "3.MD.C.5–7"
+     ],
+     [
+      "RI.3.7",
+      "W.3.2"
+     ],
+     [
+      "3-ESS2-1",
+      "3-ESS3-1"
+     ],
+     "Read a ruler and a distance sensor; decide which reading to trust; chart a week of bayou gauges",
+     "Solve a novel area problem and read a scaled bar graph",
+     "Sequencer: Gauge Reader"
+    ],
+    [
+     "Depot Inspection",
+     [
+      "3.G.A.1–2",
+      "3.OA.C.7"
+     ],
+     [
+      "W.3.1",
+      "W.3.3",
+      "RF.3.4"
+     ],
+     [
+      "3-LS4-3"
+     ],
+     "Inspect three depot machines, name the hazards, write the cursive log",
+     "Fluent multiplication facts and a hand-written inspection report",
+     "Junior Systems Cadet"
+    ]
+   ],
+   "week": [
+    "Home 5 min: cadet mission; parent reads the TAA note",
+    "Class: comprehension block, cursive practice, sorting kits",
+    "Class: fraction belts, gauge stations",
+    "Class: block-code conditionals",
+    "Depot inspection; screener windows in fall, winter, spring"
+   ]
+  },
+  {
+   "g": "4",
+   "era": "k5",
+   "role": "Shape Mechanic",
+   "world": "Bayou Robotics Depot — the crane yard",
+   "threads": {
+    "lit": "Informational text structure and evidence (RI.4.1–3, RI.4.7); grammar progression; cursive lab log.",
+    "num": "Multi-digit arithmetic, factors, fraction equivalence and operations, decimals, angles (4.OA, 4.NBT, 4.NF, 4.MD, 4.G).",
+    "sci": "Energy transfer, waves, Earth processes and Louisiana natural resources (4-PS3, 4-PS4, 4-ESS2/3, 4-LS1).",
+    "cs": "Bulletin 104 3-5: variables and events; sensor-triggered programs.",
+    "safety": "Bulletin 1674 basics: PPE fitting; ask-before-touch renewed.",
+    "assess": "LEAP 2025 grade 4 ELA, math, science, social studies; two portfolio observations."
+   },
+   "blocks": [
+    [
+     "Crane Arm Fold",
+     [
+      "4.OA.A.1–3",
+      "4.NBT.A.1–3",
+      "4.NBT.B.4–6"
+     ],
+     [
+      "RI.4.1–2",
+      "L.4.1"
+     ],
+     [
+      "4-PS3-1",
+      "4-PS3-2"
+     ],
+     "Pick the shape that lets the crane arm fold flat; compute the load in multi-digit steps",
+     "Multi-step word problem with a remainder interpreted in context",
+     "Shape Mechanic: Crane"
+    ],
+    [
+     "Fractions on the Conveyor II",
+     [
+      "4.NF.A.1–2",
+      "4.NF.B.3–4",
+      "4.NF.C.5–7"
+     ],
+     [
+      "RI.4.3",
+      "W.4.2"
+     ],
+     [
+      "4-PS4-1"
+     ],
+     "Split the belt load into equivalent fractions; convert belt speeds to decimals",
+     "Add and subtract fractions with unlike denominators in a novel belt problem",
+     "Shape Mechanic: Belt"
+    ],
+    [
+     "Measure the Machine",
+     [
+      "4.MD.A.1–3",
+      "4.MD.B.4",
+      "4.MD.C.5–7"
+     ],
+     [
+      "RI.4.7",
+      "W.4.1"
+     ],
+     [
+      "4-ESS2-1",
+      "4-ESS3-2"
+     ],
+     "Read a ruler and a sensor; measure and draw the crane's angles",
+     "Measure and sketch angles on a novel linkage; convert units",
+     "Shape Mechanic: Gauge"
+    ],
+    [
+     "Lines, Angles and the Coast",
+     [
+      "4.G.A.1–3"
+     ],
+     [
+      "W.4.3",
+      "RL.4.1–3",
+      "RF.4.4"
+     ],
+     [
+      "4-ESS3-1",
+      "4-LS1-1"
+     ],
+     "Map the levee lines and gates on the coast model; find the symmetry in the pump",
+     "Classify shapes by lines and angles and write the cursive engineering note",
+     "Shape Mechanic"
+    ]
+   ],
+   "week": [
+    "Home 5–10 min: cadet mission",
+    "Class: text-evidence block, crane kits",
+    "Class: fraction and decimal stations",
+    "Class: sensor-triggered block code",
+    "Depot inspection; LEAP practice in spring"
+   ]
+  },
+  {
+   "g": "5",
+   "era": "k5",
+   "role": "Gauge Watcher",
+   "world": "Bayou Robotics Depot — the pump station",
+   "threads": {
+    "lit": "Research from multiple sources (RI.5.7, W.5.7–9); content-rich Louisiana coast texts; cursive lab log; grammar.",
+    "num": "Decimal operations, fraction operations, volume, coordinate plane (5.NBT, 5.NF, 5.MD, 5.G).",
+    "sci": "Matter, gravity, Earth systems and hydrology, human impact and coastal restoration (5-PS1, 5-PS2, 5-ESS2, 5-ESS3).",
+    "cs": "Bulletin 104 3-5: data collection programs; the flood-alert script in block code.",
+    "safety": "Safety Cadet capstone: full PPE and machine-off protocol demonstrated to the instructor.",
+    "assess": "LEAP 2025 grade 5 ELA, math and social studies (science tested in grades 4 and 7); Story Circuits portfolio; family conference; era credential."
+   },
+   "blocks": [
+    [
+     "Weather & Water Sensors I",
+     [
+      "5.NBT.A.1–4",
+      "5.NBT.B.5–7"
+     ],
+     [
+      "RI.5.1–3",
+      "L.5.1"
+     ],
+     [
+      "5-PS1-1",
+      "5-ESS2-1"
+     ],
+     "Chart a week of bayou gauge readings to the hundredth and call the flood alert on time",
+     "Decimal computation on a novel gauge log with a justified alert decision",
+     "Gauge Watcher: Sensors"
+    ],
+    [
+     "Belt at Three-Quarter Speed",
+     [
+      "5.NF.A.1–2",
+      "5.NF.B.3–7"
+     ],
+     [
+      "RI.5.7",
+      "W.5.2"
+     ],
+     [
+      "5-PS2-1"
+     ],
+     "Set belt speeds as fractions of full; split loads across pallets",
+     "Fraction multiplication and division in a novel pump-station problem",
+     "Gauge Watcher: Belt"
+    ],
+    [
+     "Flood Alert Data",
+     [
+      "5.MD.A.1",
+      "5.MD.B.2",
+      "5.MD.C.3–5"
+     ],
+     [
+      "W.5.7",
+      "W.5.8"
+     ],
+     [
+      "5-ESS2-2",
+      "5-ESS3-1"
+     ],
+     "Compute the pump-station volume; plot rainfall on a line plot; write the alert memo",
+     "Volume and unit conversion on a novel tank; data plot with a written conclusion",
+     "Gauge Watcher: Data"
+    ],
+    [
+     "Depot Map Coordinates",
+     [
+      "5.G.A.1–2",
+      "5.G.B.3–4"
+     ],
+     [
+      "W.5.1",
+      "RL.5.1–3"
+     ],
+     [
+      "5-ESS3-1"
+     ],
+     "Plot every depot machine on the coordinate map and route the repair bot",
+     "Plot and interpret points on a novel map; classify shapes",
+     "Junior Systems Cadet (Ignite Era complete)"
+    ]
+   ],
+   "week": [
+    "Home 10 min: cadet mission",
+    "Class: research block, pump-station kits",
+    "Class: decimal and fraction stations",
+    "Class: flood-alert block code",
+    "Depot inspection; Story Circuits portfolio review"
+   ]
+  },
+  {
+   "g": "6",
+   "era": "ms",
+   "role": "Field Technician I",
+   "world": "Port of South Louisiana — the container yard",
+   "threads": {
+    "lit": "Technical manuals as content-rich text (RI.6.1–3, RI.6.7); argument writing (W.6.1); Act 964 adolescent literacy — screener within 30 days for learners below Mastery, individual reading plan, morphology and etymology; Socratic debrief every period.",
+    "num": "Ratios and rates, number system, expressions and equations, area/volume, statistics (6.RP, 6.NS, 6.EE, 6.G, 6.SP).",
+    "sci": "Forces and interactions, energy, Earth systems (MS-PS2, MS-PS3, MS-ESS2).",
+    "cs": "Bulletin 104 6-8: variables, loops, functions in Python (micro:bit or browser).",
+    "safety": "Bench Safety & PPE (AM-9) begins: the bench-clearance gate must be passed before the first live rig.",
+    "assess": "LEAP 2025 grade 6; first crew missions (roles rotate); 24-point observation twice a year."
+   },
+   "blocks": [
+    [
+     "Ratios & Gear Trains",
+     [
+      "6.RP.A.1–3",
+      "6.NS.B.2–4"
+     ],
+     [
+      "RI.6.1–2",
+      "L.6.1"
+     ],
+     [
+      "MS-PS2-2"
+     ],
+     "Size a two-stage gear train so the crane hoist lifts at the target speed",
+     "Novel ratio table and unit-rate problem with a gear-train sketch",
+     "Drive Tech"
+    ],
+    [
+     "Python Foundations I",
+     [
+      "6.EE.A.1–4",
+      "6.EE.B.5–8",
+      "6.EE.C.9"
+     ],
+     [
+      "RI.6.3",
+      "W.6.2"
+     ],
+     [
+      "MS-PS3-1"
+     ],
+     "Write the loop that stops the belt after 20 boxes; solve for the belt equation",
+     "Write and evaluate an expression for a novel belt; debug a three-line loop",
+     "Junior Programmer I"
+    ],
+    [
+     "Container Geometry",
+     [
+      "6.NS.C.5–8",
+      "6.G.A.1–4"
+     ],
+     [
+      "RI.6.7",
+      "W.6.1"
+     ],
+     [
+      "MS-ESS2-1"
+     ],
+     "Compute the container stack's area and volume; place bins on the yard coordinate plane",
+     "Area, surface area and coordinate distance on a novel yard layout",
+     "Yard Geometer"
+    ],
+    [
+     "Sensors & Noise I",
+     [
+      "6.SP.A.1–3",
+      "6.SP.B.4–5"
+     ],
+     [
+      "W.6.7",
+      "RL.6.1–2"
+     ],
+     [
+      "MS-PS2-1"
+     ],
+     "Find the noisy sensor by comparing the spread of three readings",
+     "Describe center and spread of a novel sensor set and pick the reliable one",
+     "Data Tech I"
+    ]
+   ],
+   "week": [
+    "Home 7 min ×2: acquisition missions with the DTA",
+    "Class: technical-reading block, bench rigs",
+    "Class: bench rigs, Python trainer",
+    "Crew Thursday: four-role yard incident",
+    "Socratic debrief; transfer check; portfolio note"
+   ]
+  },
+  {
+   "g": "7",
+   "era": "ms",
+   "role": "Field Technician II",
+   "world": "Port of South Louisiana — the river terminal",
+   "threads": {
+    "lit": "Analysis of technical and literary text (RI/RL.7.1–3); argument with evidence (W.7.1); grammar progression.",
+    "num": "Proportional relationships, rational numbers, equations and inequalities, scale drawings and geometry, probability (7.RP, 7.NS, 7.EE, 7.G, 7.SP).",
+    "sci": "Engineering design, chemical reactions, ecosystems (MS-ETS1, MS-PS1, MS-LS2).",
+    "cs": "Bulletin 104 6-8: conditionals and functions; sensor-driven programs.",
+    "safety": "Bench clearance renewed; lock-out introduced on the relay board.",
+    "assess": "LEAP 2025 grade 7 including science; crew telemetry per role; observation twice a year; Act 964 reading plan reviewed each block for learners below Mastery."
+   },
+   "blocks": [
+    [
+     "Proportional Torque",
+     [
+      "7.RP.A.1–3",
+      "7.EE.B.4"
+     ],
+     [
+      "RI.7.1–2",
+      "L.7.1"
+     ],
+     [
+      "MS-PS2-2",
+      "MS-ETS1-1"
+     ],
+     "Choose the motor that clears a 40 kg load with a 25% margin",
+     "Proportional reasoning with a percent margin on a novel load",
+     "Torque Tech"
+    ],
+    [
+     "Motor Margin Equations",
+     [
+      "7.NS.A.1–3",
+      "7.EE.A.1–2",
+      "7.EE.B.3"
+     ],
+     [
+      "W.7.1",
+      "RI.7.3"
+     ],
+     [
+      "MS-PS1-2"
+     ],
+     "Balance the terminal's power budget with signed numbers and two-step equations",
+     "Two-step equation and inequality on a novel power budget",
+     "Power Tech"
+    ],
+    [
+     "Coordinate Robots I",
+     [
+      "7.G.A.1–3",
+      "7.G.B.4–6"
+     ],
+     [
+      "RI.7.7",
+      "W.7.2"
+     ],
+     [
+      "MS-ETS1-2"
+     ],
+     "Scale the gantry drawing; compute the circle the arm sweeps; find the clearance angle",
+     "Scale drawing and circle problem on a novel gantry",
+     "Path Planner I"
+    ],
+    [
+     "Sensor Sampling",
+     [
+      "7.SP.A.1–2",
+      "7.SP.B.3–4",
+      "7.SP.C.5–8"
+     ],
+     [
+      "W.7.7",
+      "RL.7.1–2"
+     ],
+     [
+      "MS-LS2-1"
+     ],
+     "Sample the sensor stream; estimate the failure probability; defend the sampling plan",
+     "Probability and sampling inference on a novel sensor log",
+     "Data Tech II"
+    ]
+   ],
+   "week": [
+    "Home 7 min ×2: missions with the DTA",
+    "Class: analysis block, bench rigs",
+    "Class: relay boards, Python conditionals",
+    "Crew Thursday: terminal incident",
+    "Socratic debrief; transfer check"
+   ]
+  },
+  {
+   "g": "8",
+   "era": "ms",
+   "role": "Field Technician III",
+   "world": "Port of South Louisiana — the grain terminal",
+   "threads": {
+    "lit": "Argument and research (W.8.1, W.8.7); technical text evaluation (RI.8.8); grammar progression complete.",
+    "num": "Linear equations and systems, functions, transformations and the Pythagorean theorem, bivariate data (8.EE, 8.F, 8.G, 8.SP). Accelerated learners take the Algebra I block here.",
+    "sci": "Waves and information transfer, Earth and human activity, electricity and magnetism (MS-PS4, MS-ESS3, MS-PS2-3/5).",
+    "cs": "Bulletin 104 6-8 capstone: a sensor-to-actuator program with functions.",
+    "safety": "Bench Safety & PPE certificate (AM-9); Bulletin 1674 orientation for high school.",
+    "assess": "LEAP 2025 grade 8; Applied Mechanics era credential; pathway interest survey; family conference on the high-school plan."
+   },
+   "blocks": [
+    [
+     "Linear Motion Models",
+     [
+      "8.EE.B.5–6",
+      "8.EE.C.7–8"
+     ],
+     [
+      "RI.8.1–2",
+      "L.8.1"
+     ],
+     [
+      "MS-PS4-1"
+     ],
+     "Fit a line to the servo sweep and predict the position at t = 12 s",
+     "Write and solve a linear model and a system on a novel sweep",
+     "Motion Analyst"
+    ],
+    [
+     "Servo Sweep Functions",
+     [
+      "8.F.A.1–3",
+      "8.F.B.4–5"
+     ],
+     [
+      "W.8.2",
+      "RI.8.3"
+     ],
+     [
+      "MS-PS4-2"
+     ],
+     "Model the servo as a function; compare two motors from tables and graphs",
+     "Interpret rate and initial value of a novel function in context",
+     "Function Analyst"
+    ],
+    [
+     "Coordinate Robots II & Pythagorean Reach",
+     [
+      "8.G.A.1–5",
+      "8.G.B.6–8",
+      "8.G.C.9"
+     ],
+     [
+      "RI.8.7",
+      "W.8.1"
+     ],
+     [
+      "MS-PS2-3",
+      "MS-PS2-5"
+     ],
+     "Translate and rotate the gantry path; check whether the two-segment arm reaches the corner bin",
+     "Transformation sequence and Pythagorean reach on a novel arm",
+     "Reach Analyst"
+    ],
+    [
+     "Circuits, Relays & Sensors II",
+     [
+      "8.SP.A.1–4",
+      "8.EE.A.1–4"
+     ],
+     [
+      "W.8.7",
+      "RI.8.8"
+     ],
+     [
+      "MS-ESS3-3"
+     ],
+     "Trace the relay circuit and find the open contact; fit the sensor scatter plot",
+     "Bivariate data interpretation and a relay fault diagnosis",
+     "Field Technician (Applied Mechanics complete)"
+    ]
+   ],
+   "week": [
+    "Home 7 min ×2: missions with the DTA",
+    "Class: research block, relay rigs",
+    "Class: Python capstone, servo rigs",
+    "Crew Thursday: grain-terminal incident",
+    "Socratic debrief; transfer check; portfolio"
+   ]
+  },
+  {
+   "g": "9",
+   "era": "hs1",
+   "role": "Mechatronic Systems Specialist (Trainee)",
+   "world": "Calcasieu Smart Logistics Terminal — onboarding and Line 4",
+   "threads": {
+    "lit": "English I: technical reading, analytic writing and the written explanation required before every credential (RI/RL.9-10, W.9-10.1–2); LEAP 2025 English I EOC.",
+    "num": "Algebra I block: modeling with linear and exponential functions, systems, statistics (N-Q, A-CED, A-REI, F-IF, F-BF, F-LE, S-ID); LEAP 2025 Algebra I EOC.",
+    "sci": "Physical Science: forces, energy, waves and electricity (HS-PS2, HS-PS3, HS-PS4) with Bulletin 115 relay and thermal-actuator labs.",
+    "cs": "Computer science course offered from 2026-27 (Act 268 of 2025) and required for 9th graders entering 2027-28, delivered as Bulletin 104 HS modules: functions, conditionals, error handling — FC-7.",
+    "safety": "Machine Clearance (FC-10, Bulletin 1674): lock-out sequence, PPE and sign-off before any twin-linked hardware.",
+    "assess": "English I and Algebra I EOCs for cohorts through 2025-26; from the 2026-27 cohort, transfer checks build toward the comprehensive 10th-grade ELA and math exams (first spring 2028); four transfer checks; crew telemetry; two 24-point observations; Trade Hall exploration."
+   },
+   "blocks": [
+    [
+     "Terminal Onboarding & Linear Models",
+     [
+      "N-Q.A.1–3",
+      "A-CED.A.1–2",
+      "A-REI.B.3",
+      "F-IF.A.1–2"
+     ],
+     [
+      "RI.9-10.1",
+      "W.9-10.2"
+     ],
+     [
+      "HS-PS2-1"
+     ],
+     "Terminal Onboarding — clear the safety gate; model Line 4 belt speeds as linear functions",
+     "Safety-gate sign-off; linear model of a novel belt with units justified",
+     "Cleared Trainee"
+    ],
+    [
+     "Linear Systems & Control",
+     [
+      "A-REI.C.5–6",
+      "A-REI.D.10–12",
+      "A-CED.A.3"
+     ],
+     [
+      "RI.9-10.2",
+      "W.9-10.1"
+     ],
+     [
+      "HS-PS3-1",
+      "HS-PS3-3"
+     ],
+     "Solve for the two motor speeds that keep the belts synchronized (FC-5)",
+     "System of equations and inequalities on a novel line; graph and interpret",
+     "Controls Specialist I"
+    ],
+    [
+     "Functions of Motion",
+     [
+      "F-IF.B.4–6",
+      "F-IF.C.7–9",
+      "F-BF.A.1",
+      "F-LE.A.1–3"
+     ],
+     [
+      "RI.9-10.3",
+      "W.9-10.7"
+     ],
+     [
+      "HS-PS4-1"
+     ],
+     "Model the ramp profile so the arm does not overshoot (FC-6); compare linear and exponential growth of load",
+     "Interpret and build functions for a novel motion profile",
+     "Motion Modeler"
+    ],
+    [
+     "Statistics & the Controller Patch",
+     [
+      "S-ID.A.1–3",
+      "S-ID.B.5–6",
+      "S-ID.C.7–9"
+     ],
+     [
+      "W.9-10.2",
+      "L.9-10.1–2"
+     ],
+     [
+      "HS-PS4-5"
+     ],
+     "Patch calibrate_arm_joints() and pass the test suite (FC-7); fit a line to the sensor data",
+     "Code review passed; line of fit and correlation interpreted on a novel data set",
+     "Systems Programmer I"
+    ]
+   ],
+   "week": [
+    "Home 30 min: acquisition mission set the night before",
+    "Applied block 90 min: rigs and twins",
+    "Applied block: Bulletin 115 relay and thermal labs",
+    "Crew Thursday: Line 4 fault",
+    "Friday: transfer check, portfolio, Socratic debrief"
+   ]
+  },
+  {
+   "g": "10",
+   "era": "hs1",
+   "role": "Mechatronic Systems Specialist",
+   "world": "Calcasieu Smart Logistics Terminal — the sorting arms and weld cell",
+   "threads": {
+    "lit": "English II: argument and research; the written physical explanation of every formula used (W.9-10.1, W.9-10.7–9); LEAP 2025 English II EOC.",
+    "num": "Geometry block: the Mechatronic-Math syllabus — congruence and transformations, similarity, trigonometry, laws of sines and cosines, circles, vectors, modeling (G-CO, G-SRT, G-C, G-GPE, G-MG, N-VM); LEAP 2025 Geometry EOC.",
+    "sci": "Biology (LEAP 2025 Biology EOC): systems, energy, ecology (HS-LS1–4) — with a bio-sensor and cold-chain mission set.",
+    "cs": "Bulletin 104 HS: data structures and simulation; Electrical & Thermal Systems (FC-8, Bulletin 115).",
+    "safety": "Machine Clearance renewed; automated weld path clearance (FC-9, Bulletin 114).",
+    "assess": "Biology EOC; Geometry and English II EOCs through the 2025-26 cohort, replaced by the comprehensive 10th-grade ELA and math exams from spring 2028; four transfer checks; Jump Start pathway declared by spring; era credential."
+   },
+   "blocks": [
+    [
+     "Scale the Twin",
+     [
+      "G-CO.A.1–5",
+      "G-CO.B.6–8",
+      "G-SRT.A.1–2"
+     ],
+     [
+      "RI.9-10.5",
+      "W.9-10.7"
+     ],
+     [
+      "HS-LS1-2"
+     ],
+     "Match the model to the yard: measure a physical rig and build the scaled twin",
+     "Congruence and similarity proof on a novel rig; scale factor from two lengths",
+     "Twin Calibrator I"
+    ],
+    [
+     "The Calcasieu Assembly Calibration",
+     [
+      "G-SRT.B.4–5",
+      "G-SRT.C.6–8"
+     ],
+     [
+      "W.9-10.1",
+      "RI.9-10.8"
+     ],
+     [
+      "HS-LS1-3"
+     ],
+     "Find the scale factor between twin and effector (FC-1); resolve the gripper force and set the joint angle (FC-2)",
+     "Similarity and right-triangle trigonometry on a novel arm with new stroke lengths",
+     "Twin Calibrator · Kinematics Lead"
+    ],
+    [
+     "Two-Link Arm & Torque",
+     [
+      "G-SRT.D.9–11",
+      "G-C.A.1–3",
+      "N-VM.A.1–3",
+      "N-VM.B.4"
+     ],
+     [
+      "W.9-10.8",
+      "L.9-10.3"
+     ],
+     [
+      "HS-LS2-1"
+     ],
+     "Diagnose why the two-link arm cannot reach the third pallet (FC-3); balance torque vectors on the floodgate actuator (FC-4)",
+     "Law of cosines reach decision and vector balance on a novel actuator",
+     "Reach Diagnostician · Load Analyst"
+    ],
+    [
+     "Weld Paths & Thermal Systems",
+     [
+      "G-GPE.B.4–7",
+      "G-MG.A.1–3",
+      "G-GMD.A.1–3"
+     ],
+     [
+      "W.9-10.9",
+      "RI.9-10.7"
+     ],
+     [
+      "HS-LS4-2"
+     ],
+     "Re-plot the weld trajectory after the fixture moved 3 cm (FC-9); read the thermal actuator feedback and swap the failed relay (FC-8)",
+     "Coordinate-geometry weld path and relay diagnosis on a novel cell",
+     "Mechatronic Systems Specialist (Mechatronic-Math Block complete)"
+    ]
+   ],
+   "week": [
+    "Home 30 min: acquisition mission",
+    "Applied block 90 min: twins and arms",
+    "Applied block: weld cell and thermal rigs",
+    "Crew Thursday: multi-fault Line 4 blackout",
+    "Friday: transfer check, portfolio, debrief; Trade Hall visit each block"
+   ]
+  },
+  {
+   "g": "11",
+   "era": "hs2",
+   "role": "Diagnostics Analyst",
+   "world": "Regional industry sites — LNG terminal, chemical corridor, shipyard, data hall (by parish)",
+   "threads": {
+    "lit": "English III: research and technical documentation; the credential explanation written for an employer audience (W.11-12.1–2, W.11-12.7–9).",
+    "num": "Algebra II block: polynomial and rational functions, exponential and logarithmic models, trigonometric functions, statistics and inference (A-APR, A-REI, F-IF, F-BF, F-LE, F-TF, S-IC, S-ID).",
+    "sci": "Chemistry or Physics with plant-floor labs (HS-PS1, HS-PS2); Environmental Science option tied to coastal restoration.",
+    "cs": "Bulletin 104 advanced: Multi-Agent Factory Loops (ST-3); Algorithmic Ethics & Liability (ST-8).",
+    "safety": "Site clearance: OSHA 10, TWIC eligibility, site induction at every Trade Hall interior.",
+    "assess": "U.S. History EOC (Civics replaces it for the 2026-27 cohort); ACT for all juniors (WorkKeys for Jump Start); IBC attempts; Trade Hall days two to three per week; four transfer checks."
+   },
+   "blocks": [
+    [
+     "PLC & Industrial Networks",
+     [
+      "A-APR.A.1",
+      "A-APR.B.2–3",
+      "A-REI.A.2",
+      "F-IF.C.7"
+     ],
+     [
+      "W.11-12.2",
+      "RI.11-12.3"
+     ],
+     [
+      "HS-PS2-5"
+     ],
+     "Trace a PLC fault through the network and restore the line (ST-4); model the ladder-logic timing with polynomials",
+     "Polynomial and rational model on a novel line; fault traced and documented",
+     "Automation Tech I"
+    ],
+    [
+     "Predictive Fatigue Diagnostics",
+     [
+      "F-LE.B.4",
+      "F-LE.B.5",
+      "F-BF.B.4–5",
+      "A-REI.D.11"
+     ],
+     [
+      "W.11-12.1",
+      "RI.11-12.7"
+     ],
+     [
+      "HS-PS1-5"
+     ],
+     "Calculate the replacement cycle before Line 4 fails (ST-1); set the bearing swap after run 4",
+     "Exponential and logarithmic solution on a novel reliability curve with a work order",
+     "Reliability Analyst"
+    ],
+    [
+     "Statistics for Quality",
+     [
+      "S-IC.A.1–2",
+      "S-IC.B.3–6",
+      "S-ID.A.4"
+     ],
+     [
+      "W.11-12.7",
+      "W.11-12.8"
+     ],
+     [
+      "HS-PS1-7"
+     ],
+     "Set control limits and catch the drifting weld cell (ST-2); design the sampling plan",
+     "Control chart and inference on a novel process; sampling plan defended",
+     "Quality Analyst"
+    ],
+    [
+     "AI-CAD & Trig Models",
+     [
+      "F-TF.A.1–2",
+      "F-TF.B.5",
+      "F-TF.C.8",
+      "G-MG.A.1"
+     ],
+     [
+      "W.11-12.9",
+      "RI.11-12.6"
+     ],
+     [
+      "HS-PS2-1"
+     ],
+     "Compare the CAD twin to the scan and locate the deformed bracket (ST-5); model the periodic vibration",
+     "Trigonometric model of a novel vibration and a twin-to-scan discrepancy report",
+     "AI-CAD Analyst"
+    ]
+   ],
+   "week": [
+    "School day 1: flipped acquisition + applied block",
+    "School day 2: Algebra II block + CS/ethics",
+    "Trade Hall: site induction, spine modules, IBC prep",
+    "Trade Hall or work-based learning site",
+    "Trade Hall crew capstone prep; Friday transfer check and portfolio"
+   ]
+  },
+  {
+   "g": "12",
+   "era": "hs2",
+   "role": "Registered Apprentice / Credentialed Graduate",
+   "world": "Regional industry sites and the Trade Hall capstone floor",
+   "threads": {
+    "lit": "English IV: professional communication; capstone documentation; the portfolio narrative for employers and TOPS.",
+    "num": "Advanced Math (Statistics, Pre-Calculus or dual-enrollment college algebra through LCTCS) applied to the capstone data set; financial literacy (Act 48 of 2025).",
+    "sci": "Elective science or dual enrollment; capstone science is embedded in the site project.",
+    "cs": "Bulletin 104 advanced capstone: agent-operations project (AO pathway) or embedded controls.",
+    "safety": "Site clearance maintained; OSHA 10 (or 30 for construction pathways); equipment operator certification tracks.",
+    "assess": "IBC exams; 120 verified work-based-learning hours (ST-7); employer-judged capstone (ST-6); credential ledger sealed; TOPS University or Jump Start TOPS Tech diploma; FAFSA and apprenticeship placement."
+   },
+   "blocks": [
+    [
+     "Capstone Design",
+     [
+      "S-ID",
+      "S-IC",
+      "F-BF (as applied)"
+     ],
+     [
+      "W.11-12.2",
+      "SL.11-12.4"
+     ],
+     [
+      "HS-ETS1-1",
+      "HS-ETS1-2"
+     ],
+     "Scope the crew capstone with the employer partner; define the fault set and the data plan",
+     "Capstone proposal accepted by the employer panel",
+     "Capstone Lead"
+    ],
+    [
+     "Industry-Based Certifications",
+     [
+      "N-Q (as applied)"
+     ],
+     [
+      "RI.11-12.4",
+      "W.11-12.6"
+     ],
+     [
+      "HS-ETS1-3"
+     ],
+     "Trade Hall spine modules 17–26 for the declared trade; IBC exam sitting",
+     "IBC earned (NCCER Core, OSHA 10, AWS, EPA 608, CompTIA, PTEC or equivalent)",
+     "Credentialed Trainee"
+    ],
+    [
+     "Capstone Build & Work-Based Learning",
+     [
+      "S-ID (as applied)"
+     ],
+     [
+      "W.11-12.7",
+      "SL.11-12.5"
+     ],
+     [
+      "HS-ETS1-4"
+     ],
+     "Deliver the crew capstone on an active site; log the 120 verified hours",
+     "Employer-judged capstone passed; hours countersigned",
+     "Apprentice"
+    ],
+    [
+     "Ledger, Placement & Launch",
+     [
+      "financial literacy (Act 48)"
+     ],
+     [
+      "W.11-12.10"
+     ],
+     [],
+     "Seal the credential ledger; apprenticeship, LCTCS or university placement; financial plan",
+     "Credential ledger verified by an employer; placement confirmed",
+     "Credentialed Graduate (Specialized Tracks complete)"
+    ]
+   ],
+   "week": [
+    "School day: English IV, Advanced Math, financial literacy",
+    "School day: capstone data and documentation",
+    "Work-based learning or Trade Hall",
+    "Work-based learning or Trade Hall",
+    "Trade Hall capstone floor; Friday portfolio and ledger update"
+   ]
+  }
+ ],
+ "threads": [
+  [
+   "Literacy",
+   "Science of reading K-3 (Act 108 training, three-cueing banned), the Act 422 grade-3 gate, cursive from grade 3, revised ELA (grammar progression, content-rich text) effective 2027-28, the written explanation before every credential from grade 9."
+  ],
+  [
+   "Numeracy",
+   "Counting → operations → fractions → ratios → linear → geometry-trig → exponential-log-statistics, each carried by a machine; Act 353 numeracy PD for grades 4-8 teachers delivered as the 30-hour track."
+  ],
+  [
+   "Science",
+   "LSS Science K-12 in NGSS form, taught through the depot, the port and the terminal; Biology EOC in grade 10."
+  ],
+  [
+   "Computer science",
+   "Bulletin 104 K-12 progression; the CS graduation requirement for 9th graders entering 2026-27 satisfied by the grade 9 course and FC-7/ST-3."
+  ],
+  [
+   "Safety",
+   "Safety Cadet (K-5) → bench clearance (6-8) → machine clearance (9-10, Bulletin 1674) → site clearance and OSHA 10 (11-12). No hardware without a countersigned gate."
+  ],
+  [
+   "Assessment",
+   "Screener K-3 · LEAP 2025 grades 3-8 (science in 4 and 7 from Act 472) · Biology EOC; English I/II, Algebra I and Geometry EOCs replaced by comprehensive 10th-grade exams from spring 2028; Civics replaces U.S. History · ACT and WorkKeys in grade 11 · IBCs and capstone in grade 12 — every one mapped to a transfer check and reported in the credential ledger."
+  ],
+  [
+   "Standards currency",
+   "Codes shown are the current Louisiana Student Standards; revised ELA (Bulletin 141) and math (Bulletin 142) standards take effect 2027-28 and the SSCA re-crosswalks every block before then."
+  ],
+  [
+   "Family",
+   "Daily TAA signal K-8; family conference each block with the action plan; home study families on the same grade plan with the parent as Teacher Leader."
+  ]
+ ]
+}

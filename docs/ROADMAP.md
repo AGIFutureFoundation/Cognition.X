@@ -84,8 +84,11 @@ stable id. ✅
   failure modes, and an assessor note
 - Translation infrastructure: `data/i18n/<lang>/` with per-block string
   files; first target languages driven by pilot regions
-- Data quality dashboard generated in CI (per-pack completeness, review
-  status, reading-level lint)
+- [x] Data quality dashboard generated in CI (v0.44.0):
+  `tools/data_quality.py` → `docs/DATA_QUALITY.md`, per-pack
+  completeness with the content debt counted openly; regenerated and
+  drift-checked by the CI dataset job on every push. (Review status
+  and reading-level lint remain future columns.)
 
 **New packs (continue generating, same 250-block shape):**
 - [x] Food, Cooking & Nutrition — shipped in v0.4.0
@@ -148,9 +151,11 @@ standards-mapped; validator extended to rubric and mapping checks.
   round-trip verified byte-identical. The WLB leadership curriculum
   (strands, eras, 125 course ladders, modules, bridge, standards,
   seal) joined the canonical file in v0.43.0 and renders in the
-  Louisiana and States Institute views. Remaining: source the K–12
-  program layer the same way and inject the canonicalized layers
-  back, shrinking `template.html` over time
+  Louisiana and States Institute views. The K–12 program layer
+  joined in v0.44.0 (`data/louisiana/k12_program.json`, rendered in
+  the Curriculum view) — every named display layer is now canonical.
+  Remaining: inject the canonicalized layers back into the Education
+  OS template, shrinking `template.html` over time
 - [x] Learner state, first working version (v0.25.0): local-first
   progress ledger in the Louisiana platform — per-learner check
   records on the 30 core-spine tracks, automatic credential award at
