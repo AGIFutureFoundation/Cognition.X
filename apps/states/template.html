@@ -297,6 +297,16 @@
       state page by that state's capital and legislature.</p>
       <ul class="tracklist" id="modeltracks"></ul>
     </div>
+    <div class="panel" style="margin-top:14px">
+      <h3>The Leadership Ladder</h3>
+      <p class="note" id="ladderline"></p>
+      <div class="grid2" id="strands"></div>
+      <p class="note" style="margin-top:10px"><b>The graduation seal certifies:</b></p>
+      <div id="sealrows"></div>
+      <p class="note" style="margin-top:8px">The full ladder — every course, the ten-module method, the
+      bridge — is in the <a href="../louisiana/index.html#/institute">Louisiana platform's Institute view</a>;
+      each state localizes it through its own slots.</p>
+    </div>
     <div class="disc" id="wlbdisc"></div>
   </section>
 
@@ -545,6 +555,16 @@ function renderInstitute(){
      <p class="note" style="margin:4px 0 0">${esc(p.teach)}</p></div>`).join("");
   $("#modeltracks").innerHTML = D.model.tracks.map(t=>
     `<li>${esc(t.name)}<span class="cred">${esc(t.credential)}</span></li>`).join("");
+  const L = D.leadership;
+  if (L){
+    $("#ladderline").textContent =
+      `${L.strands.length} strands · ${Object.keys(L.eras).length} eras (${Object.values(L.eras).join(" → ")}) · ` +
+      `${L.counts.courses} courses on the ${L.counts.modules}-module method, with ${L.counts.bridge} public bridge milestones.`;
+    $("#strands").innerHTML = L.strands.map(s=>
+      `<div class="panel"><h3 style="font-size:.92rem">${esc(s.id)} · ${esc(s.t)}</h3>
+       <p class="note" style="margin:4px 0 0">${esc(s.d)}</p></div>`).join("");
+    $("#sealrows").innerHTML = L.seal.map(s=>`<div style="font-size:.84rem; padding:2px 0">✓ ${esc(s)}</div>`).join("");
+  }
   $("#wlbdisc").textContent = D.wlb.disclaimer;
 }
 

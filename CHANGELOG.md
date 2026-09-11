@@ -4,6 +4,35 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.43.0] — 2026-09-11
+
+### Added
+- **The Leadership Ladder — the Willie L. Brown Jr. Institute
+  program, canonical and visible.** The Institute's full leadership
+  curriculum, which lived only inside the Education OS app, is now
+  canonical dataset content and a first-class program surface:
+  - `data/wlb/institute.json` gains the complete program (extracted
+    by the same deterministic tool): **5 strands** (Public Service &
+    Civic Leadership, Democracy Law & Rights, Economic Development &
+    Opportunity, Community Health & Wellbeing, Equity Inclusion &
+    Access) × **5 eras** (K–2 → 11–12) × **125 courses**, the
+    **ten-module method** every course runs on, the **8 public
+    bridge milestones**, per-era standards (the original California
+    mapping, labeled as such), the **5-part graduation seal**, the
+    junior placement ladder, and the Fellowship pattern.
+  - **Louisiana Institute view** gains the Leadership Ladder: a
+    strand picker over the era-by-era course table with the
+    standards column, the ten-module method, the bridge & seal, the
+    junior placement ladder and the Fellowship pattern — with the
+    Institute disclaimer carried verbatim, course titles keeping
+    their original San Francisco ground, and every edition
+    localizing through the existing slots.
+  - **States app Institute view** gains the ladder headline (strand
+    cards, era arc, counts, the seal) linking to the full ladder.
+  - Verified headlessly: 5 strand options, 5 era rows × 25 course
+    chips per strand, 10 modules, 8 bridge rows, 5 seal items,
+    disclaimer verbatim, zero page errors in both apps.
+
 ## [0.42.0] — 2026-09-11
 
 ### Added

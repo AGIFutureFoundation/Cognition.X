@@ -54,6 +54,14 @@ def wlb_fact_base():
     return {
         "wlb": {k: w[k] for k in ("org", "disclaimer", "mission", "quote")},
         "principles": [{"p": x["p"], "teach": x["teach"]} for x in w["principles"]],
+        # the Leadership Ladder headline (full ladder lives in the Louisiana app)
+        "leadership": {
+            "strands": [{"id": s["id"], "t": s["t"], "d": s["d"]} for s in w["strands"]],
+            "eras": w["eras"], "seal": w["seal"],
+            "counts": {"courses": sum(len(v2) for v in w["courses"].values()
+                                      for v2 in v.values()),
+                       "modules": len(w["modules"]), "bridge": len(w["bridge"])},
+        },
     }
 
 
@@ -76,6 +84,7 @@ def main():
                       for s in CORE_PACKS},
         "wlb": wlb["wlb"],
         "principles": wlb["principles"],
+        "leadership": wlb["leadership"],
         "curriculum": {
             "blocks": sum(1 for _ in csv.DictReader(open(BLOCKS, newline="", encoding="utf-8"))),
             "packs": len(catalog),
