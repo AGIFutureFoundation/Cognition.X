@@ -278,6 +278,114 @@ async function testPlatformLoop(browser, errs) {
   await page.close();
 }
 
+/* ------- regressions: the defects the v0.44.0 review confirmed, fixed ---- */
+async function testReviewRegressions(browser, errs) {
+  const page = await newPage(browser, 'regressions', errs);
+  await page.goto(url('louisiana'));
+  await page.waitForTimeout(700);
+
+  // (1) The standing panel used to go dead the moment a request was waiting:
+  // `el.innerHTML +=` after binding re-parsed the panel and dropped every
+  // listener. Requesting a witnessed check must leave the panel operable.
+  await page.evaluate(() => {
+    const d = llLoad();
+    d.learners = [{ id: 'reg1', name: 'Regression Learner', band: 3, prog: {} }];
+    d.queue = []; llSave(d);
+    R.layout = {}; R.role = 'student'; R.me = 'reg1'; saveR();
+    location.hash = '#/roles';
+  });
+  await page.waitForTimeout(600);
+  await page.click('#ls-witness');
+  await page.waitForTimeout(400);
+  const waitingShown = await page.$eval('[data-widget="standing"]', el =>
+    el.textContent.includes('witnessed-check request'));
+  check('standing panel shows the waiting request', waitingShown);
+  // the panel must still work: record a practice check and see the count move
+  const before = await page.evaluate(() => llStanding(llLoad().learners[0]).done);
+  await page.click('#ls-check');
+  await page.waitForTimeout(400);
+  const after = await page.evaluate(() => llStanding(llLoad().learners[0]).done);
+  check('standing panel stays live once a request is waiting', after === before + 1,
+    `${before} -> ${after}`);
+
+  // (2) A pasted ledger is third-party data: ids that would land in HTML
+  // attributes must be rejected, and the shape coerced.
+  const san = await page.evaluate(() => {
+    const hostile = { learners: [
+      { id: '"><img src=x onerror=alert(1)>', name: '<b>Bold</b>', band: 99, prog: { nope: 999 } },
+      { id: 'ok-1', name: 'Fine', band: 2, prog: {} },
+    ], queue: [{ id: 'q"><x', learner: 'ok-1', track: 'nope', status: 'waiting' }] };
+    const out = llSanitize(hostile);
+    return out && { ids: out.learners.map(l => l.id), band: out.learners[0].band,
+                    prog: JSON.stringify(out.learners[0].prog), queue: out.queue.length };
+  });
+  check('imported ledger: hostile id replaced', san && !san.ids[0].includes('<'), JSON.stringify(san));
+  check('imported ledger: out-of-range band clamped', san && san.band <= 4, String(san && san.band));
+  check('imported ledger: unknown track keys dropped', san && san.prog === '{}', san && san.prog);
+  check('imported ledger: queue rows with bad ids dropped', san && san.queue === 0, String(san && san.queue));
+
+  // (3) A signed record must state what it actually stands on, never assert
+  // witnessing the ledger cannot see.
+  const rec = await page.evaluate(async () => {
+    const d = llLoad();
+    d.learners = [{ id: 'sig1', name: 'Signed Learner', band: 4, prog: { [LTRACKS[0].key]: 50 },
+                    evidence: [{ at: '2026-01-01', track: LTRACKS[0].name, by: 'A', note: '', result: 'confirmed' }] }];
+    llSave(d);
+    await issuerCreate('Regression Office');
+    const r = await issueRecord(llLoad().learners[0], LTRACKS[0]);
+    return { witnessed: r.payload.witnessed, demo: r.payload.demo, note: r.payload.note };
+  });
+  check('signed record carries its witnessed count', rec && rec.witnessed === 1, JSON.stringify(rec));
+  check('signed record does not overclaim witnessing',
+    rec && rec.note.includes('practice log'), rec && rec.note.slice(0, 80));
+  const demoRec = await page.evaluate(async () => {
+    const d = llLoad();
+    d.learners = [{ id: 'demo1', name: 'Demo One', band: 4, demo: true, prog: { [LTRACKS[0].key]: 50 } }];
+    llSave(d);
+    const r = await issueRecord(llLoad().learners[0], LTRACKS[0]);
+    return { demo: r.payload.demo, note: r.payload.note };
+  });
+  check('a demo learner\'s record says so on its face',
+    demoRec && demoRec.demo === true && demoRec.note.startsWith('DEMO DATA'),
+    demoRec && demoRec.note.slice(0, 60));
+
+  // (4) The assessor queue header must be operable without a mouse.
+  await page.evaluate(() => {
+    const d = llLoad();
+    d.learners = [{ id: 'a1', name: 'A One', band: 3, prog: {} }, { id: 'a2', name: 'A Two', band: 3, prog: {} }];
+    d.queue = []; llSave(d);
+    qRequest('a1', LTRACKS[0].key); qRequest('a2', LTRACKS[1].key);
+    R.role = 'assessor'; saveR();
+  });
+  await page.waitForTimeout(600);
+  const hdr = await page.$$eval('[data-qopen]', els => els.map(e => ({
+    role: e.getAttribute('role'), tab: e.getAttribute('tabindex'), exp: e.getAttribute('aria-expanded') })));
+  check('assessor queue headers are focusable buttons',
+    hdr.length >= 2 && hdr.every(h => h.role === 'button' && h.tab === '0'), JSON.stringify(hdr));
+  const second = await page.$$eval('[data-qopen]', els => els[1].dataset.qopen);
+  await page.evaluate(id => {
+    const el = document.querySelector(`[data-qopen="${id}"]`);
+    el.focus();
+    el.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+  }, second);
+  await page.waitForTimeout(400);
+  check('a keyboard assessor can open any request',
+    await page.evaluate(id => R.qOpen === id, second));
+  await page.close();
+
+  // (5) Flow Hub's deep link accepts the bare slug every cross-app chip emits.
+  const fh = await newPage(browser, 'flow-hub/deeplink', errs);
+  const slug = 'K12';
+  await fh.goto(url('flow-hub') + '#track=' + slug);
+  await fh.waitForTimeout(900);
+  const picked = await fh.evaluate(() => {
+    const sel = document.querySelector('#fs-pack');
+    return sel ? sel.options[sel.selectedIndex].textContent : null;
+  });
+  check('flow hub opens a bare-slug deep link', !!picked, String(picked));
+  await fh.close();
+}
+
 /* ---------------- education os: it must actually boot and render a view */
 async function testEducationOsBoots(browser, errs) {
   const before = errs.length;
@@ -345,6 +453,7 @@ async function testOtherApps(browser, errs) {
       ['flow engine and swarm', testFlowAndSwarm],
       ['network OS drill-downs', testNetworkOS],
       ['platform loop', testPlatformLoop],
+      ['review regressions', testReviewRegressions],
       ['education os boots', testEducationOsBoots],
       ['other apps', testOtherApps],
     ]) {

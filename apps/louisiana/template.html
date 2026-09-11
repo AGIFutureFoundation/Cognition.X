@@ -673,7 +673,31 @@ function abbr(name){
   if (w.length > 1) return w.map(x=>x[0]).join("").toUpperCase().slice(0,3);
   return name.slice(0,3).toUpperCase();
 }
-function store(k, v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){ return null; } }
+/* A browser can refuse to store — private mode, a full quota, blocked site
+   data. Swallowing that told the user their record was kept when it was not,
+   so a refusal now says so once, plainly, and every writer can see it. */
+let storeBroken = false;
+function storeWarn(){
+  if (storeBroken) return;
+  storeBroken = true;
+  try {
+    const b = document.createElement("div");
+    b.id = "cx-storewarn";
+    b.setAttribute("role", "alert");
+    b.style.cssText = "position:fixed;left:12px;right:12px;bottom:12px;z-index:90;background:var(--w4);"
+      + "color:#fff;padding:11px 15px;border-radius:10px;font-size:.85rem;box-shadow:var(--shadow)";
+    b.textContent = "This browser refused to save — nothing on this page is being recorded. "
+      + "Private browsing or blocked site data will do this. Export anything you need before you leave.";
+    document.body.appendChild(b);
+  } catch(e){}
+}
+function store(k, v){
+  try {
+    if (v === undefined) return localStorage.getItem(k);
+    localStorage.setItem(k, v);
+    return true;
+  } catch(e){ storeWarn(); return false; }
+}
 
 /* ---------- STATE ---------- */
 function renderState(){
@@ -1045,14 +1069,28 @@ function newRid(){
 }
 async function issueRecord(learner, track){
   const ik = await issuerGet(); if (!ik) return null;
+  /* The ledger counts practice checks and witnessed ones in the same counter.
+     A record must therefore say which it is standing on, and must never
+     assert witnessing it cannot see: the payload carries the witnessed count
+     the evidence log actually supports, and a demo learner says so on its
+     face. A signature over a false claim is worse than no signature. */
+  const witnessed = (learner.evidence||[]).filter(e=>e.result==="confirmed").length;
+  const note = learner.demo
+    ? "DEMO DATA — a seeded learner, issued to exercise the records office. Not a person, not an award."
+    : (witnessed >= 50
+        ? "50 transfer checks on real material, every one witnessed and recorded by an assessor."
+        : `50 transfer checks recorded on real material, of which ${witnessed} `
+          + `${witnessed===1?"was":"were"} witnessed by an assessor; the remainder are the `
+          + `learner's own practice log. Ask the issuing hall what it witnessed.`);
   const payload = {
     format: "cx-credential/1",
     rid: newRid(),
     credential: track.credential, track: track.name, pack: track.pack,
-    blocks: 50, learner: learner.name, band: BANDS[learner.band]||"",
+    blocks: 50, witnessed, demo: !!learner.demo,
+    learner: learner.name, band: BANDS[learner.band]||"",
     issuedAt: new Date().toISOString().slice(0,10),
     dataset: "Cognition.X v" + D.version,
-    note: "50 transfer checks recorded on real material; witnessed per the pack's checks.",
+    note,
   };
   const bytes = new TextEncoder().encode(JSON.stringify(payload));
   const sig = await crypto.subtle.sign({name:"ECDSA", hash:"SHA-256"}, ik.priv, bytes);
@@ -1288,6 +1326,7 @@ const netOpen = new Set();
 const netLog = {};
 function renderNetOS(){
   const host = $("#autoboard"); if (!host) return;
+  const mark = focusMark();
   const ls = llLoad().learners;
   pulseCount++;
   const at = new Date().toLocaleTimeString();
@@ -1324,8 +1363,11 @@ function renderNetOS(){
   }));
   const pl = $("#pulse-line");
   if (pl) pl.textContent = `pulse #${pulseCount} · ${new Date().toLocaleTimeString()}`;
+  focusRestore(mark);
 }
 setInterval(()=>{ try{
+  const host = $("#autoboard");
+  if (host && host.contains(document.activeElement)) return;   // not mid-interaction
   if ($("#view-regions").classList.contains("active")) renderNetOS();
 }catch(e){} }, 20000);
 
@@ -1810,6 +1852,53 @@ function llClearDemo(){
    auto-award the credential); "not yet" records an honest debrief and no
    credit. Self-recorded checks remain the learner's practice log — the
    witnessed record is what the Records Office signs. */
+/* A pasted ledger is third-party data. Ids reach HTML attributes and object
+   keys, so they are constrained to a safe alphabet; everything else is
+   coerced to the shape the app expects rather than trusted. Returns null if
+   the paste is not a ledger at all. */
+const LL_ID = /^[A-Za-z0-9_-]{1,64}$/;
+function llSanitize(d){
+  if (!d || typeof d !== "object" || !Array.isArray(d.learners)) return null;
+  const keys = new Set(LTRACKS.map(t=>t.key));
+  const seen = new Set();
+  const learners = [];
+  d.learners.forEach((l, i) => {
+    if (!l || typeof l !== "object") return;
+    let id = typeof l.id === "string" && LL_ID.test(l.id) ? l.id : "imported-" + i;
+    while (seen.has(id)) id += "x";
+    seen.add(id);
+    const prog = {};
+    if (l.prog && typeof l.prog === "object" && !Array.isArray(l.prog))
+      Object.keys(l.prog).forEach(k => {
+        if (keys.has(k)) prog[k] = Math.max(0, Math.min(50, Math.round(Number(l.prog[k])) || 0));
+      });
+    const out = {id, name: String(l.name == null ? "Unnamed" : l.name).slice(0, 120),
+                 band: Math.max(0, Math.min(4, Math.round(Number(l.band)) || 0)), prog};
+    if (l.demo) out.demo = true;
+    if (Array.isArray(l.types))
+      out.types = l.types.filter(x => typeof x === "string" && D.access.types.some(a => a.id === x)).slice(0, 6);
+    if (l.fs && typeof l.fs === "object"){
+      const ev = Array.isArray(l.fs.events) ? l.fs.events.filter(x => x === 1 || x === -1).slice(-12) : [];
+      out.fs = {events: ev, sinceBreak: Math.max(0, Math.round(Number(l.fs.sinceBreak)) || 0),
+                moves: Math.max(0, Math.round(Number(l.fs.moves)) || 0)};
+    }
+    if (Array.isArray(l.evidence))
+      out.evidence = l.evidence.filter(e => e && typeof e === "object").slice(-30).map(e => ({
+        at: String(e.at || "").slice(0, 10), track: String(e.track || "").slice(0, 160),
+        by: String(e.by || "").slice(0, 80), note: String(e.note || "").slice(0, 400),
+        result: e.result === "confirmed" ? "confirmed" : "not yet"}));
+    learners.push(out);
+  });
+  const ids = new Set(learners.map(l => l.id));
+  const queue = (Array.isArray(d.queue) ? d.queue : []).filter(q =>
+      q && typeof q === "object" && typeof q.id === "string" && LL_ID.test(q.id)
+      && ids.has(q.learner) && keys.has(q.track))
+    .slice(0, 500)
+    .map(q => ({id: q.id, learner: q.learner, track: q.track,
+                at: String(q.at || "").slice(0, 10),
+                status: ["waiting", "confirmed", "not yet"].includes(q.status) ? q.status : "waiting"}));
+  return {learners, queue};
+}
 function qLoad(){ const d = llLoad(); if (!Array.isArray(d.queue)) d.queue = []; return d; }
 function qRequest(learnerId, trackKey){
   const d = qLoad();
@@ -1943,7 +2032,10 @@ function launchTrack(name){
    open. */
 function swarmMe(){
   const d = llLoad();
-  return d.learners.find(l=>l.id===R.me) || d.learners[0] || null;
+  // Parent and Homeschool panels read R.child; every other role reads R.me.
+  // The swarm must name the same learner the panels beside it are describing.
+  const key = (R.role === "parent" || R.role === "homeschool") ? R.child : R.me;
+  return d.learners.find(l=>l.id===key) || d.learners.find(l=>l.id===R.me) || d.learners[0] || null;
 }
 const SWARMS = {
  student: [
@@ -2104,8 +2196,11 @@ function renderSwarm(p, el){
 }
 setInterval(()=>{ try{
   if (!$("#view-roles").classList.contains("active")) return;
-  document.querySelectorAll('[data-widget="swarm"]').forEach(host=>
-    renderSwarm(bySlug[R.parish] || D.parishes[0], host));
+  document.querySelectorAll('[data-widget="swarm"]').forEach(host=>{
+    // never redraw a panel the user is working inside
+    if (host.contains(document.activeElement)) return;
+    renderSwarm(bySlug[R.parish] || D.parishes[0], host);
+  });
 }catch(e){} }, 10000);
 
 const WIDGETS = {
@@ -2118,7 +2213,7 @@ const WIDGETS = {
       credentials earned, and the automation's suggested next step. Records live only in this browser.</p>`;
     if (d.learners.length)
       html += `<div class="pickrow" style="margin:0 0 12px"><select id="ls-me">${d.learners.map(l=>
-        `<option value="${l.id}"${l.id===R.me?" selected":""}>${esc(l.name)}</option>`).join("")}</select></div>`;
+        `<option value="${esc(l.id)}"${l.id===R.me?" selected":""}>${esc(l.name)}</option>`).join("")}</select></div>`;
     html += `<div style="display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px">
       <input type="search" id="ls-name" placeholder="Add me — name" style="min-width:160px">
       <button class="btn" id="ls-add">Add learner</button></div>`;
@@ -2145,7 +2240,9 @@ const WIDGETS = {
     } else {
       html += `<p class="note">No learners in this browser's ledger yet — add yourself above, or seed a demo cohort from the Teacher dashboard.</p>`;
     }
-    el.innerHTML += html;
+    const waiting = qLoad().queue.filter(q=>q.learner===R.me && q.status==="waiting").length;
+    if (waiting) html += `<p class="note" style="margin-top:8px">⏳ ${waiting} witnessed-check request${waiting>1?"s":""} waiting in the Assessor queue.</p>`;
+    el.innerHTML += html;   // the last write: everything below binds to these nodes
     const sel = el.querySelector("#ls-me");
     if (sel) sel.addEventListener("change", e=>{ R.me = e.target.value; saveR(); });
     el.querySelector("#ls-add").addEventListener("click", ()=>{
@@ -2170,8 +2267,6 @@ const WIDGETS = {
       say(ok ? "Request sent. An assessor will find you in the queue." : "That request is already waiting in the queue.");
       setTimeout(renderRoles, 0);
     });
-    const waiting = qLoad().queue.filter(q=>q.learner===R.me && q.status==="waiting").length;
-    if (waiting) el.innerHTML += `<p class="note" style="margin-top:8px">⏳ ${waiting} witnessed-check request${waiting>1?"s":""} waiting in the Assessor queue.</p>`;
   }},
   {id:"flowsession", t:"Flow session — the automations at work", span:true, r:(p,el)=>{
     const d = llLoad();
@@ -2305,8 +2400,8 @@ const WIDGETS = {
         return `<div class="hbar"><span class="lab" title="${esc(l.name)}">${esc(l.name)}${l.demo?" ·demo":""} · ${BANDS[l.band]}</span>`+
           `<span class="bar" style="width:${Math.max(1.5,st.pct)}%; background:var(--chart)" title="${esc(l.name)}: ${st.done} checks · ${st.creds.length} credentials · ${st.pct}% of spine"></span>`+
           `<span class="val">${st.pct}% · ${st.creds.length}🎓 · unit ${n}/50</span>`+
-          `<button class="btn" data-plus="${l.id}" title="Record a passed check on the working unit" aria-label="Record a passed check for ${esc(l.name)}" style="padding:2px 9px">+1</button>`+
-          `<button data-del="${l.id}" title="Remove" aria-label="Remove ${esc(l.name)} from the roster" style="border:0;background:none;color:var(--faint);cursor:pointer">✕</button></div>`;}).join("");
+          `<button class="btn" data-plus="${esc(l.id)}" title="Record a passed check on the working unit" aria-label="Record a passed check for ${esc(l.name)}" style="padding:2px 9px">+1</button>`+
+          `<button data-del="${esc(l.id)}" title="Remove" aria-label="Remove ${esc(l.name)} from the roster" style="border:0;background:none;color:var(--faint);cursor:pointer">✕</button></div>`;}).join("");
       // class × track heatmap on tracks anyone has touched
       const cols = LTRACKS.filter(t=>ls.some(l=>((l.prog||{})[t.key]||0)>0)).slice(0,14);
       if (cols.length){
@@ -2336,8 +2431,8 @@ const WIDGETS = {
         ta.style.display = "block"; ta.value = JSON.stringify(llLoad());
         ta.select();
       } else {
-        try { const d2 = JSON.parse(ta.value);
-          if (d2 && Array.isArray(d2.learners)){ llSave(d2); setTimeout(renderRoles, 0); return; } } catch(e){}
+        try { const d2 = llSanitize(JSON.parse(ta.value));
+          if (d2){ llSave(d2); setTimeout(renderRoles, 0); return; } } catch(e){}
         ta.style.display = "none";
       }
     });
@@ -2446,7 +2541,7 @@ const WIDGETS = {
         const t = LTRACKS.find(x=>x.key===q.track);
         const open = q.id===R.qOpen;
         return `<div style="border:1px solid var(--line); ${open?"border-color:var(--purple);":""} border-radius:10px; padding:10px 14px; margin:0 0 8px">
-          <div style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; cursor:pointer" data-qopen="${q.id}">
+          <div role="button" tabindex="0" aria-expanded="${open?"true":"false"}" style="display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; cursor:pointer" data-qopen="${esc(q.id)}">
             <b>${esc(l?l.name:"(removed)")}</b>
             <span style="color:var(--muted); font-size:.86rem">${esc(t?t.name:q.track)} · ${esc(t?t.credential:"")}</span>
             <span class="mono" style="font-size:.7rem; color:var(--faint)">requested ${esc(q.at)}</span></div>` +
@@ -2456,13 +2551,18 @@ const WIDGETS = {
               `<div style="font-size:.85rem; padding:4px 0; border-top:1px solid var(--line)"><b>${h}</b> — <span style="color:var(--muted)">${d2}</span></div>`).join("")}</div>
             <textarea id="aq-note" rows="3" style="width:100%" placeholder="Evidence: the material used, where, and what was demonstrated…"></textarea>
             <div style="display:flex; gap:9px; margin-top:8px">
-              <button class="btn gold" data-qres="confirmed|${q.id}">✓ Confirmed</button>
-              <button class="btn" data-qres="not yet|${q.id}">↺ Not yet</button></div>` : "") +
+              <button class="btn gold" data-qres="confirmed|${esc(q.id)}">✓ Confirmed</button>
+              <button class="btn" data-qres="not yet|${esc(q.id)}">↺ Not yet</button></div>` : "") +
           `</div>`;
       }).join("");
       el.innerHTML += html;
-      el.querySelectorAll("[data-qopen]").forEach(h=> h.addEventListener("click", ()=>{
-        R.qOpen = h.dataset.qopen; saveR(); }));
+      el.querySelectorAll("[data-qopen]").forEach(h=>{
+        const open = ()=>{ R.qOpen = h.dataset.qopen; saveR(); };
+        h.addEventListener("click", open);
+        h.addEventListener("keydown", e=>{
+          if (e.key === "Enter" || e.key === " "){ e.preventDefault(); open(); }
+        });
+      });
       el.querySelectorAll("[data-qres]").forEach(b=> b.addEventListener("click", ()=>{
         const [result, qid] = b.dataset.qres.split("|");
         const note = (el.querySelector("#aq-note")||{}).value || "";
@@ -2510,7 +2610,7 @@ const WIDGETS = {
     if (!R.child || !ls.some(l=>l.id===R.child)) R.child = ls[0].id;
     const c = ls.find(l=>l.id===R.child), st = llStanding(c), rec = llRecommend(c);
     el.innerHTML += `<div class="pickrow" style="margin:0 0 12px"><select id="lp-child">${ls.map(l=>
-        `<option value="${l.id}"${l.id===R.child?" selected":""}>${esc(l.name)}</option>`).join("")}</select></div>
+        `<option value="${esc(l.id)}"${l.id===R.child?" selected":""}>${esc(l.name)}</option>`).join("")}</select></div>
       <div class="tiles" style="margin:8px 0 4px">
         <div class="tile t1"><b>${st.done}</b><span>checks recorded</span></div>
         <div class="tile t2"><b>${st.creds.length}</b><span>credentials</span></div>
@@ -2673,7 +2773,7 @@ const WIDGETS = {
        <p class="note" style="margin:14px 0 4px"><b>Verify a record</b> — paste any cx-credential/1 JSON:</p>
        <textarea id="ro-in" rows="4" style="width:100%" spellcheck="false" placeholder='{"payload":…,"signature":…,"publicKey":…}'></textarea>
        <div style="margin-top:8px"><button class="btn" id="ro-verify">Verify</button>
-       <span id="ro-result" style="font-size:.88rem; margin-left:10px"></span></div>
+       <span id="ro-result" role="status" aria-live="polite" style="font-size:.88rem; margin-left:10px"></span></div>
        <p class="note" style="margin:16px 0 4px"><b>Trusted offices — federation v1.</b> Paste another hall's
        published <span class="mono">{recordsOffice, publicKey}</span> export (after confirming, once and
        out-of-band, that the key really is theirs). Records signed by a trusted office verify by name.</p>
@@ -2983,7 +3083,26 @@ function roleLayout(role){
   // keep saved order, drop unknown ids, ignore hidden ones (absent = hidden)
   return saved.filter(id=>all.includes(id));
 }
+/* Re-rendering a panel replaces its DOM, which drops focus and any caret the
+   user had. Every full re-render restores both by element id. */
+function focusMark(){
+  const a = document.activeElement;
+  if (!a || !a.id || a === document.body) return null;
+  const m = {id:a.id};
+  try { if (typeof a.selectionStart === "number"){ m.s = a.selectionStart; m.e = a.selectionEnd; } } catch(err){}
+  return m;
+}
+function focusRestore(m){
+  if (!m) return;
+  const el = document.getElementById(m.id);
+  if (!el) return;
+  try {
+    el.focus({preventScroll:true});
+    if (m.s != null && typeof el.setSelectionRange === "function") el.setSelectionRange(m.s, m.e);
+  } catch(err){}
+}
 function renderRoles(){
+  const mark = focusMark();
   const p = bySlug[R.parish] || D.parishes[0];
   $("#rolechips").innerHTML = ROLES.map(([k,l]) =>
     `<button class="chip" data-role="${k}" aria-pressed="${R.role===k}">${l}</button>`).join("");
@@ -3038,6 +3157,7 @@ function renderRoles(){
     [l[i], l[j]] = [l[j], l[i]];
     R.layout[R.role] = l; saveR();
   }));
+  focusRestore(mark);
 }
 
 

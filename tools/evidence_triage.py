@@ -10,8 +10,10 @@ human sends them here, and this tool merges them into a triage report:
                     "not yet" rate with enough attempts) — the check
                     may be pitched wrong for the band, or the theme
                     under-taught. Top revision priority.
-  2. UNUSED         Spine tracks with no recorded activity across all
-                    files — review for relevance or reachability.
+  2. UNREPORTED     Tracks in the dataset that no submitted file mentions
+                    at all — review for relevance or reachability. Read
+                    it honestly: this means no SUBMITTING site reported
+                    activity, not that nobody anywhere used the track.
   3. HEALTHY        Everything else, listed with its numbers.
 
 Usage:
@@ -24,6 +26,7 @@ input to the curriculum review board (docs/GOVERNANCE.md), never an
 automatic edit — evidence proposes; the board disposes.
 """
 
+import csv
 import json
 import sys
 from pathlib import Path
@@ -50,6 +53,16 @@ def load(paths):
                 a[f] += int(t.get(f, 0))
             a["sites"] += 1
     return merged, files
+
+
+def dataset_tracks():
+    """Every tracked (pack, track) in the canonical dataset — the universe
+    the submitted evidence is measured against."""
+    try:
+        with open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8") as f:
+            return {(r["pack"], r["track"]) for r in csv.DictReader(f) if r["track"]}
+    except OSError:
+        return set()
 
 
 def main():
@@ -82,6 +95,20 @@ def main():
         print("  → propose a supersession or teaching note to the review board; never edit ids.\n")
     else:
         print("REVISION PRIORITIES: none flagged at current thresholds.\n")
+    universe = dataset_tracks()
+    if universe:
+        unreported = sorted(universe - set(merged))
+        print(f"UNREPORTED ({len(unreported)} of {len(universe)} tracks in the dataset):")
+        if unreported:
+            for pack, track in unreported[:15]:
+                print(f"  {track}  [{pack}]")
+            if len(unreported) > 15:
+                print(f"  …and {len(unreported)-15} more.")
+            print("  → no submitting site reported activity on these. That is not the same")
+            print("    as unused: review for relevance or reachability, and check whether")
+            print("    the sites that use them simply have not sent evidence.\n")
+        else:
+            print("  none — every track in the dataset appears in the submitted evidence.\n")
     print("ACTIVE TRACKS:")
     for r in healthy[:20]:
         print(f"  {r['checksRecorded']:>5} checks  {r['track']}  [{r['pack']}]"

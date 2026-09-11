@@ -34,7 +34,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.46.0)
+## Numbers (v0.47.0)
 
 **16,700 blocks · 44 packs · 210 tracks · 1,393 credentials**
 

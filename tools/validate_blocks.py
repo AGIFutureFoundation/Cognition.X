@@ -62,6 +62,22 @@ def main():
     for (pack, track), trows in per_track.items():
         if len(trows) != 50:
             err(f"{pack} / {track}: {len(trows)} rows, expected 50")
+        # The documented shape is 10 themes x 5 bands. Checking only the row
+        # count and the theme count let a track pass with a band taught twice
+        # and another missing, which is exactly what the shape exists to stop.
+        themes = {r["theme"] for r in trows}
+        if len(themes) != 10:
+            err(f"{pack} / {track}: {len(themes)} distinct themes, expected 10")
+        for theme in sorted(themes):
+            bands = [r["grade"] for r in trows if r["theme"] == theme]
+            if sorted(bands) != sorted(BAND_LEVEL):
+                err(f"{pack} / {track} / {theme}: bands {sorted(bands)}, "
+                    f"expected one row at each of {sorted(BAND_LEVEL)}")
+        # every tracked row must carry a grade the band table knows, or the
+        # grade/level agreement check above silently skips it
+        unknown = sorted({r["grade"] for r in trows if r["grade"] not in BAND_LEVEL})
+        if unknown:
+            err(f"{pack} / {track}: unknown grade band(s) {unknown}")
         themes = {r["theme"] for r in trows}
         if len(themes) != 10:
             err(f"{pack} / {track}: {len(themes)} themes, expected 10")

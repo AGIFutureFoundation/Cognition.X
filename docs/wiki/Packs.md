@@ -321,7 +321,7 @@ walkable city layer)
 
 **Trades Across School Subjects** — the early-pathways layer of the
 Trades Network: the working world taught inside math, science, ELA and
-civics from K–2 up, feeding the classroom hooks on all 111 roster
+civics from K–2 up, feeding the classroom hooks on all 222 roster
 entries
 - Discovering the working world
 - The math on the jobsite
