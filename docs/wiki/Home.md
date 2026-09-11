@@ -27,14 +27,19 @@ tenancy, reentry, global health field practice, and working with AI.
 
 - [Complete system review](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/SYSTEM_REVIEW.md)
 - [Deep roadmap](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/ROADMAP.md)
+- [Next steps — ten prompts](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/NEXT_STEPS_OPUS5.md)
+- [Data quality dashboard](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_QUALITY.md)
 - [Data review & known issues](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_REVIEW.md)
 - [Licensing rationale](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/LICENSING.md)
 - [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.44.0)
+## Numbers (v0.45.0)
 
-**16,700 blocks · 44 packs · 210 tracks · 1,394 credentials**
+**16,700 blocks · 44 packs · 210 tracks · 1,393 credentials**
+
+*(1,394 distinct credential strings, one of which is the bare level word
+“Practitioner” — see [Data quality](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_QUALITY.md#credential-naming).)*
 
 ---
 

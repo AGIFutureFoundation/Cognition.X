@@ -121,3 +121,45 @@ the full platform assessment now lives in
    (50 × 5 anchors) are reviewed content with the same stance —
    public general knowledge, door-openers not exhaustive claims, no
    union local numbers, profiles never diagnoses.
+
+## Finding 6 — level words standing in for credential names (v0.45.0)
+
+Found by the new invariant suite (`tests/test_platform.py`), not by a
+reader: **1,228 rows — 7% of the dataset, 24 tracks across five
+community packs — name their credential with the bare band level
+“Practitioner”** instead of an accomplishment.
+
+- **Origin.** The rows arrive this way in the v0.1.0 import
+  (`data/source/Cognition.X_all_blocks.csv`, 1,228 rows already
+  affected). The pipeline is behaving correctly: `normalize_blocks.py`
+  never overwrites a non-empty source field, so the value passes
+  through untouched. Nothing downstream introduced it.
+- **Packs.** Basic Life Skills & Self-Reliance, Water Land & Climate,
+  Care Across a Life, Making Repair & Reuse (5 tracks each) and
+  Preventive Health & Everyday Care (4 of 5 — its “The mouth,
+  understood” track was partly corrected to *Oral Health Peer* for one
+  theme, leaving the only split-credential track in the dataset).
+- **Consequence, stated plainly.** The headline “1,394 credentials”
+  counts “Practitioner” as if it were a credential; there are
+  **1,393** real ones. A learner completing one of these 24 tracks
+  would be issued, and the Records Office would cryptographically
+  sign, a `cx-credential/1` record whose credential reads
+  “Practitioner” — a level, not an accomplishment. The signature would
+  be valid and the claim meaningless.
+- **Why it is not silently fixed here.** Naming 24 credentials is
+  authored content, and `docs/GOVERNANCE.md` reserves that to the
+  review board; inventing names in a build tool would be exactly the
+  machine-authored content the board exists to gate. It is also
+  **not** a placeholder substitution: the guarded rule permits
+  replacing only the two exact generic sentences, never an arbitrary
+  non-empty field.
+- **What is done instead.** The scope is pinned as a ratchet in
+  `tests/test_platform.py` (rows ≤ 1,228, tracks ≤ 24, and **no pack
+  outside the legacy import may contain a level-word credential**), so
+  the defect can only shrink and no new pack can repeat it; and
+  `docs/DATA_QUALITY.md` now carries a per-pack *Level-word cred %*
+  column plus a “Credential naming” section, regenerated on every push.
+
+**Queued for the board** as the first item of the standing review
+queue: author 24 credential names in the shape the packs already use
+(“Care Explorer”, “Oral Health Peer”), then lower the ratchet.

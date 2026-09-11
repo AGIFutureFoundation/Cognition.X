@@ -1,0 +1,367 @@
+/**
+ * Browser smoke suite — the working models, exercised for real.
+ *
+ * Every release from v0.22.0 onward was verified by a throwaway script
+ * that never entered the repository. This is that verification, kept:
+ * one headless pass that opens all six apps and drives the mechanics
+ * that must not silently break — the 50-check credential threshold,
+ * genuine ECDSA signing and its four verification grades, the consent
+ * gate, flow-state transitions, swarm arbitration, and the Platform
+ * app's end-to-end loop.
+ *
+ * It needs a browser, so it is NOT part of the Python-only CI gate
+ * (tests/test_platform.py is). Run it before shipping an app change:
+ *
+ *     node tests/browser/smoke.js
+ *
+ * Requires Playwright and a Chromium build. In this project's
+ * environment: PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers, executable
+ * at /opt/pw-browsers/chromium. Override with CX_CHROMIUM=/path.
+ * Exit 0 = every assertion held.
+ */
+
+const { chromium } = require('playwright');
+const path = require('path');
+
+const ROOT = path.resolve(__dirname, '..', '..');
+const url = app => 'file://' + path.join(ROOT, 'apps', app, 'index.html');
+
+const results = [];
+let failed = 0;
+function check(name, ok, detail) {
+  results.push({ name, ok, detail });
+  if (!ok) failed++;
+  console.log(`${ok ? '  ok  ' : '  FAIL'} ${name}${ok || !detail ? '' : ' — ' + detail}`);
+}
+
+async function newPage(browser, label, errs) {
+  const page = await browser.newPage();
+  page.on('pageerror', e => errs.push(`${label}: ${e.message}`));
+  return page;
+}
+
+/* ---------------------------------------------- every app loads cleanly */
+async function testAllAppsLoad(browser, errs) {
+  for (const app of ['education-os', 'flow-hub', 'louisiana', 'trades-network', 'states', 'platform']) {
+    const before = errs.length;
+    const page = await newPage(browser, app, errs);
+    await page.goto(url(app));
+    await page.waitForTimeout(900);
+    const title = await page.title();
+    check(`${app}: loads with a title`, !!title, `title=${JSON.stringify(title)}`);
+    check(`${app}: no page errors on load`, errs.length === before, errs.slice(before).join(' | '));
+    await page.close();
+  }
+}
+
+/* ------------------------------- louisiana: the credential fires at 50 */
+async function testCredentialThreshold(browser, errs) {
+  const page = await newPage(browser, 'la/credential', errs);
+  await page.goto(url('louisiana'));
+  await page.waitForTimeout(700);
+  const out = await page.evaluate(() => {
+    const d = llLoad();
+    const key = LTRACKS[0].key;
+    d.learners = [{ id: 'thr', name: 'Threshold Learner', band: 3, prog: { [key]: 48 } }];
+    llSave(d);
+    const l = llLoad().learners[0];
+    const at49 = llCredit(l, key, 1);            // 48 -> 49: no credential
+    const creds49 = llStanding(l).creds.length;
+    const at50 = llCredit(l, key, 1);            // 49 -> 50: credential crosses
+    const creds50 = llStanding(l).creds.length;
+    const at51 = llCredit(l, key, 1);            // capped, no double-award
+    return { at49, creds49, at50, creds50, at51, prog: l.prog[key] };
+  });
+  check('ledger: no credential at 49 checks', out.at49 === false && out.creds49 === 0, JSON.stringify(out));
+  check('ledger: credential fires at exactly 50', out.at50 === true && out.creds50 === 1, JSON.stringify(out));
+  check('ledger: no second award past 50', out.at51 === false && out.prog === 50, JSON.stringify(out));
+  await page.close();
+}
+
+/* --------------------- louisiana: signing and the four verification grades */
+async function testRecordsOfficeGrades(browser, errs) {
+  const page = await newPage(browser, 'la/records', errs);
+  await page.goto(url('louisiana'));
+  await page.waitForTimeout(700);
+  await page.evaluate(() => {
+    const d = llLoad();
+    d.learners = [{ id: 'rec', name: 'Record Learner', band: 4, prog: { [LTRACKS[0].key]: 50 } }];
+    d.queue = []; llSave(d);
+    try { localStorage.removeItem('cxla.trust'); localStorage.removeItem('cxla.revlists'); } catch (e) {}
+    location.hash = '#/roles';
+  });
+  await page.waitForTimeout(400);
+  await page.click('#rolechips [data-role="parishadmin"]');
+  await page.waitForTimeout(400);
+
+  await page.fill('#ro-name', 'Smoke Hall Records Office');
+  await page.click('#ro-create'); await page.waitForTimeout(500);
+  await page.click('#ro-issue'); await page.waitForTimeout(600);
+  const recText = await page.$eval('#ro-out', el => el.value);
+  const rec = JSON.parse(recText);
+
+  check('record: cx-credential/1 format', rec.payload.format === 'cx-credential/1');
+  check('record: real P-256 signature', typeof rec.signature === 'string' && rec.signature.length === 88,
+    `len=${rec.signature && rec.signature.length}`);
+  check('record: carries a unique rid', typeof rec.payload.rid === 'string' && rec.payload.rid.length >= 8);
+  check('record: public key only, never the private half',
+    rec.publicKey && rec.publicKey.kty === 'EC' && !('d' in rec.publicKey));
+
+  // grade 1 — valid, key untrusted
+  await page.fill('#ro-in', recText); await page.click('#ro-verify'); await page.waitForTimeout(400);
+  check('verify: valid-but-untrusted grade',
+    (await page.$eval('#ro-result', el => el.textContent)).includes('key not trusted'));
+
+  // grade 2 — tampered payload is invalid
+  const bad = JSON.parse(recText); bad.payload.learner = 'Impostor';
+  await page.fill('#ro-in', JSON.stringify(bad)); await page.click('#ro-verify'); await page.waitForTimeout(400);
+  check('verify: tamper detected',
+    (await page.$eval('#ro-result', el => el.textContent)).includes('Invalid'));
+
+  // grade 3 — trusted by name
+  await page.click('#ro-pub'); await page.waitForTimeout(300);
+  const pub = await page.$eval('#ro-out', el => el.value);
+  await page.fill('#ro-trust-in', pub); await page.click('#ro-trust-add'); await page.waitForTimeout(300);
+  await page.fill('#ro-in', recText); await page.click('#ro-verify'); await page.waitForTimeout(400);
+  const trusted = await page.$eval('#ro-result', el => el.textContent);
+  check('verify: trusted-office grade by name',
+    trusted.includes('trusted office') && trusted.includes('Smoke Hall'));
+
+  // grade 4 — revoked trumps trusted, and an unsigned list is refused
+  await page.fill('#ro-rev-id', rec.payload.rid);
+  await page.fill('#ro-rev-reason', 'smoke test');
+  await page.click('#ro-rev-add'); await page.waitForTimeout(300);
+  await page.click('#ro-rev-export'); await page.waitForTimeout(500);
+  const revDoc = await page.$eval('#ro-out', el => el.value);
+  const forged = JSON.parse(revDoc);
+  forged.payload.revoked.push({ rid: 'forged', reason: 'x', at: '2026-01-01' });
+  await page.fill('#ro-rev-in', JSON.stringify(forged));
+  await page.click('#ro-rev-import'); await page.waitForTimeout(500);
+  check('revocation: altered list is rejected',
+    (await page.$eval('#ro-rev-msg', el => el.textContent)).includes('Rejected'));
+  await page.fill('#ro-rev-in', revDoc); await page.click('#ro-rev-import'); await page.waitForTimeout(500);
+  await page.fill('#ro-in', recText); await page.click('#ro-verify'); await page.waitForTimeout(400);
+  const revoked = await page.$eval('#ro-result', el => el.textContent);
+  check('verify: revoked grade trumps trusted',
+    revoked.includes('Revoked') && revoked.includes('smoke test'), revoked.slice(0, 90));
+  await page.close();
+}
+
+/* --------------------------- louisiana: evidence export is consent-gated */
+async function testEvidenceConsentGate(browser, errs) {
+  const page = await newPage(browser, 'la/evidence', errs);
+  await page.goto(url('louisiana'));
+  await page.waitForTimeout(700);
+  await page.evaluate(() => {
+    const d = llLoad();
+    d.learners = [{
+      id: 'ev', name: 'Evidence Learner', band: 3, prog: { [LTRACKS[0].key]: 12 },
+      evidence: [{ at: '2026-01-01', track: LTRACKS[0].name, by: 'X', note: '', result: 'confirmed' },
+                 { at: '2026-01-01', track: LTRACKS[0].name, by: 'X', note: '', result: 'not yet' }],
+    }];
+    d.queue = []; llSave(d); location.hash = '#/roles';
+  });
+  await page.waitForTimeout(400);
+  await page.click('#rolechips [data-role="stateadmin"]');
+  await page.waitForTimeout(400);
+  check('evidence: export disabled before consent', await page.$eval('#ev-export', el => el.disabled));
+  await page.click('#ev-consent');
+  check('evidence: export enabled after consent', await page.$eval('#ev-export', el => !el.disabled));
+  await page.fill('#ev-site', 'Smoke Hall');
+  await page.click('#ev-export'); await page.waitForTimeout(400);
+  const out = await page.$eval('#ev-out', el => el.value);
+  const parsed = JSON.parse(out);
+  check('evidence: cx-evidence/1 aggregate', parsed.format === 'cx-evidence/1');
+  check('evidence: aggregate-only consent recorded', parsed.consent && parsed.consent.aggregateOnly === true);
+  check('evidence: no learner names in the export', !out.includes('Evidence Learner'));
+  check('evidence: no per-learner ids in the export', !out.includes('"ev"'));
+  await page.close();
+}
+
+/* --------------------------------- louisiana: flow engine + swarm arbitration */
+async function testFlowAndSwarm(browser, errs) {
+  const page = await newPage(browser, 'la/flow', errs);
+  await page.goto(url('louisiana'));
+  await page.waitForTimeout(700);
+  const flow = await page.evaluate(() => {
+    const mk = fs => ({ id: 'f', name: 'Flow Learner', band: 3, prog: {}, fs });
+    return {
+      warming: flowOf(mk({ events: [], sinceBreak: 0, moves: 0 })).state,
+      overload: flowOf(mk({ events: [-1, -1, -1], sinceBreak: 1, moves: 3 })).state,
+      cruising: flowOf(mk({ events: [1, 1, 1], sinceBreak: 1, moves: 3 })).state,
+      brk: flowOf(mk({ events: [1, 1, 1], sinceBreak: 8, moves: 8 })).state,
+    };
+  });
+  check('flow: no events → warming up', flow.warming === 'warming', flow.warming);
+  check('flow: three struggles → overloaded', flow.overload === 'overload', flow.overload);
+  check('flow: three passes → cruising', flow.cruising === 'cruising', flow.cruising);
+  check('flow: cadence reached → break called (trumps all)', flow.brk === 'brk', flow.brk);
+
+  // swarm arbitration: a due break (95) must out-rank a 49/50 credential watch (90)
+  await page.evaluate(() => {
+    const d = llLoad();
+    d.learners = [{ id: 'sw', name: 'Swarm Learner', band: 3,
+      prog: { [LTRACKS[0].key]: 49 }, fs: { events: [1, 1, 1], sinceBreak: 8, moves: 3 } }];
+    d.queue = []; llSave(d);
+    R.layout = {}; R.role = 'student'; R.me = 'sw'; saveR();
+    location.hash = '#/roles';
+  });
+  await page.waitForTimeout(600);
+  const swarm = await page.$eval('[data-widget="swarm"] .swbox', el => el.textContent);
+  check('swarm: arbitrated call is shown', swarm.includes("The swarm's call"));
+  check('swarm: break (pri 95) out-ranks credential watch (pri 90)',
+    swarm.includes('Motivator') && swarm.includes('pri 95') && swarm.includes('pri 90'));
+  check('swarm: every agent stays inspectable',
+    ['Coach', 'Pathfinder', 'Credential Watch', 'Access Ally'].every(n => swarm.includes(n)));
+  await page.close();
+}
+
+/* --------------------------------- louisiana: Network OS granular drill-downs */
+async function testNetworkOS(browser, errs) {
+  const page = await newPage(browser, 'la/netos', errs);
+  await page.goto(url('louisiana'));
+  await page.waitForTimeout(700);
+  await page.evaluate(() => {
+    const d = llLoad();
+    d.learners = [{ id: 'n1', name: 'Net Learner', band: 3,
+      prog: { [LTRACKS[0].key]: 49 }, fs: { events: [1, 1, 1], sinceBreak: 8, moves: 3 } }];
+    d.queue = []; llSave(d);
+    location.hash = '#/regions';
+  });
+  await page.waitForTimeout(500);
+  const sections = await page.$$eval('#autoboard button[data-sec]', els => els.map(e => e.dataset.sec));
+  check('network OS: all eight sections present', sections.length === 8, sections.join(','));
+  await page.click('#autoboard button[data-sec="Break Caller"]');
+  await page.waitForTimeout(200);
+  const detail = await page.$eval('#autoboard .netdetail[data-sec="Break Caller"]', el => el.textContent);
+  check('network OS: drill-down states its thresholds', detail.includes('thresholds:'));
+  check('network OS: drill-down names the learner and their cadence',
+    detail.includes('Net Learner') && detail.includes('due now'), detail.slice(0, 120));
+  await page.evaluate(() => renderNetOS());
+  await page.waitForTimeout(200);
+  check('network OS: expansion survives the pulse',
+    (await page.$('#autoboard .netdetail[data-sec="Break Caller"]')) !== null);
+  await page.close();
+}
+
+/* ------------------------------- platform: the end-to-end loop really runs */
+async function testPlatformLoop(browser, errs) {
+  const page = await newPage(browser, 'platform/loop', errs);
+  await page.goto(url('platform') + '#/loop');
+  await page.waitForTimeout(700);
+  await page.click('#s1go'); await page.waitForTimeout(150);
+  for (let i = 0; i < 3; i++) { await page.click('#s2p'); await page.waitForTimeout(100); }
+  await page.click('#s3n'); await page.waitForTimeout(100);      // not-yet credits nothing
+  const stages = () => page.$$eval('#stages .stage', els => els.map(e => e.textContent));
+  check('platform: "not yet" credits nothing', (await stages())[2].includes('47/50'));
+  for (let i = 0; i < 2; i++) { await page.click('#s3c'); await page.waitForTimeout(100); }
+  check('platform: no credential at 49', (await stages())[2].includes('49/50') &&
+    !(await stages())[2].includes('fired automatically'));
+  await page.click('#s3c'); await page.waitForTimeout(150);
+  check('platform: credential fires at exactly 50', (await stages())[2].includes('fired automatically'));
+  await page.click('#s4go'); await page.waitForTimeout(700);
+  const rec = await page.evaluate(() => M.record && {
+    fmt: M.record.payload.format, len: M.record.signature.length, hasPriv: 'd' in M.record.publicKey });
+  check('platform: genuine WebCrypto signature', rec && rec.fmt === 'cx-credential/1' &&
+    rec.len === 88 && rec.hasPriv === false, JSON.stringify(rec));
+  await page.click('#s5t'); await page.waitForTimeout(400);
+  check('platform: tampered copy reports invalid',
+    (await page.$eval('#s5out', el => el.textContent)).includes('Invalid'));
+  await page.click('#s5tr'); await page.waitForTimeout(400);
+  check('platform: trust closes the loop',
+    (await page.$eval('#loop-status', el => el.textContent)).includes('Run complete'));
+  const ev = (await stages())[5];
+  check('platform: evidence aggregate emitted, no learner name',
+    ev.includes('cx-evidence/1') && !ev.includes('Demo Learner'));
+  await page.click('#loop-reset'); await page.waitForTimeout(200);
+  check('platform: reset restores a fresh run', (await page.$('#s1go')) !== null);
+  await page.close();
+}
+
+/* ---------------- education os: it must actually boot and render a view */
+async function testEducationOsBoots(browser, errs) {
+  const before = errs.length;
+  const page = await newPage(browser, 'education-os', errs);
+  await page.goto(url('education-os'));
+  await page.waitForTimeout(2500);
+  const r = await page.evaluate(() => ({
+    views: document.querySelectorAll('.view').length,
+    active: document.querySelectorAll('.view.active').length,
+    activeId: (document.querySelector('.view.active') || {}).id,
+    chars: (document.querySelector('.view.active') || { textContent: '' }).textContent.trim().length,
+    navbtns: document.querySelectorAll('.navbtn').length,
+    editions: document.querySelectorAll('#stateSel option').length,
+  }));
+  check('education-os: boots without errors', errs.length === before, errs.slice(before).join(' | '));
+  check('education-os: every view has a container', r.views >= 149, `${r.views}`);
+  check('education-os: nav is built', r.navbtns >= 149, `${r.navbtns}`);
+  check('education-os: edition picker populated', r.editions > 50, `${r.editions}`);
+  check('education-os: one view is active on load', r.active === 1 && r.activeId === 'v-overview',
+    JSON.stringify(r));
+  check('education-os: the active view renders real content', r.chars > 1000, `${r.chars} chars`);
+  // and the stray script text must never reappear as page text
+  const leak = await page.evaluate(() => document.body.innerText.includes('var DATA = {'));
+  check('education-os: no script source visible on the page', !leak);
+  await page.close();
+}
+
+/* ------------------------------------------- the other apps' key surfaces */
+async function testOtherApps(browser, errs) {
+  const fh = await newPage(browser, 'flow-hub', errs);
+  await fh.goto(url('flow-hub'));
+  await fh.waitForTimeout(900);
+  check('flow hub: dataset payload present',
+    await fh.evaluate(() => typeof DATA === 'object' && DATA.packs && Object.keys(DATA.packs).length > 20));
+  await fh.close();
+
+  const tn = await newPage(browser, 'trades-network', errs);
+  await tn.goto(url('trades-network'));
+  await tn.waitForTimeout(800);
+  check('trades: 222 regional entries',
+    await tn.evaluate(() => D.entries ? D.entries.length === 222 :
+      (D.families && D.regions && D.families.length * D.regions.length === 222)));
+  await tn.close();
+
+  const st = await newPage(browser, 'states', errs);
+  await st.goto(url('states') + '#/institute');
+  await st.waitForTimeout(800);
+  check('states: 50 states in the fact base', await st.evaluate(() => D.states.length === 50));
+  check('states: leadership ladder headline renders',
+    (await st.$eval('#ladderline', el => el.textContent)).includes('125 courses'));
+  await st.close();
+}
+
+(async () => {
+  const browser = await chromium.launch({
+    executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium',
+  });
+  const errs = [];
+  try {
+    for (const [name, fn] of [
+      ['all apps load', testAllAppsLoad],
+      ['credential threshold', testCredentialThreshold],
+      ['records office grades', testRecordsOfficeGrades],
+      ['evidence consent gate', testEvidenceConsentGate],
+      ['flow engine and swarm', testFlowAndSwarm],
+      ['network OS drill-downs', testNetworkOS],
+      ['platform loop', testPlatformLoop],
+      ['education os boots', testEducationOsBoots],
+      ['other apps', testOtherApps],
+    ]) {
+      console.log(`\n▸ ${name}`);
+      await fn(browser, errs);
+    }
+  } finally {
+    await browser.close();
+  }
+  console.log(`\nran ${results.length} assertions`);
+  if (errs.length) {
+    console.log(`\nPAGE ERRORS (${errs.length}):`);
+    errs.forEach(e => console.log('  ✗ ' + e));
+  }
+  if (failed || errs.length) {
+    console.log(`\nFAILED: ${failed} assertion(s), ${errs.length} page error(s)`);
+    process.exit(1);
+  }
+  console.log('OK: every working model behaves');
+})();

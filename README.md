@@ -51,6 +51,14 @@ byte-for-byte — CI rebuilds the dataset **and all six apps** on every
 push and fails on any drift, so the committed builds are always
 exactly what the sources produce.
 
+```bash
+# The standing rules, enforced (Python only — runs in CI)
+python3 tests/test_platform.py
+
+# The working models, exercised (needs Playwright + Chromium)
+node tests/browser/smoke.js
+```
+
 ## The data model in one paragraph
 
 Every row of [`data/blocks.csv`](data/blocks.csv) is a block with a globally
@@ -70,7 +78,8 @@ state blueprint the States app localizes for all fifty states —
 Louisiana — the state's own, 500
 blocks of river, coast, corridor, table and storm — Education, reconciled
 from the app in v0.17.0, plus Corporate, Science, Robotics, Global
-Health, Multilateral, Sapient, Non-Profit — 500 blocks each), sixteen
+Health, Multilateral, Sapient, Non-Profit — 1,120–1,160 blocks each,
+8,040 in all), sixteen
 **community packs** (250 each — housing, money, reentry, neighbourhood,
 preventive health, life skills, water/land/climate, care, making/repair,
 digital life & AI, food & nutrition, energy & the home, transport &

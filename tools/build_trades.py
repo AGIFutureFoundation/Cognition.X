@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Build the Cognition.X Trades Network app from the unions fact base + dataset.
 
-Crosses the 37 trade families in data/unions/trade_unions.json with its 3
-regions (San Francisco, Oakland–East Bay, New Orleans) into 111 regional
+Crosses the 37 trade families in data/unions/trade_unions.json with its 6
+regions (San Francisco, Oakland–East Bay, Los Angeles on the Pacific;
+New Orleans, Baton Rouge, Houston on the Gulf) into 222 regional
 union/trade entries — each with the family's international union (with
 per-region overrides where the craft is organized differently by coast),
 a training-simulation scenario localized to a real, publicly known site,

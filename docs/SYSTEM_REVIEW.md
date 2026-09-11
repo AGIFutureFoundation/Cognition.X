@@ -45,11 +45,12 @@ fact bases; none is hand-edited (CI-adjacent rule in CONTRIBUTING).
 
 | App | State | Notes |
 |---|---|---|
-| **Education OS** | stable, legacy | Verbatim "gov" build + canonical sector-library overlay (11,520 raw → 5,200 canonical). One pre-existing page error in the template baseline (documented; not introduced by the pipeline). Remaining data layers (wlb ladders, K–12 program, parish fact base) still live in the template — the long-term plan is to source them from canonical files. |
+| **Education OS** | repaired, unstyled | The v0.1.0 import captured the app's JavaScript (149 views, 143 renderers) but **not its HTML shell or stylesheet**, so it never ran: it threw on boot and printed a stray `var DATA` block as page text. v0.45.0 generates the shell from the app's own VIEWS array in `tools/build_education_os.py` — it now boots clean and renders every view. Its imported visual design is still missing; the generated shell carries only the layout rules the code requires. Sector library overlaid canonically (11,520 raw → 5,200). |
 | **Flow Hub** | strong | Flow engine, 8 agents + tutor swarm (blackboard, priority arbitration), CX-Trace v1 export, access-profile pacing, printable workbooks. Largest payload (~1.9 MB) — acceptable for one offline file. |
 | **Louisiana** | flagship | 64 parish dashboards, adopted 2-wave plan, readiness, missions, budgets, learner ledger, flow engine + 20 access profiles, Network OS automations, 7 role dashboards (widgetized), Assessor Mode, Records Office (signed credentials). The deepest surface; also the most JS — kept maintainable by the widget architecture. |
 | **Trades Network** | strong | 222 entries / 6 regions / 6 city maps, classroom hooks, flipped model. Fact base carries the two hard rules (no local numbers; simulation ≠ certification) — verified present in every rendering path. |
 | **States** | new, sound | 50-state localizer over the States OS blueprint + Institute Model; seeded from the Education OS fact base at build time. Anchors are labeled door-openers, not exhaustive claims. |
+| **Platform** | new, sound | The working model (v0.37.0): a clickable ten-node system map and a six-stage runnable loop that executes the real mechanics — flow machine, the 50-check threshold, WebCrypto signing, four-grade verification, the evidence aggregate — on labeled demo data. |
 | **Archived builds** | frozen | `apps/education-os/versions/` — never overwritten. |
 
 **Verification methodology** (applied every release): headless Chromium
