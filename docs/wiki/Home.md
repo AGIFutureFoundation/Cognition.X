@@ -28,6 +28,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Complete system review](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/SYSTEM_REVIEW.md)
 - [Deep roadmap](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/ROADMAP.md)
 - [Next steps — ten prompts](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/NEXT_STEPS_OPUS5.md)
+- [Investor walkthrough](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/WALKTHROUGH.md) — the learning system, end to end, for a reader deciding whether to back it
 - [Film production briefs](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/film/PRODUCTION_BRIEFS.md) — the two product films (`tools/film/`) and their cinematic cuts
 - [Data quality dashboard](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_QUALITY.md)
 - [Data review & known issues](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_REVIEW.md)
@@ -35,7 +36,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.49.0)
+## Numbers (v0.49.1)
 
 **17,450 blocks · 47 packs · 225 tracks · 1,407 credentials**
 
