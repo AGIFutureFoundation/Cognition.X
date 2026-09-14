@@ -4,6 +4,39 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.49.0] — 2026-09-14
+
+The film kit. Two short product films rendered from the platform's own
+apps — every frame the software as shipped — plus the production briefs
+for the cinematic cuts.
+
+### Added
+- **`tools/film/`** — a Playwright + ffmpeg film kit: `film.js` records a
+  scene list from the real apps at 1920×1080 (generated kinetic-type
+  title cards from `card.js`; injected captions, chapter labels, a
+  visible cursor and dissolves; real clicks, selects, typing and
+  scrolling on the live dashboards) and encodes H.264. `scenes1.js` is
+  *The Flow Zone* (3:04 — the platform model and runnable loop, the
+  Education OS, Cognition.X Louisiana as the flagship: tile map,
+  parish dashboards, the Network OS, role dashboards and swarms; the
+  flipped classroom and honest gamification; a Flow Hub session; the
+  Legacy Institute and Leadership Ladder for educators; the States app;
+  the Makers' Hall). `scenes2.js` is *Training that proves itself*
+  (2:15 — organisation packs, Pack Studio, and SmartCiti.X: the Trades
+  Network's city maps, roster, simulations under the studio law, the
+  district compact, the Trade Hall Network OS, Assessor Mode and the
+  Records Office signing a credential). Renders one film at a time;
+  output is git-ignored.
+- **`docs/film/PRODUCTION_BRIEFS.md`** — for each film: the narration
+  script with timestamps, a shot list with generation prompts for the
+  dramatized inserts, and the assembly plan — so a cinematic cut can be
+  produced from the product cut without any shot claiming a feature the
+  platform does not have. The briefs carry the platform's stances:
+  simulation ≠ certification, nothing leaves the page, the Institute
+  referenced through its public record with the app's disclaimer, no
+  living local practitioner depicted, SmartCiti.X presented as the
+  VR/AR training center whose curriculum engine is Cognition.X.
+
 ## [0.48.0] — 2026-09-14
 
 The culture trades. Three new trade packs — the music trade end to end,

@@ -1,0 +1,25 @@
+const { run, app } = require('./film');
+const S = [
+ {card:{kicker:'Cognition.X for organisations', title:'Training that <b>proves itself</b>', sub:'Non-profit practice, corporate training and the trades — the same verifiable blocks, authored on your own terms, run offline, signed by your own office.', lines:['Non-Profit Practice','Corporate OS','Multilateral OS','Trades in the Classroom']}, dur:7},
+ {url:app('flow-hub','#'), chapter:'Packs for organisations', caption:'Non-Profit Practice, Corporate OS, Multilateral OS, Global Health OS — 1,100+ blocks each, tracks with credentials.',
+  steps:[{click:'.navbtn[data-view="packs"]', dwell:1200},{drift:700, ms:2400},{cap:'Every pack: five tracks, ten themes, five grade bands, one credential per track.', dwell:400},{drift:700, ms:2200}]},
+ {url:app('flow-hub','#'), chapter:'Pack Studio', caption:'Author your organisation\'s own pack: a validated spec, generated blocks, the same pipeline the platform runs in CI.',
+  steps:[{click:'.navbtn[data-view="author"]', dwell:1400},{drift:600, ms:2200},{cap:'Governance built in: a review board, a checklist, a supersede policy — block ids are never reused.', dwell:2200}]},
+ {card:{kicker:'Powering', title:'<b>SmartCiti.X</b>', sub:'The VR/AR training center for the trades and unions — its curriculum engine is the Cognition.X Trades Network and the SmartCiti.X : New Orleans Trades pack.', lines:['222 union & trade entries','37 trade families','6 regions · 2 coasts','simulation ≠ certification'], theme:'teal'}, dur:7},
+ {url:app('trades-network','#'), chapter:'The Trades Network', caption:'Six regions on two coasts — San Francisco, Oakland, New Orleans, Baton Rouge, Houston, Los Angeles — every training-ground site on the map.',
+  steps:[{hover:'.regnode[data-reg]', dwell:900},{click:'.regnode[data-reg]', dwell:1600},{cap:'Click a site and the roster opens filtered to that region and category.', dwell:400},{click:'.csite[data-reg]', dwell:1800},{drift:500, ms:1600}]},
+ {url:app('trades-network','#'), chapter:'Unions & trades', caption:'Every card names the international, the localized training sim, the classroom hook and the Flow Hub link — never a local number.',
+  steps:[{click:'.tab[data-r="unions"]', dwell:1000},{type:'#usearch', text:'electric', dwell:1400},{drift:500, ms:1800},{type:'#usearch', text:'musicians', dwell:1600},{cap:'Musicians, culinary workers and stagehands now back the culture-trade packs too.', dwell:1400}]},
+ {url:app('trades-network','#'), chapter:'Simulations', caption:'Nine control disciplines under the studio law — the jobsite in the classroom before the jobsite. Simulation ≠ certification.',
+  steps:[{click:'.tab[data-r="sims"]', dwell:1200},{drift:800, ms:2600},{cap:'These are the scenarios a VR/AR center renders: the rigging plot, the banquet line, the load-in — with the show-stop authority named.', dwell:400},{drift:600, ms:2000}]},
+ {url:app('trades-network','#'), chapter:'Districts', caption:'The district–council compact: trades on the transcript, six commitments each way.',
+  steps:[{click:'.tab[data-r="districts"]', dwell:1200},{drift:800, ms:2600}]},
+ {url:app('louisiana','#/regions'), chapter:'The Trade Hall Network OS', caption:'Eight sections, eight automations on a live pulse — flow, breaks, steps, credentials, alerts, readiness, teacher relief, network sync.',
+  steps:[{scroll:'#autoboard', dwell:900},{click:'#autoboard button[data-sec]', dwell:2000},{drift:500, ms:1600}]},
+ {url:app('louisiana','#/roles'), chapter:'Assessor Mode', caption:'Witnessed checks, the three-line rubric, evidence capture — confirm, or an honest not-yet with no credit.',
+  steps:[{click:'#rolechips [data-role="assessor"]', dwell:1600},{drift:700, ms:2200},{cap:'The Records Office: ECDSA-signed portable credentials, four verification grades, federation between halls.', dwell:400},{click:'#rolechips [data-role="parishadmin"]', dwell:1200},{scroll:'[data-widget="records"]', dwell:1000},{type:'#ro-name', text:'SmartCiti.X Training Center', dwell:600},{click:'#ro-create', dwell:2000},{click:'#ro-pub', dwell:1800}]},
+ {url:app('platform','#/stack'), chapter:'The stack', caption:'One CSV, one validator, six apps rebuilt byte-for-byte in CI from a fresh clone — your deployment is a file you own.',
+  steps:[{drift:600, ms:2200},{cap:'Nothing phones home. Records live in your browser; export boxes are the only exits.', dwell:2000}]},
+ {card:{kicker:'Cognition.X · SmartCiti.X', title:'Your trades, <b>your record</b>', sub:'Open source, offline-first, signed by your own office. Simulation ≠ certification — and every credential says exactly what was witnessed.', lines:['github.com/AGIFutureFoundation/Cognition.X','AGI Future Foundation','v0.48.0']}, dur:7},
+];
+run('cognitionx-smartciti', S).then(()=>console.log('FILM2 DONE')).catch(e=>{console.error(e); process.exit(1);});
