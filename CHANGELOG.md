@@ -4,6 +4,20 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.49.1] — 2026-09-14
+
+### Documentation
+- **`docs/WALKTHROUGH.md`** — the investor walkthrough: the block as the
+  unit (one real dataset row, unedited), the manifest, the six-stage
+  learning loop, the automated flow system (flow-state engine, 20 access
+  modules, 24-agent dashboard swarms, the eight-automation Network OS,
+  CX-Trace), Louisiana as the flagship, the Legacy Institute curriculum
+  with the Institute's disclaimer verbatim, trades and SmartCiti.X,
+  portable records, the fifty-state pattern, engineering integrity, the
+  eight stances the platform will not round up, and the v1.0 gate as the
+  roadmap states it. A designed edition of the same text is published as
+  a page; the Markdown is the canonical copy.
+
 ## [0.49.0] — 2026-09-14
 
 The film kit. Two short product films rendered from the platform's own
