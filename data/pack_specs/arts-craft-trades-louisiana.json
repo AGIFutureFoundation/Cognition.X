@@ -1,0 +1,291 @@
+{
+ "pack": "Arts & Craft Trades : Louisiana Makers",
+ "notes": "Making as a trade: seeing and drawing for work, the materials, the state's own craft traditions, showing the work, and the working artist's money and rights. Every check produces a real object, drawing or document. Stance: the traditions named here — the Mardi Gras Indian suit, Chitimacha basketry, the float den, the forge — belong to the communities and families who carry them; this pack teaches the craft with respect and sends the learner to those keepers, never around them.",
+ "tracks": [
+  {
+   "name": "Seeing and drawing for work",
+   "prefix": "SD",
+   "credential": "Working Draftsperson",
+   "themes": [
+    {
+     "theme": "Drawing to communicate",
+     "description": "The sketch that gets built: drawing not as art but as the fastest way to show what you mean.",
+     "transfer_check": "Sketch an object or a plan clearly enough that a second person builds or finds it from the drawing alone."
+    },
+    {
+     "theme": "Proportion and measure",
+     "description": "Scale, the ruler, the grid and the eye that checks them: drawing things the size they are.",
+     "transfer_check": "Draw a room or object to scale with measurements and produce a second drawing at a different scale that matches."
+    },
+    {
+     "theme": "Perspective",
+     "description": "One point, two points and the horizon: making a flat page hold a real space.",
+     "transfer_check": "Draw a street or interior in two-point perspective with correct vanishing points, checked against a photograph."
+    },
+    {
+     "theme": "Color",
+     "description": "The wheel, mixing, value and the Louisiana palette of water, rust, iron and festival.",
+     "transfer_check": "Mix and chart twelve target colours from primaries and paint a small study using a limited palette."
+    },
+    {
+     "theme": "Composition",
+     "description": "Where the eye goes and why: balance, contrast, the rule you follow and the one you break.",
+     "transfer_check": "Produce three compositions of the same subject that lead the eye differently, and explain each."
+    },
+    {
+     "theme": "Lettering and layout",
+     "description": "The sign, the poster, the menu board: letters drawn by hand and set by rule.",
+     "transfer_check": "Hand-letter a legible sign and lay out a poster with a clear hierarchy that a stranger reads at a glance."
+    },
+    {
+     "theme": "Drawing the figure",
+     "description": "Gesture, proportion and the human form: the hardest subject and the most useful.",
+     "transfer_check": "Complete ten timed gesture drawings and one sustained figure study from a live model or a working person."
+    },
+    {
+     "theme": "The design brief",
+     "description": "Reading what a client needs, asking what they did not say, and drawing back to check.",
+     "transfer_check": "Take a brief from a real client, produce three sketched options, and get one approved."
+    },
+    {
+     "theme": "Digital drawing",
+     "description": "The tablet, layers, vector and raster, and the file a printer can use.",
+     "transfer_check": "Produce a digital drawing with layers and export it correctly for print and for screen."
+    },
+    {
+     "theme": "The sketchbook habit",
+     "description": "Daily practice: the page a day that makes the hand fast and the eye honest.",
+     "transfer_check": "Keep a daily sketchbook for three weeks and present the first and last pages side by side."
+    }
+   ]
+  },
+  {
+   "name": "Materials: clay, wood, metal, textile, paint",
+   "prefix": "MT",
+   "credential": "Materials Maker",
+   "themes": [
+    {
+     "theme": "Clay",
+     "description": "Pinch, coil and wheel; the kiln, the glaze and the piece that survives the fire.",
+     "transfer_check": "Make a functional clay vessel by hand or wheel, glaze it, and fire it (or have it fired) to a usable finish."
+    },
+    {
+     "theme": "Wood",
+     "description": "Grain, joints, the saw and the finish: making a thing that stays square.",
+     "transfer_check": "Build a small joined wooden object — a box or frame — with a proper joint and a finished surface."
+    },
+    {
+     "theme": "Metal",
+     "description": "Cutting, bending, the weld and the forge: shaping what will not be persuaded.",
+     "transfer_check": "Cut, bend and join metal into a small functional object under supervision, safely, with a clean result."
+    },
+    {
+     "theme": "Textile",
+     "description": "The needle, the machine and the seam that holds: sewing as a working skill.",
+     "transfer_check": "Sew a wearable or usable textile item with straight seams, a hem and a fastening that lasts."
+    },
+    {
+     "theme": "Paint",
+     "description": "Surface preparation, media and the brush: paint that stays on and looks intended.",
+     "transfer_check": "Prepare a surface and paint it to a finished standard in two media, with edges a customer would accept."
+    },
+    {
+     "theme": "Print",
+     "description": "Relief, screen and the edition: making one image many times, all the same.",
+     "transfer_check": "Cut or expose a block or screen and pull a consistent edition of ten prints."
+    },
+    {
+     "theme": "Glass and mosaic",
+     "description": "Cutting, setting and grout: the fragile material made permanent.",
+     "transfer_check": "Cut glass or tile safely and set a small mosaic or leaded panel that holds together."
+    },
+    {
+     "theme": "Found and reclaimed",
+     "description": "Materials the river and the city bring: seeing the object inside the discard.",
+     "transfer_check": "Make a finished piece from reclaimed material, documenting the source and the transformation."
+    },
+    {
+     "theme": "Tools and their care",
+     "description": "Sharpening, safety and the shop: a maker is only as good as the edge.",
+     "transfer_check": "Sharpen an edge tool to working sharpness and demonstrate the safe use and storage of five shop tools."
+    },
+    {
+     "theme": "Finishing",
+     "description": "The last ten percent that makes an object sellable: sanding, sealing, polishing, presenting.",
+     "transfer_check": "Take an unfinished object to a sellable finish and have a maker or buyer judge it ready."
+    }
+   ]
+  },
+  {
+   "name": "Louisiana traditions: the crafts of the state",
+   "prefix": "LT",
+   "credential": "Tradition Bearer Apprentice",
+   "themes": [
+    {
+     "theme": "Beadwork and the suit",
+     "description": "The Mardi Gras Indian tradition's craft — the patch, the stitch, the year of work — learned with the respect its keepers require.",
+     "transfer_check": "Complete a small beaded patch with a clean stitch and a finished edge, and describe the tradition's protocols as its keepers state them."
+    },
+    {
+     "theme": "Float building",
+     "description": "Papier-mâché, the den and the parade: the sculptural craft behind Carnival.",
+     "transfer_check": "Build a papier-mâché or foam prop figure to a design, painted and finished for a parade or display."
+    },
+    {
+     "theme": "Ironwork",
+     "description": "The balcony, the gate and the scroll: the iron that gives the old cities their face.",
+     "transfer_check": "Form a scroll or simple bracket in metal, cold or hot under supervision, matching a traditional pattern."
+    },
+    {
+     "theme": "Basketry",
+     "description": "Split cane, palmetto and pine needle: the Chitimacha, Houma and Coushatta traditions and the weave that carries them.",
+     "transfer_check": "Weave a small basket in one traditional technique, naming the tradition and the people it belongs to."
+    },
+    {
+     "theme": "Instrument making",
+     "description": "The accordion, the fiddle and the triangle: Cajun country still builds its own music.",
+     "transfer_check": "Make a simple playable instrument — a triangle, a box drum, a cigar-box guitar — that holds tune or tone."
+    },
+    {
+     "theme": "Sign painting",
+     "description": "The hand-lettered city: the brush, the enamel and the sign that outlives the shop.",
+     "transfer_check": "Paint a hand-lettered sign in enamel on a board with clean strokes, to a size a shop could hang."
+    },
+    {
+     "theme": "Quilting and the sewn story",
+     "description": "Piecing, the pattern and the story in the cloth.",
+     "transfer_check": "Piece and quilt a small block or panel with a traditional pattern and a straight, even stitch."
+    },
+    {
+     "theme": "Boat building",
+     "description": "The pirogue and the Lafitte skiff: the boats the water taught people to build.",
+     "transfer_check": "Build a scale model of a Louisiana boat from plans, or complete one stage of a full-size build under a builder."
+    },
+    {
+     "theme": "Decoy carving",
+     "description": "The duck in wood: carving, painting and the hunter's eye for what a bird looks like.",
+     "transfer_check": "Carve and paint a decoy or small figure in wood that reads as its subject from across a room."
+    },
+    {
+     "theme": "Pottery of the state",
+     "description": "Newcomb and the state's clay: a tradition of form, glaze and the local ground.",
+     "transfer_check": "Make a piece in a Louisiana pottery tradition and write one paragraph on the tradition's history from a source."
+    }
+   ]
+  },
+  {
+   "name": "Showing the work: exhibition and public art",
+   "prefix": "EX",
+   "credential": "Exhibiting Artist",
+   "themes": [
+    {
+     "theme": "Documenting the work",
+     "description": "The photograph, the file and the portfolio: work no one can see does not exist.",
+     "transfer_check": "Photograph five pieces to a gallery standard — lit, square, colour-true — and assemble a portfolio."
+    },
+    {
+     "theme": "The artist statement",
+     "description": "Saying what the work is in plain words a stranger understands.",
+     "transfer_check": "Write a one-paragraph artist statement, test it on someone outside the arts, and revise it."
+    },
+    {
+     "theme": "The gallery",
+     "description": "How a show happens: the approach, consignment, the split, the opening.",
+     "transfer_check": "Read a real gallery consignment agreement, explain its terms, and prepare a submission to a gallery's call."
+    },
+    {
+     "theme": "The market and the festival booth",
+     "description": "Selling in person: the display, the price tag, the conversation.",
+     "transfer_check": "Set up and run a market booth for one session with priced work and a sales record."
+    },
+    {
+     "theme": "Public art",
+     "description": "The call, the proposal, the budget and the community that has to live with it.",
+     "transfer_check": "Answer a real or mock public-art call with a proposal, a budget and a community-consultation plan."
+    },
+    {
+     "theme": "The mural",
+     "description": "Wall preparation, scale, transfer and the neighbourhood's say.",
+     "transfer_check": "Scale a design onto a wall (or panel) with a grid or projector and paint a section to finish."
+    },
+    {
+     "theme": "Installation",
+     "description": "Hanging, lighting and the label: the show is made in the last two days.",
+     "transfer_check": "Hang and light a small exhibition with correct heights, spacing and labels."
+    },
+    {
+     "theme": "The critique",
+     "description": "Giving and taking it: describe, analyse, interpret, and only then judge.",
+     "transfer_check": "Run a structured critique of three works, and receive one on your own work and act on it."
+    },
+    {
+     "theme": "Online",
+     "description": "The portfolio site, the post and the shop: being found without losing the work.",
+     "transfer_check": "Build an online portfolio with priced work and a shop or contact path, checked by a buyer."
+    },
+    {
+     "theme": "Museums and archives",
+     "description": "How work is kept: conservation, the collection and the record of who made what.",
+     "transfer_check": "Visit a museum or archive and document how one Louisiana work is stored, labelled and attributed."
+    }
+   ]
+  },
+  {
+   "name": "The working artist: money, rights and the studio",
+   "prefix": "WA",
+   "credential": "Working Artist",
+   "themes": [
+    {
+     "theme": "Pricing the work",
+     "description": "Time, materials and the market: a price you can say aloud and stand behind.",
+     "transfer_check": "Price ten works using a stated formula and compare against three comparable sales."
+    },
+    {
+     "theme": "The commission",
+     "description": "Brief, deposit, contract and delivery: the job that pays before the work is made.",
+     "transfer_check": "Take a commission from a real client with a written agreement, deposit and delivery, and complete it."
+    },
+    {
+     "theme": "Copyright and reproduction",
+     "description": "What you keep when you sell: reproduction rights, licensing, and the print of the painting.",
+     "transfer_check": "Draft a sale receipt that reserves reproduction rights and license one image for a specific use."
+    },
+    {
+     "theme": "Grants and residencies",
+     "description": "The application: the budget, the statement, the deadline and the no.",
+     "transfer_check": "Complete a real grant or residency application to submission standard (submission at the artist's choice)."
+    },
+    {
+     "theme": "The studio",
+     "description": "Space, rent, the co-op and the shared kiln: where the work gets made.",
+     "transfer_check": "Cost three studio options — home, shared, rented — and choose one with a year's budget."
+    },
+    {
+     "theme": "Taxes and the business",
+     "description": "Sole proprietor, the invoice, the ledger and the receipt you keep.",
+     "transfer_check": "Keep a three-month artist ledger with income, expenses and invoices, reconciled."
+    },
+    {
+     "theme": "Teaching as income",
+     "description": "The class, the workshop and the school residency: passing it on for a living.",
+     "transfer_check": "Plan and deliver a one-session workshop in your craft to real learners, with a costed budget."
+    },
+    {
+     "theme": "The arts-economy roles map",
+     "description": "Artist, fabricator, curator, framer, art handler, arts administrator, gallerist, conservator: the jobs around the work.",
+     "transfer_check": "Map twelve arts-economy roles with what each does and who pays them, and interview one working person in any of them."
+    },
+    {
+     "theme": "Louisiana's arts institutions",
+     "description": "Councils, cultural districts, the state's programs and the folklife record: the support where you live.",
+     "transfer_check": "Produce a one-page map of your parish's arts institutions and programs — with what each offers — from sources."
+    },
+    {
+     "theme": "A career in seasons",
+     "description": "The long practice: the year's rhythm of making, showing, selling and resting.",
+     "transfer_check": "Write a one-year plan for a working art practice with income, making time and two shows, reviewed with a working artist."
+    }
+   ]
+  }
+ ]
+}

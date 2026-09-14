@@ -1,0 +1,291 @@
+{
+ "pack": "Music : Creation to Industry",
+ "notes": "The whole arc of a working life in music, from the first pulse to the royalty statement: the sound, the song, the room, the studio and the industry. Every block ends in something made or done on real material — a played phrase, a written verse, a mixed track, a costed gig. Louisiana's own grooves and its own music economy are the ground. Stance: practising a craft here is not a union card, a license or a contract; the American Federation of Musicians, the performing-rights organisations and the courts are the front doors for those, and this pack teaches how to walk up to them.",
+ "tracks": [
+  {
+   "name": "The sound: instrument, voice and ear",
+   "prefix": "MS",
+   "credential": "Sound Maker",
+   "themes": [
+    {
+     "theme": "Finding the pulse",
+     "description": "Beat, subdivision and the second-line clap: feeling time in the body before counting it, and the Louisiana habit of putting the accent where the street puts it.",
+     "transfer_check": "Keep steady time with a metronome at three tempos while clapping the second-line pattern, then recorded and self-checked against the click."
+    },
+    {
+     "theme": "The voice as the first instrument",
+     "description": "Breath, pitch-matching and the speaking voice turned into the singing voice; care of the instrument you were born with.",
+     "transfer_check": "Match twelve played pitches by voice within a semitone, recorded, and sing a four-line melody in tune with a drone."
+    },
+    {
+     "theme": "One instrument, honestly",
+     "description": "A first real instrument — guitar, keyboard, horn, accordion, drum — its parts, its care, and the first ten notes played cleanly.",
+     "transfer_check": "Play a one-octave scale and a four-bar phrase cleanly on a real instrument, and demonstrate tuning and basic maintenance on it."
+    },
+    {
+     "theme": "Hearing intervals and chords",
+     "description": "Training the ear to name what it hears: intervals, major and minor, the I–IV–V that most songs live on.",
+     "transfer_check": "Identify by ear eight intervals and six chord qualities played at random, scoring at least three in four."
+    },
+    {
+     "theme": "Reading and not reading",
+     "description": "Notation, tablature, chord charts and the Nashville numbers — and the ear-first tradition that built jazz and zydeco without them.",
+     "transfer_check": "Read a lead sheet well enough to play its melody and chords, and learn a second tune entirely by ear from a recording."
+    },
+    {
+     "theme": "The Louisiana grooves",
+     "description": "Second line, the zydeco two-step, the Cajun waltz, swamp pop and bounce: what makes each one itself, felt in the feet and the hands.",
+     "transfer_check": "Play or clap four distinct Louisiana grooves at correct feel and tempo, naming what distinguishes each, for a listener who can tell the difference."
+    },
+    {
+     "theme": "Playing with others",
+     "description": "Listening, locking to the drummer, leaving space and passing the lead — the ensemble skills no solo practice teaches.",
+     "transfer_check": "Hold a part in a three-person ensemble through a full tune without dropping time, then trade a four-bar solo with another player."
+    },
+    {
+     "theme": "Practice that works",
+     "description": "The loop, the slow-down, the metronome and the log: getting better on purpose instead of by accident.",
+     "transfer_check": "Keep a two-week practice log with a target phrase, and demonstrate it at a tempo 20% faster than on day one."
+    },
+    {
+     "theme": "Instrument technology",
+     "description": "Tuning systems, strings, reeds, mouthpieces, the accordion's bellows and the electric signal: knowing the machine you play.",
+     "transfer_check": "Change strings or a reed (or service an accordion bellows or a drum head) and return the instrument to playing pitch."
+    },
+    {
+     "theme": "Protecting the ear and the body",
+     "description": "Hearing loss is permanent; repetitive strain is real. Earplugs, posture, breaks, and the musician's long body.",
+     "transfer_check": "Measure a rehearsal's sound level with a phone meter, choose protection for it, and demonstrate a posture and warm-up routine for your instrument."
+    }
+   ]
+  },
+  {
+   "name": "The song: writing and arranging",
+   "prefix": "SW",
+   "credential": "Songwriter",
+   "themes": [
+    {
+     "theme": "Where songs come from",
+     "description": "The hook, the title and the line you cannot shake: catching an idea and keeping it before it leaves.",
+     "transfer_check": "Collect twenty song ideas in a week — titles, lines, hummed phrases — and develop one into a hook with a recorded eight bars."
+    },
+    {
+     "theme": "Lyric craft",
+     "description": "Rhyme, meter, the concrete image over the vague feeling, and the first line's job of earning the second.",
+     "transfer_check": "Write a verse and chorus with a consistent meter and a concrete image in every line, then revise it after reading it aloud to someone."
+    },
+    {
+     "theme": "Melody over changes",
+     "description": "Writing a tune that moves: contour, range, repetition with variation, and a melody a stranger can sing back.",
+     "transfer_check": "Write a melody over a given four-chord progression that a listener can sing back after two hearings."
+    },
+    {
+     "theme": "Harmony choices",
+     "description": "The three chords, the fourth one, the borrowed chord and the turnaround — how harmony colours a line.",
+     "transfer_check": "Reharmonise a simple melody two ways and explain, on the instrument, what each change does to the feeling."
+    },
+    {
+     "theme": "Form",
+     "description": "Verse, chorus, bridge; the 12-bar blues; the jazz head and the AABA — the shapes songs come in and why.",
+     "transfer_check": "Map the form of three recorded songs from different Louisiana genres and write an original song in one of those forms."
+    },
+    {
+     "theme": "Arranging for the band",
+     "description": "Who plays what, when to stop, the intro and the ending — turning a song into a piece a band can play.",
+     "transfer_check": "Write a one-page arrangement (intro, sections, dynamics, ending) for a four-piece band and rehearse it with them once."
+    },
+    {
+     "theme": "The horn section and the rhythm section",
+     "description": "Writing parts: a horn line that fits the vocal, a bass line that locks to the kick, a keyboard part that leaves room.",
+     "transfer_check": "Write and notate or chart a two-horn line and a bass part for an existing song, and hear them played by real players."
+    },
+    {
+     "theme": "Co-writing",
+     "description": "Two people in a room: the split, the credit, and the habits that make collaboration work instead of end.",
+     "transfer_check": "Co-write a complete song with a partner, agree the split in writing before finishing, and each perform the other's contribution."
+    },
+    {
+     "theme": "Demoing the song",
+     "description": "The phone, the sketch and the honest rough: a demo that shows the song, not the production.",
+     "transfer_check": "Record a clear voice-and-instrument demo of an original song, under three minutes, that a stranger can understand on one listen."
+    },
+    {
+     "theme": "Copyright at birth",
+     "description": "What you own the moment a song is fixed, what registration adds, and what a split sheet is for.",
+     "transfer_check": "Fill in a split sheet for a co-written song and complete a copyright-registration form correctly (submission optional and at the writer's choice)."
+    }
+   ]
+  },
+  {
+   "name": "The room: live performance",
+   "prefix": "LV",
+   "credential": "Working Performer",
+   "themes": [
+    {
+     "theme": "The set list",
+     "description": "Building an hour: opener, the lull, the peak, the encore; keys and tempos that flow; the song you cut.",
+     "transfer_check": "Build and play a forty-five-minute set list with written reasoning for its order, then revise it after one performance."
+    },
+    {
+     "theme": "Sound check",
+     "description": "The stage plot, the input list and the monitor mix: getting the sound right before the door opens.",
+     "transfer_check": "Produce a stage plot and input list for your act and run a sound check with a sound engineer using them."
+    },
+    {
+     "theme": "The front line and the back line",
+     "description": "Stage roles: who leads, who cues, who counts in; the bandleader's hand and the sideman's ear.",
+     "transfer_check": "Lead a band through a set — counting in, cueing endings, calling an unplanned tune — and be followed cleanly."
+    },
+    {
+     "theme": "Playing the room",
+     "description": "Reading an audience, the dance floor and the listening room; when to talk, when to play, when to stop.",
+     "transfer_check": "Perform for a live audience and afterwards describe three things you changed in the moment because of what the room did."
+    },
+    {
+     "theme": "The second line and the street",
+     "description": "Performing outdoors and on the move: the brass band tradition, the parade permit, the crowd, the weather.",
+     "transfer_check": "Play in a moving or outdoor ensemble for at least twenty minutes, keeping the tune together without amplification."
+    },
+    {
+     "theme": "The gig economy",
+     "description": "The call, the load-in, the settle-up and the tax form: what a gig actually involves from booking to being paid.",
+     "transfer_check": "Handle one real or simulated gig end to end — confirmation, load-in list, set, invoice — with every document produced."
+    },
+    {
+     "theme": "Stage tech",
+     "description": "Cables, DI boxes, gain structure and feedback: enough live sound to save your own show.",
+     "transfer_check": "Set up a small PA for a duo — correct gain structure, no feedback, a monitor mix — and troubleshoot a fault introduced by the assessor."
+    },
+    {
+     "theme": "The festival stage",
+     "description": "The 45-minute set and the 15-minute changeover: preparation, the advance, the stage manager's clock.",
+     "transfer_check": "Execute a timed festival-style changeover and set under twenty minutes total, meeting a stage manager's schedule."
+    },
+    {
+     "theme": "Merch and the table",
+     "description": "The shirt, the record, the QR code and the person at the table: selling at the show honestly.",
+     "transfer_check": "Plan, cost and run a merch table for one show, reconciling stock and cash at the end."
+    },
+    {
+     "theme": "Working with the venue",
+     "description": "Promoter, sound engineer, the contract, the door split and the guarantee: the deal behind the show.",
+     "transfer_check": "Read a real venue performance agreement, explain its terms in plain words, and negotiate one term with a role-playing promoter."
+    }
+   ]
+  },
+  {
+   "name": "The studio: recording and production",
+   "prefix": "ST",
+   "credential": "Studio Hand",
+   "themes": [
+    {
+     "theme": "Signal path",
+     "description": "Microphone to preamp to converter to the DAW and back to the speakers: the chain and where it breaks.",
+     "transfer_check": "Draw the full signal path of a recording setup and trace a silent channel to its fault."
+    },
+    {
+     "theme": "Microphones",
+     "description": "Dynamic and condenser, polar patterns, placement and the room: the first decision that shapes every recording.",
+     "transfer_check": "Record the same source with three microphone placements and identify each by ear, explaining the differences."
+    },
+    {
+     "theme": "Tracking",
+     "description": "Takes, the click, punching in and comping: capturing a performance and keeping the best of it.",
+     "transfer_check": "Track a song in a DAW with a click, punch in a fix, and comp a lead vocal from three takes."
+    },
+    {
+     "theme": "The producer's job",
+     "description": "The sound, the performance and the decision: what a producer does that a musician and an engineer don't.",
+     "transfer_check": "Produce a two-minute recording for another artist — choosing arrangement, take and sound — and explain each decision."
+    },
+    {
+     "theme": "Editing",
+     "description": "Timing, tuning and the ethics of it: what to fix, what to leave, and telling the artist.",
+     "transfer_check": "Edit a tracked performance for timing and tuning, keeping an untouched version, and defend where you stopped."
+    },
+    {
+     "theme": "Mixing",
+     "description": "Balance, EQ, compression and space: making twenty tracks into one record.",
+     "transfer_check": "Mix a multitrack session to a reference, with documented moves, and improve it after a listen on a second system."
+    },
+    {
+     "theme": "Mastering",
+     "description": "The last mile: loudness, translation, formats and the version that goes out.",
+     "transfer_check": "Master a mix to a streaming loudness target and produce correctly formatted files for streaming and CD."
+    },
+    {
+     "theme": "Session craft",
+     "description": "The session musician's world: the chart, the call, the first take that counts.",
+     "transfer_check": "Play a session part from a chart with two takes, as recorded and judged by the person who called the session."
+    },
+    {
+     "theme": "Home studio",
+     "description": "Building one honestly on a budget: the interface, the treatment, the one good microphone.",
+     "transfer_check": "Design a home studio under a set budget with an itemised list, and record a usable vocal in it."
+    },
+    {
+     "theme": "Deliverables",
+     "description": "Stems, metadata, ISRC codes, artwork specs and the file that actually ships.",
+     "transfer_check": "Prepare a finished release package — masters, stems, metadata, codes, artwork — that passes a distributor's checklist."
+    }
+   ]
+  },
+  {
+   "name": "The industry: rights, money and roles",
+   "prefix": "IN",
+   "credential": "Music Industry Navigator",
+   "themes": [
+    {
+     "theme": "Two copyrights",
+     "description": "The song and the recording are two different properties with two different owners: the fact everything else rests on.",
+     "transfer_check": "Take three real records and identify, from public sources, who owns the composition and who owns the master."
+    },
+    {
+     "theme": "Publishing",
+     "description": "Performing-rights organisations, mechanicals and the publisher's job: how a song earns when it isn't you playing it.",
+     "transfer_check": "Register (or complete the forms to register) with a performing-rights organisation and explain the mechanical and performance royalty for one song."
+    },
+    {
+     "theme": "Royalties",
+     "description": "Streams, radio, sync and live: where each dollar comes from and how little some of them are.",
+     "transfer_check": "Compute the earnings of a song at published rates across four income streams and present them on one page."
+    },
+    {
+     "theme": "The manager",
+     "description": "What a manager does, what they take, and the contract you should never sign without reading.",
+     "transfer_check": "Annotate a sample management agreement clause by clause and name the three you would negotiate."
+    },
+    {
+     "theme": "The booking agent and the promoter",
+     "description": "How a tour is built: the agent's routing, the promoter's risk, the guarantee and the split.",
+     "transfer_check": "Route a five-date regional tour with realistic drives, venues and a costed budget that breaks even."
+    },
+    {
+     "theme": "Labels and distribution",
+     "description": "Major, independent and self-release: what each gives, what each takes, and how a record reaches a phone.",
+     "transfer_check": "Compare three release paths for one recording on cost, ownership and reach, and choose one with reasons."
+    },
+    {
+     "theme": "Sync licensing",
+     "description": "Film, television, advertising and games: the license, the fee and the pitch.",
+     "transfer_check": "Prepare a sync pitch package for one track — metadata, instrumental, one-sheet — to a real brief."
+    },
+    {
+     "theme": "The music-business roles map",
+     "description": "A&R, publicist, tour manager, merch, entertainment lawyer, music supervisor: the jobs around the music.",
+     "transfer_check": "Map twelve music-industry roles with what each does and who pays them, and interview one working person in any of them."
+    },
+    {
+     "theme": "Louisiana's music economy",
+     "description": "Festivals, venues, cultural districts, co-ops and the state's music program: the industry where you live.",
+     "transfer_check": "Produce a one-page map of your parish's or region's music economy — venues, festivals, organisations, training — with sources."
+    },
+    {
+     "theme": "Building a career",
+     "description": "The plan, the team, the day job and the long game: careers in music are built, not struck.",
+     "transfer_check": "Write a two-year music career plan with milestones, income sources and the people you need, and review it with a working musician."
+    }
+   ]
+  }
+ ]
+}

@@ -122,6 +122,21 @@ the full platform assessment now lives in
    public general knowledge, door-openers not exhaustive claims, no
    union local numbers, profiles never diagnoses.
 
+## Stance — named people in the Makers' Hall (v0.48.0)
+
+`data/louisiana/makers.json` names 63 people. The rule: **public record
+only** — published work, recordings, restaurants, exhibitions, awards,
+obituaries, institutions that carry their names — as *examples of a
+craft*, with the file's own `note` (rendered in the app) stating that
+naming is not endorsement, implies no affiliation, and that living
+people appear only through what is already public about them. Working
+local practitioners are deliberately absent: the parish, the school
+board and the trade hall name their own, in person, with consent.
+`tests/test_platform.py` holds the note's two sentences, the parish
+names, the stage ids and region coverage mechanically. A factual
+correction to any entry is a PATCH; removal on a person's or estate's
+request is honoured without discussion.
+
 ## Finding 6 — level words standing in for credential names (v0.45.0)
 
 Found by the new invariant suite (`tests/test_platform.py`), not by a

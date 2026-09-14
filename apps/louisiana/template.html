@@ -194,6 +194,30 @@
   .pcard h4{font-family:Fraunces,Georgia,serif; font-weight:600; font-size:1.02rem; margin:.25em 0 .45em; line-height:1.3}
   .pcard .teach{font-size:.84rem; color:var(--muted); margin:0 0 8px}
   .pcard .src{font-size:.72rem; color:var(--faint)}
+  /* the Makers' Hall (v0.48.0) */
+  .mkpath{overflow-x:auto; margin:8px 0 4px}
+  .mkpath svg{display:block; min-width:640px; width:100%; height:auto; font-family:inherit}
+  .mkpath .mkstage{cursor:pointer}
+  .mkpath .mkstage rect{fill:var(--surface); stroke:var(--line); stroke-width:1.5; transition:stroke .15s}
+  .mkpath .mkstage:hover rect, .mkpath .mkstage:focus rect{stroke:var(--mk,var(--purple))}
+  .mkpath .mkstage[aria-pressed="true"] rect{fill:var(--mk,var(--purple)); stroke:var(--mk,var(--purple))}
+  .mkpath .mkstage[aria-pressed="true"] text{fill:#fff}
+  .mkpath .mkstage:focus{outline:none}
+  .mkpath .mkstage:focus-visible rect{stroke-width:3}
+  .mkpath text{fill:var(--ink); font-size:14px}
+  .mkpath text.sm{font-size:11px; fill:var(--muted)}
+  .mkpath text.n{font-size:11px; fill:var(--faint)}
+  .mkpath .mkarrow{stroke:var(--faint); stroke-width:1.5; fill:none; marker-end:url(#mkhead)}
+  .mkroles{display:flex; flex-wrap:wrap; gap:6px; margin:6px 0 10px}
+  .mkroles .chip{font-weight:500}
+  .mkstagehead{font-size:.72rem; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:var(--mk,var(--purple)); margin:10px 0 2px}
+  .mkcard .mklesson{font-family:Fraunces,Georgia,serif; font-style:italic; font-size:.95rem; margin:0 0 8px; color:var(--ink)}
+  .mkcard details{font-size:.82rem; margin:0 0 8px} .mkcard summary{cursor:pointer; color:var(--mk,var(--purple)); font-weight:600}
+  .mkcard details p{margin:.35em 0 0; color:var(--muted)}
+  .mkmini{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:10px}
+  .mkmini .pcard{padding:12px 14px} .mkmini .pcard h4{font-size:.98rem; margin:.2em 0 .3em}
+  .mkorg{display:flex; gap:10px; padding:7px 0; border-top:1px solid var(--line); font-size:.85rem}
+  .mkorg b{flex:0 0 min(42%,300px)} .mkorg span{color:var(--muted)}
   blockquote.big{font-family:Fraunces,Georgia,serif; font-size:clamp(1.15rem,2.4vw,1.5rem); line-height:1.4; margin:26px 0;
     padding:18px 22px; border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 12px 12px 0}
   blockquote.big footer{font-family:"Instrument Sans",sans-serif; font-size:.8rem; color:var(--muted); margin-top:8px}
@@ -322,6 +346,7 @@
     <button class="tab" data-r="regions">Regions &amp; Trade Halls</button>
     <button class="tab" data-r="roles">Dashboards</button>
     <button class="tab" data-r="institute">The Institute</button>
+    <button class="tab" data-r="makers">Makers' Hall</button>
     <button class="tab" data-r="machines">Agents &amp; Robots</button>
     <button class="tab" data-r="curriculum">Curriculum</button>
   </nav>
@@ -453,6 +478,18 @@
     it works from. Everything entered here stays in this browser; a deployed instance holds its own records.</p>
     <div class="chiprow" id="rolechips"></div>
     <div id="rolebody"></div>
+  </section>
+
+  <!-- ================= MAKERS' HALL (culture trades) ================= -->
+  <section class="view" id="view-makers">
+    <p class="eyebrow"><b>Culture trades</b> · <i>music · culinary · arts &amp; craft</i> · <em>from the first note to the industry</em></p>
+    <h1>The Makers' Hall</h1>
+    <p class="lede">Three trade pathways built for Louisiana — music from creation to the industry's every role,
+    the professional kitchen from knife to ownership, and the art and craft trades from seeing to the working
+    studio — each mapped stage by stage, with the roles it pays, the tracks that teach it, and makers from the
+    public record whose examples a learner in any parish can claim.</p>
+    <div class="chiprow" id="mkchips" role="group" aria-label="Discipline"></div>
+    <div id="mkbody"></div>
   </section>
 
   <!-- ================= INSTITUTE (flagship) ================= -->
@@ -886,6 +923,11 @@ function renderParish(p){
      </div>
 
      <div class="panel span2">
+       <h3>Makers from this parish</h3>
+       <div id="pmakers"></div>
+     </div>
+
+     <div class="panel span2">
        <h3>Parish mission module — custom to this parish</h3>
        <p class="note">A five-rung capstone ladder generated from <i>this parish's</i> narrative world in the fact
        base — the custom layer over the universal dataset. Generated scaffolds: a parish committee refines them
@@ -970,6 +1012,7 @@ function renderParish(p){
   renderMissionLadder("#pmissions", p, true);
   renderReady(p);
   renderParishUnions(p);
+  renderParishMakers(p);
 
   // customizer picker: every catalog pack not already in the plan
   const inPlan = new Set(plan.map(([s])=>s));
@@ -2371,6 +2414,7 @@ const WIDGETS = {
     el.innerHTML += `<p class="note">Notes to yourself — what transferred this week. Stays in this browser.</p>` +
       wNote(el, "student.journal", "This week I proved…"); wWireNotes(el);
   }},
+  {id:"maker", t:"A maker from your parish", r:(p,el)=>{ makerWidget(p, el); }},
  ],
  teacher: [
   {id:"class", t:"Class standing — every student at a glance", span:true, r:(p,el)=>{
@@ -2598,6 +2642,7 @@ const WIDGETS = {
           ${e.note?`<div style="color:var(--muted)">${esc(e.note)}</div>`:""}</div>`).join("")
       : `<p class="note">No witnessed checks recorded yet.</p>`;
   }},
+  {id:"maker", t:"A maker from your parish", r:(p,el)=>{ makerWidget(p, el); }},
  ],
  parent: [
   {id:"childstand", t:"Where my child stands", r:(p,el)=>{
@@ -2662,6 +2707,7 @@ const WIDGETS = {
     wParishPick(el, "rp-parish");
     el.querySelector("[data-pp]").addEventListener("click", ()=> location.hash = "#/parish/"+p.slug);
   }},
+  {id:"maker", t:"A maker from your parish", r:(p,el)=>{ makerWidget(p, el); }},
  ],
  homeschool: [
   {id:"planner", t:"This week", span:true, r:(p,el)=>{
@@ -2690,6 +2736,7 @@ const WIDGETS = {
       <div>${D.corePacks.map(s=>`<button class="chip" data-fh="${s}">${esc((D.catalog[s]||{}).name||s)} →</button>`).join("")}</div>`;
     wFlowChips(el);
   }},
+  {id:"maker", t:"A maker from your parish", r:(p,el)=>{ makerWidget(p, el); }},
  ],
  parishadmin: [
   {id:"overview", t:"Parish overview", r:(p,el)=>{
@@ -3200,6 +3247,182 @@ function say(text){
     });
   } catch(e){}
 }
+
+/* ================= THE MAKERS' HALL (v0.48.0) =================
+   Three culture-trade packs drawn as pathways from creation to the industry,
+   with role ladders, the pack's tracks, organisations, and public-record
+   makers by parish. Everything here is D.makers (data/louisiana/makers.json);
+   naming is not endorsement — see the honesty box the view renders. */
+const MK = {disc:"music", stage:"", parish:""};
+const byName = Object.fromEntries(D.parishes.map(p=>[p.name, p]));
+function mkDisc(){ return (D.makers.disciplines.find(d=>d.id===MK.disc) || D.makers.disciplines[0]); }
+function mkParishLink(name){
+  const p = byName[name];
+  return p ? `<a href="#/parish/${p.slug}">${esc(name)}</a>` : esc(name);
+}
+function makerCard(f, d, compact){
+  return `<div class="pcard mkcard" style="--arc:${d.color}; --mk:${d.color}" data-stage="${esc(f.stage)}" data-parish="${esc(f.parish)}">
+    <span class="pn">${esc(f.years)} · ${esc(f.craft)}</span>
+    <h4>${esc(f.name)}</h4>` +
+    (compact ? `<p class="mklesson">“${esc(f.lesson)}”</p>`
+             : `<p class="teach">${esc(f.did)}</p><p class="mklesson">“${esc(f.lesson)}”</p>
+                <details><summary>The check a learner does</summary><p>${esc(f.check)}</p></details>`) +
+    `<div class="src">${mkParishLink(f.parish)} Parish · ${esc(f.place)} · public record</div></div>`;
+}
+function pathwaySVG(d){
+  const W = 1000, H = 150, n = d.stages.length, bw = 168, gap = (W - 40 - n*bw)/(n-1);
+  const parts = [`<svg viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(d.name)} pathway from creation to industry">
+    <defs><marker id="mkhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--faint)"/></marker></defs>`];
+  d.stages.forEach((st, i) => {
+    const x = 20 + i*(bw+gap), y = 34, makers = d.figures.filter(f=>f.stage===st.id).length;
+    const on = MK.stage===st.id;
+    if (i < n-1) parts.push(`<path class="mkarrow" d="M${x+bw+2},${y+30} L${x+bw+gap-4},${y+30}"/>`);
+    parts.push(`<g class="mkstage" data-stage="${esc(st.id)}" role="button" tabindex="0" aria-pressed="${on}"
+        aria-label="${esc(st.name)}: ${st.roles.length} roles, ${makers} makers">
+      <rect x="${x}" y="${y}" width="${bw}" height="60" rx="12"/>
+      <text x="${x+bw/2}" y="${y+26}" text-anchor="middle" font-weight="700">${esc(st.name)}</text>
+      <text x="${x+bw/2}" y="${y+45}" text-anchor="middle" class="sm"${on?' fill="#fff" style="fill:#fff"':''}>${esc(st.short)}</text>
+      <text x="${x+bw/2}" y="${y+82}" text-anchor="middle" class="n">${st.roles.length} roles · ${makers} makers</text>
+      <text x="${x+bw/2}" y="${y+100}" text-anchor="middle" class="n">track ${i+1} of ${n}</text></g>`);
+  });
+  parts.push(`<text x="20" y="18" class="n">creation</text><text x="${W-20}" y="18" text-anchor="end" class="n">industry</text></svg>`);
+  return parts.join("");
+}
+function renderMakers(){
+  const M = D.makers, host = $("#mkbody"); if (!M || !host) return;
+  const mark = focusMark();
+  const d = mkDisc();
+  if (!d.stages.some(st=>st.id===MK.stage)) MK.stage = "";
+  $("#mkchips").innerHTML = M.disciplines.map(x =>
+    `<button class="chip" data-disc="${esc(x.id)}" aria-pressed="${x.id===d.id}" style="${x.id===d.id?`background:${x.color}; color:#fff; border-color:${x.color}`:""}">${esc(x.name)} <span style="opacity:.75">· ${x.figures.length} makers</span></button>`).join("");
+  $("#mkchips").querySelectorAll("[data-disc]").forEach(b => b.addEventListener("click", ()=>{
+    MK.disc = b.dataset.disc; MK.stage = ""; MK.parish = ""; renderMakers();
+  }));
+
+  const pk = (D.packmeta||{})[d.pack];
+  const isFile = location.protocol === "file:";
+  const stages = MK.stage ? d.stages.filter(st=>st.id===MK.stage) : d.stages;
+  const nroles = d.stages.reduce((a,st)=>a+st.roles.length, 0);
+
+  // parishes that have makers in this discipline, grouped by region for the filter
+  const have = new Map();
+  d.figures.forEach(f => { const p = byName[f.parish]; if (p) have.set(p.slug, p); });
+  const regionsWith = [...new Set([...have.values()].map(p=>p.region))].sort((a,b)=>a-b);
+  const parishOpts = [`<option value="">Whole state — ${d.figures.length} makers</option>`]
+    .concat(regionsWith.map(r => `<option value="r${r}">${esc(D.regions[r])} region — ${d.figures.filter(f=>(byName[f.parish]||{}).region===r).length}</option>`))
+    .concat([...have.values()].sort((a,b)=>a.name.localeCompare(b.name)).map(p =>
+      `<option value="${p.slug}">${esc(p.name)} Parish — ${d.figures.filter(f=>f.parish===p.name).length}</option>`));
+  let figs = d.figures.filter(f => !MK.stage || f.stage===MK.stage);
+  if (MK.parish.startsWith("r")) figs = figs.filter(f => (byName[f.parish]||{}).region===+MK.parish.slice(1));
+  else if (MK.parish) figs = figs.filter(f => (byName[f.parish]||{}).slug===MK.parish);
+
+  host.innerHTML =
+    `<p class="lede" style="margin-top:0">${esc(d.lede)}</p>
+     <div class="panel" style="--mk:${d.color}">
+       <h3>The pathway — creation → industry</h3>
+       <p class="note">Five stages, one track each in <b>${esc(d.packName)}</b> (CX-${esc(d.pack)}). Click a stage to
+       see only its roles and its makers; click again to clear. ${MK.stage ? `<b>Showing: ${esc(stages[0].name)}.</b>` : "Showing every stage."}</p>
+       <div class="mkpath" id="mkpath">${pathwaySVG(d)}</div>
+     </div>
+     <div class="dashgrid" style="margin-top:14px">
+       <div class="panel" style="--mk:${d.color}">
+         <h3>Roles this trade pays — ${MK.stage ? stages[0].roles.length : nroles}</h3>
+         <p class="note">Every job title on the pathway, from the first stage to the industry. Roles, not rungs: a person moves between them for a working life.</p>
+         ${stages.map(st => `<div class="mkstagehead">${esc(st.name)} · ${esc(st.short)}</div>
+           <div class="mkroles">${st.roles.map(r=>`<span class="chip">${esc(r)}</span>`).join("")}</div>`).join("")}
+       </div>
+       <div class="panel" style="--mk:${d.color}">
+         <h3>The tracks that teach it</h3>
+         <p class="note">${esc(d.packName)} — ${pk ? pk.blocks + " blocks, " + pk.tracks.length + " tracks, ten themes each across all five grade bands" : "in the dataset"}.
+         ${isFile ? "Each track opens as a flow session in the Flow Hub alongside this file." : "Open the Flow Hub from a local copy to run a track as a flow session."}</p>
+         <ul class="tracklist">${(pk ? pk.tracks : d.stages.map(st=>({name:st.track, prefix:"", credential:""}))).map((t,i) => {
+           const st = d.stages[i] || {};
+           return `<li${MK.stage && st.id!==MK.stage ? ' style="opacity:.45"' : ""}><span class="mono" style="color:var(--faint); font-size:.74rem">${esc(t.prefix||("0"+(i+1)))}</span> ${esc(t.name)}` +
+             (isFile && t.prefix ? ` <a href="../flow-hub/index.html#track=${esc(d.pack)}/${esc(t.prefix)}" style="font-size:.76rem; white-space:nowrap">flow session →</a>` : "") +
+             (t.credential ? `<span class="cred">${esc(t.credential)}</span>` : "") + `</li>`;}).join("")}</ul>
+       </div>
+       <div class="panel span2" style="--mk:${d.color}">
+         <h3>Makers' Hall — ${figs.length} of ${d.figures.length} makers from the public record</h3>
+         <div class="pickrow" style="margin:6px 0 12px">
+           <label for="mkparish" style="font-size:.85rem; color:var(--muted)">Parish or region</label>
+           <select id="mkparish">${parishOpts.join("")}</select>
+           ${MK.stage || MK.parish ? `<button class="btn" id="mkclear">Clear filters</button>` : ""}
+         </div>
+         <div class="pgrid" id="mkhall">${figs.length ? figs.map(f => makerCard(f, d, false)).join("")
+           : `<p class="note">No public-record maker at this stage in that place yet — the parish names its own.</p>`}</div>
+       </div>
+       <div class="panel span2" style="--mk:${d.color}">
+         <h3>Where to learn it near you — ${d.orgs.length} organisations</h3>
+         <p class="note">Schools, programs, museums, festivals and agencies on the public record. Listing is not a partnership; check each one's current offer directly.</p>
+         ${d.orgs.map(o => `<div class="mkorg"><b>${esc(o.name)}<br><span class="mono" style="font-size:.72rem; font-weight:400">${mkParishLink(o.parish)}</span></b><span>${esc(o.what)}</span></div>`).join("")}
+       </div>
+       <div class="panel span2" id="mkhonest">
+         <h3>How to read this hall</h3>
+         <p class="note" style="font-size:.84rem; color:var(--muted); margin:0">${esc(M.note)}</p>
+       </div>
+     </div>`;
+
+  host.querySelectorAll(".mkstage").forEach(g => {
+    const pick = () => { MK.stage = MK.stage===g.dataset.stage ? "" : g.dataset.stage; renderMakers(); };
+    g.addEventListener("click", pick);
+    g.addEventListener("keydown", e => { if (e.key==="Enter" || e.key===" "){ e.preventDefault(); pick(); } });
+  });
+  const sel = $("#mkparish"); sel.value = MK.parish; if (sel.value !== MK.parish) { MK.parish = ""; }
+  sel.addEventListener("change", ()=>{ MK.parish = sel.value; renderMakers(); });
+  const clr = $("#mkclear"); if (clr) clr.addEventListener("click", ()=>{ MK.stage=""; MK.parish=""; renderMakers(); });
+  focusRestore(mark);
+}
+/* Parish dashboards: the makers tied to this parish, across all three trades;
+   a parish with none yet sees its region's, and is told plainly. */
+function parishMakers(p){
+  const out = [];
+  (D.makers ? D.makers.disciplines : []).forEach(d => d.figures.forEach(f => { if (f.parish===p.name) out.push([f, d]); }));
+  return out;
+}
+function regionMakers(p){
+  const out = [];
+  (D.makers ? D.makers.disciplines : []).forEach(d => d.figures.forEach(f => {
+    const q = byName[f.parish]; if (q && q.region===p.region && q.name!==p.name) out.push([f, d]); }));
+  return out;
+}
+function renderParishMakers(p){
+  const host = $("#pmakers"); if (!host || !D.makers) return;
+  const mine = parishMakers(p), near = regionMakers(p);
+  const trades = D.makers.disciplines.map(d => {
+    const on = p.packs.some(([s])=>s===d.pack);
+    return `<span class="chip${on?" gold":""}">${esc(d.name)}${on ? " · in this parish's plan" : ""}</span>`; }).join(" ");
+  let html = `<p class="note">Music, culinary and art-and-craft makers from the public record with a home or working
+    life in ${esc(p.name)} Parish — examples of a craft, not endorsements. Living local practitioners are named by
+    the parish itself. <a href="#/makers">Open the Makers' Hall →</a></p><div class="chiprow" style="margin:0 0 10px">${trades}</div>`;
+  if (mine.length){
+    html += `<div class="mkmini">${mine.map(([f,d]) => makerCard(f, d, true)).join("")}</div>`;
+  } else {
+    html += `<p class="note" style="margin:0 0 8px"><b>No public-record maker is listed for ${esc(p.name)} yet</b> — the
+      school board, the trade hall and the community name their own. From the ${esc(D.regions[p.region])} region:</p>` +
+      (near.length ? `<div class="mkmini">${near.slice(0,4).map(([f,d]) => makerCard(f, d, true)).join("")}</div>`
+                   : `<p class="note">none listed yet either — the three trade packs still apply; open the Makers' Hall for the whole state.</p>`);
+  }
+  host.innerHTML = html;
+}
+/* Role dashboards (student · teacher · parent · homeschool): one maker at a
+   time, rotating daily, drawn from the parish first, then the region, then
+   the state — with the check a learner can actually do. */
+function makerWidget(p, el){
+  if (!D.makers) return;
+  let pool = parishMakers(p), scope = p.name + " Parish";
+  if (!pool.length){ pool = regionMakers(p); scope = "the " + D.regions[p.region] + " region"; }
+  if (!pool.length){ D.makers.disciplines.forEach(d => d.figures.forEach(f => pool.push([f, d]))); scope = "the whole state"; }
+  const day = Math.floor(Date.now()/864e5);
+  const idx = ((R.makerIdx|0) + day) % pool.length;
+  const [f, d] = pool[idx];
+  el.innerHTML += `<p class="note">From ${esc(scope)} — ${idx+1} of ${pool.length}, rotating daily. An example of a
+    craft from the public record, not an endorsement.</p>
+    <div class="mkmini" style="grid-template-columns:1fr">${makerCard(f, d, false)}</div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px">
+      <button class="btn" id="mk-next">Another maker</button>
+      <a class="btn" href="#/makers/${esc(d.id)}/${esc((byName[f.parish]||{}).slug||"")}" style="text-decoration:none">This trade in the Makers' Hall →</a></div>`;
+  el.querySelector("#mk-next").addEventListener("click", ()=>{ R.makerIdx = (R.makerIdx|0) + 1; saveR(); });
+}
 const TOUR = [
   {hash:"#/state", sel:"#mapbox", t:"Sixty-four parishes", m:"Here's the tile map — click any parish and its own dashboard opens. The two colors are the adopted waves: thirty-three parishes go first, and the rest follow the year after."},
   {hash:"#/state", sel:"#vormap", t:"The state as cells", m:"The recursive Voronoi: regions tessellated by parishes, cell area proportional to population. Hover for the numbers."},
@@ -3208,6 +3431,7 @@ const TOUR = [
   {hash:"#/parish/east-baton-rouge", sel:"#pmissions", t:"The mission module", m:"Five rungs built from this parish's narrative world. Check rungs as an assessor confirms them."},
   {hash:"#/regions", sel:"#autoboard", t:"The Network OS", m:"Eight Trade Hall sections, and eight system automations running over them — watching the live ledger, calling the breaks, tuning the steps, awarding the credentials, and keeping teachers as well as learners in flow."},
   {hash:"#/roles", sel:"#rolechips", t:"Every seat's dashboard", m:"Student, teacher, parent, homeschool, parish and state admin — pick your role and the view is yours: choose which panels show and order them. The learner ledger runs underneath, so every seat sees exactly where each student stands."},
+  {hash:"#/makers", sel:"#mkpath", t:"The Makers' Hall", m:"Three culture trades — music, the kitchen, art and craft — each drawn as a pathway from creation to the industry. Click a stage: the roles it pays, the track that teaches it, and makers from the public record, by parish."},
   {hash:"#/institute", sel:"#arcs", t:"The Legacy Institute", m:"Twelve principles of leadership, ethics and civic duty — with the universal model localizable to any state or country."},
   {hash:"#/machines", sel:"#loopdiagram", t:"Agents and robots", m:"One block, two learners: humans earn credentials, and with consent, machines learn from how it was done."},
   {hash:"#/curriculum", sel:"#vorcurr", t:"The curriculum as cells", m:"Every pack in the ledger, tessellated by family, sized by blocks. That is the whole system on one canvas."},
@@ -3319,6 +3543,7 @@ function route(){
   } else if (h==="regions"){ view="regions"; renderRegions(); }
   else if (h==="roles"){ view="roles"; renderRoles(); }
   else if (h==="institute") view="institute";
+  else if (h.startsWith("makers")){ view="makers"; const q=h.split("/"); if (q[1]) MK.disc=q[1]; if (q[2]) MK.parish=q[2]; renderMakers(); }
   else if (h==="machines") view="machines";
   else if (h==="curriculum") view="curriculum";
   document.querySelectorAll(".view").forEach(el=>el.classList.toggle("active", el.id==="view-"+view));
@@ -3333,7 +3558,7 @@ $("#prand").addEventListener("click", ()=> location.hash="#/parish/"+D.parishes[
 window.addEventListener("hashchange", route);
 
 renderState(); renderParishPicker(); renderRegions(); renderCurriculum();
-renderInstitute(); renderLoop(); initStyles(); renderRoles(); initGuide();
+renderInstitute(); renderMakers(); renderLoop(); initStyles(); renderRoles(); initGuide();
 renderStateVoronoi("#vormap"); renderCurrVoronoi(); renderExpansion();
 renderParish(bySlug["east-baton-rouge"] || D.parishes[0]);
 route();

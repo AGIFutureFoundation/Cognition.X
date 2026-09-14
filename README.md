@@ -15,7 +15,7 @@ The repository carries three things:
 
 | What | Where | Format |
 |---|---|---|
-| The blocks dataset (16,700 blocks, 44 packs) | [`data/`](data/) | CSV + JSON manifest |
+| The blocks dataset (17,450 blocks, 47 packs) | [`data/`](data/) | CSV + JSON manifest |
 | The Education OS app (single-file, offline-capable) | [`apps/education-os/`](apps/education-os/) | HTML |
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
@@ -96,7 +96,14 @@ model), the **Trades Across School Subjects** pack (250 blocks teaching
 the working world inside math, science, ELA and civics from the
 earliest bands), the **Learning States & Universal Access** pack (250
 blocks behind the platform's 20 learner-type access modules — chosen
-supports, never diagnoses), three **legacy-track localizations** (*Civic Leadership
+supports, never diagnoses), three **culture-trade packs** (250 each,
+v0.48.0 — *Music : Creation to Industry*, the whole music trade from
+the ear and the instrument through the song, the room and the studio
+to the industry's rights, money and roles; *Culinary Trades : The
+Louisiana Kitchen*, knife to ownership; and *Arts & Craft Trades :
+Louisiana Makers*, seeing to the working studio — rendered in the
+Louisiana app's Makers' Hall with public-record makers by parish),
+three **legacy-track localizations** (*Civic Leadership
 Legacy : Louisiana / California / Texas*, in the Willie L. Brown Jr.
 Institute model carried by the app — see
 [`docs/wiki/Legacy-Tracks.md`](docs/wiki/Legacy-Tracks.md)), plus the

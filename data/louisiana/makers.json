@@ -1,0 +1,1227 @@
+{
+ "note": "Every person named here appears through the public record only — published work, recordings, restaurants, exhibitions, awards, obituaries and the institutions that carry their names. Naming is not endorsement and implies no affiliation with Cognition.X; nobody here has been asked to vouch for this platform. Living people appear only through what is already public about them. Local practitioners who are still working — the band teacher, the boucherie cook, the bead-maker two streets over — are deliberately left unnamed here: the parish, the school board, the trade hall and the community name their own, in person, with consent. Dates are birth–death years or 'b.' for the living; 'parish' is the home or working parish the figure is most tied to, chosen so that every region of the state has makers a learner can claim. Simulation ≠ certification, and a maker's example ≠ a job offer.",
+ "disciplines": [
+  {
+   "id": "music",
+   "name": "Music",
+   "tag": "from the first note to the industry",
+   "pack": "MUSICIND",
+   "packName": "Music : Creation to Industry",
+   "color": "var(--purple)",
+   "lede": "Louisiana's first export was a sound. The music trades run from the ear to the contract: the instrument and the voice, the song, the room, the studio, and the industry that pays (or fails to pay) for all of it.",
+   "stages": [
+    {
+     "id": "sound",
+     "name": "The sound",
+     "short": "instrument · voice · ear",
+     "track": "The sound: instrument, voice and ear",
+     "roles": [
+      "instrumentalist",
+      "vocalist",
+      "church musician",
+      "brass-band player",
+      "accordion or fiddle player",
+      "music teacher / band director",
+      "private lesson teacher",
+      "instrument repair technician",
+      "luthier / accordion builder",
+      "piano tuner",
+      "music therapist"
+     ]
+    },
+    {
+     "id": "song",
+     "name": "The song",
+     "short": "writing · arranging",
+     "track": "The song: writing and arranging",
+     "roles": [
+      "songwriter",
+      "lyricist",
+      "composer",
+      "arranger",
+      "beatmaker / producer-writer",
+      "copyist / engraver",
+      "film & game composer",
+      "jingle and sync writer"
+     ]
+    },
+    {
+     "id": "room",
+     "name": "The room",
+     "short": "live performance",
+     "track": "The room: live performance",
+     "roles": [
+      "bandleader",
+      "sideman / session player",
+      "touring musician",
+      "DJ",
+      "front-of-house sound engineer",
+      "monitor engineer",
+      "stage manager",
+      "tour manager",
+      "lighting technician",
+      "backline technician",
+      "stagehand / rigger",
+      "house of worship audio-visual tech"
+     ]
+    },
+    {
+     "id": "studio",
+     "name": "The studio",
+     "short": "recording · production",
+     "track": "The studio: recording and production",
+     "roles": [
+      "record producer",
+      "recording engineer",
+      "mix engineer",
+      "mastering engineer",
+      "studio manager",
+      "assistant / runner",
+      "session musician",
+      "vocal producer",
+      "podcast and broadcast engineer",
+      "live-stream / video engineer"
+     ]
+    },
+    {
+     "id": "industry",
+     "name": "The industry",
+     "short": "rights · money · roles",
+     "track": "The industry: rights, money and roles",
+     "roles": [
+      "artist manager",
+      "booking agent",
+      "promoter",
+      "venue operator",
+      "festival producer",
+      "music publisher",
+      "A&R",
+      "independent label owner",
+      "distributor / DSP relations",
+      "sync licensing agent",
+      "royalty & PRO administration",
+      "entertainment lawyer",
+      "music journalist / critic",
+      "radio and playlist programmer",
+      "merchandise and touring logistics",
+      "music education administrator",
+      "nonprofit music program director"
+     ]
+    }
+   ],
+   "orgs": [
+    {
+     "name": "New Orleans Center for Creative Arts (NOCCA)",
+     "parish": "Orleans",
+     "what": "Public pre-professional arts high school (since 1973) — music, theatre, visual arts, dance, creative writing, media and culinary arts — with a long list of working alumni."
+    },
+    {
+     "name": "Ellis Marsalis Center for Music",
+     "parish": "Orleans",
+     "what": "Community music school and performance/recording space in the Musicians' Village (Upper Ninth Ward), opened 2011, founded through Harry Connick Jr. and Branford Marsalis with Habitat for Humanity."
+    },
+    {
+     "name": "Tipitina's Foundation",
+     "parish": "Orleans",
+     "what": "Puts instruments into Louisiana school bands and runs Music Office Co-Ops that give working musicians shared office tools for the business side."
+    },
+    {
+     "name": "The Roots of Music",
+     "parish": "Orleans",
+     "what": "Free after-school marching-band academy (since 2007) combining instrument instruction with academic tutoring and hot meals."
+    },
+    {
+     "name": "New Orleans Jazz & Heritage Foundation — Heritage School of Music",
+     "parish": "Orleans",
+     "what": "The nonprofit that owns Jazz Fest funds a tuition-free music school and grants to musicians and culture bearers."
+    },
+    {
+     "name": "Preservation Hall Foundation",
+     "parish": "Orleans",
+     "what": "Education and archive arm of the hall opened in 1961 — lessons, school residencies and the traditional-jazz repertoire kept in working hands."
+    },
+    {
+     "name": "Trombone Shorty Foundation",
+     "parish": "Orleans",
+     "what": "Instruments, mentoring and industry classes for New Orleans high-school musicians."
+    },
+    {
+     "name": "Loyola University New Orleans — Music Industry Studies",
+     "parish": "Orleans",
+     "what": "Degree program covering the business, law and technology of music alongside performance."
+    },
+    {
+     "name": "University of Louisiana at Lafayette — Music Business",
+     "parish": "Lafayette",
+     "what": "Degree track in the school of music that pairs performance with publishing, licensing and management coursework."
+    },
+    {
+     "name": "Festivals Acadiens et Créoles",
+     "parish": "Lafayette",
+     "what": "Free annual festival (since 1974) of Cajun and Creole music, food and crafts — a working stage for the region's players."
+    },
+    {
+     "name": "Festival International de Louisiane",
+     "parish": "Lafayette",
+     "what": "Francophone world-music festival downtown (since 1987), run largely by volunteers — a full production crew a student can join."
+    },
+    {
+     "name": "Savoy Music Center",
+     "parish": "St. Landry",
+     "what": "Accordion workshop and music store in Eunice (since 1966) whose Saturday-morning jam is an open apprenticeship in Cajun music."
+    },
+    {
+     "name": "Louisiana Entertainment (Louisiana Economic Development)",
+     "parish": "East Baton Rouge",
+     "what": "The state's music program — incentives, industry directories and the Louisiana Music Commission's successor functions."
+    }
+   ],
+   "figures": [
+    {
+     "name": "Buddy Bolden",
+     "years": "1877–1931",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "cornet · bandleader",
+     "stage": "sound",
+     "did": "Credited by the musicians who heard him as the first bandleader to play what became jazz, in New Orleans halls and parks around 1900. No recording of him survives; the music was carried by ear.",
+     "lesson": "The sound comes first — from the room and the ear — before anyone writes it down.",
+     "check": "Learn a melody entirely by ear from a recording, play it back for a partner, then explain one thing you changed on purpose."
+    },
+    {
+     "name": "Louis Armstrong",
+     "years": "1901–1971",
+     "parish": "Orleans",
+     "place": "New Orleans (Third Ward)",
+     "craft": "trumpet · voice",
+     "stage": "sound",
+     "did": "Learned cornet in the Colored Waif's Home band; his Hot Five and Hot Seven recordings (1925–28) changed how everyone after him soloed and sang.",
+     "lesson": "A band with a schedule is a school. Practice inside a group, on time, every week.",
+     "check": "Keep a four-week practice log with a fixed weekly ensemble slot; show the log and play the piece you rehearsed."
+    },
+    {
+     "name": "Jelly Roll Morton",
+     "years": "1890–1941",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "piano · composer",
+     "stage": "song",
+     "did": "Among the first to write jazz down — 'Jelly Roll Blues' was published in 1915 — and his Red Hot Peppers records (1926–30) were arranged as compositions, not jams.",
+     "lesson": "Writing it down is a trade of its own: a chart is how a song leaves your hands and still sounds like you.",
+     "check": "Write a lead sheet (melody, chords, form) for a tune you made up; have a musician who has never heard it play it from the page."
+    },
+    {
+     "name": "Sidney Bechet",
+     "years": "1897–1959",
+     "parish": "Orleans",
+     "place": "New Orleans → Paris",
+     "craft": "clarinet · soprano saxophone",
+     "stage": "room",
+     "did": "Took the New Orleans sound to Europe from 1919 and became a national figure in France in the 1950s.",
+     "lesson": "The room can be anywhere. A craft that is truly yours travels.",
+     "check": "Perform the same three-tune set for two different audiences (a class, a community room) and write what you changed between them and why."
+    },
+    {
+     "name": "Mahalia Jackson",
+     "years": "1911–1972",
+     "parish": "Orleans",
+     "place": "New Orleans (Carrollton)",
+     "craft": "gospel voice",
+     "stage": "sound",
+     "did": "Raised in the Carrollton neighborhood; became the most widely heard gospel singer of the century, and sang at the 1963 March on Washington.",
+     "lesson": "The voice is an instrument you keep for life — breath, health and rest are part of the craft.",
+     "check": "Record yourself singing one piece before and after four weeks of a written warm-up routine; play both and name the differences you hear."
+    },
+    {
+     "name": "Professor Longhair (Henry Roeland Byrd)",
+     "years": "1918–1980",
+     "parish": "Washington",
+     "place": "born Bogalusa; worked New Orleans",
+     "craft": "piano · songwriter",
+     "stage": "song",
+     "did": "His rumba-boogie piano ('Tipitina', 'Go to the Mardi Gras') became the foundation of New Orleans rhythm and blues; the club Tipitina's opened in 1977 partly to give him a place to play.",
+     "lesson": "A personal style is built from what you heard growing up, combined in a way nobody else did.",
+     "check": "Take a rhythm from where you live (a church clap, a second line, a dance beat) and build a two-minute piano or drum piece on it; explain the source."
+    },
+    {
+     "name": "Dave Bartholomew",
+     "years": "1918–2019",
+     "parish": "St. John the Baptist",
+     "place": "born Edgard; worked New Orleans",
+     "craft": "trumpet · producer · arranger",
+     "stage": "studio",
+     "did": "Bandleader, producer and arranger who co-wrote and produced Fats Domino's hits at J&M studio and led the house band that defined the New Orleans R&B sound of the 1950s.",
+     "lesson": "The producer and the arranger are musicians too — the decisions made in the room are theirs.",
+     "check": "Produce a one-song session for another student: choose the tempo, the parts and the takes; deliver a mix and a one-page production note."
+    },
+    {
+     "name": "Fats Domino",
+     "years": "1928–2017",
+     "parish": "Orleans",
+     "place": "New Orleans (Lower Ninth Ward)",
+     "craft": "piano · voice",
+     "stage": "room",
+     "did": "From 'The Fat Man' (1949) on he sold tens of millions of records, toured the world, and kept his home in the Lower Ninth Ward.",
+     "lesson": "Consistency is a performance skill: the same show, night after night, is what a touring musician sells.",
+     "check": "Run the same 15-minute set three times in one week for a live listener; log the errors each time and show the count going down."
+    },
+    {
+     "name": "Cosimo Matassa",
+     "years": "1926–2014",
+     "parish": "Orleans",
+     "place": "New Orleans (North Rampart Street)",
+     "craft": "recording engineer · studio owner",
+     "stage": "studio",
+     "did": "Opened J&M Recording Studio in 1945 — the room where Fats Domino, Little Richard and Ray Charles cut early hits — and let the room sound like the room.",
+     "lesson": "An engineer's first job is to hear honestly. The gear serves the ear, not the other way round.",
+     "check": "Record the same short performance two ways (two mic placements or rooms); play both blind to a listener and document what they heard."
+    },
+    {
+     "name": "Harold Battiste",
+     "years": "1931–2015",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "saxophone · arranger · label founder",
+     "stage": "industry",
+     "did": "Founded AFO (All For One) Records in 1961, a musician-owned label in New Orleans; arranged for Sam Cooke and Sonny & Cher; later taught at the University of New Orleans.",
+     "lesson": "Owning the label, not just the song, is a musical decision too.",
+     "check": "Draft a one-page operating plan for a student-owned label or collective: who owns what, how a dollar splits, and who signs."
+    },
+    {
+     "name": "Allen Toussaint",
+     "years": "1938–2015",
+     "parish": "Orleans",
+     "place": "New Orleans (Gert Town)",
+     "craft": "songwriter · producer · pianist",
+     "stage": "song",
+     "did": "Wrote, arranged and produced hundreds of records ('Working in the Coal Mine', 'Southern Nights', 'Yes We Can Can') and ran the Sea-Saint studio.",
+     "lesson": "A songwriter is a supplier: other people's records are where most songs live.",
+     "check": "Write a song for another singer's voice and range, not your own; have them perform it and note what you rewrote for them."
+    },
+    {
+     "name": "Irma Thomas",
+     "years": "b. 1941",
+     "parish": "Tangipahoa",
+     "place": "born Ponchatoula; New Orleans",
+     "craft": "voice",
+     "stage": "room",
+     "did": "The 'Soul Queen of New Orleans': recording since 1959 ('It's Raining', 'Time Is on My Side'); a Grammy in 2007 for 'After the Rain'.",
+     "lesson": "A working singer's career is long. Hits come and go; the room and the audience stay.",
+     "check": "Plan a 45-minute show with set order, key changes and talk-breaks written down; perform 15 minutes of it and take feedback on pacing."
+    },
+    {
+     "name": "Ellis Marsalis Jr.",
+     "years": "1934–2020",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "piano · teacher",
+     "stage": "sound",
+     "did": "Pianist and teacher at NOCCA and the University of New Orleans who shaped generations of players, among them Wynton and Branford Marsalis, Harry Connick Jr. and Terence Blanchard.",
+     "lesson": "Teaching is a music trade. The best teacher's name is on other people's records.",
+     "check": "Teach one eight-bar phrase to a beginner using a lesson plan you wrote; the beginner plays it back and says what helped."
+    },
+    {
+     "name": "Danny Barker",
+     "years": "1909–1994",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "guitar · banjo · teacher",
+     "stage": "sound",
+     "did": "Rhythm guitarist with Cab Calloway who came home and in 1970 started the Fairview Baptist Church Marching Band, training the players who revived the brass-band tradition.",
+     "lesson": "A tradition survives when someone decides to hand it to children.",
+     "check": "Help run a beginners' rehearsal for a younger group; keep the attendance and tune list for four sessions."
+    },
+    {
+     "name": "Clifton Chenier",
+     "years": "1925–1987",
+     "parish": "St. Landry",
+     "place": "Opelousas",
+     "craft": "piano accordion · bandleader",
+     "stage": "room",
+     "did": "The 'King of Zydeco': combined accordion, rubboard and R&B; Grammy in 1983; NEA National Heritage Fellow in 1984.",
+     "lesson": "A new form is often an old instrument in a new band.",
+     "check": "Arrange a traditional tune for an instrument it was not written for; perform it and explain what you kept and what you changed."
+    },
+    {
+     "name": "Amédé Ardoin",
+     "years": "1898–1942",
+     "parish": "Evangeline",
+     "place": "near Basile",
+     "craft": "accordion · voice",
+     "stage": "song",
+     "did": "Creole accordionist and singer whose 1929 recordings with the fiddler Dennis McGee are the root recordings of both Cajun and zydeco music.",
+     "lesson": "Recordings are how a song outlives a singer. Get it down.",
+     "check": "Make a clean recording of a song from your family or town, with a written note on who it came from; deposit it with the school library."
+    },
+    {
+     "name": "Dewey Balfa",
+     "years": "1927–1992",
+     "parish": "Evangeline",
+     "place": "Bayou Grand Louis",
+     "craft": "fiddle",
+     "stage": "room",
+     "did": "His 1964 appearance at the Newport Folk Festival sparked the Cajun music revival; NEA National Heritage Fellow in 1982; a lifelong advocate for the music in schools.",
+     "lesson": "One honest performance in the right room can change what a whole region thinks of itself.",
+     "check": "Present a piece of local music to an audience unfamiliar with it; introduce it in two minutes, play it, and gather three written reactions."
+    },
+    {
+     "name": "Iry LeJeune",
+     "years": "1928–1955",
+     "parish": "Acadia",
+     "place": "Pointe Noire",
+     "craft": "accordion · voice",
+     "stage": "sound",
+     "did": "Nearly blind from birth, his late-1940s recordings brought the accordion back to the center of Cajun music.",
+     "lesson": "Technique is built around the body you have.",
+     "check": "Identify one physical limit in your own playing and design a two-week practice adaptation; show the before/after recording."
+    },
+    {
+     "name": "Boozoo Chavis",
+     "years": "1930–2001",
+     "parish": "Calcasieu",
+     "place": "Lake Charles",
+     "craft": "accordion · bandleader",
+     "stage": "industry",
+     "did": "Recorded 'Paper in My Shoe' (1954), often called the first zydeco hit, later said he was not paid fairly for it, and left music for decades to train racehorses before returning in the 1980s.",
+     "lesson": "Read what you sign. A hit without a fair contract can cost you the career.",
+     "check": "Read a sample recording contract and mark every clause about money and ownership; explain each in plain words to a partner."
+    },
+    {
+     "name": "Lead Belly (Huddie Ledbetter)",
+     "years": "1888–1949",
+     "parish": "Caddo",
+     "place": "Mooringsport",
+     "craft": "twelve-string guitar · voice",
+     "stage": "song",
+     "did": "Carried a vast repertoire ('Goodnight Irene', 'The Midnight Special') on the twelve-string guitar and recorded for the Library of Congress from 1933.",
+     "lesson": "A repertoire is capital. Learn more songs than you think you need.",
+     "check": "Build a written repertoire list of 20 songs you can play on request; a listener picks five at random and you play them."
+    },
+    {
+     "name": "Buddy Guy",
+     "years": "b. 1936",
+     "parish": "Pointe Coupee",
+     "place": "Lettsworth",
+     "craft": "guitar · voice",
+     "stage": "room",
+     "did": "Left Lettsworth for Chicago in 1957; a Grammy-winning blues guitarist, Rock and Roll Hall of Fame (2005), Kennedy Center Honors (2012).",
+     "lesson": "Leaving is sometimes part of the trade — and the place you left is in every note.",
+     "check": "Interview an older musician about the first place they played for money; write it up in one page with a photo or drawing of the place."
+    },
+    {
+     "name": "Slim Harpo (James Moore)",
+     "years": "1924–1970",
+     "parish": "West Baton Rouge",
+     "place": "Lobdell",
+     "craft": "harmonica · voice",
+     "stage": "studio",
+     "did": "'I'm a King Bee' and 'Baby Scratch My Back' (a No. 1 R&B record in 1966) were cut in J. D. Miller's studio in Crowley for the Excello label — swamp blues from a small-town studio.",
+     "lesson": "A small studio in a small town can make a record the world hears.",
+     "check": "Set up a two-microphone recording in a non-studio room; make a track that a listener says sounds finished, and document the setup."
+    },
+    {
+     "name": "Dr. John (Mac Rebennack)",
+     "years": "1941–2019",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "session musician · piano · producer",
+     "stage": "studio",
+     "did": "Began as a teenage session guitarist and producer in New Orleans studios, then in Los Angeles, before his own records won six Grammys.",
+     "lesson": "Session work is a trade of speed and listening — play what the record needs in one or two takes.",
+     "check": "Learn and record a part for someone else's song within one hour of first hearing it; the writer signs off that it served the song."
+    },
+    {
+     "name": "Marc Savoy",
+     "years": "b. 1940",
+     "parish": "St. Landry",
+     "place": "Eunice",
+     "craft": "accordion builder",
+     "stage": "sound",
+     "did": "Has built Acadian accordions by hand in Eunice since 1966 and hosts the Savoy Music Center's Saturday-morning jam.",
+     "lesson": "Instrument-making is a music trade with a workshop, not a stage.",
+     "check": "Repair or set up one instrument (restring, re-reed, re-pad or intonate) and document the before/after with measurements."
+    },
+    {
+     "name": "Jon Batiste",
+     "years": "b. 1986",
+     "parish": "Jefferson",
+     "place": "Kenner / Metairie",
+     "craft": "piano · composer · bandleader",
+     "stage": "industry",
+     "did": "From a New Orleans musical family, NOCCA and Juilliard; bandleader on national television, an Academy Award for the score of 'Soul' (2021), Album of the Year at the 2022 Grammys.",
+     "lesson": "Composer, bandleader, television, film: one musician can hold several industry roles at once.",
+     "check": "Map three income streams a working musician could have this year in your parish, with a real venue, a real teaching slot and a real license type for each."
+    },
+    {
+     "name": "Trombone Shorty (Troy Andrews)",
+     "years": "b. 1986",
+     "parish": "Orleans",
+     "place": "New Orleans (Tremé)",
+     "craft": "trombone · trumpet · bandleader",
+     "stage": "room",
+     "did": "Led his own brass band as a child in Tremé, toured with Lenny Kravitz at 19, and runs a foundation that puts instruments and industry classes into New Orleans schools.",
+     "lesson": "The bandleader hires, pays, schedules and answers for the band. It is a management job with a horn.",
+     "check": "Book, budget and run one 20-minute student performance: written call sheet, pay split (even if in points), and a debrief note."
+    },
+    {
+     "name": "Quint Davis",
+     "years": "b. 1947",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "festival producer",
+     "stage": "industry",
+     "did": "Helped start the New Orleans Jazz & Heritage Festival in 1970 and has produced it since — stages, schedules, crews and a city's worth of logistics every spring.",
+     "lesson": "The producer's instrument is the schedule.",
+     "check": "Produce a two-stage, four-act school showcase: run-of-show to the minute, stage-plot per act, and a changeover plan that you actually execute."
+    },
+    {
+     "name": "Little Walter (Marion Walter Jacobs)",
+     "years": "1930–1968",
+     "parish": "Avoyelles",
+     "place": "Marksville",
+     "craft": "harmonica · voice",
+     "stage": "sound",
+     "did": "Left Marksville as a boy and, with an amplified harmonica, made 'Juke' (1952) a No. 1 R&B instrumental; inducted into the Rock and Roll Hall of Fame in 2008.",
+     "lesson": "A new tool (the microphone in the hand) can turn a folk instrument into a lead voice.",
+     "check": "Take an acoustic instrument through a microphone and amplifier; find and document two tones you cannot get without it."
+    },
+    {
+     "name": "Jerry Lee Lewis",
+     "years": "1935–2022",
+     "parish": "Concordia",
+     "place": "Ferriday",
+     "craft": "piano · voice",
+     "stage": "room",
+     "did": "From Ferriday to Sun Records in Memphis: 'Whole Lotta Shakin' Goin' On' and 'Great Balls of Fire' (1957); a performing career of more than sixty years across rock and country.",
+     "lesson": "Showmanship is a craft with rules: energy you can repeat, on cue, every night.",
+     "check": "Stage one song twice — once still, once with a planned physical performance — and get an audience vote with reasons."
+    },
+    {
+     "name": "Webb Pierce",
+     "years": "1921–1991",
+     "parish": "Ouachita",
+     "place": "West Monroe",
+     "craft": "voice · publisher",
+     "stage": "industry",
+     "did": "The most-charted country singer of the 1950s ('There Stands the Glass', 'In the Jailhouse Now'); co-founded Cedarwood Publishing in 1953 and owned radio stations — a singer who kept the publishing.",
+     "lesson": "The publishing is where the money lives. Singers who own it keep earning when the radio moves on.",
+     "check": "Split a song's earnings on paper between writer, publisher, performer and label for one sale and one radio play; show who gets what."
+    },
+    {
+     "name": "Tim McGraw",
+     "years": "b. 1967",
+     "parish": "Richland",
+     "place": "Delhi / Start",
+     "craft": "voice · touring artist",
+     "stage": "room",
+     "did": "From Richland Parish to one of country music's biggest touring acts, with dozens of No. 1 singles and arena tours run as a business with hundreds of crew.",
+     "lesson": "A tour is a company on wheels: crew, trucks, schedules, payroll.",
+     "check": "Draw the org chart and day-sheet for a one-night arena show — every crew role, call time and load-out — from public production sources."
+    },
+    {
+     "name": "Tab Benoit",
+     "years": "b. 1967",
+     "parish": "Terrebonne",
+     "place": "Houma",
+     "craft": "guitar · festival founder · label owner",
+     "stage": "industry",
+     "did": "Blues guitarist from Houma who founded the Voice of the Wetlands festival (2004) and his own label, Whiskey Bayou Records — a musician who built his own industry around the coast he plays for.",
+     "lesson": "If the industry you need does not exist where you live, build it: a festival, a label, a cause.",
+     "check": "Write a one-page plan for a benefit concert in your parish — cause, venue, budget, three acts, and how the money is accounted for."
+    }
+   ]
+  },
+  {
+   "id": "culinary",
+   "name": "Culinary",
+   "tag": "knife, fire and the Louisiana table",
+   "pack": "CULINARY",
+   "packName": "Culinary Trades : The Louisiana Kitchen",
+   "color": "var(--gold)",
+   "lede": "The kitchen is a trade with a brigade, a clock and a health code. Louisiana's runs from the knife and the roux through the supply line and the dining room to ownership — and its makers include cooks, hosts, seasoning-makers and the people who feed a whole festival.",
+   "stages": [
+    {
+     "id": "knife",
+     "name": "Knife & fire",
+     "short": "mise en place",
+     "track": "Knife, fire and mise en place",
+     "roles": [
+      "dishwasher / steward",
+      "prep cook",
+      "line cook",
+      "grill & sauté cook",
+      "pastry cook",
+      "baker",
+      "butcher",
+      "fishmonger",
+      "sous chef",
+      "chef de cuisine",
+      "executive chef"
+     ]
+    },
+    {
+     "id": "roux",
+     "name": "The Louisiana table",
+     "short": "roux · gumbo · boil",
+     "track": "The roux and the Louisiana table",
+     "roles": [
+      "gumbo and roux cook",
+      "boucherie cook",
+      "seafood boil master",
+      "boudin and cracklin maker",
+      "king cake baker",
+      "Creole and Cajun home cook",
+      "food historian",
+      "cookbook author",
+      "television & video cook"
+     ]
+    },
+    {
+     "id": "sourcing",
+     "name": "Sourcing & safety",
+     "short": "the supply line",
+     "track": "Sourcing, safety and the supply line",
+     "roles": [
+      "shrimper / oysterman / crawfish farmer",
+      "farmer and market grower",
+      "seafood processor",
+      "food distributor",
+      "purchasing manager",
+      "food safety manager",
+      "health inspector (sanitarian)",
+      "farm-to-school coordinator",
+      "food bank & kitchen logistics"
+     ]
+    },
+    {
+     "id": "front",
+     "name": "Front of house",
+     "short": "hospitality",
+     "track": "Front of house and hospitality",
+     "roles": [
+      "host",
+      "server",
+      "bartender",
+      "barista",
+      "sommelier",
+      "maître d'",
+      "banquet captain",
+      "event and catering coordinator",
+      "hotel food & beverage manager",
+      "festival food operations"
+     ]
+    },
+    {
+     "id": "business",
+     "name": "The business",
+     "short": "menu · money · ownership",
+     "track": "The business: menu, money and ownership",
+     "roles": [
+      "restaurant owner",
+      "general manager",
+      "food-truck operator",
+      "caterer",
+      "pop-up and market vendor",
+      "seasoning / sauce / product maker",
+      "culinary instructor",
+      "food writer and stylist",
+      "restaurant accountant",
+      "franchisee"
+     ]
+    }
+   ],
+   "orgs": [
+    {
+     "name": "John Folse Culinary Institute, Nicholls State University",
+     "parish": "Lafourche",
+     "what": "Four-year culinary degree program in Thibodaux with a teaching restaurant and Louisiana foodways curriculum."
+    },
+    {
+     "name": "New Orleans Culinary & Hospitality Institute (NOCHI)",
+     "parish": "Orleans",
+     "what": "Nonprofit culinary school opened in 2019 — certificate programs in culinary and pastry arts plus short courses and industry training."
+    },
+    {
+     "name": "Delgado Community College — Culinary Arts",
+     "parish": "Orleans",
+     "what": "Associate-degree culinary and pastry programs, the community-college route into the brigade."
+    },
+    {
+     "name": "SOWELA Technical Community College — Culinary Arts",
+     "parish": "Calcasieu",
+     "what": "Lake Charles technical college culinary program serving the southwest."
+    },
+    {
+     "name": "Café Reconcile",
+     "parish": "Orleans",
+     "what": "A working Central City restaurant (since 2000) that trains young people in kitchen and front-of-house work with paid placements."
+    },
+    {
+     "name": "Liberty's Kitchen",
+     "parish": "Orleans",
+     "what": "Youth culinary and life-skills training built around a real café and school-meal operation."
+    },
+    {
+     "name": "Grow Dat Youth Farm",
+     "parish": "Orleans",
+     "what": "Paid youth farm employment in City Park — the sourcing end of the supply line, taught by growing it."
+    },
+    {
+     "name": "Emeril Lagasse Foundation",
+     "parish": "Orleans",
+     "what": "Funds culinary, nutrition and arts education for children, including teaching kitchens in schools."
+    },
+    {
+     "name": "Southern Food & Beverage Museum",
+     "parish": "Orleans",
+     "what": "Museum of the food and drink of the South with a demonstration kitchen and archives."
+    },
+    {
+     "name": "Louisiana Restaurant Association",
+     "parish": "Jefferson",
+     "what": "Statewide industry body — ServSafe food-safety certification classes and the ProStart high-school program."
+    },
+    {
+     "name": "Breaux Bridge Crawfish Festival",
+     "parish": "St. Martin",
+     "what": "Since 1960 — a whole town's food operation for a weekend, from boil to cleanup."
+    },
+    {
+     "name": "Louisiana Department of Health — Sanitarian Services",
+     "parish": "East Baton Rouge",
+     "what": "The permits, inspections and food-safety rules every kitchen in the state runs under."
+    }
+   ],
+   "figures": [
+    {
+     "name": "Lena Richard",
+     "years": "1892–1950",
+     "parish": "Pointe Coupee",
+     "place": "born New Roads; New Orleans",
+     "craft": "chef · author · television cook",
+     "stage": "business",
+     "did": "Trained cook who published 'Lena Richard's Cook Book' (1939, reissued by Houghton Mifflin as 'New Orleans Cook Book' in 1940), ran a cooking school and the Gumbo House restaurant, and in 1949 hosted her own cooking show on WDSU — the first Black woman with a television cooking show.",
+     "lesson": "Write it down, teach it, own the room, and take the new medium when it appears.",
+     "check": "Write, test and print a six-recipe booklet with costed ingredient lists; teach one recipe to a class from your own booklet."
+    },
+    {
+     "name": "Leah Chase",
+     "years": "1923–2019",
+     "parish": "St. Tammany",
+     "place": "born Madisonville; New Orleans (Tremé)",
+     "craft": "chef · restaurateur",
+     "stage": "roux",
+     "did": "Ran Dooky Chase's Restaurant in Tremé for seven decades and published 'The Dooky Chase Cookbook' (1990); the dining room hosted civil-rights organizers in the 1960s.",
+     "lesson": "A restaurant is a civic room. What happens at the table is part of the trade.",
+     "check": "Cook a gumbo from a roux you made, serve it to eight people, and record the timeline from first heat to last plate."
+    },
+    {
+     "name": "Paul Prudhomme",
+     "years": "1940–2015",
+     "parish": "St. Landry",
+     "place": "near Opelousas; New Orleans",
+     "craft": "chef · author · product maker",
+     "stage": "roux",
+     "did": "Youngest of thirteen on a farm near Opelousas; executive chef at Commander's Palace, opened K-Paul's Louisiana Kitchen (1979), wrote 'Chef Paul Prudhomme's Louisiana Kitchen' (1984) with its roux color chart, and built the Magic Seasoning Blends company.",
+     "lesson": "A technique you can explain precisely (the roux chart) is a technique you can sell.",
+     "check": "Make three roux to three named colors, photograph each beside the chart, and write the time and heat for each."
+    },
+    {
+     "name": "John Folse",
+     "years": "b. 1946",
+     "parish": "St. James",
+     "place": "born St. James Parish; institute in Thibodaux",
+     "craft": "chef · food historian",
+     "stage": "sourcing",
+     "did": "Founded Chef John Folse & Company (1978), wrote the 'Encyclopedia of Cajun & Creole Cuisine' (2004), and is the namesake of the culinary institute at Nicholls State University.",
+     "lesson": "Know where every ingredient comes from and who grew, caught or made it.",
+     "check": "Trace one dish's five main ingredients to a named source (farm, boat, mill, market); present the supply map with distances."
+    },
+    {
+     "name": "Willie Mae Seaton",
+     "years": "1916–2015",
+     "parish": "Orleans",
+     "place": "New Orleans (Tremé)",
+     "craft": "cook · restaurateur",
+     "stage": "knife",
+     "did": "Opened Willie Mae's Scotch House in 1957; a James Beard America's Classic in 2005; the restaurant was rebuilt by volunteers after Hurricane Katrina.",
+     "lesson": "Do one thing perfectly for fifty years and the city will rebuild your kitchen.",
+     "check": "Fry chicken to a written standard (brine, dredge, oil temperature, internal temperature) ten times in a month; log every batch's temperatures."
+    },
+    {
+     "name": "Austin Leslie",
+     "years": "1934–2005",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "chef",
+     "stage": "knife",
+     "did": "Chef of Chez Helene (1964–1995), whose fried chicken and Creole soul food inspired the television series 'Frank's Place' (1987).",
+     "lesson": "The line cook's station is a discipline — mise en place before the first ticket.",
+     "check": "Set a station for a six-item menu in 30 minutes; a checker verifies every item, label and temperature before service."
+    },
+    {
+     "name": "Ella Brennan",
+     "years": "1925–2018",
+     "parish": "Orleans",
+     "place": "New Orleans (Garden District)",
+     "craft": "restaurateur · front of house",
+     "stage": "front",
+     "did": "Ran Commander's Palace from 1974, hiring and training Paul Prudhomme and Emeril Lagasse — a career built entirely in the dining room and the office, not the kitchen.",
+     "lesson": "The front of house is a career, not a stepping stone. Someone has to run the room.",
+     "check": "Run the floor for a 20-cover mock service: seating plan, timing sheet, one complaint handled and logged."
+    },
+    {
+     "name": "Antoine Alciatore",
+     "years": "1813–1874",
+     "parish": "Orleans",
+     "place": "New Orleans (French Quarter)",
+     "craft": "restaurateur",
+     "stage": "business",
+     "did": "Founded Antoine's in 1840; still run by his descendants, it is among the oldest family-owned restaurants in the United States.",
+     "lesson": "A restaurant can be a family's trade for generations — if the books and the recipes are both kept.",
+     "check": "Write a one-page succession plan for a family food business: who holds the recipes, who holds the lease, who holds the license."
+    },
+    {
+     "name": "Elizabeth Kettenring Bégué (Madame Bégué)",
+     "years": "1831–1906",
+     "parish": "Orleans",
+     "place": "New Orleans (French Market)",
+     "craft": "cook · restaurateur · author",
+     "stage": "front",
+     "did": "Her late-morning 'second breakfast' for market workers from the 1860s is the origin of the New Orleans brunch; published 'Mme. Bégué's Recipes of Old New Orleans Creole Cookery' (1900).",
+     "lesson": "Feed the people who are already there, at the hour they are hungry.",
+     "check": "Design a service for a real local shift pattern (dockworkers, nurses, market vendors): menu, hours, price, and a two-hour trial run."
+    },
+    {
+     "name": "Tony Chachere",
+     "years": "1905–1995",
+     "parish": "St. Landry",
+     "place": "Opelousas",
+     "craft": "seasoning maker · author",
+     "stage": "business",
+     "did": "An insurance man who published his 'Cajun Country Cookbook' in 1972 at 67 and launched Tony Chachere's Original Creole Seasoning; the family company still makes it in Opelousas.",
+     "lesson": "It is never too late, and the product can be the recipe itself.",
+     "check": "Develop, label and cost a shelf-stable seasoning or sauce; include an ingredient statement and a per-unit cost sheet."
+    },
+    {
+     "name": "Justin Wilson",
+     "years": "1914–2001",
+     "parish": "Tangipahoa",
+     "place": "Roseland",
+     "craft": "television cook · storyteller",
+     "stage": "front",
+     "did": "Safety engineer turned humorist whose public-television series 'Louisiana Cookin'' taught a national audience Cajun cooking through story.",
+     "lesson": "Hospitality is telling the story of the food while you serve it.",
+     "check": "Present one dish to a live audience in five minutes — origin, ingredients, one safety point — and answer two questions."
+    },
+    {
+     "name": "Emeril Lagasse",
+     "years": "b. 1959",
+     "parish": "Orleans",
+     "place": "New Orleans (arrived 1982)",
+     "craft": "chef · restaurateur · television",
+     "stage": "business",
+     "did": "Came to Commander's Palace as executive chef in 1982, opened Emeril's (1990), became a national television chef, and funds children's culinary education through his foundation.",
+     "lesson": "Scale changes the job: at ten restaurants the chef's trade is systems, hiring and training.",
+     "check": "Write the training checklist a new line cook must pass in week one at a restaurant you design; test it on a classmate."
+    },
+    {
+     "name": "Al Copeland",
+     "years": "1944–2008",
+     "parish": "St. Bernard",
+     "place": "Arabi; Jefferson",
+     "craft": "franchise founder",
+     "stage": "business",
+     "did": "Opened the first Popeyes in Arabi in 1972 and grew it to hundreds of restaurants; the company went through bankruptcy in 1991 after a debt-financed expansion, while the brand went on without him.",
+     "lesson": "Growth on borrowed money can cost you the company you built. Learn the balance sheet.",
+     "check": "Build a one-year budget for a single food outlet including a loan; show what happens to cash if sales fall 20%."
+    },
+    {
+     "name": "Drago and Klara Cvitanovich",
+     "years": "Drago 1922–2011",
+     "parish": "Jefferson",
+     "place": "Metairie",
+     "craft": "restaurateurs · oyster trade",
+     "stage": "sourcing",
+     "did": "Croatian immigrants who opened Drago's in 1969 on the Croatian oyster tradition of Plaquemines Parish; the charbroiled oyster the restaurant introduced in 1993 became a Gulf Coast standard.",
+     "lesson": "The plate begins on the water. Know the harvest, the season and the safety rules of your main ingredient.",
+     "check": "Document one local seafood from harvest to plate — season, handling temperatures, the tag or record that travels with it — and cook it."
+    },
+    {
+     "name": "Emile Zatarain",
+     "years": "1865–1926",
+     "parish": "Jefferson",
+     "place": "New Orleans; Gretna",
+     "craft": "food manufacturer",
+     "stage": "sourcing",
+     "did": "Started in 1889 with root beer and mustard; the company that carries his name still makes seafood-boil and rice mixes in Gretna.",
+     "lesson": "Manufacturing food is a trade of consistency: the thousandth box must taste like the first.",
+     "check": "Produce three identical batches of one product by written spec; a blind taster cannot tell them apart."
+    },
+    {
+     "name": "Nina Compton",
+     "years": "b. 1978",
+     "parish": "Orleans",
+     "place": "New Orleans (Bywater)",
+     "craft": "chef · restaurateur",
+     "stage": "knife",
+     "did": "Born in St. Lucia, trained in classical kitchens, opened Compère Lapin in 2015 and was named James Beard Best Chef: South in 2018.",
+     "lesson": "Classical technique plus where you come from equals a kitchen of your own.",
+     "check": "Cook one classical mother-sauce dish and one dish from your own family tradition to the same plating standard; a taster scores both."
+    },
+    {
+     "name": "Lea Johnson",
+     "years": "1893–2001",
+     "parish": "Rapides",
+     "place": "Lecompte",
+     "craft": "restaurateur · pie maker",
+     "stage": "business",
+     "did": "Opened Lea's Lunchroom in Lecompte in 1928 and ran it for the rest of a very long life; its ham sandwiches and pies made the town the legislature's designated Pie Capital of Louisiana.",
+     "lesson": "One small town, one small menu, done the same way for seventy years, is a business.",
+     "check": "Run a one-day pie or sandwich stand with a real cost sheet, a price, a sales count and a profit line — then say what you would change."
+    }
+   ]
+  },
+  {
+   "id": "arts",
+   "name": "Arts & craft",
+   "tag": "seeing, making, showing, working",
+   "color": "var(--green)",
+   "pack": "ARTCRAFT",
+   "packName": "Arts & Craft Trades : Louisiana Makers",
+   "lede": "The art trades are hand trades: drawing for work, materials that fight back, the state's own crafts (beadwork, basketry, floats, ironwork, boats), the rooms where the work is shown, and the studio as a business.",
+   "stages": [
+    {
+     "id": "seeing",
+     "name": "Seeing & drawing",
+     "short": "for work",
+     "track": "Seeing and drawing for work",
+     "roles": [
+      "illustrator",
+      "draftsperson / technical illustrator",
+      "sign painter",
+      "graphic designer",
+      "tattoo artist",
+      "photographer",
+      "storyboard and concept artist",
+      "architectural renderer"
+     ]
+    },
+    {
+     "id": "materials",
+     "name": "Materials",
+     "short": "clay · wood · metal · textile · paint",
+     "track": "Materials: clay, wood, metal, textile, paint",
+     "roles": [
+      "potter / ceramicist",
+      "woodworker / furniture maker",
+      "blacksmith / metal sculptor",
+      "weaver and textile artist",
+      "painter",
+      "muralist",
+      "printmaker",
+      "glass artist",
+      "sculptor",
+      "fabricator"
+     ]
+    },
+    {
+     "id": "traditions",
+     "name": "Louisiana traditions",
+     "short": "the crafts of the state",
+     "track": "Louisiana traditions: the crafts of the state",
+     "roles": [
+      "Mardi Gras Indian suit maker (beadwork)",
+      "float builder and float designer",
+      "costume and mask maker",
+      "split-cane and pine-needle basket weaver",
+      "pirogue and wooden-boat builder",
+      "decoy carver",
+      "ironwork restorer",
+      "quilter",
+      "Cajun accordion / instrument craft",
+      "cemetery and stone craft"
+     ]
+    },
+    {
+     "id": "showing",
+     "name": "Showing the work",
+     "short": "exhibition · public art",
+     "track": "Showing the work: exhibition and public art",
+     "roles": [
+      "gallery owner / director",
+      "curator",
+      "museum preparator / art handler",
+      "framer",
+      "exhibition designer",
+      "public art administrator",
+      "art conservator",
+      "festival and market vendor",
+      "arts council program officer",
+      "art critic and writer"
+     ]
+    },
+    {
+     "id": "working",
+     "name": "The working artist",
+     "short": "money · rights · studio",
+     "track": "The working artist: money, rights and the studio",
+     "roles": [
+      "studio artist (commissions)",
+      "teaching artist",
+      "licensing and print business",
+      "grant-funded artist",
+      "art therapist",
+      "community arts organizer",
+      "foundation and nonprofit director",
+      "design studio owner",
+      "art educator / department head"
+     ]
+    }
+   ],
+   "orgs": [
+    {
+     "name": "New Orleans Center for Creative Arts (NOCCA) — Visual Arts",
+     "parish": "Orleans",
+     "what": "Pre-professional visual-arts training inside the public school day."
+    },
+    {
+     "name": "YAYA Arts Center",
+     "parish": "Orleans",
+     "what": "Young Aspirations / Young Artists (since 1988) — youth learn glass, design and painting and sell the work, keeping a share."
+    },
+    {
+     "name": "Arts Council of New Orleans",
+     "parish": "Orleans",
+     "what": "Runs the city's percent-for-art public-art program and artist markets."
+    },
+    {
+     "name": "Ogden Museum of Southern Art",
+     "parish": "Orleans",
+     "what": "The largest collection of Southern art, with education and teen programs."
+    },
+    {
+     "name": "New Orleans Museum of Art & Besthoff Sculpture Garden",
+     "parish": "Orleans",
+     "what": "The state's oldest fine-arts museum (1911) and an outdoor sculpture garden — a syllabus of public art in one walk."
+    },
+    {
+     "name": "Kern Studios / Mardi Gras World",
+     "parish": "Orleans",
+     "what": "The working float-building studios, open to the public — sculptors, painters, welders and carpenters on one floor."
+    },
+    {
+     "name": "Chitimacha Tribe of Louisiana — Cultural Department",
+     "parish": "St. Mary",
+     "what": "Keeps the split-cane basketry tradition through tribal apprenticeships in Charenton."
+    },
+    {
+     "name": "Coushatta Tribe of Louisiana",
+     "parish": "Allen",
+     "what": "Longleaf pine-needle basketry tradition carried in Elton."
+    },
+    {
+     "name": "Louisiana Folklife Center, Northwestern State University",
+     "parish": "Natchitoches",
+     "what": "Documents the state's folk crafts and runs the Natchitoches-NSU Folk Festival."
+    },
+    {
+     "name": "Louisiana Division of the Arts — Folklife Program",
+     "parish": "East Baton Rouge",
+     "what": "State grants, the folk-artist apprenticeship pattern and the Louisiana Folklife Program's documentation."
+    },
+    {
+     "name": "Louisiana Crafts Guild",
+     "parish": "Lafayette",
+     "what": "Juried guild of working craftspeople — the market side of the craft trades."
+    },
+    {
+     "name": "Melrose Plantation",
+     "parish": "Natchitoches",
+     "what": "The site of Clementine Hunter's African House murals, run as a museum."
+    },
+    {
+     "name": "Hilliard Art Museum, University of Louisiana at Lafayette",
+     "parish": "Lafayette",
+     "what": "University museum with Acadiana-focused exhibitions and school programs."
+    },
+    {
+     "name": "Masur Museum of Art",
+     "parish": "Ouachita",
+     "what": "Monroe's public art museum with juried regional shows."
+    },
+    {
+     "name": "Alexandria Museum of Art",
+     "parish": "Rapides",
+     "what": "Central Louisiana's art museum, with a focus on Louisiana artists."
+    },
+    {
+     "name": "R. W. Norton Art Gallery",
+     "parish": "Caddo",
+     "what": "Shreveport museum and gardens with a permanent collection and school tours."
+    },
+    {
+     "name": "LSU Museum of Art",
+     "parish": "East Baton Rouge",
+     "what": "Shaw Center collection including Newcomb Pottery and Louisiana artists."
+    }
+   ],
+   "figures": [
+    {
+     "name": "Clementine Hunter",
+     "years": "c. 1886–1988",
+     "parish": "Natchitoches",
+     "place": "Melrose Plantation",
+     "craft": "painter",
+     "stage": "materials",
+     "did": "Began painting in her fifties with paints left behind at Melrose; painted the African House murals (1955) and an estimated 5,000 or more works; among the first Black artists given a solo show at the New Orleans Museum of Art.",
+     "lesson": "You can begin late, with what is at hand, and paint what you know.",
+     "check": "Make a series of six paintings of ordinary work you have watched in your own parish; hang and title them for a school showing."
+    },
+    {
+     "name": "John T. Scott",
+     "years": "1940–2007",
+     "parish": "Orleans",
+     "place": "New Orleans (Ninth Ward; Xavier University)",
+     "craft": "sculptor · printmaker · teacher",
+     "stage": "showing",
+     "did": "Kinetic sculptures inspired by the diddley bow, public works across the city, a MacArthur Fellowship (1992), and forty years teaching at Xavier University.",
+     "lesson": "Public art is engineered: wind, weight, weather and the people who walk under it.",
+     "check": "Design a small outdoor piece with a materials list, a load and weather note, and a maintenance plan; build a scale model."
+    },
+    {
+     "name": "Big Chief Allison 'Tootie' Montana",
+     "years": "1922–2005",
+     "parish": "Orleans",
+     "place": "New Orleans (Seventh Ward)",
+     "craft": "Mardi Gras Indian suit maker · lather",
+     "stage": "traditions",
+     "did": "Big Chief of the Yellow Pocahontas for 52 years; a lather (plasterer) by trade who turned the beaded suit into three-dimensional sculpture; NEA National Heritage Fellow in 1987.",
+     "lesson": "A day trade and a masterpiece can share the same hands — the suit is built like a building.",
+     "check": "Complete a beaded or sewn panel from your own design, log the hours, and present it with the design drawing."
+    },
+    {
+     "name": "Ada Thomas",
+     "years": "1924–1992",
+     "parish": "St. Mary",
+     "place": "Charenton (Chitimacha)",
+     "craft": "split-cane basket weaver",
+     "stage": "traditions",
+     "did": "Chitimacha weaver who kept the double-weave split-cane basket alive when few still made it; NEA National Heritage Fellow in 1983.",
+     "lesson": "Some crafts are held by a handful of people; learning one is an act of keeping.",
+     "check": "Learn one traditional weave from a documented source, produce a finished small piece, and record who taught you and where the material came from."
+    },
+    {
+     "name": "Sister Gertrude Morgan",
+     "years": "1900–1980",
+     "parish": "Orleans",
+     "place": "New Orleans (Lower Ninth Ward)",
+     "craft": "painter · preacher",
+     "stage": "seeing",
+     "did": "Street preacher who painted her visions on cardboard, window shades and paper; her work is now held by major museums.",
+     "lesson": "Materials do not have to be expensive to be permanent. Draw what you see, on what you have.",
+     "check": "Fill a 30-page sketchbook in a month, dated daily, from direct observation; present the five best with what each taught you."
+    },
+    {
+     "name": "George Rodrigue",
+     "years": "1944–2013",
+     "parish": "Iberia",
+     "place": "New Iberia",
+     "craft": "painter · foundation founder",
+     "stage": "working",
+     "did": "Painted Cajun life and, from 1984, the Blue Dog; his foundation funds art education and scholarships across the state.",
+     "lesson": "An image can be a business — prints, licensing, galleries — and a business can fund the next generation.",
+     "check": "Price one artwork three ways (original, limited print, license) with a written rationale; explain what rights the buyer gets in each."
+    },
+    {
+     "name": "Blaine Kern Sr.",
+     "years": "1927–2020",
+     "parish": "Orleans",
+     "place": "New Orleans (Algiers)",
+     "craft": "sign painter · float builder",
+     "stage": "traditions",
+     "did": "Started as a sign painter, built his first floats in 1947, and grew Kern Studios into the largest float-building business in the world — now Mardi Gras World.",
+     "lesson": "A float is sculpture, carpentry, painting, electrics and a deadline. Learn the whole shop.",
+     "check": "Build a tabletop float for a school parade with a drawn design, a materials budget and a build log across three trades (structure, sculpture, paint)."
+    },
+    {
+     "name": "Bror Anders Wikstrom",
+     "years": "1854–1909",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "float designer · painter",
+     "stage": "traditions",
+     "did": "Swedish-born artist who designed floats and costumes for the Rex and Proteus parades in the 1880s–1900s; his watercolor designs are in museum collections.",
+     "lesson": "Design is the drawing that everyone else builds from.",
+     "check": "Produce a full design package for one float — elevation, color study, costume sketch — that a builder could follow without asking you."
+    },
+    {
+     "name": "Enrique Alférez",
+     "years": "1901–1999",
+     "parish": "Orleans",
+     "place": "New Orleans (City Park)",
+     "craft": "sculptor",
+     "stage": "showing",
+     "did": "Mexican-born sculptor whose WPA-era figures, reliefs and fountains stand across City Park, Lakefront Airport and the old Charity Hospital.",
+     "lesson": "Public art gets commissioned, budgeted and approved before it gets carved.",
+     "check": "Write a public-art proposal for a real site in your parish: sketch, materials, budget, site owner and the approval it would need."
+    },
+    {
+     "name": "Ida Kohlmeyer",
+     "years": "1912–1997",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "painter · sculptor · teacher",
+     "stage": "working",
+     "did": "Began painting at 37, studied with Hans Hofmann, and became one of the South's leading abstract artists while teaching at Newcomb College.",
+     "lesson": "A studio practice is built in years: a consistent body of work is what galleries and museums can show.",
+     "check": "Make ten works in one consistent series with a written artist statement; a reviewer confirms they read as one body of work."
+    },
+    {
+     "name": "Sadie Irvine",
+     "years": "1887–1970",
+     "parish": "Orleans",
+     "place": "Newcomb College",
+     "craft": "pottery designer",
+     "stage": "materials",
+     "did": "The most prolific designer at Newcomb Pottery (1895–1940), known for the moonlit live-oak motif, and later taught at Newcomb.",
+     "lesson": "Craft can be a paid job in a working pottery, with a signature you keep.",
+     "check": "Design and decorate a set of four matching pieces to a written spec; fire them and mark each with a maker's mark you designed."
+    },
+    {
+     "name": "E. J. Bellocq",
+     "years": "1873–1949",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "commercial photographer",
+     "stage": "seeing",
+     "did": "A working commercial photographer whose Storyville portraits, found after his death, became a landmark of American photography.",
+     "lesson": "Commercial work is where most photographers earn; the personal work can matter more later.",
+     "check": "Shoot a paid-style assignment (product, portrait or documentation) to a client brief, deliver edited files, and invoice it on paper."
+    },
+    {
+     "name": "Lin Emery",
+     "years": "1926–2021",
+     "parish": "Orleans",
+     "place": "New Orleans",
+     "craft": "kinetic sculptor",
+     "stage": "showing",
+     "did": "Made aluminum sculptures moved by wind and water for public sites across the city and the country.",
+     "lesson": "A piece for a plaza must survive the plaza: engineer it, then make it beautiful.",
+     "check": "Build a small wind-driven kinetic piece; test it outdoors for a week and log any failure and your fix."
+    },
+    {
+     "name": "Clyde Connell",
+     "years": "1901–1998",
+     "parish": "Caddo",
+     "place": "Belcher; Lake Bistineau",
+     "craft": "sculptor",
+     "stage": "materials",
+     "did": "Began her mature work in her sixties, building totem-like sculptures from paper pulp, wood and found iron beside Lake Bistineau; shown nationally from the 1980s.",
+     "lesson": "Materials can be the place itself — mud, pulp, scrap — worked until they hold.",
+     "check": "Make a freestanding sculpture at least 60 cm tall from found and recycled materials that survives a week outdoors; document the joins."
+    }
+   ]
+  }
+ ]
+}

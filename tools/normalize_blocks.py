@@ -81,6 +81,9 @@ PACK_SLUGS = {
     "Trades Across School Subjects": "TRADESUBJ",
     "Learning States & Universal Access": "ACCESS",
     "Cognition.X : States OS": "STATEOS",
+    "Music : Creation to Industry": "MUSICIND",
+    "Culinary Trades : The Louisiana Kitchen": "CULINARY",
+    "Arts & Craft Trades : Louisiana Makers": "ARTCRAFT",
 }
 
 
