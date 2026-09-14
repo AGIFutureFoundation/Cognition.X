@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.49.1** | The investor walkthrough (`docs/WALKTHROUGH.md`): the deep features and learning system in one document, every number tied to the dataset |
+| **v0.50.0** | The film kit speaks: offline narration (piper) in the film driver, five narrated feature shorts for social channels, and the 15-slide pitch deck generator with its 7-minute narrated video |
+| v0.49.1 | The investor walkthrough (`docs/WALKTHROUGH.md`): the deep features and learning system in one document, every number tied to the dataset |
 | v0.49.0 | The film kit: two product films rendered from the apps themselves by `tools/film/` (*The Flow Zone* 3:04 · *Training that proves itself* 2:15) and the production briefs for their cinematic cuts |
 | v0.48.0 | The culture trades: three new trade packs — *Music : Creation to Industry* (the whole music trade, ear to industry), *Culinary Trades : The Louisiana Kitchen* and *Arts & Craft Trades : Louisiana Makers* — and the Louisiana app's Makers' Hall: creation→industry pathway maps, 154 industry roles, 63 public-record makers by parish, 42 organisations, parish and role-dashboard maker panels — 17,450 blocks / 47 packs |
 | v0.47.0 | The 24 adversarially-verified review findings closed: a dead standing panel, silent save failures, focus theft on every re-render, a credential that asserted unseen witnessing, CI never re-deriving 60% of the dataset, a latent slug collision, half-enforced track shape, three keyboard traps, and validated ledger imports |

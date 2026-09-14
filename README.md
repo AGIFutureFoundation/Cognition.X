@@ -22,7 +22,7 @@ The repository carries three things:
 | Cognition.X Trades Network (222 union & trade entries, 6 regions) | [`apps/trades-network/`](apps/trades-network/) | HTML |
 | Cognition.X States (custom curriculum for all 50 states) | [`apps/states/`](apps/states/) | HTML |
 | Cognition.X Platform (the working model: system map + runnable loop) | [`apps/platform/`](apps/platform/) | HTML |
-| The film kit (two product films rendered from the apps themselves) | [`tools/film/`](tools/film/) · [briefs](docs/film/PRODUCTION_BRIEFS.md) | Node + ffmpeg |
+| The film kit (product films, five narrated feature shorts and the pitch deck, rendered from the apps themselves) | [`tools/film/`](tools/film/) · [briefs](docs/film/PRODUCTION_BRIEFS.md) | Node + ffmpeg |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
 
 ## Quick start

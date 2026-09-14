@@ -1,0 +1,22 @@
+const { run, app } = require('./film');
+run('social-3-the-makers-hall', [
+ {card:{kicker:'Cognition.X Louisiana · the Makers\' Hall', title:'From the first note to <b>the industry.</b>', sub:'Music, the Louisiana kitchen, art and craft — three trade pathways, taught through makers from the public record.', lines:['3 trades','154 roles','63 makers'], theme:'gold'},
+  say:"Music, from the first note to the industry. The kitchen, from knife to ownership. Art and craft, from seeing to the working studio. This is the Makers' Hall."},
+ {url:app('louisiana','#/makers'), chapter:'The pathway', caption:'Five stages — one track each — from creation to industry.',
+  say:"Three culture trades, each drawn as a pathway from creation to industry. Five stages, one track each, ten themes across every grade band.",
+  steps:[{scroll:'#mkpath', dwell:1800},{hover:'#mkpath .mkstage[data-stage="song"]', dwell:900}]},
+ {url:app('louisiana','#/makers'), chapter:'The industry', caption:'The roles it pays, the track that teaches it, the makers who worked it.',
+  say:"Click a stage: the roles it pays — publisher, booking agent, sync licensing, royalty administration, entertainment lawyer — the track that teaches it, and the makers who worked it.",
+  steps:[{scroll:'#mkpath', dwell:600},{click:'#mkpath .mkstage[data-stage="industry"]', dwell:1600},{drift:600, ms:2400}]},
+ {url:app('louisiana','#/makers/music/orleans'), chapter:'By parish', caption:'Orleans: Cosimo Matassa · Harold Battiste · Allen Toussaint · Trombone Shorty.',
+  say:"Filter by parish. Cosimo Matassa's studio on Rampart Street. Harold Battiste's musician-owned label. Boozoo Chavis, who learned the hard way what a contract says.",
+  steps:[{scroll:'#mkhall', dwell:1200},{drift:700, ms:2600}]},
+ {url:app('louisiana','#/makers/culinary'), chapter:'The Louisiana kitchen', caption:'Lena Richard · Leah Chase · Paul Prudhomme · Ella Brennan.',
+  say:"The Louisiana kitchen. Lena Richard, the first Black woman with a television cooking show, in nineteen forty-nine. Leah Chase. Paul Prudhomme's roux chart. Ella Brennan, who ran the room.",
+  steps:[{scroll:'#mkpath', dwell:1000},{scroll:'#mkhall', dwell:1000},{drift:700, ms:2400}]},
+ {url:app('louisiana','#/makers/arts'), chapter:'Art & craft', caption:'Clementine Hunter · Tootie Montana · Ada Thomas · Blaine Kern.',
+  say:"And the art and craft trades: Clementine Hunter, Tootie Montana's beaded suits, Ada Thomas's split-cane baskets, Blaine Kern's float shop. Every name from the public record; naming is not endorsement. The living practitioner two streets over is for the parish to name.",
+  steps:[{scroll:'#mkpath', dwell:900},{scroll:'#mkhall', dwell:900},{drift:600, ms:2200},{scroll:'#mkhonest', dwell:2200}]},
+ {card:{kicker:'Cognition.X Louisiana', title:'Every parish has <b>makers.</b>', sub:'Open source, offline-first. github.com/AGIFutureFoundation/Cognition.X', lines:['music','culinary','arts & craft'], theme:'gold'},
+  say:"Every parish has makers. Cognition X Louisiana."},
+]).then(()=>console.log('DONE 3')).catch(e=>{console.error(e);process.exit(1);});

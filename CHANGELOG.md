@@ -4,6 +4,34 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.50.0] — 2026-09-14
+
+The film kit speaks. Narration, five feature shorts for social channels,
+and the pitch deck — all rendered from the platform's own apps and an
+offline voice; no external service, no credits.
+
+### Added
+- **Narration in `tools/film/film.js`** — a scene's `say` text is
+  rendered by piper (offline neural TTS) into a clip; the scene is held
+  at least as long as the clip, the audio track is assembled from the
+  recorded scene start times, and ffmpeg muxes it (loudness-normalised).
+  Scenes without `say` record silent, as before.
+- **Five narrated feature shorts** (`tools/film/social1.js` … `social5.js`,
+  1080p, 72–90 s): *Sixty-four parishes* (Louisiana dashboards, a parish
+  plan, its makers, the Network OS); *The Flow Zone* (a Flow Hub session,
+  the engine's three answers, dashboard swarms, access modules); *The
+  Makers' Hall* (the pathway, the industry stage, makers by parish, the
+  kitchen, art and craft, the honesty note); *Proof, not attendance* (the
+  runnable loop to a signed, verified, tamper-checked record); *Leadership
+  as craft* (the Legacy Institute: principles, the record, the Leadership
+  Ladder, the Fellowship pattern, any state, the disclaimer).
+- **The pitch deck** (`tools/film/deck/`) — `gen.py` writes a 15-slide
+  16:9 HTML deck on the platform's own tokens and faces (keyboard/click
+  navigation) plus per-slide narration; `shots.js` captures the real app
+  screens the slides embed; `rec.js` records it to the narration timings
+  and muxes — a 7-minute narrated pitch video. The opening slide is dataset
+  row CX-MUSICIND-0054, unedited; every number is the manifest's.
+
 ## [0.49.1] — 2026-09-14
 
 ### Documentation

@@ -1,5 +1,11 @@
 # Cognition.X — film production briefs
 
+> **v0.50.0:** the kit now narrates (piper, offline). Five feature shorts
+> (`tools/film/social1.js` … `social5.js`) and the pitch deck
+> (`tools/film/deck/`) ship with their narration in the scene files; the
+> two product films below can be narrated the same way by adding `say`
+> to their scenes — the scripts under each film are written for that.
+
 Two short films, each delivered two ways:
 
 1. **The product cut** — recorded from the real apps at 1920×1080 by
