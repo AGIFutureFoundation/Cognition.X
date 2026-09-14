@@ -9,6 +9,14 @@
  *     node tools/film/scenes1.js     # The Flow Zone (education · Louisiana · Institute)
  *     node tools/film/scenes2.js     # Training that proves itself (organisations · SmartCiti.X)
  *
+ *     node tools/film/social1.js … social5.js   # the five narrated feature shorts
+ *
+ * Narration: a scene's `say` text is rendered offline by piper (pip install
+ * piper-tts; a voice such as en-us-ryan-high.onnx + .json in tools/film/voices/,
+ * or CX_PIPER_VOICE) — the scene is held at least as long as its clip, the
+ * track is assembled from the recorded scene start times, and ffmpeg muxes
+ * it. Scenes without `say` record silent.
+ *
  * Needs Playwright + a Chromium build (CX_CHROMIUM, default the project
  * environment's /opt/pw-browsers/chromium) and ffmpeg (CX_FFMPEG, else the
  * imageio-ffmpeg wheel, else PATH). Output lands in tools/film/out/ (git-
@@ -26,6 +34,30 @@ const app = (a, hash='') => `file://${ROOT}/${a}/index.html${hash}`;
 // ffmpeg: CX_FFMPEG, else the imageio-ffmpeg wheel's binary, else whatever is on PATH
 const FF = process.env.CX_FFMPEG || (()=>{ try { return require('child_process').execSync('python3 -c "import imageio_ffmpeg as f;print(f.get_ffmpeg_exe())"', {stdio:['ignore','pipe','ignore']}).toString().trim(); } catch(e){ return 'ffmpeg'; } })();
 const CHROME = process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium';
+
+const VOICE = process.env.CX_PIPER_VOICE || path.resolve(__dirname, 'voices', 'en-us-ryan-high.onnx');
+// Narration: piper (offline neural TTS) renders each scene's `say` to a wav;
+// the scene is held at least as long as its clip, and the track is assembled
+// from the recorded scene start times so voice and picture stay aligned.
+function wavInfo(file){
+  const b = fs.readFileSync(file); let off = 12, byteRate = 0, dataLen = 0;
+  while (off + 8 <= b.length){ const id = b.toString('ascii', off, off+4), len = b.readUInt32LE(off+4);
+    if (id === 'fmt ') byteRate = b.readUInt32LE(off+16); if (id === 'data'){ dataLen = len; break; } off += 8 + len + (len % 2); }
+  return {dur: dataLen / byteRate, sampleRate: b.readUInt32LE(24), channels: b.readUInt16LE(22), bits: b.readUInt16LE(34)};
+}
+function synth(text, file){
+  if (!fs.existsSync(file)) execFileSync('python3', ['-m','piper','-m', VOICE, '--length-scale','1.04','--sentence-silence','0.3','-f', file], {input: text, stdio:['pipe','ignore','pipe']});
+  return wavInfo(file).dur;
+}
+function buildTrack(clips, out){ // clips: [{file, at}] seconds; writes a 16-bit PCM wav with silence between
+  const info = wavInfo(clips[0].file), sr = info.sampleRate, bps = info.channels * info.bits / 8;
+  const parts = []; let pos = 0;
+  for (const c of clips){ const start = Math.round(c.at * sr) * bps; if (start > pos){ parts.push(Buffer.alloc(start - pos)); pos = start; }
+    const b = fs.readFileSync(c.file); let off = 12; while (off + 8 <= b.length){ const id = b.toString('ascii', off, off+4), len = b.readUInt32LE(off+4); if (id === 'data'){ const d = b.subarray(off+8, off+8+len); parts.push(d); pos += d.length; break; } off += 8 + len + (len % 2); } }
+  const data = Buffer.concat(parts); const h = Buffer.alloc(44);
+  h.write('RIFF',0); h.writeUInt32LE(36+data.length,4); h.write('WAVE',8); h.write('fmt ',12); h.writeUInt32LE(16,16); h.writeUInt16LE(1,20); h.writeUInt16LE(info.channels,22); h.writeUInt32LE(sr,24); h.writeUInt32LE(sr*bps,28); h.writeUInt16LE(bps,32); h.writeUInt16LE(info.bits,34); h.write('data',36); h.writeUInt32LE(data.length,40);
+  fs.writeFileSync(out, Buffer.concat([h, data]));
+}
 
 const OVERLAY = `
 (function(){
@@ -72,24 +104,31 @@ async function drift(page, px, ms){ // slow scroll over ms
 
 async function run(name, scenes){
   const outdir = path.resolve(__dirname, 'out', name); fs.rmSync(outdir, {recursive:true, force:true}); fs.mkdirSync(outdir, {recursive:true});
+  // narration first, so every scene knows how long it must hold
+  scenes.forEach((sc, i) => { if (sc.say){ sc.audio = path.join(outdir, `say${i+1}.wav`); sc.sayDur = synth(sc.say, sc.audio); } });
   const b = await chromium.launch({executablePath: CHROME});
   const ctx = await b.newContext({viewport:{width:1920,height:1080}, recordVideo:{dir:outdir, size:{width:1920,height:1080}}, reducedMotion:'no-preference'});
   const page = await ctx.newPage();
   page.on('pageerror', e=>console.log('  pageerror', e.message.slice(0,80)));
+  const T0 = Date.now(), clips = [];
+  const holdFor = async (sc, started) => { if (!sc.sayDur) return; const left = (sc.sayDur + 0.6) * 1000 - (Date.now() - started); if (left > 0) await page.waitForTimeout(left); };
   let i=0;
   for (const sc of scenes){
     i++;
     if (sc.card){
       const file = path.join(outdir, `card${i}.html`);
-      const u = card(file, {...sc.card, dur: sc.dur||5});
+      const dur = Math.max(sc.dur||5, sc.sayDur ? sc.sayDur + 0.8 : 0);
+      const u = card(file, {...sc.card, dur});
       console.log(`[${i}] card ${sc.card.title.replace(/<[^>]+>/g,'')}`);
-      await page.goto(u); await page.waitForTimeout((sc.dur||5)*1000);
+      await page.goto(u); if (sc.audio) clips.push({file: sc.audio, at: (Date.now()-T0)/1000 + 0.35});
+      await page.waitForTimeout(dur*1000);
       continue;
     }
     console.log(`[${i}] ${sc.url.split('/apps/')[1]} — ${sc.caption}`);
     await page.goto('about:blank'); // every scene starts from a fresh document
     await page.goto(sc.url); await page.waitForTimeout(sc.settle||900);
     await page.evaluate(OVERLAY);
+    const started = Date.now(); if (sc.audio) clips.push({file: sc.audio, at: (started-T0)/1000 + 0.3});
     await page.evaluate(()=>window.cxFade(false));
     await page.evaluate(([c,t])=>window.cxCap(c,t), [sc.chapter||'', sc.caption||'']);
     await page.waitForTimeout(600);
@@ -105,12 +144,19 @@ async function run(name, scenes){
       else if (st.eval){ await page.evaluate(st.eval); await page.waitForTimeout(st.dwell||600); }
     }
     await page.waitForTimeout(sc.hold||1200);
+    await holdFor(sc, started);
     await page.evaluate(()=>window.cxFade(true)); await page.waitForTimeout(650);
   }
   await page.close(); await ctx.close(); await b.close();
   const webm = fs.readdirSync(outdir).find(f=>f.endsWith('.webm'));
   const mp4 = path.resolve(__dirname, 'out', name + '.mp4');
-  execFileSync(FF, ['-y','-hide_banner','-loglevel','error','-i', path.join(outdir, webm), '-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-movflags','+faststart','-r','25', mp4]);
+  const vargs = ['-c:v','libx264','-preset','slow','-crf','24','-pix_fmt','yuv420p','-movflags','+faststart','-r','25'];
+  if (clips.length){
+    const track = path.join(outdir, 'track.wav'); buildTrack(clips, track);
+    execFileSync(FF, ['-y','-hide_banner','-loglevel','error','-i', path.join(outdir, webm), '-i', track, ...vargs, '-c:a','aac','-b:a','128k','-af','highpass=f=80,loudnorm=I=-18:TP=-1.5:LRA=9','-shortest', mp4]);
+  } else {
+    execFileSync(FF, ['-y','-hide_banner','-loglevel','error','-i', path.join(outdir, webm), ...vargs, mp4]);
+  }
   console.log('wrote', mp4, (fs.statSync(mp4).size/1e6).toFixed(1)+' MB');
   return mp4;
 }
