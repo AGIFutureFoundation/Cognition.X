@@ -561,7 +561,8 @@
    "sim": "Produce the rigging plot and load-in schedule for {site}, with every point's weight and the show-stop authority named",
    "packs": [
     "ARTS",
-    "MAKE"
+    "MAKE",
+    "ARTCRAFT"
    ],
    "subjects": [
     "math",
@@ -576,7 +577,8 @@
    "sim": "Run a banquet line simulation scaled to {site}: mise en place, allergy chain of custody, and the 200-cover clock",
    "packs": [
     "FOOD",
-    "CORP"
+    "CORP",
+    "CULINARY"
    ],
    "subjects": [
     "math",
@@ -650,7 +652,8 @@
    "sim": "Contract, rehearse and run a three-tune set for {site} on union terms: the call, the book, the split, the encore",
    "packs": [
     "ARTS",
-    "CORP"
+    "CORP",
+    "MUSICIND"
    ],
    "subjects": [
     "math",

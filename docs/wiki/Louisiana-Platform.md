@@ -4,7 +4,7 @@
 structure — 64 parishes, 8 regions, 8 Trade Halls — with an
 **independent dashboard for every parish**:
 [`apps/louisiana/index.html`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/apps/louisiana/index.html)
-(~410 KB single file; opens locally).
+(~490 KB single file; opens locally).
 
 ## Surfaces
 
@@ -39,6 +39,27 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   Trade Hall, the capstone teaches it to a younger cohort). Generated
   scaffolds, labeled for committee refinement; rural-tier parishes get
   offline-evidence wording.
+- **The Makers' Hall (v0.48.0)** — the culture trades as a view of
+  their own: music, culinary, and arts & craft, each drawn as an SVG
+  **pathway map from creation to industry** whose five stages are the
+  five tracks of its pack (*Music : Creation to Industry*, *Culinary
+  Trades : The Louisiana Kitchen*, *Arts & Craft Trades : Louisiana
+  Makers*). Clicking a stage filters the **role ladder** (154 job
+  titles across the three trades — songwriter to sync-licensing agent,
+  dishwasher to franchisee, sign painter to conservator), the track
+  list (Flow Hub deep links), and the **Makers' Hall** of 63 figures
+  from the public record — each with what they did, the lesson a
+  learner can take, and a transfer check to actually do — filterable
+  by parish or region, with 42 schools, programs, museums and
+  festivals listed by parish. Naming is not endorsement; living local
+  practitioners are left for the parish to name; every region has at
+  least one maker. Parish dashboards gain a *Makers from this parish*
+  panel (falling back to the region, and saying so), a parish whose
+  makers worked a discipline earns that trade pack in its module plan
+  with the reason stated, and the Student, Teacher, Parent and
+  Homeschool dashboards carry *A maker from your parish* — one figure
+  at a time, rotating daily or on demand, parish first, then region,
+  then state. Deep link: `#/makers/<discipline>/<parish-slug>`.
 - **Dashboard agent swarms (v0.42.0)** — every role dashboard opens
   with its own crew of agents on a shared blackboard (24 agents
   across the seven roles): each computes a priority and a concrete

@@ -1,0 +1,291 @@
+{
+ "pack": "Culinary Trades : The Louisiana Kitchen",
+ "notes": "The kitchen as a trade: knife and fire, the roux and the Louisiana table, the supply line and its safety, the dining room, and the business that keeps the doors open. Every check is on real food, a real station or a real ticket. Stance: practising food safety here is not a food-safety certificate — the parish health unit and the certifying bodies issue those, and this pack teaches what they will ask; the Creole and Cajun tables are two living traditions whose keepers are the cooks and families who carry them.",
+ "tracks": [
+  {
+   "name": "Knife, fire and mise en place",
+   "prefix": "KN",
+   "credential": "Line Cook",
+   "themes": [
+    {
+     "theme": "The knife",
+     "description": "Grip, the claw, the honed edge and the cuts — dice, julienne, chiffonade — that every kitchen speaks in.",
+     "transfer_check": "Produce a small dice, a julienne and a chiffonade to size on real vegetables, safely, in under ten minutes."
+    },
+    {
+     "theme": "Mise en place",
+     "description": "Everything in its place before the heat goes on: the prep list, the containers, the station that thinks ahead.",
+     "transfer_check": "Prep a complete mise en place for a three-component dish from a written recipe, checked by a cook before cooking begins."
+    },
+    {
+     "theme": "Heat",
+     "description": "Sauté, sear, braise, fry and roast: what each does to food and how to know which one a dish needs.",
+     "transfer_check": "Cook one protein by three different methods and explain, on the plate, what each method changed."
+    },
+    {
+     "theme": "Stocks and the flavor base",
+     "description": "The trinity — onion, celery, bell pepper — and the stock underneath it: the foundation of the Louisiana pot.",
+     "transfer_check": "Make a stock from bones or shells and a properly sweated trinity, and use both in a finished dish."
+    },
+    {
+     "theme": "Tasting and seasoning",
+     "description": "Salt, acid, fat and heat; tasting at every stage; fixing a dish that is flat.",
+     "transfer_check": "Correct three deliberately under- or over-seasoned dishes by tasting, naming what each needed."
+    },
+    {
+     "theme": "The station",
+     "description": "Line discipline: the call, the callback, the pass, and the cook who never leaves a burner unwatched.",
+     "transfer_check": "Work a station through a mock ticket rail with correct callbacks, plating to the pass on time."
+    },
+    {
+     "theme": "Timing",
+     "description": "Cooking four things at once so they land together: the countdown and the order of operations.",
+     "transfer_check": "Plate a three-component dish with every component hot and finished at the same moment, twice in a row."
+    },
+    {
+     "theme": "Cleaning as you go",
+     "description": "The sanitised station, the wiped board and the sink that is never full: cleanliness as speed.",
+     "transfer_check": "Cook a full prep session and finish with a station an inspector would pass, with no dedicated clean-up time."
+    },
+    {
+     "theme": "Kitchen safety",
+     "description": "Burns, cuts, slips, the fryer, the fire suppression and the first-aid kit: staying whole in a dangerous room.",
+     "transfer_check": "Demonstrate safe fryer operation, knife handling and a wet-floor response, and locate and explain the kitchen's fire suppression."
+    },
+    {
+     "theme": "Speed with care",
+     "description": "The rush: staying accurate when the tickets pile up, and knowing when to call for help.",
+     "transfer_check": "Complete a timed rush of eight tickets with zero errors, calling for help correctly at least once when overloaded."
+    }
+   ]
+  },
+  {
+   "name": "The roux and the Louisiana table",
+   "prefix": "RX",
+   "credential": "Louisiana Cook",
+   "themes": [
+    {
+     "theme": "The roux",
+     "description": "Blond to brick to dark: flour, fat, patience and the ratio; the smell that tells you it is done.",
+     "transfer_check": "Make a blond, a peanut-butter and a dark roux without scorching, and name which dishes each belongs to."
+    },
+    {
+     "theme": "Gumbo",
+     "description": "Okra, filé and roux — the three ways — and the pot that means home in every part of the state.",
+     "transfer_check": "Cook a gumbo from a roux you made, seasoned to taste, and serve it to someone who grew up on it."
+    },
+    {
+     "theme": "Rice and jambalaya",
+     "description": "Rice as the plate's foundation; red jambalaya and brown, and why the two towns argue.",
+     "transfer_check": "Cook rice perfectly by absorption and make a jambalaya in one of the two styles, explaining the choice."
+    },
+    {
+     "theme": "Red beans on Monday",
+     "description": "The pot that feeds the week: soaking, the ham bone, the creaminess, and the tradition behind the day.",
+     "transfer_check": "Cook a pot of red beans to a creamy finish and cost it per serving as a Monday plate."
+    },
+    {
+     "theme": "The boucherie",
+     "description": "Boudin, cracklins, andouille and the whole animal: the Cajun butchering tradition and its respect for every part.",
+     "transfer_check": "Make boudin or a fresh sausage from scratch under supervision, with correct grind, seasoning and casing."
+    },
+    {
+     "theme": "Seafood",
+     "description": "The boil, the étouffée, the oyster and the honest source: cooking the coast's food and knowing where it came from.",
+     "transfer_check": "Run a seafood boil for a table of six with correct timing and seasoning, naming the source of every species."
+    },
+    {
+     "theme": "Sauce piquante and the stew",
+     "description": "The Cajun stew and its sauce: browning, building, the long simmer and the tomato's role.",
+     "transfer_check": "Cook a sauce piquante or a smothered dish from raw ingredients, judged by a cook who makes it at home."
+    },
+    {
+     "theme": "The bread and the sweet",
+     "description": "French bread, king cake, pralines and beignets: the sweet and baked side of the table.",
+     "transfer_check": "Bake one Louisiana bread or pastry and make one candy, both to a standard a market would sell."
+    },
+    {
+     "theme": "Creole and Cajun",
+     "description": "Two tables, one state: the city and the country, the tomato and the roux, and what each word actually means.",
+     "transfer_check": "Cook the same dish in a Creole and a Cajun style and explain the difference to a diner in plain words."
+    },
+    {
+     "theme": "The plate lunch",
+     "description": "Feeding a working town at noon: the meat-and-two, the board, the line out the door.",
+     "transfer_check": "Plan, cook and serve a plate-lunch menu for twenty at a fixed price, delivering on time and on budget."
+    }
+   ]
+  },
+  {
+   "name": "Sourcing, safety and the supply line",
+   "prefix": "SS",
+   "credential": "Food Safety Practitioner",
+   "themes": [
+    {
+     "theme": "Time and temperature",
+     "description": "The danger zone, the thermometer and the clock: the two numbers that keep people out of hospital.",
+     "transfer_check": "Log the temperatures of five foods through a full service with a probe thermometer and act correctly on one that fails."
+    },
+    {
+     "theme": "Cross-contamination",
+     "description": "Boards, colours, hands and the raw-to-ready flow: keeping what is raw away from what is served.",
+     "transfer_check": "Set up a prep station with correct colour-coded boards and flow, and catch three planted contamination errors."
+    },
+    {
+     "theme": "Receiving and storage",
+     "description": "FIFO, labels, the walk-in and the reach-in: what arrives, where it goes, and when it leaves.",
+     "transfer_check": "Receive a delivery — checking temperatures, dates and condition — and store it with correct labels and rotation."
+    },
+    {
+     "theme": "Allergens",
+     "description": "The major allergens, the label, the question you ask every table, and the plate you never guess about.",
+     "transfer_check": "Identify every allergen in a ten-item menu and demonstrate the correct response to an allergy declared mid-service."
+    },
+    {
+     "theme": "HACCP thinking",
+     "description": "Hazards, critical control points and the log: the system behind every safe kitchen.",
+     "transfer_check": "Write a HACCP-style plan for one dish from delivery to plate with its critical points and limits."
+    },
+    {
+     "theme": "The health inspection",
+     "description": "What the inspector checks, why, and how a kitchen stays ready every day, not just inspection day.",
+     "transfer_check": "Inspect a real or mock kitchen against the local health checklist and write up findings an operator could act on."
+    },
+    {
+     "theme": "Sourcing Louisiana",
+     "description": "Seafood docks, farms, the co-op and the seasons: buying close to home and knowing the supplier.",
+     "transfer_check": "Source the ingredients for one dish from local producers, documenting each source, price and season."
+    },
+    {
+     "theme": "Waste, cost and the compost",
+     "description": "What is thrown away is money and ground: trim, portioning, stock from scraps, and where waste goes.",
+     "transfer_check": "Measure a kitchen's waste for one service, propose three reductions, and put one into practice."
+    },
+    {
+     "theme": "The certification",
+     "description": "What a food-safety certificate certifies, where you sit for it, and why practice here is not the same thing.",
+     "transfer_check": "Sit a practice food-safety exam, score it, and name the certifying body and process in your parish (the real exam is theirs, not this pack's)."
+    },
+    {
+     "theme": "When something goes wrong",
+     "description": "A recall, an illness, a complaint: the honest report, the trace-back, and doing right by the person.",
+     "transfer_check": "Work a mock foodborne-illness report from the complaint to the trace-back to the corrective action, documented."
+    }
+   ]
+  },
+  {
+   "name": "Front of house and hospitality",
+   "prefix": "FH",
+   "credential": "Hospitality Hand",
+   "themes": [
+    {
+     "theme": "Greeting",
+     "description": "The first thirty seconds: the welcome, the seat, the water, and the feeling that someone is glad you came.",
+     "transfer_check": "Greet and seat six parties in a mock service, observed for warmth, timing and accuracy."
+    },
+    {
+     "theme": "The menu, spoken",
+     "description": "Describing dishes honestly — ingredients, preparation, heat — and answering the question you don't know.",
+     "transfer_check": "Describe every dish on a ten-item menu accurately from memory to a diner, including allergens and preparation."
+    },
+    {
+     "theme": "Taking the order",
+     "description": "The ticket, the modifications, the allergy note and the kitchen that has to read it.",
+     "transfer_check": "Take orders for a four-top with modifications and an allergy, writing a ticket the kitchen executes without a question."
+    },
+    {
+     "theme": "Timing service",
+     "description": "Courses, the kitchen's pace, the table that is ahead and the one that is behind.",
+     "transfer_check": "Run three tables at different stages through a mock service without a table waiting on a course."
+    },
+    {
+     "theme": "The bar basics",
+     "description": "Service, responsible practice and the law: what a server may do, must refuse, and must check.",
+     "transfer_check": "Demonstrate responsible-service checks — identification, refusal, the intoxication signs — in role-play against the parish's rules."
+    },
+    {
+     "theme": "Handling the problem",
+     "description": "A wrong plate, a long wait, a cold dish: fixing it fast and keeping the guest.",
+     "transfer_check": "Resolve three service problems in role-play so the guest leaves satisfied, and explain each recovery."
+    },
+    {
+     "theme": "The room",
+     "description": "Sections, sidework, resets and the floor plan: the invisible work that makes service look easy.",
+     "transfer_check": "Reset and prepare a full section for service to a checklist, and complete opening and closing sidework."
+    },
+    {
+     "theme": "Tips, wages and the law",
+     "description": "How servers are actually paid: the tipped wage, the pool, the record, and your rights.",
+     "transfer_check": "Compute a week's pay for a tipped worker under the applicable wage rules and explain the tip-pooling rules in force."
+    },
+    {
+     "theme": "The festival booth and the food truck",
+     "description": "Service outdoors: the line, the cash, the heat, the health permit on the wall.",
+     "transfer_check": "Run a mock festival booth service for thirty minutes with correct cash handling, food safety and line management."
+    },
+    {
+     "theme": "Hospitality as a craft",
+     "description": "Why people come back: memory, care, and the restaurant as the neighbourhood's living room.",
+     "transfer_check": "Serve one real table start to finish and collect their honest account of the experience, with what you would change."
+    }
+   ]
+  },
+  {
+   "name": "The business: menu, money and ownership",
+   "prefix": "BZ",
+   "credential": "Kitchen Entrepreneur",
+   "themes": [
+    {
+     "theme": "Plate cost",
+     "description": "The recipe costed to the cent: ingredient, yield, portion, and the margin that pays the rent.",
+     "transfer_check": "Cost three dishes from invoices to the plate with yields, and set a menu price at a target food-cost percentage."
+    },
+    {
+     "theme": "Menu design",
+     "description": "What sells, what feeds the margin, and the page that guides a diner's eye.",
+     "transfer_check": "Design a one-page menu with costed items, engineered placement, and reasoning for every choice."
+    },
+    {
+     "theme": "Labor",
+     "description": "Scheduling, the wage bill and the crew: the biggest cost and the whole culture.",
+     "transfer_check": "Build a two-week staff schedule for a small restaurant within a labor budget, covering every service."
+    },
+    {
+     "theme": "Licenses and permits",
+     "description": "Health, occupational, alcohol, signage and the fire marshal: the papers before the first plate.",
+     "transfer_check": "List every license and permit a food business needs in your parish, with the issuing office and cost of each."
+    },
+    {
+     "theme": "The food truck",
+     "description": "The smallest restaurant: the build, the commissary, the route and the permit.",
+     "transfer_check": "Write a food-truck plan with a costed build, a menu, a commissary arrangement and the parish permits."
+    },
+    {
+     "theme": "The pop-up and the catering job",
+     "description": "A business for a day: the quote, the deposit, the load-out, the invoice.",
+     "transfer_check": "Quote, plan and execute (or fully simulate) a catering job for forty, with contract, timeline and invoice."
+    },
+    {
+     "theme": "Suppliers and cash flow",
+     "description": "Paying and getting paid: terms, the weekly order, and the month the money runs out.",
+     "transfer_check": "Build a thirteen-week cash-flow forecast for a small food business and identify the tight week."
+    },
+    {
+     "theme": "Marketing a place",
+     "description": "The neighbourhood, the plate-lunch board, the post and the regulars: being known without a budget.",
+     "transfer_check": "Create a month's marketing plan for a food business using only free and local channels, with one measurable goal."
+    },
+    {
+     "theme": "The career roles map",
+     "description": "Cook, sous, chef, pastry, general manager, owner, caterer, purveyor, food writer: the jobs around the plate.",
+     "transfer_check": "Map twelve culinary-industry roles with what each does and how one moves between them, and interview one person in any of them."
+    },
+    {
+     "theme": "Louisiana's food economy",
+     "description": "Restaurants, festivals, seafood, the culinary institutes and the tourism dollar: the industry where you live.",
+     "transfer_check": "Produce a one-page map of your parish's food economy — employers, festivals, training, suppliers — with sources."
+    }
+   ]
+  }
+ ]
+}

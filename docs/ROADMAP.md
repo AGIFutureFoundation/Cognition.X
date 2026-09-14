@@ -6,7 +6,7 @@ school, parish, ministry or employer can run. Phases are sequential but
 overlapping; versions follow SemVer and are cut when a phase's exit
 criteria pass.
 
-## Status at v0.45.0 (system review: [`SYSTEM_REVIEW.md`](SYSTEM_REVIEW.md))
+## Status at v0.48.0 (system review: [`SYSTEM_REVIEW.md`](SYSTEM_REVIEW.md))
 
 - **Phase 0 — Foundation: complete.**
 - **Phase 1 — Data completeness: complete** except the foundation
@@ -24,8 +24,10 @@ criteria pass.
   Network (6 regions), States app (50 states), Network OS automations
   with granular per-section boards (v0.40.0), dashboard agent swarms
   (v0.42.0), federation v1–v2 (v0.34.0, v0.38.0), educator authoring
-  (v0.35.0), governance (v0.35.0) and the evidence loop (v0.36.0).
-  Open: the v1.0 external-cohort gate (operational, below) and W3C
+  (v0.35.0), governance (v0.35.0), the evidence loop (v0.36.0) and the
+  culture trades (v0.48.0: music creation→industry, culinary and
+  arts-and-craft trade packs with the Makers' Hall of public-record
+  examples by parish). Open: the v1.0 external-cohort gate (operational, below) and W3C
   Verifiable Credentials / Open Badges 3.0 envelope alignment.
 - **Phase 4 — Intelligence: architecture shipped** (CX-Trace, flow
   model, data principles); adaptive sequencing exists in first working

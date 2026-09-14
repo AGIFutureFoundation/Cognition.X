@@ -309,6 +309,70 @@ def test_education_os_design_system():
     check("education-os: reduced motion honoured", "prefers-reduced-motion" in t)
 
 
+# The culture trades (v0.48.0): three trade packs and the Makers' Hall fact
+# base behind the Louisiana app's Makers view. Every named person comes from
+# the public record and the note must say naming is not endorsement.
+CULTURE_PACKS = {
+    "MUSICIND": "Music : Creation to Industry",
+    "CULINARY": "Culinary Trades : The Louisiana Kitchen",
+    "ARTCRAFT": "Arts & Craft Trades : Louisiana Makers",
+}
+
+
+def test_culture_trade_packs():
+    rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
+    for slug, name in CULTURE_PACKS.items():
+        mine = [r for r in rows if r["pack"] == name]
+        check(f"{slug}: 250 blocks in the dataset", len(mine) == 250, f"{len(mine)}")
+        check(f"{slug}: block_ids carry the slug", all(r["block_id"].startswith(f"CX-{slug}-") for r in mine))
+        check(f"{slug}: five tracks", len({r["track"] for r in mine}) == 5)
+        check(f"{slug}: no level-word credentials",
+              not any(r["credential"].strip() in LEVEL_WORDS for r in mine))
+    unions = json.loads((ROOT / "data" / "unions" / "trade_unions.json").read_text(encoding="utf-8"))
+    fam = {f["family"]: f["packs"] for f in unions["families"]}
+    check("unions: Musicians back the music pack", "MUSICIND" in fam.get("Musicians", []))
+    check("unions: culinary workers back the culinary pack",
+          "CULINARY" in fam.get("Culinary & hospitality workers", []))
+    check("unions: stagehands & exhibition workers back the arts pack",
+          "ARTCRAFT" in fam.get("Stagehands & exhibition workers", []))
+    check("unions: still 37 families (no new family for the culture trades)", len(fam) == 37, str(len(fam)))
+
+
+def test_makers_fact_base():
+    M = json.loads((ROOT / "data" / "louisiana" / "makers.json").read_text(encoding="utf-8"))
+    fb = json.loads((ROOT / "data" / "louisiana" / "fact_base.json").read_text(encoding="utf-8"))
+    parishes = {p[0] for p in fb["parishes"]}
+    rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
+    tracks = {(r["pack"], r["track"]) for r in rows if r["track"]}
+    note = M.get("note", "")
+    check("makers: note says naming is not endorsement", "not endorsement" in note and "public record" in note)
+    check("makers: note leaves living local practitioners to the community", "name their own" in note)
+    discs = M["disciplines"]
+    check("makers: three disciplines", [d["id"] for d in discs] == ["music", "culinary", "arts"])
+    seen = set()
+    for d in discs:
+        check(f"makers/{d['id']}: pack is a culture-trade pack", CULTURE_PACKS.get(d["pack"]) == d["packName"])
+        check(f"makers/{d['id']}: five stages, each one real track of the pack",
+              len(d["stages"]) == 5 and all((d["packName"], st["track"]) in tracks for st in d["stages"]),
+              str([st["track"] for st in d["stages"]]))
+        stage_ids = {st["id"] for st in d["stages"]}
+        check(f"makers/{d['id']}: every stage has roles", all(len(st["roles"]) >= 5 for st in d["stages"]))
+        check(f"makers/{d['id']}: at least ten makers", len(d["figures"]) >= 10, str(len(d["figures"])))
+        for f in d["figures"]:
+            key = ("name", "years", "parish", "place", "craft", "stage", "did", "lesson", "check")
+            empty = [k for k in key if not str(f.get(k, "")).strip()]
+            check(f"maker {f.get('name', '?')}: no empty field", not empty, str(empty))
+            check(f"maker {f['name']}: parish is a real parish", f["parish"] in parishes, f["parish"])
+            check(f"maker {f['name']}: stage is on the pathway", f["stage"] in stage_ids, f["stage"])
+            check(f"maker {f['name']}: named once", f["name"] not in seen); seen.add(f["name"])
+        for o in d["orgs"]:
+            check(f"org {o['name']}: parish is a real parish", o["parish"] in parishes, o["parish"])
+    regions = {p[0]: fb["regions"][p[1]] for p in fb["parishes"]}
+    covered = {regions[f["parish"]] for d in discs for f in d["figures"]}
+    check("makers: every region has at least one maker", covered == set(fb["regions"][1:]),
+          str(set(fb["regions"][1:]) - covered))
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))

@@ -216,6 +216,92 @@ async function testFlowAndSwarm(browser, errs) {
   await page.close();
 }
 
+/* --------------------------------- louisiana: the Makers' Hall (v0.48.0) */
+async function testMakersHall(browser, errs) {
+  const page = await newPage(browser, 'louisiana-makers', errs);
+  await page.goto(url('louisiana') + '#/makers');
+  await page.waitForTimeout(600);
+  const r = await page.evaluate(() => ({
+    active: document.querySelector('.view.active').id,
+    discs: document.querySelectorAll('#mkchips [data-disc]').length,
+    stages: document.querySelectorAll('#mkpath .mkstage').length,
+    cards: document.querySelectorAll('#mkhall .mkcard').length,
+    tracks: document.querySelectorAll('#mkbody .tracklist li').length,
+    roles: document.querySelectorAll('.mkroles .chip').length,
+    honest: (document.querySelector('#mkhonest') || {}).textContent || '',
+  }));
+  check('makers: view routes', r.active === 'view-makers', r.active);
+  check('makers: three disciplines', r.discs === 3, String(r.discs));
+  check('makers: pathway map has five stages', r.stages === 5, String(r.stages));
+  check('makers: five tracks listed', r.tracks === 5, String(r.tracks));
+  check('makers: figure cards render', r.cards >= 20, String(r.cards));
+  check('makers: role ladder renders', r.roles >= 40, String(r.roles));
+  check('makers: honesty note says naming is not endorsement',
+        /not endorsement/.test(r.honest) && /name their own/.test(r.honest));
+  // a stage filters roles and makers; Enter on the SVG node works too
+  await page.click('#mkpath .mkstage[data-stage="studio"]');
+  await page.waitForTimeout(150);
+  const st = await page.evaluate(() => ({
+    pressed: (document.querySelector('.mkstage[aria-pressed="true"]') || {}).dataset,
+    cards: document.querySelectorAll('#mkhall .mkcard').length,
+    allStudio: [...document.querySelectorAll('#mkhall .mkcard')].every(c => c.dataset.stage === 'studio'),
+    heads: document.querySelectorAll('.mkstagehead').length,
+  }));
+  check('makers: stage click filters to that stage', st.pressed && st.pressed.stage === 'studio' && st.allStudio && st.heads === 1,
+        JSON.stringify(st));
+  await page.focus('#mkpath .mkstage[data-stage="studio"]');
+  await page.keyboard.press('Enter');
+  await page.waitForTimeout(150);
+  check('makers: Enter on a stage clears the filter (keyboard-operable)',
+        await page.evaluate(() => !document.querySelector('.mkstage[aria-pressed="true"]') && document.querySelectorAll('.mkstagehead').length === 5));
+  // parish filter narrows the hall; the deep link sets it
+  await page.selectOption('#mkparish', 'orleans');
+  await page.waitForTimeout(150);
+  check('makers: parish filter narrows to that parish',
+        await page.evaluate(() => [...document.querySelectorAll('#mkhall .mkcard')].every(c => c.dataset.parish === 'Orleans')
+                                  && document.querySelectorAll('#mkhall .mkcard').length > 0));
+  await page.goto(url('louisiana') + '#/makers/arts/natchitoches');
+  await page.waitForTimeout(400);
+  const dl = await page.evaluate(() => [document.querySelector('#mkparish').value,
+    [...document.querySelectorAll('#mkhall .mkcard h4')].map(h => h.textContent)]);
+  check('makers: deep link #/makers/<discipline>/<parish> selects both', dl[0] === 'natchitoches' && dl[1].includes('Clementine Hunter'), JSON.stringify(dl));
+  // culinary tracks link into Flow Hub sessions
+  await page.click('#mkchips [data-disc="culinary"]');
+  await page.waitForTimeout(150);
+  const href = await page.evaluate(() => (document.querySelector('#mkbody .tracklist li a') || {}).getAttribute
+    ? document.querySelector('#mkbody .tracklist li a').getAttribute('href') : '');
+  check('makers: culinary tracks deep-link into Flow Hub', /#track=CULINARY\/KN$/.test(href), href);
+  // parish dashboards: makers from this parish, or the region's, plainly labeled
+  await page.goto(url('louisiana') + '#/parish/st-landry');
+  await page.waitForTimeout(400);
+  const pm = await page.evaluate(() => ({
+    cards: document.querySelectorAll('#pmakers .mkcard').length,
+    plan: [...document.querySelectorAll('#pplan summary b')].map(b => b.textContent),
+    reason: [...document.querySelectorAll('#pplan .chip.gold')].map(c => c.textContent).join(' | '),
+  }));
+  check('parish: St. Landry lists its public-record makers', pm.cards >= 3, String(pm.cards));
+  check('parish: makers earn the culture-trade packs in the module plan',
+        pm.plan.includes('Music : Creation to Industry') && /maker/.test(pm.reason), JSON.stringify(pm.plan));
+  await page.goto(url('louisiana') + '#/parish/winn');
+  await page.waitForTimeout(400);
+  const wn = await page.evaluate(() => document.querySelector('#pmakers').textContent);
+  check('parish: a parish with no listed maker says so and shows its region',
+        /No public-record maker is listed for Winn/.test(wn) && /name their own/.test(wn), wn.slice(0, 120));
+  // role dashboards: a maker from your parish, rotating on demand
+  await page.goto(url('louisiana') + '#/roles');
+  await page.waitForTimeout(400);
+  const w1 = await page.evaluate(() => {
+    const w = document.querySelector('[data-widget="maker"]');
+    return w ? (w.querySelector('.mkcard h4') || {}).textContent : null;
+  });
+  check('student dashboard: "A maker from your parish" widget renders', !!w1, String(w1));
+  await page.click('#mk-next');
+  await page.waitForTimeout(300);
+  const w2 = await page.evaluate(() => (document.querySelector('[data-widget="maker"] .mkcard h4') || {}).textContent);
+  check('student dashboard: "Another maker" rotates the example', !!w2 && w2 !== w1, `${w1} → ${w2}`);
+  await page.close();
+}
+
 /* --------------------------------- louisiana: Network OS granular drill-downs */
 async function testNetworkOS(browser, errs) {
   const page = await newPage(browser, 'la/netos', errs);
@@ -452,6 +538,7 @@ async function testOtherApps(browser, errs) {
       ['evidence consent gate', testEvidenceConsentGate],
       ['flow engine and swarm', testFlowAndSwarm],
       ['network OS drill-downs', testNetworkOS],
+      ['makers hall', testMakersHall],
       ['platform loop', testPlatformLoop],
       ['review regressions', testReviewRegressions],
       ['education os boots', testEducationOsBoots],

@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 16700,
+  "total_blocks": 17450,
   "packs": [
     {
       "name": "K–12",
@@ -515,6 +515,26 @@
       ]
     },
     {
+      "name": "Arts & Craft Trades : Louisiana Makers",
+      "slug": "ARTCRAFT",
+      "blocks": 250,
+      "tracks": [
+        "Seeing and drawing for work",
+        "Materials: clay, wood, metal, textile, paint",
+        "Louisiana traditions: the crafts of the state",
+        "Showing the work: exhibition and public art",
+        "The working artist: money, rights and the studio"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
       "name": "Arts, Making Media & Performance",
       "slug": "ARTS",
       "blocks": 250,
@@ -604,6 +624,26 @@
         "Austin: the biennial Legislature",
         "Elections and the Texas voter",
         "Storm, grid and the long border of water"
+      ],
+      "credentials": 5,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Culinary Trades : The Louisiana Kitchen",
+      "slug": "CULINARY",
+      "blocks": 250,
+      "tracks": [
+        "Knife, fire and mise en place",
+        "The roux and the Louisiana table",
+        "Sourcing, safety and the supply line",
+        "Front of house and hospitality",
+        "The business: menu, money and ownership"
       ],
       "credentials": 5,
       "grade_bands": [
@@ -751,6 +791,26 @@
         "The storm and the long memory"
       ],
       "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "Music : Creation to Industry",
+      "slug": "MUSICIND",
+      "blocks": 250,
+      "tracks": [
+        "The sound: instrument, voice and ear",
+        "The song: writing and arranging",
+        "The room: live performance",
+        "The studio: recording and production",
+        "The industry: rights, money and roles"
+      ],
+      "credentials": 5,
       "grade_bands": [
         "K–2",
         "3–5",

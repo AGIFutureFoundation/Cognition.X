@@ -32,7 +32,10 @@ plus the canonical dataset — never hand-edit `index.html`.
 - **Unions & Trades** — the full 222-entry roster, searchable and
   filterable by region and category; every card names the international
   union, its localized training sim, and Flow Hub deep links into its
-  backing packs.
+  backing packs. Since v0.48.0 the Musicians, Culinary & hospitality
+  workers and Stagehands & exhibition workers families also back the
+  three culture-trade packs (music, culinary, arts & craft) — no new
+  families, still 222 entries.
 - **Simulations** — nine control-discipline categories on all three
   coasts, each under the studio law.
 - **Flipped Classroom** — the four-node flipped cycle and the honest

@@ -83,6 +83,10 @@ INDUSTRY_RULES = [
     (r"port|marine|river|coastal|shipbuild|terminal", ["TRANSPORT", "EMERGENCY"]),
     (r"corrections", ["REENTRY"]),
     (r"casino|hospitality|tourism|culture|music", ["CORP", "ARTS"]),
+    # the culture trades (v0.48.0): kitchens where people are fed, and
+    # the arts and music trades where a parish's culture is the industry
+    (r"hospitality|tourism|casino|restaurant|food|seafood|meat|crawfish|oyster|shrimp", ["CULINARY"]),
+    (r"film|music|culture\b|cultural|festival|arts", ["MUSICIND", "ARTCRAFT"]),
     (r"military|Fort |AFB|Barksdale", ["EMERGENCY", "ROB"]),
     (r"government|research|universit|LSU|Southern|SOWELA", ["SCI", "LEGACYLA"]),
     (r"restoration", ["WLC", "EMERGENCY"]),
@@ -156,7 +160,22 @@ def load_fact_base():
         # the Louisiana K-12 program (canonical since v0.44.0)
         "k12program": json.loads((ROOT / "data" / "louisiana" / "k12_program.json")
                                  .read_text(encoding="utf-8")),
+        # the Makers' Hall: public-record makers, role ladders and
+        # organisations for the three culture-trade packs (v0.48.0)
+        "makers": json.loads((ROOT / "data" / "louisiana" / "makers.json")
+                             .read_text(encoding="utf-8")),
     }
+
+
+def maker_packs(makers, parish):
+    """[(slug, reason)] — a parish whose public-record makers worked a
+    discipline earns that discipline's trade pack in its module plan."""
+    out = []
+    for d in makers["disciplines"]:
+        n = sum(1 for f in d["figures"] if f["parish"] == parish)
+        if n:
+            out.append([d["pack"], f"{n} {d['name'].lower()} maker{'s' if n > 1 else ''} on the public record"])
+    return out
 
 
 def pack_catalog():
@@ -247,6 +266,8 @@ def main():
     for name, region, seat, pop_k, wave, districts, industries, world, rural in fb["parishes"]:
         r, c = POS[name]
         matched = match_packs(industries)
+        have = {s for s, _ in matched}
+        matched += [m for m in maker_packs(fb["makers"], name) if m[0] not in have]
         used_slugs.update(s for s, _ in matched)
         parishes.append({
             "name": name, "region": region, "seat": seat, "pop": pop_k,
@@ -256,6 +277,8 @@ def main():
             "missions": parish_missions(name, seat, world, fb["hubs"][region], rural),
         })
     adopted_waves(parishes)
+    # the Makers' Hall links every culture-trade track, matched or not
+    used_slugs.update(d["pack"] for d in fb["makers"]["disciplines"])
     packmeta = {s: catalog[s] for s in sorted(used_slugs) if s in catalog}
     # full catalog (light) so the plan customizer can offer every pack
     catalog_light = {s: {"name": c["name"], "blocks": c["blocks"],
@@ -272,6 +295,7 @@ def main():
         "principles": fb["principles"],
         "leadership": fb["leadership"],
         "k12program": fb["k12program"],
+        "makers": fb["makers"],
         "corePacks": CORE_PACKS,
         "packmeta": packmeta,
         "catalog": catalog_light,

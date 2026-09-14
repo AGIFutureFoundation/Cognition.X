@@ -4,6 +4,96 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.48.0] — 2026-09-14
+
+The culture trades. Three new trade packs — the music trade end to end,
+the professional kitchen, and the art and craft trades — and the
+Louisiana app's **Makers' Hall**, where each trade is drawn as a pathway
+from creation to industry and taught through the example of makers from
+the public record, parish by parish.
+
+### Added — dataset (17,450 blocks · 47 packs · 225 tracks)
+- **Music : Creation to Industry** (`CX-MUSICIND`, 250 blocks): *The
+  sound: instrument, voice and ear* → *The song: writing and arranging*
+  → *The room: live performance* → *The studio: recording and
+  production* → *The industry: rights, money and roles* — the whole
+  trade, from ear training and the instrument you can afford through
+  songwriting, arranging, gigging, the sound and stage crew, recording,
+  mixing and mastering, to publishing, PROs, royalties, contracts,
+  management, booking, festivals, labels, distribution, sync and the
+  nonprofit and teaching roles.
+- **Culinary Trades : The Louisiana Kitchen** (`CX-CULINARY`, 250):
+  knife, fire and mise en place; the roux and the Louisiana table;
+  sourcing, safety and the supply line; front of house and hospitality;
+  the business of menu, money and ownership.
+- **Arts & Craft Trades : Louisiana Makers** (`CX-ARTCRAFT`, 250):
+  seeing and drawing for work; materials (clay, wood, metal, textile,
+  paint); the crafts of the state (beadwork, floats, basketry, boats,
+  ironwork); showing the work (exhibition and public art); the working
+  artist's money, rights and studio.
+- **`data/louisiana/makers.json`** — the Makers' Hall fact base: for
+  each discipline, five pathway stages mapped one-to-one onto the pack's
+  tracks with **154 industry roles** in all; **63 makers from the public
+  record** (each with years, parish and place, craft, what they did, the
+  lesson a learner can take, and a transfer check to actually do) — from
+  Buddy Bolden, Amédé Ardoin and Lead Belly to Cosimo Matassa, Harold
+  Battiste and Boozoo Chavis's contract; from Lena Richard, Leah Chase
+  and Paul Prudhomme's roux chart to Ella Brennan's dining room and Al
+  Copeland's balance sheet; from Clementine Hunter, Tootie Montana and
+  Ada Thomas to Blaine Kern's float shop and John T. Scott's public
+  works — spread so that every one of the eight regions has at least
+  one; and **42 organisations** (NOCCA, the Ellis Marsalis Center,
+  Tipitina's Foundation, the John Folse Culinary Institute, NOCHI, Café
+  Reconcile, the Chitimacha cultural department, the Folklife Center…)
+  by parish. The file's `note` states the stance: public record only,
+  naming is not endorsement, living people only through what is already
+  public, working local practitioners left for the parish to name.
+- The Musicians (AFM), Culinary & hospitality workers (UNITE HERE) and
+  Stagehands & exhibition workers (IATSE) union families now back the
+  three packs — no new families; still 222 regional entries.
+
+### Added — Louisiana app
+- **The Makers' Hall view** (`#/makers`): discipline chips; an SVG
+  **pathway map** whose five stage nodes are keyboard-operable buttons
+  (click or Enter filters roles, tracks and makers to that stage; again
+  clears); the role ladder grouped by stage; the pack's tracks with Flow
+  Hub deep links (`#track=CULINARY/KN`); the Makers' Hall of figure
+  cards with the check under a disclosure, filterable by parish or
+  region (`#/makers/<discipline>/<parish-slug>` deep-links both); the
+  organisations by parish; and the honesty box. A Guide tour stop.
+- **Parish dashboards** — *Makers from this parish*: the parish's own
+  figures across the three trades, or its region's with the plain
+  statement that none is listed for the parish yet and that it names
+  its own. The build-time rules engine adds a culture-trade pack to a
+  parish's module plan when its makers worked that discipline (reason
+  shown: "2 music makers on the public record"), and the industry rules
+  now map hospitality/food phrases to the culinary pack and
+  film/music/festival/arts phrases to the music and arts packs.
+- **Role dashboards** — *A maker from your parish* on the Student,
+  Teacher, Parent and Homeschool dashboards: one maker at a time from
+  the parish, then the region, then the state, rotating daily and on
+  demand (*Another maker*), with the transfer check and a link into the
+  hall.
+
+### Tests
+- `tests/test_platform.py` (+~230 checks): each culture pack is 250
+  blocks / five tracks / no level-word credentials; the union links; and
+  the makers fact base — the note's two stance sentences, every figure's
+  fields non-empty, every parish a real parish, every stage on its
+  pathway, every stage a real track, no name twice, every region
+  covered.
+- `tests/browser/smoke.js` (+17 assertions): the view routes and
+  renders three disciplines, five stages, five tracks, the honesty note;
+  stage click and keyboard Enter filter and clear; the parish filter and
+  the deep link; culinary Flow Hub links; St. Landry's makers and the
+  pack they earn; Winn's honest fallback; the student widget renders and
+  rotates.
+
+### Documentation
+- README packs-at-a-glance, wiki Home / Packs / Louisiana Platform /
+  Trades Network / Versioning, ROADMAP status, SYSTEM_REVIEW numbers,
+  and a DATA_REVIEW stance section on named people.
+
 ## [0.47.0] — 2026-09-11
 
 The adversarial multi-agent review of v0.44.0 finished: 116 agents, 36

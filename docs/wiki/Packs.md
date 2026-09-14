@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 44 packs — 16,700 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 47 packs — 17,450 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -13,41 +13,44 @@ Catalog of all 44 packs — 16,700 blocks total. Machine-readable version: [`dat
 | Language, Culture & Communication | `LANG` | 111 | — | 15 |
 | Empathy & Emotional Intelligence | `EMPATH` | 167 | — | 5 |
 | Community & Relationship Practice | `COMREL` | 167 | — | 5 |
-| Preventive Health & Everyday Care | `PREVCARE` | 250 | 5 | 3 |
-| Basic Life Skills & Self-Reliance | `LIFESKILL` | 250 | 5 | 1 |
-| Water, Land & Climate | `WLC` | 250 | 5 | 1 |
-| Care Across a Life | `CARELIFE` | 250 | 5 | 1 |
-| Making, Repair & Reuse | `MAKE` | 250 | 5 | 1 |
-| Housing & Tenancy | `HOUSING` | 250 | 5 | 5 |
-| Money, Benefits & Entitlements | `MONEY` | 250 | 5 | 5 |
-| Reentry & Recovery Pathways | `REENTRY` | 250 | 5 | 5 |
-| Neighbourhood, Safety & Civic Voice | `NEIGH` | 250 | 5 | 5 |
-| Cognition.X : Corporate OS | `CORP` | 1160 | 10 | 124 |
-| Cognition.X : Science OS | `SCI` | 1160 | 10 | 124 |
-| Cognition.X : Robotics OS | `ROB` | 1140 | 10 | 122 |
-| Cognition.X : Global Health OS | `GHEALTH` | 1160 | 10 | 127 |
-| Cognition.X : Multilateral OS | `MULTI` | 1150 | 10 | 126 |
-| Cognition.X : Sapient OS | `SAPIENT` | 1120 | 10 | 119 |
-| Non-Profit Practice | `NPO` | 1150 | 10 | 122 |
 | Cognition.X : Education OS | `EDUOS` | 660 | — | 115 |
+| Arts & Craft Trades : Louisiana Makers | `ARTCRAFT` | 250 | 5 | 5 |
 | Arts, Making Media & Performance | `ARTS` | 250 | 5 | 5 |
-| Civic Leadership Legacy : The Institute Model | `LEGACYMODEL` | 250 | 5 | 5 |
+| Basic Life Skills & Self-Reliance | `LIFESKILL` | 250 | 5 | 1 |
+| Care Across a Life | `CARELIFE` | 250 | 5 | 1 |
 | Civic Leadership Legacy : California | `LEGACYCA` | 250 | 5 | 5 |
 | Civic Leadership Legacy : Louisiana | `LEGACYLA` | 250 | 5 | 5 |
 | Civic Leadership Legacy : Texas | `LEGACYTX` | 250 | 5 | 5 |
+| Civic Leadership Legacy : The Institute Model | `LEGACYMODEL` | 250 | 5 | 5 |
+| Cognition.X : Corporate OS | `CORP` | 1160 | 10 | 124 |
+| Culinary Trades : The Louisiana Kitchen | `CULINARY` | 250 | 5 | 5 |
 | Digital Life, Data & AI | `DIGITAL` | 250 | 5 | 5 |
 | Emergency Preparedness & First Response | `EMERGENCY` | 250 | 5 | 5 |
 | Energy, Grid & the Home | `ENERGY` | 250 | 5 | 5 |
 | Food, Cooking & Nutrition | `FOOD` | 250 | 5 | 5 |
+| Cognition.X : Global Health OS | `GHEALTH` | 1160 | 10 | 127 |
+| Housing & Tenancy | `HOUSING` | 250 | 5 | 5 |
 | Law, Contracts & Everyday Rights | `LAW` | 250 | 5 | 5 |
 | Learning States & Universal Access | `ACCESS` | 250 | 5 | 5 |
 | Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
+| Making, Repair & Reuse | `MAKE` | 250 | 5 | 1 |
+| Money, Benefits & Entitlements | `MONEY` | 250 | 5 | 5 |
+| Cognition.X : Multilateral OS | `MULTI` | 1150 | 10 | 126 |
+| Music : Creation to Industry | `MUSICIND` | 250 | 5 | 5 |
+| Neighbourhood, Safety & Civic Voice | `NEIGH` | 250 | 5 | 5 |
+| Non-Profit Practice | `NPO` | 1150 | 10 | 122 |
 | Parish Launch & Scale | `LAUNCH` | 250 | 5 | 5 |
+| Preventive Health & Everyday Care | `PREVCARE` | 250 | 5 | 3 |
+| Reentry & Recovery Pathways | `REENTRY` | 250 | 5 | 5 |
+| Cognition.X : Robotics OS | `ROB` | 1140 | 10 | 122 |
+| Cognition.X : Sapient OS | `SAPIENT` | 1120 | 10 | 119 |
+| Cognition.X : Science OS | `SCI` | 1160 | 10 | 124 |
 | SmartCiti.X : New Orleans Trades | `NOLATRADES` | 250 | 5 | 5 |
 | Cognition.X : States OS | `STATEOS` | 250 | 5 | 5 |
 | Trades Across School Subjects | `TRADESUBJ` | 250 | 5 | 5 |
 | Trades in the Classroom : Flipped & Gamified | `TRADESCLASS` | 250 | 5 | 5 |
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
+| Water, Land & Climate | `WLC` | 250 | 5 | 1 |
 
 ## Tracks by pack
 
@@ -346,3 +349,23 @@ council), the simulation studio, and the district compact
 - Roads shared: safety for every user
 - Journeys: planning, rights and the wider world
 
+**Arts & Craft Trades : Louisiana Makers**
+- Seeing and drawing for work
+- Materials: clay, wood, metal, textile, paint
+- Louisiana traditions: the crafts of the state
+- Showing the work: exhibition and public art
+- The working artist: money, rights and the studio
+
+**Culinary Trades : The Louisiana Kitchen**
+- Knife, fire and mise en place
+- The roux and the Louisiana table
+- Sourcing, safety and the supply line
+- Front of house and hospitality
+- The business: menu, money and ownership
+
+**Music : Creation to Industry**
+- The sound: instrument, voice and ear
+- The song: writing and arranging
+- The room: live performance
+- The studio: recording and production
+- The industry: rights, money and roles
