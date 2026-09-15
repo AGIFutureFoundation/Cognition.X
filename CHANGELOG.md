@@ -4,6 +4,30 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.53.2] — 2026-09-15
+
+### Documentation
+- **`docs/PITCH_DECK.md`** — the three-page investor deck as canonical
+  text: the problem, the solution, the ask — use of proceeds, milestones,
+  the round on standard forms, the call to action, the risk paragraph.
+  The proof strip (54 releases, 17,450 blocks, 6 apps, 64 parishes, 0
+  WCAG-tagged violations, 50 states) is held to the dataset by the tests.
+- **`docs/CAPITAL_STRUCTURE.md`** — new section *Recommended terms on
+  standard forms*: the YC post-money SAFE (cap only, no discount, no MFN,
+  one form per round), AGI Corp as a Delaware C-corp issuer, a cap set
+  from a fully diluted model, the pro rata side letter as the only side
+  letter, NVCA documents at the priced round, Regulation D 506(b) with
+  Form D and blue-sky notices, a written Mission Rights Agreement, the
+  reporting cadence, and what not to do. Proposals until counsel has
+  papered them; not legal, tax or securities advice.
+
+### Tooling
+- **`tools/film/deck3/`** — the three-page deck generator (`gen3.py`
+  writes the clickable page, the print edition and the eight-slide video
+  edition with its narration), the overflow/overlap measurer and PDF
+  exporter (`check3.js`), and the narrate → record → align → mux chain
+  (`synth.py`, `rec.js`, `mux.py`). Rendered PDF and MP4 are not committed.
+
 ## [0.53.1] — 2026-09-15
 
 ### Documentation

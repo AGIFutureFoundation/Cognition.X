@@ -1,0 +1,106 @@
+<title>AGI Future Foundation Investor Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{--paper:#F3F5F8;--paper2:#FFFFFF;--paper3:#E9EEF2;--ink:#0E1E2E;--ink2:#3E5266;--faint:#5F6B7A;--line:#D6DEE5;--gold:#B8871F;--gold-ink:#7F5A00;--gold-wash:#F6EFDF;--teal:#1E7A72;--teal-wash:#E3F1EF;--dark:#0A1622;--red:#B22B2B}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;background:var(--dark);color:var(--ink);font:400 24px/1.4 "IBM Plex Sans",system-ui,sans-serif;overflow:hidden}
+.stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform:translate(-50%,-50%) scale(var(--s,1));transform-origin:center}
+.slide{position:absolute;inset:0;background:var(--paper);padding:84px 110px 80px;display:none;flex-direction:column;gap:18px}
+.slide.on{display:flex}
+.slide.dark{background:radial-gradient(1300px 760px at 28% 30%,#16304a 0%,#0A1622 65%);color:#E6EDF3}
+.slide.dark .kicker{color:#D9A441} .slide.dark .sub{color:#B8C7D3} .slide.dark .pn{color:#8FA3B4}
+.kicker{font:600 19px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-ink);margin:0}
+h1{font-family:Fraunces,Georgia,serif;font-variation-settings:"opsz" 144;font-weight:800;font-size:112px;line-height:1;letter-spacing:-.015em;margin:12px 0 0;max-width:16ch;text-wrap:balance}
+h1 em{font-style:italic;font-weight:400;color:#D9A441}
+.sub{font-family:Fraunces,Georgia,serif;font-variation-settings:"opsz" 30;font-size:34px;line-height:1.35;margin:22px 0 0;max-width:36ch;text-wrap:balance}
+h2{font-family:Fraunces,Georgia,serif;font-variation-settings:"opsz" 96;font-weight:600;font-size:52px;line-height:1.08;letter-spacing:-.012em;margin:0;max-width:24ch;text-wrap:balance}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;margin-top:22px}
+.col{border-top:4px solid var(--gold);padding-top:14px}
+.col b{display:block;font-size:28px;font-weight:600;margin:0 0 8px} .col p{margin:0;font-size:22px;color:var(--ink2);line-height:1.45}
+.strip{margin-top:auto;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;border-top:1px solid var(--line);padding-top:18px}
+.strip div b{display:block;font-family:Fraunces,Georgia,serif;font-size:44px;line-height:1;color:var(--gold-ink);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.strip div span{display:block;font-size:17px;color:var(--ink2);margin-top:6px;line-height:1.3}
+.striplab{font:600 15px/1 "IBM Plex Mono",monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin:0 0 -6px}
+.split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;flex:1;min-height:0;margin-top:10px}
+.loop{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:8px 0 6px}
+.loop div{background:var(--paper2);border:1px solid var(--line);border-top:4px solid var(--teal);padding:12px 12px 10px;font-size:17px;line-height:1.3;color:var(--ink2)}
+.loop b{display:block;font-size:19px;color:var(--ink);margin-bottom:4px}
+.loop i{display:block;font:800 26px/1 Fraunces,Georgia,serif;color:var(--teal);font-style:normal;margin-bottom:6px}
+.lines{display:grid;gap:10px;margin-top:12px}
+.lines div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px;padding:10px 0;border-top:1px solid var(--line);font-size:20px;line-height:1.35}
+.lines.mid div{font-size:17.5px;padding:7px 0;line-height:1.3} .lines.mid b{font-size:18px}
+.lines.tight div{grid-template-columns:110px minmax(0,1fr);padding:6px 0;font-size:15.5px;line-height:1.3} .lines.tight b{font-size:15.5px}
+.lines b{font-size:21px} .lines span{color:var(--ink2)}
+.shot{margin:0;background:var(--paper2);border:1px solid var(--line);box-shadow:0 22px 56px rgba(14,30,46,.18);overflow:hidden;min-height:0;height:100%;max-height:560px}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.shots2{display:grid;grid-template-rows:1fr 1fr;gap:16px;min-height:0}
+.shots2 .shot{max-height:270px}
+.ask{display:grid;grid-template-columns:1fr 1fr;gap:34px;flex:1;min-height:0;margin-top:4px;align-items:start}
+.ask table{font-size:16px} .ask td{padding:4px 10px 4px 0} .ask .lines.tight div{font-size:15px;padding:5px 0;gap:12px} .ask .lines.tight b{font-size:15px}
+.ask .terms{font-size:14px;line-height:1.28;gap:4px 18px} .ask .box{padding:12px 18px} .ask .box h3{font-size:21px;margin-bottom:4px} .ask .box p{font-size:15.5px;line-height:1.35}
+.stack{display:flex;height:54px;border-radius:10px;overflow:hidden;margin:18px 0 8px;font:600 15px/1.2 "IBM Plex Sans",system-ui,sans-serif}
+.stack div{display:flex;align-items:center;justify-content:center;color:#fff;padding:0 10px;text-align:center}
+.prot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.prot div{border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:16px;line-height:1.35;color:var(--ink2);background:#fff}
+.prot b{display:block;font:600 13px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+table{border-collapse:collapse;width:100%;font-size:17px;line-height:1.25}
+th{text-align:left;font:600 13px/1.2 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);padding:0 10px 8px 0;border-bottom:2px solid var(--line)}
+td{padding:5px 10px 5px 0;border-bottom:1px solid var(--line);color:var(--ink2);vertical-align:top} td b{color:var(--ink);font-weight:600}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{border-bottom:0;border-top:2px solid var(--ink);color:var(--ink);font-weight:600}
+.box{background:var(--paper2);border:1px solid var(--line);border-left:6px solid var(--gold);padding:16px 20px;font-size:17px;line-height:1.35;color:var(--ink2)}
+.box h3{font-family:Fraunces,Georgia,serif;font-size:23px;margin:0 0 6px;color:var(--ink)}
+.box b{color:var(--ink)} .box p{margin:0 0 8px} .box p:last-child{margin:0}
+.terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 22px;font-size:15.5px;line-height:1.3}
+.terms div{padding:6px 0;border-top:1px solid var(--line)} .terms b{display:block;font-size:14px;font:600 13px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:5px}
+.terms span{color:var(--ink)}
+.cta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:30px}
+.cta div{border:1.5px solid rgba(217,164,65,.6);border-radius:14px;padding:22px 26px;font-size:24px;line-height:1.35;color:#E6EDF3}
+.cta b{display:block;font:600 15px/1 "IBM Plex Mono",monospace;letter-spacing:.2em;text-transform:uppercase;color:#D9A441;margin-bottom:10px}
+.fine{font-size:13.5px;line-height:1.35;color:var(--faint);margin:0}
+.slide.dark .fine{color:#8FA3B4}
+.pn{position:absolute;left:110px;right:110px;bottom:34px;display:flex;justify-content:space-between;font:500 16px/1 "IBM Plex Mono",monospace;letter-spacing:.2em;color:var(--faint)}
+.nav{position:fixed;right:18px;bottom:14px;display:flex;gap:6px;z-index:5}
+.nav button{font:600 14px "IBM Plex Mono",monospace;background:rgba(14,30,46,.7);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:8px 12px;cursor:pointer}
+.nav button:focus-visible{outline:2px solid #D9A441;outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.slide.on>*{animation:up .5s cubic-bezier(.2,.8,.2,1) both} .slide.on>*:nth-child(2){animation-delay:.07s} .slide.on>*:nth-child(3){animation-delay:.14s} .slide.on>*:nth-child(4){animation-delay:.21s}}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media print{body{overflow:visible;background:#fff} .stage{position:static;transform:none;width:1920px;height:auto} .slide{display:flex!important;position:relative;height:1080px;page-break-after:always;break-after:page} .slide:last-child{page-break-after:auto;break-after:auto} .slide.on>*{animation:none!important} .nav{display:none}}
+</style><div class="stage"><section class="slide on" id="problem"><p class="kicker">1 · The problem</p>
+<h2>AI and robotics are advancing faster than workforce readiness and institutional governance.</h2>
+<div class="cols">
+ <div class="col"><b>Training is completion-based</b><p>Lessons, videos and quizzes measure attendance. A certificate says you sat in the room; nobody can check what a person can actually do.</p></div>
+ <div class="col"><b>Robotics is hard to operationalize</b><p>Integration complexity, safety requirements and a shortage of operators and technicians hold adoption back more than the hardware does.</p></div>
+ <div class="col"><b>Enterprises need governed adoption</b><p>Before an agent or a robot enters a high-consequence setting, institutions need human oversight, auditability, measurable skills and interoperable evidence.</p></div>
+</div>
+<div class="box" style="margin-top:34px;border-left-color:var(--teal);font-size:23px"><h3 style="font-size:30px">A certificate says you sat in the room. A record says what you did.</h3><p>The readiness layer is the training, simulation, governance and evidence infrastructure that lets an institution adopt intelligent machines and prove its people can run them.</p></div>
+<div style="margin-top:auto"><p class="striplab">What exists today — open the repository and click</p><div class="strip"><div><b>54</b><span>releases, every one merged green</span></div><div><b>17,450</b><span>verifiable blocks · 47 packs</span></div><div><b>6</b><span>offline single-file apps</span></div><div><b>64</b><span>Louisiana parish dashboards</span></div><div><b>0</b><span>WCAG-tagged violations (45 views)</span></div><div><b>50</b><span>states: curriculum + compliance</span></div></div></div><div class="pn"><span>AGI FUTURE FOUNDATION PBC · COGNITION.X · ROBOTICS.X</span><span>1 / 3</span></div></section><section class="slide" id="solution"><p class="kicker">2 · The solution</p>
+<h2>Cognition.X + Robotics.X turn learning into verified capability.</h2>
+<div class="loop"><div><i>1</i><b>Understand</b>role-based concepts and policy context</div><div><i>2</i><b>Practice</b>scenario role-play and guided decisions</div><div><i>3</i><b>Simulate</b>digital twin, XR or browser environment</div><div><i>4</i><b>Perform</b>supervised task or workplace evidence</div><div><i>5</i><b>Verify</b>human-reviewed rubric, credential, audit record</div><div><i>6</i><b>Improve</b>remediation and instructor insight</div></div>
+<div class="split">
+ <div class="lines mid">
+  <div><b>Cognition.X</b><span>AI-native education and workforce platform — role-based learning, scenario practice, skills verification, governance workflows. Shipped today: the six-stage loop as running code, signed portable credentials, 47 packs, six offline apps.</span></div>
+  <div><b>Robotics.X</b><span>Simulation-to-operation environment for embodied AI — operator readiness, human-robot collaboration, maintenance, field operations. Today: the Robotics OS curriculum and the trades simulation studio; the immersive layer is what the raise builds.</span></div>
+  <div><b>Mission layer</b><span>AGI Future Foundation PBC protects safety, accessibility, accountability and equitable access through narrow mission rights and public-benefit reporting — the credibility institutions require.</span></div>
+  <div><b>Commercial model</b><span>Enterprise licences, paid pilots, learner seats, simulation-module licences, implementation, train-the-trainer, integrations.</span></div>
+ </div>
+ <div class="shots2"><figure class="shot"><img src="shot-loop.png" alt=""></figure><figure class="shot"><img src="shot-trades.png" alt=""></figure></div>
+</div><div class="pn"><span>AGI FUTURE FOUNDATION PBC · COGNITION.X · ROBOTICS.X</span><span>2 / 3</span></div></section><section class="slide" id="ask"><p class="kicker">3 · The ask</p>
+<h2>Raising $5.0M to build trusted AI and robotics readiness infrastructure.</h2>
+<div class="ask">
+ <div><table><thead><tr><th>Use of proceeds — $5.0M, 18–24 months</th><th class="r">Amount</th><th class="r">Share</th></tr></thead><tbody><tr><td>Cognition.X platform &amp; AI learning infrastructure</td><td class="r"><b>$1.20M</b></td><td class="r">24%</td></tr><tr><td>Robotics simulation &amp; immersive-content studio</td><td class="r"><b>$1.00M</b></td><td class="r">20%</td></tr><tr><td>Robotics lab pilots &amp; partner equipment</td><td class="r"><b>$850K</b></td><td class="r">17%</td></tr><tr><td>Curriculum, SMEs &amp; credential design</td><td class="r"><b>$600K</b></td><td class="r">12%</td></tr><tr><td>Enterprise delivery &amp; customer success</td><td class="r"><b>$450K</b></td><td class="r">9%</td></tr><tr><td>Sales, partnerships &amp; market development</td><td class="r"><b>$300K</b></td><td class="r">6%</td></tr><tr><td>Mission governance, accessibility &amp; public benefit</td><td class="r"><b>$250K</b></td><td class="r">5%</td></tr><tr><td>Legal, security, compliance &amp; operations reserve</td><td class="r"><b>$350K</b></td><td class="r">7%</td></tr><tr class="total"><td>Total</td><td class="r">$5.0M</td><td class="r">100%</td></tr></tbody></table><p class="striplab" style="margin-top:14px">Milestones</p><div class="lines tight" style="margin-top:6px"><div><b>0–3 mo</b><span>Charter, mission-rights framework, competency framework, first three course blueprints · 3 LOIs</span></div><div><b>3–6 mo</b><span>Cognition.X Core; AI-readiness, governance and robot-operator simulations · first paid pilot; two lab/OEM partnerships</span></div><div><b>6–12 mo</b><span>Three flagship pathways; xAPI/LRS; simulation analytics · 5–10 paid pilots; $150K–$300K contracted</span></div><div><b>12–18 mo</b><span>Cybersecurity and robotics-maintenance tracks; partner-lab model · 10–20 customers; $500K–$1M run-rate</span></div><div><b>18–24 mo</b><span>Enterprise integrations, governance layer, skills passport · $1M–$2M ARR; Series A readiness</span></div></div></div>
+ <div><div class="box"><h3>The round</h3><div class="terms"><div><b>Total program capitalization</b><span>$5.0M blended: $2.5M AGI Corp equity (this instrument) · $1.5–2.0M robotics program capital (grants, leases, strategic) · $0.5–1.5M non-dilutive grants and customer-funded pilots</span></div><div><b>Instrument — standard form</b><span>Y Combinator post-money SAFE, valuation-cap only (no discount, no MFN), one form for every investor in the round; cap set with counsel from a fully diluted model. Issuer: AGI Corp, a Delaware C-corporation</span></div><div><b>Side letter</b><span>YC pro rata side letter for investors at or above $250K; information rights for the same group; no other special rights</span></div><div><b>At the priced round</b><span>NVCA model documents: 1× non-participating preferred · option pool 10–15% pre-money · founder vesting 4 years / 1-year cliff · one investor seat plus an independent director policy · protective provisions limited to major items</span></div><div><b>Securities compliance</b><span>Regulation D Rule 506(b) — accredited investors, no general solicitation; Form D within 15 days of first sale; state notice filings; QSBS analysis for a C-corp issuer</span></div><div><b>Mission rights &amp; reporting</b><span>Foundation reserved matters limited to public-benefit purpose, safety-policy removal, sale of mission-critical IP and dissolution; quarterly investor report; annual public-benefit report (8 Del. C. §366)</span></div></div></div>
+  <div class="box" style="margin-top:12px;border-left-color:var(--teal)"><h3>Call to action</h3><p><b>Request the data room</b> — brief, capital-structure and risk memo, and the repository behind every product claim. <br>agifuturefoundation.org · github.com/AGIFutureFoundation/Cognition.X</p></div></div>
+</div>
+<p class="fine">Risk management: AGI operates in early-stage, regulated and technically evolving markets — product execution, AI-model reliability, adoption, enterprise sales cycles, privacy and security, robotics safety, capital availability and mission-governance complexity. Mitigated through a phased roadmap, simulation-first robotics, human oversight, standards-based interoperability, separate legal entities and capital pools, rigorous data controls, customer-funded pilots and board-level governance. Not an offer to sell securities; any offering is made only through definitive documents under an available exemption. Structure and terms are proposals until counsel has papered them.</p><div class="pn"><span>AGI FUTURE FOUNDATION PBC · COGNITION.X · ROBOTICS.X</span><span>3 / 3</span></div></section></div>
+<div class="nav"><button id="prev" aria-label="Previous slide">◀</button><button id="next" aria-label="Next slide">▶</button></div><script>
+const slides=[...document.querySelectorAll('.slide')]; let cur=0;
+function fit(){ const s=Math.min(innerWidth/1920, innerHeight/1080); document.documentElement.style.setProperty('--s', s); }
+function show(i){ cur=Math.max(0,Math.min(slides.length-1,i)); slides.forEach((s,j)=>s.classList.toggle('on', j===cur)); history.replaceState(null,'','#'+slides[cur].id); }
+function fromHash(){ const i=slides.findIndex(s=>'#'+s.id===location.hash); show(i<0?0:i); }
+addEventListener('resize', fit); fit(); fromHash(); addEventListener('hashchange', fromHash);
+addEventListener('keydown', e=>{ if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();show(cur+1);} if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();show(cur-1);} if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1); });
+document.querySelector('#prev').addEventListener('click',()=>show(cur-1)); document.querySelector('#next').addEventListener('click',()=>show(cur+1));
+document.querySelector('.stage').addEventListener('click', e=>{ if(e.target.closest('.nav')) return; show(cur+1); });
+</script>

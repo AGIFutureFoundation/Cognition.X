@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.53.1** | The investor data room: `docs/INVESTOR_BRIEF.md` and `docs/CAPITAL_STRUCTURE.md` with a claim-by-claim bridge to what the repository proves |
+| **v0.53.2** | The three-page investor deck (`docs/PITCH_DECK.md`, generator in `tools/film/deck3/`) with the round on standard forms — post-money SAFE, NVCA at the priced round, Reg D 506(b) — and its narrated pitch video |
+| v0.53.1 | The investor data room: `docs/INVESTOR_BRIEF.md` and `docs/CAPITAL_STRUCTURE.md` with a claim-by-claim bridge to what the repository proves |
 | v0.53.0 | The accessibility audit: axe-core over 45 views, every WCAG-tagged finding fixed at the token/component level (0 remaining), keyboard sweep clean, `docs/ACCESSIBILITY.md` with what remains, the audit result held by the tests |
 | v0.52.0 | The credential-naming correction: 24 proposed credential names (person + capability) applied through the pipeline as a counted exception, the split track unified, ratchets lowered to 33 rows / 0 tracks — proposed to the review board, not yet adopted; plus the accessibility audit runner |
 | v0.51.0 | The compliance layer: for every state, ten domains a program office meets — privacy law and agreement, homeschool forms, nonprofit and charity registration, background checks, mandated reporting, apprenticeship agency, CTE list, accessibility, sales tax — with forms, agencies, fees (as-of, verify) and cost roll-ups; the States app Compliance view, state-page panels, the Louisiana State Admin widget, and a CI-checked report |
