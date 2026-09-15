@@ -702,6 +702,32 @@ async function testComplianceReview(browser, errs) {
   await tn.close();
 }
 
+/* ------- standards and rubrics (v0.56.0): where the assessor and the workbook see them ------- */
+async function testStandardsAndRubrics(browser, errs) {
+  const la = await newPage(browser, 'la/rubric', errs);
+  await la.goto(url('louisiana') + '#/roles'); await la.waitForTimeout(700);
+  await la.evaluate(() => { localStorage.removeItem('cxla.ledger'); llSeedDemo(); const d = llLoad(); d.queue = []; llSave(d);
+    qRequest('demo-1', LTRACKS[0].key); R.role = 'assessor'; saveR(); });
+  await la.waitForTimeout(400);
+  const txt = await la.$eval('.trackrubric', el => el.textContent).catch(() => '');
+  check('rubrics: assessor sees the track rubric under the three lines', txt.includes('Pass evidence') && txt.includes('Common failure modes') && txt.includes('Assessor note'), txt.slice(0, 80));
+  await la.evaluate(() => { localStorage.removeItem('cxla.ledger'); localStorage.removeItem('cxla.roles'); });
+  await la.close();
+  const fh = await newPage(browser, 'flow-hub/standards', errs);
+  await fh.goto(url('flow-hub')); await fh.waitForTimeout(700);
+  await fh.evaluate(() => { go('packs'); openPack(DATA.packs.findIndex(p => p.slug === 'ROB')); });
+  await fh.waitForTimeout(400);
+  const body = await fh.$eval('#view-packs', el => el.textContent);
+  check('standards: flow hub shows NGSS chips on Robotics OS bands', body.includes('MS-ETS1-1') && body.includes('HS-ETS1-3'));
+  await fh.evaluate(() => { openPack(DATA.packs.findIndex(p => p.slug === 'LAOS')); }); await fh.waitForTimeout(400);
+  const laos = await fh.$eval('#view-packs', el => el.textContent);
+  check('rubrics: flow hub shows the track rubric on a core-spine pack', laos.includes('How an assessor reads a check on this track'));
+  await fh.evaluate(() => { openPack(DATA.packs.findIndex(p => p.slug === 'K12')); }); await fh.waitForTimeout(400);
+  const k12 = await fh.$eval('#view-packs', el => el.textContent);
+  check('standards: K–12 rows carry their cited codes', k12.includes('Standards (as cited)') && k12.includes('K.CC.A.1'));
+  await fh.close();
+}
+
 (async () => {
   const browser = await chromium.launch({
     executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium',
@@ -723,6 +749,7 @@ async function testComplianceReview(browser, errs) {
       ['other apps', testOtherApps],
       ['simulation studio', testSimulationStudio],
       ['compliance review', testComplianceReview],
+      ['standards and rubrics', testStandardsAndRubrics],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);

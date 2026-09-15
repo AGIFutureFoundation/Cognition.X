@@ -505,6 +505,31 @@ def test_app_compliance_review():
     check("fonts: licence file present", (ROOT / "data" / "fonts" / "LICENSE-OFL.txt").exists())
 
 
+def test_standards_and_rubrics():
+    """v0.56.0 — standards mappings and transfer-check rubrics: valid against
+    the dataset, honest about strength, and surfaced where assessors work."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from validate_standards import validate as validate_standards
+    errs, cov = validate_standards()
+    check("standards: mappings and rubrics validate", not errs, "; ".join(errs[:3]))
+    check("standards: at least two frameworks", len(cov["frameworks"]) >= 2)
+    check("standards: at least two packs mapped", cov["blocks_covered"] >= 200, str(cov["blocks_covered"]))
+    check("rubrics: the 30 core-spine tracks", cov["tracks_with_rubric"] == 30, str(cov["tracks_with_rubric"]))
+    for p in sorted((ROOT / "data" / "standards").glob("*.json")):
+        d = json.loads(p.read_text(encoding="utf-8"))
+        check(f"standards: {p.name} never claims an external alignment", d["strength"] != "aligns")
+        check(f"standards: {p.name} caveat says verify", "verify" in d["caveat"].lower())
+    la = app_html("louisiana")
+    check("louisiana: track rubrics embedded", "Common failure modes" in la and '"byTrack"' in la)
+    fh = app_html("flow-hub")
+    check("flow hub: standards embedded with the caveat", "HS-ETS1-3" in fh and "verify each code against the current" in fh.lower())
+    check("flow hub: rubrics embedded", "How an assessor reads a check on this track" in fh)
+    doc = (ROOT / "docs" / "STANDARDS.md").read_text(encoding="utf-8")
+    check("STANDARDS.md states the coverage", f"{cov['blocks_covered']} of 17,450 blocks" in doc and f"{cov['tracks_with_rubric']} of {cov['tracks']} tracks" in doc)
+    dq = (ROOT / "docs" / "DATA_QUALITY.md").read_text(encoding="utf-8")
+    check("DATA_QUALITY.md reports standards coverage", "## Standards and rubrics" in dq)
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))

@@ -1970,6 +1970,18 @@ function qResolve(qid, result, by, note){
   llSave(d);
   return {learner:l, track:t, earned};
 }
+/* Track rubrics (v0.56.0): data/rubrics/core_spine.json, keyed slug|track like LTRACKS.
+   Shown under the three lines whenever a queue item is open; the theme-level specific
+   stays the block's own transfer check. */
+function trackRubricHTML(key){
+  const rb = D.rubrics && D.rubrics.byTrack[key]; if (!rb) return "";
+  const li = xs => xs.map(x=>`<li>${esc(x)}</li>`).join("");
+  return `<div class="trackrubric" style="border:1px solid var(--line); border-radius:10px; padding:8px 12px; margin:6px 0 8px; font-size:.82rem">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:8px 16px">
+      <div><b>Pass evidence</b> — any one, on real material, at band<ul style="margin:4px 0 0; padding-left:18px">${li(rb.pass)}</ul></div>
+      <div><b>Common failure modes</b> — record not-yet with the smaller step<ul style="margin:4px 0 0; padding-left:18px">${li(rb.fails)}</ul></div></div>
+    <p class="note" style="margin:8px 0 0"><b>Assessor note:</b> ${esc(rb.note)}</p></div>`;
+}
 const RUBRIC = [
   ["Real material","The check was performed on real material — not a worksheet about it."],
   ["Independent at band","The learner carried the moves themselves, at their band's level of independence."],
@@ -2604,6 +2616,7 @@ const WIDGETS = {
             ${(accessOf(l).alts.length ? `<p class="note" style="margin:8px 0 4px"><b>Check format for this learner:</b> ${esc(accessOf(l).alts[0])}.</p>` : "")}
             <div style="margin:8px 0 6px">${RUBRIC.map(([h,d2])=>
               `<div style="font-size:.85rem; padding:4px 0; border-top:1px solid var(--line)"><b>${h}</b> — <span style="color:var(--muted)">${d2}</span></div>`).join("")}</div>
+            ${trackRubricHTML(q.track)}
             <textarea id="aq-note" rows="3" style="width:100%" placeholder="Evidence: the material used, where, and what was demonstrated…"></textarea>
             <div style="display:flex; gap:9px; margin-top:8px">
               <button class="btn gold" data-qres="confirmed|${esc(q.id)}">✓ Confirmed</button>
@@ -2639,7 +2652,10 @@ const WIDGETS = {
         ${RUBRIC.map(([h,d2])=>`<li><span><b>${h}</b> — ${d2}</span></li>`).join("")}</ul>
       <p class="note" style="margin-top:10px">The learner's access profile sets the <b>format</b> (oral,
       demonstrated, directed, scaffolded) — never the bar. The capability is the constant; the format is
-      the variable. Trainer track: <b>Training the trainers</b> in Parish Launch &amp; Scale.</p>`;
+      the variable. Trainer track: <b>Training the trainers</b> in Parish Launch &amp; Scale.</p>` +
+      (D.rubrics ? `<p class="note" style="margin-top:8px"><b>Track rubrics:</b> ${Object.keys(D.rubrics.byTrack).length} of the
+      ${LTRACKS.length} core-spine tracks carry pass evidence, failure modes and an assessor note (shown under the three lines
+      when a request is open). ${esc(D.rubrics.bands)}</p>` : "");
   }},
   {id:"evidence", t:"Recent evidence log", r:(p,el)=>{
     const ls = llLoad().learners;

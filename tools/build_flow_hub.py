@@ -40,6 +40,29 @@ def kind_of(pack, has_tracks, blocks):
     return "community"
 
 
+def standards_payload(rows):
+    """Every framework's metadata plus the codes, keyed for the app: by block_id
+    (block scope) and by slug|track|band (track-band scope)."""
+    out = {"frameworks": [], "byBlock": {}, "byTrackBand": {}}
+    for p in sorted((ROOT / "data" / "standards").glob("*.json")):
+        d = json.loads(p.read_text(encoding="utf-8"))
+        out["frameworks"].append({k: d[k] for k in ("id", "framework", "publisher", "as_of", "scope", "strength", "strength_note", "caveat")})
+        if d["scope"] == "block":
+            for e in d["entries"]:
+                flat = [c for v in e["codes"].values() for c in v]
+                out["byBlock"].setdefault(e["block_id"], []).append({"fw": d["id"], "codes": flat})
+        else:
+            for e in d["entries"]:
+                out["byTrackBand"].setdefault(f'{d["pack"]}|{e["track"]}|{e["band"]}', []).append({"fw": d["id"], "codes": e["codes"], "why": e["why"]})
+    return out
+
+
+def rubrics_payload():
+    d = json.loads((ROOT / "data" / "rubrics" / "core_spine.json").read_text(encoding="utf-8"))
+    return {"how_to_read": d["how_to_read"], "bands": d["bands"],
+            "byTrack": {f'{r["pack"]}|{r["track"]}': {"pass": r["pass"], "fails": r["fails"], "note": r["note"]} for r in d["rubrics"]}}
+
+
 def main():
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
     version = (ROOT / "VERSION").read_text().strip()
@@ -66,7 +89,7 @@ def main():
                 base = re.sub(r"\s+—\s+at\s+[^—]+$", "", r["description"])
                 th[1] = base
             else:
-                loose.append([r["grade"], r["credential"], r["theme"], r["transfer_check"]])
+                loose.append([r["grade"], r["credential"], r["theme"], r["transfer_check"], r["block_id"]])
         tr = [{"name": t["name"], "prefix": t["prefix"], "credential": t["credential"],
                "themes": list(t["themes"].values())} for t in tracks.values()]
         entry = {
@@ -88,7 +111,10 @@ def main():
     payload = {"version": version, "bands": BANDS, "levels": LEVELS, "packs": out_packs,
                "access": access,
                # the Simulation Studio (v0.54.0): every scenario, keyed in the app by pack slug + track
-               "sims": sim_payload()}
+               "sims": sim_payload(),
+               # standards mappings and track rubrics (v0.56.0)
+               "standards": standards_payload(rows),
+               "rubrics": rubrics_payload()}
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
     # keep the JSON safe inside a <script> block
     data = data.replace("</", "<\\/")

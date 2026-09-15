@@ -63,6 +63,19 @@ authored descriptions. Neither is hidden — both are counted here.
 
 **Dataset-wide:** descriptions 64% · band-suffix 64% · code+level 100% · shortest transfer check 14 chars.
 
+## Standards and rubrics
+
+Standards mappings (`data/standards/*.json`) name the codes a block was
+designed against — *cites* — or the performance expectations a track's
+blocks practise at a band — *touches*. Neither is an external alignment
+review, and every framework carries the caveat to verify codes against the
+current document. Rubrics (`data/rubrics/*.json`) give an assessor pass
+evidence, failure modes and a note per track. Validated by
+`tools/validate_standards.py`.
+
+- Blocks carrying at least one standards code: **252** of 17,450 (1%) — lss-k12 (block: 52 entries, 299 codes) · ngss-ets-robotics (track-band: 20 entries, 32 codes)
+- Tracks with a transfer-check rubric: **30** of 225 (13%) — the core-spine tracks the Louisiana ledger credits.
+
 ## Credential naming
 
 A credential should name an accomplishment (“Oral Health Peer”), not a

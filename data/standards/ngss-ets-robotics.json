@@ -1,0 +1,37 @@
+{
+ "format": "cx-standards/1",
+ "id": "ngss-ets-robotics",
+ "framework": "Next Generation Science Standards — Engineering Design performance expectations (ETS1)",
+ "publisher": "NGSS Lead States (2013); Achieve, Inc.",
+ "documents": [
+  {"key": "ngss_ets1", "title": "NGSS Engineering Design: K-2-ETS1, 3-5-ETS1, MS-ETS1, HS-ETS1 (2013)", "url": "https://www.nextgenscience.org/"}
+ ],
+ "as_of": "NGSS as published April 2013; Louisiana's own science standards (LSS Science, 2017) carry equivalent engineering-design expectations — verify against the adopting state's document",
+ "scope": "track-band",
+ "strength": "touches",
+ "strength_note": "touches: the track's blocks at this band practise the performance expectation's core activity (defining a problem, generating and comparing solutions, testing and improving). The mapping is at track-and-band level, authored by the maintainers, not a block-by-block alignment review. Use it to find the door, not to claim the room.",
+ "caveat": "Verify each code against the current NGSS or state science document before classroom use. A code names an intended alignment, not a certification of it.",
+ "pack": "ROB",
+ "entries": [
+  {"track": "Machines and how they move", "band": "K–2", "codes": ["K-2-ETS1-1", "K-2-ETS1-2"], "why": "Asking what a machine cannot reach and drawing how it moves is a simple problem defined and a solution sketched."},
+  {"track": "Machines and how they move", "band": "3–5", "codes": ["3-5-ETS1-1", "3-5-ETS1-2"], "why": "Criteria and constraints on a mechanism (reach, force, power) and comparing two ways to move a load."},
+  {"track": "Machines and how they move", "band": "6–8", "codes": ["MS-ETS1-1", "MS-ETS1-2"], "why": "Precision in defining a mechanism's problem and evaluating competing designs against criteria."},
+  {"track": "Machines and how they move", "band": "9–10", "codes": ["HS-ETS1-1", "HS-ETS1-2"], "why": "Quantified criteria for a real mechanism and breaking a motion problem into solvable parts."},
+  {"track": "Machines and how they move", "band": "11–12", "codes": ["HS-ETS1-2", "HS-ETS1-3"], "why": "Trade-offs between reach, force, cost and safety in a design the learner can measure."},
+  {"track": "Control and autonomy", "band": "K–2", "codes": ["K-2-ETS1-3"], "why": "Testing two ways to make a bot follow a line and saying which worked better."},
+  {"track": "Control and autonomy", "band": "3–5", "codes": ["3-5-ETS1-3"], "why": "Fair tests of a controller with one variable changed at a time."},
+  {"track": "Control and autonomy", "band": "6–8", "codes": ["MS-ETS1-3", "MS-ETS1-4"], "why": "Iterative tuning of something that oscillates; results used to improve the next version."},
+  {"track": "Control and autonomy", "band": "9–10", "codes": ["HS-ETS1-3", "HS-ETS1-4"], "why": "Evaluating a controller against criteria and using a model to predict its behaviour before running it."},
+  {"track": "Control and autonomy", "band": "11–12", "codes": ["HS-ETS1-3", "HS-ETS1-4"], "why": "Simulation-first evaluation of a plan meeting the world, with the model's limits stated."},
+  {"track": "Bringing it into service", "band": "K–2", "codes": ["K-2-ETS1-1"], "why": "Asking what a machine needs before it can do its job at a real place."},
+  {"track": "Bringing it into service", "band": "3–5", "codes": ["3-5-ETS1-1", "3-5-ETS1-3"], "why": "A site's constraints defined; a fair test of whether the machine meets them."},
+  {"track": "Bringing it into service", "band": "6–8", "codes": ["MS-ETS1-1", "MS-ETS1-3"], "why": "Site survey as problem definition; acceptance testing as evaluation against criteria."},
+  {"track": "Bringing it into service", "band": "9–10", "codes": ["HS-ETS1-2", "HS-ETS1-3"], "why": "Integration with what is already there broken into parts; commissioning as prioritized-criteria evaluation."},
+  {"track": "Bringing it into service", "band": "11–12", "codes": ["HS-ETS1-2", "HS-ETS1-3"], "why": "The gap list and the acceptance test are the engineering-design cycle closed on a real system."},
+  {"track": "Materials, energy and afterwards", "band": "K–2", "codes": ["K-2-ETS1-2"], "why": "Drawing what a machine is made of and which parts could be reused."},
+  {"track": "Materials, energy and afterwards", "band": "3–5", "codes": ["3-5-ETS1-2"], "why": "Comparing two designs for how easily they are repaired."},
+  {"track": "Materials, energy and afterwards", "band": "6–8", "codes": ["MS-ETS1-2"], "why": "Evaluating designs for repair and energy use against criteria."},
+  {"track": "Materials, energy and afterwards", "band": "9–10", "codes": ["HS-ETS1-3"], "why": "Trade-offs including environmental impact across a machine's life."},
+  {"track": "Materials, energy and afterwards", "band": "11–12", "codes": ["HS-ETS1-3"], "why": "Prioritized criteria — cost, safety, reliability, environmental impact — for refurbishment against replacement."}
+ ]
+}

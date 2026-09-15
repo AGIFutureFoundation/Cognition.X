@@ -38,6 +38,12 @@ jobs:
         run: python3 tools/validate_blocks.py
       - name: Validate the Simulation Studio fact base against the dataset
         run: python3 tools/validate_simulations.py
+      - name: Regenerate the LSS K–12 standards mapping from the program
+        run: python3 tools/generate_standards.py
+      - name: Standards mapping must be current with the program
+        run: git diff --exit-code data/standards/
+      - name: Validate standards mappings and rubrics against the dataset
+        run: python3 tools/validate_standards.py
       - name: Regenerate the data-quality dashboard
         run: python3 tools/data_quality.py
       - name: Dashboard must be current with the dataset

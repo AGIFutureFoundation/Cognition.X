@@ -257,6 +257,13 @@ def hall_unions():
     return out
 
 
+def la_rubrics():
+    d = json.loads((ROOT / "data" / "rubrics" / "core_spine.json").read_text(encoding="utf-8"))
+    return {"note": d["note"], "how_to_read": d["how_to_read"], "bands": d["bands"],
+            "byTrack": {f'{r["pack"]}|{r["track"]}': {"pass": r["pass"], "fails": r["fails"], "note": r["note"]}
+                        for r in d["rubrics"]}}
+
+
 def la_sims():
     """Every canonical scenario plus the New Orleans and River Region sites the
     trades kinds localize to (from the unions fact base)."""
@@ -320,6 +327,8 @@ def main():
         "compliance": la_compliance(),
         # the Simulation Studio (v0.54.0): every canonical scenario, with the two Louisiana regions' real sites
         "sims": la_sims(),
+        # transfer-check rubrics for the core-spine tracks (v0.56.0), keyed like LTRACKS: slug|track
+        "rubrics": la_rubrics(),
         "corePacks": CORE_PACKS,
         "packmeta": packmeta,
         "catalog": catalog_light,

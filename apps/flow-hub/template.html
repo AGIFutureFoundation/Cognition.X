@@ -659,6 +659,9 @@ function printWorkbook(p, t){
      <p style="font-size:.85rem; margin:0 0 14px">Cognition.X workbook — one theme per section, five grade bands each.
      A check counts when it is demonstrated on real material and witnessed; the witness signs the line.
      (Blocks: CX-${p.slug}. Content CC BY 4.0.)</p>` +
+    (RUB.byTrack[p.slug+"|"+t.name] ? (rb => `<div style="border:1px solid #000; padding:8px 10px; margin:0 0 12px; font-size:.82rem">
+      <b>How the witness reads a check on this track.</b> Pass evidence (any one, on real material, at band): ${rb.pass.map(esc).join(" · ")}
+      <br><b>Record not-yet if:</b> ${rb.fails.map(esc).join(" · ")}<br><b>Assessor note:</b> ${esc(rb.note)}</div>`)(RUB.byTrack[p.slug+"|"+t.name]) : "") +
     t.themes.map((th,ti) =>
       `<div style="page-break-inside:avoid; border-top:2px solid #000; padding:8px 0 14px; margin-top:8px">
         <h2 style="font-size:1.05rem; margin:0">${ti+1}. ${esc(th[0])} <span style="font-weight:400; font-size:.8rem">(${t.prefix}-${ti*5+1}…${t.prefix}-${ti*5+5})</span></h2>
@@ -666,7 +669,7 @@ function printWorkbook(p, t){
         <p style="margin:0 0 8px; font-size:.9rem"><b>Transfer check:</b> ${esc(th[2])}</p>
         <table style="width:100%; border-collapse:collapse; font-size:.82rem">
           ${BANDS.map((b,bi)=>`<tr>
-            <td style="border:1px solid #000; padding:5px 8px; width:110px">${b} · ${LEVELS[bi]}</td>
+            <td style="border:1px solid #000; padding:5px 8px; width:110px">${b} · ${LEVELS[bi]}${codesForBand(p,t,b).length?`<br><span style="font-size:.68rem">${codesForBand(p,t,b).flatMap(m=>m.codes).map(esc).join(", ")}</span>`:""}</td>
             <td style="border:1px solid #000; padding:5px 8px">Witnessed by ______________________ &nbsp; date ____________</td>
           </tr>`).join("")}
         </table>
@@ -689,23 +692,48 @@ function renderPackDetail(p){
       (sim ? `<span class="chip" title="A studio scenario is tied to this track">🎛 studio: ${esc(sim.title)}</span>` : "") +
       `<span class="meta mono" style="color:var(--faint); font-size:.74rem">${t.prefix}-1…${t.prefix}-50</span>` +
       `<button class="chip" data-wb="${DATA.packs.indexOf(p)}|${tj}" title="Print this track as a paper workbook">🖨 Workbook</button></div>` +
-      `<div class="themelist">` + t.themes.map((th,ti) =>
+      trackStandardsNote(p, t) +
+      `<div class="themelist">` + rubricHTML(p, t) + t.themes.map((th,ti) =>
         `<details class="theme"><summary><span class="code mono">${t.prefix}-${ti*5+1}</span>` +
         `<span class="tt">${esc(th[0])}</span>` +
         (done[ti]!=null ? `<span class="done-pill">✓ ${esc(BANDS[done[ti]])}</span>` : "") +
         `</summary><div class="body"><div>${esc(th[1])}</div>` +
         `<div class="check"><b>Transfer check:</b> ${esc(th[2])}</div>` +
-        `<div>Bands: ${BANDS.map((b,bi)=>`<span class="band">${b} · ${LEVELS[bi]}</span>`).join(" ")}</div>` +
+        `<div>Bands: ${BANDS.map((b,bi)=>`<span class="band">${b} · ${LEVELS[bi]}</span>`+(codesForBand(p,t,b).length?` <span class="mono" style="font-size:.7rem; color:var(--faint)">${codeChips(codesForBand(p,t,b))}</span>`:"")).join(" ")}</div>` +
         `</div></details>`).join("") + `</div>`;
     }).join("");
   }
   const rows = (p.loose||[]);
-  return `<div class="tablewrap" style="margin-top:10px"><table><thead><tr>` +
-    `<th>Grade</th><th>Credential</th><th>Theme</th><th>Transfer check</th></tr></thead><tbody>` +
-    rows.map(r => `<tr><td class="mono">${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`).join("") +
+  const anyStd = rows.some(r => STD.byBlock[r[4]]);
+  return (anyStd ? `<p class="lede" style="font-size:.8rem; margin:10px 0 0">${esc(STD.frameworks.map(f=>f.framework).filter((f,i)=>rows.some(r=>(STD.byBlock[r[4]]||[]).some(m=>fwName(m.fw)===f))).join("; "))}. ${esc((STD.frameworks[0]||{}).caveat||"")}</p>` : "") +
+    `<div class="tablewrap" style="margin-top:10px"><table><thead><tr>` +
+    `<th>Grade</th><th>Credential</th><th>Theme</th><th>Transfer check</th>${anyStd?"<th>Standards (as cited)</th>":""}</tr></thead><tbody>` +
+    rows.map(r => `<tr><td class="mono">${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td>${anyStd?`<td class="mono" style="font-size:.7rem">${(STD.byBlock[r[4]]||[]).flatMap(m=>m.codes).map(esc).join(" · ")}</td>`:""}</tr>`).join("") +
     `</tbody></table></div>`;
 }
 $("#packsearch").addEventListener("input", e => { packFilter.q = e.target.value; renderPacks(); });
+
+/* ---------- standards and rubrics (v0.56.0) ---------- */
+const STD = DATA.standards || {frameworks:[], byBlock:{}, byTrackBand:{}};
+const RUB = DATA.rubrics || {byTrack:{}};
+const fwName = id => (STD.frameworks.find(f=>f.id===id)||{}).framework || id;
+function codesForBand(p, t, band){ return STD.byTrackBand[p.slug+"|"+t.name+"|"+band] || []; }
+function codeChips(list){
+  return list.map(m => m.codes.map(c => `<span class="chip" style="font-size:.68rem; padding:2px 8px" title="${esc(fwName(m.fw))} · ${esc(m.why||"as cited")} · verify against the current document">${esc(c)}</span>`).join(" ")).join(" ");
+}
+function rubricHTML(p, t){
+  const rb = RUB.byTrack[p.slug+"|"+t.name]; if (!rb) return "";
+  const li = xs => xs.map(x=>`<li>${esc(x)}</li>`).join("");
+  return `<details class="theme"><summary><span class="code mono">rubric</span><span class="tt">How an assessor reads a check on this track</span></summary><div class="body">
+    <div><b>Pass evidence</b> — any one, on real material, at band<ul style="margin:4px 0 8px; padding-left:18px">${li(rb.pass)}</ul></div>
+    <div><b>Common failure modes</b> — record not-yet with the smaller step<ul style="margin:4px 0 8px; padding-left:18px">${li(rb.fails)}</ul></div>
+    <div class="check"><b>Assessor note:</b> ${esc(rb.note)}</div><div style="font-size:.8rem; color:var(--faint)">${esc(RUB.how_to_read||"")}</div></div></details>`;
+}
+function trackStandardsNote(p, t){
+  const any = BANDS.some(b => codesForBand(p,t,b).length); if (!any) return "";
+  const fws = [...new Set(BANDS.flatMap(b => codesForBand(p,t,b).map(m=>m.fw)))];
+  return `<div class="check" style="margin-top:6px"><b>Standards:</b> ${fws.map(f=>esc(fwName(f))).join("; ")}. ${esc((STD.frameworks.find(f=>f.id===fws[0])||{}).caveat||"")}</div>`;
+}
 
 /* ---------- the simulation studio (v0.54.0): scenarios keyed by pack slug + track ---------- */
 const SIMS = DATA.sims || {scenarios:[]};
