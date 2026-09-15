@@ -3,28 +3,28 @@
 <style>
   :root{
     --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#E9EDF1; --line:#D5DBE2;
-    --ink:#1B2431; --muted:#4E5A6B; --faint:#7E8898;
-    --purple:#2456A6; --gold:#946900; --green:#1F7A5C; --red:#B3352C;
-    --gold-soft:rgba(148,105,0,.10); --purple-soft:rgba(36,86,166,.10);
-    --w1:#3B6FD4; --w2:#2E8F63; --w3:#9552BD; --w4:#C25A3A;
+    --ink:#1B2431; --muted:#4E5A6B; --faint:#5F6B7A;
+    --purple:#2456A6; --gold:#7F5A00; --green:#1F7A5C; --red:#B3352C;
+    --gold-soft:rgba(127,90,0,.10); --purple-soft:rgba(36,86,166,.10);
+    --w1:#3B6FD4; --w2:#2A835B; --w3:#9552BD; --w4:#BA5637;
     --ring:rgba(36,86,166,.45); --shadow:0 8px 22px rgba(27,36,49,.08);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
       --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E; --red:#E07A72;
       --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
-      --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+      --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
       --ring:rgba(122,167,234,.5); --shadow:0 12px 32px rgba(0,0,0,.4);
     }
   }
   :root[data-theme="dark"]{
     --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
     --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E; --red:#E07A72;
     --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
-    --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+    --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
     --ring:rgba(122,167,234,.5); --shadow:0 12px 32px rgba(0,0,0,.4);
   }
   *{box-sizing:border-box}
@@ -72,7 +72,7 @@
   .chip{display:inline-block; border:1px solid var(--line); background:var(--surface-2); color:var(--muted);
     border-radius:999px; padding:2px 11px; font-size:.74rem; margin:2px 4px 2px 0}
   .btn{border:1px solid var(--line); background:var(--surface-2); color:var(--ink); border-radius:9px; padding:6px 14px}
-  .btn.gold{background:var(--gold); border-color:var(--gold); color:#fff}
+  .btn.gold{background:var(--gold); border-color:var(--gold); color:var(--on-gold,#fff)}
   .btn:disabled{opacity:.45; cursor:not-allowed}
   .mapwrap{overflow-x:auto}
   .sysnode{cursor:pointer}
@@ -154,7 +154,7 @@
     <div class="grid3">
       <div class="panel"><h3>Regenerate everything</h3>
         <p class="note">The whole platform rebuilds from one CSV:</p>
-        <div class="artifact">python3 tools/generate_pack.py spec.json > out.csv
+        <div class="artifact" tabindex="0" role="region" aria-label="Output">python3 tools/generate_pack.py spec.json > out.csv
 python3 tools/normalize_blocks.py
 python3 tools/validate_blocks.py      # CI runs this
 python3 tools/build_flow_hub.py
@@ -196,7 +196,7 @@ python3 tools/evidence_triage.py      # the loop's return path</div></div>
 
 <script>
 document.documentElement.lang = "en";
-const D = {"version":"0.52.0","totals":{"blocks":17450,"packs":47,"tracks":225,"credentials":1431},"demoTrack":{"pack":"Cognition.X : Louisiana OS","name":"The river: the Mississippi and its machinery","credential":"River Systems Reader","blocks":50,"sampleTheme":"A continent's drain runs past your door","sampleCheck":"Trace, on a real map, the path rain falling in two distant states takes to pass Louisiana, and name what it picks up on the way."}};
+const D = {"version":"0.53.0","totals":{"blocks":17450,"packs":47,"tracks":225,"credentials":1431},"demoTrack":{"pack":"Cognition.X : Louisiana OS","name":"The river: the Mississippi and its machinery","credential":"River Systems Reader","blocks":50,"sampleTheme":"A continent's drain runs past your door","sampleCheck":"Trace, on a real map, the path rain falling in two distant states takes to pass Louisiana, and name what it picks up on the way."}};
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 $("#verline").textContent = "v" + D.version;
@@ -268,7 +268,7 @@ function renderMap(){
     <path d="M 120,362 Q 90,330 90,300" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#pxarrg)"/>
     <text x="420" y="405" font-size="10" fill="var(--gold)">what happened, by consent → what gets revised, by review</text>`;
   $("#sysmap").innerHTML =
-    `<svg viewBox="0 0 700 420" width="100%" style="max-width:760px" role="img" aria-label="System map of the Cognition.X platform">
+    `<svg viewBox="0 0 700 420" width="100%" style="max-width:760px" role="group" aria-label="System map of the Cognition.X platform">
       <defs>
         <marker id="pxarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--faint)"/></marker>
         <marker id="pxarrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--gold)"/></marker>
@@ -369,7 +369,7 @@ const STAGES = [
    if (M.record){
      el.innerHTML = `<p class="note" style="margin:0">✓ Signed by <b>${esc(M.office.name)}</b> — a genuine ECDSA P-256
        signature from your browser's WebCrypto (only the public key is in the record).</p>
-       <div class="artifact">${esc(JSON.stringify(M.record, null, 1))}</div>`;
+       <div class="artifact" tabindex="0" role="region" aria-label="Output">${esc(JSON.stringify(M.record, null, 1))}</div>`;
      return;
    }
    el.innerHTML = `<p class="note">A Records Office keypair is generated in this page's memory, and the earned
@@ -431,7 +431,7 @@ const STAGES = [
    el.innerHTML = `<p class="note">The run's aggregate — per-track counts only, no names — in the same
      cx-evidence/1 format the review board's <span class="mono">evidence_triage.py</span> reads. In the real
      platform this exports only behind a consent checkbox and is sent by a person, never a page.</p>
-     <div class="artifact">${esc(JSON.stringify(ev, null, 1))}</div>
+     <div class="artifact" tabindex="0" role="region" aria-label="Output">${esc(JSON.stringify(ev, null, 1))}</div>
      <p class="note" style="margin-top:10px"><b>The loop is closed:</b> a learner moved through flow, was
      witnessed honestly, holds a verifiable credential, and what happened is on its way — by consent, through
      people — to shaping what gets revised. That is the working model of Cognition.X.</p>`;

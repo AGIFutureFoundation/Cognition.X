@@ -4,44 +4,44 @@
   /* ---------- tokens: enterprise-first; full dark mirror; 5 style templates ---------- */
   :root{
     --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#E9EDF1; --line:#D5DBE2;
-    --ink:#1B2431; --muted:#4E5A6B; --faint:#7E8898;
-    --purple:#2456A6; --gold:#946900; --green:#1F7A5C;
-    --gold-soft:rgba(148,105,0,.10); --purple-soft:rgba(36,86,166,.10);
-    --w1:#3B6FD4; --w2:#2E8F63; --w3:#9552BD; --w4:#C25A3A;
+    --ink:#1B2431; --muted:#4E5A6B; --faint:#5F6B7A;
+    --purple:#2456A6; --gold:#7F5A00; --green:#1F7A5C;
+    --gold-soft:rgba(127,90,0,.10); --purple-soft:rgba(36,86,166,.10);
+    --w1:#3B6FD4; --w2:#2A835B; --w3:#9552BD; --w4:#BA5637;
     --chart:#2456A6; --ring:rgba(36,86,166,.45);
     --shadow:0 8px 22px rgba(27,36,49,.08);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
       --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
       --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
-      --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+      --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
       --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
       --shadow:0 12px 32px rgba(0,0,0,.4);
     }
   }
   :root[data-theme="dark"]{
     --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
     --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
     --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
-    --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+    --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
     --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
     --shadow:0 12px 32px rgba(0,0,0,.4);
   }
   /* Parade — the platform's celebratory palette */
   :root[data-style="parade"]{
     --bg:#F7F5F0; --surface-2:#EFECE4; --line:#DCD8CD;
-    --ink:#221F33; --muted:#5B566E; --faint:#8B879B;
-    --purple:#6B3FA0; --gold:#B87514; --green:#2E8F63;
-    --purple-soft:rgba(107,63,160,.10); --gold-soft:rgba(184,117,20,.12);
+    --ink:#221F33; --muted:#5B566E; --faint:#6F6C7C;
+    --purple:#6B3FA0; --gold:#9A6210; --green:#2A835B;
+    --purple-soft:rgba(107,63,160,.10); --gold-soft:rgba(154,98,16,.12);
     --chart:#3B6FD4; --ring:rgba(107,63,160,.45);
   }
   :root[data-style="parade"][data-theme="dark"]{
     --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
-    --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+    --ink:#EDEAF4; --muted:#A9A4BC; --faint:#9A95AE; --on-gold:#161320;
     --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
     --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
     --chart:#5580D6; --ring:rgba(232,163,61,.5);
@@ -49,7 +49,7 @@
   @media (prefers-color-scheme: dark){
     :root[data-style="parade"]:not([data-theme="light"]){
       --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
-      --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+      --ink:#EDEAF4; --muted:#A9A4BC; --faint:#9A95AE; --on-gold:#161320;
       --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
       --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
       --chart:#5580D6; --ring:rgba(232,163,61,.5);
@@ -79,7 +79,7 @@
   /* Bayou — moss, cypress and river light */
   :root[data-style="bayou"]{
     --bg:#F4F5EC; --surface-2:#EAEBDD; --line:#D8DAC6;
-    --purple:#3E6B34; --gold:#A0621B; --green:#2E8F63;
+    --purple:#3E6B34; --gold:#A0621B; --green:#2A835B;
     --purple-soft:rgba(62,107,52,.11); --gold-soft:rgba(160,98,27,.11);
     --chart:#3E7A4F; --ring:rgba(62,107,52,.45);
   }
@@ -213,7 +213,7 @@
   #tourbox button.primary{background:var(--purple); border-color:var(--purple); color:#fff}
   .tourhl{outline:3px solid var(--gold) !important; outline-offset:3px; border-radius:8px}
   .btn{border:1px solid var(--line); background:var(--surface-2); color:var(--ink); border-radius:9px; padding:6px 14px}
-  .btn.gold{background:var(--gold); border-color:var(--gold); color:#fff}
+  .btn.gold{background:var(--gold); border-color:var(--gold); color:var(--on-gold,#fff)}
 
   .foot{border-top:1px solid var(--line); margin-top:60px; padding:22px 0 40px; font-size:.78rem; color:var(--faint)}
   @media(max-width:640px){ .hbar .lab{flex-basis:120px} }
@@ -313,8 +313,8 @@
     <b>always through the regional council</b>.</p>
     <div class="filters">
       <input type="search" id="usearch" placeholder="Search trades, unions, sims…" aria-label="Search roster">
-      <select id="uregion"><option value="">All regions</option></select>
-      <select id="ukind"><option value="">All categories</option></select>
+      <select id="uregion" aria-label="Region"><option value="">All regions</option></select>
+      <select id="ukind" aria-label="Category"><option value="">All categories</option></select>
       <span class="note" id="ucount" style="margin:0"></span>
     </div>
     <div class="grid3" id="ugrid"></div>
@@ -526,7 +526,7 @@ function renderNetwork(){
   const P = {sf:[100,120], oak:[185,78], lax:[150,215], nola:[560,190], br:[500,110], hou:[420,225]};
   const arcs = [["sf","oak"],["oak","lax"],["sf","lax"],["nola","br"],["br","hou"],["nola","hou"],["oak","br"],["lax","hou"]];
   const svg =
-    `<svg viewBox="0 0 680 290" width="100%" style="max-width:680px" role="img" aria-label="Network map of the six regions">`+
+    `<svg viewBox="0 0 680 290" width="100%" style="max-width:680px" role="group" aria-label="Network map of the six regions">`+
     `<text x="140" y="22" text-anchor="middle" font-size="10" fill="var(--faint)">PACIFIC COAST</text>`+
     `<text x="500" y="22" text-anchor="middle" font-size="10" fill="var(--faint)">GULF COAST</text>`+
     arcs.map(([a,b])=>{const[x1,y1]=P[a],[x2,y2]=P[b];
@@ -622,7 +622,7 @@ function cityMapSVG(r){
       `<text x="${x}" y="${y+30}" text-anchor="middle" font-size="9.5" fill="var(--ink)">${esc(KINDSHORT[k])}</text>`+
       `<title>${esc(r.sites[k])} — ${fams.length} trade families: ${fams.map(f=>f.family).join(", ")}</title></g>`;
   }).join("");
-  return `<svg viewBox="0 0 460 300" width="100%" role="img" aria-label="Stylized city map of ${esc(r.name)}">`+
+  return `<svg viewBox="0 0 460 300" width="100%" role="group" aria-label="Stylized city map of ${esc(r.name)}">`+
     `<rect x="0" y="0" width="460" height="300" rx="10" fill="var(--surface-2)"/>`+
     `<g fill="var(--chart)" opacity="0.18">${g.water.join("")}</g>`+
     g.hint.map(([t,x,y,vert])=>`<text x="${x}" y="${y}" text-anchor="middle" font-size="9" fill="var(--faint)"`+

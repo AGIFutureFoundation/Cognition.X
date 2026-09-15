@@ -414,6 +414,27 @@ def test_state_compliance_layer():
     check("STATE_COMPLIANCE.md carries the disclaimer", "Not legal advice" in doc)
 
 
+# The accessibility audit (v0.53.0): tools/a11y/audit.js writes
+# docs/ACCESSIBILITY.json from axe-core over every route of every app. The
+# committed result must carry no WCAG-tagged violation; best-practice rules
+# (heading-order) are documented deviations, not failures.
+def test_accessibility_audit_is_clean():
+    d = json.loads((ROOT / "docs" / "ACCESSIBILITY.json").read_text(encoding="utf-8"))
+    check("a11y: audit covers every app", {r["label"].split(" ")[0] for r in d["runs"]} >=
+          {"louisiana", "flow-hub", "trades-network", "states", "platform", "education-os"})
+    check("a11y: at least 40 views audited", len(d["runs"]) >= 40, str(len(d["runs"])))
+    wcag = [(r["label"], v["id"], v["nodes"]) for r in d["runs"] for v in r["violations"]
+            if any(t.startswith("wcag") for t in v["tags"])]
+    check("a11y: zero WCAG-tagged violations", not wcag, str(wcag[:5]))
+    serious = [(r["label"], v["id"]) for r in d["runs"] for v in r["violations"] if v["impact"] in ("serious", "critical")]
+    check("a11y: zero serious or critical violations", not serious, str(serious[:5]))
+    check("a11y: every focusable control has an accessible name",
+          not any(r["keyboard"]["noName"] for r in d["runs"]))
+    check("a11y: no click-only div/span controls", not any(r["keyboard"]["clickOnly"] for r in d["runs"]))
+    doc = (ROOT / "docs" / "ACCESSIBILITY.md").read_text(encoding="utf-8")
+    check("ACCESSIBILITY.md names what remains", "heading-order" in doc and "remains" in doc.lower())
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))

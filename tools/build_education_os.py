@@ -184,6 +184,11 @@ SHELL_CSS = """
   .small{font-size:.82rem}
   .muted,.dim{color:var(--ink2)}
   .mono{font-family:var(--mono);font-size:.86em}
+  /* a11y (v0.53.0): the app's own CSS paints ids and codes in #b8860b (3.0:1 on
+     the page ground); the shell overrides that one colour with the brand's
+     gold-ink, which reads at 4.5:1+ on every surface in both themes */
+  summary .mono,td .mono,th .mono,.id .mono,.card .mono,.row .mono{color:var(--gold-ink)!important}
+  details details>summary{color:var(--gold-ink)!important}
   .note{font-size:.82rem;color:var(--ink2);background:var(--bg3);border-radius:8px;
         padding:9px 12px;margin:8px 0}
   .term{font-family:var(--mono);font-size:12px;line-height:1.55;background:var(--ink);
@@ -371,7 +376,14 @@ def main():
         raise SystemExit("template.html: stub block not found — shell insertion "
                          "would be unsafe; inspect the template before building")
 
-    html = template + overlay + "</body>\n</html>\n"
+    # a11y: every region that scrolls is reachable by keyboard (WCAG 2.1.1);
+    # the app renders views on hashchange, so re-check after each render
+    a11y = ("\n<script>/* CX a11y: scrollable regions are focusable */(function(){"
+            "function mark(){document.querySelectorAll('.tablewrap,#fg-out,pre,.scroll,[style*=\"overflow\"]').forEach(function(el){"
+            "if((el.scrollHeight>el.clientHeight+2||el.scrollWidth>el.clientWidth+2)&&!el.hasAttribute('tabindex')){el.tabIndex=0;if(!el.hasAttribute('aria-label'))el.setAttribute('aria-label','Scrollable content');}});}"
+            "window.addEventListener('hashchange',function(){setTimeout(mark,80)});window.addEventListener('load',function(){setTimeout(mark,120)});"
+            "})();</script>\n")
+    html = template + overlay + a11y + "</body>\n</html>\n"
     OUT.write_text(html, encoding="utf-8")
     print(f"wrote {OUT.relative_to(ROOT)}: {len(html)/1e6:.2f} MB — "
           f"{len(out)} canonical sector blocks injected ({kept} with original "
