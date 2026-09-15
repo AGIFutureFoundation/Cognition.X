@@ -4,6 +4,31 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.53.0] — 2026-09-15
+
+The accessibility audit — prompt 4 of the ranked next steps.
+
+### Fixed — WCAG 2.2 AA
+- axe-core over 45 views of the six apps, light and dark, found 1,182
+  colour-contrast nodes, 82 target-size, 16 nested-interactive, 12
+  select-name and 4 scrollable-region findings. All fixed at the token or
+  component level in the templates: `--faint`, `--gold`, the region
+  colours and Flow Hub's accent brought to ≥4.5:1 on every surface;
+  gold buttons take ink text in dark themes (`--on-gold`); the States
+  compliance tier colours darkened; the Education OS shell overrides the
+  app's `#b8860b` id colour; the dashboard reorder buttons meet the 24 px
+  target size; tile and city maps are `role="group"`; set-aside buttons
+  moved out of `<summary>`; every generated `<select>` carries an
+  accessible name; output boxes and scrolling tables are keyboard
+  focusable. Result: **0 WCAG-tagged violations**; keyboard sweep 4,849
+  focusable elements, 0 unnamed, 0 click-only.
+- `docs/ACCESSIBILITY.md` records the method, the findings, the fixes,
+  and what remains (heading-order as a documented best-practice
+  deviation, axe “needs review” items, non-default styles, the missing
+  human screen-reader pass); `docs/ACCESSIBILITY.json` is the committed
+  result and `tests/test_platform.py` fails if it ever carries a
+  WCAG-tagged violation.
+
 ## [0.52.0] — 2026-09-15
 
 The credential-naming correction — prompt 2 of the ranked next steps.

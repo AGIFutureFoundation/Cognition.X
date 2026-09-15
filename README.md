@@ -137,6 +137,7 @@ in [`CHANGELOG.md`](CHANGELOG.md); the current version is in
 - Complete system review: [`docs/SYSTEM_REVIEW.md`](docs/SYSTEM_REVIEW.md)
 - Investor walkthrough: [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)
 - State compliance layer (fifty states; not legal advice): [`docs/STATE_COMPLIANCE.md`](docs/STATE_COMPLIANCE.md)
+- Accessibility audit (WCAG 2.2 AA): [`docs/ACCESSIBILITY.md`](docs/ACCESSIBILITY.md)
 - Deep roadmap: [`docs/ROADMAP.md`](docs/ROADMAP.md)
 - Wiki source (publishable to the GitHub wiki): [`docs/wiki/`](docs/wiki/)
 - Data review and known issues: [`docs/DATA_REVIEW.md`](docs/DATA_REVIEW.md)

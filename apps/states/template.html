@@ -4,44 +4,44 @@
   /* tokens: enterprise-first; full dark mirror; 5 style templates (platform standard) */
   :root{
     --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#E9EDF1; --line:#D5DBE2;
-    --ink:#1B2431; --muted:#4E5A6B; --faint:#7E8898;
-    --purple:#2456A6; --gold:#946900; --green:#1F7A5C;
-    --gold-soft:rgba(148,105,0,.10); --purple-soft:rgba(36,86,166,.10);
-    --w1:#3B6FD4; --w2:#2E8F63; --w3:#9552BD; --w4:#C25A3A;
+    --ink:#1B2431; --muted:#4E5A6B; --faint:#5F6B7A;
+    --purple:#2456A6; --gold:#7F5A00; --green:#1F7A5C;
+    --gold-soft:rgba(127,90,0,.10); --purple-soft:rgba(36,86,166,.10);
+    --w1:#3B6FD4; --w2:#2A835B; --w3:#9552BD; --w4:#BA5637;
     --chart:#2456A6; --ring:rgba(36,86,166,.45);
     --shadow:0 8px 22px rgba(27,36,49,.08);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
       --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
       --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
-      --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+      --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
       --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
       --shadow:0 12px 32px rgba(0,0,0,.4);
     }
   }
   :root[data-theme="dark"]{
     --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
     --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
     --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
-    --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+    --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
     --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
     --shadow:0 12px 32px rgba(0,0,0,.4);
   }
   :root[data-style="parade"]{
-    --bg:#F7F5F0; --surface-2:#EFECE4; --line:#DCD8CD; --ink:#221F33; --muted:#5B566E; --faint:#8B879B;
-    --purple:#6B3FA0; --gold:#B87514; --green:#2E8F63;
-    --purple-soft:rgba(107,63,160,.10); --gold-soft:rgba(184,117,20,.12);
+    --bg:#F7F5F0; --surface-2:#EFECE4; --line:#DCD8CD; --ink:#221F33; --muted:#5B566E; --faint:#6F6C7C;
+    --purple:#6B3FA0; --gold:#9A6210; --green:#2A835B;
+    --purple-soft:rgba(107,63,160,.10); --gold-soft:rgba(154,98,16,.12);
     --chart:#3B6FD4; --ring:rgba(107,63,160,.45);
   }
   :root[data-style="parade"][data-theme="dark"], :root[data-style="parade"]:not([data-theme="light"]) { }
   @media (prefers-color-scheme: dark){
     :root[data-style="parade"]:not([data-theme="light"]){
       --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
-      --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+      --ink:#EDEAF4; --muted:#A9A4BC; --faint:#9A95AE; --on-gold:#161320;
       --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
       --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
       --chart:#5580D6; --ring:rgba(232,163,61,.5);
@@ -49,7 +49,7 @@
   }
   :root[data-style="parade"][data-theme="dark"]{
     --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
-    --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+    --ink:#EDEAF4; --muted:#A9A4BC; --faint:#9A95AE; --on-gold:#161320;
     --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
     --purple-soft:rgba(169,127,217,.14); --gold-soft:rgba(232,163,61,.14);
     --chart:#5580D6; --ring:rgba(232,163,61,.5);
@@ -76,7 +76,7 @@
   }
   :root[data-style="bayou"]{
     --bg:#F4F5EC; --surface-2:#EAEBDD; --line:#D8DAC6;
-    --purple:#3E6B34; --gold:#A0621B; --green:#2E8F63;
+    --purple:#3E6B34; --gold:#A0621B; --green:#2A835B;
     --purple-soft:rgba(62,107,52,.11); --gold-soft:rgba(160,98,27,.11);
     --chart:#3E7A4F; --ring:rgba(62,107,52,.45);
   }
@@ -214,7 +214,7 @@
   .steps li::before{content:counter(st); flex:0 0 30px; height:30px; border-radius:999px; background:var(--purple-soft);
     color:var(--purple); font-weight:700; display:grid; place-items:center; font-family:"IBM Plex Mono",monospace; font-size:.85rem}
   .btn{border:1px solid var(--line); background:var(--surface-2); color:var(--ink); border-radius:9px; padding:6px 14px}
-  .btn.gold{background:var(--gold); border-color:var(--gold); color:#fff}
+  .btn.gold{background:var(--gold); border-color:var(--gold); color:var(--on-gold,#fff)}
   .pnav{display:flex; gap:10px; margin:18px 0 0}
   .foot{border-top:1px solid var(--line); margin-top:60px; padding:22px 0 40px; font-size:.78rem; color:var(--faint)}
 
@@ -284,7 +284,7 @@
     table, culture and storm, on the shared blueprint.</p>
     <div class="filters">
       <input type="search" id="ssearch" placeholder="Search states, capitals, anchors…" aria-label="Search states">
-      <select id="sregion"><option value="">All regions</option>
+      <select id="sregion" aria-label="Region"><option value="">All regions</option>
         <option>Northeast</option><option>Midwest</option><option>South</option><option>West</option></select>
       <span class="note" id="scount" style="margin:0"></span>
     </div>
@@ -514,7 +514,7 @@ function renderNation(){
   const cols = Math.max(...D.states.map(s=>s.grid[1]))+1, rows = Math.max(...D.states.map(s=>s.grid[0]))+1;
   const W = PAD*2+cols*(T+G), H = PAD*2+rows*(T+G);
   $("#usmap").innerHTML =
-    `<svg class="map" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="img" aria-label="Tile map of the fifty states">`+
+    `<svg class="map" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="group" aria-label="Tile map of the fifty states">`+
     D.states.map(s=>{
       const x=PAD+s.grid[1]*(T+G), y=PAD+s.grid[0]*(T+G);
       return `<g class="tile" tabindex="0" role="button" data-st="${s.abbr}" aria-label="${esc(s.name)}">`+
@@ -642,15 +642,15 @@ function renderInstitute(){
 const CP = {lens:"homeschool", state: curState};
 const C = D.compliance;
 const byAbbrC = Object.fromEntries((C ? C.states : []).map(s=>[s.abbr, s]));
-const TIERCOL = {none:"#1F7A4D", low:"#4FA36B", moderate:"#D9A441", high:"#B22B2B"};
+const TIERCOL = {none:"#1F7A4D", low:"#257A54", moderate:"#8A6210", high:"#B22B2B"};
 const LENS = {
   homeschool:{note:"Homeschool regulation tier, as commonly published.", val:s=>s.homeschool.tier, col:{none:TIERCOL.none, low:TIERCOL.low, moderate:TIERCOL.moderate, high:TIERCOL.high}, lab:{none:"no notice", low:"low", moderate:"moderate", high:"high"}},
   charity:{note:"Whether a nonprofit must register before soliciting residents.", val:s=>s.charity.required?"yes":"no", col:{yes:"#B22B2B", no:"#1F7A4D"}, lab:{yes:"registration required", no:"no registration"}},
-  privacy:{note:"Whether the state has a SOPIPA-style statute binding ed-tech operators.", val:s=>s.privacy.tier, col:{"operator-law":"#2456A6", baseline:"#8FA3B4"}, lab:{"operator-law":"operator law", baseline:"FERPA baseline"}},
+  privacy:{note:"Whether the state has a SOPIPA-style statute binding ed-tech operators.", val:s=>s.privacy.tier, col:{"operator-law":"#2456A6", baseline:"#5F6B7A"}, lab:{"operator-law":"operator law", baseline:"FERPA baseline"}},
   apprenticeship:{note:"Who registers apprenticeship programs.", val:s=>s.apprenticeship.type, col:{SAA:"#1E7A72", OA:"#8A6210"}, lab:{SAA:"state agency (SAA)", OA:"federal office (OA)"}},
-  sales_tax:{note:"Nonprofit purchase exemption.", val:s=>!s.sales_tax.state_sales_tax?"none":(s.sales_tax.nonprofit_exemption?"exempt":"taxed"), col:{none:"#1F7A4D", exempt:"#4FA36B", taxed:"#B22B2B"}, lab:{none:"no state sales tax", exempt:"exemption available", taxed:"no general exemption"}},
-  mandated:{note:"Whether every adult is a mandated reporter.", val:s=>s.mandated.universal?"universal":"professions", col:{universal:"#2456A6", professions:"#8FA3B4"}, lab:{universal:"every adult", professions:"named professions"}},
-  cost:{note:"One-time compliance cost, low estimate, under the stated assumptions.", val:s=>{const c=s.cost.one_time.low; return c<400?"a":c<700?"b":c<1000?"c":"d";}, col:{a:"#4FA36B", b:"#D9A441", c:"#C0692A", d:"#B22B2B"}, lab:{a:"under $400", b:"$400–$699", c:"$700–$999", d:"$1,000+"}},
+  sales_tax:{note:"Nonprofit purchase exemption.", val:s=>!s.sales_tax.state_sales_tax?"none":(s.sales_tax.nonprofit_exemption?"exempt":"taxed"), col:{none:"#1F7A4D", exempt:"#257A54", taxed:"#B22B2B"}, lab:{none:"no state sales tax", exempt:"exemption available", taxed:"no general exemption"}},
+  mandated:{note:"Whether every adult is a mandated reporter.", val:s=>s.mandated.universal?"universal":"professions", col:{universal:"#2456A6", professions:"#5F6B7A"}, lab:{universal:"every adult", professions:"named professions"}},
+  cost:{note:"One-time compliance cost, low estimate, under the stated assumptions.", val:s=>{const c=s.cost.one_time.low; return c<400?"a":c<700?"b":c<1000?"c":"d";}, col:{a:"#257A54", b:"#8A6210", c:"#A0522D", d:"#B22B2B"}, lab:{a:"under $400", b:"$400–$699", c:"$700–$999", d:"$1,000+"}},
 };
 const money = v => v==null ? "—" : "$"+Number(v).toLocaleString(undefined,{maximumFractionDigits:2});
 const feeTxt = f => f ? (f.amount!=null ? money(f.amount) : (f.band||"—")) : "—";
@@ -675,7 +675,7 @@ function renderCompliance(){
   const cols = Math.max(...D.states.map(s=>s.grid[1]))+1, rows = Math.max(...D.states.map(s=>s.grid[0]))+1;
   const W = PAD*2+cols*(T+G), H = PAD*2+rows*(T+G);
   $("#cmap").innerHTML =
-    `<svg class="map" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="img" aria-label="Tile map of the fifty states by ${esc(L.note)}">`+
+    `<svg class="map" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="group" aria-label="Tile map of the fifty states by ${esc(L.note)}">`+
     D.states.map(s=>{
       const c = byAbbrC[s.abbr]; const v = c ? L.val(c) : "";
       const x=PAD+s.grid[1]*(T+G), y=PAD+s.grid[0]*(T+G);
@@ -718,11 +718,11 @@ function checklistHTML(c, compact){
     H("nonprofit", `<span class="k">Form:</span> ${esc(c.nonprofit.form)} — ${esc(c.nonprofit.agency)}<br><span class="k">Report:</span> ${esc(c.nonprofit.report)} (${esc(feeTxt(c.nonprofit.report_fee))})<br><span class="k">Registered agent:</span> ${esc(c.nonprofit.registered_agent.band)}`, feeCell(c.nonprofit.fee, "qualification")),
     H("charity", (c.charity.required ? `<span class="tier" style="background:#B22B2B">required</span>` : `<span class="tier" style="background:#1F7A4D">not required</span>`) + ` ${esc(c.charity.form)} — ${esc(c.charity.agency)}${c.charity.notes?"<br>"+esc(c.charity.notes):""}<br><span class="k">Renewal:</span> ${esc(feeTxt(c.charity.renewal_fee))}`, feeCell(c.charity.initial_fee, "initial")),
     H("background", esc(c.background.law), feeCell(c.background.cost, "per person")),
-    H("mandated", `<span class="tier" style="background:${c.mandated.universal?"#2456A6":"#8FA3B4"}">${c.mandated.universal?"every adult":"named professions"}</span> ${esc(c.mandated.training)}`, feeCell(c.mandated.fee, "training")),
+    H("mandated", `<span class="tier" style="background:${c.mandated.universal?"#2456A6":"#5F6B7A"}">${c.mandated.universal?"every adult":"named professions"}</span> ${esc(c.mandated.training)}`, feeCell(c.mandated.fee, "training")),
     H("apprenticeship", `<span class="tier" style="background:${LENS.apprenticeship.col[c.apprenticeship.type]}">${esc(c.apprenticeship.type)}</span> ${esc(c.apprenticeship.agency)}<br><span class="k">Youth:</span> ${esc(c.apprenticeship.youth)}`, feeCell(c.apprenticeship.fee, "registration")),
     H("cte", `${esc(c.cte.list)}<br><span class="k">Stance:</span> ${esc(c.cte.note)}`),
     H("accessibility", esc(c.accessibility.standard), feeCell(c.accessibility.fee, "audit, once")),
-    H("sales_tax", (c.sales_tax.state_sales_tax ? (c.sales_tax.nonprofit_exemption ? `<span class="tier" style="background:#4FA36B">exemption available</span>` : `<span class="tier" style="background:#B22B2B">no general exemption</span>`) : `<span class="tier" style="background:#1F7A4D">no state sales tax</span>`) + ` ${esc(c.sales_tax.form)}`),
+    H("sales_tax", (c.sales_tax.state_sales_tax ? (c.sales_tax.nonprofit_exemption ? `<span class="tier" style="background:#257A54">exemption available</span>` : `<span class="tier" style="background:#B22B2B">no general exemption</span>`) : `<span class="tier" style="background:#1F7A4D">no state sales tax</span>`) + ` ${esc(c.sales_tax.form)}`),
   ];
   const cost = `<div class="costrow">
      <div><b>${money(c.cost.one_time.low)} – ${money(c.cost.one_time.high)}</b><span>one-time, estimated</span></div>

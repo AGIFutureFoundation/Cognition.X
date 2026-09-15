@@ -185,7 +185,7 @@ with the reason it was rejected. Regression coverage added to
 
 ---
 
-## 4 — Finish the WCAG 2.2 AA audit
+## 4 — Finish the WCAG 2.2 AA audit *(done in v0.53.0 — see docs/ACCESSIBILITY.md for what remains)*
 
 **Why.** v0.33.0 shipped a first pass (skip links, `lang`, reduced
 motion, aria-labels). The audit itself was never completed, and the

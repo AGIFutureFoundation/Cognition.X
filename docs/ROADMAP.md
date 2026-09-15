@@ -43,7 +43,7 @@ criteria pass.
 sessions are written out in
 [`docs/NEXT_STEPS_OPUS5.md`](NEXT_STEPS_OPUS5.md). In short: ① restore
 the Education OS design system (done, v0.46.0) → ② author the 24 missing credential
-names (drafted v0.52.0; board adoption pending) → ③ finish the WCAG 2.2 AA audit → ④ close the
+names (drafted v0.52.0; board adoption pending) → ③ finish the WCAG 2.2 AA audit (done, v0.53.0) → ④ close the
 remaining verified review findings → ⑤ standards mapping and rubrics →
 ⑥ W3C VC / Open Badges alignment → ⑦ cut v1.0 when a named external
 cohort completes credentials on an unmodified release.

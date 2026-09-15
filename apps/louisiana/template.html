@@ -4,10 +4,10 @@
   /* ---------- tokens: light-first civic platform; full dark mirror ---------- */
   :root{
     --bg:#F7F5F0; --surface:#FFFFFF; --surface-2:#EFECE4; --line:#DCD8CD;
-    --ink:#221F33; --muted:#5B566E; --faint:#8B879B;
-    --purple:#6B3FA0; --gold:#B87514; --green:#2E8F63;
-    --gold-soft:rgba(184,117,20,.12); --purple-soft:rgba(107,63,160,.10);
-    --w1:#3B6FD4; --w2:#2E8F63; --w3:#9552BD; --w4:#C25A3A;
+    --ink:#221F33; --muted:#5B566E; --faint:#6F6C7C;
+    --purple:#6B3FA0; --gold:#9A6210; --green:#2A835B;
+    --gold-soft:rgba(154,98,16,.12); --purple-soft:rgba(107,63,160,.10);
+    --w1:#3B6FD4; --w2:#2A835B; --w3:#9552BD; --w4:#BA5637;
     --chart:#3B6FD4;
     --ring:rgba(107,63,160,.45);
     --shadow:0 12px 32px rgba(34,31,51,.10);
@@ -15,10 +15,10 @@
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
-      --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+      --ink:#EDEAF4; --muted:#A9A4BC; --faint:#9A95AE; --on-gold:#161320;
       --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
       --gold-soft:rgba(232,163,61,.14); --purple-soft:rgba(169,127,217,.14);
-      --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+      --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
       --chart:#5580D6;
       --ring:rgba(232,163,61,.5);
       --shadow:0 12px 32px rgba(0,0,0,.4);
@@ -26,10 +26,10 @@
   }
   :root[data-theme="dark"]{
     --bg:#161320; --surface:#1F1B2E; --surface-2:#2A2540; --line:#3A3454;
-    --ink:#EDEAF4; --muted:#A9A4BC; --faint:#7A7590;
+    --ink:#EDEAF4; --muted:#A9A4BC; --faint:#9A95AE; --on-gold:#161320;
     --purple:#A97FD9; --gold:#E8A33D; --green:#3E9A72;
     --gold-soft:rgba(232,163,61,.14); --purple-soft:rgba(169,127,217,.14);
-    --w1:#5580D6; --w2:#3E9A72; --w3:#A96FC9; --w4:#C96A4B;
+    --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
     --chart:#5580D6;
     --ring:rgba(232,163,61,.5);
     --shadow:0 12px 32px rgba(0,0,0,.4);
@@ -103,7 +103,7 @@
     border-radius:9px; padding:9px 13px; font:inherit}
   .btn{border-radius:9px; padding:8px 16px; border:1px solid var(--line); background:var(--surface); color:var(--ink); font-weight:600}
   .btn:hover{border-color:var(--purple)}
-  .btn.gold{background:var(--gold); border-color:var(--gold); color:#fff}
+  .btn.gold{background:var(--gold); border-color:var(--gold); color:var(--on-gold,#fff)}
 
   .phead{display:flex; gap:18px; align-items:center; flex-wrap:wrap; margin-bottom:4px}
   .seal{flex:none}
@@ -258,15 +258,15 @@
   /* Enterprise — the professional default: slate ground, corporate blue */
   :root[data-style="enterprise"]{
     --bg:#F3F5F8; --surface-2:#E9EDF1; --line:#D5DBE2;
-    --ink:#1B2431; --muted:#4E5A6B; --faint:#7E8898;
-    --purple:#2456A6; --gold:#946900; --green:#1F7A5C;
-    --purple-soft:rgba(36,86,166,.10); --gold-soft:rgba(148,105,0,.10);
+    --ink:#1B2431; --muted:#4E5A6B; --faint:#5F6B7A;
+    --purple:#2456A6; --gold:#7F5A00; --green:#1F7A5C;
+    --purple-soft:rgba(36,86,166,.10); --gold-soft:rgba(127,90,0,.10);
     --chart:#2456A6; --ring:rgba(36,86,166,.45);
     --shadow:0 8px 22px rgba(27,36,49,.08);
   }
   :root[data-style="enterprise"][data-theme="dark"]{
     --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
     --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
     --purple-soft:rgba(122,167,234,.14); --gold-soft:rgba(201,162,75,.14);
     --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
@@ -274,7 +274,7 @@
   @media (prefers-color-scheme: dark){
     :root[data-style="enterprise"]:not([data-theme="light"]){
       --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#768290;
+      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
       --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
       --purple-soft:rgba(122,167,234,.14); --gold-soft:rgba(201,162,75,.14);
       --chart:#7AA7EA; --ring:rgba(122,167,234,.5);
@@ -286,7 +286,7 @@
   /* Bayou — moss, cypress and river light */
   :root[data-style="bayou"]{
     --bg:#F4F5EC; --surface-2:#EAEBDD; --line:#D8DAC6;
-    --purple:#3E6B34; --gold:#A0621B; --green:#2E8F63;
+    --purple:#3E6B34; --gold:#A0621B; --green:#2A835B;
     --purple-soft:rgba(62,107,52,.11); --gold-soft:rgba(160,98,27,.11);
     --chart:#3E7A4F; --ring:rgba(62,107,52,.45);
   }
@@ -440,7 +440,7 @@
     <p class="eyebrow"><b>Independent dashboards</b> · one per parish</p>
     <div class="pickrow">
       <label for="ppick" style="font-weight:600">Parish</label>
-      <select id="ppick"></select>
+      <select id="ppick" aria-label="Parish"></select>
       <button class="btn" id="prand">Surprise me</button>
     </div>
     <div id="pdash"></div>
@@ -756,7 +756,7 @@ function renderState(){
       `<text x="${x+T/2}" y="${y+T/2+15}" text-anchor="middle" font-size="8.5" fill="rgba(255,255,255,.85)">W${p.accWave}</text>`+
       `<title>${esc(p.name)} Parish — seat ${esc(p.seat)} · ${esc(D.regions[p.region])} · Wave ${p.accWave} (${D.accYears[p.accWave-1]}) · original proposal: Wave ${p.wave} (${D.waveYears[p.wave-1]})</title></g>`;
   }).join("");
-  $("#mapbox").innerHTML = `<svg class="map" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="img" aria-label="Tile map of the 64 parishes by rollout wave">${tiles}</svg>`;
+  $("#mapbox").innerHTML = `<svg class="map" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="group" aria-label="Tile map of the 64 parishes by rollout wave">${tiles}</svg>`;
   $("#mapbox").querySelectorAll("g.tile").forEach(g => {
     const open = () => location.hash = "#/parish/"+g.dataset.p;
     g.addEventListener("click", open);
@@ -940,7 +940,7 @@ function renderParish(p){
        <p class="note">The core spine is fixed; industry packs can be set aside and any pack in the catalog added.
        Choices are saved in this browser, per parish, and travel with the exported program.</p>
        <div class="pickrow" style="margin:0 0 12px">
-         <select id="custpick" style="min-width:min(320px,100%)"></select>
+         <select id="custpick" aria-label="Pack to add to the plan" style="min-width:min(320px,100%)"></select>
          <button class="btn" id="custadd">Add to plan</button>
          <button class="btn gold" id="progcopy">Copy parish program</button>
        </div>
@@ -983,8 +983,8 @@ function renderParish(p){
         : `<span class="chip gold" style="font-weight:500">because: ${esc(reason)}</span><button class="chip" data-setaside="${esc(s)}" style="cursor:pointer">set aside</button>`;
     if (!pk.tracks){
       return `<details style="margin-bottom:10px"><summary style="cursor:pointer; display:flex; gap:10px; align-items:center; flex-wrap:wrap">` +
-        `<b>${esc(pk.name)}</b><span class="mono" style="font-size:.74rem; color:var(--faint)">${pk.blocks} blocks · CX-${esc(s)}</span>${why}</summary>` +
-        `<p class="note" style="margin:8px 0 0">${pk.ntracks ? pk.ntracks + " tracks — browse them in the Curriculum view." : "Foundation library — per-grade blocks."}</p></details>`;
+        `<b>${esc(pk.name)}</b><span class="mono" style="font-size:.74rem; color:var(--faint)">${pk.blocks} blocks · CX-${esc(s)}</span></summary>` +
+        `<div class="chiprow" style="margin:8px 0 0">${why}</div><p class="note" style="margin:8px 0 0">${pk.ntracks ? pk.ntracks + " tracks — browse them in the Curriculum view." : "Foundation library — per-grade blocks."}</p></details>`;
     }
     const tracks = pk.tracks.length
       ? `<ul class="tracklist" style="margin-top:10px">` + pk.tracks.map(t =>
@@ -993,7 +993,7 @@ function renderParish(p){
           `<span class="cred">${esc(t.credential)}</span></li>`).join("") + `</ul>`
       : `<p class="note" style="margin:8px 0 0">Foundation library — per-grade blocks, browsable in the Curriculum view.</p>`;
     return `<details style="margin-bottom:10px"><summary style="cursor:pointer; display:flex; gap:10px; align-items:center; flex-wrap:wrap">` +
-      `<b>${esc(pk.name)}</b><span class="mono" style="font-size:.74rem; color:var(--faint)">${pk.blocks} blocks · CX-${esc(s)}</span>${why}</summary>${tracks}</details>`;
+      `<b>${esc(pk.name)}</b><span class="mono" style="font-size:.74rem; color:var(--faint)">${pk.blocks} blocks · CX-${esc(s)}</span></summary>` + `<div class="chiprow" style="margin:8px 0 0">${why}</div>` + `${tracks}</details>`;
   }).join("");
 
   // set-aside restore row
@@ -1795,11 +1795,11 @@ if (!R.layout) R.layout = {};
 if (!R.notes) R.notes = {};
 function saveR(){ store("cxla.roles", JSON.stringify(R)); setTimeout(renderRoles, 0); }
 function parishSelect(id){
-  return `<select id="${id}">` + D.parishes.slice().sort((a,b)=>a.name.localeCompare(b.name))
+  return `<select id="${id}" aria-label="Parish">` + D.parishes.slice().sort((a,b)=>a.name.localeCompare(b.name))
     .map(p=>`<option value="${p.slug}" ${p.slug===R.parish?"selected":""}>${esc(p.name)}</option>`).join("") + `</select>`;
 }
 function bandSelect(id){
-  return `<select id="${id}">` + BANDS.map((b,i)=>`<option value="${i}" ${i===R.band?"selected":""}>${b} · ${LEVELS[i]}</option>`).join("") + `</select>`;
+  return `<select id="${id}" aria-label="Grade band">` + BANDS.map((b,i)=>`<option value="${i}" ${i===R.band?"selected":""}>${b} · ${LEVELS[i]}</option>`).join("") + `</select>`;
 }
 const BANDS = D.bands ? D.bands : ["K–2","3–5","6–8","9–10","11–12"];
 const LEVELS = ["Explorer","Explorer","Builder","Practitioner","Lead"];
@@ -2255,7 +2255,7 @@ const WIDGETS = {
     let html = `<p class="note">Your place in the whole system — recorded checks on the core-spine tracks,
       credentials earned, and the automation's suggested next step. Records live only in this browser.</p>`;
     if (d.learners.length)
-      html += `<div class="pickrow" style="margin:0 0 12px"><select id="ls-me">${d.learners.map(l=>
+      html += `<div class="pickrow" style="margin:0 0 12px"><select id="ls-me" aria-label="Learner">${d.learners.map(l=>
         `<option value="${esc(l.id)}"${l.id===R.me?" selected":""}>${esc(l.name)}</option>`).join("")}</select></div>`;
     html += `<div style="display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px">
       <input type="search" id="ls-name" placeholder="Add me — name" style="min-width:160px">
@@ -2270,7 +2270,7 @@ const WIDGETS = {
       if (rec) html += `<p class="note" style="margin:10px 0 4px"><b>Suggested next:</b> ${esc(rec.t.name)}
         <span class="mono" style="font-size:.72rem; color:var(--faint)">${esc(rec.t.pack)}</span> — ${esc(rec.why)}.</p>`;
       html += `<div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:10px 0 4px">
-        <select id="ls-track">${LTRACKS.map(t=>`<option value="${esc(t.key)}"${rec&&t.key===rec.t.key?" selected":""}>${esc(t.name)} · ${esc(t.pack)}</option>`).join("")}</select>
+        <select id="ls-track" aria-label="Track">${LTRACKS.map(t=>`<option value="${esc(t.key)}"${rec&&t.key===rec.t.key?" selected":""}>${esc(t.name)} · ${esc(t.pack)}</option>`).join("")}</select>
         <button class="btn gold" id="ls-check">Record a practice check</button>
         <button class="btn" id="ls-witness">Request a witnessed check</button></div>
         <p class="note" style="margin:2px 0 10px">Practice checks build your own log; a <b>witnessed</b> check goes
@@ -2328,7 +2328,7 @@ const WIDGETS = {
       </div>
       ${flowChannelSVG(fl.last3)}
       <p style="font-size:.88rem; margin:10px 0"><b>Guide:</b> ${esc(fl.advice)}</p>
-      <div class="pickrow" style="margin:0 0 10px"><select id="fs-track">${LTRACKS.map(t=>
+      <div class="pickrow" style="margin:0 0 10px"><select id="fs-track" aria-label="Track for the flow session">${LTRACKS.map(t=>
         `<option value="${esc(t.key)}"${t.key===key?" selected":""}>${esc(t.name)} · ${esc(t.pack)}</option>`).join("")}</select></div>
       <div style="display:flex; gap:9px; flex-wrap:wrap">
         <button class="btn gold" id="fs-pass">✓ Passed the check</button>
@@ -2426,7 +2426,7 @@ const WIDGETS = {
       surface who is close and who hasn't started. Records live only in this browser.</p>
       <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 10px">
         <input type="search" id="lc-name" placeholder="Add learner — name" style="min-width:150px">
-        <select id="lc-band">${BANDS.map((b,i)=>`<option value="${i}">${b}</option>`).join("")}</select>
+        <select id="lc-band" aria-label="Grade band">${BANDS.map((b,i)=>`<option value="${i}">${b}</option>`).join("")}</select>
         <button class="btn" id="lc-add">Add</button>
         <span style="flex:1"></span>
         <button class="btn" id="lc-demo">Seed demo cohort</button>
@@ -2439,7 +2439,7 @@ const WIDGETS = {
         the model and its automations working end to end.</p>`;
     } else {
       html += `<div class="pickrow" style="margin:6px 0 10px"><label class="mono" style="font-size:.7rem; color:var(--faint)">working unit</label>
-        <select id="lc-track">${LTRACKS.map(t=>`<option value="${esc(t.key)}"${t.key===track?" selected":""}>${esc(t.name)} · ${esc(t.pack)}</option>`).join("")}</select></div>`;
+        <select id="lc-track" aria-label="Track">${LTRACKS.map(t=>`<option value="${esc(t.key)}"${t.key===track?" selected":""}>${esc(t.name)} · ${esc(t.pack)}</option>`).join("")}</select></div>`;
       html += ls.map(l=>{ const st = llStanding(l); const n = (l.prog||{})[track]||0;
         return `<div class="hbar"><span class="lab" title="${esc(l.name)}">${esc(l.name)}${l.demo?" ·demo":""} · ${BANDS[l.band]}</span>`+
           `<span class="bar" style="width:${Math.max(1.5,st.pct)}%; background:var(--chart)" title="${esc(l.name)}: ${st.done} checks · ${st.creds.length} credentials · ${st.pct}% of spine"></span>`+
@@ -2529,7 +2529,7 @@ const WIDGETS = {
     const pk = D.packmeta.LAOS || {tracks:[]};
     const unit = R.unit || (pk.tracks[0]||{}).name || "";
     el.innerHTML += `<p class="note">Pick the Louisiana OS track your class is on.</p>
-      <select id="rt-unit" style="width:100%">${pk.tracks.map(t=>`<option ${t.name===unit?"selected":""}>${esc(t.name)}</option>`).join("")}</select>
+      <select id="rt-unit" aria-label="Unit" style="width:100%">${pk.tracks.map(t=>`<option ${t.name===unit?"selected":""}>${esc(t.name)}</option>`).join("")}</select>
       <p class="note" style="margin-top:12px">Tick a learner when their check is confirmed for this unit:</p>
       <div id="rt-roll">${roster.length ? roster.map(nm => { const k = unit+"|"+nm;
         return `<label style="display:flex; gap:8px; align-items:center; padding:4px 0; font-size:.9rem">
@@ -2654,7 +2654,7 @@ const WIDGETS = {
     }
     if (!R.child || !ls.some(l=>l.id===R.child)) R.child = ls[0].id;
     const c = ls.find(l=>l.id===R.child), st = llStanding(c), rec = llRecommend(c);
-    el.innerHTML += `<div class="pickrow" style="margin:0 0 12px"><select id="lp-child">${ls.map(l=>
+    el.innerHTML += `<div class="pickrow" style="margin:0 0 12px"><select id="lp-child" aria-label="Child">${ls.map(l=>
         `<option value="${esc(l.id)}"${l.id===R.child?" selected":""}>${esc(l.name)}</option>`).join("")}</select></div>
       <div class="tiles" style="margin:8px 0 4px">
         <div class="tile t1"><b>${st.done}</b><span>checks recorded</span></div>
@@ -2811,7 +2811,7 @@ const WIDGETS = {
         <button class="btn" id="ro-pub">Show public key</button>
       </div>` +
       (earned.length
-        ? `<div class="pickrow" style="margin:0 0 10px"><select id="ro-pick">${earned.map(({l,t},i)=>
+        ? `<div class="pickrow" style="margin:0 0 10px"><select id="ro-pick" aria-label="Credential to sign">${earned.map(({l,t},i)=>
             `<option value="${i}">${esc(l.name)} — ${esc(t.credential)} (${esc(t.name)})</option>`).join("")}</select>
            <button class="btn gold" id="ro-issue">Issue signed record</button></div>`
         : `<p class="note">No earned credentials in the ledger yet — records are issued only for credentials the
@@ -3169,8 +3169,8 @@ function renderRoles(){
       return `<span class="chip" style="display:inline-flex; gap:6px; align-items:center; margin:3px 6px 3px 0">
         <label style="display:inline-flex; gap:5px; align-items:center; cursor:pointer">
           <input type="checkbox" data-w="${w.id}" ${on?"checked":""}> ${esc(w.t)}</label>` +
-        (on ? `<button data-mv="${w.id}|-1" title="Earlier" aria-label="Move ${esc(w.t)} earlier" ${at===0?"disabled":""} style="border:0;background:none;padding:0;color:var(--faint)">◀</button>
-               <button data-mv="${w.id}|1" title="Later" aria-label="Move ${esc(w.t)} later" ${at===layout.length-1?"disabled":""} style="border:0;background:none;padding:0;color:var(--faint)">▶</button>` : "") +
+        (on ? `<button data-mv="${w.id}|-1" title="Earlier" aria-label="Move ${esc(w.t)} earlier" ${at===0?"disabled":""} style="border:0;background:none;padding:0;min-width:24px;min-height:24px;color:var(--faint)">◀</button>
+               <button data-mv="${w.id}|1" title="Later" aria-label="Move ${esc(w.t)} later" ${at===layout.length-1?"disabled":""} style="border:0;background:none;padding:0;min-width:24px;min-height:24px;color:var(--faint)">▶</button>` : "") +
       `</span>`;}).join("")}</div></div>`;
 
   const body = $("#rolebody");
@@ -3295,7 +3295,7 @@ function renderMakers(){
   const d = mkDisc();
   if (!d.stages.some(st=>st.id===MK.stage)) MK.stage = "";
   $("#mkchips").innerHTML = M.disciplines.map(x =>
-    `<button class="chip" data-disc="${esc(x.id)}" aria-pressed="${x.id===d.id}" style="${x.id===d.id?`background:${x.color}; color:#fff; border-color:${x.color}`:""}">${esc(x.name)} <span style="opacity:.75">· ${x.figures.length} makers</span></button>`).join("");
+    `<button class="chip" data-disc="${esc(x.id)}" aria-pressed="${x.id===d.id}" style="${x.id===d.id?`background:${x.color}; color:#fff; border-color:${x.color}`:""}">${esc(x.name)} <span>· ${x.figures.length} makers</span></button>`).join("");
   $("#mkchips").querySelectorAll("[data-disc]").forEach(b => b.addEventListener("click", ()=>{
     MK.disc = b.dataset.disc; MK.stage = ""; MK.parish = ""; renderMakers();
   }));
