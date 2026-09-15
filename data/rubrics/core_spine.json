@@ -1,0 +1,458 @@
+{
+ "format": "cx-rubrics/1",
+ "note": "Transfer-check rubrics for the thirty core-spine tracks — the tracks the Louisiana ledger credits and the Records Office signs. Each rubric sits under the three-line rubric every assessor already uses (real material · independent at band · would transfer) and names what passing evidence looks like for this track, the three ways a check most often fails to transfer, and one note to the assessor. The theme-level specific is the block's own transfer check, quoted at check time; the rubric never replaces it. Authored by the maintainers; reviewed like any pack.",
+ "how_to_read": "Pass evidence: any one line met on real material at the learner's band is a confirmed check; two or three is a strong one. Failure modes: if the check matches one of these, record not-yet with the smaller step and the retry date. The bar never moves for an access profile; the format does.",
+ "bands": "At K–2 and 3–5 the assessor supplies the material and the prompt; at 6–8 the learner brings the material; at 9–10 and 11–12 the learner brings the material and the question.",
+ "rubrics": [
+  {
+   "pack": "LAOS",
+   "track": "The river: the Mississippi and its machinery",
+   "pass": [
+    "Names a real gauge, structure, spillway or reach and reads it from a current source, not from memory.",
+    "States what today's number, decision or structure means for the parish downstream of it.",
+    "Can answer a one-step-sideways question: what changes if the stage rises a metre, if the control structure fails, if the diversion opens."
+   ],
+   "fails": [
+    "Recites the river's story without a place, a date or a number the assessor could check.",
+    "Reads the map or the gauge correctly but cannot say what it means for anyone.",
+    "Treats a contested decision (a diversion, a spillway opening) as settled and cites one side only."
+   ],
+   "note": "Ask for the source before the story. A learner who can find the gauge again tomorrow has the capability; one who remembers a fact from class does not yet."
+  },
+  {
+   "pack": "LAOS",
+   "track": "The working coast: wetlands and restoration",
+   "pass": [
+    "Distinguishes marsh, swamp, ridge and open water on real imagery and names the protective job each does.",
+    "Explains one real loss mechanism and one real restoration method with the trade-off each carries.",
+    "Connects the coast to a livelihood or a community by name and can say what that community stands to lose or gain."
+   ],
+   "fails": [
+    "Uses 'the coast is disappearing' as a conclusion rather than a starting point for a specific place.",
+    "Presents restoration as costless or as futile — either way, no trade-off named.",
+    "Cannot locate the parish's own coastline, waterway or ridge on the map used."
+   ],
+   "note": "Real imagery and a real project. If the learner has never looked at their own parish from above, the check has not happened yet."
+  },
+  {
+   "pack": "LAOS",
+   "track": "The energy corridor: from well to grid",
+   "pass": [
+    "Traces one real product from well or field through one named facility to a customer, naming each step's hazard.",
+    "Reads a real plant, pipeline or grid map and identifies what sits near a school, a home or a waterway.",
+    "Holds two things at once: what the corridor pays for and what it costs, with a source for each."
+   ],
+   "fails": [
+    "Describes a refinery, plant or substation from a diagram they cannot connect to a place they have been or seen.",
+    "Takes the industry's or the critic's account as the whole story.",
+    "Confuses energy carriers (gas, electricity, fuel) or cannot say which one a facility handles."
+   ],
+   "note": "The capability is reading the corridor, not judging it. Reward the learner who finds the fenceline and reads the sign."
+  },
+  {
+   "pack": "LAOS",
+   "track": "Ports and the river highway",
+   "pass": [
+    "Finds the port facility nearest the parish on a real map and names two things that actually move through it.",
+    "Follows one real cargo from vessel to truck or rail, naming who handles it and where control changes hands.",
+    "Explains one real risk at the port (a lift, a spill, a storm) and the control that stands over it."
+   ],
+   "fails": [
+    "Describes 'the port' as one place rather than the complex it is.",
+    "Cannot connect a cargo to a job a person does.",
+    "Names hazards without the control that answers each."
+   ],
+   "note": "Ask what moved yesterday. A port learner can tell you; a port reader cannot."
+  },
+  {
+   "pack": "LAOS",
+   "track": "Agriculture: rice, cane and the crawfish pond",
+   "pass": [
+    "Explains why a crop grows where it does, from water, soil and season, with the parish's own fields as the example.",
+    "Follows one crop through a real year: planting, water, harvest, mill or market, and where the money is made and lost.",
+    "Names one real risk to the season (flood, drought, price, disease) and how a producer actually answers it."
+   ],
+   "fails": [
+    "Knows the crops but not the water — cannot say why a field is flooded or drained.",
+    "Presents farming as tradition only, with no account of margins, contracts or labour.",
+    "Cannot name a producer, mill, co-op or market in the region."
+   ],
+   "note": "A visit or a producer's own account counts as real material. A textbook page about rice does not."
+  },
+  {
+   "pack": "LAOS",
+   "track": "The Louisiana table",
+   "pass": [
+    "Makes a roux, a stock or a base dish on real heat with the technique visible: colour, timing, the moment to stop.",
+    "Names the dish's origin honestly — who cooked it first, and what changed on the way — without inventing a story.",
+    "Adapts a dish to what is in the kitchen and explains what the substitution costs."
+   ],
+   "fails": [
+    "Talks about the dish without cooking it, or cooks it once and cannot say what would have gone wrong.",
+    "Repeats a marketing origin story as history.",
+    "Follows the recipe exactly and stalls when an ingredient is missing."
+   ],
+   "note": "Kitchen, heat and a plate that can be tasted. The written explanation matters at the older bands, but the pot comes first."
+  },
+  {
+   "pack": "LAOS",
+   "track": "Music: the sound the state gave the world",
+   "pass": [
+    "Plays, sings or produces one piece in a Louisiana form and can name the form's markers in their own performance.",
+    "Traces one form from its origin to a living player, naming real people and places, not myths.",
+    "Listens to an unfamiliar recording and identifies the form, the region and one thing about the players' choices."
+   ],
+   "fails": [
+    "Can name the forms but cannot hear them.",
+    "Performs without being able to say what makes the performance belong to the form.",
+    "Repeats the 'birthplace' claims without the people, the places or the dates that back them."
+   ],
+   "note": "Ear before names. If the learner can hear a second line in a recording they have never heard, they have it."
+  },
+  {
+   "pack": "LAOS",
+   "track": "French, Creole and the languages of home",
+   "pass": [
+    "Uses the language in a real exchange — a greeting, a transaction, a story — with a speaker or a recording, at the learner's own band.",
+    "Explains who speaks what in the region and why, including the generation that was punished for it, with sources.",
+    "Distinguishes Louisiana French, Kouri-Vini and standard French by example, not by label."
+   ],
+   "fails": [
+    "Knows the history of the language but cannot use ten words of it.",
+    "Presents the language as dead or as a costume.",
+    "Conflates the varieties or dismisses one as 'not real French'."
+   ],
+   "note": "A conversation with a speaker is the material. Where no speaker is available, a recorded exchange with the learner responding aloud counts."
+  },
+  {
+   "pack": "LAOS",
+   "track": "Krewes, festivals and the craft of celebration",
+   "pass": [
+    "Explains one real krewe or festival as an organization: who runs it, how it is funded, what it takes to stage one event.",
+    "Contributes a real piece of craft — a float element, a costume, a throw, a parade plan — that meets a stated constraint.",
+    "Names the civic rules that govern a parade or festival (permits, routes, safety) and one real incident that changed them."
+   ],
+   "fails": [
+    "Treats carnival as spectacle only, with no account of the year of work behind one day.",
+    "Makes the craft piece without a constraint (a budget, a size, a deadline) it can be checked against.",
+    "Cannot name who decides the route or what a permit requires."
+   ],
+   "note": "The organization is the content. A learner who can read a krewe's budget has done more than one who can name its history."
+  },
+  {
+   "pack": "LAOS",
+   "track": "The storm and the long memory",
+   "pass": [
+    "Builds a documented timeline of the storms that struck the region, each with a stated lesson and a source.",
+    "Knows the household's or the school's own plan — zone, route, supplies, contacts — and can act it out in order.",
+    "Explains one real change in law, levee or practice that followed one real storm."
+   ],
+   "fails": [
+    "Remembers storm names without dates, tracks or consequences.",
+    "Has a plan on paper that nobody in the household could follow.",
+    "Presents the next storm as unpredictable rather than as something a plan already answers."
+   ],
+   "note": "The plan is checked by walking it. Ask the learner to run the seventy-two-hour sequence aloud with a clock."
+  },
+  {
+   "pack": "LEGACYLA",
+   "track": "Public service as a craft: the Louisiana ladder",
+   "pass": [
+    "Names three public servants within reach of the school, what each actually does in a week, and how each got there.",
+    "Describes the ladder from volunteer to elected or appointed service with real roles and real requirements.",
+    "Completes one real act of service — a shift, a task, a document — for a real body, and reports what it took."
+   ],
+   "fails": [
+    "Speaks about service as a value with no person, role or task attached.",
+    "Knows the elected offices but not the appointed and civil-service jobs that do most of the work.",
+    "Reports a service act that cannot be confirmed by the body it served."
+   ],
+   "note": "Ask for the name of the person two streets away. That is the check."
+  },
+  {
+   "pack": "LEGACYLA",
+   "track": "The parish: government closest to the door",
+   "pass": [
+    "Produces the one-page profile of their own parish — seat, governing form, three services it actually runs — from official sources.",
+    "Reads a real parish agenda or budget line and explains what will change for whom.",
+    "Contacts or attends a real parish body and reports what happened, who spoke, and what was decided."
+   ],
+   "fails": [
+    "Confuses parish with county, city or state functions.",
+    "Describes parish government from a chart rather than from a meeting, a document or a person.",
+    "Reports an outcome without the evidence a clerk's record would show."
+   ],
+   "note": "Official sources only for the profile. The learner who finds the parish's own website and reads it has the capability."
+  },
+  {
+   "pack": "LEGACYLA",
+   "track": "Baton Rouge: the Legislature and the law",
+   "pass": [
+    "Traces one real bill through the session: sponsor, committee, floor, governor, and what it changed.",
+    "Finds and reads the actual text of one law that affects the learner's own life, and states what it requires.",
+    "Explains the session calendar and who can do what when, with the current year's dates."
+   ],
+   "fails": [
+    "Describes 'how a bill becomes law' generically with no real bill.",
+    "Quotes a law from a summary rather than the text.",
+    "Confuses the state and federal legislatures, or the two chambers' roles."
+   ],
+   "note": "The bill number is the material. Without one, the learner has done civics, not this track."
+  },
+  {
+   "pack": "LEGACYLA",
+   "track": "Elections, voice and the ballot in Louisiana",
+   "pass": [
+    "Explains registration, deadlines and the state's own way of electing, with the current dates and rules.",
+    "Reads a real sample ballot and explains each item, including what a proposition would do if passed.",
+    "Takes one real civic action — a registration drive, a public comment, a candidate question — and reports it."
+   ],
+   "fails": [
+    "Describes elections from another state's rules.",
+    "Reads the ballot but cannot explain a single proposition.",
+    "Treats voice as opinion only, with no act that reached a real body."
+   ],
+   "note": "Use the current election cycle's material. Last year's ballot is history; this year's is the check."
+  },
+  {
+   "pack": "LEGACYLA",
+   "track": "Water, storm and the civic machine",
+   "pass": [
+    "Names the levee board, drainage district or authority responsible for the learner's own ground and one decision it made.",
+    "Explains one real funding or governance decision about water (a tax, a bond, a project) and who paid.",
+    "Follows one real storm through the civic machine: declaration, order, response, recovery, and what the record says about each."
+   ],
+   "fails": [
+    "Attributes water decisions to 'the government' with no body or person named.",
+    "Knows the disaster but not the declaration, the order or the money.",
+    "Cannot find the learner's own ground on the levee or drainage map."
+   ],
+   "note": "The body's own minutes or budget are the material. A news story about the storm is context, not evidence."
+  },
+  {
+   "pack": "LIFESKILL",
+   "track": "The household that works",
+   "pass": [
+    "Reads a real bill or meter and states what is owed, by when, and what happens if it is not paid.",
+    "Runs one household routine to completion — a wash, a meal, a repair, a clean — safely and to a checkable standard.",
+    "Keeps a simple household record for a period and can say what it shows."
+   ],
+   "fails": [
+    "Describes the task without doing it on real material.",
+    "Does the task once, prompted at every step.",
+    "Cannot connect the bill to the meter, the appliance or the habit that produced it."
+   ],
+   "note": "Real bill, real meter, real machine. A worksheet bill teaches reading, not running a household."
+  },
+  {
+   "pack": "LIFESKILL",
+   "track": "Money that lasts the month",
+   "pass": [
+    "Builds a month's budget from real or realistic figures and lands within it, or explains exactly where and why it broke.",
+    "Reads an account statement, a fee schedule or a contract and finds the charge that matters.",
+    "Chooses between two real options (a plan, a loan, a purchase) with the total cost over time stated."
+   ],
+   "fails": [
+    "Produces a budget that ignores a category the learner actually spends on.",
+    "Reads the statement but misses the fee or the interest line.",
+    "Chooses on the monthly payment alone."
+   ],
+   "note": "Total cost over time is the transfer. If the learner can only compare monthly numbers, keep going."
+  },
+  {
+   "pack": "LIFESKILL",
+   "track": "Getting and holding work",
+   "pass": [
+    "Assembles the documents a real application needs and completes one real form correctly.",
+    "Prepares for and completes a real or realistic interview, and can say what the employer was looking for.",
+    "Handles one real workplace situation — a schedule change, a mistake, a request — in a way that keeps the job."
+   ],
+   "fails": [
+    "Has a résumé but no documents, or documents that do not match.",
+    "Answers interview questions with no evidence of listening to the question.",
+    "Treats a workplace problem as someone else's to solve."
+   ],
+   "note": "Use a real employer's form. Practice forms hide the fields that trip people up."
+  },
+  {
+   "pack": "LIFESKILL",
+   "track": "Getting things done in the world",
+   "pass": [
+    "Plans and completes a real journey using a timetable, a map or an app, with a fallback if the first plan fails.",
+    "Makes one real appointment, attends it, and handles what the front desk asks for.",
+    "Solves one real problem with an organization — a return, a complaint, a form — and gets a documented outcome."
+   ],
+   "fails": [
+    "Plans the journey but cannot recover when a connection is missed.",
+    "Attends the appointment without the document or the question they came with.",
+    "Gives up at the first 'no' from an organization."
+   ],
+   "note": "The fallback is the capability. Ask what they would have done if the bus had not come."
+  },
+  {
+   "pack": "LIFESKILL",
+   "track": "The first minutes of an emergency",
+   "pass": [
+    "Runs the first sixty seconds in order on a staged scene: safe, responsive, breathing, call, act.",
+    "Makes the emergency call with the address, the situation and the answers the call-taker needs, in that order.",
+    "Performs one hands-on action (recovery position, pressure on a bleed, compressions) on a manikin or partner to standard."
+   ],
+   "fails": [
+    "Acts before checking the scene.",
+    "Calls without the address or hangs up before the call-taker is done.",
+    "Knows the steps but freezes when the scene is staged without warning."
+   ],
+   "note": "Stage it unannounced once. The order under surprise is what the track certifies."
+  },
+  {
+   "pack": "EMERGENCY",
+   "track": "The household that is ready",
+   "pass": [
+    "Names the real risks where the household actually lives, ranked, with a source for each.",
+    "Assembles and shows a seventy-two-hour shelf and go-bag that fits the household's real needs, including medical ones.",
+    "Runs the household plan aloud with a clock: who does what, when the decision is made, where everyone meets."
+   ],
+   "fails": [
+    "Prepares for a generic disaster rather than the ones the address faces.",
+    "Has a kit without the household's medications, documents or a child's needs.",
+    "Has a plan nobody else in the household knows."
+   ],
+   "note": "Ask the household, not the learner. If another member can say where the bag is and where they meet, the check holds."
+  },
+  {
+   "pack": "EMERGENCY",
+   "track": "First aid: the first ten minutes",
+   "pass": [
+    "Approaches a staged scene and verbalises the hazard check and the decision to proceed, stage or wait.",
+    "Performs the first-ten-minutes actions on a manikin or partner to the current guideline standard.",
+    "Hands over to the next responder with the times and actions in order."
+   ],
+   "fails": [
+    "Skips the scene check when the casualty is dramatic.",
+    "Performs the skill but at the wrong rate, depth or sequence.",
+    "Cannot give the handover — what was done, when."
+   ],
+   "note": "Manikin and clock. The handover is the part most learners have never practised; make it part of every check."
+  },
+  {
+   "pack": "EMERGENCY",
+   "track": "Fire: prevention, escape, fighting small",
+   "pass": [
+    "Audits a real dwelling against the top ignition causes and fixes or mitigates every finding, with evidence.",
+    "Runs the escape drill from the home's own rooms with the doors closed and the second exit used.",
+    "Matches extinguisher type to fuel and demonstrates the alarm–fight–leave order on a cold station."
+   ],
+   "fails": [
+    "Audits a checklist rather than the rooms.",
+    "Knows the escape route but has never used the second exit.",
+    "Reaches for water on an electrical or oil fire in the drill."
+   ],
+   "note": "A drill in the real home beats a plan on paper. If the home cannot be used, a staged floor plan with real doors is the substitute."
+  },
+  {
+   "pack": "EMERGENCY",
+   "track": "When the ground, water or sky turns",
+   "pass": [
+    "Reads the real warning products for the region (watch, warning, order, zone) and states what each requires the household to do.",
+    "Applies the right shelter or evacuation decision to one staged event using the parish's own map and route.",
+    "Identifies the after-event hazards (water, power, debris, carbon monoxide) and the control for each."
+   ],
+   "fails": [
+    "Confuses watch with warning, or zone with order.",
+    "Plans the evacuation without the route, the fuel or the time it takes.",
+    "Treats the all-clear as the end of danger."
+   ],
+   "note": "Use the current season's real products. The learner should be able to find them again without help."
+  },
+  {
+   "pack": "EMERGENCY",
+   "track": "Community response and recovery",
+   "pass": [
+    "Explains who responds to a real event in the parish — agencies, roles, the order they arrive — from the official plan.",
+    "Volunteers or takes a real role in a drill or a recovery effort through a recognised organisation, and reports it.",
+    "Describes the spontaneous-volunteer problem and how a coordinated response solves it, with a real example."
+   ],
+   "fails": [
+    "Names 'the first responders' without the system behind them.",
+    "Helps outside any structure and cannot say who coordinated.",
+    "Presents recovery as the week after, with no account of the months."
+   ],
+   "note": "A real drill with a real organisation is the material. Watching a documentary is not."
+  },
+  {
+   "pack": "LAUNCH",
+   "track": "The first ninety days",
+   "pass": [
+    "Writes the parish's own ninety-day plan with dated commitments, named owners and the first cohort identified.",
+    "Reads the parish first: population, schools, halls, employers, the room that exists — from real sources.",
+    "Runs the first week and reports what happened against the plan, honestly, including what slipped."
+   ],
+   "fails": [
+    "Plans from the platform's template without the parish's own facts.",
+    "Sets commitments without dates or owners.",
+    "Reports the plan instead of the week."
+   ],
+   "note": "The slipped item, reported plainly, is a pass. The plan that claims nothing slipped is the red flag."
+  },
+  {
+   "pack": "LAUNCH",
+   "track": "Standing up the Trade Hall",
+   "pass": [
+    "Produces the hall's schedule — rooms, hours, stations, who holds the key — for a room the parish already owns.",
+    "Sets up one station to the studio law: what is simulated, what is live, what is posted.",
+    "Runs the first session and records who came, what was done and what needs fixing before the next one."
+   ],
+   "fails": [
+    "Describes the hall as a building to be built rather than a schedule to be kept.",
+    "Sets up a station with an energized, suspended or moving hazard live.",
+    "Runs the session without a record."
+   ],
+   "note": "The studio law posted at the station is the artifact. Read it before the check begins."
+  },
+  {
+   "pack": "LAUNCH",
+   "track": "Training the trainers",
+   "pass": [
+    "Teaches one block to a peer, at the block's band, ending with a transfer check the peer actually performs.",
+    "Witnesses a check as the honest witness: real material, independent at band, would transfer — and records the not-yet honestly.",
+    "Explains the three-line rubric, the access-profile formats and why the bar never moves, in their own words."
+   ],
+   "fails": [
+    "Teaches the theme without the check.",
+    "Records a soft yes.",
+    "Lowers the bar for a learner's access profile instead of changing the format."
+   ],
+   "note": "Watch the trainer record a not-yet. That is the only way to know the witness is honest."
+  },
+  {
+   "pack": "LAUNCH",
+   "track": "Enrolling the community",
+   "pass": [
+    "Chooses the first cohort by stated criteria and can defend each choice.",
+    "Speaks parish, not platform: explains the program to a family or an employer without jargon, and is understood.",
+    "Enrols a real cohort with the consent language read, understood and kept, and the ledger started."
+   ],
+   "fails": [
+    "Chooses whoever showed up.",
+    "Explains the program in platform terms nobody outside it uses.",
+    "Enrols without consent that the family could actually read."
+   ],
+   "note": "Have a family member repeat back what they agreed to. If they can, the enrolment holds."
+  },
+  {
+   "pack": "LAUNCH",
+   "track": "Measure, report, scale",
+   "pass": [
+    "Produces the five numbers that cannot lie for a real period, from the ledger, with the source of each shown.",
+    "Runs the weekly count on time for a month and can show the trend.",
+    "Writes the report a parish administrator or a funder can read, with the not-yet counts in it."
+   ],
+   "fails": [
+    "Reports projections as results.",
+    "Counts practice checks as witnessed ones.",
+    "Drops the numbers that look bad."
+   ],
+   "note": "The report with the bad number in it passes. The clean report without it does not."
+  }
+ ]
+}

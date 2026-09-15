@@ -16,6 +16,7 @@ Deterministic: same dataset, same file.
 """
 
 import csv
+import sys
 import re
 from collections import OrderedDict
 from pathlib import Path
@@ -30,6 +31,11 @@ LEVEL_WORDS = {"Explorer", "Builder", "Practitioner", "Lead"}  # not credential 
 def main():
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv",
                                     newline="", encoding="utf-8")))
+    sys.path.insert(0, str(ROOT / "tools"))
+    from validate_standards import validate as validate_standards
+    std_errs, std_cov = validate_standards(rows)
+    if std_errs:
+        raise SystemExit("standards/rubrics invalid: " + "; ".join(std_errs[:3]))
     packs = OrderedDict()
     for r in rows:
         packs.setdefault(r["pack"], []).append(r)
@@ -77,6 +83,20 @@ def main():
         f"band-suffix {100*suff_all//len(rows)}% · code+level "
         f"{100*cl_all//len(rows)}% · shortest transfer check "
         f"{min(len(r['transfer_check']) for r in rows)} chars.",
+        "",
+        "## Standards and rubrics",
+        "",
+        "Standards mappings (`data/standards/*.json`) name the codes a block was",
+        "designed against — *cites* — or the performance expectations a track's",
+        "blocks practise at a band — *touches*. Neither is an external alignment",
+        "review, and every framework carries the caveat to verify codes against the",
+        "current document. Rubrics (`data/rubrics/*.json`) give an assessor pass",
+        "evidence, failure modes and a note per track. Validated by",
+        "`tools/validate_standards.py`.",
+        "",
+        f"- Blocks carrying at least one standards code: **{std_cov['blocks_covered']:,}** of {len(rows):,} ({100*std_cov['blocks_covered']//len(rows)}%) — "
+        + " · ".join(f"{i} ({s}: {n} entries, {c} codes)" for i, s, n, c in std_cov["frameworks"]),
+        f"- Tracks with a transfer-check rubric: **{std_cov['tracks_with_rubric']}** of {std_cov['tracks']} ({100*std_cov['tracks_with_rubric']//std_cov['tracks']}%) — the core-spine tracks the Louisiana ledger credits.",
         "",
         "## Credential naming",
         "",

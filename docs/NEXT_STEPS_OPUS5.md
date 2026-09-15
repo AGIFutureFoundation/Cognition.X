@@ -214,7 +214,7 @@ lists any remaining AA gap explicitly rather than implying none.
 
 ---
 
-## 5 — Standards mapping and transfer-check rubrics
+## 5 — Standards mapping and transfer-check rubrics *(done in v0.56.0 — two frameworks, 30 rubrics; see docs/STANDARDS.md)*
 
 **Why.** Two Phase 1 items with real classroom consequences are still
 open: no block maps to an external standard, and no transfer check

@@ -44,7 +44,7 @@ sessions are written out in
 [`docs/NEXT_STEPS_OPUS5.md`](NEXT_STEPS_OPUS5.md). In short: ① restore
 the Education OS design system (done, v0.46.0) → ② author the 24 missing credential
 names (drafted v0.52.0; board adoption pending) → ③ finish the WCAG 2.2 AA audit (done, v0.53.0) → ④ close the
-remaining verified review findings → ⑤ standards mapping and rubrics →
+remaining verified review findings → ⑤ standards mapping and rubrics (done, v0.56.0) →
 ⑥ W3C VC / Open Badges alignment → ⑦ cut v1.0 when a named external
 cohort completes credentials on an unmodified release.
 
@@ -124,8 +124,20 @@ model, v29 state template; see `docs/wiki/Legacy-Tracks.md`):
 - Further state/country localizations on request, subject to the
   disclaimer and partnership rules on the Legacy Tracks wiki page
 
+- [x] Standards mapping, first two frameworks (v0.56.0):
+  `data/standards/lss-k12.json` (generated from the K–12 program; block
+  scope, *cites*) and `data/standards/ngss-ets-robotics.json` (four
+  Robotics OS tracks × five bands; *touches*); every code carries the
+  caveat to verify. `docs/STANDARDS.md`.
+- [x] Transfer-check rubrics for the 30 core-spine tracks (v0.56.0):
+  pass evidence, failure modes, assessor note — in Assessor Mode, the
+  Flow Hub pack detail and the printed workbook.
+- [x] Validator extended to rubric and mapping checks
+  (`tools/validate_standards.py`, CI).
+
 **Exit criteria:** zero empty fields dataset-wide; ≥2 packs
-standards-mapped; validator extended to rubric and mapping checks.
+standards-mapped (done, v0.56.0); validator extended to rubric and
+mapping checks (done, v0.56.0).
 
 ---
 

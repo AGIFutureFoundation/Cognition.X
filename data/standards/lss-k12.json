@@ -1,0 +1,1005 @@
+{
+ "format": "cx-standards/1",
+ "id": "lss-k12",
+ "framework": "Louisiana Student Standards — Mathematics (LSSM, CCSS-numbered), ELA (LSS ELA) and Science (LSS Science, NGSS-style codes)",
+ "publisher": "Louisiana Department of Education",
+ "documents": [
+  {
+   "key": "lssm",
+   "title": "Louisiana Student Standards for Mathematics",
+   "url": "https://doe.louisiana.gov/"
+  },
+  {
+   "key": "lss_ela",
+   "title": "Louisiana Student Standards for English Language Arts",
+   "url": "https://doe.louisiana.gov/"
+  },
+  {
+   "key": "lss_science",
+   "title": "Louisiana Student Standards for Science",
+   "url": "https://doe.louisiana.gov/"
+  }
+ ],
+ "as_of": "as cited by data/louisiana/k12_program.json (extracted v0.44.0); document editions as published by LDOE",
+ "scope": "block",
+ "strength": "cites",
+ "strength_note": "cites: the block's author named these codes as the design target. Stronger claims (an external body's alignment review) are not made anywhere in this repository.",
+ "caveat": "These are the standards codes the block was designed against, as cited by the Louisiana K–12 program; verify each code against the current LDOE documents before classroom use. A code names an intended alignment, not a certification of it.",
+ "generated_by": "tools/generate_standards.py",
+ "entries": [
+  {
+   "block_id": "CX-K12-0001",
+   "theme": "Counting the Depot",
+   "grade": "K",
+   "codes": {
+    "lssm": [
+     "K.CC.A.1–3",
+     "K.CC.B.4–5"
+    ],
+    "lss_ela": [
+     "RF.K.1",
+     "RF.K.2"
+    ],
+    "lss_science": [
+     "K-PS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0002",
+   "theme": "Shapes that Roll",
+   "grade": "K",
+   "codes": {
+    "lssm": [
+     "K.G.A.1–3",
+     "K.G.B.4–6"
+    ],
+    "lss_ela": [
+     "RF.K.3",
+     "L.K.1"
+    ],
+    "lss_science": [
+     "K-PS3-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0003",
+   "theme": "More or Fewer",
+   "grade": "K",
+   "codes": {
+    "lssm": [
+     "K.CC.C.6–7",
+     "K.OA.A.1–5"
+    ],
+    "lss_ela": [
+     "RF.K.3",
+     "RL.K.1"
+    ],
+    "lss_science": [
+     "K-LS1-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0004",
+   "theme": "Measure and Compare",
+   "grade": "K",
+   "codes": {
+    "lssm": [
+     "K.MD.A.1–2",
+     "K.MD.B.3"
+    ],
+    "lss_ela": [
+     "RF.K.4",
+     "W.K.1–3"
+    ],
+    "lss_science": [
+     "K-ESS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0006",
+   "theme": "Adding to Ten",
+   "grade": "1",
+   "codes": {
+    "lssm": [
+     "1.OA.A.1–2",
+     "1.OA.B.3–4",
+     "1.OA.C.5–6"
+    ],
+    "lss_ela": [
+     "RF.1.2",
+     "RF.1.3"
+    ],
+    "lss_science": [
+     "1-PS4-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0007",
+   "theme": "Place Value at the Depot",
+   "grade": "1",
+   "codes": {
+    "lssm": [
+     "1.NBT.A.1",
+     "1.NBT.B.2–3",
+     "1.NBT.C.4–6"
+    ],
+    "lss_ela": [
+     "RF.1.3",
+     "RI.1.1–2"
+    ],
+    "lss_science": [
+     "1-LS1-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0008",
+   "theme": "Measuring with Bots",
+   "grade": "1",
+   "codes": {
+    "lssm": [
+     "1.MD.A.1–2",
+     "1.MD.B.3",
+     "1.MD.C.4"
+    ],
+    "lss_ela": [
+     "W.1.1–3",
+     "L.1.1"
+    ],
+    "lss_science": [
+     "1-ESS1-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0009",
+   "theme": "Shapes and Halves",
+   "grade": "1",
+   "codes": {
+    "lssm": [
+     "1.G.A.1–3"
+    ],
+    "lss_ela": [
+     "RF.1.4",
+     "L.1.2"
+    ],
+    "lss_science": [
+     "1-LS3-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0011",
+   "theme": "Gear Tooth Operations II",
+   "grade": "2",
+   "codes": {
+    "lssm": [
+     "2.OA.A.1",
+     "2.OA.B.2",
+     "2.OA.C.3–4"
+    ],
+    "lss_ela": [
+     "RF.2.3",
+     "RI.2.1–3"
+    ],
+    "lss_science": [
+     "2-PS1-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0012",
+   "theme": "Depot Inventory to 1,000",
+   "grade": "2",
+   "codes": {
+    "lssm": [
+     "2.NBT.A.1–4",
+     "2.NBT.B.5–9"
+    ],
+    "lss_ela": [
+     "RF.2.4",
+     "W.2.2"
+    ],
+    "lss_science": [
+     "2-ESS1-1",
+     "2-ESS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0013",
+   "theme": "The Repair Log",
+   "grade": "2",
+   "codes": {
+    "lssm": [
+     "2.MD.A.1–4",
+     "2.MD.B.5–6",
+     "2.MD.C.7–8",
+     "2.MD.D.9–10"
+    ],
+    "lss_ela": [
+     "W.2.1",
+     "L.2.1–2"
+    ],
+    "lss_science": [
+     "2-LS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0014",
+   "theme": "Belt Sections",
+   "grade": "2",
+   "codes": {
+    "lssm": [
+     "2.G.A.1–3"
+    ],
+    "lss_ela": [
+     "W.2.3",
+     "RL.2.1–3"
+    ],
+    "lss_science": [
+     "2-LS4-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0016",
+   "theme": "Pattern & Sequence Bots",
+   "grade": "3",
+   "codes": {
+    "lssm": [
+     "3.OA.A.1–4",
+     "3.OA.B.5–6",
+     "3.OA.D.9"
+    ],
+    "lss_ela": [
+     "RF.3.3",
+     "RL.3.1–3"
+    ],
+    "lss_science": [
+     "3-LS1-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0017",
+   "theme": "Fractions on the Conveyor I",
+   "grade": "3",
+   "codes": {
+    "lssm": [
+     "3.NF.A.1–3"
+    ],
+    "lss_ela": [
+     "RI.3.1–3",
+     "L.3.1"
+    ],
+    "lss_science": [
+     "3-PS2-1",
+     "3-PS2-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0018",
+   "theme": "Gauge Reader",
+   "grade": "3",
+   "codes": {
+    "lssm": [
+     "3.MD.A.1–2",
+     "3.MD.B.3–4",
+     "3.MD.C.5–7"
+    ],
+    "lss_ela": [
+     "RI.3.7",
+     "W.3.2"
+    ],
+    "lss_science": [
+     "3-ESS2-1",
+     "3-ESS3-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0019",
+   "theme": "Depot Inspection",
+   "grade": "3",
+   "codes": {
+    "lssm": [
+     "3.G.A.1–2",
+     "3.OA.C.7"
+    ],
+    "lss_ela": [
+     "W.3.1",
+     "W.3.3",
+     "RF.3.4"
+    ],
+    "lss_science": [
+     "3-LS4-3"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0021",
+   "theme": "Crane Arm Fold",
+   "grade": "4",
+   "codes": {
+    "lssm": [
+     "4.OA.A.1–3",
+     "4.NBT.A.1–3",
+     "4.NBT.B.4–6"
+    ],
+    "lss_ela": [
+     "RI.4.1–2",
+     "L.4.1"
+    ],
+    "lss_science": [
+     "4-PS3-1",
+     "4-PS3-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0022",
+   "theme": "Fractions on the Conveyor II",
+   "grade": "4",
+   "codes": {
+    "lssm": [
+     "4.NF.A.1–2",
+     "4.NF.B.3–4",
+     "4.NF.C.5–7"
+    ],
+    "lss_ela": [
+     "RI.4.3",
+     "W.4.2"
+    ],
+    "lss_science": [
+     "4-PS4-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0023",
+   "theme": "Measure the Machine",
+   "grade": "4",
+   "codes": {
+    "lssm": [
+     "4.MD.A.1–3",
+     "4.MD.B.4",
+     "4.MD.C.5–7"
+    ],
+    "lss_ela": [
+     "RI.4.7",
+     "W.4.1"
+    ],
+    "lss_science": [
+     "4-ESS2-1",
+     "4-ESS3-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0024",
+   "theme": "Lines, Angles and the Coast",
+   "grade": "4",
+   "codes": {
+    "lssm": [
+     "4.G.A.1–3"
+    ],
+    "lss_ela": [
+     "W.4.3",
+     "RL.4.1–3",
+     "RF.4.4"
+    ],
+    "lss_science": [
+     "4-ESS3-1",
+     "4-LS1-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0026",
+   "theme": "Weather & Water Sensors I",
+   "grade": "5",
+   "codes": {
+    "lssm": [
+     "5.NBT.A.1–4",
+     "5.NBT.B.5–7"
+    ],
+    "lss_ela": [
+     "RI.5.1–3",
+     "L.5.1"
+    ],
+    "lss_science": [
+     "5-PS1-1",
+     "5-ESS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0027",
+   "theme": "Belt at Three-Quarter Speed",
+   "grade": "5",
+   "codes": {
+    "lssm": [
+     "5.NF.A.1–2",
+     "5.NF.B.3–7"
+    ],
+    "lss_ela": [
+     "RI.5.7",
+     "W.5.2"
+    ],
+    "lss_science": [
+     "5-PS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0028",
+   "theme": "Flood Alert Data",
+   "grade": "5",
+   "codes": {
+    "lssm": [
+     "5.MD.A.1",
+     "5.MD.B.2",
+     "5.MD.C.3–5"
+    ],
+    "lss_ela": [
+     "W.5.7",
+     "W.5.8"
+    ],
+    "lss_science": [
+     "5-ESS2-2",
+     "5-ESS3-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0029",
+   "theme": "Depot Map Coordinates",
+   "grade": "5",
+   "codes": {
+    "lssm": [
+     "5.G.A.1–2",
+     "5.G.B.3–4"
+    ],
+    "lss_ela": [
+     "W.5.1",
+     "RL.5.1–3"
+    ],
+    "lss_science": [
+     "5-ESS3-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0031",
+   "theme": "Ratios & Gear Trains",
+   "grade": "6",
+   "codes": {
+    "lssm": [
+     "6.RP.A.1–3",
+     "6.NS.B.2–4"
+    ],
+    "lss_ela": [
+     "RI.6.1–2",
+     "L.6.1"
+    ],
+    "lss_science": [
+     "MS-PS2-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0032",
+   "theme": "Python Foundations I",
+   "grade": "6",
+   "codes": {
+    "lssm": [
+     "6.EE.A.1–4",
+     "6.EE.B.5–8",
+     "6.EE.C.9"
+    ],
+    "lss_ela": [
+     "RI.6.3",
+     "W.6.2"
+    ],
+    "lss_science": [
+     "MS-PS3-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0033",
+   "theme": "Container Geometry",
+   "grade": "6",
+   "codes": {
+    "lssm": [
+     "6.NS.C.5–8",
+     "6.G.A.1–4"
+    ],
+    "lss_ela": [
+     "RI.6.7",
+     "W.6.1"
+    ],
+    "lss_science": [
+     "MS-ESS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0034",
+   "theme": "Sensors & Noise I",
+   "grade": "6",
+   "codes": {
+    "lssm": [
+     "6.SP.A.1–3",
+     "6.SP.B.4–5"
+    ],
+    "lss_ela": [
+     "W.6.7",
+     "RL.6.1–2"
+    ],
+    "lss_science": [
+     "MS-PS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0036",
+   "theme": "Proportional Torque",
+   "grade": "7",
+   "codes": {
+    "lssm": [
+     "7.RP.A.1–3",
+     "7.EE.B.4"
+    ],
+    "lss_ela": [
+     "RI.7.1–2",
+     "L.7.1"
+    ],
+    "lss_science": [
+     "MS-PS2-2",
+     "MS-ETS1-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0037",
+   "theme": "Motor Margin Equations",
+   "grade": "7",
+   "codes": {
+    "lssm": [
+     "7.NS.A.1–3",
+     "7.EE.A.1–2",
+     "7.EE.B.3"
+    ],
+    "lss_ela": [
+     "W.7.1",
+     "RI.7.3"
+    ],
+    "lss_science": [
+     "MS-PS1-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0038",
+   "theme": "Coordinate Robots I",
+   "grade": "7",
+   "codes": {
+    "lssm": [
+     "7.G.A.1–3",
+     "7.G.B.4–6"
+    ],
+    "lss_ela": [
+     "RI.7.7",
+     "W.7.2"
+    ],
+    "lss_science": [
+     "MS-ETS1-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0039",
+   "theme": "Sensor Sampling",
+   "grade": "7",
+   "codes": {
+    "lssm": [
+     "7.SP.A.1–2",
+     "7.SP.B.3–4",
+     "7.SP.C.5–8"
+    ],
+    "lss_ela": [
+     "W.7.7",
+     "RL.7.1–2"
+    ],
+    "lss_science": [
+     "MS-LS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0041",
+   "theme": "Linear Motion Models",
+   "grade": "8",
+   "codes": {
+    "lssm": [
+     "8.EE.B.5–6",
+     "8.EE.C.7–8"
+    ],
+    "lss_ela": [
+     "RI.8.1–2",
+     "L.8.1"
+    ],
+    "lss_science": [
+     "MS-PS4-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0042",
+   "theme": "Servo Sweep Functions",
+   "grade": "8",
+   "codes": {
+    "lssm": [
+     "8.F.A.1–3",
+     "8.F.B.4–5"
+    ],
+    "lss_ela": [
+     "W.8.2",
+     "RI.8.3"
+    ],
+    "lss_science": [
+     "MS-PS4-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0043",
+   "theme": "Coordinate Robots II & Pythagorean Reach",
+   "grade": "8",
+   "codes": {
+    "lssm": [
+     "8.G.A.1–5",
+     "8.G.B.6–8",
+     "8.G.C.9"
+    ],
+    "lss_ela": [
+     "RI.8.7",
+     "W.8.1"
+    ],
+    "lss_science": [
+     "MS-PS2-3",
+     "MS-PS2-5"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0044",
+   "theme": "Circuits, Relays & Sensors II",
+   "grade": "8",
+   "codes": {
+    "lssm": [
+     "8.SP.A.1–4",
+     "8.EE.A.1–4"
+    ],
+    "lss_ela": [
+     "W.8.7",
+     "RI.8.8"
+    ],
+    "lss_science": [
+     "MS-ESS3-3"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0046",
+   "theme": "Terminal Onboarding & Linear Models",
+   "grade": "9",
+   "codes": {
+    "lssm": [
+     "N-Q.A.1–3",
+     "A-CED.A.1–2",
+     "A-REI.B.3",
+     "F-IF.A.1–2"
+    ],
+    "lss_ela": [
+     "RI.9-10.1",
+     "W.9-10.2"
+    ],
+    "lss_science": [
+     "HS-PS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0047",
+   "theme": "Linear Systems & Control",
+   "grade": "9",
+   "codes": {
+    "lssm": [
+     "A-REI.C.5–6",
+     "A-REI.D.10–12",
+     "A-CED.A.3"
+    ],
+    "lss_ela": [
+     "RI.9-10.2",
+     "W.9-10.1"
+    ],
+    "lss_science": [
+     "HS-PS3-1",
+     "HS-PS3-3"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0048",
+   "theme": "Functions of Motion",
+   "grade": "9",
+   "codes": {
+    "lssm": [
+     "F-IF.B.4–6",
+     "F-IF.C.7–9",
+     "F-BF.A.1",
+     "F-LE.A.1–3"
+    ],
+    "lss_ela": [
+     "RI.9-10.3",
+     "W.9-10.7"
+    ],
+    "lss_science": [
+     "HS-PS4-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0049",
+   "theme": "Statistics & the Controller Patch",
+   "grade": "9",
+   "codes": {
+    "lssm": [
+     "S-ID.A.1–3",
+     "S-ID.B.5–6",
+     "S-ID.C.7–9"
+    ],
+    "lss_ela": [
+     "W.9-10.2",
+     "L.9-10.1–2"
+    ],
+    "lss_science": [
+     "HS-PS4-5"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0051",
+   "theme": "Scale the Twin",
+   "grade": "10",
+   "codes": {
+    "lssm": [
+     "G-CO.A.1–5",
+     "G-CO.B.6–8",
+     "G-SRT.A.1–2"
+    ],
+    "lss_ela": [
+     "RI.9-10.5",
+     "W.9-10.7"
+    ],
+    "lss_science": [
+     "HS-LS1-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0052",
+   "theme": "The Calcasieu Assembly Calibration",
+   "grade": "10",
+   "codes": {
+    "lssm": [
+     "G-SRT.B.4–5",
+     "G-SRT.C.6–8"
+    ],
+    "lss_ela": [
+     "W.9-10.1",
+     "RI.9-10.8"
+    ],
+    "lss_science": [
+     "HS-LS1-3"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0053",
+   "theme": "Two-Link Arm & Torque",
+   "grade": "10",
+   "codes": {
+    "lssm": [
+     "G-SRT.D.9–11",
+     "G-C.A.1–3",
+     "N-VM.A.1–3",
+     "N-VM.B.4"
+    ],
+    "lss_ela": [
+     "W.9-10.8",
+     "L.9-10.3"
+    ],
+    "lss_science": [
+     "HS-LS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0054",
+   "theme": "Weld Paths & Thermal Systems",
+   "grade": "10",
+   "codes": {
+    "lssm": [
+     "G-GPE.B.4–7",
+     "G-MG.A.1–3",
+     "G-GMD.A.1–3"
+    ],
+    "lss_ela": [
+     "W.9-10.9",
+     "RI.9-10.7"
+    ],
+    "lss_science": [
+     "HS-LS4-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0056",
+   "theme": "PLC & Industrial Networks",
+   "grade": "11",
+   "codes": {
+    "lssm": [
+     "A-APR.A.1",
+     "A-APR.B.2–3",
+     "A-REI.A.2",
+     "F-IF.C.7"
+    ],
+    "lss_ela": [
+     "W.11-12.2",
+     "RI.11-12.3"
+    ],
+    "lss_science": [
+     "HS-PS2-5"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0057",
+   "theme": "Predictive Fatigue Diagnostics",
+   "grade": "11",
+   "codes": {
+    "lssm": [
+     "F-LE.B.4",
+     "F-LE.B.5",
+     "F-BF.B.4–5",
+     "A-REI.D.11"
+    ],
+    "lss_ela": [
+     "W.11-12.1",
+     "RI.11-12.7"
+    ],
+    "lss_science": [
+     "HS-PS1-5"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0058",
+   "theme": "Statistics for Quality",
+   "grade": "11",
+   "codes": {
+    "lssm": [
+     "S-IC.A.1–2",
+     "S-IC.B.3–6",
+     "S-ID.A.4"
+    ],
+    "lss_ela": [
+     "W.11-12.7",
+     "W.11-12.8"
+    ],
+    "lss_science": [
+     "HS-PS1-7"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0059",
+   "theme": "AI-CAD & Trig Models",
+   "grade": "11",
+   "codes": {
+    "lssm": [
+     "F-TF.A.1–2",
+     "F-TF.B.5",
+     "F-TF.C.8",
+     "G-MG.A.1"
+    ],
+    "lss_ela": [
+     "W.11-12.9",
+     "RI.11-12.6"
+    ],
+    "lss_science": [
+     "HS-PS2-1"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0061",
+   "theme": "Capstone Design",
+   "grade": "12",
+   "codes": {
+    "lssm": [
+     "S-ID",
+     "S-IC",
+     "F-BF (as applied)"
+    ],
+    "lss_ela": [
+     "W.11-12.2",
+     "SL.11-12.4"
+    ],
+    "lss_science": [
+     "HS-ETS1-1",
+     "HS-ETS1-2"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0062",
+   "theme": "Industry-Based Certifications",
+   "grade": "12",
+   "codes": {
+    "lssm": [
+     "N-Q (as applied)"
+    ],
+    "lss_ela": [
+     "RI.11-12.4",
+     "W.11-12.6"
+    ],
+    "lss_science": [
+     "HS-ETS1-3"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0063",
+   "theme": "Capstone Build & Work-Based Learning",
+   "grade": "12",
+   "codes": {
+    "lssm": [
+     "S-ID (as applied)"
+    ],
+    "lss_ela": [
+     "W.11-12.7",
+     "SL.11-12.5"
+    ],
+    "lss_science": [
+     "HS-ETS1-4"
+    ]
+   }
+  },
+  {
+   "block_id": "CX-K12-0064",
+   "theme": "Ledger, Placement & Launch",
+   "grade": "12",
+   "codes": {
+    "lssm": [
+     "financial literacy (Act 48)"
+    ],
+    "lss_ela": [
+     "W.11-12.10"
+    ],
+    "lss_science": []
+   }
+  }
+ ]
+}
