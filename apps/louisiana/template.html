@@ -3114,6 +3114,7 @@ const WIDGETS = {
         `<span class="bar" style="width:${Math.max(2,100*r.w1/max)}%; background:${ACCCOL[0]}" title="${esc(r.n)}: ${r.w1} of ${r.all} parishes in Wave 1"></span>`+
         `<span class="val">${r.w1}/${r.all}</span></div>`).join("");
   }},
+  {id:"compliance", t:"Compliance — Louisiana", span:true, r:(p,el)=>{ complianceWidget(el); }},
  ],
 };
 
@@ -3422,6 +3423,34 @@ function makerWidget(p, el){
       <button class="btn" id="mk-next">Another maker</button>
       <a class="btn" href="#/makers/${esc(d.id)}/${esc((byName[f.parish]||{}).slug||"")}" style="text-decoration:none">This trade in the Makers' Hall →</a></div>`;
   el.querySelector("#mk-next").addEventListener("click", ()=>{ R.makerIdx = (R.makerIdx|0) + 1; saveR(); });
+}
+
+/* State Admin: Louisiana's entry of the 50-state compliance layer (v0.51.0) */
+function complianceWidget(el){
+  const C = D.compliance; if (!C) return;
+  const c = C.state, dom = Object.fromEntries(C.domains.map(d=>[d.id,d]));
+  const money = v => v==null ? "—" : "$"+Number(v).toLocaleString();
+  const fee = f => f ? (f.amount!=null ? money(f.amount) : (f.band||"—")) : "—";
+  const row = (id, body, f) => `<div style="display:grid; grid-template-columns:170px minmax(0,1fr) 120px; gap:6px 14px; padding:8px 0; border-top:1px solid var(--line); font-size:.82rem">
+     <div><b>${esc(dom[id].name)}</b><div style="font-size:.7rem; color:var(--faint)">${esc(dom[id].what)}</div></div><div style="color:var(--muted)">${body}</div>
+     <div style="text-align:right; font-variant-numeric:tabular-nums"><b>${esc(f)}</b><div style="font-size:.66rem; color:var(--faint)">as of ${esc(C.asOf)} · verify</div></div></div>`;
+  el.innerHTML += `<p class="note">${esc(C.disclaimer)} Ten domains a Louisiana program office meets, from the 50-state compliance layer — the full checklist for every state is in the
+    <a href="../states/index.html#/compliance/LA" target="_blank" rel="noopener">States app</a>.</p>
+    <div class="tiles" style="margin:8px 0 10px">
+      <div class="tile t2"><b>${money(c.cost.one_time.low)}–${money(c.cost.one_time.high)}</b><span>one-time, estimated</span></div>
+      <div class="tile t1"><b>${money(c.cost.annual.low)}–${money(c.cost.annual.high)}</b><span>per year, estimated</span></div>
+      <div class="tile t3"><b>${esc(c.apprenticeship.type)}</b><span>${esc(c.apprenticeship.agency)}</span></div></div>` +
+    row("privacy", esc(c.privacy.law)+"<br><b>Agreement:</b> "+esc(c.privacy.agreement), fee(c.privacy.fee)) +
+    row("homeschool", esc(c.homeschool.forms), fee(c.homeschool.fee)) +
+    row("nonprofit", esc(c.nonprofit.form)+" · "+esc(c.nonprofit.report), fee(c.nonprofit.fee)) +
+    row("charity", (c.charity.required?"Required — ":"Not required in general — ")+esc(c.charity.form)+(c.charity.notes?" · "+esc(c.charity.notes):""), fee(c.charity.initial_fee)) +
+    row("background", esc(c.background.law), fee(c.background.cost)) +
+    row("mandated", (c.mandated.universal?"Every adult. ":"Named professions. ")+esc(c.mandated.training), fee(c.mandated.fee)) +
+    row("apprenticeship", esc(c.apprenticeship.agency)+"<br><b>Youth:</b> "+esc(c.apprenticeship.youth), fee(c.apprenticeship.fee)) +
+    row("cte", esc(c.cte.list)+" — "+esc(c.cte.note), "—") +
+    row("accessibility", esc(c.accessibility.standard), fee(c.accessibility.fee)) +
+    row("sales_tax", esc(c.sales_tax.form), "—") +
+    `<p class="note" style="margin-top:8px"><b>Assumptions:</b> ${esc(c.cost.assumptions)}.</p>`;
 }
 const TOUR = [
   {hash:"#/state", sel:"#mapbox", t:"Sixty-four parishes", m:"Here's the tile map — click any parish and its own dashboard opens. The two colors are the adopted waves: thirty-three parishes go first, and the rest follow the year after."},

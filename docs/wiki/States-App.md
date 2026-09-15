@@ -36,6 +36,21 @@ from three sources — never hand-edit `index.html`:
   Hub deep links.
 - **The Blueprint / The Institute Model** — the two universal layers in
   full, with the twelve principles.
+- **Compliance (v0.51.0)** — what each state asks of a program office:
+  ten domains per state (student data privacy law and the agreement a
+  district will ask for, homeschool notice and assessment forms, foreign
+  nonprofit qualification, charitable-solicitation registration,
+  background checks, mandated reporting, apprenticeship agency, the CTE
+  credential list, digital accessibility, sales-tax exemption) with the
+  agency, the form, the fee (as-of year, `verify` flag) and a cost
+  roll-up. A lens map of the nation (homeschool tier, charity
+  registration, operator law, SAA/OA, sales tax, universal reporting,
+  cost band), a per-state checklist that exports as
+  `cxstate-compliance/1` JSON and prints, and the national baseline.
+  Every state page carries the short list. Not legal advice — the data
+  says so, and CI regenerates
+  [`docs/STATE_COMPLIANCE.md`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/STATE_COMPLIANCE.md)
+  from it.
 - **Adoption** — how a state goes from blueprint to running system on
   the Louisiana reference: fact base → spine → two waves → halls with
   the Network OS → ledger and signed credentials.

@@ -190,6 +190,24 @@
 
   blockquote.big{margin:14px 0; padding:14px 18px; border-left:4px solid var(--gold); background:var(--gold-soft);
     border-radius:0 10px 10px 0; font-family:Fraunces,Georgia,serif; font-size:1.05rem}
+  /* the compliance layer (v0.51.0) */
+  .cmap .tile rect{transition:filter .15s}
+  .cdom{border-top:1px solid var(--line); padding:12px 0; display:grid; grid-template-columns:190px minmax(0,1fr) 150px; gap:6px 18px; font-size:.86rem; align-items:start}
+  .cdom:first-child{border-top:0}
+  .cdom b{font-weight:600} .cdom .what{font-size:.74rem; color:var(--faint); display:block; margin-top:2px}
+  .cdom .fee{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap}
+  .cdom .fee b{font-family:Fraunces,Georgia,serif; font-size:1.05rem; display:block}
+  .cdom .fee small{display:block; font-size:.68rem; color:var(--faint)}
+  .cdom .body{color:var(--muted); line-height:1.5} .cdom .body .k{color:var(--ink); font-weight:600}
+  .vf{display:inline-block; font:600 .62rem/1 "IBM Plex Mono",monospace; letter-spacing:.1em; text-transform:uppercase; border:1px solid var(--gold); color:var(--gold); border-radius:999px; padding:2px 7px; vertical-align:middle; margin-left:6px}
+  .tier{display:inline-block; border-radius:999px; padding:2px 10px; font-size:.74rem; font-weight:600; color:#fff}
+  .costrow{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:10px 0 4px}
+  .costrow div{background:var(--surface-2); border:1px solid var(--line); border-radius:10px; padding:10px 14px}
+  .costrow b{display:block; font-family:Fraunces,Georgia,serif; font-size:1.3rem; font-variant-numeric:tabular-nums}
+  .costrow span{font-size:.74rem; color:var(--muted)}
+  .honest{border-left:4px solid var(--gold); background:var(--surface-2); padding:12px 16px; border-radius:0 10px 10px 0; font-size:.84rem; color:var(--muted); margin:14px 0}
+  @media (max-width:700px){ .cdom{grid-template-columns:minmax(0,1fr)} .cdom .fee{text-align:left} }
+  @media print{ .mast, .tab, .filters, .btn, .pnav{display:none!important} .view{display:block!important} }
   .disc{border:1px dashed var(--line); border-radius:11px; padding:13px 16px; font-size:.8rem; color:var(--muted); margin-top:22px}
   .steps{counter-reset:st; margin:14px 0 0; padding:0; list-style:none}
   .steps li{counter-increment:st; display:flex; gap:14px; padding:12px 0; border-top:1px solid var(--line); font-size:.9rem}
@@ -219,6 +237,7 @@
     <button class="tab" data-r="blueprint">The Blueprint</button>
     <button class="tab" data-r="institute">The Institute Model</button>
     <button class="tab" data-r="adoption">Adoption</button>
+    <button class="tab" data-r="compliance">Compliance</button>
   </nav>
   <div class="mastctl">
     <label for="themepick">theme</label>
@@ -329,6 +348,49 @@
       trades layer: <a href="../trades-network/index.html" target="_blank" rel="noopener">Trades Network</a>.</p>
   </section>
 
+  <section class="view" id="view-compliance">
+    <p class="eyebrow">Compliance · fifty states · costs, forms, applications, agencies</p>
+    <h1>What each state asks of a program office</h1>
+    <p class="lede">Ten things an adopting program meets in every state — student data privacy, homeschool
+    notice, nonprofit registration, charitable solicitation, background checks, mandated reporting,
+    apprenticeship registration, the CTE credential list, digital accessibility and sales-tax exemption —
+    with the agency, the form, the fee and a cost roll-up per state. Every figure carries a
+    <span class="vf">verify</span> flag: this is a working checklist, not legal advice.</p>
+    <div class="tiles" id="ctiles"></div>
+    <div class="panel">
+      <h3>The nation, by one lens at a time</h3>
+      <div class="filters" style="margin-top:6px">
+        <label for="clens" style="font-size:.85rem; color:var(--muted)">Lens</label>
+        <select id="clens">
+          <option value="homeschool">Homeschool regulation</option>
+          <option value="charity">Charitable solicitation registration</option>
+          <option value="privacy">Student privacy: operator law</option>
+          <option value="apprenticeship">Apprenticeship agency (SAA / OA)</option>
+          <option value="sales_tax">Sales-tax exemption for nonprofits</option>
+          <option value="mandated">Universal mandated reporting</option>
+          <option value="cost">One-time compliance cost (low estimate)</option>
+        </select>
+        <span class="note" id="clensnote" style="margin:0"></span>
+      </div>
+      <div class="mapwrap cmap" id="cmap"></div>
+      <div class="legend" id="clegend"></div>
+    </div>
+    <div class="panel" style="margin-top:14px" id="cstate">
+      <div class="filters" style="margin:0 0 8px">
+        <label for="cpick" style="font-size:.85rem; color:var(--muted)">State checklist</label>
+        <select id="cpick"></select>
+        <button class="btn" id="cexport">Export checklist (JSON)</button>
+        <button class="btn" id="cprint">Print</button>
+      </div>
+      <div id="cbody"></div>
+    </div>
+    <div class="panel" style="margin-top:14px">
+      <h3>The national baseline — everywhere, before any state</h3>
+      <div id="cnational"></div>
+    </div>
+    <div class="honest" id="cdisc"></div>
+  </section>
+
   <div class="foot wrap" style="padding-inline:0">
     Cognition.X States — built from the canonical dataset, the 50-state fact base, and the Education OS
     app's Institute fact base. Code Apache-2.0 · content CC BY 4.0. Anchors are door-openers of public
@@ -429,6 +491,7 @@ function route(){
   else if (h==="blueprint") view="blueprint";
   else if (h==="institute") view="institute";
   else if (h==="adoption") view="adoption";
+  else if (h.startsWith("compliance")){ view="compliance"; const st=(h.split("/")[1]||"").toUpperCase(); if (byAbbr[st]) CP.state=st; renderCompliance(); }
   document.querySelectorAll(".view").forEach(el=>el.classList.toggle("active", el.id==="view-"+view));
   document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-current", t.dataset.r===view ? "true":"false"));
   window.scrollTo({top:0});
@@ -528,6 +591,7 @@ function renderState(){
         <p class="note"><b>Table anchor:</b> ${esc(s.table)}.</p>
       </div>
     </div>
+    ${compliancePanel(s)}
     <div class="pnav">
       <button class="btn" id="stprev">← ${esc(prev.name)}</button>
       <button class="btn" id="stnext">${esc(next.name)} →</button>
@@ -536,6 +600,7 @@ function renderState(){
   $("#stprev").addEventListener("click", ()=> location.hash="#/state/"+prev.abbr);
   $("#stnext").addEventListener("click", ()=> location.hash="#/state/"+next.abbr);
   $("#stmap").addEventListener("click", ()=> location.hash="#/nation");
+  const cl = $("#stcomp"); if (cl) cl.addEventListener("click", ()=> location.hash="#/compliance/"+s.abbr);
   $("#statebody").querySelectorAll("[data-fh]").forEach(b=> b.addEventListener("click",
     ()=> window.open("../flow-hub/index.html#track="+b.dataset.fh, "_blank")));
 }
@@ -569,12 +634,145 @@ function renderInstitute(){
 }
 
 /* guide */
+
+/* ================= THE COMPLIANCE LAYER (v0.51.0) =================
+   D.compliance: 50 state entries × ten domains, the national baseline,
+   fees flagged verify with an as-of year. Rendered as a lens map, a
+   per-state checklist (exportable, printable) and the state page panel. */
+const CP = {lens:"homeschool", state: curState};
+const C = D.compliance;
+const byAbbrC = Object.fromEntries((C ? C.states : []).map(s=>[s.abbr, s]));
+const TIERCOL = {none:"#1F7A4D", low:"#4FA36B", moderate:"#D9A441", high:"#B22B2B"};
+const LENS = {
+  homeschool:{note:"Homeschool regulation tier, as commonly published.", val:s=>s.homeschool.tier, col:{none:TIERCOL.none, low:TIERCOL.low, moderate:TIERCOL.moderate, high:TIERCOL.high}, lab:{none:"no notice", low:"low", moderate:"moderate", high:"high"}},
+  charity:{note:"Whether a nonprofit must register before soliciting residents.", val:s=>s.charity.required?"yes":"no", col:{yes:"#B22B2B", no:"#1F7A4D"}, lab:{yes:"registration required", no:"no registration"}},
+  privacy:{note:"Whether the state has a SOPIPA-style statute binding ed-tech operators.", val:s=>s.privacy.tier, col:{"operator-law":"#2456A6", baseline:"#8FA3B4"}, lab:{"operator-law":"operator law", baseline:"FERPA baseline"}},
+  apprenticeship:{note:"Who registers apprenticeship programs.", val:s=>s.apprenticeship.type, col:{SAA:"#1E7A72", OA:"#8A6210"}, lab:{SAA:"state agency (SAA)", OA:"federal office (OA)"}},
+  sales_tax:{note:"Nonprofit purchase exemption.", val:s=>!s.sales_tax.state_sales_tax?"none":(s.sales_tax.nonprofit_exemption?"exempt":"taxed"), col:{none:"#1F7A4D", exempt:"#4FA36B", taxed:"#B22B2B"}, lab:{none:"no state sales tax", exempt:"exemption available", taxed:"no general exemption"}},
+  mandated:{note:"Whether every adult is a mandated reporter.", val:s=>s.mandated.universal?"universal":"professions", col:{universal:"#2456A6", professions:"#8FA3B4"}, lab:{universal:"every adult", professions:"named professions"}},
+  cost:{note:"One-time compliance cost, low estimate, under the stated assumptions.", val:s=>{const c=s.cost.one_time.low; return c<400?"a":c<700?"b":c<1000?"c":"d";}, col:{a:"#4FA36B", b:"#D9A441", c:"#C0692A", d:"#B22B2B"}, lab:{a:"under $400", b:"$400–$699", c:"$700–$999", d:"$1,000+"}},
+};
+const money = v => v==null ? "—" : "$"+Number(v).toLocaleString(undefined,{maximumFractionDigits:2});
+const feeTxt = f => f ? (f.amount!=null ? money(f.amount) : (f.band||"—")) : "—";
+const feeCell = (f, label) => `<div class="fee"><b>${esc(feeTxt(f))}</b><small>${esc(label)}${f&&f.note?" · "+esc(f.note):""}</small><small>as of ${esc((f&&f.asOf)||C.asOf)} <span class="vf">verify</span></small></div>`;
+
+function renderCompliance(){
+  if (!C) return;
+  const ss = C.states;
+  const n = ss.length;
+  $("#ctiles").innerHTML = [
+    [String(ss.filter(s=>s.charity.required).length), "states register charitable solicitation", "t1"],
+    [String(ss.filter(s=>s.privacy.tier==="operator-law").length), "states with an ed-tech operator law", "t2"],
+    [String(ss.filter(s=>s.apprenticeship.type==="SAA").length), "state apprenticeship agencies · "+ss.filter(s=>s.apprenticeship.type==="OA").length+" federal", "t3"],
+    [String(ss.filter(s=>s.homeschool.tier==="high").length)+" / "+ss.filter(s=>s.homeschool.tier==="none").length, "high-regulation / no-notice homeschool states", "t1"],
+    [money(Math.min(...ss.map(s=>s.cost.one_time.low)))+"–"+money(Math.max(...ss.map(s=>s.cost.one_time.high))), "one-time compliance cost range, per state", "t2"],
+  ].map(([v,l,t])=>`<div class="tile ${t}"><b>${v}</b><span>${l}</span></div>`).join("");
+
+  // lens map
+  const L = LENS[CP.lens] || LENS.homeschool;
+  $("#clens").value = CP.lens; $("#clensnote").textContent = L.note;
+  const T=54, G=5, PAD=4;
+  const cols = Math.max(...D.states.map(s=>s.grid[1]))+1, rows = Math.max(...D.states.map(s=>s.grid[0]))+1;
+  const W = PAD*2+cols*(T+G), H = PAD*2+rows*(T+G);
+  $("#cmap").innerHTML =
+    `<svg class="map" viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px" role="img" aria-label="Tile map of the fifty states by ${esc(L.note)}">`+
+    D.states.map(s=>{
+      const c = byAbbrC[s.abbr]; const v = c ? L.val(c) : "";
+      const x=PAD+s.grid[1]*(T+G), y=PAD+s.grid[0]*(T+G);
+      return `<g class="tile" tabindex="0" role="button" data-st="${s.abbr}" aria-label="${esc(s.name)}: ${esc(L.lab[v]||v)}">`+
+        `<rect x="${x}" y="${y}" width="${T}" height="${T}" rx="9" fill="${L.col[v]||"#999"}" stroke="${s.abbr===CP.state?"var(--ink)":"var(--surface)"}" stroke-width="${s.abbr===CP.state?3:1}"/>`+
+        `<text x="${x+T/2}" y="${y+T/2+5}" text-anchor="middle" font-size="14" font-weight="600" fill="#fff">${s.abbr}</text>`+
+        `<title>${esc(s.name)} — ${esc(L.lab[v]||v)} · click for the checklist</title></g>`;
+    }).join("")+`</svg>`;
+  $("#cmap").querySelectorAll("g.tile").forEach(g=>{
+    const open = ()=>{ CP.state = g.dataset.st; renderCompliance(); $("#cstate").scrollIntoView({behavior:"smooth", block:"start"}); };
+    g.addEventListener("click", open);
+    g.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } });
+  });
+  $("#clegend").innerHTML = Object.entries(L.col).map(([k,c])=>
+    `<span><i style="background:${c}"></i>${esc(L.lab[k]||k)} · ${ss.filter(s=>L.val(s)===k).length}</span>`).join("");
+
+  // state checklist
+  const pick = $("#cpick");
+  pick.innerHTML = D.states.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(s=>`<option value="${s.abbr}"${s.abbr===CP.state?" selected":""}>${esc(s.name)}</option>`).join("");
+  $("#cbody").innerHTML = checklistHTML(byAbbrC[CP.state] || byAbbrC.LA, false);
+
+  // national baseline
+  const N = C.national;
+  $("#cnational").innerHTML =
+    `<p class="note"><b>Student privacy — federal:</b></p><ul class="tracklist">${N.privacy.federal.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+     <p class="note" style="margin-top:10px"><b>What the platform's architecture changes:</b> ${esc(N.privacy.platform)}</p>
+     <p class="note" style="margin-top:10px"><b>Accessibility:</b> ${esc(N.accessibility.note)} ${esc(N.accessibility.platform)}</p>
+     <p class="note" style="margin-top:10px"><b>Background checks:</b> ${esc(N.background.note)} <b>Mandated reporting:</b> ${esc(N.mandated.note)}</p>
+     <p class="note" style="margin-top:10px"><b>Nonprofit registration:</b> ${esc(N.nonprofit.note)} <b>Charitable solicitation:</b> ${esc(N.charity.note)} ${esc(N.charity.instrument)}</p>
+     <p class="note" style="margin-top:10px"><b>Apprenticeship:</b> ${esc(N.apprenticeship.note)} (${esc(N.apprenticeship.federal)}) <b>CTE lists:</b> ${esc(N.cte.note)} <b>Sales tax:</b> ${esc(N.sales_tax.note)}</p>`;
+  $("#cdisc").innerHTML = `<b>How to read this layer.</b> ${esc(C.note)}`;
+}
+function checklistHTML(c, compact){
+  if (!c) return "";
+  const dom = Object.fromEntries(C.domains.map(d=>[d.id, d]));
+  const H = (id, body, feeHtml) => `<div class="cdom"><div><b>${esc(dom[id].name)}</b><span class="what">${esc(dom[id].what)}</span></div><div class="body">${body}</div>${feeHtml||"<div></div>"}</div>`;
+  const rows = [
+    H("privacy", `<span class="tier" style="background:${LENS.privacy.col[c.privacy.tier]}">${esc(LENS.privacy.lab[c.privacy.tier])}</span> ${esc(c.privacy.law)}<br><span class="k">Agreement:</span> ${esc(c.privacy.agreement)}`, feeCell(c.privacy.fee, "filing")),
+    H("homeschool", `<span class="tier" style="background:${TIERCOL[c.homeschool.tier]}">${esc(LENS.homeschool.lab[c.homeschool.tier])}</span> ${esc(c.homeschool.description)}<br><span class="k">Forms:</span> ${esc(c.homeschool.forms)}${compact?"":"<br><span class=\"k\">Platform:</span> "+esc(c.homeschool.platform)}`, feeCell(c.homeschool.fee, "state filing")),
+    H("nonprofit", `<span class="k">Form:</span> ${esc(c.nonprofit.form)} — ${esc(c.nonprofit.agency)}<br><span class="k">Report:</span> ${esc(c.nonprofit.report)} (${esc(feeTxt(c.nonprofit.report_fee))})<br><span class="k">Registered agent:</span> ${esc(c.nonprofit.registered_agent.band)}`, feeCell(c.nonprofit.fee, "qualification")),
+    H("charity", (c.charity.required ? `<span class="tier" style="background:#B22B2B">required</span>` : `<span class="tier" style="background:#1F7A4D">not required</span>`) + ` ${esc(c.charity.form)} — ${esc(c.charity.agency)}${c.charity.notes?"<br>"+esc(c.charity.notes):""}<br><span class="k">Renewal:</span> ${esc(feeTxt(c.charity.renewal_fee))}`, feeCell(c.charity.initial_fee, "initial")),
+    H("background", esc(c.background.law), feeCell(c.background.cost, "per person")),
+    H("mandated", `<span class="tier" style="background:${c.mandated.universal?"#2456A6":"#8FA3B4"}">${c.mandated.universal?"every adult":"named professions"}</span> ${esc(c.mandated.training)}`, feeCell(c.mandated.fee, "training")),
+    H("apprenticeship", `<span class="tier" style="background:${LENS.apprenticeship.col[c.apprenticeship.type]}">${esc(c.apprenticeship.type)}</span> ${esc(c.apprenticeship.agency)}<br><span class="k">Youth:</span> ${esc(c.apprenticeship.youth)}`, feeCell(c.apprenticeship.fee, "registration")),
+    H("cte", `${esc(c.cte.list)}<br><span class="k">Stance:</span> ${esc(c.cte.note)}`),
+    H("accessibility", esc(c.accessibility.standard), feeCell(c.accessibility.fee, "audit, once")),
+    H("sales_tax", (c.sales_tax.state_sales_tax ? (c.sales_tax.nonprofit_exemption ? `<span class="tier" style="background:#4FA36B">exemption available</span>` : `<span class="tier" style="background:#B22B2B">no general exemption</span>`) : `<span class="tier" style="background:#1F7A4D">no state sales tax</span>`) + ` ${esc(c.sales_tax.form)}`),
+  ];
+  const cost = `<div class="costrow">
+     <div><b>${money(c.cost.one_time.low)} – ${money(c.cost.one_time.high)}</b><span>one-time, estimated</span></div>
+     <div><b>${money(c.cost.annual.low)} – ${money(c.cost.annual.high)}</b><span>per year, estimated</span></div>
+     <div><b>${C.domains.length}</b><span>domains checked</span></div></div>
+     <p class="note" style="margin:0 0 6px"><b>Assumptions:</b> ${esc(c.cost.assumptions)}. Fees as of ${esc(C.asOf)} <span class="vf">verify</span>.</p>`;
+  return `<h3 style="margin-bottom:2px">${esc(c.name)} — the checklist</h3><p class="note" style="margin:0 0 6px">Capital ${esc(c.capital)} · ${esc(C.disclaimer)}</p>` + cost + rows.join("") +
+    `<p class="note" style="margin-top:10px"><b>Where to confirm:</b> ${c.sources.map(esc).join(" · ")}.</p>`;
+}
+function compliancePanel(s){
+  const c = byAbbrC[s.abbr]; if (!c) return "";
+  const L = LENS;
+  return `<div class="panel" style="margin-top:14px">
+    <h3>Compliance in ${esc(s.name)} — the short list</h3>
+    <p class="note">What a program office meets here, from the 50-state compliance layer. Not legal advice; every fee is flagged <span class="vf">verify</span>.</p>
+    <div class="costrow">
+      <div><b>${money(c.cost.one_time.low)} – ${money(c.cost.one_time.high)}</b><span>one-time, estimated</span></div>
+      <div><b>${money(c.cost.annual.low)} – ${money(c.cost.annual.high)}</b><span>per year, estimated</span></div>
+      <div><b>${esc(c.apprenticeship.type)}</b><span>apprenticeship agency</span></div>
+      <div><b>${esc(L.homeschool.lab[c.homeschool.tier])}</b><span>homeschool regulation</span></div></div>
+    <ul class="tracklist">
+      <li>Student privacy: ${esc(L.privacy.lab[c.privacy.tier])}<span class="cred">${esc(c.privacy.agreement.split(" (")[0].slice(0,60))}</span></li>
+      <li>Nonprofit registration: ${esc(c.nonprofit.form)}<span class="cred">${esc(feeTxt(c.nonprofit.fee))}</span></li>
+      <li>Charitable solicitation: ${c.charity.required?"required — "+esc(c.charity.form):"not required"}<span class="cred">${esc(feeTxt(c.charity.initial_fee))}</span></li>
+      <li>Background checks<span class="cred">${esc(feeTxt(c.background.cost))}</span></li>
+      <li>Sales tax: ${esc(c.sales_tax.form)}</li>
+    </ul>
+    <p class="note" style="margin-top:10px"><button class="chip link" id="stcomp">Open the full ${esc(s.name)} checklist →</button></p>
+  </div>`;
+}
+(function initCompliance(){
+  if (!C) return;
+  $("#clens").addEventListener("change", ()=>{ CP.lens = $("#clens").value; renderCompliance(); });
+  $("#cpick").addEventListener("change", ()=>{ CP.state = $("#cpick").value; renderCompliance(); });
+  $("#cexport").addEventListener("click", ()=>{
+    const c = byAbbrC[CP.state]; if (!c) return;
+    const out = {format:"cxstate-compliance/1", version:D.version, asOf:C.asOf, disclaimer:C.disclaimer, state:c, national:C.national, domains:C.domains};
+    const blob = new Blob([JSON.stringify(out, null, 2)], {type:"application/json"});
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `cognitionx-compliance-${c.abbr}.json`; a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+  });
+  $("#cprint").addEventListener("click", ()=> window.print());
+})();
 const TOUR = [
   {hash:"#/nation", sel:"#usmap", t:"Fifty states, one blueprint", m:"The tile map of the nation — click any state and its own custom curriculum opens, built from its own water, corridor, table, culture and storms."},
   {hash:"#/state/LA", sel:"#statebody", t:"A state's custom courses", m:"Louisiana's page, for example: the five blueprint courses localized to its delta, its river ports, its gumbo, its krewes and its storm memory — plus the Institute's civic tracks in Baton Rouge."},
   {hash:"#/blueprint", sel:"#bpbody", t:"The blueprint", m:"Five universal tracks, two hundred and fifty blocks. The blueprint is the constant; the state is the variable."},
   {hash:"#/institute", sel:"#prin", t:"The Institute Model", m:"Leadership, ethics, civic duty and emotional intelligence — the universal model, localized to every capital."},
   {hash:"#/adoption", sel:".steps", t:"How a state adopts", m:"Fact base, spine, two waves, halls, ledger — the Louisiana platform is the working reference for all fifty."},
+  {hash:"#/compliance", sel:"#cmap", t:"What each state asks", m:"Ten compliance domains per state — privacy law, homeschool notice, nonprofit and charity registration, background checks, mandated reporting, apprenticeship, the CTE list, accessibility, sales tax — with the form, the agency, the fee and a cost roll-up. Every number is flagged verify: a checklist, not legal advice."},
 ];
 let tourAt = -1, tourEl = null;
 function tourShow(i){

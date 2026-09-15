@@ -20,7 +20,7 @@ The repository carries three things:
 | The Flow Hub app (built from the dataset; flow engine + agents) | [`apps/flow-hub/`](apps/flow-hub/) | HTML |
 | Cognition.X Louisiana (64 independent parish dashboards) | [`apps/louisiana/`](apps/louisiana/) | HTML |
 | Cognition.X Trades Network (222 union & trade entries, 6 regions) | [`apps/trades-network/`](apps/trades-network/) | HTML |
-| Cognition.X States (custom curriculum for all 50 states) | [`apps/states/`](apps/states/) | HTML |
+| Cognition.X States (custom curriculum + compliance checklist for all 50 states) | [`apps/states/`](apps/states/) | HTML |
 | Cognition.X Platform (the working model: system map + runnable loop) | [`apps/platform/`](apps/platform/) | HTML |
 | The film kit (product films, five narrated feature shorts and the pitch deck, rendered from the apps themselves) | [`tools/film/`](tools/film/) · [briefs](docs/film/PRODUCTION_BRIEFS.md) | Node + ffmpeg |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
@@ -136,6 +136,7 @@ in [`CHANGELOG.md`](CHANGELOG.md); the current version is in
 
 - Complete system review: [`docs/SYSTEM_REVIEW.md`](docs/SYSTEM_REVIEW.md)
 - Investor walkthrough: [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md)
+- State compliance layer (fifty states; not legal advice): [`docs/STATE_COMPLIANCE.md`](docs/STATE_COMPLIANCE.md)
 - Deep roadmap: [`docs/ROADMAP.md`](docs/ROADMAP.md)
 - Wiki source (publishable to the GitHub wiki): [`docs/wiki/`](docs/wiki/)
 - Data review and known issues: [`docs/DATA_REVIEW.md`](docs/DATA_REVIEW.md)

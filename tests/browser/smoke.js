@@ -302,6 +302,46 @@ async function testMakersHall(browser, errs) {
   await page.close();
 }
 
+/* --------------------------------- states: the compliance layer (v0.51.0) */
+async function testComplianceLayer(browser, errs) {
+  const page = await newPage(browser, 'states-compliance', errs);
+  await page.goto(url('states') + '#/compliance/TX');
+  await page.waitForTimeout(700);
+  const r = await page.evaluate(() => ({
+    active: document.querySelector('.view.active').id,
+    tiles: document.querySelectorAll('#cmap g.tile').length,
+    rows: document.querySelectorAll('#cbody .cdom').length,
+    head: document.querySelector('#cbody h3').textContent,
+    verify: document.querySelectorAll('#cbody .vf').length,
+    disc: document.querySelector('#cdisc').textContent,
+  }));
+  check('compliance: view routes with the state from the hash', r.active === 'view-compliance' && /^Texas/.test(r.head), r.head);
+  check('compliance: fifty tiles on the lens map', r.tiles === 50, String(r.tiles));
+  check('compliance: ten domain rows in the checklist', r.rows === 10, String(r.rows));
+  check('compliance: fees flagged verify', r.verify >= 8, String(r.verify));
+  check('compliance: the disclaimer renders', /NOT LEGAL ADVICE/.test(r.disc));
+  await page.selectOption('#clens', 'charity');
+  await page.waitForTimeout(200);
+  const lg = await page.evaluate(() => [...document.querySelectorAll('#clegend span')].map(s => s.textContent));
+  check('compliance: lens select recolors the map and legend', lg.length === 2 && /registration required/.test(lg.join(' ')), lg.join(' | '));
+  await page.click('#cmap g.tile[data-st="LA"]');
+  await page.waitForTimeout(300);
+  check('compliance: clicking a tile opens that state\'s checklist',
+        await page.evaluate(() => /^Louisiana/.test(document.querySelector('#cbody h3').textContent) && document.querySelector('#cpick').value === 'LA'));
+  await page.goto(url('states') + '#/state/NY');
+  await page.waitForTimeout(500);
+  check('state page: the compliance short list renders', await page.evaluate(() => !!document.querySelector('#stcomp') && !!document.querySelector('#statebody .costrow')));
+  await page.close();
+  const la = await newPage(browser, 'louisiana-compliance', errs);
+  await la.goto(url('louisiana') + '#/roles');
+  await la.waitForTimeout(600);
+  await la.click('#rolechips [data-role="stateadmin"]');
+  await la.waitForTimeout(800);
+  check('louisiana state admin: Compliance — Louisiana widget renders with the disclaimer',
+        await la.evaluate(() => { const w = document.querySelector('[data-widget="compliance"]'); return !!w && /Not legal advice/.test(w.textContent) && w.querySelectorAll('.tile').length === 3; }));
+  await la.close();
+}
+
 /* --------------------------------- louisiana: Network OS granular drill-downs */
 async function testNetworkOS(browser, errs) {
   const page = await newPage(browser, 'la/netos', errs);
@@ -539,6 +579,7 @@ async function testOtherApps(browser, errs) {
       ['flow engine and swarm', testFlowAndSwarm],
       ['network OS drill-downs', testNetworkOS],
       ['makers hall', testMakersHall],
+      ['compliance layer', testComplianceLayer],
       ['platform loop', testPlatformLoop],
       ['review regressions', testReviewRegressions],
       ['education os boots', testEducationOsBoots],

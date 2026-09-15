@@ -373,6 +373,43 @@ def test_makers_fact_base():
           str(set(fb["regions"][1:]) - covered))
 
 
+# The 50-state compliance layer (v0.51.0): a checklist, not legal advice —
+# the file must say so, every fee must carry an as-of year and a verify flag,
+# every state must be one of the fifty, and every domain must be present.
+def test_state_compliance_layer():
+    c = json.loads((ROOT / "data" / "states" / "compliance.json").read_text(encoding="utf-8"))
+    fb = json.loads((ROOT / "data" / "states" / "states.json").read_text(encoding="utf-8"))
+    abbrs = [s["abbr"] for s in fb["states"]]
+    check("compliance: note says it is not legal advice", "NOT LEGAL ADVICE" in c["note"] and "verify" in c["note"])
+    check("compliance: disclaimer present", "Not legal advice" in c["disclaimer"])
+    check("compliance: fifty states, same set as the fact base", sorted(s["abbr"] for s in c["states"]) == sorted(abbrs))
+    dom = [d["id"] for d in c["domains"]]
+    check("compliance: ten domains", len(dom) == 10, str(dom))
+    fees_seen = 0
+    for s in c["states"]:
+        missing = [d for d in dom if d not in s]
+        check(f"compliance/{s['abbr']}: every domain present", not missing, str(missing))
+        check(f"compliance/{s['abbr']}: homeschool tier valid", s["homeschool"]["tier"] in ("none", "low", "moderate", "high"))
+        check(f"compliance/{s['abbr']}: apprenticeship type valid", s["apprenticeship"]["type"] in ("SAA", "OA"))
+        check(f"compliance/{s['abbr']}: privacy tier valid", s["privacy"]["tier"] in ("operator-law", "baseline"))
+        check(f"compliance/{s['abbr']}: cost roll-up sane",
+              0 <= s["cost"]["one_time"]["low"] <= s["cost"]["one_time"]["high"] and 0 <= s["cost"]["annual"]["low"] <= s["cost"]["annual"]["high"] and s["cost"]["verify"] is True)
+        check(f"compliance/{s['abbr']}: sources listed", len(s["sources"]) >= 3)
+        for d in dom:
+            for k, v in s[d].items():
+                if isinstance(v, dict) and "verify" in v and "asOf" in v:
+                    fees_seen += 1
+                    check(f"compliance/{s['abbr']}/{d}/{k}: fee flagged verify with as-of year",
+                          v["verify"] is True and v["asOf"] == c["asOf"] and (v["amount"] is not None or v["band"]))
+    check("compliance: fees carry verify flags (many)", fees_seen >= 400, str(fees_seen))
+    check("compliance: the stance survives", "Simulation ≠ certification" in c["states"][0]["cte"]["note"] or "simulation" in c["national"]["apprenticeship"]["note"].lower())
+    # the report must match the data (CI regenerates it; this holds the headline)
+    doc = (ROOT / "docs" / "STATE_COMPLIANCE.md").read_text(encoding="utf-8")
+    reg = sum(1 for s in c["states"] if s["charity"]["required"])
+    check("STATE_COMPLIANCE.md current: charity count", f"**{reg}** states require charitable-solicitation" in doc)
+    check("STATE_COMPLIANCE.md carries the disclaimer", "Not legal advice" in doc)
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
