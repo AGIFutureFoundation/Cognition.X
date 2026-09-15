@@ -28,6 +28,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Complete system review](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/SYSTEM_REVIEW.md)
 - [Deep roadmap](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/ROADMAP.md)
 - [Next steps — ten prompts](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/NEXT_STEPS_OPUS5.md)
+- [Investor brief](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/INVESTOR_BRIEF.md) and [capital structure, governance & risk](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/CAPITAL_STRUCTURE.md) — the AGI Future Foundation PBC data room, with what the repository proves today
 - [Investor walkthrough](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/WALKTHROUGH.md) — the learning system, end to end, for a reader deciding whether to back it
 - [Film production briefs](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/film/PRODUCTION_BRIEFS.md) — the two product films (`tools/film/`) and their cinematic cuts
 - [Accessibility audit](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/ACCESSIBILITY.md) — WCAG 2.2 AA, what was tested, fixed and remains
@@ -38,7 +39,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.53.0)
+## Numbers (v0.53.1)
 
 **17,450 blocks · 47 packs · 225 tracks · 1,430 credentials**
 
