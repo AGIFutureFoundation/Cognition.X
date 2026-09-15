@@ -4,6 +4,17 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.50.1] — 2026-09-15
+
+### Changed
+- **A more human narration voice.** `tools/film/tts.py` now fronts the
+  film kit's narration: kokoro-onnx by default (the `af_heart` voice;
+  `CX_TTS_VOICE` selects another, e.g. `am_michael`, `bm_george`), with
+  piper kept as the fallback engine (`CX_TTS=piper`). The five feature
+  shorts and the pitch-deck video were re-rendered with it; the deck's
+  per-slide synthesis is `tools/film/deck/synth.py`. Still offline, still
+  no service — model files live in the git-ignored `tools/film/kokoro/`.
+
 ## [0.50.0] — 2026-09-14
 
 The film kit speaks. Narration, five feature shorts for social channels,

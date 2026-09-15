@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.50.0** | The film kit speaks: offline narration (piper) in the film driver, five narrated feature shorts for social channels, and the 15-slide pitch deck generator with its 7-minute narrated video |
+| **v0.50.1** | A more human narration voice: kokoro-onnx (offline) fronts the film kit's narration via `tools/film/tts.py`, piper kept as fallback; shorts and pitch video re-rendered |
+| v0.50.0 | The film kit speaks: offline narration (piper) in the film driver, five narrated feature shorts for social channels, and the 15-slide pitch deck generator with its 7-minute narrated video |
 | v0.49.1 | The investor walkthrough (`docs/WALKTHROUGH.md`): the deep features and learning system in one document, every number tied to the dataset |
 | v0.49.0 | The film kit: two product films rendered from the apps themselves by `tools/film/` (*The Flow Zone* 3:04 · *Training that proves itself* 2:15) and the production briefs for their cinematic cuts |
 | v0.48.0 | The culture trades: three new trade packs — *Music : Creation to Industry* (the whole music trade, ear to industry), *Culinary Trades : The Louisiana Kitchen* and *Arts & Craft Trades : Louisiana Makers* — and the Louisiana app's Makers' Hall: creation→industry pathway maps, 154 industry roles, 63 public-record makers by parish, 42 organisations, parish and role-dashboard maker panels — 17,450 blocks / 47 packs |
