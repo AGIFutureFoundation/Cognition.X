@@ -331,8 +331,8 @@ def main():
     if "__LADATA__" not in template:
         raise SystemExit("template.html is missing the __LADATA__ placeholder")
     out = ROOT / "apps" / "louisiana" / "index.html"
-    from sim_lib import inject_sim
-    out.write_text(inject_sim(template.replace("__LADATA__", data)), encoding="utf-8")
+    from runtime_lib import inject_runtime
+    out.write_text(inject_runtime(template.replace("__LADATA__", data), "louisiana"), encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)}: {out.stat().st_size/1e3:.0f} KB "
           f"({len(parishes)} parishes, {len(payload['curriculum']['laTracks'])} LA tracks)")
 

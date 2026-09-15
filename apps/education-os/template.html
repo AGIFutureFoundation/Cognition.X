@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  __CXHEAD__
   <title>Cognition.X Education OS</title>
   
   <style>
@@ -13466,7 +13467,7 @@ renderers.guard=function(){var v=view('guard');var R=DATA.hgRun();var D=DATA.hgD
 /* ---------- SECURITY, COMPLIANCE AND SAFETY, EXECUTED (v92) ---------- */
 DATA.secThesis='A security section that lists intentions is worth nothing. This one publishes tests that were actually run against the built file and reports what they returned, including the one thing they found. The platform is a single HTML document with no server, no database and no account, which removes most of the attack surface a normal education product carries and creates a different obligation: everything it does happens on somebody else’s device, in their browser, under their control, and the honest thing is to state exactly what that amounts to.';
 DATA.secTests=[
- ['Outbound network','Every request the page makes was intercepted across all 94 views.','Two origins: the local file itself, and fonts.googleapis.com for the typeface. Nothing else — no API, no beacon, no telemetry, no third party.','pass'],
+ ['Outbound network','Every request the page makes was intercepted across all 94 views.','One origin: the local file itself — since v0.55.0 the typefaces are embedded and a Content-Security-Policy blocks every connection. Nothing else — no API, no beacon, no telemetry, no third party.','pass'],
  ['Script execution primitives','The built file was scanned for eval and the Function constructor before this page existed.','Zero occurrences of either. Nothing in the platform compiles a string into code at runtime. The terms now appear once each in this page\u2019s own description of the test, which is the only place they occur.','pass'],
  ['Network primitives','Scanned for fetch, XMLHttpRequest, WebSocket and sendBeacon, and separately proved at runtime: the browser\u2019s own resource timeline is read on this page and every entry is listed below.','Zero occurrences in code, and the runtime timeline holds only the font stylesheet. There is no code path that could transmit anything, and nothing did.','pass'],
  ['Device sensors','Scanned for the camera, microphone, location and peer-connection APIs.','Zero occurrences. The platform cannot access a camera, a microphone or a location, which is what makes the no-affect-inference refusal structural rather than a promise.','pass'],

@@ -83,7 +83,8 @@ def main():
     access = json.loads((ROOT / "data" / "learners" / "learner_types.json")
                         .read_text(encoding="utf-8"))
     sys.path.insert(0, str(ROOT / "tools"))
-    from sim_lib import sim_payload, inject_sim
+    from sim_lib import sim_payload
+    from runtime_lib import inject_runtime
     payload = {"version": version, "bands": BANDS, "levels": LEVELS, "packs": out_packs,
                "access": access,
                # the Simulation Studio (v0.54.0): every scenario, keyed in the app by pack slug + track
@@ -95,7 +96,7 @@ def main():
     template = (ROOT / "apps" / "flow-hub" / "template.html").read_text(encoding="utf-8")
     if "__CXDATA__" not in template:
         raise SystemExit("template.html is missing the __CXDATA__ placeholder")
-    html = inject_sim(template.replace("__CXDATA__", data))
+    html = inject_runtime(template.replace("__CXDATA__", data), "flow-hub")
     out = ROOT / "apps" / "flow-hub" / "index.html"
     out.write_text(html, encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)}: {len(html)/1e6:.2f} MB "

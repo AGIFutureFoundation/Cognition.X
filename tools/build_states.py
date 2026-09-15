@@ -68,7 +68,8 @@ def wlb_fact_base():
 
 def main():
     sys.path.insert(0, str(ROOT / "tools"))
-    from sim_lib import sim_payload, inject_sim
+    from sim_lib import sim_payload
+    from runtime_lib import inject_runtime
     fb = json.loads(STATES.read_text(encoding="utf-8"))
     assert len(fb["states"]) == 50, "fact base must carry all 50 states"
     catalog = pack_catalog()
@@ -101,7 +102,7 @@ def main():
     template = TEMPLATE.read_text(encoding="utf-8")
     if "__STDATA__" not in template:
         raise SystemExit("template.html is missing the __STDATA__ placeholder")
-    OUT.write_text(inject_sim(template.replace("__STDATA__", data)), encoding="utf-8")
+    OUT.write_text(inject_runtime(template.replace("__STDATA__", data), "states"), encoding="utf-8")
     print(f"wrote {OUT.relative_to(ROOT)}: {OUT.stat().st_size/1e3:.0f} KB "
           f"(50 states, {len(payload['blueprint']['tracks'])} blueprint tracks, "
           f"{len(payload['model']['tracks'])} civic tracks)")

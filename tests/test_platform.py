@@ -100,7 +100,8 @@ NETWORK_CALLS = {
 }
 # Hosts an app may REFERENCE. The font stylesheet is the one runtime load;
 # the rest are documentation links a person clicks, never fetched by code.
-ALLOWED_HOSTS = {"fonts.googleapis.com", "fonts.gstatic.com", "github.com", "www2.ed.gov"}
+# v0.55.0: the typefaces are embedded; the only hosts an app may name are link targets a person clicks
+ALLOWED_HOSTS = {"github.com", "www2.ed.gov"}
 HOST_REF = re.compile(r"""(?:src|href)\s*=\s*["'](?:https?:)?//([^/"']+)""", re.I)
 
 
@@ -464,6 +465,44 @@ def test_simulation_studio():
     sdoc = (ROOT / "docs" / "SIMULATION.md").read_text(encoding="utf-8")
     check("SIMULATION.md states the scenario count", f"{len(doc['scenarios'])} scenarios" in sdoc)
     check("SIMULATION.md carries the law", "Simulation ≠ certification" in sdoc)
+
+
+def test_app_compliance_review():
+    """v0.55.0 — the review of the apps themselves, held mechanically:
+    no third-party request on load, a browser-enforced no-network policy,
+    no referrer leakage, and an in-app disclosure with an erase control."""
+    priv = json.loads((ROOT / "data" / "policy" / "privacy.json").read_text(encoding="utf-8"))
+    sys.path.insert(0, str(ROOT / "tools"))
+    from runtime_lib import CSP, APPS as RT, font_faces
+    check("compliance: CSP blocks every connection", "connect-src 'none'" in CSP and "default-src 'none'" in CSP)
+    check("compliance: CSP allows no eval", "unsafe-eval" not in CSP)
+    for app in APPS:
+        t = app_html(app)
+        check(f"compliance: {app} carries the CSP meta", f'http-equiv="Content-Security-Policy" content="{CSP}"' in t)
+        check(f"compliance: {app} sends no referrer", '<meta name="referrer" content="no-referrer">' in t)
+        check(f"compliance: {app} loads no Google Fonts", "fonts.googleapis.com" not in t and "fonts.gstatic.com" not in t)
+        faces = t.count("@font-face")
+        want = font_faces(RT[app]["fonts"]).count("@font-face")
+        check(f"compliance: {app} embeds its typefaces once each ({want} faces)", faces == want, f"{faces} @font-face rules")
+        if want:
+            check(f"compliance: {app} fonts are data: URIs", "src:url(data:font/woff2;base64," in t)
+        check(f"compliance: {app} carries the Data & privacy notice", 'id = "cx-privbtn"' in t and "window.CX_PRIVACY=" in t)
+        check(f"compliance: {app} notice text is canonical", priv["leaves"] in t and priv["erase_label"] in t)
+        check(f"compliance: {app} no __CXHEAD__ placeholder left", "__CXHEAD__" not in t)
+        # the Education OS carries one deliberate probe — new Function('return 1') inside a try —
+        # that reports whether a CSP is active; nothing else may construct code from text
+        probes = 1 if app == "education-os" else 0
+        check(f"compliance: {app} has no eval", re.search(r"[^\w.$]eval\s*\(", t) is None and t.count("new Function(") <= probes)
+    for key in ("stays", "leaves", "exports", "minors", "rights", "security", "not_advice"):
+        check(f"privacy notice: {key} present", bool(priv.get(key)))
+    check("privacy notice: says nothing leaves on its own", "Nothing leaves this page on its own" in priv["leaves"])
+    check("privacy notice: is not legal advice", "not legal advice" in priv["not_advice"])
+    doc = (ROOT / "docs" / "COMPLIANCE_REVIEW.md").read_text(encoding="utf-8")
+    for needle in ("not legal advice", "FERPA", "COPPA", "Content-Security-Policy", "Data map", "Findings"):
+        check(f"COMPLIANCE_REVIEW.md mentions {needle}", needle in doc)
+    lic = (ROOT / "docs" / "LICENSING.md").read_text(encoding="utf-8")
+    check("LICENSING.md covers the embedded typefaces (OFL)", "Open Font License" in lic)
+    check("fonts: licence file present", (ROOT / "data" / "fonts" / "LICENSE-OFL.txt").exists())
 
 
 def test_docs_numbers_match_dataset():

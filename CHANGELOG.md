@@ -4,6 +4,41 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.55.0] — 2026-09-15
+
+### Changed — the compliance and regulatory review of the apps
+- **No third-party request, ever.** Five apps loaded their typefaces from
+  Google Fonts on every open — a request carrying the reader's IP
+  address and user agent, contradicting "nothing leaves the page on its
+  own" and the offline promise. The latin subsets of the four families
+  (Fraunces, Instrument Sans, IBM Plex Mono, Archivo — all SIL Open Font
+  License, `data/fonts/`) are now embedded into each build as `data:`
+  URIs by the shared runtime (`tools/runtime_lib.py`); no app names a
+  font host and the tests forbid it.
+- **A browser-enforced no-network policy.** Every app carries a strict
+  Content-Security-Policy meta (`default-src 'none'`, `connect-src
+  'none'`, no eval, no frames, no objects, no workers). The smoke suite
+  proves the browser refuses a fetch from inside each app.
+- **No referrer leakage** on outbound links (`referrer: no-referrer`).
+- **A Data & privacy notice in every app** (`tools/privacy/notice.js`,
+  canonical text `data/policy/privacy.json`): the keys this app has
+  written and their size, what stays, what leaves, learners under
+  thirteen, rights, security, and *Erase everything this app stored in
+  this browser* behind a confirm — a native dialog, keyboard-complete.
+- The Louisiana ledger asks for a first name or nickname; the Education
+  OS's own network self-review no longer claims a font origin.
+
+### Added
+- **`docs/COMPLIANCE_REVIEW.md`** — scope and method, nine findings with
+  status, the data map per app, and the posture under FERPA, COPPA,
+  state student-privacy law, access/correction/erasure rights, WCAG,
+  security, claims about AI, licensing and securities. Not legal advice.
+- `tests/test_platform.py` holds the review mechanically (CSP, referrer,
+  embedded fonts, the canonical notice, no eval, no font hosts);
+  `tests/browser/smoke.js` sweeps every app for CSP violations and
+  external requests, checks the fonts resolve, and proves erase-all
+  removes this app's keys and nothing else.
+
 ## [0.54.0] — 2026-09-15
 
 ### Added — the Simulation Studio
