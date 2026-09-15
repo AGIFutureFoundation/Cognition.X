@@ -160,13 +160,17 @@ def test_dataset():
           f"{len(bad_cred)} tracks, known baseline {KNOWN_SPLIT_CREDENTIAL_TRACKS}: {list(bad_cred)[:3]}")
 
 
-# A level word is not a credential. 1,228 rows imported in v0.1.0 name their
-# credential "Practitioner" — documented debt, pinned here as a ratchet so the
-# defect can only shrink. Lower these numbers when the review board authors
-# the real credential names; never raise them.
-KNOWN_LEVEL_WORD_CREDENTIAL_ROWS = 1228
-KNOWN_LEVEL_WORD_CREDENTIAL_TRACKS = 24
-KNOWN_SPLIT_CREDENTIAL_TRACKS = 1
+# A level word is not a credential. The v0.1.0 import named 1,228 rows'
+# credential "Practitioner"; v0.52.0 corrected the 1,195 that sit in the 24
+# promoted tracks through data/promotions/ (names proposed to the review
+# board, applied as a counted exception to fill-empty-only). The 33 that
+# remain are the Empathy & Emotional Intelligence pack's trackless (EW)
+# theme group — a partial group with no 50-block track to hang a credential
+# on; the board decides whether to complete it as a track. Ratchets: lower
+# them when that happens; never raise them.
+KNOWN_LEVEL_WORD_CREDENTIAL_ROWS = 33
+KNOWN_LEVEL_WORD_CREDENTIAL_TRACKS = 0
+KNOWN_SPLIT_CREDENTIAL_TRACKS = 0
 LEVEL_WORDS = {"Explorer", "Builder", "Practitioner", "Lead"}
 
 

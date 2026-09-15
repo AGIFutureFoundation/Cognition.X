@@ -1,6 +1,7 @@
 {
   "pack": "Basic Life Skills & Self-Reliance",
   "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names. Empty fields (track, code, level, description) are filled; authored transfer_check values replace ONLY the two known generic placeholder sentences — real source checks are never overwritten (guard in tools/normalize_blocks.py).",
+  "credential_correction": "Credential correction (v0.52.0, proposed — not yet adopted by the review board): the v0.1.0 import named these tracks' credential with the bare band level 'Practitioner'. The `credential` on each track below replaces that level word only (real credential names are never overwritten); tools/normalize_blocks.py applies it as the one deliberate, counted exception to fill-empty-only and prints the count. Names follow the packs' own shape — a person and a capability, never a level word, never a job title the credential cannot confer.",
   "tracks": [
     {
       "prefix": "HH",
@@ -56,7 +57,8 @@
           "description": "Moving out well: notice, cleaning, meter readings, key handover and getting the deposit back.",
           "transfer_check": "Produce a complete move-out file for a real or rehearsed departure: notice letter, meter readings, cleaning checklist, key handover."
         }
-      ]
+      ],
+      "credential": "Household Keeper"
     },
     {
       "prefix": "MY",
@@ -112,7 +114,8 @@
           "description": "The buffer, the priority order of bills, and who to call first when income stops.",
           "transfer_check": "Write your household's bad-month plan: the priority order of bills, the buffer target, and the first two calls made before missing a payment."
         }
-      ]
+      ],
+      "credential": "Home Budget Keeper"
     },
     {
       "prefix": "WK",
@@ -168,7 +171,8 @@
           "description": "Notice, handover and the reference — ending a job so the door stays open.",
           "transfer_check": "Draft a proper notice letter and a one-page handover for a real or rehearsed departure that keeps the reference intact."
         }
-      ]
+      ],
+      "credential": "Working Life Navigator"
     },
     {
       "prefix": "CM",
@@ -224,7 +228,8 @@
           "description": "Passing on a skill properly — showing, watching them try, and correcting without taking over.",
           "transfer_check": "Teach one skill from this pack to another person, hands on their materials, until they perform it without you."
         }
-      ]
+      ],
+      "credential": "Everyday Navigator"
     },
     {
       "prefix": "SF",
@@ -280,7 +285,8 @@
           "description": "The hours after — reporting, records, checking on people, and the reactions in yourself that are normal.",
           "transfer_check": "From a staged incident, complete the after-actions: report filed, people checked, record written, and the normal reactions named."
         }
-      ]
+      ],
+      "credential": "First-Minutes Responder"
     }
   ]
 }

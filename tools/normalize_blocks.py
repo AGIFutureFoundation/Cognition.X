@@ -131,6 +131,8 @@ BAND_LEVEL = {"K–2": "Explorer", "3–5": "Explorer", "6–8": "Builder",
 # was authored. These, and ONLY these, may be replaced by a promotion's
 # authored `transfer_check` — any other source check is real content and
 # is never overwritten.
+LEVEL_WORDS = {"Explorer", "Builder", "Practitioner", "Lead"}
+
 PLACEHOLDER_CHECKS = {
     "Demonstrate it once, correctly, to somebody who will use it",
     "Do it once, for real, and show it to somebody who will use it",
@@ -150,14 +152,15 @@ def apply_promotions(rows):
         for track in spec["tracks"]:
             for i, th in enumerate(track["themes"]):
                 themap[th["theme"]] = (track["name"], track["prefix"], i,
-                                       th["description"], th.get("transfer_check"))
+                                       th["description"], th.get("transfer_check"),
+                                       track.get("credential"))
         promos[spec["pack"]] = themap
-    filled = checks = 0
+    filled = checks = creds = 0
     for r in rows:
         themap = promos.get(r["pack"])
         if not themap or r["track"] or r["theme"] not in themap or r["grade"] not in BAND_LEVEL:
             continue
-        name, prefix, ti, desc, check = themap[r["theme"]]
+        name, prefix, ti, desc, check, cred = themap[r["theme"]]
         bi = BANDS.index(r["grade"])
         r["track"] = name
         r["code"] = r["code"] or f"{prefix}-{ti*5 + bi + 1}"
@@ -167,9 +170,18 @@ def apply_promotions(rows):
         if check and r["transfer_check"] in PLACEHOLDER_CHECKS:
             r["transfer_check"] = check
             checks += 1
+        # The one deliberate exception to fill-empty-only: a track's
+        # `credential` in a promotion replaces a bare level word ("Practitioner")
+        # that the v0.1.0 import used where a credential name belonged. A real
+        # credential name is never overwritten. Counted and printed so the
+        # correction is always visible (docs/DATA_REVIEW.md, Finding 6).
+        if cred and r["credential"].strip() in LEVEL_WORDS:
+            r["credential"] = cred
+            creds += 1
     if filled:
         print(f"promotions: filled {filled} legacy rows from {len(promos)} pack(s)"
-              + (f"; replaced {checks} placeholder transfer checks" if checks else ""))
+              + (f"; replaced {checks} placeholder transfer checks" if checks else "")
+              + (f"; corrected {creds} level-word credentials to the promotion's named credential" if creds else ""))
 
 
 # Level derivation for foundation-library rows that use single grades,

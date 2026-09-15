@@ -91,7 +91,7 @@ node tests/browser/smoke.js
 
 ---
 
-## 2 — Author the 24 missing credential names (review-board work)
+## 2 — Author the 24 missing credential names *(drafted in v0.52.0 — proposed to the board, not yet adopted)*
 
 **Why.** A credential should name an accomplishment. **1,228 rows — 7% of
 the dataset, 24 tracks across five community packs — name their

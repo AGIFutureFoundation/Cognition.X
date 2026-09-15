@@ -11,7 +11,7 @@ findings).*
 
 ## 1. The dataset and pipeline — solid
 
-**17,450 blocks · 47 packs · 225 tracks · 1,408 credentials**, one CSV,
+**17,450 blocks · 47 packs · 225 tracks · 1,431 credentials**, one CSV,
 one manifest, one validator, regenerated deterministically.
 
 - **Provenance is clean.** Source rows (6,750) are untouched; everything
