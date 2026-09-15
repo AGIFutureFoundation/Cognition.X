@@ -4,6 +4,43 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.52.0] — 2026-09-15
+
+The credential-naming correction — prompt 2 of the ranked next steps.
+
+### Changed — dataset (proposed to the review board, not yet adopted)
+- **Twenty-four credential names** for the tracks the v0.1.0 import left
+  named with the bare level word “Practitioner” (1,228 rows, 7% of the
+  dataset): *Household Keeper*, *Home Budget Keeper*, *Working Life
+  Navigator*, *Everyday Navigator*, *First-Minutes Responder*; *Infant
+  Care Companion*, *Childhood Companion*, *Adult Life Steward*, *Elder
+  Care Companion*, *Family Carer*; *Workshop Maker*, *Everyday Repairer*,
+  *Reuse Steward*, *Workshop Hand*, *Trade Pathfinder*; *Oral Health Peer*
+  (the split track unified), *Sight and Hearing Peer*, *Food and Water
+  Peer*, *Recovery Peer*; *Water Reader*, *Land Reader*, *Local Climate
+  Reader*, *Home Energy Reader*, *Resilience Planner*. A person and a
+  capability; never a level word; never a job title the credential
+  cannot confer.
+- Applied **through the pipeline**: each track in `data/promotions/*.json`
+  carries a `credential` and a `credential_correction` note;
+  `tools/normalize_blocks.py` replaces a bare level word with it as the
+  one deliberate, counted exception to fill-empty-only (“corrected 1,195
+  level-word credentials”, printed on every run). Real names are never
+  overwritten; no `block_id` changed. 33 trackless rows in the Empathy &
+  Emotional Intelligence (EW) group remain and are documented.
+- Ratchets in `tests/test_platform.py`: 1,228 → **33 rows**, 24 → **0
+  tracks**, 1 → **0 split tracks**. `docs/DATA_REVIEW.md` Finding 6
+  rewritten with the table of names and the board's decision;
+  `docs/DATA_QUALITY.md` regenerated (0% level-word credentials in every
+  pack; 1,431 distinct credential strings).
+
+### Added — tooling
+- **`tools/a11y/audit.js`** — the accessibility audit runner for prompt 4:
+  axe-core (WCAG 2.2 A/AA + best-practice rules) over every route of every
+  app, in-app view switches included, plus a keyboard sweep (focusable
+  count, unnamed controls, click-only elements); writes
+  `docs/ACCESSIBILITY.json`. The audit itself ships next.
+
 ## [0.51.0] — 2026-09-15
 
 The compliance layer. What each of the fifty states asks of a program

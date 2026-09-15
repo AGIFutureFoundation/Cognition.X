@@ -137,44 +137,62 @@ names, the stage ids and region coverage mechanically. A factual
 correction to any entry is a PATCH; removal on a person's or estate's
 request is honoured without discussion.
 
-## Finding 6 — level words standing in for credential names (v0.45.0)
+## Finding 6 — level words standing in for credential names (v0.45.0 → corrected v0.52.0, pending board adoption)
 
-Found by the new invariant suite (`tests/test_platform.py`), not by a
-reader: **1,228 rows — 7% of the dataset, 24 tracks across five
-community packs — name their credential with the bare band level
-“Practitioner”** instead of an accomplishment.
+Found by the invariant suite in v0.45.0: **1,228 rows — 7% of the
+dataset, 24 tracks across five community packs — named their credential
+with the bare band level “Practitioner”** instead of an accomplishment.
+The defect arrived with the v0.1.0 import and passed through untouched
+because the pipeline correctly never overwrites a non-empty source field.
 
-- **Origin.** The rows arrive this way in the v0.1.0 import
-  (`data/source/Cognition.X_all_blocks.csv`, 1,228 rows already
-  affected). The pipeline is behaving correctly: `normalize_blocks.py`
-  never overwrites a non-empty source field, so the value passes
-  through untouched. Nothing downstream introduced it.
-- **Packs.** Basic Life Skills & Self-Reliance, Water Land & Climate,
-  Care Across a Life, Making Repair & Reuse (5 tracks each) and
-  Preventive Health & Everyday Care (4 of 5 — its “The mouth,
-  understood” track was partly corrected to *Oral Health Peer* for one
-  theme, leaving the only split-credential track in the dataset).
-- **Consequence, stated plainly.** The headline “1,394 credentials”
-  counts “Practitioner” as if it were a credential; there are
-  **1,393** real ones. A learner completing one of these 24 tracks
-  would be issued, and the Records Office would cryptographically
-  sign, a `cx-credential/1` record whose credential reads
-  “Practitioner” — a level, not an accomplishment. The signature would
-  be valid and the claim meaningless.
-- **Why it is not silently fixed here.** Naming 24 credentials is
-  authored content, and `docs/GOVERNANCE.md` reserves that to the
-  review board; inventing names in a build tool would be exactly the
-  machine-authored content the board exists to gate. It is also
-  **not** a placeholder substitution: the guarded rule permits
-  replacing only the two exact generic sentences, never an arbitrary
-  non-empty field.
-- **What is done instead.** The scope is pinned as a ratchet in
-  `tests/test_platform.py` (rows ≤ 1,228, tracks ≤ 24, and **no pack
-  outside the legacy import may contain a level-word credential**), so
-  the defect can only shrink and no new pack can repeat it; and
-  `docs/DATA_QUALITY.md` now carries a per-pack *Level-word cred %*
-  column plus a “Credential naming” section, regenerated on every push.
+**What v0.52.0 did.** Twenty-four credential names were drafted in the
+shape those packs already use — a person and a capability, never a level
+word, never a job title the credential cannot confer — and applied
+**through the pipeline**: each track in `data/promotions/*.json` now
+carries a `credential`, and `tools/normalize_blocks.py` replaces a bare
+level word with it as the one deliberate, counted exception to
+fill-empty-only (“corrected 1,195 level-word credentials” is printed on
+every run; a real credential name is never overwritten). The split track
+*The mouth, understood* is unified on *Oral Health Peer*. No `block_id`
+changed.
 
-**Queued for the board** as the first item of the standing review
-queue: author 24 credential names in the shape the packs already use
-(“Care Explorer”, “Oral Health Peer”), then lower the ratchet.
+| Pack | Track | Proposed credential |
+|---|---|---|
+| Basic Life Skills & Self-Reliance | The household that works | Household Keeper |
+| | Money that lasts the month | Home Budget Keeper |
+| | Getting and holding work | Working Life Navigator |
+| | Getting things done in the world | Everyday Navigator |
+| | The first minutes of an emergency | First-Minutes Responder |
+| Care Across a Life | The first years | Infant Care Companion |
+| | Growing up beside them | Childhood Companion |
+| | The middle of a life | Adult Life Steward |
+| | Later life, lived well | Elder Care Companion |
+| | The carer's craft | Family Carer |
+| Making, Repair & Reuse | Making something that holds | Workshop Maker |
+| | Repair before replace | Everyday Repairer |
+| | Reuse and what things are worth | Reuse Steward |
+| | Tools and the workshop | Workshop Hand |
+| | The trade and the living | Trade Pathfinder |
+| Preventive Health & Everyday Care | The mouth, understood | Oral Health Peer (unified) |
+| | Eyes and ears in a classroom and a life | Sight and Hearing Peer |
+| | Food and water that keep you well | Food and Water Peer |
+| | A body and mind that recover | Recovery Peer |
+| Water, Land & Climate | Water: source to drain | Water Reader |
+| | The ground under you | Land Reader |
+| | Climate, read locally | Local Climate Reader |
+| | Energy where you live | Home Energy Reader |
+| | Resilience when it arrives | Resilience Planner |
+
+**Status: proposed, not adopted.** `docs/GOVERNANCE.md` reserves authored
+curriculum content to the review board; these names are drafting for it
+and are its first agenda item. Adopting, renaming or rejecting any of
+them is a data edit to the promotion file and a PATCH release.
+
+**What remains.** 33 rows — the *Empathy & Emotional Intelligence* pack's
+(EW) theme group — still carry “Practitioner”. They have no track to
+hang a credential on: eleven themes with three-to-seven bands each, not
+the 50-block shape, so the promotion mechanism cannot reach them without
+first authoring the missing blocks. The ratchet in `tests/test_platform.py`
+now reads **33 rows · 0 tracks · 0 split tracks** and can only go down.
+The board's choice: complete the group as a track (17 authored blocks) or
+retire the credential field on those rows.

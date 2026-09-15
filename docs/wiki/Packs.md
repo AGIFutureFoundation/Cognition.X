@@ -16,8 +16,8 @@ Catalog of all 47 packs — 17,450 blocks total. Machine-readable version: [`dat
 | Cognition.X : Education OS | `EDUOS` | 660 | — | 115 |
 | Arts & Craft Trades : Louisiana Makers | `ARTCRAFT` | 250 | 5 | 5 |
 | Arts, Making Media & Performance | `ARTS` | 250 | 5 | 5 |
-| Basic Life Skills & Self-Reliance | `LIFESKILL` | 250 | 5 | 1 |
-| Care Across a Life | `CARELIFE` | 250 | 5 | 1 |
+| Basic Life Skills & Self-Reliance | `LIFESKILL` | 250 | 5 | 5 |
+| Care Across a Life | `CARELIFE` | 250 | 5 | 5 |
 | Civic Leadership Legacy : California | `LEGACYCA` | 250 | 5 | 5 |
 | Civic Leadership Legacy : Louisiana | `LEGACYLA` | 250 | 5 | 5 |
 | Civic Leadership Legacy : Texas | `LEGACYTX` | 250 | 5 | 5 |
@@ -33,14 +33,14 @@ Catalog of all 47 packs — 17,450 blocks total. Machine-readable version: [`dat
 | Law, Contracts & Everyday Rights | `LAW` | 250 | 5 | 5 |
 | Learning States & Universal Access | `ACCESS` | 250 | 5 | 5 |
 | Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
-| Making, Repair & Reuse | `MAKE` | 250 | 5 | 1 |
+| Making, Repair & Reuse | `MAKE` | 250 | 5 | 5 |
 | Money, Benefits & Entitlements | `MONEY` | 250 | 5 | 5 |
 | Cognition.X : Multilateral OS | `MULTI` | 1150 | 10 | 126 |
 | Music : Creation to Industry | `MUSICIND` | 250 | 5 | 5 |
 | Neighbourhood, Safety & Civic Voice | `NEIGH` | 250 | 5 | 5 |
 | Non-Profit Practice | `NPO` | 1150 | 10 | 122 |
 | Parish Launch & Scale | `LAUNCH` | 250 | 5 | 5 |
-| Preventive Health & Everyday Care | `PREVCARE` | 250 | 5 | 3 |
+| Preventive Health & Everyday Care | `PREVCARE` | 250 | 5 | 5 |
 | Reentry & Recovery Pathways | `REENTRY` | 250 | 5 | 5 |
 | Cognition.X : Robotics OS | `ROB` | 1140 | 10 | 122 |
 | Cognition.X : Sapient OS | `SAPIENT` | 1120 | 10 | 119 |
@@ -50,7 +50,7 @@ Catalog of all 47 packs — 17,450 blocks total. Machine-readable version: [`dat
 | Trades Across School Subjects | `TRADESUBJ` | 250 | 5 | 5 |
 | Trades in the Classroom : Flipped & Gamified | `TRADESCLASS` | 250 | 5 | 5 |
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
-| Water, Land & Climate | `WLC` | 250 | 5 | 1 |
+| Water, Land & Climate | `WLC` | 250 | 5 | 5 |
 
 ## Tracks by pack
 
