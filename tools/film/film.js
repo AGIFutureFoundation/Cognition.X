@@ -11,11 +11,12 @@
  *
  *     node tools/film/social1.js … social5.js   # the five narrated feature shorts
  *
- * Narration: a scene's `say` text is rendered offline by piper (pip install
- * piper-tts; a voice such as en-us-ryan-high.onnx + .json in tools/film/voices/,
- * or CX_PIPER_VOICE) — the scene is held at least as long as its clip, the
- * track is assembled from the recorded scene start times, and ffmpeg muxes
- * it. Scenes without `say` record silent.
+ * Narration: a scene's `say` text is rendered offline by tools/film/tts.py —
+ * kokoro-onnx by default (pip install kokoro-onnx soundfile; kokoro-v1.0.onnx +
+ * voices-v1.0.bin in tools/film/kokoro/ or CX_KOKORO_DIR; voice via CX_TTS_VOICE,
+ * default af_heart) or piper (CX_TTS=piper, CX_PIPER_VOICE). The scene is held
+ * at least as long as its clip, the track is assembled from the recorded scene
+ * start times, and ffmpeg muxes it. Scenes without `say` record silent.
  *
  * Needs Playwright + a Chromium build (CX_CHROMIUM, default the project
  * environment's /opt/pw-browsers/chromium) and ffmpeg (CX_FFMPEG, else the
@@ -35,7 +36,6 @@ const app = (a, hash='') => `file://${ROOT}/${a}/index.html${hash}`;
 const FF = process.env.CX_FFMPEG || (()=>{ try { return require('child_process').execSync('python3 -c "import imageio_ffmpeg as f;print(f.get_ffmpeg_exe())"', {stdio:['ignore','pipe','ignore']}).toString().trim(); } catch(e){ return 'ffmpeg'; } })();
 const CHROME = process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium';
 
-const VOICE = process.env.CX_PIPER_VOICE || path.resolve(__dirname, 'voices', 'en-us-ryan-high.onnx');
 // Narration: piper (offline neural TTS) renders each scene's `say` to a wav;
 // the scene is held at least as long as its clip, and the track is assembled
 // from the recorded scene start times so voice and picture stay aligned.
@@ -46,7 +46,8 @@ function wavInfo(file){
   return {dur: dataLen / byteRate, sampleRate: b.readUInt32LE(24), channels: b.readUInt16LE(22), bits: b.readUInt16LE(34)};
 }
 function synth(text, file){
-  if (!fs.existsSync(file)) execFileSync('python3', ['-m','piper','-m', VOICE, '--length-scale','1.04','--sentence-silence','0.3','-f', file], {input: text, stdio:['pipe','ignore','pipe']});
+  // tts.py: kokoro (default, CX_TTS_VOICE e.g. af_heart / am_michael / bm_george) or piper (CX_TTS=piper)
+  if (!fs.existsSync(file)) execFileSync('python3', [path.join(__dirname, 'tts.py'), '--out', file], {input: text, stdio:['pipe','ignore','pipe'], env: {...process.env}});
   return wavInfo(file).dur;
 }
 function buildTrack(clips, out){ // clips: [{file, at}] seconds; writes a 16-bit PCM wav with silence between
