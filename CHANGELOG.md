@@ -4,6 +4,30 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.53.1] — 2026-09-15
+
+### Documentation
+- **`docs/INVESTOR_BRIEF.md`** — the AGI Future Foundation PBC investor
+  brief: mission and structure, the investment thesis, the twelve-module
+  training portfolio and launch sequence, the Robotics.X layers and
+  hardware strategy, the $5.0M ask with allocation and milestones,
+  standards and governance requirements, the diligence package, the
+  claims to avoid — and a closing section, **What the repository proves
+  today**, that lists claim by claim what the code already backs (the
+  loop, signed credentials, the audit, the compliance layer, the honesty
+  stances) and what the brief promises that is not yet built (model-backed
+  coaching, SCORM/xAPI/LTI, immersive simulation, Robotics.X as a product,
+  SOC 2, revenue).
+- **`docs/CAPITAL_STRUCTURE.md`** — capital structure, governance and
+  risk: separated capital pools by entity, the ownership architecture,
+  narrow mission-protection rights, instruments by stage, the full risk
+  register framed as disciplined governance, investor protections,
+  cap-table guidance, use-of-proceeds controls and reporting cadence —
+  with a note on where Cognition.X sits (the education line; evidence,
+  not revenue; open source by design).
+- Both are published together as one designed data-room page; the
+  Markdown is canonical. Neither is legal, tax or securities advice.
+
 ## [0.53.0] — 2026-09-15
 
 The accessibility audit — prompt 4 of the ranked next steps.
