@@ -334,6 +334,23 @@ Use this in the deck or offering memorandum:
 
 The goal is not to make AGI appear risk-free. It is to show investors that you understand where risk lives, who owns each risk, how capital is protected from cross-entity confusion, and what objective milestones must be achieved before the company spends more capital or raises the next round.
 
+## Recommended terms on standard forms
+
+*Added by the Cognition.X maintainers as the working recommendation for the first instrument, on the industry-standard documents rather than bespoke paper. Proposals until counsel has papered them; not legal, tax or securities advice.*
+
+| Item | Recommendation | Why this is the standard |
+|---|---|---|
+| **Instrument** | Y Combinator **post-money SAFE, valuation-cap only** — no discount, no MFN — one identical form for every investor in the round | The post-money SAFE (2018 form) is the most widely used pre-seed instrument; cap-only keeps the conversion math legible and avoids stacking incompatible terms |
+| **Issuer** | **AGI Corp**, a Delaware C-corporation, with the PBC as parent holding mission rights | Delaware C-corp is what institutional investors and their counsel expect; enables QSBS analysis and a clean NVCA-form priced round later |
+| **Valuation cap** | Set with counsel from a **fully diluted model** that converts every SAFE, note, option and warrant; disclose the SAFE stack to every investor | The single most common pre-seed mistake is an unmodelled SAFE stack; investors will ask for the model |
+| **Side letters** | YC **pro rata side letter** and information rights for investors at or above a threshold (e.g. $250K); nothing else | Limits special rights to the standard one; keeps the round closable |
+| **Round size in this instrument** | $2.5M of the $5.0M program; the balance is grants, program capital and customer-funded pilots in their own vehicles | Keeps a software investor out of an unintended property or grant-restricted pool |
+| **At the priced round** | **NVCA model documents**: 1× non-participating preferred; option pool 10–15% pre-money sized to an 12–18-month hiring plan; founder vesting 4 years / 1-year cliff with credit for service; one investor seat plus an independent-director policy; protective provisions limited to major items | The NVCA forms are the industry baseline; every deviation costs negotiation time and trust |
+| **Securities compliance** | **Regulation D, Rule 506(b)**: accredited investors, no general solicitation, subscription and accreditation process; **Form D within 15 days of first sale**; state blue-sky notice filings; controlled investor communications | The exemption most venture financings use; 506(b) permits no general solicitation, so decks and videos go to identified investors, not the public |
+| **Mission rights** | A written Mission Rights Agreement: reserved matters limited to the public-benefit purpose, removal of safety/accessibility/privacy/oversight policies, sale or exclusive licence of mission-critical IP, dissolution, and related-party transactions above a threshold | Narrow enough to be financeable, specific enough to protect the charter |
+| **Reporting** | Quarterly investor report (cash, runway, revenue, product, customers, team, governance, risk register, asks); annual public-benefit report — the statutory minimum is biennial (8 Del. C. §366) | Investors fund what they can see; the PBC statute requires the benefit report |
+| **What not to do** | No uncapped SAFEs, no MFN stacking, no side-letter sprawl, no advisor equity without vesting and IP assignment, no promises of liquidity or returns, no "AGI" claims in offering materials | Each is a known diligence red flag |
+
 ## Where Cognition.X sits in this structure
 
 *Added by the Cognition.X maintainers.* In the architecture above, this repository is the **Cognition.X** line: the education, simulation, assessment and workforce platform. What it contributes to the capital story is evidence, not revenue: 54 merged releases with the build green on every one, a dataset of 17,450 verifiable blocks, six offline apps that a fresh clone reproduces byte-for-byte, an accessibility audit at zero WCAG-tagged violations, a fifty-state compliance layer, and honesty stances held by tests. It is published open source (MIT code, CC BY 4.0 curriculum), which is itself a structural choice an investor should understand: the moat is the data, the halls, the credentials people carry and the trust the stances earn — not a closed codebase. The companion note [`INVESTOR_BRIEF.md`](INVESTOR_BRIEF.md#what-the-repository-proves-today) lists, claim by claim, what the code already backs and what the raise would build.

@@ -2,7 +2,8 @@
 
 > **v0.50.0:** the kit now narrates (piper, offline). Five feature shorts
 > (`tools/film/social1.js` … `social5.js`) and the pitch deck
-> (`tools/film/deck/`) ship with their narration in the scene files; the
+> (`tools/film/deck/`; the three-page investor deck and its eight-slide
+> video in `tools/film/deck3/`) ship with their narration in the scene files; the
 > two product films below can be narrated the same way by adding `say`
 > to their scenes — the scripts under each film are written for that.
 
