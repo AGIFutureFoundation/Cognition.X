@@ -661,6 +661,47 @@ async function testSimulationStudio(browser, errs) {
   await eo.close();
 }
 
+/* ------- the app compliance review (v0.55.0): CSP holds, fonts are local, erase-all works ------- */
+async function testComplianceReview(browser, errs) {
+  const views = { 'louisiana': ['#/roles', '#/parish/orleans', '#/makers'], 'flow-hub': [''], 'trades-network': ['#/sims', '#/unions'],
+                  'states': ['#/state/LA', '#/compliance'], 'platform': ['#/loop'], 'education-os': ['#/quest', '#/overview'] };
+  for (const [app, hashes] of Object.entries(views)) {
+    const page = await browser.newPage();
+    const csp = [], reqs = [];
+    page.on('console', m => { if (/Content Security Policy|Refused to/.test(m.text())) csp.push(m.text().slice(0, 140)); });
+    page.on('request', r => { const u = r.url(); if (!u.startsWith('file://') && !u.startsWith('blob:') && !u.startsWith('data:')) reqs.push(u); });
+    page.on('pageerror', e => errs.push(`${app}/compliance: ${e.message}`));
+    for (const h of hashes) { await page.goto(url(app) + h); await page.waitForTimeout(app === 'education-os' ? 1800 : 600); }
+    check(`compliance: ${app} raises no CSP violation across ${hashes.length} view(s)`, csp.length === 0, csp[0]);
+    check(`compliance: ${app} makes no external request`, reqs.length === 0, reqs[0]);
+    const csn = await page.evaluate(() => { const m = document.querySelector('meta[http-equiv="Content-Security-Policy"]'); return m ? m.content : ''; });
+    check(`compliance: ${app} CSP meta present in the live DOM`, csn.includes("connect-src 'none'"));
+    const blocked = await page.evaluate(async () => { try { await fetch('https://example.com/'); return false; } catch (e) { return true; } });
+    check(`compliance: ${app} browser refuses a fetch under the CSP`, blocked);
+    check(`compliance: ${app} privacy control present`, (await page.$('#cx-privbtn')) !== null);
+    await page.close();
+  }
+  // fonts are loaded from the embedded data: URIs
+  const la = await newPage(browser, 'la/fonts', errs);
+  await la.goto(url('louisiana')); await la.waitForTimeout(900);
+  const fonts = await la.evaluate(async () => { await document.fonts.ready; return { fr: document.fonts.check('800 20px Fraunces'), is: document.fonts.check('500 16px "Instrument Sans"'), mono: document.fonts.check('400 14px "IBM Plex Mono"') }; });
+  check('compliance: embedded typefaces resolve (Fraunces, Instrument Sans, IBM Plex Mono)', fonts.fr && fonts.is && fonts.mono, JSON.stringify(fonts));
+  await la.close();
+  // the notice lists this app's keys and erase-all removes exactly them
+  const tn = await newPage(browser, 'trades/privacy', errs);
+  await tn.goto(url('trades-network')); await tn.waitForTimeout(600);
+  await tn.evaluate(() => { localStorage.setItem('cxtn.theme', 'dark'); localStorage.setItem('cxtn.lastrun', '{"x":1}'); localStorage.setItem('cxla.keep', 'other-app'); });
+  await tn.click('#cx-privbtn'); await tn.waitForTimeout(150);
+  const listed = await tn.$$eval('#cx-privdlg tbody code', els => els.map(e => e.textContent));
+  check('compliance: notice lists only this app\'s keys', listed.includes('cxtn.theme') && listed.includes('cxtn.lastrun') && !listed.includes('cxla.keep'), listed.join(','));
+  tn.once('dialog', d => d.accept());
+  await tn.click('#cx-priverase'); await tn.waitForTimeout(300);
+  const after = await tn.evaluate(() => ({ tn: localStorage.getItem('cxtn.theme'), la: localStorage.getItem('cxla.keep') }));
+  check('compliance: erase-all removes this app\'s keys and nothing else', after.tn === null && after.la === 'other-app', JSON.stringify(after));
+  await tn.evaluate(() => localStorage.removeItem('cxla.keep'));
+  await tn.close();
+}
+
 (async () => {
   const browser = await chromium.launch({
     executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium',
@@ -681,6 +722,7 @@ async function testSimulationStudio(browser, errs) {
       ['education os boots', testEducationOsBoots],
       ['other apps', testOtherApps],
       ['simulation studio', testSimulationStudio],
+      ['compliance review', testComplianceReview],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);

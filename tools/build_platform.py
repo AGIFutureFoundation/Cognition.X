@@ -41,7 +41,8 @@ def main():
     }
 
     sys.path.insert(0, str(ROOT / "tools"))
-    from sim_lib import sim_payload, inject_sim
+    from sim_lib import sim_payload
+    from runtime_lib import inject_runtime
     sims = sim_payload(ids={"SIM-HURRICANE-72"})
     sims["site"] = "Orleans Parish"
 
@@ -62,7 +63,7 @@ def main():
     if "__PXDATA__" not in template:
         raise SystemExit("template.html is missing the __PXDATA__ placeholder")
     out = ROOT / "apps" / "platform" / "index.html"
-    out.write_text(inject_sim(template.replace("__PXDATA__", data)), encoding="utf-8")
+    out.write_text(inject_runtime(template.replace("__PXDATA__", data), "platform"), encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)}: {out.stat().st_size/1e3:.0f} KB "
           f"({payload['totals']['blocks']} blocks, demo track: {demo_track['name']!r})")
 

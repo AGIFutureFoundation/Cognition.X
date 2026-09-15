@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.54.0** | The Simulation Studio: `data/simulations/scenarios.json` (18 branching control-discipline scenarios tied to real tracks, each carrying its witnessed transfer check verbatim) played by one shared engine in all six apps — deterministic, three difficulties, no timers, `cx-simrun/1` runs kept as practice and never credentials; `validate_simulations.py` in CI |
+| **v0.55.0** | The compliance and regulatory review of the apps: typefaces embedded so no app makes a third-party request, a strict Content-Security-Policy in every app (the no-network stance browser-enforced), no referrer leakage, a Data & privacy notice with erase-all, `docs/COMPLIANCE_REVIEW.md` (not legal advice) |
+| v0.54.0 | The Simulation Studio: `data/simulations/scenarios.json` (18 branching control-discipline scenarios tied to real tracks, each carrying its witnessed transfer check verbatim) played by one shared engine in all six apps — deterministic, three difficulties, no timers, `cx-simrun/1` runs kept as practice and never credentials; `validate_simulations.py` in CI |
 | v0.53.2 | The three-page investor deck (`docs/PITCH_DECK.md`, generator in `tools/film/deck3/`) with the round on standard forms — post-money SAFE, NVCA at the priced round, Reg D 506(b) — and its narrated pitch video |
 | v0.53.1 | The investor data room: `docs/INVESTOR_BRIEF.md` and `docs/CAPITAL_STRUCTURE.md` with a claim-by-claim bridge to what the repository proves |
 | v0.53.0 | The accessibility audit: axe-core over 45 views, every WCAG-tagged finding fixed at the token/component level (0 remaining), keyboard sweep clean, `docs/ACCESSIBILITY.md` with what remains, the audit result held by the tests |

@@ -368,17 +368,20 @@ def main():
     )
     # the Simulation Studio (v0.54.0): the engine plus every canonical scenario, as DATA.simStudio
     sys.path.insert(0, str(ROOT / "tools"))
-    from sim_lib import sim_payload, sim_script
-    sims = json.dumps(sim_payload(), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    studio = ("<script>" + sim_script() + "</script>\n"
-              "<script>/* CX simulation studio — data/simulations/scenarios.json via tools/sim_lib.py; "
-              "loaded before the app so the quest view finds it on first render */\n"
-              "window.CX_SIM_STUDIO = " + sims + ";\n</script>\n")
+    from sim_lib import sim_payload
+    from runtime_lib import head_snippet, body_snippet
+    sims = json.dumps(sim_payload(), ensure_ascii=False, separators=(",", ":"))
+    # the shared runtime (CSP, referrer, privacy notice, studio engine) with the
+    # studio data as a global, all ahead of the app's own (single) script block
+    # so the quest view finds it on first render
+    studio = body_snippet("education-os", "window.CX_SIM_STUDIO = " + sims + ";\n") + "\n"
     template = TEMPLATE.read_text(encoding="utf-8", errors="replace")
-    # the engine and its data go in front of the app's own (single) script block
+    if "__CXHEAD__" not in template:
+        raise SystemExit("template.html is missing the __CXHEAD__ placeholder")
+    template = template.replace("__CXHEAD__", head_snippet("education-os"))
     first = template.find("<script>")
     if first < 0:
-        raise SystemExit("template.html: no script block to precede with the studio engine")
+        raise SystemExit("template.html: no script block to precede with the shared runtime")
     template = template[:first] + studio + template[first:]
 
     # replace the vestigial stub page (an unreferenced container plus an

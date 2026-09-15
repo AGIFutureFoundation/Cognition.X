@@ -58,5 +58,10 @@ Attribution line for content reuse:
   (see [`CONTRIBUTING.md`](../CONTRIBUTING.md)). If the foundation later
   wants relicensing freedom, adopt a lightweight CLA/DCO before external
   contributions scale up.
+- The four typefaces embedded in the apps since v0.55.0 (Fraunces,
+  Instrument Sans, IBM Plex Mono, Archivo — latin subsets under
+  `data/fonts/`) are licensed under the SIL Open Font License 1.1; the
+  licence and copyright notices are in `data/fonts/LICENSE-OFL.txt`. They
+  are embedded so that no app makes a third-party request.
 - The names "Cognition.X" and "AGI Future Foundation" are not licensed by
   either license; trademark use requires separate permission.

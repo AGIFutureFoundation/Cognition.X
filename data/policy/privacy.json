@@ -1,0 +1,16 @@
+{
+ "format": "cx-privacy/1",
+ "note": "The canonical text of the Data & privacy notice every Cognition.X app shows from its footer control (tools/privacy/notice.js). One source, six apps; tests hold every app to it. This notice describes what the software does. It is not legal advice, and it does not make any school's, hall's or family's own obligations go away.",
+ "title": "Data & privacy — what this page does with your information",
+ "stays": "Everything you enter stays in this browser, in its local storage, under the keys listed below. There is no account, no server and no sync. It stays until you erase it here, clear the browser's site data, or use a private window that discards it.",
+ "leaves": "Nothing leaves this page on its own. The page makes no network requests: its typefaces are embedded, and a Content-Security-Policy set by the page tells the browser to block any connection. The only things that ever leave are the files you export yourself — a ledger, a credential record, an evidence aggregate, a run record — and you decide who receives them.",
+ "exports": "Exports that could describe a person are behind a consent step and are sent by a person, never by the page. Evidence aggregates carry per-track counts only, never names.",
+ "minors": "If a learner is under thirteen, or a school policy asks for it, use a first name or a nickname in the ledger. Nothing here needs a legal name, a date of birth or a contact detail, and none is asked for.",
+ "rights": "You can see everything stored (the export box shows it), correct it (edit the learner, re-import a corrected ledger) and erase it (remove one learner, or erase everything this app stored, below). Nobody else can, because nobody else holds it.",
+ "security": "Credential records are signed with a key generated in this browser (ECDSA P-256 via WebCrypto); only the public key travels with a record. Pasted ledgers, trust lists and revocation lists are treated as third-party data and sanitized before use.",
+ "erase_label": "Erase everything this app stored in this browser",
+ "erase_confirm": "This removes every key listed above from this browser. Exported files you already saved are unaffected. Continue?",
+ "erased": "Erased. The page will reload with nothing stored.",
+ "not_advice": "This describes the software as built and tested. It is not legal advice. A school, hall or program office adopting the platform keeps its own duties under FERPA, COPPA, its state's student-privacy law and its own policies; the fifty-state compliance layer in the States app lists them.",
+ "docs": "The full review — scope, method, data map, findings and what remains — is docs/COMPLIANCE_REVIEW.md in the repository."
+}
