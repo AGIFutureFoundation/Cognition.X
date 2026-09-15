@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.50.1** | A more human narration voice: kokoro-onnx (offline) fronts the film kit's narration via `tools/film/tts.py`, piper kept as fallback; shorts and pitch video re-rendered |
+| **v0.51.0** | The compliance layer: for every state, ten domains a program office meets — privacy law and agreement, homeschool forms, nonprofit and charity registration, background checks, mandated reporting, apprenticeship agency, CTE list, accessibility, sales tax — with forms, agencies, fees (as-of, verify) and cost roll-ups; the States app Compliance view, state-page panels, the Louisiana State Admin widget, and a CI-checked report |
+| v0.50.1 | A more human narration voice: kokoro-onnx (offline) fronts the film kit's narration via `tools/film/tts.py`, piper kept as fallback; shorts and pitch video re-rendered |
 | v0.50.0 | The film kit speaks: offline narration (piper) in the film driver, five narrated feature shorts for social channels, and the 15-slide pitch deck generator with its 7-minute narrated video |
 | v0.49.1 | The investor walkthrough (`docs/WALKTHROUGH.md`): the deep features and learning system in one document, every number tied to the dataset |
 | v0.49.0 | The film kit: two product films rendered from the apps themselves by `tools/film/` (*The Flow Zone* 3:04 · *Training that proves itself* 2:15) and the production briefs for their cinematic cuts |

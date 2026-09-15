@@ -85,6 +85,8 @@ def main():
         "wlb": wlb["wlb"],
         "principles": wlb["principles"],
         "leadership": wlb["leadership"],
+        # the 50-state compliance layer (data/states/compliance.json, v0.51.0)
+        "compliance": json.loads((ROOT / "data" / "states" / "compliance.json").read_text(encoding="utf-8")),
         "curriculum": {
             "blocks": sum(1 for _ in csv.DictReader(open(BLOCKS, newline="", encoding="utf-8"))),
             "packs": len(catalog),

@@ -167,6 +167,15 @@ def load_fact_base():
     }
 
 
+def la_compliance():
+    """Louisiana's entry of the 50-state compliance layer (v0.51.0) with the
+    national baseline and domain list — for the State Admin dashboard."""
+    c = json.loads((ROOT / "data" / "states" / "compliance.json").read_text(encoding="utf-8"))
+    la = next(s for s in c["states"] if s["abbr"] == "LA")
+    return {"asOf": c["asOf"], "disclaimer": c["disclaimer"], "domains": c["domains"],
+            "national": c["national"], "state": la}
+
+
 def maker_packs(makers, parish):
     """[(slug, reason)] — a parish whose public-record makers worked a
     discipline earns that discipline's trade pack in its module plan."""
@@ -296,6 +305,7 @@ def main():
         "leadership": fb["leadership"],
         "k12program": fb["k12program"],
         "makers": fb["makers"],
+        "compliance": la_compliance(),
         "corePacks": CORE_PACKS,
         "packmeta": packmeta,
         "catalog": catalog_light,
