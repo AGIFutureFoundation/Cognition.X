@@ -14,6 +14,7 @@ __PXDATA__). A build product — never hand-edited.
 
 import csv
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -39,6 +40,11 @@ def main():
         "sampleCheck": tr_rows[0]["transfer_check"],
     }
 
+    sys.path.insert(0, str(ROOT / "tools"))
+    from sim_lib import sim_payload, inject_sim
+    sims = sim_payload(ids={"SIM-HURRICANE-72"})
+    sims["site"] = "Orleans Parish"
+
     payload = {
         "version": (ROOT / "VERSION").read_text().strip(),
         "totals": {
@@ -48,13 +54,15 @@ def main():
             "credentials": creds,
         },
         "demoTrack": demo_track,
+        # the Simulation Studio (v0.54.0): the scenario from the demo track's own pack (Louisiana OS)
+        "sims": sims,
     }
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     template = (ROOT / "apps" / "platform" / "template.html").read_text(encoding="utf-8")
     if "__PXDATA__" not in template:
         raise SystemExit("template.html is missing the __PXDATA__ placeholder")
     out = ROOT / "apps" / "platform" / "index.html"
-    out.write_text(template.replace("__PXDATA__", data), encoding="utf-8")
+    out.write_text(inject_sim(template.replace("__PXDATA__", data)), encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)}: {out.stat().st_size/1e3:.0f} KB "
           f"({payload['totals']['blocks']} blocks, demo track: {demo_track['name']!r})")
 

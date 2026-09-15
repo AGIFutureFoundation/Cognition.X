@@ -435,6 +435,37 @@ def test_accessibility_audit_is_clean():
     check("ACCESSIBILITY.md names what remains", "heading-order" in doc and "remains" in doc.lower())
 
 
+def test_simulation_studio():
+    """The Simulation Studio (v0.54.0): the fact base is sound, every app
+    carries the one engine and the honesty lines, and a run can never be
+    mistaken for a check."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from validate_simulations import validate, load
+    doc = load()
+    errs = validate(doc)
+    check("sims: fact base validates", not errs, "; ".join(errs[:3]))
+    check("sims: 18 scenarios", len(doc["scenarios"]) == 18, str(len(doc["scenarios"])))
+    check("sims: nine trades kinds localized by region",
+          len({s["kind"] for s in doc["scenarios"] if s.get("kind")}) == 9)
+    check("sims: every scenario carries its track's transfer check verbatim",
+          all(s["transfer"]["check"] and s["transfer"]["block_id"] for s in doc["scenarios"]))
+    engine = (ROOT / "tools" / "sim" / "engine.js").read_text(encoding="utf-8")
+    check("sims: engine never touches the network or storage",
+          not re.search(r"\b(fetch|XMLHttpRequest|localStorage|sessionStorage|indexedDB|navigator\.sendBeacon)\b", engine))
+    check("sims: engine is deterministic (no Math.random)", "Math.random" not in engine)
+    check("sims: engine has no timers driving play", "setTimeout" not in engine and "setInterval" not in engine)
+    for app in ("education-os", "flow-hub", "louisiana", "trades-network", "states", "platform"):
+        t = app_html(app)
+        check(f"sims: {app} carries the engine", "Cognition.X Simulation Studio — the shared scenario engine" in t)
+        check(f"sims: {app} carries the run record format", "cx-simrun/1" in t)
+        check(f"sims: {app} carries the studio law verbatim", doc["law"] in t or doc["law"].replace("\u2260", "≠") in t)
+        check(f"sims: {app} says a run is never a credential", "never a credential" in t)
+        check(f"sims: {app} has no __CXSIM__ placeholder left", "__CXSIM__" not in t)
+    sdoc = (ROOT / "docs" / "SIMULATION.md").read_text(encoding="utf-8")
+    check("SIMULATION.md states the scenario count", f"{len(doc['scenarios'])} scenarios" in sdoc)
+    check("SIMULATION.md carries the law", "Simulation ≠ certification" in sdoc)
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))

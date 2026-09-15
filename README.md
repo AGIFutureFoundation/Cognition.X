@@ -136,6 +136,7 @@ in [`CHANGELOG.md`](CHANGELOG.md); the current version is in
 
 - Complete system review: [`docs/SYSTEM_REVIEW.md`](docs/SYSTEM_REVIEW.md)
 - Investor walkthrough: [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md) · investor brief: [`docs/INVESTOR_BRIEF.md`](docs/INVESTOR_BRIEF.md) · capital structure & risk: [`docs/CAPITAL_STRUCTURE.md`](docs/CAPITAL_STRUCTURE.md) · three-page deck: [`docs/PITCH_DECK.md`](docs/PITCH_DECK.md)
+- The Simulation Studio (18 scenarios, one engine, six apps; simulation ≠ certification): [`docs/SIMULATION.md`](docs/SIMULATION.md)
 - State compliance layer (fifty states; not legal advice): [`docs/STATE_COMPLIANCE.md`](docs/STATE_COMPLIANCE.md)
 - Accessibility audit (WCAG 2.2 AA): [`docs/ACCESSIBILITY.md`](docs/ACCESSIBILITY.md)
 - Deep roadmap: [`docs/ROADMAP.md`](docs/ROADMAP.md)

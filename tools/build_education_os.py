@@ -24,6 +24,7 @@ Deterministic: same inputs -> same output.
 
 import csv
 import json
+import sys
 import re
 import subprocess
 import tempfile
@@ -365,7 +366,20 @@ def main():
         " }\n"
         "}catch(e){}})();\n</script>\n"
     )
+    # the Simulation Studio (v0.54.0): the engine plus every canonical scenario, as DATA.simStudio
+    sys.path.insert(0, str(ROOT / "tools"))
+    from sim_lib import sim_payload, sim_script
+    sims = json.dumps(sim_payload(), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    studio = ("<script>" + sim_script() + "</script>\n"
+              "<script>/* CX simulation studio — data/simulations/scenarios.json via tools/sim_lib.py; "
+              "loaded before the app so the quest view finds it on first render */\n"
+              "window.CX_SIM_STUDIO = " + sims + ";\n</script>\n")
     template = TEMPLATE.read_text(encoding="utf-8", errors="replace")
+    # the engine and its data go in front of the app's own (single) script block
+    first = template.find("<script>")
+    if first < 0:
+        raise SystemExit("template.html: no script block to precede with the studio engine")
+    template = template[:first] + studio + template[first:]
 
     # replace the vestigial stub page (an unreferenced container plus an
     # unwrapped `var DATA` block that rendered as visible text) with the

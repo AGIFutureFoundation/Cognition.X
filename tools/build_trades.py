@@ -19,6 +19,7 @@ lists) so the app's curriculum links always match the canonical dataset.
 
 import csv
 import json
+import sys
 from collections import OrderedDict
 from pathlib import Path
 
@@ -75,9 +76,14 @@ def main():
     if missing:
         raise SystemExit(f"union fact base references unknown pack slugs: {missing}")
 
+    sys.path.insert(0, str(ROOT / "tools"))
+    from sim_lib import sim_payload, inject_sim
+
     payload = {
         "version": (ROOT / "VERSION").read_text().strip(),
         "note": fb["note"],
+        # the Simulation Studio (v0.54.0): one scenario per trades kind, localized at run time to the region's site
+        "sims": sim_payload(kinds={fam["kind"] for fam in families}),
         "regions": [{k: v for k, v in r.items()} for r in regions],
         "families": len(families),
         "entries": entries,
@@ -89,7 +95,7 @@ def main():
     template = TEMPLATE.read_text(encoding="utf-8")
     if "__TNDATA__" not in template:
         raise SystemExit("template.html is missing the __TNDATA__ placeholder")
-    OUT.write_text(template.replace("__TNDATA__", data), encoding="utf-8")
+    OUT.write_text(inject_sim(template.replace("__TNDATA__", data)), encoding="utf-8")
     print(f"wrote {OUT.relative_to(ROOT)}: {OUT.stat().st_size/1e3:.0f} KB "
           f"({len(entries)} regional union/trade entries, {len(families)} families, "
           f"{len(regions)} regions)")

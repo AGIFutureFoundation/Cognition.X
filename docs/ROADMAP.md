@@ -185,8 +185,12 @@ standards-mapped; validator extended to rubric and mapping checks.
   assessors work oldest-first), three-line rubric display, per-learner
   access-profile check formats, evidence capture, and confirm /
   not-yet outcomes that credit the ledger honestly
-- Mission simulator: promote from demo to configurable engine driven by
-  pack data
+- [x] Mission simulator promoted to a configurable engine driven by pack
+  data (v0.54.0): the Simulation Studio — `data/simulations/scenarios.json`
+  (18 scenarios tied to real tracks, each carrying its witnessed transfer
+  check verbatim) played by one shared engine (`tools/sim/engine.js`) in
+  all six apps; deterministic, three difficulties, no timers, `cx-simrun/1`
+  run records that are practice and never credentials
 - Accessibility: WCAG 2.2 AA audit and fixes; keyboard-complete; screen-
   reader labels on all interactive panels
 - [x] Packaging (v0.32.0–v0.34.0): printable per-track workbooks
@@ -300,7 +304,8 @@ The remaining v1.0 work is operational, not code:
   flow-state as machine curriculum, ecosystem evaluation criteria and
   the four data principles (`docs/AGENT_LEARNING.md`)
 - Adaptive sequencing: recommend next block from prior transfer-check
-  outcomes (the mission simulator's difficulty model, generalised)
+  outcomes (the studio's next-difficulty rule — v0.54.0 — generalised
+  from scenario runs to blocks)
 - AI study partner: block-scoped tutoring with the *Working with AI*
   pack's own norms enforced (no substitution on transfer checks)
 - Auto-drafted pack specs: model-generated first drafts routed through

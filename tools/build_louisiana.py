@@ -17,6 +17,7 @@ never hand-edited.
 import csv
 import json
 import re
+import sys
 from collections import OrderedDict
 from pathlib import Path
 
@@ -256,6 +257,17 @@ def hall_unions():
     return out
 
 
+def la_sims():
+    """Every canonical scenario plus the New Orleans and River Region sites the
+    trades kinds localize to (from the unions fact base)."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from sim_lib import sim_payload
+    unions = json.loads((ROOT / "data" / "unions" / "trade_unions.json").read_text(encoding="utf-8"))
+    payload = sim_payload()
+    payload["sites"] = {r["id"]: r["sites"] for r in unions["regions"] if r["id"] in ("nola", "br")}
+    return payload
+
+
 def learner_types():
     """The 20 access profiles (support preferences, never diagnoses) that
     drive the flow-state automations and access guidance."""
@@ -306,6 +318,8 @@ def main():
         "k12program": fb["k12program"],
         "makers": fb["makers"],
         "compliance": la_compliance(),
+        # the Simulation Studio (v0.54.0): every canonical scenario, with the two Louisiana regions' real sites
+        "sims": la_sims(),
         "corePacks": CORE_PACKS,
         "packmeta": packmeta,
         "catalog": catalog_light,
@@ -317,7 +331,8 @@ def main():
     if "__LADATA__" not in template:
         raise SystemExit("template.html is missing the __LADATA__ placeholder")
     out = ROOT / "apps" / "louisiana" / "index.html"
-    out.write_text(template.replace("__LADATA__", data), encoding="utf-8")
+    from sim_lib import inject_sim
+    out.write_text(inject_sim(template.replace("__LADATA__", data)), encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)}: {out.stat().st_size/1e3:.0f} KB "
           f"({len(parishes)} parishes, {len(payload['curriculum']['laTracks'])} LA tracks)")
 

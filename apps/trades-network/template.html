@@ -329,6 +329,18 @@
     every run.</p>
     <div class="honesty"><b>Every station posts the same law:</b> nothing energized, suspended or moving is
     practiced live in a classroom studio, and no simulation claims to certify.</div>
+    <div class="panel" id="simstudio">
+      <h3>Run a scenario on a region's own ground</h3>
+      <p class="note">The studio engine (v0.54.0): one branching control-discipline scenario per category, localized to the
+      region's real site, scored on six disciplines, seeded and deterministic, no timer. A run ends in a
+      <span class="mono">cx-simrun/1</span> record you may keep as practice. It is never a check and never a credential.</p>
+      <div class="pickrow" style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 12px">
+        <label for="simkind" style="font-size:.8rem">Category</label><select id="simkind" aria-label="Category"></select>
+        <label for="simreg" style="font-size:.8rem">Region</label><select id="simreg" aria-label="Region"></select>
+        <button class="btn gold" id="simgo">Open the scenario</button>
+        <span class="note" style="margin:0" id="simsite"></span></div>
+      <div id="simhost"></div>
+    </div>
     <div class="panel">
       <h3>Category coverage across the regions</h3>
       <p class="note">Regional entries per category — every category is taught on all three coasts' ground.</p>
@@ -411,6 +423,7 @@
   <button class="primary" id="tournext">Next</button></div>
 </div>
 
+<script>__CXSIM__</script>
 <script>
 document.documentElement.lang = "en";
 /* PWA install metadata: a runtime blob manifest + metas. Honest scope —
@@ -685,13 +698,19 @@ function renderRoster(){
       `<span class="chip">${esc(KINDS[e.kind])}</span>`+
       `<h4 style="margin-top:8px">${esc(e.family)}</h4>`+
       `<p class="intl">${esc(e.intl)}</p>`+
-      `<div class="sim"><b>Training sim:</b> ${esc(e.sim)}.</div>`+
+      `<div class="sim"><b>Training sim:</b> ${esc(e.sim)}.`+
+        (simByKind[e.kind] ? ` <button class="chip link" data-simrun="${e.kind}|${e.region}" aria-label="Run the ${esc(KINDS[e.kind])} scenario at ${esc(r.name)}">Run the scenario →</button>` : "")+`</div>`+
       (e.school ? `<p style="font-size:.8rem; margin:8px 0"><b>In class:</b> ${esc(e.school)} `+
         e.subjects.map(s=>`<span class="chip" style="font-size:.66rem; padding:1px 8px">${esc(s.toUpperCase())}</span>`).join("")+`</p>` : "")+
       `<div>${e.packs.map(s=>{const p=D.packmeta[s];
         return p?`<span class="chip link" role="link" tabindex="0" data-pack="${esc(s)}" title="Open in Flow Hub" aria-label="Open ${esc(p.name)} in Flow Hub">${esc(p.name)} · ${p.blocks}</span>`:"";}).join("")}</div>`+
       `<p class="council">Current local: verify with ${esc(r.council)}. Simulation ≠ certification.</p></div>`;
   }).join("");
+  $("#ugrid").querySelectorAll("[data-simrun]").forEach(b=> b.addEventListener("click", ()=>{
+    const [k, reg] = b.dataset.simrun.split("|");
+    location.hash = "#/sims"; openSim(k, reg);
+    setTimeout(()=> $("#simstudio").scrollIntoView({behavior:"smooth", block:"start"}), 50);
+  }));
   $("#ugrid").querySelectorAll("[data-pack]").forEach(c=>{
       // deep link into the repository's Flow Hub when it sits alongside this file
       const go = ()=> window.open("../flow-hub/index.html#track="+c.dataset.pack, "_blank");
@@ -702,7 +721,25 @@ function renderRoster(){
     });
 }
 
-/* ---------- simulations view ---------- */
+/* ---------- simulations view: the studio (v0.54.0) ---------- */
+const SIMS = D.sims || {scenarios:[]};
+if (window.CXSIM) CXSIM.configure(SIMS);
+const simByKind = Object.fromEntries(SIMS.scenarios.map(s=>[s.kind, s]));
+let simCtl = null;
+function openSim(kind, reg){
+  const sc = simByKind[kind], r = regById[reg];
+  if (!sc || !r || !window.CXSIM) return;
+  $("#simkind").value = kind; $("#simreg").value = reg;
+  $("#simsite").textContent = "at " + r.sites[kind];
+  simCtl = CXSIM.mount($("#simhost"), sc, {site: r.sites[kind], seed: kind+"|"+reg,
+    onRun: rec => { store("cxtn.lastrun", JSON.stringify({scenario:rec.scenario, region:reg, pct:rec.pct, difficulty:rec.difficulty, at:rec.at})); }});
+}
+function initStudio(){
+  if (!$("#simkind")) return;
+  $("#simkind").innerHTML = Object.entries(KINDS).map(([k,l])=>`<option value="${k}">${esc(l)}${simByKind[k]?" — "+esc(simByKind[k].title):""}</option>`).join("");
+  $("#simreg").innerHTML = D.regions.map(r=>`<option value="${r.id}">${esc(r.name)}</option>`).join("");
+  $("#simgo").addEventListener("click", ()=> openSim($("#simkind").value, $("#simreg").value));
+}
 function renderSims(){
   const counts = Object.keys(KINDS).map(k=>[k, D.entries.filter(e=>e.kind===k).length]);
   const max = Math.max(...counts.map(([,n])=>n));
@@ -711,7 +748,10 @@ function renderSims(){
     `<span class="bar" style="width:${100*n/max}%; background:var(--chart)" title="${esc(KINDS[k])}: ${n} regional entries"></span>`+
     `<span class="val">${n}</span></div>`).join("");
   $("#simgrid").innerHTML = Object.keys(KINDS).map(k=>{
+    const sc = simByKind[k];
     return `<div class="panel"><h3>${esc(KINDS[k])}</h3>`+
+      (sc ? `<p class="note" style="margin:0 0 6px"><b>Scenario:</b> ${esc(sc.title)} — <i>${esc(sc.role)}</i> · ${esc(sc.packName)} · ${esc(sc.track)}
+        <button class="chip link" data-simkind="${k}" aria-label="Open the scenario ${esc(sc.title)}">Run it →</button></p>` : "")+
       D.regions.map(r=>{
         const es = D.entries.filter(e=>e.kind===k && e.region===r.id);
         if (!es.length) return "";
@@ -720,6 +760,10 @@ function renderSims(){
           `<ul class="sitelist">${es.map(e=>`<li><b>${esc(e.family)}</b> — ${esc(e.sim)}.</li>`).join("")}</ul>`;
       }).join("")+`</div>`;
   }).join("");
+  $("#simgrid").querySelectorAll("[data-simkind]").forEach(b=> b.addEventListener("click", ()=>{
+    openSim(b.dataset.simkind, $("#simreg").value || D.regions[0].id);
+    $("#simstudio").scrollIntoView({behavior:"smooth", block:"start"});
+  }));
 }
 
 /* ---------- flipped view ---------- */
@@ -799,7 +843,7 @@ $("#tourback").addEventListener("click", ()=> tourShow(tourAt-1));
 $("#tourend").addEventListener("click", tourEnd);
 
 /* ---------- boot ---------- */
-fillFilters();
+fillFilters(); initStudio();
 renderNetwork(); renderRegions(); renderRoster(); renderSims(); renderFlipped(); renderDistricts();
 ["usearch","uregion","ukind"].forEach(id => {
   $("#"+id).addEventListener("input", renderRoster);

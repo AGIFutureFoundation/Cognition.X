@@ -667,6 +667,7 @@
 </main>
 
 <script id="ladata" type="application/json">__LADATA__</script>
+<script>__CXSIM__</script>
 <script>
 "use strict";
 document.documentElement.lang = "en";
@@ -1925,6 +1926,11 @@ function llSanitize(d){
       out.fs = {events: ev, sinceBreak: Math.max(0, Math.round(Number(l.fs.sinceBreak)) || 0),
                 moves: Math.max(0, Math.round(Number(l.fs.moves)) || 0)};
     }
+    if (Array.isArray(l.practice))
+      out.practice = l.practice.filter(e => e && typeof e === "object").slice(-20).map(e => ({
+        at: String(e.at || "").slice(0, 10), sim: String(e.sim || "").slice(0, 40), title: String(e.title || "").slice(0, 120),
+        site: String(e.site || "").slice(0, 160), pct: Math.max(0, Math.min(100, Math.round(Number(e.pct)) || 0)),
+        difficulty: Math.max(1, Math.min(3, Math.round(Number(e.difficulty)) || 1))}));
     if (Array.isArray(l.evidence))
       out.evidence = l.evidence.filter(e => e && typeof e === "object").slice(-30).map(e => ({
         at: String(e.at || "").slice(0, 10), track: String(e.track || "").slice(0, 160),
@@ -2280,6 +2286,9 @@ const WIDGETS = {
       if (rows.length) html += rows.map(t=>{const n=(me.prog||{})[t.key]||0;
         return `<div style="font-size:.85rem">${esc(t.name)} <span class="mono" style="font-size:.7rem; color:var(--faint)">${n}/50${n>=50?" · ✓ "+esc(t.credential):""}</span>${llMeter(n)}</div>`;}).join("");
       if (st.creds.length) html += `<p class="note" style="margin-top:8px"><b>Credentials:</b> ${st.creds.map(t=>esc(t.credential)).join(" · ")}</p>`;
+      const pr = me.practice || [];
+      if (pr.length) html += `<p class="note" style="margin-top:8px"><b>Studio runs kept as practice:</b> ${pr.length} — latest
+        “${esc(pr[pr.length-1].title)}” at ${pr[pr.length-1].pct}% (difficulty ${pr[pr.length-1].difficulty}). Practice, never checks; nothing here counts toward the 50.</p>`;
     } else {
       html += `<p class="note">No learners in this browser's ledger yet — add yourself above, or seed a demo cohort from the Teacher dashboard.</p>`;
     }
@@ -2415,6 +2424,7 @@ const WIDGETS = {
       wNote(el, "student.journal", "This week I proved…"); wWireNotes(el);
   }},
   {id:"maker", t:"A maker from your parish", r:(p,el)=>{ makerWidget(p, el); }},
+  {id:"studio", t:"The simulation studio — rehearse before the bench", span:true, r:(p,el)=>{ simWidget(p, el, "student"); }},
  ],
  teacher: [
   {id:"class", t:"Class standing — every student at a glance", span:true, r:(p,el)=>{
@@ -2563,6 +2573,7 @@ const WIDGETS = {
     el.innerHTML += `<p class="note">Bench plans, catch-up corners, mentor asks. Stays in this browser.</p>` +
       wNote(el, "teacher.notes", "Next bench session…"); wWireNotes(el);
   }},
+  {id:"studio", t:"The simulation studio — the class's practice runs", span:true, r:(p,el)=>{ simWidget(p, el, "teacher"); }},
  ],
  assessor: [
   {id:"queue", t:"The transfer-check queue", span:true, r:(p,el)=>{
@@ -3423,6 +3434,47 @@ function makerWidget(p, el){
       <button class="btn" id="mk-next">Another maker</button>
       <a class="btn" href="#/makers/${esc(d.id)}/${esc((byName[f.parish]||{}).slug||"")}" style="text-decoration:none">This trade in the Makers' Hall →</a></div>`;
   el.querySelector("#mk-next").addEventListener("click", ()=>{ R.makerIdx = (R.makerIdx|0) + 1; saveR(); });
+}
+
+/* The Simulation Studio (v0.54.0): canonical scenarios from data/simulations/scenarios.json,
+   localized to the parish's region — New Orleans or River Region sites for the trades kinds,
+   the parish itself for the rest. A finished run may be kept on the learner as PRACTICE:
+   it never touches prog, evidence or the queue. Simulation ≠ certification. */
+const SIMS = D.sims || {scenarios:[], sites:{}};
+if (window.CXSIM) CXSIM.configure(SIMS);
+function simSite(sc, p){
+  if (sc.kind){ const reg = (D.regions[p.region]||"").indexOf("New Orleans")>=0 ? "nola" : "br"; return (SIMS.sites[reg]||{})[sc.kind] || sc.site_default; }
+  return p.name + " Parish";
+}
+function simWidget(p, el, role){
+  if (!window.CXSIM || !SIMS.scenarios.length) return;
+  const d = llLoad(); const me = d.learners.find(l=>l.id===R.me);
+  let html = `<p class="note">${esc(SIMS.law)} Every scenario is tied to a real track and carries that track's witnessed transfer
+    check, so the studio can never be mistaken for the check. ${SIMS.scenarios.length} scenarios; the trades kinds run on
+    ${esc(simSite({kind:"port"}, p))} and its neighbours, the rest in ${esc(p.name)} Parish.</p>`;
+  if (role === "teacher"){
+    const ls = d.learners.filter(l=>(l.practice||[]).length);
+    const runs = ls.reduce((s,l)=>s+l.practice.length, 0);
+    html += `<div class="tiles" style="margin:8px 0 10px"><div class="tile t1"><b>${runs}</b><span>studio runs kept</span></div>
+      <div class="tile t2"><b>${ls.length}</b><span>learners who rehearsed</span></div>
+      <div class="tile t3"><b>${runs ? Math.round(ls.reduce((s,l)=>s+l.practice.reduce((a,r)=>a+r.pct,0),0)/runs) : 0}%</b><span>mean score</span></div></div>
+      <p class="note">Practice, never checks. Use the debrief answers in the conversation before the bench; the witnessed check still happens on real material.</p>`;
+    if (ls.length) html += `<div style="font-size:.82rem">${ls.slice(0,12).map(l=>{const r=l.practice[l.practice.length-1];
+      return `<div>${esc(l.name)} — ${l.practice.length} run${l.practice.length>1?"s":""}, latest “${esc(r.title)}” ${r.pct}% · d${r.difficulty}</div>`;}).join("")}</div>`;
+  } else {
+    html += me ? `<p class="note">Runs you keep are attached to <b>${esc(me.name)}</b> as practice — visible to your teacher, never to the Records Office.</p>`
+               : `<p class="note">Add yourself in “My standing” to keep runs as practice; you can rehearse without it.</p>`;
+  }
+  html += `<div id="lasim-${role}"></div>`;
+  el.innerHTML += html;
+  CXSIM.mountLibrary(el.querySelector("#lasim-"+role), SIMS.scenarios, {id:"lasim-pick-"+role, siteFor: sc=>simSite(sc,p), autoOpen:false,
+    onRun: rec => {
+      if (role !== "student") return;
+      const d2 = llLoad(); const l = d2.learners.find(x=>x.id===R.me); if (!l) return;
+      l.practice = (l.practice||[]).slice(-19);
+      l.practice.push({at:rec.at, sim:rec.scenario, title:rec.title, site:rec.site, pct:rec.pct, difficulty:rec.difficulty});
+      llSave(d2);
+    }});
 }
 
 /* State Admin: Louisiana's entry of the 50-state compliance layer (v0.51.0) */

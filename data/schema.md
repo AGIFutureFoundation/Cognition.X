@@ -38,6 +38,10 @@ at one grade band, with a transfer check that proves it.
   descriptions that fill empty fields during normalization
 - `blocks.csv` — canonical dataset: source + generated, with `block_id`
 - `manifest.json` — machine-readable per-pack index
+- `simulations/scenarios.json` — the Simulation Studio fact base
+  (`cx-simulations/1`): branching control-discipline scenarios, each tied
+  to a pack slug + track and carrying that track's witnessed transfer
+  check verbatim; validated by `tools/validate_simulations.py`
 
 Rebuild with `python3 tools/normalize_blocks.py`; check with
 `python3 tools/validate_blocks.py`.
