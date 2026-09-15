@@ -565,6 +565,102 @@ async function testOtherApps(browser, errs) {
   await st.close();
 }
 
+/* ------- the simulation studio (v0.54.0): one engine, six hosts, never a check ------- */
+async function playThrough(page, hostSel) {
+  // click the best-looking first option at every decision until the debrief; no timers to wait on
+  for (let i = 0; i < 12; i++) {
+    const opt = await page.$(hostSel + ' .cxsim-opt:not([disabled])');
+    if (!opt) break;
+    await opt.click(); await page.waitForTimeout(60);
+    const next = await page.$(hostSel + ' .cxsim-next');
+    if (!next) break;
+    await next.click(); await page.waitForTimeout(60);
+  }
+  return page.$(hostSel + ' .cxsim-result');
+}
+async function testSimulationStudio(browser, errs) {
+  // Trades Network: a localized scenario runs end to end and emits cx-simrun/1
+  const tn = await newPage(browser, 'trades/sims', errs);
+  await tn.goto(url('trades-network') + '#/sims'); await tn.waitForTimeout(700);
+  check('studio: trades carries one scenario per category',
+    await tn.evaluate(() => Object.keys(KINDS).every(k => simByKind[k])));
+  await tn.selectOption('#simkind', 'elec'); await tn.selectOption('#simreg', 'nola');
+  await tn.click('#simgo'); await tn.waitForTimeout(200);
+  check('studio: scenario localized to the region site',
+    (await tn.$eval('#simhost', el => el.textContent)).includes('French Quarter feeder'));
+  check('studio: the witnessed check is quoted, and marked as not done here',
+    (await tn.$eval('#simhost .cxsim-transfer', el => el.textContent)).includes('done live with an assessor'));
+  check('studio: plan is deterministic for a seed', await tn.evaluate(() => {
+    const sc = simByKind.elec, a = CXSIM.plan(sc, 3, 'x'), b = CXSIM.plan(sc, 3, 'x'), c = CXSIM.plan(sc, 3, 'y');
+    return a.length === 7 && JSON.stringify(a.map(s => s.id)) === JSON.stringify(b.map(s => s.id)) && a[0].kind === 'step' && a[6].kind === 'step'
+      && (JSON.stringify(a.map(s => s.id)) !== JSON.stringify(c.map(s => s.id)) || true);
+  }));
+  await tn.click('#simhost .cxsim-start'); await tn.waitForTimeout(120);
+  check('studio: five decisions at difficulty 1', (await tn.$eval('#simhost .cxsim-prog', el => el.textContent)).includes('of 5'));
+  check('studio: run ends in a debrief', !!(await playThrough(tn, '#simhost')));
+  await tn.click('#simhost .cxsim-export'); await tn.waitForTimeout(80);
+  const rec = JSON.parse(await tn.$eval('#simhost .cxsim-json', el => el.value));
+  check('studio: cx-simrun/1 record, never a credential, check not done here',
+    rec.format === 'cx-simrun/1' && rec.note.includes('never a credential') && rec.transfer.done_here === false
+      && rec.decisions.length === 5 && rec.max === 10 && rec.pct >= 0 && rec.pct <= 100, JSON.stringify(rec).slice(0, 200));
+  check('studio: next difficulty follows the rule', rec.next === (rec.pct >= 85 ? 2 : 1));
+  await tn.close();
+
+  // Louisiana: a kept run attaches as PRACTICE and changes nothing else on the learner
+  const la = await newPage(browser, 'louisiana/studio', errs);
+  await la.goto(url('louisiana') + '#/roles'); await la.waitForTimeout(700);
+  await la.evaluate(() => { localStorage.removeItem('cxla.ledger'); llSeedDemo(); R.role = 'student'; R.me = 'demo-1'; saveR(); });
+  await la.waitForTimeout(400);
+  const before = await la.evaluate(() => JSON.stringify((llLoad().learners.find(l => l.id === 'demo-1') || {}).prog));
+  check('studio: louisiana student widget present', (await la.$('#lasim-student .cxsim-pick')) !== null);
+  await la.click('#lasim-student .cxsim-open'); await la.waitForTimeout(150);
+  await la.click('#lasim-student .cxsim-start'); await la.waitForTimeout(120);
+  check('studio: louisiana run reaches the debrief', !!(await playThrough(la, '#lasim-student')));
+  await la.click('#lasim-student .cxsim-finish'); await la.waitForTimeout(150);
+  const after = await la.evaluate(() => { const l = llLoad().learners.find(x => x.id === 'demo-1');
+    return { prog: JSON.stringify(l.prog), practice: (l.practice || []).length, evidence: (l.evidence || []).length, queue: (llLoad().queue || []).length }; });
+  check('studio: kept run is practice only — prog, evidence and queue untouched',
+    after.practice === 1 && after.prog === before && after.evidence === 0 && after.queue === 0, JSON.stringify(after));
+  check('studio: practice survives the sanitizer', await la.evaluate(() => (llSanitize(llLoad()).learners.find(l => l.id === 'demo-1').practice || []).length === 1));
+  await la.evaluate(() => { localStorage.removeItem('cxla.ledger'); localStorage.removeItem('cxla.roles'); });
+  await la.close();
+
+  // Platform: the studio lives outside the stages and adds nothing to the count
+  const px = await newPage(browser, 'platform/studio', errs);
+  await px.goto(url('platform') + '#/loop'); await px.waitForTimeout(600);
+  check('studio: platform mounts the demo pack scenario', (await px.$eval('#loop-simhost', el => el.textContent)).includes('Seventy-two hours out'));
+  await px.click('#loop-simhost .cxsim-start'); await px.waitForTimeout(100);
+  await playThrough(px, '#loop-simhost');
+  await px.click('#loop-simhost .cxsim-finish'); await px.waitForTimeout(100);
+  check('studio: platform run keeps the count at 47', (await px.$eval('#loop-status', el => el.textContent)).includes('47/50'));
+  await px.close();
+
+  // States: the anchored scenarios run on the state's own ground
+  const st = await newPage(browser, 'states/studio', errs);
+  await st.goto(url('states') + '#/state/IL'); await st.waitForTimeout(600);
+  check('studio: states lists the anchored scenarios', await st.$$eval('#stsim .cxsim-pick option', o => o.length) === 9);
+  await st.click('#stsim .cxsim-open'); await st.waitForTimeout(120);
+  check('studio: state scenario localized to the state anchor',
+    (await st.$eval('#stsim .cxsim-host', el => el.textContent)).includes('Lake Michigan'));
+  await st.close();
+
+  // Flow Hub: a session on a track with a scenario offers the rehearsal
+  const fh = await newPage(browser, 'flow-hub/studio', errs);
+  await fh.goto(url('flow-hub')); await fh.waitForTimeout(700);
+  await fh.evaluate(() => { go('flow'); const pi = tracked.findIndex(p => p.slug === 'CULINARY'); document.querySelector('#fs-pack').value = String(pi); fillTracks(); document.querySelector('#fs-track').value = '0'; });
+  await fh.click('#fs-start'); await fh.waitForTimeout(200);
+  check('studio: flow hub offers the track rehearsal', await fh.$eval('#simpanel', el => !el.hidden && el.textContent.includes('Friday service')));
+  await fh.click('#simopen'); await fh.waitForTimeout(120);
+  check('studio: flow hub mounts the engine', (await fh.$('#simhost .cxsim-start')) !== null);
+  await fh.close();
+
+  // Education OS: the canonical library sits under the quest simulator
+  const eo = await newPage(browser, 'education-os/studio', errs);
+  await eo.goto(url('education-os') + '#/quest'); await eo.waitForTimeout(2500);
+  check('studio: education os library carries all 18 scenarios', await eo.$$eval('#simlib .cxsim-pick option', o => o.length) === 18);
+  await eo.close();
+}
+
 (async () => {
   const browser = await chromium.launch({
     executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium',
@@ -584,6 +680,7 @@ async function testOtherApps(browser, errs) {
       ['review regressions', testReviewRegressions],
       ['education os boots', testEducationOsBoots],
       ['other apps', testOtherApps],
+      ['simulation studio', testSimulationStudio],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);

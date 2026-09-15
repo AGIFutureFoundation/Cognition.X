@@ -4,6 +4,55 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.54.0] — 2026-09-15
+
+### Added — the Simulation Studio
+- **`data/simulations/scenarios.json`** — a canonical fact base of 18
+  branching control-discipline scenarios (126 decision points, 378
+  options), each tied to a real track in `data/blocks.csv` and carrying
+  that track's witnessed transfer check verbatim so the studio can never
+  be mistaken for the check. Nine scenarios take a trades kind and are
+  localized by the host to a region's publicly known site; the rest take
+  a place anchor. Six disciplines are scored: verify before you act,
+  stop-work authority, say it out loud, the order is the safety,
+  escalate rather than improvise, the person in front of you. The
+  studio law and the run note are carried verbatim.
+- **`tools/sim/engine.js`** — one shared engine injected into all six
+  apps: deterministic (seeded, no `Math.random`), three difficulties
+  (rehearsal, one complication, full drill — complications land at
+  seeded positions), no timers, a live region for consequences, a
+  debrief with the scenario's three questions, and a portable
+  `cx-simrun/1` run record with a next-difficulty recommendation (85%
+  up, under 50% down; advice, never a gate). The engine never touches
+  the network or storage; the host decides what to keep.
+- **Six hosts.** Trades Network: the Simulations view runs any category
+  on any region's real site, and every roster card offers its scenario.
+  Louisiana: a student widget whose kept runs attach to the learner as
+  *practice* — never to progress, evidence or the queue — and a teacher
+  widget with the class's runs; the sanitizer carries practice through
+  import. Platform: the studio sits between stage 2 and stage 3 of the
+  loop, from the demo track's own pack, and adds nothing to the count.
+  Flow Hub: a session on a track with a scenario offers the rehearsal,
+  and pack detail marks the tracks that carry one. States: the nine
+  anchored scenarios run on each state's own water, corridor, table,
+  culture and storm memory. Education OS: the canonical library sits
+  under the quest simulator, loaded ahead of the app.
+- **`tools/validate_simulations.py`** — referential integrity against
+  the dataset (pack, track, transfer block and its check text), exactly
+  one best option per decision, discipline coverage, the honesty lines —
+  run by CI after the dataset validator. `tools/sim_lib.py` is the
+  helper every builder shares. `tests/test_platform.py` holds the
+  engine's stances (no network, no storage, no randomness, no timers)
+  and every app's copy of them; `tests/browser/smoke.js` plays a run to
+  the debrief in every host and proves a kept run changes nothing else.
+- **`docs/SIMULATION.md`** and the wiki page *Simulation Studio*.
+
+### Changed
+- `docs/ROADMAP.md`: the Phase 2 item "Mission simulator: promote from
+  demo to configurable engine driven by pack data" is done; the Phase 4
+  difficulty model exists in first working form (the studio's
+  next-difficulty rule).
+
 ## [0.53.2] — 2026-09-15
 
 ### Documentation

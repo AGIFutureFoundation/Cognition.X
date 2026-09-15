@@ -398,6 +398,7 @@
   </div>
 </main>
 
+<script>__CXSIM__</script>
 <script>
 document.documentElement.lang = "en";
 /* PWA install metadata: a runtime blob manifest + metas. Honest scope —
@@ -591,18 +592,40 @@ function renderState(){
         <p class="note"><b>Table anchor:</b> ${esc(s.table)}.</p>
       </div>
     </div>
+    ${studioPanel(s)}
     ${compliancePanel(s)}
     <div class="pnav">
       <button class="btn" id="stprev">← ${esc(prev.name)}</button>
       <button class="btn" id="stnext">${esc(next.name)} →</button>
       <button class="btn" id="stmap" style="margin-left:auto">Back to the map</button>
     </div>`;
+  mountStudio(s);
   $("#stprev").addEventListener("click", ()=> location.hash="#/state/"+prev.abbr);
   $("#stnext").addEventListener("click", ()=> location.hash="#/state/"+next.abbr);
   $("#stmap").addEventListener("click", ()=> location.hash="#/nation");
   const cl = $("#stcomp"); if (cl) cl.addEventListener("click", ()=> location.hash="#/compliance/"+s.abbr);
   $("#statebody").querySelectorAll("[data-fh]").forEach(b=> b.addEventListener("click",
     ()=> window.open("../flow-hub/index.html#track="+b.dataset.fh, "_blank")));
+}
+
+/* the simulation studio in this state (v0.54.0): the scenarios that take a place anchor,
+   localized to the state's own water, corridor, table, culture and storm memory */
+const SIMS = D.sims || {scenarios:[]};
+if (window.CXSIM) CXSIM.configure(SIMS);
+function studioPanel(s){
+  if (!SIMS.scenarios.length) return "";
+  return `<div class="panel" id="studio">
+    <h3>The simulation studio in ${esc(s.name)}</h3>
+    <p class="note">${esc(SIMS.law)} ${SIMS.scenarios.length} of the platform's ${SIMS.total} scenarios take a place anchor; here
+    they run on ${esc(s.name)}'s own — the water is ${esc(s.water)}; the storm memory is ${esc(s.storm)}. A run is practice; the
+    witnessed check is done live, on the state's real material.</p>
+    <div id="stsim"></div></div>`;
+}
+function mountStudio(s){
+  const host = $("#stsim"); if (!host || !window.CXSIM) return;
+  const anchor = {water:s.water, corridor:s.corridor, table:s.table, culture:s.culture, storm:s.storm};
+  CXSIM.mountLibrary(host, SIMS.scenarios, {id:"stsim-pick", autoOpen:false, seed:"state-"+s.abbr,
+    siteFor: sc => anchor[sc.localize] || sc.site_default});
 }
 
 /* blueprint + institute */

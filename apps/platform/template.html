@@ -138,6 +138,14 @@
       <span class="note" style="margin:0" id="loop-status" aria-live="polite"></span>
     </div>
     <div id="stages"></div>
+    <div class="panel" id="loop-studio" style="margin-top:18px">
+      <h3>Between stage 2 and stage 3 — the simulation studio</h3>
+      <p class="note">The same engine every app carries (v0.54.0): a scenario from the demo track's own pack, played here
+      on the real mechanics — seeded, no timer, scored on six control disciplines, ending in a
+      <span class="mono">cx-simrun/1</span> record. Run it before the witnessed checks if you like. <b>It adds nothing to
+      the count.</b> The check is done live with an assessor; the studio rehearses judgement.</p>
+      <div id="loop-simhost"></div>
+    </div>
   </section>
 
   <section class="view" id="view-apps">
@@ -194,6 +202,7 @@ python3 tools/evidence_triage.py      # the loop's return path</div></div>
   </div>
 </main>
 
+<script>__CXSIM__</script>
 <script>
 document.documentElement.lang = "en";
 const D = __PXDATA__;
@@ -437,7 +446,17 @@ const STAGES = [
      people — to shaping what gets revised. That is the working model of Cognition.X.</p>`;
  }},
 ];
+/* the studio panel is mounted once and lives outside the stage re-render */
+let studioMounted = false;
+function mountStudio(){
+  if (studioMounted || !window.CXSIM || !D.sims || !D.sims.scenarios.length) return;
+  CXSIM.configure(D.sims);
+  CXSIM.mount($("#loop-simhost"), D.sims.scenarios[0], {site: D.sims.site, seed: "platform-demo",
+    onRun: rec => { $("#loop-status").textContent = "Studio run kept as practice (" + rec.pct + "%) — the count is still " + (M.learner ? M.learner.prog : 47) + "/50."; }});
+  studioMounted = true;
+}
 function render(){
+  mountStudio();
   const host = $("#stages");
   host.innerHTML = "";
   STAGES.forEach((s,i)=>{

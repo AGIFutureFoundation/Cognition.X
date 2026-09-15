@@ -1344,6 +1344,10 @@ renderers.quest=function(){
   $('#qbadge').innerHTML=`<div class="badge"><div class="seal">G2FC</div><div><div class="eyebrow">Verifiable credential · issued by the pilot school · countersign: Teacher Leader</div><b>${esc(current.title)}</b><div class="small" style="color:var(--ink2)">${current.skills.map(esc).join(' · ')}</div><div class="mono small muted">tx_${tx} · ${attempts} attempt(s) · evidence hash on-chain, PII off-chain</div></div></div>`;
   $('#choices').innerHTML=`<button class="btn primary" id="qnext">Next mission from the engine</button>`;$('#qnext').onclick=()=>start(missionFor(difficulty()).id);toast('Credential issued');}
  v.querySelectorAll('#qtabs .tab').forEach(t=>t.onclick=()=>start(t.dataset.q));prof();start(missionFor(difficulty()).id);
+ /* the canonical simulation studio (v0.54.0): scenarios from data/simulations/scenarios.json, injected by the builder as window.CX_SIM_STUDIO ahead of the app */
+ if(window.CXSIM&&window.CX_SIM_STUDIO&&window.CX_SIM_STUDIO.scenarios){const S=window.CX_SIM_STUDIO;CXSIM.configure(S);
+  const sec=el('div','card');sec.style.marginTop='20px';sec.innerHTML=`<div class="eyebrow">Simulation studio · ${S.scenarios.length} canonical scenarios · the same engine every Cognition.X app carries</div><h3 style="margin:6px 0 8px">Branching control-discipline scenarios, driven by pack data</h3><p class="small muted">${esc(S.law)} Each scenario is tied to a real track and carries that track's witnessed transfer check verbatim. A run ends in a cx-simrun/1 record; it is practice, never a credential — unlike the reference missions above, nothing here is issued to a wallet.</p><div id="simlib"></div>`;
+  v.appendChild(sec);CXSIM.mountLibrary($('#simlib'),S.scenarios,{id:'eos-sim-pick',autoOpen:false,seed:'education-os'});}
 };
 
 /* ---------- IMMERSION ---------- */

@@ -17,6 +17,11 @@ plus the canonical dataset — never hand-edit `index.html`.
 
 ## Surfaces
 
+> **v0.54.0:** the Simulations view is runnable — pick a category and a
+> region and the studio engine plays that category's scenario on the
+> region's own site; every roster card offers its scenario. See
+> [[Simulation Studio]].
+
 - **The Network** — totals, the three-region arc map, the learner's
   five-step path (flipped lesson → simulation studio → bench & transfer
   check → the hall → the pathway is the learner's).

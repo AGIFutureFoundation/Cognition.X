@@ -301,6 +301,12 @@
               <button class="btn" id="fs-complete">Mark transfer check complete</button>
               <button class="btn" id="fs-end">End session</button>
             </div>
+            <div class="panel" id="simpanel" hidden style="margin-top:14px">
+              <h3>Rehearse this track in the simulation studio</h3>
+              <p class="lede" style="font-size:.84rem; margin:0 0 8px" id="simlede"></p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin:0 0 10px"><button class="btn" id="simopen">Open the scenario</button></div>
+              <div id="simhost"></div>
+            </div>
           </div>
         </div>
 
@@ -401,6 +407,7 @@
 </div>
 
 <script id="cxdata" type="application/json">__CXDATA__</script>
+<script>__CXSIM__</script>
 <script>
 "use strict";
 document.documentElement.lang = "en";
@@ -677,7 +684,9 @@ function renderPackDetail(p){
          search above to find them.</p>` : "";
     return practice + p.tracks.map((t, tj) => {
       const done = S.done[trackKey(p,t)] || {};
+      const sim = simsFor(p, t)[0];
       return `<div class="trackhead"><h3>${esc(t.name)}</h3><span class="cred">${esc(t.credential)}</span>` +
+      (sim ? `<span class="chip" title="A studio scenario is tied to this track">🎛 studio: ${esc(sim.title)}</span>` : "") +
       `<span class="meta mono" style="color:var(--faint); font-size:.74rem">${t.prefix}-1…${t.prefix}-50</span>` +
       `<button class="chip" data-wb="${DATA.packs.indexOf(p)}|${tj}" title="Print this track as a paper workbook">🖨 Workbook</button></div>` +
       `<div class="themelist">` + t.themes.map((th,ti) =>
@@ -697,6 +706,20 @@ function renderPackDetail(p){
     `</tbody></table></div>`;
 }
 $("#packsearch").addEventListener("input", e => { packFilter.q = e.target.value; renderPacks(); });
+
+/* ---------- the simulation studio (v0.54.0): scenarios keyed by pack slug + track ---------- */
+const SIMS = DATA.sims || {scenarios:[]};
+if (window.CXSIM) CXSIM.configure(SIMS);
+const simsFor = (p, t) => SIMS.scenarios.filter(s => s.pack === p.slug && (!t || s.track === t.name));
+function showSimPanel(p, t){
+  const panel = $("#simpanel"); if (!panel) return;
+  const scs = simsFor(p, t);
+  if (!scs.length || !window.CXSIM){ panel.hidden = true; return; }
+  panel.hidden = false; $("#simhost").innerHTML = "";
+  $("#simlede").textContent = `“${scs[0].title}” — ${scs[0].role}. ${SIMS.run_note}`;
+  $("#simopen").onclick = () => CXSIM.mount($("#simhost"), scs[0], {seed: trackKey(p,t),
+    onRun: rec => log("Archivist", `Studio run kept as practice on “${t.name}” — ${rec.pct}% at difficulty ${rec.difficulty}. Practice, never a check.`)});
+}
 
 /* ---------- FLOW view ---------- */
 let F = null;  // live session
@@ -721,6 +744,7 @@ $("#fs-start").addEventListener("click", () => {
   S.skills[F.key] = skill; save();
   $("#flowsetup").hidden = true; $("#flowlive").hidden = false;
   log("Pathfinder", `Session opened on “${t.name}” (${p.name}) at ${BANDS[skill-1]}.`);
+  showSimPanel(p, t);
   nextBlock();
 });
 function pickTheme(){
