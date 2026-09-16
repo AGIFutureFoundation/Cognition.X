@@ -58,14 +58,14 @@ statement, incident runbook, records custody), and the register names
 each item with an owner and a next step.
 
 **What remains open in the software itself** (register status *partial*
-or *open*): durable IndexedDB state for ledgers with quota errors
-surfaced; a hosting-hardening guide for districts that serve the apps
-over https; an SBOM and signed releases; a one-click records-custody
-bundle; OSHA-10 and employment-certificate lines in the Trade Hall
-checklist; a CISA-aligned answer table for district questionnaires.
+or *open*): a hosting-hardening guide for districts that serve the apps
+over https; an SBOM and signed releases; a CISA-aligned answer table for
+district questionnaires; trust and revocation lists still in local
+storage. (Durable IndexedDB ledger state, the records-custody bundle and
+the hall checklist shipped in v0.58.0.)
 
-Counts from the register at this release: 44 controls — 23 met, 10
-partial, 11 open. Every open item has a wave and an owner below.
+Counts from the register at v0.58.0: 44 controls — 25 met, 15 partial,
+4 open. Every open item has a wave and an owner below.
 
 ## 3. Recommendations
 
@@ -122,11 +122,11 @@ Ordered by how much risk they retire per unit of work.
 
 | Item | Owner | Acceptance |
 |---|---|---|
-| Ledger and queue in IndexedDB behind the existing accessors, one-time migration, quota errors surfaced (roadmap prompt 9) | software | cohort-sized ledger saves and reloads; a simulated quota failure is reported; smoke covers migration |
-| One-click records-custody bundle (ledger + issued records + trust list, dated) | software | the bundle exports from State Admin and the Records Office widget; custody statement references it |
+| Ledger and queue in IndexedDB behind the existing accessors, one-time migration, quota errors surfaced (roadmap prompt 9) | software | **done, v0.58.0** — a 400-learner ledger saves and reloads; a simulated quota failure is reported and the ledger reloads from IndexedDB; `testDurableLedger` |
+| One-click records-custody bundle (ledger + office public key + trust and revocation lists + checklists, dated) | software | **done, v0.58.0** — exports from the Records Office and Parish Admin; never the private key; the custody statement names it |
 | `docs/HOSTING.md` with header examples; a Playwright check against a hosted copy | software | hosted copy passes the same CSP, referrer and no-request checks as the file |
 | CycloneDX SBOM from the build; signed release tags | software | `tools/sbom.py` in CI; tags verifiable |
-| Trade Hall checklist gains OSHA 10, the fire-marshal walkthrough, the employment-certificate step, the two-adult rule | software (LAUNCH pack) | the LAUNCH pack's hall track carries the lines; the register's FD-04, ST-06, PA-02, LO-01 move to *met* on the software side |
+| Hall safety & compliance checklist: the thirteen wave-3 operating controls per parish, exported with the bundle | software | **done, v0.58.0** — in the parish dashboard and Parish Admin; the register's adopter controls carry it as evidence and move from *open* to *partial* |
 | CISA K–12 vendor summary table | software | one page mapping the register to CISA's K–12 questions |
 
 ### Wave 3 — the adopter's operating controls (first cohort)

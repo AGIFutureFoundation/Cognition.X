@@ -119,8 +119,9 @@ term is a proposal until counsel has papered it.
 
 ## What remains
 
-- Durable learner state in IndexedDB with quota errors surfaced (roadmap
-  prompt 9; the office key moved there in v0.57.0).
+- Trust and revocation lists still live in localStorage (the ledger and the
+  office key moved to IndexedDB in v0.57.0–v0.58.0, with quota failures
+  surfaced).
 - First-party hosting over https, which gives each app its own origin
   (finding 8) and makes the PWA installable; the single file stays the
   primary packaging.

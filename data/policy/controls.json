@@ -338,18 +338,22 @@
    "level": "platform",
    "domain": "records",
    "title": "Records custody statement for public bodies",
-   "requirement": "A hall or school that keeps a ledger holds a record under its own retention schedule; the export is the custody mechanism.",
+   "requirement": "A one-click cx-custody/1 bundle — ledger, office public key, trust and revocation lists, readiness and hall checklists, dated — exports from the Records Office and Parish Admin; the custody statement names it.",
    "source": "Louisiana Public Records Law R.S. 44:1 et seq.; state records-retention schedules",
    "owner": "software",
-   "status": "partial",
+   "status": "met",
    "evidence": [
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
+    },
     {
      "type": "doc",
      "ref": "docs/templates/RECORDS_CUSTODY_STATEMENT.md"
     }
    ],
    "wave": 2,
-   "next": "Add an 'export all for records custody' one-click bundle (ledger + issued records + trust list) in the Louisiana app."
+   "next": "Keep."
   },
   {
    "id": "PL-17",
@@ -404,18 +408,18 @@
    "level": "platform",
    "domain": "security",
    "title": "Durable learner state and quota handling",
-   "requirement": "Ledgers live in localStorage, which is size-limited and silently lossy; write failures are surfaced, not yet durable.",
+   "requirement": "The ledger and queue are kept in IndexedDB behind the existing accessors with localStorage as the compatibility copy; a quota failure is reported to the user and the ledger reloads from IndexedDB; a cohort-sized ledger saves and reloads whole.",
    "source": "CIS 11 (data recovery)",
    "owner": "software",
-   "status": "partial",
+   "status": "met",
    "evidence": [
     {
-     "type": "doc",
-     "ref": "docs/NEXT_STEPS_OPUS5.md"
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 2,
-   "next": "Roadmap prompt 9: IndexedDB for the ledger with a one-time migration; quota errors reported to the user."
+   "next": "Trust and revocation lists stay in localStorage (small); move them if a hall's list outgrows it."
   },
   {
    "id": "PL-20",
@@ -492,10 +496,14 @@
     {
      "type": "doc",
      "ref": "docs/COMPLIANCE_ROADMAP.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 1,
-   "next": "Each Trade Hall station posts its youth line; the hall keeps the written student-learner agreements where an exemption is used."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Each Trade Hall station posts its youth line; the hall keeps the written student-learner agreements where an exemption is used."
   },
   {
    "id": "FD-04",
@@ -505,15 +513,19 @@
    "requirement": "Halls follow OSHA general-industry and construction rules for any live station; OSHA 10 for trainees is the customary floor.",
    "source": "29 CFR 1910 / 1926; OSHA Outreach Training",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
     {
      "type": "doc",
      "ref": "docs/COMPLIANCE_ROADMAP.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 2,
-   "next": "Add OSHA 10 as a hall-readiness requirement in the LAUNCH pack's Trade Hall checklist."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Add OSHA 10 as a hall-readiness requirement in the LAUNCH pack's Trade Hall checklist."
   },
   {
    "id": "FD-05",
@@ -594,10 +606,14 @@
     {
      "type": "doc",
      "ref": "docs/STATE_COMPLIANCE.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 1,
-   "next": "Name the incident lead and the district's reporting line in the runbook before the first cohort."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Name the incident lead and the district's reporting line in the runbook before the first cohort."
   },
   {
    "id": "ST-03",
@@ -630,10 +646,14 @@
     {
      "type": "test",
      "ref": "test_state_compliance_layer"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 1,
-   "next": "Keep the check log with the hall's records."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Keep the check log with the hall's records."
   },
   {
    "id": "ST-05",
@@ -661,15 +681,19 @@
    "requirement": "Minors under 18 need an employment certificate (work permit) for paid work in Louisiana; unpaid classroom studio time is not employment, a paid apprenticeship is.",
    "source": "La. R.S. 23:151 et seq.",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
     {
      "type": "doc",
      "ref": "docs/COMPLIANCE_ROADMAP.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 2,
-   "next": "Add the certificate step to the union-partnership track when a placement becomes paid."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Add the certificate step to the union-partnership track when a placement becomes paid."
   },
   {
    "id": "ST-07",
@@ -684,10 +708,14 @@
     {
      "type": "doc",
      "ref": "docs/templates/RECORDS_CUSTODY_STATEMENT.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 2,
-   "next": "Map the ledger, the issued records and the evidence exports to the district's retention schedule; keep the custody statement on file."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Map the ledger, the issued records and the evidence exports to the district's retention schedule; keep the custody statement on file."
   },
   {
    "id": "ST-08",
@@ -733,15 +761,19 @@
    "requirement": "Hall devices running the apps are parish assets under the parish's policy: screen lock, disk encryption, no shared accounts, backups by export.",
    "source": "Parish IT policy; CIS 4.x, 3.6 (encryption at rest)",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
     {
      "type": "doc",
      "ref": "docs/COMPLIANCE_ROADMAP.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 1,
-   "next": "Write the hall's device sheet: encryption on, auto-lock 5 minutes, one profile per assessor, weekly ledger export to the parish share."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Write the hall's device sheet: encryption on, auto-lock 5 minutes, one profile per assessor, weekly ledger export to the parish share."
   },
   {
    "id": "PA-02",
@@ -751,15 +783,19 @@
    "requirement": "A hall in a parish-owned room meets the fire marshal's occupancy, egress and extinguisher rules; the studio law keeps hot, suspended and moving work out of the room.",
    "source": "Louisiana State Fire Marshal (R.S. 40:1561 et seq.); NFPA 101 as adopted",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
     {
      "type": "doc",
      "ref": "docs/COMPLIANCE_ROADMAP.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 1,
-   "next": "Fire-marshal walkthrough before the first session; post occupancy; extinguisher types matched to the stations."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Fire-marshal walkthrough before the first session; post occupancy; extinguisher types matched to the stations."
   },
   {
    "id": "PA-03",
@@ -769,15 +805,19 @@
    "requirement": "General liability and, where apprentices are paid, workers' compensation; volunteers covered by the parish's or the nonprofit's policy.",
    "source": "Parish risk management; La. R.S. 23:1021 et seq.",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
     {
      "type": "doc",
      "ref": "docs/COMPLIANCE_ROADMAP.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 1,
-   "next": "Confirm coverage in writing before the first cohort."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Confirm coverage in writing before the first cohort."
   },
   {
    "id": "PA-04",
@@ -787,15 +827,19 @@
    "requirement": "A memorandum of understanding between the program office, the parish and the district names the room, the schedule, the custody of records and the incident line.",
    "source": "Parish council / school board authority",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
     {
      "type": "doc",
      "ref": "docs/templates/RECORDS_CUSTODY_STATEMENT.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 1,
-   "next": "Draft the MOU from the three templates; put it on the next agenda."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Draft the MOU from the three templates; put it on the next agenda."
   },
   {
    "id": "LO-01",
@@ -805,15 +849,19 @@
    "requirement": "Hall sessions with minors keep the district's supervision ratio, a sign-in sheet, and two-adult rule.",
    "source": "District and municipal youth-program rules",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
     {
      "type": "doc",
      "ref": "docs/COMPLIANCE_ROADMAP.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 1,
-   "next": "Use the LAUNCH pack's session record; add ratio and two-adult lines."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Use the LAUNCH pack's session record; add ratio and two-adult lines."
   },
   {
    "id": "LO-02",
@@ -846,10 +894,14 @@
     {
      "type": "doc",
      "ref": "docs/templates/DATA_PROCESSING_STATEMENT.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 1,
-   "next": "Submit the statement with the district's DPA; ask the district to list the apps as approved offline tools."
+   "next": "Software: the hall checklist carries this control per parish and exports with the custody bundle (v0.58.0). Adopter: Submit the statement with the district's DPA; ask the district to list the apps as approved offline tools."
   },
   {
    "id": "DI-02",

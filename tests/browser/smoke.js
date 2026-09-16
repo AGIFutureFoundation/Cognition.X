@@ -772,6 +772,50 @@ async function testOfficeKeyNonExtractable(browser, errs) {
   await st.close();
 }
 
+/* ------- v0.58.0: durable ledger (IndexedDB), quota failure surfaced, custody bundle, hall checklist ------- */
+async function testDurableLedger(browser, errs) {
+  const la = await newPage(browser, 'la/durable', errs);
+  await la.goto(url('louisiana') + '#/roles'); await la.waitForTimeout(800);
+  // a cohort-sized ledger saves and reloads whole
+  const big = await la.evaluate(async () => {
+    localStorage.removeItem('cxla.ledger'); await new Promise(r => { const q = indexedDB.deleteDatabase('cxla.ledgerdb'); q.onsuccess = q.onerror = q.onblocked = () => r(); });
+    LL.cache = null;
+    const d = { learners: [], queue: [] };
+    for (let i = 0; i < 400; i++) d.learners.push({ id: 'c' + i, name: 'Learner ' + i, band: i % 5, prog: { [LTRACKS[i % LTRACKS.length].key]: i % 51 },
+      evidence: Array.from({ length: 12 }, (_, k) => ({ at: '2026-09-16', track: 'T', by: 'assessor', note: 'note '.repeat(20), result: k % 3 ? 'confirmed' : 'not yet' })) });
+    llSave(d); await new Promise(r => setTimeout(r, 300));
+    const rec = await ldbGet('ledger');
+    return { n: JSON.parse(rec.json).learners.length, bytes: rec.json.length };
+  });
+  check('durable: a 400-learner ledger is written to IndexedDB', big.n === 400 && big.bytes > 500000, JSON.stringify(big));
+  await la.reload(); await la.waitForTimeout(900);
+  check('durable: it reloads whole', await la.evaluate(() => llLoad().learners.length === 400));
+  // a localStorage quota failure is surfaced and the ledger still survives a reload from IndexedDB
+  const quota = await la.evaluate(async () => {
+    const orig = Storage.prototype.setItem;
+    Storage.prototype.setItem = function (k, v) { if (k === 'cxla.ledger') throw new DOMException('quota', 'QuotaExceededError'); return orig.call(this, k, v); };
+    const d = llLoad(); d.learners.push({ id: 'after-quota', name: 'After Quota', band: 2, prog: {} });
+    const ok = llSave(d); await new Promise(r => setTimeout(r, 300));
+    Storage.prototype.setItem = orig;
+    localStorage.removeItem('cxla.ledger');   // the compatibility copy is gone; IndexedDB must carry it
+    const note = (document.getElementById('cx-ledgernote') || {}).textContent || '';
+    return { ok, note };
+  });
+  check('durable: the quota failure is reported, not swallowed', quota.ok === false && /IndexedDB/.test(quota.note), quota.note.slice(0, 80));
+  await la.reload(); await la.waitForTimeout(900);
+  check('durable: the ledger written after the quota failure reloads from IndexedDB', await la.evaluate(() => llLoad().learners.some(l => l.id === 'after-quota') && llLoad().learners.length === 401));
+  // the custody bundle: everything the custodian keeps, never the private key
+  const bundle = await la.evaluate(async () => { await issuerForget(); await issuerCreate('Bundle Office'); const b = await custodyBundle(D.parishes[0]); return { fmt: b.format, learners: b.ledger.learners.length, pub: !!(b.recordsOffice && b.recordsOffice.publicKey && b.recordsOffice.publicKey.x), hasD: JSON.stringify(b).includes('"d":'), hall: b.hallChecklist.length, ready: b.readiness.length }; });
+  check('custody: bundle carries the ledger, the public key, the checklists and never the private key', bundle.fmt === 'cx-custody/1' && bundle.learners === 401 && bundle.pub && !bundle.hasD && bundle.hall === 13 && bundle.ready === 5, JSON.stringify(bundle));
+  // the hall checklist persists per parish
+  await la.evaluate(() => { R.role = 'parishadmin'; saveR(); }); await la.waitForTimeout(400);
+  check('hall checklist: thirteen operating controls render for the parish admin', await la.$$eval('#ra-hall input[data-hi]', els => els.length) === 13);
+  await la.click('#ra-hall input[data-hi="6"]'); await la.waitForTimeout(150);
+  check('hall checklist: a checked control is kept per parish', await la.evaluate(() => { const k = Object.keys(localStorage).find(x => x.startsWith('cxla.hallcheck.')); return !!k && JSON.parse(localStorage.getItem(k))[6] === true && (document.querySelector('#ra-hall .kv b') || {}).textContent.startsWith('1/13'); }));
+  await la.evaluate(async () => { await issuerForget(); localStorage.removeItem('cxla.ledger'); localStorage.removeItem('cxla.roles'); Object.keys(localStorage).filter(k => k.startsWith('cxla.hallcheck.')).forEach(k => localStorage.removeItem(k)); await new Promise(r => { const q = indexedDB.deleteDatabase('cxla.ledgerdb'); q.onsuccess = q.onerror = q.onblocked = () => r(); }); });
+  await la.close();
+}
+
 (async () => {
   const browser = await chromium.launch({
     executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium',
@@ -795,6 +839,7 @@ async function testOfficeKeyNonExtractable(browser, errs) {
       ['compliance review', testComplianceReview],
       ['standards and rubrics', testStandardsAndRubrics],
       ['office key and wave one', testOfficeKeyNonExtractable],
+      ['durable ledger and custody bundle', testDurableLedger],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);

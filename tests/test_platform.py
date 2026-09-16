@@ -566,6 +566,7 @@ def test_security_compliance_register():
         check(f"templates: {t} exists and is not legal advice", "Not legal advice" in (ROOT / "docs" / "templates" / f"{t}.md").read_text(encoding="utf-8"))
     la = app_html("louisiana")
     check("louisiana: private key never exported (no extractable sign key)", 'namedCurve:"P-256"}, true, ["sign"]' not in la and 'generateKey({name:"ECDSA", namedCurve:"P-256"}, false' in la)
+    check("louisiana: durable ledger store and custody bundle present", "cxla.ledgerdb" in la and "cx-custody/1" in la and "HALL_REQS" in la)
     road = (ROOT / "docs" / "COMPLIANCE_ROADMAP.md").read_text(encoding="utf-8")
     check("COMPLIANCE_ROADMAP.md states the register counts", f"{len(reg['controls'])} controls" in road)
 

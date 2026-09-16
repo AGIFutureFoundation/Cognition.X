@@ -16,7 +16,7 @@ When a public body's staff record witnessed checks, issue signed credential reco
 
 ## 3. Custody practice
 
-1. Export the ledger from every device to the secured share on a fixed schedule: [weekly].
+1. Export the **records-custody bundle** (Parish Admin → *Export records-custody bundle*, or the Records Office widget) from every device to the secured share on a fixed schedule: [weekly]. The bundle is one dated `cx-custody/1` file: the ledger, the office's public key, trust and revocation lists, and the readiness and hall checklists.
 2. Keep issued credential records with the ledger export of the same date.
 3. Keep the office's **public** key and every published trust and revocation list with the records; the private key is non-extractable by design and is not a record.
 4. Apply the retention series to the exports; when the series expires, erase the device copies from the app's notice and delete the exports under the schedule.
