@@ -351,7 +351,7 @@ to the user, not silently dropped; existing browsers migrate without loss;
 
 ---
 
-## 10 — The v1.0 gate: make the operational checklist executable
+## 10 — The v1.0 gate: make the operational checklist executable *(done in v0.61.0 — BOARD_PACKET.md, COHORT_ONBOARDING.md, CONSENT_FORM.md, tools/cohort_report.py)*
 
 **Why.** `docs/ROADMAP.md` ends with four operational steps to v1.0 —
 seat the review board, recruit a named external cohort, exchange

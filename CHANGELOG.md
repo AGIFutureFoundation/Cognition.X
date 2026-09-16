@@ -4,6 +4,34 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.61.0] — 2026-09-16
+
+### Added — the v1.0 gate made executable (roadmap step ⑦)
+- **`docs/BOARD_PACKET.md`** — the Curriculum Review Board's
+  first-meeting packet, generated from the repository's own data: the
+  agenda, the six-point checklist as a working form, the first decision
+  (the 24 proposed credential names from v0.52.0, listed), the standing
+  queue of the 22 generated packs (6,160 blocks) in the governance
+  order with reviewer and sitting columns, what the board receives at
+  every later sitting, and the gate restated. Held to the dataset by
+  the tests.
+- **`docs/COHORT_ONBOARDING.md`** — the path a hall, class or co-op
+  follows: verify the release, meet the thirteen operating controls,
+  create the office, enrol with a nickname, run one track to the
+  credential, export the custody bundle weekly, exchange keys
+  out-of-band with the confirmation step, issue the record, send
+  evidence by hand. Every claim matches the code.
+- **`docs/templates/CONSENT_FORM.md`** — a consent sheet a family can
+  read; the "what the software does" paragraphs are held true by the
+  tests (nothing is sent and the browser blocks it; nickname, band and
+  chosen supports only; aggregate export optional and nameless;
+  simulation is practice).
+- **`tools/cohort_report.py`** — turns collected `cx-evidence/1` files
+  into the board's packet: the cohort at a glance, every track with its
+  witnessed rate and rubric, revision priorities, unreported tracks,
+  the standing-queue status of the packs used, and the v1.0 gate status
+  as a form. Reuses `evidence_triage.py`.
+
 ## [0.60.0] — 2026-09-16
 
 ### Added — Open Badges 3.0 / W3C VC 2.0 envelopes (roadmap step ⑥)
