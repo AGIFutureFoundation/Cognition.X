@@ -849,6 +849,66 @@ async function testHostedCopy(browser, errs) {
   } finally { if (srv) srv.kill(); }
 }
 
+/* ------- v0.60.0: the Open Badges 3.0 envelope — same key, same rid, four grades, and the command-line verifier ------- */
+async function testOpenBadgeEnvelope(browser, errs) {
+  const fs = require('fs'), os = require('os'), { execFileSync } = require('child_process');
+  const page = await newPage(browser, 'la/openbadge', errs);
+  await page.goto(url('louisiana')); await page.waitForTimeout(700);
+  await page.evaluate(async () => { await issuerForget(); const d = llLoad(); d.learners = [{ id: 'ob', name: 'Badge Learner', band: 4, prog: { [LTRACKS[0].key]: 50 } }]; d.queue = []; llSave(d);
+    localStorage.removeItem('cxla.trust'); localStorage.removeItem('cxla.revlists'); localStorage.removeItem('cxla.revoked'); location.hash = '#/roles'; });
+  await page.waitForTimeout(400);
+  await page.click('#rolechips [data-role="parishadmin"]'); await page.waitForTimeout(400);
+  await page.fill('#ro-name', 'Badge Hall Records Office'); await page.click('#ro-create'); await page.waitForTimeout(500);
+  await page.click('#ro-issue-ob'); await page.waitForTimeout(700);
+  const jwt = await page.$eval('#ro-out', el => el.value);
+  const parts = jwt.split('.');
+  const dec = s => JSON.parse(Buffer.from(s.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString('utf8'));
+  const header = dec(parts[0]), vc = dec(parts[1]);
+  check('ob3: compact vc+jwt with ES256 and a did:jwk kid', parts.length === 3 && header.alg === 'ES256' && header.typ === 'vc+jwt' && /^did:jwk:.+#0$/.test(header.kid));
+  check('ob3: OpenBadgeCredential with the OB 3.0 and VC 2.0 contexts', vc.type.includes('OpenBadgeCredential') && vc['@context'][0] === 'https://www.w3.org/ns/credentials/v2' && /purl\.imsglobal\.org\/spec\/ob\/v3p0/.test(vc['@context'][1]));
+  check('ob3: pseudonymous subject, achievement, honest narrative and the embedded native payload', vc.credentialSubject.identifier[0].identityHash === 'Badge Learner' && vc.credentialSubject.identifier[0].hashed === false && !vc.credentialSubject.id
+    && vc.credentialSubject.achievement.name === vc.name && /out-of-band|witnessed|practice log/.test(vc.credentialSubject.achievement.criteria.narrative) && vc['cx:record'].format === 'cx-credential/1' && vc.id === 'urn:uuid:' + vc['cx:record'].rid);
+  check('ob3: did:jwk carries the public key only', !JSON.stringify(dec(header.kid.replace(/^did:jwk:/, '').replace(/#.*$/, ''))).includes('"d"'));
+  // grade 1 — valid, untrusted
+  await page.fill('#ro-in', jwt); await page.click('#ro-verify'); await page.waitForTimeout(400);
+  check('ob3: verifies in the app as valid, key not trusted', (await page.$eval('#ro-result', el => el.textContent)).includes('key not trusted'));
+  // grade 2 — tamper
+  const tampered = parts[0] + '.' + Buffer.from(JSON.stringify({ ...vc, name: 'Forged' })).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '') + '.' + parts[2];
+  await page.fill('#ro-in', tampered); await page.click('#ro-verify'); await page.waitForTimeout(400);
+  check('ob3: a tampered envelope is invalid', (await page.$eval('#ro-result', el => el.textContent)).includes('Invalid'));
+  // grade 3 — trusted by name
+  await page.click('#ro-pub'); await page.waitForTimeout(300);
+  const pub = await page.$eval('#ro-out', el => el.value);
+  await page.fill('#ro-trust-in', pub); await page.click('#ro-trust-add'); await page.waitForTimeout(300);
+  await page.fill('#ro-in', jwt); await page.click('#ro-verify'); await page.waitForTimeout(400);
+  check('ob3: trusted-office grade by name', (await page.$eval('#ro-result', el => el.textContent)).includes('Badge Hall'));
+  // grade 4 — the native revocation list revokes the envelope (same rid)
+  await page.fill('#ro-rev-id', vc['cx:record'].rid); await page.fill('#ro-rev-reason', 'issued in error');
+  await page.click('#ro-rev-add'); await page.waitForTimeout(300);
+  await page.click('#ro-rev-export'); await page.waitForTimeout(500);
+  const revDoc = await page.$eval('#ro-out', el => el.value);
+  await page.fill('#ro-in', jwt); await page.click('#ro-verify'); await page.waitForTimeout(400);
+  check('ob3: revoked by the native list, same rid', (await page.$eval('#ro-result', el => el.textContent)).includes('Revoked'));
+  // the command-line verifier agrees on both forms
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'cxv-'));
+  fs.writeFileSync(path.join(dir, 'badge.jwt'), jwt); fs.writeFileSync(path.join(dir, 'trust.json'), pub); fs.writeFileSync(path.join(dir, 'rev.json'), revDoc);
+  const run = args => { try { return { out: execFileSync('node', [path.join(ROOT, 'tools', 'verify_record.js'), ...args], { encoding: 'utf8' }), code: 0 }; } catch (e) { return { out: String(e.stdout || ''), code: e.status }; } };
+  const v1 = run([path.join(dir, 'badge.jwt')]);
+  check('cli: VALID for the untrusted envelope', v1.code === 0 && v1.out.startsWith('VALID'), v1.out.slice(0, 60));
+  const v2 = run([path.join(dir, 'badge.jwt'), '--trust', path.join(dir, 'trust.json')]);
+  check('cli: TRUSTED with the trust list', v2.code === 0 && v2.out.startsWith('TRUSTED'), v2.out.slice(0, 60));
+  const v3 = run([path.join(dir, 'badge.jwt'), '--revocations', path.join(dir, 'rev.json')]);
+  check('cli: REVOKED with the signed list', v3.code === 2 && v3.out.startsWith('REVOKED'), v3.out.slice(0, 60));
+  await page.click('#ro-issue'); await page.waitForTimeout(500);
+  fs.writeFileSync(path.join(dir, 'record.json'), await page.$eval('#ro-out', el => el.value));
+  const v4 = run([path.join(dir, 'record.json'), '--trust', path.join(dir, 'trust.json')]);
+  check('cli: native record TRUSTED too', v4.code === 0 && v4.out.startsWith('TRUSTED'), v4.out.slice(0, 60));
+  fs.writeFileSync(path.join(dir, 'bad.jwt'), tampered);
+  check('cli: tampered envelope INVALID', run([path.join(dir, 'bad.jwt')]).code === 1);
+  await page.evaluate(async () => { await issuerForget(); localStorage.removeItem('cxla.ledger'); localStorage.removeItem('cxla.trust'); localStorage.removeItem('cxla.revlists'); localStorage.removeItem('cxla.revoked'); localStorage.removeItem('cxla.roles'); });
+  await page.close();
+}
+
 (async () => {
   const browser = await chromium.launch({
     executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium',
@@ -874,6 +934,7 @@ async function testHostedCopy(browser, errs) {
       ['office key and wave one', testOfficeKeyNonExtractable],
       ['durable ledger and custody bundle', testDurableLedger],
       ['hosted copy', testHostedCopy],
+      ['open badge envelope', testOpenBadgeEnvelope],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);

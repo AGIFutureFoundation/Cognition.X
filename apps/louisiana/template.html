@@ -1196,6 +1196,65 @@ async function verifyRecord(obj){
   const bytes = new TextEncoder().encode(JSON.stringify(obj.payload));
   return crypto.subtle.verify({name:"ECDSA", hash:"SHA-256"}, pub, b64d(obj.signature), bytes);
 }
+/* v0.60.0 — the Open Badges 3.0 / W3C VC 2.0 envelope (docs/CREDENTIALS.md).
+   The same credential, the same key, the same rid: a compact vc+jwt (ES256,
+   kid = did:jwk of the office's PUBLIC key) whose payload is an
+   OpenBadgeCredential with the native payload embedded as cx:record. The
+   learner stays pseudonymous (a first name or nickname, unhashed and
+   labelled so); the honest-scope wording rides in criteria.narrative. */
+const b64u = buf => btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+const b64ud = s => Uint8Array.from(atob(s.replace(/-/g,"+").replace(/_/g,"/") + "=".repeat((4 - s.length % 4) % 4)), c=>c.charCodeAt(0));
+const utf8b64u = s => b64u(new TextEncoder().encode(s));
+const didJwk = jwk => "did:jwk:" + utf8b64u(JSON.stringify({kty:jwk.kty, crv:jwk.crv, x:jwk.x, y:jwk.y}));
+function openBadgeOf(rec){
+  const p = rec.payload;
+  const rid = p.rid || "";
+  const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  return {
+    "@context": ["https://www.w3.org/ns/credentials/v2", "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json",
+                 {"cx": "https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/CREDENTIALS.md#"}],
+    id: (/^[0-9a-f-]{36}$/i.test(rid) ? "urn:uuid:" : "urn:cx:rid:") + rid,
+    type: ["VerifiableCredential", "OpenBadgeCredential"],
+    issuer: {id: didJwk(rec.publicKey), type: ["Profile"], name: rec.issuer},
+    validFrom: p.issuedAt + "T00:00:00Z",
+    name: p.credential,
+    credentialSubject: {
+      type: ["AchievementSubject"],
+      identifier: [{type: "IdentityObject", identityType: "name", hashed: false, identityHash: p.learner}],
+      achievement: {id: "urn:cx:achievement:" + slug(p.pack) + ":" + slug(p.track), type: ["Achievement"], achievementType: "Competency",
+        name: p.credential, description: p.track + " — " + p.pack + ": fifty transfer checks on real material, at band " + (p.band || "") + ".",
+        criteria: {narrative: p.note + " " + rec.verify}}
+    },
+    "cx:record": p,
+  };
+}
+async function issueOpenBadge(learner, track){
+  const rec = await issueRecord(learner, track); if (!rec) return null;
+  const ik = await issuerGet(); if (!ik || !ik.priv) return null;
+  const header = {alg: "ES256", typ: "vc+jwt", kid: didJwk(rec.publicKey) + "#0"};
+  const signing = utf8b64u(JSON.stringify(header)) + "." + utf8b64u(JSON.stringify(openBadgeOf(rec)));
+  const sig = await crypto.subtle.sign({name:"ECDSA", hash:"SHA-256"}, ik.priv, new TextEncoder().encode(signing));
+  return signing + "." + b64u(sig);   // WebCrypto's raw r‖s is exactly the JWS ES256 form
+}
+/* Verify either form and return the native shape the graders already read
+   ({payload:{rid, credential, learner, issuedAt}, publicKey, issuer}) plus ok. */
+async function verifyAny(text){
+  const t = String(text || "").trim();
+  if (t.startsWith("{")){ const obj = JSON.parse(t); return {ok: await verifyRecord(obj), rec: obj, form: "cx-credential/1"}; }
+  const parts = t.split("."); if (parts.length !== 3) throw new Error("shape");
+  const header = JSON.parse(new TextDecoder().decode(b64ud(parts[0])));
+  const vc = JSON.parse(new TextDecoder().decode(b64ud(parts[1])));
+  if (header.alg !== "ES256" || !/^did:jwk:/.test(header.kid || "")) throw new Error("alg");
+  const jwk = JSON.parse(new TextDecoder().decode(b64ud(header.kid.replace(/^did:jwk:/, "").replace(/#.*$/, ""))));
+  if (jwk.d) throw new Error("private");
+  const pub = await crypto.subtle.importKey("jwk", {kty:jwk.kty, crv:jwk.crv, x:jwk.x, y:jwk.y}, {name:"ECDSA", namedCurve:"P-256"}, false, ["verify"]);
+  const ok = await crypto.subtle.verify({name:"ECDSA", hash:"SHA-256"}, pub, b64ud(parts[2]), new TextEncoder().encode(parts[0] + "." + parts[1]));
+  const subj = vc.credentialSubject || {}, idobj = (subj.identifier || [])[0] || {}, cx = vc["cx:record"] || {};
+  const rec = {payload: {rid: String(vc.id || "").replace(/^urn:(uuid|cx:rid):/, ""), credential: vc.name || (subj.achievement || {}).name || "", learner: idobj.identityHash || "",
+                         issuedAt: String(vc.validFrom || "").slice(0, 10), witnessed: cx.witnessed, demo: !!cx.demo},
+               publicKey: {kty:jwk.kty, crv:jwk.crv, x:jwk.x, y:jwk.y}, issuer: (vc.issuer || {}).name || ""};
+  return {ok, rec, form: header.typ || "vc+jwt"};
+}
 
 /* Federation v1 — the trusted-offices registry. Each hall publishes its
    public key; adding it here (after confirming identity out-of-band, once)
@@ -3034,12 +3093,13 @@ const WIDGETS = {
       (earned.length
         ? `<div class="pickrow" style="margin:0 0 10px"><select id="ro-pick" aria-label="Credential to sign">${earned.map(({l,t},i)=>
             `<option value="${i}">${esc(l.name)} — ${esc(t.credential)} (${esc(t.name)})</option>`).join("")}</select>
-           <button class="btn gold" id="ro-issue">Issue signed record</button></div>`
+           <button class="btn gold" id="ro-issue">Issue signed record</button>
+           <button class="btn" id="ro-issue-ob">Issue as Open Badge 3.0 (vc+jwt)</button></div>`
         : `<p class="note">No earned credentials in the ledger yet — records are issued only for credentials the
            ledger shows earned (50 checks).</p>`) +
       `<textarea id="ro-out" rows="6" style="width:100%; display:none" spellcheck="false"></textarea>
        <p class="note" style="margin:14px 0 4px"><b>Verify a record</b> — paste any cx-credential/1 JSON:</p>
-       <textarea id="ro-in" rows="4" style="width:100%" spellcheck="false" placeholder='{"payload":…,"signature":…,"publicKey":…}'></textarea>
+       <textarea id="ro-in" rows="4" style="width:100%" spellcheck="false" placeholder='a cx-credential/1 record {"payload":…,"signature":…,"publicKey":…} or an Open Badges 3.0 vc+jwt (eyJ…)'></textarea>
        <div style="margin-top:8px"><button class="btn" id="ro-verify">Verify</button>
        <span id="ro-result" role="status" aria-live="polite" style="font-size:.88rem; margin-left:10px"></span></div>
        <p class="note" style="margin:16px 0 4px"><b>Trusted offices — federation v1.</b> Paste another hall's
@@ -3110,11 +3170,22 @@ const WIDGETS = {
       ta.value = JSON.stringify(rec, null, 1); ta.select();
       say("Signed record issued. " + t.credential + ", " + l.name + ".");
     });
+    const iob = el.querySelector("#ro-issue-ob");
+    if (iob) iob.addEventListener("click", async ()=>{
+      const ik = await issuerGet();
+      const ta = el.querySelector("#ro-out"); ta.style.display = "block";
+      if (!ik || !ik.priv){ ta.value = "Create the office keys first."; return; }
+      const {l, t} = earned[+el.querySelector("#ro-pick").value];
+      const jwt = await issueOpenBadge(l, t);
+      ta.value = jwt || "Could not sign."; ta.select();
+      say("Open Badge issued as a signed credential JWT. " + t.credential + ", " + l.name + ".");
+    });
     el.querySelector("#ro-verify").addEventListener("click", async ()=>{
       const out = el.querySelector("#ro-result");
       try {
-        const obj = JSON.parse(el.querySelector("#ro-in").value);
-        const ok = await verifyRecord(obj);
+        const v = await verifyAny(el.querySelector("#ro-in").value);
+        const obj = v.rec, ok = v.ok;
+        const formNote = v.form === "cx-credential/1" ? "" : ` <span class="mono" style="font-size:.7rem; color:var(--faint)">Open Badges 3.0 · ${esc(v.form)}${obj.payload.witnessed!=null?` · ${obj.payload.witnessed} of 50 witnessed`:""}${obj.payload.demo?" · DEMO DATA":""}</span>`;
         if (!ok){
           out.innerHTML = `<span style="color:var(--w4); font-weight:600">✗ Invalid</span> — the record was altered or the signature does not match this public key.`;
         } else {
@@ -3126,10 +3197,10 @@ const WIDGETS = {
           const who = trustedName(obj.publicKey);
           out.innerHTML = who
             ? `<span style="color:var(--green); font-weight:600">✓ Signed by trusted office “${esc(who)}”</span> — “${esc(obj.payload.credential)}” for ${esc(obj.payload.learner)}, issued ${esc(obj.payload.issuedAt)}. Record unaltered.`
-            : `<span style="color:var(--gold); font-weight:600">△ Signature valid, key not trusted</span> — the record is unaltered and signed by the holder of this key (claims to be “${esc(obj.issuer||"unnamed office")}”), but the key is not in your trusted offices. Confirm identity with the issuing hall, then add its published key below.`;
+            : `<span style="color:var(--gold); font-weight:600">△ Signature valid, key not trusted</span>${formNote} — the record is unaltered and signed by the holder of this key (claims to be “${esc(obj.issuer||"unnamed office")}”), but the key is not in your trusted offices. Confirm identity with the issuing hall, then add its published key below.`;
         }
       } catch(e){
-        out.innerHTML = `<span style="color:var(--w4)">Not a readable cx-credential record.</span>`;
+        out.innerHTML = `<span style="color:var(--w4)">Not a readable cx-credential record or Open Badges 3.0 vc+jwt.</span>`;
       }
     });
     const renderTrust = () => {

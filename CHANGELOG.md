@@ -4,6 +4,29 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.60.0] — 2026-09-16
+
+### Added — Open Badges 3.0 / W3C VC 2.0 envelopes (roadmap step ⑥)
+- **Issue as Open Badge 3.0.** The Records Office issues the same
+  credential, from the same non-extractable key and with the same
+  record id, as a compact `vc+jwt`: ES256, `kid` a `did:jwk` of the
+  office's public key, the payload an `OpenBadgeCredential` (VC 2.0 and
+  OB 3.0 contexts, issuer Profile, AchievementSubject with a
+  pseudonymous unhashed IdentityObject, Achievement with the witnessed
+  count and the honest-scope wording in its criteria narrative) and the
+  native `cx-credential/1` payload embedded as `cx:record`.
+- **Verify either form.** The verify box reads a pasted native record or
+  a JWT and grades both the same four ways — invalid, valid but
+  untrusted, trusted by name, revoked — and a native `cx-revocation/1`
+  list revokes the envelope because the rid is shared.
+- **`tools/verify_record.js`** — a dependency-free Node verifier for
+  both forms with `--trust` and `--revocations`; exit codes 0 / 1 / 2.
+- **`docs/CREDENTIALS.md`** — the two forms, what a verifier learns and
+  does not, the envelope exactly, and the honest limits of a
+  third-party round trip.
+- Nothing changed in the native path, the threshold, the witnessed
+  count on the face of every record, the trust list or revocation.
+
 ## [0.59.0] — 2026-09-16
 
 ### Added — roadmap wave 2 closed out

@@ -584,6 +584,20 @@ def test_security_compliance_register():
     check("COMPLIANCE_ROADMAP.md states the register counts", f"{len(reg['controls'])} controls" in road)
 
 
+def test_open_badge_envelope():
+    """v0.60.0 — the Open Badges 3.0 / VC 2.0 envelope: present in the app,
+    documented, pseudonymous by design, and verifiable from the command line."""
+    la = app_html("louisiana")
+    check("ob3: the app issues vc+jwt with did:jwk", '"vc+jwt"' in la and "did:jwk:" in la and "OpenBadgeCredential" in la)
+    check("ob3: the subject stays pseudonymous (no subject id, unhashed nickname labelled so)", 'identityType: "name", hashed: false' in la and "credentialSubject.id" not in la)
+    check("ob3: the native payload rides inside the envelope", '"cx:record": p' in la)
+    check("ob3: the honest-scope wording travels in the narrative", "criteria: {narrative: p.note + \" \" + rec.verify}" in la)
+    v = (ROOT / "tools" / "verify_record.js").read_text(encoding="utf-8")
+    check("cli verifier: no dependencies, both forms, four grades", "require(\"fs\")" in v and "vc+jwt" in v and "cx-credential/1" in v and all(g in v for g in ("INVALID", "VALID", "TRUSTED", "REVOKED")) and "require(\"node_modules" not in v)
+    doc = (ROOT / "docs" / "CREDENTIALS.md").read_text(encoding="utf-8")
+    check("CREDENTIALS.md states what a signature proves and does not", "does not prove who" in doc and "out-of-band" in doc and "Revoked outranks trusted" in doc)
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
