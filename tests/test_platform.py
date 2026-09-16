@@ -762,7 +762,7 @@ def test_xr_integration():
     js = ("require(process.argv[1]); require(process.argv[2]); const fb = require(process.argv[3]); CXSIM.configure(fb);"
           "const sc = fb.scenarios[0]; const plan = CXSIM.plan(CXSIM.localize(sc, 'the yard'), 3, 'seed-1');"
           "const scene = CXXR.scene(sc, 'the yard', plan); const g = CXXR.gltf(scene); const buf = Buffer.from(g.buffers[0].uri.split(',')[1], 'base64');"
-          "console.log(JSON.stringify({format: scene.format, stations: scene.nodes.filter(n => n.kind === 'station').length, plan: plan.length, law: scene.nodes.find(n => n.kind === 'sign').text, note: scene.note,"
+          "console.log(JSON.stringify({format: scene.format, total: scene.nodes.length, stations: scene.nodes.filter(n => n.kind === 'station').length, plan: plan.length, law: scene.nodes.find(n => n.kind === 'sign').text, note: scene.note,"
           " v: g.asset.version, nodes: g.nodes.length, bufOk: buf.length === g.buffers[0].byteLength, acc: g.accessors.length, extras: g.nodes.every(n => n.extras && n.extras.cx && n.extras.cx.scenario === sc.id), score: /\"s\":|score/.test(JSON.stringify(g))}));")
     r = subprocess.run(["node", "-e", js, str(ROOT / "tools" / "sim" / "engine.js"), str(ROOT / "tools" / "xr" / "engine.js"), str(ROOT / "data" / "simulations" / "scenarios.json")], capture_output=True, text=True, cwd=ROOT)
     check("xr: scene and glTF writers run in node", r.returncode == 0, r.stderr[-300:])
@@ -770,7 +770,22 @@ def test_xr_integration():
         o = json.loads(r.stdout.strip().splitlines()[-1])
         sims = json.loads((ROOT / "data" / "simulations" / "scenarios.json").read_text(encoding="utf-8"))
         check("xr: cx-xrscene/1 has one station per decision point and the law on the sign", o["format"] == "cx-xrscene/1" and o["stations"] == o["plan"] and o["law"] == sims["law"] and "never a credential" in o["note"])
-        check("xr: glTF 2.0 is well formed — nodes, accessors, embedded buffer, scenario extras, no score", o["v"] == "2.0" and o["nodes"] == o["stations"] + 3 and o["bufOk"] and o["acc"] == 3 and o["extras"] and not o["score"])
+        check("xr: glTF 2.0 is well formed — one node per scene node, accessors, embedded buffer, scenario extras, no score", o["v"] == "2.0" and o["nodes"] == o["total"] and o["total"] >= o["stations"] + 3 and o["bufOk"] and o["acc"] == 3 and o["extras"] and not o["score"])
+    js2 = ("require(process.argv[1]); require(process.argv[2]); const fb = require(process.argv[3]); CXSIM.configure(fb);"
+           "const sc = fb.scenarios.find(s => s.youth); const plan = CXSIM.plan(CXSIM.localize(sc, 'the yard'), 3, 'seed-1'); const scene = CXXR.scene(sc, 'the yard', plan); const g = CXXR.gltf(scene);"
+           "const r1 = CXXR.parseGltf(JSON.stringify(g));"
+           "const jt = JSON.stringify(Object.assign({}, g, {buffers: [{byteLength: g.buffers[0].byteLength}]})); const bin = Buffer.from(g.buffers[0].uri.split(',')[1], 'base64'); const pad = n => (4 - n % 4) % 4; const jb = Buffer.from(jt);"
+           "const total = 28 + jb.length + pad(jb.length) + bin.length + pad(bin.length); const out = Buffer.alloc(total); out.writeUInt32LE(0x46546C67, 0); out.writeUInt32LE(2, 4); out.writeUInt32LE(total, 8);"
+           "let o = 12; out.writeUInt32LE(jb.length + pad(jb.length), o); out.writeUInt32LE(0x4E4F534A, o + 4); jb.copy(out, o + 8); out.fill(0x20, o + 8 + jb.length, o + 8 + jb.length + pad(jb.length)); o += 8 + jb.length + pad(jb.length);"
+           "out.writeUInt32LE(bin.length + pad(bin.length), o); out.writeUInt32LE(0x004E4942, o + 4); bin.copy(out, o + 8);"
+           "const r2 = CXXR.parseGltf(out.buffer.slice(out.byteOffset, out.byteOffset + out.length)); let refused = false; try { CXXR.parseGltf(JSON.stringify(Object.assign({}, g, {buffers: [{byteLength: 1, uri: 'room.bin'}]}))); } catch (e) { refused = /fetches nothing/.test(e.message); }"
+           "console.log(JSON.stringify({signs: scene.nodes.filter(n => n.kind === 'sign').map(n => n.id), n: g.nodes.length, m1: r1.meshes.length, t1: r1.triangles, m2: r2.meshes.length, t2: r2.triangles, floor: Math.abs(Math.min(...r2.meshes.map(m => m.model[13] + 0))) >= 0, refused}));")
+    r2 = subprocess.run(["node", "-e", js2, str(ROOT / "tools" / "sim" / "engine.js"), str(ROOT / "tools" / "xr" / "engine.js"), str(ROOT / "data" / "simulations" / "scenarios.json")], capture_output=True, text=True, cwd=ROOT)
+    check("xr: room reader round-trips our own glTF as JSON and as GLB, and refuses external buffers", r2.returncode == 0, r2.stderr[-300:])
+    if r2.returncode == 0:
+        o2 = json.loads(r2.stdout.strip().splitlines()[-1])
+        check("xr: a trades scenario's room carries the law, the simulated and live lists and the under-18 line as signs", set(o2["signs"]) >= {"sign", "sign-simulated", "sign-live", "sign-youth"})
+        check("xr: every exported node comes back as a 12-triangle mesh from both containers", o2["m1"] == o2["n"] and o2["t1"] == o2["n"] * 12 and o2["m2"] == o2["n"] and o2["t2"] == o2["n"] * 12 and o2["refused"])
     priv = json.loads((ROOT / "data" / "policy" / "privacy.json").read_text(encoding="utf-8"))
     check("privacy: the notice covers XR sessions", "WebXR" in priv["security"] and "never records it" in priv["security"] and "no hand, eye or face tracking" in priv["security"])
     reg = json.loads((ROOT / "data" / "policy" / "controls.json").read_text(encoding="utf-8"))

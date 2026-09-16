@@ -17,6 +17,12 @@ room: **Open in 3D / VR** in the brief, on any decision, or in the debrief.
   file that Blender, Unity, Unreal, Godot, Hubs and any OpenXR world
   import. Node names and `extras` carry the scenario and step ids, never
   a score. The scene document itself is `cx-xrscene/1` (metres, +Y up).
+- **Your own hall (v0.70.0).** *Load your hall's room* opens a glTF or
+  GLB scan or model with embedded buffers and draws it under the
+  stations, floor at zero, centred on you; the file stays on the device
+  and a file that points at external buffers is refused, because the
+  page fetches nothing. The studio's *Simulated here*, *Practised live*
+  and *Under eighteen* lines stand in the room as signs.
 - **What it keeps.** Nothing. The device's position is read to draw each
   frame and dropped; no hand, eye or face tracking is requested; the
   privacy notice says so and the register holds it (PL-21).

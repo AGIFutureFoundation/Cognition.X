@@ -63,6 +63,17 @@ credential. Those rules rule the platforms out and the standards in.
   that mounts the studio — Trades Network, Louisiana (student and teacher
   widgets), States, Flow Hub, Platform, Education OS — has the room with
   no host code changed.
+- **A hall's own room (v0.70.0).** *Load your hall's room* opens a glTF 2.0
+  or GLB file with embedded buffers — a phone scan exported from any
+  scanning app, or a room modelled in Blender — and draws it under the
+  stations with its floor set to y = 0 and centred on the learner. The
+  page fetches nothing, so a `.gltf` whose buffers are external files is
+  refused with the reason; the file stays on the device. *Export scene
+  (JSON)* writes the `cx-xrscene/1` document itself.
+- **The studio's honesty lists stand in the room (v0.70.0).** Beside the
+  law: *Simulated here* and *Practised live, at the bench* from the
+  scenario, and the *Under eighteen* hazard line where the scenario
+  carries one — signs, never stations, never scored.
 - **The honesty lines travel.** The studio law is on the sign in the room;
   the scene document, the glTF `extras` and the panel's own note say a
   scene is practice, never a check, never a credential. Option slabs are
@@ -101,10 +112,11 @@ credential. Those rules rule the platforms out and the standards in.
   rehearsal is two learners at one bench with one assessor.
 - **No 3D content authoring.** Stations are drawn from the scenario's own
   decision points; there is no scene editor, and the specs stay text.
-- **Next, if a hall asks:** a glTF *import* of a hall's own room scan as
-  the floor and walls (still offline, still a file); the trade-hall
-  station cards drawn as signs on those walls; the studio's youth lines
-  drawn on the relevant station. Each is a view; none changes what a run
-  is.
+- **Done in v0.70.0** from the earlier list: the room import, the
+  youth line and the simulated/live lists as signs.
+- **Next, if a hall asks:** placing the stations against the loaded
+  room's walls instead of the fixed arc; a QR-style share of the scene
+  JSON between two devices in a hall (still a file). Each is a view;
+  none changes what a run is.
 
 Not legal advice. A scene is practice.
