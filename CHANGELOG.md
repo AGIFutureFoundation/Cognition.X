@@ -4,6 +4,35 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.63.0] — 2026-09-16
+
+### Changed — the Education OS is built from the canonical fact bases (roadmap prompt 7)
+- **Seven literals out of the template, injected in place at build
+  time.** `DATA.regions`, `DATA.regionHubs`, `DATA.parishes`
+  (`data/louisiana/fact_base.json`), `DATA.wlb`, `DATA.wlbPrinciples`
+  (`data/wlb/institute.json`), `DATA.lak12`, `DATA.lak12Threads`
+  (`data/louisiana/k12_program.json`) stood in
+  `apps/education-os/template.html` as JavaScript literals — the same
+  facts the other apps read from the canonical files, free to drift.
+  The template now carries a `__CXFACT:<name>__` placeholder where each
+  literal stood and `tools/build_education_os.py` injects the canonical
+  JSON at exactly that point in the script, so every view reads what it
+  always read. 53 KB of duplicated facts left the template.
+- **Every view rendered identically.** A full sweep of the app's views
+  (rendered HTML hashed per view, before and after) found no difference
+  beyond the views that were already nondeterministic (live feeds).
+- **The extractor is the round-trip check.** `tools/extract_fact_bases.py`
+  now reads each layer from wherever it lives (the injected value in the
+  built app, or a literal still in the template), writes the canonical
+  files, and with `--check` exits non-zero if any would change; CI runs
+  it after the build. The twelve Institute principles' `strands` field,
+  which the app carried and the canonical file had dropped, is canonical
+  now (its own commit, before any literal moved).
+- Tests: `test_education_os_canonical_injection` (placeholders present,
+  no literal left, markers in the build, round-trip clean, byte
+  equality of each injected layer with its file); browser boot test
+  extended to the Parishes, K–12 Program and Institute views.
+
 ## [0.62.0] — 2026-09-16
 
 ### Changed — durable state closed out (roadmap prompt 9)

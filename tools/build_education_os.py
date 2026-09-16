@@ -18,6 +18,12 @@ original, the overlay re-emits the original [task, outcome]; when the
 dataset row was edited, the edited check ships as the task with the
 outcome left empty — the dataset wins.
 
+Since v0.63.0 the Louisiana fact base, the K-12 program and the WLB
+Institute fact base are injected IN PLACE too (see FACT_LAYERS): the
+template holds a placeholder where each literal stood, so one source of
+truth serves every app and the template no longer carries a copy that
+could drift.
+
 Output stays a single offline file, per the app's standing constraint.
 Deterministic: same inputs -> same output.
 """
@@ -335,6 +341,46 @@ def build_shell(views):
     )
 
 
+# ------------------------------------------------ the canonical fact bases
+# v0.63.0 (roadmap prompt 7): the Louisiana region/parish fact base, the K-12
+# program and the WLB Institute fact base are canonical in data/ and were once
+# ALSO literals in the template — the same facts twice, free to drift. The
+# template now carries a `__CXFACT:<name>__` placeholder where each literal
+# stood and the canonical JSON is injected IN PLACE at build time, so every
+# view that read DATA.parishes (or any of the others) at that point in the
+# script reads exactly what the other apps read. tools/extract_fact_bases.py
+# reads the injected values back (between the /*cx:<name>*/ … /*cx:end*/
+# markers) and must reproduce the canonical files byte for byte; CI checks it.
+FACT_LAYERS = {
+    "regions":      ("data/louisiana/fact_base.json",   lambda d: d["regions"]),
+    "regionHubs":   ("data/louisiana/fact_base.json",   lambda d: d["regionHubs"]),
+    "parishes":     ("data/louisiana/fact_base.json",   lambda d: d["parishes"]),
+    "wlb":          ("data/wlb/institute.json",         lambda d: {k: v for k, v in d.items() if k not in ("note", "principles")}),
+    "wlbPrinciples": ("data/wlb/institute.json",        lambda d: d["principles"]),
+    "lak12":        ("data/louisiana/k12_program.json", lambda d: d["grades"]),
+    "lak12Threads": ("data/louisiana/k12_program.json", lambda d: d["threads"]),
+}
+
+
+def inject_fact_bases(template):
+    """Replace every __CXFACT:<name>__ placeholder with the canonical JSON,
+    marked so the extractor can read it back. Every placeholder must be
+    present and used exactly once; a stray literal or a missing placeholder
+    stops the build."""
+    cache = {}
+    injected = {}
+    for name, (rel, pick) in FACT_LAYERS.items():
+        token = "__CXFACT:" + name + "__"
+        if template.count(token) != 1:
+            raise SystemExit(f"template.html: expected exactly one {token}, found {template.count(token)}")
+        if rel not in cache:
+            cache[rel] = json.loads((ROOT / rel).read_text(encoding="utf-8"))
+        payload = json.dumps(pick(cache[rel]), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+        template = template.replace(token, "/*cx:" + name + "*/" + payload + "/*cx:end*/")
+        injected[name] = len(payload)
+    return template, injected
+
+
 def main():
     version = (ROOT / "VERSION").read_text().strip()
     parts = json.loads(MAP.read_text(encoding="utf-8"))
@@ -376,6 +422,7 @@ def main():
     # so the quest view finds it on first render
     studio = body_snippet("education-os", "window.CX_SIM_STUDIO = " + sims + ";\n") + "\n"
     template = TEMPLATE.read_text(encoding="utf-8", errors="replace")
+    template, facts = inject_fact_bases(template)
     if "__CXHEAD__" not in template:
         raise SystemExit("template.html is missing the __CXHEAD__ placeholder")
     template = template.replace("__CXHEAD__", head_snippet("education-os"))
@@ -404,8 +451,9 @@ def main():
     OUT.write_text(html, encoding="utf-8")
     print(f"wrote {OUT.relative_to(ROOT)}: {len(html)/1e6:.2f} MB — "
           f"{len(out)} canonical sector blocks injected ({kept} with original "
-          f"task/outcome fields, {edited} dataset-edited); shell generated for "
-          f"{len(views)} views")
+          f"task/outcome fields, {edited} dataset-edited); {len(facts)} canonical "
+          f"fact-base layers injected in place ({sum(facts.values()):,} bytes); "
+          f"shell generated for {len(views)} views")
 
 
 if __name__ == "__main__":

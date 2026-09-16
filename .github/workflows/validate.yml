@@ -26,9 +26,9 @@ jobs:
           done
       - name: Generated packs must match their specs
         run: git diff --exit-code data/generated/
-      - name: Re-extract the canonical fact bases from the app
+      - name: Round-trip the canonical fact bases through the built Education OS
         run: python3 tools/extract_fact_bases.py
-      - name: Fact bases must match the app they came from
+      - name: The app must carry exactly the canonical fact bases
         run: git diff --exit-code data/louisiana/ data/wlb/
       - name: Rebuild canonical dataset
         run: python3 tools/normalize_blocks.py

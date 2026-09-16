@@ -1,5 +1,5 @@
 {
- "note": "Willie L. Brown Jr. Institute fact base — extracted from the Education OS app by tools/extract_fact_bases.py and canonical here since v0.39.0; the full leadership curriculum (strands, eras, course ladders, bridge, modules, standards, seal) since v0.43.0. The disclaimer travels verbatim with every use; principles carry their source attribution.",
+ "note": "Willie L. Brown Jr. Institute fact base — canonical here since v0.39.0 (extracted once from the Education OS app by tools/extract_fact_bases.py; the full leadership curriculum — strands, eras, course ladders, bridge, modules, standards, seal — since v0.43.0; since v0.63.0 the app is built FROM this file and the tool round-trips it). The disclaimer travels verbatim with every use; principles carry their source attribution and the strands they anchor.",
  "name": "Willie L. Brown Jr. Institute Track",
  "org": "The Willie L. Brown Jr. Institute of Politics and Public Service (wlbinstitute.org), San Francisco",
  "disclaimer": "This track is a proposal built from the Institute's public mission and the Willie L. Brown Jr. Fellowship Program at San Francisco State University. It is not affiliated with, endorsed by, or reviewed by the Institute, SF State, or Mayor Brown; the \"Willie Brown Foundation\" name in the brief refers to this Institute. A named track would be offered under a partnership agreement and the Institute's review of every course.",
@@ -447,62 +447,136 @@
   {
    "p": "Public service is the most noble of professions",
    "src": "Institute vision statement (wlbinstitute.org)",
-   "teach": "Service is taught as a craft with roles, crews, evidence and credentials — not as a slogan. Every course ends with a real audience."
+   "teach": "Service is taught as a craft with roles, crews, evidence and credentials — not as a slogan. Every course ends with a real audience.",
+   "strands": [
+    "PS",
+    "CG",
+    "LG",
+    "ME",
+    "PS2",
+    "PR"
+   ]
   },
   {
    "p": "Recruit and include students of diverse racial, cultural and economic backgrounds",
    "src": "Willie L. Brown Jr., on the Fellowship (SF State News)",
-   "teach": "Who is in the room is a design decision. Every course asks who is missing and why; accommodation profiles, four-language signals and Tier 0 parity apply; barriers are named, not hidden."
+   "teach": "Who is in the room is a design decision. Every course asks who is missing and why; accommodation profiles, four-language signals and Tier 0 parity apply; barriers are named, not hidden.",
+   "strands": [
+    "FG",
+    "AA",
+    "IM",
+    "DP"
+   ]
   },
   {
    "p": "Hands-on learning inside real public agencies, with a cohort, a seminar and a stipend",
    "src": "The Fellowship Program (SF State ICCE): 16 hours a week, 15 weeks, Friday seminars, cohort focused on equity and social change",
-   "teach": "A junior placement at every grade band and a weekly seminar circle from grade 3; in 11–12 a supervised, FLSA-compliant placement mirrors the Fellowship itself."
+   "teach": "A junior placement at every grade band and a weekly seminar circle from grade 3; in 11–12 a supervised, FLSA-compliant placement mirrors the Fellowship itself.",
+   "strands": [
+    "CG",
+    "WP",
+    "ED",
+    "ID"
+   ]
   },
   {
    "p": "Share knowledge and skills with a new generation of leaders",
    "src": "Institute mission; Claremont McKenna Athenaeum description of Brown's mentoring role",
-   "teach": "Mentorship is a strand and a bridge: alumni and public servants as mentors and panelists; older students mentor younger cohorts; the leader's-story module in every course."
+   "teach": "Mentorship is a strand and a bridge: alumni and public servants as mentors and panelists; older students mentor younger cohorts; the leader's-story module in every course.",
+   "strands": [
+    "ME",
+    "LG",
+    "NR"
+   ]
   },
   {
    "p": "Eagerly, aggressively and affirmatively push for those who have been blocked by the ceiling",
    "src": "Willie L. Brown Jr., NPR interview on Basic Brown (2008)",
-   "teach": "Affirmative action, first-generation pathways and opportunity data are taught as history, law and practice — with the debate included, not avoided."
+   "teach": "Affirmative action, first-generation pathways and opportunity data are taught as history, law and practice — with the debate included, not avoided.",
+   "strands": [
+    "AA",
+    "FG",
+    "ER",
+    "CE"
+   ]
   },
   {
    "p": "Take on the cases others dismiss as hopeless",
    "src": "Brown's early law career (Claremont McKenna Athenaeum)",
-   "teach": "Civil-rights law, housing discrimination (the 1960 sit-in), the Free Speech Movement defense: courses on standing up when the odds are long, with moot courts and rights cases to argue."
+   "teach": "Civil-rights law, housing discrimination (the 1960 sit-in), the Free Speech Movement defense: courses on standing up when the odds are long, with moot courts and rights cases to argue.",
+   "strands": [
+    "CR",
+    "CC",
+    "HJ",
+    "JJ"
+   ]
   },
   {
    "p": "Tolerate diverse viewpoints; some opposing ideas strengthen consensus",
    "src": "NPR summary of Basic Brown's political lessons",
-   "teach": "Negotiation, coalition and consensus are practiced every week in the seminar circle and in mock legislatures; the fifteen-year Speakership is the case study."
+   "teach": "Negotiation, coalition and consensus are practiced every week in the seminar circle and in mock legislatures; the fifteen-year Speakership is the case study.",
+   "strands": [
+    "NC",
+    "SL",
+    "PC",
+    "GT"
+   ]
   },
   {
    "p": "What you see is what you get — transparency removes the liability and lets you move on to substance",
    "src": "NPR interview on Basic Brown",
-   "teach": "Ethics, transparency and accountability strand: public records, conflicts of interest, the investigator's question, saying the hard thing first."
+   "teach": "Ethics, transparency and accountability strand: public records, conflicts of interest, the investigator's question, saying the hard thing first.",
+   "strands": [
+    "ET",
+    "PC",
+    "MS",
+    "CE"
+   ]
   },
   {
    "p": "Bringing everyone along with you",
    "src": "Larry Berry, Fellowship alumnus (SF State PACE alumni spotlight)",
-   "teach": "Inclusive decision-making and relationship-building are taught as skills with evidence: stakeholder maps, crew hand-offs, the \"who did we forget\" check before every presentation."
+   "teach": "Inclusive decision-making and relationship-building are taught as skills with evidence: stakeholder maps, crew hand-offs, the \"who did we forget\" check before every presentation.",
+   "strands": [
+    "NR",
+    "NC",
+    "UP"
+   ]
   },
   {
    "p": "Decisions in the public sector must account for the wide-ranging impacts on people's lives",
    "src": "Larry Berry, Fellowship alumnus",
-   "teach": "Every policy-design course carries an impact analysis: who pays, who benefits, who is displaced — in real numbers from the state's own data."
+   "teach": "Every policy-design course carries an impact analysis: who pays, who benefits, who is displaced — in real numbers from the state's own data.",
+   "strands": [
+    "BF",
+    "TP",
+    "UP",
+    "HJ",
+    "TI",
+    "PH",
+    "EJ"
+   ]
   },
   {
    "p": "From segregated Mineola to San Francisco State: education as the bridge across barriers",
    "src": "Biography (HistoryMakers; African American Registry): born 1934, Mineola, Texas; moved to San Francisco in 1951; SF State 1955; Hastings 1958",
-   "teach": "The first-generation strand and the Mineola-to-City bridge: oral histories, the story of one's own family's barrier-crossing, and the concrete map from a K–12 credential to a state university and a public-service career."
+   "teach": "The first-generation strand and the Mineola-to-City bridge: oral histories, the story of one's own family's barrier-crossing, and the concrete map from a K–12 credential to a state university and a public-service career.",
+   "strands": [
+    "FG",
+    "ER",
+    "LS"
+   ]
   },
   {
    "p": "Living large: enjoy the work and share the joy",
    "src": "Willie L. Brown Jr., NPR interview",
-   "teach": "Presence, confidence and joy in service are taught age-appropriately — public speaking, presentation, the civic celebration — because a leader who dreads the room cannot bring anyone along."
+   "teach": "Presence, confidence and joy in service are taught age-appropriately — public speaking, presentation, the civic celebration — because a leader who dreads the room cannot bring anyone along.",
+   "strands": [
+    "PC",
+    "MS",
+    "LS",
+    "PR"
+   ]
   }
  ]
 }

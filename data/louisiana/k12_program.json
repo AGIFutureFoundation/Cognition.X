@@ -1,5 +1,5 @@
 {
- "note": "Louisiana K-12 program — extracted from the Education OS app by tools/extract_fact_bases.py and canonical here since v0.44.0. Thirteen grade rows (K-12), each with an age-appropriate role and narrative world and six threads (literacy, numeracy, science, computer science, safety, assessment) citing Louisiana LDOE standard codes; the policy threads name the LDOE acts and gates the program is built around. A design mapped against public LDOE documents — verify each code against the current documents before classroom use.",
+ "note": "Louisiana K-12 program — canonical here since v0.44.0 (extracted once from the Education OS app by tools/extract_fact_bases.py; since v0.63.0 the app is built FROM this file and the tool round-trips it). Thirteen grade rows (K-12), each with an age-appropriate role and narrative world and six threads (literacy, numeracy, science, computer science, safety, assessment) citing Louisiana LDOE standard codes; the policy threads name the LDOE acts and gates the program is built around. A design mapped against public LDOE documents — verify each code against the current documents before classroom use.",
  "grades": [
   {
    "g": "K",

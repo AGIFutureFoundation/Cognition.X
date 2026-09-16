@@ -142,8 +142,8 @@ def parish_missions(name, seat, world, hub, rural):
 def load_fact_base():
     """The Louisiana and Institute fact bases, canonical in data/ since
     v0.39.0 (extracted once from the Education OS app by
-    tools/extract_fact_bases.py; re-run that tool if the app's copy is
-    ever edited)."""
+    tools/extract_fact_bases.py; since v0.63.0 the Education OS is built
+    from the same files, so there is no other copy to drift)."""
     fb = json.loads((ROOT / "data" / "louisiana" / "fact_base.json")
                     .read_text(encoding="utf-8"))
     w = json.loads((ROOT / "data" / "wlb" / "institute.json")
