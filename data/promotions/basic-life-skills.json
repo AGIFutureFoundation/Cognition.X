@@ -10,52 +10,122 @@
         {
           "theme": "The bill that arrives (HH)",
           "description": "Reading a real utility or service bill line by line — what is owed, by when, and what happens if it is ignored.",
-          "transfer_check": "Read one real bill aloud line by line — amount, due date, consequence — and pay it or diarise its payment correctly."
+          "transfer_check": "Read one real bill aloud line by line — amount, due date, consequence — and pay it or diarise its payment correctly.",
+          "bands": {
+            "K–2": "Look at a real bill with an adult and find the big number and the date it must be paid by.",
+            "3–5": "Read a real household bill with help and point to what is owed, when, and what happens if it is late.",
+            "6–8": "Read one real bill aloud line by line — amount, due date, consequence — and put its payment date on the household calendar.",
+            "9–10": "Read one real bill aloud line by line — amount, due date, consequence — and pay it or diarise its payment correctly.",
+            "11–12": "Read a month of a household's bills, build the payment calendar for all of them, and query one charge that does not add up."
+          }
         },
         {
           "theme": "Water, power and the meter (HH)",
           "description": "Where water and electricity enter the home, how the meter counts them, and shutting either off safely.",
-          "transfer_check": "Locate the water shutoff and electrical panel in a real dwelling and read both meters, logging the figures."
+          "transfer_check": "Locate the water shutoff and electrical panel in a real dwelling and read both meters, logging the figures.",
+          "bands": {
+            "K–2": "Find, with an adult, where the water and the electricity come into your home, and never touch the panel alone.",
+            "3–5": "Find the water shutoff and the electrical panel at home with an adult, and read one meter's numbers onto a card.",
+            "6–8": "Locate the water shutoff and electrical panel in a real dwelling, read both meters, and log the figures with the date.",
+            "9–10": "Locate the water shutoff and electrical panel in a real dwelling and read both meters, logging the figures.",
+            "11–12": "Locate and operate both shutoffs safely, read the meters on two dates, and compute the household's use and cost between them."
+          }
         },
         {
           "theme": "A room that can be cleaned (HH)",
           "description": "The order and method of cleaning a room so it stays clean — surfaces, floors, and the corners that get skipped.",
-          "transfer_check": "Clean one real room in the taught order and have somebody else verify it against a checklist, corners included."
+          "transfer_check": "Clean one real room in the taught order and have somebody else verify it against a checklist, corners included.",
+          "bands": {
+            "K–2": "Tidy your own corner in the order you were shown — toys away, surfaces, floor — and let an adult check the corners.",
+            "3–5": "Clean one real room in the taught order and tick a picture checklist, corners included.",
+            "6–8": "Clean one real room in the taught order and have somebody else verify it against a checklist, corners included.",
+            "9–10": "Clean one real room in the taught order and have somebody else verify it against a checklist, corners included, within a set time.",
+            "11–12": "Write the cleaning order for a whole dwelling, clean it against the checklist, and teach the order to someone who then cleans one room to it."
+          }
         },
         {
           "theme": "Fixing the thing that broke (HH)",
           "description": "The household repairs anyone can do — a washer, a fuse, a hinge — and recognising the ones that need a professional.",
-          "transfer_check": "Complete one real household repair — washer, hinge, fuse or equivalent — and state which failures you would not attempt."
+          "transfer_check": "Complete one real household repair — washer, hinge, fuse or equivalent — and state which failures you would not attempt.",
+          "bands": {
+            "K–2": "Help an adult fix one small thing at home — a loose screw, a squeaky hinge — and hand them the right tool.",
+            "3–5": "Fix one small real thing with an adult watching — a hinge, a drawer runner — and say which jobs are for a professional.",
+            "6–8": "Complete one real household repair — a washer, a hinge, a fuse or equivalent — and state which failures you would not attempt.",
+            "9–10": "Complete one real household repair — washer, hinge, fuse or equivalent — and state which failures you would not attempt.",
+            "11–12": "Complete two repairs of different kinds, write the household's when-to-call-a-professional list with reasons, and price one professional job."
+          }
         },
         {
           "theme": "Laundry, properly (HH)",
           "description": "Sorting, temperatures, dosing and drying so clothes come out clean and last — including washing by hand.",
-          "transfer_check": "Sort, wash and dry one real mixed load correctly, including one item washed by hand, with nothing shrunk or stained."
+          "transfer_check": "Sort, wash and dry one real mixed load correctly, including one item washed by hand, with nothing shrunk or stained.",
+          "bands": {
+            "K–2": "Sort the washing into lights and darks with an adult, and hang small things to dry.",
+            "3–5": "Sort a real load, choose the temperature from the labels with help, and wash one item by hand.",
+            "6–8": "Sort, wash and dry one real mixed load with a checker watching the temperatures and doses, including one item washed by hand.",
+            "9–10": "Sort, wash and dry one real mixed load correctly, including one item washed by hand, with nothing shrunk or stained.",
+            "11–12": "Run a week's laundry for a household, including stain treatment and one delicate item, and write the label guide for a new housemate."
+          }
         },
         {
           "theme": "Pests and damp (HH)",
           "description": "Reading the early signs of pests and damp, the causes behind them, and the response that stops them spreading.",
-          "transfer_check": "Inspect a real dwelling for pest and damp signs, identify any cause found, and apply or specify the first remedy."
+          "transfer_check": "Inspect a real dwelling for pest and damp signs, identify any cause found, and apply or specify the first remedy.",
+          "bands": {
+            "K–2": "Look for the signs of damp and bugs at home with an adult — the black spots, the crumbs, the droppings — and point them out.",
+            "3–5": "Inspect one room for pest and damp signs with a picture guide, and say one cause you found.",
+            "6–8": "Inspect two rooms of a real dwelling for pest and damp signs, name the likely cause of each finding, and propose the first remedy.",
+            "9–10": "Inspect a real dwelling for pest and damp signs, identify any cause found, and apply or specify the first remedy.",
+            "11–12": "Inspect a dwelling, apply the first remedy, re-inspect a month later, and write what worked and what needs the landlord or a professional."
+          }
         },
         {
           "theme": "The household that runs on a list (HH)",
           "description": "Shopping lists, chore rotas and the weekly routine — running a household deliberately instead of by crisis.",
-          "transfer_check": "Run one real week from a written shopping list and chore rota, and report what the lists caught that memory would have missed."
+          "transfer_check": "Run one real week from a written shopping list and chore rota, and report what the lists caught that memory would have missed.",
+          "bands": {
+            "K–2": "Help write the shopping list with pictures, and tick off your chore on the family chart.",
+            "3–5": "Write the week's shopping list from the cupboard and the meals, and follow a chore rota for a week.",
+            "6–8": "Write and run one real week's shopping list and chore rota with a checker, and list what the lists caught that memory would have missed.",
+            "9–10": "Run one real week from a written shopping list and chore rota, and report what the lists caught that memory would have missed.",
+            "11–12": "Run a household for two weeks on lists and a rota, cost the shopping against the plan, and revise the rota from what actually happened."
+          }
         },
         {
           "theme": "Sharing a space with people (HH)",
           "description": "The agreements that make shared kitchens, bathrooms and bills workable, and repairing them when they break.",
-          "transfer_check": "Draft house rules for a real shared space with those who share it, and mediate or rehearse one disagreement under them."
+          "transfer_check": "Draft house rules for a real shared space with those who share it, and mediate or rehearse one disagreement under them.",
+          "bands": {
+            "K–2": "Agree two rules for sharing the toy shelf or the table with a brother, sister or friend, and keep them for a week.",
+            "3–5": "Draft three house rules for a shared room with the people who share it, and sort out one disagreement using them.",
+            "6–8": "Draft house rules for a real shared space with those who share it, and rehearse one disagreement under them.",
+            "9–10": "Draft house rules for a real shared space with those who share it, and mediate or rehearse one disagreement under them.",
+            "11–12": "Draft the rules and the bills split for a real shared home, mediate one live disagreement, and write what the rules needed to add."
+          }
         },
         {
           "theme": "Emergency in the house (HH)",
           "description": "The household emergencies — leak, outage, lockout, gas smell — and the first correct move for each.",
-          "transfer_check": "Given three staged household emergencies — leak, outage, gas smell — perform the correct first move for each."
+          "transfer_check": "Given three staged household emergencies — leak, outage, gas smell — perform the correct first move for each.",
+          "bands": {
+            "K–2": "Learn the three home emergencies — water, dark, smell — and that the first move is to find a grown-up.",
+            "3–5": "For a leak, an outage and a gas smell, say the first thing you do and show where the torch and the tap are.",
+            "6–8": "For three staged household emergencies — leak, outage, gas smell — perform the correct first move for each with a checker, and show where the shutoffs are.",
+            "9–10": "Given three staged household emergencies — leak, outage, gas smell — perform the correct first move for each.",
+            "11–12": "Run the three emergencies for a household you do not live in, teach its members the first moves, and post the card by the panel."
+          }
         },
         {
           "theme": "Leaving a place properly (HH)",
           "description": "Moving out well: notice, cleaning, meter readings, key handover and getting the deposit back.",
-          "transfer_check": "Produce a complete move-out file for a real or rehearsed departure: notice letter, meter readings, cleaning checklist, key handover."
+          "transfer_check": "Produce a complete move-out file for a real or rehearsed departure: notice letter, meter readings, cleaning checklist, key handover.",
+          "bands": {
+            "K–2": "Help pack up your own things neatly when the family moves rooms or houses, and hand back what was borrowed.",
+            "3–5": "Make the leaving checklist for a room or a holiday cabin — clean, count, hand over the key — and do it.",
+            "6–8": "Produce a move-out file for a rehearsed departure: notice letter, meter readings, cleaning checklist, key handover.",
+            "9–10": "Produce a complete move-out file for a real or rehearsed departure: notice letter, meter readings, cleaning checklist, key handover.",
+            "11–12": "Produce the move-out file for a real departure, negotiate the deposit return in writing, and record what the landlord withheld and why."
+          }
         }
       ],
       "credential": "Household Keeper"
@@ -67,52 +137,122 @@
         {
           "theme": "Where the money goes (MY)",
           "description": "Tracking a real month of spending until the pattern is visible, and naming the categories honestly.",
-          "transfer_check": "Track every expense for one real week and present the categorised total with the one pattern that surprised you."
+          "transfer_check": "Track every expense for one real week and present the categorised total with the one pattern that surprised you.",
+          "bands": {
+            "K–2": "Keep a jar chart for a week of pocket money — what came in, what went out — with pictures.",
+            "3–5": "Write down everything you spend for a week and sort it into three piles: need, want, forgot.",
+            "6–8": "Track every expense for one real week, sort the total into categories with a checker, and name the one pattern that surprised you.",
+            "9–10": "Track every expense for one real week and present the categorised total with the one pattern that surprised you.",
+            "11–12": "Track a full month for a household with its consent, present the categorised totals, and propose one change the pattern justifies."
+          }
         },
         {
           "theme": "The account, the card and the fee (MY)",
           "description": "What a basic account does, what a card actually is, and the fees that quietly take from small balances.",
-          "transfer_check": "Read a real account's fee schedule and statement, and name every charge taken from it in the last month."
+          "transfer_check": "Read a real account's fee schedule and statement, and name every charge taken from it in the last month.",
+          "bands": {
+            "K–2": "Learn that a card is a way to spend money that is somewhere else, and that some cards cost money to use.",
+            "3–5": "Look at a real account statement with an adult and find one fee that was taken.",
+            "6–8": "Read a real account's fee schedule and statement and name every charge taken from it in the last month.",
+            "9–10": "Read a real account's fee schedule and statement, and name every charge taken from it in the last month.",
+            "11–12": "Compare two real accounts' fee schedules for a named person's habits, and write the switch-or-stay recommendation with the yearly figure."
+          }
         },
         {
           "theme": "Borrowing, and what it costs (MY)",
           "description": "Interest as the price of borrowed money — comparing a loan, a card and an informal lender on total cost.",
-          "transfer_check": "Compute the true total cost of one real or advertised loan against paying cash, showing the interest arithmetic."
+          "transfer_check": "Compute the true total cost of one real or advertised loan against paying cash, showing the interest arithmetic.",
+          "bands": {
+            "K–2": "Learn that when you borrow, you give back more than you took, and practise it with counters.",
+            "3–5": "Work out with counters what a loan of ten costs if you pay back one extra each week, and compare with saving up.",
+            "6–8": "Compute the true total cost of one advertised loan against paying cash, showing the interest arithmetic.",
+            "9–10": "Compute the true total cost of one real or advertised loan against paying cash, showing the interest arithmetic.",
+            "11–12": "Compare a loan, a card and an informal lender on the total cost of the same purchase, and write the one-page guide a friend could use."
+          }
         },
         {
           "theme": "Being paid correctly (MY)",
           "description": "Checking pay against hours and rate, reading the deductions, and querying a shortfall without drama.",
-          "transfer_check": "Check one real payslip or payment against hours and agreed rate, and draft the query for any shortfall found."
+          "transfer_check": "Check one real payslip or payment against hours and agreed rate, and draft the query for any shortfall found.",
+          "bands": {
+            "K–2": "Count the coins you are given for a job against the number you agreed.",
+            "3–5": "Check a pretend payslip: hours times rate, minus the deductions, equals the pay — and find the mistake.",
+            "6–8": "Check one real or sample payslip against hours and agreed rate with a checker, and write the query for any shortfall found.",
+            "9–10": "Check one real payslip or payment against hours and agreed rate, and draft the query for any shortfall found.",
+            "11–12": "Check three payslips over a quarter, explain every deduction, and send or rehearse the query for a shortfall to the right office."
+          }
         },
         {
           "theme": "Saving where you cannot reach it (MY)",
           "description": "Why savings survive only when they are separated, and the vehicles — account, lockbox, club — that create distance.",
-          "transfer_check": "Open or design a separated savings arrangement and make its first deposit, stating the barrier that protects it."
+          "transfer_check": "Open or design a separated savings arrangement and make its first deposit, stating the barrier that protects it.",
+          "bands": {
+            "K–2": "Put some of your money in a box you cannot open by yourself, and count it after a month.",
+            "3–5": "Set a saving goal, keep the savings somewhere separate, and record each deposit until the goal is met.",
+            "6–8": "Design a separated savings arrangement for a goal of your own, make its first deposit, and say what barrier keeps you from raiding it.",
+            "9–10": "Open or design a separated savings arrangement and make its first deposit, stating the barrier that protects it.",
+            "11–12": "Design and run a separated savings plan for three months, record every deposit and every temptation, and report the balance and the barrier that held."
+          }
         },
         {
           "theme": "The scam aimed at you (MY)",
           "description": "The frauds that target ordinary money — prizes, urgent transfers, fake officials — and the checks that defeat them.",
-          "transfer_check": "Take one real scam message received by you or your family and demonstrate, step by step, the checks that expose it."
+          "transfer_check": "Take one real scam message received by you or your family and demonstrate, step by step, the checks that expose it.",
+          "bands": {
+            "K–2": "Learn that a stranger asking for money or a password is a trick, and to tell a grown-up.",
+            "3–5": "Look at a pretend scam message and find the three signs it is not real.",
+            "6–8": "Take one real scam message received by your family and, with a checker, walk through the checks that expose it.",
+            "9–10": "Take one real scam message received by you or your family and demonstrate, step by step, the checks that expose it.",
+            "11–12": "Take three real scams of different kinds, expose each, and write the check-before-you-pay card for an older relative."
+          }
         },
         {
           "theme": "Buying something that lasts (MY)",
           "description": "Cost per use, quality signals and timing — spending more once instead of less repeatedly.",
-          "transfer_check": "Compare two real purchase options on cost per use and evidence of durability, and defend your choice with figures."
+          "transfer_check": "Compare two real purchase options on cost per use and evidence of durability, and defend your choice with figures.",
+          "bands": {
+            "K–2": "Compare two toys: the one that broke and the one that lasted, and say why.",
+            "3–5": "Compare two real things you could buy — a cheap one and a dearer one — and work out which costs less over a year.",
+            "6–8": "Compare two real purchase options on cost per use with a checker, and defend your choice with the figures.",
+            "9–10": "Compare two real purchase options on cost per use and evidence of durability, and defend your choice with figures.",
+            "11–12": "Compare three options for a real household purchase with cost-per-use figures and sources, and buy or recommend the one the figures support."
+          }
         },
         {
           "theme": "Tax, in the simplest form that is true (MY)",
           "description": "What tax is, which ones touch your life, and the difference between avoiding a form and owing a debt.",
-          "transfer_check": "Identify which taxes touch your own household and correctly read one real tax line on a payslip, receipt or bill."
+          "transfer_check": "Identify which taxes touch your own household and correctly read one real tax line on a payslip, receipt or bill.",
+          "bands": {
+            "K–2": "Learn that some of the money people pay for things goes to pay for the roads and the school.",
+            "3–5": "Find the tax line on a real receipt and say what the money helps to pay for.",
+            "6–8": "Identify two taxes that touch your own household and read one real tax line on a receipt or a bill correctly.",
+            "9–10": "Identify which taxes touch your own household and correctly read one real tax line on a payslip, receipt or bill.",
+            "11–12": "Identify the taxes that touch a household, read each line on real documents, and explain the difference between avoiding a form and owing a debt with an example."
+          }
         },
         {
           "theme": "Money between people (MY)",
           "description": "Lending to and borrowing from family and friends with terms said out loud, and what a gift is.",
-          "transfer_check": "Write a fair one-page note for a real or rehearsed loan between people who trust each other — amount, timing, and what happens if it fails."
+          "transfer_check": "Write a fair one-page note for a real or rehearsed loan between people who trust each other — amount, timing, and what happens if it fails.",
+          "bands": {
+            "K–2": "Learn the difference between giving and lending, and practise saying which one you mean.",
+            "3–5": "Write a one-line note when you lend something to a friend — what, when back — and keep it.",
+            "6–8": "Write a fair one-page note for a rehearsed loan between people who trust each other — amount, timing, and what happens if it fails.",
+            "9–10": "Write a fair one-page note for a real or rehearsed loan between people who trust each other — amount, timing, and what happens if it fails.",
+            "11–12": "Write the note for a real family loan, talk both parties through it, and record how the terms were kept at the end."
+          }
         },
         {
           "theme": "Planning for the month that goes wrong (MY)",
           "description": "The buffer, the priority order of bills, and who to call first when income stops.",
-          "transfer_check": "Write your household's bad-month plan: the priority order of bills, the buffer target, and the first two calls made before missing a payment."
+          "transfer_check": "Write your household's bad-month plan: the priority order of bills, the buffer target, and the first two calls made before missing a payment.",
+          "bands": {
+            "K–2": "Learn that families keep a little money aside for the day something breaks.",
+            "3–5": "Put the household's bills in order of which must be paid first if money runs short, with an adult.",
+            "6–8": "Draft your household's bad-month plan — the order the bills are paid in and a buffer target — and check it with an adult who pays them.",
+            "9–10": "Write your household's bad-month plan: the priority order of bills, the buffer target, and the first two calls made before missing a payment.",
+            "11–12": "Write the bad-month plan for a household, find the real phone numbers and hardship schemes for its first two calls, and rehearse the calls."
+          }
         }
       ],
       "credential": "Home Budget Keeper"
@@ -124,52 +264,122 @@
         {
           "theme": "The five documents (WK)",
           "description": "The identity and qualification papers work requires, where each comes from, and keeping copies that survive.",
-          "transfer_check": "Assemble your own five work documents — or the plan to obtain each — with safe copies stored in two places."
+          "transfer_check": "Assemble your own five work documents — or the plan to obtain each — with safe copies stored in two places.",
+          "bands": {
+            "K–2": "Learn your full name, your birthday and your address, and where the family keeps your papers.",
+            "3–5": "List the five papers a grown-up needs to work and find out where each one comes from.",
+            "6–8": "List your own five work documents, find which ones you already have and where each missing one comes from, and store a safe copy of one.",
+            "9–10": "Assemble your own five work documents — or the plan to obtain each — with safe copies stored in two places.",
+            "11–12": "Assemble the five documents, obtain the one you lack for real, and write the replace-if-lost guide with the office and cost for each."
+          }
         },
         {
           "theme": "Filling in a form that decides something (WK)",
           "description": "Reading a consequential form fully before writing, answering what is actually asked, and keeping the copy.",
-          "transfer_check": "Complete one real consequential form fully and correctly on the first pass, keeping the copy."
+          "transfer_check": "Complete one real consequential form fully and correctly on the first pass, keeping the copy.",
+          "bands": {
+            "K–2": "Fill in your name, age and class on a real form neatly, all the way to the end.",
+            "3–5": "Fill in a real form — a library card, a club — reading it all first, and keep a copy.",
+            "6–8": "Complete one real form that matters — a bank, a permit, a program — fully and correctly with a checker, and keep the copy.",
+            "9–10": "Complete one real consequential form fully and correctly on the first pass, keeping the copy.",
+            "11–12": "Complete a consequential form for real, then help another person through theirs without writing it for them, and note where forms trip people."
+          }
         },
         {
           "theme": "Writing to somebody who can help (WK)",
           "description": "The short, specific letter or message — who you are, what you need, by when — that gets an answer.",
-          "transfer_check": "Send one real letter or message of request — who you are, what you need, by when — and log the response it got."
+          "transfer_check": "Send one real letter or message of request — who you are, what you need, by when — and log the response it got.",
+          "bands": {
+            "K–2": "Write a short note asking a grown-up for something you need — who you are, what, when — and deliver it.",
+            "3–5": "Write a three-sentence message asking someone for help with a real thing, and record what they answered.",
+            "6–8": "Write and send one real message of request — who you are, what you need, by when — with a checker reading it first, and log the response.",
+            "9–10": "Send one real letter or message of request — who you are, what you need, by when — and log the response it got.",
+            "11–12": "Send three requests to three different offices, log every response and its timing, and write what changed between the one that worked and the ones that did not."
+          }
         },
         {
           "theme": "The interview, prepared (WK)",
           "description": "Researching the role, preparing three stories and two questions, and arriving early in the right clothes.",
-          "transfer_check": "Complete a mock interview with three prepared stories and two questions, scored by the interviewer against a rubric."
+          "transfer_check": "Complete a mock interview with three prepared stories and two questions, scored by the interviewer against a rubric.",
+          "bands": {
+            "K–2": "Practise telling a grown-up one thing you are good at and one thing you would like to learn.",
+            "3–5": "Prepare two short stories about things you have done and practise a pretend interview for a class job.",
+            "6–8": "Complete a mock interview with three prepared stories and two questions, and debrief it against the rubric with the interviewer.",
+            "9–10": "Complete a mock interview with three prepared stories and two questions, scored by the interviewer against a rubric.",
+            "11–12": "Complete a real interview or a mock one with an employer, debrief against the rubric, and interview someone else using it."
+          }
         },
         {
           "theme": "Your first day (WK)",
           "description": "Names, rules, where things are and what to ask — the first day handled so the second is easier.",
-          "transfer_check": "After a real or simulated first day, produce the map: names learned, rules that matter, where things are, and your three questions."
+          "transfer_check": "After a real or simulated first day, produce the map: names learned, rules that matter, where things are, and your three questions.",
+          "bands": {
+            "K–2": "On the first day somewhere new, learn three names and where the toilet is, and ask one question.",
+            "3–5": "After a first day at a new club or class, write the map: names, rules, where things are, and three questions.",
+            "6–8": "After a simulated first day, produce the map: names learned, rules that matter, where things are, and your three questions.",
+            "9–10": "After a real or simulated first day, produce the map: names learned, rules that matter, where things are, and your three questions.",
+            "11–12": "After a real first day at work, produce the map and the questions, and write the first-day guide the workplace could give the next new person."
+          }
         },
         {
           "theme": "Being paid to do a job well (WK)",
           "description": "Reliability, standards and finishing — the working habits that turn a job into a reference.",
-          "transfer_check": "Hold one real responsibility for two weeks — job, chore contract or role — with reliability logged and a reference obtained."
+          "transfer_check": "Hold one real responsibility for two weeks — job, chore contract or role — with reliability logged and a reference obtained.",
+          "bands": {
+            "K–2": "Keep one class job for a week, every day, without being reminded.",
+            "3–5": "Hold one real responsibility for two weeks — a chore, a class job — with a chart, and ask for a note saying you did it.",
+            "6–8": "Hold one real responsibility for two weeks — a job, a chore contract or a role — with reliability logged and a reference obtained.",
+            "9–10": "Hold one real responsibility for two weeks — job, chore contract or role — with reliability logged and a reference obtained.",
+            "11–12": "Hold a paid or formal responsibility for a month, keep the log, obtain the reference, and use it in a real application."
+          }
         },
         {
           "theme": "When something goes wrong at work (WK)",
           "description": "Mistakes, conflicts and accidents at work — owning, reporting and repairing them in the right order.",
-          "transfer_check": "Role-play owning a real-shaped workplace mistake: report it, propose the fix, and follow through in the right order."
+          "transfer_check": "Role-play owning a real-shaped workplace mistake: report it, propose the fix, and follow through in the right order.",
+          "bands": {
+            "K–2": "When you break or spill something, tell the grown-up straight away and help clean up.",
+            "3–5": "Practise owning a mistake: say what happened, say sorry once, and offer how to fix it.",
+            "6–8": "Role-play owning a workplace-shaped mistake with a checker: report it, propose the fix, and say what follow-through would look like.",
+            "9–10": "Role-play owning a real-shaped workplace mistake: report it, propose the fix, and follow through in the right order.",
+            "11–12": "Handle a real workplace mistake or conflict to the same order, document it, and write what the workplace's process did and did not provide."
+          }
         },
         {
           "theme": "Your rights at work here (WK)",
           "description": "The minimum wage, hours, breaks and safety rules that apply where you live, and where to turn when they are broken.",
-          "transfer_check": "Look up the actual minimum wage, break and safety rules where you live, and check one real job against them."
+          "transfer_check": "Look up the actual minimum wage, break and safety rules where you live, and check one real job against them.",
+          "bands": {
+            "K–2": "Learn that there are rules about how long people work and that children are protected by extra rules.",
+            "3–5": "Find out the youngest age a person can work where you live and the rules for their hours.",
+            "6–8": "Look up the actual minimum wage, break and safety rules for young workers where you live, and check one advertised job against them.",
+            "9–10": "Look up the actual minimum wage, break and safety rules where you live, and check one real job against them.",
+            "11–12": "Check two real jobs against the rules, find where to report a breach, and write the plain card a young worker could keep."
+          }
         },
         {
           "theme": "Being self-employed, honestly (WK)",
           "description": "Pricing, invoicing, records and tax when you are the business — the paperwork that keeps small work legitimate.",
-          "transfer_check": "Produce a correct quote, invoice and simple record page for one real or rehearsed piece of paid work."
+          "transfer_check": "Produce a correct quote, invoice and simple record page for one real or rehearsed piece of paid work.",
+          "bands": {
+            "K–2": "Sell lemonade or cakes at a class stall and count what it cost and what you took.",
+            "3–5": "Price a small job — car wash, dog walk — write a simple bill for it, and record what you earned.",
+            "6–8": "Produce a correct quote, invoice and simple record page for one rehearsed piece of paid work.",
+            "9–10": "Produce a correct quote, invoice and simple record page for one real or rehearsed piece of paid work.",
+            "11–12": "Do one piece of paid work for real, produce the quote, invoice and record, and work out what you would owe in tax on it."
+          }
         },
         {
           "theme": "Leaving a job well (WK)",
           "description": "Notice, handover and the reference — ending a job so the door stays open.",
-          "transfer_check": "Draft a proper notice letter and a one-page handover for a real or rehearsed departure that keeps the reference intact."
+          "transfer_check": "Draft a proper notice letter and a one-page handover for a real or rehearsed departure that keeps the reference intact.",
+          "bands": {
+            "K–2": "When you stop a class job, show the next person how it is done.",
+            "3–5": "Write a note when you leave a club or a job — thank you, when you stop, what the next person needs to know.",
+            "6–8": "Draft a proper notice letter and a one-page handover for a rehearsed departure that keeps the reference intact.",
+            "9–10": "Draft a proper notice letter and a one-page handover for a real or rehearsed departure that keeps the reference intact.",
+            "11–12": "Leave a real role with a notice letter and a handover, obtain the reference, and record what the handover missed once you were gone."
+          }
         }
       ],
       "credential": "Working Life Navigator"
@@ -181,52 +391,122 @@
         {
           "theme": "Reading a timetable and a map (CM)",
           "description": "Planning a real journey from timetable and map alone — connections, walking legs and the margin for error.",
-          "transfer_check": "Plan and complete a real journey with one connection using only the timetable and map, arriving within your stated margin."
+          "transfer_check": "Plan and complete a real journey with one connection using only the timetable and map, arriving within your stated margin.",
+          "bands": {
+            "K–2": "Find your house and your school on a map, and trace the way between them with your finger.",
+            "3–5": "Plan a real short journey on a bus or a walk from the timetable and the map with an adult, and take it.",
+            "6–8": "Plan and complete a real journey with one connection using only the timetable and map, with a checker along, arriving within your stated margin.",
+            "9–10": "Plan and complete a real journey with one connection using only the timetable and map, arriving within your stated margin.",
+            "11–12": "Plan a journey with two connections for someone else, brief them, and compare their actual times with your plan."
+          }
         },
         {
           "theme": "The vehicle you depend on (CM)",
           "description": "The checks and small maintenance that keep a bicycle, motorbike or car dependable, and the costs of neglect.",
-          "transfer_check": "Perform the full pre-use check on a real bicycle, motorbike or car and correct or report every fault found."
+          "transfer_check": "Perform the full pre-use check on a real bicycle, motorbike or car and correct or report every fault found.",
+          "bands": {
+            "K–2": "Check your bike's tyres, brakes and bell with an adult before every ride.",
+            "3–5": "Do the full check on your own bike — tyres, brakes, chain, lights — and fix or report what is wrong.",
+            "6–8": "Perform the full pre-use check on a real bicycle or a family vehicle with a checker, and correct or report every fault found.",
+            "9–10": "Perform the full pre-use check on a real bicycle, motorbike or car and correct or report every fault found.",
+            "11–12": "Perform the check, do one piece of scheduled maintenance yourself, and cost the year's upkeep against what neglect would cost."
+          }
         },
         {
           "theme": "Being early (CM)",
           "description": "Working backwards from an appointment — preparation, travel and buffer — so arriving early becomes ordinary.",
-          "transfer_check": "Work backwards from a real appointment in writing — preparation, travel, buffer — and arrive early, showing the plan."
+          "transfer_check": "Work backwards from a real appointment in writing — preparation, travel, buffer — and arrive early, showing the plan.",
+          "bands": {
+            "K–2": "Get your bag ready the night before and be at the door when the grown-up says.",
+            "3–5": "Work backwards from a real appointment — get ready, travel, spare time — on a card, and arrive early.",
+            "6–8": "Work backwards from a real appointment in writing — preparation, travel, buffer — and arrive early, with a checker confirming the time.",
+            "9–10": "Work backwards from a real appointment in writing — preparation, travel, buffer — and arrive early, showing the plan.",
+            "11–12": "Work backwards for a week of real appointments, arrive early to each, and record where the plan was wrong and why."
+          }
         },
         {
           "theme": "Getting an appointment (CM)",
           "description": "Booking with a clinic, office or service: the information to have ready, the questions to ask, and the confirmation to keep.",
-          "transfer_check": "Book one real appointment by phone or portal with the information ready, and keep the confirmation record."
+          "transfer_check": "Book one real appointment by phone or portal with the information ready, and keep the confirmation record.",
+          "bands": {
+            "K–2": "Practise asking for a turn politely with your name and what you need.",
+            "3–5": "Help an adult book a real appointment — have the details ready, ask when, write down the confirmation.",
+            "6–8": "Book one real appointment by phone or portal with the information ready and a checker listening, and keep the confirmation.",
+            "9–10": "Book one real appointment by phone or portal with the information ready, and keep the confirmation record.",
+            "11–12": "Book, reschedule and confirm real appointments for yourself and for someone who needs help, keeping the records of each."
+          }
         },
         {
           "theme": "Speaking to an official (CM)",
           "description": "Stating your business to an official clearly and calmly — what to bring, what to ask for, and what to write down after.",
-          "transfer_check": "Conduct one real or role-played official interaction: state your business in two sentences, ask your question, and write the record after."
+          "transfer_check": "Conduct one real or role-played official interaction: state your business in two sentences, ask your question, and write the record after.",
+          "bands": {
+            "K–2": "Practise saying your name and what you need to a grown-up at a desk, calmly.",
+            "3–5": "Role-play going to a counter: say your business in two sentences, ask one question, and write down the answer.",
+            "6–8": "Conduct one role-played official interaction to the real script: state your business in two sentences, ask your question, and write the record after.",
+            "9–10": "Conduct one real or role-played official interaction: state your business in two sentences, ask your question, and write the record after.",
+            "11–12": "Conduct two real official interactions, keep the records, and coach one other person through theirs."
+          }
         },
         {
           "theme": "Keeping a record (CM)",
           "description": "Dates, names, reference numbers and copies — the personal record-keeping that wins disputes months later.",
-          "transfer_check": "Build a record file for one real ongoing matter — dates, names, reference numbers, copies — complete enough to hand to a stranger."
+          "transfer_check": "Build a record file for one real ongoing matter — dates, names, reference numbers, copies — complete enough to hand to a stranger.",
+          "bands": {
+            "K–2": "Keep your important things in one folder — the letter from school, the club card — and show where it is.",
+            "3–5": "Start a folder for one real thing — a club, a lost item, a repair — with dates, names and copies.",
+            "6–8": "Build a record file for one real ongoing matter — dates, names, reference numbers, copies — and have a checker say what a stranger would still need.",
+            "9–10": "Build a record file for one real ongoing matter — dates, names, reference numbers, copies — complete enough to hand to a stranger.",
+            "11–12": "Build and use the record file to resolve a real dispute or claim, and write what the record won that memory would have lost."
+          }
         },
         {
           "theme": "Asking for help (CM)",
           "description": "Naming what you need, choosing who to ask, and accepting help in a way that keeps your dignity and theirs.",
-          "transfer_check": "Make one real, specific request for help — the need named, the person chosen — and report what asking well changed."
+          "transfer_check": "Make one real, specific request for help — the need named, the person chosen — and report what asking well changed.",
+          "bands": {
+            "K–2": "Practise saying exactly what you need help with, and say thank you.",
+            "3–5": "Ask one person for help with a real thing, saying exactly what you need, and tell what happened.",
+            "6–8": "Make one real, specific request for help — the need named, the person chosen — and tell a checker what asking well changed.",
+            "9–10": "Make one real, specific request for help — the need named, the person chosen — and report what asking well changed.",
+            "11–12": "Make a real request for help you had been avoiding, accept the help, and write what it changed for you and for them."
+          }
         },
         {
           "theme": "Doing something for the first time (CM)",
           "description": "The method for any unfamiliar task — find someone who has done it, break it down, do the first small step today.",
-          "transfer_check": "Take one real unfamiliar task through the method: find someone who has done it, break it down, complete the first step today."
+          "transfer_check": "Take one real unfamiliar task through the method: find someone who has done it, break it down, complete the first step today.",
+          "bands": {
+            "K–2": "Try one new thing with someone who knows how, and do the first small step yourself.",
+            "3–5": "Pick one thing you have never done, find someone who has, break it into steps, and do the first step today.",
+            "6–8": "Take one real unfamiliar task through the method with a checker: find someone who has done it, break it down, complete the first step today.",
+            "9–10": "Take one real unfamiliar task through the method: find someone who has done it, break it down, complete the first step today.",
+            "11–12": "Take an unfamiliar task through the method to completion, and write the method up for someone else facing a different first."
+          }
         },
         {
           "theme": "When you are the responsible adult (CM)",
           "description": "Being the one in charge of children, elders or a situation — the duties that arrive with the role and the calls you must be ready to make.",
-          "transfer_check": "Run a rehearsed scenario as the responsible adult — a child, an elder, an incident — making each required call in order."
+          "transfer_check": "Run a rehearsed scenario as the responsible adult — a child, an elder, an incident — making each required call in order.",
+          "bands": {
+            "K–2": "Learn who to fetch and what to say when you are the biggest one in the room and something goes wrong.",
+            "3–5": "Practise being in charge of a younger child for a short time — the rules, the check-ins, who you call.",
+            "6–8": "Run a rehearsed scenario as the responsible person — a child, an elder, an incident — making each required call in order.",
+            "9–10": "Run a rehearsed scenario as the responsible adult — a child, an elder, an incident — making each required call in order.",
+            "11–12": "Run the scenario and then hold real responsibility for a person for a stated period, with the calls, the checks and the record kept."
+          }
         },
         {
           "theme": "Teaching somebody else what you learned (CM)",
           "description": "Passing on a skill properly — showing, watching them try, and correcting without taking over.",
-          "transfer_check": "Teach one skill from this pack to another person, hands on their materials, until they perform it without you."
+          "transfer_check": "Teach one skill from this pack to another person, hands on their materials, until they perform it without you.",
+          "bands": {
+            "K–2": "Show a friend how to do one thing you can do, and let them try it themselves.",
+            "3–5": "Teach one skill from this pack to a classmate, hands on their things, and let them do it without you.",
+            "6–8": "Teach one skill from this pack to a younger learner, hands on their materials, until they perform it with only a reminder from you.",
+            "9–10": "Teach one skill from this pack to another person, hands on their materials, until they perform it without you.",
+            "11–12": "Teach one skill to two people of different ages, and write what you had to change between them."
+          }
         }
       ],
       "credential": "Everyday Navigator"
@@ -238,52 +518,122 @@
         {
           "theme": "The first sixty seconds (SF)",
           "description": "The look-assess-act habit at any emergency — danger first, then the person, then the call.",
-          "transfer_check": "Approach three staged emergencies verbalising the sequence — danger, response, call — and act correctly in each."
+          "transfer_check": "Approach three staged emergencies verbalising the sequence — danger, response, call — and act correctly in each.",
+          "bands": {
+            "K–2": "Learn to stop, look and fetch a grown-up when someone is hurt.",
+            "3–5": "Practise the three steps at a staged emergency — is it safe, is the person answering, call for help.",
+            "6–8": "Approach three staged emergencies saying the sequence aloud — danger, response, call — and act correctly in each with a checker watching.",
+            "9–10": "Approach three staged emergencies verbalising the sequence — danger, response, call — and act correctly in each.",
+            "11–12": "Run the three emergencies for a group of helpers, assign roles, and stop anyone about to enter an unsafe scene."
+          }
         },
         {
           "theme": "Calling for help here (SF)",
           "description": "The emergency numbers where you live, what the call-taker will ask, and giving a location that can be found.",
-          "transfer_check": "Complete a realistic mock emergency call: correct number, the call-taker's questions answered, your location given two ways."
+          "transfer_check": "Complete a realistic mock emergency call: correct number, the call-taker's questions answered, your location given two ways.",
+          "bands": {
+            "K–2": "Learn the emergency number and practise saying your name and street.",
+            "3–5": "Practise the emergency call: the right number, your name, what is wrong, where you are two ways.",
+            "6–8": "Complete a realistic mock emergency call with a checker as call-taker: correct number, the questions answered, your location given two ways.",
+            "9–10": "Complete a realistic mock emergency call: correct number, the call-taker's questions answered, your location given two ways.",
+            "11–12": "Coach a younger person through a mock emergency call and debrief which questions they missed."
+          }
         },
         {
           "theme": "Bleeding (SF)",
           "description": "Direct pressure, elevation and when a bleed is beyond home control — stopping blood loss with what is in reach.",
-          "transfer_check": "Control a staged severe bleed with correct direct pressure and escalation, narrating the decision points."
+          "transfer_check": "Control a staged severe bleed with correct direct pressure and escalation, narrating the decision points.",
+          "bands": {
+            "K–2": "Practise pressing a clean cloth on a pretend cut and holding it still until a grown-up comes.",
+            "3–5": "Press firmly on a staged cut with a pad, raise the arm, and keep pressing until told it has stopped.",
+            "6–8": "Control a staged severe bleed with correct direct pressure, narrating each decision, and say when it is beyond home control.",
+            "9–10": "Control a staged severe bleed with correct direct pressure and escalation, narrating the decision points.",
+            "11–12": "Control two staged bleeds at once, decide which needs help first, and hand over to a simulated crew with the times."
+          }
         },
         {
           "theme": "Choking (SF)",
           "description": "Recognising true choking and delivering back blows and thrusts, adapted for infants and adults.",
-          "transfer_check": "Demonstrate the complete choking response on adult and infant manikins, adapting correctly for each."
+          "transfer_check": "Demonstrate the complete choking response on adult and infant manikins, adapting correctly for each.",
+          "bands": {
+            "K–2": "Learn the hands-at-the-throat sign and shout for a grown-up when you see it.",
+            "3–5": "Show the choking sign and practise back blows on a manikin.",
+            "6–8": "Demonstrate the choking response on an adult manikin and show the changes for an infant, with a checker correcting technique.",
+            "9–10": "Demonstrate the complete choking response on adult and infant manikins, adapting correctly for each.",
+            "11–12": "Manage a staged choking casualty end to end, including the change to CPR if they collapse, and teach the response to a novice."
+          }
         },
         {
           "theme": "Burns and scalds (SF)",
           "description": "Cooling a burn long enough, covering it right, and the burns that must be seen by a clinician.",
-          "transfer_check": "Treat a staged burn with correct cooling time and covering, and state which burns must be seen by a clinician."
+          "transfer_check": "Treat a staged burn with correct cooling time and covering, and state which burns must be seen by a clinician.",
+          "bands": {
+            "K–2": "Learn to run cool water over a small burn and to fetch a grown-up.",
+            "3–5": "Cool a staged burn under running water for the right time and cover it the way you were shown.",
+            "6–8": "Treat a staged burn with correct cooling time and covering under a checker's eye, and list the burns that must be seen by a clinician.",
+            "9–10": "Treat a staged burn with correct cooling time and covering, and state which burns must be seen by a clinician.",
+            "11–12": "Treat a staged burn on a child with the parent present, decide on the clinician, and brief them with what was done and when."
+          }
         },
         {
           "theme": "Someone who has collapsed (SF)",
           "description": "Checking response and breathing, the recovery position, and staying until help takes over.",
-          "transfer_check": "Assess a staged collapse — response, breathing — place the person in the recovery position, and maintain monitoring until handover."
+          "transfer_check": "Assess a staged collapse — response, breathing — place the person in the recovery position, and maintain monitoring until handover.",
+          "bands": {
+            "K–2": "Practise gently calling a doll's name and running for a grown-up when it does not answer.",
+            "3–5": "Check whether a partner answers and is breathing, and roll them onto their side the way you were shown.",
+            "6–8": "Assess a staged collapse — response, breathing — and place the person in the recovery position with a checker timing the monitoring.",
+            "9–10": "Assess a staged collapse — response, breathing — place the person in the recovery position, and maintain monitoring until handover.",
+            "11–12": "Assess a staged collapse, manage it through to a simulated handover, and teach the recovery position to a small group."
+          }
         },
         {
           "theme": "Fire (SF)",
           "description": "Escape first, doors closed, smoke low — the household fire response, and the small fire you may fight.",
-          "transfer_check": "Run your dwelling's escape drill smoke-low with doors closed behind you, and state the one fire you might fight and the ones you never would."
+          "transfer_check": "Run your dwelling's escape drill smoke-low with doors closed behind you, and state the one fire you might fight and the ones you never would.",
+          "bands": {
+            "K–2": "Practise crawling low to the door and getting out when the alarm sounds, and never going back in.",
+            "3–5": "Run the escape drill at home smoke-low with the doors closed behind you, to the meeting place.",
+            "6–8": "Run your dwelling's escape drill smoke-low with the doors closed behind you, timed by a checker, and state the one fire you might fight.",
+            "9–10": "Run your dwelling's escape drill smoke-low with doors closed behind you, and state the one fire you might fight and the ones you never would.",
+            "11–12": "Run the drill for a dwelling with an occupant who needs help, and write the card that names who moves whom and the fire nobody fights."
+          }
         },
         {
           "theme": "Water safety (SF)",
           "description": "The drowning risks around your own area, reach-and-throw rescue, and why swimmers drown trying to help.",
-          "transfer_check": "Demonstrate reach-and-throw rescue with real materials and name the three drowning risks nearest your own area."
+          "transfer_check": "Demonstrate reach-and-throw rescue with real materials and name the three drowning risks nearest your own area.",
+          "bands": {
+            "K–2": "Learn to never go in the water after someone — reach with a stick or throw something that floats, and shout for a grown-up.",
+            "3–5": "Practise reach-and-throw rescue with a pole and a rope from the edge, never going in.",
+            "6–8": "Demonstrate reach-and-throw rescue with real materials under a checker, and name two drowning risks near your own area.",
+            "9–10": "Demonstrate reach-and-throw rescue with real materials and name the three drowning risks nearest your own area.",
+            "11–12": "Demonstrate reach-and-throw, assess a real local water hazard, and write the sign or card that warns the people who use it."
+          }
         },
         {
           "theme": "Road and vehicle safety (SF)",
           "description": "Crossing, riding and travelling defensively, and the first-on-scene basics at a road accident.",
-          "transfer_check": "Assess one real crossing or junction for its risks and walk a staged first-on-scene response — protect, assess, call."
+          "transfer_check": "Assess one real crossing or junction for its risks and walk a staged first-on-scene response — protect, assess, call.",
+          "bands": {
+            "K–2": "Stop, look and listen at a real crossing with an adult, and hold hands until the road is clear.",
+            "3–5": "Cross a real road safely on your own using the taught method, and name two risks at your school crossing.",
+            "6–8": "Assess one real crossing or junction for its risks with a checker, and walk the staged first-on-scene response — protect, assess, call.",
+            "9–10": "Assess one real crossing or junction for its risks and walk a staged first-on-scene response — protect, assess, call.",
+            "11–12": "Assess a junction, walk the first-on-scene response with a group, and write the improvement request to the road authority with the evidence."
+          }
         },
         {
           "theme": "After an emergency (SF)",
           "description": "The hours after — reporting, records, checking on people, and the reactions in yourself that are normal.",
-          "transfer_check": "From a staged incident, complete the after-actions: report filed, people checked, record written, and the normal reactions named."
+          "transfer_check": "From a staged incident, complete the after-actions: report filed, people checked, record written, and the normal reactions named.",
+          "bands": {
+            "K–2": "After a scary thing, tell a grown-up how you feel and know that feeling shaky is normal.",
+            "3–5": "After a staged incident, help check everyone is all right and say two feelings that are normal afterwards.",
+            "6–8": "From a staged incident, complete the after-actions with a checker — people checked, record written — and name the reactions that are normal.",
+            "9–10": "From a staged incident, complete the after-actions: report filed, people checked, record written, and the normal reactions named.",
+            "11–12": "Lead the after-actions for a group, file the report, check on people over the following days, and know when to point someone to more help."
+          }
         }
       ],
       "credential": "First-Minutes Responder"

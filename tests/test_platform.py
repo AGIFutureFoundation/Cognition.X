@@ -677,8 +677,9 @@ def test_education_os_canonical_injection():
     check("institute: every principle carries its strands", all(isinstance(x.get("strands"), list) and x["strands"] for x in inst["principles"]))
 
 
-KNOWN_BAND_SUFFIX_ROWS = 10750      # v0.65.0 baseline: 11,250 before the first tranche; the ratchet only falls
-BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch & Scale"}
+KNOWN_BAND_SUFFIX_ROWS = 10250      # 11,250 before tranche one (v0.65.0), 10,750 after it, 10,250 after tranche two (v0.66.0); the ratchet only falls
+BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch & Scale",
+                       "Civic Leadership Legacy : Louisiana", "Basic Life Skills & Self-Reliance"}
 
 
 def test_band_differentiated_descriptions():
@@ -710,10 +711,12 @@ def test_band_differentiated_descriptions():
         except ValueError:
             ok = True
         check("generator: refuses duplicate, missing or suffixed band sentences", ok)
-    specs = {json.loads(p.read_text(encoding="utf-8"))["pack"]: p for p in (ROOT / "data" / "pack_specs").glob("*.json")}
+    specs = {json.loads(p.read_text(encoding="utf-8"))["pack"]: p for d in ("pack_specs", "promotions") for p in (ROOT / "data" / d).glob("*.json")}
     for pack in BAND_AUTHORED_PACKS:
         spec = json.loads(specs[pack].read_text(encoding="utf-8"))
         check(f"spec: {pack} carries bands on every theme", all("bands" in th for t in spec["tracks"] for th in t["themes"]))
+    check("core spine: every core-spine pack outside the Louisiana OS is band-authored",
+          {"EMERGENCY", "LAUNCH", "LEGACYLA", "LIFESKILL"} <= {r["pack"] for r in json.loads((ROOT / "data" / "rubrics" / "core_spine.json").read_text(encoding="utf-8"))["rubrics"]} and len(BAND_AUTHORED_PACKS) == 4)
 
 
 def test_docs_numbers_match_dataset():
