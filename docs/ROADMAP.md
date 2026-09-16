@@ -179,8 +179,14 @@ mapping checks (done, v0.56.0).
   Louisiana and States Institute views. The K–12 program layer
   joined in v0.44.0 (`data/louisiana/k12_program.json`, rendered in
   the Curriculum view) — every named display layer is now canonical.
-  Remaining: inject the canonicalized layers back into the Education
-  OS template, shrinking `template.html` over time
+  Closed in v0.63.0: the Education OS is built FROM the canonical
+  files — the template holds a placeholder where each of the seven
+  literals stood (regions, hubs, parishes, the WLB fact base and
+  principles, the K–12 grades and threads; 53 KB of duplicated
+  facts gone), the builder injects the JSON in place, every view
+  renders identically, and `tools/extract_fact_bases.py` reads the
+  built app back and must reproduce the canonical files byte for
+  byte in CI. One source of truth per fact, at last
 - [x] Learner state, first working version (v0.25.0): local-first
   progress ledger in the Louisiana platform — per-learner check
   records on the 30 core-spine tracks, automatic credential award at

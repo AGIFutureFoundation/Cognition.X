@@ -648,6 +648,30 @@ def test_durable_lists_and_restore():
     check("smoke: the browser suite covers migration, quota and restore", "testDurableListsAndRestore" in (ROOT / "tests" / "browser" / "smoke.js").read_text(encoding="utf-8"))
 
 
+def test_education_os_canonical_injection():
+    """v0.63.0 — the Education OS is built from the canonical fact bases:
+    placeholders in the template, JSON injected in place, the extractor a
+    clean round trip, each injected layer byte-equal to its file."""
+    import subprocess
+    sys.path.insert(0, str(ROOT / "tools"))
+    from build_education_os import FACT_LAYERS
+    tpl = (ROOT / "apps" / "education-os" / "template.html").read_text(encoding="utf-8", errors="replace")
+    built = app_html("education-os")
+    for name, (rel, pick) in FACT_LAYERS.items():
+        check(f"education-os: template holds one placeholder for {name} and no literal", tpl.count(f"__CXFACT:{name}__") == 1 and tpl.count(f"DATA.{name}=") == 1 and f"DATA.{name}=[" not in tpl and f"DATA.{name}={{" not in tpl)
+        a = built.find(f"/*cx:{name}*/")
+        z = built.find("/*cx:end*/", a)
+        canonical = json.dumps(pick(json.loads((ROOT / rel).read_text(encoding="utf-8"))), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+        check(f"education-os: {name} injected in place, byte-equal to {rel}", a > 0 and built[a + len(f"/*cx:{name}*/"):z] == canonical)
+        check(f"education-os: {name} injected before its first reader", built.find(f"DATA.{name}", a + 1) > a and built.count(f"DATA.{name}=") == 1)
+    check("education-os: no __CXFACT placeholder survives the build", "__CXFACT:" not in built)
+    r = subprocess.run([sys.executable, str(ROOT / "tools" / "extract_fact_bases.py"), "--check"], capture_output=True, text=True, cwd=ROOT)
+    check("extractor: the built app reproduces the canonical files byte for byte", r.returncode == 0 and "would change" not in r.stdout, (r.stdout + r.stderr)[-300:])
+    check("extractor: every layer was read from the built app", r.stdout.count("from built app") == len(FACT_LAYERS), r.stdout[-200:])
+    inst = json.loads((ROOT / "data" / "wlb" / "institute.json").read_text(encoding="utf-8"))
+    check("institute: every principle carries its strands", all(isinstance(x.get("strands"), list) and x["strands"] for x in inst["principles"]))
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))

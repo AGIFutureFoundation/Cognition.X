@@ -273,7 +273,7 @@ promotion; no `block_id` changed.
 
 ---
 
-## 7 — Inject the canonical layers back into the Education OS template
+## 7 — Inject the canonical layers back into the Education OS template *(done in v0.63.0 — seven literals replaced by placeholders, injected in place at build time; every view rendered identically in a full sweep; the extractor is now the round-trip check)*
 
 **Why.** Four fact bases are canonical data now
 (`data/louisiana/fact_base.json`, `data/louisiana/k12_program.json`,

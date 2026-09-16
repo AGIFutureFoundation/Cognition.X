@@ -536,6 +536,15 @@ async function testEducationOsBoots(browser, errs) {
   // and the stray script text must never reappear as page text
   const leak = await page.evaluate(() => document.body.innerText.includes('var DATA = {'));
   check('education-os: no script source visible on the page', !leak);
+  // v0.63.0: the views that read the canonical fact bases injected in place render from them
+  const facts = await page.evaluate(async () => {
+    const go = async id => { location.hash = '#/' + id; await new Promise(r => setTimeout(r, 250)); return document.getElementById('v-' + id).innerHTML; };
+    const p = await go('parishes'), k = await go('lak12'), w = await go('wlb');
+    return { parishes: DATA.parishes.length, hubs: DATA.regionHubs.length, acadia: p.includes('Acadia') && p.includes('Crowley'), grades: DATA.lak12.length, k: k.includes('Depot Cadet'), principles: DATA.wlbPrinciples.length, strands: DATA.wlbPrinciples.every(x => Array.isArray(x.strands)), w: w.includes(DATA.wlb.disclaimer.slice(0, 40)) };
+  });
+  check('education-os: parishes view renders the canonical fact base (64 parishes, 8 hubs)', facts.parishes === 64 && facts.hubs === 9 && facts.acadia, JSON.stringify(facts));
+  check('education-os: K-12 view renders the canonical program (13 grades)', facts.grades === 13 && facts.k);
+  check('education-os: Institute view carries the disclaimer and the 12 principles with strands', facts.principles === 12 && facts.strands && facts.w);
   await page.close();
 }
 

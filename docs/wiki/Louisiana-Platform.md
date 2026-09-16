@@ -188,7 +188,8 @@ hand-edited:
    per-parish name/seat/region/population/wave/districts/industries/
    narrative-world/rural-tier (canonical since v0.39.0; originally
    extracted from the Education OS app by
-   `tools/extract_fact_bases.py`).
+   `tools/extract_fact_bases.py`; since v0.63.0 the Education OS is
+   built from this file too, and the tool round-trips it).
 2. **`data/wlb/institute.json`** — the Institute fact base, with the
    disclaimer carried verbatim.
 3. **`data/blocks.csv`** — curriculum totals and the Louisiana legacy
