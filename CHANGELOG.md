@@ -4,6 +4,33 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.64.0] — 2026-09-16
+
+### Added — the register's last open items, closed
+- **`docs/templates/DEVICE_AND_DATA_HYGIENE.md`** — the one page hall
+  staff read and sign, yearly: what is on the device and why it is the
+  record; ten rules in the order they come up (encryption and lock,
+  one profile per assessor, no accounts or extensions, the weekly
+  export, restore only by merge, what leaves and by whose hand, keys
+  out-of-band, learners' lines are theirs, screens face the room, the
+  first hour of an incident); a yearly re-check; a sign-off. Register
+  ST-03 moves to *partial* — the parish's own annual course still
+  governs a parish employee. Not legal advice.
+- **Hall checklist lines widened.** The device-sheet line asks that
+  every staff member has signed the hygiene sheet (PA-01 · ST-03); the
+  MOU line asks for the city clerk's use permit where the room is
+  city-owned or leased, and an assembly permit for a public showcase
+  (PA-04 · LO-02). Still thirteen controls; two of them now carry two
+  register ids.
+- **DI-03 to partial.** The board packet lists the 24 proposed
+  credential names as its first decision and every record states its
+  witnessed count on its face — what a district CTE office asks first.
+  Recognition on a transcript remains the district's decision.
+- Register: 44 controls, 28 met, 16 partial, **0 open**. Every
+  remaining *partial* is an adopter's act the software supports and
+  cannot do. `docs/COMPLIANCE_ROADMAP.md` counts and wave-2 table;
+  `docs/COHORT_ONBOARDING.md` §0; tests.
+
 ## [0.63.0] — 2026-09-16
 
 ### Changed — the Education OS is built from the canonical fact bases (roadmap prompt 7)

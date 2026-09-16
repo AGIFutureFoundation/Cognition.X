@@ -21,7 +21,9 @@
    (device sheet, weekly export, incident lead, DPA, records custody,
    background checks, fire marshal, insurance, OSHA 10, youth lines,
    employment certificates, two-adult rule, MOU). The templates for the
-   paper are in `docs/templates/`.
+   paper are in `docs/templates/`, including the one-page device and
+   data hygiene sheet every staff member signs
+   (`templates/DEVICE_AND_DATA_HYGIENE.md`).
 3. **Create the Records Office** on one controlled device: Parish Admin
    → *Records Office* → name it → *Create office keys*. The private key
    is non-extractable and lives only in that browser profile; the

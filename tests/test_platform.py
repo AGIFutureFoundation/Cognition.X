@@ -562,8 +562,13 @@ def test_security_compliance_register():
     check("studio: youth note is not legal advice", "NOT LEGAL ADVICE" in sims["youth_note"])
     for app in ("trades-network", "louisiana"):
         check(f"studio: {app} carries the youth lines", "Hazardous Occupations Orders" in app_html(app))
-    for t in ("DATA_PROCESSING_STATEMENT", "INCIDENT_RESPONSE_RUNBOOK", "RECORDS_CUSTODY_STATEMENT"):
+    for t in ("DATA_PROCESSING_STATEMENT", "INCIDENT_RESPONSE_RUNBOOK", "RECORDS_CUSTODY_STATEMENT", "DEVICE_AND_DATA_HYGIENE"):
         check(f"templates: {t} exists and is not legal advice", "Not legal advice" in (ROOT / "docs" / "templates" / f"{t}.md").read_text(encoding="utf-8"))
+    hyg = (ROOT / "docs" / "templates" / "DEVICE_AND_DATA_HYGIENE.md").read_text(encoding="utf-8")
+    check("hygiene sheet: ten rules, a yearly re-sign, and the runbook named", hyg.count("\n1. **") == 1 and "10. **" in hyg and "Once a year" in hyg and "INCIDENT_RESPONSE_RUNBOOK.md" in hyg and "ST-03" in hyg)
+    check("register: no open item remains (v0.64.0)", not [c["id"] for c in reg["controls"] if c["status"] == "open"], str([c["id"] for c in reg["controls"] if c["status"] == "open"]))
+    la_hall = app_html("louisiana")
+    check("hall checklist: the device-sheet line names the hygiene sheet and the MOU line the city clerk's permit", "DEVICE_AND_DATA_HYGIENE.md" in la_hall and "city clerk" in la_hall and "PA-01 · ST-03" in la_hall and "PA-04 · LO-02" in la_hall)
     la = app_html("louisiana")
     check("louisiana: private key never exported (no extractable sign key)", 'namedCurve:"P-256"}, true, ["sign"]' not in la and 'generateKey({name:"ECDSA", namedCurve:"P-256"}, false' in la)
     check("louisiana: durable ledger store and custody bundle present", "cxla.ledgerdb" in la and "cx-custody/1" in la and "HALL_REQS" in la)
