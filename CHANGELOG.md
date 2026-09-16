@@ -4,6 +4,31 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.65.0] — 2026-09-16
+
+### Changed — the description debt, tranche one (roadmap prompt 6)
+- **Per-band descriptions through the pipeline.** A pack-spec theme (and
+  a promotion theme) may carry `bands`: the five band labels each to one
+  sentence that says what the learner *does* at that band. The generator
+  uses it verbatim and refuses a theme whose five are missing, empty,
+  duplicated or still suffixed; without `bands` the shared sentence is
+  suffixed as before. No `block_id` depends on either form.
+- **Two core-spine packs authored across all five bands.** Emergency
+  Preparedness & First Response (50 themes) and Parish Launch & Scale
+  (50 themes): 500 rows now differ in the doing — a K–2 line is the
+  child's honest version of the task with an adult, an 11–12 line the
+  real deliverable for a real office. Regenerated through
+  `tools/generate_pack.py` and `tools/normalize_blocks.py`; every
+  `block_id` unchanged.
+- **Measured.** Band-suffix rows fall from 11,250 (64.5%) to 10,750
+  (61.6%); `test_band_differentiated_descriptions` holds the count as a
+  ratchet that only falls, checks five distinct sentences per theme and
+  no suffix in the authored packs, and exercises the generator's refusals.
+  `docs/DATA_QUALITY.md` regenerated. The 6,200 empty descriptions are
+  left honest (`docs/DATA_REVIEW.md` §2). Next tranches: Louisiana OS,
+  Civic Leadership Legacy Louisiana, Basic Life Skills.
+- `CONTRIBUTING.md` and the Authoring Packs wiki page document `bands`.
+
 ## [0.64.0] — 2026-09-16
 
 ### Added — the register's last open items, closed

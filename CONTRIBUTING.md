@@ -22,6 +22,22 @@
    (pins its `block_id` prefix), update `CHANGELOG.md` under *Unreleased*,
    and open a PR.
 
+### Per-band descriptions (`bands`)
+
+A theme's `description` is the sentence every band shares; on its own,
+each block gets that sentence with an "— at ‹band›" suffix, which is the
+documented content debt (`docs/DATA_QUALITY.md`, band-suffix column). To
+pay it down, give the theme a `bands` map — the five band labels
+(`K–2`, `3–5`, `6–8`, `9–10`, `11–12`) each to one sentence that says
+what the learner **does** at that band. The band is already in the
+`level` column, so the five must differ in the doing, not in adjectives:
+a K–2 sentence is the child's honest version of the task with an adult,
+an 11–12 sentence is the real deliverable for a real office. All five
+must be present, non-empty and distinct; the generator refuses anything
+less, and the suffix count in the tests only ever falls. Two core-spine
+packs carry them since v0.65.0 (Emergency Preparedness & First Response,
+Parish Launch & Scale) — copy their shape.
+
 ### Writing style (match the corpus)
 
 - Track names read like a journey: *"Privacy and the trail you leave"*.
