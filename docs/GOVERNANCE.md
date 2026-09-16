@@ -68,6 +68,10 @@ A pack is approved when every reviewer can answer yes:
 
 ## The standing review queue
 
+> The queue as a working table, with the first sitting's agenda and the
+> checklist as a form, is [`BOARD_PACKET.md`](BOARD_PACKET.md) (v0.61.0).
+> `tools/cohort_report.py` produces the packet for every later sitting.
+
 The ~9,950 machine-authored blocks (everything post-import) are
 validator-clean but **have not passed this board**. They are the
 standing queue, to be reviewed pack-by-pack in this order: the packs in

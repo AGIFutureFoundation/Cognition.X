@@ -292,7 +292,9 @@ complete a track and hold a verifiable credential file.
 
 ### The path to v1.0 (operational checklist)
 
-The remaining v1.0 work is operational, not code:
+The remaining v1.0 work is operational, not code — and since v0.61.0 it
+has artifacts: `docs/BOARD_PACKET.md`, `docs/COHORT_ONBOARDING.md`,
+`docs/templates/CONSENT_FORM.md` and `tools/cohort_report.py`:
 
 1. **Seat the curriculum review board** (docs/GOVERNANCE.md) and
    begin the standing review queue, classroom-facing packs first.

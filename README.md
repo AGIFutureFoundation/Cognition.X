@@ -138,6 +138,7 @@ in [`CHANGELOG.md`](CHANGELOG.md); the current version is in
 - Investor walkthrough: [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md) · investor brief: [`docs/INVESTOR_BRIEF.md`](docs/INVESTOR_BRIEF.md) · capital structure & risk: [`docs/CAPITAL_STRUCTURE.md`](docs/CAPITAL_STRUCTURE.md) · three-page deck: [`docs/PITCH_DECK.md`](docs/PITCH_DECK.md)
 - The Simulation Studio (18 scenarios, one engine, six apps; simulation ≠ certification): [`docs/SIMULATION.md`](docs/SIMULATION.md)
 - Standards mapping and transfer-check rubrics (intended alignment, never certification): [`docs/STANDARDS.md`](docs/STANDARDS.md)
+- The v1.0 gate, executable: [`docs/BOARD_PACKET.md`](docs/BOARD_PACKET.md) · [`docs/COHORT_ONBOARDING.md`](docs/COHORT_ONBOARDING.md) · `tools/cohort_report.py`
 - Credential records — the native format and the Open Badges 3.0 envelope: [`docs/CREDENTIALS.md`](docs/CREDENTIALS.md) · verify from the command line with `node tools/verify_record.js`
 - Hosting hardening guide and the CISA K–12 vendor summary: [`docs/HOSTING.md`](docs/HOSTING.md) · [`docs/CISA_K12_SUMMARY.md`](docs/CISA_K12_SUMMARY.md) · SBOM: [`sbom/cognitionx.cdx.json`](sbom/cognitionx.cdx.json)
 - Security & compliance roadmap and control register (state, parish, local, district; not legal advice): [`docs/COMPLIANCE_ROADMAP.md`](docs/COMPLIANCE_ROADMAP.md) · [`docs/CONTROL_REGISTER.md`](docs/CONTROL_REGISTER.md) · [`SECURITY.md`](SECURITY.md)

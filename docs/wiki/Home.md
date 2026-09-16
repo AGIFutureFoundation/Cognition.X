@@ -41,10 +41,11 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Data quality dashboard](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_QUALITY.md)
 - [Data review & known issues](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_REVIEW.md)
 - [Licensing rationale](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/LICENSING.md)
+- [The board packet](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/BOARD_PACKET.md) and [running a cohort](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/COHORT_ONBOARDING.md) — the v1.0 gate, executable
 - [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.60.0)
+## Numbers (v0.61.0)
 
 **17,450 blocks · 47 packs · 225 tracks · 1,430 credentials**
 

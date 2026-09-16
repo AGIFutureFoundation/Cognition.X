@@ -598,6 +598,35 @@ def test_open_badge_envelope():
     check("CREDENTIALS.md states what a signature proves and does not", "does not prove who" in doc and "out-of-band" in doc and "Revoked outranks trusted" in doc)
 
 
+def test_v1_gate_materials():
+    """v0.61.0 — the v1.0 gate is executable: the board packet, the cohort
+    onboarding path and its consent sheet match the code, and the cohort
+    report runs on the sample evidence."""
+    import subprocess
+    packet = (ROOT / "docs" / "BOARD_PACKET.md").read_text(encoding="utf-8")
+    src = {r["pack"] for r in csv.DictReader(open(ROOT / "data" / "source" / "Cognition.X_all_blocks.csv", newline="", encoding="utf-8"))}
+    packs = json.loads((ROOT / "data" / "manifest.json").read_text(encoding="utf-8"))["packs"]
+    mach = [p for p in packs if p["name"] not in src]
+    check("board packet: standing queue counts match the dataset", f"**{len(mach)} packs, {sum(p['blocks'] for p in mach):,} blocks**" in packet)
+    check("board packet: every machine-authored pack is in the queue", all(f"(`{p['slug']}`)" in packet for p in mach))
+    check("board packet: the 24 proposed names are the first decision", packet.count("| Basic Life Skills") + packet.count("| Care Across") + packet.count("| Making,") + packet.count("| Preventive") + packet.count("| Water, Land") == 24 and "First decision" in packet)
+    check("board packet: the six-point checklist is a form", all(f"| {i} |" in packet for i in range(1, 7)) and "Reviewer:" in packet)
+    onb = (ROOT / "docs" / "COHORT_ONBOARDING.md").read_text(encoding="utf-8")
+    consent = (ROOT / "docs" / "templates" / "CONSENT_FORM.md").read_text(encoding="utf-8")
+    la = app_html("louisiana")
+    check("consent: says nothing is sent and the browser blocks it — true (CSP connect-src 'none')", "cannot send anything anywhere" in consent and "connect-src 'none'" in la)
+    check("consent: says only a nickname, band and supports are asked — true", "first name or a nickname" in consent and "a first name or nickname" in la and "Nothing here needs a legal name" in la)
+    check("consent: aggregate export is optional and nameless — true", "no names in it" in consent and "per-track counts only" in la and "I choose to export this aggregate" in la)
+    check("consent: simulation is practice — true", "never a check and never a credential" in consent and "never a credential" in la)
+    check("onboarding: key exchange is out-of-band with a confirmation step", "out-of-band" in onb and "confirm the office name" in onb)
+    check("onboarding: names the checksum step and the unmodified-release rule", "sha256sum -c apps/CHECKSUMS.sha256" in onb and "unmodified" in onb)
+    r = subprocess.run([sys.executable, str(ROOT / "tools" / "cohort_report.py")], capture_output=True, text=True, cwd=ROOT)
+    check("cohort report: runs on the sample evidence", r.returncode == 0, r.stderr[-200:])
+    for sec in ("## 1. The cohort at a glance", "## 3. Revision priorities", "## 5. Standing-queue status", "## 6. The v1.0 gate"):
+        check(f"cohort report: has section {sec[3:24]}", sec in r.stdout)
+    check("cohort report: evidence proposes, the board disposes", "Evidence proposes; the board disposes" in r.stdout)
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
