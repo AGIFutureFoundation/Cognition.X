@@ -24,6 +24,7 @@ in CI on every push.
 | CTE credential lists | the state's approved industry-recognized credential list |
 | Digital accessibility | the standard a public entity's technology must meet |
 | Sales-tax exemption | whether nonprofit purchases can be exempt |
+| Data breach notification & cybersecurity | the state statute that governs notice when personal information on a device or in a file is lost or exposed, and the K–12 / local-government cybersecurity duties a program office inherits from its host |
 
 ## At a glance
 
@@ -31,62 +32,63 @@ in CI on every push.
 - **31** states have a SOPIPA-style statute binding ed-tech operators; the rest run on FERPA, COPPA and district policy.
 - **28** states register apprenticeship programs through a State Apprenticeship Agency; **22** through the federal Office of Apprenticeship.
 - Homeschool regulation: **11** no-notice · **15** low · **18** moderate · **6** high.
+- Breach notification: **19** states set a fixed outer deadline after discovery (30–60 days); **31** say 'without unreasonable delay'. Regulator-notice thresholds vary; verify with the attorney general.
 - Estimated one-time compliance cost per state: **$320–$1,400** under the stated assumptions (one program office, ten background checks; excludes staff time, counsel, insurance and devices).
 
 ## The fifty states
 
-| State | Homeschool | Privacy | Charity reg. | Apprenticeship | Sales-tax exemption | Foreign nonprofit fee | One-time est. | Annual est. |
-|---|---|---|---|---|---|---:|---:|---:|
-| Alabama | low | baseline | required | SAA | none | $150 | $475–$925 | $100–$350 |
-| Alaska | none | baseline | required | OA | no state tax | $50 | $390–$840 | $115–$365 |
-| Arizona | low | operator law | no | SAA | none | $175 | $475–$925 | $60–$310 |
-| Arkansas | low | operator law | required | OA | none | $300 | $600–$1,050 | $75–$325 |
-| California | low | operator law | required | SAA | none | $30 | $380–$830 | $170–$420 |
-| Colorado | moderate | operator law | required | SAA | available | $100 | $410–$860 | $70–$320 |
-| Connecticut | none | operator law | required | SAA | available | $50 | $400–$850 | $150–$400 |
-| Delaware | low | operator law | no | SAA | no state tax | $25–$300 | $450–$900 | $75–$325 |
-| Florida | moderate | operator law | required | SAA | available | $70 | $470–$920 | $211–$461 |
-| Georgia | moderate | operator law | required | OA | none | $225 | $560–$1,010 | $100–$350 |
-| Hawaii | moderate | operator law | required | SAA | none | $50 | $350–$800 | $155–$405 |
-| Idaho | none | baseline | no | OA | none | $30 | $330–$780 | $50–$300 |
-| Illinois | none | operator law | required | OA | available | $50 | $365–$815 | $75–$325 |
-| Indiana | none | baseline | no | OA | available | $125 | $425–$875 | $70–$320 |
-| Iowa | none | operator law | no | OA | none | $25 | $325–$775 | $70–$320 |
-| Kansas | low | operator law | required | SAA | available | $115 | $435–$885 | $110–$360 |
-| Kentucky | low | baseline | required | SAA | available | $90 | $390–$840 | $65–$315 |
-| Louisiana | moderate | operator law | no | SAA | none | $125 | $450–$900 | $85–$335 |
-| Maine | moderate | operator law | required | SAA | none | $105 | $455–$905 | $110–$360 |
-| Maryland | moderate | operator law | required | SAA | available | $100 | $500–$950 | $150–$400 |
-| Massachusetts | high | operator law | required | SAA | available | $400 | $800–$1,250 | $275–$525 |
-| Michigan | none | operator law | required | OA | available | $20 | $320–$770 | $70–$320 |
-| Minnesota | moderate | baseline | required | SAA | available | $50 | $375–$825 | $75–$325 |
-| Mississippi | low | baseline | required | OA | none | $100 | $450–$900 | $125–$375 |
-| Missouri | none | operator law | required | OA | available | $25 | $340–$790 | $80–$330 |
-| Montana | low | baseline | no | SAA | no state tax | $70 | $370–$820 | $65–$315 |
-| Nebraska | low | operator law | no | OA | available | $25 | $325–$775 | $70–$320 |
-| Nevada | low | operator law | required | SAA | available | $50 | $350–$800 | $100–$350 |
-| New Hampshire | moderate | operator law | required | OA | no state tax | $25 | $350–$800 | $150–$400 |
-| New Jersey | none | baseline | required | OA | available | $125 | $455–$905 | $180–$430 |
-| New Mexico | low | baseline | required | SAA | available | $25 | $325–$775 | $60–$310 |
-| New York | high | operator law | required | SAA | available | $135 | $460–$910 | $100–$350 |
-| North Carolina | moderate | operator law | required | SAA | none | $125 | $525–$975 | $175–$425 |
-| North Dakota | high | baseline | required | OA | none | $50 | $375–$825 | $70–$320 |
-| Ohio | moderate | baseline | required | SAA | available | $99 | $399–$849 | $175–$425 |
-| Oklahoma | none | operator law | required | OA | available | $300 | $665–$1,115 | $140–$390 |
-| Oregon | moderate | operator law | required | SAA | no state tax | $50 | $350–$800 | $200–$450 |
-| Pennsylvania | high | baseline | required | SAA | available | $250 | $650–$1,100 | $150–$400 |
-| Rhode Island | high | baseline | required | SAA | available | $50 | $440–$890 | $160–$410 |
-| South Carolina | moderate | baseline | required | OA | none | $10 | $360–$810 | $125–$375 |
-| South Dakota | moderate | baseline | no | OA | none | $125 | $425–$875 | $60–$310 |
-| Tennessee | moderate | operator law | required | OA | available | $600 | $950–$1,400 | $170–$420 |
-| Texas | none | operator law | no | OA | available | $25 | $325–$775 | $55–$305 |
-| Utah | low | operator law | required | OA | available | $30 | $430–$880 | $160–$410 |
-| Vermont | high | baseline | no | SAA | available | $125 | $425–$875 | $70–$320 |
-| Virginia | moderate | operator law | required | SAA | available | $75 | $475–$925 | $175–$425 |
-| Washington | moderate | operator law | required | SAA | none | $50 | $410–$860 | $100–$350 |
-| West Virginia | moderate | operator law | required | OA | none | $50 | $365–$815 | $90–$340 |
-| Wisconsin | low | baseline | required | SAA | available | $45 | $360–$810 | $129–$379 |
-| Wyoming | low | baseline | no | OA | none | $50 | $350–$800 | $75–$325 |
+| State | Homeschool | Privacy | Charity reg. | Apprenticeship | Sales-tax exemption | Breach deadline | Foreign nonprofit fee | One-time est. | Annual est. |
+|---|---|---|---|---|---|---|---:|---:|---:|
+| Alabama | low | baseline | required | SAA | none | 45 days | $150 | $475–$925 | $100–$350 |
+| Alaska | none | baseline | required | OA | no state tax | no fixed count | $50 | $390–$840 | $115–$365 |
+| Arizona | low | operator law | no | SAA | none | 45 days | $175 | $475–$925 | $60–$310 |
+| Arkansas | low | operator law | required | OA | none | no fixed count | $300 | $600–$1,050 | $75–$325 |
+| California | low | operator law | required | SAA | none | no fixed count | $30 | $380–$830 | $170–$420 |
+| Colorado | moderate | operator law | required | SAA | available | 30 days | $100 | $410–$860 | $70–$320 |
+| Connecticut | none | operator law | required | SAA | available | 60 days | $50 | $400–$850 | $150–$400 |
+| Delaware | low | operator law | no | SAA | no state tax | 60 days | $25–$300 | $450–$900 | $75–$325 |
+| Florida | moderate | operator law | required | SAA | available | 30 days | $70 | $470–$920 | $211–$461 |
+| Georgia | moderate | operator law | required | OA | none | no fixed count | $225 | $560–$1,010 | $100–$350 |
+| Hawaii | moderate | operator law | required | SAA | none | no fixed count | $50 | $350–$800 | $155–$405 |
+| Idaho | none | baseline | no | OA | none | no fixed count | $30 | $330–$780 | $50–$300 |
+| Illinois | none | operator law | required | OA | available | no fixed count | $50 | $365–$815 | $75–$325 |
+| Indiana | none | baseline | no | OA | available | no fixed count | $125 | $425–$875 | $70–$320 |
+| Iowa | none | operator law | no | OA | none | no fixed count | $25 | $325–$775 | $70–$320 |
+| Kansas | low | operator law | required | SAA | available | no fixed count | $115 | $435–$885 | $110–$360 |
+| Kentucky | low | baseline | required | SAA | available | no fixed count | $90 | $390–$840 | $65–$315 |
+| Louisiana | moderate | operator law | no | SAA | none | 60 days | $125 | $450–$900 | $85–$335 |
+| Maine | moderate | operator law | required | SAA | none | 30 days | $105 | $455–$905 | $110–$360 |
+| Maryland | moderate | operator law | required | SAA | available | 45 days | $100 | $500–$950 | $150–$400 |
+| Massachusetts | high | operator law | required | SAA | available | no fixed count | $400 | $800–$1,250 | $275–$525 |
+| Michigan | none | operator law | required | OA | available | no fixed count | $20 | $320–$770 | $70–$320 |
+| Minnesota | moderate | baseline | required | SAA | available | no fixed count | $50 | $375–$825 | $75–$325 |
+| Mississippi | low | baseline | required | OA | none | no fixed count | $100 | $450–$900 | $125–$375 |
+| Missouri | none | operator law | required | OA | available | no fixed count | $25 | $340–$790 | $80–$330 |
+| Montana | low | baseline | no | SAA | no state tax | no fixed count | $70 | $370–$820 | $65–$315 |
+| Nebraska | low | operator law | no | OA | available | no fixed count | $25 | $325–$775 | $70–$320 |
+| Nevada | low | operator law | required | SAA | available | no fixed count | $50 | $350–$800 | $100–$350 |
+| New Hampshire | moderate | operator law | required | OA | no state tax | no fixed count | $25 | $350–$800 | $150–$400 |
+| New Jersey | none | baseline | required | OA | available | no fixed count | $125 | $455–$905 | $180–$430 |
+| New Mexico | low | baseline | required | SAA | available | 45 days | $25 | $325–$775 | $60–$310 |
+| New York | high | operator law | required | SAA | available | no fixed count | $135 | $460–$910 | $100–$350 |
+| North Carolina | moderate | operator law | required | SAA | none | no fixed count | $125 | $525–$975 | $175–$425 |
+| North Dakota | high | baseline | required | OA | none | no fixed count | $50 | $375–$825 | $70–$320 |
+| Ohio | moderate | baseline | required | SAA | available | 45 days | $99 | $399–$849 | $175–$425 |
+| Oklahoma | none | operator law | required | OA | available | no fixed count | $300 | $665–$1,115 | $140–$390 |
+| Oregon | moderate | operator law | required | SAA | no state tax | 45 days | $50 | $350–$800 | $200–$450 |
+| Pennsylvania | high | baseline | required | SAA | available | no fixed count | $250 | $650–$1,100 | $150–$400 |
+| Rhode Island | high | baseline | required | SAA | available | 45 days | $50 | $440–$890 | $160–$410 |
+| South Carolina | moderate | baseline | required | OA | none | no fixed count | $10 | $360–$810 | $125–$375 |
+| South Dakota | moderate | baseline | no | OA | none | 60 days | $125 | $425–$875 | $60–$310 |
+| Tennessee | moderate | operator law | required | OA | available | 45 days | $600 | $950–$1,400 | $170–$420 |
+| Texas | none | operator law | no | OA | available | 60 days | $25 | $325–$775 | $55–$305 |
+| Utah | low | operator law | required | OA | available | no fixed count | $30 | $430–$880 | $160–$410 |
+| Vermont | high | baseline | no | SAA | available | 45 days | $125 | $425–$875 | $70–$320 |
+| Virginia | moderate | operator law | required | SAA | available | no fixed count | $75 | $475–$925 | $175–$425 |
+| Washington | moderate | operator law | required | SAA | none | 30 days | $50 | $410–$860 | $100–$350 |
+| West Virginia | moderate | operator law | required | OA | none | no fixed count | $50 | $365–$815 | $90–$340 |
+| Wisconsin | low | baseline | required | SAA | available | 45 days | $45 | $360–$810 | $129–$379 |
+| Wyoming | low | baseline | no | OA | none | no fixed count | $50 | $350–$800 | $75–$325 |
 
 ## The national baseline
 
@@ -112,6 +114,8 @@ in CI on every push.
 **CTE credential lists.** Each state education agency keeps a list of approved industry-recognized credentials that count toward CTE accountability and graduation pathways. Cognition.X credentials are practice records, not industry certifications; the path onto a state list is an application by the credential's owner in the state's annual window, and it is not assumed here.
 
 **Sales tax.** Nonprofit purchases are exempt from sales tax in some states on application, in others not at all; five states levy no state sales tax. Matters for devices and materials bought in-state.
+
+**Breach notification and cybersecurity.** Every state has a breach-notification statute. Because the platform stores learner records only on the device in use, the realistic incident is a lost or stolen device or an exported file sent to the wrong hand; the notice clock starts at discovery. Deadlines below are the outer limits as commonly published (many statutes also say 'without unreasonable delay'); attorney-general or regulator notice thresholds vary. Verify with the state attorney general's office before relying on any of them. A Content-Security-Policy blocks every connection from the apps, typefaces are embedded, and nothing leaves a page on its own — so the notification surface is the device and the exports, not a server. The incident runbook template (docs/templates/INCIDENT_RESPONSE_RUNBOOK.md) walks a hall through discovery, containment, the state clock and the district's own policy.
 
 ## Maintaining the layer
 

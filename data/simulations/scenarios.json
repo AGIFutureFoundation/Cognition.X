@@ -258,7 +258,8 @@
     "check": "Write the studio's one-page law — what may be simulated, what must never be live, what no sim claims — and post it where the stations stand.",
     "note": "The witnessed transfer check for this track is done live, on real material, with an assessor. This simulation rehearses judgement; it does not perform the check and it never credits the ledger."
    },
-   "band": "9–10"
+   "band": "9–10",
+   "youth": "Under 18: FLSA Hazardous Occupations Orders 7 (power-driven hoisting apparatus), 14 (circular and band saws), 16 (roofing) and 17 (excavation) bar minors from the live tasks this scenario simulates; a bona fide student-learner or apprenticeship program may exempt HO 14, 16 and 17 under written agreement, never HO 7. Working at height is not itself an HO but falls under the host's own youth policy."
   },
   {
    "id": "SIM-ELEC-LOTO",
@@ -464,7 +465,8 @@
     "check": "From the ground and eyes only, sketch the path power takes from the nearest pole to your meter, naming each piece.",
     "note": "The witnessed transfer check for this track is done live, on real material, with an assessor. This simulation rehearses judgement; it does not perform the check and it never credits the ledger."
    },
-   "band": "9–10"
+   "band": "9–10",
+   "youth": "Under 18: no live work on energized or potentially energized conductors — OSHA 29 CFR 1910.333 'qualified person' rules and the host's policy; minors observe and practise on de-energized training panels only. Louisiana and most states also require an employment certificate for minors."
   },
   {
    "id": "SIM-WATER-PUMP",
@@ -670,7 +672,8 @@
     "check": "On a real elevation map, find your own ground height relative to the river and the lake, and state where your rain goes.",
     "note": "The witnessed transfer check for this track is done live, on real material, with an assessor. This simulation rehearses judgement; it does not perform the check and it never credits the ledger."
    },
-   "band": "9–10"
+   "band": "9–10",
+   "youth": "Under 18: FLSA HO 7 (hoisting) and HO 17 (excavation) apply at a pump station's sumps and pits; confined-space entry (29 CFR 1910.146) is never a youth task. Control-room observation and dry runs on a mock panel are the youth-appropriate forms."
   },
   {
    "id": "SIM-PORT-CRANE",
@@ -876,7 +879,8 @@
     "check": "Find, on a real map, the port facility nearest your parish and name two things that actually move through it.",
     "note": "The witnessed transfer check for this track is done live, on real material, with an assessor. This simulation rehearses judgement; it does not perform the check and it never credits the ledger."
    },
-   "band": "9–10"
+   "band": "9–10",
+   "youth": "Under 18: FLSA HO 7 bars minors from operating or assisting on cranes, hoists and forklifts, with no student-learner exemption; lashing under a suspended load is an adult task. The hand-signal and bay-plan practices are the youth forms."
   },
   {
    "id": "SIM-TRANSIT-YARD",
@@ -1082,7 +1086,8 @@
     "check": "Assess three real crossing points near a school or home, rank their risk with reasons, and demonstrate the safest use of the worst one.",
     "note": "The witnessed transfer check for this track is done live, on real material, with an assessor. This simulation rehearses judgement; it does not perform the check and it never credits the ledger."
    },
-   "band": "9–10"
+   "band": "9–10",
+   "youth": "Under 18: no minor works foul of a live track; rail-yard roles are adult roles under the carrier's rules. Youth practise the radio protocol, the yard diagram and the marked crossing in the studio only."
   },
   {
    "id": "SIM-SERVICE-RIG",
@@ -1288,7 +1293,8 @@
     "check": "Build and play a forty-five-minute set list with written reasoning for its order, then revise it after one performance.",
     "note": "The witnessed transfer check for this track is done live, on real material, with an assessor. This simulation rehearses judgement; it does not perform the check and it never credits the ledger."
    },
-   "band": "9–10"
+   "band": "9–10",
+   "youth": "Under 18: FLSA HO 7 covers motorised hoists and truss lifts; working at height and under a moving truss is an adult task. Knots, plot reading and console setup at the bench are the youth forms."
   },
   {
    "id": "SIM-CIVIC-CAMPUS",
@@ -1494,7 +1500,8 @@
     "check": "Diagnose one real fault to a most-likely cause using questions and checks alone, before any tool touches it.",
     "note": "The witnessed transfer check for this track is done live, on real material, with an assessor. This simulation rehearses judgement; it does not perform the check and it never credits the ledger."
    },
-   "band": "9–10"
+   "band": "9–10",
+   "youth": "Under 18: gas-suspected areas, boiler rooms and rooftop plant are excluded from youth work under the host's facilities policy; the diagnostic questions and a training rig are the youth forms."
   },
   {
    "id": "SIM-MECH-SHOP",
@@ -1700,7 +1707,8 @@
     "check": "Interview somebody whose work was automated and write their account.",
     "note": "The witnessed transfer check for this track is done live, on real material, with an assessor. This simulation rehearses judgement; it does not perform the check and it never credits the ledger."
    },
-   "band": "9–10"
+   "band": "9–10",
+   "youth": "Under 18: FLSA HO 8 (metal-forming, punching, shearing) and HO 14 (power-driven saws, guillotine shears) apply in a machine shop; a lathe is not listed by HO but the host's youth policy and state child-labor law govern it, and a student-learner exemption needs a written agreement. Measuring, drawing and guard inspection on a powered-down machine are the youth forms."
   },
   {
    "id": "SIM-FIRE-DRILL",
@@ -1906,7 +1914,8 @@
     "check": "Audit a real dwelling against the top ignition causes and eliminate or mitigate every finding, with photos.",
     "note": "The witnessed transfer check for this track is done live, on real material, with an assessor. This simulation rehearses judgement; it does not perform the check and it never credits the ledger."
    },
-   "band": "9–10"
+   "band": "9–10",
+   "youth": "Under 18: extinguisher and evacuation drills are appropriate at every age; interior firefighting is an adult, trained role. Junior programs run under the department's own rules."
   },
   {
    "id": "SIM-ROB-CELL",
@@ -3762,5 +3771,6 @@
    },
    "band": "9–10"
   }
- ]
+ ],
+ "youth_note": "Youth (under 18) lines cite the U.S. Department of Labor's Hazardous Occupations Orders (29 CFR 570 Subpart E) and OSHA rules as commonly published; state child-labor law (in Louisiana, La. R.S. 23:151 et seq. and the employment-certificate requirement) and the host's own policy add to them. NOT LEGAL ADVICE — verify with the state labor department before a minor is placed at any station."
 }

@@ -120,6 +120,7 @@
   .cxsim .cxsim-lists{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;font-size:.8rem;margin:0 0 12px}
   .cxsim .cxsim-lists b{display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint,#5f6b7a);margin-bottom:3px}
   .cxsim ul{margin:0;padding-left:18px}
+  .cxsim .cxsim-youth{grid-column:1/-1;border-top:1px dashed var(--line,#d9dee4);padding-top:8px;color:var(--muted,#4b5563)}
   .cxsim .cxsim-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0 4px}
   .cxsim select,.cxsim button{font:inherit}
   .cxsim .cxsim-btn{border:1px solid var(--line,#d9dee4);background:var(--surface-2,var(--bg,#f4f6f8));color:var(--ink,#1c2430);border-radius:9px;padding:8px 14px;cursor:pointer;min-height:36px}
@@ -187,6 +188,7 @@
         <div class="cxsim-lists">
           <div><b>Simulated here</b><ul>${(sc.simulated || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
           <div><b>Practised live, in the studio</b><ul>${(sc.live || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+          ${sc.youth ? `<div class="cxsim-youth"><b>Under eighteen</b><p style="margin:0">${esc(sc.youth)}</p></div>` : ""}
         </div>
         <div class="cxsim-controls">
           <label for="cxsim-diff-${esc(sc.id)}" style="font-size:.8rem">Difficulty</label>

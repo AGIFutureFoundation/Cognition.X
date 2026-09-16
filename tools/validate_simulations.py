@@ -50,6 +50,8 @@ def validate(doc, rows=None, manifest=None):
             errs.append(f"missing {key}")
     if "Simulation ≠ certification" not in doc.get("law", "") or "Simulation ≠ certification" not in doc.get("run_note", ""):
         errs.append("the law and the run note must both carry 'Simulation ≠ certification' verbatim")
+    if "NOT LEGAL ADVICE" not in doc.get("youth_note", ""):
+        errs.append("youth_note must say NOT LEGAL ADVICE and tell the reader to verify with the state labor department")
     if "never a credential" not in doc.get("run_note", ""):
         errs.append("run_note must say a run is never a credential")
     disc = {d["id"] for d in doc.get("disciplines", [])}
@@ -80,6 +82,8 @@ def validate(doc, rows=None, manifest=None):
             errs.append(f"{sid}: unknown trades kind {kind!r}")
         if kind in TRADES_KINDS and "{site}" not in s.get("brief", ""):
             errs.append(f"{sid}: a trades-kind scenario must localize with {{site}} in its brief")
+        if kind in TRADES_KINDS and "Under 18" not in s.get("youth", ""):
+            errs.append(f"{sid}: a trades-kind scenario must carry an 'Under 18' youth line (hazardous-occupation orders)")
         if s.get("localize") not in ANCHORS:
             errs.append(f"{sid}: unknown localize anchor {s.get('localize')!r}")
         t = s.get("transfer") or {}

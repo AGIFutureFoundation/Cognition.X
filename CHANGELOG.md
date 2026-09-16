@@ -4,6 +4,43 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.57.0] — 2026-09-16
+
+### Added — the security and compliance register, the roadmap, and wave one
+- **`docs/COMPLIANCE_ROADMAP.md`** — the review of the apps and the
+  deployment they imply against state, parish/county, local and district
+  security and compliance expectations; findings, eight recommendations,
+  a four-wave roadmap with owners and acceptance, and a ten-step
+  begin-now checklist for a Louisiana parish pilot. Not legal advice.
+- **`data/policy/controls.json` → `docs/CONTROL_REGISTER.md`** — 44
+  controls across six levels (platform, federal, state, parish, local,
+  district), each with requirement, source, owner, status, evidence and
+  next step. `tools/controls_report.py` regenerates the register in CI
+  and refuses any evidence reference (test, browser check, CI step,
+  document or file) that does not exist.
+- **The Records Office private key is non-extractable** (finding 7 of
+  the v0.55.0 review, fixed): a WebCrypto key held in IndexedDB that no
+  script, extension or export can read and that cannot be copied to
+  another machine; a pre-v0.57.0 office migrates once with the same
+  public key; *Retire this office* destroys it; page-memory fallback
+  where IndexedDB is unavailable, stated on the widget.
+- **Release checksums and a security policy** — `tools/checksums.py`
+  writes `apps/CHECKSUMS.sha256` in CI; `SECURITY.md` gives the
+  reporting channel, response times, the verification step and the
+  threat model.
+- **Breach notification for all fifty states** — an eleventh domain in
+  the compliance layer (statute, outer deadline after discovery,
+  regulator notice, the K–12 policy line; every entry flagged verify),
+  a *Breach-notification deadline* lens and checklist row in the States
+  app, a row in the Louisiana State Admin dashboard, and the report.
+- **Youth hazard orders in the studio** — every trades scenario carries
+  an *Under 18* line naming the FLSA Hazardous Occupations Orders and
+  OSHA rules that keep minors off the live task; the engine shows it in
+  the brief; the validator requires it.
+- **Adopter templates** — `docs/templates/`: a data-processing
+  statement for a district's DPA, an incident-response runbook keyed to
+  the state clock, and a records-custody statement for public bodies.
+
 ## [0.56.0] — 2026-09-15
 
 ### Added — standards mapping and transfer-check rubrics (roadmap step ⑤)

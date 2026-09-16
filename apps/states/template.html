@@ -368,6 +368,7 @@ __CXHEAD__
           <option value="apprenticeship">Apprenticeship agency (SAA / OA)</option>
           <option value="sales_tax">Sales-tax exemption for nonprofits</option>
           <option value="mandated">Universal mandated reporting</option>
+          <option value="breach">Breach-notification deadline</option>
           <option value="cost">One-time compliance cost (low estimate)</option>
         </select>
         <span class="note" id="clensnote" style="margin:0"></span>
@@ -673,6 +674,7 @@ const LENS = {
   apprenticeship:{note:"Who registers apprenticeship programs.", val:s=>s.apprenticeship.type, col:{SAA:"#1E7A72", OA:"#8A6210"}, lab:{SAA:"state agency (SAA)", OA:"federal office (OA)"}},
   sales_tax:{note:"Nonprofit purchase exemption.", val:s=>!s.sales_tax.state_sales_tax?"none":(s.sales_tax.nonprofit_exemption?"exempt":"taxed"), col:{none:"#1F7A4D", exempt:"#257A54", taxed:"#B22B2B"}, lab:{none:"no state sales tax", exempt:"exemption available", taxed:"no general exemption"}},
   mandated:{note:"Whether every adult is a mandated reporter.", val:s=>s.mandated.universal?"universal":"professions", col:{universal:"#2456A6", professions:"#5F6B7A"}, lab:{universal:"every adult", professions:"named professions"}},
+  breach:{note:"Breach-notification outer deadline after discovery, as commonly published; verify with the attorney general.", val:s=>!s.breach?"n":(s.breach.deadline_days==null?"none":s.breach.deadline_days<=30?"30":s.breach.deadline_days<=45?"45":"60"), col:{none:"#5F6B7A","30":"#B22B2B","45":"#8A6210","60":"#2456A6", n:"#ccc"}, lab:{none:"no fixed day count","30":"30 days or fewer","45":"45 days","60":"60 days", n:"—"}},
   cost:{note:"One-time compliance cost, low estimate, under the stated assumptions.", val:s=>{const c=s.cost.one_time.low; return c<400?"a":c<700?"b":c<1000?"c":"d";}, col:{a:"#257A54", b:"#8A6210", c:"#A0522D", d:"#B22B2B"}, lab:{a:"under $400", b:"$400–$699", c:"$700–$999", d:"$1,000+"}},
 };
 const money = v => v==null ? "—" : "$"+Number(v).toLocaleString(undefined,{maximumFractionDigits:2});
@@ -745,6 +747,7 @@ function checklistHTML(c, compact){
     H("apprenticeship", `<span class="tier" style="background:${LENS.apprenticeship.col[c.apprenticeship.type]}">${esc(c.apprenticeship.type)}</span> ${esc(c.apprenticeship.agency)}<br><span class="k">Youth:</span> ${esc(c.apprenticeship.youth)}`, feeCell(c.apprenticeship.fee, "registration")),
     H("cte", `${esc(c.cte.list)}<br><span class="k">Stance:</span> ${esc(c.cte.note)}`),
     H("accessibility", esc(c.accessibility.standard), feeCell(c.accessibility.fee, "audit, once")),
+    H("breach", c.breach ? `<span class="tier" style="background:${LENS.breach.col[LENS.breach.val(c)]}">${esc(LENS.breach.lab[LENS.breach.val(c)])}</span> ${esc(c.breach.law)}<br><span class="k">Deadline:</span> ${esc(c.breach.deadline)} — ${esc(c.breach.clock)}<br><span class="k">Regulator notice:</span> ${esc(c.breach.regulator)}<br><span class="k">K–12:</span> ${esc(c.breach.k12_note)} <span class="vf">verify</span>` : "—"),
     H("sales_tax", (c.sales_tax.state_sales_tax ? (c.sales_tax.nonprofit_exemption ? `<span class="tier" style="background:#257A54">exemption available</span>` : `<span class="tier" style="background:#B22B2B">no general exemption</span>`) : `<span class="tier" style="background:#1F7A4D">no state sales tax</span>`) + ` ${esc(c.sales_tax.form)}`),
   ];
   const cost = `<div class="costrow">
@@ -772,6 +775,7 @@ function compliancePanel(s){
       <li>Charitable solicitation: ${c.charity.required?"required — "+esc(c.charity.form):"not required"}<span class="cred">${esc(feeTxt(c.charity.initial_fee))}</span></li>
       <li>Background checks<span class="cred">${esc(feeTxt(c.background.cost))}</span></li>
       <li>Sales tax: ${esc(c.sales_tax.form)}</li>
+      ${c.breach ? `<li>Breach notification: ${esc(c.breach.deadline)}<span class="cred">${esc(c.breach.law.split(" (")[0].slice(0,40))}</span></li>` : ""}
     </ul>
     <p class="note" style="margin-top:10px"><button class="chip link" id="stcomp">Open the full ${esc(s.name)} checklist →</button></p>
   </div>`;

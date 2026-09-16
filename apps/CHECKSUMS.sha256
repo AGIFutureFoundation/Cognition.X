@@ -1,0 +1,7 @@
+# Cognition.X v0.57.0 — SHA-256 of every built app; verify with: sha256sum -c apps/CHECKSUMS.sha256
+220a3b5838cebae6fdfc94a01bf1f2790d1feb57f6e234df2837f8da9642fda8  apps/education-os/index.html
+8b8f5aff5cda62e12e579dbe518d1694848f6817533705b237060b113fc06873  apps/flow-hub/index.html
+2f22df2b5481e93ac5b5cf05229bf5226749179337e874d1fef214c78a7fa8a4  apps/louisiana/index.html
+ee795794227c7e292a86231df113b022248323f0395466334c8b582c93e92238  apps/platform/index.html
+a12da7ce687ed1bec7329bd76722f453581be18763a6fce108e412825f4b2d4e  apps/states/index.html
+3b1b6fe66547b066f32d1a80ddc5155b0dee8fc996ea806cbc57218f8965c55a  apps/trades-network/index.html
