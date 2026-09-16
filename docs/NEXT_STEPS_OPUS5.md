@@ -243,7 +243,7 @@ before classroom use.*
 
 ---
 
-## 6 — Pay down the description debt without inventing content *(tranches one and two in v0.65.0–v0.66.0 — `bands` in pack specs and promotions; Emergency Preparedness & First Response, Parish Launch & Scale, Civic Leadership Legacy Louisiana and Basic Life Skills & Self-Reliance authored, 1,000 rows; suffix rows 11,250 → 10,250, a ratchet in the tests; next tranche: the Louisiana OS, 500 rows)*
+## 6 — Pay down the description debt without inventing content *(core spine done in v0.65.0–v0.67.0 — `bands` in pack specs and promotions; Emergency Preparedness & First Response, Parish Launch & Scale, Civic Leadership Legacy Louisiana, Basic Life Skills & Self-Reliance and the Louisiana OS authored, 1,500 rows; suffix rows 11,250 → 9,750, a ratchet in the tests; the remaining 9,750 suffixed rows sit outside the core spine and are next by pack importance)*
 
 **Why.** `docs/DATA_QUALITY.md`: **6,200 rows (37%) have no description
 at all**, and **10,500 (62%) share one sentence across five bands with an

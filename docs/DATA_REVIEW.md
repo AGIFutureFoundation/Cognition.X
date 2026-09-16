@@ -58,9 +58,9 @@ sections; the only other diff is the fonts `<link>`).
    description distinguished only by an "— at {band}" suffix, and the
    transfer check is identical across bands. Since v0.65.0 a pack spec
    or promotion theme may carry `bands` — five sentences in what the
-   learner does — and four core-spine packs do (1,000 rows; suffix rows
-   11,250 → 10,250, a ratchet in the tests). The transfer check still
-   does not vary by band; that is a later item.
+   learner does — and the whole core spine does (five packs, 1,500 rows;
+   suffix rows 11,250 → 9,750, a ratchet in the tests). The transfer
+   check still does not vary by band; that is a later item.
 
 4. **Minor anomalies (documented).** Two rows have grade `—` (Trade
    School capstones); grades `9–12 · adult` (7 rows) and `11–12 · adult`

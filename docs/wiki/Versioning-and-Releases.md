@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.66.0** | Description debt, tranche two: Civic Leadership Legacy : Louisiana and Basic Life Skills & Self-Reliance (the first promotion to carry `bands`) authored across all five bands, 500 more rows, no block id changed; band-suffix rows 10,750 → 10,250 |
+| **v0.67.0** | Description debt, tranche three: the Louisiana OS (both spec parts, 100 themes) authored across all five bands, 500 rows, no block id changed; the whole core spine is now band-differentiated; band-suffix rows 10,250 → 9,750 |
+| v0.66.0 | Description debt, tranche two: Civic Leadership Legacy : Louisiana and Basic Life Skills & Self-Reliance (the first promotion to carry `bands`) authored across all five bands, 500 more rows, no block id changed; band-suffix rows 10,750 → 10,250 |
 | v0.65.0 | Description debt, tranche one: pack specs and promotions carry per-band sentences (`bands`) in what the learner does; Emergency Preparedness & First Response and Parish Launch & Scale authored across all five bands (500 rows, no block id changed); the dataset-wide band-suffix count falls from 11,250 to 10,750 and is a ratchet in the tests |
 | v0.64.0 | The register's last open items closed: a one-page device and data hygiene sheet hall staff sign yearly (ST-03), the city clerk's use permit on the hall checklist's MOU line (LO-02), the credential list on the board's agenda for the CTE office (DI-03); 44 controls, 28 met / 16 partial / 0 open |
 | v0.63.0 | One source of truth per fact: the Education OS is built from the canonical Louisiana, K–12 and Institute files — seven template literals became placeholders injected in place at build time, every view renders identically, and the extractor is now the CI round-trip check |

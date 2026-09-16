@@ -92,9 +92,10 @@ stable id. ✅
   band-differentiated descriptions (most bands share one sentence
   with an "— at {band}" suffix) — the largest content-quality lift.
   Started in v0.65.0: pack specs and promotions carry `bands` (five
-  sentences per theme in what the learner does); four core-spine packs
-  authored by v0.66.0 (1,000 rows); the suffix count is a ratchet in
-  the tests that only falls. Remaining core spine: the Louisiana OS
+  sentences per theme in what the learner does); the whole core spine
+  authored by v0.67.0 (five packs, 1,500 rows); the suffix count is a
+  ratchet in the tests that only falls (11,250 → 9,750). The remaining
+  suffixed rows sit outside the core spine, next by pack importance
 - Standards mapping tables: Common Core / NGSS for K–12 packs; NICE, WHO
   competency frameworks for health packs; ESCO/O*NET for work packs
 - Rubrics for transfer checks: each check gets pass evidence, common

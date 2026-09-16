@@ -10,52 +10,122 @@
         {
           "theme": "First you make a roux",
           "description": "The roux as the foundation — flour, fat, patience — and the colors that decide what dish it becomes.",
-          "transfer_check": "Make a roux to a stated color without burning it, and say which dish each of three colors belongs to."
+          "transfer_check": "Make a roux to a stated color without burning it, and say which dish each of three colors belongs to.",
+          "bands": {
+            "K–2": "Watch an adult stir a roux, smell it change, and say which colour it is now.",
+            "3–5": "Stir a roux with an adult to a light colour without burning it, and say which dish it is for.",
+            "6–8": "Make a roux to a stated colour with a checker at the stove, and say which dish two of the three colours belong to.",
+            "9–10": "Make a roux to a stated color without burning it, and say which dish each of three colors belongs to.",
+            "11–12": "Make three roux to three colours in one session, teach the stir to a younger learner, and cook one dish on the darkest."
+          }
         },
         {
           "theme": "The trinity and the pot",
           "description": "Onion, celery, bell pepper — the base of the cuisine, and the pot cookery built on it.",
-          "transfer_check": "Prepare the trinity correctly and build one real pot dish on it, narrating what each stage contributes."
+          "transfer_check": "Prepare the trinity correctly and build one real pot dish on it, narrating what each stage contributes.",
+          "bands": {
+            "K–2": "Help wash and count the onion, celery and bell pepper, and name them as the trinity.",
+            "3–5": "Chop the trinity with an adult and start one pot dish on it, saying what each vegetable adds.",
+            "6–8": "Prepare the trinity correctly with a checker and build one pot dish on it, narrating two of the stages.",
+            "9–10": "Prepare the trinity correctly and build one real pot dish on it, narrating what each stage contributes.",
+            "11–12": "Prepare the trinity and cook two different pot dishes on it for a group, explaining at the table what the base does in each."
+          }
         },
         {
           "theme": "Gumbo: one word, many households",
           "description": "Okra, filé, roux — the gumbo lineages, why no two families agree, and the respect owed to each version.",
-          "transfer_check": "Cook one gumbo in a named lineage and document a second household's differing version without ruling either wrong."
+          "transfer_check": "Cook one gumbo in a named lineage and document a second household's differing version without ruling either wrong.",
+          "bands": {
+            "K–2": "Taste gumbo from two households and say one thing that was different, and that both are right.",
+            "3–5": "Ask two families how they make gumbo and write down one difference without saying whose is better.",
+            "6–8": "Cook one gumbo in a named lineage with a checker, and document one difference in another household's version without ruling it wrong.",
+            "9–10": "Cook one gumbo in a named lineage and document a second household's differing version without ruling either wrong.",
+            "11–12": "Cook a gumbo for a group, document two other households' versions with their keepers, and present the lineages with respect for each."
+          }
         },
         {
           "theme": "The boil as a public event",
           "description": "Crawfish and shrimp boils — the seasoning, the timing, the table covered in newspaper — cooking as gathering.",
-          "transfer_check": "Plan and run (or fully rehearse) a boil for a real group — quantities, seasoning, timing, safe handling — through to the table."
+          "transfer_check": "Plan and run (or fully rehearse) a boil for a real group — quantities, seasoning, timing, safe handling — through to the table.",
+          "bands": {
+            "K–2": "Help lay the newspaper and count the plates for a family boil, and learn the hot-pot rule.",
+            "3–5": "Help plan a small boil — how many, how much, when it goes in — and help serve it safely.",
+            "6–8": "Plan and help run a boil for a small group with a checker on the seasoning, timing and safe handling.",
+            "9–10": "Plan and run (or fully rehearse) a boil for a real group — quantities, seasoning, timing, safe handling — through to the table.",
+            "11–12": "Plan and run a boil for a real community group, do the batch maths and the safety plan, and account for what it cost and raised."
+          }
         },
         {
           "theme": "Boudin, andouille and the smokehouse",
           "description": "The sausage craft of the prairies and the German Coast — what goes in, how it is smoked, and where to find the real thing.",
-          "transfer_check": "Make or closely document one batch of boudin or andouille at a real kitchen or shop, recording the method start to finish."
+          "transfer_check": "Make or closely document one batch of boudin or andouille at a real kitchen or shop, recording the method start to finish.",
+          "bands": {
+            "K–2": "Visit a boudin shop or smokehouse with an adult, taste, and say what is inside.",
+            "3–5": "Watch or study how boudin is made and draw the steps from meat and rice to the link.",
+            "6–8": "Closely document one batch of boudin or andouille at a real kitchen or shop, recording the method start to finish.",
+            "9–10": "Make or closely document one batch of boudin or andouille at a real kitchen or shop, recording the method start to finish.",
+            "11–12": "Make a batch under a maker's eye, document the method for a stranger, and compare two shops' methods with their makers' consent."
+          }
         },
         {
           "theme": "Cajun and Creole are not the same word",
           "description": "Two cuisines with tangled roots — country and city, prairie and port — told through their dishes and histories.",
-          "transfer_check": "Present one dish in its Cajun and its Creole expression, explaining the historical reason for each difference, with sources."
+          "transfer_check": "Present one dish in its Cajun and its Creole expression, explaining the historical reason for each difference, with sources.",
+          "bands": {
+            "K–2": "Learn that Cajun and Creole are two different ways of cooking and living, and taste one dish from each.",
+            "3–5": "Say one thing that is Cajun and one thing that is Creole about the same dish, with an adult's help.",
+            "6–8": "Present one dish in its Cajun and its Creole expression and explain one historical reason for the difference, with a source.",
+            "9–10": "Present one dish in its Cajun and its Creole expression, explaining the historical reason for each difference, with sources.",
+            "11–12": "Present two dishes both ways with sources, and lead a class discussion that keeps the two words honest and respectful."
+          }
         },
         {
           "theme": "The seafood counter",
           "description": "Shrimp, oysters, catfish and the gulf catch — buying Louisiana seafood knowledgeably and handling it safely.",
-          "transfer_check": "At a real counter or dock, identify the local catch, judge its freshness, and prepare one item with correct safe handling."
+          "transfer_check": "At a real counter or dock, identify the local catch, judge its freshness, and prepare one item with correct safe handling.",
+          "bands": {
+            "K–2": "Go to a seafood counter or dock with an adult and name three things from Louisiana water.",
+            "3–5": "At a counter, say how you can tell if fish and shrimp are fresh, and help prepare one safely at home.",
+            "6–8": "At a real counter or dock, identify the local catch and judge its freshness, and prepare one item with a checker on safe handling.",
+            "9–10": "At a real counter or dock, identify the local catch, judge its freshness, and prepare one item with correct safe handling.",
+            "11–12": "Buy, judge and prepare three local items for a group, and teach the freshness and safety checks to a younger learner."
+          }
         },
         {
           "theme": "Rice at every meal",
           "description": "Why rice anchors the plate — from the fields of the prairie to jambalaya, étouffée and red beans on Monday.",
-          "transfer_check": "Cook rice properly at scale and serve it under one classic preparation, explaining the Monday red beans tradition while it simmers."
+          "transfer_check": "Cook rice properly at scale and serve it under one classic preparation, explaining the Monday red beans tradition while it simmers.",
+          "bands": {
+            "K–2": "Help measure rice and water for the family pot, and learn why Monday is red beans day.",
+            "3–5": "Cook a pot of rice with an adult and serve it under one dish, telling the Monday red beans story.",
+            "6–8": "Cook rice properly for a family with a checker and serve it under one classic preparation, explaining the Monday tradition.",
+            "9–10": "Cook rice properly at scale and serve it under one classic preparation, explaining the Monday red beans tradition while it simmers.",
+            "11–12": "Cook rice at scale for a community feed under two preparations, and explain the rice-and-Monday tradition to the table."
+          }
         },
         {
           "theme": "The recipe an elder holds",
           "description": "Documenting family foodways — the pinch and the handful written down before they are lost.",
-          "transfer_check": "Record one real family or community recipe from its keeper — quantities, technique, story — into a form a stranger could cook from."
+          "transfer_check": "Record one real family or community recipe from its keeper — quantities, technique, story — into a form a stranger could cook from.",
+          "bands": {
+            "K–2": "Ask an elder how they make one dish and draw the steps.",
+            "3–5": "Write down one family recipe from its keeper — what goes in, how much, the story — and cook it with them.",
+            "6–8": "Record one family or community recipe from its keeper — quantities, technique, story — into a form a friend could cook from.",
+            "9–10": "Record one real family or community recipe from its keeper — quantities, technique, story — into a form a stranger could cook from.",
+            "11–12": "Record two recipes from two keepers with consent, cook one for them, and archive both where the family can reach them."
+          }
         },
         {
           "theme": "Feeding the parish",
           "description": "The capstone: church suppers, benefit plate lunches and disaster kitchens — Louisiana cooking as civic infrastructure.",
-          "transfer_check": "Help run or fully plan one real community feed — the plates, the batch math, the safe service — and account for what it raised or delivered."
+          "transfer_check": "Help run or fully plan one real community feed — the plates, the batch math, the safe service — and account for what it raised or delivered.",
+          "bands": {
+            "K–2": "Help at a church supper or a class feed — carry, serve, tidy — and say who it was for.",
+            "3–5": "Help plan a small community feed — how many plates, what goes on each — and help serve it.",
+            "6–8": "Help run one real community feed — the plates, the batch maths, the safe service — with a checker on the numbers.",
+            "9–10": "Help run or fully plan one real community feed — the plates, the batch math, the safe service — and account for what it raised or delivered.",
+            "11–12": "Plan and run a real community feed end to end, account for it, and hand the plan to the next crew."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "Congo Square and the root of it",
           "description": "The Sunday gatherings in New Orleans where African rhythm kept its public voice — and what grew from that ground.",
-          "transfer_check": "Present the documented history of Congo Square and trace one musical line from it to a form you can play or play back."
+          "transfer_check": "Present the documented history of Congo Square and trace one musical line from it to a form you can play or play back.",
+          "bands": {
+            "K–2": "Hear a recording of drums from Congo Square's tradition, clap the beat, and learn where it came from.",
+            "3–5": "Tell the story of Congo Square in your own words and clap one rhythm that grew from it.",
+            "6–8": "Present the documented history of Congo Square and trace one musical line from it to a form you can play back.",
+            "9–10": "Present the documented history of Congo Square and trace one musical line from it to a form you can play or play back.",
+            "11–12": "Present the history with sources, trace two lines from it, and teach the root rhythm to a younger group."
+          }
         },
         {
           "theme": "Jazz: the city's invention",
           "description": "Collective improvisation, the second line beat and the horns — how New Orleans assembled jazz from its neighborhoods.",
-          "transfer_check": "Identify the parts of one early New Orleans jazz recording by ear — lead, harmony, rhythm — and clap or play its second-line figure."
+          "transfer_check": "Identify the parts of one early New Orleans jazz recording by ear — lead, harmony, rhythm — and clap or play its second-line figure.",
+          "bands": {
+            "K–2": "Listen to an early jazz recording and point to the horn, the drum and the piano when you hear each.",
+            "3–5": "Listen to an early New Orleans jazz recording and say which instrument leads and which keeps time, and clap the beat.",
+            "6–8": "Identify the parts of one early New Orleans jazz recording by ear — lead, harmony, rhythm — and clap its second-line figure.",
+            "9–10": "Identify the parts of one early New Orleans jazz recording by ear — lead, harmony, rhythm — and clap or play its second-line figure.",
+            "11–12": "Identify the parts on two recordings, play the second-line figure with others, and present how the neighbourhoods assembled the music."
+          }
         },
         {
           "theme": "The brass band and the street",
           "description": "Parade bands from funeral dirge to street celebration — the repertoire, the instrumentation, the roles.",
-          "transfer_check": "March or perform one piece in a brass-band arrangement, holding your part, or direct a recorded analysis of a real parade performance."
+          "transfer_check": "March or perform one piece in a brass-band arrangement, holding your part, or direct a recorded analysis of a real parade performance.",
+          "bands": {
+            "K–2": "March in a line to a brass band recording, playing or pretending an instrument, and learn what a second line is.",
+            "3–5": "Play or clap one part of a brass-band piece with the class, holding your part.",
+            "6–8": "Perform one piece in a brass-band arrangement in a group, holding your part, or analyse a recorded parade performance with a checker.",
+            "9–10": "March or perform one piece in a brass-band arrangement, holding your part, or direct a recorded analysis of a real parade performance.",
+            "11–12": "Lead or arrange a brass-band piece for a group, march it, and teach the roles to younger players."
+          }
         },
         {
           "theme": "Zydeco and the Creole dancehall",
           "description": "Accordion, rubboard and the southwest Louisiana Saturday night — zydeco's Creole roots and living circuit.",
-          "transfer_check": "Learn zydeco's basic rhythm on any instrument or rubboard and identify two living artists on the real regional circuit."
+          "transfer_check": "Learn zydeco's basic rhythm on any instrument or rubboard and identify two living artists on the real regional circuit.",
+          "bands": {
+            "K–2": "Hear zydeco, find the rubboard sound, and scrape a rhythm on a board or a washboard.",
+            "3–5": "Learn zydeco's basic rhythm on a rubboard or any instrument and name one zydeco artist.",
+            "6–8": "Learn zydeco's basic rhythm on any instrument or rubboard and identify one living artist on the regional circuit.",
+            "9–10": "Learn zydeco's basic rhythm on any instrument or rubboard and identify two living artists on the real regional circuit.",
+            "11–12": "Play the rhythm with others at tempo, attend or document a dancehall night, and present the living circuit to a class."
+          }
         },
         {
           "theme": "Cajun music: the ballads of the prairie",
           "description": "Fiddle, accordion and French singing — the Cajun repertoire and the dance halls that keep it working music.",
-          "transfer_check": "Perform or accompany one Cajun standard, or document a real dance-hall night — the band, the steps, the sung French."
+          "transfer_check": "Perform or accompany one Cajun standard, or document a real dance-hall night — the band, the steps, the sung French.",
+          "bands": {
+            "K–2": "Hear a Cajun waltz, learn one French word from it, and sway in time.",
+            "3–5": "Sing or play along with one Cajun song and learn what the dance halls are.",
+            "6–8": "Accompany one Cajun standard on any instrument with a checker, or document a dance-hall night — the band, the steps.",
+            "9–10": "Perform or accompany one Cajun standard, or document a real dance-hall night — the band, the steps, the sung French.",
+            "11–12": "Perform a Cajun standard for a real audience and document a dance-hall night with its musicians' consent."
+          }
         },
         {
           "theme": "Gospel and the church house",
           "description": "The choirs and quartets — gospel as the training ground of Louisiana voices, sacred music as community practice.",
-          "transfer_check": "Sing in or closely document one real choir or quartet rehearsal, mapping the parts and the call-and-response at work."
+          "transfer_check": "Sing in or closely document one real choir or quartet rehearsal, mapping the parts and the call-and-response at work.",
+          "bands": {
+            "K–2": "Sing in a group call-and-response song and learn that many singers started in church.",
+            "3–5": "Listen to a gospel choir and say which voices sing which parts, and join a group song.",
+            "6–8": "Sing in or closely document one choir or quartet rehearsal, mapping the parts with a checker.",
+            "9–10": "Sing in or closely document one real choir or quartet rehearsal, mapping the parts and the call-and-response at work.",
+            "11–12": "Sing in a rehearsal and lead a call-and-response with the group, or document a rehearsal and present its method to a class."
+          }
         },
         {
           "theme": "The blues highway through the north",
           "description": "North Louisiana's blues and its highways — the juke joints, the labels, the artists who carried it out.",
-          "transfer_check": "Profile one documented north Louisiana blues artist and learn a twelve-bar form well enough to play or analyze their recording."
+          "transfer_check": "Profile one documented north Louisiana blues artist and learn a twelve-bar form well enough to play or analyze their recording.",
+          "bands": {
+            "K–2": "Hear a north Louisiana blues song and clap along on the beat.",
+            "3–5": "Learn the twelve-bar blues shape by counting bars along with a recording, and name one artist from north Louisiana.",
+            "6–8": "Profile one documented north Louisiana blues artist and learn a twelve-bar form well enough to count and clap through their recording.",
+            "9–10": "Profile one documented north Louisiana blues artist and learn a twelve-bar form well enough to play or analyze their recording.",
+            "11–12": "Profile the artist, play the twelve-bar form with others, and present the highway, the labels and the artists as one story."
+          }
         },
         {
           "theme": "The studio and the business",
           "description": "From Cosimo's rooms to the streaming ledger — how Louisiana records got made and who got paid, then and now.",
-          "transfer_check": "Trace one classic Louisiana recording's business story — studio, label, songwriter credit — and compare it to a streaming payout today."
+          "transfer_check": "Trace one classic Louisiana recording's business story — studio, label, songwriter credit — and compare it to a streaming payout today.",
+          "bands": {
+            "K–2": "Learn that a song is made in a studio and that the people who make it are supposed to get paid.",
+            "3–5": "Find one classic Louisiana recording and say who wrote it and where it was recorded.",
+            "6–8": "Trace one classic Louisiana recording's business story — studio, label, songwriter credit — from documented sources.",
+            "9–10": "Trace one classic Louisiana recording's business story — studio, label, songwriter credit — and compare it to a streaming payout today.",
+            "11–12": "Trace two recordings' business stories, compute what each would earn on streaming today, and present who got paid then and now."
+          }
         },
         {
           "theme": "Playing for a living here",
           "description": "The working musician's Louisiana — gigs, festivals, sideman work and the arithmetic of a music year.",
-          "transfer_check": "Interview or study one real working Louisiana musician and chart their actual year — gigs, income streams, the hardest month."
+          "transfer_check": "Interview or study one real working Louisiana musician and chart their actual year — gigs, income streams, the hardest month.",
+          "bands": {
+            "K–2": "Meet or hear about a working musician and name three places they play.",
+            "3–5": "Interview a musician about their year — where they play, how they get paid.",
+            "6–8": "Study one real working Louisiana musician and chart their year — gigs, income streams — from an interview or their own account.",
+            "9–10": "Interview or study one real working Louisiana musician and chart their actual year — gigs, income streams, the hardest month.",
+            "11–12": "Interview two musicians, chart both years, and present the arithmetic of a music year to a class thinking of the life."
+          }
         },
         {
           "theme": "Passing the horn",
           "description": "The capstone: the tradition's transmission — school bands, church, family — and taking your own place in it.",
-          "transfer_check": "Prepare and give one real performance in any Louisiana tradition, and teach its basic figure to a younger learner."
+          "transfer_check": "Prepare and give one real performance in any Louisiana tradition, and teach its basic figure to a younger learner.",
+          "bands": {
+            "K–2": "Play or sing one Louisiana tune for the class and show a friend the first note.",
+            "3–5": "Give one small performance in a Louisiana tradition and teach a younger child its rhythm.",
+            "6–8": "Prepare and give one performance in any Louisiana tradition for a class, and teach its basic figure to a younger learner.",
+            "9–10": "Prepare and give one real performance in any Louisiana tradition, and teach its basic figure to a younger learner.",
+            "11–12": "Give a real performance for a public audience and take a younger learner through a full piece to their own performance."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "Who speaks what, and why",
           "description": "Louisiana French, Kouri-Vini (Louisiana Creole), Spanish, Vietnamese and the rest — the state's language map and the histories under it.",
-          "transfer_check": "Map the languages historically and currently spoken in your own parish, with one documented source per language."
+          "transfer_check": "Map the languages historically and currently spoken in your own parish, with one documented source per language.",
+          "bands": {
+            "K–2": "Learn the names of two languages spoken in Louisiana besides English and say hello in one.",
+            "3–5": "Map the languages spoken in your parish now and long ago, with help from a book or a website.",
+            "6–8": "Map the languages historically and currently spoken in your parish, with one source for two of them.",
+            "9–10": "Map the languages historically and currently spoken in your own parish, with one documented source per language.",
+            "11–12": "Map the languages with sources, interview one speaker of a heritage language, and present the map with the histories under it."
+          }
         },
         {
           "theme": "The punishment generation",
           "description": "When French was punished in schools — the generation that stopped speaking, told from documented accounts.",
-          "transfer_check": "Record or study one firsthand account of school-era language punishment and present its effect across that family's generations."
+          "transfer_check": "Record or study one firsthand account of school-era language punishment and present its effect across that family's generations.",
+          "bands": {
+            "K–2": "Hear the story of children who were told not to speak French at school, and say how that would feel.",
+            "3–5": "Read one account of a child punished for speaking French at school and tell what happened to that family's language.",
+            "6–8": "Study one firsthand account of school-era language punishment and present its effect on that family's next generation.",
+            "9–10": "Record or study one firsthand account of school-era language punishment and present its effect across that family's generations.",
+            "11–12": "Record an account with consent, present its effect across generations, and archive it where the family and the community can reach it."
+          }
         },
         {
           "theme": "Hearing the difference",
           "description": "Louisiana French and Kouri-Vini side by side — what distinguishes them, and why the difference deserves respect.",
-          "transfer_check": "From recordings, distinguish Louisiana French from Kouri-Vini on three features, and say each variety's name correctly."
+          "transfer_check": "From recordings, distinguish Louisiana French from Kouri-Vini on three features, and say each variety's name correctly.",
+          "bands": {
+            "K–2": "Listen to Louisiana French and Kouri-Vini and say the name of each one correctly.",
+            "3–5": "Listen to recordings of Louisiana French and Kouri-Vini and say one way they sound different.",
+            "6–8": "From recordings, distinguish Louisiana French from Kouri-Vini on two features, and say each variety's name correctly.",
+            "9–10": "From recordings, distinguish Louisiana French from Kouri-Vini on three features, and say each variety's name correctly.",
+            "11–12": "Distinguish the two on three features with examples, and present to a class why the difference deserves respect, with a speaker's words."
+          }
         },
         {
           "theme": "A hundred words of home",
           "description": "A working vocabulary — greetings, kitchen, weather, kin — in Louisiana French or Kouri-Vini, learned aloud.",
-          "transfer_check": "Hold a one-minute exchange — greeting, three questions, farewell — in Louisiana French or Kouri-Vini with a speaker or teacher."
+          "transfer_check": "Hold a one-minute exchange — greeting, three questions, farewell — in Louisiana French or Kouri-Vini with a speaker or teacher.",
+          "bands": {
+            "K–2": "Learn ten words in Louisiana French or Kouri-Vini — hello, thank you, the kitchen — and say them aloud.",
+            "3–5": "Learn thirty words of home in Louisiana French or Kouri-Vini and use them in a short exchange with a speaker or teacher.",
+            "6–8": "Hold a short exchange — greeting, two questions, farewell — in Louisiana French or Kouri-Vini with a speaker or teacher.",
+            "9–10": "Hold a one-minute exchange — greeting, three questions, farewell — in Louisiana French or Kouri-Vini with a speaker or teacher.",
+            "11–12": "Hold a three-minute exchange with a speaker, and teach twenty words of home to a younger learner until they can greet and ask."
+          }
         },
         {
           "theme": "The table is a classroom",
           "description": "Language living in food, music and prayer — learning through the domains where it never fully left.",
-          "transfer_check": "Collect ten living heritage-language terms from a real kitchen, song or blessing in your region, with meanings from a speaker."
+          "transfer_check": "Collect ten living heritage-language terms from a real kitchen, song or blessing in your region, with meanings from a speaker.",
+          "bands": {
+            "K–2": "Learn three heritage-language words from a kitchen, a song or a blessing at home.",
+            "3–5": "Collect five heritage-language words from a real kitchen, song or blessing, with what they mean from a speaker.",
+            "6–8": "Collect ten living heritage-language terms from a real kitchen, song or blessing in your region, checking meanings with a speaker.",
+            "9–10": "Collect ten living heritage-language terms from a real kitchen, song or blessing in your region, with meanings from a speaker.",
+            "11–12": "Collect twenty terms across two domains from two speakers, and make the illustrated card set a family could use at the table."
+          }
         },
         {
           "theme": "The immersion school",
           "description": "French immersion in Louisiana public schools and CODOFIL's work — how the revival actually runs.",
-          "transfer_check": "Profile the nearest real immersion program — where, what grades, how enrolled — and interview or study one family's experience of it."
+          "transfer_check": "Profile the nearest real immersion program — where, what grades, how enrolled — and interview or study one family's experience of it.",
+          "bands": {
+            "K–2": "Learn that some Louisiana schools teach in French all day, and say one thing you would like about that.",
+            "3–5": "Find the nearest French immersion school and say what grades it has.",
+            "6–8": "Profile the nearest real immersion program — where, what grades, how to enrol — and study one family's experience of it.",
+            "9–10": "Profile the nearest real immersion program — where, what grades, how enrolled — and interview or study one family's experience of it.",
+            "11–12": "Profile the program, interview a family and a teacher, and present how the revival actually runs, with CODOFIL's own figures."
+          }
         },
         {
           "theme": "The elders' tapes",
           "description": "Recording speakers properly — consent, equipment, transcription — so a voice outlives its speaker.",
-          "transfer_check": "Record one heritage-language speaker with consent, transcribe two minutes, and archive the recording where family can reach it."
+          "transfer_check": "Record one heritage-language speaker with consent, transcribe two minutes, and archive the recording where family can reach it.",
+          "bands": {
+            "K–2": "Listen to a recording of an elder speaking the old language and say one word you heard.",
+            "3–5": "Record an elder saying a few phrases, with their yes, and play it back to them.",
+            "6–8": "Record one heritage-language speaker with consent, transcribe one minute, and keep the recording where the family can reach it.",
+            "9–10": "Record one heritage-language speaker with consent, transcribe two minutes, and archive the recording where family can reach it.",
+            "11–12": "Record two speakers with consent, transcribe and translate a passage from each, and archive both with a community institution."
+          }
         },
         {
           "theme": "New Louisianians, new languages",
           "description": "Vietnamese on the coast, Spanish across the state, and the newest arrivals — the language map still being drawn.",
-          "transfer_check": "Document one newer language community in Louisiana — where it settled, why, what it built — from its own institutions."
+          "transfer_check": "Document one newer language community in Louisiana — where it settled, why, what it built — from its own institutions.",
+          "bands": {
+            "K–2": "Learn that new families bring new languages to Louisiana, and say hello in one of them.",
+            "3–5": "Find one newer language community in Louisiana and say where it lives and one thing it built.",
+            "6–8": "Document one newer language community in Louisiana — where it settled, why, what it built — from one of its own institutions.",
+            "9–10": "Document one newer language community in Louisiana — where it settled, why, what it built — from its own institutions.",
+            "11–12": "Document the community from its institutions and an interview, and present it to a class as part of the state's language map."
+          }
         },
         {
           "theme": "Signs, songs and public French",
           "description": "The public face of revival — bilingual signage, French media, festival stages — and what visibility does for a language.",
-          "transfer_check": "Inventory the real public presence of French or Creole in one town — signs, radio, mass, stage — and propose one addition to it."
+          "transfer_check": "Inventory the real public presence of French or Creole in one town — signs, radio, mass, stage — and propose one addition to it.",
+          "bands": {
+            "K–2": "Find a French word on a sign, a menu or a street name in your town and say what it means.",
+            "3–5": "Make a list of where French or Creole shows up in public in your town — signs, radio, church, a festival.",
+            "6–8": "Inventory the public presence of French or Creole in one town — signs, radio, mass, stage — and propose one addition.",
+            "9–10": "Inventory the real public presence of French or Creole in one town — signs, radio, mass, stage — and propose one addition to it.",
+            "11–12": "Inventory the presence, propose the addition to the body that could make it, and record the response."
+          }
         },
         {
           "theme": "Keeping it alive in your house",
           "description": "The capstone: a household language practice — small, daily, sustainable — designed and actually begun.",
-          "transfer_check": "Design and run two weeks of a real household heritage-language practice — the daily moment, the phrases — and report what stuck."
+          "transfer_check": "Design and run two weeks of a real household heritage-language practice — the daily moment, the phrases — and report what stuck.",
+          "bands": {
+            "K–2": "Say one heritage-language phrase at the table every day for a week.",
+            "3–5": "Design one daily language moment for your house — a greeting, a blessing, a song — and do it for a week.",
+            "6–8": "Design and run one week of a real household heritage-language practice — the daily moment, the phrases — and report what stuck.",
+            "9–10": "Design and run two weeks of a real household heritage-language practice — the daily moment, the phrases — and report what stuck.",
+            "11–12": "Design and run a month of household practice, involve every member, and write the plan another household could start tomorrow."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "The krewe is an organization",
           "description": "Behind the parade — dues, committees, captains and a year of work for a night of joy; the krewe as civic machinery.",
-          "transfer_check": "Profile one real krewe or parading club — its structure, calendar and budget scale — from its own materials or members."
+          "transfer_check": "Profile one real krewe or parading club — its structure, calendar and budget scale — from its own materials or members.",
+          "bands": {
+            "K–2": "Learn that a parade takes a whole year of work by a club, and name one job in it.",
+            "3–5": "Profile one krewe or parading club — its name, when it parades, what it does all year.",
+            "6–8": "Profile one real krewe or parading club — its structure and calendar — from its own materials.",
+            "9–10": "Profile one real krewe or parading club — its structure, calendar and budget scale — from its own materials or members.",
+            "11–12": "Profile the krewe from its members, and present it to a class as civic machinery with the year's calendar and money."
+          }
         },
         {
           "theme": "Carnival's calendar",
           "description": "Twelfth Night to Fat Tuesday — the season's actual structure, and why the date moves.",
-          "transfer_check": "Compute Mardi Gras's date for three different years and lay out one real community's carnival calendar across a season."
+          "transfer_check": "Compute Mardi Gras's date for three different years and lay out one real community's carnival calendar across a season.",
+          "bands": {
+            "K–2": "Learn that Mardi Gras moves each year and find this year's date on the calendar.",
+            "3–5": "Work out Mardi Gras's date for next year from Easter and mark the season on a calendar.",
+            "6–8": "Compute Mardi Gras's date for two years and lay out one community's carnival calendar across a season.",
+            "9–10": "Compute Mardi Gras's date for three different years and lay out one real community's carnival calendar across a season.",
+            "11–12": "Compute the dates, lay out two communities' calendars, and present why the season's structure is what it is."
+          }
         },
         {
           "theme": "The float in the barn",
           "description": "Float building — structure, papier-mâché and paint, the artists' year — celebration as fabrication trade.",
-          "transfer_check": "Build one small float or prop element with sound structure and finish, or document a real float barn's build process start to parade."
+          "transfer_check": "Build one small float or prop element with sound structure and finish, or document a real float barn's build process start to parade.",
+          "bands": {
+            "K–2": "Make a small float from a box, paper and paint, and pull it in a class parade.",
+            "3–5": "Build a small float element with a structure that holds and a finish that lasts a day.",
+            "6–8": "Build one small float or prop element with sound structure and finish, or document a float barn's build with a checker.",
+            "9–10": "Build one small float or prop element with sound structure and finish, or document a real float barn's build process start to parade.",
+            "11–12": "Build a float element to a barn's standard, or document a full build with the artists, and present the trade to a class."
+          }
         },
         {
           "theme": "Costume, mask and beadwork",
           "description": "The sewing year — from krewe costumes to the hand-beaded suits of the Black Masking Indians, honored as the masterworks they are.",
-          "transfer_check": "Complete one real costume or beadwork piece to wearable standard, or closely document a suit's making with its maker's consent."
+          "transfer_check": "Complete one real costume or beadwork piece to wearable standard, or closely document a suit's making with its maker's consent.",
+          "bands": {
+            "K–2": "Make a simple mask or sew three beads onto felt, and learn that some suits take a whole year to bead.",
+            "3–5": "Sew a small beaded patch and learn about the suits of the Black Masking Indians as masterworks.",
+            "6–8": "Complete one small costume or beadwork piece to a wearable standard, or document a suit's making with its maker's consent.",
+            "9–10": "Complete one real costume or beadwork piece to wearable standard, or closely document a suit's making with its maker's consent.",
+            "11–12": "Complete a costume piece to a wearable standard for a real event, or document a suit with its maker, and present the craft with the honour it is owed."
+          }
         },
         {
           "theme": "The parade as logistics",
           "description": "Routes, permits, bands, throws and cleanup — the operational craft that moves a parade through a town.",
-          "transfer_check": "Produce the full logistics plan for a real or modeled small parade — route, permits, order, safety, cleanup — to a standard an official could approve."
+          "transfer_check": "Produce the full logistics plan for a real or modeled small parade — route, permits, order, safety, cleanup — to a standard an official could approve.",
+          "bands": {
+            "K–2": "Help plan a class parade — the route round the playground, who goes first, who tidies.",
+            "3–5": "Plan a small school parade — route, order, safety, cleanup — on one page.",
+            "6–8": "Produce the logistics plan for a modeled small parade — route, permits, order, safety, cleanup — with a checker.",
+            "9–10": "Produce the full logistics plan for a real or modeled small parade — route, permits, order, safety, cleanup — to a standard an official could approve.",
+            "11–12": "Produce the plan for a real parade, present it to the official who approves such plans, and revise it from their notes."
+          }
         },
         {
           "theme": "The festival economy",
           "description": "From Jazz Fest to the smallest church fair — what festivals earn, who they pay, and the volunteer hours underneath.",
-          "transfer_check": "For one real Louisiana festival, chart attendance, economics and staffing from published figures, and work or shadow one real shift."
+          "transfer_check": "For one real Louisiana festival, chart attendance, economics and staffing from published figures, and work or shadow one real shift.",
+          "bands": {
+            "K–2": "Visit a festival with an adult and count the jobs you see — selling, cooking, cleaning, playing.",
+            "3–5": "For one festival, find how many people come and one way it makes money.",
+            "6–8": "For one real Louisiana festival, chart attendance and economics from published figures, and shadow one shift.",
+            "9–10": "For one real Louisiana festival, chart attendance, economics and staffing from published figures, and work or shadow one real shift.",
+            "11–12": "Chart two festivals, work a real shift, and present who the festival pays and the volunteer hours underneath."
+          }
         },
         {
           "theme": "Every parish has a festival",
           "description": "The small-town circuit — rice, strawberry, gumbo, pirogue — celebration as the parish's mirror of what it grows and makes.",
-          "transfer_check": "Document your own parish's festival — its history, its committee, what it celebrates — and take one working role in it, real or planned."
+          "transfer_check": "Document your own parish's festival — its history, its committee, what it celebrates — and take one working role in it, real or planned.",
+          "bands": {
+            "K–2": "Learn what your parish's festival celebrates and draw it.",
+            "3–5": "Document your parish's festival — what it celebrates, when, who runs it.",
+            "6–8": "Document your own parish's festival — its history, its committee, what it celebrates — and plan one working role in it.",
+            "9–10": "Document your own parish's festival — its history, its committee, what it celebrates — and take one working role in it, real or planned.",
+            "11–12": "Take a real working role in the festival, document the committee's year, and write the role's handover for next year's volunteer."
+          }
         },
         {
           "theme": "The second line and the social aid club",
           "description": "Social aid and pleasure clubs — mutual aid societies whose parades are the visible edge of year-round care.",
-          "transfer_check": "Present the documented history and present work of one real social aid and pleasure club, parade and aid function both."
+          "transfer_check": "Present the documented history and present work of one real social aid and pleasure club, parade and aid function both.",
+          "bands": {
+            "K–2": "Hear the story of a social aid and pleasure club and learn that its parade is also about helping neighbours.",
+            "3–5": "Present one social aid and pleasure club — its parade and one way it helps its members.",
+            "6–8": "Present the documented history and present work of one real social aid and pleasure club — parade and aid function — from published sources.",
+            "9–10": "Present the documented history and present work of one real social aid and pleasure club, parade and aid function both.",
+            "11–12": "Present the club from its own members or archive, and compare its aid function with a mutual-aid society's, with sources."
+          }
         },
         {
           "theme": "Safety in the crowd",
           "description": "Route medicine, lost children, weather calls and the barricade line — keeping a celebration safe without killing it.",
-          "transfer_check": "Draft the safety annex for a real or modeled parade day — medical points, lost-person protocol, weather triggers — and walk its route."
+          "transfer_check": "Draft the safety annex for a real or modeled parade day — medical points, lost-person protocol, weather triggers — and walk its route.",
+          "bands": {
+            "K–2": "Learn the parade rules — stay behind the line, find the helper if you are lost — and practise them.",
+            "3–5": "Draw the safety map for a class parade — first-aid spot, lost-child place, what we do if it rains.",
+            "6–8": "Draft the safety annex for a modeled parade day — medical points, lost-person protocol, weather triggers — with a checker.",
+            "9–10": "Draft the safety annex for a real or modeled parade day — medical points, lost-person protocol, weather triggers — and walk its route.",
+            "11–12": "Draft the annex for a real parade, walk the route with the organiser, and brief the marshals on it."
+          }
         },
         {
           "theme": "Throwing the party that binds the town",
           "description": "The capstone: producing one real community celebration end to end — the committee, the money, the day itself.",
-          "transfer_check": "Serve on or simulate the production of one real community event through its full cycle, delivering your role's checklist complete."
+          "transfer_check": "Serve on or simulate the production of one real community event through its full cycle, delivering your role's checklist complete.",
+          "bands": {
+            "K–2": "Help with one job at a class or church celebration, from set-up to tidy-up.",
+            "3–5": "Take one role in a class or community celebration and finish its checklist.",
+            "6–8": "Serve in a simulated production of one community event through its cycle, delivering your role's checklist.",
+            "9–10": "Serve on or simulate the production of one real community event through its full cycle, delivering your role's checklist complete.",
+            "11–12": "Serve on the committee of a real community event through its full cycle, deliver your role, and write the after-action note."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "The hurricanes with names we still say",
           "description": "Betsy, Camille, Katrina, Rita, Laura, Ida — the storms as history, each one's lesson named.",
-          "transfer_check": "Build a documented timeline of the major storms that struck your own region, with each storm's principal lesson stated."
+          "transfer_check": "Build a documented timeline of the major storms that struck your own region, with each storm's principal lesson stated.",
+          "bands": {
+            "K–2": "Learn the name of one big storm that came to your region and ask a grown-up what they remember.",
+            "3–5": "Make a timeline of the big storms that hit your region, with one thing each one taught.",
+            "6–8": "Build a documented timeline of the major storms that struck your region, with a lesson stated for three of them.",
+            "9–10": "Build a documented timeline of the major storms that struck your own region, with each storm's principal lesson stated.",
+            "11–12": "Build the timeline with sources, interview one person about one storm, and present the lessons to a class as a single argument."
+          }
         },
         {
           "theme": "1927: the flood that changed the rules",
           "description": "The Great Flood — the crevasses, the displacement, and how it rewrote river policy and politics.",
-          "transfer_check": "Present the 1927 flood's course and consequences for one real community, from documented accounts, including what policy changed."
+          "transfer_check": "Present the 1927 flood's course and consequences for one real community, from documented accounts, including what policy changed.",
+          "bands": {
+            "K–2": "Hear the story of the great flood of 1927 and say what happened to the people.",
+            "3–5": "Tell what the 1927 flood did to one community and one thing that changed afterwards.",
+            "6–8": "Present the 1927 flood's course and consequences for one real community from documented accounts, including one policy change.",
+            "9–10": "Present the 1927 flood's course and consequences for one real community, from documented accounts, including what policy changed.",
+            "11–12": "Present the flood for two communities, compare their treatment from the record, and explain the policy that followed and who it served."
+          }
         },
         {
           "theme": "Katrina: what failed and what held",
           "description": "The levee failures, the flooded city, the response — told precisely, from the investigations, without myth.",
-          "transfer_check": "Using the official investigations, explain what actually failed in 2005 — where, why — and one reform that directly followed."
+          "transfer_check": "Using the official investigations, explain what actually failed in 2005 — where, why — and one reform that directly followed.",
+          "bands": {
+            "K–2": "Hear, carefully, what happened in New Orleans in 2005, and learn that walls failed and people helped each other.",
+            "3–5": "Say what failed in 2005 and where, from a simple account, and one thing that was fixed afterwards.",
+            "6–8": "Using the official investigations, explain what actually failed in 2005 — where, why — and one reform that followed.",
+            "9–10": "Using the official investigations, explain what actually failed in 2005 — where, why — and one reform that directly followed.",
+            "11–12": "Explain the failures from the investigations, separate them from the myths with evidence, and present the reforms and their limits."
+          }
         },
         {
           "theme": "The diaspora and the return",
           "description": "Displacement after the great storms — who left, who returned, and how neighborhoods rebuilt or didn't.",
-          "transfer_check": "Trace one documented neighborhood's or family's displacement-and-return arc after a named storm, with the numbers that frame it."
+          "transfer_check": "Trace one documented neighborhood's or family's displacement-and-return arc after a named storm, with the numbers that frame it.",
+          "bands": {
+            "K–2": "Hear the story of a family that left after a storm and came back, and say what they would have missed.",
+            "3–5": "Trace one family's or neighbourhood's leaving and returning after a storm, in pictures and dates.",
+            "6–8": "Trace one documented neighborhood's or family's displacement-and-return arc after a named storm, with one number that frames it.",
+            "9–10": "Trace one documented neighborhood's or family's displacement-and-return arc after a named storm, with the numbers that frame it.",
+            "11–12": "Trace two arcs that ended differently, with the numbers, and present what decided who could return."
+          }
         },
         {
           "theme": "The house that survives here",
           "description": "Elevation, tie-downs, fortified roofs — Louisiana building lessons written into codes and grants.",
-          "transfer_check": "Assess one real house against current wind-and-water lessons and specify its three highest-value hardening steps, roughly costed."
+          "transfer_check": "Assess one real house against current wind-and-water lessons and specify its three highest-value hardening steps, roughly costed.",
+          "bands": {
+            "K–2": "Look at a house on stilts and say why it is up high.",
+            "3–5": "Look at your own house with an adult and name two things that would help it in a storm.",
+            "6–8": "Assess one real house against wind-and-water lessons and specify its three highest-value hardening steps.",
+            "9–10": "Assess one real house against current wind-and-water lessons and specify its three highest-value hardening steps, roughly costed.",
+            "11–12": "Assess two houses, cost the hardening, and find the real grant or program that would pay for one step, with its application drafted."
+          }
         },
         {
           "theme": "The evacuation, remembered and rehearsed",
           "description": "Contraflow, the phased zones and the lessons of the hard evacuations — leaving as a practiced civic skill.",
-          "transfer_check": "Build your household's evacuation plan on the parish's actual zones and routes, and rehearse the leave decision against a real storm's timeline."
+          "transfer_check": "Build your household's evacuation plan on the parish's actual zones and routes, and rehearse the leave decision against a real storm's timeline.",
+          "bands": {
+            "K–2": "Learn where your family goes when a storm comes, and practise packing your bag.",
+            "3–5": "Make your family's hurricane card — zone, route, when we go, where — from the parish's guidance.",
+            "6–8": "Build your household's evacuation plan on the parish's zones and routes, and rehearse the leave decision against one storm's timeline.",
+            "9–10": "Build your household's evacuation plan on the parish's actual zones and routes, and rehearse the leave decision against a real storm's timeline.",
+            "11–12": "Build the plan for a household with a barrier to leaving, rehearse it against a real timeline, and present the parish's phased zones to a class."
+          }
         },
         {
           "theme": "The neighbors with boats",
           "description": "The volunteer rescues — citizen response in the floods, and how it organized itself alongside the official one.",
-          "transfer_check": "Document one real volunteer rescue effort from a named event — how it organized, what it did — and map how you would lawfully plug in today."
+          "transfer_check": "Document one real volunteer rescue effort from a named event — how it organized, what it did — and map how you would lawfully plug in today.",
+          "bands": {
+            "K–2": "Hear the story of the neighbours who rescued people with their boats, and say what made them helpers.",
+            "3–5": "Tell how one volunteer rescue got organised in a real flood, and one thing it did.",
+            "6–8": "Document one real volunteer rescue effort from a named event — how it organized, what it did — and map one lawful way to plug in today.",
+            "9–10": "Document one real volunteer rescue effort from a named event — how it organized, what it did — and map how you would lawfully plug in today.",
+            "11–12": "Document the effort, register with a lawful volunteer route for real, and present how citizen and official response are meant to fit."
+          }
         },
         {
           "theme": "Insurance and the rebuilt house",
           "description": "Wind, flood and the recovery programs — the paperwork history of getting rebuilt, and its documented unfairnesses.",
-          "transfer_check": "From one documented recovery, chart which programs and policies actually paid for one rebuilt home, and where the gaps fell."
+          "transfer_check": "From one documented recovery, chart which programs and policies actually paid for one rebuilt home, and where the gaps fell.",
+          "bands": {
+            "K–2": "Learn that grown-ups pay for a promise that a broken house will be fixed after a storm.",
+            "3–5": "From one storm, say which programs helped rebuild homes and one family that was left waiting.",
+            "6–8": "From one documented recovery, chart which programs and policies paid for one rebuilt home, and where one gap fell.",
+            "9–10": "From one documented recovery, chart which programs and policies actually paid for one rebuilt home, and where the gaps fell.",
+            "11–12": "Chart two recoveries, document the gaps with the record, and present the unfairnesses found and the reforms proposed."
+          }
         },
         {
           "theme": "Telling the storm",
           "description": "Oral history of disaster — interviewing survivors with care, and archiving the account for the parish record.",
-          "transfer_check": "Record one consented oral history of a named storm from someone who lived it, and archive it where the community can reach it."
+          "transfer_check": "Record one consented oral history of a named storm from someone who lived it, and archive it where the community can reach it.",
+          "bands": {
+            "K–2": "Ask a grown-up what they remember about a storm and draw one thing they said.",
+            "3–5": "Interview someone about a storm they lived through, with their yes, and write down three things they said.",
+            "6–8": "Record one consented oral history of a named storm from someone who lived it, and keep it where the family can reach it.",
+            "9–10": "Record one consented oral history of a named storm from someone who lived it, and archive it where the community can reach it.",
+            "11–12": "Record two oral histories with consent and care, archive them with a community institution, and present what they add to the record."
+          }
         },
         {
           "theme": "The next one",
           "description": "The capstone: applying the long memory — reading a live forecast season with history in hand and the household ready.",
-          "transfer_check": "Present your household's and street's readiness against the lessons of the last three regional storms, gaps named and one closed."
+          "transfer_check": "Present your household's and street's readiness against the lessons of the last three regional storms, gaps named and one closed.",
+          "bands": {
+            "K–2": "Check the family storm kit with an adult and say one thing that is missing.",
+            "3–5": "Check your household's readiness against the last storm's lessons and fix one thing.",
+            "6–8": "Present your household's readiness against the lessons of the last two regional storms, gaps named and one closed.",
+            "9–10": "Present your household's and street's readiness against the lessons of the last three regional storms, gaps named and one closed.",
+            "11–12": "Present the street's readiness to the neighbours, close one gap together, and write the plan for the season with the long memory in hand."
+          }
         }
       ]
     }
