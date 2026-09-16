@@ -4,6 +4,26 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.70.0] — 2026-09-16
+
+### Added — the studio in space, round two
+- **A hall's own room.** `CXXR.parseGltf()` reads glTF 2.0 as JSON or
+  GLB — embedded buffers only, because the page fetches nothing (an
+  external `.bin` is refused with the reason) — resolving node
+  transforms, indices and materials into flat triangle lists, and
+  *Load your hall's room* in the 3D panel draws the result under the
+  stations with its floor set to y = 0 and centred on the learner. The
+  file stays on the device.
+- **The studio's honesty lists in the room.** Beside the law sign:
+  *Simulated here* and *Practised live, at the bench* from the
+  scenario, and the *Under eighteen* hazard line where the scenario
+  carries one. Signs, never stations, never scored.
+- **Export scene (JSON)** writes the `cx-xrscene/1` document itself.
+- Tests: the room reader round-trips our own export as JSON and as GLB
+  and refuses external buffers (node); the browser suite loads a room
+  from bytes, checks the signs, and sees the refusal message.
+  `docs/XR_REVIEW.md` and the wiki page updated.
+
 ## [0.69.0] — 2026-09-16
 
 ### Added — the studio in space: AR, VR and the "metaverse fabric", reviewed and begun
