@@ -57,15 +57,17 @@ statute for every state, three templates exist (data-processing
 statement, incident runbook, records custody), and the register names
 each item with an owner and a next step.
 
-**What remains open in the software itself** (register status *partial*
-or *open*): signed release tags once a signing key is provisioned; trust
-and revocation lists still in local storage. Wave 2 is otherwise
+**What remains open in the software itself** (register status *partial*):
+signed release tags once a signing key is provisioned. Trust and
+revocation lists moved to IndexedDB in v0.62.0. Wave 2 is otherwise
 complete: the durable ledger, the custody bundle and the hall checklist
 (v0.58.0); the hosting guide with a hosted-copy test, the CycloneDX SBOM
 and the CISA K–12 vendor summary (v0.59.0).
 
-Counts from the register at v0.59.0: 44 controls — 28 met, 13 partial,
-3 open. Every open item has a wave and an owner below.
+Counts from the register at v0.64.0: 44 controls — 28 met, 16 partial,
+0 open. Nothing is open: every remaining *partial* is an adopter's act
+(a signature, a course, a permit, a district decision) that the software
+supports with a checklist line, a template or a packet, and cannot do.
 
 ## 3. Recommendations
 
@@ -129,6 +131,7 @@ Ordered by how much risk they retire per unit of work.
 | CycloneDX SBOM from the build; signed release tags | software | **SBOM done, v0.59.0** — `tools/sbom.py`, `sbom/cognitionx.cdx.json`, CI-diffed; signed tags wait on a signing key |
 | Hall safety & compliance checklist: the thirteen wave-3 operating controls per parish, exported with the bundle | software | **done, v0.58.0** — in the parish dashboard and Parish Admin; the register's adopter controls carry it as evidence and move from *open* to *partial* |
 | CISA K–12 vendor summary table | software | **done, v0.59.0** — `docs/CISA_K12_SUMMARY.md` |
+| The last open items: a one-page device and data hygiene sheet for hall staff (ST-03), the city clerk's use permit on the MOU line (LO-02), the credential list on the board's agenda for the CTE office (DI-03) | software | **done, v0.64.0** — `docs/templates/DEVICE_AND_DATA_HYGIENE.md`, signed yearly; the hall checklist's device-sheet and MOU lines name the sheet and the permit; `docs/BOARD_PACKET.md` carries the credential list; the register has no open item left |
 
 ### Wave 3 — the adopter's operating controls (first cohort)
 

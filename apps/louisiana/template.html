@@ -1798,7 +1798,7 @@ const READY_REQS = [
    operating controls from docs/COMPLIANCE_ROADMAP.md wave 3, kept per parish
    in this browser and exported with the custody bundle. Not legal advice. */
 const HALL_REQS = [
-  ["Device sheet adopted", "Full-disk encryption on, auto-lock at five minutes, one browser profile per assessor, no shared logins.", "PA-01"],
+  ["Device sheet adopted; staff signed the hygiene sheet", "Full-disk encryption on, auto-lock at five minutes, one browser profile per assessor, no shared logins; every staff member has read and signed the one-page device and data hygiene sheet (docs/templates/DEVICE_AND_DATA_HYGIENE.md).", "PA-01 · ST-03"],
   ["Weekly export to the secured share", "The ledger and issued records exported on a fixed day to the parish's or district's secured share.", "PL-16"],
   ["Incident lead named; state clock recorded", "The runbook filled: lead, deputy, district reporting line, the state's breach deadline.", "ST-02"],
   ["Data-processing statement attached to the DPA", "The statement signed with the district's own data-privacy agreement; apps listed as approved offline tools.", "DI-01"],
@@ -1810,7 +1810,7 @@ const HALL_REQS = [
   ["Youth lines posted; student-learner agreements filed", "Each station shows its Under-18 hazard-order line; written agreements where an exemption is used.", "FD-03"],
   ["Employment certificates where a placement is paid", "Louisiana work permits for minors under 18 in paid apprenticeships.", "ST-06"],
   ["Two-adult rule and sign-in for every session", "Supervision ratio kept; the session record signed.", "LO-01"],
-  ["MOU signed: program office, parish, district", "The room, the schedule, custody of records and the incident line, on both agendas.", "PA-04"],
+  ["MOU signed: program office, parish, district", "The room, the schedule, custody of records and the incident line, on both agendas; where the room is city-owned or leased, the city clerk's use permit is on file (and an assembly permit for any public showcase).", "PA-04 · LO-02"],
 ];
 function hallState(slug){
   try { const raw = store("cxla.hallcheck."+slug); if (raw){ const a = JSON.parse(raw); if (Array.isArray(a)) return HALL_REQS.map((_,i)=>!!a[i]); } } catch(e){}

@@ -643,15 +643,23 @@
    "requirement": "Louisiana requires annual cybersecurity training for state and local government employees; a parish-run hall's staff fall under the parish's program.",
    "source": "La. Act 250 (2020), R.S. 42:1267; OTS Information Security Policy",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
     {
      "type": "doc",
-     "ref": "docs/COMPLIANCE_ROADMAP.md"
+     "ref": "docs/templates/DEVICE_AND_DATA_HYGIENE.md"
+    },
+    {
+     "type": "test",
+     "ref": "test_security_compliance_register"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableLedger"
     }
    ],
    "wave": 2,
-   "next": "Add a one-page 'device and data hygiene for hall staff' to the trainer track; parish staff take the parish's own course."
+   "next": "Software: the one-page device and data hygiene sheet for hall staff (v0.64.0), signed once a year, is named on the hall checklist's device-sheet line. Adopter: parish employees also take the parish's own annual course; where it is stricter, it governs."
   },
   {
    "id": "ST-04",
@@ -891,15 +899,19 @@
    "requirement": "A city-owned or leased room may need a use permit; events (a public showcase) may need an assembly permit.",
    "source": "Municipal ordinances",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
     {
-     "type": "doc",
-     "ref": "docs/COMPLIANCE_ROADMAP.md"
+     "type": "smoke",
+     "ref": "testDurableLedger"
+    },
+    {
+     "type": "test",
+     "ref": "test_security_compliance_register"
     }
    ],
    "wave": 2,
-   "next": "Check with the city clerk when the room is not parish- or district-owned."
+   "next": "Software: the hall checklist's MOU line asks for the city clerk's use permit where the room is city-owned or leased, and an assembly permit for a public showcase (v0.64.0). Adopter: check with the city clerk before the first session; file the permit with the MOU."
   },
   {
    "id": "DI-01",
@@ -957,15 +969,23 @@
    "requirement": "A platform credential is recognised on a transcript only by district decision; the district compact track names the steps.",
    "source": "District policy; LDOE Jump Start / IBC lists",
    "owner": "adopter",
-   "status": "open",
+   "status": "partial",
    "evidence": [
+    {
+     "type": "doc",
+     "ref": "docs/BOARD_PACKET.md"
+    },
+    {
+     "type": "doc",
+     "ref": "docs/CREDENTIALS.md"
+    },
     {
      "type": "doc",
      "ref": "docs/STATE_COMPLIANCE.md"
     }
    ],
    "wave": 2,
-   "next": "Bring the credential list to the review board and the district's CTE office together."
+   "next": "Software: the board packet lists the 24 proposed credential names as its first decision and every record states its witnessed count on its face, which is what a CTE office asks first (v0.64.0). Adopter: bring the packet's credential list to the district's CTE office with the review board's decision; recognition on a transcript is the district's."
   }
  ]
 }
