@@ -139,6 +139,21 @@ def parish_missions(name, seat, world, hub, rural):
     ]
 
 
+def precompute_voronoi(payload):
+    """Run the template's own tessellation code on the payload (node) and
+    return both maps' grids, run-length encoded; see tools/voronoi_precompute.js."""
+    import subprocess, tempfile
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False)
+        path = f.name
+    r = subprocess.run(["node", str(ROOT / "tools" / "voronoi_precompute.js"),
+                        str(ROOT / "apps" / "louisiana" / "template.html"), path],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        raise SystemExit("voronoi precompute failed: " + r.stderr[-500:])
+    return json.loads(r.stdout)
+
+
 def load_fact_base():
     """The Louisiana and Institute fact bases, canonical in data/ since
     v0.39.0 (extracted once from the Education OS app by
@@ -335,6 +350,10 @@ def main():
         "unions": hall_unions(),
         "access": learner_types(),
     }
+    # v0.68.0: the two Voronoi maps are deterministic functions of this
+    # payload and cost ~240 ms of startup script; precompute them with the
+    # app's own code (tools/voronoi_precompute.js) and ship the grids
+    payload["voronoi"] = precompute_voronoi(payload)
     data = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     template = (ROOT / "apps" / "louisiana" / "template.html").read_text(encoding="utf-8")
     if "__LADATA__" not in template:

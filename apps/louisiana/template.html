@@ -1620,6 +1620,12 @@ function renderLoop(){
    rectangle, each group's mask tessellated by its members. Areas converge to
    the weight shares by adaptive power weights + Lloyd relaxation (fixed
    iteration count — no randomness, same input → same picture). */
+/* @cx-voronoi-begin */
+/* v0.68.0 — everything between the @cx-voronoi markers is also run at build
+   time by tools/voronoi_precompute.js on the same data, and the resulting
+   grids ship in D.voronoi (run-length encoded). tessFromPre() decodes them;
+   the callers fall back to computing when they are absent; the browser
+   suite asserts decoded == freshly computed. Keep the markers. */
 function voronoiTessellate(groups, W, H, iters){
   // groups: [{id, weight, seeds:[{id, weight, x, y}]}] with x,y in [0,1]
   const gw = 132, gh = Math.round(gw*H/W);
@@ -1659,6 +1665,35 @@ function voronoiTessellate(groups, W, H, iters){
   groups.forEach(g=>relax(g.seeds.map(s=>({...s})), gAssign, g.id, mAssign));
   return {gw, gh, gAssign, mAssign};
 }
+function stateVoronoiGroups(){
+  return D.regions.map((r,ri)=> ri ? {
+    id: "R"+ri,
+    weight: D.parishes.filter(p=>p.region===ri).reduce((s,p)=>s+p.pop,0),
+    seeds: D.parishes.filter(p=>p.region===ri).map(p=>({
+      id: p.slug, weight: Math.max(p.pop,4), x: (p.col+0.5)/11, y: (p.row+0.5)/9 }))
+  } : null).filter(Boolean);
+}
+const VOR_FAMS = [["os","OS editions","var(--w1)"],["community","Community","var(--w2)"],
+                  ["legacy","Legacy tracks","var(--w3)"],["foundation","Foundation","var(--faint)"]];
+function currVoronoiKind(s){ const n = (D.catalog[s]||{}).name||"";
+  if (n.startsWith("Civic Leadership Legacy")) return "legacy";
+  if (n.startsWith("Cognition.X :") || n === "Non-Profit Practice") return "os";
+  return (D.catalog[s]||{}).ntracks ? "community" : "foundation"; }
+function currVoronoiGroups(){
+  const entries = Object.entries(D.catalog);
+  return VOR_FAMS.map(([k,label,col],fi)=>{
+    const members = entries.filter(([s])=>currVoronoiKind(s)===k);
+    return { id:"F"+k, weight: members.reduce((s,[,c])=>s+c.blocks,0),
+      seeds: members.map(([s,c],i)=>({ id:s, weight:c.blocks,
+        x: (fi%2)*0.5 + 0.25 + 0.18*Math.cos(i*2.4), y: Math.floor(fi/2)*0.5 + 0.25 + 0.18*Math.sin(i*2.4) })) };
+  }).filter(g=>g.weight>0);
+}
+function tessFromPre(pre){
+  if (!pre || !pre.g || !pre.m) return null;
+  const dec = rl => { const a = new Array(pre.gw*pre.gh); let i = 0; for (const [id,n] of rl){ for (let k=0; k<n; k++) a[i++] = id; } return a; };
+  return {gw: pre.gw, gh: pre.gh, gAssign: dec(pre.g), mAssign: dec(pre.m)};
+}
+/* @cx-voronoi-end */
 function drawVoronoi(hostSel, tess, cellMeta, W, H, onClick){
   // cellMeta: id -> {color, label, tip}
   const host = $(hostSel);
@@ -1667,14 +1702,21 @@ function drawVoronoi(hostSel, tess, cellMeta, W, H, onClick){
   const ctx = cv.getContext("2d");
   const {gw, gh, gAssign, mAssign} = tess;
   const css = getComputedStyle(document.documentElement);
-  const resolve = c => c.startsWith("var(") ? css.getPropertyValue(c.slice(4,-1)).trim() : c;
+  const resolved = new Map();   // v0.68.0: one computed-style lookup per colour, not per cell
+  const resolve = c => { if (!resolved.has(c)) resolved.set(c, c.startsWith("var(") ? css.getPropertyValue(c.slice(4,-1)).trim() : c); return resolved.get(c); };
   const sx = W*2/gw, sy = H*2/gh;
   const surface = css.getPropertyValue("--surface").trim() || "#fff";
   const ink = css.getPropertyValue("--ink").trim() || "#222";
-  for (let y=0; y<gh; y++) for (let x=0; x<gw; x++){
-    const gi=y*gw+x, id=mAssign[gi], m=cellMeta[id];
-    ctx.fillStyle = m ? resolve(m.color) : surface;
-    ctx.fillRect(x*sx, y*sy, sx+1, sy+1);
+  for (let y=0; y<gh; y++){
+    let x = 0;
+    while (x < gw){                // fill each horizontal run of one cell in a single rect
+      const id = mAssign[y*gw+x]; let x2 = x+1;
+      while (x2 < gw && mAssign[y*gw+x2] === id) x2++;
+      const m = cellMeta[id];
+      ctx.fillStyle = m ? resolve(m.color) : surface;
+      ctx.fillRect(x*sx, y*sy, (x2-x)*sx+1, sy+1);
+      x = x2;
+    }
   }
   // borders: thin between cells, thick between groups
   ctx.fillStyle = surface;
@@ -1719,13 +1761,7 @@ function drawVoronoi(hostSel, tess, cellMeta, W, H, onClick){
 }
 let voronoiRedraws = [];
 function renderStateVoronoi(hostSel){
-  const groups = D.regions.map((r,ri)=> ri ? {
-    id: "R"+ri,
-    weight: D.parishes.filter(p=>p.region===ri).reduce((s,p)=>s+p.pop,0),
-    seeds: D.parishes.filter(p=>p.region===ri).map(p=>({
-      id: p.slug, weight: Math.max(p.pop,4), x: (p.col+0.5)/11, y: (p.row+0.5)/9 }))
-  } : null).filter(Boolean);
-  const tess = voronoiTessellate(groups, 560, 380, 24);
+  const tess = tessFromPre(D.voronoi && D.voronoi.state) || voronoiTessellate(stateVoronoiGroups(), 560, 380, 24);
   const meta = {};
   D.parishes.forEach(p=>{ meta[p.slug] = {
     color: ACCCOL[p.accWave-1], label: abbr(p.name),
@@ -1736,20 +1772,8 @@ function renderStateVoronoi(hostSel){
     `<span style="color:var(--faint)">cell area ∝ population · heavy borders = regions</span>`);
 }
 function renderCurrVoronoi(){
-  const FAMS = [["os","OS editions","var(--w1)"],["community","Community","var(--w2)"],
-                ["legacy","Legacy tracks","var(--w3)"],["foundation","Foundation","var(--faint)"]];
-  const kindOf = s => { const n = (D.catalog[s]||{}).name||"";
-    if (n.startsWith("Civic Leadership Legacy")) return "legacy";
-    if (n.startsWith("Cognition.X :") || n === "Non-Profit Practice") return "os";
-    return (D.catalog[s]||{}).ntracks ? "community" : "foundation"; };
-  const entries = Object.entries(D.catalog);
-  const groups = FAMS.map(([k,label,col],fi)=>{
-    const members = entries.filter(([s])=>kindOf(s)===k);
-    return { id:"F"+k, weight: members.reduce((s,[,c])=>s+c.blocks,0),
-      seeds: members.map(([s,c],i)=>({ id:s, weight:c.blocks,
-        x: (fi%2)*0.5 + 0.25 + 0.18*Math.cos(i*2.4), y: Math.floor(fi/2)*0.5 + 0.25 + 0.18*Math.sin(i*2.4) })) };
-  }).filter(g=>g.weight>0);
-  const tess = voronoiTessellate(groups, 560, 380, 24);
+  const FAMS = VOR_FAMS, kindOf = currVoronoiKind, entries = Object.entries(D.catalog);
+  const tess = tessFromPre(D.voronoi && D.voronoi.curr) || voronoiTessellate(currVoronoiGroups(), 560, 380, 24);
   const meta = {};
   FAMS.forEach(([k,label,col])=> entries.filter(([s])=>kindOf(s)===k).forEach(([s,c])=>{
     meta[s] = {color: col, label: s.length>7 ? s.slice(0,6) : s,

@@ -725,6 +725,25 @@ def test_band_differentiated_descriptions():
     check("core spine: every core-spine pack is band-authored (v0.67.0)", spine <= BAND_AUTHORED_PACKS, str(sorted(spine - BAND_AUTHORED_PACKS)))
 
 
+FOOTPRINT_BUDGET_MB = {"education-os": 6.5, "flow-hub": 2.6, "louisiana": 1.0, "platform": 0.3, "states": 0.65, "trades-network": 0.5}
+
+
+def test_footprint_budget():
+    """v0.68.0 — every built app stays under its byte budget (docs/PERFORMANCE.md);
+    the performance pass's structural changes hold."""
+    for app, mb in FOOTPRINT_BUDGET_MB.items():
+        size = (ROOT / "apps" / app / "index.html").stat().st_size
+        check(f"footprint: {app} within {mb} MB", size <= mb * 1e6, f"{size/1e6:.2f} MB — raise the budget in docs/PERFORMANCE.md and here, with the reason")
+    perf = (ROOT / "docs" / "PERFORMANCE.md").read_text(encoding="utf-8")
+    check("PERFORMANCE.md states the budgets the test holds", all(f"| {app} | {mb} MB |" in perf for app, mb in FOOTPRINT_BUDGET_MB.items()))
+    ed = app_html("education-os"); tpl = (ROOT / "apps" / "education-os" / "template.html").read_text(encoding="utf-8", errors="replace")
+    check("education-os: the sector library is injected in place, once, with no trailing overlay", ed.count("/*cx:sectorBlocks*/") == 1 and "CX canonical overlay" not in ed and "DATA.cxCanonical={version:" in ed)
+    check("education-os: the template holds the placeholder and no literal rounds", tpl.count("__CXFACT:sectorBlocks__") == 1 and "DATA.sectorBlocks=DATA.sectorBlocks.concat(" not in tpl)
+    la = app_html("louisiana"); ltpl = (ROOT / "apps" / "louisiana" / "template.html").read_text(encoding="utf-8", errors="replace")
+    check("louisiana: both Voronoi grids ship precomputed and the marker region exists for the precompute tool", '"voronoi":{"state":{"gw":132,"gh":90' in la and '"curr":{"gw":132' in la and "/* @cx-voronoi-begin */" in ltpl and "/* @cx-voronoi-end */" in ltpl and "function tessFromPre(" in ltpl)
+    check("perf tooling present", (ROOT / "tools" / "perf.js").exists() and (ROOT / "tools" / "voronoi_precompute.js").exists())
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))

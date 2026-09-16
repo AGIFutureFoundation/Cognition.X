@@ -120,6 +120,23 @@ louisiana.example.org {
 }
 ```
 
+## Compression
+
+Serve the files compressed. Every app shrinks by 60–80% on the wire
+(`docs/PERFORMANCE.md` has the per-app figures: the Education OS goes
+from 6.1 MB to 1.65 MB), and pre-compressing at deploy time costs the
+server nothing per request:
+
+```
+gzip -9 -k apps/*/index.html        # leaves index.html.gz beside each file
+```
+
+nginx: `gzip_static on;` in the location block (Apache: `mod_deflate` or
+`AddEncoding gzip .gz` with a rewrite to the `.gz` file; Caddy:
+`encode gzip` or `file_server { precompressed gzip }`). None of the
+headers above change with compression, and the checksums in
+`apps/CHECKSUMS.sha256` still apply to the uncompressed files.
+
 ## Checking your host
 
 1. Open the hosted app with the browser's network panel: after the
