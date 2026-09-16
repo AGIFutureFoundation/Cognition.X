@@ -918,6 +918,27 @@ async function testOpenBadgeEnvelope(browser, errs) {
   await page.close();
 }
 
+/* ------- v0.68.0: the performance pass — precomputed Voronoi grids equal a fresh computation; the Education OS carries the canonical sector library in place, once ------- */
+async function testPerformancePass(browser, errs) {
+  const la = await newPage(browser, 'la/perf', errs);
+  await la.goto(url('louisiana')); await la.waitForTimeout(900);
+  const v = await la.evaluate(() => {
+    const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+    const st = tessFromPre(D.voronoi && D.voronoi.state), cu = tessFromPre(D.voronoi && D.voronoi.curr);
+    return { has: !!(st && cu), state: same(st, voronoiTessellate(stateVoronoiGroups(), 560, 380, 24)), curr: same(cu, voronoiTessellate(currVoronoiGroups(), 560, 380, 24)),
+             cells: st ? st.mAssign.length : 0, bytes: JSON.stringify(D.voronoi).length, drawn: !!document.querySelector('#vormap canvas') };
+  });
+  check('voronoi: both maps ship precomputed and decode to exactly what the app would compute', v.has && v.state && v.curr && v.cells === 132 * 90, JSON.stringify(v));
+  check('voronoi: the shipped grids are small (run-length encoded) and the map is drawn from them', v.bytes < 60000 && v.drawn, `${v.bytes} bytes`);
+  await la.close();
+  const ed = await newPage(browser, 'education-os/perf', errs);
+  await ed.goto(url('education-os')); await ed.waitForTimeout(2000);
+  const e = await ed.evaluate(() => ({ n: DATA.sectorBlocks.length, marker: DATA.cxCanonical && DATA.cxCanonical.sectorBlocks, src: DATA.cxCanonical && DATA.cxCanonical.source,
+    overlays: [...document.scripts].filter(s => /CX canonical overlay/.test(s.textContent.slice(0, 200))).length, shape: DATA.sectorBlocks[0].length }));
+  check('education-os: the canonical sector library is in place once — 5,200 rows, no trailing overlay', e.n === 5200 && e.marker === 5200 && e.src === 'data/blocks.csv' && e.overlays === 0 && e.shape === 6, JSON.stringify(e));
+  await ed.close();
+}
+
 /* ------- v0.62.0: the trust and revocation lists take the ledger's durable path; a custody bundle restores onto a second device by hand ------- */
 async function testDurableListsAndRestore(browser, errs) {
   const la = await newPage(browser, 'la/durlists', errs);
@@ -1023,6 +1044,7 @@ async function testDurableListsAndRestore(browser, errs) {
       ['hosted copy', testHostedCopy],
       ['open badge envelope', testOpenBadgeEnvelope],
       ['durable lists and custody restore', testDurableListsAndRestore],
+      ['performance pass', testPerformancePass],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);

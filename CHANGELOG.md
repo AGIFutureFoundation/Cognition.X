@@ -4,6 +4,33 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.68.0] — 2026-09-16
+
+### Changed — the performance and footprint pass
+- **Education OS: 9.54 MB → 6.12 MB, first content 630 → 459 ms.** The
+  template carried its own copy of the sector master-block library (96
+  literal rounds, 3.4 MB) that a trailing 1.3 MB overlay then replaced
+  with the canonical rows; both were parsed on every load. The library
+  is now injected in place where the template's copy stood
+  (`__CXFACT:sectorBlocks__`), the literals and the overlay are gone.
+  All 149 views were rendered and hashed before and after: identical,
+  apart from random gradient ids, live-feed lines and the accessibility
+  marker's timing.
+- **Louisiana: first content 468 → 233 ms, startup script 273 → 75 ms.**
+  The two Voronoi maps are deterministic functions of the build data and
+  were 240 ms of startup. `tools/voronoi_precompute.js` runs the
+  template's own tessellation code (the `@cx-voronoi` marker region,
+  unmodified) at build time and ships both grids run-length encoded
+  (+33 KB); the app decodes them, falls back to computing when absent,
+  and the browser suite asserts decoded == freshly computed. The canvas
+  renderer resolves each colour once and fills runs, not cells.
+- **Measured and held.** `tools/perf.js` measures bytes, gzip, load,
+  first content, script evaluation and heap for every app;
+  `docs/PERFORMANCE.md` records the table, the changes, and what was
+  measured and deliberately left alone (fonts, minification, the Flow
+  Hub payload); `test_footprint_budget` holds a byte budget per app.
+  `docs/HOSTING.md` gains a compression section.
+
 ## [0.67.0] — 2026-09-16
 
 ### Changed — the description debt, tranche three: the core spine is done (roadmap prompt 6)

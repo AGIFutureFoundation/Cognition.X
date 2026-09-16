@@ -29,10 +29,13 @@ A single-file, offline-capable HTML application:
 
 `index.html` is now **built**: the hand-grown "gov" build lives on as
 `template.html` (shell + legacy content), and
-`tools/build_education_os.py` appends a canonical overlay sourcing
-`DATA.sectorBlocks` from `data/blocks.csv` — dataset edits flow into
-the app, and the overlay cures the template's accumulated duplicate
-inflation (11,520 raw rows → 5,200 canonical). Never edit `index.html`
+`tools/build_education_os.py` injects `DATA.sectorBlocks` from
+`data/blocks.csv` in place of the template's own copy (5,200 canonical
+rows where the template once accumulated 11,520 raw ones across 96
+literal rounds; since v0.68.0 those literals are gone and a placeholder
+stands in their place, so the library is parsed once, not twice) —
+dataset edits flow into the app. The Louisiana, K–12 and Institute fact
+bases are injected the same way (v0.63.0). Never edit `index.html`
 directly.
 
 ## Constraint that is a feature
