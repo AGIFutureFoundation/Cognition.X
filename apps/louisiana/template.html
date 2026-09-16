@@ -865,6 +865,14 @@ function renderParish(p){
        <div id="pready"></div>
      </div>
 
+     <div class="panel span2">
+       <h3>Hall safety &amp; compliance — the operating controls</h3>
+       <p class="note">The thirteen controls a hall meets before it enrols a cohort — device sheet, exports, the incident lead,
+       the DPA, records custody, background checks, the fire marshal, insurance, OSHA 10, youth lines, employment
+       certificates, the two-adult rule, the MOU. This browser's record; exported with the custody bundle.</p>
+       <div id="phall"></div>
+     </div>
+
      <div class="panel">
        <h3>School systems</h3>
        <p class="note">From the Louisiana fact base.</p>
@@ -1012,6 +1020,7 @@ function renderParish(p){
   // mission module: the parish-custom capstone ladder — in full run
   renderMissionLadder("#pmissions", p, true);
   renderReady(p);
+  renderHallCheck(p, "#phall");
   renderParishUnions(p);
   renderParishMakers(p);
 
@@ -1738,6 +1747,69 @@ const READY_REQS = [
   ["First cohort designed & enrolling", "A chosen cohort of twenty and the five-minute enrollment path, timed.", "Enrolling the community"],
   ["Records & reporting policy", "The five-number card, local records, and the learner-consent rule in writing.", "Measure, report, scale"],
 ];
+/* ---------- Hall safety & compliance checklist (v0.58.0) — the adopter's
+   operating controls from docs/COMPLIANCE_ROADMAP.md wave 3, kept per parish
+   in this browser and exported with the custody bundle. Not legal advice. */
+const HALL_REQS = [
+  ["Device sheet adopted", "Full-disk encryption on, auto-lock at five minutes, one browser profile per assessor, no shared logins.", "PA-01"],
+  ["Weekly export to the secured share", "The ledger and issued records exported on a fixed day to the parish's or district's secured share.", "PL-16"],
+  ["Incident lead named; state clock recorded", "The runbook filled: lead, deputy, district reporting line, the state's breach deadline.", "ST-02"],
+  ["Data-processing statement attached to the DPA", "The statement signed with the district's own data-privacy agreement; apps listed as approved offline tools.", "DI-01"],
+  ["Records custody statement signed", "Custodian named, retention series mapped, first erase date set.", "ST-07"],
+  ["Background checks and mandated-reporter training logged", "Every assessor, mentor and volunteer with unsupervised access, before the first session.", "ST-04"],
+  ["Fire-marshal walkthrough; occupancy posted; extinguishers matched", "Egress and occupancy signed off for the hall's room; extinguisher types match the stations.", "PA-02"],
+  ["Insurance confirmed in writing", "General liability, and workers' compensation where apprentices are paid.", "PA-03"],
+  ["OSHA 10 for trainees at live stations", "Outreach cards on file before anyone works a live bench.", "FD-04"],
+  ["Youth lines posted; student-learner agreements filed", "Each station shows its Under-18 hazard-order line; written agreements where an exemption is used.", "FD-03"],
+  ["Employment certificates where a placement is paid", "Louisiana work permits for minors under 18 in paid apprenticeships.", "ST-06"],
+  ["Two-adult rule and sign-in for every session", "Supervision ratio kept; the session record signed.", "LO-01"],
+  ["MOU signed: program office, parish, district", "The room, the schedule, custody of records and the incident line, on both agendas.", "PA-04"],
+];
+function hallState(slug){
+  try { const raw = store("cxla.hallcheck."+slug); if (raw){ const a = JSON.parse(raw); if (Array.isArray(a)) return HALL_REQS.map((_,i)=>!!a[i]); } } catch(e){}
+  return HALL_REQS.map(()=>false);
+}
+function renderHallCheck(p, sel){
+  const host = $(sel); if (!host) return;
+  const st = hallState(p.slug), n = st.filter(Boolean).length, N = HALL_REQS.length;
+  host.innerHTML =
+    `<div class="kv" style="margin-bottom:8px"><span>Operating controls met — this browser's record</span><b>${n}/${N}${n===N ? " · hall ready to enrol" : ""}</b></div>`+
+    `<div class="meter" style="margin:0 0 12px"><i style="width:${Math.round(100*n/N)}%"></i></div>`+
+    HALL_REQS.map(([t,d,ctl],i)=>
+      `<label style="display:flex; gap:10px; align-items:flex-start; padding:8px 0; border-top:1px solid var(--line); cursor:pointer">`+
+      `<input type="checkbox" data-hi="${i}"${st[i]?" checked":""} style="margin-top:4px">`+
+      `<span><b>${t}</b> — <span style="color:var(--muted)">${d}</span> `+
+      `<span class="mono" style="font-size:.7rem; color:var(--faint)">register ${ctl}</span></span></label>`).join("")+
+    `<p class="note" style="margin-top:10px">From the security &amp; compliance roadmap (docs/COMPLIANCE_ROADMAP.md, wave 3) and its control register. Not legal advice; the parish's, district's and state's own rules govern. Exported with the records-custody bundle.</p>`;
+  host.querySelectorAll("input[data-hi]").forEach(cb => cb.addEventListener("change", ()=>{
+    const s2 = hallState(p.slug); s2[cb.dataset.hi|0] = cb.checked;
+    store("cxla.hallcheck."+p.slug, JSON.stringify(s2));
+    setTimeout(()=>renderHallCheck(p, sel), 0);
+  }));
+}
+/* ---------- the records-custody bundle (v0.58.0): everything a public body's
+   custodian keeps, in one dated file — the ledger, the office's PUBLIC key,
+   trust and revocation lists, readiness and hall checklists. Never the
+   private key (non-extractable), never a demo learner marked as a person. */
+async function custodyBundle(p){
+  const ik = cryptoOK() ? await issuerGet() : null;
+  const d = llSanitize(llLoad()) || {learners: [], queue: []};
+  return {
+    format: "cx-custody/1", version: D.version, exportedAt: new Date().toISOString(),
+    parish: p ? p.name : null,
+    custodyNote: "A records-custody export for a public body: keep with the body's records under its retention schedule (docs/templates/RECORDS_CUSTODY_STATEMENT.md). Contains the learner ledger (first names or nicknames, progress, witnessed evidence lines, practice runs), the Records Office name and PUBLIC key, trust and revocation lists, and this browser's readiness and hall checklists. Demo learners are marked demo. The private key is non-extractable and is not here.",
+    recordsOffice: ik ? {name: ik.name, publicKey: ik.pubJwk} : null,
+    ledger: d,
+    trustedOffices: trustLoad(), revoked: revokedLoad(), revocationLists: revlistsLoad(),
+    readiness: p ? READY_REQS.map(([t],i)=>({requirement: t, met: !!readyState(p.slug)[i]})) : [],
+    hallChecklist: p ? HALL_REQS.map(([t,,ctl],i)=>({control: ctl, requirement: t, met: !!hallState(p.slug)[i]})) : [],
+  };
+}
+function downloadJSON(obj, name){
+  const blob = new Blob([JSON.stringify(obj, null, 1)], {type: "application/json"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+}
 function readyState(slug){
   try { const raw = store("cxla.ready."+slug); if (raw) return JSON.parse(raw); } catch(e){}
   return [false,false,false,false,false];
@@ -1861,12 +1933,79 @@ const LTRACKS = (() => {
       pack: pm.name, name: t.name, credential: t.credential})); });
   return out;
 })();
-function llLoad(){
-  try { const r = store(LKEY); if (r){ const d = JSON.parse(r);
-    if (d && Array.isArray(d.learners)) return d; } } catch(e){}
-  return {learners: []};
+/* v0.58.0 — durable ledger. llLoad() stays synchronous (every dashboard calls
+   it) and serves an in-memory copy; llSave() writes through to BOTH
+   localStorage (the compatibility copy every earlier release read) and an
+   IndexedDB record (size-unbounded in practice, survives a localStorage
+   quota failure). On startup the IndexedDB copy is authoritative when it is
+   at least as new as the localStorage one — so a ledger that outgrew
+   localStorage, or one whose last localStorage write was refused, comes
+   back whole. A write that fails everywhere is announced, never swallowed. */
+const LDB = "cxla.ledgerdb", LDB_STORE = "kv";
+function ldbOpen(){
+  return new Promise((res, rej) => {
+    try {
+      const r = indexedDB.open(LDB, 1);
+      r.onupgradeneeded = () => { r.result.createObjectStore(LDB_STORE); };
+      r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+    } catch(e){ rej(e); }
+  });
 }
-function llSave(d){ store(LKEY, JSON.stringify(d)); }
+async function ldbGet(k){ const db = await ldbOpen(); return new Promise((res, rej) => { const t = db.transaction(LDB_STORE, "readonly").objectStore(LDB_STORE).get(k); t.onsuccess = () => res(t.result); t.onerror = () => rej(t.error); }); }
+async function ldbPut(k, v){ const db = await ldbOpen(); return new Promise((res, rej) => { const t = db.transaction(LDB_STORE, "readwrite"); t.objectStore(LDB_STORE).put(v, k); t.oncomplete = () => res(true); t.onerror = () => rej(t.error); }); }
+const LL = {cache: null, ready: false, lastSave: null};
+function ledgerNote(msg, level){
+  try {
+    let b = document.getElementById("cx-ledgernote");
+    if (!b){ b = document.createElement("div"); b.id = "cx-ledgernote"; b.setAttribute("role", "status"); b.setAttribute("aria-live", "polite");
+      b.style.cssText = "position:fixed;left:12px;right:12px;bottom:56px;z-index:89;padding:10px 14px;border-radius:10px;font-size:.84rem;box-shadow:var(--shadow);color:#fff";
+      document.body.appendChild(b); }
+    b.style.background = level === "error" ? "var(--w4)" : "var(--gold)";
+    b.textContent = msg;
+  } catch(e){}
+}
+function llLoad(){
+  if (LL.cache) return LL.cache;
+  try { const r = store(LKEY); if (r){ const d = JSON.parse(r);
+    if (d && Array.isArray(d.learners)){ LL.cache = d; return d; } } } catch(e){}
+  LL.cache = {learners: []};
+  return LL.cache;
+}
+function llSave(d){
+  LL.cache = d;
+  d.savedAt = new Date().toISOString();
+  const s = JSON.stringify(d);
+  let okLS = false;
+  try { localStorage.setItem(LKEY, s); okLS = true; } catch(e){ okLS = false; }
+  LL.lastSave = {ls: okLS, idb: null};
+  ldbPut("ledger", {savedAt: d.savedAt, json: s}).then(() => {
+    LL.lastSave.idb = true;
+    if (!okLS) ledgerNote("Local storage refused this save (it is full or blocked) — the ledger is kept in this browser's IndexedDB instead and reloads from there. Export a copy soon.", "warn");
+  }).catch(() => {
+    LL.lastSave.idb = false;
+    if (!okLS){ ledgerNote("This browser refused to save the ledger anywhere — nothing since your last export is being kept. Export now.", "error"); storeWarn(); }
+  });
+  return okLS;
+}
+/* startup: prefer the IndexedDB copy when it is at least as new; migrate a
+   localStorage-only ledger into IndexedDB once */
+async function llInit(){
+  try {
+    const rec = await ldbGet("ledger");
+    const ls = llLoad();
+    if (rec && rec.json){
+      const d = JSON.parse(rec.json);
+      if (d && Array.isArray(d.learners) && (!ls.savedAt || String(rec.savedAt || "") >= String(ls.savedAt))){
+        const changed = JSON.stringify(d) !== JSON.stringify(ls);
+        LL.cache = d;
+        if (changed){ try { localStorage.setItem(LKEY, rec.json); } catch(e){} setTimeout(renderRoles, 0); }
+      }
+    } else if (ls.learners.length){
+      await ldbPut("ledger", {savedAt: ls.savedAt || new Date().toISOString(), json: JSON.stringify(ls)});
+    }
+  } catch(e){ /* IndexedDB unavailable: localStorage alone, as before v0.58.0 */ }
+  LL.ready = true;
+}
 function llStanding(l){
   const prog = l.prog || {};
   const done = LTRACKS.reduce((s,t)=>s+(prog[t.key]||0), 0);
@@ -1987,7 +2126,9 @@ function llSanitize(d){
     .map(q => ({id: q.id, learner: q.learner, track: q.track,
                 at: String(q.at || "").slice(0, 10),
                 status: ["waiting", "confirmed", "not yet"].includes(q.status) ? q.status : "waiting"}));
-  return {learners, queue};
+  const out = {learners, queue};
+  if (typeof d.savedAt === "string" && /^\d{4}-\d{2}-\d{2}/.test(d.savedAt)) out.savedAt = d.savedAt.slice(0, 40);
+  return out;
 }
 function qLoad(){ const d = llLoad(); if (!Array.isArray(d.queue)) d.queue = []; return d; }
 function qRequest(learnerId, trackKey){
@@ -2825,6 +2966,16 @@ const WIDGETS = {
     el.innerHTML += `<p class="note">The five launch requirements from Parish Launch &amp; Scale — this browser's record.</p><div id="ra-ready"></div>`;
     renderReady(p, "#ra-ready");
   }},
+  {id:"hallcheck", t:"Hall safety & compliance — operating controls", span:true, r:(p,el)=>{
+    el.innerHTML += `<div id="ra-hall"></div>
+      <div style="display:flex; gap:9px; flex-wrap:wrap; margin-top:10px">
+        <button class="btn gold" id="ra-bundle">Export records-custody bundle</button>
+        <span class="note" style="margin:0">One dated cx-custody/1 file: ledger, office public key, trust and revocation lists, readiness and this checklist.</span></div>`;
+    renderHallCheck(p, "#ra-hall");
+    el.querySelector("#ra-bundle").addEventListener("click", async ()=>{
+      downloadJSON(await custodyBundle(p), `cognitionx-custody-${p.slug}-${new Date().toISOString().slice(0,10)}.json`);
+    });
+  }},
   {id:"missions", t:"Mission ladder", span:true, r:(p,el)=>{
     el.innerHTML += `<div id="ra-missions"></div>`;
     renderMissionLadder("#ra-missions", p, true);
@@ -2878,6 +3029,7 @@ const WIDGETS = {
         <button class="btn" id="ro-create">Create office keys</button>
         <button class="btn" id="ro-pub">Show public key</button>
         <button class="btn" id="ro-forget">Retire this office</button>
+        <button class="btn" id="ro-bundle">Export records-custody bundle</button>
       </div>` +
       (earned.length
         ? `<div class="pickrow" style="margin:0 0 10px"><select id="ro-pick" aria-label="Credential to sign">${earned.map(({l,t},i)=>
@@ -2933,6 +3085,9 @@ const WIDGETS = {
     el.querySelector("#ro-create").addEventListener("click", async ()=>{
       const nm = (el.querySelector("#ro-name").value||"").trim() || (p.name + " Trade Hall records office");
       await issuerCreate(nm); showIssuer();
+    });
+    el.querySelector("#ro-bundle").addEventListener("click", async ()=>{
+      downloadJSON(await custodyBundle(p), `cognitionx-custody-${p.slug}-${new Date().toISOString().slice(0,10)}.json`);
     });
     el.querySelector("#ro-forget").addEventListener("click", async ()=>{
       if (!window.confirm("Retire this Records Office? Its private key is destroyed and cannot be recovered. Records it already signed still verify against its published public key; a new office will need to be published to the trust list.")) return;
@@ -3702,6 +3857,7 @@ document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click", ()=>{
 $("#ppick").addEventListener("change", ()=> location.hash="#/parish/"+$("#ppick").value);
 $("#prand").addEventListener("click", ()=> location.hash="#/parish/"+D.parishes[Math.floor(Math.random()*64)].slug);
 window.addEventListener("hashchange", route);
+llInit();
 
 renderState(); renderParishPicker(); renderRegions(); renderCurriculum();
 renderInstitute(); renderMakers(); renderLoop(); initStyles(); renderRoles(); initGuide();

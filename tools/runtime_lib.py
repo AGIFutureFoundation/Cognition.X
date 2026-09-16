@@ -38,7 +38,7 @@ CSP = ("default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline
 APPS = {
     "education-os":   {"name": "Education OS",   "prefixes": ["aff."],                     "fonts": []},
     "flow-hub":       {"name": "Flow Hub",       "prefixes": ["cxflow."],                  "fonts": ["Archivo", "Instrument Sans", "IBM Plex Mono"]},
-    "louisiana":      {"name": "Louisiana",      "prefixes": ["cxla."],  "idb": ["cxla.office"],  "fonts": ["Fraunces", "Instrument Sans", "IBM Plex Mono"]},
+    "louisiana":      {"name": "Louisiana",      "prefixes": ["cxla."],  "idb": ["cxla.office", "cxla.ledgerdb"],  "fonts": ["Fraunces", "Instrument Sans", "IBM Plex Mono"]},
     "platform":       {"name": "Platform",       "prefixes": ["cxpx."],                    "fonts": ["Fraunces", "Instrument Sans", "IBM Plex Mono"]},
     "states":         {"name": "States",         "prefixes": ["cxst."],                    "fonts": ["Fraunces", "Instrument Sans", "IBM Plex Mono"]},
     "trades-network": {"name": "Trades Network", "prefixes": ["cxtn."],                    "fonts": ["Fraunces", "Instrument Sans", "IBM Plex Mono"]},

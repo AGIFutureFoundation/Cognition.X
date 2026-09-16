@@ -4,6 +4,30 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.58.0] — 2026-09-16
+
+### Added — roadmap wave 2 in the Louisiana app
+- **A durable ledger.** The learner ledger and the assessor queue are kept
+  in IndexedDB behind the existing accessors (localStorage stays as the
+  compatibility copy every earlier release read); on startup the
+  IndexedDB copy is authoritative when it is at least as new, and a
+  localStorage-only ledger migrates once. A localStorage quota failure is
+  reported on screen, not swallowed, and the ledger written after it
+  reloads from IndexedDB. A 400-learner ledger saves and reloads whole.
+- **The records-custody bundle.** One dated `cx-custody/1` file — the
+  ledger, the Records Office name and public key, trust and revocation
+  lists, the readiness and hall checklists — exported from the Records
+  Office widget and Parish Admin. Never the private key.
+- **The hall safety & compliance checklist.** The thirteen wave-3
+  operating controls (device sheet, weekly export, incident lead, DPA,
+  records custody, background checks, fire marshal, insurance, OSHA 10,
+  youth lines, employment certificates, two-adult rule, MOU), per parish
+  in the parish dashboard and Parish Admin, each tagged with its
+  register id and exported with the bundle.
+- The control register moves two platform controls to *met* and twelve
+  adopter controls from *open* to *partial* with the checklist as
+  evidence: 25 met, 15 partial, 4 open.
+
 ## [0.57.0] — 2026-09-16
 
 ### Added — the security and compliance register, the roadmap, and wave one
