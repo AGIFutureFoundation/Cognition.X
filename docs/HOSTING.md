@@ -54,7 +54,7 @@ Referrer-Policy: no-referrer
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 X-Content-Type-Options: nosniff
 X-Frame-Options: DENY
-Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), xr-spatial-tracking=(self)
 Cache-Control: no-store
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Resource-Policy: same-origin
@@ -63,7 +63,11 @@ Cross-Origin-Resource-Policy: same-origin
 `frame-ancestors` is not in the CSP because it is ignored in a `<meta>`
 policy; `X-Frame-Options: DENY` covers it at the header level. Speech
 synthesis (the optional Guide voice) needs no permission; the
-Permissions-Policy above disables what the apps never use.
+Permissions-Policy above disables what the apps never use and allows
+`xr-spatial-tracking` to the page itself only, for the studio's 3D / VR /
+AR view (`docs/XR_REVIEW.md`; an `immersive-ar` session also needs the
+camera on the device, which the browser asks the person for at that
+moment — the header does not grant it to anyone else).
 
 ### nginx
 
@@ -77,7 +81,7 @@ server {
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
   add_header X-Content-Type-Options "nosniff" always;
   add_header X-Frame-Options "DENY" always;
-  add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()" always;
+  add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), xr-spatial-tracking=(self)" always;
   add_header Cache-Control "no-store" always;
   location = / { try_files /index.html =404; }
   location / { try_files $uri =404; }
@@ -97,7 +101,7 @@ server { listen 80; server_name louisiana.example.org; return 301 https://$host$
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "DENY"
-  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), xr-spatial-tracking=(self)"
   Header always set Cache-Control "no-store"
 </VirtualHost>
 ```
@@ -114,7 +118,7 @@ louisiana.example.org {
     Strict-Transport-Security "max-age=31536000; includeSubDomains"
     X-Content-Type-Options "nosniff"
     X-Frame-Options "DENY"
-    Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), xr-spatial-tracking=(self)"
     Cache-Control "no-store"
   }
 }

@@ -24,6 +24,14 @@
  *   CXSIM.nextDifficulty(pct, difficulty)
  *   CXSIM.LAW / CXSIM.RUN_NOTE / CXSIM.DISCIPLINES (set by CXSIM.configure)
  *
+ * Events (v0.69.0): the host element dispatches a `cxsim` CustomEvent at
+ * every phase change — {phase, idx, plan, options, picked} — and the
+ * controller exposes choose(i) and next(), so another view (the WebXR room
+ * in tools/xr/engine.js) can mirror and drive the same run without owning
+ * any of its state or its scoring. When window.CXXR is present the studio
+ * offers an "Open in 3D / VR" control; the HTML buttons keep working
+ * beside it and remain the accessible path.
+ *
  * Nothing here touches the network or storage; the host decides what to
  * keep. Styles use the host app's tokens with plain fallbacks.
  */
@@ -113,6 +121,12 @@
   .cxsim{border:1px solid var(--line,#d9dee4);border-radius:12px;padding:16px 18px;background:var(--surface,#fff);color:var(--ink,#1c2430);font-size:.92rem;line-height:1.45}
   .cxsim *{box-sizing:border-box}
   .cxsim .cxsim-law{font-size:.78rem;color:var(--faint,#5f6b7a);border-left:3px solid var(--gold,#7f5a00);padding:6px 10px;margin:8px 0 12px}
+  .cxxr-panel{border:1px solid var(--line,#d9dee4);border-radius:12px;padding:12px 14px;margin-top:10px;background:var(--surface,#fff);color:var(--ink,#1c2430)}
+  .cxxr-panel .cxxr-bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+  .cxxr-panel .cxxr-status{font-size:.8rem;color:var(--muted,#4b5563);flex:1 1 240px}
+  .cxxr-panel .cxxr-canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;background:#ede9e1;cursor:grab;touch-action:none}
+  .cxxr-panel .cxxr-canvas:focus-visible{outline:2px solid var(--gold,#7f5a00);outline-offset:2px}
+  .cxxr-panel .cxxr-note{margin:8px 0 0}
   .cxsim .cxsim-head{display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
   .cxsim h4{margin:0;font-size:1.05rem}
   .cxsim .cxsim-role{font-size:.78rem;color:var(--muted,#4b5563)}
@@ -176,6 +190,26 @@
     host.setAttribute("data-scenario", sc.id);
 
     function announce(t) { const l = host.querySelector(".cxsim-live"); if (l) l.textContent = t; }
+    let xrView = null;
+    function emit() {
+      try {
+        const st = phase === "step" || phase === "consequence" ? plan[idx] : null;
+        host.dispatchEvent(new CustomEvent("cxsim", { detail: { phase, idx: st ? idx : null, plan, options: st ? st.options.map(o => ({ t: o.t })) : [], picked: st && phase === "consequence" ? choices[idx] : null } }));
+      } catch (e) {}
+    }
+    function xrButton() {
+      if (!global.CXXR || typeof global.CXXR.attach !== "function") return "";
+      return `<button type="button" class="cxsim-btn cxsim-xr" aria-pressed="${xrView ? "true" : "false"}">${xrView ? "3D view open" : "Open in 3D / VR"}</button>`;
+    }
+    function wireXr() {
+      const b = host.querySelector(".cxsim-xr"); if (!b) return;
+      b.addEventListener("click", () => {
+        if (xrView) { xrView.destroy(); xrView = null; }
+        else { xrView = global.CXXR.attach(controller, host, sc, { site }); const d = xrView && xrView.destroy; if (xrView) xrView.destroy = () => { d(); xrView = null; const bb = host.querySelector(".cxsim-xr"); if (bb) { bb.textContent = "Open in 3D / VR"; bb.setAttribute("aria-pressed", "false"); } }; }
+        b.textContent = xrView ? "3D view open" : "Open in 3D / VR"; b.setAttribute("aria-pressed", xrView ? "true" : "false");
+        emit();
+      });
+    }
     function focusPrompt() { const p = host.querySelector(".cxsim-prompt, .cxsim-result h4"); if (p) { p.setAttribute("tabindex", "-1"); p.focus({preventScroll: false}); } }
 
     function renderIntro() {
@@ -194,6 +228,7 @@
           <label for="cxsim-diff-${esc(sc.id)}" style="font-size:.8rem">Difficulty</label>
           <select id="cxsim-diff-${esc(sc.id)}" class="cxsim-diff" aria-label="Difficulty">${CXSIM.DIFFICULTY.map(d => `<option value="${d.level}"${d.level === difficulty ? " selected" : ""}>${d.level} · ${esc(d.name)}</option>`).join("")}</select>
           <button class="cxsim-btn gold cxsim-start" type="button">Start the run</button>
+          ${xrButton()}
           <span class="cxsim-note" style="margin:0">No timer. Every step waits for you.</span>
         </div>
         <div class="cxsim-transfer"><b>What this run is not:</b> the witnessed check for “${esc(sc.track)}” — <i>${esc(sc.transfer.check)}</i> — is done live with an assessor on real material (${esc(sc.transfer.block_id)}, credential “${esc(sc.transfer.credential)}”). ${esc(CXSIM.RUN_NOTE)}</div>`;
@@ -201,6 +236,7 @@
         difficulty = Number(host.querySelector(".cxsim-diff").value) || 1;
         start();
       });
+      wireXr(); emit();
     }
 
     function start() {
@@ -215,14 +251,14 @@
       host.innerHTML = `
         <div class="cxsim-live" aria-live="polite"></div>
         <div class="cxsim-head"><h4>${esc(sc.title)}</h4><span class="cxsim-role">${esc(site)} · difficulty ${difficulty} · seed ${esc(seed)}</span></div>
-        <p class="cxsim-prog">Decision ${idx + 1} of ${plan.length}</p>
+        <p class="cxsim-prog">Decision ${idx + 1} of ${plan.length} ${xrButton()}</p>
         <p class="cxsim-prompt${st.kind === "complication" ? " comp" : ""}">${esc(st.prompt)}</p>
         <div class="cxsim-opts" role="group" aria-label="Your options">
           ${st.options.map((o, i) => `<button type="button" class="cxsim-opt" data-i="${i}">${esc(o.t)}</button>`).join("")}
         </div>
         <div class="cxsim-after"></div>`;
       host.querySelectorAll(".cxsim-opt").forEach(b => b.addEventListener("click", () => choose(Number(b.dataset.i))));
-      focusPrompt();
+      wireXr(); focusPrompt(); emit();
     }
 
     function choose(i) {
@@ -236,8 +272,12 @@
         <div class="cxsim-controls"><button type="button" class="cxsim-btn gold cxsim-next">${idx + 1 < plan.length ? "Next decision" : "Debrief"}</button></div>`;
       announce(label + ". " + o.c);
       const nb = after.querySelector(".cxsim-next");
-      nb.addEventListener("click", () => { idx++; if (idx < plan.length) renderStep(); else renderDebrief(); });
-      nb.focus();
+      nb.addEventListener("click", next);
+      nb.focus(); emit();
+    }
+    function next() {
+      if (phase !== "consequence") return;
+      idx++; if (idx < plan.length) renderStep(); else renderDebrief();
     }
 
     function renderDebrief() {
@@ -256,6 +296,7 @@
           <button type="button" class="cxsim-btn cxsim-export">Show the run record</button>
           <button type="button" class="cxsim-btn cxsim-again">Run again</button>
           <button type="button" class="cxsim-btn cxsim-back">Back to the brief</button>
+          ${xrButton()}
         </div>
         <textarea class="cxsim-json" readonly aria-label="cx-simrun/1 record"></textarea></div>`;
       host.querySelectorAll(".cxsim-debrief textarea").forEach(t => t.addEventListener("input", () => { debrief[Number(t.dataset.i)] = t.value; }));
@@ -270,7 +311,7 @@
         announce("Run kept as practice. It is not a check and not a credential.");
         if (typeof opts.onRun === "function") opts.onRun(lastRecord);
       });
-      focusPrompt();
+      wireXr(); focusPrompt(); emit();
     }
     function nextText(pct) {
       const n = CXSIM.nextDifficulty(pct, difficulty);
@@ -294,11 +335,13 @@
       };
     }
 
-    renderIntro();
-    return {
-      start, record, destroy() { host.innerHTML = ""; host.classList.remove("cxsim"); },
-      get plan() { return plan; }, get phase() { return phase; }
+    const controller = {
+      start, record, choose, next,
+      destroy() { if (xrView) xrView.destroy(); host.innerHTML = ""; host.classList.remove("cxsim"); },
+      get plan() { return plan; }, get phase() { return phase; }, get idx() { return idx; }, get xr() { return xrView; }
     };
+    renderIntro();
+    return controller;
   };
 
   /* A picker + host pair for apps that list several scenarios. */

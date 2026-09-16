@@ -456,6 +456,32 @@
    "next": "Run the hosted-copy test against the real host (CX_HOSTED_BASE) before go-live."
   },
   {
+   "id": "PL-21",
+   "level": "platform",
+   "domain": "privacy",
+   "title": "XR sessions keep nothing and prove nothing",
+   "requirement": "The 3D / VR / AR view of a scenario uses the browser's own WebXR API (no SDK, no library, no network); device pose is read to draw each frame and dropped; no hand, eye or face tracking is requested; the HTML controls remain the accessible path; a scene is practice, never a check or a credential; the privacy notice says so; a hosted copy allows xr-spatial-tracking to itself only.",
+   "source": "W3C WebXR Device API; WCAG 2.2 (2D fallback); the studio law",
+   "owner": "software",
+   "status": "met",
+   "evidence": [
+    {
+     "type": "test",
+     "ref": "test_xr_integration"
+    },
+    {
+     "type": "smoke",
+     "ref": "testXrView"
+    },
+    {
+     "type": "doc",
+     "ref": "docs/XR_REVIEW.md"
+    }
+   ],
+   "wave": 3,
+   "next": "Re-audit when a browser ships hand or eye tracking by default in immersive sessions; the engine must keep declining them."
+  },
+  {
    "id": "FD-01",
    "level": "federal",
    "domain": "privacy",

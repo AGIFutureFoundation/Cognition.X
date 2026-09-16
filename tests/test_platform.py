@@ -744,6 +744,43 @@ def test_footprint_budget():
     check("perf tooling present", (ROOT / "tools" / "perf.js").exists() and (ROOT / "tools" / "voronoi_precompute.js").exists())
 
 
+def test_xr_integration():
+    """v0.69.0 — the WebXR view of a studio run: one engine in six apps, no
+    network, storage or randomness, valid cx-xrscene/1 and glTF 2.0 output,
+    the honesty lines on the sign, and the privacy, register and hosting
+    lines that go with it."""
+    import subprocess
+    xr = (ROOT / "tools" / "xr" / "engine.js").read_text(encoding="utf-8")
+    check("xr: engine never touches the network or storage", not re.search(r"\b(fetch|XMLHttpRequest|localStorage|sessionStorage|indexedDB|navigator\.sendBeacon|WebSocket)\b", xr))
+    check("xr: engine is deterministic (no Math.random)", "Math.random" not in xr)
+    check("xr: engine requests no hand, eye or face tracking feature", '"hand-tracking"' not in xr and "eye-tracking" not in xr and "face-tracking" not in xr)
+    check("xr: only the viewer pose is used, per frame, and the note says so", "getViewerPose" in xr and "nothing about where you look or move is recorded" in xr)
+    check("xr: optionalFeatures ask for the floor reference only", 'optionalFeatures: ["local-floor"]' in xr and "hand-tracking" not in xr)
+    for app in ("education-os", "flow-hub", "louisiana", "trades-network", "states", "platform"):
+        t = app_html(app)
+        check(f"xr: {app} carries the XR engine and the studio offers it", "Cognition.X Studio in space" in t and "Open in 3D / VR" in t)
+    js = ("require(process.argv[1]); require(process.argv[2]); const fb = require(process.argv[3]); CXSIM.configure(fb);"
+          "const sc = fb.scenarios[0]; const plan = CXSIM.plan(CXSIM.localize(sc, 'the yard'), 3, 'seed-1');"
+          "const scene = CXXR.scene(sc, 'the yard', plan); const g = CXXR.gltf(scene); const buf = Buffer.from(g.buffers[0].uri.split(',')[1], 'base64');"
+          "console.log(JSON.stringify({format: scene.format, stations: scene.nodes.filter(n => n.kind === 'station').length, plan: plan.length, law: scene.nodes.find(n => n.kind === 'sign').text, note: scene.note,"
+          " v: g.asset.version, nodes: g.nodes.length, bufOk: buf.length === g.buffers[0].byteLength, acc: g.accessors.length, extras: g.nodes.every(n => n.extras && n.extras.cx && n.extras.cx.scenario === sc.id), score: /\"s\":|score/.test(JSON.stringify(g))}));")
+    r = subprocess.run(["node", "-e", js, str(ROOT / "tools" / "sim" / "engine.js"), str(ROOT / "tools" / "xr" / "engine.js"), str(ROOT / "data" / "simulations" / "scenarios.json")], capture_output=True, text=True, cwd=ROOT)
+    check("xr: scene and glTF writers run in node", r.returncode == 0, r.stderr[-300:])
+    if r.returncode == 0:
+        o = json.loads(r.stdout.strip().splitlines()[-1])
+        sims = json.loads((ROOT / "data" / "simulations" / "scenarios.json").read_text(encoding="utf-8"))
+        check("xr: cx-xrscene/1 has one station per decision point and the law on the sign", o["format"] == "cx-xrscene/1" and o["stations"] == o["plan"] and o["law"] == sims["law"] and "never a credential" in o["note"])
+        check("xr: glTF 2.0 is well formed — nodes, accessors, embedded buffer, scenario extras, no score", o["v"] == "2.0" and o["nodes"] == o["stations"] + 3 and o["bufOk"] and o["acc"] == 3 and o["extras"] and not o["score"])
+    priv = json.loads((ROOT / "data" / "policy" / "privacy.json").read_text(encoding="utf-8"))
+    check("privacy: the notice covers XR sessions", "WebXR" in priv["security"] and "never records it" in priv["security"] and "no hand, eye or face tracking" in priv["security"])
+    reg = json.loads((ROOT / "data" / "policy" / "controls.json").read_text(encoding="utf-8"))
+    check("register: PL-21 holds the XR control as met", any(c["id"] == "PL-21" and c["status"] == "met" for c in reg["controls"]))
+    hosting = (ROOT / "docs" / "HOSTING.md").read_text(encoding="utf-8")
+    check("hosting: xr-spatial-tracking allowed to self, camera still denied by policy", hosting.count("xr-spatial-tracking=(self)") >= 4 and "camera=()" in hosting)
+    review = (ROOT / "docs" / "XR_REVIEW.md").read_text(encoding="utf-8")
+    check("XR_REVIEW.md takes the stances", all(k in review for k in ("WebXR", "glTF 2.0", "No hand, eye or face tracking", "never a check, never a credential", "No platform integrations", "Not legal advice")))
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
