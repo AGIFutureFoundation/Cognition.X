@@ -4,6 +4,42 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.62.0] — 2026-09-16
+
+### Changed — durable state closed out (roadmap prompt 9)
+- **Trust and revocation lists on the ledger's durable path.** `cxla.trust`,
+  `cxla.revoked` and `cxla.revlists` are now served from an in-memory copy
+  behind the same accessors every earlier release called, written through
+  to localStorage (the compatibility copy) and to an IndexedDB record in
+  `cxla.ledgerdb`; on startup the IndexedDB copy wins when it is at least
+  as new (`cxla.dmeta` keeps the localStorage save times). A browser that
+  held the lists only in localStorage migrates once, without loss; a save
+  refused by localStorage is announced and the list reloads from
+  IndexedDB; a save refused everywhere is announced as such.
+
+### Added — restore from a records-custody bundle
+- **Records Office → *Restore (merge)*.** A second device, a replacement
+  after a loss, a hall that moves rooms: load the dated `cx-custody/1`
+  file and the browser merges it — learners by id (the bundle's copy
+  replaces a local learner only when the bundle was saved later; an older
+  bundle never overwrites), the assessor queue by row, trusted offices by
+  key (arriving second-hand, the bundle's office as voucher, until
+  confirmed out-of-band again), imported revocation lists only after
+  their signatures verify again here, readiness and hall checklists by
+  OR for the same parish. This office's own revoked ids restore only
+  when the bundle's key is this office's key or no office exists here —
+  in which case the office is noted by name and **public** key only, so
+  records it signed verify by name while signing stays on the device
+  that holds the non-extractable private key. No sync service: a file, a
+  person, a channel the two devices already trust.
+- Browser suite: `testDurableListsAndRestore` (migration, quota failure,
+  merge rules, tampered list rejected, another office's revoked ids
+  skipped, the control end to end); Python: `test_durable_lists_and_restore`.
+- Register PL-19 widened to the lists and the restore;
+  `docs/COMPLIANCE_REVIEW.md` data map and *What remains*,
+  `docs/COHORT_ONBOARDING.md` §2, `docs/COMPLIANCE_ROADMAP.md` wave 2,
+  `docs/ROADMAP.md`, prompt 9 marked done.
+
 ## [0.61.0] — 2026-09-16
 
 ### Added — the v1.0 gate made executable (roadmap step ⑦)

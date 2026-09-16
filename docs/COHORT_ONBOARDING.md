@@ -71,6 +71,14 @@
   hall's secured share. That file is the backup and the public record.
 - **If a device is lost or a file is misdirected:** the incident
   runbook, from the first hour.
+- **A second device, or a replacement:** Records Office → *Restore
+  (merge)* → load the latest custody bundle. Learners merge by id (a
+  newer bundle updates, an older one never overwrites), trusted offices
+  arrive second-hand until confirmed again, revocation lists are
+  re-verified, and the office is noted by name and public key only —
+  the private key never travels, so signing stays on the device that
+  holds it. Two devices reconcile by exchanging bundles; nothing syncs
+  on its own.
 
 ## 3. Key exchange between records offices (federation)
 

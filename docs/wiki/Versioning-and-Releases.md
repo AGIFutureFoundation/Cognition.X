@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.61.0** | The v1.0 gate made executable: the board's first-meeting packet (checklist form, the 24 proposed credential names, the 22-pack standing queue), the cohort onboarding path with a readable consent sheet and the out-of-band key-exchange procedure, and `tools/cohort_report.py` turning evidence into the board's packet |
+| **v0.62.0** | Durable state closed out: the trust list and the revocation lists take the ledger's IndexedDB path (one-time migration, quota failures surfaced), and the Records Office restores a `cx-custody/1` bundle onto a second device by merge — learners by id, trusted offices second-hand, revocation lists re-verified, an office by name and public key only |
+| v0.61.0 | The v1.0 gate made executable: the board's first-meeting packet (checklist form, the 24 proposed credential names, the 22-pack standing queue), the cohort onboarding path with a readable consent sheet and the out-of-band key-exchange procedure, and `tools/cohort_report.py` turning evidence into the board's packet |
 | v0.60.0 | Open Badges 3.0 / W3C VC 2.0 envelopes: the Records Office issues the same credential as a `vc+jwt` (ES256, `did:jwk`, same key and record id, native payload embedded), verifies either form with the same four grades, and `tools/verify_record.js` verifies both from the command line |
 | v0.59.0 | Roadmap wave 2 closed out: the hosting hardening guide with a hosted-copy browser test, a CycloneDX SBOM generated in CI, the CISA K–12 vendor summary; register at 28 met / 13 partial / 3 open |
 | v0.58.0 | Roadmap wave 2 in the Louisiana app: a durable IndexedDB ledger with quota failures surfaced, the `cx-custody/1` records-custody bundle, and the thirteen-control hall safety & compliance checklist per parish; register at 25 met / 15 partial / 4 open |

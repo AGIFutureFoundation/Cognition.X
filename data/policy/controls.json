@@ -416,7 +416,7 @@
    "level": "platform",
    "domain": "security",
    "title": "Durable learner state and quota handling",
-   "requirement": "The ledger and queue are kept in IndexedDB behind the existing accessors with localStorage as the compatibility copy; a quota failure is reported to the user and the ledger reloads from IndexedDB; a cohort-sized ledger saves and reloads whole.",
+   "requirement": "The ledger, the queue, the trust list and the revocation lists are kept in IndexedDB behind the existing accessors with localStorage as the compatibility copy; a quota failure is reported to the user and the data reloads from IndexedDB; a cohort-sized ledger saves and reloads whole; a second device restores from the records-custody bundle by merge, never by overwrite, and never receives a private key.",
    "source": "CIS 11 (data recovery)",
    "owner": "software",
    "status": "met",
@@ -424,10 +424,14 @@
     {
      "type": "smoke",
      "ref": "testDurableLedger"
+    },
+    {
+     "type": "smoke",
+     "ref": "testDurableListsAndRestore"
     }
    ],
    "wave": 2,
-   "next": "Trust and revocation lists stay in localStorage (small); move them if a hall's list outgrows it."
+   "next": "Cross-device continuity is the custody bundle carried by hand, by design; no sync service. Re-audit the merge rules when a hall runs two assessor devices at once."
   },
   {
    "id": "PL-20",

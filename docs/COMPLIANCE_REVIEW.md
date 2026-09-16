@@ -47,7 +47,7 @@ browser's site data.
 
 | App | Keys | Personal data that may be present |
 |---|---|---|
-| Louisiana | `cxla.office` (IndexedDB: the non-extractable private key), `cxla.ledger` (learners: name, band, progress counts, access profile ids, flow events, witnessed evidence lines with the assessor's name and note, studio practice runs; the assessor queue), `cxla.roles` (chosen role, current learner id, dashboard layouts, planning notes, assessor name), `cxla.issuer` (the Records Office name and **public** key), `cxla.trust`, `cxla.revoked`, `cxla.revlists` (public keys and record ids of other offices), `cxla.missions.*`, `cxla.ready.*`, `cxla.theme`, `cxla.style`, `cxla.voice` | Learner names or nicknames; assessor names; free-text notes. Access profiles are chosen supports, never diagnoses. |
+| Louisiana | `cxla.office` (IndexedDB: the non-extractable private key), `cxla.ledger` (learners: name, band, progress counts, access profile ids, flow events, witnessed evidence lines with the assessor's name and note, studio practice runs; the assessor queue), `cxla.roles` (chosen role, current learner id, dashboard layouts, planning notes, assessor name), `cxla.issuer` (the Records Office name and **public** key), `cxla.trust`, `cxla.revoked`, `cxla.revlists` (public keys and record ids of other offices; since v0.62.0 also in IndexedDB `cxla.ledgerdb`, with `cxla.dmeta` holding their save times), `cxla.missions.*`, `cxla.ready.*`, `cxla.theme`, `cxla.style`, `cxla.voice` | Learner names or nicknames; assessor names; free-text notes. Access profiles are chosen supports, never diagnoses. |
 | Flow Hub | `cxflow.v1` (per-track skill, completed themes, flow points), `cxflow.draft` (Pack Studio drafts), `cxflow.theme`, `cxflow.voice`, `cxflow.access` | None by design; the session holds no name. |
 | Education OS | `aff.*` (the demo learner profile and quest history, view state) | A display name for the demo learner. |
 | States | `cxst.state`, `cxst.theme`, `cxst.style`, `cxst.voice` | None. |
@@ -119,9 +119,11 @@ term is a proposal until counsel has papered it.
 
 ## What remains
 
-- Trust and revocation lists still live in localStorage (the ledger and the
-  office key moved to IndexedDB in v0.57.0–v0.58.0, with quota failures
-  surfaced).
+- Durable state is complete as of v0.62.0 (ledger, office key, trust and
+  revocation lists in IndexedDB with quota failures surfaced; a custody
+  bundle restores onto a second device by merge). Two assessor devices
+  used at once still reconcile only by exchanging bundles; there is no
+  sync service, by design.
 - First-party hosting over https, which gives each app its own origin
   (finding 8) and makes the PWA installable; the single file stays the
   primary packaging.
