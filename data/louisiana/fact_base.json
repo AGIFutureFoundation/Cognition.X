@@ -1,5 +1,5 @@
 {
- "note": "Louisiana fact base — extracted from the Education OS app (apps/education-os/template.html) by tools/extract_fact_bases.py and canonical here since v0.39.0. Parish rows are [name, region, seat, population_k, proposed_wave, districts, industries, narrative_world, rural_tier]. Waves are the original four-wave proposal kept as provenance; the adopted two-wave plan is computed at build time.",
+ "note": "Louisiana fact base — canonical here since v0.39.0 (extracted once from the Education OS app by tools/extract_fact_bases.py; since v0.63.0 the app is built FROM this file and the tool round-trips it). Parish rows are [name, region, seat, population_k, proposed_wave, districts, industries, narrative_world, rural_tier]. Waves are the original four-wave proposal kept as provenance; the adopted two-wave plan is computed at build time.",
  "regions": [
   null,
   "Greater New Orleans",
