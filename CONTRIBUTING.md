@@ -34,9 +34,11 @@ what the learner **does** at that band. The band is already in the
 a K–2 sentence is the child's honest version of the task with an adult,
 an 11–12 sentence is the real deliverable for a real office. All five
 must be present, non-empty and distinct; the generator refuses anything
-less, and the suffix count in the tests only ever falls. Two core-spine
-packs carry them since v0.65.0 (Emergency Preparedness & First Response,
-Parish Launch & Scale) — copy their shape.
+less, and the suffix count in the tests only ever falls. Four core-spine
+packs carry them (Emergency Preparedness & First Response and Parish
+Launch & Scale since v0.65.0; Civic Leadership Legacy : Louisiana and, as
+a promotion, Basic Life Skills & Self-Reliance since v0.66.0) — copy
+their shape.
 
 ### Writing style (match the corpus)
 

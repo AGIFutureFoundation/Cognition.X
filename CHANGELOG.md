@@ -4,6 +4,24 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.66.0] — 2026-09-16
+
+### Changed — the description debt, tranche two (roadmap prompt 6)
+- **Two more core-spine packs authored across all five bands.** Civic
+  Leadership Legacy : Louisiana (50 themes, a pack spec) and Basic Life
+  Skills & Self-Reliance (50 themes, the first *promotion* to carry
+  `bands` — its source rows have empty descriptions and
+  `tools/normalize_blocks.py` now fills them per band). 500 more rows
+  differ in the doing; every `block_id` unchanged. The 6–8 band does the
+  task on a smaller scope or with a checker; 9–10 does the whole thing
+  for real; 11–12 does it for others or on the record.
+- **Measured.** Band-suffix rows fall from 10,750 to 10,250 (58.7%);
+  the ratchet in `test_band_differentiated_descriptions` moves down and
+  the four authored packs are checked for five distinct sentences per
+  theme and no suffix. Every core-spine pack outside the Louisiana OS
+  is now band-authored; the Louisiana OS (500 rows) is the next tranche.
+- `CONTRIBUTING.md`, prompt 6, ROADMAP and DATA_REVIEW §3 updated.
+
 ## [0.65.0] — 2026-09-16
 
 ### Changed — the description debt, tranche one (roadmap prompt 6)

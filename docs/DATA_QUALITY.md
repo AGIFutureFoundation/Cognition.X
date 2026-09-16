@@ -23,7 +23,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Empathy & Emotional Intelligence | 167 | 0 | 0% | 0% | 100% | 19% | 37 |
 | Community & Relationship Practice | 167 | 0 | 0% | 0% | 100% | 0% | 32 |
 | Preventive Health & Everyday Care | 250 | 5 | 100% | 100% | 100% | 0% | 30 |
-| Basic Life Skills & Self-Reliance | 250 | 5 | 100% | 100% | 100% | 0% | 93 |
+| Basic Life Skills & Self-Reliance | 250 | 5 | 100% | 0% | 100% | 0% | 93 |
 | Water, Land & Climate | 250 | 5 | 100% | 100% | 100% | 0% | 92 |
 | Care Across a Life | 250 | 5 | 100% | 100% | 100% | 0% | 92 |
 | Making, Repair & Reuse | 250 | 5 | 100% | 100% | 100% | 0% | 83 |
@@ -43,7 +43,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Arts, Making Media & Performance | 250 | 5 | 100% | 100% | 100% | 0% | 82 |
 | Civic Leadership Legacy : The Institute Model | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
 | Civic Leadership Legacy : California | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
-| Civic Leadership Legacy : Louisiana | 250 | 5 | 100% | 100% | 100% | 0% | 117 |
+| Civic Leadership Legacy : Louisiana | 250 | 5 | 100% | 0% | 100% | 0% | 117 |
 | Civic Leadership Legacy : Texas | 250 | 5 | 100% | 100% | 100% | 0% | 88 |
 | Culinary Trades : The Louisiana Kitchen | 250 | 5 | 100% | 100% | 100% | 0% | 85 |
 | Digital Life, Data & AI | 250 | 5 | 100% | 100% | 100% | 0% | 54 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 100% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 61% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 58% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
