@@ -22,6 +22,15 @@ Practitioner, 11–12 Lead) → 250 blocks.
 
 ```bash
 python3 tools/generate_pack.py data/pack_specs/my-pack.json > data/generated/my-pack.csv
+```
+
+A theme may carry `bands` — the five band labels each to a sentence
+that says what the learner does at that band — instead of letting the
+generator suffix one shared sentence with "— at ‹band›". All five must
+be present and distinct (see `CONTRIBUTING.md`, *Per-band descriptions*;
+`parish-launch-scale.json` shows the shape).
+
+```
 python3 tools/normalize_blocks.py     # rebuild blocks.csv + manifest.json
 python3 tools/validate_blocks.py      # must pass; CI enforces it
 ```

@@ -53,11 +53,14 @@ sections; the only other diff is the fonts `<link>`).
    sentences — real source checks are never overwritten. Zero
    placeholder checks remain dataset-wide.
 
-3. **Band descriptions are suffixed, not differentiated (scheduled).**
-   Within a theme, all five grade bands share one description
-   distinguished only by an "— at {band}" suffix, and the transfer check
-   is identical across bands. Real band differentiation is the largest
-   content-quality item in Phase 1.
+3. **Band descriptions are suffixed, not differentiated (in progress
+   since v0.65.0).** Within a theme, all five grade bands shared one
+   description distinguished only by an "— at {band}" suffix, and the
+   transfer check is identical across bands. Since v0.65.0 a pack spec
+   or promotion theme may carry `bands` — five sentences in what the
+   learner does — and two core-spine packs do (500 rows; suffix rows
+   11,250 → 10,750, a ratchet in the tests). The transfer check still
+   does not vary by band; that is a later item.
 
 4. **Minor anomalies (documented).** Two rows have grade `—` (Trade
    School capstones); grades `9–12 · adult` (7 rows) and `11–12 · adult`

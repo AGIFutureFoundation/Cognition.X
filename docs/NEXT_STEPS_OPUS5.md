@@ -243,7 +243,7 @@ before classroom use.*
 
 ---
 
-## 6 — Pay down the description debt without inventing content
+## 6 — Pay down the description debt without inventing content *(tranche one in v0.65.0 — `bands` in pack specs and promotions; Emergency Preparedness & First Response and Parish Launch & Scale authored, 500 rows; suffix rows 11,250 → 10,750, a ratchet in the tests; next tranches: Louisiana OS, Civic Leadership Legacy Louisiana, Basic Life Skills)*
 
 **Why.** `docs/DATA_QUALITY.md`: **6,200 rows (37%) have no description
 at all**, and **10,500 (62%) share one sentence across five bands with an

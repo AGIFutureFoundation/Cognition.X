@@ -153,19 +153,28 @@ def apply_promotions(rows):
             for i, th in enumerate(track["themes"]):
                 themap[th["theme"]] = (track["name"], track["prefix"], i,
                                        th["description"], th.get("transfer_check"),
-                                       track.get("credential"))
+                                       track.get("credential"), th.get("bands"))
         promos[spec["pack"]] = themap
     filled = checks = creds = 0
     for r in rows:
         themap = promos.get(r["pack"])
         if not themap or r["track"] or r["theme"] not in themap or r["grade"] not in BAND_LEVEL:
             continue
-        name, prefix, ti, desc, check, cred = themap[r["theme"]]
+        name, prefix, ti, desc, check, cred, bands = themap[r["theme"]]
         bi = BANDS.index(r["grade"])
         r["track"] = name
         r["code"] = r["code"] or f"{prefix}-{ti*5 + bi + 1}"
         r["level"] = r["level"] or BAND_LEVEL[r["grade"]]
-        r["description"] = r["description"] or f"{desc} — at {r['grade']}"
+        # a promotion theme may carry per-band sentences (`bands`, the same
+        # shape and rules as a pack spec's); otherwise the shared sentence
+        # takes the documented "— at <band>" suffix
+        if not r["description"]:
+            if bands:
+                if sorted(bands) != sorted(BANDS) or len({str(bands[b]).strip() for b in BANDS}) != 5 or any(not str(bands[b]).strip() for b in BANDS):
+                    raise SystemExit(f"promotion {r['pack']!r}, theme {r['theme']!r}: bands must name the five bands with five distinct non-empty sentences")
+                r["description"] = str(bands[r["grade"]]).strip()
+            else:
+                r["description"] = f"{desc} — at {r['grade']}"
         filled += 1
         if check and r["transfer_check"] in PLACEHOLDER_CHECKS:
             r["transfer_check"] = check

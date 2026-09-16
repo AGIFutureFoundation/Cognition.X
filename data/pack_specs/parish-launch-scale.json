@@ -10,52 +10,122 @@
     {
      "theme": "The launch is a promise with a date",
      "description": "What adopting the platform actually commits a parish to — the named lead, the hall, the first cohort — and why a launch date written down changes everything that comes before it.",
-     "transfer_check": "Write your parish's one-page launch promise — lead, site, first cohort, date — and have the person who must keep it sign it."
+     "transfer_check": "Write your parish's one-page launch promise — lead, site, first cohort, date — and have the person who must keep it sign it.",
+     "bands": {
+      "K–2": "Make a promise card for one thing you will do for the class — what, and on which day — and put it on the wall.",
+      "3–5": "Write a promise for a class project with the who, the where, the first thing that happens and the date, and have a partner sign as witness.",
+      "6–8": "Read one real school-board or council decision that set a date, and write what it committed the parish to in four lines: lead, site, first cohort, date.",
+      "9–10": "Draft your parish's one-page launch promise — lead, site, first cohort, date — from real names and places, and get a teacher or officer to review it.",
+      "11–12": "Write your parish's one-page launch promise — lead, site, first cohort, date — and have the person who must keep it sign it."
+     }
     },
     {
      "theme": "Reading your own parish first",
      "description": "The fact base before the plan: enrollment, districts, industries, the seat and the distances — what the launch has to fit, not the other way round.",
-     "transfer_check": "Fill in the parish fact sheet from public sources — population, districts, three real employers, travel time from the farthest school to the seat — and mark the one fact that most constrains the launch."
+     "transfer_check": "Fill in the parish fact sheet from public sources — population, districts, three real employers, travel time from the farthest school to the seat — and mark the one fact that most constrains the launch.",
+     "bands": {
+      "K–2": "Draw your parish: your school, the big town, the road between, and one place where grown-ups work.",
+      "3–5": "Fill in a fact sheet about your parish from a book or a website with help — how many people, the seat, three places people work.",
+      "6–8": "Fill in the parish fact sheet from public sources — population, districts, three employers, travel time from the farthest school to the seat.",
+      "9–10": "Fill in the parish fact sheet from public sources and mark the one fact that most constrains a launch, with your reason.",
+      "11–12": "Fill in the parish fact sheet from public sources — population, districts, three real employers, travel time from the farthest school to the seat — and mark the one fact that most constrains the launch."
+     }
     },
     {
      "theme": "The ninety-day clock",
      "description": "The launch broken into three thirty-day blocks — secure, staff, open — and what done looks like at each gate.",
-     "transfer_check": "Lay your parish's launch onto the ninety-day clock and name the single task in each block that, if late, slips the date."
+     "transfer_check": "Lay your parish's launch onto the ninety-day clock and name the single task in each block that, if late, slips the date.",
+     "bands": {
+      "K–2": "Put the steps of a class project in order on a calendar — get ready, practise, show — and mark the day it happens.",
+      "3–5": "Break a class project into three blocks on a calendar and name the one job in each block that would make the whole thing late.",
+      "6–8": "Lay a real event you helped run onto three thirty-day blocks — secure, staff, open — and name the task in each that, if late, slips the date.",
+      "9–10": "Lay your parish's launch onto the ninety-day clock from its real constraints and name the single task in each block that, if late, slips the date.",
+      "11–12": "Lay your parish's launch onto the ninety-day clock and name the single task in each block that, if late, slips the date."
+     }
     },
     {
      "theme": "Who signs: the adoption decision",
      "description": "School board, police jury, superintendent — whose signature the launch actually needs in this parish, and how the decision gets on an agenda.",
-     "transfer_check": "Find, in your parish's real public meeting minutes or agenda, where an adoption item would appear, and draft the one-paragraph agenda item."
+     "transfer_check": "Find, in your parish's real public meeting minutes or agenda, where an adoption item would appear, and draft the one-paragraph agenda item.",
+     "bands": {
+      "K–2": "Find out who says yes to a new thing at school — the principal — and practise asking for something politely.",
+      "3–5": "Find out who decides things for your school and your town, and write the one sentence you would say to ask them for a class project.",
+      "6–8": "Find a real meeting agenda for your school board or police jury online and show where a new-program item would appear on it.",
+      "9–10": "Find, in your parish's real public minutes or agenda, where an adoption item would appear, and draft the one-paragraph agenda item.",
+      "11–12": "Find, in your parish's real public meeting minutes or agenda, where an adoption item would appear, and draft the one-paragraph agenda item."
+     }
     },
     {
      "theme": "The launch team of five",
      "description": "The smallest team that can open a parish — lead, hall steward, trainer, enrollment lead, records keeper — and why each seat must be a named person before day one.",
-     "transfer_check": "Name five real people (or five real open seats with the office that fills them) for your parish's launch team and one line on why each fits."
+     "transfer_check": "Name five real people (or five real open seats with the office that fills them) for your parish's launch team and one line on why each fits.",
+     "bands": {
+      "K–2": "Pick five friends for a class job and say what each one is good at.",
+      "3–5": "Name five roles a class project needs — leader, helper, checker, greeter, recorder — and match a real classmate to each with one reason.",
+      "6–8": "Name the five seats a parish launch needs and find, for each, the real office in your parish that would fill it.",
+      "9–10": "Name five real people or five real open seats with the office that fills them for your parish's launch team, with one line on why each fits.",
+      "11–12": "Name five real people (or five real open seats with the office that fills them) for your parish's launch team and one line on why each fits."
+     }
     },
     {
      "theme": "Money that already exists",
      "description": "Launching on the budget the parish already has — the school system, the library, workforce funds — before asking for a dollar of new money.",
-     "transfer_check": "List three funding lines that already exist in your parish's public budget documents that a launch could lawfully draw on, with the office that controls each."
+     "transfer_check": "List three funding lines that already exist in your parish's public budget documents that a launch could lawfully draw on, with the office that controls each.",
+     "bands": {
+      "K–2": "Find out what the class already has — paper, tools, a room — before asking for anything new.",
+      "3–5": "List three things your school already has that a project could use for free, and who looks after each.",
+      "6–8": "Find your school system's or library's public budget online and name one line a program could lawfully draw on.",
+      "9–10": "List three funding lines in your parish's public budget documents that a launch could lawfully draw on, with the office that controls each.",
+      "11–12": "List three funding lines that already exist in your parish's public budget documents that a launch could lawfully draw on, with the office that controls each."
+     }
     },
     {
      "theme": "The risk register nobody reads",
      "description": "The five ways parish launches actually fail — no named lead, no site, trainer burnout, empty first cohort, records chaos — and the early warning for each.",
-     "transfer_check": "Write your parish's five-line risk register and, for each risk, the week on the ninety-day clock when its warning sign would first show."
+     "transfer_check": "Write your parish's five-line risk register and, for each risk, the week on the ninety-day clock when its warning sign would first show.",
+     "bands": {
+      "K–2": "Say three things that could go wrong with a class show and one way to spot each early.",
+      "3–5": "Write five things that could go wrong with a class project and the sign you would see first for each.",
+      "6–8": "Write a five-line risk register for a real event you know and, for each risk, the week its warning sign would first show.",
+      "9–10": "Write your parish's five-line risk register and, for each risk, the week on the ninety-day clock when its warning sign would first show.",
+      "11–12": "Write your parish's five-line risk register and, for each risk, the week on the ninety-day clock when its warning sign would first show, and name who watches for it."
+     }
     },
     {
      "theme": "Borrowing a neighbor's launch",
      "description": "The Wave-1 cohort as each other's teachers — what to copy from a parish that opened last month, and what never transfers across a parish line.",
-     "transfer_check": "Interview someone from another parish's launch (or study its public record) and write down two things you will copy and one thing that will not survive your parish line."
+     "transfer_check": "Interview someone from another parish's launch (or study its public record) and write down two things you will copy and one thing that will not survive your parish line.",
+     "bands": {
+      "K–2": "Ask another class how they did their show and copy one good idea.",
+      "3–5": "Interview a class that ran a project before you, write two things to copy and one thing that would not work in your class.",
+      "6–8": "Study the public record of another parish's or school's launch and write two things you would copy and one that would not survive your line.",
+      "9–10": "Interview someone from another parish's launch (or study its public record) and write two things you will copy and one thing that will not survive your parish line.",
+      "11–12": "Interview someone from another parish's launch (or study its public record) and write down two things you will copy and one thing that will not survive your parish line."
+     }
     },
     {
      "theme": "Opening day is a rehearsal you already ran",
      "description": "The dry run: walking the first cohort's first day — arrival, roster, first block, first check — a week before it happens.",
-     "transfer_check": "Script your parish's opening-day run of show, hour by hour, and walk it physically in the real space with at least one other person."
+     "transfer_check": "Script your parish's opening-day run of show, hour by hour, and walk it physically in the real space with at least one other person.",
+     "bands": {
+      "K–2": "Practise the first morning of a class show — where to stand, who speaks first — before the real day.",
+      "3–5": "Write the first hour of a class event step by step and walk it in the real room with a partner.",
+      "6–8": "Script the run of show for a real event's opening hour and walk it physically in the space with one other person.",
+      "9–10": "Script your parish's opening-day run of show, hour by hour, and walk it in the real space with at least one other person.",
+      "11–12": "Script your parish's opening-day run of show, hour by hour, and walk it physically in the real space with at least one other person."
+     }
     },
     {
      "theme": "Handing the launch to the parish",
      "description": "Day ninety-one: the launch lead's job ends and the parish's own steady operation begins — what gets handed over, in writing, to whom.",
-     "transfer_check": "Write the one-page handover memo for your parish — what runs weekly, who owns each piece, where the records live — addressed to a real office."
+     "transfer_check": "Write the one-page handover memo for your parish — what runs weekly, who owns each piece, where the records live — addressed to a real office.",
+     "bands": {
+      "K–2": "Tell the next helper how to do your class job, and show them where things are kept.",
+      "3–5": "Write a half-page note for the next class: what runs every week, who does it, and where the things are kept.",
+      "6–8": "Write the handover note for a real role you held — what runs weekly, who owns each piece, where the records live.",
+      "9–10": "Write the one-page handover memo for your parish — what runs weekly, who owns each piece, where the records live — addressed to a real office.",
+      "11–12": "Write the one-page handover memo for your parish — what runs weekly, who owns each piece, where the records live — addressed to a real office, and present it to that office."
+     }
     }
    ]
   },
@@ -67,52 +137,122 @@
     {
      "theme": "A hall is a schedule, not a building",
      "description": "What makes a Trade Hall real — hours, a steward, a posted week — and why a borrowed cafeteria with a schedule beats an empty dedicated building.",
-     "transfer_check": "Draft a one-week posted schedule for a hall in your parish — open hours, who stewards each block — that a real space you name could run next week."
+     "transfer_check": "Draft a one-week posted schedule for a hall in your parish — open hours, who stewards each block — that a real space you name could run next week.",
+     "bands": {
+      "K–2": "Make a picture timetable for a corner of the classroom — who uses it and when.",
+      "3–5": "Draft a one-week schedule for a shared room at school — open hours and who looks after each block.",
+      "6–8": "Draft a one-week posted schedule for a hall in a real space you name in your parish — hours and stewards — that could run next week.",
+      "9–10": "Draft a one-week posted schedule for a hall in your parish — open hours, who stewards each block — that a real space you name could run next week.",
+      "11–12": "Draft a one-week posted schedule for a hall in your parish — open hours, who stewards each block — that a real space you name could run next week, and get the space's keeper to confirm it."
+     }
     },
     {
      "theme": "Finding the room the parish already owns",
      "description": "Libraries, school shops, community centers, fairgrounds — surveying the public rooms a parish already has before renting one.",
-     "transfer_check": "Walk or map three publicly owned spaces in your parish that could host hall hours, and rank them by access, safety and cost with a sentence each."
+     "transfer_check": "Walk or map three publicly owned spaces in your parish that could host hall hours, and rank them by access, safety and cost with a sentence each.",
+     "bands": {
+      "K–2": "Name three rooms in your school or town where people can gather, and say which one you like best for making things.",
+      "3–5": "Visit or look at three public places in your town — library, gym, community room — and say which is best for a workshop and why.",
+      "6–8": "Walk or map three publicly owned spaces in your parish that could host hall hours and rank them by access, safety and cost.",
+      "9–10": "Walk or map three publicly owned spaces in your parish that could host hall hours, and rank them by access, safety and cost with a sentence each.",
+      "11–12": "Walk or map three publicly owned spaces in your parish, rank them by access, safety and cost, and write the request for the top one to its owner."
+     }
     },
     {
      "theme": "The steward's week",
      "description": "The recurring rhythm of hall stewardship — open, log, check, close — and why the same person at the same door builds the habit a parish keeps.",
-     "transfer_check": "Shadow or simulate one full hall session end to end and produce the steward's log for it: who came, what ran, what broke, what's needed."
+     "transfer_check": "Shadow or simulate one full hall session end to end and produce the steward's log for it: who came, what ran, what broke, what's needed.",
+     "bands": {
+      "K–2": "Be the classroom helper for a week: open the box, count the tools, put them back, tell the teacher what broke.",
+      "3–5": "Keep a helper's log for a week of a class activity — who came, what we did, what broke, what we need.",
+      "6–8": "Shadow or simulate one hall session end to end and write the steward's log: who came, what ran, what broke, what is needed.",
+      "9–10": "Shadow or simulate one full hall session end to end and produce the steward's log for it: who came, what ran, what broke, what's needed.",
+      "11–12": "Steward a full week of real or simulated sessions, keep the log, and write the week's reading for the launch lead."
+     }
     },
     {
      "theme": "Tools, benches and the safety line",
      "description": "Outfitting a hall from the trade tracks it will actually run — and the safety rule that no station opens without its named safe practice posted.",
-     "transfer_check": "For one trade track your parish plans to run, list the stations it needs, and write the posted safe-practice card for one station."
+     "transfer_check": "For one trade track your parish plans to run, list the stations it needs, and write the posted safe-practice card for one station.",
+     "bands": {
+      "K–2": "Learn the safe way to hold and carry the class tools, and the rule for each station.",
+      "3–5": "Write the safety card for one classroom station — the tool, the rule, what to do if it goes wrong — and post it.",
+      "6–8": "For one trade track, list the stations it needs and write the posted safe-practice card for one of them.",
+      "9–10": "For one trade track your parish plans to run, list the stations it needs, and write the posted safe-practice card for one station.",
+      "11–12": "For one trade track, list the stations, write the safe-practice cards for all of them, and check each against the Under-18 hazard lines."
+     }
     },
     {
      "theme": "The pack roster on the wall",
      "description": "The hall's visible curriculum — which packs and tracks this parish runs, posted where a walk-in can read them — drawn from the parish's own module plan.",
-     "transfer_check": "Produce the wall roster for your parish's hall from its actual module plan: packs, tracks, and the credential each track ends in, on one printable page."
+     "transfer_check": "Produce the wall roster for your parish's hall from its actual module plan: packs, tracks, and the credential each track ends in, on one printable page.",
+     "bands": {
+      "K–2": "Make a wall chart of what the class is learning this term, with a picture for each part.",
+      "3–5": "Make a one-page poster of the tracks your class runs and what each one ends with.",
+      "6–8": "Produce a wall roster for a hall from a parish's module plan — packs, tracks, the credential each ends in — on one page.",
+      "9–10": "Produce the wall roster for your parish's hall from its actual module plan: packs, tracks, and the credential each track ends in, on one printable page.",
+      "11–12": "Produce the wall roster for your parish's hall from its actual module plan and the version for a neighbouring parish that shares the hall."
+     }
     },
     {
      "theme": "Hosting a transfer check",
      "description": "The hall as the place checks happen — setting up real material, witnessing honestly, recording the outcome — without turning it into an exam room.",
-     "transfer_check": "Set up and host one real transfer check from any track for one learner, with the material, the witness and the record all real."
+     "transfer_check": "Set up and host one real transfer check from any track for one learner, with the material, the witness and the record all real.",
+     "bands": {
+      "K–2": "Show a grown-up one thing you can really do, on the real thing, and let them watch the whole way.",
+      "3–5": "Set up one real check for a classmate — the materials, the watcher, the record — and be the honest watcher.",
+      "6–8": "Set up and host one real transfer check for one learner, with the material, the witness and the record all real.",
+      "9–10": "Set up and host one real transfer check from any track for one learner, with the material, the witness and the record all real.",
+      "11–12": "Host a session of three transfer checks across two tracks, with real material and witnesses, and reconcile the records afterwards."
+     }
     },
     {
      "theme": "The hub and the spokes",
      "description": "How a parish hall relates to its regional Trade Hall hub — what travels to the hub (rare equipment, capstones) and what must stay in the parish (the weekly habit).",
-     "transfer_check": "Name your parish's regional hub and list two activities that belong at the hub and two that must never leave the parish, with reasons."
+     "transfer_check": "Name your parish's regional hub and list two activities that belong at the hub and two that must never leave the parish, with reasons.",
+     "bands": {
+      "K–2": "Say which things the class keeps and which things live at the big school or library that everyone shares.",
+      "3–5": "Name the big shared place your school uses for special things, and two things that should stay in your own classroom.",
+      "6–8": "Name your parish's regional hub and list two activities that belong at the hub and two that must never leave the parish.",
+      "9–10": "Name your parish's regional hub and list two activities that belong at the hub and two that must never leave the parish, with reasons.",
+      "11–12": "Name your parish's regional hub, write the hub-and-spoke agreement for what travels and what stays, and get both sides to comment."
+     }
     },
     {
      "theme": "Sharing the hall across a parish line",
      "description": "Rural reality: two small parishes, one hall, alternating days — the sharing agreements that keep both parishes owners rather than guests.",
-     "transfer_check": "Draft the half-page sharing agreement for a hall serving your parish and a real neighbor: days, stewardship, records, and what ends the deal."
+     "transfer_check": "Draft the half-page sharing agreement for a hall serving your parish and a real neighbor: days, stewardship, records, and what ends the deal.",
+     "bands": {
+      "K–2": "Practise sharing one set of tools between two groups fairly, with a turn list.",
+      "3–5": "Write the sharing rules for one room used by two classes — days, who tidies, what ends the deal.",
+      "6–8": "Draft a half-page sharing agreement for a hall serving two real neighbouring parishes — days, stewardship, records, what ends the deal.",
+      "9–10": "Draft the half-page sharing agreement for a hall serving your parish and a real neighbor: days, stewardship, records, and what ends the deal.",
+      "11–12": "Draft and negotiate the sharing agreement with a counterpart from the neighbouring parish, and record where you had to give ground."
+     }
     },
     {
      "theme": "When the storm comes to the hall",
      "description": "The hall in emergency posture — the same room as shelter support, charging point, information post — and the switch-over checklist.",
-     "transfer_check": "Write the one-page storm posture checklist for a hall in your parish — what it becomes, who opens it, what gets moved — grounded in your parish's real hazard."
+     "transfer_check": "Write the one-page storm posture checklist for a hall in your parish — what it becomes, who opens it, what gets moved — grounded in your parish's real hazard.",
+     "bands": {
+      "K–2": "Learn where the class goes when the storm comes, and help move the things that must not get wet.",
+      "3–5": "Make a checklist for turning the classroom into a storm room — what moves, who opens the door, where people charge phones.",
+      "6–8": "Write a one-page storm posture checklist for a hall in your parish — what it becomes, who opens it, what gets moved — for your parish's real hazard.",
+      "9–10": "Write the one-page storm posture checklist for a hall in your parish — what it becomes, who opens it, what gets moved — grounded in your parish's real hazard.",
+      "11–12": "Write the storm posture checklist for a hall and run the switch-over drill with its steward, timing the change from workshop to shelter support."
+     }
     },
     {
      "theme": "The hall's first hundred visitors",
      "description": "Reading the early logbook — who is coming, who is missing, which hours die — and adjusting the schedule before habits set.",
-     "transfer_check": "Take a real or simulated month of hall logs, find the emptiest hour and the missing audience, and propose one schedule change with the evidence."
+     "transfer_check": "Take a real or simulated month of hall logs, find the emptiest hour and the missing audience, and propose one schedule change with the evidence.",
+     "bands": {
+      "K–2": "Count who came to the class corner this week and say which day was empty.",
+      "3–5": "Keep a tally of visitors to a class activity for a month, find the emptiest day, and suggest one change.",
+      "6–8": "Take a month of real or simulated hall logs, find the emptiest hour and the missing audience, and propose one schedule change.",
+      "9–10": "Take a real or simulated month of hall logs, find the emptiest hour and the missing audience, and propose one schedule change with the evidence.",
+      "11–12": "Take a real month of hall logs, propose the schedule change with evidence, run it for a month, and report whether the numbers moved."
+     }
     }
    ]
   },
@@ -124,52 +264,122 @@
     {
      "theme": "The block is the unit of teaching",
      "description": "Reading a block like a trainer — one capability, one band, one check — and why a trainer who teaches the check first teaches backwards on purpose.",
-     "transfer_check": "Pick one real block from your parish's plan, teach it to one person starting from its transfer check, and have them attempt the check."
+     "transfer_check": "Pick one real block from your parish's plan, teach it to one person starting from its transfer check, and have them attempt the check.",
+     "bands": {
+      "K–2": "Teach a friend one thing you can do, starting with showing them what done looks like.",
+      "3–5": "Teach a classmate one skill by showing the finished check first, then let them try it.",
+      "6–8": "Pick one real block, teach it to one person starting from its transfer check, and have them attempt the check.",
+      "9–10": "Pick one real block from your parish's plan, teach it to one person starting from its transfer check, and have them attempt the check.",
+      "11–12": "Teach one block to two learners at different bands, starting from the check each time, and write what changed between the two teachings."
+     }
     },
     {
      "theme": "The honest witness",
      "description": "What an assessor actually certifies — that the check happened, on real material, and transferred — and why a soft yes today costs the learner later.",
-     "transfer_check": "Witness someone attempt a transfer check and write the two-line honest record: what was demonstrated, and what — if anything — was not."
+     "transfer_check": "Witness someone attempt a transfer check and write the two-line honest record: what was demonstrated, and what — if anything — was not.",
+     "bands": {
+      "K–2": "Watch a friend do something and say truthfully whether they did it or not.",
+      "3–5": "Watch a classmate attempt a check and write two lines: what they did, and what they did not do yet.",
+      "6–8": "Witness someone attempt a transfer check and write the two-line honest record: what was demonstrated, and what was not.",
+      "9–10": "Witness someone attempt a transfer check and write the two-line honest record: what was demonstrated, and what — if anything — was not.",
+      "11–12": "Witness three checks in one session and write each honest record, including one where you must record not-yet for someone you like."
+     }
     },
     {
      "theme": "Recruiting trainers the parish already has",
      "description": "Retired tradespeople, coaches, librarians, line supervisors — the parish's existing bench, and the pitch that respects their time.",
-     "transfer_check": "Name three real categories of people in your parish who could assess one named track each, and write the three-sentence ask for one of them."
+     "transfer_check": "Name three real categories of people in your parish who could assess one named track each, and write the three-sentence ask for one of them.",
+     "bands": {
+      "K–2": "Name a grown-up you know who is good at something real, and ask them to show the class.",
+      "3–5": "Name three grown-ups in your town who could teach one skill each, and write the polite ask for one of them.",
+      "6–8": "Name three categories of people in your parish who could assess one named track each and write the three-sentence ask for one.",
+      "9–10": "Name three real categories of people in your parish who could assess one named track each, and write the three-sentence ask for one of them.",
+      "11–12": "Name three categories, write the ask, deliver it to one real person, and record what they said yes to and what they would not do."
+     }
     },
     {
      "theme": "The trainer's first cohort of one",
      "description": "Certifying a new trainer by having them take a learner through one full theme — five bands, five checks — under observation.",
-     "transfer_check": "Take one learner through one full theme across its bands (or a compressed adult run) while an observer scores your teaching against the checks."
+     "transfer_check": "Take one learner through one full theme across its bands (or a compressed adult run) while an observer scores your teaching against the checks.",
+     "bands": {
+      "K–2": "Help a younger child do one thing all the way through, step by step.",
+      "3–5": "Take a partner through one skill from the easy version to the harder one while a teacher watches.",
+      "6–8": "Take one learner through one theme across its bands, or a compressed adult run, while an observer notes your teaching.",
+      "9–10": "Take one learner through one full theme across its bands (or a compressed adult run) while an observer scores your teaching against the checks.",
+      "11–12": "Take one learner through a full theme under observation, then observe and score another trainer doing the same, and reconcile the two scores."
+     }
     },
     {
      "theme": "Banding without shaming",
      "description": "Placing an adult learner at Explorer without insult and a fast child at Lead without ceremony — the band as a description of the material, never the person.",
-     "transfer_check": "Place two very different real or role-played learners onto bands for the same theme and explain each placement in one sentence that names the material, not the person."
+     "transfer_check": "Place two very different real or role-played learners onto bands for the same theme and explain each placement in one sentence that names the material, not the person.",
+     "bands": {
+      "K–2": "Learn that starting at the beginning is fine for anyone, big or small.",
+      "3–5": "Say which of two tasks is the harder material without saying which person is better.",
+      "6–8": "Place two different learners onto bands for one theme and explain each placement in a sentence that names the material, not the person.",
+      "9–10": "Place two very different real or role-played learners onto bands for the same theme and explain each placement in one sentence that names the material, not the person.",
+      "11–12": "Place an adult and a child on the same theme, explain each in material terms, and write the sentence you say to the adult placed at Explorer."
+     }
     },
     {
      "theme": "The check that fails well",
      "description": "What to do when a transfer check fails — the debrief, the smaller step, the retry date — and why a failed check recorded honestly is a working system.",
-     "transfer_check": "Run a debrief for a failed (real or staged) check: name what transferred, what didn't, and set the smaller step and the retry date in writing."
+     "transfer_check": "Run a debrief for a failed (real or staged) check: name what transferred, what didn't, and set the smaller step and the retry date in writing.",
+     "bands": {
+      "K–2": "When something does not work, say what did work, and try the smaller step next.",
+      "3–5": "After a check that did not pass, write what worked, what did not, the smaller step, and the day to try again.",
+      "6–8": "Run a debrief for a failed (real or staged) check: name what transferred, what did not, and set the smaller step and the retry date.",
+      "9–10": "Run a debrief for a failed (real or staged) check: name what transferred, what didn't, and set the smaller step and the retry date in writing.",
+      "11–12": "Run the debrief for a failed check with the learner's family present, keep it honest and kind, and record the smaller step and the retry date."
+     }
     },
     {
      "theme": "Ten trainers by week six",
      "description": "The multiplication schedule — each certified trainer certifies two more — and the quality gate that keeps speed from hollowing the credential.",
-     "transfer_check": "Draw your parish's trainer multiplication tree from one seed trainer to ten by week six, and mark the gate every new trainer must pass."
+     "transfer_check": "Draw your parish's trainer multiplication tree from one seed trainer to ten by week six, and mark the gate every new trainer must pass.",
+     "bands": {
+      "K–2": "Teach one friend a thing, then watch them teach another friend.",
+      "3–5": "Draw the tree from one teacher to eight learners if each teaches two, and say what could go wrong at each step.",
+      "6–8": "Draw a trainer multiplication tree from one seed trainer to ten by week six and mark the gate every new trainer must pass.",
+      "9–10": "Draw your parish's trainer multiplication tree from one seed trainer to ten by week six, and mark the gate every new trainer must pass.",
+      "11–12": "Draw the tree, run its first two generations with real people, and report where the gate held and where speed hollowed it."
+     }
     },
     {
      "theme": "The swarm at the trainer's side",
      "description": "Using the platform's tutor agents as the trainer's assistant — what the Coach, Scholar and Examiner catch — while the human keeps the witness role the machine never takes.",
-     "transfer_check": "Run one session with the app's tutor strip active, and afterwards name one thing an agent surfaced that you missed and one call that stayed rightly human."
+     "transfer_check": "Run one session with the app's tutor strip active, and afterwards name one thing an agent surfaced that you missed and one call that stayed rightly human.",
+     "bands": {
+      "K–2": "Use the app's helper once with a grown-up and say one thing it told you.",
+      "3–5": "Run one session with the app's tutor strip on and write one thing it noticed that you had not.",
+      "6–8": "Run one session with the tutor strip active and name one thing an agent surfaced that you missed and one call that stayed rightly human.",
+      "9–10": "Run one session with the app's tutor strip active, and afterwards name one thing an agent surfaced that you missed and one call that stayed rightly human.",
+      "11–12": "Run three sessions with the tutor strip, log every agent suggestion you accepted or rejected, and write the rule for when the human overrides it."
+     }
     },
     {
      "theme": "Cross-parish calibration",
      "description": "Two assessors, two parishes, one check — trading recorded checks across a parish line so a credential means the same thing in both.",
-     "transfer_check": "Exchange one recorded check with an assessor from another parish (or another school), independently score it, and reconcile any difference in writing."
+     "transfer_check": "Exchange one recorded check with an assessor from another parish (or another school), independently score it, and reconcile any difference in writing.",
+     "bands": {
+      "K–2": "Watch the same task done by two friends and say whether both did it the same way.",
+      "3–5": "Swap a recorded check with another class, score it separately, and talk about any difference.",
+      "6–8": "Exchange one recorded check with an assessor from another school, score it independently, and reconcile any difference in writing.",
+      "9–10": "Exchange one recorded check with an assessor from another parish (or another school), independently score it, and reconcile any difference in writing.",
+      "11–12": "Run a calibration round of three checks with two other assessors, document every disagreement, and propose the wording change that would have prevented it."
+     }
     },
     {
      "theme": "The trainer's own ledger",
      "description": "Trainers as learners — keeping your own credential ledger current, because the parish watches whether the trainers believe the system enough to use it.",
-     "transfer_check": "Complete and record one block yourself, in any pack outside your own trade, in your own ledger where your cohort can see it."
+     "transfer_check": "Complete and record one block yourself, in any pack outside your own trade, in your own ledger where your cohort can see it.",
+     "bands": {
+      "K–2": "Keep your own chart of the things you have learned to do, where the class can see it.",
+      "3–5": "Complete one block yourself in a pack outside your favourite and record it where your class can see.",
+      "6–8": "Complete and record one block yourself, in a pack outside your own trade, in your own ledger where your cohort can see it.",
+      "9–10": "Complete and record one block yourself, in any pack outside your own trade, in your own ledger where your cohort can see it.",
+      "11–12": "Complete one block outside your trade with a witnessed check, and show a cohort your own ledger before asking them to keep theirs."
+     }
     }
    ]
   },
@@ -181,52 +391,122 @@
     {
      "theme": "The first cohort is chosen, not found",
      "description": "Why a launch enrolls a deliberate first cohort — mixed ages, visible trades, likely finishers — instead of waiting for walk-ins.",
-     "transfer_check": "Design your parish's first cohort of twenty on paper — who they are, why each was chosen, who asks them — and get one real person to say yes."
+     "transfer_check": "Design your parish's first cohort of twenty on paper — who they are, why each was chosen, who asks them — and get one real person to say yes.",
+     "bands": {
+      "K–2": "Pick the friends for a group so that everyone has a job and someone will finish.",
+      "3–5": "Design a class team of eight on paper — why each was chosen, who asks them — and get one real yes.",
+      "6–8": "Design a first cohort of twenty on paper — who they are, why each was chosen, who asks them — and get one real person to say yes.",
+      "9–10": "Design your parish's first cohort of twenty on paper — who they are, why each was chosen, who asks them — and get one real person to say yes.",
+      "11–12": "Design the first cohort of twenty, make three of the asks yourself, and revise the design from what the three answers taught you."
+     }
     },
     {
      "theme": "Speaking parish, not platform",
      "description": "Translating the system into the parish's own words — the shrimper's, the teacher's, the pastor's — and retiring every acronym at the door.",
-     "transfer_check": "Rewrite the platform's one-paragraph pitch in your parish's own voice for two different audiences you name, and test one version on a real listener."
+     "transfer_check": "Rewrite the platform's one-paragraph pitch in your parish's own voice for two different audiences you name, and test one version on a real listener.",
+     "bands": {
+      "K–2": "Explain what you are learning to a grown-up at home in your own words, without any school words.",
+      "3–5": "Rewrite a paragraph about the program in your own town's words for one listener you name, and try it on them.",
+      "6–8": "Rewrite the platform's one-paragraph pitch in your parish's voice for two audiences you name, and test one version on a real listener.",
+      "9–10": "Rewrite the platform's one-paragraph pitch in your parish's own voice for two different audiences you name, and test one version on a real listener.",
+      "11–12": "Rewrite the pitch for three audiences, test all three on real listeners, and keep only the sentences they repeated back to you."
+     }
     },
     {
      "theme": "The six doors into the parish",
      "description": "Schools, churches, employers, the library, the ballpark, the feed store — mapping where this parish actually gathers and who holds each door.",
-     "transfer_check": "Map six real gathering places in your parish with the named person or role who holds each door, and secure one standing five-minute slot."
+     "transfer_check": "Map six real gathering places in your parish with the named person or role who holds each door, and secure one standing five-minute slot.",
+     "bands": {
+      "K–2": "Name the places where the people you know gather — church, ballpark, the store — and who you see there.",
+      "3–5": "Draw a map of six places where people in your town gather, and name the person who runs each.",
+      "6–8": "Map six real gathering places in your parish with the named person or role who holds each door, and ask for one five-minute slot.",
+      "9–10": "Map six real gathering places in your parish with the named person or role who holds each door, and secure one standing five-minute slot.",
+      "11–12": "Map the six doors, secure two standing slots, use one, and record what the room asked that the pitch had not answered."
+     }
     },
     {
      "theme": "Enrolling the homeschool network",
      "description": "The homeschool families as a launch's readiest audience — what the platform gives them, what they teach the launch about self-paced learning.",
-     "transfer_check": "Meet (or correspond with) one real homeschool family or co-op in your region and record what they would use first and what they would never use, verbatim."
+     "transfer_check": "Meet (or correspond with) one real homeschool family or co-op in your region and record what they would use first and what they would never use, verbatim.",
+     "bands": {
+      "K–2": "Ask a friend who learns at home what their day is like.",
+      "3–5": "Talk to a homeschool family and write down two things they would like and one thing they would not use.",
+      "6–8": "Meet or correspond with one homeschool family or co-op and record what they would use first and what they would never use, verbatim.",
+      "9–10": "Meet (or correspond with) one real homeschool family or co-op in your region and record what they would use first and what they would never use, verbatim.",
+      "11–12": "Meet two homeschool families or a co-op, record their answers verbatim, and write the enrolment path that respects both what they want and what they refuse."
+     }
     },
     {
      "theme": "The employer's fifteen minutes",
      "description": "The pitch to a parish employer — which tracks feed their floor, what a credential proves, what they give back (material, witnesses, a bench).",
-     "transfer_check": "Deliver the fifteen-minute employer pitch for one real employer in your parish's industry list, and leave with one named thing they would contribute."
+     "transfer_check": "Deliver the fifteen-minute employer pitch for one real employer in your parish's industry list, and leave with one named thing they would contribute.",
+     "bands": {
+      "K–2": "Ask a grown-up at their job what they need a helper to be able to do.",
+      "3–5": "Give a three-minute talk to a local business owner about what your class can do, and ask for one thing they could give.",
+      "6–8": "Deliver a fifteen-minute pitch for one real employer in your parish's industry list, and leave with one named thing they would contribute.",
+      "9–10": "Deliver the fifteen-minute employer pitch for one real employer in your parish's industry list, and leave with one named thing they would contribute.",
+      "11–12": "Deliver the pitch to two employers, secure one contribution in writing, and write what the second employer's no should change in the pitch."
+     }
     },
     {
      "theme": "Signing up without a form fortress",
      "description": "Enrollment that takes five minutes and no login — the paper card, the hall visit, the record made afterwards — because friction at the door is a policy choice.",
-     "transfer_check": "Design the five-minute enrollment path for your hall — the card, the questions, where the record goes — and time a real person through it."
+     "transfer_check": "Design the five-minute enrollment path for your hall — the card, the questions, where the record goes — and time a real person through it.",
+     "bands": {
+      "K–2": "Practise joining a club with just your name and a wave, no forms.",
+      "3–5": "Design a sign-up card for a class club that takes one minute, and time a classmate filling it in.",
+      "6–8": "Design the five-minute enrollment path for a hall — the card, the questions, where the record goes — and time a real person through it.",
+      "9–10": "Design the five-minute enrollment path for your hall — the card, the questions, where the record goes — and time a real person through it.",
+      "11–12": "Design the enrolment path, run ten real people through it, and cut the one question the timings show is not needed."
+     }
     },
     {
      "theme": "The family ledger",
      "description": "Enrolling households rather than individuals — the parent at Practitioner, the child at Explorer, the same theme at two bands on one kitchen table.",
-     "transfer_check": "Enroll (or design the enrollment of) one real household onto one shared theme at two different bands, and write what each will demonstrate."
+     "transfer_check": "Enroll (or design the enrollment of) one real household onto one shared theme at two different bands, and write what each will demonstrate.",
+     "bands": {
+      "K–2": "Do the same activity as a grown-up at home, each at your own level, and show each other.",
+      "3–5": "Plan one theme for you and an adult at home at two levels, and write what each of you will show.",
+      "6–8": "Design the enrolment of one household onto one shared theme at two bands, and write what each member will demonstrate.",
+      "9–10": "Enroll (or design the enrollment of) one real household onto one shared theme at two different bands, and write what each will demonstrate.",
+      "11–12": "Enrol a real household at two bands, witness both first checks, and write what the kitchen-table pairing changed for each learner."
+     }
     },
     {
      "theme": "Keeping the ones who stop coming",
      "description": "The re-engagement call — reading why a learner went quiet, the check-in that isn't a summons, and when to let a pause be a pause.",
-     "transfer_check": "Draft the three-sentence re-engagement message for a real reason a learner in your parish would go quiet, and the one signal that says don't send it."
+     "transfer_check": "Draft the three-sentence re-engagement message for a real reason a learner in your parish would go quiet, and the one signal that says don't send it.",
+     "bands": {
+      "K–2": "Notice when a friend stops coming to the club and ask them kindly if they are all right.",
+      "3–5": "Write a friendly two-sentence note to a classmate who stopped coming, and one reason you would not send it.",
+      "6–8": "Draft the three-sentence re-engagement message for a real reason a learner would go quiet, and the one signal that says do not send it.",
+      "9–10": "Draft the three-sentence re-engagement message for a real reason a learner in your parish would go quiet, and the one signal that says don't send it.",
+      "11–12": "Draft messages for three real reasons learners go quiet, send one, and record the response and what it taught the hall about its own schedule."
+     }
     },
     {
      "theme": "The waitlist as a wave-two asset",
      "description": "Demand a launch can't seat yet — recording it honestly, feeding it to the next cohort, and using a Wave-1 waitlist to justify a neighbor's Wave-2 case.",
-     "transfer_check": "Design the waitlist record for your hall — what is captured, what is promised, what is never promised — and write the sentence that tells a waitlisted person the truth."
+     "transfer_check": "Design the waitlist record for your hall — what is captured, what is promised, what is never promised — and write the sentence that tells a waitlisted person the truth.",
+     "bands": {
+      "K–2": "Keep a fair turn list when more people want the activity than there is room for.",
+      "3–5": "Design a waiting list for a class club — what you write down, what you promise, what you never promise.",
+      "6–8": "Design the waitlist record for a hall — what is captured, what is promised, what is never promised — and the honest sentence a waitlisted person hears.",
+      "9–10": "Design the waitlist record for your hall — what is captured, what is promised, what is never promised — and write the sentence that tells a waitlisted person the truth.",
+      "11–12": "Design the waitlist, run it for a real month, and write the paragraph that uses its numbers to argue a neighbouring parish's Wave-2 case."
+     }
     },
     {
      "theme": "Enrollment tells the truth about the launch",
      "description": "Reading enrollment as the launch's honest gauge — who the parish is reaching, who it is missing, and the month-two correction that evidence demands.",
-     "transfer_check": "Take real or simulated month-one enrollment, compare it against the parish's actual population shape, name the missing audience, and propose the correction."
+     "transfer_check": "Take real or simulated month-one enrollment, compare it against the parish's actual population shape, name the missing audience, and propose the correction.",
+     "bands": {
+      "K–2": "Count who is in the club and who in the class is not, and say who is missing.",
+      "3–5": "Compare who joined a class activity with the whole class list, name who is missing, and suggest one way to reach them.",
+      "6–8": "Compare month-one enrolment with the parish's population shape, name the missing audience, and propose the correction.",
+      "9–10": "Take real or simulated month-one enrollment, compare it against the parish's actual population shape, name the missing audience, and propose the correction.",
+      "11–12": "Take real month-one enrolment, name the missing audience, run the correction for a month, and report honestly whether it reached them."
+     }
     }
    ]
   },
@@ -238,52 +518,122 @@
     {
      "theme": "Five numbers that cannot lie",
      "description": "The launch dashboard reduced to five honest counts — enrolled, active, checks passed, credentials, trainers — and why every added metric is a place to hide.",
-     "transfer_check": "Produce your parish's five-number card for a real or simulated week, and defend to a listener why no sixth number belongs on it."
+     "transfer_check": "Produce your parish's five-number card for a real or simulated week, and defend to a listener why no sixth number belongs on it.",
+     "bands": {
+      "K–2": "Count five true things about the class club — how many joined, how many came today — and say them out loud.",
+      "3–5": "Make a card with five honest numbers about a class activity and explain why a sixth would just be showing off.",
+      "6–8": "Produce a five-number card for a real or simulated week and defend to a listener why no sixth number belongs on it.",
+      "9–10": "Produce your parish's five-number card for a real or simulated week, and defend to a listener why no sixth number belongs on it.",
+      "11–12": "Produce the five-number card for four consecutive real weeks and write the reading that a board member could act on without a sixth number."
+     }
     },
     {
      "theme": "The weekly count",
      "description": "The steward's Friday ritual — counting the week from the logs, not from memory — and the discipline of writing the number down before interpreting it.",
-     "transfer_check": "Run the weekly count from one week of real or simulated hall logs, write the five numbers first, and only then write the two-sentence reading."
+     "transfer_check": "Run the weekly count from one week of real or simulated hall logs, write the five numbers first, and only then write the two-sentence reading.",
+     "bands": {
+      "K–2": "Count the week's tally marks on Friday and write the number down before saying anything about it.",
+      "3–5": "Count the week from the class log, write the five numbers first, then one sentence about what they mean.",
+      "6–8": "Run the weekly count from a week of hall logs, write the five numbers first, and only then write the two-sentence reading.",
+      "9–10": "Run the weekly count from one week of real or simulated hall logs, write the five numbers first, and only then write the two-sentence reading.",
+      "11–12": "Run the weekly count for a month, keep the numbers-before-reading discipline, and show where an early reading would have been wrong."
+     }
     },
     {
      "theme": "Local records, learner's consent",
      "description": "Where the numbers live — in the parish, on paper or local files — and the consent rule: a learner's record travels only when the learner sends it.",
-     "transfer_check": "Write your hall's one-page records policy — what is kept, where, who sees it, and the exact sentence a learner reads before anything is shared."
+     "transfer_check": "Write your hall's one-page records policy — what is kept, where, who sees it, and the exact sentence a learner reads before anything is shared.",
+     "bands": {
+      "K–2": "Learn that your own record is yours, and that you decide who sees it.",
+      "3–5": "Write the rule for a class record: what is written down, where it stays, who can look, and the words a classmate hears before anything is shared.",
+      "6–8": "Write a hall's one-page records policy — what is kept, where, who sees it — and the sentence a learner reads before anything is shared.",
+      "9–10": "Write your hall's one-page records policy — what is kept, where, who sees it, and the exact sentence a learner reads before anything is shared.",
+      "11–12": "Write the records policy, walk a family through it, and record the one question they asked that the policy had not answered."
+     }
     },
     {
      "theme": "Reporting up without dressing up",
      "description": "The monthly parish-to-state report — the five numbers, the one problem, the one ask — and why a report that admits the bad week earns the next year's budget.",
-     "transfer_check": "Write one honest monthly report for your parish including a genuinely bad number, its plain cause, and the one specific ask."
+     "transfer_check": "Write one honest monthly report for your parish including a genuinely bad number, its plain cause, and the one specific ask.",
+     "bands": {
+      "K–2": "Tell the teacher truthfully how the club week went, including the day that went badly.",
+      "3–5": "Write a short report for the class about a month of a project, including one bad number and why it happened.",
+      "6–8": "Write an honest monthly report for a program you know, including one bad number, its cause, and one specific ask.",
+      "9–10": "Write one honest monthly report for your parish including a genuinely bad number, its plain cause, and the one specific ask.",
+      "11–12": "Write the monthly report, present it to a real or role-played reviewing office, and record whether the bad number cost you or earned you the ask."
+     }
     },
     {
      "theme": "Comparing parishes without ranking them",
      "description": "Reading 33 launches side by side — rates not raw counts, cohorts not league tables — and why ranking parishes kills the honest reporting that scale depends on.",
-     "transfer_check": "Take five parishes' numbers (real or supplied), convert them to honest per-capita rates, and write one comparison sentence that helps without ranking."
+     "transfer_check": "Take five parishes' numbers (real or supplied), convert them to honest per-capita rates, and write one comparison sentence that helps without ranking.",
+     "bands": {
+      "K–2": "Compare two groups by how many out of each group came, not just who had more.",
+      "3–5": "Turn two classes' counts into per-ten rates and write one sentence that helps both classes without saying who won.",
+      "6–8": "Take five parishes' numbers, convert them to per-capita rates, and write one comparison sentence that helps without ranking.",
+      "9–10": "Take five parishes' numbers (real or supplied), convert them to honest per-capita rates, and write one comparison sentence that helps without ranking.",
+      "11–12": "Take the 33 Wave-1 parishes' numbers (real or supplied), build the rate table, and write the page that informs without a league table."
+     }
     },
     {
      "theme": "The wave-one review gate",
      "description": "The end-of-year review that Wave 2 depends on — what evidence the 33 must show, who reviews it, and what an honest 'not ready' buys.",
-     "transfer_check": "Draft the review-gate checklist your own parish would have to pass at the end of Wave 1, and mark the item your parish would find hardest today."
+     "transfer_check": "Draft the review-gate checklist your own parish would have to pass at the end of Wave 1, and mark the item your parish would find hardest today.",
+     "bands": {
+      "K–2": "Say what a club must show before it can grow — that people came and learned something.",
+      "3–5": "Write a checklist a class project must pass before a second class copies it.",
+      "6–8": "Draft the review-gate checklist a parish would pass at the end of Wave 1 and mark the hardest item for your parish today.",
+      "9–10": "Draft the review-gate checklist your own parish would have to pass at the end of Wave 1, and mark the item your parish would find hardest today.",
+      "11–12": "Draft the review-gate checklist, apply it to your parish's real evidence, and write the honest 'not ready' note for any item that fails."
+     }
     },
     {
      "theme": "Twinning: every wave-two parish gets a teacher",
      "description": "The 33-to-31 pairing — each Wave-2 parish twinned with a Wave-1 neighbor, visits both ways, and the playbook annotated in the margins by someone who ran it.",
-     "transfer_check": "Propose the twin for one real Wave-2 parish — which Wave-1 parish, why (distance, size, industry) — and list the three visits the pairing needs."
+     "transfer_check": "Propose the twin for one real Wave-2 parish — which Wave-1 parish, why (distance, size, industry) — and list the three visits the pairing needs.",
+     "bands": {
+      "K–2": "Pair up with a friend who has done the activity before and learn one thing from them.",
+      "3–5": "Pair your class with one that ran the project before and plan two visits — one each way.",
+      "6–8": "Propose the twin for one real Wave-2 parish — which Wave-1 parish and why — and list the three visits the pairing needs.",
+      "9–10": "Propose the twin for one real Wave-2 parish — which Wave-1 parish, why (distance, size, industry) — and list the three visits the pairing needs.",
+      "11–12": "Propose the twins for three Wave-2 parishes, resolve the conflicts where two want the same teacher, and write the visit calendar."
+     }
     },
     {
      "theme": "What breaks at scale",
      "description": "The failure modes that only appear past twenty parishes — trainer poaching, hub congestion, report fatigue, the fork in the curriculum — and the early countermeasure for each.",
-     "transfer_check": "Pick one scale failure mode, find its earliest measurable signal in the five-number cards, and write the countermeasure that triggers on that signal."
+     "transfer_check": "Pick one scale failure mode, find its earliest measurable signal in the five-number cards, and write the countermeasure that triggers on that signal.",
+     "bands": {
+      "K–2": "Say what gets harder when a small club becomes a big one.",
+      "3–5": "Name three things that go wrong when a class project spreads to the whole school, and one early sign for each.",
+      "6–8": "Pick one scale failure mode, find its earliest measurable signal in the five-number cards, and write the countermeasure.",
+      "9–10": "Pick one scale failure mode, find its earliest measurable signal in the five-number cards, and write the countermeasure that triggers on that signal.",
+      "11–12": "Pick two scale failure modes, define the signals and countermeasures, and test them against a supplied set of cards to see if they would have fired in time."
+     }
     },
     {
      "theme": "The playbook is a living document",
      "description": "Versioning the launch playbook itself — every parish's corrections merged monthly — so parish 64 launches on the lessons of the first 33.",
-     "transfer_check": "Write one real playbook amendment from your parish's experience — what the playbook said, what actually worked, the replacement text — in a form another parish could adopt."
+     "transfer_check": "Write one real playbook amendment from your parish's experience — what the playbook said, what actually worked, the replacement text — in a form another parish could adopt.",
+     "bands": {
+      "K–2": "Change one rule of the class game because of what happened last time, and tell everyone.",
+      "3–5": "Write one change to the class project instructions from what actually happened, so the next class gets it right.",
+      "6–8": "Write one playbook amendment from real experience — what it said, what worked, the replacement text — in a form another parish could adopt.",
+      "9–10": "Write one real playbook amendment from your parish's experience — what the playbook said, what actually worked, the replacement text — in a form another parish could adopt.",
+      "11–12": "Write three amendments from real experience, get one adopted by another parish or a review body, and record the change they made to it."
+     }
     },
     {
      "theme": "Beyond the parish line",
      "description": "The two-year plan as a model — what another state would need to change (and what it must not touch) to run its own two-wave adoption.",
-     "transfer_check": "Write the one-page adaptation memo for a neighboring state: three things it must localize, two invariants it must keep, grounded in the Louisiana rollout's evidence."
+     "transfer_check": "Write the one-page adaptation memo for a neighboring state: three things it must localize, two invariants it must keep, grounded in the Louisiana rollout's evidence.",
+     "bands": {
+      "K–2": "Tell a friend from another place how your club works and what they would have to change.",
+      "3–5": "Write three things another school would have to change to run your class project, and two rules it must keep.",
+      "6–8": "Write a one-page adaptation memo for a neighbouring state: three things to localise, two invariants to keep, grounded in evidence.",
+      "9–10": "Write the one-page adaptation memo for a neighboring state: three things it must localize, two invariants it must keep, grounded in the Louisiana rollout's evidence.",
+      "11–12": "Write the adaptation memo and present it to a reader from the other state, recording which invariant they pushed back on and how you held it."
+     }
     }
    ]
   }

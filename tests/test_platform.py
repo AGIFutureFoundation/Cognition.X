@@ -677,6 +677,45 @@ def test_education_os_canonical_injection():
     check("institute: every principle carries its strands", all(isinstance(x.get("strands"), list) and x["strands"] for x in inst["principles"]))
 
 
+KNOWN_BAND_SUFFIX_ROWS = 10750      # v0.65.0 baseline: 11,250 before the first tranche; the ratchet only falls
+BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch & Scale"}
+
+
+def test_band_differentiated_descriptions():
+    """v0.65.0 — roadmap prompt 6, tranche one: per-band descriptions flow
+    through the pipeline; the packs that carry them have five distinct
+    sentences per theme and no suffix; the dataset-wide suffix count never
+    rises again; the generator refuses malformed bands."""
+    import re, subprocess, tempfile
+    sys.path.insert(0, str(ROOT / "tools"))
+    from generate_pack import band_description, BAND_LABELS
+    rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
+    suffix = re.compile(r"— at .{1,20}$")
+    suffixed = [r for r in rows if suffix.search(r["description"].strip())]
+    check("band descriptions: the suffix count never rises", len(suffixed) <= KNOWN_BAND_SUFFIX_ROWS, f"{len(suffixed)} rows, baseline {KNOWN_BAND_SUFFIX_ROWS}")
+    for pack in BAND_AUTHORED_PACKS:
+        pr = [r for r in rows if r["pack"] == pack]
+        by_theme = {}
+        for r in pr:
+            by_theme.setdefault(r["theme"], []).append(r["description"])
+        check(f"band descriptions: {pack} — no row carries the suffix", not [r for r in pr if suffix.search(r["description"])])
+        check(f"band descriptions: {pack} — five distinct sentences per theme, 50 themes", len(by_theme) == 50 and all(len(v) == 5 and len(set(v)) == 5 for v in by_theme.values()))
+        check(f"band descriptions: {pack} — every description is a full sentence that says what the learner does", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in pr))
+    good = {"theme": "t", "description": "d", "bands": {b: f"Do the {i} thing." for i, b in enumerate(BAND_LABELS)}}
+    check("generator: an authored band sentence is used verbatim", band_description(good, "6–8") == "Do the 2 thing.")
+    check("generator: without bands the shared sentence is suffixed", band_description({"theme": "t", "description": "d"}, "K–2") == "d — at K–2")
+    for bad in ({"bands": {b: "same." for b in BAND_LABELS}}, {"bands": {b: f"x{i}" for i, b in enumerate(BAND_LABELS[:4])}}, {"bands": {b: f"x{i} — at K–2" for i, b in enumerate(BAND_LABELS)}}):
+        try:
+            band_description({"theme": "t", "description": "d", **bad}, "K–2"); ok = False
+        except ValueError:
+            ok = True
+        check("generator: refuses duplicate, missing or suffixed band sentences", ok)
+    specs = {json.loads(p.read_text(encoding="utf-8"))["pack"]: p for p in (ROOT / "data" / "pack_specs").glob("*.json")}
+    for pack in BAND_AUTHORED_PACKS:
+        spec = json.loads(specs[pack].read_text(encoding="utf-8"))
+        check(f"spec: {pack} carries bands on every theme", all("bands" in th for t in spec["tracks"] for th in t["themes"]))
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))

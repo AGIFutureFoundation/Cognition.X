@@ -10,52 +10,122 @@
         {
           "theme": "The risks where you actually live",
           "description": "Flood maps, fault lines, storm tracks and the industrial site up the road — replacing generic fear with your address's real risk list.",
-          "transfer_check": "Build the ranked hazard list for your own address from official maps and records, with the evidence for each entry."
+          "transfer_check": "Build the ranked hazard list for your own address from official maps and records, with the evidence for each entry.",
+          "bands": {
+            "K–2": "With an adult, name the two things that could go wrong where you live — the big water, the big wind — and point to where you would go.",
+            "3–5": "Find your home on a printed flood or storm map with help, colour the risks that touch it, and list them from most to least likely.",
+            "6–8": "Look up the official hazard maps for your address yourself, list every risk that touches it, and say where each entry came from.",
+            "9–10": "Build the ranked hazard list for your address from official maps and records, with a source and a likelihood note on every entry.",
+            "11–12": "Build the ranked list for a household other than your own, defend the ranking to its members, and file the sources so they can check you."
+          }
         },
         {
           "theme": "Seventy-two hours on your own shelf",
           "description": "Water, food, light, warmth, medication — the kit that keeps a household functional for three days, sized to the people actually in it.",
-          "transfer_check": "Assemble or audit a real 72-hour kit for your household's actual members, including the items lists always forget."
+          "transfer_check": "Assemble or audit a real 72-hour kit for your household's actual members, including the items lists always forget.",
+          "bands": {
+            "K–2": "Help gather the family's water, snacks, a light and a blanket into one box, and count the people the box is for.",
+            "3–5": "Write the three-day list for your own household — water by the person, food that needs no stove, light, warmth, medicine — and check the shelf against it.",
+            "6–8": "Audit the household's real kit against a three-day standard, find what is missing or expired, and make the replacement list with costs.",
+            "9–10": "Assemble or audit a complete 72-hour kit sized to the people, pets and prescriptions actually in the household, including the items lists forget.",
+            "11–12": "Size and assemble a kit for a household with a named special need — an infant, a dialysis patient, a wheelchair user — and write the rotation schedule."
+          }
         },
         {
           "theme": "The grab bag and the ninety seconds",
           "description": "Documents, medications, chargers, cash — what leaves the house with you when there is no time to choose.",
-          "transfer_check": "Pack a real grab bag, stage it, and run the ninety-second evacuation drill with it twice."
+          "transfer_check": "Pack a real grab bag, stage it, and run the ninety-second evacuation drill with it twice.",
+          "bands": {
+            "K–2": "Practise the leave-now game: grab your own small bag with one comfort thing in it and get to the door with an adult before the count ends.",
+            "3–5": "Pack your own grab bag from a checklist — copies of your name card, a torch, a snack, a charger — and time yourself getting it to the door.",
+            "6–8": "Pack the household's grab bag with the documents, medicines, chargers and cash that leave with you, and run the ninety-second drill twice.",
+            "9–10": "Pack and stage a real grab bag for the whole household, run the ninety-second evacuation drill twice, and fix what the drill found slow.",
+            "11–12": "Design the grab-bag standard for a family other than your own — contents, staging point, who carries what — and run their first drill with them."
+          }
         },
         {
           "theme": "The family communication plan",
           "description": "The out-of-area contact, the rally points, and how a separated household finds itself when networks are down or jammed.",
-          "transfer_check": "Write your household's communication plan on one card per person and test it with an unannounced check-in drill."
+          "transfer_check": "Write your household's communication plan on one card per person and test it with an unannounced check-in drill.",
+          "bands": {
+            "K–2": "Learn the name and number of the grown-up who lives far away, and practise saying your own full name and street to an adult.",
+            "3–5": "Fill in the family contact card — the far-away person, the meeting place near home, the one farther out — and keep it in your bag.",
+            "6–8": "Write the household's communication plan, one card per person, with the out-of-area contact and two rally points, and hand the cards out.",
+            "9–10": "Write the household's communication plan on one card per person and test it with an unannounced check-in drill where no one is warned.",
+            "11–12": "Write and test the plan for a household that includes someone who cannot use a phone unaided, and record how the drill reached them."
+          }
         },
         {
           "theme": "Water when the taps stop",
           "description": "Storage amounts per person, the sources hiding in a home, and making questionable water drinkable.",
-          "transfer_check": "Locate and quantify every emergency water source in a real dwelling, and demonstrate one purification method correctly."
+          "transfer_check": "Locate and quantify every emergency water source in a real dwelling, and demonstrate one purification method correctly.",
+          "bands": {
+            "K–2": "Find where the family keeps spare water, and help pour and count enough bottles for everyone for one day.",
+            "3–5": "Work out how many litres your household needs for three days, count what is stored, and find one more place in the home that holds clean water.",
+            "6–8": "Find every emergency water source in your dwelling — tank, heater, ice, stored bottles — quantify each, and show one way to make doubtful water safe.",
+            "9–10": "Locate and quantify every emergency water source in a real dwelling and demonstrate one purification method correctly, stating its limits.",
+            "11–12": "Plan three days of water for a household of six from what the dwelling actually holds, demonstrate two purification methods, and say when each fails."
+          }
         },
         {
           "theme": "Power down, house still working",
           "description": "Light, heat, cooking and phones through an outage — running the essentials safely without the grid, and the CO line never crossed.",
-          "transfer_check": "Run a two-hour household blackout drill covering light, one hot meal and phone charging, with every method used safely."
+          "transfer_check": "Run a two-hour household blackout drill covering light, one hot meal and phone charging, with every method used safely.",
+          "bands": {
+            "K–2": "Practise finding the torch in the dark, and learn the one rule: no fire or camp stove inside the house, ever.",
+            "3–5": "Help run a lights-out hour at home — torch, blankets, a cold meal — and say why the grill and the generator stay outside.",
+            "6–8": "Run a two-hour blackout drill at home covering light, one hot meal and phone charging, and name the carbon-monoxide line you never cross.",
+            "9–10": "Run a two-hour household blackout drill covering light, one hot meal and phone charging, with every method used safely and logged.",
+            "11–12": "Plan and run the blackout drill for a household with medical equipment or an infant, including the fallback for a device that needs power."
+          }
         },
         {
           "theme": "Documents that survive the disaster",
           "description": "IDs, deeds, policies, prescriptions — the copies, the cloud, the sealed pouch, and proving who you are when the originals burned.",
-          "transfer_check": "Create the full document backup for a real household — physical copies staged, digital copies encrypted and reachable."
+          "transfer_check": "Create the full document backup for a real household — physical copies staged, digital copies encrypted and reachable.",
+          "bands": {
+            "K–2": "Draw or trace your name card and put a copy of it in the family's special pouch with an adult.",
+            "3–5": "Help make the list of the papers that matter — who we are, where we live, the doctor's notes — and put copies in a sealed bag.",
+            "6–8": "Make photocopies and photographs of the household's key documents, store the digital set with a password, and put the paper set in the grab bag.",
+            "9–10": "Create the full document backup for a real household — physical copies staged, digital copies encrypted and reachable — and test recovering one.",
+            "11–12": "Design the backup for a household that has just lost its originals, walking through how each identity is proven again, and write the recovery steps."
+          }
         },
         {
           "theme": "Pets and the beings who cannot pack",
           "description": "Animals in evacuation: carriers, records, the shelters that take them and the ones that will not.",
-          "transfer_check": "Build the evacuation plan and kit for a real animal, and complete a timed load-and-go drill with it."
+          "transfer_check": "Build the evacuation plan and kit for a real animal, and complete a timed load-and-go drill with it.",
+          "bands": {
+            "K–2": "Help put the pet's lead, a food scoop and its picture into one bag, and practise calling the animal calmly.",
+            "3–5": "Make the pet's own kit — food for three days, water, medicine, its records and photo — and practise getting it into its carrier.",
+            "6–8": "Build the evacuation plan and kit for a real animal, find the shelters that take it, and run a timed load-and-go drill with it.",
+            "9–10": "Build the evacuation plan and kit for a real animal, and complete a timed load-and-go drill with it, with the shelter and vet contacts confirmed.",
+            "11–12": "Plan the evacuation of animals for a household with more than one species or a large animal, including transport and the shelter that will refuse them."
+          }
         },
         {
           "theme": "The neighbours in your plan",
           "description": "The street-level map of who has skills, tools and needs — preparedness as a shared asset rather than a private bunker.",
-          "transfer_check": "Map your immediate neighbours' relevant skills, equipment and vulnerabilities (with consent), and agree one mutual commitment."
+          "transfer_check": "Map your immediate neighbours' relevant skills, equipment and vulnerabilities (with consent), and agree one mutual commitment.",
+          "bands": {
+            "K–2": "Name the neighbour a grown-up trusts, and practise knocking and asking for help politely.",
+            "3–5": "Draw your street and mark, with an adult, the houses of people who could help and people who might need help.",
+            "6–8": "Map your immediate neighbours' skills, equipment and needs with their consent, and agree one thing you will do for each other in an event.",
+            "9–10": "Map your immediate neighbours' relevant skills, equipment and vulnerabilities (with consent), and agree one mutual commitment in writing.",
+            "11–12": "Organise the street's mutual-aid map, host the conversation that gets consent, and write the one-page agreement the neighbours sign."
+          }
         },
         {
           "theme": "The drill calendar",
           "description": "Why untested plans fail, rotating supplies before they expire, and the twice-yearly hour that keeps readiness real.",
-          "transfer_check": "Run a full household drill against your written plan, log every failure found, and fix the worst one the same week."
+          "transfer_check": "Run a full household drill against your written plan, log every failure found, and fix the worst one the same week.",
+          "bands": {
+            "K–2": "Practise the family drill once with the adults, and put a sticker on the calendar for the next time.",
+            "3–5": "Run the household drill with the family, write down one thing that did not work, and mark the next drill date on the calendar.",
+            "6–8": "Run a full household drill against the written plan, log every failure found, and fix the worst one in the same week.",
+            "9–10": "Run a full household drill against your written plan, log every failure found, and fix the worst one the same week, dated and signed.",
+            "11–12": "Design and run the twice-yearly drill cycle for a household or small group, including supply rotation, and write the after-action note others can use."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "The scene before the patient",
           "description": "Danger, response, airway — why rescuers become casualties, and the look-around that comes before the kneel-down.",
-          "transfer_check": "Approach three staged casualty scenes, verbalising the hazard check and the decision to proceed, stage, or wait for each."
+          "transfer_check": "Approach three staged casualty scenes, verbalising the hazard check and the decision to proceed, stage, or wait for each.",
+          "bands": {
+            "K–2": "Learn to stop and look before running to help — cars, water, fire — and to fetch a grown-up first.",
+            "3–5": "Practise the look-around at three pretend scenes, say out loud what could hurt you, and decide whether to go closer or call for help.",
+            "6–8": "Approach three staged casualty scenes, say the hazard check aloud, and decide for each whether to proceed, stage back, or wait for help.",
+            "9–10": "Approach three staged casualty scenes, verbalising the hazard check and the decision to proceed, stage, or wait for each, with reasons.",
+            "11–12": "Run the scene check for a group of helpers at a staged incident, assign safe roles, and stop anyone about to become a second casualty."
+          }
         },
         {
           "theme": "The emergency call that works",
           "description": "What the call-taker needs, in what order, and the location skills (addresses, apps, landmarks) that cut minutes off arrival.",
-          "transfer_check": "Complete a realistic mock emergency call scored against dispatch criteria, including conveying a precise location two ways."
+          "transfer_check": "Complete a realistic mock emergency call scored against dispatch criteria, including conveying a precise location two ways.",
+          "bands": {
+            "K–2": "Practise saying your name, your street and what is wrong to a pretend call-taker, and know which number to press.",
+            "3–5": "Make a practice emergency call and give your address two ways — the street and a landmark — in the order the call-taker asks.",
+            "6–8": "Complete a realistic mock emergency call scored against dispatch criteria, giving the location two ways and answering the questions in order.",
+            "9–10": "Complete a realistic mock emergency call scored against dispatch criteria, including conveying a precise location two ways and staying on the line.",
+            "11–12": "Coach a novice through a mock emergency call while managing the scene, and debrief which of the call-taker's questions they missed."
+          }
         },
         {
           "theme": "The unconscious person who is breathing",
           "description": "Checking response and breathing, the recovery position, and staying until handover.",
-          "transfer_check": "Demonstrate the full assessment and recovery position on a live volunteer, including the monitoring you keep doing."
+          "transfer_check": "Demonstrate the full assessment and recovery position on a live volunteer, including the monitoring you keep doing.",
+          "bands": {
+            "K–2": "Practise gently shaking and calling a doll's name, then running to a grown-up when it does not answer.",
+            "3–5": "Practise checking whether a person answers and is breathing, and roll a partner onto their side the way you were shown.",
+            "6–8": "Demonstrate the response and breathing checks and the recovery position on a partner, and keep watching their breathing until told to stop.",
+            "9–10": "Demonstrate the full assessment and recovery position on a live volunteer, including the monitoring you keep doing until handover.",
+            "11–12": "Teach the assessment and recovery position to a small group, correct their errors, and manage a handover to a simulated ambulance crew."
+          }
         },
         {
           "theme": "CPR and the machine on the wall",
           "description": "Compressions that are hard and fast enough, rescue breaths where trained, and using an AED with its voice as your guide.",
-          "transfer_check": "Perform two minutes of adequate-rate, adequate-depth compressions on a manikin and run a full AED sequence to shock/no-shock."
+          "transfer_check": "Perform two minutes of adequate-rate, adequate-depth compressions on a manikin and run a full AED sequence to shock/no-shock.",
+          "bands": {
+            "K–2": "Practise pushing hard on a doll's chest to a steady beat, and find the box on the wall with the heart picture.",
+            "3–5": "Practise chest pushes on a manikin at the right speed with a song to keep time, and point to where the AED lives in your building.",
+            "6–8": "Perform two minutes of compressions on a manikin at adequate rate and depth, and follow an AED trainer's voice through its sequence.",
+            "9–10": "Perform two minutes of adequate-rate, adequate-depth compressions on a manikin and run a full AED sequence to shock or no-shock.",
+            "11–12": "Lead a two-rescuer CPR cycle with a swap, run the AED, and coach a bystander to take over compressions without losing the rhythm."
+          }
         },
         {
           "theme": "Choking",
           "description": "The universal sign, back blows and abdominal thrusts, and the differences for infants and the pregnant.",
-          "transfer_check": "Demonstrate the complete choking protocol on adult and infant manikins, adapting correctly for each."
+          "transfer_check": "Demonstrate the complete choking protocol on adult and infant manikins, adapting correctly for each.",
+          "bands": {
+            "K–2": "Learn the hands-at-the-throat sign and shout for a grown-up when you see it.",
+            "3–5": "Show the choking sign, and practise the back blows on a manikin the way you were shown.",
+            "6–8": "Demonstrate back blows and abdominal thrusts on an adult manikin, and show the differences for an infant.",
+            "9–10": "Demonstrate the complete choking protocol on adult and infant manikins, adapting correctly for each and for the pregnant.",
+            "11–12": "Assess and manage a staged choking casualty end to end, including the transition to CPR when they collapse, and teach the protocol to a novice."
+          }
         },
         {
           "theme": "Bleeding you can see",
           "description": "Pressure, elevation, packing and the tourniquet's honest place — stopping blood loss with what is in reach.",
-          "transfer_check": "Control three staged bleeds — minor, severe limb, junctional — choosing and applying the right technique for each."
+          "transfer_check": "Control three staged bleeds — minor, severe limb, junctional — choosing and applying the right technique for each.",
+          "bands": {
+            "K–2": "Practise pressing a clean cloth on a pretend cut and holding it still while a grown-up comes.",
+            "3–5": "Practise firm pressure with a pad on a staged cut, lift the limb, and keep pressing until told it has stopped.",
+            "6–8": "Control two staged bleeds — a minor cut and a severe limb wound — choosing pressure, packing or a tourniquet trainer and applying it correctly.",
+            "9–10": "Control three staged bleeds — minor, severe limb, junctional — choosing and applying the right technique for each, with times recorded.",
+            "11–12": "Manage a staged multiple-casualty bleed, prioritise, apply and document a tourniquet with its time, and hand over to a simulated crew."
+          }
         },
         {
           "theme": "Burns, breaks and the injuries that wait badly",
           "description": "Cooling burns properly, immobilising suspected fractures, and the do-nots that make each worse.",
-          "transfer_check": "Manage one staged burn and one staged fracture end to end, stating what you will not do and why."
+          "transfer_check": "Manage one staged burn and one staged fracture end to end, stating what you will not do and why.",
+          "bands": {
+            "K–2": "Learn to run cool water over a small burn and to leave a hurt arm still until a grown-up comes.",
+            "3–5": "Cool a staged burn under running water for the right time, and keep a partner's pretend broken arm still with a cushion.",
+            "6–8": "Manage one staged burn and one staged fracture, saying what you will not do — no ice, no creams, no straightening — and why.",
+            "9–10": "Manage one staged burn and one staged fracture end to end, stating what you will not do and why, and improvising a splint.",
+            "11–12": "Manage a staged burn and fracture on a casualty who must be moved, deciding when moving is justified, and brief a crew on what was done."
+          }
         },
         {
           "theme": "The medical emergencies",
           "description": "Heart attack, stroke, seizure, severe allergy, diabetic collapse — recognising each fast and the one right action for each.",
-          "transfer_check": "From five scripted casualty presentations, identify each condition and perform or state its correct first response, including auto-injector use."
+          "transfer_check": "From five scripted casualty presentations, identify each condition and perform or state its correct first response, including auto-injector use.",
+          "bands": {
+            "K–2": "Learn what a grown-up looks like when very unwell, and practise fetching help and the family's medicine bag.",
+            "3–5": "Match five picture cards — chest pain, a drooping face, a fit, a swelling allergy, a shaky diabetic — to the one thing you do for each.",
+            "6–8": "From five scripted presentations, name each condition and state or perform its correct first response, including a trainer auto-injector.",
+            "9–10": "From five scripted casualty presentations, identify each condition and perform or state its correct first response, including auto-injector use.",
+            "11–12": "Run a scenario with two presentations at once, triage them, direct helpers, and give a structured handover naming each condition and the time."
+          }
         },
         {
           "theme": "Little patients",
           "description": "Children and infants: the doses, ratios and signs that differ, and keeping a frightened child workable.",
-          "transfer_check": "Adapt three adult protocols correctly to a child or infant manikin, and demonstrate one calming approach while treating."
+          "transfer_check": "Adapt three adult protocols correctly to a child or infant manikin, and demonstrate one calming approach while treating.",
+          "bands": {
+            "K–2": "Practise being gentle with a baby doll and calling a grown-up when a small child is hurt.",
+            "3–5": "Practise the softer pushes and breaths for a baby manikin, and say one calm thing you would tell a frightened little one.",
+            "6–8": "Adapt three adult protocols to a child or infant manikin and demonstrate one way of calming a frightened child while treating.",
+            "9–10": "Adapt three adult protocols correctly to a child or infant manikin, and demonstrate one calming approach while treating.",
+            "11–12": "Manage a staged paediatric emergency with a distressed parent present, adapt the protocol, and direct the parent to a useful role."
+          }
         },
         {
           "theme": "The kit and the kit in your head",
           "description": "Building a first-aid kit that matches your life, improvising when there is none, and the refresher rhythm that keeps skills alive.",
-          "transfer_check": "Assemble a first-aid kit for a named context (home, car, hike), justify every item, and treat one staged injury using improvised materials only."
+          "transfer_check": "Assemble a first-aid kit for a named context (home, car, hike), justify every item, and treat one staged injury using improvised materials only.",
+          "bands": {
+            "K–2": "Find the first-aid box at home, and name three things inside and what they are for.",
+            "3–5": "Check the family first-aid kit against a picture list, and make a card of what is missing.",
+            "6–8": "Assemble a first-aid kit for one named place — home, car or hike — justify every item, and treat one staged injury with improvised materials only.",
+            "9–10": "Assemble a first-aid kit for a named context (home, car, hike), justify every item, and treat one staged injury using improvised materials only.",
+            "11–12": "Specify the kits for three contexts and a refresher calendar for a group, then run a drill where the kit is missing and only improvisation is allowed."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "How fires actually start at home",
           "description": "Cooking, smoking, chargers, candles, heaters — the ignition league table and the habits behind each entry.",
-          "transfer_check": "Audit a real dwelling against the top ignition causes and eliminate or mitigate every finding, with photos."
+          "transfer_check": "Audit a real dwelling against the top ignition causes and eliminate or mitigate every finding, with photos.",
+          "bands": {
+            "K–2": "Walk the home with an adult and point to the hot things — the stove, the heater, the candles — that are never touched alone.",
+            "3–5": "Make a picture list of the top ways home fires start and check your own home for each one with an adult.",
+            "6–8": "Audit your own home against the top ignition causes, fix or flag every finding, and photograph the before and after.",
+            "9–10": "Audit a real dwelling against the top ignition causes and eliminate or mitigate every finding, with photos and a dated record.",
+            "11–12": "Audit a dwelling you do not live in, present the findings to its occupants in their own priorities, and agree the fixes and the dates."
+          }
         },
         {
           "theme": "The alarms that buy the minutes",
           "description": "Smoke and heat detector types, where each belongs, and the dead battery that undoes it all.",
-          "transfer_check": "Verify correct type, placement and function of every alarm in a real dwelling, and fix or specify what is missing."
+          "transfer_check": "Verify correct type, placement and function of every alarm in a real dwelling, and fix or specify what is missing.",
+          "bands": {
+            "K–2": "Learn the sound of the smoke alarm and practise what you do when you hear it: get out, stay out.",
+            "3–5": "Find every alarm in your home with an adult, press the test buttons, and mark on a drawing where they are.",
+            "6–8": "Verify the type, placement and function of every alarm in your home, and list what is missing or in the wrong place.",
+            "9–10": "Verify correct type, placement and function of every alarm in a real dwelling, and fix or specify what is missing.",
+            "11–12": "Specify the alarm scheme for a dwelling with a deaf or heavy-sleeping occupant — types, placement, interlinking — and verify the installation."
+          }
         },
         {
           "theme": "The escape plan with two ways out",
           "description": "Routes, the smoke-low crawl, the closed-door discipline and the meeting point nobody re-enters from.",
-          "transfer_check": "Draw the two-route escape plan for a real dwelling and run the drill with its actual occupants, timed, including the meeting point."
+          "transfer_check": "Draw the two-route escape plan for a real dwelling and run the drill with its actual occupants, timed, including the meeting point.",
+          "bands": {
+            "K–2": "Practise the crawl-low-and-go from your bedroom to the door, and the meeting place outside the family chose.",
+            "3–5": "Draw your home with two ways out of your room, mark the meeting place, and run the escape with the family once.",
+            "6–8": "Draw the two-route escape plan for your home, run the timed drill with its real occupants, and end at the meeting point.",
+            "9–10": "Draw the two-route escape plan for a real dwelling and run the drill with its actual occupants, timed, including the meeting point.",
+            "11–12": "Write and drill the escape plan for a dwelling with an upper floor and a mobility-impaired occupant, and fix the route the drill proved unusable."
+          }
         },
         {
           "theme": "Fighting the small fire, fleeing the rest",
           "description": "Extinguisher classes, the pan fire and the fire blanket, and the honest size limit where fighting stops and leaving starts.",
-          "transfer_check": "Match extinguisher types to five fire scenarios, demonstrate the technique (live or simulated), and state your personal stop-and-go line."
+          "transfer_check": "Match extinguisher types to five fire scenarios, demonstrate the technique (live or simulated), and state your personal stop-and-go line.",
+          "bands": {
+            "K–2": "Learn that children never fight fires: get out and tell a grown-up.",
+            "3–5": "Learn the picture labels on extinguishers and say which fire — paper, oil, electric — each is for, and when everyone just leaves.",
+            "6–8": "Match extinguisher types to five fire scenarios and demonstrate the technique on a trainer or simulator, then state your own stop-and-go line.",
+            "9–10": "Match extinguisher types to five fire scenarios, demonstrate the technique (live or simulated), and state your personal stop-and-go line.",
+            "11–12": "Run a fire-blanket and extinguisher station for others, correct their technique, and enforce the size limit where fighting stops and leaving starts."
+          }
         },
         {
           "theme": "Smoke: the actual killer",
           "description": "What smoke does in minutes, why closed doors matter for hours, and surviving in a room you cannot leave.",
-          "transfer_check": "Demonstrate the trapped-in-room protocol — door checks, sealing, the window signal, the call — in a staged scenario."
+          "transfer_check": "Demonstrate the trapped-in-room protocol — door checks, sealing, the window signal, the call — in a staged scenario.",
+          "bands": {
+            "K–2": "Practise staying low under pretend smoke and closing the door behind you.",
+            "3–5": "Practise the closed-door test — the back of the hand on the door — and what to do if it is hot: stay, seal, signal.",
+            "6–8": "Demonstrate the trapped-in-room protocol in a staged scenario — door check, sealing the gap, the window signal, the call.",
+            "9–10": "Demonstrate the trapped-in-room protocol — door checks, sealing, the window signal, the call — in a staged scenario, with a partner timing you.",
+            "11–12": "Teach the trapped-in-room protocol to a class, run the staged scenario for them, and debrief the one step they most often skip."
+          }
         },
         {
           "theme": "The building bigger than your door",
           "description": "Apartment blocks: stay-put versus evacuate policies, alarm systems, dry risers and why the policy differs by construction.",
-          "transfer_check": "Find and explain your own building's fire strategy, and state exactly what you would do for an alarm at 3 a.m. under it."
+          "transfer_check": "Find and explain your own building's fire strategy, and state exactly what you would do for an alarm at 3 a.m. under it.",
+          "bands": {
+            "K–2": "Learn what the alarm in a big building sounds like and follow the grown-up to the outside meeting place.",
+            "3–5": "Find the escape signs and the fire doors in your school or building, and walk the route to the assembly point.",
+            "6–8": "Find and explain your own building's fire strategy — stay put or evacuate — and say what you would do for an alarm at three in the morning.",
+            "9–10": "Find and explain your own building's fire strategy, and state exactly what you would do for an alarm at 3 a.m. under it, with the reasons.",
+            "11–12": "Compare the fire strategies of two buildings of different construction, explain why they differ, and write the resident notice for one of them."
+          }
         },
         {
           "theme": "Wildfire at the edge of town",
           "description": "Ember attack, defensible space, the leave-early principle and the go/no-go decision made before smoke is visible.",
-          "transfer_check": "Assess a real or case-study property's wildfire exposure, specify its defensible-space actions, and write its trigger-based leave plan."
+          "transfer_check": "Assess a real or case-study property's wildfire exposure, specify its defensible-space actions, and write its trigger-based leave plan.",
+          "bands": {
+            "K–2": "Learn the go-early rule: when the grown-ups say we leave, we leave, before the smoke.",
+            "3–5": "Look at a house at the edge of the trees on a picture or map and name three things around it that could burn.",
+            "6–8": "Assess a real or case-study property's wildfire exposure and list its defensible-space actions in order.",
+            "9–10": "Assess a real or case-study property's wildfire exposure, specify its defensible-space actions, and write its trigger-based leave plan.",
+            "11–12": "Write the leave plan for a street, with triggers, routes and who checks on whom, and present it to residents or a role-played council."
+          }
         },
         {
           "theme": "After the fire",
           "description": "Re-entry dangers, insurance documentation, and the recovery sequence for a household that just lost its rooms.",
-          "transfer_check": "Produce the first-72-hours checklist for a post-fire household — safety, claims evidence, shelter, records — from a case study."
+          "transfer_check": "Produce the first-72-hours checklist for a post-fire household — safety, claims evidence, shelter, records — from a case study.",
+          "bands": {
+            "K–2": "Learn that after a fire you do not go back inside until a grown-up says it is safe.",
+            "3–5": "Make a list of what a family needs in the first days after a fire — somewhere to sleep, clothes, the important papers.",
+            "6–8": "Produce a first-days checklist for a post-fire household from a case study — safety, records, shelter — in the order it is needed.",
+            "9–10": "Produce the first-72-hours checklist for a post-fire household — safety, claims evidence, shelter, records — from a case study.",
+            "11–12": "Write the recovery plan for a post-fire household through the first month, including the insurance evidence sequence and the support agencies."
+          }
         },
         {
           "theme": "Fire and the very young and very old",
           "description": "Who dies in home fires and why — mobility, hearing, medication sleep — and adapting alarms, plans and drills to real occupants.",
-          "transfer_check": "Adapt a real dwelling's fire plan for a named occupant with impaired mobility, hearing or cognition, and test the adaptation."
+          "transfer_check": "Adapt a real dwelling's fire plan for a named occupant with impaired mobility, hearing or cognition, and test the adaptation.",
+          "bands": {
+            "K–2": "Practise waking a sleeping grown-up by shouting and shaking when the alarm sounds.",
+            "3–5": "Think of someone who could not hear or move fast in a fire, and say how you would help them get out.",
+            "6–8": "Adapt your home's fire plan for a named person with impaired hearing, mobility or memory, and test the adaptation once.",
+            "9–10": "Adapt a real dwelling's fire plan for a named occupant with impaired mobility, hearing or cognition, and test the adaptation.",
+            "11–12": "Adapt and drill the plan for a care setting or multi-occupant home, and write the staff card that says who moves whom, in what order."
+          }
         },
         {
           "theme": "Being the workplace or venue warden",
           "description": "Sweep duties, refuge points, roll calls and the authority a high-vis vest carries when everyone else is deciding to finish their coffee.",
-          "transfer_check": "Act as warden in a real or staged evacuation: complete the sweep, manage the reluctant, and deliver the roll-call report."
+          "transfer_check": "Act as warden in a real or staged evacuation: complete the sweep, manage the reluctant, and deliver the roll-call report.",
+          "bands": {
+            "K–2": "Practise being the line leader who counts everyone at the meeting place.",
+            "3–5": "Be the drill helper who checks the room is empty and reports to the teacher at the assembly point.",
+            "6–8": "Act as warden in a staged evacuation: sweep the area, move the slow, and give the roll-call report.",
+            "9–10": "Act as warden in a real or staged evacuation: complete the sweep, manage the reluctant, and deliver the roll-call report.",
+            "11–12": "Plan and run the evacuation for a venue with a public audience, brief the wardens, and deliver the report the fire service would ask for."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "Flood: the water that wins",
           "description": "Flash versus river flood, the depths that move cars and people, and the property-level defences that actually help.",
-          "transfer_check": "Read your address's flood risk from official maps, and state the action sequence for a warning at each of three lead times."
+          "transfer_check": "Read your address's flood risk from official maps, and state the action sequence for a warning at each of three lead times.",
+          "bands": {
+            "K–2": "Learn the rule for moving water — never walk or ride into it — and where the family goes when the water comes.",
+            "3–5": "Find your home on a flood map with help, and say what you would take upstairs first.",
+            "6–8": "Read your address's flood risk from official maps and state what you do for a warning with a day, an hour, and minutes to go.",
+            "9–10": "Read your address's flood risk from official maps, and state the action sequence for a warning at each of three lead times.",
+            "11–12": "Write the flood plan for a household with a ground-floor bedroom and a car, with the three lead times, and test the property-level defences named."
+          }
         },
         {
           "theme": "Storm and wind",
           "description": "What wind speeds do to roofs, trees and driving, the pre-storm hour list, and the shelter spots inside a home.",
-          "transfer_check": "Complete a real pre-storm property walk-around — securing, clearing, charging — and identify the safest internal refuge with reasons."
+          "transfer_check": "Complete a real pre-storm property walk-around — securing, clearing, charging — and identify the safest internal refuge with reasons.",
+          "bands": {
+            "K–2": "Help bring the toys and garden things inside before a storm, and learn the safest room in the house.",
+            "3–5": "Help with the pre-storm walk-around — chairs in, bins tied, torches charged — and show the family the inside room away from windows.",
+            "6–8": "Do a real pre-storm property walk-around — securing, clearing, charging — and pick the safest internal refuge with reasons.",
+            "9–10": "Complete a real pre-storm property walk-around — securing, clearing, charging — and identify the safest internal refuge with reasons.",
+            "11–12": "Write the storm checklist for a building with several households, run the walk-around with them, and decide when the roof means leaving instead of sheltering."
+          }
         },
         {
           "theme": "Earthquake: drop, cover, hold on",
           "description": "What buildings do in shaking, the myths (doorways, running out), and the aftershock rules.",
-          "transfer_check": "Run the full drop-cover-hold drill in two different rooms, then perform the post-shake checks — gas, structure, exits — in order."
+          "transfer_check": "Run the full drop-cover-hold drill in two different rooms, then perform the post-shake checks — gas, structure, exits — in order.",
+          "bands": {
+            "K–2": "Practise drop, cover and hold on under the table until the count ends.",
+            "3–5": "Practise drop, cover and hold on in two rooms, and name the myths — doorways, running outside — that are not safe.",
+            "6–8": "Run the full drop-cover-hold drill in two rooms, then do the after-shake checks — gas, structure, exits — in order.",
+            "9–10": "Run the full drop-cover-hold drill in two different rooms, then perform the post-shake checks — gas, structure, exits — in order.",
+            "11–12": "Lead the drill for a group, run the post-shake checks on a building, and decide whether it can be re-entered or must be evacuated, with reasons."
+          }
         },
         {
           "theme": "Heat that kills quietly",
           "description": "Heatwave physiology, the rooms and hours that matter, and the neighbours on the checking list.",
-          "transfer_check": "Write and rehearse a heatwave plan for a real household including one vulnerable person's specific arrangements."
+          "transfer_check": "Write and rehearse a heatwave plan for a real household including one vulnerable person's specific arrangements.",
+          "bands": {
+            "K–2": "Learn to drink water, stay in the shade, and tell a grown-up when someone looks too hot.",
+            "3–5": "Make the family's hot-day plan: the coolest room, the drinking times, and the older neighbour you check on.",
+            "6–8": "Write and rehearse a heatwave plan for your household including the arrangements for one vulnerable person.",
+            "9–10": "Write and rehearse a heatwave plan for a real household including one vulnerable person's specific arrangements.",
+            "11–12": "Write the heatwave checking rota for a street or building, including the signs that mean calling for help, and run the first day of it."
+          }
         },
         {
           "theme": "Cold, snow and the iced-in week",
           "description": "Freezing pipes, stranded cars, carbon monoxide from improvised heating — the winter emergency's specific traps.",
-          "transfer_check": "Prepare a real car and home for a cold snap against a checklist, including the in-car survival kit demonstrated."
+          "transfer_check": "Prepare a real car and home for a cold snap against a checklist, including the in-car survival kit demonstrated.",
+          "bands": {
+            "K–2": "Learn the layers rule for cold and that a car stove or a grill never comes inside.",
+            "3–5": "Help pack the family car's winter box — blanket, water, snacks, torch — and know why the heater in a stuck car runs only with the exhaust clear.",
+            "6–8": "Prepare a real car and home for a cold snap against a checklist, and demonstrate the in-car survival kit.",
+            "9–10": "Prepare a real car and home for a cold snap against a checklist, including the in-car survival kit demonstrated.",
+            "11–12": "Plan the cold-snap response for a household with an older person and no backup heat, including the carbon-monoxide rules and the moment to relocate them."
+          }
         },
         {
           "theme": "Lightning and the thirty-thirty rule",
           "description": "Where lightning actually strikes people, the timing rules, and the safe and unsafe shelters.",
-          "transfer_check": "Given three outdoor scenarios with a building storm, state and justify the correct action and shelter for each."
+          "transfer_check": "Given three outdoor scenarios with a building storm, state and justify the correct action and shelter for each.",
+          "bands": {
+            "K–2": "Learn to go inside when you hear thunder and to wait until the grown-ups say the storm has gone.",
+            "3–5": "Count the seconds between flash and thunder, and say when to go in and how long to wait before going out.",
+            "6–8": "Given three outdoor scenarios with a building storm, state and justify the correct action and shelter for each.",
+            "9–10": "Given three outdoor scenarios with a building storm, state and justify the correct action and shelter for each, including the unsafe shelters.",
+            "11–12": "Write the lightning protocol for an outdoor event or a sports field, with the trigger, the shelters, and who calls the return."
+          }
         },
         {
           "theme": "Landslip, sinkhole and the moving ground",
           "description": "Reading slopes and warning signs — cracks, leaning trees, sudden springs — and who to call before the road drops.",
-          "transfer_check": "Survey one real slope or cutting for instability indicators and file or draft the report to the responsible authority."
+          "transfer_check": "Survey one real slope or cutting for instability indicators and file or draft the report to the responsible authority.",
+          "bands": {
+            "K–2": "Learn to keep away from cracks in the ground and leaning trees, and to tell a grown-up.",
+            "3–5": "Look at a slope or bank near you with an adult and point out cracks, leaning trees or new wet patches.",
+            "6–8": "Survey one real slope or cutting for instability signs and draft the note you would send to the responsible authority.",
+            "9–10": "Survey one real slope or cutting for instability indicators and file or draft the report to the responsible authority.",
+            "11–12": "Survey and report on a slope above homes or a road, including what should be monitored and when the road should close."
+          }
         },
         {
           "theme": "The hazardous release",
           "description": "The overturned tanker, the chemical smell, the plume — shelter-in-place done properly versus the instinct to drive through it.",
-          "transfer_check": "Demonstrate full shelter-in-place for a staged airborne release — sealing, ventilation off, information channel on — in your own home."
+          "transfer_check": "Demonstrate full shelter-in-place for a staged airborne release — sealing, ventilation off, information channel on — in your own home.",
+          "bands": {
+            "K–2": "Learn that a strange smell or a big cloud means go inside, shut the windows and find a grown-up.",
+            "3–5": "Practise shelter-in-place at home: inside, windows shut, fans off, the radio or phone on for the news.",
+            "6–8": "Demonstrate full shelter-in-place for a staged airborne release in your own home — sealing, ventilation off, information channel on.",
+            "9–10": "Demonstrate full shelter-in-place for a staged airborne release — sealing, ventilation off, information channel on — in your own home.",
+            "11–12": "Run shelter-in-place for a school or workplace, including the decision to end it, and write the notice that tells people what to do next."
+          }
         },
         {
           "theme": "Warnings and the words they use",
           "description": "Watch versus warning, amber versus red, sirens and cell alerts — the official vocabulary and the action each word demands.",
-          "transfer_check": "Match your region's actual alert levels to required actions, and show where the warnings arrive on your own devices, tested."
+          "transfer_check": "Match your region's actual alert levels to required actions, and show where the warnings arrive on your own devices, tested.",
+          "bands": {
+            "K–2": "Learn the sounds and words the grown-ups listen for — the siren, the phone alert — and what we do when we hear them.",
+            "3–5": "Learn the difference between a watch and a warning, and find where the alerts arrive on the family phone.",
+            "6–8": "Match your region's alert levels to the actions each demands and show where the warnings arrive on your own devices, tested.",
+            "9–10": "Match your region's actual alert levels to required actions, and show where the warnings arrive on your own devices, tested.",
+            "11–12": "Write the one-page warning guide for a household in a language or format they can use, and test that the alert reaches every member."
+          }
         },
         {
           "theme": "Evacuation: leaving well",
           "description": "Routes, timing, the full tank rule, and the decision discipline that leaves before the road jams.",
-          "transfer_check": "Plan two evacuation routes from your home to defined refuges, drive or trace both, and state your pre-committed leave triggers."
+          "transfer_check": "Plan two evacuation routes from your home to defined refuges, drive or trace both, and state your pre-committed leave triggers.",
+          "bands": {
+            "K–2": "Practise getting in the car with your bag and your shoes on when the family says it is time to go.",
+            "3–5": "Trace two ways from home to the place the family would go on a map, and say why the car is kept half full of fuel.",
+            "6–8": "Plan two evacuation routes from home to defined refuges, drive or trace both, and set the triggers that mean leaving early.",
+            "9–10": "Plan two evacuation routes from your home to defined refuges, drive or trace both, and state your pre-committed leave triggers.",
+            "11–12": "Plan the evacuation for a household without a car or with a member who cannot travel far, including the transport and the earliest leave trigger."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "Who responds: the system revealed",
           "description": "Emergency services, civil protection, utilities, charities — who does what in a disaster and where the citizen fits.",
-          "transfer_check": "Map the actual response structure for your area — agencies, roles, activation — and identify the citizen-facing entry point of each."
+          "transfer_check": "Map the actual response structure for your area — agencies, roles, activation — and identify the citizen-facing entry point of each.",
+          "bands": {
+            "K–2": "Learn who the helpers are — fire, police, ambulance — and what each one's vehicle looks like.",
+            "3–5": "Draw the helpers in your area and say what each one does in a flood or a fire.",
+            "6–8": "Map the response structure for your area — agencies, roles, activation — and find the public entry point of each.",
+            "9–10": "Map the actual response structure for your area — agencies, roles, activation — and identify the citizen-facing entry point of each.",
+            "11–12": "Map the response structure and its gaps for your area, interview one responder, and write the citizen's guide to who to call for what."
+          }
         },
         {
           "theme": "The spontaneous volunteer problem",
           "description": "Why untasked helpers clog disasters, and the registered, trained routes by which help actually helps.",
-          "transfer_check": "Identify and complete registration (or its full application) with one recognised local response or resilience group."
+          "transfer_check": "Identify and complete registration (or its full application) with one recognised local response or resilience group.",
+          "bands": {
+            "K–2": "Learn that in an emergency you help by staying with your grown-up and doing what they say.",
+            "3–5": "Find one group in your area that trains people to help, and say why turning up untrained can get in the way.",
+            "6–8": "Identify a recognised local response or resilience group and complete its registration or full application.",
+            "9–10": "Identify and complete registration (or its full application) with one recognised local response or resilience group.",
+            "11–12": "Register with a group, complete its first training, and write the guide that tells untrained helpers where to go instead of the scene."
+          }
         },
         {
           "theme": "Psychological first aid",
           "description": "Look, listen, link — steadying frightened people without therapy or platitudes, and the referrals beyond your role.",
-          "transfer_check": "Demonstrate psychological first aid in three role-played encounters — the panicked, the numb, the searching — with correct referral for each."
+          "transfer_check": "Demonstrate psychological first aid in three role-played encounters — the panicked, the numb, the searching — with correct referral for each.",
+          "bands": {
+            "K–2": "Practise sitting with a friend who is upset, staying quiet and close until a grown-up comes.",
+            "3–5": "Practise look, listen, link with a partner: notice, hear them out, and find the grown-up who can help.",
+            "6–8": "Demonstrate psychological first aid in two role-played encounters — the panicked and the searching — with the right referral for each.",
+            "9–10": "Demonstrate psychological first aid in three role-played encounters — the panicked, the numb, the searching — with correct referral for each.",
+            "11–12": "Deliver psychological first aid in a staged mass event, keep to your role, and teach the look-listen-link method to new helpers."
+          }
         },
         {
           "theme": "The rest centre",
           "description": "Running the hall where evacuees arrive: registration, needs triage, families kept together, and the quiet corner that matters.",
-          "transfer_check": "Set up and run (or fully exercise) a rest-centre reception for a staged intake of ten, with registration and needs triage completed."
+          "transfer_check": "Set up and run (or fully exercise) a rest-centre reception for a staged intake of ten, with registration and needs triage completed.",
+          "bands": {
+            "K–2": "Practise arriving at a pretend rest centre, saying your name, and staying in the family's spot.",
+            "3–5": "Help set up the pretend rest centre: the welcome table, the family corners, the quiet corner.",
+            "6–8": "Set up and run a rest-centre reception for a staged intake of five, with registration and a needs check completed.",
+            "9–10": "Set up and run (or fully exercise) a rest-centre reception for a staged intake of ten, with registration and needs triage completed.",
+            "11–12": "Plan and run a rest centre for a staged intake of thirty, including the roles, the vulnerable-persons process, and the handover to the next shift."
+          }
         },
         {
           "theme": "Information in the chaos",
           "description": "Rumour dynamics in disasters, official channels, and being the neighbour who relays what is true rather than what is loud.",
-          "transfer_check": "During an exercise or case study, verify three circulating claims against official sources and publish the corrected summary."
+          "transfer_check": "During an exercise or case study, verify three circulating claims against official sources and publish the corrected summary.",
+          "bands": {
+            "K–2": "Learn that only the grown-ups and the official news tell us what to do, not something a friend heard.",
+            "3–5": "Take a rumour from a story and check it against the official page with an adult, then say what was true.",
+            "6–8": "During an exercise or case study, verify three circulating claims against official sources and write the corrected summary.",
+            "9–10": "During an exercise or case study, verify three circulating claims against official sources and publish the corrected summary.",
+            "11–12": "Run the information desk in an exercise, log and check every incoming claim, and issue the hourly corrected bulletin."
+          }
         },
         {
           "theme": "The damage assessment walk",
           "description": "Recording what happened — structures, utilities, needs — in the form responders and insurers can actually use.",
-          "transfer_check": "Complete a structured damage assessment of a staged or historical scene, producing the standard-format report."
+          "transfer_check": "Complete a structured damage assessment of a staged or historical scene, producing the standard-format report.",
+          "bands": {
+            "K–2": "Walk the pretend damaged street with an adult and point out what is broken.",
+            "3–5": "Fill in a simple damage card for a staged scene — what is broken, what is dangerous, who needs help.",
+            "6–8": "Complete a structured damage assessment of a staged or historical scene and produce the standard-format report.",
+            "9–10": "Complete a structured damage assessment of a staged or historical scene, producing the standard-format report insurers and responders use.",
+            "11–12": "Lead a two-person assessment team across a staged block, reconcile the two reports, and brief the coordinator on the priorities."
+          }
         },
         {
           "theme": "Vulnerable people in the emergency",
           "description": "The registers, the door-knock lists and the housebound — how communities make sure the flood does not sort by mobility.",
-          "transfer_check": "Build the (consented) support map for one street's vulnerable residents and the check-in protocol that activates in an event."
+          "transfer_check": "Build the (consented) support map for one street's vulnerable residents and the check-in protocol that activates in an event.",
+          "bands": {
+            "K–2": "Name a neighbour who might need help and learn what a grown-up would do to check on them.",
+            "3–5": "Make a list, with an adult, of who on your street might need a knock on the door in an emergency.",
+            "6–8": "Build the consented support map for one street's vulnerable residents and the check-in protocol that starts in an event.",
+            "9–10": "Build the (consented) support map for one street's vulnerable residents and the check-in protocol that activates in an event.",
+            "11–12": "Build and test the support map for a neighbourhood, including the consent process, the data-handling rule, and the drill that proves the check-ins happen."
+          }
         },
         {
           "theme": "The recovery marathon",
           "description": "After the cameras leave: claims, rebuilding, the long tail of displacement, and pacing a community's return.",
-          "transfer_check": "From one documented disaster, chart its recovery timeline against needs, and identify the two support gaps that appeared at month three."
+          "transfer_check": "From one documented disaster, chart its recovery timeline against needs, and identify the two support gaps that appeared at month three.",
+          "bands": {
+            "K–2": "Learn that after a big storm it takes a long time to fix things, and that helping keeps going after the news stops.",
+            "3–5": "Read the story of one disaster and put its recovery steps in order on a timeline.",
+            "6–8": "From one documented disaster, chart its recovery timeline against needs and find one support gap that appeared later.",
+            "9–10": "From one documented disaster, chart its recovery timeline against needs, and identify the two support gaps that appeared at month three.",
+            "11–12": "Compare the recovery timelines of two disasters, explain what made one faster, and write the month-three checklist a community should have ready."
+          }
         },
         {
           "theme": "Learning from the event",
           "description": "Debriefs without blame, the report that changes procedure, and the drill updated because of what actually happened.",
-          "transfer_check": "Run a structured debrief of a real drill or event, extract three actionable lessons, and change one written plan accordingly."
+          "transfer_check": "Run a structured debrief of a real drill or event, extract three actionable lessons, and change one written plan accordingly.",
+          "bands": {
+            "K–2": "Talk about what went well and what was hard in the class drill, without blaming anyone.",
+            "3–5": "After a drill, write down two things that worked and one to change, and share it with the group.",
+            "6–8": "Run a structured debrief of a real drill or event, extract three lessons, and change one written plan accordingly.",
+            "9–10": "Run a structured debrief of a real drill or event, extract three actionable lessons, and change one written plan accordingly.",
+            "11–12": "Facilitate a no-blame debrief for a group, write the report that changes a procedure, and re-run the drill to prove the change took."
+          }
         },
         {
           "theme": "Building the resilient community",
           "description": "From prepared households to a prepared street to a town with a plan — the organising work between emergencies.",
-          "transfer_check": "Organise or advance one concrete community resilience action — a street meeting, a shared equipment list, a plan adopted — with evidence."
+          "transfer_check": "Organise or advance one concrete community resilience action — a street meeting, a shared equipment list, a plan adopted — with evidence.",
+          "bands": {
+            "K–2": "Take part in the class or family readiness day and help with one job.",
+            "3–5": "Help organise one small readiness action — a family kit check, a class map of helpers — and show what came of it.",
+            "6–8": "Organise or advance one concrete community resilience action — a street meeting, a shared equipment list — with evidence.",
+            "9–10": "Organise or advance one concrete community resilience action — a street meeting, a shared equipment list, a plan adopted — with evidence.",
+            "11–12": "Lead a resilience action from proposal to adoption by a real group or body, and hand it to a named person who will keep it going."
+          }
         }
       ]
     }
