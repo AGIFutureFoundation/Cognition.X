@@ -83,11 +83,11 @@ async function testRecordsOfficeGrades(browser, errs) {
   const page = await newPage(browser, 'la/records', errs);
   await page.goto(url('louisiana'));
   await page.waitForTimeout(700);
-  await page.evaluate(() => {
+  await page.evaluate(async () => {
     const d = llLoad();
     d.learners = [{ id: 'rec', name: 'Record Learner', band: 4, prog: { [LTRACKS[0].key]: 50 } }];
     d.queue = []; llSave(d);
-    try { localStorage.removeItem('cxla.trust'); localStorage.removeItem('cxla.revlists'); } catch (e) {}
+    await dlReset();
     location.hash = '#/roles';
   });
   await page.waitForTimeout(400);
@@ -855,7 +855,7 @@ async function testOpenBadgeEnvelope(browser, errs) {
   const page = await newPage(browser, 'la/openbadge', errs);
   await page.goto(url('louisiana')); await page.waitForTimeout(700);
   await page.evaluate(async () => { await issuerForget(); const d = llLoad(); d.learners = [{ id: 'ob', name: 'Badge Learner', band: 4, prog: { [LTRACKS[0].key]: 50 } }]; d.queue = []; llSave(d);
-    localStorage.removeItem('cxla.trust'); localStorage.removeItem('cxla.revlists'); localStorage.removeItem('cxla.revoked'); location.hash = '#/roles'; });
+    await dlReset(); location.hash = '#/roles'; });
   await page.waitForTimeout(400);
   await page.click('#rolechips [data-role="parishadmin"]'); await page.waitForTimeout(400);
   await page.fill('#ro-name', 'Badge Hall Records Office'); await page.click('#ro-create'); await page.waitForTimeout(500);
@@ -905,8 +905,86 @@ async function testOpenBadgeEnvelope(browser, errs) {
   check('cli: native record TRUSTED too', v4.code === 0 && v4.out.startsWith('TRUSTED'), v4.out.slice(0, 60));
   fs.writeFileSync(path.join(dir, 'bad.jwt'), tampered);
   check('cli: tampered envelope INVALID', run([path.join(dir, 'bad.jwt')]).code === 1);
-  await page.evaluate(async () => { await issuerForget(); localStorage.removeItem('cxla.ledger'); localStorage.removeItem('cxla.trust'); localStorage.removeItem('cxla.revlists'); localStorage.removeItem('cxla.revoked'); localStorage.removeItem('cxla.roles'); });
+  await page.evaluate(async () => { await issuerForget(); localStorage.removeItem('cxla.ledger'); await dlReset(); localStorage.removeItem('cxla.roles'); });
   await page.close();
+}
+
+/* ------- v0.62.0: the trust and revocation lists take the ledger's durable path; a custody bundle restores onto a second device by hand ------- */
+async function testDurableListsAndRestore(browser, errs) {
+  const la = await newPage(browser, 'la/durlists', errs);
+  await la.goto(url('louisiana') + '#/roles'); await la.waitForTimeout(800);
+  // 1. a pre-v0.62.0 browser holds its trust list in localStorage only: it migrates once, without loss
+  await la.evaluate(async () => { await dlReset(); await issuerForget(); localStorage.removeItem('cxla.ledger');
+    await new Promise(r => { const q = indexedDB.deleteDatabase('cxla.ledgerdb'); q.onsuccess = q.onerror = q.onblocked = () => r(); });
+    localStorage.setItem('cxla.trust', JSON.stringify([{ recordsOffice: 'Legacy Hall', publicKey: { kty: 'EC', crv: 'P-256', x: 'legacyx', y: 'legacyy' } }])); });
+  await la.reload(); await la.waitForTimeout(900);
+  const mig = await la.evaluate(async () => ({ name: (trustLoad()[0] || {}).recordsOffice, idb: JSON.parse((await ldbGet('cxla.trust') || {}).json || '[]').map(o => o.recordsOffice)[0] }));
+  check('durable lists: a legacy localStorage trust list migrates into IndexedDB once', mig.name === 'Legacy Hall' && mig.idb === 'Legacy Hall', JSON.stringify(mig));
+  // 2. a localStorage quota failure on a list is reported and the list reloads from IndexedDB
+  const quota = await la.evaluate(async () => {
+    const orig = Storage.prototype.setItem;
+    Storage.prototype.setItem = function (k, v) { if (k === 'cxla.trust') throw new DOMException('quota', 'QuotaExceededError'); return orig.call(this, k, v); };
+    const l = trustLoad(); l.push({ recordsOffice: 'After Quota', publicKey: { kty: 'EC', crv: 'P-256', x: 'aqx', y: 'aqy' } });
+    const ok = trustSave(l); await new Promise(r => setTimeout(r, 300));
+    Storage.prototype.setItem = orig; localStorage.removeItem('cxla.trust');
+    return { ok, note: (document.getElementById('cx-ledgernote') || {}).textContent || '' };
+  });
+  check('durable lists: a quota failure on the trust list is reported, not swallowed', quota.ok === false && /IndexedDB/.test(quota.note), quota.note.slice(0, 80));
+  await la.reload(); await la.waitForTimeout(900);
+  check('durable lists: the list written after the failure reloads from IndexedDB', await la.evaluate(() => trustLoad().length === 2 && trustLoad().some(o => o.recordsOffice === 'After Quota')));
+  // 3. device A exports a custody bundle: an office, two learners, a revoked id, its own signed list imported as a verifier would, one hall line
+  const bundleJson = await la.evaluate(async () => {
+    await issuerCreate('Origin Office');
+    const d = { learners: [{ id: 'ra', name: 'Restored A', band: 1, prog: { [LTRACKS[0].key]: 12 } }, { id: 'rb', name: 'Restored B', band: 3, prog: {} }], queue: [] };
+    llSave(d); await new Promise(r => setTimeout(r, 200));
+    revokedSave([{ rid: 'rid-1', reason: 'duplicate', at: '2026-09-16' }]);
+    revlistsSave([await signRevocationList()]);
+    const p = D.parishes[0]; const s = hallState(p.slug); s[2] = true; localStorage.setItem('cxla.hallcheck.' + p.slug, JSON.stringify(s));
+    return JSON.stringify(await custodyBundle(p));
+  });
+  check('restore: the bundle carries no private key', !bundleJson.includes('"d":'));
+  // device B: a fresh profile with its own partial state (a local learner that is newer, one only here, no office)
+  await la.evaluate(async () => { await issuerForget(); await dlReset(); localStorage.removeItem('cxla.ledger');
+    Object.keys(localStorage).filter(k => k.startsWith('cxla.hallcheck.')).forEach(k => localStorage.removeItem(k));
+    await new Promise(r => { const q = indexedDB.deleteDatabase('cxla.ledgerdb'); q.onsuccess = q.onerror = q.onblocked = () => r(); }); });
+  await la.reload(); await la.waitForTimeout(900);
+  const r1 = await la.evaluate(async (bj) => {
+    const d = { learners: [{ id: 'ra', name: 'Restored A (local, newer)', band: 1, prog: { [LTRACKS[0].key]: 20 } }, { id: 'local-only', name: 'Local Only', band: 2, prog: {} }], queue: [] };
+    llSave(d); await new Promise(r => setTimeout(r, 50));
+    const o = await restoreCustody(JSON.parse(bj), D.parishes[0]);
+    const L = llLoad(); const ik = await issuerGet();
+    return { o, n: L.learners.length, raProg: L.learners.find(l => l.id === 'ra').prog[LTRACKS[0].key], trust: trustLoad().length, via: trustLoad()[0].via, lists: revlistsLoad().length, revoked: revokedLoad().length,
+             office: ik && ik.name, orphaned: !!(ik && ik.orphaned), hall: hallState(D.parishes[0].slug)[2], issuerHasD: (localStorage.getItem('cxla.issuer') || '').includes('"d"') };
+  }, bundleJson);
+  check('restore: learners merge by id — the missing one is added, the newer local one is kept', r1.o.learnersAdded === 1 && r1.o.learnersUpdated === 0 && r1.n === 3 && r1.raProg === 20, JSON.stringify(r1.o));
+  check('restore: trusted offices arrive second-hand with the bundle office as voucher', r1.trust === 2 && r1.o.trustAdded === 2 && r1.via === 'Origin Office', JSON.stringify([r1.trust, r1.via]));
+  check('restore: the imported revocation list is re-verified and kept; the office revoked ids follow when no office is here', r1.lists === 1 && r1.o.listsAdded === 1 && r1.o.listsRejected === 0 && r1.revoked === 1 && r1.o.revokedAdded === 1);
+  check('restore: the office is noted by name and public key only, orphaned, never with a private key', r1.office === 'Origin Office' && r1.orphaned && r1.o.officeNoted && !r1.issuerHasD);
+  check('restore: the hall checklist line is set for the same parish', r1.hall === true && r1.o.hallSet === 1);
+  // 4. an older bundle never overwrites; a tampered revocation list is rejected; a different office's revoked ids are skipped
+  const r2 = await la.evaluate(async (bj) => {
+    const b = JSON.parse(bj);
+    b.ledger.learners[0].prog[LTRACKS[0].key] = 3;
+    b.revocationLists[0].payload.revoked[0].reason = 'tampered';
+    await issuerForget(); await issuerCreate('Other Office'); b.revoked.push({ rid: 'rid-2', reason: 'x', at: '2026-09-16' });
+    const o = await restoreCustody(b, D.parishes[0]);
+    return { o, raProg: llLoad().learners.find(l => l.id === 'ra').prog[LTRACKS[0].key], revoked: revokedLoad().length };
+  }, bundleJson);
+  check('restore: the same bundle again changes nothing and an older learner copy never overwrites', r2.o.learnersAdded === 0 && r2.o.learnersUpdated === 0 && r2.raProg === 20 && r2.o.trustAdded === 0);
+  check('restore: a tampered revocation list is rejected', r2.o.listsRejected === 1 && r2.o.listsAdded === 0);
+  check("restore: another office's revoked ids are skipped, never signed here", r2.o.revokedSkipped === 2 && r2.revoked === 1, JSON.stringify(r2.o));
+  // 5. the Records Office control: paste, restore, read the summary; a non-bundle changes nothing
+  await la.evaluate(() => { R.role = 'parishadmin'; saveR(); }); await la.waitForTimeout(500);
+  check('restore: the control is in the Records Office', (await la.$('#ro-restore')) !== null && (await la.$('#ro-restore-file')) !== null);
+  await la.fill('#ro-restore-in', '{"format":"cx-credential/1"}'); await la.click('#ro-restore'); await la.waitForTimeout(200);
+  check('restore: a non-bundle is refused with nothing changed', /nothing was changed/.test(await la.$eval('#ro-restore-msg', e => e.textContent)));
+  await la.fill('#ro-restore-in', bundleJson); await la.click('#ro-restore'); await la.waitForTimeout(500);
+  const msg = await la.$eval('#ro-restore-msg', e => e.textContent);
+  check('restore: the summary names the source and what merged', /Merged from Origin Office/.test(msg) && /revoked ids skipped/.test(msg) && /overwritten by an older copy/.test(msg), msg.slice(0, 120));
+  await la.evaluate(async () => { await issuerForget(); await dlReset(); localStorage.removeItem('cxla.ledger'); localStorage.removeItem('cxla.roles');
+    Object.keys(localStorage).filter(k => k.startsWith('cxla.hallcheck.') || k.startsWith('cxla.ready.')).forEach(k => localStorage.removeItem(k));
+    await new Promise(r => { const q = indexedDB.deleteDatabase('cxla.ledgerdb'); q.onsuccess = q.onerror = q.onblocked = () => r(); }); });
+  await la.close();
 }
 
 (async () => {
@@ -935,6 +1013,7 @@ async function testOpenBadgeEnvelope(browser, errs) {
       ['durable ledger and custody bundle', testDurableLedger],
       ['hosted copy', testHostedCopy],
       ['open badge envelope', testOpenBadgeEnvelope],
+      ['durable lists and custody restore', testDurableListsAndRestore],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);

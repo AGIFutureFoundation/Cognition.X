@@ -627,6 +627,27 @@ def test_v1_gate_materials():
     check("cohort report: evidence proposes, the board disposes", "Evidence proposes; the board disposes" in r.stdout)
 
 
+def test_durable_lists_and_restore():
+    """v0.62.0 — the trust and revocation lists take the ledger's durable
+    path and a custody bundle restores by merge; the register, the review
+    and the onboarding path say so."""
+    la = app_html("louisiana")
+    check("durable lists: the accessors route through the seam", 'function trustLoad(){ return dlLoad("cxla.trust"); }' in la and 'function revlistsSave(l){ return dlSave("cxla.revlists", l); }' in la)
+    check("durable lists: the seam writes through to IndexedDB and announces a refused save", "async function dlInit()" in la and "cxla.dmeta" in la and "refused to save the " in la)
+    check("durable lists: startup initializes the seam", "llInit(); dlInit();" in la)
+    check("restore: the merge never overwrites from an older bundle", "async function restoreCustody(" in la and 'if (!cur){ d.learners.push(l); out.learnersAdded++; }' in la and "else if (newer && " in la)
+    check("restore: revocation lists are re-verified and a foreign office's revoked ids are skipped", "await verifyRecord(doc)" in la and "out.revokedSkipped = b.revoked.length" in la)
+    check("restore: an office is noted by public key only, never with a private key", 'durable: false, restored: true' in la and "e.publicKey.d) continue" in la and "!doc.publicKey.d" in la)
+    check("restore: the control is in the Records Office", 'id="ro-restore"' in la and 'id="ro-restore-file"' in la and "No sync service" in la)
+    reg = json.loads((ROOT / "data" / "policy" / "controls.json").read_text(encoding="utf-8"))
+    pl19 = next(c for c in reg["controls"] if c["id"] == "PL-19")
+    check("register: PL-19 covers the lists and the restore with browser evidence", "trust list" in pl19["requirement"] and any(e["ref"] == "testDurableListsAndRestore" for e in pl19["evidence"]))
+    check("review: the data map names the durable copy", "cxla.dmeta" in (ROOT / "docs" / "COMPLIANCE_REVIEW.md").read_text(encoding="utf-8"))
+    onb = (ROOT / "docs" / "COHORT_ONBOARDING.md").read_text(encoding="utf-8")
+    check("onboarding: a second device restores by merge and never receives a private key", "Restore" in onb and "never overwrites" in onb and "private key never travels" in onb)
+    check("smoke: the browser suite covers migration, quota and restore", "testDurableListsAndRestore" in (ROOT / "tests" / "browser" / "smoke.js").read_text(encoding="utf-8"))
+
+
 def test_docs_numbers_match_dataset():
     """Headline counts in the README and wiki must match the dataset."""
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))

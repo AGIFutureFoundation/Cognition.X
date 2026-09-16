@@ -1260,12 +1260,8 @@ async function verifyAny(text){
    public key; adding it here (after confirming identity out-of-band, once)
    upgrades verification from "signed by this key's holder" to "signed by
    the office I trust as X". Trust is browser-local and removable. */
-function trustLoad(){
-  try { const r = store("cxla.trust"); if (r){ const l = JSON.parse(r);
-    if (Array.isArray(l)) return l; } } catch(e){}
-  return [];
-}
-function trustSave(l){ store("cxla.trust", JSON.stringify(l)); }
+function trustLoad(){ return dlLoad("cxla.trust"); }
+function trustSave(l){ return dlSave("cxla.trust", l); }
 function jwkEq(a,b){ return !!(a && b && a.kty===b.kty && a.crv===b.crv && a.x===b.x && a.y===b.y); }
 function trustedName(jwk){
   const t = trustLoad().find(o => jwkEq(o.publicKey, jwk));
@@ -1280,18 +1276,10 @@ function trustedName(jwk){
    SIGNS with the same key its records carry; a verifier that has imported
    it grades matching records ⊘ revoked. There is no network: both travel
    the same out-of-band channel as the keys themselves. */
-function revokedLoad(){
-  try { const r = store("cxla.revoked"); if (r){ const l = JSON.parse(r);
-    if (Array.isArray(l)) return l; } } catch(e){}
-  return [];
-}
-function revokedSave(l){ store("cxla.revoked", JSON.stringify(l)); }
-function revlistsLoad(){
-  try { const r = store("cxla.revlists"); if (r){ const l = JSON.parse(r);
-    if (Array.isArray(l)) return l; } } catch(e){}
-  return [];
-}
-function revlistsSave(l){ store("cxla.revlists", JSON.stringify(l)); }
+function revokedLoad(){ return dlLoad("cxla.revoked"); }
+function revokedSave(l){ return dlSave("cxla.revoked", l); }
+function revlistsLoad(){ return dlLoad("cxla.revlists"); }
+function revlistsSave(l){ return dlSave("cxla.revlists", l); }
 async function signRevocationList(){
   const ik = await issuerGet(); if (!ik) return null;
   const payload = { format: "cx-revocation/1", office: ik.name,
@@ -1864,6 +1852,106 @@ async function custodyBundle(p){
     hallChecklist: p ? HALL_REQS.map(([t,,ctl],i)=>({control: ctl, requirement: t, met: !!hallState(p.slug)[i]})) : [],
   };
 }
+/* v0.62.0 — restore from a records-custody bundle: continuity by hand.
+   A second device, a replacement after a loss, a hall that moves rooms:
+   the custodian loads the dated cx-custody/1 file and this browser MERGES
+   it — learners by id (the bundle's copy replaces a local learner only when
+   the bundle was saved later; an older bundle never overwrites), the queue
+   by row, trusted offices by key (arriving second-hand, with the bundle's
+   office as the voucher, until confirmed out-of-band), imported revocation
+   lists only after their signatures verify again here, the readiness and
+   hall checklists by OR for the same parish. This office's own revoked ids
+   are restored only when the bundle's office key is this office's key, or
+   when this browser has no office yet — in which case the office is noted
+   by NAME AND PUBLIC KEY ONLY, so records it signed verify by name here
+   while signing stays on the device that holds the private key (which is
+   non-extractable and never in a bundle). No sync service: a file, a
+   person, a channel the two devices already trust. */
+async function restoreCustody(b, p){
+  if (!b || typeof b !== "object" || b.format !== "cx-custody/1") throw new Error("not a cx-custody/1 bundle");
+  const out = {learnersAdded: 0, learnersUpdated: 0, queueAdded: 0, trustAdded: 0, revokedAdded: 0, revokedSkipped: 0,
+               listsAdded: 0, listsRejected: 0, hallSet: 0, readySet: 0, officeNoted: false, from: String((b.recordsOffice || {}).name || b.parish || "unnamed bundle").slice(0, 120)};
+  const inc = b.ledger ? llSanitize(b.ledger) : null;
+  if (inc){
+    const d = qLoad();
+    const newer = String(b.ledger.savedAt || "") > String(d.savedAt || "");
+    const byId = new Map(d.learners.map(l => [l.id, l]));
+    inc.learners.forEach(l => {
+      const cur = byId.get(l.id);
+      if (!cur){ d.learners.push(l); out.learnersAdded++; }
+      else if (newer && JSON.stringify(cur) !== JSON.stringify(l)){ d.learners[d.learners.indexOf(cur)] = l; out.learnersUpdated++; }
+    });
+    const seen = new Set(d.queue.map(q => JSON.stringify(q)));
+    inc.queue.forEach(q => { const s = JSON.stringify(q); if (!seen.has(s)){ d.queue.push(q); seen.add(s); out.queueAdded++; } });
+    if (out.learnersAdded || out.learnersUpdated || out.queueAdded) llSave(d);
+  }
+  const bpub = b.recordsOffice && b.recordsOffice.publicKey && b.recordsOffice.publicKey.kty === "EC"
+    ? {kty: "EC", crv: b.recordsOffice.publicKey.crv, x: String(b.recordsOffice.publicKey.x || ""), y: String(b.recordsOffice.publicKey.y || "")} : null;
+  if (Array.isArray(b.trustedOffices)){
+    const l = trustLoad();
+    for (const e of b.trustedOffices){
+      if (!e || typeof e.recordsOffice !== "string" || !e.publicKey || e.publicKey.kty !== "EC" || e.publicKey.d) continue;
+      if (l.some(x => jwkEq(x.publicKey, e.publicKey))) continue;
+      l.push({recordsOffice: e.recordsOffice.slice(0, 120), publicKey: {kty: e.publicKey.kty, crv: e.publicKey.crv, x: e.publicKey.x, y: e.publicKey.y},
+              via: String(e.via || out.from).slice(0, 120)});
+      out.trustAdded++;
+    }
+    if (out.trustAdded) trustSave(l);
+  }
+  if (Array.isArray(b.revocationLists)){
+    const ls = revlistsLoad();
+    for (const doc of b.revocationLists){
+      let ok = false;
+      try { ok = !!(doc && doc.payload && doc.payload.format === "cx-revocation/1" && Array.isArray(doc.payload.revoked) && doc.publicKey && !doc.publicKey.d && await verifyRecord(doc)); } catch(e){ ok = false; }
+      if (!ok){ out.listsRejected++; continue; }
+      const i = ls.findIndex(x => jwkEq(x.publicKey, doc.publicKey));
+      if (i < 0){ ls.push(doc); out.listsAdded++; }
+      else if (String(doc.payload.updatedAt || "") > String(ls[i].payload.updatedAt || "")){ ls[i] = doc; out.listsAdded++; }
+    }
+    if (out.listsAdded) revlistsSave(ls);
+  }
+  const ik = cryptoOK() ? await issuerGet() : null;
+  if (Array.isArray(b.revoked) && b.revoked.length){
+    if (ik && bpub && !jwkEq(ik.pubJwk, bpub)){ out.revokedSkipped = b.revoked.length; }
+    else {
+      const l = revokedLoad();
+      for (const r of b.revoked){
+        if (!r || typeof r.rid !== "string" || !r.rid || l.some(x => x.rid === r.rid)) continue;
+        l.push({rid: r.rid.slice(0, 80), reason: String(r.reason || "").slice(0, 200), at: String(r.at || "").slice(0, 10)});
+        out.revokedAdded++;
+      }
+      if (out.revokedAdded) revokedSave(l);
+    }
+  }
+  if (!ik && bpub && b.recordsOffice.name && bpub.x && bpub.y){
+    store("cxla.issuer", JSON.stringify({name: String(b.recordsOffice.name).slice(0, 120), pub: bpub, v: 2, durable: false, restored: true}));
+    out.officeNoted = true;
+  }
+  if (p && b.parish === p.name){
+    if (Array.isArray(b.hallChecklist)){
+      const st = hallState(p.slug);
+      HALL_REQS.forEach(([,,ctl], i) => { const row = b.hallChecklist.find(h => h && h.control === ctl); if (row && row.met && !st[i]){ st[i] = true; out.hallSet++; } });
+      if (out.hallSet) store("cxla.hallcheck." + p.slug, JSON.stringify(st));
+    }
+    if (Array.isArray(b.readiness)){
+      const st = readyState(p.slug);
+      READY_REQS.forEach(([t], i) => { const row = b.readiness.find(h => h && h.requirement === t); if (row && row.met && !st[i]){ st[i] = true; out.readySet++; } });
+      if (out.readySet) store("cxla.ready." + p.slug, JSON.stringify(st));
+    }
+  }
+  return out;
+}
+function restoreSummary(o){
+  const bits = [`${o.learnersAdded} learner${o.learnersAdded === 1 ? "" : "s"} added`, `${o.learnersUpdated} updated from a newer bundle`];
+  if (o.queueAdded) bits.push(`${o.queueAdded} queue row${o.queueAdded === 1 ? "" : "s"}`);
+  bits.push(`${o.trustAdded} trusted office${o.trustAdded === 1 ? "" : "s"} added second-hand`);
+  bits.push(`${o.listsAdded} revocation list${o.listsAdded === 1 ? "" : "s"} re-verified and kept${o.listsRejected ? `, <b>${o.listsRejected} rejected</b> (signature did not verify)` : ""}`);
+  if (o.revokedAdded) bits.push(`${o.revokedAdded} of this office's revoked ids restored`);
+  if (o.revokedSkipped) bits.push(`<b>${o.revokedSkipped} revoked ids skipped</b> — they belong to another office's key`);
+  if (o.hallSet || o.readySet) bits.push(`${o.hallSet + o.readySet} checklist line${o.hallSet + o.readySet === 1 ? "" : "s"} set`);
+  if (o.officeNoted) bits.push(`the office <b>${esc(o.from)}</b> noted by name and public key only — signing stays on the device that holds its private key`);
+  return `✓ Merged from <b>${esc(o.from)}</b>: ${bits.join(" · ")}. Nothing here was overwritten by an older copy.`;
+}
 function downloadJSON(obj, name){
   const blob = new Blob([JSON.stringify(obj, null, 1)], {type: "application/json"});
   const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; a.click();
@@ -2064,6 +2152,67 @@ async function llInit(){
     }
   } catch(e){ /* IndexedDB unavailable: localStorage alone, as before v0.58.0 */ }
   LL.ready = true;
+}
+/* v0.62.0 — the trust list, this office's revoked ids and the imported
+   revocation lists take the same path as the ledger: a synchronous
+   in-memory copy behind the accessors every earlier release called
+   (trustLoad/trustSave, revokedLoad/revokedSave, revlistsLoad/revlistsSave),
+   written through to localStorage (the compatibility copy) AND an IndexedDB
+   record in the ledger database; on startup the IndexedDB copy is
+   authoritative when it is at least as new (cxla.dmeta keeps the
+   localStorage save times so the two can be compared); a browser that held
+   these lists only in localStorage migrates once, without loss; a write
+   refused everywhere is announced. Nothing here reaches a network. */
+const DL = {cache: {}, keys: ["cxla.trust", "cxla.revoked", "cxla.revlists"], ready: false,
+            names: {"cxla.trust": "trusted-offices list", "cxla.revoked": "revocation list", "cxla.revlists": "imported revocation lists"}};
+function dlMeta(){ try { const m = JSON.parse(store("cxla.dmeta") || "{}"); return m && typeof m === "object" ? m : {}; } catch(e){ return {}; } }
+function dlLoad(key){
+  if (DL.cache[key]) return DL.cache[key];
+  try { const r = store(key); if (r){ const l = JSON.parse(r); if (Array.isArray(l)){ DL.cache[key] = l; return l; } } } catch(e){}
+  DL.cache[key] = [];
+  return DL.cache[key];
+}
+function dlSave(key, l){
+  DL.cache[key] = l;
+  const savedAt = new Date().toISOString(), s = JSON.stringify(l);
+  let okLS = false;
+  try { localStorage.setItem(key, s); const m = dlMeta(); m[key] = savedAt; localStorage.setItem("cxla.dmeta", JSON.stringify(m)); okLS = true; } catch(e){ okLS = false; }
+  ldbPut(key, {savedAt, json: s}).then(() => {
+    if (!okLS) ledgerNote("Local storage refused to save the " + DL.names[key] + " — it is kept in this browser's IndexedDB instead and reloads from there. Export a custody bundle soon.", "warn");
+  }).catch(() => {
+    if (!okLS){ ledgerNote("This browser refused to save the " + DL.names[key] + " anywhere — export a custody bundle now.", "error"); storeWarn(); }
+  });
+  return okLS;
+}
+async function dlInit(){
+  let changed = false;
+  for (const key of DL.keys){
+    try {
+      const rec = await ldbGet(key);
+      const ls = dlLoad(key), meta = String(dlMeta()[key] || "");
+      if (rec && rec.json){
+        const l = JSON.parse(rec.json);
+        if (Array.isArray(l) && String(rec.savedAt || "") >= meta && JSON.stringify(l) !== JSON.stringify(ls)){
+          DL.cache[key] = l; changed = true;
+          try { localStorage.setItem(key, rec.json); } catch(e){}
+        }
+      } else if (ls.length){
+        await ldbPut(key, {savedAt: meta || new Date().toISOString(), json: JSON.stringify(ls)});
+      }
+    } catch(e){ /* IndexedDB unavailable: localStorage alone, as before v0.62.0 */ }
+  }
+  DL.ready = true;
+  if (changed) setTimeout(renderRoles, 0);
+}
+/* Forget the durable lists everywhere (the privacy control's erase, and the
+   browser suite's isolation between checks). */
+async function dlReset(keys){
+  for (const key of (keys || DL.keys)){
+    delete DL.cache[key];
+    try { localStorage.removeItem(key); } catch(e){}
+    try { const m = dlMeta(); delete m[key]; localStorage.setItem("cxla.dmeta", JSON.stringify(m)); } catch(e){}
+    try { const db = await ldbOpen(); await new Promise((res, rej) => { const t = db.transaction(LDB_STORE, "readwrite"); t.objectStore(LDB_STORE).delete(key); t.oncomplete = () => res(true); t.onerror = () => rej(t.error); }); } catch(e){}
+  }
 }
 function llStanding(l){
   const prog = l.prog || {};
@@ -3029,7 +3178,7 @@ const WIDGETS = {
     el.innerHTML += `<div id="ra-hall"></div>
       <div style="display:flex; gap:9px; flex-wrap:wrap; margin-top:10px">
         <button class="btn gold" id="ra-bundle">Export records-custody bundle</button>
-        <span class="note" style="margin:0">One dated cx-custody/1 file: ledger, office public key, trust and revocation lists, readiness and this checklist.</span></div>`;
+        <span class="note" style="margin:0">One dated cx-custody/1 file: ledger, office public key, trust and revocation lists, readiness and this checklist. A second device restores it from the Records Office (merge, never overwrite).</span></div>`;
     renderHallCheck(p, "#ra-hall");
     el.querySelector("#ra-bundle").addEventListener("click", async ()=>{
       downloadJSON(await custodyBundle(p), `cognitionx-custody-${p.slug}-${new Date().toISOString().slice(0,10)}.json`);
@@ -3132,12 +3281,36 @@ const WIDGETS = {
        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:flex-start; margin-top:8px">
          <textarea id="ro-rev-in" rows="2" style="flex:1; min-width:240px" spellcheck="false" placeholder='paste a signed cx-revocation/1 document'></textarea>
          <button class="btn" id="ro-rev-import">Import revocation list</button></div>
-       <div id="ro-rev-msg" class="note" style="margin-top:6px"></div>`;
+       <div id="ro-rev-msg" class="note" style="margin-top:6px"></div>
+       <p class="note" style="margin:16px 0 4px"><b>Restore from a records-custody bundle — continuity by hand.</b> Load a
+       <span class="mono">cx-custody/1</span> file this or another device exported: learners merge by id (a newer bundle
+       updates, an older one never overwrites), trusted offices arrive second-hand, imported revocation lists are
+       re-verified, and an office is noted by name and <b>public</b> key only — a private key never travels, so signing
+       stays on the device that holds it. No sync service: a file, a person, a channel you already trust.</p>
+       <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:flex-start">
+         <input type="file" id="ro-restore-file" accept=".json,application/json" aria-label="Choose a cx-custody/1 bundle file">
+         <textarea id="ro-restore-in" rows="2" style="flex:1; min-width:240px" spellcheck="false" placeholder='or paste a cx-custody/1 bundle'></textarea>
+         <button class="btn" id="ro-restore">Restore (merge)</button></div>
+       <div id="ro-restore-msg" class="note" role="status" aria-live="polite" style="margin-top:6px"></div>`;
+    el.querySelector("#ro-restore-file").addEventListener("change", ev => {
+      const f = ev.target.files && ev.target.files[0]; if (!f) return;
+      const rd = new FileReader(); rd.onload = () => { el.querySelector("#ro-restore-in").value = String(rd.result || ""); }; rd.readAsText(f);
+    });
+    el.querySelector("#ro-restore").addEventListener("click", async ()=>{
+      const msg = el.querySelector("#ro-restore-msg");
+      let b; try { b = JSON.parse(el.querySelector("#ro-restore-in").value); } catch(e){ msg.textContent = "Not a readable cx-custody/1 bundle."; return; }
+      try {
+        const o = await restoreCustody(b, p);
+        renderRoles();
+        const m2 = $("#ro-restore-msg"); if (m2) m2.innerHTML = restoreSummary(o);
+        say("Custody bundle merged.");
+      } catch(e){ msg.textContent = "Not a cx-custody/1 bundle — nothing was changed."; }
+    });
     const showIssuer = async () => {
       const ik = await issuerGet();
       $("#ro-issuer") && ($("#ro-issuer").innerHTML = ik
         ? (ik.orphaned
-            ? `Office: <b>${esc(ik.name)}</b> — its private key is not in this browser profile (it was created elsewhere, or site data was cleared). Records it signed still verify; retire it and create a new office here.`
+            ? `Office: <b>${esc(ik.name)}</b> — its private key is not in this browser profile (it was created elsewhere, restored from a custody bundle, or site data was cleared). Records it signed still verify, by name; to sign here, retire it and create a new office on this device.`
             : `Office: <b>${esc(ik.name)}</b> · keys ready (P-256). The private key is a <b>non-extractable</b> key held ${ik.durable ? "in this browser's IndexedDB — no script or export can read it, and it cannot be copied to another machine" : "in page memory only for this session (IndexedDB unavailable here) — records issued now still verify, but create the office on a browser that can keep the key"}${ik.migrated ? "; migrated from the pre-v0.57.0 format, same key, private bytes removed from local storage" : ""}. The public key below is safe to publish anywhere.`)
         : `No office keys in this browser yet — create them once below.`);
     };
@@ -3928,7 +4101,7 @@ document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click", ()=>{
 $("#ppick").addEventListener("change", ()=> location.hash="#/parish/"+$("#ppick").value);
 $("#prand").addEventListener("click", ()=> location.hash="#/parish/"+D.parishes[Math.floor(Math.random()*64)].slug);
 window.addEventListener("hashchange", route);
-llInit();
+llInit(); dlInit();
 
 renderState(); renderParishPicker(); renderRegions(); renderCurriculum();
 renderInstitute(); renderMakers(); renderLoop(); initStyles(); renderRoles(); initGuide();

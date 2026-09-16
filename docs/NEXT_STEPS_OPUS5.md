@@ -328,7 +328,7 @@ identity is confirmed out-of-band.
 
 ---
 
-## 9 — Learner state that survives: IndexedDB and cross-app continuity *(ledger and office key durable in v0.57.0–v0.58.0; trust lists and cross-app continuity remain)*
+## 9 — Learner state that survives: IndexedDB and cross-app continuity *(done — office key v0.57.0, ledger v0.58.0, trust and revocation lists and the custody-bundle restore v0.62.0; continuity across devices is the bundle carried by hand, never a sync service)*
 
 **Why.** The ledger, the queue, the trust list and the revocation lists
 all live in `localStorage`, which is size-limited, synchronous, and

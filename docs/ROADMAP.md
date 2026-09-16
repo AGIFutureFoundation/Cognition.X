@@ -185,8 +185,11 @@ mapping checks (done, v0.56.0).
   progress ledger in the Louisiana platform — per-learner check
   records on the 30 core-spine tracks, automatic credential award at
   50 checks, deterministic next-step recommendation and alerts,
-  export/import, demo-cohort seeding; no account required. (IndexedDB
-  migration and cross-app sync remain future work.)
+  export/import, demo-cohort seeding; no account required. Durable
+  state landed in v0.57.0–v0.62.0 (office key, ledger, trust and
+  revocation lists in IndexedDB; restore from the custody bundle on a
+  second device). Cross-device continuity is that bundle, carried by
+  hand — no sync service, by design.
 - [x] Credential ledger v1 (v0.29.0): signed completion records — a
   per-browser Records Office (ECDSA P-256 via WebCrypto), records
   issued offline as portable `cx-credential/1` JSON and verified
