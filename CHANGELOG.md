@@ -4,6 +4,28 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.59.0] — 2026-09-16
+
+### Added — roadmap wave 2 closed out
+- **`docs/HOSTING.md`** — the hardening guide for a district that wants
+  a URL: serve the released file unchanged, one origin per app, the same
+  Content-Security-Policy as an HTTP header, HSTS, no cookies, no
+  analytics, `no-store`; nginx, Apache and Caddy examples; a checking
+  procedure. `testHostedCopy` serves the apps over HTTP in the browser
+  suite and proves a hosted copy behaves like the file (no request, no
+  CSP violation, fetch refused, fonts resolve); `CX_HOSTED_BASE` points
+  it at a real host.
+- **`sbom/cognitionx.cdx.json`** — a CycloneDX 1.5 software bill of
+  materials generated from the build by `tools/sbom.py` and diffed in
+  CI: the six apps with hashes, the four embedded typefaces under OFL,
+  the build toolchain, the development toolchain marked excluded, and
+  zero runtime dependencies declared.
+- **`docs/CISA_K12_SUMMARY.md`** — the one-page vendor answer to CISA's
+  K–12 cybersecurity recommendations, each mapped to who answers, how,
+  and the register control.
+- The register: 28 met, 13 partial, 3 open (signed tags, cybersecurity
+  training, municipal permits).
+
 ## [0.58.0] — 2026-09-16
 
 ### Added — roadmap wave 2 in the Louisiana app

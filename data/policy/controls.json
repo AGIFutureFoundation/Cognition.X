@@ -174,18 +174,26 @@
    "level": "platform",
    "domain": "security",
    "title": "Software bill of materials",
-   "requirement": "The apps have no runtime dependencies; build-time tooling is Python 3 standard library; dev-time browser tests use Playwright and axe-core.",
+   "requirement": "A CycloneDX 1.5 SBOM is generated from the build in CI: the six apps with hashes, the four embedded typefaces (OFL), the build toolchain, and the development toolchain marked excluded; zero runtime dependencies declared.",
    "source": "EO 14028 SBOM expectations; NTIA minimum elements",
    "owner": "software",
-   "status": "partial",
+   "status": "met",
    "evidence": [
     {
-     "type": "doc",
-     "ref": "docs/COMPLIANCE_ROADMAP.md"
+     "type": "file",
+     "ref": "sbom/cognitionx.cdx.json"
+    },
+    {
+     "type": "ci",
+     "ref": "Regenerate the software bill of materials"
+    },
+    {
+     "type": "test",
+     "ref": "test_security_compliance_register"
     }
    ],
    "wave": 2,
-   "next": "Emit a CycloneDX SBOM from the build (tools/sbom.py) listing the embedded fonts and the dev toolchain."
+   "next": "Sign release tags when a signing key is provisioned."
   },
   {
    "id": "PL-09",
@@ -426,18 +434,22 @@
    "level": "platform",
    "domain": "security",
    "title": "Hosting hardening guide",
-   "requirement": "When a district hosts the apps over https, each gets its own origin; the guide should set TLS, HSTS, the same CSP as a header and no analytics.",
+   "requirement": "When a district hosts the apps over https, each gets its own origin; docs/HOSTING.md gives the headers (the same CSP as a header, HSTS, no cookies, no analytics) with nginx, Apache and Caddy examples, and the browser suite proves a hosted copy behaves like the file.",
    "source": "CIS 12/13; OWASP secure headers",
    "owner": "software",
-   "status": "open",
+   "status": "met",
    "evidence": [
     {
      "type": "doc",
-     "ref": "docs/COMPLIANCE_ROADMAP.md"
+     "ref": "docs/HOSTING.md"
+    },
+    {
+     "type": "smoke",
+     "ref": "testHostedCopy"
     }
    ],
    "wave": 2,
-   "next": "Write docs/HOSTING.md with nginx/Apache header examples and a Playwright check that the hosted copy behaves like the file."
+   "next": "Run the hosted-copy test against the real host (CX_HOSTED_BASE) before go-live."
   },
   {
    "id": "FD-01",
@@ -550,18 +562,22 @@
    "level": "federal",
    "domain": "security",
    "title": "K–12 cybersecurity guidance",
-   "requirement": "CISA's K–12 guidance is voluntary; districts increasingly require vendors to answer it.",
+   "requirement": "CISA's K–12 guidance is voluntary; districts increasingly require vendors to answer it. docs/CISA_K12_SUMMARY.md maps each recommendation to who answers, how, and the register control.",
    "source": "K–12 Cybersecurity Act of 2021; CISA K–12 toolkit",
    "owner": "adopter",
-   "status": "partial",
+   "status": "met",
    "evidence": [
     {
      "type": "doc",
-     "ref": "docs/CONTROL_REGISTER.md"
+     "ref": "docs/CISA_K12_SUMMARY.md"
+    },
+    {
+     "type": "test",
+     "ref": "test_security_compliance_register"
     }
    ],
    "wave": 1,
-   "next": "Use this register as the vendor answer; add a CISA-aligned summary table in wave 2."
+   "next": "Keep; re-check against CISA's current guidance yearly."
   },
   {
    "id": "ST-01",
@@ -920,10 +936,14 @@
     {
      "type": "file",
      "ref": "SECURITY.md"
+    },
+    {
+     "type": "doc",
+     "ref": "docs/CISA_K12_SUMMARY.md"
     }
    ],
    "wave": 1,
-   "next": "Answer with the register; note the open items honestly."
+   "next": "Answer with the register, the CISA summary and the SBOM; note the open items honestly."
   },
   {
    "id": "DI-03",

@@ -78,6 +78,10 @@ jobs:
           python3 tools/build_platform.py
       - name: Regenerate the release checksums
         run: python3 tools/checksums.py
+      - name: Regenerate the software bill of materials
+        run: python3 tools/sbom.py
+      - name: SBOM must be current with the builds
+        run: git diff --exit-code sbom/
       - name: Apps must be byte-identical to their committed builds
         run: git diff --exit-code apps/
       - name: Platform invariants (no network, honesty stances, dataset shape)
