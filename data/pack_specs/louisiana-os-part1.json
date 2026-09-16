@@ -10,52 +10,122 @@
         {
           "theme": "A continent's drain runs past your door",
           "description": "The Mississippi's watershed — how water from thirty-one states arrives at Louisiana, and what that makes the river carry.",
-          "transfer_check": "Trace, on a real map, the path rain falling in two distant states takes to pass Louisiana, and name what it picks up on the way."
+          "transfer_check": "Trace, on a real map, the path rain falling in two distant states takes to pass Louisiana, and name what it picks up on the way.",
+          "bands": {
+            "K–2": "Pour water on a tray of sand and watch where it runs, then find the big river on a map and trace it with your finger to the Gulf.",
+            "3–5": "On a map of the United States, colour the states whose rain ends up in the Mississippi and trace one raindrop's path past Louisiana.",
+            "6–8": "Trace, on a real map, the path rain falling in one distant state takes to pass Louisiana, and name two things it picks up on the way.",
+            "9–10": "Trace, on a real map, the path rain falling in two distant states takes to pass Louisiana, and name what it picks up on the way.",
+            "11–12": "Trace the paths from two states, quantify one thing the river carries from published measurements, and present the watershed to a class as one system."
+          }
         },
         {
           "theme": "The levee line",
           "description": "The mainline levees from the river's own banks — what they protect, what they stopped, and what confining a river costs downstream.",
-          "transfer_check": "Visit or study the levee section nearest your parish and report who maintains it, its height history, and what sits behind it."
+          "transfer_check": "Visit or study the levee section nearest your parish and report who maintains it, its height history, and what sits behind it.",
+          "bands": {
+            "K–2": "Stand on or look at a levee with an adult and say what it keeps out and what is behind it.",
+            "3–5": "Find the levee nearest your parish on a map and draw what it protects on one side and the river on the other.",
+            "6–8": "Study the levee section nearest your parish and report who maintains it and what sits behind it.",
+            "9–10": "Visit or study the levee section nearest your parish and report who maintains it, its height history, and what sits behind it.",
+            "11–12": "Visit the section, report its history and maintainer, and present to a class what confining the river there costs downstream, with sources."
+          }
         },
         {
           "theme": "The structures that hold the river in place",
           "description": "Old River Control and the spillways — the machinery that keeps the Mississippi in its channel and away from the Atchafalaya's shorter path.",
-          "transfer_check": "Explain, with a drawing, what Old River Control does and what would change downstream if it failed, verified against an authoritative source."
+          "transfer_check": "Explain, with a drawing, what Old River Control does and what would change downstream if it failed, verified against an authoritative source.",
+          "bands": {
+            "K–2": "Build a channel in sand, let water find a shorter way, and see why people built walls to keep the river where it is.",
+            "3–5": "Draw the river and the shorter path it wants to take to the Gulf, and mark the structure that stops it.",
+            "6–8": "Explain, with a drawing, what Old River Control does and what would change downstream if it failed.",
+            "9–10": "Explain, with a drawing, what Old River Control does and what would change downstream if it failed, verified against an authoritative source.",
+            "11–12": "Explain the structure from primary sources and lead a class discussion of who would gain and lose if the river moved, with the evidence for each."
+          }
         },
         {
           "theme": "Opening the spillway",
           "description": "Bonnet Carré and Morganza — when a spillway opens, who decides, and what the fresh water does to the basins it enters.",
-          "transfer_check": "From records of one real spillway opening, chart the trigger, the decision-maker, and two documented downstream effects."
+          "transfer_check": "From records of one real spillway opening, chart the trigger, the decision-maker, and two documented downstream effects.",
+          "bands": {
+            "K–2": "Learn that when the river gets too high, grown-ups open a big gate to let some water out, and draw where it goes.",
+            "3–5": "Find one time the spillway was opened, and say who decided and where the water went.",
+            "6–8": "From records of one real spillway opening, chart the trigger and the decision-maker, and name one downstream effect.",
+            "9–10": "From records of one real spillway opening, chart the trigger, the decision-maker, and two documented downstream effects.",
+            "11–12": "Compare two openings from the records, explain why the decisions differed, and present the case for and against the second one."
+          }
         },
         {
           "theme": "Reading the gauge",
           "description": "River stages, flood stage and the forecast — reading the river's actual numbers the way river communities do.",
-          "transfer_check": "Read the current stage at the gauge nearest your parish, compare it to flood stage and the record, and state what today's number means."
+          "transfer_check": "Read the current stage at the gauge nearest your parish, compare it to flood stage and the record, and state what today's number means.",
+          "bands": {
+            "K–2": "Look at a river gauge picture or a real one with an adult and say whether the water is high or low today.",
+            "3–5": "Read the number at the gauge nearest your parish and put it on a chart against flood stage.",
+            "6–8": "Read the current stage at the gauge nearest your parish, compare it to flood stage, and say what today's number means.",
+            "9–10": "Read the current stage at the gauge nearest your parish, compare it to flood stage and the record, and state what today's number means.",
+            "11–12": "Read the gauge for two weeks, chart it against the forecast, and write the plain-language note a neighbour would need if the trend continued."
+          }
         },
         {
           "theme": "The sediment the coast is starving for",
           "description": "Mud as treasure — how the leveed river sends land-building sediment off the shelf, and the diversions meant to reclaim it.",
-          "transfer_check": "Explain the sediment argument for and against one real diversion project, citing each side's own documents."
+          "transfer_check": "Explain the sediment argument for and against one real diversion project, citing each side's own documents.",
+          "bands": {
+            "K–2": "Stir mud into water and watch it settle, then learn that the river's mud used to build land at the coast.",
+            "3–5": "Draw where the river's mud goes now and where a diversion would send it, and say why the coast wants it.",
+            "6–8": "Explain the sediment argument for one real diversion project from its own documents and one concern raised against it.",
+            "9–10": "Explain the sediment argument for and against one real diversion project, citing each side's own documents.",
+            "11–12": "Present both sides of a real diversion to an audience with a stake in it, and record which argument moved them and why."
+          }
         },
         {
           "theme": "The river as a working road",
           "description": "Tows, barges and pilots — what actually moves on the river, and why one barge tow replaces dozens of trucks.",
-          "transfer_check": "Observe or study one real stretch of river traffic and report what was moving, in what, and roughly what it would take by road."
+          "transfer_check": "Observe or study one real stretch of river traffic and report what was moving, in what, and roughly what it would take by road.",
+          "bands": {
+            "K–2": "Watch or look at pictures of a barge tow and count the barges, then learn how many trucks that would take.",
+            "3–5": "Observe or study one stretch of river traffic and say what was moving and in what.",
+            "6–8": "Observe or study one stretch of river traffic with a checker, report what was moving and in what, and estimate with help what it would take by road.",
+            "9–10": "Observe or study one real stretch of river traffic and report what was moving, in what, and roughly what it would take by road.",
+            "11–12": "Observe a stretch of traffic on two days, compute the road equivalent with published figures, and present the river as a highway to a class."
+          }
         },
         {
           "theme": "Drinking the river",
           "description": "The intakes, treatment and saltwater wedge — the communities that drink the Mississippi and what threatens the tap.",
-          "transfer_check": "Determine whether your own parish drinks river water, and for one that does, trace the intake-to-tap path and its named risks."
+          "transfer_check": "Determine whether your own parish drinks river water, and for one that does, trace the intake-to-tap path and its named risks.",
+          "bands": {
+            "K–2": "Find out with an adult where your tap water comes from — the river, a well, a lake.",
+            "3–5": "Find out whether your parish drinks river water and draw the path from the river to the tap.",
+            "6–8": "Determine whether your parish drinks river water and, for one that does, trace the intake-to-tap path and name one risk.",
+            "9–10": "Determine whether your own parish drinks river water, and for one that does, trace the intake-to-tap path and its named risks.",
+            "11–12": "Trace the path, document the named risks from the utility's own reports, and write the resident's note on what a saltwater wedge means for the tap."
+          }
         },
         {
           "theme": "The Atchafalaya: the other river",
           "description": "America's largest river swamp — the basin, its floodway job, and the crawfish economy inside it.",
-          "transfer_check": "Map the Atchafalaya Basin's floodway role and profile one real livelihood that depends on the basin staying wet."
+          "transfer_check": "Map the Atchafalaya Basin's floodway role and profile one real livelihood that depends on the basin staying wet.",
+          "bands": {
+            "K–2": "Look at pictures of the great swamp and learn that it is where the river would go if it could.",
+            "3–5": "Find the Atchafalaya Basin on a map, say what it does in a flood, and name one thing people catch there.",
+            "6–8": "Map the Atchafalaya Basin's floodway role and profile one livelihood that depends on the basin staying wet.",
+            "9–10": "Map the Atchafalaya Basin's floodway role and profile one real livelihood that depends on the basin staying wet.",
+            "11–12": "Map the floodway role, profile a livelihood from an interview or its own records, and present what a floodway operation would cost it."
+          }
         },
         {
           "theme": "Living in the shadow of the river",
           "description": "The capstone: river decisions as parish decisions — levees, diversions, traffic and water, argued with real neighbours.",
-          "transfer_check": "Run or present a structured deliberation on one real river decision affecting your region, and deliver the recommendation you would defend."
+          "transfer_check": "Run or present a structured deliberation on one real river decision affecting your region, and deliver the recommendation you would defend.",
+          "bands": {
+            "K–2": "Talk about one thing the river gives your town and one thing it could take, and say what people do about it.",
+            "3–5": "Hold a class debate on one real river decision near you and vote.",
+            "6–8": "Present a structured deliberation on one real river decision affecting your region — options, trade-offs, voices — and give your recommendation.",
+            "9–10": "Run or present a structured deliberation on one real river decision affecting your region, and deliver the recommendation you would defend.",
+            "11–12": "Run the deliberation with affected residents in the room, deliver the recommendation to a parish body or class, and record what changed your mind."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "The land that is water",
           "description": "Marsh, swamp, ridge and bayou — reading the coastal landscape's parts and what each does for the state behind it.",
-          "transfer_check": "Identify marsh, swamp and ridge on real imagery of the Louisiana coast and state one protective job each performs."
+          "transfer_check": "Identify marsh, swamp and ridge on real imagery of the Louisiana coast and state one protective job each performs.",
+          "bands": {
+            "K–2": "Look at pictures of marsh, swamp and bayou and say which is grass, which is trees, which is water.",
+            "3–5": "Identify marsh, swamp and ridge on real coast pictures and say one thing each does.",
+            "6–8": "Identify marsh, swamp and ridge on real imagery of one stretch of the Louisiana coast with a checker, and state one protective job two of them perform.",
+            "9–10": "Identify marsh, swamp and ridge on real imagery of the Louisiana coast and state one protective job each performs.",
+            "11–12": "Identify the parts on imagery of your own region, map them, and explain to a class what each does for the town behind it."
+          }
         },
         {
           "theme": "A football field an hour",
           "description": "Coastal land loss — the causes stacked together (subsidence, channels, levees, storms, sea rise) and the honest arithmetic of what is going.",
-          "transfer_check": "Compare historical and current imagery of one real coastal spot and quantify what has gone, attributing causes from published analysis."
+          "transfer_check": "Compare historical and current imagery of one real coastal spot and quantify what has gone, attributing causes from published analysis.",
+          "bands": {
+            "K–2": "Look at an old picture and a new picture of the same coast and point to the land that is gone.",
+            "3–5": "Compare old and new pictures of one coastal spot and say what has gone and one reason why.",
+            "6–8": "Compare historical and current imagery of one real coastal spot and quantify what has gone, naming one cause from published analysis.",
+            "9–10": "Compare historical and current imagery of one real coastal spot and quantify what has gone, attributing causes from published analysis.",
+            "11–12": "Quantify the loss at two spots, attribute the causes with sources, and present the honest arithmetic to a class without a slogan."
+          }
         },
         {
           "theme": "Why the marsh matters inland",
           "description": "Surge protection, nurseries and livelihoods — what a mile of marsh is worth to a town it fronts.",
-          "transfer_check": "For one real coastal community, explain what the fronting wetlands do for it in a storm, citing the protection estimates."
+          "transfer_check": "For one real coastal community, explain what the fronting wetlands do for it in a storm, citing the protection estimates.",
+          "bands": {
+            "K–2": "Build a wall of grass in a tray and see how it slows the water, then learn that marsh does that for towns.",
+            "3–5": "For one coastal town, say what the marsh in front of it does in a storm.",
+            "6–8": "For one real coastal community, explain what the fronting wetlands do for it in a storm, citing one protection estimate.",
+            "9–10": "For one real coastal community, explain what the fronting wetlands do for it in a storm, citing the protection estimates.",
+            "11–12": "Explain the protection for two communities with different marsh in front of them, and present what losing a mile of it would mean, with sources."
+          }
         },
         {
           "theme": "The Coastal Master Plan",
           "description": "The state's fifty-year plan — how projects are chosen, funded and ranked, and how to read it as a citizen.",
-          "transfer_check": "From the current Master Plan's own documents, summarise the project nearest your parish — type, cost, purpose, status."
+          "transfer_check": "From the current Master Plan's own documents, summarise the project nearest your parish — type, cost, purpose, status.",
+          "bands": {
+            "K–2": "Learn that the state has a big plan to save the coast, and find the project nearest you on the map.",
+            "3–5": "Find the coastal project nearest your parish in the plan and say what it does.",
+            "6–8": "From the current Master Plan's documents, summarise the project nearest your parish — type, cost, purpose.",
+            "9–10": "From the current Master Plan's own documents, summarise the project nearest your parish — type, cost, purpose, status.",
+            "11–12": "Summarise the nearest project and how it was ranked, and present the plan's choices for your region to a class as a citizen would read them."
+          }
         },
         {
           "theme": "Building land on purpose",
           "description": "Dredge, diversion and terrace — the restoration toolbox, what each technique builds, and what each costs.",
-          "transfer_check": "Match three real restoration projects to their techniques and report what each has measurably built so far."
+          "transfer_check": "Match three real restoration projects to their techniques and report what each has measurably built so far.",
+          "bands": {
+            "K–2": "Learn the three ways people build new land — pumping mud, opening a diversion, making terraces — and draw one.",
+            "3–5": "Match three restoration projects to their techniques on a picture card.",
+            "6–8": "Match three real restoration projects to their techniques and report what one has measurably built so far.",
+            "9–10": "Match three real restoration projects to their techniques and report what each has measurably built so far.",
+            "11–12": "Match the projects, report what each built with figures, and compare cost per acre across the three from their own records."
+          }
         },
         {
           "theme": "The fisheries on the line",
           "description": "Shrimp, oyster, crab and finfish — the working coast's harvest, and how restoration and salinity decisions land on the deck.",
-          "transfer_check": "Profile one real Louisiana fishery — season, method, landing figures — and one live decision currently affecting it, from both sides."
+          "transfer_check": "Profile one real Louisiana fishery — season, method, landing figures — and one live decision currently affecting it, from both sides.",
+          "bands": {
+            "K–2": "Learn what shrimp, oysters and crabs are and that people in Louisiana catch them for a living.",
+            "3–5": "Profile one Louisiana fishery — when it is in season and how it is caught.",
+            "6–8": "Profile one real Louisiana fishery — season, method, landing figures — and name one live decision affecting it.",
+            "9–10": "Profile one real Louisiana fishery — season, method, landing figures — and one live decision currently affecting it, from both sides.",
+            "11–12": "Profile the fishery, interview or study one person on each side of the decision, and write the balanced brief a council member could use."
+          }
         },
         {
           "theme": "The oyster and the salinity line",
           "description": "The oyster as an animal with an address — why fresh and salt must balance, and what moves the line.",
-          "transfer_check": "Explain what a named freshwater event did to a real oyster area, using landings or lease records as evidence."
+          "transfer_check": "Explain what a named freshwater event did to a real oyster area, using landings or lease records as evidence.",
+          "bands": {
+            "K–2": "Learn that oysters need water that is a little salty, not too fresh, and that the river can change that.",
+            "3–5": "Explain what happens to an oyster bed when a lot of fresh water comes, using one real example.",
+            "6–8": "Explain what a named freshwater event did to a real oyster area, using one landings or lease record as evidence.",
+            "9–10": "Explain what a named freshwater event did to a real oyster area, using landings or lease records as evidence.",
+            "11–12": "Explain the event with records, and present the trade-off between the freshwater decision and the oyster harvest to an audience with a stake in it."
+          }
         },
         {
           "theme": "Communities deciding to stay or go",
           "description": "The hardest coastal question — elevation, buyouts and relocation, told through the communities already deciding.",
-          "transfer_check": "Study one documented Louisiana community's stay-or-move decision and present the options it faced and the choice it made, fairly."
+          "transfer_check": "Study one documented Louisiana community's stay-or-move decision and present the options it faced and the choice it made, fairly.",
+          "bands": {
+            "K–2": "Hear the story of a coastal town that had to decide whether to move, and say what you would find hardest.",
+            "3–5": "Study one Louisiana community that decided to stay or move, and say what choices it had.",
+            "6–8": "Study one documented Louisiana community's stay-or-move decision and present the options it faced, with a checker for fairness.",
+            "9–10": "Study one documented Louisiana community's stay-or-move decision and present the options it faced and the choice it made, fairly.",
+            "11–12": "Study two communities that chose differently, present both fairly, and lead a discussion of what your own community would need to decide."
+          }
         },
         {
           "theme": "Working in restoration",
           "description": "The restoration economy — the trades, sciences and boats the Master Plan employs, and the local routes into them.",
-          "transfer_check": "Map three real jobs on one restoration project — what each does, what it requires — from the project's own records or employers."
+          "transfer_check": "Map three real jobs on one restoration project — what each does, what it requires — from the project's own records or employers.",
+          "bands": {
+            "K–2": "Learn that saving the coast is a job — boats, science, building — and name one.",
+            "3–5": "Map three jobs on a restoration project and what each person does.",
+            "6–8": "Map three real jobs on one restoration project — what each does, what it requires — from the project's own records.",
+            "9–10": "Map three real jobs on one restoration project — what each does, what it requires — from the project's own records or employers.",
+            "11–12": "Map the jobs, contact one employer or program, and write the route from your parish's high school into one of them."
+          }
         },
         {
           "theme": "The coast in fifty years",
           "description": "The capstone: reading the projections honestly and arguing what your parish should ask of the plan.",
-          "transfer_check": "Using the Master Plan's own future maps, describe your region's projected coast and draft your parish's one-page ask of the plan."
+          "transfer_check": "Using the Master Plan's own future maps, describe your region's projected coast and draft your parish's one-page ask of the plan.",
+          "bands": {
+            "K–2": "Look at the map of what the coast may look like when you are grown up, and say what you notice.",
+            "3–5": "Using the plan's future map, describe what your region's coast may look like in fifty years.",
+            "6–8": "Using the Master Plan's future maps, describe your region's projected coast and draft one ask of the plan.",
+            "9–10": "Using the Master Plan's own future maps, describe your region's projected coast and draft your parish's one-page ask of the plan.",
+            "11–12": "Draft the ask, present it to a parish body or class, and revise it from the questions you were asked."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "Why the plants are here",
           "description": "River, feedstock and deep water — the geography that lined the Mississippi with refineries and chemical plants.",
-          "transfer_check": "For one real corridor facility, explain in a paragraph why it sits where it sits — river, pipeline, port — with evidence."
+          "transfer_check": "For one real corridor facility, explain in a paragraph why it sits where it sits — river, pipeline, port — with evidence.",
+          "bands": {
+            "K–2": "Look at a map of the big plants along the river and say why they are next to the water.",
+            "3–5": "For one plant on the river, say two reasons it is where it is — the river, the pipeline, the port.",
+            "6–8": "For one real corridor facility, explain in a paragraph why it sits where it sits — river, pipeline, port — with one piece of evidence.",
+            "9–10": "For one real corridor facility, explain in a paragraph why it sits where it sits — river, pipeline, port — with evidence.",
+            "11–12": "Explain the siting of two facilities with evidence, and present the corridor's geography to a class as an argument, not a list."
+          }
         },
         {
           "theme": "What a refinery actually does",
           "description": "Crude in, products out — distillation and units explained at working depth, without the mystery.",
-          "transfer_check": "Diagram a refinery's main flow from crude to three named products and explain one unit's job to somebody else."
+          "transfer_check": "Diagram a refinery's main flow from crude to three named products and explain one unit's job to somebody else.",
+          "bands": {
+            "K–2": "Learn that a refinery takes thick oil and makes it into fuel and other things, and name two of them.",
+            "3–5": "Draw the refinery as a box — crude in, three products out — and name the products.",
+            "6–8": "Diagram a refinery's main flow from crude to three named products and explain one unit's job.",
+            "9–10": "Diagram a refinery's main flow from crude to three named products and explain one unit's job to somebody else.",
+            "11–12": "Diagram the flow, explain two units, and teach the whole diagram to a younger learner until they can name the products."
+          }
         },
         {
           "theme": "LNG: the cold ships",
           "description": "Liquefaction, the terminals and the cryogenic chain — why Louisiana became an export coast and what a loading arm does.",
-          "transfer_check": "Explain the LNG chain from pipeline gas to loaded ship, and locate the terminals on a real map with their parishes named."
+          "transfer_check": "Explain the LNG chain from pipeline gas to loaded ship, and locate the terminals on a real map with their parishes named.",
+          "bands": {
+            "K–2": "Learn that gas can be made so cold it turns to liquid, and find the big ships that carry it on a map.",
+            "3–5": "Find Louisiana's LNG terminals on a map and say what parish each is in.",
+            "6–8": "Explain the LNG chain from pipeline gas to loaded ship, and locate two terminals on a real map with their parishes named.",
+            "9–10": "Explain the LNG chain from pipeline gas to loaded ship, and locate the terminals on a real map with their parishes named.",
+            "11–12": "Explain the chain, locate the terminals, and present one terminal's economic and community record from primary documents."
+          }
         },
         {
           "theme": "The pipeline under the parish",
           "description": "The buried network — how pipelines are marked, mapped and struck, and the call made before any digging.",
-          "transfer_check": "Use the official locator process for a real or staged dig on a real parcel, and read the pipeline markers nearest your parish."
+          "transfer_check": "Use the official locator process for a real or staged dig on a real parcel, and read the pipeline markers nearest your parish.",
+          "bands": {
+            "K–2": "Learn that pipes run under the ground and that grown-ups call a number before they dig.",
+            "3–5": "Find pipeline markers near your school or home with an adult and learn what the call-before-you-dig number is.",
+            "6–8": "Use the official locator process for a staged dig on a real parcel, and read the pipeline markers nearest your parish.",
+            "9–10": "Use the official locator process for a real or staged dig on a real parcel, and read the pipeline markers nearest your parish.",
+            "11–12": "Run the locator process for a real dig, document the response, and write the card a homeowner could follow before planting a tree."
+          }
         },
         {
           "theme": "Turnaround: the corridor's harvest season",
           "description": "The maintenance surges that employ thousands — what a turnaround is, the crafts it calls, and how workers plug in.",
-          "transfer_check": "Profile one real turnaround's scale and crafts from public sources, and map how a qualified local worker actually gets hired onto one."
+          "transfer_check": "Profile one real turnaround's scale and crafts from public sources, and map how a qualified local worker actually gets hired onto one.",
+          "bands": {
+            "K–2": "Learn that big plants stop sometimes for many people to fix them, like a giant repair day.",
+            "3–5": "Find out what a turnaround is and name three kinds of workers it needs.",
+            "6–8": "Profile one real turnaround's scale and crafts from public sources, and map one way a qualified local worker gets hired onto one.",
+            "9–10": "Profile one real turnaround's scale and crafts from public sources, and map how a qualified local worker actually gets hired onto one.",
+            "11–12": "Profile the turnaround, interview or study one worker's route in, and write the guide from a parish trade hall to a turnaround job."
+          }
         },
         {
           "theme": "The fence line",
           "description": "Living next to industry — monitoring, alerts, shelter-in-place, and the community's lawful levers on permits.",
-          "transfer_check": "For one real fence-line community, find its monitoring data and alert system, and demonstrate the shelter-in-place response."
+          "transfer_check": "For one real fence-line community, find its monitoring data and alert system, and demonstrate the shelter-in-place response.",
+          "bands": {
+            "K–2": "Learn that people who live next to a plant have a way to know if something is wrong, and practise going inside and shutting the windows.",
+            "3–5": "For one community next to a plant, find where its alerts come from and practise shelter-in-place at home.",
+            "6–8": "For one real fence-line community, find its monitoring data and alert system, and demonstrate shelter-in-place.",
+            "9–10": "For one real fence-line community, find its monitoring data and alert system, and demonstrate the shelter-in-place response.",
+            "11–12": "Find the data and alerts, demonstrate the response, and present the community's lawful levers on a permit from the agency's own process."
+          }
         },
         {
           "theme": "The safety culture that keeps hands",
           "description": "Process safety, permits-to-work and the refusal that is a duty — the corridor's safety systems as working practice.",
-          "transfer_check": "Walk a staged permit-to-work for a simple task — hazards named, isolations listed, sign-offs in order — and name the stop-work right."
+          "transfer_check": "Walk a staged permit-to-work for a simple task — hazards named, isolations listed, sign-offs in order — and name the stop-work right.",
+          "bands": {
+            "K–2": "Learn that at big plants everyone can say stop when something is unsafe, and practise saying it.",
+            "3–5": "Walk a simple task through the safety questions — what could hurt, what is turned off, who signs.",
+            "6–8": "Walk a staged permit-to-work for a simple task with a checker — hazards named, isolations listed, sign-offs in order — and name the stop-work right.",
+            "9–10": "Walk a staged permit-to-work for a simple task — hazards named, isolations listed, sign-offs in order — and name the stop-work right.",
+            "11–12": "Write and run the permit-to-work for a real hall task, teach the stop-work right to a group, and record one stop that was called."
+          }
         },
         {
           "theme": "The grid the plants and parishes share",
           "description": "Generation, the big substations and hurricane hardening — Louisiana's electricity from plant to parish line.",
-          "transfer_check": "Trace your parish's power from its likely generation source through one named substation, and report the utility's storm-hardening work there."
+          "transfer_check": "Trace your parish's power from its likely generation source through one named substation, and report the utility's storm-hardening work there.",
+          "bands": {
+            "K–2": "Learn that electricity comes from a big plant to your house through wires, and find a substation on the way.",
+            "3–5": "Trace your parish's electricity from a likely plant to a substation to your street on a map.",
+            "6–8": "Trace your parish's power from its likely generation source through one named substation, and note one storm-hardening measure.",
+            "9–10": "Trace your parish's power from its likely generation source through one named substation, and report the utility's storm-hardening work there.",
+            "11–12": "Trace the power, report the hardening from the utility's filings, and present what a named storm did to your parish's grid and what changed after."
+          }
         },
         {
           "theme": "The transition on the corridor",
           "description": "Hydrogen, carbon capture and offshore wind — the projects actually proposed here, read without slogans.",
-          "transfer_check": "Take one real announced transition project in Louisiana and examine its claims, funding and status from primary documents."
+          "transfer_check": "Take one real announced transition project in Louisiana and examine its claims, funding and status from primary documents.",
+          "bands": {
+            "K–2": "Learn that people are building new kinds of energy on the river — wind, hydrogen — and name one.",
+            "3–5": "Find one new energy project announced in Louisiana and say what it claims it will do.",
+            "6–8": "Take one real announced transition project in Louisiana and examine its claims and status from primary documents.",
+            "9–10": "Take one real announced transition project in Louisiana and examine its claims, funding and status from primary documents.",
+            "11–12": "Examine two projects from primary documents, compare claims with status, and present a balanced brief without slogans."
+          }
         },
         {
           "theme": "A corridor career",
           "description": "The capstone: process tech, crafts and the two-year path — mapping a real corridor career from a parish high school.",
-          "transfer_check": "Map one complete real route from your parish's high school to a named corridor job — program, cost, credential, starting pay — from the providers' own information."
+          "transfer_check": "Map one complete real route from your parish's high school to a named corridor job — program, cost, credential, starting pay — from the providers' own information.",
+          "bands": {
+            "K–2": "Name one job at a plant on the river and one thing a person learns to do it.",
+            "3–5": "Map one route from your school to a plant job — the class, the program, the first job.",
+            "6–8": "Map one real route from your parish's high school to a named corridor job — program, cost, credential — from the providers' own information.",
+            "9–10": "Map one complete real route from your parish's high school to a named corridor job — program, cost, credential, starting pay — from the providers' own information.",
+            "11–12": "Map two routes, contact one provider, and write the guide a counsellor could hand to a student in your parish."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "The port complex nobody sees whole",
           "description": "From Baton Rouge to the Gulf — the string of ports that together move more tonnage than almost anywhere, and what each handles.",
-          "transfer_check": "Name the major Louisiana ports on a real map with each one's main cargo, citing the ports' own figures."
+          "transfer_check": "Name the major Louisiana ports on a real map with each one's main cargo, citing the ports' own figures.",
+          "bands": {
+            "K–2": "Look at pictures of the big ships on the river and learn that Louisiana's ports move more than almost anywhere.",
+            "3–5": "Find the major Louisiana ports on a map and say what one of them mostly handles.",
+            "6–8": "Name the major Louisiana ports on a real map with each one's main cargo, citing the ports' own figures for two of them.",
+            "9–10": "Name the major Louisiana ports on a real map with each one's main cargo, citing the ports' own figures.",
+            "11–12": "Name the ports with figures and present the string of them to a class as one system, with what would happen if one closed."
+          }
         },
         {
           "theme": "Grain: the harvest passing through",
           "description": "The elevators — how the Midwest's grain arrives by barge and leaves by ship, and why this stretch of river feeds the world.",
-          "transfer_check": "Explain the barge-to-elevator-to-ship chain for grain with real tonnage figures from one named elevator or port."
+          "transfer_check": "Explain the barge-to-elevator-to-ship chain for grain with real tonnage figures from one named elevator or port.",
+          "bands": {
+            "K–2": "Learn that corn and soybeans from far away come down the river and leave on big ships.",
+            "3–5": "Draw the grain's path — barge, elevator, ship — and say where it goes.",
+            "6–8": "Explain the barge-to-elevator-to-ship chain for grain with one real tonnage figure from a named elevator or port.",
+            "9–10": "Explain the barge-to-elevator-to-ship chain for grain with real tonnage figures from one named elevator or port.",
+            "11–12": "Explain the chain with figures, and present what a low-river year does to it from the records of one such year."
+          }
         },
         {
           "theme": "The container and the box economy",
           "description": "What a container changes, how a terminal works, and where Louisiana's boxes come from and go.",
-          "transfer_check": "Follow one real imported product from ship to shelf through a Louisiana gateway, naming each handling step."
+          "transfer_check": "Follow one real imported product from ship to shelf through a Louisiana gateway, naming each handling step.",
+          "bands": {
+            "K–2": "Learn that many things in the shop came in a big metal box on a ship.",
+            "3–5": "Follow one thing you own from a ship to the shop, step by step, in pictures.",
+            "6–8": "Follow one real imported product from ship to shelf through a Louisiana gateway, naming the main handling steps with a checker.",
+            "9–10": "Follow one real imported product from ship to shelf through a Louisiana gateway, naming each handling step.",
+            "11–12": "Follow an import and an export through the gateway, name each step and its paperwork, and present where a delay would cost the most."
+          }
         },
         {
           "theme": "The pilot takes the ship",
           "description": "Bar pilots and river pilots — why deep-draft ships change hands at the mouth, and what the pilot actually does on the bridge.",
-          "transfer_check": "Describe the pilotage handoffs a ship makes from the Gulf to Baton Rouge and what each pilot group's charge covers."
+          "transfer_check": "Describe the pilotage handoffs a ship makes from the Gulf to Baton Rouge and what each pilot group's charge covers.",
+          "bands": {
+            "K–2": "Learn that a special captain climbs aboard to guide big ships up the river.",
+            "3–5": "Say why a ship changes pilots at the mouth of the river and what a pilot does.",
+            "6–8": "Describe the pilotage handoffs a ship makes from the Gulf to Baton Rouge and what one pilot group's charge covers.",
+            "9–10": "Describe the pilotage handoffs a ship makes from the Gulf to Baton Rouge and what each pilot group's charge covers.",
+            "11–12": "Describe the handoffs, and present the pilotage system's history and a live question about it from primary sources."
+          }
         },
         {
           "theme": "The channel and the dredge",
           "description": "Draft, shoaling and the dredges that keep the river open — depth as a thing that must be bought continuously.",
-          "transfer_check": "Report the current controlling depth of the river channel and what one real dredging campaign cost and achieved."
+          "transfer_check": "Report the current controlling depth of the river channel and what one real dredging campaign cost and achieved.",
+          "bands": {
+            "K–2": "Learn that the river fills with mud and that big machines dig it out so ships can pass.",
+            "3–5": "Find out how deep the river channel is kept and what a dredge does.",
+            "6–8": "Report the current controlling depth of the river channel and what one real dredging campaign achieved.",
+            "9–10": "Report the current controlling depth of the river channel and what one real dredging campaign cost and achieved.",
+            "11–12": "Report the depth and the campaign, and present the case for a deeper channel with its costs and benefits from the project's own documents."
+          }
         },
         {
           "theme": "Port jobs and the union hall",
           "description": "Longshore work, warehousing, trucking and the halls and schools that fill them — the waterfront as employer.",
-          "transfer_check": "Map three real port-adjacent jobs — entry route, credential, starting pay — from the actual employers, halls or programs."
+          "transfer_check": "Map three real port-adjacent jobs — entry route, credential, starting pay — from the actual employers, halls or programs.",
+          "bands": {
+            "K–2": "Learn that many people work at the port — loading, driving, keeping — and name one job.",
+            "3–5": "Map three port jobs and what a person needs to get each.",
+            "6–8": "Map three real port-adjacent jobs — entry route, credential, starting pay — from actual employers or programs.",
+            "9–10": "Map three real port-adjacent jobs — entry route, credential, starting pay — from the actual employers, halls or programs.",
+            "11–12": "Map the jobs, contact one hall or program, and write the route from your parish's trade hall into one of them."
+          }
         },
         {
           "theme": "The intermodal moment",
           "description": "Barge to rail to truck — where cargo changes modes, and why the yard is where logistics is won or lost.",
-          "transfer_check": "For one real Louisiana intermodal facility, diagram a load's path across modes and identify the step most likely to delay it."
+          "transfer_check": "For one real Louisiana intermodal facility, diagram a load's path across modes and identify the step most likely to delay it.",
+          "bands": {
+            "K–2": "Learn that a load can move by boat, then train, then truck, and draw the three.",
+            "3–5": "For one place where cargo changes from boat to train or truck, draw the path of one load.",
+            "6–8": "For one real Louisiana intermodal facility, diagram a load's path across modes with a checker and name one step likely to delay it.",
+            "9–10": "For one real Louisiana intermodal facility, diagram a load's path across modes and identify the step most likely to delay it.",
+            "11–12": "Diagram the path, propose one change that would cut the delay, and present it with the facility's own throughput figures."
+          }
         },
         {
           "theme": "The port in the storm",
           "description": "Closing the river — hurricane port condition stages, the fleet's refuge, and restarting commerce after landfall.",
-          "transfer_check": "From records of one real storm, chart the port's condition stages, closure and reopening timeline, and what backed up meanwhile."
+          "transfer_check": "From records of one real storm, chart the port's condition stages, closure and reopening timeline, and what backed up meanwhile.",
+          "bands": {
+            "K–2": "Learn that when a hurricane comes, the port closes and the ships go somewhere safe.",
+            "3–5": "From one storm, put in order what the port did — warning, closing, opening.",
+            "6–8": "From records of one real storm, chart the port's condition stages and its closure and reopening timeline.",
+            "9–10": "From records of one real storm, chart the port's condition stages, closure and reopening timeline, and what backed up meanwhile.",
+            "11–12": "Chart two storms, compare the timelines, and present what backed up and what the port changed between them."
+          }
         },
         {
           "theme": "Customs, cargo and the paper river",
           "description": "Manifests, inspections and free-trade zones — the documents that move with every ton.",
-          "transfer_check": "Trace the paperwork one real import or export requires through a Louisiana port, naming each document and who files it."
+          "transfer_check": "Trace the paperwork one real import or export requires through a Louisiana port, naming each document and who files it.",
+          "bands": {
+            "K–2": "Learn that every box on a ship has a paper that says what is inside and who it is for.",
+            "3–5": "List the papers one import needs and who fills each in.",
+            "6–8": "Trace the paperwork one real import requires through a Louisiana port, naming each document and who files it.",
+            "9–10": "Trace the paperwork one real import or export requires through a Louisiana port, naming each document and who files it.",
+            "11–12": "Trace the paperwork for an import and an export, and explain what a free-trade zone changes, from the port's own guidance."
+          }
         },
         {
           "theme": "The port and the parish",
           "description": "The capstone: port authorities as public bodies — their boards, their taxes, and the parish's seat at the table.",
-          "transfer_check": "Profile your nearest port authority — board, budget, current expansion — and draft the public comment your parish's interest calls for."
+          "transfer_check": "Profile your nearest port authority — board, budget, current expansion — and draft the public comment your parish's interest calls for.",
+          "bands": {
+            "K–2": "Learn that the port is run by a board of people, like the school board, and find out its name.",
+            "3–5": "Find your nearest port authority's board and one thing it decided this year.",
+            "6–8": "Profile your nearest port authority — board, budget, current expansion — and draft one question your parish should ask it.",
+            "9–10": "Profile your nearest port authority — board, budget, current expansion — and draft the public comment your parish's interest calls for.",
+            "11–12": "Profile the authority, deliver the public comment for real or to a role-played board, and record the response."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "The crops the water chose",
           "description": "Why rice, sugarcane, soybeans and cotton grow where they do in Louisiana — soil, water and the map they make.",
-          "transfer_check": "Map Louisiana's main crop belts against soil and water on real maps, and name the crops actually grown in your own parish."
+          "transfer_check": "Map Louisiana's main crop belts against soil and water on real maps, and name the crops actually grown in your own parish.",
+          "bands": {
+            "K–2": "Learn what grows in your parish — rice, cane, beans, cotton — and taste or touch one.",
+            "3–5": "Colour Louisiana's crop belts on a map and name the crops grown in your own parish.",
+            "6–8": "Map Louisiana's main crop belts against soil and water on real maps with a checker, and name the crops actually grown in your own parish.",
+            "9–10": "Map Louisiana's main crop belts against soil and water on real maps, and name the crops actually grown in your own parish.",
+            "11–12": "Map the belts, explain the soil and water behind two of them, and present why your parish grows what it grows to a class."
+          }
         },
         {
           "theme": "Rice: the flooded field",
           "description": "The rice year — water in, water out, harvest — and the pumps, levees and mills that make a crop of a flood.",
-          "transfer_check": "Chart a real rice season's calendar from planting to mill, from a grower, extension source or farm record."
+          "transfer_check": "Chart a real rice season's calendar from planting to mill, from a grower, extension source or farm record.",
+          "bands": {
+            "K–2": "Learn that rice grows in a flooded field and draw the water going in and out.",
+            "3–5": "Chart a rice year — plant, flood, drain, harvest — in pictures with a grower's help or a book.",
+            "6–8": "Chart a real rice season's calendar from planting to mill, from an extension source or farm record.",
+            "9–10": "Chart a real rice season's calendar from planting to mill, from a grower, extension source or farm record.",
+            "11–12": "Chart the season, cost one stage from published figures, and present what a late flood or an early storm does to the year."
+          }
         },
         {
           "theme": "The crawfish rotation",
           "description": "The same field twice — rice then crawfish — and the traps, boats and boils of a uniquely Louisiana aquaculture.",
-          "transfer_check": "Explain the rice-crawfish rotation's annual cycle and profile one real operation's season with its actual numbers."
+          "transfer_check": "Explain the rice-crawfish rotation's annual cycle and profile one real operation's season with its actual numbers.",
+          "bands": {
+            "K–2": "Learn that the same field grows rice and then crawfish, and draw both.",
+            "3–5": "Explain the rice-then-crawfish year in pictures with the traps and the boat.",
+            "6–8": "Explain the rice-crawfish rotation's annual cycle and profile one real operation's season with one of its numbers.",
+            "9–10": "Explain the rice-crawfish rotation's annual cycle and profile one real operation's season with its actual numbers.",
+            "11–12": "Profile the operation with its numbers, interview or study the producer, and present the rotation's economics to a class."
+          }
         },
         {
           "theme": "Sugarcane: the year the grinding comes",
           "description": "Cane's long season — planting, the autumn harvest rush, and the mills that must grind around the clock.",
-          "transfer_check": "Chart the cane year through grinding season for one real mill area, and explain why the harvest cannot wait."
+          "transfer_check": "Chart the cane year through grinding season for one real mill area, and explain why the harvest cannot wait.",
+          "bands": {
+            "K–2": "Learn that cane is cut in autumn and the mill runs day and night, and taste cane if you can.",
+            "3–5": "Chart the cane year with the grinding season marked, and say why the harvest cannot wait.",
+            "6–8": "Chart the cane year through grinding season for one real mill area and explain why the harvest cannot wait.",
+            "9–10": "Chart the cane year through grinding season for one real mill area, and explain why the harvest cannot wait.",
+            "11–12": "Chart the year, cost one stage from published figures, and present what a freeze or a mill breakdown does to a grower."
+          }
         },
         {
           "theme": "The machinery of the modern farm",
           "description": "Combines, laser levels, pumps and monitors — the equipment fleet, its costs, and the skills that keep it running.",
-          "transfer_check": "Inventory the equipment one real rice or cane operation runs, with rough costs, and demonstrate or describe one machine's field check."
+          "transfer_check": "Inventory the equipment one real rice or cane operation runs, with rough costs, and demonstrate or describe one machine's field check.",
+          "bands": {
+            "K–2": "Look at a combine or a pump with an adult and say what it does.",
+            "3–5": "List the machines one farm uses and what each one is for.",
+            "6–8": "Inventory the equipment one real rice or cane operation runs, with rough costs, and describe one machine's field check.",
+            "9–10": "Inventory the equipment one real rice or cane operation runs, with rough costs, and demonstrate or describe one machine's field check.",
+            "11–12": "Inventory the fleet with costs, perform one field check with the operator, and present what a breakdown in harvest costs."
+          }
         },
         {
           "theme": "Water rights and the pump",
           "description": "Irrigation, the aquifer and drainage districts — the water arrangements under every field.",
-          "transfer_check": "For one real farming area, identify where its irrigation water comes from and the body that governs the drainage, from records."
+          "transfer_check": "For one real farming area, identify where its irrigation water comes from and the body that governs the drainage, from records.",
+          "bands": {
+            "K–2": "Learn that farms need water from wells, canals or rivers, and find one pump with an adult.",
+            "3–5": "For one farming area, find where its water comes from.",
+            "6–8": "For one real farming area, identify where its irrigation water comes from and the body that governs the drainage.",
+            "9–10": "For one real farming area, identify where its irrigation water comes from and the body that governs the drainage, from records.",
+            "11–12": "Identify the water and the body from records, attend or review one drainage board meeting, and report what it decided."
+          }
         },
         {
           "theme": "The farm economy's arithmetic",
           "description": "Input costs, futures prices and the margin — why a good crop can still lose money, read from real numbers.",
-          "transfer_check": "Build a one-page budget for an acre of one real Louisiana crop from published costs and prices, and state its break-even."
+          "transfer_check": "Build a one-page budget for an acre of one real Louisiana crop from published costs and prices, and state its break-even.",
+          "bands": {
+            "K–2": "Learn that a farmer spends money on seed and fuel before selling anything, and count it with beans.",
+            "3–5": "Add up what one acre of a crop costs and what it sells for, with help, and see if there is anything left.",
+            "6–8": "Build a one-page budget for an acre of one real Louisiana crop from published costs and prices with a checker, and state its break-even.",
+            "9–10": "Build a one-page budget for an acre of one real Louisiana crop from published costs and prices, and state its break-even.",
+            "11–12": "Build budgets for two crops, compare their break-evens, and present why a good crop can still lose money with the year's real prices."
+          }
         },
         {
           "theme": "Extension and the science on the tailgate",
           "description": "The land-grant system — research stations, extension agents and the trial plots that change practice.",
-          "transfer_check": "Contact or study your parish's actual extension service and report two current recommendations it is making to local producers."
+          "transfer_check": "Contact or study your parish's actual extension service and report two current recommendations it is making to local producers.",
+          "bands": {
+            "K–2": "Learn that there are people whose job is to help farmers with new ideas, and find their office.",
+            "3–5": "Find your parish's extension office and one thing it is telling farmers this year.",
+            "6–8": "Study your parish's extension service and report one current recommendation it is making to local producers.",
+            "9–10": "Contact or study your parish's actual extension service and report two current recommendations it is making to local producers.",
+            "11–12": "Contact the extension service, report the recommendations, and present one trial's results to a class in the producer's terms."
+          }
         },
         {
           "theme": "Weather, insurance and the year that fails",
           "description": "Freeze, flood and hurricane on a farm — crop insurance, disaster programs and surviving the failed year.",
-          "transfer_check": "From one documented bad year, chart what a real crop lost and which programs actually paid, from the records."
+          "transfer_check": "From one documented bad year, chart what a real crop lost and which programs actually paid, from the records.",
+          "bands": {
+            "K–2": "Learn that a freeze or a flood can ruin a crop and that farmers plan for the bad year.",
+            "3–5": "From one bad year, say what a crop lost and one program that helped.",
+            "6–8": "From one documented bad year, chart what a real crop lost and one program that paid, from the records.",
+            "9–10": "From one documented bad year, chart what a real crop lost and which programs actually paid, from the records.",
+            "11–12": "Chart two bad years, compare what paid, and present the gaps a grower faced with the records that show them."
+          }
         },
         {
           "theme": "The next generation on the land",
           "description": "The capstone: getting into farming — land access, lending, young-farmer programs — mapped honestly.",
-          "transfer_check": "Map one realistic route for a young person in your parish into producing — land, capital, program support — from real sources, with its hardest obstacle named."
+          "transfer_check": "Map one realistic route for a young person in your parish into producing — land, capital, program support — from real sources, with its hardest obstacle named.",
+          "bands": {
+            "K–2": "Ask a farmer or a grown-up who grows things how they started.",
+            "3–5": "Map one way a young person could start farming in your parish — the land, the money, the help.",
+            "6–8": "Map one realistic route for a young person in your parish into producing — land, capital, program support — from real sources.",
+            "9–10": "Map one realistic route for a young person in your parish into producing — land, capital, program support — from real sources, with its hardest obstacle named.",
+            "11–12": "Map the route, interview or study one young producer, and present the obstacle and the support that got them past it."
+          }
         }
       ]
     }

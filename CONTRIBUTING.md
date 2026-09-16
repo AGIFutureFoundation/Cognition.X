@@ -34,11 +34,14 @@ what the learner **does** at that band. The band is already in the
 a K–2 sentence is the child's honest version of the task with an adult,
 an 11–12 sentence is the real deliverable for a real office. All five
 must be present, non-empty and distinct; the generator refuses anything
-less, and the suffix count in the tests only ever falls. Four core-spine
-packs carry them (Emergency Preparedness & First Response and Parish
+less, and the suffix count in the tests only ever falls. The whole core
+spine carries them (Emergency Preparedness & First Response and Parish
 Launch & Scale since v0.65.0; Civic Leadership Legacy : Louisiana and, as
-a promotion, Basic Life Skills & Self-Reliance since v0.66.0) — copy
-their shape.
+a promotion, Basic Life Skills & Self-Reliance since v0.66.0; the
+Louisiana OS since v0.67.0) — copy their shape. The band ladder they
+follow: 6–8 does the task on a smaller scope or with a checker; 9–10
+does the whole thing for real; 11–12 does it for others, for a real
+body, or on the record.
 
 ### Writing style (match the corpus)
 

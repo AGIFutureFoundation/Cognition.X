@@ -4,6 +4,26 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.67.0] — 2026-09-16
+
+### Changed — the description debt, tranche three: the core spine is done (roadmap prompt 6)
+- **The Louisiana OS authored across all five bands.** Both spec parts
+  — river, coast, energy corridor, ports and agriculture; the table,
+  music, the languages of home, krewes and festivals, the storm and the
+  long memory — 100 themes, 500 rows that differ in the doing; every
+  `block_id` unchanged. Traditions stay with the families and
+  communities who carry them: every band sends the learner to those
+  keepers, with consent and respect, never around them.
+- **The core spine is band-differentiated end to end.** All five packs
+  the rubrics name (Louisiana OS, Civic Leadership Legacy Louisiana,
+  Basic Life Skills, Emergency Preparedness, Parish Launch & Scale) now
+  carry `bands`; a test holds that every core-spine pack is authored.
+  Band-suffix rows fall from 10,250 to 9,750 (55.9%); the ratchet moves
+  down. The remaining suffixed rows sit outside the core spine and are
+  next by pack importance.
+- `CONTRIBUTING.md` states the band ladder; prompt 6, ROADMAP,
+  DATA_REVIEW §3, wiki; `docs/DATA_QUALITY.md` regenerated.
+
 ## [0.66.0] — 2026-09-16
 
 ### Changed — the description debt, tranche two (roadmap prompt 6)

@@ -677,9 +677,11 @@ def test_education_os_canonical_injection():
     check("institute: every principle carries its strands", all(isinstance(x.get("strands"), list) and x["strands"] for x in inst["principles"]))
 
 
-KNOWN_BAND_SUFFIX_ROWS = 10250      # 11,250 before tranche one (v0.65.0), 10,750 after it, 10,250 after tranche two (v0.66.0); the ratchet only falls
+KNOWN_BAND_SUFFIX_ROWS = 9750       # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); the ratchet only falls
 BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch & Scale",
-                       "Civic Leadership Legacy : Louisiana", "Basic Life Skills & Self-Reliance"}
+                       "Civic Leadership Legacy : Louisiana", "Basic Life Skills & Self-Reliance",
+                       "Cognition.X : Louisiana OS"}
+BAND_AUTHORED_THEMES = {"Cognition.X : Louisiana OS": 100}   # two spec parts, one pack
 
 
 def test_band_differentiated_descriptions():
@@ -700,7 +702,7 @@ def test_band_differentiated_descriptions():
         for r in pr:
             by_theme.setdefault(r["theme"], []).append(r["description"])
         check(f"band descriptions: {pack} — no row carries the suffix", not [r for r in pr if suffix.search(r["description"])])
-        check(f"band descriptions: {pack} — five distinct sentences per theme, 50 themes", len(by_theme) == 50 and all(len(v) == 5 and len(set(v)) == 5 for v in by_theme.values()))
+        check(f"band descriptions: {pack} — five distinct sentences per theme, {BAND_AUTHORED_THEMES.get(pack, 50)} themes", len(by_theme) == BAND_AUTHORED_THEMES.get(pack, 50) and all(len(v) == 5 and len(set(v)) == 5 for v in by_theme.values()))
         check(f"band descriptions: {pack} — every description is a full sentence that says what the learner does", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in pr))
     good = {"theme": "t", "description": "d", "bands": {b: f"Do the {i} thing." for i, b in enumerate(BAND_LABELS)}}
     check("generator: an authored band sentence is used verbatim", band_description(good, "6–8") == "Do the 2 thing.")
@@ -711,12 +713,16 @@ def test_band_differentiated_descriptions():
         except ValueError:
             ok = True
         check("generator: refuses duplicate, missing or suffixed band sentences", ok)
-    specs = {json.loads(p.read_text(encoding="utf-8"))["pack"]: p for d in ("pack_specs", "promotions") for p in (ROOT / "data" / d).glob("*.json")}
+    specs = {}
+    for d in ("pack_specs", "promotions"):
+        for p in (ROOT / "data" / d).glob("*.json"):
+            specs.setdefault(json.loads(p.read_text(encoding="utf-8"))["pack"], []).append(p)
     for pack in BAND_AUTHORED_PACKS:
-        spec = json.loads(specs[pack].read_text(encoding="utf-8"))
-        check(f"spec: {pack} carries bands on every theme", all("bands" in th for t in spec["tracks"] for th in t["themes"]))
-    check("core spine: every core-spine pack outside the Louisiana OS is band-authored",
-          {"EMERGENCY", "LAUNCH", "LEGACYLA", "LIFESKILL"} <= {r["pack"] for r in json.loads((ROOT / "data" / "rubrics" / "core_spine.json").read_text(encoding="utf-8"))["rubrics"]} and len(BAND_AUTHORED_PACKS) == 4)
+        parts = [json.loads(p.read_text(encoding="utf-8")) for p in specs[pack]]
+        check(f"spec: {pack} carries bands on every theme", all("bands" in th for s in parts for t in s["tracks"] for th in t["themes"]))
+    packs_by_slug = {p["slug"]: p["name"] for p in json.loads((ROOT / "data" / "manifest.json").read_text(encoding="utf-8"))["packs"]}
+    spine = {packs_by_slug.get(r["pack"], r["pack"]) for r in json.loads((ROOT / "data" / "rubrics" / "core_spine.json").read_text(encoding="utf-8"))["rubrics"]}
+    check("core spine: every core-spine pack is band-authored (v0.67.0)", spine <= BAND_AUTHORED_PACKS, str(sorted(spine - BAND_AUTHORED_PACKS)))
 
 
 def test_docs_numbers_match_dataset():
