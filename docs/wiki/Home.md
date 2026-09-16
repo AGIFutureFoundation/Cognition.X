@@ -42,10 +42,11 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Data review & known issues](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_REVIEW.md)
 - [Licensing rationale](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/LICENSING.md)
 - [The board packet](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/BOARD_PACKET.md) and [running a cohort](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/COHORT_ONBOARDING.md) — the v1.0 gate, executable
+- [XR and the "metaverse" — the studio in space](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/wiki/XR-and-the-Metaverse.md)
 - [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.68.0)
+## Numbers (v0.69.0)
 
 **17,450 blocks · 47 packs · 225 tracks · 1,430 credentials**
 

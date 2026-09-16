@@ -918,6 +918,32 @@ async function testOpenBadgeEnvelope(browser, errs) {
   await page.close();
 }
 
+/* ------- v0.69.0: the WebXR view — the studio offers the room, WebGL draws it, the run is mirrored and driven through the view, glTF exports, and without an immersive session the window is the whole experience ------- */
+async function testXrView(browser, errs) {
+  const page = await newPage(browser, 'tn/xr', errs);
+  await page.goto(url('trades-network') + '#/sims'); await page.waitForTimeout(900);
+  await page.evaluate(() => openSim(Object.keys(simByKind)[0], D.regions[0].id)); await page.waitForTimeout(400);
+  check('xr: the studio offers Open in 3D / VR', (await page.$('#simhost .cxsim-xr')) !== null);
+  await page.click('#simhost .cxsim-xr'); await page.waitForTimeout(700);
+  const s1 = await page.evaluate(() => { const p = document.querySelector('.cxxr-panel'); const c = p && p.querySelector('canvas'); return { panel: !!p, webgl: !!(c && c.getContext('webgl')), status: p ? p.querySelector('.cxxr-status').textContent : '', note: p ? p.querySelector('.cxxr-note').textContent : '', label: c ? c.getAttribute('aria-label') : '' }; });
+  check('xr: the room mounts with a WebGL canvas and says what it keeps (nothing)', s1.panel && s1.webgl && /never a check, never a credential/.test(s1.note) && /nothing about where you look or move is recorded/.test(s1.note) && /arrow keys/.test(s1.label));
+  check('xr: without an immersive session the window is the whole experience, and it says so', /magic-window/.test(s1.status));
+  await page.click('#simhost .cxsim-start'); await page.waitForTimeout(500);
+  const s2 = await page.evaluate(() => ({ phase: simCtl.phase, vphase: simCtl.xr.state.phase, vidx: simCtl.xr.state.idx, opts: simCtl.xr.state.options.length, stations: simCtl.xr.scene.nodes.filter(n => n.kind === 'station').length, plan: simCtl.plan.length, sign: simCtl.xr.scene.nodes.find(n => n.kind === 'sign').text }));
+  check('xr: the view mirrors the run — one station per decision, the current decision\'s options, the law on the sign', s2.phase === 'step' && s2.vphase === 'step' && s2.vidx === 0 && s2.opts === 3 && s2.stations === s2.plan && /Simulate/.test(s2.sign), JSON.stringify(s2));
+  const s3 = await page.evaluate(() => { const a = simCtl.xr.act({ option: 2 }); const picked = simCtl.xr.state.picked, ph = simCtl.phase; const b = simCtl.xr.act({ next: true }); return { a, picked, ph, b, ph2: simCtl.phase, idx: simCtl.idx, htmlPicked: !!document.querySelector('#simhost .cxsim-opt.picked') || simCtl.idx === 1 }; });
+  check('xr: selecting a slab chooses through the studio (scoring stays there) and Next advances', s3.a && s3.picked === 2 && s3.ph === 'consequence' && s3.b && s3.ph2 === 'step' && s3.idx === 1, JSON.stringify(s3));
+  const s4 = await page.evaluate(() => { const st = simCtl.xr.scene.nodes.find(n => n.kind === 'station' && n.index === simCtl.idx); const target = [st.position[0] - Math.sin(st.yaw) * 0.55, 1.55, st.position[2] + Math.cos(st.yaw) * 0.55]; const o = [0, 1.55, 0]; const d = [target[0] - o[0], 0, target[2] - o[2]]; const l = Math.hypot(d[0], d[2]); return simCtl.xr.pick(o, [d[0] / l, 0, d[2] / l]); });
+  check('xr: a ray from the learner at the current station\'s first slab picks option 0', s4 && s4.option === 0, JSON.stringify(s4));
+  const px = await page.evaluate(() => { const c = simCtl.xr.canvas, gl = c.getContext('webgl'); const p = new Uint8Array(c.width * c.height * 4); gl.readPixels(0, 0, c.width, c.height, gl.RGBA, gl.UNSIGNED_BYTE, p); const seen = new Set(); for (let i = 0; i < p.length; i += 4 * 97) seen.add(p[i] + ',' + p[i + 1] + ',' + p[i + 2]); return seen.size; });
+  check('xr: the canvas is actually drawn (many distinct colours, not a blank clear)', px > 20, `${px} colours`);
+  const g = await page.evaluate(() => { const d = simCtl.xr.gltf(); return { v: d.asset.version, n: d.nodes.length, stations: simCtl.xr.scene.nodes.filter(n => n.kind === 'station').length, buf: d.buffers[0].uri.startsWith('data:application/octet-stream;base64,'), score: /\"s\":/.test(JSON.stringify(d)) }; });
+  check('xr: glTF 2.0 export carries every node, an embedded buffer, and no score', g.v === '2.0' && g.n === g.stations + 3 && g.buf && !g.score, JSON.stringify(g));
+  await page.click('.cxxr-close'); await page.waitForTimeout(200);
+  check('xr: Close 3D removes the room and the studio forgets the view', await page.evaluate(() => !document.querySelector('.cxxr-panel') && !simCtl.xr && document.querySelector('#simhost .cxsim-xr').textContent === 'Open in 3D / VR'));
+  await page.close();
+}
+
 /* ------- v0.68.0: the performance pass — precomputed Voronoi grids equal a fresh computation; the Education OS carries the canonical sector library in place, once ------- */
 async function testPerformancePass(browser, errs) {
   const la = await newPage(browser, 'la/perf', errs);
@@ -1045,6 +1071,7 @@ async function testDurableListsAndRestore(browser, errs) {
       ['open badge envelope', testOpenBadgeEnvelope],
       ['durable lists and custody restore', testDurableListsAndRestore],
       ['performance pass', testPerformancePass],
+      ['xr view', testXrView],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);

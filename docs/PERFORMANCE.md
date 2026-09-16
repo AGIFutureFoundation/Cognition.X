@@ -33,6 +33,10 @@ host compresses (`docs/HOSTING.md`).
 
 Nothing else moved by more than measurement noise.
 
+v0.69.0 added the WebXR studio engine (`tools/xr/engine.js`) to every
+app's shared runtime: about 25 KB per app, well inside the budgets
+below, and nothing runs until a person presses *Open in 3D / VR*.
+
 ## What was measured and deliberately left alone
 
 - **Fonts** (169 KB in each of the five branded apps; 70% of the Platform

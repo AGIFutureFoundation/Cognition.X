@@ -4,6 +4,46 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.69.0] — 2026-09-16
+
+### Added — the studio in space: AR, VR and the "metaverse fabric", reviewed and begun
+- **`docs/XR_REVIEW.md`.** What the "metaverse fabric" can honestly mean
+  for an offline, consent-first platform used by minors: the standards
+  (WebXR, OpenXR through the browser, glTF 2.0) in; the platforms
+  (Horizon, VRChat, Roblox, Spatial, Decentraland) out; the decisions,
+  what shipped, and what is deliberately not built (no hand, eye or face
+  tracking; no avatars, multi-user rooms or voice; no platform SDKs).
+- **`tools/xr/engine.js` — `CXXR`.** A ~400-line WebGL renderer with
+  WebXR sessions, injected into all six apps by the shared runtime.
+  `CXXR.scene()` produces a **cx-xrscene/1** document (the floor, the
+  studio law on a sign, one station per decision point in an arc, the
+  current decision's options as slabs); `CXXR.gltf()` writes **glTF 2.0**
+  with the geometry embedded and the scenario and step ids in node
+  names and `extras`, never a score; `CXXR.attach()` draws the room —
+  magic window in any browser (drag or arrow keys, click a slab),
+  **Enter VR** / **Enter AR** where `navigator.xr` offers the session,
+  controller or gaze `select` to choose.
+- **The studio offers it everywhere, and stays the source of truth.**
+  `CXSIM.mount` now dispatches `cxsim` events at every phase change and
+  exposes `choose()`/`next()`; when `CXXR` is present it shows **Open in
+  3D / VR** in the brief, on every decision and in the debrief. The
+  room is a view: scoring, records and the honesty lines stay in the
+  studio; the HTML buttons keep working beside it and are the
+  accessible path. Every host — Trades Network, Louisiana, States, Flow
+  Hub, Platform, Education OS — has the room with no host code changed.
+- **Privacy, register, hosting.** The privacy notice's security
+  paragraph covers XR sessions (pose read to draw a frame and dropped;
+  no hand, eye or face tracking requested; a scene is practice); the
+  register gains **PL-21** (met; 45 controls, 29 met, 16 partial, 0
+  open); the hosting headers allow `xr-spatial-tracking=(self)` and
+  still deny the camera by policy.
+- Tests: `test_xr_integration` (no network, storage or randomness; the
+  engine in six apps; scene and glTF validity run in node; the notice,
+  register and hosting lines) and `testXrView` (the room mounts with
+  WebGL, mirrors and drives a run, picks by ray, is actually drawn,
+  exports glTF, and states the no-WebXR fallback). `docs/SIMULATION.md`,
+  the wiki (new page), README.
+
 ## [0.68.0] — 2026-09-16
 
 ### Changed — the performance and footprint pass

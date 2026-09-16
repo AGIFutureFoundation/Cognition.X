@@ -64,7 +64,7 @@ complete: the durable ledger, the custody bundle and the hall checklist
 (v0.58.0); the hosting guide with a hosted-copy test, the CycloneDX SBOM
 and the CISA K–12 vendor summary (v0.59.0).
 
-Counts from the register at v0.64.0: 44 controls — 28 met, 16 partial,
+Counts from the register at v0.69.0: 45 controls — 29 met, 16 partial,
 0 open. Nothing is open: every remaining *partial* is an adopter's act
 (a signature, a course, a permit, a district decision) that the software
 supports with a checklist line, a template or a packet, and cannot do.

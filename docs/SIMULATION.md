@@ -126,3 +126,14 @@ missed — the consequence explains why); three debrief questions; the
 `simulated` and `live` lists that apply the studio law; and the transfer
 block copied from the dataset, never paraphrased. Scenarios go through
 the curriculum review board like any pack.
+
+## The studio in space (v0.69.0)
+
+Every scenario can be opened as a room — **Open in 3D / VR** in the
+brief, on any decision, or in the debrief. The room is a view of the same
+run: the studio still plans, scores and records; the room draws the floor,
+the law on a sign, one station per decision point and the current
+decision's options as slabs, and calls the studio's own `choose()` when a
+slab is selected. It reaches headsets and phones through WebXR, the
+browser's own API, and everything else through a glTF 2.0 export. It
+keeps nothing and proves nothing: `docs/XR_REVIEW.md`.
