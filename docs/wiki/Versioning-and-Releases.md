@@ -25,7 +25,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 
 | Version | Summary |
 |---|---|
-| **v0.59.0** | Roadmap wave 2 closed out: the hosting hardening guide with a hosted-copy browser test, a CycloneDX SBOM generated in CI, the CISA K–12 vendor summary; register at 28 met / 13 partial / 3 open |
+| **v0.60.0** | Open Badges 3.0 / W3C VC 2.0 envelopes: the Records Office issues the same credential as a `vc+jwt` (ES256, `did:jwk`, same key and record id, native payload embedded), verifies either form with the same four grades, and `tools/verify_record.js` verifies both from the command line |
+| v0.59.0 | Roadmap wave 2 closed out: the hosting hardening guide with a hosted-copy browser test, a CycloneDX SBOM generated in CI, the CISA K–12 vendor summary; register at 28 met / 13 partial / 3 open |
 | v0.58.0 | Roadmap wave 2 in the Louisiana app: a durable IndexedDB ledger with quota failures surfaced, the `cx-custody/1` records-custody bundle, and the thirteen-control hall safety & compliance checklist per parish; register at 25 met / 15 partial / 4 open |
 | v0.57.0 | The security and compliance register and roadmap (44 controls across platform, federal, state, parish, local and district levels, evidence checked in CI) and wave one: a non-extractable Records Office key, release checksums and `SECURITY.md`, breach notification for all fifty states, youth hazard orders in the studio, adopter templates |
 | v0.56.0 | Standards mapping and transfer-check rubrics: the LSS K–12 codes generated from the program (52 blocks, *cites*), NGSS Engineering Design for four Robotics OS tracks (*touches*), 30 rubrics for the core-spine tracks — in Assessor Mode, Flow Hub pack detail and the printed workbook; `validate_standards.py` in CI |

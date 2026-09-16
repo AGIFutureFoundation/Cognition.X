@@ -303,7 +303,7 @@ every affected view identically; the template shrinks; all tests pass.
 
 ---
 
-## 8 — W3C Verifiable Credentials / Open Badges 3.0 envelopes
+## 8 — W3C Verifiable Credentials / Open Badges 3.0 envelopes *(done in v0.60.0 — see docs/CREDENTIALS.md)*
 
 **Why.** The Records Office issues `cx-credential/1` — a format this
 project invented. It is honest and it verifies, but nothing outside

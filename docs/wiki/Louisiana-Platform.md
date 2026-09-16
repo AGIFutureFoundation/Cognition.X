@@ -107,7 +107,7 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
   witnessed record being what the Records Office signs.
 - **Credential Ledger v1 & launch budgets (v0.29.0)** — the Records
   Office: a per-browser ECDSA P-256 keypair issues ledger-earned
-  credentials as portable, offline-verifiable `cx-credential/1` JSON
+  credentials as portable, offline-verifiable `cx-credential/1` JSON and, since v0.60.0, as Open Badges 3.0 `vc+jwt` envelopes from the same key (see `docs/CREDENTIALS.md`)
   (tamper-detected; verification proves the record unaltered and
   signed by that key's holder, with issuer identity confirmed via the
   hall's published public key). Plus a deterministic per-parish

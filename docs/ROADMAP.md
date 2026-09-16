@@ -45,7 +45,7 @@ sessions are written out in
 the Education OS design system (done, v0.46.0) → ② author the 24 missing credential
 names (drafted v0.52.0; board adoption pending) → ③ finish the WCAG 2.2 AA audit (done, v0.53.0) → ④ close the
 remaining verified review findings → ⑤ standards mapping and rubrics (done, v0.56.0) →
-⑥ W3C VC / Open Badges alignment → ⑦ cut v1.0 when a named external
+⑥ W3C VC / Open Badges alignment (done, v0.60.0) → ⑦ cut v1.0 when a named external
 cohort completes credentials on an unmodified release.
 
 ---
@@ -191,8 +191,8 @@ mapping checks (done, v0.56.0).
   per-browser Records Office (ECDSA P-256 via WebCrypto), records
   issued offline as portable `cx-credential/1` JSON and verified
   offline against the office's published public key, with tamper
-  detection. Alignment with W3C Verifiable Credentials / Open Badges
-  3.0 envelopes remains follow-on work.
+  detection. Open Badges 3.0 / VC 2.0 envelopes (`vc+jwt`, `did:jwk`,
+  same key and record id) shipped in v0.60.0 — `docs/CREDENTIALS.md`.
 - [x] Assessor mode (v0.32.0): witnessed-check queue (students request,
   assessors work oldest-first), three-line rubric display, per-learner
   access-profile check formats, evidence capture, and confirm /
