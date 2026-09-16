@@ -52,6 +52,15 @@
   },
   "cte": {
    "note": "Each state education agency keeps a list of approved industry-recognized credentials that count toward CTE accountability and graduation pathways. Cognition.X credentials are practice records, not industry certifications; the path onto a state list is an application by the credential's owner in the state's annual window, and it is not assumed here."
+  },
+  "breach": {
+   "note": "Every state has a breach-notification statute. Because the platform stores learner records only on the device in use, the realistic incident is a lost or stolen device or an exported file sent to the wrong hand; the notice clock starts at discovery. Deadlines below are the outer limits as commonly published (many statutes also say 'without unreasonable delay'); attorney-general or regulator notice thresholds vary. Verify with the state attorney general's office before relying on any of them.",
+   "platform": "A Content-Security-Policy blocks every connection from the apps, typefaces are embedded, and nothing leaves a page on its own — so the notification surface is the device and the exports, not a server. The incident runbook template (docs/templates/INCIDENT_RESPONSE_RUNBOOK.md) walks a hall through discovery, containment, the state clock and the district's own policy.",
+   "federal": [
+    "FERPA has no breach-notification clause but the Department of Education expects districts to notify affected families under their own policies",
+    "FTC Safeguards Rule (16 CFR 314) — applies to financial institutions, not schools; listed for completeness",
+    "K–12 Cybersecurity Act of 2021 — CISA guidance for districts (voluntary)"
+   ]
   }
  },
  "domains": [
@@ -104,6 +113,11 @@
    "id": "sales_tax",
    "name": "Sales-tax exemption",
    "what": "whether nonprofit purchases can be exempt"
+  },
+  {
+   "id": "breach",
+   "name": "Data breach notification & cybersecurity",
+   "what": "the state statute that governs notice when personal information on a device or in a file is lost or exposed, and the K–12 / local-government cybersecurity duties a program office inherits from its host"
   }
  ],
  "states": [
@@ -240,7 +254,8 @@
     "Department of Law",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -252,6 +267,16 @@
      "low": 115,
      "high": 365
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Alaska Stat. §45.48.010 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -388,7 +413,8 @@
     "Dept. of Professional & Financial Regulation",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -400,6 +426,16 @@
      "low": 110,
      "high": 360
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "10 M.R.S. §1346 et seq.",
+    "deadline_days": 30,
+    "deadline": "30 days from discovery, outer limit",
+    "regulator": "AG or Dept. of Professional and Financial Regulation",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -536,7 +572,8 @@
     "Secretary of State, Charities Program",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -548,6 +585,16 @@
      "low": 100,
      "high": 350
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "RCW 19.255.010",
+    "deadline_days": 30,
+    "deadline": "30 days from discovery, outer limit",
+    "regulator": "AG if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -684,7 +731,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -696,6 +744,16 @@
      "low": 50,
      "high": 300
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Idaho Code §28-51-104 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG for public agencies",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -832,7 +890,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -844,6 +903,16 @@
      "low": 65,
      "high": 315
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Mont. Code §30-14-1704",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG at the same time as residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -980,7 +1049,8 @@
     "Secretary of State",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -992,6 +1062,16 @@
      "low": 70,
      "high": 320
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "N.D.C.C. §51-30",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG if >250 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -1128,7 +1208,8 @@
     "Attorney General",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -1140,6 +1221,16 @@
      "low": 75,
      "high": 325
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Minn. Stat. §325E.61",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "CRAs if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -1276,7 +1367,8 @@
     "Dept. of Financial Institutions",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -1288,6 +1380,16 @@
      "low": 129,
      "high": 379
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Wis. Stat. §134.98",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "CRAs if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -1424,7 +1526,8 @@
     "Attorney General, Charitable Trust Section",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -1436,6 +1539,16 @@
      "low": 70,
      "high": 320
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "MCL §445.72",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "CRAs if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -1572,7 +1685,8 @@
     "Attorney General, Charities Bureau",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -1584,6 +1698,16 @@
      "low": 100,
      "high": 350
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "N.Y. Gen. Bus. Law §899-aa",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG, Dept. of State and State Police",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -1720,7 +1844,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -1732,6 +1857,16 @@
      "low": 70,
      "high": 320
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "9 V.S.A. §2435",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "AG within 14 business days",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -1868,7 +2003,8 @@
     "Attorney General, Charitable Trusts Unit",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -1880,6 +2016,16 @@
      "low": 150,
      "high": 400
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "RSA 359-C:20",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG before notice to residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -2016,7 +2162,8 @@
     "Department of Justice, Charitable Activities Section",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -2028,6 +2175,16 @@
      "low": 200,
      "high": 450
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "ORS §646A.604",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "AG if >250 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -2164,7 +2321,8 @@
     "Secretary of State",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -2176,6 +2334,16 @@
      "low": 100,
      "high": 350
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "NRS §603A.220",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "none",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -2312,7 +2480,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -2324,6 +2493,16 @@
      "low": 75,
      "high": 325
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Wyo. Stat. §40-12-501 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "none",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -2460,7 +2639,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -2472,6 +2652,16 @@
      "low": 60,
      "high": 310
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "SDCL §22-40-19 et seq.",
+    "deadline_days": 60,
+    "deadline": "60 days from discovery, outer limit",
+    "regulator": "AG if >250 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -2608,7 +2798,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -2620,6 +2811,16 @@
      "low": 70,
      "high": 320
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Iowa Code §715C",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -2756,7 +2957,8 @@
     "Attorney General, Charitable Trust Bureau",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -2768,6 +2970,16 @@
      "low": 75,
      "high": 325
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "815 ILCS 530",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -2904,7 +3116,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -2916,6 +3129,16 @@
      "low": 70,
      "high": 320
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Ind. Code §24-4.9",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG for every breach requiring notice",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -3052,7 +3275,8 @@
     "Attorney General, Charitable Law Section",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -3064,6 +3288,16 @@
      "low": 175,
      "high": 425
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Ohio Rev. Code §1349.19",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "CRAs if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -3200,7 +3434,8 @@
     "Dept. of State, Bureau of Corporations and Charitable Organizations",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -3212,6 +3447,16 @@
      "low": 150,
      "high": 400
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "73 P.S. §2301 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -3348,7 +3593,8 @@
     "Division of Consumer Affairs, Charities Registration",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -3360,6 +3606,16 @@
      "low": 180,
      "high": 430
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "N.J.S.A. 56:8-163",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "State Police before notice to residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -3496,7 +3752,8 @@
     "Attorney General, Non-Profit Organizations/Public Charities Division",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -3508,6 +3765,16 @@
      "low": 275,
      "high": 525
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "M.G.L. c. 93H",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG and OCABR at the same time as residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -3644,7 +3911,8 @@
     "Dept. of Business Regulation",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -3656,6 +3924,16 @@
      "low": 160,
      "high": 410
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "R.I. Gen. Laws §11-49.3-1 et seq.",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "AG and CRAs if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -3792,7 +4070,8 @@
     "Attorney General, Registry of Charities and Fundraisers",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -3804,6 +4083,16 @@
      "low": 170,
      "high": 420
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Cal. Civ. Code §1798.82",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -3940,7 +4229,8 @@
     "Division of Consumer Protection",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -3952,6 +4242,16 @@
      "low": 160,
      "high": 410
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Utah Code §13-44-202",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG and Cyber Center if ≥500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -4088,7 +4388,8 @@
     "Secretary of State",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -4100,6 +4401,16 @@
      "low": 70,
      "high": 320
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "C.R.S. §6-1-716",
+    "deadline_days": 30,
+    "deadline": "30 days from discovery, outer limit",
+    "regulator": "AG if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -4236,7 +4547,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -4248,6 +4560,16 @@
      "low": 70,
      "high": 320
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Neb. Rev. Stat. §87-801 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG at the same time as residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -4384,7 +4706,8 @@
     "Attorney General",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -4396,6 +4719,16 @@
      "low": 80,
      "high": 330
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Mo. Rev. Stat. §407.1500",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -4532,7 +4865,8 @@
     "Attorney General",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -4544,6 +4878,16 @@
      "low": 65,
      "high": 315
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "KRS §365.732; KRS §61.931 (public agencies)",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "public agencies: Commonwealth Office of Technology within 72 hours of determination",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -4680,7 +5024,8 @@
     "Secretary of State",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -4692,6 +5037,16 @@
      "low": 90,
      "high": 340
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "W. Va. Code §46A-2A-101 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "CRAs if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -4828,7 +5183,8 @@
     "Dept. of Agriculture and Consumer Services, Office of Charitable and Regulatory Programs",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -4840,6 +5196,16 @@
      "low": 175,
      "high": 425
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Va. Code §18.2-186.6",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG for every breach requiring notice",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -4976,7 +5342,8 @@
     "Secretary of State, Charitable Organizations Division",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -4988,6 +5355,16 @@
      "low": 150,
      "high": 400
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Md. Code Com. Law §14-3501 et seq.",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "AG before notice to residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -5124,7 +5501,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -5136,6 +5514,16 @@
      "low": 75,
      "high": 325
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "6 Del. C. §12B-101 et seq.",
+    "deadline_days": 60,
+    "deadline": "60 days from discovery, outer limit",
+    "regulator": "AG if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -5272,7 +5660,8 @@
     "Department of Consumer Protection",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -5284,6 +5673,16 @@
      "low": 150,
      "high": 400
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Conn. Gen. Stat. §36a-701b",
+    "deadline_days": 60,
+    "deadline": "60 days from discovery, outer limit",
+    "regulator": "AG at the same time as residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -5420,7 +5819,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -5432,6 +5832,16 @@
      "low": 60,
      "high": 310
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "A.R.S. §18-551 et seq.",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "AG and CRAs if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -5568,7 +5978,8 @@
     "Attorney General",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -5580,6 +5991,16 @@
      "low": 60,
      "high": 310
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "NMSA §57-12C-1 et seq.",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "AG and CRAs if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -5716,7 +6137,8 @@
     "Attorney General (since 2023; formerly SOS)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -5728,6 +6150,16 @@
      "low": 110,
      "high": 360
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "K.S.A. §50-7a01 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "CRAs if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -5864,7 +6296,8 @@
     "Attorney General",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -5876,6 +6309,16 @@
      "low": 75,
      "high": 325
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Ark. Code §4-110-101 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -6012,7 +6455,8 @@
     "Secretary of State, Division of Charitable Solicitations",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -6024,6 +6468,16 @@
      "low": 170,
      "high": 420
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Tenn. Code §47-18-2107",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "CRAs if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -6160,7 +6614,8 @@
     "Secretary of State, Charitable Solicitation Licensing",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -6172,6 +6627,16 @@
      "low": 175,
      "high": 425
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "N.C.G.S. §75-65",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "AG for every breach",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -6308,7 +6773,8 @@
     "Secretary of State, Public Charities Division",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -6320,6 +6786,16 @@
      "low": 125,
      "high": 375
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "S.C. Code §39-1-90",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "Consumer Protection Division and CRAs if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -6456,7 +6932,8 @@
     "Secretary of State",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -6468,6 +6945,16 @@
      "low": 140,
      "high": 390
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "24 O.S. §161 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "none",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -6604,7 +7091,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -6616,6 +7104,16 @@
      "low": 85,
      "high": 335
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "La. R.S. 51:3071 et seq. (Database Security Breach Notification Law)",
+    "deadline_days": 60,
+    "deadline": "60 days from discovery, outer limit",
+    "regulator": "Attorney General (Consumer Protection Section) within 10 days of notice to residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -6752,7 +7250,8 @@
     "Secretary of State, Charities Division",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -6764,6 +7263,16 @@
      "low": 125,
      "high": 375
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Miss. Code §75-24-29",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "none",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -6900,7 +7409,8 @@
     "Attorney General, Consumer Interest Division",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -6912,6 +7422,16 @@
      "low": 100,
      "high": 350
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Ala. Code §8-38-1 et seq.",
+    "deadline_days": 45,
+    "deadline": "45 days from discovery, outer limit",
+    "regulator": "AG if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -7048,7 +7568,8 @@
     "Secretary of State, Charities Division",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -7060,6 +7581,16 @@
      "low": 100,
      "high": 350
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "O.C.G.A. §10-1-910 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "CRAs if >10,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -7196,7 +7727,8 @@
     "Attorney General, Tax & Charities Division",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -7208,6 +7740,16 @@
      "low": 155,
      "high": 405
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Haw. Rev. Stat. §487N-1 et seq.",
+    "deadline_days": null,
+    "deadline": "without unreasonable delay (no fixed day count)",
+    "regulator": "Office of Consumer Protection if >1,000 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -7344,7 +7886,8 @@
     "n/a (no charitable registration)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -7356,6 +7899,16 @@
      "low": 55,
      "high": 305
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Tex. Bus. & Com. Code §521.053",
+    "deadline_days": 60,
+    "deadline": "60 days from discovery, outer limit",
+    "regulator": "AG within 30 days if ≥250 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   },
@@ -7492,7 +8045,8 @@
     "Dept. of Agriculture and Consumer Services (FDACS)",
     "State education agency (student privacy, homeschool, CTE credentials)",
     "State apprenticeship agency or U.S. DOL Office of Apprenticeship",
-    "State department of revenue"
+    "State department of revenue",
+    "the state attorney general's office (breach notification) and the district's own data-governance policy"
    ],
    "cost": {
     "assumptions": "one program office registering in the state, soliciting donations there, and fielding 10 assessors/volunteers who need background checks; accessibility audit counted once nationally, not per state; excludes staff time, counsel, insurance and devices",
@@ -7504,6 +8058,16 @@
      "low": 211,
      "high": 461
     },
+    "verify": true
+   },
+   "breach": {
+    "law": "Fla. Stat. §501.171",
+    "deadline_days": 30,
+    "deadline": "30 days from discovery, outer limit",
+    "regulator": "Dept. of Legal Affairs if >500 residents",
+    "clock": "starts when the loss or exposure is discovered by the hall, school or office",
+    "k12_note": "District policy usually adds its own reporting line (board, superintendent, state education agency) and a shorter internal clock; the host's policy governs the program office on its premises.",
+    "asOf": "2025",
     "verify": true
    }
   }

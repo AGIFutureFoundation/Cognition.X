@@ -34,7 +34,7 @@ as built from their templates by `tools/build_*.py`, the shared runtime
 | 4 | No in-app disclosure of what is stored, and no single erase control | Medium | **Fixed.** A *Data & privacy* control in every app opens a dialog built from one canonical text (`data/policy/privacy.json`): the keys this app has written and their size, what stays, what leaves (nothing, by itself), rights, security, and *Erase everything this app stored in this browser* behind a confirm. Tests hold every app to the canonical text. |
 | 5 | Learner names are entered freely into the Louisiana ledger; nothing said that a nickname is enough | Low | **Fixed.** The field asks for a first name or nickname; the notice says nothing here needs a legal name, birth date or contact detail, and none is asked for. |
 | 6 | The Education OS's own network self-review still said the page reached `fonts.googleapis.com` | Low | **Fixed.** The claim now reads: one origin, the file itself. |
-| 7 | The Louisiana Records Office keypair is stored in `localStorage` in exportable JWK form, so anyone with the browser profile holds the signing key | Medium | **Open, documented.** Acceptable for a per-browser demo office; a real hall should keep the office on one controlled machine. The durable fix — a non-extractable key in IndexedDB — is roadmap prompt 9 (`NEXT_STEPS_OPUS5.md`). |
+| 7 | The Louisiana Records Office keypair was stored in `localStorage` in exportable JWK form, so anyone with the browser profile held the signing key | Medium | **Fixed (v0.57.0).** The private key is a non-extractable WebCrypto key in IndexedDB: no script, extension or export can read it and it cannot be copied to another machine; a pre-v0.57.0 office migrates once (same key, private bytes removed); *Retire this office* destroys it. Held by the browser suite. |
 | 8 | Chromium treats every `file://` page as one origin, so an app can read another app's `localStorage` keys | Low | **Open, mitigated.** Every app namespaces its keys (`cxla.`, `cxflow.`, `cxst.`, `cxtn.`, `cxpx.`, `aff.`), the notice lists and erases only its own prefix, and imports are sanitized. First-party hosting over https gives each app its own origin. |
 | 9 | Federation trust and revocation lists are pasted, not fetched, so identity is confirmed out-of-band | — | **By design.** The signature proves integrity and key possession; identity is confirmed by people. |
 
@@ -47,7 +47,7 @@ browser's site data.
 
 | App | Keys | Personal data that may be present |
 |---|---|---|
-| Louisiana | `cxla.ledger` (learners: name, band, progress counts, access profile ids, flow events, witnessed evidence lines with the assessor's name and note, studio practice runs; the assessor queue), `cxla.roles` (chosen role, current learner id, dashboard layouts, planning notes, assessor name), `cxla.issuer` (the Records Office name and keypair — see finding 7), `cxla.trust`, `cxla.revoked`, `cxla.revlists` (public keys and record ids of other offices), `cxla.missions.*`, `cxla.ready.*`, `cxla.theme`, `cxla.style`, `cxla.voice` | Learner names or nicknames; assessor names; free-text notes. Access profiles are chosen supports, never diagnoses. |
+| Louisiana | `cxla.office` (IndexedDB: the non-extractable private key), `cxla.ledger` (learners: name, band, progress counts, access profile ids, flow events, witnessed evidence lines with the assessor's name and note, studio practice runs; the assessor queue), `cxla.roles` (chosen role, current learner id, dashboard layouts, planning notes, assessor name), `cxla.issuer` (the Records Office name and **public** key), `cxla.trust`, `cxla.revoked`, `cxla.revlists` (public keys and record ids of other offices), `cxla.missions.*`, `cxla.ready.*`, `cxla.theme`, `cxla.style`, `cxla.voice` | Learner names or nicknames; assessor names; free-text notes. Access profiles are chosen supports, never diagnoses. |
 | Flow Hub | `cxflow.v1` (per-track skill, completed themes, flow points), `cxflow.draft` (Pack Studio drafts), `cxflow.theme`, `cxflow.voice`, `cxflow.access` | None by design; the session holds no name. |
 | Education OS | `aff.*` (the demo learner profile and quest history, view state) | A display name for the demo learner. |
 | States | `cxst.state`, `cxst.theme`, `cxst.style`, `cxst.voice` | None. |
@@ -119,8 +119,8 @@ term is a proposal until counsel has papered it.
 
 ## What remains
 
-- Finding 7: a non-extractable Records Office key in IndexedDB (roadmap
-  prompt 9), and durable learner state with quota errors surfaced.
+- Durable learner state in IndexedDB with quota errors surfaced (roadmap
+  prompt 9; the office key moved there in v0.57.0).
 - First-party hosting over https, which gives each app its own origin
   (finding 8) and makes the PWA installable; the single file stays the
   primary packaging.

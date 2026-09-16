@@ -44,6 +44,10 @@ jobs:
         run: git diff --exit-code data/standards/
       - name: Validate standards mappings and rubrics against the dataset
         run: python3 tools/validate_standards.py
+      - name: Regenerate the security and compliance control register
+        run: python3 tools/controls_report.py
+      - name: Control register must be current and every evidence reference must resolve
+        run: git diff --exit-code docs/CONTROL_REGISTER.md
       - name: Regenerate the data-quality dashboard
         run: python3 tools/data_quality.py
       - name: Dashboard must be current with the dataset
@@ -72,6 +76,8 @@ jobs:
           python3 tools/build_trades.py
           python3 tools/build_states.py
           python3 tools/build_platform.py
+      - name: Regenerate the release checksums
+        run: python3 tools/checksums.py
       - name: Apps must be byte-identical to their committed builds
         run: git diff --exit-code apps/
       - name: Platform invariants (no network, honesty stances, dataset shape)

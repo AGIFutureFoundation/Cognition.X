@@ -317,7 +317,7 @@ async function testComplianceLayer(browser, errs) {
   }));
   check('compliance: view routes with the state from the hash', r.active === 'view-compliance' && /^Texas/.test(r.head), r.head);
   check('compliance: fifty tiles on the lens map', r.tiles === 50, String(r.tiles));
-  check('compliance: ten domain rows in the checklist', r.rows === 10, String(r.rows));
+  check('compliance: eleven domain rows in the checklist (breach added v0.57.0)', r.rows === 11, String(r.rows));
   check('compliance: fees flagged verify', r.verify >= 8, String(r.verify));
   check('compliance: the disclaimer renders', /NOT LEGAL ADVICE/.test(r.disc));
   await page.selectOption('#clens', 'charity');
@@ -728,6 +728,50 @@ async function testStandardsAndRubrics(browser, errs) {
   await fh.close();
 }
 
+/* ------- v0.57.0: the Records Office key is non-extractable and durable; the studio shows the youth line; the breach row renders ------- */
+async function testOfficeKeyNonExtractable(browser, errs) {
+  const la = await newPage(browser, 'la/office', errs);
+  await la.goto(url('louisiana') + '#/roles'); await la.waitForTimeout(700);
+  // a pre-v0.57.0 office (exportable JWK in localStorage) migrates once, same public key, private bytes gone
+  const legacy = await la.evaluate(async () => {
+    await issuerForget();
+    const kp = await crypto.subtle.generateKey({name:'ECDSA', namedCurve:'P-256'}, true, ['sign','verify']);
+    const priv = await crypto.subtle.exportKey('jwk', kp.privateKey), pub = await crypto.subtle.exportKey('jwk', kp.publicKey);
+    localStorage.setItem('cxla.issuer', JSON.stringify({name:'Legacy Office', priv, pub}));
+    const ik = await issuerGet();
+    const stored = JSON.parse(localStorage.getItem('cxla.issuer'));
+    let exportable = null; try { await crypto.subtle.exportKey('jwk', ik.priv); exportable = true; } catch (e) { exportable = false; }
+    return { migrated: ik.migrated === true, durable: ik.durable, samePub: stored.pub.x === pub.x, privGone: !('priv' in stored) && !JSON.stringify(stored).includes('"d"'), exportable, extractable: ik.priv.extractable };
+  });
+  check('office: legacy office migrates to a non-extractable key with the same public key', legacy.migrated && legacy.durable && legacy.samePub && legacy.privGone && legacy.exportable === false && legacy.extractable === false, JSON.stringify(legacy));
+  // a fresh office: key in IndexedDB, survives reload, signs, never exportable
+  const fresh = await la.evaluate(async () => { await issuerForget(); const d = await issuerCreate('Test Hall Office'); return d; });
+  await la.reload(); await la.waitForTimeout(700);
+  const after = await la.evaluate(async (fresh) => {
+    const ik = await issuerGet();
+    const stored = JSON.parse(localStorage.getItem('cxla.issuer'));
+    llSeedDemo(); const l = llLoad().learners[0]; l.prog[LTRACKS[0].key] = 50; llSave(llLoad());
+    const rec = await issueRecord(l, LTRACKS[0]);
+    const ok = rec ? await verifyRecord(rec) : false;
+    return { durable: fresh && ik.durable, present: !!ik.priv, extractable: ik.priv && ik.priv.extractable, noD: !JSON.stringify(stored).includes('"d"'), signed: !!rec && ok, pubOnly: rec && !('d' in rec.publicKey) };
+  }, fresh);
+  check('office: fresh office key is durable in IndexedDB, non-extractable, signs and verifies', after.durable && after.present && after.extractable === false && after.noD && after.signed && after.pubOnly, JSON.stringify(after));
+  await la.evaluate(async () => { await issuerForget(); localStorage.removeItem('cxla.ledger'); localStorage.removeItem('cxla.roles'); });
+  await la.close();
+  const tn = await newPage(browser, 'trades/youth', errs);
+  await tn.goto(url('trades-network') + '#/sims'); await tn.waitForTimeout(600);
+  await tn.selectOption('#simkind', 'port'); await tn.click('#simgo'); await tn.waitForTimeout(150);
+  check('studio: the under-eighteen line shows on a trades scenario', (await tn.$eval('#simhost .cxsim-youth', el => el.textContent)).includes('HO 7'));
+  await tn.close();
+  const st = await newPage(browser, 'states/breach', errs);
+  await st.goto(url('states') + '#/compliance/LA'); await st.waitForTimeout(700);
+  const body = await st.$eval('#view-compliance', el => el.textContent);
+  check('states: Louisiana checklist carries the breach-notification row', body.includes('51:3071') && body.includes('60 days'));
+  await st.selectOption('#clens', 'breach'); await st.waitForTimeout(200);
+  check('states: breach lens renders the nation map', (await st.$$eval('#cmap .tile, #cmap g.tile, #cmap [data-abbr]', els => els.length)) >= 50 || (await st.$eval('#clensnote', el => el.textContent)).includes('Breach'));
+  await st.close();
+}
+
 (async () => {
   const browser = await chromium.launch({
     executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium',
@@ -750,6 +794,7 @@ async function testStandardsAndRubrics(browser, errs) {
       ['simulation studio', testSimulationStudio],
       ['compliance review', testComplianceReview],
       ['standards and rubrics', testStandardsAndRubrics],
+      ['office key and wave one', testOfficeKeyNonExtractable],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);

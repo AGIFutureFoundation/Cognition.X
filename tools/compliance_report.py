@@ -33,6 +33,7 @@ def main():
     saa = sum(1 for s in ss if s["apprenticeship"]["type"] == "SAA")
     tiers = {t: sum(1 for s in ss if s["homeschool"]["tier"] == t) for t in ("none", "low", "moderate", "high")}
     lo = min(s["cost"]["one_time"]["low"] for s in ss); hi = max(s["cost"]["one_time"]["high"] for s in ss)
+    fixed = sum(1 for s in ss if s.get("breach", {}).get("deadline_days"))
     lines = [
         "# State compliance — the fifty-state layer",
         "",
@@ -60,17 +61,18 @@ def main():
         f"- **{op}** states have a SOPIPA-style statute binding ed-tech operators; the rest run on FERPA, COPPA and district policy.",
         f"- **{saa}** states register apprenticeship programs through a State Apprenticeship Agency; **{50-saa}** through the federal Office of Apprenticeship.",
         f"- Homeschool regulation: **{tiers['none']}** no-notice · **{tiers['low']}** low · **{tiers['moderate']}** moderate · **{tiers['high']}** high.",
+        f"- Breach notification: **{fixed}** states set a fixed outer deadline after discovery (30–60 days); **{50-fixed}** say 'without unreasonable delay'. Regulator-notice thresholds vary; verify with the attorney general.",
         f"- Estimated one-time compliance cost per state: **{money(lo)}–{money(hi)}** under the stated assumptions (one program office, ten background checks; excludes staff time, counsel, insurance and devices).",
         "",
         "## The fifty states",
         "",
-        "| State | Homeschool | Privacy | Charity reg. | Apprenticeship | Sales-tax exemption | Foreign nonprofit fee | One-time est. | Annual est. |",
-        "|---|---|---|---|---|---|---:|---:|---:|",
+        "| State | Homeschool | Privacy | Charity reg. | Apprenticeship | Sales-tax exemption | Breach deadline | Foreign nonprofit fee | One-time est. | Annual est. |",
+        "|---|---|---|---|---|---|---|---:|---:|---:|",
     ]
     for s in sorted(ss, key=lambda x: x["name"]):
         stx = "no state tax" if not s["sales_tax"]["state_sales_tax"] else ("available" if s["sales_tax"]["nonprofit_exemption"] else "none")
         lines.append(f"| {s['name']} | {s['homeschool']['tier']} | {'operator law' if s['privacy']['tier']=='operator-law' else 'baseline'} | "
-                     f"{'required' if s['charity']['required'] else 'no'} | {s['apprenticeship']['type']} | {stx} | {fee(s['nonprofit']['fee'])} | "
+                     f"{'required' if s['charity']['required'] else 'no'} | {s['apprenticeship']['type']} | {stx} | {(str(s['breach']['deadline_days'])+' days') if s.get('breach',{}).get('deadline_days') else 'no fixed count'} | {fee(s['nonprofit']['fee'])} | "
                      f"{money(s['cost']['one_time']['low'])}–{money(s['cost']['one_time']['high'])} | {money(s['cost']['annual']['low'])}–{money(s['cost']['annual']['high'])} |")
     lines += [
         "",
@@ -88,6 +90,7 @@ def main():
               f"**Apprenticeship.** {N['apprenticeship']['note']} ({N['apprenticeship']['federal']})", "",
               f"**CTE credential lists.** {N['cte']['note']}", "",
               f"**Sales tax.** {N['sales_tax']['note']}", "",
+              f"**Breach notification and cybersecurity.** {N['breach']['note']} {N['breach']['platform']}", "",
               "## Maintaining the layer", "",
               "Each state entry carries `sources` (the agencies to confirm with) and every fee carries `asOf` and `verify`.",
               "A correction is a PATCH release: edit the JSON, run this script, and the tests will hold the shape.",

@@ -5,7 +5,9 @@
  * the canonical text in data/policy/privacy.json (window.CX_PRIVACY) and
  * the app's own storage prefixes (window.CX_APP.prefixes):
  *
- *   - lists every localStorage key this app has written, with its size;
+ *   - lists every localStorage key this app has written, with its size,
+ *     and any IndexedDB database the app declares (window.CX_APP.idb —
+ *     the Louisiana Records Office's non-extractable key lives in one);
  *   - states what stays, what leaves (nothing, by itself) and the rights
  *     a person has over what is stored;
  *   - offers one erase-all control for this app's keys, behind a confirm.
@@ -68,6 +70,7 @@
         <h3>What stays here</h3><p>${esc(P.stays)}</p>
         <table aria-label="Keys this app has stored in this browser"><thead><tr><th>Key</th><th class="n">Size</th></tr></thead><tbody>
         ${ks.length ? ks.map(x => `<tr><td><code>${esc(x.k)}</code></td><td class="n">${fmt(x.n)}</td></tr>`).join("") : `<tr><td colspan="2" class="fine">Nothing stored yet under ${A.prefixes.map(p => "<code>" + esc(p) + "…</code>").join(", ")}.</td></tr>`}
+        ${(A.idb || []).map(n => `<tr><td><code>${esc(n)}</code> <span class="fine">(IndexedDB — a non-extractable signing key, if an office was created; its bytes cannot be read or shown)</span></td><td class="n">—</td></tr>`).join("")}
         </tbody></table>
         <p class="fine">${ks.length} key${ks.length === 1 ? "" : "s"} · ${fmt(total)} · app ${esc(A.name || "")} v${esc(A.version || "")}</p>
         <h3>What leaves</h3><p>${esc(P.leaves)}</p><p>${esc(P.exports)}</p>
@@ -75,13 +78,14 @@
         <h3>Your rights over it</h3><p>${esc(P.rights)}</p>
         <h3>Security</h3><p>${esc(P.security)}</p>
         <p class="fine">${esc(P.not_advice)} ${esc(P.docs)}</p>
-        <div class="row"><button type="button" class="danger" id="cx-priverase" ${ks.length ? "" : "disabled"}>${esc(P.erase_label)}</button>
+        <div class="row"><button type="button" class="danger" id="cx-priverase" ${(ks.length || (A.idb || []).length) ? "" : "disabled"}>${esc(P.erase_label)}</button>
         <button type="button" id="cx-privclose">Close</button></div>
         <p class="fine" id="cx-privmsg" aria-live="polite"></p></div>`;
       dlg.querySelector("#cx-privclose").addEventListener("click", () => { dlg.close ? dlg.close() : dlg.removeAttribute("open"); btn.focus(); });
       dlg.querySelector("#cx-priverase").addEventListener("click", () => {
         if (!window.confirm(P.erase_confirm)) return;
         try { keys().forEach(x => localStorage.removeItem(x.k)); } catch (e) {}
+        try { (A.idb || []).forEach(n => indexedDB.deleteDatabase(n)); } catch (e) {}
         dlg.querySelector("#cx-privmsg").textContent = P.erased;
         dlg.querySelector("#cx-priverase").disabled = true;
         setTimeout(() => location.reload(), 900);

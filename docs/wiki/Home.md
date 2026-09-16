@@ -35,6 +35,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Film production briefs](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/film/PRODUCTION_BRIEFS.md) — the two product films (`tools/film/`) and their cinematic cuts
 - [Accessibility audit](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/ACCESSIBILITY.md) — WCAG 2.2 AA, what was tested, fixed and remains
 - [Standards mapping and rubrics](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/STANDARDS.md) — the codes a block was designed against and what a passing check looks like, per track
+- [Security & compliance roadmap](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/COMPLIANCE_ROADMAP.md) and the [control register](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/CONTROL_REGISTER.md) — state, parish, local and district expectations with owners, evidence and a begin-now checklist; not legal advice
 - [Compliance and regulatory review of the apps](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/COMPLIANCE_REVIEW.md) — what each app stores, what leaves (nothing, by itself), the CSP, FERPA/COPPA posture; not legal advice
 - [State compliance — the fifty-state layer](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/STATE_COMPLIANCE.md) — forms, agencies, fees and cost roll-ups per state (not legal advice)
 - [Data quality dashboard](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/DATA_QUALITY.md)
@@ -43,7 +44,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.56.0)
+## Numbers (v0.57.0)
 
 **17,450 blocks · 47 packs · 225 tracks · 1,430 credentials**
 

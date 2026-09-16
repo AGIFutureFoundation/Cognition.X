@@ -389,7 +389,7 @@ def test_state_compliance_layer():
     check("compliance: disclaimer present", "Not legal advice" in c["disclaimer"])
     check("compliance: fifty states, same set as the fact base", sorted(s["abbr"] for s in c["states"]) == sorted(abbrs))
     dom = [d["id"] for d in c["domains"]]
-    check("compliance: ten domains", len(dom) == 10, str(dom))
+    check("compliance: eleven domains (breach notification added v0.57.0)", len(dom) == 11 and "breach" in dom, str(dom))
     fees_seen = 0
     for s in c["states"]:
         missing = [d for d in dom if d not in s]
@@ -400,6 +400,10 @@ def test_state_compliance_layer():
         check(f"compliance/{s['abbr']}: cost roll-up sane",
               0 <= s["cost"]["one_time"]["low"] <= s["cost"]["one_time"]["high"] and 0 <= s["cost"]["annual"]["low"] <= s["cost"]["annual"]["high"] and s["cost"]["verify"] is True)
         check(f"compliance/{s['abbr']}: sources listed", len(s["sources"]) >= 3)
+        b = s["breach"]
+        check(f"compliance/{s['abbr']}: breach entry complete and flagged verify",
+              b["law"] and b["deadline"] and b["regulator"] and b["verify"] is True and b["asOf"] == c["asOf"]
+              and (b["deadline_days"] is None or 30 <= b["deadline_days"] <= 60))
         for d in dom:
             for k, v in s[d].items():
                 if isinstance(v, dict) and "verify" in v and "asOf" in v:
@@ -528,6 +532,42 @@ def test_standards_and_rubrics():
     check("STANDARDS.md states the coverage", f"{cov['blocks_covered']} of 17,450 blocks" in doc and f"{cov['tracks_with_rubric']} of {cov['tracks']} tracks" in doc)
     dq = (ROOT / "docs" / "DATA_QUALITY.md").read_text(encoding="utf-8")
     check("DATA_QUALITY.md reports standards coverage", "## Standards and rubrics" in dq)
+
+
+def test_security_compliance_register():
+    """v0.57.0 — the control register validates and every evidence reference
+    resolves; release checksums are current; the security policy, the youth
+    hazard lines and the adopter templates exist."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    import hashlib
+    from controls_report import validate as validate_controls
+    reg = json.loads((ROOT / "data" / "policy" / "controls.json").read_text(encoding="utf-8"))
+    errs = validate_controls(reg)
+    check("register: validates and every evidence reference resolves", not errs, "; ".join(errs[:3]))
+    check("register: at least forty controls across six levels", len(reg["controls"]) >= 40 and len({c["level"] for c in reg["controls"]}) == 6)
+    check("register: every platform control that is met carries a test, smoke or CI evidence",
+          all(any(e["type"] in ("test", "smoke", "ci") for e in c["evidence"]) for c in reg["controls"] if c["level"] == "platform" and c["status"] == "met"))
+    sums = (ROOT / "apps" / "CHECKSUMS.sha256").read_text(encoding="utf-8").splitlines()
+    for line in sums:
+        if line.startswith("#") or not line.strip():
+            continue
+        digest, path = line.split("  ", 1)
+        check(f"checksums: {path} current", hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest)
+    check("checksums: all six apps listed", sum(1 for l in sums if l.endswith("/index.html")) == 6)
+    sec = (ROOT / "SECURITY.md").read_text(encoding="utf-8")
+    check("SECURITY.md names a reporting channel and the checksum step", "Report" in sec and "CHECKSUMS.sha256" in sec)
+    sims = json.loads((ROOT / "data" / "simulations" / "scenarios.json").read_text(encoding="utf-8"))
+    check("studio: every trades scenario carries an under-18 hazard line",
+          all("Under 18" in s.get("youth", "") for s in sims["scenarios"] if s.get("kind")))
+    check("studio: youth note is not legal advice", "NOT LEGAL ADVICE" in sims["youth_note"])
+    for app in ("trades-network", "louisiana"):
+        check(f"studio: {app} carries the youth lines", "Hazardous Occupations Orders" in app_html(app))
+    for t in ("DATA_PROCESSING_STATEMENT", "INCIDENT_RESPONSE_RUNBOOK", "RECORDS_CUSTODY_STATEMENT"):
+        check(f"templates: {t} exists and is not legal advice", "Not legal advice" in (ROOT / "docs" / "templates" / f"{t}.md").read_text(encoding="utf-8"))
+    la = app_html("louisiana")
+    check("louisiana: private key never exported (no extractable sign key)", 'namedCurve:"P-256"}, true, ["sign"]' not in la and 'generateKey({name:"ECDSA", namedCurve:"P-256"}, false' in la)
+    road = (ROOT / "docs" / "COMPLIANCE_ROADMAP.md").read_text(encoding="utf-8")
+    check("COMPLIANCE_ROADMAP.md states the register counts", f"{len(reg['controls'])} controls" in road)
 
 
 def test_docs_numbers_match_dataset():

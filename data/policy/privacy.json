@@ -7,7 +7,7 @@
  "exports": "Exports that could describe a person are behind a consent step and are sent by a person, never by the page. Evidence aggregates carry per-track counts only, never names.",
  "minors": "If a learner is under thirteen, or a school policy asks for it, use a first name or a nickname in the ledger. Nothing here needs a legal name, a date of birth or a contact detail, and none is asked for.",
  "rights": "You can see everything stored (the export box shows it), correct it (edit the learner, re-import a corrected ledger) and erase it (remove one learner, or erase everything this app stored, below). Nobody else can, because nobody else holds it.",
- "security": "Credential records are signed with a key generated in this browser (ECDSA P-256 via WebCrypto); only the public key travels with a record. Pasted ledgers, trust lists and revocation lists are treated as third-party data and sanitized before use.",
+ "security": "Credential records are signed with a key generated in this browser (ECDSA P-256 via WebCrypto). The private key is non-extractable and held in the browser's IndexedDB: no script, extension or export can read it, and it cannot be copied to another machine. Only the public key travels with a record. Pasted ledgers, trust lists and revocation lists are treated as third-party data and sanitized before use.",
  "erase_label": "Erase everything this app stored in this browser",
  "erase_confirm": "This removes every key listed above from this browser. Exported files you already saved are unaffected. Continue?",
  "erased": "Erased. The page will reload with nothing stored.",

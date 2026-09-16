@@ -1092,27 +1092,68 @@ function renderRegions(){
 const b64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
 const b64d = s => Uint8Array.from(atob(s), c=>c.charCodeAt(0));
 const cryptoOK = () => { try { return !!(window.crypto && crypto.subtle); } catch(e){ return false; } };
+/* v0.57.0 — the private key is a NON-EXTRACTABLE CryptoKey held in IndexedDB
+   (structured clone keeps it opaque: no script, extension or export can read
+   its bytes; only this browser profile can sign with it). localStorage keeps
+   only the office name and the PUBLIC key. An office created before v0.57.0
+   (an exportable JWK in localStorage) is migrated once: the same key is
+   re-imported non-extractable, so every record it ever signed still verifies,
+   and the private bytes are removed from localStorage. Where IndexedDB is
+   unavailable, the key lives in page memory for the session and the office
+   says so. The office cannot be copied to another machine by design: a new
+   machine is a new office, published through the trust list. */
+const IDB_NAME = "cxla.office", IDB_STORE = "keys";
+function idbOpen(){
+  return new Promise((res, rej) => {
+    try {
+      const r = indexedDB.open(IDB_NAME, 1);
+      r.onupgradeneeded = () => { r.result.createObjectStore(IDB_STORE); };
+      r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+    } catch(e){ rej(e); }
+  });
+}
+async function idbGet(k){ const db = await idbOpen(); return new Promise((res, rej) => { const t = db.transaction(IDB_STORE, "readonly").objectStore(IDB_STORE).get(k); t.onsuccess = () => res(t.result); t.onerror = () => rej(t.error); }); }
+async function idbPut(k, v){ const db = await idbOpen(); return new Promise((res, rej) => { const t = db.transaction(IDB_STORE, "readwrite"); t.objectStore(IDB_STORE).put(v, k); t.oncomplete = () => res(true); t.onerror = () => rej(t.error); }); }
+async function idbDel(k){ const db = await idbOpen(); return new Promise((res, rej) => { const t = db.transaction(IDB_STORE, "readwrite"); t.objectStore(IDB_STORE).delete(k); t.oncomplete = () => res(true); t.onerror = () => rej(t.error); }); }
+let issuerMem = null;   // fallback when IndexedDB is unavailable: this session only
 async function issuerGet(){
   try{
     const raw = store("cxla.issuer");
     if (!raw) return null;
     const j = JSON.parse(raw);
-    const priv = await crypto.subtle.importKey("jwk", j.priv, {name:"ECDSA", namedCurve:"P-256"}, true, ["sign"]);
-    return {priv, pubJwk: j.pub, name: j.name};
+    if (j.priv){
+      // pre-v0.57.0 office: migrate the same key to a non-extractable CryptoKey, then forget the bytes
+      const priv = await crypto.subtle.importKey("jwk", j.priv, {name:"ECDSA", namedCurve:"P-256"}, false, ["sign"]);
+      let durable = false;
+      try { await idbPut("priv", priv); durable = true; } catch(e){ issuerMem = priv; }
+      store("cxla.issuer", JSON.stringify({name: j.name, pub: j.pub, v: 2, durable}));
+      return {priv, pubJwk: j.pub, name: j.name, durable, migrated: true};
+    }
+    let priv = issuerMem;
+    if (!priv){ try { priv = await idbGet("priv"); } catch(e){} }
+    if (!priv) return {priv: null, pubJwk: j.pub, name: j.name, durable: !!j.durable, orphaned: true};
+    return {priv, pubJwk: j.pub, name: j.name, durable: !!j.durable};
   }catch(e){ return null; }
 }
 async function issuerCreate(name){
-  const kp = await crypto.subtle.generateKey({name:"ECDSA", namedCurve:"P-256"}, true, ["sign","verify"]);
-  const priv = await crypto.subtle.exportKey("jwk", kp.privateKey);
+  const kp = await crypto.subtle.generateKey({name:"ECDSA", namedCurve:"P-256"}, false, ["sign","verify"]);
   const pub = await crypto.subtle.exportKey("jwk", kp.publicKey);
-  store("cxla.issuer", JSON.stringify({name, priv, pub}));
+  let durable = false;
+  try { await idbPut("priv", kp.privateKey); durable = true; issuerMem = null; } catch(e){ issuerMem = kp.privateKey; }
+  store("cxla.issuer", JSON.stringify({name, pub: {kty: pub.kty, crv: pub.crv, x: pub.x, y: pub.y}, v: 2, durable}));
+  return durable;
+}
+async function issuerForget(){
+  try { await idbDel("priv"); } catch(e){}
+  issuerMem = null;
+  try { localStorage.removeItem("cxla.issuer"); } catch(e){}
 }
 function newRid(){
   try { if (crypto.randomUUID) return crypto.randomUUID(); } catch(e){}
   return "r-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,10);
 }
 async function issueRecord(learner, track){
-  const ik = await issuerGet(); if (!ik) return null;
+  const ik = await issuerGet(); if (!ik || !ik.priv) return null;
   /* The ledger counts practice checks and witnessed ones in the same counter.
      A record must therefore say which it is standing on, and must never
      assert witnessing it cannot see: the payload carries the witnessed count
@@ -2836,6 +2877,7 @@ const WIDGETS = {
         <input type="search" id="ro-name" placeholder="Records office name (e.g. ${esc(p.name)} Trade Hall)" style="min-width:240px">
         <button class="btn" id="ro-create">Create office keys</button>
         <button class="btn" id="ro-pub">Show public key</button>
+        <button class="btn" id="ro-forget">Retire this office</button>
       </div>` +
       (earned.length
         ? `<div class="pickrow" style="margin:0 0 10px"><select id="ro-pick" aria-label="Credential to sign">${earned.map(({l,t},i)=>
@@ -2882,13 +2924,19 @@ const WIDGETS = {
     const showIssuer = async () => {
       const ik = await issuerGet();
       $("#ro-issuer") && ($("#ro-issuer").innerHTML = ik
-        ? `Office: <b>${esc(ik.name)}</b> · keys ready (P-256). The public key below is safe to publish anywhere.`
+        ? (ik.orphaned
+            ? `Office: <b>${esc(ik.name)}</b> — its private key is not in this browser profile (it was created elsewhere, or site data was cleared). Records it signed still verify; retire it and create a new office here.`
+            : `Office: <b>${esc(ik.name)}</b> · keys ready (P-256). The private key is a <b>non-extractable</b> key held ${ik.durable ? "in this browser's IndexedDB — no script or export can read it, and it cannot be copied to another machine" : "in page memory only for this session (IndexedDB unavailable here) — records issued now still verify, but create the office on a browser that can keep the key"}${ik.migrated ? "; migrated from the pre-v0.57.0 format, same key, private bytes removed from local storage" : ""}. The public key below is safe to publish anywhere.`)
         : `No office keys in this browser yet — create them once below.`);
     };
     showIssuer();
     el.querySelector("#ro-create").addEventListener("click", async ()=>{
       const nm = (el.querySelector("#ro-name").value||"").trim() || (p.name + " Trade Hall records office");
       await issuerCreate(nm); showIssuer();
+    });
+    el.querySelector("#ro-forget").addEventListener("click", async ()=>{
+      if (!window.confirm("Retire this Records Office? Its private key is destroyed and cannot be recovered. Records it already signed still verify against its published public key; a new office will need to be published to the trust list.")) return;
+      await issuerForget(); showIssuer(); say("Office retired.");
     });
     el.querySelector("#ro-pub").addEventListener("click", async ()=>{
       const ik = await issuerGet(); const ta = el.querySelector("#ro-out");
@@ -3518,6 +3566,7 @@ function complianceWidget(el){
     row("cte", esc(c.cte.list)+" — "+esc(c.cte.note), "—") +
     row("accessibility", esc(c.accessibility.standard), fee(c.accessibility.fee)) +
     row("sales_tax", esc(c.sales_tax.form), "—") +
+    (c.breach ? row("breach", esc(c.breach.law)+"<br><b>Deadline:</b> "+esc(c.breach.deadline)+" · <b>Regulator:</b> "+esc(c.breach.regulator), "—") : "") +
     `<p class="note" style="margin-top:8px"><b>Assumptions:</b> ${esc(c.cost.assumptions)}.</p>`;
 }
 const TOUR = [
