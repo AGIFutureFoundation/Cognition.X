@@ -567,6 +567,19 @@ def test_security_compliance_register():
     la = app_html("louisiana")
     check("louisiana: private key never exported (no extractable sign key)", 'namedCurve:"P-256"}, true, ["sign"]' not in la and 'generateKey({name:"ECDSA", namedCurve:"P-256"}, false' in la)
     check("louisiana: durable ledger store and custody bundle present", "cxla.ledgerdb" in la and "cx-custody/1" in la and "HALL_REQS" in la)
+    import hashlib as _h
+    sbom = json.loads((ROOT / "sbom" / "cognitionx.cdx.json").read_text(encoding="utf-8"))
+    apps_in = [c for c in sbom["components"] if c["type"] == "application"]
+    check("sbom: CycloneDX 1.5 with the six apps", sbom["bomFormat"] == "CycloneDX" and sbom["specVersion"] == "1.5" and len(apps_in) == 6)
+    check("sbom: app hashes current", all(_h.sha256((ROOT / c["properties"][0]["value"]).read_bytes()).hexdigest() == c["hashes"][0]["content"] for c in apps_in))
+    check("sbom: four typeface families listed under OFL", len({c["name"] for c in sbom["components"] if c["type"] == "file"}) == 4 and all(c["licenses"][0]["license"]["id"] == "OFL-1.1" for c in sbom["components"] if c["type"] == "file"))
+    check("sbom: dev toolchain excluded from the shipped scope", all(c.get("scope") == "excluded" for c in sbom["components"] if c["type"] == "library"))
+    check("sbom: declares zero runtime dependencies", any(p["name"] == "cx:runtime_dependencies" and p["value"] == "0" for p in sbom["metadata"]["properties"]))
+    from runtime_lib import CSP as _CSP
+    hosting = (ROOT / "docs" / "HOSTING.md").read_text(encoding="utf-8")
+    check("HOSTING.md carries the exact CSP as a header", _CSP in hosting and "Strict-Transport-Security" in hosting and "no-referrer" in hosting)
+    cisa = (ROOT / "docs" / "CISA_K12_SUMMARY.md").read_text(encoding="utf-8")
+    check("CISA summary maps to register ids", "PL-01" in cisa and "ST-02" in cisa and "Not legal advice" in cisa)
     road = (ROOT / "docs" / "COMPLIANCE_ROADMAP.md").read_text(encoding="utf-8")
     check("COMPLIANCE_ROADMAP.md states the register counts", f"{len(reg['controls'])} controls" in road)
 

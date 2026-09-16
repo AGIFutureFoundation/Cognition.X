@@ -816,6 +816,39 @@ async function testDurableLedger(browser, errs) {
   await la.close();
 }
 
+/* ------- v0.59.0: a hosted copy behaves exactly like the file (docs/HOSTING.md) ------- */
+async function testHostedCopy(browser, errs) {
+  const { spawn } = require('child_process');
+  let base = process.env.CX_HOSTED_BASE, srv = null, port = 8765 + Math.floor(Math.random() * 1000);
+  if (!base) {
+    srv = spawn('python3', ['-m', 'http.server', String(port), '--bind', '127.0.0.1', '--directory', ROOT], { stdio: 'ignore' });
+    await new Promise(r => setTimeout(r, 900));
+    base = `http://127.0.0.1:${port}/apps/`;
+  }
+  try {
+    for (const app of ['louisiana', 'trades-network']) {
+      const page = await browser.newPage();
+      const reqs = [], csp = [];
+      page.on('request', r => { const u = r.url(); if (!u.startsWith(base) && !u.startsWith('blob:') && !u.startsWith('data:')) reqs.push(u); });
+      page.on('console', m => { if (/Content Security Policy|Refused to/.test(m.text())) csp.push(m.text().slice(0, 120)); });
+      page.on('pageerror', e => errs.push(`${app}/hosted: ${e.message}`));
+      const u = process.env.CX_HOSTED_BASE ? base : base + app + '/index.html';
+      await page.goto(u + '#/roles'); await page.waitForTimeout(900);
+      check(`hosted: ${app} makes no request beyond its own document`, reqs.length === 0, reqs[0]);
+      check(`hosted: ${app} raises no CSP violation`, csp.length === 0, csp[0]);
+      check(`hosted: ${app} browser refuses a fetch`, await page.evaluate(async () => { try { await fetch('https://example.com/'); return false; } catch (e) { return true; } }));
+      check(`hosted: ${app} origin is http(s), one per app`, await page.evaluate(() => /^https?:$/.test(location.protocol)));
+      check(`hosted: ${app} privacy control and runtime present`, (await page.$('#cx-privbtn')) !== null && await page.evaluate(() => typeof CXSIM === 'object'));
+      if (app === 'louisiana') {
+        const fonts = await page.evaluate(async () => { await document.fonts.ready; return document.fonts.check('800 20px Fraunces') && document.fonts.check('400 14px "IBM Plex Mono"'); });
+        check('hosted: embedded typefaces resolve over http', fonts);
+      }
+      await page.close();
+      if (process.env.CX_HOSTED_BASE) break;   // an external host serves one app
+    }
+  } finally { if (srv) srv.kill(); }
+}
+
 (async () => {
   const browser = await chromium.launch({
     executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium',
@@ -840,6 +873,7 @@ async function testDurableLedger(browser, errs) {
       ['standards and rubrics', testStandardsAndRubrics],
       ['office key and wave one', testOfficeKeyNonExtractable],
       ['durable ledger and custody bundle', testDurableLedger],
+      ['hosted copy', testHostedCopy],
     ]) {
       console.log(`\n▸ ${name}`);
       await fn(browser, errs);
