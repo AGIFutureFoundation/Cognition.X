@@ -35,7 +35,7 @@ Unchanged from the first set, and not style preferences:
 
 ---
 
-## 1 — Design the description override, then author the sector-OS bands
+## 1 — Design the description override, then author the sector-OS bands *(override designed and the Corporate OS authored in v0.72.0 — 500 rows; six sector packs remain, same shape)*
 
 **Why.** 9,750 rows carry one sentence per theme with a band suffix.
 3,457 of them are in the seven sector-OS packs (Corporate, Science,

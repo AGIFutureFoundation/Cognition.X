@@ -16,6 +16,7 @@ Deterministic: same dataset, same file.
 """
 
 import csv
+import json
 import sys
 import re
 from collections import OrderedDict
@@ -74,6 +75,18 @@ def main():
     desc_all = sum(1 for r in rows if r["description"].strip())
     suff_all = sum(1 for r in rows if SUFFIX.search(r["description"].strip()))
     cl_all = sum(1 for r in rows if r["code"].strip() and r["level"].strip())
+    # description overrides: rows in an override promotion's pack whose description
+    # is that theme's authored sentence for the row's band (see normalize_blocks.py)
+    overrides, override_packs = 0, set()
+    for p in sorted((ROOT / "data" / "promotions").glob("*.json")):
+        spec = json.loads(p.read_text(encoding="utf-8"))
+        if spec.get("override") != "band-suffix":
+            continue
+        bands = {th["theme"]: th["bands"] for t in spec["tracks"] for th in t["themes"]}
+        for r in rows:
+            if r["pack"] == spec["pack"] and r["theme"] in bands and r["description"].strip() == str(bands[r["theme"]].get(r["grade"], "")).strip():
+                overrides += 1
+                override_packs.add(r["pack"])
     lw_rows = [r for r in rows if r["credential"].strip() in LEVEL_WORDS]
     lw_tracks = {(r["pack"], r["track"]) for r in lw_rows if r["track"]}
     creds = {r["credential"] for r in rows}
@@ -97,6 +110,17 @@ def main():
         f"- Blocks carrying at least one standards code: **{std_cov['blocks_covered']:,}** of {len(rows):,} ({100*std_cov['blocks_covered']//len(rows)}%) — "
         + " · ".join(f"{i} ({s}: {n} entries, {c} codes)" for i, s, n, c in std_cov["frameworks"]),
         f"- Tracks with a transfer-check rubric: **{std_cov['tracks_with_rubric']}** of {std_cov['tracks']} ({100*std_cov['tracks_with_rubric']//std_cov['tracks']}%) — the core-spine tracks the Louisiana ledger credits.",
+        "",
+        "## Description overrides",
+        "",
+        "The pipeline never overwrites a non-empty source field, with two counted",
+        "exceptions. The second (v0.72.0): a promotion declaring",
+        "`\"override\": \"band-suffix\"` replaces a band-suffixed description — the",
+        "content debt above, and nothing else — with an authored sentence for that",
+        "band; the normaliser refuses any other target with the row id.",
+        "",
+        f"- Rows whose band-suffix description was replaced by an authored band sentence: **{overrides:,}** "
+        f"across {len(override_packs)} pack(s) ({', '.join(sorted(override_packs)) or 'none'}).",
         "",
         "## Credential naming",
         "",

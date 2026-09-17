@@ -677,11 +677,14 @@ def test_education_os_canonical_injection():
     check("institute: every principle carries its strands", all(isinstance(x.get("strands"), list) and x["strands"] for x in inst["principles"]))
 
 
-KNOWN_BAND_SUFFIX_ROWS = 9750       # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); the ratchet only falls
+KNOWN_BAND_SUFFIX_ROWS = 9250       # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); 9,250 after the Corporate OS override (v0.72.0); the ratchet only falls
 BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch & Scale",
                        "Civic Leadership Legacy : Louisiana", "Basic Life Skills & Self-Reliance",
                        "Cognition.X : Louisiana OS"}
 BAND_AUTHORED_THEMES = {"Cognition.X : Louisiana OS": 100}   # two spec parts, one pack
+# packs whose source rows carried the suffix and were overridden through an
+# `override: band-suffix` promotion (v0.72.0): themes overridden, rows expected
+BAND_OVERRIDDEN_PACKS = {"Cognition.X : Corporate OS": (100, 500)}
 
 
 def test_band_differentiated_descriptions():
@@ -720,6 +723,32 @@ def test_band_differentiated_descriptions():
     for pack in BAND_AUTHORED_PACKS:
         parts = [json.loads(p.read_text(encoding="utf-8")) for p in specs[pack]]
         check(f"spec: {pack} carries bands on every theme", all("bands" in th for s in parts for t in s["tracks"] for th in t["themes"]))
+    # v0.72.0 — the band-suffix override: counted, suffix-only, refused otherwise
+    from normalize_blocks import override_description, BANDS
+    dq = (ROOT / "docs" / "DATA_QUALITY.md").read_text(encoding="utf-8")
+    total_over = 0
+    for pack, (themes_n, rows_n) in BAND_OVERRIDDEN_PACKS.items():
+        pr = [r for r in rows if r["pack"] == pack and r["track"]]
+        by_theme = {}
+        for r in pr:
+            by_theme.setdefault(r["theme"], []).append(r["description"])
+        check(f"override: {pack} — no tracked row carries the suffix", not [r for r in pr if suffix.search(r["description"])])
+        check(f"override: {pack} — {themes_n} themes with five distinct sentences", len(by_theme) == themes_n and all(len(v) == 5 and len(set(v)) == 5 for v in by_theme.values()), str(len(by_theme)))
+        check(f"override: {pack} — every sentence is a full sentence that says what the learner does", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in pr))
+        check(f"override: {pack} — the rows' track, code and credential are untouched", all(r["code"] and r["credential"] for r in pr) and len(pr) == rows_n, str(len(pr)))
+        promo = [p for p in (ROOT / "data" / "promotions").glob("*.json") if json.loads(p.read_text(encoding="utf-8"))["pack"] == pack]
+        check(f"override: {pack} — declared as an override promotion with bands on every theme", promo and json.loads(promo[0].read_text(encoding="utf-8")).get("override") == "band-suffix")
+        total_over += rows_n
+    check("override: the dashboard counts the exception", f"replaced by an authored band sentence: **{total_over:,}**" in dq)
+    good = {b: f"Do the {i} thing for real." for i, b in enumerate(BANDS)}
+    check("override: a suffix row for its own band is replaced", override_description({"code": "X-1", "pack": "p", "theme": "t", "grade": "6–8", "description": "Shared sentence — at 6–8"}, good) == "Do the 2 thing for real.")
+    check("override: an empty description is left to the fill-empty path", override_description({"code": "X-1", "pack": "p", "theme": "t", "grade": "6–8", "description": ""}, good) is None)
+    for bad_row, bad_bands in (({"description": "An authored sentence that must never be overwritten."}, good), ({"description": "Shared — at 9–10"}, good), ({"description": "Shared — at 6–8"}, {b: "same." for b in BANDS})):
+        try:
+            override_description({"code": "X-1", "pack": "p", "theme": "t", "grade": "6–8", **bad_row}, bad_bands); ok = False
+        except SystemExit:
+            ok = True
+        check("override: refuses an authored target, a wrong band and malformed bands", ok)
     packs_by_slug = {p["slug"]: p["name"] for p in json.loads((ROOT / "data" / "manifest.json").read_text(encoding="utf-8"))["packs"]}
     spine = {packs_by_slug.get(r["pack"], r["pack"]) for r in json.loads((ROOT / "data" / "rubrics" / "core_spine.json").read_text(encoding="utf-8"))["rubrics"]}
     check("core spine: every core-spine pack is band-authored (v0.67.0)", spine <= BAND_AUTHORED_PACKS, str(sorted(spine - BAND_AUTHORED_PACKS)))
@@ -824,8 +853,11 @@ def test_system_review_2():
     rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
     empty = sum(1 for r in rows if not r["description"].strip())
     suffix = sum(1 for r in rows if re.search(r"— at [^—]+$", r["description"]))
-    check("review 2: empty-description count matches", f"{empty:,} rows" in rev, str(empty))
-    check("review 2: band-suffix count matches", f"{suffix:,} rows" in rev, str(suffix))
+    # the review is a snapshot at v0.70.0; both debts only ever fall, so its figures bound the current ones
+    rev_empty = int(re.search(r"(\d[\d,]*) rows \(\d+%\) have no description", rev).group(1).replace(",", ""))
+    rev_suffix = int(re.search(r"(\d[\d,]*) rows \(\d+%\) carry one sentence", rev).group(1).replace(",", ""))
+    check("review 2: empty-description count has not risen since the review", empty <= rev_empty, f"{empty} vs {rev_empty}")
+    check("review 2: band-suffix count has not risen since the review", suffix <= rev_suffix, f"{suffix} vs {rev_suffix}")
     real = len({r["credential"] for r in rows} - {"Explorer", "Builder", "Practitioner", "Lead"})
     dq = (ROOT / "docs" / "DATA_QUALITY.md").read_text(encoding="utf-8")
     check("data quality headline counts real credentials", f"{real:,} credentials**" in dq, str(real))

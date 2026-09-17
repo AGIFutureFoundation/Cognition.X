@@ -4,6 +4,27 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.72.0] — 2026-09-17
+
+### Added — the description override, and the Corporate OS across five bands
+- **`"override": "band-suffix"` in promotions** — the second counted
+  exception to fill-empty-only. The seven sector-OS packs carry their
+  band-suffixed sentences in the *source*, so `bands` could not reach
+  them. A promotion declaring the override replaces a description only
+  when it is the shared sentence with its "— at ‹band›" suffix for the
+  row's own band, and only with that theme's authored sentence for that
+  band; an authored source sentence, a wrong band or malformed `bands`
+  is refused with the row id. The normaliser prints the count,
+  `docs/DATA_QUALITY.md` reports it under *Description overrides*, and
+  the tests hold the refusals and the count (`CONTRIBUTING.md`).
+- **The Corporate OS authored** (`data/promotions/corporate-os.json`):
+  ten tracks, 100 themes, five distinct sentences each on the band
+  ladder (K–2 the child's-scale analogue with an adult; 3–5 at school
+  or club scale; 6–8 smaller scope or with a checker; 9–10 the whole
+  thing for real; 11–12 for others, for a real body, on the record) —
+  500 rows; no block id, code, credential or transfer check changed.
+  Band-suffix rows 9,750 → 9,250; the ratchet lowered.
+
 ## [0.71.1] — 2026-09-17
 
 ### Added — white papers and promo films for three organisation modules

@@ -43,6 +43,22 @@ follow: 6–8 does the task on a smaller scope or with a checker; 9–10
 does the whole thing for real; 11–12 does it for others, for a real
 body, or on the record.
 
+### Overriding a suffixed source description (`override`)
+
+Some packs — the seven sector OS packs — arrived with their suffixed
+sentences already in the *source*, so the fill-empty rule keeps `bands`
+out. For those, and only those, a promotion may declare
+`"override": "band-suffix"` (see `data/promotions/corporate-os.json`).
+The normaliser then replaces a description **only** when it is the
+shared sentence with its "— at ‹band›" suffix for the row's own band,
+and only with that theme's authored sentence for that band; an authored
+source sentence, an empty one, a wrong band or malformed `bands` is
+refused with the row id. It is the second counted exception to
+fill-empty-only (the first is the credential correction): the
+normaliser prints the count, `docs/DATA_QUALITY.md` reports it, and the
+tests hold it. Nothing else on the row — track, code, credential,
+transfer check — is touched.
+
 ### Writing style (match the corpus)
 
 - Track names read like a journey: *"Privacy and the trail you leave"*.

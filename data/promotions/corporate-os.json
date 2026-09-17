@@ -1,0 +1,1167 @@
+{
+  "pack": "Cognition.X : Corporate OS",
+  "override": "band-suffix",
+  "note": "v0.72.0 — the second counted exception to fill-empty-only. Every theme here exists in the source with a band-suffixed description (the documented content debt); this promotion replaces exactly those 500 rows with five authored sentences per theme. The normaliser refuses any other target. Track names, prefixes, codes, credentials and transfer checks are untouched.",
+  "tracks": [
+    {
+      "prefix": "ON",
+      "name": "Arriving in a job",
+      "themes": [
+        {
+          "theme": "The first day somebody actually remembers",
+          "description": "What actually happens on a first day, what to bring, and the three things worth asking before lunch.",
+          "bands": {
+            "K–2": "Tell an adult the three things you would want to know on your first day in a new class, and go and find one out.",
+            "3–5": "Write the three questions you would ask before lunch on a first day at a new school or club, and ask one of a teacher.",
+            "6–8": "Write a first-day plan for a new club member or a new student — where to go, whom to ask, what to bring — and have a teacher check it.",
+            "9–10": "Write the first-day plan you would want for a real job or placement, then run somebody else through theirs.",
+            "11–12": "Write and run a first-day plan for a real newcomer at a workplace or programme, and keep the record of what they asked that you had missed."
+          }
+        },
+        {
+          "theme": "What the role is, said plainly",
+          "description": "A job description is a negotiating document; the role is what you are held to. Learning to read the gap.",
+          "bands": {
+            "K–2": "Say in one sentence what your job is in the classroom this week, and check it with your teacher.",
+            "3–5": "Write your role in a group project in two sentences and check it against what the teacher expects.",
+            "6–8": "Read a real job advert and write, in two sentences, what the person is actually held to; have a teacher check the gap.",
+            "9–10": "State your own role at a real job or placement in two sentences and check it against your manager.",
+            "11–12": "Write the plain-language role statement for a real position and have the manager and the person holding it both confirm it."
+          }
+        },
+        {
+          "theme": "Who decides what about your work",
+          "description": "Who signs off what, who is consulted, and who only needs telling. The map nobody hands you.",
+          "bands": {
+            "K–2": "Draw who decides what in your classroom — the teacher, the helper, you — for one job you do.",
+            "3–5": "Draw the decision map for one school project: who signs off, who is asked, who is only told.",
+            "6–8": "Draw the decision map for one real task at a club, team or school and confirm it with two people involved.",
+            "9–10": "Draw the decision map for one real task at work and confirm it with two colleagues.",
+            "11–12": "Draw and confirm the decision map for a real team's recurring task, and hand it to the next newcomer as the map nobody gave you."
+          }
+        },
+        {
+          "theme": "The systems you must be able to use by Friday",
+          "description": "The five systems that gate the work, and getting access before the access is urgent.",
+          "bands": {
+            "K–2": "Show an adult you can log in to the class computer or open the class app on your own.",
+            "3–5": "List the three school systems you need this week and show a working login for each.",
+            "6–8": "List every system a real project needs — accounts, tools, shared folders — and get access before it is urgent, with a teacher checking.",
+            "9–10": "List every system your first task at work needs and show a working login for each.",
+            "11–12": "Prepare the access list for a real newcomer's first week, get every login working before they arrive, and record what took longest."
+          }
+        },
+        {
+          "theme": "Asking a question without looking incapable",
+          "description": "Questions that make you look careful rather than lost, and when to batch them.",
+          "bands": {
+            "K–2": "Save up two questions during a task and ask them together at the right moment.",
+            "3–5": "Write three questions before asking them, and ask all three in one go rather than one at a time.",
+            "6–8": "Prepare three questions for a coach or teacher, ask them in one sitting, and write down the answers so you never need to ask again.",
+            "9–10": "Ask three prepared questions of a manager in one sitting and record the answers usefully.",
+            "11–12": "Run a question batch for a real team — collected, prioritised, asked once, answered in writing — and publish the answers where the next person finds them."
+          }
+        },
+        {
+          "theme": "The ninety-day mark and what should be true",
+          "description": "What competence looks like at ninety days, described before you get there rather than after.",
+          "bands": {
+            "K–2": "Say what you want to be able to do by the end of term, and tell your teacher.",
+            "3–5": "Write what a good term at a new school or club would look like, then check it with an adult at the end.",
+            "6–8": "Write your own ninety-day expectations for a new team, club or placement and have a coach or teacher correct them.",
+            "9–10": "Write your own ninety-day expectations for a real job and have them corrected by somebody senior.",
+            "11–12": "Write the ninety-day expectations for a real role you supervise or support, agree them with the person on day one, and review them together on day ninety."
+          }
+        },
+        {
+          "theme": "Probation, and what it actually measures",
+          "description": "Probation measures reliability far more than brilliance, and the evidence is mostly ordinary.",
+          "bands": {
+            "K–2": "Keep a chart of the promises you made this week and whether you kept them.",
+            "3–5": "Keep a two-week record of things you said you would do at school and whether you did them, and show it to an adult.",
+            "6–8": "Keep a two-week record of commitments made and kept for a team or club, and show the pattern to a coach.",
+            "9–10": "Keep a two-week record of commitments made and commitments kept at work.",
+            "11–12": "Keep and share a two-week reliability record with a real manager, and write what a fair probation review of it would say."
+          }
+        },
+        {
+          "theme": "A manager relationship that works",
+          "description": "A working relationship is built from predictable updates, not from being liked.",
+          "bands": {
+            "K–2": "Tell your teacher one thing you finished and one thing you are stuck on, at the same time each day this week.",
+            "3–5": "Give a teacher a short update on a project at an agreed time, with what is done and what is next.",
+            "6–8": "Run one check-in with a coach or teacher using an agenda you wrote, and keep the agenda for next time.",
+            "9–10": "Run one structured check-in with a manager using an agenda you wrote.",
+            "11–12": "Run four weekly check-ins with a real manager on a written agenda, and show the record of decisions they produced."
+          }
+        },
+        {
+          "theme": "The colleague who shows you the real process",
+          "description": "The documented process and the real process differ. Finding the person who knows the second.",
+          "bands": {
+            "K–2": "Ask a classmate how they really do a class job, and show an adult the difference from the instructions.",
+            "3–5": "Find the classmate who knows how something at school really works, write it down, and check it with them.",
+            "6–8": "Document one real process at a club or school as it is actually done, not as the sheet says, and have the person who does it verify it.",
+            "9–10": "Document one real workplace process as actually performed and have it verified.",
+            "11–12": "Document a real process as performed, reconcile it with the written one, and get both the doer and the owner to sign the reconciled version."
+          }
+        },
+        {
+          "theme": "What to do when the job is not the job advertised",
+          "description": "When the work is materially different from what was advertised, and what to do about it early.",
+          "bands": {
+            "K–2": "Tell an adult when a job you were given turned out different from what you were told, and say what changed.",
+            "3–5": "Write what a school role was supposed to be and what it turned out to be, and say who could fix the gap.",
+            "6–8": "Compare a real club, team or placement role as advertised with the role as lived, name what changed, and identify who can address it.",
+            "9–10": "Write the comparison for a real job, name what changed, and identify who can address it.",
+            "11–12": "Write the advertised-versus-actual comparison for a real role, raise it with the person who can address it, and record their answer."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SK",
+      "name": "Skill at work",
+      "themes": [
+        {
+          "theme": "The skill your role rests on",
+          "description": "Identifying the one capability the role genuinely rests on, underneath the task list.",
+          "bands": {
+            "K–2": "Say the one thing you are best at in class and show an adult how you know.",
+            "3–5": "Name the one skill a school job really depends on, and say how you would know you were getting better at it.",
+            "6–8": "Name the one capability a real club or team role rests on, defend the choice to a coach, and say how you would measure improvement.",
+            "9–10": "Name it for a real job, defend the choice, and show how you would measure improvement in it.",
+            "11–12": "Name the one capability a real role rests on, agree it with the person who holds the role, and set the measure you will both use."
+          }
+        },
+        {
+          "theme": "Practising something while being paid to do it",
+          "description": "Deliberate practice inside paid work, without pretending it is not happening.",
+          "bands": {
+            "K–2": "Practise one skill inside a real class job every day this week and tell an adult what got easier.",
+            "3–5": "Build a small practice into a school task for two weeks and show what changed.",
+            "6–8": "Design a practice loop inside a real club or team task, run it for two weeks, and show a coach the record.",
+            "9–10": "Design a practice loop inside a real work task and run it for two weeks.",
+            "11–12": "Design and run a two-week practice loop inside real paid work, agreed with the manager, and show the measured change."
+          }
+        },
+        {
+          "theme": "Learning from the person leaving",
+          "description": "Knowledge leaves with people. Extracting it before the last day, not on it.",
+          "bands": {
+            "K–2": "Ask someone who is leaving your class or club to show you one thing they know before they go.",
+            "3–5": "Interview a classmate who is leaving a role about how they did it, and write it up for the next person.",
+            "6–8": "Run a handover interview with a departing club or team member and produce something a successor could use.",
+            "9–10": "Run a handover interview at work and produce something a successor could use.",
+            "11–12": "Run a handover for a real departure, produce the document, and have the successor confirm it was enough after their first month."
+          }
+        },
+        {
+          "theme": "Documentation as a skill rather than a chore",
+          "description": "Writing something down is a skill with technique, and it is the cheapest leverage available.",
+          "bands": {
+            "K–2": "Write or draw the steps of a class job so a friend can do it without asking you.",
+            "3–5": "Write instructions for a school task so a classmate completes it correctly without asking you.",
+            "6–8": "Document a real club or team task so a stranger completes it correctly without asking, and test it on somebody.",
+            "9–10": "Document a work task so a stranger completes it correctly without asking you.",
+            "11–12": "Document a real task, have two strangers follow it, and revise it from where they got stuck."
+          }
+        },
+        {
+          "theme": "Getting better at the thing you avoid",
+          "description": "The avoided task is usually the one where the gap is largest. Approaching it deliberately.",
+          "bands": {
+            "K–2": "Pick the class job you like least, do the first step, and tell an adult.",
+            "3–5": "Pick the school task you avoid, break it into three steps, and complete the first one.",
+            "6–8": "Pick the avoided thing in a real club or team role, break it into three steps, and complete the first with a coach watching.",
+            "9–10": "Pick the avoided thing at work, break it into three steps, and complete the first.",
+            "11–12": "Pick the avoided task, complete all three steps on the record, and write what the gap actually was."
+          }
+        },
+        {
+          "theme": "A qualification your employer will fund",
+          "description": "Employer-funded qualifications exist, are underused, and have a process with a deadline.",
+          "bands": {
+            "K–2": "Find out one thing your school will pay for that helps you learn, and ask an adult how to ask for it.",
+            "3–5": "Find one course or badge your school or club will fund, and find out who approves it.",
+            "6–8": "Find one funded course or certificate you are eligible for through a school, club or programme, identify the approver, and draft the request.",
+            "9–10": "Find one your employer will fund, identify the approver, and draft the request.",
+            "11–12": "Find an employer-funded qualification, submit the real request through the real process, and record the decision and its timing."
+          }
+        },
+        {
+          "theme": "Transferable versus employer-specific",
+          "description": "Which of your skills you keep when the employer changes, and which evaporate at the door.",
+          "bands": {
+            "K–2": "Sort three things you can do into ones you could use anywhere and ones only for this classroom.",
+            "3–5": "Sort your school skills into ones you keep anywhere and ones that only work here, and say why.",
+            "6–8": "Sort the skills from a real club, team or placement into transferable and place-specific, and justify each placement to a coach.",
+            "9–10": "Sort your current work skills into the two lists and justify each placement.",
+            "11–12": "Sort a real role's skills into the two lists with the person holding it, and agree what they would keep if they left tomorrow."
+          }
+        },
+        {
+          "theme": "When automation changes your task",
+          "description": "Automation changes the shape of a task before it removes it. Reading the change early.",
+          "bands": {
+            "K–2": "Find one class job a machine or app now does, and say what you do instead.",
+            "3–5": "Describe one school task that a computer changed, and what the person still has to do.",
+            "6–8": "Describe one task in a real club, team or placement that a tool has changed shape, and what it now demands of the person.",
+            "9–10": "Describe one task in your work that has changed shape, and what it demands now.",
+            "11–12": "Describe a real task's change of shape under automation, and write the new role description the manager would need."
+          }
+        },
+        {
+          "theme": "Teaching the thing you just learned",
+          "description": "Teaching is the fastest way to find the holes in what you just learned.",
+          "bands": {
+            "K–2": "Teach a classmate one thing you learned this week and notice the question you could not answer.",
+            "3–5": "Teach one thing to a classmate and write down where their questions found a gap in what you knew.",
+            "6–8": "Teach one thing to a club or team member and record where their questions found gaps.",
+            "9–10": "Teach one thing to a colleague and record where their questions found gaps.",
+            "11–12": "Teach a real skill to two colleagues, record the gaps their questions found, and close them on the record."
+          }
+        },
+        {
+          "theme": "Evidence of competence you keep, not the company",
+          "description": "Evidence of competence that lives with you rather than in an employer system.",
+          "bands": {
+            "K–2": "Keep one piece of work you are proud of in your own folder to show next year.",
+            "3–5": "Make one portfolio page of something you did at school or a club that you could show anywhere.",
+            "6–8": "Assemble a portfolio entry from a real club, team or placement that you could show elsewhere, with nothing private in it.",
+            "9–10": "Assemble a portfolio entry from real work you could show after leaving, with nothing confidential in it.",
+            "11–12": "Assemble and have reviewed a portfolio of real work evidence that lives with you, checked for confidentiality by the employer."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SF",
+      "name": "Safety and the line you do not cross",
+      "themes": [
+        {
+          "theme": "What the safety rule is protecting",
+          "description": "Every safety rule encodes an incident. Reading the rule back to the harm it prevents.",
+          "bands": {
+            "K–2": "Pick one class safety rule and say what could go wrong without it.",
+            "3–5": "Take three school safety rules and say what harm each one prevents.",
+            "6–8": "Take three rules from a real club, workshop or team and state the harm each one is protecting against, checked by a coach.",
+            "9–10": "Take three rules where you work and state the harm each one is protecting against.",
+            "11–12": "Take three real workplace rules, trace each to the incident it encodes, and present the trace to the people who must follow them."
+          }
+        },
+        {
+          "theme": "Stopping work, and the right to",
+          "description": "The right to stop unsafe work, where it comes from, and how to use it without theatre.",
+          "bands": {
+            "K–2": "Practise saying 'stop, that is not safe' and telling an adult straight away.",
+            "3–5": "Practise the stop sentence for a school or club activity and say whom you would tell.",
+            "6–8": "Rehearse the stop-work sentence for a real workshop or team activity and identify who you say it to.",
+            "9–10": "Rehearse the stop-work sentence for a real job and identify who you say it to.",
+            "11–12": "Rehearse and use the stop-work sentence in a real setting, and write where the right comes from and how it was received."
+          }
+        },
+        {
+          "theme": "Reporting a hazard without consequence",
+          "description": "Reporting routes, what protection exists, and the difference between a report and a complaint.",
+          "bands": {
+            "K–2": "Show an adult one thing in the classroom that could hurt someone, and say who fixes it.",
+            "3–5": "Find the way to report a hazard at school and say what happens after you do.",
+            "6–8": "Identify the hazard-reporting route at a real club, workshop or school and the protection attached to it.",
+            "9–10": "Identify the route where you work and the protection attached to it.",
+            "11–12": "Report a real hazard through the real route, follow what happens to it, and write what protection actually applied."
+          }
+        },
+        {
+          "theme": "Near misses and why they are the data",
+          "description": "A near miss is the only free data a system gets. Why they go unreported and how to fix that.",
+          "bands": {
+            "K–2": "Tell an adult about one time something nearly went wrong, and what you would change.",
+            "3–5": "Write down one near miss at school or a club and say what it tells you.",
+            "6–8": "Log one near miss from a real activity properly and trace what happens to the record.",
+            "9–10": "Log one near miss at work properly and trace what happens to the record.",
+            "11–12": "Log a real near miss, trace the record to its outcome, and propose one change to how they get reported."
+          }
+        },
+        {
+          "theme": "Fatigue as a safety condition",
+          "description": "Fatigue is a hazard with the same standing as a chemical or a height, and is treated as weakness.",
+          "bands": {
+            "K–2": "Notice when you are too tired to do something carefully, and say so to an adult.",
+            "3–5": "Keep a week's record of when you were tired at school and what was harder because of it.",
+            "6–8": "Map your own fatigue across a real week of school, club and sport and identify one factor you can control.",
+            "9–10": "Map your own fatigue risk across a real working week and identify one controllable factor.",
+            "11–12": "Map fatigue across a real team's week, identify the controllable factors, and raise one with the person who sets the schedule."
+          }
+        },
+        {
+          "theme": "The shortcut everybody takes",
+          "description": "Every workplace has a normalised shortcut. Naming yours and understanding why it persists.",
+          "bands": {
+            "K–2": "Name one rule people skip in class and say why they skip it.",
+            "3–5": "Name a shortcut everyone takes at school or a club, and say what pressure causes it.",
+            "6–8": "Identify the normalised shortcut in a real club or workshop, describe the pressure creating it, and propose the fix to a coach.",
+            "9–10": "Identify the shortcut where you work, describe the pressure creating it, and propose the fix.",
+            "11–12": "Identify a real workplace shortcut, propose the fix to the people who take it, and record whether the pressure changed."
+          }
+        },
+        {
+          "theme": "Personal protective equipment that actually fits",
+          "description": "Protective equipment that does not fit is not protective equipment, and fit is a right.",
+          "bands": {
+            "K–2": "Check that your helmet, goggles or apron fits, and tell an adult if it does not.",
+            "3–5": "Check that your safety equipment for sport or craft fits and say what you would do if it did not.",
+            "6–8": "Check the fit of your own protective equipment in a real workshop or sport against what it is for, and report the gap.",
+            "9–10": "Check the fit of your own equipment against its specification and report the gap.",
+            "11–12": "Check protective equipment fit for a real team against specification, report the gaps, and follow the replacement to its arrival."
+          }
+        },
+        {
+          "theme": "An incident, and the hours after it",
+          "description": "The hours after an incident: preserving the scene, the record, and your own account.",
+          "bands": {
+            "K–2": "Tell an adult exactly what happened when something went wrong, in order, without leaving bits out.",
+            "3–5": "Write down what happened in an accident at school in order, as you saw it.",
+            "6–8": "Write the account you would need to give after a real or documented incident at a club or workshop.",
+            "9–10": "Write the account you would need to give, from a real or documented incident at work.",
+            "11–12": "Write a real incident account to the standard an investigation would accept, and preserve the record with it."
+          }
+        },
+        {
+          "theme": "Speaking up about somebody else",
+          "description": "Raising a concern about a colleague, which is the hardest safety act and the most necessary.",
+          "bands": {
+            "K–2": "Tell an adult when someone is doing something unsafe, saying what you saw, not that they are bad.",
+            "3–5": "Practise telling an adult about a classmate's unsafe act by naming the fact, not the person.",
+            "6–8": "Prepare a conversation about a real teammate's unsafe act, name the fact, and separate it from the person, with a coach checking.",
+            "9–10": "Prepare the conversation at work, name the fact, and separate it from the person.",
+            "11–12": "Have the real conversation about a colleague's unsafe act, on the record, and write what changed afterwards."
+          }
+        },
+        {
+          "theme": "The rule you were asked to break",
+          "description": "Being asked to break a rule by somebody with authority over you, and the response prepared in advance.",
+          "bands": {
+            "K–2": "Say what you would do if an adult told you to do something unsafe, and whom you would tell.",
+            "3–5": "Write what you would say if someone in charge asked you to break a safety rule, and who you would go to next.",
+            "6–8": "Write the response you would give if a coach or supervisor asked you to break a rule, and identify the escalation route.",
+            "9–10": "Write the response you would give at work, and identify the escalation route if it fails.",
+            "11–12": "Write and rehearse the response for a real setting, identify the escalation route, and confirm with the safety lead that it holds."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "VO",
+      "name": "Voice and representation",
+      "themes": [
+        {
+          "theme": "What your contract actually says",
+          "description": "Reading your own contract for the four clauses that will matter, before they matter.",
+          "bands": {
+            "K–2": "Find the class rules and point to the ones about time, jobs and what happens if you break them.",
+            "3–5": "Read a school or club agreement and find the parts about hours, duties and leaving.",
+            "6–8": "Locate notice, hours, duties and termination in a real club, team or part-time agreement and summarise each.",
+            "9–10": "Locate notice, hours, duties and termination in your own contract and summarise each.",
+            "11–12": "Summarise the four clauses of a real contract for somebody else, and have a union or advice service confirm the summary."
+          }
+        },
+        {
+          "theme": "Hours, breaks and the law on them",
+          "description": "Working time, rest breaks, and the difference between what is offered and what is required.",
+          "bands": {
+            "K–2": "Say when your break is and why everyone needs one.",
+            "3–5": "Find out what breaks a young worker is entitled to and compare it to a job you know about.",
+            "6–8": "State the legal minimum rest and break rules for young workers where you live and compare them to a real part-time job.",
+            "9–10": "State the legal minimum where you are and compare it to your actual pattern.",
+            "11–12": "State the legal minimum, compare it to a real team's pattern, and raise a real gap with the person who sets the rota."
+          }
+        },
+        {
+          "theme": "Pay: the number, the deductions, the proof",
+          "description": "Reading a payslip line by line, and what to do when the number is wrong.",
+          "bands": {
+            "K–2": "Count the money for a class shop or a chore chart and check the total with an adult.",
+            "3–5": "Check a worked payslip against hours and rate and find the mistake in it.",
+            "6–8": "Reconcile a real or worked payslip against hours worked and the stated rate, and show a checker the arithmetic.",
+            "9–10": "Reconcile one payslip against hours worked and the stated rate.",
+            "11–12": "Reconcile three months of real payslips, document any error, and take it through the correction process."
+          }
+        },
+        {
+          "theme": "Raising a grievance",
+          "description": "A grievance is a process with steps and timescales, and it works better written than spoken.",
+          "bands": {
+            "K–2": "Tell an adult about something unfair, saying what happened and what you want to change.",
+            "3–5": "Write a short complaint about a real school problem with what happened, when, and what you want done.",
+            "6–8": "Draft a grievance for a real or worked example following a real club, school or team process, checked by an adult.",
+            "9–10": "Draft a grievance for a real or worked example, following the actual process.",
+            "11–12": "Draft and, where warranted, submit a real grievance following the actual process, and record each step and its timescale."
+          }
+        },
+        {
+          "theme": "A union, and what one is for",
+          "description": "What a union is, what it can and cannot do, and how membership actually functions.",
+          "bands": {
+            "K–2": "Say what happens when a group of people ask for something together instead of alone.",
+            "3–5": "Explain to a classmate what a union is, using one real example.",
+            "6–8": "Explain to a coach or teacher what a union does and does not do, without slogans in either direction.",
+            "9–10": "Explain to somebody else what a union does, without slogans in either direction.",
+            "11–12": "Explain to a real group of colleagues what a union is and how membership works, and answer their questions from the rules."
+          }
+        },
+        {
+          "theme": "Collective versus individual complaint",
+          "description": "When a problem is yours alone and when it is shared, and why that changes the route.",
+          "bands": {
+            "K–2": "Say whether a class problem is just yours or everyone's, and how that changes who you tell.",
+            "3–5": "Take one school problem and say whether it is one person's or shared, and why that matters.",
+            "6–8": "Take one real club or team problem and argue both framings — individual and shared — to a checker.",
+            "9–10": "Take one workplace problem and argue both framings.",
+            "11–12": "Take a real workplace problem, argue both framings to the people affected, and record which route they chose and why."
+          }
+        },
+        {
+          "theme": "Discrimination and the route for it",
+          "description": "Discrimination, the categories protected where you are, and the specific route for it.",
+          "bands": {
+            "K–2": "Say what it means to be treated unfairly because of who you are, and whom you would tell.",
+            "3–5": "Name the groups the law protects from unfair treatment and find who at school you would go to.",
+            "6–8": "Identify the protected categories where you live and the route for a complaint at a real school or club.",
+            "9–10": "Identify the route and the time limit that applies where you work.",
+            "11–12": "Identify the route and time limit for a real workplace, and explain them to somebody who might need them."
+          }
+        },
+        {
+          "theme": "Whistleblowing and its protections",
+          "description": "Disclosure in the public interest: what is protected, what is not, and the order of steps.",
+          "bands": {
+            "K–2": "Say what you would do if you saw something seriously wrong that an adult should know about.",
+            "3–5": "Write the order of people you would tell about something seriously wrong at school.",
+            "6–8": "Map the internal route for reporting serious wrongdoing at a real club or school and where an outside body comes in.",
+            "9–10": "Map the internal route and the point at which external disclosure becomes protected.",
+            "11–12": "Map the disclosure route for a real workplace against the law where you are, and have it checked by an advice service."
+          }
+        },
+        {
+          "theme": "Redundancy, notice and what is owed",
+          "description": "Redundancy as a process with consultation, selection and entitlement, each contestable.",
+          "bands": {
+            "K–2": "Say what is fair when a class job ends early, and what the person should be told.",
+            "3–5": "Work out from a simple example how much notice someone should get when a job ends.",
+            "6–8": "Calculate the notice and payment owed in a worked example, showing the working to a checker.",
+            "9–10": "Calculate the notice and payment owed in a worked example.",
+            "11–12": "Calculate what is owed in a real or realistic case, check it against the law and the contract, and explain it to the person affected."
+          }
+        },
+        {
+          "theme": "Leaving well",
+          "description": "Leaving without burning what you built, and what you are entitled to take.",
+          "bands": {
+            "K–2": "When you leave a group or job, say thank you and hand over what you were doing.",
+            "3–5": "Write a note handing over a school role to the next person so nothing is lost.",
+            "6–8": "Write a resignation and handover for a real club or team role that the coach would give a reference after.",
+            "9–10": "Write a resignation and handover that a former manager would give a reference after.",
+            "11–12": "Leave a real role with a written handover and an exit conversation, and confirm the reference that follows it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "LD",
+      "name": "Leading other people",
+      "themes": [
+        {
+          "theme": "The first time you supervise somebody",
+          "description": "The shift from doing the work to being accountable for it, and what changes on day one.",
+          "bands": {
+            "K–2": "When you are the leader of a game or a table, say one thing you will let others do instead of doing it yourself.",
+            "3–5": "Lead a small group task and write down what you stopped doing yourself so others could do it.",
+            "6–8": "Lead a real club or team activity and write down what you will stop doing yourself; tell the group, with a coach observing.",
+            "9–10": "Write down what you will stop doing yourself as a new supervisor, and tell your team.",
+            "11–12": "Take on real supervision of one or more people, publish what you stopped doing yourself, and review with your own manager what it cost."
+          }
+        },
+        {
+          "theme": "Delegation without abandonment",
+          "description": "Delegating the whole task with the authority attached, and staying available without hovering.",
+          "bands": {
+            "K–2": "Give a friend a whole job to do in a group task and check in once without taking it back.",
+            "3–5": "Hand a classmate a whole piece of a project with clear instructions and an agreed time to check.",
+            "6–8": "Delegate one real task at a club or team with a written brief and an agreed check-in, and do not take it back.",
+            "9–10": "Delegate one real task at work with a written brief and an agreed check-in.",
+            "11–12": "Delegate a real task with authority attached, hold the check-in, and have the person say afterwards whether they were supported or abandoned."
+          }
+        },
+        {
+          "theme": "A difficult conversation, prepared",
+          "description": "Preparing a hard conversation so that the fact leads and the judgement follows.",
+          "bands": {
+            "K–2": "Practise saying what happened first and how you felt second, when telling someone something hard.",
+            "3–5": "Write the first two sentences of a hard conversation with a classmate, fact first, and practise them.",
+            "6–8": "Script the opening two sentences of a real hard conversation on a team and have a coach critique them before you have it.",
+            "9–10": "Script the opening two sentences of a real conversation at work and have them critiqued.",
+            "11–12": "Prepare and hold a real difficult conversation, fact leading, and write what the judgement that followed was based on."
+          }
+        },
+        {
+          "theme": "Performance, described rather than scored",
+          "description": "Describing performance in observable behaviour rather than a number, and why the number distorts.",
+          "bands": {
+            "K–2": "Say what a classmate did well using what you saw, not a mark out of ten.",
+            "3–5": "Rewrite a star rating for a group member as a sentence describing what they actually did.",
+            "6–8": "Rewrite one scored assessment from a club, team or class as a description of what was observed, checked by an adult.",
+            "9–10": "Rewrite one scored assessment at work as a description of what was observed.",
+            "11–12": "Run one real review as description rather than score, and have the person say which they found fairer and why."
+          }
+        },
+        {
+          "theme": "Recruiting when you cannot pay market",
+          "description": "Hiring against a real constraint, and what you can offer when money is not it.",
+          "bands": {
+            "K–2": "Say why someone should join your team when you cannot give them a prize.",
+            "3–5": "Write an honest invitation to join a school club role that has no reward except the work.",
+            "6–8": "Write the honest pitch for a real volunteer or club role, naming what it cannot offer and what it can.",
+            "9–10": "Write the honest pitch for a role you would have to fill without market pay.",
+            "11–12": "Write and use the honest pitch for a real role, and record who applied and what they said the pitch got right."
+          }
+        },
+        {
+          "theme": "Someone on your team is struggling",
+          "description": "Noticing that somebody is struggling, and the boundary between support and diagnosis.",
+          "bands": {
+            "K–2": "Notice when a classmate is having a hard time and tell a trusted adult rather than trying to fix it.",
+            "3–5": "Practise the question you would ask a struggling teammate, and name the adult you would go to.",
+            "6–8": "Rehearse the opening question for a real teammate who is struggling, and name the referral you would not attempt yourself.",
+            "9–10": "Rehearse the opening question at work, and name the referral you would not attempt yourself.",
+            "11–12": "Hold the real conversation, stay on the support side of the boundary, and record the referral you made and why."
+          }
+        },
+        {
+          "theme": "Holding a gate you did not design",
+          "description": "Enforcing a rule you would not have written, and being honest about that with your team.",
+          "bands": {
+            "K–2": "Explain a class rule you did not choose to a younger child without saying it is silly.",
+            "3–5": "Explain a school rule you disagree with to a classmate, honestly, without pretending you wrote it.",
+            "6–8": "Explain one club or team rule you would not have written to the group without pretending you agree.",
+            "9–10": "Explain one such rule at work to your team without pretending you agree.",
+            "11–12": "Enforce a real rule you did not design, explain it honestly to the team, and raise your objection through the route that can change it."
+          }
+        },
+        {
+          "theme": "Managing upward",
+          "description": "Managing your own manager: what to escalate, when, and in what form.",
+          "bands": {
+            "K–2": "Ask a teacher for one decision by saying what you need and by when.",
+            "3–5": "Write a short note to a teacher asking for a decision, with the options and what you recommend.",
+            "6–8": "Write one escalation to a coach or teacher for a real team problem that gives them exactly what a decision needs.",
+            "9–10": "Write one escalation at work that gives a decision-maker exactly what a decision needs.",
+            "11–12": "Send a real escalation to a real decision-maker, get the decision, and write what the note would have needed to be faster."
+          }
+        },
+        {
+          "theme": "The team after somebody leaves",
+          "description": "A team after a departure is a different team, and pretending otherwise costs more.",
+          "bands": {
+            "K–2": "When someone leaves your group, say out loud who will do their job now.",
+            "3–5": "After a classmate leaves a project, write who takes what and tell the group.",
+            "6–8": "Run a redistribution conversation for a real club or team after somebody leaves and publish what changed for whom.",
+            "9–10": "Run a redistribution conversation at work and publish what changed for whom.",
+            "11–12": "Lead a real redistribution after a departure, publish it, and review four weeks later whether the load actually moved."
+          }
+        },
+        {
+          "theme": "What a manager owes and does not",
+          "description": "The obligations of the role, and the ones people wrongly assume come with it.",
+          "bands": {
+            "K–2": "Say two things a group leader must do for the group and one thing they do not have to do.",
+            "3–5": "Write the two lists for a school club leader and check them with the teacher in charge.",
+            "6–8": "Write the two lists for a real coach or club leader and check them against the club's actual rules.",
+            "9–10": "Write the two lists for a manager and check them against your organisation's actual policy.",
+            "11–12": "Write the two lists for a real role you hold or support, check them against policy and law, and share them with the team."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "RM",
+      "name": "Where the work happens",
+      "themes": [
+        {
+          "theme": "The job that is done from a kitchen table",
+          "description": "What changes when the workplace is a room you also live in, and what does not change at all.",
+          "bands": {
+            "K–2": "Say what is different about doing homework at the kitchen table, and make one rule for it.",
+            "3–5": "Write your own rules for working at home — when, where, and when you stop.",
+            "6–8": "Write a working agreement for real study or club work done from home covering hours, space and availability.",
+            "9–10": "Write your own working agreement for a real remote job covering hours, space and availability.",
+            "11–12": "Write a working agreement for a real remote role, agree it with the manager, and review it after a month of use."
+          }
+        },
+        {
+          "theme": "Being visible without being watched",
+          "description": "The difference between demonstrating work and being monitored, and where the line sits.",
+          "bands": {
+            "K–2": "Show an adult what you did today without them having to watch you do it.",
+            "3–5": "Say the difference between showing your work and being watched, using a school example.",
+            "6–8": "For a real online class or club platform, identify what the organisers can see and what they may not require.",
+            "9–10": "Identify what your employer can see and what it may not require.",
+            "11–12": "Identify what a real employer can see under its policy and the law, and explain the line to a colleague who was unsure."
+          }
+        },
+        {
+          "theme": "A meeting that should have been three sentences",
+          "description": "Recognising the meeting that exists to transmit information, and the cheaper form of it.",
+          "bands": {
+            "K–2": "Say one class announcement in three sentences instead of a whole meeting.",
+            "3–5": "Turn a school group meeting into a written update and see if anything was lost.",
+            "6–8": "Convert one recurring club or team meeting into a written update and measure what changed, with a coach's agreement.",
+            "9–10": "Convert one recurring meeting at work into a written update and measure the difference.",
+            "11–12": "Convert a real recurring meeting, run the written form for a month, and report the time saved and anything lost."
+          }
+        },
+        {
+          "theme": "Time zones and whose morning it is",
+          "description": "The recurring meeting time is a distribution of inconvenience, and somebody always pays it.",
+          "bands": {
+            "K–2": "Work out what time it is for a friend or relative far away and pick a time that is fair to both.",
+            "3–5": "Plan a call between two places in different time zones so neither side is always the one up early.",
+            "6–8": "Redesign a real online club or team schedule across time zones so the inconvenience rotates rather than settles.",
+            "9–10": "Redesign a schedule at work so the cost rotates rather than settles.",
+            "11–12": "Redesign a real distributed team's schedule with the team, and record who pays the cost each month afterwards."
+          }
+        },
+        {
+          "theme": "Asking for help across a screen",
+          "description": "The informal channel that a corridor provides and a video call does not.",
+          "bands": {
+            "K–2": "Ask for help in an online class using words, because nobody can see your face.",
+            "3–5": "Set up one way to ask a classmate for help online that is not a big message to everyone.",
+            "6–8": "Establish one deliberate informal channel with a real online team or class and run it for a month.",
+            "9–10": "Establish one deliberate informal channel with a remote team and run it for a month.",
+            "11–12": "Establish and run a real informal channel for a remote team, and report after a month who used it and for what."
+          }
+        },
+        {
+          "theme": "Equipment, and who pays for it",
+          "description": "What an employer owes for the tools of remote work, and the local position on it.",
+          "bands": {
+            "K–2": "List the things you need for schoolwork at home and say who got each one.",
+            "3–5": "List what you use for learning at home and who paid for each item.",
+            "6–8": "List what a real remote study or club role needs and who paid for each, and find the local rule on who should.",
+            "9–10": "List what you use for remote work and who paid for each item.",
+            "11–12": "List a real remote role's equipment, who paid, and the employer's obligation where you are, and raise any gap in writing."
+          }
+        },
+        {
+          "theme": "The colleague you have never met",
+          "description": "Building a working relationship without shared physical space, deliberately rather than by accident.",
+          "bands": {
+            "K–2": "Have a proper conversation with an online classmate about something other than the work.",
+            "3–5": "Get to know one online classmate on purpose, with three questions you planned.",
+            "6–8": "Run one deliberate relationship-building conversation with a real remote teammate and write what you learned.",
+            "9–10": "Run one relationship-building conversation with a remote colleague.",
+            "11–12": "Run relationship-building conversations with every remote member of a real team and record what each one needed from you."
+          }
+        },
+        {
+          "theme": "Overwork when there is no leaving time",
+          "description": "The commute was a boundary. Replacing it with something that also ends the day.",
+          "bands": {
+            "K–2": "Pick a time when homework stops every day and stick to it for a week.",
+            "3–5": "Design an end-of-day rule for home study and hold it for two weeks.",
+            "6–8": "Design an end-of-day boundary for real remote study or club work and hold it for two weeks, with a checker.",
+            "9–10": "Design an end-of-day boundary for remote work and hold it for two weeks.",
+            "11–12": "Design the boundary, hold it for two weeks, and write what it took to hold it against a real team's expectations."
+          }
+        },
+        {
+          "theme": "Hybrid, and who is actually in the room",
+          "description": "Decisions made in a room reach the people in it first, and remote colleagues last.",
+          "bands": {
+            "K–2": "Notice who missed a class decision because they were away, and tell them.",
+            "3–5": "For one class decision, write who heard it first and who heard it last.",
+            "6–8": "Audit one real club or team decision for who heard it when, and propose how the remote members would hear sooner.",
+            "9–10": "Audit one decision at work for who heard it when.",
+            "11–12": "Audit a month of a real hybrid team's decisions for who heard what when, and propose one change to the team."
+          }
+        },
+        {
+          "theme": "Coming back, or not",
+          "description": "Return-to-office as a change with a process, consultation and grounds for exception.",
+          "bands": {
+            "K–2": "Say what changed when you went back to school in the room after learning at home.",
+            "3–5": "Write what a fair return to in-person learning would include for someone who found home better.",
+            "6–8": "Identify the process a real school or club uses for returning to in-person, and the grounds for an exception.",
+            "9–10": "Identify the return-to-office process where you work and the grounds for an exception.",
+            "11–12": "Identify the real process and exception grounds, and prepare a real or worked exception request that the process would accept."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CU",
+      "name": "The public and the customer",
+      "themes": [
+        {
+          "theme": "The first thirty seconds",
+          "description": "What decides whether an interaction goes well, and how much of it is not what you say.",
+          "bands": {
+            "K–2": "Greet a visitor to the classroom and notice what made them smile.",
+            "3–5": "Practise five greetings for a school event and have a friend say which worked.",
+            "6–8": "Run five openings at a real club desk, stall or event and have a coach observe them.",
+            "9–10": "Run five openings at work and have them observed.",
+            "11–12": "Run and be observed on five real openings, then coach somebody else through theirs."
+          }
+        },
+        {
+          "theme": "Someone angry, and not about you",
+          "description": "Separating the complaint from the person delivering it, and staying useful.",
+          "bands": {
+            "K–2": "When someone is cross about something that is not your fault, stay calm and ask what they need.",
+            "3–5": "Role-play a cross customer at a school stall and stay helpful without taking it personally.",
+            "6–8": "De-escalate a scripted complaint under observation at a club, stall or event.",
+            "9–10": "De-escalate a scripted complaint under observation at work.",
+            "11–12": "De-escalate a real complaint, on the record, and debrief with a supervisor on what separated the person from the problem."
+          }
+        },
+        {
+          "theme": "What you can actually authorise",
+          "description": "Knowing your own limit precisely, so you neither overpromise nor refuse unnecessarily.",
+          "bands": {
+            "K–2": "Say what you are allowed to decide at a class stall and what you must ask an adult about.",
+            "3–5": "List what a helper at a school event can decide alone and what needs a teacher.",
+            "6–8": "State your authority limits in a real club or event role and the escalation for each, checked by the organiser.",
+            "9–10": "State your authority limits at work and the escalation for each.",
+            "11–12": "State your real authority limits, get them confirmed in writing, and use them in a live case without over- or under-promising."
+          }
+        },
+        {
+          "theme": "Saying no so it can be heard",
+          "description": "A refusal with a reason and a next step, rather than a policy quoted at somebody.",
+          "bands": {
+            "K–2": "Say no to a request kindly, with a reason and one other thing the person can do.",
+            "3–5": "Practise three refusals for a school situation, each with a reason and a next step.",
+            "6–8": "Deliver three refusals with a route attached in a real club or event role.",
+            "9–10": "Deliver three refusals with a route attached at work.",
+            "11–12": "Deliver real refusals with routes attached and have a supervisor confirm the person left knowing what to do next."
+          }
+        },
+        {
+          "theme": "The complaint that is a warning",
+          "description": "Recognising the individual complaint that is describing a systemic failure.",
+          "bands": {
+            "K–2": "Notice when several people say the same thing is wrong, and tell an adult it keeps happening.",
+            "3–5": "Spot one complaint at school that keeps coming back and say what it is really about.",
+            "6–8": "Identify one complaint pattern from a real club, event or stall and escalate it as a pattern to the organiser.",
+            "9–10": "Identify one complaint pattern at work and escalate it as a pattern.",
+            "11–12": "Identify a real pattern, escalate it with the evidence, and follow whether the system behind it changed."
+          }
+        },
+        {
+          "theme": "Abuse, and the line you do not stand behind",
+          "description": "What you are not required to absorb, and the support that should exist for it.",
+          "bands": {
+            "K–2": "Say what you should do if someone is rude or scary to you, and whom you tell.",
+            "3–5": "Say what a school helper does not have to put up with and who supports them.",
+            "6–8": "State a real club or event's position on abuse of its helpers and what it commits to do.",
+            "9–10": "State your organisation's position on abuse and what it commits to.",
+            "11–12": "State the real policy, test it against a real or worked case, and raise any gap with the person who owns it."
+          }
+        },
+        {
+          "theme": "A vulnerable customer",
+          "description": "Recognising when the ordinary process will fail somebody, and what to do instead.",
+          "bands": {
+            "K–2": "Notice when someone needs extra help and get an adult rather than rushing them.",
+            "3–5": "Say the signs that someone at a school event needs a different kind of help, and what you would do.",
+            "6–8": "Identify the flags and the alternative route for a vulnerable person at a real club, event or stall.",
+            "9–10": "Identify the flags and the alternative route at work.",
+            "11–12": "Identify the flags and route in a real setting, use them in a live case, and record what the ordinary process would have missed."
+          }
+        },
+        {
+          "theme": "Recording an interaction fairly",
+          "description": "Notes that are accurate about what happened rather than protective of who wrote them.",
+          "bands": {
+            "K–2": "Tell an adult what happened in a disagreement using only what was said and done.",
+            "3–5": "Write a fair record of a school disagreement that both people would agree is true.",
+            "6–8": "Write a record of a real difficult interaction at a club or event and have it reviewed for fairness.",
+            "9–10": "Write a record of a difficult interaction at work and have it reviewed.",
+            "11–12": "Write real records for a month and have a supervisor review them for accuracy rather than self-protection."
+          }
+        },
+        {
+          "theme": "The handover to somebody else",
+          "description": "Passing a live problem without the customer having to start again.",
+          "bands": {
+            "K–2": "When you pass a job to a friend, tell them what has already been done so they do not start again.",
+            "3–5": "Hand over a school helper task to a classmate with a short written summary.",
+            "6–8": "Run one real handover of a live problem at a club or event with a written summary, so the person does not start again.",
+            "9–10": "Run one handover at work with a written summary.",
+            "11–12": "Run real handovers for a week and have the receivers confirm no customer had to start again."
+          }
+        },
+        {
+          "theme": "Repairing it afterwards",
+          "description": "What follow-up actually changes, and the cases where an apology is the whole remedy.",
+          "bands": {
+            "K–2": "After something went wrong for someone, say sorry properly and do one thing to make it better.",
+            "3–5": "Plan a follow-up for a school event that went badly for someone, including the apology.",
+            "6–8": "Design a follow-up for one real failed interaction at a club or event, and carry it out with the organiser.",
+            "9–10": "Design a follow-up for one failed interaction at work.",
+            "11–12": "Design and deliver the follow-up for a real failure, and record whether the apology or the action was the remedy."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "TM",
+      "name": "Time, load and the limit",
+      "themes": [
+        {
+          "theme": "What you are actually being asked to do",
+          "description": "Separating the stated job from the accumulated one, in writing.",
+          "bands": {
+            "K–2": "List every job you do in class this week and circle the ones that are really yours.",
+            "3–5": "List everything you do for a school role and mark what was actually asked of you.",
+            "6–8": "List everything you do in a real club, team or part-time role and mark what is in the role as described, with a checker.",
+            "9–10": "List everything you do at work and mark what is in your role description.",
+            "11–12": "List a real role's accumulated work against its description and agree with the manager which items stay."
+          }
+        },
+        {
+          "theme": "A workload that does not fit the hours",
+          "description": "Describing overload as arithmetic rather than as a personal difficulty.",
+          "bands": {
+            "K–2": "Add up how long your homework takes and show an adult if it is more than the time you have.",
+            "3–5": "Add up the hours a week of school work actually takes and compare it to the time available.",
+            "6–8": "Produce the hours arithmetic for a real week of school, club and part-time work, and show a checker where it does not fit.",
+            "9–10": "Produce the hours arithmetic for your own workload.",
+            "11–12": "Produce the hours arithmetic for a real team and present it as arithmetic, not difficulty, to the person who can change it."
+          }
+        },
+        {
+          "theme": "Prioritising when everything is urgent",
+          "description": "A method for deciding, and being able to show the method to whoever disagrees.",
+          "bands": {
+            "K–2": "When you have three jobs, put them in order and say why to an adult.",
+            "3–5": "Order a real list of school tasks with a method you can explain to a classmate.",
+            "6–8": "Apply one prioritisation method to a real backlog of club or school tasks and defend it to a coach.",
+            "9–10": "Apply one prioritisation method to a real backlog at work and defend it.",
+            "11–12": "Apply a method to a real team backlog, publish the order and the method, and defend it to whoever disagrees."
+          }
+        },
+        {
+          "theme": "Saying that something will not be done",
+          "description": "Making the trade-off visible to the person who owns it rather than absorbing it silently.",
+          "bands": {
+            "K–2": "Tell an adult which job you cannot finish today, rather than leaving it quietly.",
+            "3–5": "Write a note saying which school task will not be done and what you did instead.",
+            "6–8": "Deliver one trade-off in writing to a coach or teacher for a real club or school task.",
+            "9–10": "Deliver one trade-off to a decision-maker at work in writing.",
+            "11–12": "Deliver real trade-offs in writing for a month and record which the decision-maker accepted and which they overrode."
+          }
+        },
+        {
+          "theme": "Interruption as a workload item",
+          "description": "Counting what is not on the list, because it is most of the day.",
+          "bands": {
+            "K–2": "Count how many times you were interrupted during one task and tell an adult.",
+            "3–5": "Keep a tally of interruptions during a week of homework and add up the time.",
+            "6–8": "Log interruptions for a week of real study, club or part-time work and quantify them for a checker.",
+            "9–10": "Log interruptions at work for a week and quantify them.",
+            "11–12": "Log a real team's interruptions for a week, quantify them, and propose one change to the person who can make it."
+          }
+        },
+        {
+          "theme": "Deadlines you did not set",
+          "description": "Testing whether a deadline is real, and what happens on the day after it.",
+          "bands": {
+            "K–2": "Ask what happens if a class deadline is missed, and whether it could move.",
+            "3–5": "Test whether a school deadline is real by asking what happens the day after.",
+            "6–8": "Test three real deadlines from clubs, school or part-time work and record which were negotiable.",
+            "9–10": "Test three deadlines at work and record which were negotiable.",
+            "11–12": "Test three real deadlines by asking their owners what the day after holds, and publish which were real."
+          }
+        },
+        {
+          "theme": "The task that expands to fill everything",
+          "description": "Recognising and bounding the work that has no natural end.",
+          "bands": {
+            "K–2": "Decide what 'finished' means for a drawing or a build before you start, and stop there.",
+            "3–5": "Write what 'enough' means for one school project before starting, and stop at it.",
+            "6–8": "Bound one real open-ended club or school task with a definition of enough, agreed with a checker.",
+            "9–10": "Bound one open-ended task at work with a definition of enough.",
+            "11–12": "Bound a real open-ended task with a written definition of enough, agree it with the owner, and hold to it."
+          }
+        },
+        {
+          "theme": "Leave, and actually taking it",
+          "description": "Entitlement, the practical obstacles, and the cover that makes it possible.",
+          "bands": {
+            "K–2": "Say why everyone needs days off and what has to be ready before you take one.",
+            "3–5": "Plan a day away from a school role including who covers your job.",
+            "6–8": "Plan real time off from a club or team role including the cover arrangement, and take it.",
+            "9–10": "Plan leave from work including the cover arrangement.",
+            "11–12": "Plan and take real leave with the cover arrangement written, and record whether the cover held."
+          }
+        },
+        {
+          "theme": "Being on call",
+          "description": "What on-call costs, what it should pay, and the rest that must follow it.",
+          "bands": {
+            "K–2": "Say what it is like to have to be ready to help at any time, and why you need rest after.",
+            "3–5": "Describe what being on call would cost someone and what rest they should get.",
+            "6–8": "State the on-call terms of a real role you know — a lifeguard, a first-aider, a coach — and the recovery attached.",
+            "9–10": "State your own on-call terms and the recovery attached.",
+            "11–12": "State the real on-call terms for a role, check them against law and policy, and raise any gap in writing."
+          }
+        },
+        {
+          "theme": "The month you cannot sustain",
+          "description": "Recognising an unsustainable period in advance and naming it before it ends badly.",
+          "bands": {
+            "K–2": "Say how you know when you are doing too much, and tell an adult.",
+            "3–5": "Write the signs that a school term is getting too heavy, and what you would do about them.",
+            "6–8": "Write the early-warning signs of an unsustainable period across school, club and work, and show a checker.",
+            "9–10": "Write the early-warning signs you would act on at work.",
+            "11–12": "Write the signs, agree with a manager what happens when they appear, and use them once in a real period."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CH",
+      "name": "When the organisation changes",
+      "themes": [
+        {
+          "theme": "The announcement, and what it did not say",
+          "description": "Reading a restructure announcement for what is decided and what is still open.",
+          "bands": {
+            "K–2": "Listen to a class announcement and say what has been decided and what has not.",
+            "3–5": "Read a school announcement and sort it into decided and still open.",
+            "6–8": "Analyse one real announcement from a school, club or organisation for decided and undecided, with a checker.",
+            "9–10": "Analyse one real workplace announcement for decided and undecided.",
+            "11–12": "Analyse a real restructure announcement for decided and undecided, and put the open questions to the person who issued it."
+          }
+        },
+        {
+          "theme": "Consultation, and whether it is real",
+          "description": "The difference between being consulted and being informed, and how to tell.",
+          "bands": {
+            "K–2": "Say the difference between being asked what you think and being told what will happen.",
+            "3–5": "Give two ways to tell whether a school is really asking your opinion or just informing you.",
+            "6–8": "Identify three tests for real consultation and apply them to a real school or club decision.",
+            "9–10": "Identify three tests and apply them to a real consultation process at work.",
+            "11–12": "Apply the tests to a real consultation, document the result, and raise it through the route that can respond."
+          }
+        },
+        {
+          "theme": "A merger and the two ways of doing everything",
+          "description": "What happens when two sets of practice meet, and who is expected to change.",
+          "bands": {
+            "K–2": "When two groups join, say which way of doing something each group had and pick one fairly.",
+            "3–5": "Describe one thing two merged classes or clubs did differently, and how they chose.",
+            "6–8": "Map one process under both approaches when two real clubs, teams or classes merge, and say who was expected to change.",
+            "9–10": "Map one process under both approaches in a real merger.",
+            "11–12": "Map a real merged process under both approaches with people from both sides, and record who changed and why."
+          }
+        },
+        {
+          "theme": "New ownership",
+          "description": "What transfers with a business sale and what your position is on the day after.",
+          "bands": {
+            "K–2": "Say what stays the same and what might change when a shop or club gets a new owner.",
+            "3–5": "List what would change for the staff if a local shop was sold.",
+            "6–8": "State what transfers with a business sale where you live, using a real local example.",
+            "9–10": "State what transfers with a business sale where you are.",
+            "11–12": "State what transfers for a real or realistic sale, check it against the law, and explain it to somebody affected."
+          }
+        },
+        {
+          "theme": "A closure with a date on it",
+          "description": "The sequence, the entitlements, and the things that must be done before the last day.",
+          "bands": {
+            "K–2": "Make a list of what has to happen before a class project or club ends on its last day.",
+            "3–5": "Build the checklist for closing down a school club properly, with dates.",
+            "6–8": "Build the closure checklist for a real club, team or event role with a date on it.",
+            "9–10": "Build the closure checklist for your own role in a real closure.",
+            "11–12": "Build and run the closure checklist for a real role, and record what the entitlements and last-day duties actually were."
+          }
+        },
+        {
+          "theme": "Selection, and the criteria used",
+          "description": "How selection for redundancy is supposed to work, and what makes it contestable.",
+          "bands": {
+            "K–2": "Say how a team was picked and whether the way was fair.",
+            "3–5": "Read the rules for picking a school team and find one that could be unfair.",
+            "6–8": "Read one real selection matrix from a school, club or programme and identify a contestable element.",
+            "9–10": "Read one selection matrix at work and identify a contestable element.",
+            "11–12": "Read a real selection matrix, identify the contestable element, and set out how it would be contested."
+          }
+        },
+        {
+          "theme": "The colleague who is going",
+          "description": "Behaving well toward somebody whose outcome differed from yours.",
+          "bands": {
+            "K–2": "Be kind to a classmate who did not get picked, and say what you would do in their first week.",
+            "3–5": "Describe what you would do in the first week for a friend who lost a school role you kept.",
+            "6–8": "Describe what you would do in the first week for a real teammate whose outcome differed from yours.",
+            "9–10": "Describe what you would do in the first week at work.",
+            "11–12": "Do it, in a real case, and write what behaving well actually required."
+          }
+        },
+        {
+          "theme": "Surviving a restructure and the guilt after",
+          "description": "The known effect on the people who stay, and what teams do about it.",
+          "bands": {
+            "K–2": "Say how the people who stay feel when friends leave a group, and what would help.",
+            "3–5": "Say what a class needs after several classmates leave, and plan one thing.",
+            "6–8": "Identify what a real club or team would need after a round of departures, and propose it to the coach.",
+            "9–10": "Identify what your team at work would need afterwards.",
+            "11–12": "Identify what a real team needed after a restructure, provide one part of it, and record whether it helped."
+          }
+        },
+        {
+          "theme": "A reference, requested and given",
+          "description": "What a reference may say, what it may not, and what to ask for while you can.",
+          "bands": {
+            "K–2": "Ask a teacher to say one true thing about your work that you could show someone else.",
+            "3–5": "Ask an adult for a short written reference for a school role and check it says what you need.",
+            "6–8": "Request one reference from a real coach, teacher or employer and check what it commits to.",
+            "9–10": "Request one reference at work and check what it commits to.",
+            "11–12": "Request a real reference, check it against what a reference may and may not say, and give one properly for somebody else."
+          }
+        },
+        {
+          "theme": "Rebuilding after",
+          "description": "What the new organisation actually is, versus the one described in the announcement.",
+          "bands": {
+            "K–2": "Say what a class is really like after a big change, compared to what you were told.",
+            "3–5": "Compare what a school change was supposed to be with what it turned out to be after a term.",
+            "6–8": "Compare a real described change at a club or school to the real one after ninety days, with a checker.",
+            "9–10": "Compare the described change at work to the real one after ninety days.",
+            "11–12": "Compare a real described change to the real one at ninety days, and present the comparison to the people who announced it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CA",
+      "name": "A working life",
+      "themes": [
+        {
+          "theme": "The first ten years and what they are for",
+          "description": "Treating early work as accumulation of evidence rather than a ladder.",
+          "bands": {
+            "K–2": "Say three things you want to be able to do by the end of primary school.",
+            "3–5": "Write what your first years at secondary school should produce, specifically.",
+            "6–8": "Write what your first years of work or study should produce as evidence, specifically, and check it with an adult who has done it.",
+            "9–10": "Write what your first years of work should produce, specifically.",
+            "11–12": "Write the evidence your first years should produce, review it with somebody ten years ahead, and revise it on the record."
+          }
+        },
+        {
+          "theme": "A sideways move that is not a demotion",
+          "description": "When breadth beats a title, and how to explain the choice later.",
+          "bands": {
+            "K–2": "Say why trying a different job in class can be better than being the boss of the same one.",
+            "3–5": "Argue why changing to a different school role could be better than a bigger version of the same one.",
+            "6–8": "Argue one real sideways move — a different position on a team, a different role in a club — on its merits.",
+            "9–10": "Argue one sideways move at work on its merits.",
+            "11–12": "Make the case for a real sideways move to the person who decides it, and record the answer."
+          }
+        },
+        {
+          "theme": "Money, honestly",
+          "description": "Knowing the market for what you do, and the specific ways people find out too late.",
+          "bands": {
+            "K–2": "Find out what a job you know pays and whether that seems fair.",
+            "3–5": "Find out from two places what a real job pays and compare them.",
+            "6–8": "Establish the market rate for a real part-time role from three sources and show the working.",
+            "9–10": "Establish the market rate for your role from three sources.",
+            "11–12": "Establish the market rate for a real role from three sources and use it in a real pay conversation."
+          }
+        },
+        {
+          "theme": "The employer you would leave",
+          "description": "Deciding in advance what would make you go, so the decision is not made while exhausted.",
+          "bands": {
+            "K–2": "Say what would make you want to leave a club or team, before it happens.",
+            "3–5": "Write what would make you leave a school club, so the decision is not made when upset.",
+            "6–8": "Write your own conditions for leaving a real club, team or part-time job, before you need them.",
+            "9–10": "Write your own conditions for leaving a job.",
+            "11–12": "Write the conditions, review them with somebody who knows you, and test them against a real employer you have worked for."
+          }
+        },
+        {
+          "theme": "Sector change",
+          "description": "Moving between sectors, what transfers, and what has to be re-earned.",
+          "bands": {
+            "K–2": "Say which of your skills would work in a completely different kind of job.",
+            "3–5": "Map three of your skills onto a job in a different field and say what you would have to learn.",
+            "6–8": "Map your real skills onto a different sector honestly, marking what transfers and what must be re-earned.",
+            "9–10": "Map your skills onto a different sector honestly.",
+            "11–12": "Map a real sector change for yourself or somebody else, with a person from the target sector checking what transfers."
+          }
+        },
+        {
+          "theme": "A qualification at forty",
+          "description": "Returning to study around work and money, and the routes designed for it.",
+          "bands": {
+            "K–2": "Ask an adult who learned something new as a grown-up what it took.",
+            "3–5": "Find one way an adult can study around work and money, and describe it.",
+            "6–8": "Identify one real route to a qualification for an adult around work and money, and its constraints.",
+            "9–10": "Identify one route that fits your actual constraints.",
+            "11–12": "Identify the route, the funding and the timing for a real adult learner, and help them start the application."
+          }
+        },
+        {
+          "theme": "Being managed by somebody younger",
+          "description": "A common transition, handled badly by default and well with a little deliberateness.",
+          "bands": {
+            "K–2": "Say how you would treat a younger child who was put in charge of a game.",
+            "3–5": "Describe how you would work well with a younger classmate who leads a project.",
+            "6–8": "Describe how you would open a working relationship with a younger team captain or club leader, and try it.",
+            "9–10": "Describe how you would open that relationship at work.",
+            "11–12": "Open the relationship in a real case, deliberately, and write what the default would have been."
+          }
+        },
+        {
+          "theme": "Work when health changes",
+          "description": "Adjustments, the process for requesting them, and what an employer must consider.",
+          "bands": {
+            "K–2": "Say what a classmate might need changed if they hurt their arm, and who arranges it.",
+            "3–5": "Find out how a school arranges changes for a student whose health changes.",
+            "6–8": "Identify the process a real school, club or employer uses for adjustments when health changes, and what it must consider.",
+            "9–10": "Identify the adjustments process where you are.",
+            "11–12": "Identify the real process, prepare a real or worked adjustment request, and check it against what the employer must consider."
+          }
+        },
+        {
+          "theme": "The last decade of working",
+          "description": "Winding down, transferring knowledge, and the value of the person who has seen it before.",
+          "bands": {
+            "K–2": "Ask someone near the end of their working life what they know that nobody else does.",
+            "3–5": "Interview someone about the knowledge they would hand on before they stop working.",
+            "6–8": "Design a knowledge transfer for a role a departing adult holds, and run one session of it.",
+            "9–10": "Design a knowledge transfer for a role you hold.",
+            "11–12": "Design and run a knowledge transfer for a real role nearing its end, and have the receiver confirm what was captured."
+          }
+        },
+        {
+          "theme": "Stopping",
+          "description": "Retirement, phased or otherwise, and the identity question underneath the financial one.",
+          "bands": {
+            "K–2": "Say what a grown-up might do with their time when they stop working.",
+            "3–5": "Write what you think the first year of retirement should hold, and ask a retired person.",
+            "6–8": "Interview a retired person about their first year, and write what the identity question underneath the money one was.",
+            "9–10": "Write what you would do with the first year of retirement.",
+            "11–12": "Write the first-year plan for a real person approaching retirement, with them, covering money and identity separately."
+          }
+        }
+      ]
+    }
+  ]
+}
