@@ -1,0 +1,1167 @@
+{
+  "pack": "Cognition.X : Multilateral OS",
+  "override": "band-suffix",
+  "note": "The counted exception to fill-empty-only: every theme here exists in the source with a band-suffixed description (the documented content debt); this promotion replaces exactly those rows with five authored sentences per theme. The normaliser refuses any other target. Track names, prefixes, codes, credentials and transfer checks are untouched.",
+  "tracks": [
+    {
+      "prefix": "NE",
+      "name": "Assessing need",
+      "themes": [
+        {
+          "theme": "Who is actually affected",
+          "description": "Establishing who is affected before deciding what they need.",
+          "bands": {
+            "K–2": "After a storm story, say who was affected before saying what they need.",
+            "3–5": "Estimate how many people in a story town were affected by a flood, and say how you counted.",
+            "6–8": "Produce an affected-population estimate for a described situation with its method stated, with a checker.",
+            "9–10": "Produce an affected-population estimate with its method stated.",
+            "11–12": "Produce an affected-population estimate for a real or exercise situation with its method, and defend it to the coordination body."
+          }
+        },
+        {
+          "theme": "Rapid assessment without pretending precision",
+          "description": "Rapid assessment that reports its own uncertainty rather than hiding it.",
+          "bands": {
+            "K–2": "Guess how many children are in the playground, then say how sure you are.",
+            "3–5": "Make a quick count of something and give a lowest and highest number you are confident of.",
+            "6–8": "Publish a rapid assessment of a described situation with explicit confidence bounds, with a checker.",
+            "9–10": "Publish an assessment with explicit confidence bounds.",
+            "11–12": "Publish a real or exercise rapid assessment with confidence bounds and record how the bounds were used by decision-makers."
+          }
+        },
+        {
+          "theme": "Counting people in motion",
+          "description": "Counting a population in motion, where every method has a known failure.",
+          "bands": {
+            "K–2": "Try to count people walking past a door and say why it is hard.",
+            "3–5": "Count a moving group two different ways and say what each way missed.",
+            "6–8": "Compare two counting methods on a described moving population and state what each misses, with a checker.",
+            "9–10": "Compare two counting methods and state what each misses.",
+            "11–12": "Compare two counting methods on a real or exercise population in motion, state what each misses, and recommend one for the setting."
+          }
+        },
+        {
+          "theme": "The data the community already has",
+          "description": "The data the community already holds, and why it is usually collected again.",
+          "bands": {
+            "K–2": "Before counting the class, ask whether the teacher already has a register.",
+            "3–5": "Find data a school or town already has before collecting it again.",
+            "6–8": "Find existing local data for a described context and use it rather than duplicating it, with a checker.",
+            "9–10": "Find existing local data and use it rather than duplicating it.",
+            "11–12": "Find and use existing local data in a real assessment, and document what the community was not asked again."
+          }
+        },
+        {
+          "theme": "Assessment fatigue and the harm of it",
+          "description": "Assessment fatigue: the harm of repeatedly asking people to describe their worst month.",
+          "bands": {
+            "K–2": "Say how it feels to be asked the same hard question again and again.",
+            "3–5": "Shorten a long survey so it asks less of people, and say what you gave up.",
+            "6–8": "Redesign an assessment to reduce burden and state what you gave up, with a checker.",
+            "9–10": "Redesign an assessment to reduce burden and state what you gave up.",
+            "11–12": "Redesign a real assessment with the people who answer it, reduce the burden, and state to the funder what was given up."
+          }
+        },
+        {
+          "theme": "Disaggregation that means something",
+          "description": "Disaggregation that changes a decision, rather than disaggregation as a compliance box.",
+          "bands": {
+            "K–2": "Sort class data by something that changes a decision — like who needs a bigger chair.",
+            "3–5": "Split a dataset by age or gender and find one decision it changes.",
+            "6–8": "Disaggregate one dataset and identify a decision it changes, with a checker.",
+            "9–10": "Disaggregate one dataset and identify a decision it changes.",
+            "11–12": "Disaggregate a real dataset, identify the decision it changes, and get that decision made."
+          }
+        },
+        {
+          "theme": "Needs versus what donors fund",
+          "description": "The gap between what is needed and what is fundable, stated rather than absorbed.",
+          "bands": {
+            "K–2": "Make a list of what a class needs and a list of what it was given, side by side.",
+            "3–5": "Write what a story town needs and what the money on offer would pay for, side by side.",
+            "6–8": "Produce both lists side by side for one described context, with a checker.",
+            "9–10": "Produce both lists side by side for one context.",
+            "11–12": "Produce both lists for a real context and put the gap in writing to the funder."
+          }
+        },
+        {
+          "theme": "Saying the need is smaller than assumed",
+          "description": "Reporting a need smaller than expected, which is professionally harder than the reverse.",
+          "bands": {
+            "K–2": "Tell an adult honestly when a problem turned out smaller than everyone thought.",
+            "3–5": "Write a note saying a need is smaller than expected, and why that is hard to say.",
+            "6–8": "Write the finding and the covering note for a described smaller-than-expected need, with a checker.",
+            "9–10": "Write the finding and the covering note.",
+            "11–12": "Write and send a real finding that a need is smaller than assumed, with its covering note, and record the response."
+          }
+        },
+        {
+          "theme": "Assessment during active conflict",
+          "description": "Assessing during active conflict, where access bias is the dominant error.",
+          "bands": {
+            "K–2": "Say why you cannot know what is happening in a place you are not allowed to go.",
+            "3–5": "Say how only being able to visit some places changes what an assessment finds.",
+            "6–8": "State the access bias in one described assessment and its likely direction, with a checker.",
+            "9–10": "State the access bias in one assessment and its likely direction.",
+            "11–12": "State the access bias in a real assessment, its direction, and how the report accounts for it."
+          }
+        },
+        {
+          "theme": "Publishing an assessment that disappoints",
+          "description": "Publishing something that disappoints the organisation that paid for it.",
+          "bands": {
+            "K–2": "Say how to tell someone their idea did not work as well as they hoped.",
+            "3–5": "Write how you would tell the people who paid for a project that it found something they did not want.",
+            "6–8": "Draft the publication and the conversation preceding it for a described disappointing assessment, with a checker.",
+            "9–10": "Draft the publication and the conversation preceding it.",
+            "11–12": "Publish a real assessment that disappoints its funder, having had the conversation first, and record what changed."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CD",
+      "name": "Coordination",
+      "themes": [
+        {
+          "theme": "Clusters, and what they coordinate",
+          "description": "What the cluster system coordinates, and what it does not.",
+          "bands": {
+            "K–2": "Say what a group of helpers can decide together and what each must decide alone.",
+            "3–5": "Say what a coordination group of aid organisations decides, and what it does not.",
+            "6–8": "Reconstruct a cluster meeting from its minutes and state what was actually decided, with a checker.",
+            "9–10": "Attend or reconstruct a cluster meeting and state what was actually decided.",
+            "11–12": "Attend real cluster meetings for a month and report what was decided against what was discussed."
+          }
+        },
+        {
+          "theme": "The coordination meeting worth attending",
+          "description": "A meeting worth attending, and how to make one, or leave one.",
+          "bands": {
+            "K–2": "Say what a class meeting must decide, or else it should not happen.",
+            "3–5": "Redesign a school meeting so it produces one decision.",
+            "6–8": "Redesign one recurring meeting around a decision it must produce, with a checker.",
+            "9–10": "Redesign one recurring meeting around a decision it must produce.",
+            "11–12": "Redesign a real recurring coordination meeting around its decision, run it, and record the change."
+          }
+        },
+        {
+          "theme": "Duplication and how it happens",
+          "description": "How duplication happens without anybody intending it.",
+          "bands": {
+            "K–2": "Find a job two people in class both did without knowing, and say how it happened.",
+            "3–5": "Trace how two groups ended up doing the same task without meaning to.",
+            "6–8": "Trace one real or described duplication to its cause, with a checker.",
+            "9–10": "Trace one real duplication to its cause.",
+            "11–12": "Trace a real duplication in a real response to its cause and propose the coordination fix."
+          }
+        },
+        {
+          "theme": "Sharing a beneficiary without sharing a record",
+          "description": "Sharing that somebody is served without sharing anything about them.",
+          "bands": {
+            "K–2": "Say how two helpers could know they both helped the same person without sharing their secrets.",
+            "3–5": "Design a way for two groups to avoid helping the same person twice without sharing personal details.",
+            "6–8": "Design a deduplication approach that transmits no personal record, with a checker.",
+            "9–10": "Design a deduplication approach that transmits no personal record.",
+            "11–12": "Design and test a real deduplication approach that transmits no personal record, with the partners who would use it."
+          }
+        },
+        {
+          "theme": "Localisation, in practice not in language",
+          "description": "Localisation as budget, decision rights and risk transfer, not as vocabulary.",
+          "bands": {
+            "K–2": "Say who decides and who gets the money when a big group helps a small one.",
+            "3–5": "Look at a partnership and say who holds the budget, the decisions and the risk.",
+            "6–8": "Assess one described partnership against budget, decision rights and risk transfer, honestly, with a checker.",
+            "9–10": "Assess one partnership against those three, honestly.",
+            "11–12": "Assess a real partnership against the three honestly and put the findings to both partners."
+          }
+        },
+        {
+          "theme": "Being the international agency in a local room",
+          "description": "Being the international agency in a national room, and what that costs the room.",
+          "bands": {
+            "K–2": "Say how it feels when a visitor takes over a meeting in your classroom.",
+            "3–5": "Describe a meeting from the point of view of the people who were there before the visitors.",
+            "6–8": "Describe one described meeting from the other participants' position, with a checker.",
+            "9–10": "Describe one meeting from the other participants' position.",
+            "11–12": "Describe a real meeting from the national participants' position, check it with them, and change how you attend the next one."
+          }
+        },
+        {
+          "theme": "Handover to a national actor",
+          "description": "Handover to a national actor, planned from the start rather than at the end.",
+          "bands": {
+            "K–2": "Plan from the start how a helper will hand a job back to the person whose job it is.",
+            "3–5": "Write a plan for handing a project to a local group, with dates and names.",
+            "6–8": "Write a handover plan for a described programme with dates and named recipients, with a checker.",
+            "9–10": "Write a handover plan with dates and named recipients.",
+            "11–12": "Write a real handover plan with the national actor, with dates and names, and start it."
+          }
+        },
+        {
+          "theme": "Consortium bids and who leads",
+          "description": "Consortium bids, who leads, and where the overhead actually lands.",
+          "bands": {
+            "K–2": "When groups team up for a prize, say who is in charge and who gets the money.",
+            "3–5": "Draw where the money goes when several organisations bid together.",
+            "6–8": "Map the money flow in one described consortium structure, with a checker.",
+            "9–10": "Map the money flow in one consortium structure.",
+            "11–12": "Map the money flow in a real consortium and show where the overhead actually lands."
+          }
+        },
+        {
+          "theme": "Exit as a plan rather than an event",
+          "description": "Exit as a designed phase with criteria, not an event triggered by a funding date.",
+          "bands": {
+            "K–2": "Say how you would know a helper's job was finished, before they start.",
+            "3–5": "Write the conditions under which a project should end, not just the date.",
+            "6–8": "Write exit criteria for a described running programme, with a checker.",
+            "9–10": "Write exit criteria for a running programme.",
+            "11–12": "Write exit criteria for a real running programme and get them adopted by the people who fund it."
+          }
+        },
+        {
+          "theme": "When coordination is the obstacle",
+          "description": "When coordination itself becomes the obstacle, and saying so.",
+          "bands": {
+            "K–2": "Say when too many meetings stop work getting done.",
+            "3–5": "Find one meeting or rule that costs more than it helps, and say so.",
+            "6–8": "Identify one described coordination cost that exceeds its benefit and argue it, with a checker.",
+            "9–10": "Identify one coordination cost that exceeds its benefit and argue it.",
+            "11–12": "Identify a real coordination cost that exceeds its benefit and argue it in the forum that can change it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "AC",
+      "name": "Accountability to people served",
+      "themes": [
+        {
+          "theme": "A complaint mechanism people use",
+          "description": "A complaint mechanism people actually use, which is usually not the one that was built.",
+          "bands": {
+            "K–2": "Try using the class suggestion box and say what would stop you.",
+            "3–5": "Test a school's way of complaining from a pupil's point of view and say what stopped you.",
+            "6–8": "Test a complaint mechanism from a user's position and report what stopped you, with a checker.",
+            "9–10": "Test a mechanism from a user's position and report what stopped you.",
+            "11–12": "Test a real mechanism from a user's position with real users, report what stopped them, and change it."
+          }
+        },
+        {
+          "theme": "Feedback that changes something",
+          "description": "Feedback that changes a programme, and the loop that closes back to the person.",
+          "bands": {
+            "K–2": "Give feedback on a class rule and find out whether anything changed and whether you were told.",
+            "3–5": "Trace one piece of feedback at school to a change and to the person being told.",
+            "6–8": "Trace one piece of feedback in a described programme to a change and to the person being told, with a checker.",
+            "9–10": "Trace one piece of feedback to a change and to the person being told.",
+            "11–12": "Trace real feedback through a real programme to a change and to the person being told, and fix the loop where it broke."
+          }
+        },
+        {
+          "theme": "Consent in a power imbalance",
+          "description": "Consent where refusal has a cost, which is most of this sector.",
+          "bands": {
+            "K–2": "Ask a younger child properly, so they can really say no.",
+            "3–5": "Describe how to ask permission when saying no might cost the person something.",
+            "6–8": "Describe how you would make refusal genuinely available in a described programme, with a checker.",
+            "9–10": "Describe how you would make refusal genuinely available.",
+            "11–12": "Make refusal genuinely available in a real programme and record the refusals that followed."
+          }
+        },
+        {
+          "theme": "Protection from sexual exploitation and abuse",
+          "description": "Protection from sexual exploitation and abuse: the standards, the reporting, the obligation.",
+          "bands": {
+            "K–2": "Say the rules that keep children safe with adults, and whom you tell if a rule is broken.",
+            "3–5": "State the rules that protect people from harm by helpers, and how to report.",
+            "6–8": "State the PSEA standards, your obligations and the reporting route precisely, with a checker.",
+            "9–10": "State your own obligations and the reporting route precisely.",
+            "11–12": "State your obligations and the reporting route for a real organisation, and be assessed on them by its safeguarding lead."
+          }
+        },
+        {
+          "theme": "Reporting a colleague",
+          "description": "Reporting a colleague, which is the hardest obligation in the sector.",
+          "bands": {
+            "K–2": "Say what you would do if a helper did something wrong, even a helper you like.",
+            "3–5": "Practise reporting something a friend did wrong, and say who protects you.",
+            "6–8": "Rehearse a report about a colleague and identify the protection available, with a checker.",
+            "9–10": "Rehearse the report and identify the protection available to you.",
+            "11–12": "Rehearse the report under a real organisation's procedure and verify the protection actually exists."
+          }
+        },
+        {
+          "theme": "Communicating a decision people will not like",
+          "description": "Communicating a decision people will not like, without hiding behind a policy.",
+          "bands": {
+            "K–2": "Tell the class a decision they will not like, with the reason, without hiding behind 'those are the rules'.",
+            "3–5": "Deliver an unpopular decision in role with the reasoning and what people can do about it.",
+            "6–8": "Deliver a difficult decision in role and be critiqued on it, with a checker.",
+            "9–10": "Deliver a difficult decision in role and be critiqued on it.",
+            "11–12": "Deliver a real difficult decision to the people affected, with reasoning and recourse, and be critiqued afterwards."
+          }
+        },
+        {
+          "theme": "Participation that is not a workshop photograph",
+          "description": "Participation that transfers a decision rather than producing a photograph.",
+          "bands": {
+            "K–2": "Let the class decide something real, not just pick a colour.",
+            "3–5": "Name one decision about a school project that pupils could really make, and let them.",
+            "6–8": "Identify one decision in a described programme you would genuinely transfer, and to whom, with a checker.",
+            "9–10": "Identify one decision you would genuinely transfer, and to whom.",
+            "11–12": "Transfer a real decision in a real programme to the people served, and record what they decided."
+          }
+        },
+        {
+          "theme": "Being accountable when you are leaving",
+          "description": "Accountability while leaving, which is when it is least convenient and most owed.",
+          "bands": {
+            "K–2": "Before leaving a group, tell them what you finished and what you did not.",
+            "3–5": "Write what you would tell the people you helped when your project ends.",
+            "6–8": "Write the exit communication to the people served by a described programme, with a checker.",
+            "9–10": "Write the exit communication to the people served.",
+            "11–12": "Write and deliver the exit communication for a real programme, and record the questions it drew."
+          }
+        },
+        {
+          "theme": "Do no harm, examined",
+          "description": "Do no harm, examined against a real programme rather than recited.",
+          "bands": {
+            "K–2": "Find one way helping could accidentally make something worse, and say how to avoid it.",
+            "3–5": "Apply 'do no harm' to a school project and find one possible harm.",
+            "6–8": "Apply the framework to a described programme and find one harm, with a checker.",
+            "9–10": "Apply the framework to a real programme and find one harm.",
+            "11–12": "Apply the framework to a real programme with its team, find the harm, and change the programme."
+          }
+        },
+        {
+          "theme": "What people said they wanted",
+          "description": "What people said they wanted, recorded and set beside what was delivered.",
+          "bands": {
+            "K–2": "Ask the class what they wanted and write it next to what they got.",
+            "3–5": "List what people asked a project for and what the project gave, side by side.",
+            "6–8": "Produce the two lists for a described programme, with a checker.",
+            "9–10": "Produce the two lists for one programme.",
+            "11–12": "Produce the two lists for a real programme, publish them to the people served, and act on the gap."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "PR",
+      "name": "Programme practice",
+      "themes": [
+        {
+          "theme": "A logframe you can defend",
+          "description": "A logframe you could defend to somebody sceptical, including its assumptions.",
+          "bands": {
+            "K–2": "Say what you want to happen, what you will do, and why the doing leads to the happening.",
+            "3–5": "Draw a chain from what a project does to what it hopes will change, and say what has to be true.",
+            "6–8": "Defend one described logframe's causal chain under challenge, with a checker.",
+            "9–10": "Defend one logframe's causal chain under challenge.",
+            "11–12": "Defend a real logframe's causal chain to a sceptical reviewer and revise its assumptions on the record."
+          }
+        },
+        {
+          "theme": "Indicators that survive contact",
+          "description": "Indicators that survive contact with a real context rather than a proposal.",
+          "bands": {
+            "K–2": "Pick one way to tell whether a class project worked, and check it actually works.",
+            "3–5": "Test whether a project's measures still make sense once you see the real place.",
+            "6–8": "Test three described indicators against field reality and revise them, with a checker.",
+            "9–10": "Test three indicators against field reality and revise them.",
+            "11–12": "Test a real programme's indicators in the field, revise them, and submit the revision."
+          }
+        },
+        {
+          "theme": "Cash versus in-kind",
+          "description": "Cash versus in-kind: the evidence, and the conditions under which each is right.",
+          "bands": {
+            "K–2": "Say when giving money is better than giving things, and when it is not.",
+            "3–5": "Argue whether a story family should get cash or goods, with reasons.",
+            "6–8": "Argue the cash-or-in-kind choice for one described context, with a checker.",
+            "9–10": "Argue the choice for one specific context.",
+            "11–12": "Argue the choice for a real context with the evidence and the market conditions, to the people deciding."
+          }
+        },
+        {
+          "theme": "Targeting and its exclusions",
+          "description": "Targeting, and the people the targeting criteria exclude.",
+          "bands": {
+            "K–2": "When you decide who gets something, say who is left out and whether that is fair.",
+            "3–5": "Write who a project's rules leave out and whether that can be defended.",
+            "6–8": "Identify who a described programme's targeting excludes and whether that is defensible, with a checker.",
+            "9–10": "Identify who your targeting excludes and whether that is defensible.",
+            "11–12": "Identify who a real programme's targeting excludes, test the defence with the excluded, and revise."
+          }
+        },
+        {
+          "theme": "Monitoring during insecurity",
+          "description": "Monitoring when access is limited, and the bias that introduces.",
+          "bands": {
+            "K–2": "Say how you would check on a project you cannot visit, and what you might miss.",
+            "3–5": "Design a way to monitor a project from far away and name its blind spot.",
+            "6–8": "Design remote monitoring for a described insecure context and state its blind spot, with a checker.",
+            "9–10": "Design remote monitoring and state its blind spot.",
+            "11–12": "Design and run remote monitoring for a real programme, state its blind spot, and report it with the results."
+          }
+        },
+        {
+          "theme": "Adapting a programme mid-cycle",
+          "description": "Changing a programme mid-cycle, and the permission that requires.",
+          "bands": {
+            "K–2": "Say how you would ask permission to change a plan halfway, with a reason.",
+            "3–5": "Write a request to change a school project halfway, with the evidence for it.",
+            "6–8": "Draft a revision request for a described programme with the evidence for it, with a checker.",
+            "9–10": "Draft a revision request with the evidence for it.",
+            "11–12": "Draft and submit a real revision request with the evidence, and record the decision."
+          }
+        },
+        {
+          "theme": "Reporting failure to a donor",
+          "description": "Reporting failure to a donor, which is the report that improves the sector.",
+          "bands": {
+            "K–2": "Tell the person who gave you materials honestly that the project did not work.",
+            "3–5": "Write an honest report that a project failed and what was learned.",
+            "6–8": "Write a failure report for a described programme that you would actually send, with a checker.",
+            "9–10": "Write a failure report you would actually send.",
+            "11–12": "Write and send a real failure report to a real donor, and record the response."
+          }
+        },
+        {
+          "theme": "Audit and what it looks for",
+          "description": "What an audit looks for, and preparing without theatre.",
+          "bands": {
+            "K–2": "Keep the receipts for a class purchase so an adult can check them.",
+            "3–5": "Prepare the records for a school project so someone could check every spend.",
+            "6–8": "Prepare one audit trail for a described project and have it tested, with a checker.",
+            "9–10": "Prepare one audit trail and have it tested.",
+            "11–12": "Prepare a real audit trail, have it tested by an auditor, and fix what it found."
+          }
+        },
+        {
+          "theme": "Procurement in a hurry",
+          "description": "Procurement under time pressure, and the controls that must not be dropped.",
+          "bands": {
+            "K–2": "Say which checks you must still do when buying something in a rush.",
+            "3–5": "List the checks that must not be skipped when a school buys something urgently.",
+            "6–8": "Identify the procurement controls that survive an emergency and those that do not, with a checker.",
+            "9–10": "Identify the controls that survive an emergency and those that do not.",
+            "11–12": "Identify the controls for a real emergency procurement, apply them, and document the ones that were dropped and why."
+          }
+        },
+        {
+          "theme": "Closing a humanitarian programme well",
+          "description": "Closing a programme well, which takes longer than anybody budgets.",
+          "bands": {
+            "K–2": "Plan how to end a class project properly, and notice it takes longer than you think.",
+            "3–5": "Make a closure plan for a school project with a realistic timeline.",
+            "6–8": "Produce a closure plan for a described programme with a realistic timeline, with a checker.",
+            "9–10": "Produce a closure plan with a realistic timeline.",
+            "11–12": "Produce and run a closure plan for a real programme, and record how long it actually took."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SF",
+      "name": "Staff and security",
+      "themes": [
+        {
+          "theme": "Duty of care to national staff",
+          "description": "Duty of care to national staff, who carry the most risk and receive the least.",
+          "bands": {
+            "K–2": "Say whether everyone helping gets the same care, and whether that is fair.",
+            "3–5": "Compare how a story organisation treats its local and its visiting staff.",
+            "6–8": "Compare the provisions for national and international staff in one described organisation, with a checker.",
+            "9–10": "Compare the provisions for national and international staff in one organisation.",
+            "11–12": "Compare the provisions in a real organisation and put the gap to the people who set them."
+          }
+        },
+        {
+          "theme": "Security as a shared decision",
+          "description": "Security as a decision the team shares rather than one imposed from a capital.",
+          "bands": {
+            "K–2": "Let the people doing a risky job help decide how to do it safely.",
+            "3–5": "Run a safety decision for a school trip with the people going on it.",
+            "6–8": "Run a security decision for a described situation that includes the people bearing the risk, with a checker.",
+            "9–10": "Run a security decision that includes the people bearing the risk.",
+            "11–12": "Run a real security decision with the people bearing the risk, and record how it differed from the capital's view."
+          }
+        },
+        {
+          "theme": "Stress, and the year after a deployment",
+          "description": "Stress and the year after a deployment, which is when most of it arrives.",
+          "bands": {
+            "K–2": "Say how someone might feel after a hard time is over, and what helps.",
+            "3–5": "Say what support someone needs three, six and twelve months after a hard job.",
+            "6–8": "Identify the support available at three, six and twelve months for a described organisation, with a checker.",
+            "9–10": "Identify the support available at three, six and twelve months.",
+            "11–12": "Identify the real support at three, six and twelve months in a real organisation and test whether it can be reached."
+          }
+        },
+        {
+          "theme": "The evacuation that leaves people behind",
+          "description": "The evacuation that takes some people and not others, thought about beforehand.",
+          "bands": {
+            "K–2": "Say how you would decide who leaves first in an emergency, before it happens.",
+            "3–5": "Write fair rules for who is evacuated first, and test them on a story.",
+            "6–8": "Write evacuation criteria in advance and test them against a scenario, with a checker.",
+            "9–10": "Write the criteria in advance and test them against a scenario.",
+            "11–12": "Write real evacuation criteria with the people they cover, test them in an exercise, and record the objections."
+          }
+        },
+        {
+          "theme": "Recruiting locally and paying properly",
+          "description": "Recruiting locally and paying properly, and the market distortion argument examined.",
+          "bands": {
+            "K–2": "Say why local helpers should be paid fairly.",
+            "3–5": "Argue both sides of paying local staff more than the local rate, and choose.",
+            "6–8": "Argue both sides of the local pay question and take a position, with a checker.",
+            "9–10": "Argue both sides of the local pay question and take a position.",
+            "11–12": "Argue both sides for a real recruitment, take a position, and set the real rate."
+          }
+        },
+        {
+          "theme": "Language and who translates",
+          "description": "Language, translation, and the power held by whoever translates.",
+          "bands": {
+            "K–2": "Play a game of passing a message through a translator and see what changed.",
+            "3–5": "Say what a project loses when only one person can translate.",
+            "6–8": "Identify what a described programme loses to translation, with a checker.",
+            "9–10": "Identify what your programme loses to translation.",
+            "11–12": "Identify what a real programme loses to translation, with its translators, and change one thing."
+          }
+        },
+        {
+          "theme": "A team across time zones and cultures",
+          "description": "A team across time zones and cultures, where the default meeting time is a decision.",
+          "bands": {
+            "K–2": "Pick a meeting time for friends in different places so it is fair.",
+            "3–5": "Redesign a schedule for a team in different countries so the same people do not always pay.",
+            "6–8": "Redesign a meeting pattern for a described team that does not always cost the same people, with a checker.",
+            "9–10": "Redesign a meeting pattern that does not always cost the same people.",
+            "11–12": "Redesign a real team's meeting pattern and record who paid the cost each month afterwards."
+          }
+        },
+        {
+          "theme": "Whistleblowing in an agency",
+          "description": "Whistleblowing inside an agency, the protection claimed and the protection real.",
+          "bands": {
+            "K–2": "Say who you would tell if you saw something wrong in a group, and who would protect you.",
+            "3–5": "Map how to report wrongdoing at school and what protection exists at each step.",
+            "6–8": "Map the whistleblowing route and the actual protection at each step for a described agency, with a checker.",
+            "9–10": "Map the route and the actual protection at each step.",
+            "11–12": "Map the real route in a real agency and verify the protection at each step with someone who has used it."
+          }
+        },
+        {
+          "theme": "Burnout in humanitarian work",
+          "description": "Burnout as a structural outcome rather than a personal failure.",
+          "bands": {
+            "K–2": "Say what makes people too tired to keep helping, and what a group could change.",
+            "3–5": "Find what about a job, not the person, makes people burn out.",
+            "6–8": "Identify the structural drivers of burnout in one described team, with a checker.",
+            "9–10": "Identify the structural drivers in one real team.",
+            "11–12": "Identify the structural drivers in a real team with them, and change one."
+          }
+        },
+        {
+          "theme": "Why people leave the sector",
+          "description": "Why people leave the sector, asked of people who left.",
+          "bands": {
+            "K–2": "Ask an adult why they left a job they cared about, and listen without arguing.",
+            "3–5": "Interview someone who left a caring job and write their reasons without defending the job.",
+            "6–8": "Interview somebody who left the sector and record their account without defending the sector, with a checker.",
+            "9–10": "Interview somebody who left and record their account without defending the sector.",
+            "11–12": "Interview several people who left, record their accounts without defence, and present them to the people who recruit."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "LG",
+      "name": "Law, mandate and status",
+      "themes": [
+        {
+          "theme": "What international humanitarian law actually requires",
+          "description": "The core obligations, stated without the acronyms.",
+          "bands": {
+            "K–2": "Say the rules that protect people who are not fighting, in your own words.",
+            "3–5": "State the main rules that protect civilians in war, plainly.",
+            "6–8": "State the core obligations of international humanitarian law in plain language, with a checker.",
+            "9–10": "State the core obligations in plain language.",
+            "11–12": "State the core obligations in plain language to a real audience and answer their questions accurately."
+          }
+        },
+        {
+          "theme": "Refugee, asylum seeker, migrant, displaced",
+          "description": "Four different legal statuses with four different entitlements.",
+          "bands": {
+            "K–2": "Say the difference between someone who moved for work and someone who had to flee.",
+            "3–5": "Sort story people into refugee, asylum seeker, migrant and displaced, and say why.",
+            "6–8": "Classify described cases correctly by legal status, with a checker.",
+            "9–10": "Classify described cases correctly as refugee, asylum seeker, migrant or displaced.",
+            "11–12": "Classify real or exercise cases correctly and state the entitlements each status carries where you work."
+          }
+        },
+        {
+          "theme": "A mandate, and what your agency may do",
+          "description": "The limits on your own organisation, which are often not known internally.",
+          "bands": {
+            "K–2": "Say what a helper is allowed to do and one thing that is not their job.",
+            "3–5": "State what one organisation is for and one thing it may not do.",
+            "6–8": "State a described organisation's mandate and one thing outside it, with a checker.",
+            "9–10": "State your organisation's mandate and one thing outside it.",
+            "11–12": "State a real organisation's mandate, one thing outside it, and a real case where the line was tested."
+          }
+        },
+        {
+          "theme": "Access negotiation",
+          "description": "Talking to whoever controls the road, and what may not be traded for access.",
+          "bands": {
+            "K–2": "Say how you would ask someone to let you through, and what you would never give them for it.",
+            "3–5": "Practise asking for permission to reach people in need, and name what you would not trade.",
+            "6–8": "Identify what is negotiable and what is not in a described access negotiation, with a checker.",
+            "9–10": "Identify what is negotiable and what is not.",
+            "11–12": "Identify what is negotiable and what is not for a real negotiation, and rehearse it with the negotiator."
+          }
+        },
+        {
+          "theme": "Neutrality, impartiality, independence",
+          "description": "Three separate principles routinely collapsed into one.",
+          "bands": {
+            "K–2": "Say what it means to help everyone, take no side, and answer to no one who is fighting.",
+            "3–5": "Give one example each of being neutral, impartial and independent.",
+            "6–8": "Distinguish the three principles with a real example of each, with a checker.",
+            "9–10": "Distinguish them with a real example of each.",
+            "11–12": "Distinguish the three with real examples from a real response and identify where each was under pressure."
+          }
+        },
+        {
+          "theme": "Protection as an activity rather than a word",
+          "description": "What protection work concretely consists of.",
+          "bands": {
+            "K–2": "Say three things a helper does to keep people safe, not just say they are safe.",
+            "3–5": "Describe three things protection workers actually do.",
+            "6–8": "Describe three protection activities concretely, with a checker.",
+            "9–10": "Describe three protection activities concretely enough that somebody could do them.",
+            "11–12": "Describe three protection activities from a real programme and how each is measured."
+          }
+        },
+        {
+          "theme": "Documenting a violation",
+          "description": "What to record, how, and the risk to the person who told you.",
+          "bands": {
+            "K–2": "Say how to write down something bad you saw without putting the person who told you in danger.",
+            "3–5": "Design a record of a wrong that does not name the person who reported it.",
+            "6–8": "Design a record of a violation that does not endanger a source, with a checker.",
+            "9–10": "Design a record that does not endanger a source.",
+            "11–12": "Design and use a real documentation record that protects sources, reviewed by a protection specialist."
+          }
+        },
+        {
+          "theme": "Referral to a legal actor",
+          "description": "Knowing where a case goes when it exceeds you.",
+          "bands": {
+            "K–2": "Say who you would send a friend to for help that is too big for you.",
+            "3–5": "Find out where a legal problem goes when a helper cannot solve it.",
+            "6–8": "Identify the legal referral routes in one described context, with a checker.",
+            "9–10": "Identify the referral routes in one context.",
+            "11–12": "Identify the real referral routes in a real context and test whether a case can actually reach each."
+          }
+        },
+        {
+          "theme": "Statelessness",
+          "description": "What it means practically and why it persists across generations.",
+          "bands": {
+            "K–2": "Say what it would be like to belong to no country, and what you could not do.",
+            "3–5": "Describe what someone without a nationality cannot do, in practice.",
+            "6–8": "Describe the practical effects of statelessness in one described case, with a checker.",
+            "9–10": "Describe the practical effects in one case.",
+            "11–12": "Describe the practical effects in a real case and identify the route, if any, out of it."
+          }
+        },
+        {
+          "theme": "Return, and whether it is voluntary",
+          "description": "The conditions that make return genuinely voluntary.",
+          "bands": {
+            "K–2": "Say when going home is really a choice and when it is not.",
+            "3–5": "List the conditions that would make going home a real choice.",
+            "6–8": "Assess one described return against the conditions for genuine voluntariness, with a checker.",
+            "9–10": "Assess one return against those conditions.",
+            "11–12": "Assess a real return process against the conditions and put the assessment to the body running it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "FI",
+      "name": "Budgets, donors and audit",
+      "themes": [
+        {
+          "theme": "A budget somebody can actually deliver",
+          "description": "Costing what will happen rather than what reads well.",
+          "bands": {
+            "K–2": "Make a budget for a class event that you could really keep to.",
+            "3–5": "Build a budget for a school project that costs what will really happen.",
+            "6–8": "Build a deliverable budget for a small described project, with a checker.",
+            "9–10": "Build a deliverable budget for a small project.",
+            "11–12": "Build a deliverable budget for a real project and have it checked by the people who will spend it."
+          }
+        },
+        {
+          "theme": "Where the overhead goes",
+          "description": "Indirect cost recovery, and who absorbs the shortfall.",
+          "bands": {
+            "K–2": "Say what costs a project has that are not the thing itself — the room, the lights, the helper.",
+            "3–5": "Find the hidden costs in a school project that somebody has to pay.",
+            "6–8": "Trace the overhead in one described grant, with a checker.",
+            "9–10": "Trace the overhead in one real grant and show who absorbs the shortfall.",
+            "11–12": "Trace the overhead in a real grant and show who absorbed the shortfall."
+          }
+        },
+        {
+          "theme": "Restricted and unrestricted money",
+          "description": "The difference, and why unrestricted funding is what organisations actually need.",
+          "bands": {
+            "K–2": "Say the difference between money for one thing and money you can use as needed.",
+            "3–5": "Explain to a classmate why money with no strings is what a group most needs.",
+            "6–8": "Explain restricted and unrestricted funding to a non-specialist, with a checker.",
+            "9–10": "Explain the difference to a non-specialist.",
+            "11–12": "Explain the difference to a real non-specialist funder and make the case for unrestricted support."
+          }
+        },
+        {
+          "theme": "Cash flow when the donor pays late",
+          "description": "Pre-financing, and which organisations can survive it.",
+          "bands": {
+            "K–2": "Say what happens when you promised to buy something but the money comes late.",
+            "3–5": "Work out what a group would do if its funding arrived three months late.",
+            "6–8": "Model a three-month delay against one described budget, with a checker.",
+            "9–10": "Model a three-month delay against one budget.",
+            "11–12": "Model a three-month delay against a real budget and identify which organisations in the chain could survive it."
+          }
+        },
+        {
+          "theme": "A partner’s financial capacity",
+          "description": "Assessing it without treating a small organisation as a risk to be managed.",
+          "bands": {
+            "K–2": "Say how you would check a friend can look after money without being unkind about it.",
+            "3–5": "Design a fair way to check a small group can handle a grant.",
+            "6–8": "Design a proportionate financial assessment for a described small partner, with a checker.",
+            "9–10": "Design a proportionate financial assessment for a small partner organisation.",
+            "11–12": "Design and run a proportionate assessment of a real small partner, and have them say whether it was fair."
+          }
+        },
+        {
+          "theme": "Fraud, and the controls that actually prevent it",
+          "description": "Segregation of duties, and the pressures that erode it.",
+          "bands": {
+            "K–2": "Say why two people should count the money, not one.",
+            "3–5": "Find the checks in a school process that stop money going missing.",
+            "6–8": "Identify the fraud controls in one described process, with a checker.",
+            "9–10": "Identify the fraud controls in one real process and the pressures that erode them.",
+            "11–12": "Identify the controls in a real process and test which ones erode under real pressure."
+          }
+        },
+        {
+          "theme": "An audit finding",
+          "description": "Responding to one, and fixing the system rather than the finding.",
+          "bands": {
+            "K–2": "When someone finds a mistake in your records, say how you would fix the cause, not just the mistake.",
+            "3–5": "Write a response to a finding about a school project that fixes the system.",
+            "6–8": "Write a management response to a described audit finding, with a checker.",
+            "9–10": "Write a management response to an audit finding that fixes the system, not the finding.",
+            "11–12": "Write a management response to a real finding and follow the system fix to completion."
+          }
+        },
+        {
+          "theme": "Exchange rates and the money that disappears",
+          "description": "Currency exposure across a multi-year project, and who carries the loss when it moves.",
+          "bands": {
+            "K–2": "Say why the same money can buy less in another country next year.",
+            "3–5": "Work out what happens to a project's money if the currency changes.",
+            "6–8": "Model exchange exposure for one described budget, with a checker.",
+            "9–10": "Model exchange exposure for one multi-year budget and name who carries the loss.",
+            "11–12": "Model exchange exposure for a real multi-year budget and propose who carries the loss."
+          }
+        },
+        {
+          "theme": "Reporting expenditure honestly",
+          "description": "Including underspend, which is routinely disguised.",
+          "bands": {
+            "K–2": "Tell an adult honestly when you spent less than you were given.",
+            "3–5": "Write a report that says money was not spent, without hiding it.",
+            "6–8": "Write a variance report for a described budget that states an underspend without disguising it, with a checker.",
+            "9–10": "Write a variance report that states an underspend without disguising it.",
+            "11–12": "Write a real variance report that states the underspend plainly, and send it."
+          }
+        },
+        {
+          "theme": "What a budget says about priorities",
+          "description": "Reading an organisation from its allocations.",
+          "bands": {
+            "K–2": "Look at how a class spends its money and say what it cares about most.",
+            "3–5": "Read a school budget and say what it shows the school values.",
+            "6–8": "Analyse one described budget for its priorities, with a checker.",
+            "9–10": "Analyse one real budget for its priorities.",
+            "11–12": "Analyse a real organisation's budget for its priorities and present the reading to its leadership."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "LO",
+      "name": "Getting things to people",
+      "themes": [
+        {
+          "theme": "The supply chain from order to hand",
+          "description": "Every stage and the one most likely to fail.",
+          "bands": {
+            "K–2": "Draw how a box gets from a shop to your classroom, and mark where it could go wrong.",
+            "3–5": "Map every step from ordering supplies to handing them out, and find the weak one.",
+            "6–8": "Map one described supply chain and mark the weak stage, with a checker.",
+            "9–10": "Map one supply chain and mark the weak stage.",
+            "11–12": "Map a real supply chain end to end with the people at each stage and fix the weak one."
+          }
+        },
+        {
+          "theme": "Warehousing and what spoils",
+          "description": "Storage conditions, stock rotation and loss.",
+          "bands": {
+            "K–2": "Say which class supplies go bad and how to store them so they last.",
+            "3–5": "Check a store cupboard for what could spoil and whether the oldest is used first.",
+            "6–8": "Assess one described store against its requirements, with a checker.",
+            "9–10": "Assess one store against its requirements.",
+            "11–12": "Assess a real warehouse against its requirements and report the loss it is causing."
+          }
+        },
+        {
+          "theme": "The last mile",
+          "description": "The final stage, which costs the most and is planned the least.",
+          "bands": {
+            "K–2": "Say why the last part of a journey to someone's door is the hardest.",
+            "3–5": "Work out what it costs to get supplies from a town to a village with no road.",
+            "6–8": "Cost the last mile for one described distribution, with a checker.",
+            "9–10": "Cost the last mile for one distribution.",
+            "11–12": "Cost the last mile for a real distribution and put it in the budget that had left it out."
+          }
+        },
+        {
+          "theme": "Cold chain",
+          "description": "What must stay cold, the tolerance, and the monitoring.",
+          "bands": {
+            "K–2": "Say why some medicines must stay cold all the way, and how you would check.",
+            "3–5": "Follow a cold box from fridge to village and say where it could warm up.",
+            "6–8": "Verify one described cold chain end to end, with a checker.",
+            "9–10": "Verify one cold chain end to end, from store to hand, with its monitoring record.",
+            "11–12": "Verify a real cold chain end to end and report every break to the people responsible."
+          }
+        },
+        {
+          "theme": "Fleet and fuel",
+          "description": "Vehicles as the constraint, and the fuel that decides movement.",
+          "bands": {
+            "K–2": "Say how far a car can go on one tank, and what that means for helping far away.",
+            "3–5": "Plan a week of deliveries with only a certain amount of fuel.",
+            "6–8": "Plan movements against a described fuel constraint, with a checker.",
+            "9–10": "Plan movements against a real fuel constraint.",
+            "11–12": "Plan a real fleet's movements against its real fuel constraint and run the plan for a week."
+          }
+        },
+        {
+          "theme": "Customs and the container that is stuck",
+          "description": "Clearance, documentation, and the delays that are structural.",
+          "bands": {
+            "K–2": "Say why things sent from another country can get stuck at the border.",
+            "3–5": "List the paperwork one import needs to get through customs.",
+            "6–8": "Identify the documentation for one described import, with a checker.",
+            "9–10": "Identify the documentation for one import.",
+            "11–12": "Prepare the documentation for a real import and trace the container through clearance."
+          }
+        },
+        {
+          "theme": "Procurement that is fast and clean",
+          "description": "Speed and controls held together under pressure.",
+          "bands": {
+            "K–2": "Buy something quickly for the class and still show the receipt and the choice you made.",
+            "3–5": "Design a quick way to buy urgent supplies that still has the checks.",
+            "6–8": "Design an emergency procurement with its controls for a described case, with a checker.",
+            "9–10": "Design an emergency procurement with its controls.",
+            "11–12": "Run a real emergency procurement with its controls intact and have it audited."
+          }
+        },
+        {
+          "theme": "A distribution that is safe to attend",
+          "description": "Crowd, queue, dignity and the people who cannot come.",
+          "bands": {
+            "K–2": "Plan handing something out to the class so nobody pushes and nobody is missed.",
+            "3–5": "Design a hand-out for a school so the queue is safe and those who cannot come still get theirs.",
+            "6–8": "Design a described distribution including the people who cannot attend, with a checker.",
+            "9–10": "Design a distribution including the people who cannot attend.",
+            "11–12": "Design and run a real distribution including the people who cannot attend, and review it with them."
+          }
+        },
+        {
+          "theme": "Assets and where they end up",
+          "description": "Tracking equipment, and its disposal at project end.",
+          "bands": {
+            "K–2": "Keep a list of class equipment and where each thing is.",
+            "3–5": "Make a register of a school project's equipment and a plan for it when the project ends.",
+            "6–8": "Produce an asset register and disposal plan for a described project, with a checker.",
+            "9–10": "Produce an asset register and disposal plan.",
+            "11–12": "Produce the asset register and disposal plan for a real project and carry out the disposal."
+          }
+        },
+        {
+          "theme": "Local procurement and the market",
+          "description": "Buying locally, and what large purchases do to prices.",
+          "bands": {
+            "K–2": "Say what happens to a shop's prices when someone buys everything at once.",
+            "3–5": "Work out what one big purchase would do to prices in a small town.",
+            "6–8": "Assess the market effect of one described purchase, with a checker.",
+            "9–10": "Assess the market effect of one purchase.",
+            "11–12": "Assess the market effect of a real purchase with local sellers and change the purchasing plan if warranted."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "IF",
+      "name": "Information, rumour and media",
+      "themes": [
+        {
+          "theme": "What people already believe",
+          "description": "Starting from the existing understanding rather than correcting it.",
+          "bands": {
+            "K–2": "Ask what your friends already think about something before telling them facts.",
+            "3–5": "Find out what a group already believes about a topic before trying to change it.",
+            "6–8": "Assess existing beliefs in one described community, with a checker.",
+            "9–10": "Assess existing beliefs in one community.",
+            "11–12": "Assess existing beliefs in a real community and build the communication from them."
+          }
+        },
+        {
+          "theme": "A rumour, and why it is plausible",
+          "description": "Rumours as a response to an information vacuum.",
+          "bands": {
+            "K–2": "Find a rumour at school and say what nobody told people that let it grow.",
+            "3–5": "Trace one rumour to the missing information that made it believable.",
+            "6–8": "Trace one described rumour to the gap that produced it, with a checker.",
+            "9–10": "Trace one rumour to the gap that produced it.",
+            "11–12": "Trace a real rumour to its gap and fill the gap with the people who spread it."
+          }
+        },
+        {
+          "theme": "Communicating a decision people will not like",
+          "description": "Delivering it clearly, with the reasoning and the recourse.",
+          "bands": {
+            "K–2": "Tell the class an unpopular decision with the reason and what they can do about it.",
+            "3–5": "Write a message giving an unpopular decision clearly, with reasons and a way to appeal.",
+            "6–8": "Draft one such communication for a described decision, with a checker.",
+            "9–10": "Draft one communication of an unpopular decision with its reasoning and the recourse.",
+            "11–12": "Draft and deliver a real unpopular decision with reasoning and recourse, and record the response."
+          }
+        },
+        {
+          "theme": "Channels people actually use",
+          "description": "Radio, WhatsApp, a person at the water point.",
+          "bands": {
+            "K–2": "Say how news really travels in your community — who tells whom.",
+            "3–5": "Map how information really moves in your town: radio, phones, people at the shop.",
+            "6–8": "Map the real channels in one described context, with a checker.",
+            "9–10": "Map the channels people actually use for information in one context.",
+            "11–12": "Map the real channels in a real community and use them for a real message."
+          }
+        },
+        {
+          "theme": "Translation and what is lost",
+          "description": "The words with no equivalent, and the ones that carry stigma.",
+          "bands": {
+            "K–2": "Find a word in another language that has no exact match in yours.",
+            "3–5": "Find three words that translate badly and say what goes wrong.",
+            "6–8": "Identify three terms that translate badly in a described context, with a checker.",
+            "9–10": "Identify three terms that translate badly.",
+            "11–12": "Identify the terms that translate badly in a real programme, with its translators, and agree the words to use."
+          }
+        },
+        {
+          "theme": "A journalist arriving",
+          "description": "What may be said, what may not, and who consents to a photograph.",
+          "bands": {
+            "K–2": "Say what you would tell a visitor with a camera about who can be photographed.",
+            "3–5": "State what a helper may say to a reporter and who must agree to a photo.",
+            "6–8": "State a described organisation's media position and the consent process, with a checker.",
+            "9–10": "State your organisation's position and the consent process.",
+            "11–12": "State a real organisation's position and consent process and apply it with a real journalist."
+          }
+        },
+        {
+          "theme": "Images of the people you serve",
+          "description": "Dignity, consent and the fundraising image that would not be used at home.",
+          "bands": {
+            "K–2": "Say whether a photo of someone would be fair to use if it were of you.",
+            "3–5": "Judge three photos of people being helped against whether you would use them at home.",
+            "6–8": "Assess three images against a dignity standard, with a checker.",
+            "9–10": "Assess three images against a dignity standard.",
+            "11–12": "Assess a real organisation's images against a dignity standard and remove the ones that fail."
+          }
+        },
+        {
+          "theme": "Feedback as an information channel",
+          "description": "Complaints as the fastest source of operational information.",
+          "bands": {
+            "K–2": "Say how complaints tell a helper what is going wrong fastest.",
+            "3–5": "Design a way for complaints to reach the people who can fix things quickly.",
+            "6–8": "Design a feedback loop that reaches operations in a described programme, with a checker.",
+            "9–10": "Design a feedback loop that reaches operations.",
+            "11–12": "Design and run a real feedback loop that reaches operations, and show one change it caused."
+          }
+        },
+        {
+          "theme": "Misinformation during an outbreak",
+          "description": "Speed, trust and the messenger who is believed.",
+          "bands": {
+            "K–2": "Say who people trust most when they are frightened, and why that matters.",
+            "3–5": "Find who a community trusts to tell them the truth in an emergency.",
+            "6–8": "Identify the trusted messengers in one described context, with a checker.",
+            "9–10": "Identify the trusted messengers in one context.",
+            "11–12": "Identify the trusted messengers in a real community and work through them in a real or exercise outbreak."
+          }
+        },
+        {
+          "theme": "Telling people the programme is ending",
+          "description": "The communication most often left too late.",
+          "bands": {
+            "K–2": "Tell a group early and kindly that something they like is ending.",
+            "3–5": "Write how to tell people a project is ending, early enough to matter.",
+            "6–8": "Write the closure communication for a described programme, with a checker.",
+            "9–10": "Write the communication telling people a programme is ending, early enough to act on.",
+            "11–12": "Write and deliver the closure communication for a real programme in time for people to act on it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "TR",
+      "name": "After the emergency",
+      "themes": [
+        {
+          "theme": "When relief becomes development",
+          "description": "The transition that has no clean line, and the funding that assumes one.",
+          "bands": {
+            "K–2": "Say the difference between helping right after a storm and helping a town rebuild.",
+            "3–5": "Describe how emergency help turns into long-term help, and where the line is unclear.",
+            "6–8": "Describe the relief-to-development transition in one described context, with a checker.",
+            "9–10": "Describe the transition in one real context.",
+            "11–12": "Describe the transition in a real context to the funders whose money assumes a clean line."
+          }
+        },
+        {
+          "theme": "Handing services to a ministry",
+          "description": "What must be in place, and the gaps that appear afterwards.",
+          "bands": {
+            "K–2": "Plan how a helper hands a job to the people whose job it should be.",
+            "3–5": "Write a plan for giving a service back to the local government.",
+            "6–8": "Write a handover plan to a public authority for a described service, with a checker.",
+            "9–10": "Write a handover plan to a public authority.",
+            "11–12": "Write and begin a real handover to a public authority, and record the gaps that appeared."
+          }
+        },
+        {
+          "theme": "Livelihoods rather than distributions",
+          "description": "The shift, and the households for whom it does not work.",
+          "bands": {
+            "K–2": "Say the difference between giving someone food and helping them earn it.",
+            "3–5": "Find who would be left behind if a project stopped giving things and started helping people earn.",
+            "6–8": "Identify who is left behind by the shift in a described programme, with a checker.",
+            "9–10": "Identify who is left behind by the shift.",
+            "11–12": "Identify who a real shift leaves behind and design the provision that stays for them."
+          }
+        },
+        {
+          "theme": "Rebuilding a health or school system",
+          "description": "Systems rather than services, and the timescale involved.",
+          "bands": {
+            "K–2": "Say what a school needs to work again after a disaster, beyond the building.",
+            "3–5": "List what it takes to rebuild a school system, not just the school.",
+            "6–8": "Map one described system's recovery requirements, with a checker.",
+            "9–10": "Map one health or school system's recovery requirements and their timescale.",
+            "11–12": "Map a real system's recovery requirements with the people who run it and the timescale it needs."
+          }
+        },
+        {
+          "theme": "Land, property and return",
+          "description": "The disputes that surface when people go back.",
+          "bands": {
+            "K–2": "Say what arguments could happen when people come back to find someone in their house.",
+            "3–5": "Describe the kinds of disputes over land and homes when people return.",
+            "6–8": "Describe the dispute types in one described context, with a checker.",
+            "9–10": "Describe the dispute types in one context.",
+            "11–12": "Describe the dispute types in a real context and the routes that exist to resolve each."
+          }
+        },
+        {
+          "theme": "Reconciliation, and what aid can and cannot do",
+          "description": "The limits of an agency in a political process.",
+          "bands": {
+            "K–2": "Say what a helper can and cannot do to make people who fought become friends.",
+            "3–5": "State what an aid organisation could and could not do in a peace process.",
+            "6–8": "State what a described organisation could and could not contribute to reconciliation, with a checker.",
+            "9–10": "State what your organisation could and could not contribute.",
+            "11–12": "State what a real organisation could and could not contribute, and hold the line in a real process."
+          }
+        },
+        {
+          "theme": "Local organisations after the internationals leave",
+          "description": "What capacity was built locally, and what existing capacity was displaced by arriving.",
+          "bands": {
+            "K–2": "Say what a local group learned from visitors and what it might have lost.",
+            "3–5": "Assess what visiting organisations built locally and what local strength they pushed aside.",
+            "6–8": "Assess one described context for both built and displaced capacity, with a checker.",
+            "9–10": "Assess one context for the capacity built locally and the capacity displaced by arriving.",
+            "11–12": "Assess a real context for both with the local organisations, and publish their account."
+          }
+        },
+        {
+          "theme": "Data and records left behind",
+          "description": "What is handed over, what is destroyed, and who decides.",
+          "bands": {
+            "K–2": "Say what happens to lists of people when a project ends: kept, handed over, or destroyed.",
+            "3–5": "Write a plan for what happens to a project's records when it ends.",
+            "6–8": "Write the data disposition plan for a described programme, with a checker.",
+            "9–10": "Write the data disposition plan for a programme ending: handed over, destroyed, and who decides.",
+            "11–12": "Write and carry out the data disposition plan for a real programme, and record who decided."
+          }
+        },
+        {
+          "theme": "Evaluating a response honestly",
+          "description": "An evaluation that could conclude the response was wrong.",
+          "bands": {
+            "K–2": "Design a check of a project that could say it did not work.",
+            "3–5": "Design an evaluation of a school project that could conclude it was the wrong thing to do.",
+            "6–8": "Design an evaluation for a described response that permits the conclusion it was wrong, with a checker.",
+            "9–10": "Design one that permits that conclusion.",
+            "11–12": "Design and commission a real evaluation that permits that conclusion, and publish it whatever it says."
+          }
+        },
+        {
+          "theme": "What the community says happened",
+          "description": "The account that differs from the agency’s, recorded anyway.",
+          "bands": {
+            "K–2": "Ask people what really happened, even if it differs from the official story, and write it down.",
+            "3–5": "Collect one account of a project from the people served that differs from the organisation's.",
+            "6–8": "Collect one such account for a described response and write it up, with a checker.",
+            "9–10": "Collect and publish one community account that differs from the agency's own.",
+            "11–12": "Collect and publish a real community account of a real response alongside the agency's."
+          }
+        }
+      ]
+    }
+  ]
+}

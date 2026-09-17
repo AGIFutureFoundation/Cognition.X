@@ -175,7 +175,7 @@ def apply_promotions(rows):
     override_description() for the rule and the refusals."""
     if not PROMOTIONS.is_dir():
         return
-    promos, overriders = {}, {}
+    promos, overriders, overmap = {}, {}, {}
     for path in sorted(PROMOTIONS.glob("*.json")):
         spec = json.loads(path.read_text(encoding="utf-8"))
         themap = {}
@@ -184,6 +184,9 @@ def apply_promotions(rows):
                 themap[th["theme"]] = (track["name"], track["prefix"], i,
                                        th["description"], th.get("transfer_check"),
                                        track.get("credential"), th.get("bands"))
+                # override rows already carry a track, so a theme name that two
+                # tracks share (the Multilateral OS has one) resolves per track
+                overmap[(spec["pack"], track["name"], th["theme"])] = th.get("bands")
         promos[spec["pack"]] = themap
         if spec.get("override"):
             if spec["override"] != "band-suffix":
@@ -194,8 +197,8 @@ def apply_promotions(rows):
     filled = checks = creds = overrode = 0
     for r in rows:
         themap = promos.get(r["pack"])
-        if themap and r["track"] and r["pack"] in overriders and r["theme"] in themap and r["grade"] in BAND_LEVEL:
-            new = override_description(r, themap[r["theme"]][6])
+        if themap and r["track"] and r["pack"] in overriders and (r["pack"], r["track"], r["theme"]) in overmap and r["grade"] in BAND_LEVEL:
+            new = override_description(r, overmap[(r["pack"], r["track"], r["theme"])])
             if new is not None:
                 r["description"] = new
                 overrode += 1

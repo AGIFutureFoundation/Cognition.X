@@ -82,9 +82,10 @@ def main():
         spec = json.loads(p.read_text(encoding="utf-8"))
         if spec.get("override") != "band-suffix":
             continue
-        bands = {th["theme"]: th["bands"] for t in spec["tracks"] for th in t["themes"]}
+        bands = {(t["name"], th["theme"]): th["bands"] for t in spec["tracks"] for th in t["themes"]}
         for r in rows:
-            if r["pack"] == spec["pack"] and r["theme"] in bands and r["description"].strip() == str(bands[r["theme"]].get(r["grade"], "")).strip():
+            k = (r["track"], r["theme"])
+            if r["pack"] == spec["pack"] and k in bands and r["description"].strip() == str(bands[k].get(r["grade"], "")).strip():
                 overrides += 1
                 override_packs.add(r["pack"])
     lw_rows = [r for r in rows if r["credential"].strip() in LEVEL_WORDS]

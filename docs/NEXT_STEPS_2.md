@@ -35,7 +35,7 @@ Unchanged from the first set, and not style preferences:
 
 ---
 
-## 1 — Design the description override, then author the sector-OS bands *(override designed and the Corporate OS authored in v0.72.0, the Science OS in v0.73.0, the Robotics OS in v0.74.0, the Global Health OS in v0.75.0 — 2,000 rows; three sector packs remain, same shape, `tools/author_override.py`)*
+## 1 — Design the description override, then author the sector-OS bands *(override designed and the Corporate OS authored in v0.72.0, the Science OS in v0.73.0, the Robotics OS in v0.74.0, the Global Health OS in v0.75.0, the Multilateral OS in v0.76.0 — 2,500 rows; two sector packs remain, same shape, `tools/author_override.py`)*
 
 **Why.** 9,750 rows carry one sentence per theme with a band suffix.
 3,457 of them are in the seven sector-OS packs (Corporate, Science,

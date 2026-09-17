@@ -677,14 +677,14 @@ def test_education_os_canonical_injection():
     check("institute: every principle carries its strands", all(isinstance(x.get("strands"), list) and x["strands"] for x in inst["principles"]))
 
 
-KNOWN_BAND_SUFFIX_ROWS = 7750       # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); 9,250 Corporate OS (v0.72.0); 8,750 Science OS (v0.73.0); 8,250 Robotics OS (v0.74.0); 7,750 Global Health OS (v0.75.0); the ratchet only falls
+KNOWN_BAND_SUFFIX_ROWS = 7250       # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); 9,250 Corporate OS (v0.72.0); 8,750 Science OS (v0.73.0); 8,250 Robotics OS (v0.74.0); 7,750 Global Health OS (v0.75.0); 7,250 Multilateral OS (v0.76.0); the ratchet only falls
 BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch & Scale",
                        "Civic Leadership Legacy : Louisiana", "Basic Life Skills & Self-Reliance",
                        "Cognition.X : Louisiana OS"}
 BAND_AUTHORED_THEMES = {"Cognition.X : Louisiana OS": 100}   # two spec parts, one pack
 # packs whose source rows carried the suffix and were overridden through an
 # `override: band-suffix` promotion (v0.72.0): themes overridden, rows expected
-BAND_OVERRIDDEN_PACKS = {"Cognition.X : Corporate OS": (100, 500), "Cognition.X : Science OS": (100, 500), "Cognition.X : Robotics OS": (100, 500), "Cognition.X : Global Health OS": (100, 500)}
+BAND_OVERRIDDEN_PACKS = {"Cognition.X : Corporate OS": (100, 500), "Cognition.X : Science OS": (100, 500), "Cognition.X : Robotics OS": (100, 500), "Cognition.X : Global Health OS": (100, 500), "Cognition.X : Multilateral OS": (100, 500)}
 
 
 def test_band_differentiated_descriptions():
@@ -731,7 +731,7 @@ def test_band_differentiated_descriptions():
         pr = [r for r in rows if r["pack"] == pack and r["track"]]
         by_theme = {}
         for r in pr:
-            by_theme.setdefault(r["theme"], []).append(r["description"])
+            by_theme.setdefault((r["track"], r["theme"]), []).append(r["description"])   # a theme name may recur across tracks
         check(f"override: {pack} — no tracked row carries the suffix", not [r for r in pr if suffix.search(r["description"])])
         check(f"override: {pack} — {themes_n} themes with five distinct sentences", len(by_theme) == themes_n and all(len(v) == 5 and len(set(v)) == 5 for v in by_theme.values()), str(len(by_theme)))
         check(f"override: {pack} — every sentence is a full sentence that says what the learner does", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in pr))
