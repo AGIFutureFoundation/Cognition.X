@@ -1,0 +1,1167 @@
+{
+  "pack": "Non-Profit Practice",
+  "override": "band-suffix",
+  "note": "The counted exception to fill-empty-only: every theme here exists in the source with a band-suffixed description (the documented content debt); this promotion replaces exactly those rows with five authored sentences per theme. The normaliser refuses any other target. Track names, prefixes, codes, credentials and transfer checks are untouched.",
+  "tracks": [
+    {
+      "prefix": "VL",
+      "name": "Volunteers",
+      "themes": [
+        {
+          "theme": "The first hour a volunteer spends here",
+          "description": "What happens in that hour decides whether somebody comes back, and it is almost never planned.",
+          "bands": {
+            "K–2": "Plan the first hour for a new helper in your class so they want to come back, and ask them what was missing.",
+            "3–5": "Plan and run the first hour for a new helper at a school club, then ask what was missing.",
+            "6–8": "Design and run a first hour for a new volunteer at a real club or event, then ask them what was missing, with a checker.",
+            "9–10": "Design and run a first hour, then ask the volunteer what was missing.",
+            "11–12": "Design and run the first hour for real volunteers at a real organisation, ask each what was missing, and revise it."
+          }
+        },
+        {
+          "theme": "Training that fits in one evening",
+          "description": "Everything essential compressed into the only time a volunteer will actually give you.",
+          "bands": {
+            "K–2": "Teach a new helper the three most important things in ten minutes, then check what they remember.",
+            "3–5": "Fit everything a club helper must know into one short session and test what stuck.",
+            "6–8": "Deliver a complete induction for a real club or event role in ninety minutes and test what was retained, with a checker.",
+            "9–10": "Deliver a complete induction in ninety minutes and test what was retained.",
+            "11–12": "Deliver the ninety-minute induction to real volunteers, test retention a week later, and cut what did not survive."
+          }
+        },
+        {
+          "theme": "What a volunteer may never be asked to do",
+          "description": "The tasks that require a trained, accountable, paid person, and the pressure to blur that when short-staffed.",
+          "bands": {
+            "K–2": "Say which class jobs only an adult may do, and why.",
+            "3–5": "Write a list of tasks a helper at a club must never be given, and say who may do them.",
+            "6–8": "Write a never-list for volunteers in a real club or event and have it approved by the organiser.",
+            "9–10": "Write your organisation's never-list and have it approved.",
+            "11–12": "Write the never-list for a real organisation with its safeguarding lead, get it approved, and post it where volunteers are inducted."
+          }
+        },
+        {
+          "theme": "Boundaries, and who explains them",
+          "description": "Boundaries are protection for the volunteer as much as for the client, and they must be stated by somebody with authority.",
+          "bands": {
+            "K–2": "Say why a helper needs rules that protect them as well as the people they help.",
+            "3–5": "Practise explaining the rules to a new helper as somebody in charge would.",
+            "6–8": "Deliver the boundaries conversation in role, with a checker.",
+            "9–10": "Deliver the boundaries conversation in role.",
+            "11–12": "Deliver the boundaries conversation to real volunteers as the person with authority, and be assessed on it."
+          }
+        },
+        {
+          "theme": "Supervision without a supervisor",
+          "description": "Structured support in an organisation that has nobody spare to give it.",
+          "bands": {
+            "K–2": "Plan a five-minute weekly check on a helper when nobody has spare time.",
+            "3–5": "Design a way to support a club helper that takes under an hour a week.",
+            "6–8": "Design a supervision arrangement for real volunteers that costs under an hour a week, with a checker.",
+            "9–10": "Design a supervision arrangement that costs under an hour a week.",
+            "11–12": "Design and run a supervision arrangement under an hour a week for a real organisation for a term."
+          }
+        },
+        {
+          "theme": "The volunteer who is also a client",
+          "description": "The most valuable and most delicate relationship in the sector, and the conflicts inside it.",
+          "bands": {
+            "K–2": "Say what is tricky when a person both gets help from a group and helps in it.",
+            "3–5": "Write what a club should do when a helper is also somebody the club supports.",
+            "6–8": "Write the policy covering somebody who is both volunteer and client for a described organisation, with a checker.",
+            "9–10": "Write the policy covering somebody who is both.",
+            "11–12": "Write the policy for a real organisation with the people it covers, and have it adopted."
+          }
+        },
+        {
+          "theme": "When to stop somebody volunteering",
+          "description": "Ending it without cruelty, and the failure to do so that damages everybody.",
+          "bands": {
+            "K–2": "Practise telling a helper kindly that their help is not working, and what could change.",
+            "3–5": "Prepare and rehearse telling a club helper they must stop, without cruelty.",
+            "6–8": "Prepare and rehearse the conversation ending a volunteer's role, with a checker.",
+            "9–10": "Prepare and rehearse the conversation that ends somebody's volunteering without cruelty.",
+            "11–12": "Have the real conversation ending a volunteer's role, under supervision, and record what protected everybody."
+          }
+        },
+        {
+          "theme": "Recognition that is not a pizza party",
+          "description": "What volunteers actually report valuing, which is usually not an event.",
+          "bands": {
+            "K–2": "Ask three helpers what would make them feel valued, and do one of the things.",
+            "3–5": "Ask five club helpers what they actually value and act on one answer.",
+            "6–8": "Ask five real volunteers what they value and act on the answer, with a checker.",
+            "9–10": "Ask five volunteers and act on the answer.",
+            "11–12": "Ask a real organisation's volunteers what they value, act on it, and measure whether they stayed."
+          }
+        },
+        {
+          "theme": "The volunteer who wants your job",
+          "description": "Ambition inside volunteering, and the honest conversation about a paid route.",
+          "bands": {
+            "K–2": "Say what a helper could become at a club if they wanted more responsibility.",
+            "3–5": "Map how a club helper could become a paid member of staff where you are.",
+            "6–8": "Map the real route from volunteer to staff in a real organisation, with a checker.",
+            "9–10": "Map the real route from volunteer to staff where you are.",
+            "11–12": "Map the route for a real organisation, have the honest conversation with a volunteer who wants it, and record what was possible."
+          }
+        },
+        {
+          "theme": "Handover when they leave",
+          "description": "The knowledge that leaves with an unpaid person nobody debriefed.",
+          "bands": {
+            "K–2": "Ask a helper who is leaving to tell you one thing only they know, and write it down.",
+            "3–5": "Interview a leaving club helper and write a note for the next one.",
+            "6–8": "Run one volunteer exit interview in role or for real and produce a handover note, with a checker.",
+            "9–10": "Run one volunteer exit interview and produce a handover note.",
+            "11–12": "Run exit interviews for real departing volunteers for a term and turn the notes into the induction."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "BD",
+      "name": "Board & governance",
+      "themes": [
+        {
+          "theme": "What a board is actually for",
+          "description": "Fiduciary oversight, not operations, and the confusion that consumes small organisations.",
+          "bands": {
+            "K–2": "Say the difference between the people who run a club day to day and the people who check it is run well.",
+            "3–5": "State what a school council or club committee decides and what it leaves to the people running things.",
+            "6–8": "State what a described board decides and what it does not, with a checker.",
+            "9–10": "State what your board decides and what it does not.",
+            "11–12": "State what a real board decides and does not, agree it with the chair, and write it into the board's terms."
+          }
+        },
+        {
+          "theme": "The six meetings and what each is",
+          "description": "Designing an annual cycle so each meeting has a purpose rather than a repeated update.",
+          "bands": {
+            "K–2": "Plan the year's class meetings so each one has a purpose.",
+            "3–5": "Draft a year of club committee meetings, each with a reason to meet.",
+            "6–8": "Draft a twelve-month board calendar for a described organisation with a purpose per meeting, with a checker.",
+            "9–10": "Draft a twelve-month board calendar with a purpose per meeting.",
+            "11–12": "Draft the twelve-month calendar for a real board and get it adopted by the chair."
+          }
+        },
+        {
+          "theme": "A board packet somebody will read",
+          "description": "Length, structure and the decision stated on the first page.",
+          "bands": {
+            "K–2": "Write a one-page note for a meeting that says the decision first.",
+            "3–5": "Produce a short pack for a club committee that starts with what must be decided.",
+            "6–8": "Produce a board packet under ten pages for a described organisation that leads with the decisions, with a checker.",
+            "9–10": "Produce a packet under ten pages that leads with the decisions.",
+            "11–12": "Produce the packet for a real board meeting and have the trustees say whether they read it."
+          }
+        },
+        {
+          "theme": "Fiduciary duty in plain words",
+          "description": "Care, loyalty and obedience, explained so a new trustee understands what they carry.",
+          "bands": {
+            "K–2": "Say what it means to look after a club's money and rules as if they were not yours to spend.",
+            "3–5": "Explain care, loyalty and obedience to somebody joining a club committee, in plain words.",
+            "6–8": "Explain all three duties to somebody joining a described board, with a checker.",
+            "9–10": "Explain all three to somebody joining a board.",
+            "11–12": "Explain all three to a real new trustee and have them explain them back at their first meeting."
+          }
+        },
+        {
+          "theme": "Conflicts of interest, declared",
+          "description": "The register, the recusal, and the conflicts that are ordinary rather than scandalous.",
+          "bands": {
+            "K–2": "Say when you should not vote on something in class because it helps you or your family.",
+            "3–5": "Complete a declaration of interests for a club committee and find one vote you should sit out.",
+            "6–8": "Complete a declaration for a described board and identify one recusal it requires, with a checker.",
+            "9–10": "Complete a declaration and identify one recusal it requires.",
+            "11–12": "Complete a real declaration for a real board, identify the recusals, and record them in the minutes."
+          }
+        },
+        {
+          "theme": "The board member who wants to run the programme",
+          "description": "A common and destructive pattern, addressed by the chair rather than by staff.",
+          "bands": {
+            "K–2": "Say why the person who checks a club should not also try to run it every day.",
+            "3–5": "Prepare what a chair would say to a committee member who keeps doing the staff's job.",
+            "6–8": "Prepare the conversation the chair would have with such a member, with a checker.",
+            "9–10": "Prepare the conversation the chair would have.",
+            "11–12": "Support a real chair in having that conversation and record what changed."
+          }
+        },
+        {
+          "theme": "Recruiting a board that is not your friends",
+          "description": "Skills gaps, lived experience and the discomfort of recruiting people who will challenge you.",
+          "bands": {
+            "K–2": "Say why a club committee needs people who will disagree with you.",
+            "3–5": "List the skills a club committee needs and mark the two biggest gaps.",
+            "6–8": "Produce a board skills matrix for a described organisation and identify the two biggest gaps, with a checker.",
+            "9–10": "Produce a board skills matrix and identify the two biggest gaps.",
+            "11–12": "Produce the skills matrix for a real board, identify the gaps, and recruit against one."
+          }
+        },
+        {
+          "theme": "Term limits and why they save you",
+          "description": "The mechanism that removes an unproductive member without a confrontation.",
+          "bands": {
+            "K–2": "Say why people should take turns on a committee instead of staying forever.",
+            "3–5": "Draft a rule for how long someone may serve on a committee and how they hand over.",
+            "6–8": "Draft term limits and the transition for existing members of a described board, with a checker.",
+            "9–10": "Draft term limits and the transition for existing members.",
+            "11–12": "Draft term limits for a real board with its chair and get them adopted with the transition."
+          }
+        },
+        {
+          "theme": "The executive session",
+          "description": "What it is for, when it is legitimate, and how it is minuted.",
+          "bands": {
+            "K–2": "Say when a committee might need to talk without the staff there, and why it must be written down.",
+            "3–5": "State when a club committee would meet without staff and how that is recorded.",
+            "6–8": "State when a described board would use an executive session and how it is recorded, with a checker.",
+            "9–10": "State when your board would use one and how it is recorded.",
+            "11–12": "State the executive-session rule for a real board, agree it with the chair, and apply it in the minutes."
+          }
+        },
+        {
+          "theme": "Reporting bad news to a board",
+          "description": "Early, in writing, with the options — which is the test of whether governance works.",
+          "bands": {
+            "K–2": "Practise telling the people in charge about a problem early, with what could be done.",
+            "3–5": "Write a note to a club committee about bad news, with options and what you recommend.",
+            "6–8": "Write a bad-news report with options and a recommendation for a described board, with a checker.",
+            "9–10": "Write a bad-news report with options and a recommendation.",
+            "11–12": "Write and deliver a real bad-news report to a real board, early and in writing, and record how governance responded."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "GR",
+      "name": "Grants & funders",
+      "themes": [
+        {
+          "theme": "Reading a funding call properly",
+          "description": "What the funder is buying, and the applications it will not fund whatever their quality.",
+          "bands": {
+            "K–2": "Read the rules of a prize and say what it is really for.",
+            "3–5": "Read a funding notice and say what it would never fund, whatever the quality.",
+            "6–8": "Assess one live call for fit before writing anything, with a checker.",
+            "9–10": "Assess one live call for fit before writing anything.",
+            "11–12": "Assess a real call for a real organisation, decide with the team whether to apply, and record why."
+          }
+        },
+        {
+          "theme": "Whether to apply at all",
+          "description": "The cost of applying against the probability, honestly estimated.",
+          "bands": {
+            "K–2": "Work out how long entering a competition would take and whether it is worth it.",
+            "3–5": "Cost a school application in hours against the chance of winning, and decide.",
+            "6–8": "Cost one application in staff hours against the probability and decide, with a checker.",
+            "9–10": "Cost one application in staff hours and decide.",
+            "11–12": "Cost a real application in staff hours against an honest probability, decide with the team, and record the decision."
+          }
+        },
+        {
+          "theme": "A budget that survives contact with a finance officer",
+          "description": "Costing what will actually be spent, including the parts routinely omitted.",
+          "bands": {
+            "K–2": "Make a budget for a class project and have an adult find what you forgot.",
+            "3–5": "Build a full budget for a school project and have somebody challenge every line.",
+            "6–8": "Build a full budget for a described project and have a finance person challenge it, with a checker.",
+            "9–10": "Build a full budget and have a finance person challenge it.",
+            "11–12": "Build the full budget for a real application and have a real finance officer challenge it before submission."
+          }
+        },
+        {
+          "theme": "Indirect costs and the fight about them",
+          "description": "What overhead genuinely is, and why refusing to fund it undermines the work.",
+          "bands": {
+            "K–2": "Say what a project costs that is not the project itself — the room, the lights, the person organising.",
+            "3–5": "Work out the hidden costs of running a school club and what share of the total they are.",
+            "6–8": "Calculate a real or described organisation's indirect rate, with a checker.",
+            "9–10": "Calculate your organisation's real indirect rate from its actual costs.",
+            "11–12": "Calculate the real indirect rate for a real organisation and make the case for it to a funder."
+          }
+        },
+        {
+          "theme": "Writing outcomes you can actually measure",
+          "description": "Outcomes you can evidence without building surveillance of the people served.",
+          "bands": {
+            "K–2": "Say what would change for people if a class project worked, in a way you could check without spying on them.",
+            "3–5": "Write three results a school project should have and how you would show each without tracking people.",
+            "6–8": "Write three outcomes and the evidence for each for a described programme, with a checker.",
+            "9–10": "Write three outcomes and the evidence for each.",
+            "11–12": "Write the outcomes and evidence for a real application and check that none requires surveillance of the people served."
+          }
+        },
+        {
+          "theme": "The report nobody reads and why you still write it",
+          "description": "The record it creates, and its value to you rather than to the funder.",
+          "bands": {
+            "K–2": "Write a short report on a class project that you would want to read next year.",
+            "3–5": "Write a project report that would be useful to you in a year, not just to the funder.",
+            "6–8": "Write one report for a described programme that you would find useful in a year, with a checker.",
+            "9–10": "Write one report you would find useful in a year.",
+            "11–12": "Write a real funder report you would use in a year, and check a year later whether you did."
+          }
+        },
+        {
+          "theme": "A funder who wants something the mission refuses",
+          "description": "The conversation, and the decision to decline money.",
+          "bands": {
+            "K–2": "Say what you would do if someone offered a prize on condition you did something you thought was wrong.",
+            "3–5": "Write a polite letter turning down money that came with a condition your club would not accept.",
+            "6–8": "Write the decline letter for a described offer that conflicts with the mission, with a checker.",
+            "9–10": "Write the decline letter you would send.",
+            "11–12": "Write and send a real decline letter, and record the funder's response."
+          }
+        },
+        {
+          "theme": "Renewal, and the year before it",
+          "description": "Renewal is decided long before the application, by the relationship and the record.",
+          "bands": {
+            "K–2": "Say what you would do all year so a supporter wants to help again next year.",
+            "3–5": "Plan the year before a school grant renewal so the answer is decided by the record.",
+            "6–8": "Build the twelve-month renewal plan for a described grant, with a checker.",
+            "9–10": "Build the twelve-month renewal plan for a grant, starting the year before the application.",
+            "11–12": "Build and run the renewal plan for a real grant and record the renewal decision."
+          }
+        },
+        {
+          "theme": "Restricted funds and the trap in them",
+          "description": "Money that can only be spent one way while the need is elsewhere.",
+          "bands": {
+            "K–2": "Say what happens when money can only be spent on one thing but something else is needed more.",
+            "3–5": "Map which of a club's money is tied to one purpose and what that stops it doing.",
+            "6–8": "Map a described organisation's restricted and unrestricted split and its consequences, with a checker.",
+            "9–10": "Map your restricted and unrestricted split and its consequences.",
+            "11–12": "Map the split for a real organisation and present its consequences to the board."
+          }
+        },
+        {
+          "theme": "What to do when the grant does not renew",
+          "description": "The plan that exists before the answer arrives, including how staff are told.",
+          "bands": {
+            "K–2": "Plan what a club would do if its main supporter stopped, before that happens.",
+            "3–5": "Write a plan for a school project losing its funding, including how people are told.",
+            "6–8": "Write the non-renewal plan for a described live grant, with a checker.",
+            "9–10": "Write the non-renewal plan for a live grant.",
+            "11–12": "Write the non-renewal plan for a real live grant with the staff it would affect, before the answer arrives."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "OM",
+      "name": "Outcomes & measurement",
+      "themes": [
+        {
+          "theme": "What a funder means by outcomes",
+          "description": "Translating funder language into something your programme can honestly report.",
+          "bands": {
+            "K–2": "Turn a grown-up phrase like 'improved wellbeing' into something you could actually see happen.",
+            "3–5": "Translate one funder's outcome into words your school project could honestly report.",
+            "6–8": "Translate one funder's outcome framework into a described programme's own terms, with a checker.",
+            "9–10": "Translate one funder's outcome framework into your own terms.",
+            "11–12": "Translate a real funder's framework for a real programme and agree the translation with the funder."
+          }
+        },
+        {
+          "theme": "What you can measure with no budget",
+          "description": "The measurements available to an organisation with three staff and no evaluator.",
+          "bands": {
+            "K–2": "Find one thing about a class project you could count in five minutes a week.",
+            "3–5": "Design how a school club could measure its results in under two hours a month.",
+            "6–8": "Design a measurement plan for a described organisation costing under two hours a month, with a checker.",
+            "9–10": "Design a measurement plan costing under two hours a month.",
+            "11–12": "Design and run a measurement plan under two hours a month for a real organisation for a term."
+          }
+        },
+        {
+          "theme": "Counting without identifying",
+          "description": "Counting people served while holding no record that identifies any of them.",
+          "bands": {
+            "K–2": "Count how many people came to something without writing down who they were.",
+            "3–5": "Design a way to count club attendance that keeps no names.",
+            "6–8": "Design a counting method for a described programme that stores nothing identifying, with a checker.",
+            "9–10": "Design a counting method that stores nothing identifying.",
+            "11–12": "Design and run a counting method for a real programme that stores nothing identifying, and have it audited."
+          }
+        },
+        {
+          "theme": "Anonymous answers that are still useful",
+          "description": "One anonymous question, well chosen, that tells you something you can act on.",
+          "bands": {
+            "K–2": "Ask the class one anonymous question that would help you change something.",
+            "3–5": "Write one anonymous question for a club and try it out.",
+            "6–8": "Write the one anonymous question for a described programme and pilot it, with a checker.",
+            "9–10": "Write the one anonymous question that would tell you something actionable, and pilot it.",
+            "11–12": "Write and pilot the one question in a real programme, and act on what it told you."
+          }
+        },
+        {
+          "theme": "A baseline you can defend",
+          "description": "Establishing a starting point without pretending to precision you do not have.",
+          "bands": {
+            "K–2": "Before a project, write down how things are now, and how sure you are.",
+            "3–5": "Establish a starting point for a school project and say how uncertain it is.",
+            "6–8": "Establish one baseline for a described programme and state its uncertainty, with a checker.",
+            "9–10": "Establish one baseline and state its uncertainty.",
+            "11–12": "Establish a real baseline for a real programme, state its uncertainty, and use it in the first report."
+          }
+        },
+        {
+          "theme": "Attribution: what your programme did and what life did",
+          "description": "The claim most often overstated in this sector, and the honest version of it.",
+          "bands": {
+            "K–2": "Say which good things happened because of a project and which would have happened anyway.",
+            "3–5": "Rewrite a claim about a school project to only what the evidence shows.",
+            "6–8": "Rewrite one impact claim for a described programme to what the evidence supports, with a checker.",
+            "9–10": "Rewrite one impact claim to what the evidence supports.",
+            "11–12": "Rewrite a real organisation's impact claim to what the evidence supports and publish the honest version."
+          }
+        },
+        {
+          "theme": "Publishing a result that is bad",
+          "description": "Publishing it anyway, and what that buys with funders who have seen everything.",
+          "bands": {
+            "K–2": "Tell the class honestly when a project did not work.",
+            "3–5": "Write up a school project result that disappointed, as carefully as a good one.",
+            "6–8": "Draft a publication of a disappointing result for a described programme, with a checker.",
+            "9–10": "Draft a publication of a disappointing result.",
+            "11–12": "Publish a real disappointing result and record how funders responded."
+          }
+        },
+        {
+          "theme": "Comparison groups you do not have",
+          "description": "Reasoning about counterfactuals without a control group, honestly.",
+          "bands": {
+            "K–2": "Say why you cannot be sure a project caused a change if you did not compare with anyone.",
+            "3–5": "Say what you can and cannot conclude about a school project with no comparison group.",
+            "6–8": "State what you can and cannot conclude about a described programme without a control group, with a checker.",
+            "9–10": "State what you can and cannot conclude without one.",
+            "11–12": "State the honest conclusions for a real programme without a control group, in its report."
+          }
+        },
+        {
+          "theme": "The metric that changes behaviour badly",
+          "description": "A measure that becomes a target and distorts the work it was measuring.",
+          "bands": {
+            "K–2": "Say how counting one thing could make people do the wrong thing to get the number up.",
+            "3–5": "Find one number a school tracks that could push people to do the wrong thing.",
+            "6–8": "Identify one metric in a described organisation at risk of distorting the work, with a checker.",
+            "9–10": "Identify one metric in your organisation at risk of this.",
+            "11–12": "Identify the at-risk metric in a real organisation and replace or guard it."
+          }
+        },
+        {
+          "theme": "Measuring the thing rather than the proxy",
+          "description": "Noticing when you are counting attendance and calling it learning.",
+          "bands": {
+            "K–2": "Say the difference between counting who came and knowing who learned.",
+            "3–5": "Find one thing a club counts that stands in for something else.",
+            "6–8": "Identify one proxy used in a described programme and what it stands in for, with a checker.",
+            "9–10": "Identify one proxy you use and what it stands in for.",
+            "11–12": "Identify the proxies in a real organisation's reporting and measure the real thing for one of them."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SU",
+      "name": "Staff & sustainability",
+      "themes": [
+        {
+          "theme": "Nine hats and which two matter",
+          "description": "Deciding what genuinely cannot be dropped when everything is nominally your job.",
+          "bands": {
+            "K–2": "List all the jobs you do for a club and circle the two that matter most.",
+            "3–5": "Rank the roles you hold in a school club by what happens if they are dropped.",
+            "6–8": "Rank your roles in a real club or job by consequence and identify what you will stop, with a checker.",
+            "9–10": "Rank your roles by consequence and identify what you will stop.",
+            "11–12": "Rank the roles in a real small organisation with the person holding them, and agree what stops."
+          }
+        },
+        {
+          "theme": "Hiring when you cannot pay market",
+          "description": "What a small organisation can honestly offer, and the candidates for whom it is enough.",
+          "bands": {
+            "K–2": "Say why someone should join your team when you cannot give them a prize.",
+            "3–5": "Write an honest invitation for a role that pays less than it should.",
+            "6–8": "Write the honest pitch for a described role you would have to fill without market pay, with a checker.",
+            "9–10": "Write the honest pitch for a role you would have to fill.",
+            "11–12": "Write and use the honest pitch for a real role, and record who applied and why."
+          }
+        },
+        {
+          "theme": "The first ninety days of a new staff member",
+          "description": "The period that decides retention, in an organisation with no onboarding process.",
+          "bands": {
+            "K–2": "Plan the first weeks for a new helper so they know what to do and whom to ask.",
+            "3–5": "Design a ninety-day plan for a new club role.",
+            "6–8": "Design a ninety-day plan for a real or described role, with a checker.",
+            "9–10": "Design a ninety-day plan for a real role.",
+            "11–12": "Design and run the ninety-day plan for a real hire, and review with them what decided whether they stayed."
+          }
+        },
+        {
+          "theme": "Burnout as a design problem rather than a personal failing",
+          "description": "The structural drivers, and the changes that are within an organisation’s control.",
+          "bands": {
+            "K–2": "Say what about a job, not the person, makes people too tired to carry on.",
+            "3–5": "Find three things about how a club is run that wear people out.",
+            "6–8": "Identify three structural drivers of burnout in a described organisation, with a checker.",
+            "9–10": "Identify three structural drivers in your own organisation.",
+            "11–12": "Identify the structural drivers in a real organisation with its staff, and change one."
+          }
+        },
+        {
+          "theme": "Supervision that is not just a check-in",
+          "description": "Reflective supervision in work that exposes staff to distress.",
+          "bands": {
+            "K–2": "Practise a talk with a helper about how a hard day felt, not just what got done.",
+            "3–5": "Design a supervision session with a structure for someone doing upsetting work.",
+            "6–8": "Design and run one structured supervision session in role, with a checker.",
+            "9–10": "Design and run one supervision session with a structure.",
+            "11–12": "Design and run structured reflective supervision for real staff for a term, and review it with them."
+          }
+        },
+        {
+          "theme": "Documentation so that leaving is survivable",
+          "description": "Writing down what only one person knows, before that person leaves.",
+          "bands": {
+            "K–2": "Write down how to do one job that only you know, so a friend could do it.",
+            "3–5": "Document one club task that only one person knows how to do.",
+            "6–8": "Document one single-point-of-failure process in a described organisation, with a checker.",
+            "9–10": "Document one single-point-of-failure process.",
+            "11–12": "Document every single-point-of-failure process in a real organisation and have somebody else run one."
+          }
+        },
+        {
+          "theme": "Pay transparency in a small organisation",
+          "description": "What publishing a pay structure changes, and what it costs to do it badly.",
+          "bands": {
+            "K–2": "Say why it might help or hurt if everyone knew what everyone else was paid.",
+            "3–5": "Draft a fair pay structure for a small group that you would be willing to show everyone.",
+            "6–8": "Draft a pay structure for a described organisation you would be willing to publish, with a checker.",
+            "9–10": "Draft a pay structure you would be willing to publish.",
+            "11–12": "Draft the pay structure for a real organisation and take it to the board for publication."
+          }
+        },
+        {
+          "theme": "The founder who cannot let go",
+          "description": "The most common governance failure in small organisations, addressed structurally.",
+          "bands": {
+            "K–2": "Say what happens to a club when the person who started it will not let anyone else decide.",
+            "3–5": "Find the changes to how a club is run that would let the founder step back.",
+            "6–8": "Identify the structural changes that would address a founder who cannot let go, with a checker.",
+            "9–10": "Identify the structural changes that would address it.",
+            "11–12": "Identify the structural changes for a real organisation and put them to its board."
+          }
+        },
+        {
+          "theme": "Succession, planned early",
+          "description": "Planning for the departure of the person who holds the relationships.",
+          "bands": {
+            "K–2": "Plan who would take over a club job if the person doing it left, and what they would need to know.",
+            "3–5": "Write a plan for replacing the person who holds a club's most important relationships.",
+            "6–8": "Write a succession plan for the most critical role in a described organisation, with a checker.",
+            "9–10": "Write a succession plan for the most critical role.",
+            "11–12": "Write the succession plan for a real organisation's most critical role with the person who holds it."
+          }
+        },
+        {
+          "theme": "Closing a programme well",
+          "description": "Ending with dignity for participants and staff, which is a design requirement not a contingency.",
+          "bands": {
+            "K–2": "Plan how to end a class project so everyone feels it ended properly.",
+            "3–5": "Write a closure plan for a school programme that treats participants and staff with dignity.",
+            "6–8": "Write the closure plan for a described live programme, with a checker.",
+            "9–10": "Write the closure plan for a live programme.",
+            "11–12": "Write and run the closure plan for a real programme, and record what dignity required."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CO",
+      "name": "Coalitions & the city",
+      "themes": [
+        {
+          "theme": "Who else is already doing this",
+          "description": "Finding the existing effort before starting a parallel one.",
+          "bands": {
+            "K–2": "Before starting a class project, find out who is already doing something like it.",
+            "3–5": "Map the groups already doing similar work in your area before starting.",
+            "6–8": "Map every organisation doing adjacent work in a real area, with a checker.",
+            "9–10": "Map every organisation doing adjacent work in your area.",
+            "11–12": "Map the adjacent organisations for a real area and use the map to decide what not to duplicate."
+          }
+        },
+        {
+          "theme": "The meeting that is worth attending",
+          "description": "Judging which coordination is worth staff time, and leaving the rest.",
+          "bands": {
+            "K–2": "Say which class meetings are worth going to and which are not.",
+            "3–5": "Assess three regular meetings and say which one to drop.",
+            "6–8": "Assess three recurring meetings for a described organisation and drop one, with a checker.",
+            "9–10": "Assess three recurring meetings and drop one.",
+            "11–12": "Assess a real organisation's recurring meetings, drop one, and measure the time recovered."
+          }
+        },
+        {
+          "theme": "A coalition that is not a mailing list",
+          "description": "What makes a coalition act rather than circulate.",
+          "bands": {
+            "K–2": "Say the difference between a group that does things together and a group that just sends messages.",
+            "3–5": "Find one decision a group of clubs could actually take together.",
+            "6–8": "Identify one decision a described coalition could actually take, with a checker.",
+            "9–10": "Identify one decision your coalition could actually take.",
+            "11–12": "Identify the decision for a real coalition, put it to the members, and record whether they took it."
+          }
+        },
+        {
+          "theme": "Sharing a client without sharing a record",
+          "description": "Coordinating support for the same person while holding no shared record about them.",
+          "bands": {
+            "K–2": "Say how two helpers could know they are both helping someone without sharing their secrets.",
+            "3–5": "Design a way for two groups to coordinate help for the same person without a shared file.",
+            "6–8": "Design a coordination method for a described case that transmits no personal record, with a checker.",
+            "9–10": "Design a coordination method that transmits no personal record.",
+            "11–12": "Design and use a coordination method with a real partner organisation that transmits no personal record."
+          }
+        },
+        {
+          "theme": "Competing for the same grant as an ally",
+          "description": "Handling it openly, and the joint bid that is sometimes better.",
+          "bands": {
+            "K–2": "Say what you would do if you and a friend both wanted the same prize.",
+            "3–5": "Write the conversation you would have with a friendly group before you both apply for the same money.",
+            "6–8": "Write the conversation you would have with an ally before applying for the same grant, with a checker.",
+            "9–10": "Write the conversation you would have before applying.",
+            "11–12": "Have the real conversation with a real ally before a real application, and record the decision on a joint bid."
+          }
+        },
+        {
+          "theme": "What a city department actually needs from you",
+          "description": "Understanding the department’s own constraints and what makes you useful to it.",
+          "bands": {
+            "K–2": "Ask someone who works for the town what would make a club useful to them.",
+            "3–5": "Interview a local official about what they need from community groups.",
+            "6–8": "Interview one official about what they need from organisations like yours, with a checker.",
+            "9–10": "Interview one official about what they need.",
+            "11–12": "Interview real officials for a real organisation and change one thing about how it works with them."
+          }
+        },
+        {
+          "theme": "Testifying at a budget hearing",
+          "description": "Two minutes, one story, one number, and one specific ask.",
+          "bands": {
+            "K–2": "Say in two minutes why the town should pay for something, with one story and one number.",
+            "3–5": "Prepare a two-minute speech for a school or council meeting: one story, one number, one ask.",
+            "6–8": "Prepare and deliver a two-minute testimony in role, with a checker.",
+            "9–10": "Prepare and deliver a two-minute testimony.",
+            "11–12": "Prepare and deliver a real two-minute testimony at a real hearing, and record the outcome."
+          }
+        },
+        {
+          "theme": "A joint programme and who owns it",
+          "description": "Agreeing accountability, money and decision rights before delivery starts.",
+          "bands": {
+            "K–2": "Agree with another group who decides what before you start a shared project.",
+            "3–5": "Draft an agreement for a joint club project: money, decisions, who is responsible.",
+            "6–8": "Draft the agreement for a described joint programme, with a checker.",
+            "9–10": "Draft the agreement for a joint programme.",
+            "11–12": "Draft and sign the agreement for a real joint programme before delivery starts."
+          }
+        },
+        {
+          "theme": "When to leave a coalition",
+          "description": "Recognising that participation has stopped being worth its cost.",
+          "bands": {
+            "K–2": "Say how you would know it was time to leave a group that no longer helps.",
+            "3–5": "Write your own rules for when a club should leave a group it belongs to.",
+            "6–8": "State your own criteria for leaving a coalition, with a checker.",
+            "9–10": "State your own criteria for leaving a coalition, before the question arises.",
+            "11–12": "State the criteria for a real organisation, apply them to a real coalition, and act on the answer."
+          }
+        },
+        {
+          "theme": "Being the small organisation in a room of large ones",
+          "description": "Holding your position without being either absorbed or dismissed.",
+          "bands": {
+            "K–2": "Practise saying one thing clearly in a room where everyone else is bigger.",
+            "3–5": "Prepare one point to make at a meeting where your group is the smallest.",
+            "6–8": "Prepare one intervention for a room where you are the smallest organisation, with a checker.",
+            "9–10": "Prepare one intervention for a room where you are smallest.",
+            "11–12": "Make the intervention in a real room of larger organisations, and record how the position held."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "PD",
+      "name": "Programme design",
+      "themes": [
+        {
+          "theme": "The problem, stated before the solution",
+          "description": "Writing down what is actually wrong before describing what you will do about it, which is the step most often skipped.",
+          "bands": {
+            "K–2": "Say what is wrong before saying what you will do about it.",
+            "3–5": "Write down a school problem without mentioning any activity that would fix it.",
+            "6–8": "Write the problem statement for a described programme without naming any activity, with a checker.",
+            "9–10": "Write the problem statement without naming any activity.",
+            "11–12": "Write the problem statement for a real programme and get it agreed before any design starts."
+          }
+        },
+        {
+          "theme": "Who says this is the problem",
+          "description": "Whether the people affected agree with your diagnosis, asked before design rather than after launch.",
+          "bands": {
+            "K–2": "Ask the people a project is for whether they think it is a problem.",
+            "3–5": "Ask five people a school project would help whether they agree with what it is fixing.",
+            "6–8": "Ask five people served by a described programme and record where they disagreed, with a checker.",
+            "9–10": "Ask five people served and record where they disagreed with you.",
+            "11–12": "Ask real people served before designing a real programme, record the disagreements, and change the design."
+          }
+        },
+        {
+          "theme": "A theory of change you could be wrong about",
+          "description": "The causal chain from what you do to what changes, written so a sceptic could attack a specific link.",
+          "bands": {
+            "K–2": "Draw the chain from what you will do to what should change, and mark the weakest link.",
+            "3–5": "Draw the chain for a school project and mark the link most likely to fail.",
+            "6–8": "Draw the chain for a described programme and mark the weakest link, with a checker.",
+            "9–10": "Draw the chain and mark the weakest link.",
+            "11–12": "Draw the chain for a real programme, have a sceptic attack it, and mark the weakest link on the record."
+          }
+        },
+        {
+          "theme": "The smallest version that would teach you something",
+          "description": "Designing the pilot that answers the riskiest question first rather than the easiest.",
+          "bands": {
+            "K–2": "Design a tiny test of a class idea that could show it does not work.",
+            "3–5": "Design an eight-week pilot for a school project that could fail and teach you why.",
+            "6–8": "Design a pilot for a described programme that could fail informatively in eight weeks, with a checker.",
+            "9–10": "Design a pilot that could fail informatively in eight weeks.",
+            "11–12": "Design and run the eight-week pilot for a real programme, and report what it taught."
+          }
+        },
+        {
+          "theme": "Copying a programme that worked somewhere else",
+          "description": "What transfers, what is downstream of that place, and the part everybody copies that was never the mechanism.",
+          "bands": {
+            "K–2": "Find something that worked at another school and say what would not work here.",
+            "3–5": "Take a project from elsewhere and separate what would transfer from what was local.",
+            "6–8": "Take one model and separate the transferable from the local, with a checker.",
+            "9–10": "Take one model and separate the transferable from the local.",
+            "11–12": "Take a real model for a real organisation, separate the transferable from the local, and design accordingly."
+          }
+        },
+        {
+          "theme": "Designing for the bad month",
+          "description": "Open enrolment, no cohort lock-step, and a return path that does not require explaining an absence.",
+          "bands": {
+            "K–2": "Plan a club so someone who misses a month can come back without explaining.",
+            "3–5": "Design a school programme with a way back for anybody who has been away.",
+            "6–8": "Build the return path into a described programme design, with a checker.",
+            "9–10": "Build the return path into a real programme design.",
+            "11–12": "Build the return path into a real programme, run it, and count who used it."
+          }
+        },
+        {
+          "theme": "What the programme will not do",
+          "description": "The boundary, written at design time, so that mission drift has something to be measured against.",
+          "bands": {
+            "K–2": "Write a list of what a class project will not do, before it starts.",
+            "3–5": "Write a never-list for a school programme and get the group to agree it.",
+            "6–8": "Write the never-list for a described programme and get it agreed, with a checker.",
+            "9–10": "Write the never-list for a programme at design time and get it agreed.",
+            "11–12": "Write the never-list for a real programme, get it agreed at design time, and measure drift against it."
+          }
+        },
+        {
+          "theme": "Staffing a design before funding it",
+          "description": "What the design assumes about hours, and whether those hours exist.",
+          "bands": {
+            "K–2": "Count the adult hours a class project needs and whether they exist.",
+            "3–5": "Cost a school project in hours against the people actually available.",
+            "6–8": "Cost a described design in staff hours against the staff available, with a checker.",
+            "9–10": "Cost the design in staff hours against the staff you have.",
+            "11–12": "Cost a real design in staff hours against real staff, and cut it to what the hours permit before seeking funding."
+          }
+        },
+        {
+          "theme": "A programme that can be handed over",
+          "description": "Designing so that another organisation could run it, which is also what makes it survivable internally.",
+          "bands": {
+            "K–2": "Write how to run a class activity so another class could do it.",
+            "3–5": "Produce a how-to for a school programme that another school could run.",
+            "6–8": "Produce the operating document a successor could use for a described programme, with a checker.",
+            "9–10": "Produce the operating document a successor could use.",
+            "11–12": "Produce the operating document for a real programme and have another organisation run a session from it."
+          }
+        },
+        {
+          "theme": "Deciding not to run the programme",
+          "description": "The design that should not proceed, and having a process that permits that conclusion.",
+          "bands": {
+            "K–2": "Write down before starting what would make you decide not to do a project.",
+            "3–5": "Write the stop rules for a school project before it begins.",
+            "6–8": "Write the stop criteria for a described programme before starting, with a checker.",
+            "9–10": "Write the stop criteria before starting.",
+            "11–12": "Write the stop criteria for a real programme, get them agreed, and apply them at the decision point."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "PS",
+      "name": "The people served",
+      "themes": [
+        {
+          "theme": "Asking before deciding",
+          "description": "The difference between consulting people and informing them, and how a participant can tell which happened.",
+          "bands": {
+            "K–2": "Let the class really decide one thing, and say how they could tell it was real.",
+            "3–5": "Name one decision about a club that members could genuinely make, and hand it over.",
+            "6–8": "Identify one decision in a described programme you would genuinely transfer, and to whom, with a checker.",
+            "9–10": "Identify one decision you would genuinely transfer, and to whom.",
+            "11–12": "Transfer a real decision in a real programme to the people served, and record what they decided."
+          }
+        },
+        {
+          "theme": "A person is not a case",
+          "description": "Language, records and the small habits that turn somebody into a file.",
+          "bands": {
+            "K–2": "Find words on a class form that make a person sound like a file, and change them.",
+            "3–5": "Check a club's forms for language that turns a person into a case.",
+            "6–8": "Audit the forms of a described organisation for language that does this, with a checker.",
+            "9–10": "Audit your own forms for language that does this.",
+            "11–12": "Audit a real organisation's forms and records with people who have filled them in, and change the language."
+          }
+        },
+        {
+          "theme": "Dignity in a waiting room",
+          "description": "The physical and procedural details that communicate respect or its absence before anybody speaks.",
+          "bands": {
+            "K–2": "Look at where visitors wait at school and say what tells them they are welcome or not.",
+            "3–5": "Assess a waiting area from a visitor's point of view and list what would change.",
+            "6–8": "Assess one intake space from a participant's position, with a checker.",
+            "9–10": "Assess one intake space from a participant's position.",
+            "11–12": "Assess a real intake space with people who use it and change what communicated disrespect."
+          }
+        },
+        {
+          "theme": "Consent where refusal has a cost",
+          "description": "Making refusal genuinely available when the person needs what you have.",
+          "bands": {
+            "K–2": "Ask a friend properly when you know they need your help, so no is still possible.",
+            "3–5": "Describe how to make saying no real when the person needs what you offer.",
+            "6–8": "Describe how you would make refusal real in one described process, with a checker.",
+            "9–10": "Describe how you would make refusal real in one process.",
+            "11–12": "Make refusal real in a real process, and record the refusals that followed."
+          }
+        },
+        {
+          "theme": "A complaint route people use",
+          "description": "Why the built mechanism usually goes unused, and what an actually-used one looks like.",
+          "bands": {
+            "K–2": "Try the class complaint box and say what would stop you using it.",
+            "3–5": "Test a club's complaint route as a member and say what stopped you.",
+            "6–8": "Test a described organisation's complaint mechanism as a user and report what stopped you, with a checker.",
+            "9–10": "Test your own mechanism as a user and report what stopped you.",
+            "11–12": "Test a real mechanism with real users, report what stopped them, and rebuild it."
+          }
+        },
+        {
+          "theme": "Paying people for their time",
+          "description": "When participation should be paid, and the arguments used to avoid it.",
+          "bands": {
+            "K–2": "Say when someone who helps with a project should be paid for their time.",
+            "3–5": "Work out what it would cost to pay people fairly for taking part in a school consultation.",
+            "6–8": "Cost participation properly for one described process, with a checker.",
+            "9–10": "Cost participation properly for one process.",
+            "11–12": "Cost and pay participation in a real process, and defend the line to the people who would have avoided it."
+          }
+        },
+        {
+          "theme": "Somebody who was served and now works here",
+          "description": "The most valuable staffing route in the sector and the boundaries that protect the person.",
+          "bands": {
+            "K–2": "Say what is good and what is tricky when a person who was helped becomes a helper.",
+            "3–5": "Write a rule for a club when a former member becomes a leader, including what protects them.",
+            "6–8": "Write the policy for the served-to-staff transition in a described organisation, with a checker.",
+            "9–10": "Write the policy for somebody who was served becoming staff, including the boundaries that protect them.",
+            "11–12": "Write the policy for a real organisation with people who made the transition, and have it adopted."
+          }
+        },
+        {
+          "theme": "Telling somebody no",
+          "description": "Refusing a service without pretending the refusal is a policy rather than a decision.",
+          "bands": {
+            "K–2": "Say no to a request with a real reason and one other thing the person can do.",
+            "3–5": "Practise refusing a club service with a reason and a route, not 'those are the rules'.",
+            "6–8": "Deliver one refusal in role with a reason and a route, with a checker.",
+            "9–10": "Deliver one refusal with a reason and a route.",
+            "11–12": "Deliver real refusals for a month with a reason and a route, and have them reviewed for honesty."
+          }
+        },
+        {
+          "theme": "What participants said they wanted, recorded",
+          "description": "Recording it, and setting it beside what was actually delivered.",
+          "bands": {
+            "K–2": "Write what the class asked for next to what the class got.",
+            "3–5": "List what club members asked for and what the club delivered, side by side.",
+            "6–8": "Produce both lists for a described programme, with a checker.",
+            "9–10": "Produce the two lists for one programme: what participants asked for, and what was delivered.",
+            "11–12": "Produce both lists for a real programme, publish them to participants, and act on the gap."
+          }
+        },
+        {
+          "theme": "Ending a relationship well",
+          "description": "What is owed to somebody when the support stops, whoever ended it.",
+          "bands": {
+            "K–2": "Say what a helper owes someone when the helping stops.",
+            "3–5": "Write how a club should end its support for somebody, whoever ended it.",
+            "6–8": "Write the ending process for a described service, with a checker.",
+            "9–10": "Write the process for ending a support relationship well, whoever ended it.",
+            "11–12": "Write and use the ending process in a real service, and review it with somebody it ended with."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CF",
+      "name": "Telling people about it",
+      "themes": [
+        {
+          "theme": "The story that is not somebody’s worst week",
+          "description": "Fundraising communications that do not trade a participant’s dignity for a donation.",
+          "bands": {
+            "K–2": "Tell a true story about a project without making anyone look pitiful.",
+            "3–5": "Rewrite a fundraising story so it does not use somebody's worst moment.",
+            "6–8": "Rewrite one described appeal without the worst-week story, with a checker.",
+            "9–10": "Rewrite one appeal without the worst-week story.",
+            "11–12": "Rewrite a real organisation's appeal without the worst-week story and test whether it still raised money."
+          }
+        },
+        {
+          "theme": "Consent for a photograph",
+          "description": "What consent for an image actually requires, and how long it lasts.",
+          "bands": {
+            "K–2": "Ask before taking a picture of someone, say what it is for, and let them change their mind.",
+            "3–5": "Design a photo permission that a person could take back later.",
+            "6–8": "Produce a consent process for images that a participant could withdraw from, with a checker.",
+            "9–10": "Produce a consent process a participant could withdraw from.",
+            "11–12": "Produce and use the image consent process in a real organisation, and honour a real withdrawal."
+          }
+        },
+        {
+          "theme": "Numbers a supporter will remember",
+          "description": "Choosing the one or two figures that carry, and defending the choice.",
+          "bands": {
+            "K–2": "Pick the one number about a class project people will remember, and say why that one.",
+            "3–5": "Choose two figures for a school project that carry the story and defend the choice.",
+            "6–8": "Choose the one or two figures for a described programme and justify each, with a checker.",
+            "9–10": "Choose them for one real programme and justify each.",
+            "11–12": "Choose the figures for a real organisation's communications and check they are the ones supporters remembered."
+          }
+        },
+        {
+          "theme": "A website somebody in crisis can use",
+          "description": "Hours, address, eligibility and phone above everything about the organisation.",
+          "bands": {
+            "K–2": "Look at a helper's web page with an adult and time how long it takes to find the opening hours and phone number.",
+            "3–5": "Check a charity website from the position of someone who needs help today.",
+            "6–8": "Assess a described organisation's site from the position of somebody who needs it today, with a checker.",
+            "9–10": "Assess your own site from the position of somebody who needs it today.",
+            "11–12": "Assess a real site with somebody who needed it today, and move hours, address, eligibility and phone to the top."
+          }
+        },
+        {
+          "theme": "Saying what you do not do",
+          "description": "Being clear about scope so people are not sent to you wrongly.",
+          "bands": {
+            "K–2": "Write what a club does not do so nobody is sent to it by mistake.",
+            "3–5": "Write a scope statement for a school club's front page.",
+            "6–8": "Write the scope statement for a described organisation's front page, with a checker.",
+            "9–10": "Write the scope statement for your front page.",
+            "11–12": "Write the scope statement for a real organisation and check whether wrong referrals fell afterwards."
+          }
+        },
+        {
+          "theme": "A newsletter that is read",
+          "description": "Frequency, length and the one thing it must contain.",
+          "bands": {
+            "K–2": "Design a one-page class newsletter with the one thing everyone must know at the top.",
+            "3–5": "Design a club newsletter and test whether a real reader read it.",
+            "6–8": "Design one newsletter for a described organisation and test it on a real supporter, with a checker.",
+            "9–10": "Design one and test it on a real supporter.",
+            "11–12": "Design and send a real newsletter, and measure what was read."
+          }
+        },
+        {
+          "theme": "Bad news, communicated",
+          "description": "A programme closing, a failure, an incident — told before it is discovered.",
+          "bands": {
+            "K–2": "Practise telling people something disappointing before they find out from someone else.",
+            "3–5": "Draft a message about a club closing or a mistake, sent before it is discovered.",
+            "6–8": "Draft one bad-news communication for a described organisation, with a checker.",
+            "9–10": "Draft one communication of bad news — a closure, a failure, an incident — sent before it is discovered.",
+            "11–12": "Draft and send real bad news before it is discovered, and record the response."
+          }
+        },
+        {
+          "theme": "Social media on a budget of zero",
+          "description": "What is realistic for an organisation with no communications post.",
+          "bands": {
+            "K–2": "Plan one post a week about a class project that you could really keep up.",
+            "3–5": "Design a posting schedule a club could keep during a busy month.",
+            "6–8": "Design a social media schedule for a described organisation that survives a busy month, with a checker.",
+            "9–10": "Design a schedule that survives a busy month.",
+            "11–12": "Design and follow the schedule for a real organisation through a real busy month."
+          }
+        },
+        {
+          "theme": "A journalist calls",
+          "description": "What may be said, who says it, and what is never confirmed.",
+          "bands": {
+            "K–2": "Say what you would tell a reporter about a club and what you would never say about a person.",
+            "3–5": "Write who speaks to the press for a club and what is never confirmed.",
+            "6–8": "Write the media protocol for a described organisation, with a checker.",
+            "9–10": "Write the media protocol: who speaks, what may be said, and what is never confirmed.",
+            "11–12": "Write the media protocol for a real organisation and apply it to a real call."
+          }
+        },
+        {
+          "theme": "Being quoted about somebody else",
+          "description": "Speaking about the people you serve without speaking for them.",
+          "bands": {
+            "K–2": "Say something about a friend's situation without speaking for them.",
+            "3–5": "Rewrite a quote about club members so it does not speak for them.",
+            "6–8": "Rewrite one quote so it does not speak for anybody, with a checker.",
+            "9–10": "Rewrite one quote so it does not speak for anybody.",
+            "11–12": "Rewrite a real organisation's quotes about the people it serves, with those people, so none speaks for them."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "RS",
+      "name": "Risk and safeguarding",
+      "themes": [
+        {
+          "theme": "The risks that actually close organisations",
+          "description": "Not the ones on the register: funding concentration, a safeguarding failure, a founder departure, an unbudgeted liability.",
+          "bands": {
+            "K–2": "Say what could really make a club have to stop, not just what is on a list.",
+            "3–5": "Rank the things that could end a school club by how likely they are to end it.",
+            "6–8": "Rank a described organisation's real risks by whether they would end it, with a checker.",
+            "9–10": "Rank your real risks by whether they would end the organisation.",
+            "11–12": "Rank a real organisation's risks by whether they would end it and put the ranking to the board."
+          }
+        },
+        {
+          "theme": "Safeguarding as a system rather than a policy",
+          "description": "The recruitment, supervision, reporting and culture that make a policy work.",
+          "bands": {
+            "K–2": "Say the four things that keep children safe at a club, not just the rule on the wall.",
+            "3–5": "Check a club against recruitment, supervision, reporting and culture, not just its policy.",
+            "6–8": "Assess a described organisation's safeguarding against those four, with a checker.",
+            "9–10": "Assess your own arrangements against those four.",
+            "11–12": "Assess a real organisation against the four with its safeguarding lead and fix the weakest."
+          }
+        },
+        {
+          "theme": "Recognising and reporting harm",
+          "description": "What triggers a report, to whom, and within what time.",
+          "bands": {
+            "K–2": "Say who you tell if someone is being hurt, and how quickly.",
+            "3–5": "State what a club helper must report, to whom, and within what time.",
+            "6–8": "State your obligations precisely and the route for each in a described organisation, with a checker.",
+            "9–10": "State your obligations precisely and the route for each.",
+            "11–12": "State the obligations for a real organisation and be assessed on them by its safeguarding lead."
+          }
+        },
+        {
+          "theme": "An allegation about a colleague",
+          "description": "The hardest procedure to follow and the one most often mishandled.",
+          "bands": {
+            "K–2": "Say what you would do if someone said a helper had hurt them, step by step.",
+            "3–5": "Walk through what a club does when someone accuses a helper.",
+            "6–8": "Walk through the procedure for a described allegation, with a checker.",
+            "9–10": "Walk through the procedure for a described allegation.",
+            "11–12": "Walk through a real organisation's procedure in an exercise with its lead, and fix what it mishandled."
+          }
+        },
+        {
+          "theme": "Data you hold about people",
+          "description": "What is held, why, for how long, and what a breach would expose.",
+          "bands": {
+            "K–2": "List what a club knows about its members and what it does not need to keep.",
+            "3–5": "Make a list of the information a club holds about people and what could be deleted.",
+            "6–8": "Produce a data inventory for a described organisation and identify what could be deleted, with a checker.",
+            "9–10": "Produce a data inventory and identify what could be deleted.",
+            "11–12": "Produce the data inventory for a real organisation and delete what could be."
+          }
+        },
+        {
+          "theme": "Insurance and what it does not cover",
+          "description": "Reading the policy for the exclusions rather than the headline.",
+          "bands": {
+            "K–2": "Say why a group needs insurance and why you must read the small print.",
+            "3–5": "Read an insurance policy and find what it leaves out.",
+            "6–8": "Identify three exclusions in a real or described policy, with a checker.",
+            "9–10": "Identify three exclusions in a real policy.",
+            "11–12": "Identify the exclusions in a real organisation's policy and put the uncovered risks to the board."
+          }
+        },
+        {
+          "theme": "Lone working",
+          "description": "Staff and volunteers working alone with people, and the controls that exist.",
+          "bands": {
+            "K–2": "Say why a helper should not be alone with someone without a plan.",
+            "3–5": "Design a rule for club helpers who work alone with people.",
+            "6–8": "Design a lone-working protocol for a described organisation, with a checker.",
+            "9–10": "Design a lone-working protocol for staff and volunteers who work alone with people.",
+            "11–12": "Design and adopt the lone-working protocol for a real organisation with the people who work alone."
+          }
+        },
+        {
+          "theme": "A serious incident",
+          "description": "The first hour, the notification obligations, and the record.",
+          "bands": {
+            "K–2": "Say what to do in the first hour when something serious happens: help, tell, write down.",
+            "3–5": "Write what a club does in the first hour after a serious incident.",
+            "6–8": "Write the first-hour procedure for a described organisation, with a checker.",
+            "9–10": "Write the first-hour procedure for a serious incident: the response, the notifications, the record.",
+            "11–12": "Write and rehearse the first-hour procedure for a real organisation with its staff."
+          }
+        },
+        {
+          "theme": "Financial control in a small organisation",
+          "description": "Segregation of duties when there are three people, which is the hardest version of it.",
+          "bands": {
+            "K–2": "Say why two people should sign for money, even in a tiny club.",
+            "3–5": "Design money checks for a club with only three people.",
+            "6–8": "Design controls that work with three staff for a described organisation, with a checker.",
+            "9–10": "Design controls that work with three staff.",
+            "11–12": "Design and adopt controls for a real three-person organisation, and have them audited."
+          }
+        },
+        {
+          "theme": "The risk register nobody reads",
+          "description": "Making it a live document that changes a decision.",
+          "bands": {
+            "K–2": "Turn a list of worries into a list where each has a person and a warning sign.",
+            "3–5": "Rewrite a club's risk list so each row names who watches it and what would set it off.",
+            "6–8": "Rewrite one register so each row names an owner and a trigger, with a checker.",
+            "9–10": "Rewrite one register so each row names an owner and a trigger.",
+            "11–12": "Rewrite a real register with the owners named and make it change one decision at the next board."
+          }
+        }
+      ]
+    }
+  ]
+}

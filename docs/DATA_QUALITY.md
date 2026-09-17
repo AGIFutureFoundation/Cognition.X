@@ -37,7 +37,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Cognition.X : Global Health OS | 1160 | 10 | 43% | 0% | 100% | 0% | 28 |
 | Cognition.X : Multilateral OS | 1150 | 10 | 43% | 0% | 100% | 0% | 28 |
 | Cognition.X : Sapient OS | 1120 | 10 | 44% | 0% | 100% | 0% | 25 |
-| Non-Profit Practice | 1150 | 10 | 43% | 43% | 100% | 0% | 25 |
+| Non-Profit Practice | 1150 | 10 | 43% | 0% | 100% | 0% | 25 |
 | Cognition.X : Education OS | 660 | 0 | 0% | 0% | 100% | 0% | 113 |
 | Arts & Craft Trades : Louisiana Makers | 250 | 5 | 100% | 100% | 100% | 0% | 75 |
 | Arts, Making Media & Performance | 250 | 5 | 100% | 100% | 100% | 0% | 82 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 100% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 38% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 35% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
@@ -84,7 +84,7 @@ exceptions. The second (v0.72.0): a promotion declaring
 content debt above, and nothing else — with an authored sentence for that
 band; the normaliser refuses any other target with the row id.
 
-- Rows whose band-suffix description was replaced by an authored band sentence: **3,000** across 6 pack(s) (Cognition.X : Corporate OS, Cognition.X : Global Health OS, Cognition.X : Multilateral OS, Cognition.X : Robotics OS, Cognition.X : Sapient OS, Cognition.X : Science OS).
+- Rows whose band-suffix description was replaced by an authored band sentence: **3,500** across 7 pack(s) (Cognition.X : Corporate OS, Cognition.X : Global Health OS, Cognition.X : Multilateral OS, Cognition.X : Robotics OS, Cognition.X : Sapient OS, Cognition.X : Science OS, Non-Profit Practice).
 
 ## Credential naming
 
