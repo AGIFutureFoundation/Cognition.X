@@ -13,6 +13,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      # A warning, not a failure, until a maintainer with tag-push rights has
+      # pushed the backfilled tags (tools/release_tags.py --backfill); prompt 6
+      # of docs/NEXT_STEPS_2.md turns it into a hard failure and signs them.
+      - name: Every released version in the changelog has its tag (warns until the backfill is pushed)
+        run: |
+          git fetch --depth=1 origin '+refs/tags/*:refs/tags/*' || true
+          python3 tools/release_tags.py --check || echo "::warning::release tags missing — run: python3 tools/release_tags.py --backfill && git push origin --tags"
       # 9,950 of 16,700 blocks are generated from pack specs, and every fact
       # base is extracted from the Education OS app. Until v0.47.0 CI checked
       # neither, so both were committed artifacts nothing re-derived. Now the

@@ -16,9 +16,11 @@ criteria pass.
   mode, printable workbooks, tutor swarm/voice/guide, styles, widget
   dashboards, PWA install metadata (v0.34.0), the accessibility first
   pass (v0.33.0), and all four canonical fact-base layers (v0.39.0,
-  v0.43.0, v0.44.0). Open: the full WCAG 2.2 AA audit, restoring the
-  Education OS's imported design system, and injecting the canonical
-  layers back to shrink `template.html`.
+  v0.43.0, v0.44.0), the full WCAG 2.2 AA audit (v0.53.0), the
+  Education OS's design system restored (v0.46.0) and the canonical
+  layers injected back into its template (v0.63.0, the library in place
+  v0.68.0). Nothing in this phase is open; the second system review
+  (`docs/SYSTEM_REVIEW_2.md`) carries what is next.
 - **Phase 3 — Deployment: well underway.** Shipped: Louisiana platform
   + adopted 2-wave plan + launch curriculum/budgets/readiness, Trades
   Network (6 regions), States app (50 states), Network OS automations
@@ -27,8 +29,10 @@ criteria pass.
   (v0.35.0), governance (v0.35.0), the evidence loop (v0.36.0) and the
   culture trades (v0.48.0: music creation→industry, culinary and
   arts-and-craft trade packs with the Makers' Hall of public-record
-  examples by parish). Open: the v1.0 external-cohort gate (operational, below) and W3C
-  Verifiable Credentials / Open Badges 3.0 envelope alignment.
+  examples by parish), W3C Verifiable Credentials / Open Badges 3.0
+  envelopes (v0.60.0) and the WebXR studio rooms (v0.69.0–v0.70.0).
+  Open: the v1.0 external-cohort gate (operational, below) — it waits
+  on a cohort, not on code.
 - **Phase 4 — Intelligence: architecture shipped** (CX-Trace, flow
   model, data principles); adaptive sequencing exists in first working
   form (the ledger's recommendation + flow automations); the rest is
@@ -278,9 +282,9 @@ complete a track and hold a verifiable credential file.
   format (imported entries marked second-hand until confirmed
   out-of-band), and revocation — `cx-revocation/1` lists signed by
   the issuing office's own key, verified before import, adding the
-  fourth verification outcome *revoked by issuing office*.
-  Remaining federation work: W3C VC / Open Badges 3.0 envelope
-  alignment.
+  fourth verification outcome *revoked by issuing office*. The
+  W3C VC / Open Badges 3.0 envelopes followed in v0.60.0 and the
+  durable lists with custody-bundle restore in v0.62.0.
 - [x] Educator authoring, first slice (v0.35.0): the **Pack Studio**
   (Flow Hub's Author view) — a form-driven spec editor with live
   generator-grade validation, a worked example, import-to-edit,

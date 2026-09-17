@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15",
+ "generated": "2026-09-17",
  "axe": "4.13.0",
  "runs": [
   {
@@ -47,7 +47,7 @@
    ],
    "incomplete": 1,
    "keyboard": {
-    "focusable": 183,
+    "focusable": 196,
     "noName": [],
     "clickOnly": 0
    }
@@ -222,7 +222,7 @@
    ],
    "incomplete": 0,
    "keyboard": {
-    "focusable": 142,
+    "focusable": 164,
     "noName": [],
     "clickOnly": 0
    }
@@ -617,6 +617,56 @@
    }
   },
   {
+   "label": "trades-network studio open",
+   "url": "file:///home/user/Cognition.X/apps/trades-network/index.html#/sims",
+   "click": null,
+   "violations": [
+    {
+     "id": "heading-order",
+     "impact": "moderate",
+     "tags": [
+      "best-practice"
+     ],
+     "help": "Heading levels should only increase by one",
+     "nodes": 1,
+     "sample": [
+      "#simstudio > h3"
+     ]
+    }
+   ],
+   "incomplete": 0,
+   "keyboard": {
+    "focusable": 86,
+    "noName": [],
+    "clickOnly": 0
+   }
+  },
+  {
+   "label": "trades-network studio → Open in 3D / VR",
+   "url": "file:///home/user/Cognition.X/apps/trades-network/index.html#/sims",
+   "click": null,
+   "violations": [
+    {
+     "id": "heading-order",
+     "impact": "moderate",
+     "tags": [
+      "best-practice"
+     ],
+     "help": "Heading levels should only increase by one",
+     "nodes": 1,
+     "sample": [
+      "#simstudio > h3"
+     ]
+    }
+   ],
+   "incomplete": 0,
+   "keyboard": {
+    "focusable": 90,
+    "noName": [],
+    "clickOnly": 0
+   }
+  },
+  {
    "label": "states #/nation",
    "url": "file:///home/user/Cognition.X/apps/states/index.html#/nation",
    "click": null,
@@ -823,7 +873,7 @@
    ],
    "incomplete": 0,
    "keyboard": {
-    "focusable": 20,
+    "focusable": 21,
     "noName": [],
     "clickOnly": 0
    }

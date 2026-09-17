@@ -4,6 +4,49 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.71.0] — 2026-09-17
+
+### Added — the second complete system review
+- **`docs/SYSTEM_REVIEW_2.md`.** The platform at v0.70.0 reviewed end to
+  end, covering the 38 releases since the first review: the dataset and
+  its named debt, the six apps as build products, the test and CI
+  surface with its timings and its gaps, security and the register,
+  accessibility, performance, the documentation, and the risks that
+  remain. Every number in it was measured in the review, and the tests
+  hold the ones that can drift.
+- **`docs/NEXT_STEPS_2.md`.** The next ten prompts, each a complete brief
+  with its evidence, files, acceptance and commands: the sector-OS
+  description override, the community packs' band sentences, the 6,200
+  empty descriptions, one shared runtime for the duplicated voice and
+  tour helpers, a faster browser suite with the audit in CI, the
+  release-tag check and signed releases, the Education OS template's
+  second diet, XR round three, the board's decisions as data, and
+  accessibility round two. `docs/NEXT_STEPS_OPUS5.md` is marked complete.
+- **`tools/view_sweep.js`.** The Education OS view sweep — every route
+  rendered, hashed with known nondeterminism normalised, page errors and
+  empty views counted, and a compare mode — committed, so the "every
+  view renders identically" claim behind v0.63.0 and v0.68.0 can be
+  re-run from a clone.
+- **The accessibility audit re-run** (`tools/a11y/audit.js` gains
+  in-page steps): 47 views including the Simulation Studio open on a
+  scenario and the same studio in its WebXR room; 0 WCAG-tagged
+  violations, 5,309 focusable elements all named, 0 click-only controls.
+
+### Changed
+- `docs/DATA_QUALITY.md`'s headline counts real credentials (1,430),
+  matching the wiki, instead of distinct strings.
+- `docs/ROADMAP.md` no longer lists as open the audit, the Education OS
+  design restoration, the canonical-layer injection or the VC envelopes,
+  all of which shipped; `docs/XR_REVIEW.md` states the engine's size as
+  measured.
+- Release tags: the documented procedure (`git tag -a vX.Y.Z` on the
+  merged commit) had been followed once in 70 releases.
+  `tools/release_tags.py --backfill` recreates the 71 missing annotated
+  tags on the commits that introduced each version, and `--check` in CI
+  compares the changelog to the tags — as a warning until a maintainer
+  with tag-push rights pushes the backfill (the automation token that
+  ships releases is refused on `refs/tags`), then as a failure.
+
 ## [0.70.0] — 2026-09-16
 
 ### Added — the studio in space, round two

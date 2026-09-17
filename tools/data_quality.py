@@ -49,7 +49,7 @@ def main():
         "",
         f"**{len(rows):,} blocks · {len(packs)} packs · "
         f"{len({(r['pack'], r['track']) for r in rows if r['track']})} tracks · "
-        f"{len({r['credential'] for r in rows})} credentials**",
+        f"{len({r['credential'] for r in rows} - LEVEL_WORDS):,} credentials**",
         "",
         "The known content debt (see the roadmap): band-suffix descriptions",
         "share one sentence across bands with an “— at ‹band›” suffix; the",

@@ -1,5 +1,10 @@
 # Next steps — ten prompts for Opus 5
 
+> **Complete.** All ten prompts below were worked between v0.46.0 and
+> v0.70.0 (each header says where). The file is kept as the record of
+> what was asked and why. The second review, `docs/SYSTEM_REVIEW_2.md`,
+> and the next ten prompts, `docs/NEXT_STEPS_2.md`, continue from it.
+
 Ten self-contained sessions, ranked by value, each one a complete brief:
 what to do, why it matters now, the evidence behind it, the files, the
 acceptance criteria, and the commands that prove it. Copy a prompt
