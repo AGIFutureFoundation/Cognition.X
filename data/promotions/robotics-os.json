@@ -1,0 +1,1167 @@
+{
+  "pack": "Cognition.X : Robotics OS",
+  "override": "band-suffix",
+  "note": "The counted exception to fill-empty-only: every theme here exists in the source with a band-suffixed description (the documented content debt); this promotion replaces exactly those rows with five authored sentences per theme. The normaliser refuses any other target. Track names, prefixes, codes, credentials and transfer checks are untouched.",
+  "tracks": [
+    {
+      "prefix": "MC",
+      "name": "Machines and how they move",
+      "themes": [
+        {
+          "theme": "A machine's degrees of freedom",
+          "description": "Counting degrees of freedom on a real mechanism and predicting what it cannot reach.",
+          "bands": {
+            "K–2": "Move a toy arm or a door and count the ways it can move, then find one place it cannot reach.",
+            "3–5": "Count the ways a real mechanism can move and show a classmate a position it cannot get to.",
+            "6–8": "Count the degrees of freedom on a real rig or kit and demonstrate an unreachable pose to a checker.",
+            "9–10": "Count them on a physical rig and demonstrate an unreachable pose.",
+            "11–12": "Count the degrees of freedom on a real machine for its operators, document the unreachable poses, and put them in its operating notes."
+          }
+        },
+        {
+          "theme": "Kinematics you can feel",
+          "description": "Forward and inverse kinematics understood by moving something with your hands first.",
+          "bands": {
+            "K–2": "Move your own arm to touch a spot, then say what each joint did to get there.",
+            "3–5": "Predict where a toy arm's hand will end up when you set its joints, then check by measuring.",
+            "6–8": "Predict an end-effector position on a real kit arm from its joint angles, then measure it and explain the difference.",
+            "9–10": "Predict an end-effector position, then measure it.",
+            "11–12": "Predict end-effector positions for a real machine, measure them, and quantify the error for the people who program it."
+          }
+        },
+        {
+          "theme": "Sensors and what each actually senses",
+          "description": "What each sensor physically responds to, and the thing it is routinely assumed to sense instead.",
+          "bands": {
+            "K–2": "Say what a light sensor, a button and a distance sensor each really notice.",
+            "3–5": "For two sensors on a kit robot, say what each physically measures and one thing people wrongly think it measures.",
+            "6–8": "For three real sensors, state the physical quantity each responds to and one common misreading, checked by a teacher.",
+            "9–10": "For three sensors, state the physical quantity and one common misreading.",
+            "11–12": "For every sensor on a real machine, state the physical quantity and the misreading it invites, in the machine's documentation."
+          }
+        },
+        {
+          "theme": "Actuators, force and limits",
+          "description": "Actuators, the force available, and the limits that are structural rather than software.",
+          "bands": {
+            "K–2": "Find what stops a toy motor lifting something heavy, and say whether it is the motor or the arm.",
+            "3–5": "On a kit robot, find which part gives out first when it lifts too much, and say why.",
+            "6–8": "Identify the limiting component in a real actuator chain on a kit or rig, with a checker.",
+            "9–10": "Identify the limiting component in a real actuator chain.",
+            "11–12": "Identify the limiting component in a real machine's actuator chain and document the structural limit for its operators."
+          }
+        },
+        {
+          "theme": "Power, batteries and the hour they last",
+          "description": "Power budgets, and why the stated runtime and the observed runtime differ.",
+          "bands": {
+            "K–2": "Time how long a toy runs on one charge and compare it with what the box says.",
+            "3–5": "Measure how long a kit robot really runs under load and compare it with the stated time.",
+            "6–8": "Measure actual runtime of a real kit or rig under load and reconcile it with the specification, with a checker.",
+            "9–10": "Measure actual runtime under load and reconcile it with the specification.",
+            "11–12": "Measure a real machine's runtime under real load, reconcile it with the specification, and publish the honest figure for its users."
+          }
+        },
+        {
+          "theme": "Calibration on a real rig",
+          "description": "Calibrating a real machine, and the error that calibration cannot remove.",
+          "bands": {
+            "K–2": "Set a toy scale or sensor to zero before using it and check it reads right on something known.",
+            "3–5": "Calibrate a kit sensor against something known and say how far off it still is.",
+            "6–8": "Calibrate a real rig and quantify the residual error, with a checker.",
+            "9–10": "Calibrate a rig and quantify the residual error.",
+            "11–12": "Calibrate a real machine, quantify the residual error, and write the error into its operating tolerance."
+          }
+        },
+        {
+          "theme": "The mechanical failure you can hear",
+          "description": "Mechanical failure has an acoustic signature before it has a functional one.",
+          "bands": {
+            "K–2": "Listen to a machine that is working well and one that is not, and say what is different.",
+            "3–5": "Find a fault in a kit mechanism by its sound before you look at it.",
+            "6–8": "Identify a fault on a real rig by sound and confirm it by inspection, with a checker.",
+            "9–10": "Identify a fault by sound and confirm it by inspection.",
+            "11–12": "Identify faults by sound on real machines over a month and record which ones inspection confirmed."
+          }
+        },
+        {
+          "theme": "Maintenance as a discipline",
+          "description": "Maintenance as a scheduled discipline that prevents the failure rather than diagnosing it.",
+          "bands": {
+            "K–2": "Make a checklist to look after a class machine or bike, and follow it for a week.",
+            "3–5": "Write a maintenance list for a kit robot and follow it for a term.",
+            "6–8": "Produce and follow a maintenance schedule for one real machine, with a checker.",
+            "9–10": "Produce and follow a maintenance schedule for one machine.",
+            "11–12": "Produce and run a maintenance schedule for a real machine for a term, and show the failure it prevented."
+          }
+        },
+        {
+          "theme": "Reading a schematic",
+          "description": "Reading a schematic well enough to find a component you have never seen.",
+          "bands": {
+            "K–2": "Use a simple drawing of a toy to find a part you have never seen.",
+            "3–5": "Find two parts on a kit robot using only its diagram.",
+            "6–8": "Locate three components on real hardware using only the schematic, with a checker.",
+            "9–10": "Locate three components on hardware using only the schematic.",
+            "11–12": "Locate components on an unfamiliar real machine using only its schematic, and correct the schematic where it was wrong."
+          }
+        },
+        {
+          "theme": "Building something that moves",
+          "description": "Building something that moves, which is where every abstraction gets tested.",
+          "bands": {
+            "K–2": "Build something that moves the same way every time, and show what it cannot do.",
+            "3–5": "Build a kit mechanism that repeats one motion and write down its limits.",
+            "6–8": "Build a mechanism that performs one repeatable motion and document its limits, with a checker.",
+            "9–10": "Build a mechanism that performs one repeatable motion, and document its limits.",
+            "11–12": "Build a mechanism for a real use, document its repeatability and limits, and have somebody else operate it from the documentation."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SA",
+      "name": "Safety around a robot",
+      "themes": [
+        {
+          "theme": "Guarding, interlocks and stop buttons",
+          "description": "Guarding, interlocks and emergency stops: what each protects and the order they act in.",
+          "bands": {
+            "K–2": "Find the stop button on a class machine and say what it does.",
+            "3–5": "On a kit robot or class machine, find each guard and stop and say what it protects.",
+            "6–8": "Trace the stop circuit on a real cell or rig and identify every trigger, with a checker.",
+            "9–10": "Trace the stop circuit on a real cell and identify every trigger.",
+            "11–12": "Trace the stop circuit on a real cell, identify every trigger, and verify each one actually stops the machine."
+          }
+        },
+        {
+          "theme": "The envelope and staying out of it",
+          "description": "The working envelope, how it is defined, and why standing in it is the recurring incident.",
+          "bands": {
+            "K–2": "Mark on the floor where a moving toy could reach and stay outside the line.",
+            "3–5": "Mark the space a kit robot can reach and show the safe way to approach it.",
+            "6–8": "Mark the working envelope of a real machine physically and demonstrate the safe approach, with a checker.",
+            "9–10": "Mark the envelope physically and demonstrate the safe approach.",
+            "11–12": "Mark the envelope of a real cell, demonstrate the safe approach to its operators, and record it in the cell's procedure."
+          }
+        },
+        {
+          "theme": "Speed and separation monitoring",
+          "description": "Speed and separation monitoring, and the assumptions underneath the safe distance.",
+          "bands": {
+            "K–2": "Say why a fast-moving thing needs more space around it than a slow one.",
+            "3–5": "Work out how far away you need to stand from a moving kit robot and why.",
+            "6–8": "State the assumptions behind one published separation distance, with a checker.",
+            "9–10": "State the assumptions behind one published separation distance.",
+            "11–12": "State the assumptions behind a real cell's separation distance and check each one on the floor."
+          }
+        },
+        {
+          "theme": "A collaborative robot is still a machine",
+          "description": "A collaborative robot has reduced force, not zero force, and the distinction gets people hurt.",
+          "bands": {
+            "K–2": "Say why a robot that is made to work near people can still hurt someone.",
+            "3–5": "Explain why a robot with a force limit still needs care, using a kit example.",
+            "6–8": "Demonstrate the force limit on a real collaborative machine or kit and state what it does not protect against, with a checker.",
+            "9–10": "Demonstrate the force limit and state what it does not protect against.",
+            "11–12": "Demonstrate the force limit on a real collaborative robot to its operators and document what it does not protect against."
+          }
+        },
+        {
+          "theme": "Lockout and tagout",
+          "description": "Isolating energy before work, including the stored energy people forget.",
+          "bands": {
+            "K–2": "Before fixing a toy, take the batteries out and tell an adult it is safe.",
+            "3–5": "Switch off and unplug a kit robot before working on it, and find any energy still stored.",
+            "6–8": "Perform a full isolation on a real machine and identify every stored energy source, with a checker.",
+            "9–10": "Perform a full isolation and identify every stored energy source.",
+            "11–12": "Perform and verify a full isolation on a real machine under a written lockout procedure, and train somebody else in it."
+          }
+        },
+        {
+          "theme": "Risk assessment before the first run",
+          "description": "Risk assessment before the first run, written by the people who will operate it.",
+          "bands": {
+            "K–2": "Before running a machine you built, list what could go wrong and how you will stop it.",
+            "3–5": "Write a risk assessment for a kit robot before its first run.",
+            "6–8": "Produce a risk assessment for a real cell or rig and have an operator challenge it, with a checker.",
+            "9–10": "Produce a risk assessment for a real cell and have an operator challenge it.",
+            "11–12": "Produce the risk assessment for a real cell with its operators and have it signed before the first run."
+          }
+        },
+        {
+          "theme": "A robot that failed safely",
+          "description": "A documented case where the safety system did its job, read for what made it work.",
+          "bands": {
+            "K–2": "Find one story where a safety feature stopped an accident, and say what worked.",
+            "3–5": "Present one case where a machine's safety system worked, and say which part did it.",
+            "6–8": "Present one documented case and identify the specific control that held, with a checker.",
+            "9–10": "Present one case and identify the specific control that held.",
+            "11–12": "Present a documented case to a real team and identify the control that held and whether their cell has it."
+          }
+        },
+        {
+          "theme": "A robot that did not",
+          "description": "A documented case where it did not, read without hindsight bias.",
+          "bands": {
+            "K–2": "Find one story where a machine hurt someone, and say what could have stopped it.",
+            "3–5": "Present one case where a safety system failed, and say what people could have known before.",
+            "6–8": "Present one documented case and identify what was knowable at the time, without hindsight, with a checker.",
+            "9–10": "Present one case and identify what was knowable at the time.",
+            "11–12": "Present a documented failure to a real team, identify what was knowable, and check their cell for the same gap."
+          }
+        },
+        {
+          "theme": "Training somebody else on the cell",
+          "description": "Training somebody else on a cell, which is where your own gaps surface.",
+          "bands": {
+            "K–2": "Teach a classmate how to use a class machine safely, and watch them do it.",
+            "3–5": "Train a classmate on a kit robot and be judged on how well they use it.",
+            "6–8": "Train one person on a real rig and be assessed on their competence, not yours, with a checker.",
+            "9–10": "Train one person and be assessed on their competence, not yours.",
+            "11–12": "Train a real operator on a real cell against a written competence standard, and be assessed on their performance."
+          }
+        },
+        {
+          "theme": "The stop you should have hit",
+          "description": "The stop you hesitated on, and building the reflex before you need it.",
+          "bands": {
+            "K–2": "Practise pressing the stop button on a class machine until you do it without thinking.",
+            "3–5": "Practise stopping a kit robot until it is automatic, and time yourself.",
+            "6–8": "Rehearse the stop on a real rig until it is automatic and log the response time, with a checker.",
+            "9–10": "Rehearse the stop until it is automatic, and log the response time.",
+            "11–12": "Rehearse the stop on a real cell with its operators, log response times, and repeat until every operator meets the standard."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CT",
+      "name": "Control and autonomy",
+      "themes": [
+        {
+          "theme": "Open loop and closed loop",
+          "description": "Open loop and closed loop, felt on a real system rather than derived on a board.",
+          "bands": {
+            "K–2": "Try steering a toy with your eyes closed and then open, and say which is which.",
+            "3–5": "Run a kit robot task with and without its sensor feedback and say what changed.",
+            "6–8": "Run the same task on a real rig both ways — open loop and closed loop — and measure the difference, with a checker.",
+            "9–10": "Run the same task both ways and measure the difference.",
+            "11–12": "Run a real machine task both ways, measure the difference, and write the case for the control the task needs."
+          }
+        },
+        {
+          "theme": "Tuning something that oscillates",
+          "description": "Tuning a system that oscillates, and why the fast solution is usually the wrong one.",
+          "bands": {
+            "K–2": "Make a wobbling toy settle by changing one thing at a time, and say what helped.",
+            "3–5": "Adjust a kit robot that overshoots until it settles, changing one setting at a time.",
+            "6–8": "Tune a real loop on a rig and document each change and its effect, with a checker.",
+            "9–10": "Tune a real loop and document each change and its effect.",
+            "11–12": "Tune a real machine's loop, document each change and effect, and hand the record to the next person who tunes it."
+          }
+        },
+        {
+          "theme": "Sensing, planning, acting",
+          "description": "The sense-plan-act cycle, its timing, and what happens when one stage is late.",
+          "bands": {
+            "K–2": "Act out sense, plan, act as a game: look, decide, move — and say what happens if you decide too late.",
+            "3–5": "Time the sense, plan and act steps of a kit robot and find the slowest.",
+            "6–8": "Instrument the sense-plan-act cycle on a real rig and find the stage that limits it, with a checker.",
+            "9–10": "Instrument the cycle and find the stage that limits it.",
+            "11–12": "Instrument the cycle on a real machine, find the limiting stage, and propose the change with its measured effect."
+          }
+        },
+        {
+          "theme": "When the plan meets the world",
+          "description": "The gap between a plan made in a model and a world that was not in the model.",
+          "bands": {
+            "K–2": "Plan a route for a toy across the floor, then put a book in the way and see what happens.",
+            "3–5": "Run a planned kit-robot move with an obstacle added and write what went wrong.",
+            "6–8": "Run a planned motion on a real rig in a disturbed environment and record the divergence, with a checker.",
+            "9–10": "Run a planned motion in a disturbed environment and record the divergence.",
+            "11–12": "Run a real planned motion under real disturbance, record the divergence, and change the plan or the model on the evidence."
+          }
+        },
+        {
+          "theme": "Teleoperation and its delay",
+          "description": "Teleoperation, latency, and the operator behaviours that latency produces.",
+          "bands": {
+            "K–2": "Steer a toy while a friend delays passing on your instructions, and say what you did differently.",
+            "3–5": "Drive a kit robot with a built-in delay and describe how you changed the way you drove.",
+            "6–8": "Operate a real rig under induced delay and describe how your own behaviour changed, with a checker.",
+            "9–10": "Operate under induced delay and describe how your own behaviour changed.",
+            "11–12": "Operate a real machine under measured delay, document the behaviours it produced, and write the operator guidance."
+          }
+        },
+        {
+          "theme": "Autonomy levels, honestly described",
+          "description": "Autonomy levels described by what the human must still do, not by marketing.",
+          "bands": {
+            "K–2": "For three machines you know, say what a person still has to do.",
+            "3–5": "Sort three real machines by how much a person still has to do, not by what the advert says.",
+            "6–8": "Classify three real systems by what the human is required to do, with a checker.",
+            "9–10": "Classify three real systems by what the human is required to do.",
+            "11–12": "Classify real systems for a real buyer or team by what the human must still do, against the marketing claim for each."
+          }
+        },
+        {
+          "theme": "Handover between human and machine",
+          "description": "Handover between human and machine, which is where most autonomy incidents occur.",
+          "bands": {
+            "K–2": "Practise handing a task to a friend with a clear 'you have it' and 'I have it'.",
+            "3–5": "Design a hand-over rule for a kit robot where the person must say they have taken over.",
+            "6–8": "Design and test a handover protocol with an explicit acknowledgement step on a real rig, with a checker.",
+            "9–10": "Design and test a handover protocol with an explicit acknowledgement step.",
+            "11–12": "Design, test and document a handover protocol for a real machine and its operators, including the acknowledgement step."
+          }
+        },
+        {
+          "theme": "The failure mode you designed for",
+          "description": "The failure mode you designed for, and proving the design actually handles it.",
+          "bands": {
+            "K–2": "Make a toy do the safe thing when its sensor is covered, and show it working.",
+            "3–5": "Make a kit robot stop safely when a sensor fails, and prove it by making the sensor fail.",
+            "6–8": "Induce the anticipated failure on a real rig and verify the response, with a checker.",
+            "9–10": "Induce the anticipated failure and verify the response.",
+            "11–12": "Induce every anticipated failure on a real machine and verify each response on the record."
+          }
+        },
+        {
+          "theme": "The failure mode you did not",
+          "description": "The failure mode you did not, and building the system so it is at least visible.",
+          "bands": {
+            "K–2": "Find one way your toy could go wrong that you had not thought of, and make it show a warning.",
+            "3–5": "Find one unhandled failure on a kit robot and add a way to see that it happened.",
+            "6–8": "Identify one unhandled failure on a real rig and add detection for it, with a checker.",
+            "9–10": "Identify one unhandled failure and add detection for it.",
+            "11–12": "Identify unhandled failures on a real machine, add detection, and show the detection working in service."
+          }
+        },
+        {
+          "theme": "Logging enough to explain a failure",
+          "description": "Logging enough to reconstruct a failure without logging so much that nobody reads it.",
+          "bands": {
+            "K–2": "Keep a simple log of what a toy did so you can explain why it stopped.",
+            "3–5": "Design what a kit robot should record so you can explain one failure afterwards.",
+            "6–8": "Define a logging policy for a real rig and reconstruct one incident from it alone, with a checker.",
+            "9–10": "Define a logging policy and reconstruct one incident from it alone.",
+            "11–12": "Define the logging policy for a real machine, reconstruct a real incident from the logs alone, and revise the policy from what was missing."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "DT",
+      "name": "Data from the physical world",
+      "themes": [
+        {
+          "theme": "What an episode of robot data is",
+          "description": "What an episode of robot data actually contains, including what was captured incidentally.",
+          "bands": {
+            "K–2": "List everything a camera on a toy would see in one minute, including things you did not mean it to.",
+            "3–5": "List every stream a kit robot records in one run, including the ones nobody meant.",
+            "6–8": "Inventory every stream in one real episode of robot data, including the unintended ones, with a checker.",
+            "9–10": "Inventory every stream in one episode, including the unintended ones.",
+            "11–12": "Inventory every stream in a real dataset's episodes for the people who will use it, including what was captured incidentally."
+          }
+        },
+        {
+          "theme": "Consent before recording anything",
+          "description": "Consent before recording, from everybody in the space and not only the operator.",
+          "bands": {
+            "K–2": "Ask everyone in the room before recording, and say what the recording is for.",
+            "3–5": "Write a consent note for a class recording that says what is recorded and why.",
+            "6–8": "Produce the consent process for a real workspace recording, with a checker.",
+            "9–10": "Produce the consent process for a real workspace recording.",
+            "11–12": "Produce and run the consent process for a real workspace recording, with everybody in the space, before recording starts."
+          }
+        },
+        {
+          "theme": "A workspace is somebody's workplace",
+          "description": "A workspace is somebody’s workplace, and recording it is recording their working day.",
+          "bands": {
+            "K–2": "Say how you would feel if someone recorded your whole day, and what they should tell you.",
+            "3–5": "Write the notice you would want if your classroom were being recorded.",
+            "6–8": "Write the notice a worker in a real recorded space is owed and have one review it, with a checker.",
+            "9–10": "Write the notice a worker in that space is owed, and have one review it.",
+            "11–12": "Write the notice for a real workplace recording, have the workers review it, and change the recording to what they accept."
+          }
+        },
+        {
+          "theme": "Faces, and never capturing them",
+          "description": "Designing capture so faces are never recorded, rather than recorded and then removed.",
+          "bands": {
+            "K–2": "Set up a toy camera so it points where faces are not, and show it.",
+            "3–5": "Position a kit camera so it cannot see faces at all, rather than blurring them later.",
+            "6–8": "Demonstrate a capture configuration on a real rig where faces are not acquired at all, with a checker.",
+            "9–10": "Demonstrate a capture configuration where faces are not acquired at all.",
+            "11–12": "Design and verify a real capture configuration where faces are never acquired, and document it for the dataset's users."
+          }
+        },
+        {
+          "theme": "Constraint integrity in a dataset",
+          "description": "Constraint integrity: a dataset that preserves what was physically impossible in the scene.",
+          "bands": {
+            "K–2": "Say what a toy could not have done in a recording, and check the recording agrees.",
+            "3–5": "Check that a kit robot's recorded data never shows something physically impossible.",
+            "6–8": "Verify that one real dataset's physical constraints survived its processing pipeline, with a checker.",
+            "9–10": "Verify that one dataset's constraints survived its processing pipeline.",
+            "11–12": "Verify constraint integrity across a real dataset's pipeline and report every place it was lost."
+          }
+        },
+        {
+          "theme": "Labelling that survives review",
+          "description": "Labelling that survives independent review, with the ambiguous cases marked rather than guessed.",
+          "bands": {
+            "K–2": "Label pictures with a friend separately, then compare and mark the ones you disagree on.",
+            "3–5": "Label a small set of kit-robot data, swap with a classmate, and reconcile the differences.",
+            "6–8": "Label a sample, have it independently relabelled, and reconcile the disagreement, with a checker.",
+            "9–10": "Label a sample, have it independently relabelled, and reconcile the disagreement.",
+            "11–12": "Run a real labelling round with independent relabelling, reconcile the disagreements, and publish the ambiguity rate."
+          }
+        },
+        {
+          "theme": "Who owns an episode you contributed",
+          "description": "Who owns an episode you contributed, and what the licence actually permits.",
+          "bands": {
+            "K–2": "Say who owns a drawing you made for a class display, and what they may do with it.",
+            "3–5": "Read the rules for a class data project and say what others may do with what you contributed.",
+            "6–8": "Read one dataset licence and state what a downstream user may do, with a checker.",
+            "9–10": "Read one dataset licence and state what a downstream user may do.",
+            "11–12": "Read a real dataset licence for real contributors, state what users may do, and correct the contributor notice where it was wrong."
+          }
+        },
+        {
+          "theme": "Export, and where the data lands",
+          "description": "Export, jurisdiction, and where the data physically comes to rest.",
+          "bands": {
+            "K–2": "Say where a photo goes after you take it on a shared device.",
+            "3–5": "Trace where a class recording is stored, and who can reach it.",
+            "6–8": "Trace one dataset's path from capture to storage, naming each jurisdiction, with a checker.",
+            "9–10": "Trace one dataset's path from capture to storage, naming each jurisdiction.",
+            "11–12": "Trace a real dataset's path and jurisdictions for its owners, and document where it comes to rest."
+          }
+        },
+        {
+          "theme": "Withdrawing data after the fact",
+          "description": "Withdrawal after the fact, and whether the architecture makes it possible at all.",
+          "bands": {
+            "K–2": "Ask for a recording of you to be deleted, and check that it was.",
+            "3–5": "Test whether a class data project can really remove one person's data when asked.",
+            "6–8": "Test a withdrawal request against a real pipeline and report where it fails, with a checker.",
+            "9–10": "Test a withdrawal request against a real pipeline and report where it fails.",
+            "11–12": "Test withdrawal against a real pipeline, report the failures to its owners, and verify the fix."
+          }
+        },
+        {
+          "theme": "A dataset you would be happy to be in",
+          "description": "The standard: a dataset you would be content to appear in yourself.",
+          "bands": {
+            "K–2": "Say whether you would be happy to be in a class recording, and what would make it fair.",
+            "3–5": "Apply the test — would you be happy to be in it — to a class dataset and say what would change.",
+            "6–8": "Apply the test to a real dataset and state what would have to change, with a checker.",
+            "9–10": "Apply the test to a real dataset and state what would have to change.",
+            "11–12": "Apply the test to a real dataset with its owners, state what must change, and change it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "WK",
+      "name": "Work with machines",
+      "themes": [
+        {
+          "theme": "The job before the robot and after",
+          "description": "The job before automation and after, described by the person doing it rather than the vendor.",
+          "bands": {
+            "K–2": "Ask someone whose job changed because of a machine what it was like before and after.",
+            "3–5": "Interview an adult whose work a machine changed and write their account in their words.",
+            "6–8": "Interview somebody whose work was automated and write their account, with a checker.",
+            "9–10": "Interview somebody whose work was automated and write their account.",
+            "11–12": "Interview several people whose work was automated, write their accounts, and present them alongside the vendor's version."
+          }
+        },
+        {
+          "theme": "Tasks that should not be automated",
+          "description": "Tasks that should not be automated, and the reasons that are not efficiency reasons.",
+          "bands": {
+            "K–2": "Say one job at school that a machine should not do, and why it is not about speed.",
+            "3–5": "Argue for one task at school that should stay with a person, for reasons that are not efficiency.",
+            "6–8": "Argue one such case for a real workplace you know, with a checker.",
+            "9–10": "Argue one such case in your own workplace.",
+            "11–12": "Argue the case for a real task in a real workplace to the people deciding, with reasons that are not efficiency."
+          }
+        },
+        {
+          "theme": "Retraining when the cell arrives",
+          "description": "Retraining that starts before the equipment arrives, which is the only time it works.",
+          "bands": {
+            "K–2": "Say what a person should learn before a new machine arrives at their work.",
+            "3–5": "Draft a timeline of what people should learn before a machine is installed at a workplace you know.",
+            "6–8": "Draft a retraining timeline anchored to a real installation date, with a checker.",
+            "9–10": "Draft a retraining timeline anchored to an installation date.",
+            "11–12": "Draft and agree a retraining timeline with a real workplace before its installation date, and track it."
+          }
+        },
+        {
+          "theme": "Being the person who maintains it",
+          "description": "Maintenance as a career rather than a consolation, and what it actually requires.",
+          "bands": {
+            "K–2": "Say what a person who looks after machines needs to know and be good at.",
+            "3–5": "List the skills a maintenance technician needs and mark the ones you have.",
+            "6–8": "Map the competencies of a real maintenance role and assess yourself against them, with a checker.",
+            "9–10": "Map the competencies of a maintenance role and assess yourself against them.",
+            "11–12": "Map the competencies of a real maintenance role with somebody who holds it, assess yourself, and plan the gap."
+          }
+        },
+        {
+          "theme": "Negotiating automation at work",
+          "description": "Negotiating automation collectively, and what has historically been won.",
+          "bands": {
+            "K–2": "Say what workers might ask for when a machine comes to their workplace.",
+            "3–5": "Find one real agreement between workers and an employer about a machine, and say what workers got.",
+            "6–8": "Find one real agreement on automation and identify what was secured, with a checker.",
+            "9–10": "Find one real agreement and identify what was secured.",
+            "11–12": "Find real agreements on automation in a real sector and present what was secured to the people who might negotiate next."
+          }
+        },
+        {
+          "theme": "Measuring what the robot changed",
+          "description": "Measuring what changed, including the effects that were not in the business case.",
+          "bands": {
+            "K–2": "Say three things that change when a machine arrives, including one nobody planned.",
+            "3–5": "Design a way to measure what a machine changed at a workplace, including one effect the plan missed.",
+            "6–8": "Design the measurement for a real automation, including one effect the business case omitted, with a checker.",
+            "9–10": "Design the measurement, including one effect the business case omitted.",
+            "11–12": "Design and run the measurement for a real automation, including the omitted effects, and report the results honestly."
+          }
+        },
+        {
+          "theme": "The skill that became more valuable",
+          "description": "The skill that became more valuable, and noticing it early enough to invest.",
+          "bands": {
+            "K–2": "Say one thing people are better at than machines, that matters more now.",
+            "3–5": "Name one skill in a trade that a machine made more valuable, and give evidence.",
+            "6–8": "Identify one such skill in a real trade and evidence the claim, with a checker.",
+            "9–10": "Identify one such skill in your trade and evidence the claim.",
+            "11–12": "Identify the skills a real automation made more valuable, evidence each, and advise the people who should invest in them."
+          }
+        },
+        {
+          "theme": "The skill that became less",
+          "description": "The skill that became less valuable, and saying so without pretending otherwise.",
+          "bands": {
+            "K–2": "Say one job a machine now does better, and what the person can do instead.",
+            "3–5": "Name one skill a machine made less valuable and describe an honest way to move on from it.",
+            "6–8": "Identify one such skill in a real trade and describe the honest transition from it, with a checker.",
+            "9–10": "Identify one and describe the honest transition from it.",
+            "11–12": "Identify the skills a real automation made less valuable and write the honest transition for the people who hold them."
+          }
+        },
+        {
+          "theme": "Teaching a machine your trade",
+          "description": "Teaching a machine your trade, and what is lost in the demonstrations.",
+          "bands": {
+            "K–2": "Show a machine or a friend how to do a task by doing it, and say what they still would not know.",
+            "3–5": "Record yourself doing a task for a kit robot to copy, and list what it cannot learn from watching.",
+            "6–8": "Record a demonstration set on a real rig and state what the machine cannot learn from it, with a checker.",
+            "9–10": "Record a demonstration set and state what the machine cannot learn from it.",
+            "11–12": "Record demonstrations of a real trade skill for a real system and document, for its designers, what the demonstrations do not carry."
+          }
+        },
+        {
+          "theme": "A workshop that keeps its people",
+          "description": "A workshop that adopted machines and kept its people, and the decisions that made that possible.",
+          "bands": {
+            "K–2": "Find a story of a workplace that got machines and kept its workers, and say how.",
+            "3–5": "Present one case of a workshop that automated and kept its people, and the choices that made it possible.",
+            "6–8": "Present one real case and identify the decisions that were not automatic, with a checker.",
+            "9–10": "Present one case and identify the decisions that were not automatic.",
+            "11–12": "Present a real case to a real workshop facing automation and identify the decisions open to them."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "EL",
+      "name": "Electronics and power",
+      "themes": [
+        {
+          "theme": "Voltage, current and what will hurt you",
+          "description": "The electrical quantities that matter on a real rig, and the ones that are dangerous.",
+          "bands": {
+            "K–2": "Say which things in the classroom are safe to touch and which have dangerous electricity.",
+            "3–5": "On a kit robot, point to the parts that could hurt you and say why.",
+            "6–8": "Identify the hazardous points on a real system, with a checker.",
+            "9–10": "Identify the hazardous points on a real system.",
+            "11–12": "Identify and label the hazardous points on a real machine for the people who work on it."
+          }
+        },
+        {
+          "theme": "Reading a wiring diagram",
+          "description": "Following a circuit from source to load on paper and then on hardware.",
+          "bands": {
+            "K–2": "Follow a simple circuit drawing from the battery to the bulb, then find the same on a real one.",
+            "3–5": "Trace one circuit on a kit robot on the diagram and then on the hardware.",
+            "6–8": "Trace one real circuit both ways — diagram to hardware and back — with a checker.",
+            "9–10": "Trace one real circuit both ways, from the diagram to the hardware and back.",
+            "11–12": "Trace real circuits both ways on an unfamiliar machine and correct the diagram where it disagrees with the hardware."
+          }
+        },
+        {
+          "theme": "Connectors, and why they fail first",
+          "description": "Mechanical failure at electrical joints as the most common fault.",
+          "bands": {
+            "K–2": "Find a loose plug on a toy that stops it working, and fix it.",
+            "3–5": "Check and reseat the connectors on a kit robot and find the one that was loose.",
+            "6–8": "Inspect and reseat connectors on a real system and record what you found, with a checker.",
+            "9–10": "Inspect and reseat connectors on a real system.",
+            "11–12": "Inspect connectors across a real machine on a schedule and show a fault the schedule caught."
+          }
+        },
+        {
+          "theme": "Grounding and the noise it removes",
+          "description": "What a ground actually does and the failures caused by a poor one.",
+          "bands": {
+            "K–2": "Say why a wobbly connection can make a toy behave strangely.",
+            "3–5": "Find one kit-robot problem caused by a bad ground connection.",
+            "6–8": "Diagnose one real noise problem to its grounding cause, with a checker.",
+            "9–10": "Diagnose one noise problem to its grounding cause.",
+            "11–12": "Diagnose a real noise problem on a real machine to its grounding cause and fix it on the record."
+          }
+        },
+        {
+          "theme": "A multimeter used properly",
+          "description": "Measuring safely and interpreting what the reading means.",
+          "bands": {
+            "K–2": "With an adult, measure a battery with a meter and say what the number means.",
+            "3–5": "Take three measurements on a kit robot with a meter and say what each means.",
+            "6–8": "Take five measurements on a real system safely and interpret each, with a checker.",
+            "9–10": "Take five measurements and interpret each.",
+            "11–12": "Take measurements on a real machine to diagnose a real fault, interpreting each, and document the diagnosis."
+          }
+        },
+        {
+          "theme": "Batteries: chemistry, charge and risk",
+          "description": "What each chemistry does under abuse, and the storage that prevents it.",
+          "bands": {
+            "K–2": "Say how to store and charge a toy's battery safely.",
+            "3–5": "State the charging and storage rules for the battery in a kit robot.",
+            "6–8": "State the storage and charging rules for a real battery type, and what abuse does to it, with a checker.",
+            "9–10": "State the storage and charging rules for your battery type.",
+            "11–12": "Write and post the storage and charging rules for a real workshop's battery types, and audit the shelf against them."
+          }
+        },
+        {
+          "theme": "Power budgets under load",
+          "description": "Calculating draw, and the difference between nominal and actual.",
+          "bands": {
+            "K–2": "Count how much power a toy needs and see whether it runs longer with fewer things switched on.",
+            "3–5": "Work out how much power a kit robot should draw and measure whether it does.",
+            "6–8": "Measure actual draw on a real rig against the calculation, with a checker.",
+            "9–10": "Measure actual draw against the calculation.",
+            "11–12": "Measure a real machine's draw under real load against its calculated budget and revise the budget."
+          }
+        },
+        {
+          "theme": "Soldering that survives vibration",
+          "description": "A joint that holds in a machine that moves.",
+          "bands": {
+            "K–2": "With an adult, make a joint that stays connected when you shake it.",
+            "3–5": "Make a soldered joint on a kit and test whether it survives shaking.",
+            "6–8": "Produce joints assessed for mechanical strength on a real board, with a checker.",
+            "9–10": "Produce joints assessed for mechanical strength.",
+            "11–12": "Produce joints for a real moving machine, assessed for strength, and show them holding in service."
+          }
+        },
+        {
+          "theme": "An intermittent fault",
+          "description": "The hardest fault class, and the method for finding one.",
+          "bands": {
+            "K–2": "Find a toy that sometimes works and sometimes does not, and work out what makes the difference.",
+            "3–5": "Find a kit-robot fault that comes and goes, and write how you found it.",
+            "6–8": "Find one intermittent fault on a real system and document the method, with a checker.",
+            "9–10": "Find one intermittent fault and document the method.",
+            "11–12": "Find a real intermittent fault on a real machine, document the method, and teach it to somebody else."
+          }
+        },
+        {
+          "theme": "Isolating before you work",
+          "description": "The sequence, including the stored energy that remains after isolation.",
+          "bands": {
+            "K–2": "Take the power out of a toy before opening it, and check it is really off.",
+            "3–5": "Switch off, unplug and check a kit robot before working on it, and find any stored charge.",
+            "6–8": "Perform and verify a full isolation on a real system, with a checker.",
+            "9–10": "Perform and verify a full isolation on a real system, including the stored energy that remains.",
+            "11–12": "Perform and verify a full isolation on a real machine under its written procedure, and sign it off."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SW",
+      "name": "Software on a machine",
+      "themes": [
+        {
+          "theme": "Code that moves something",
+          "description": "What changes when a bug has physical consequences.",
+          "bands": {
+            "K–2": "Say what could go wrong if a program tells a toy to move too far.",
+            "3–5": "List what could go wrong when a program moves a kit robot's motor.",
+            "6–8": "List the failure modes of one routine that drives a real actuator, with a checker.",
+            "9–10": "List the failure modes of one routine that drives an actuator.",
+            "11–12": "List the failure modes of every routine that drives an actuator on a real machine, and add a guard for each."
+          }
+        },
+        {
+          "theme": "Real time, and what deadline means",
+          "description": "A late answer is a wrong answer, and designing for that.",
+          "bands": {
+            "K–2": "Say why a robot that decides too late can crash even if it decides right.",
+            "3–5": "Measure how long a kit robot takes to react and say when that is too slow.",
+            "6–8": "Measure the worst-case latency of one loop on a real rig, with a checker.",
+            "9–10": "Measure the worst-case latency of one loop.",
+            "11–12": "Measure worst-case latency on a real machine's loops and document the deadlines they must meet."
+          }
+        },
+        {
+          "theme": "State machines you can draw",
+          "description": "Expressing machine behaviour so that somebody can review it.",
+          "bands": {
+            "K–2": "Draw the steps a toy goes through — waiting, moving, stopped — with arrows.",
+            "3–5": "Draw the states of a kit robot's behaviour and what moves it between them.",
+            "6–8": "Draw the state machine for a real behaviour on a rig so somebody else can review it, with a checker.",
+            "9–10": "Draw the state machine for a real behaviour.",
+            "11–12": "Draw the state machines for a real machine's behaviours and have them reviewed by its operators and engineers."
+          }
+        },
+        {
+          "theme": "Testing without breaking the hardware",
+          "description": "Simulation, dry runs and the limits of both.",
+          "bands": {
+            "K–2": "Test a toy's program with the motors unplugged first.",
+            "3–5": "Plan how to test a kit robot's program without risking the robot.",
+            "6–8": "Design a test plan for a real rig that protects the hardware, with a checker.",
+            "9–10": "Design a test plan that protects the rig.",
+            "11–12": "Design and run the test plan for a real machine's software, including simulation and dry runs, before it touches the hardware."
+          }
+        },
+        {
+          "theme": "Version control on a physical system",
+          "description": "Knowing exactly what software was on the machine when it did that.",
+          "bands": {
+            "K–2": "Write down which version of a program a toy was running when it did something odd.",
+            "3–5": "Keep numbered versions of a kit robot's program and note which one was running each time.",
+            "6–8": "Establish traceability from a log entry to a commit on a real rig, with a checker.",
+            "9–10": "Establish traceability from a log entry to a commit.",
+            "11–12": "Establish and audit traceability from every log entry to a commit on a real machine."
+          }
+        },
+        {
+          "theme": "Configuration as a source of failure",
+          "description": "The parameter file that is as dangerous as the code.",
+          "bands": {
+            "K–2": "Find a setting on a toy that could make it unsafe if it were wrong.",
+            "3–5": "Check a kit robot's settings file for a value that could hurt the robot.",
+            "6–8": "Audit one real configuration for out-of-range values, with a checker.",
+            "9–10": "Audit one configuration for out-of-range values.",
+            "11–12": "Audit a real machine's configurations for out-of-range values and add the check that refuses them."
+          }
+        },
+        {
+          "theme": "Updating a machine in the field",
+          "description": "What can go wrong mid-update, and the rollback that must exist.",
+          "bands": {
+            "K–2": "Say what you would do if a toy's update stopped halfway.",
+            "3–5": "Write what to do if a kit robot's update fails, including how to go back.",
+            "6–8": "Write an update and rollback procedure for a real rig, with a checker.",
+            "9–10": "Write an update and rollback procedure for a real machine in the field.",
+            "11–12": "Write, rehearse and use an update and rollback procedure on a real machine in service."
+          }
+        },
+        {
+          "theme": "Watchdogs and safe states",
+          "description": "What the machine does when the software stops.",
+          "bands": {
+            "K–2": "Say what a toy should do if its program freezes.",
+            "3–5": "Define what a kit robot should do when its program stops, and test it.",
+            "6–8": "Define the safe state for one real system and verify it, with a checker.",
+            "9–10": "Define the safe state for one system and verify it.",
+            "11–12": "Define and verify the safe state for a real machine, and prove the watchdog reaches it."
+          }
+        },
+        {
+          "theme": "Reading somebody else’s control code",
+          "description": "Understanding a system you did not build before changing it.",
+          "bands": {
+            "K–2": "Read a program a friend wrote for a toy and explain what it does before changing it.",
+            "3–5": "Read a classmate's kit-robot program and write what it does before touching it.",
+            "6–8": "Document one unfamiliar routine on a real system before changing it, with a checker.",
+            "9–10": "Document one unfamiliar control routine on a real system before changing it.",
+            "11–12": "Document an unfamiliar real control system before changing it, and have the original author check the documentation."
+          }
+        },
+        {
+          "theme": "The log you will need at 3am",
+          "description": "Designing logs for the incident rather than for development.",
+          "bands": {
+            "K–2": "Keep a log of what a toy did so you could explain a problem the next day.",
+            "3–5": "Design a kit robot's log so you could work out a fault from it alone.",
+            "6–8": "Reconstruct one fault on a real rig from logs alone, with a checker.",
+            "9–10": "Reconstruct one real fault from the machine’s logs alone, without touching the hardware.",
+            "11–12": "Reconstruct a real fault from a real machine's logs alone, and redesign the logs for the next incident."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "IN",
+      "name": "Bringing it into service",
+      "themes": [
+        {
+          "theme": "From a working prototype to a working cell",
+          "description": "What the gap actually contains, which is mostly not technical.",
+          "bands": {
+            "K–2": "Say what a toy that works on a table would need to work in a busy room all day.",
+            "3–5": "List what a kit robot would need to run every day in a real place, beyond working once.",
+            "6–8": "List the gap items for one real system between prototype and service, with a checker.",
+            "9–10": "List the gap items for one real system between a working prototype and a working cell.",
+            "11–12": "List and cost the gap items for a real system going into service, and present them to the people who own the decision."
+          }
+        },
+        {
+          "theme": "Site survey before installation",
+          "description": "Power, space, floor, access, and the things measured too late.",
+          "bands": {
+            "K–2": "Measure a space for a machine and say whether there is room, power and a way in.",
+            "3–5": "Survey a room for a kit robot: space, power, floor and access.",
+            "6–8": "Complete a site survey for a real installation covering power, space, floor loading and access, with a checker.",
+            "9–10": "Complete a site survey covering power, space, floor loading and access.",
+            "11–12": "Complete a real site survey to the installer's standard and sign it off with the site owner."
+          }
+        },
+        {
+          "theme": "Integration with what is already there",
+          "description": "The existing equipment, its interfaces and its assumptions.",
+          "bands": {
+            "K–2": "Say how a new machine would fit with the things already in a room.",
+            "3–5": "Find one thing a kit robot would need to connect to in a real place, and what could go wrong.",
+            "6–8": "Map one integration point on a real system and its failure mode, with a checker.",
+            "9–10": "Map one integration point and its failure mode.",
+            "11–12": "Map every integration point for a real installation with its failure mode, and test each before go-live."
+          }
+        },
+        {
+          "theme": "Acceptance testing",
+          "description": "What the customer signs, and the tests that should be in it.",
+          "bands": {
+            "K–2": "Write a test that shows a toy does what it was meant to do.",
+            "3–5": "Write a test a customer could use to check a kit robot does what was promised.",
+            "6–8": "Write an acceptance test for a real system that would catch a real defect, with a checker.",
+            "9–10": "Write an acceptance test that would catch a real defect.",
+            "11–12": "Write and run the acceptance test for a real system with the customer, and record what it caught."
+          }
+        },
+        {
+          "theme": "Commissioning with the operators present",
+          "description": "Building competence during installation rather than after it.",
+          "bands": {
+            "K–2": "Set up a class machine with the person who will use it, so they learn as you go.",
+            "3–5": "Set up a kit robot with a classmate leading one step, so they learn it.",
+            "6–8": "Run one commissioning step on a real system with an operator leading, with a checker.",
+            "9–10": "Run one commissioning step with an operator leading.",
+            "11–12": "Run a real commissioning with operators leading the steps, and assess their competence at the end."
+          }
+        },
+        {
+          "theme": "Documentation handed over",
+          "description": "What must exist for somebody else to keep it running.",
+          "bands": {
+            "K–2": "Write what someone would need to know to keep a class machine working.",
+            "3–5": "Make a hand-over pack for a kit robot so another class could run it.",
+            "6–8": "Assemble the handover pack for a real system, with a checker.",
+            "9–10": "Assemble the handover pack for a real system so somebody else could keep it running.",
+            "11–12": "Assemble the handover pack for a real system and have the receiving team run it from the pack alone."
+          }
+        },
+        {
+          "theme": "Spares and the part that takes six weeks",
+          "description": "Identifying the components whose lead time decides downtime.",
+          "bands": {
+            "K–2": "Say which part of a toy would be hardest to replace if it broke.",
+            "3–5": "Find the part of a kit robot that would take longest to get, and keep a spare.",
+            "6–8": "Identify the critical spares for one real machine, with a checker.",
+            "9–10": "Identify the critical spares for one machine.",
+            "11–12": "Identify and stock the critical spares for a real machine against its lead times, and justify the cost."
+          }
+        },
+        {
+          "theme": "The first month in production",
+          "description": "What breaks early, and the support that should be planned for it.",
+          "bands": {
+            "K–2": "Say what usually goes wrong when something new is first used, and who should help.",
+            "3–5": "Plan the first month of support for a kit robot in daily use.",
+            "6–8": "Write the first-month support plan for a real system, with a checker.",
+            "9–10": "Write the first-month support plan for a real system going into production.",
+            "11–12": "Write and run the first-month support plan for a real system, and report what broke against what was planned."
+          }
+        },
+        {
+          "theme": "Performance against what was promised",
+          "description": "Measuring honestly against the specification that was sold.",
+          "bands": {
+            "K–2": "Check whether a toy does what the box says, and say where it does not.",
+            "3–5": "Measure a kit robot against what its maker claims and write the difference.",
+            "6–8": "Measure one real system against its specification, with a checker.",
+            "9–10": "Measure one system against its specification.",
+            "11–12": "Measure a real system against the specification it was sold on, and report the result to the customer honestly."
+          }
+        },
+        {
+          "theme": "Decommissioning",
+          "description": "Removing a system safely, and what happens to its data.",
+          "bands": {
+            "K–2": "Say what to do with a toy's batteries and its saved data when it is thrown away.",
+            "3–5": "Plan how to safely take a kit robot out of use, including deleting its data.",
+            "6–8": "Write the decommissioning plan for a real system, including its data, with a checker.",
+            "9–10": "Write the decommissioning plan including data.",
+            "11–12": "Write and carry out the decommissioning of a real system, including its data, and record the destinations."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "FL",
+      "name": "Fleets and machines far away",
+      "themes": [
+        {
+          "theme": "One machine and a hundred machines",
+          "description": "What changes when the same fault appears on all of them.",
+          "bands": {
+            "K–2": "Say what changes when the same problem happens on every toy in a class at once.",
+            "3–5": "Describe what a school would do if every kit robot had the same fault at once.",
+            "6–8": "Describe the response to a fleet-wide fault on real machines, with a checker.",
+            "9–10": "Describe the response to a fleet-wide fault.",
+            "11–12": "Write and rehearse the fleet-wide fault response for a real fleet with the people who would run it."
+          }
+        },
+        {
+          "theme": "Telemetry that is worth transmitting",
+          "description": "Choosing what to send from a machine you cannot visit.",
+          "bands": {
+            "K–2": "Pick the three most useful things a far-away toy should tell you about itself.",
+            "3–5": "Choose what a kit robot should report from far away, and why each thing.",
+            "6–8": "Specify a telemetry set for a real remote machine and justify each field, with a checker.",
+            "9–10": "Specify a telemetry set and justify each field.",
+            "11–12": "Specify the telemetry for a real fleet, justify each field, and remove what nobody used after a month."
+          }
+        },
+        {
+          "theme": "A fault you cannot see",
+          "description": "Diagnosing remotely, and knowing when someone must attend.",
+          "bands": {
+            "K–2": "Work out what is wrong with a toy from what a friend in another room tells you about it.",
+            "3–5": "Diagnose a kit-robot fault from a classmate's description alone, and say when you would need to go and look.",
+            "6–8": "Write the remote diagnosis procedure for a real machine and its escalation, with a checker.",
+            "9–10": "Write the remote diagnosis procedure and its escalation.",
+            "11–12": "Write and use the remote diagnosis procedure for a real fleet, and record when it sent someone to site."
+          }
+        },
+        {
+          "theme": "Updates across a fleet",
+          "description": "Staged rollout, and never updating everything at once.",
+          "bands": {
+            "K–2": "Say why you would update one toy first and wait before updating all of them.",
+            "3–5": "Plan an update for several kit robots one at a time, with a rule for stopping.",
+            "6–8": "Design a staged rollout for real machines with a stop condition, with a checker.",
+            "9–10": "Design a staged rollout with a stop condition.",
+            "11–12": "Design and run a staged rollout across a real fleet with a stop condition, and record whether it fired."
+          }
+        },
+        {
+          "theme": "Machines in public space",
+          "description": "A machine among people who did not choose to be near it.",
+          "bands": {
+            "K–2": "Say what a machine in a park owes the people who did not ask for it to be there.",
+            "3–5": "List what a delivery robot on a pavement owes the people around it.",
+            "6–8": "Identify the obligations in one real public deployment, with a checker.",
+            "9–10": "Identify the obligations in one public deployment.",
+            "11–12": "Identify the obligations for a real public deployment and check the deployment meets each, with the public body responsible."
+          }
+        },
+        {
+          "theme": "Security of a connected machine",
+          "description": "What an attacker could make it do, considered at design time.",
+          "bands": {
+            "K–2": "Say what a bad person could make a connected toy do, and how to stop them.",
+            "3–5": "List what an attacker could make a connected kit robot do, and one protection for each.",
+            "6–8": "Produce a threat model for one real connected machine, with a checker.",
+            "9–10": "Produce a threat model for one real connected machine, at design time.",
+            "11–12": "Produce the threat model for a real connected machine with its engineers and turn it into a mitigation list."
+          }
+        },
+        {
+          "theme": "Maintenance scheduling at scale",
+          "description": "Predictive versus scheduled, and the evidence for each.",
+          "bands": {
+            "K–2": "Decide whether to check a toy on a fixed day or when it shows signs of trouble, and why.",
+            "3–5": "Design a maintenance schedule for several kit robots from what has broken before.",
+            "6–8": "Design a maintenance schedule from real failure data, with a checker.",
+            "9–10": "Design a maintenance schedule from real failure data.",
+            "11–12": "Design the maintenance schedule for a real fleet from its failure data and measure the change in downtime."
+          }
+        },
+        {
+          "theme": "Operators in different places",
+          "description": "Consistent competence across sites that never meet.",
+          "bands": {
+            "K–2": "Write a check that any child in any class could use to show they can run a toy safely.",
+            "3–5": "Design an assessment for kit-robot operators that would work in another school.",
+            "6–8": "Design an operator assessment usable at every site of a real fleet, with a checker.",
+            "9–10": "Design an assessment usable at every site.",
+            "11–12": "Design, run and compare the operator assessment across the sites of a real fleet."
+          }
+        },
+        {
+          "theme": "End of life across a fleet",
+          "description": "Retiring machines, their parts and their data.",
+          "bands": {
+            "K–2": "Say what happens to lots of old toys, their parts and their memories.",
+            "3–5": "Plan how to retire several kit robots, their parts and their data.",
+            "6–8": "Write the retirement plan for a real fleet, with a checker.",
+            "9–10": "Write the retirement plan for a real fleet, covering machines, parts and data.",
+            "11–12": "Write and carry out the retirement plan for a real fleet, including parts and data, and record the destinations."
+          }
+        },
+        {
+          "theme": "What the fleet tells you about the design",
+          "description": "Field data as the strongest design feedback available.",
+          "bands": {
+            "K–2": "Find one thing that broke on many toys and say how to build the next one better.",
+            "3–5": "Find one fault common to several kit robots and propose a design change.",
+            "6–8": "Identify one design change justified by real fleet data, with a checker.",
+            "9–10": "Identify one design change justified by fleet data.",
+            "11–12": "Identify design changes from a real fleet's data and get one adopted by the people who design the next version."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "EN",
+      "name": "Materials, energy and afterwards",
+      "themes": [
+        {
+          "theme": "What a machine is made of",
+          "description": "The materials, where they come from, and their consequences.",
+          "bands": {
+            "K–2": "List what a toy is made of and where those materials might come from.",
+            "3–5": "Make a materials list for a kit robot and say where each comes from.",
+            "6–8": "Produce a materials inventory for one real machine, with a checker.",
+            "9–10": "Produce a materials inventory for one machine.",
+            "11–12": "Produce a materials inventory for a real machine with its consequences, for the people who buy or design it."
+          }
+        },
+        {
+          "theme": "Energy over a machine’s life",
+          "description": "Manufacture, operation and disposal, which are rarely compared.",
+          "bands": {
+            "K–2": "Say where a toy uses energy: being made, being used, and being thrown away.",
+            "3–5": "Estimate how much energy a kit robot uses over its whole life, not just when running.",
+            "6–8": "Estimate lifetime energy — manufacture, operation, disposal — for one real machine, with a checker.",
+            "9–10": "Estimate lifetime energy for one machine.",
+            "11–12": "Estimate lifetime energy for a real machine and compare two options for the people choosing between them."
+          }
+        },
+        {
+          "theme": "Designing for repair",
+          "description": "The choices that decide whether something can be fixed.",
+          "bands": {
+            "K–2": "Find one thing about a toy that makes it hard to fix, and say how it could be easier.",
+            "3–5": "Assess a kit robot for how easy it is to repair and suggest two changes.",
+            "6–8": "Assess one real design for repairability and name three changes, with a checker.",
+            "9–10": "Assess one design for repairability and name three changes.",
+            "11–12": "Assess a real design for repairability and get one change adopted by its designers."
+          }
+        },
+        {
+          "theme": "Spare parts in ten years",
+          "description": "Designing for a supply chain that will have moved on.",
+          "bands": {
+            "K–2": "Say which part of a toy might not be sold any more in ten years.",
+            "3–5": "Find the parts of a kit robot that might be impossible to buy later.",
+            "6–8": "Identify the parts of a real machine that would be unobtainable in ten years, with a checker.",
+            "9–10": "Identify the parts that would be unobtainable.",
+            "11–12": "Identify the parts of a real machine that will be unobtainable and plan the substitutes or the stock."
+          }
+        },
+        {
+          "theme": "Refurbishment as a business",
+          "description": "Second life, and what it requires of the original design.",
+          "bands": {
+            "K–2": "Say whether an old toy could be fixed up and used again, and what that would take.",
+            "3–5": "Assess whether a used kit robot could be refurbished and sold.",
+            "6–8": "Assess one real machine for refurbishment, with a checker.",
+            "9–10": "Assess one real machine for refurbishment and what its original design demands of it.",
+            "11–12": "Assess a real machine for refurbishment as a business case, including what its original design made hard."
+          }
+        },
+        {
+          "theme": "Recycling what cannot be reused",
+          "description": "Separating materials, and the joins that make it impossible.",
+          "bands": {
+            "K–2": "Take apart a broken toy with an adult and find the parts that are stuck together.",
+            "3–5": "Find the joins in a kit that stop its materials being separated.",
+            "6–8": "Identify the joins that prevent recycling in one real product, with a checker.",
+            "9–10": "Identify the joins that prevent recycling in one product.",
+            "11–12": "Identify the joins that prevent recycling in a real product and propose the design change to its makers."
+          }
+        },
+        {
+          "theme": "Electronic waste and where it goes",
+          "description": "The actual destination, and the conditions there.",
+          "bands": {
+            "K–2": "Find out where old electronics from your home really go.",
+            "3–5": "Trace where a school's old electronics go when thrown away.",
+            "6–8": "Trace one real electronic waste stream to its destination, with a checker.",
+            "9–10": "Trace one waste stream to its destination.",
+            "11–12": "Trace a real organisation's electronic waste to its destination and report the conditions there."
+          }
+        },
+        {
+          "theme": "Rare materials and their sources",
+          "description": "The supply chains behind the components, including the human ones.",
+          "bands": {
+            "K–2": "Find out where the metal in a battery comes from.",
+            "3–5": "Trace one part of a kit robot back to where its materials were mined.",
+            "6–8": "Trace one real component to its source, including the human conditions there, with a checker.",
+            "9–10": "Trace one real component to its source, including the human supply chain behind it.",
+            "11–12": "Trace a real machine's critical components to their sources for the people who buy them, including the human ones."
+          }
+        },
+        {
+          "theme": "A machine that lasted thirty years",
+          "description": "What made it last, which is usually maintainability.",
+          "bands": {
+            "K–2": "Find an old machine that still works and ask why it lasted.",
+            "3–5": "Present one machine that lasted decades and say what made it last.",
+            "6–8": "Present one real case and identify the design decisions that made it last, with a checker.",
+            "9–10": "Present one case and identify the design decisions.",
+            "11–12": "Present a real long-lived machine to real designers and identify the decisions they could repeat."
+          }
+        },
+        {
+          "theme": "The machine that should not be built",
+          "description": "Applying the question to a real proposal.",
+          "bands": {
+            "K–2": "Say whether a toy you have seen should have been made, and why.",
+            "3–5": "Argue whether one real machine should have been built, with reasons.",
+            "6–8": "Argue one real proposal, either way, with evidence, with a checker.",
+            "9–10": "Argue one case, either way, with evidence.",
+            "11–12": "Argue a real proposal either way to the people who will decide it, with evidence, and record the decision."
+          }
+        }
+      ]
+    }
+  ]
+}

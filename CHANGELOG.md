@@ -4,6 +4,18 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.74.0] — 2026-09-17
+
+### Added — the Robotics OS across five bands
+- **`data/promotions/robotics-os.json`** through the band-suffix override:
+  ten tracks (machines and how they move, safety around a robot, control
+  and autonomy, data from the physical world, work with machines,
+  electronics and power, software on a machine, bringing it into
+  service, fleets and machines far away, materials, energy and
+  afterwards), 100 themes, five distinct sentences each on the band
+  ladder — 500 rows; no block id, code, credential or transfer check
+  changed. Band-suffix rows 8,750 → 8,250; the ratchet lowered.
+
 ## [0.73.0] — 2026-09-17
 
 ### Added — the Science OS across five bands
