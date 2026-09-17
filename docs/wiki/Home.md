@@ -33,6 +33,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Investor deck](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/PITCH_DECK.md) — three pages: the problem, the solution, the ask with the round on standard forms
 - [Investor walkthrough](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/WALKTHROUGH.md) — the learning system, end to end, for a reader deciding whether to back it
 - [Film production briefs](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/film/PRODUCTION_BRIEFS.md) — the two product films (`tools/film/`) and their cinematic cuts
+- [White papers and promo films for named organisations](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/whitepapers/README.md) — the Institute Track, the Tenderloin pilot, the Club edition; no affiliation claimed
 - [Accessibility audit](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/ACCESSIBILITY.md) — WCAG 2.2 AA, what was tested, fixed and remains
 - [Standards mapping and rubrics](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/STANDARDS.md) — the codes a block was designed against and what a passing check looks like, per track
 - [Security & compliance roadmap](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/COMPLIANCE_ROADMAP.md) and the [control register](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/CONTROL_REGISTER.md) — state, parish, local and district expectations with owners, evidence and a begin-now checklist; not legal advice
@@ -46,7 +47,7 @@ tenancy, reentry, global health field practice, and working with AI.
 - [Governance — the curriculum review board](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/docs/GOVERNANCE.md)
 - [Contributing](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/CONTRIBUTING.md)
 
-## Numbers (v0.71.0)
+## Numbers (v0.71.1)
 
 **17,450 blocks · 47 packs · 225 tracks · 1,430 credentials**
 

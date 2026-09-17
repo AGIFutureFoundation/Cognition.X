@@ -4,6 +4,23 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.71.1] — 2026-09-17
+
+### Added — white papers and promo films for three organisation modules
+- **`docs/whitepapers/`** — three white papers, one per module written
+  for a named organisation from its public record: the Willie L. Brown
+  Jr. Institute Track (every strand, bridge, principle and grade), the
+  Tenderloin Pilot (four layers, every track and theme with its adult
+  sentence and transfer check, the twelve sessions, the six refusals),
+  and Third Place · Club Edition with the Club Administrator Academy (all
+  225 sessions and 144 modules, the instruments, the records and what
+  they never hold). Each carries the module's own disclaimer verbatim;
+  the appendices are generated from the built app and the dataset.
+- **`tools/film/orgs/`** — a promo film per module, recorded from the
+  Education OS by the film kit with offline narration (the disclaimer
+  spoken first), and `paper.py`, which renders a paper to print HTML and
+  PDF through Chromium.
+
 ## [0.71.0] — 2026-09-17
 
 ### Added — the second complete system review
