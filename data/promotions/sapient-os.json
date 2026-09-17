@@ -1,0 +1,1167 @@
+{
+  "pack": "Cognition.X : Sapient OS",
+  "override": "band-suffix",
+  "note": "The counted exception to fill-empty-only: every theme here exists in the source with a band-suffixed description (the documented content debt); this promotion replaces exactly those rows with five authored sentences per theme. The normaliser refuses any other target. Track names, prefixes, codes, credentials and transfer checks are untouched.",
+  "tracks": [
+    {
+      "prefix": "UN",
+      "name": "Understanding a model",
+      "themes": [
+        {
+          "theme": "What a model is and is not",
+          "description": "What a language model is, mechanically, at the level that predicts its behaviour.",
+          "bands": {
+            "K–2": "Say in your own words that a chat helper guesses the next words from what it has read, and is not a person.",
+            "3–5": "Explain to a classmate how a language model predicts words, and one way that makes it get things wrong.",
+            "6–8": "Explain how a language model works to somebody else and have them predict a failure from your explanation, with a checker.",
+            "9–10": "Explain it to somebody else and have them predict a failure from your explanation.",
+            "11–12": "Explain the mechanism to a real non-specialist audience and have them predict failures, then test their predictions live."
+          }
+        },
+        {
+          "theme": "Training data, and where it came from",
+          "description": "Training data, its origins, and what that implies about what a model reflects.",
+          "bands": {
+            "K–2": "Say where a chat helper learned its words from, and whose words are missing.",
+            "3–5": "Find out what kinds of writing a model was trained on and name one kind it would not have seen.",
+            "6–8": "Identify what a given model was trained on from its documentation, and what that omits, with a checker.",
+            "9–10": "Identify what a given model was trained on, and what that omits.",
+            "11–12": "Identify the training data of a model in real use at an organisation, what it omits, and what that means for the people it serves."
+          }
+        },
+        {
+          "theme": "Why a fluent answer can be wrong",
+          "description": "Fluency and accuracy are separate properties, and fluency is the one you perceive.",
+          "bands": {
+            "K–2": "Find an answer from a chat helper that sounds sure but is wrong, and say how you knew.",
+            "3–5": "Find a smooth, confident wrong answer and explain why it sounded right.",
+            "6–8": "Find a fluent wrong answer and explain why it reads as confident, with a checker.",
+            "9–10": "Find a fluent wrong answer and explain why it reads as confident.",
+            "11–12": "Collect fluent wrong answers in a real domain, explain the fluency, and write the guidance a team would need."
+          }
+        },
+        {
+          "theme": "Confidence, and why it is not accuracy",
+          "description": "Stated confidence is not calibrated probability, and treating it as one is the common error.",
+          "bands": {
+            "K–2": "Ask a chat helper five easy questions and check each answer with an adult.",
+            "3–5": "Collect five confident answers from a model and check each against a book.",
+            "6–8": "Collect five confident answers and check them against sources, with a checker.",
+            "9–10": "Collect five confident answers and check them.",
+            "11–12": "Collect confident answers in a real workflow, check them, and report the accuracy rate to the people relying on them."
+          }
+        },
+        {
+          "theme": "Prompting as a skill",
+          "description": "Prompting as a skill with technique, limits, and diminishing returns.",
+          "bands": {
+            "K–2": "Ask a helper the same question two ways and say which got the better answer.",
+            "3–5": "Improve one answer from a model by changing how you asked, and write down what you changed.",
+            "6–8": "Improve one task's output measurably by prompting and document what changed, with a checker.",
+            "9–10": "Improve one task's output measurably and document what changed.",
+            "11–12": "Improve a real task's output measurably, document the technique, and hand it to a team with its limits stated."
+          }
+        },
+        {
+          "theme": "The same question, asked five ways",
+          "description": "Asking the same question five ways to see the variance the single answer hides.",
+          "bands": {
+            "K–2": "Ask a helper the same thing five different ways and notice whether the answers agree.",
+            "3–5": "Ask a model one question five ways and write down how much the answers differed.",
+            "6–8": "Run the five-ways experiment on one question and report the spread, with a checker.",
+            "9–10": "Run the experiment and report the spread.",
+            "11–12": "Run the experiment on a real question that matters to an organisation and report the spread to the people who use the single answer."
+          }
+        },
+        {
+          "theme": "Checking an answer you cannot verify",
+          "description": "Checking an answer in a domain where you cannot judge it, which is the real problem.",
+          "bands": {
+            "K–2": "When a helper tells you something you cannot check, say who you would ask.",
+            "3–5": "Plan how to check a model's answer about something you know nothing about.",
+            "6–8": "Design a verification route for a domain outside your expertise, with a checker.",
+            "9–10": "Design a verification route for a domain outside your expertise.",
+            "11–12": "Design and use a verification route for a real domain outside your expertise, and record where it failed."
+          }
+        },
+        {
+          "theme": "Hallucination as a property, not a bug",
+          "description": "Fabrication as a property of the mechanism rather than a defect to be patched out.",
+          "bands": {
+            "K–2": "Say why a helper sometimes makes things up, using the word-guessing idea.",
+            "3–5": "Explain why a model invents facts, from how it works, not as a mistake somebody forgot to fix.",
+            "6–8": "Explain why fabrication happens, from the mechanism, with a checker.",
+            "9–10": "Explain why it happens, from the mechanism.",
+            "11–12": "Explain fabrication from the mechanism to a real team and turn the explanation into a rule for when they may rely on the output."
+          }
+        },
+        {
+          "theme": "What a model cannot know about you",
+          "description": "What a model cannot know about you, and the inferences it will make anyway.",
+          "bands": {
+            "K–2": "Say what a chat helper knows about you: only what you typed.",
+            "3–5": "List what a model actually has about you and what it is guessing.",
+            "6–8": "List what a model actually has and what it is inferring in one real interaction, with a checker.",
+            "9–10": "List what it actually has and what it is inferring.",
+            "11–12": "Audit a real deployed assistant for what it has about a user and what it infers, and write the notice the user is owed."
+          }
+        },
+        {
+          "theme": "Reading a model card",
+          "description": "Reading a model card for the limitations rather than the benchmarks.",
+          "bands": {
+            "K–2": "With an adult, find the part of a helper's description that says what it cannot do.",
+            "3–5": "Read a model's information page and write two things it says it is bad at.",
+            "6–8": "Read one model card and state three limitations in your own words, with a checker.",
+            "9–10": "Read one and state three limitations in your own words.",
+            "11–12": "Read the model card for a system in real use and state the limitations that apply to that use, for the people using it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "US",
+      "name": "Using one at work or school",
+      "themes": [
+        {
+          "theme": "The task it is good at",
+          "description": "Identifying the tasks where assistance genuinely helps, from evidence rather than habit.",
+          "bands": {
+            "K–2": "Try a class task with a helper and without, and say which was better and why.",
+            "3–5": "Test one school task with and without a model and measure the difference.",
+            "6–8": "Test one task both ways and measure the difference, with a checker.",
+            "9–10": "Test one task both ways and measure the difference.",
+            "11–12": "Test a real work task both ways with measured criteria and report the difference to the team."
+          }
+        },
+        {
+          "theme": "The task it is bad at",
+          "description": "The tasks where it degrades the work, including ones where the degradation is invisible.",
+          "bands": {
+            "K–2": "Find a task a helper does badly and say how you would notice.",
+            "3–5": "Find a school task a model makes worse and say how nobody would notice.",
+            "6–8": "Find one task a model degrades and describe how the failure would be missed, with a checker.",
+            "9–10": "Find one and describe how the failure would be missed.",
+            "11–12": "Find a real task a model degrades invisibly and put the finding to the people who rely on it."
+          }
+        },
+        {
+          "theme": "Disclosure: saying you used one",
+          "description": "Disclosure: when to say you used one, to whom, and in what form.",
+          "bands": {
+            "K–2": "When a helper helped with your work, say so on the work.",
+            "3–5": "Write a note on a piece of school work saying what a model did and what you did.",
+            "6–8": "Write a disclosure statement for one real piece of work, with a checker.",
+            "9–10": "Write a disclosure statement for one real piece of work.",
+            "11–12": "Write and attach disclosure statements for real work over a month, and agree the form with the people who receive it."
+          }
+        },
+        {
+          "theme": "Your own work versus assisted work",
+          "description": "The line between your work and assisted work, drawn by you before somebody draws it for you.",
+          "bands": {
+            "K–2": "Say which parts of a drawing or story were yours and which a helper did.",
+            "3–5": "Draw your own line between your work and a model's help, and explain it to a teacher.",
+            "6–8": "Define your own line between your work and assisted work and defend it, with a checker.",
+            "9–10": "Define your own line between your work and assisted work, and defend it to somebody who assesses you.",
+            "11–12": "Define the line for a real team and get it adopted before somebody else draws it for you."
+          }
+        },
+        {
+          "theme": "Where the output goes",
+          "description": "Where the output goes, who retains it, and what that means for what you paste in.",
+          "bands": {
+            "K–2": "Say where your words go when you type them into a helper, and who might keep them.",
+            "3–5": "Read what a service keeps of what you type and say what you can no longer control.",
+            "6–8": "Read one service's retention terms and state what leaves your control, with a checker.",
+            "9–10": "Read one service's retention terms and state what leaves your control.",
+            "11–12": "Read the retention terms of a service a real organisation uses and write the guidance on what may be pasted in."
+          }
+        },
+        {
+          "theme": "Confidential information and the box",
+          "description": "Confidential information and the box: the rule, and the reason people break it.",
+          "bands": {
+            "K–2": "Say what you should never type into a helper: passwords, addresses, other people's secrets.",
+            "3–5": "List what school information you may not paste into a model, and why people do it anyway.",
+            "6–8": "Identify what you may not paste into a model and the pressure that would make you, with a checker.",
+            "9–10": "Identify what you may not paste, and the pressure that would make you.",
+            "11–12": "Identify the rule for a real organisation, the pressure that breaks it, and one control that relieves the pressure."
+          }
+        },
+        {
+          "theme": "A model in a hiring decision",
+          "description": "A model in a hiring decision, and what a candidate is owed.",
+          "bands": {
+            "K–2": "Say whether a computer should decide who gets a job, and what the person should be told.",
+            "3–5": "Say what someone applying for a job should be told if a model reads their application.",
+            "6–8": "State what an applicant should be told and the recourse they should have, with a checker.",
+            "9–10": "State what an applicant should be told, and the recourse they should have.",
+            "11–12": "State what applicants are owed for a real hiring process and check it against what they are actually told."
+          }
+        },
+        {
+          "theme": "A model marking your work",
+          "description": "A model marking your work, and the appeal route that should exist.",
+          "bands": {
+            "K–2": "Say what you would want to happen if a computer marked your work wrong.",
+            "3–5": "Design how you would appeal a mark a model gave you.",
+            "6–8": "Design the appeal route you would want for model-marked work, with a checker.",
+            "9–10": "Design the appeal route you would want when a model has marked your work.",
+            "11–12": "Design the appeal route for a real setting where a model marks work, and get it adopted."
+          }
+        },
+        {
+          "theme": "Refusing to use one",
+          "description": "Refusing to use one, and making the refusal legible rather than merely stubborn.",
+          "bands": {
+            "K–2": "Say why you might choose to do a task without a helper, in a way a teacher could accept.",
+            "3–5": "Write why you will not use a model for one school task, so somebody could act on it.",
+            "6–8": "Write a refusal to use a model in terms somebody could act on, with a checker.",
+            "9–10": "Write the refusal in terms somebody could act on.",
+            "11–12": "Write and deliver a real refusal to a real manager or teacher in actionable terms, and record the response."
+          }
+        },
+        {
+          "theme": "Keeping the skill you delegated",
+          "description": "Keeping a skill you have delegated, which requires deliberately not delegating it sometimes.",
+          "bands": {
+            "K–2": "Do a task by hand this week that you usually let a helper do, and say what you noticed.",
+            "3–5": "Plan when you will do a task yourself even though a model could, so you keep the skill.",
+            "6–8": "Design a practice schedule for one delegated skill, with a checker.",
+            "9–10": "Design a practice schedule for one delegated skill.",
+            "11–12": "Design and follow a practice schedule for a real delegated skill for a term, and measure whether it held."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "HA",
+      "name": "Harms, plainly",
+      "themes": [
+        {
+          "theme": "Bias that is measurable",
+          "description": "Bias you can measure, the metrics that exist, and what each metric misses.",
+          "bands": {
+            "K–2": "Ask a helper to draw or describe ten people and count who is missing.",
+            "3–5": "Test a model's outputs for one kind of unfairness you can count, and say what counting misses.",
+            "6–8": "Apply one fairness metric to a real output set and state its blind spot, with a checker.",
+            "9–10": "Apply one fairness metric to a real output set and state its blind spot.",
+            "11–12": "Apply fairness metrics to a system in real use, state their blind spots, and report to the people accountable for it."
+          }
+        },
+        {
+          "theme": "Bias that is not",
+          "description": "Bias you cannot measure, which is most of it, and reasoning about it anyway.",
+          "bands": {
+            "K–2": "Say one unfair thing a helper might do that would be hard to count.",
+            "3–5": "Find one unfairness in a system that you cannot measure and say which way it probably goes.",
+            "6–8": "Identify one unmeasurable bias in a real system and argue its likely direction, with a checker.",
+            "9–10": "Identify one unmeasurable bias in a real system and argue its likely direction.",
+            "11–12": "Identify unmeasurable biases in a system in real use, argue their direction, and write them into its documentation."
+          }
+        },
+        {
+          "theme": "Automation of a decision about a person",
+          "description": "Automating a decision about a person, and the threshold at which that becomes unacceptable.",
+          "bands": {
+            "K–2": "Say one decision about a person that a computer should never make alone.",
+            "3–5": "Take one decision about a person and say where a computer should stop and a person decide.",
+            "6–8": "Take one decision and argue where the line for automation sits, with a checker.",
+            "9–10": "Take one decision and argue where the line sits.",
+            "11–12": "Argue the line for a real automated decision to the people who run it, and record what they decided."
+          }
+        },
+        {
+          "theme": "Surveillance dressed as a service",
+          "description": "Services whose value proposition is surveillance, recognised from the design.",
+          "bands": {
+            "K–2": "Find an app that watches you to be helpful, and say what it watches.",
+            "3–5": "Find one product that is convenient because it watches you, and say what it collects.",
+            "6–8": "Identify the surveillance in one product presented as convenience, with a checker.",
+            "9–10": "Identify the surveillance in one product presented as convenience.",
+            "11–12": "Identify the surveillance in a product a real organisation uses and write what its users should be told."
+          }
+        },
+        {
+          "theme": "Deepfakes and the person in them",
+          "description": "Synthetic media of a real person, and what that person is owed.",
+          "bands": {
+            "K–2": "Say why making a fake picture of a real person is wrong, and what they could do about it.",
+            "3–5": "Say what a person in a fake video is owed and who could help them.",
+            "6–8": "State the obligations to a person in synthetic media, and the recourse that currently exists, with a checker.",
+            "9–10": "State the obligations, and the recourse that currently exists.",
+            "11–12": "State the obligations and the real recourse where you live, and test the recourse with a real or worked case."
+          }
+        },
+        {
+          "theme": "Persuasion and the warm voice",
+          "description": "Persuasion delivered warmly, and why warmth defeats scepticism.",
+          "bands": {
+            "K–2": "Notice when a helper sounds friendly and say why that makes you believe it more.",
+            "3–5": "Look at one friendly message from a system and find how the friendliness persuades.",
+            "6–8": "Analyse one persuasive interaction and identify the mechanism, with a checker.",
+            "9–10": "Analyse one persuasive interaction and identify the mechanism.",
+            "11–12": "Analyse persuasive interactions in a real product and write the guidance its users need to resist them."
+          }
+        },
+        {
+          "theme": "Dependency and what it costs",
+          "description": "Dependency and what it costs, including the capabilities that quietly stop being practised.",
+          "bands": {
+            "K–2": "Say one thing you can do less well because a device does it for you.",
+            "3–5": "Audit what you rely on one app for and what you would lose without it.",
+            "6–8": "Audit your own dependence on one system and what you would lose, with a checker.",
+            "9–10": "Audit your own dependence on one system and what you would lose.",
+            "11–12": "Audit a real team's dependence on one system and what it would lose, and plan the practice that keeps the skill."
+          }
+        },
+        {
+          "theme": "Children and systems that reason",
+          "description": "Children interacting with systems that reason, and the protections that do not yet exist.",
+          "bands": {
+            "K–2": "Say what a chat helper should never do with a child, and who should make the rules.",
+            "3–5": "State what protection a child using a chat system should have, and why it is missing.",
+            "6–8": "State what protection you would require for children and why the current position fails it, with a checker.",
+            "9–10": "State what protection you would require, and why the current position fails it.",
+            "11–12": "State the protection you would require for a real setting with children, compare it with what exists, and put the gap to the people responsible."
+          }
+        },
+        {
+          "theme": "Work that disappears",
+          "description": "Work that disappears, described by the people whose work it was.",
+          "bands": {
+            "K–2": "Ask an adult about a job that a machine now does, and listen without arguing.",
+            "3–5": "Find one account by a person whose work a system replaced and retell it faithfully.",
+            "6–8": "Find one account of work that disappeared and present it without softening, with a checker.",
+            "9–10": "Find one account and present it without softening.",
+            "11–12": "Collect accounts of work that disappeared in a real sector and present them unsoftened to the people deploying the systems."
+          }
+        },
+        {
+          "theme": "Concentration of who owns the systems",
+          "description": "Concentration of ownership, and why it is a governance question rather than a market one.",
+          "bands": {
+            "K–2": "Say how many companies make the helpers people use, and why that matters.",
+            "3–5": "Find out who owns the systems in one area and what that lets them decide.",
+            "6–8": "Map who controls the systems in one domain and what that permits, with a checker.",
+            "9–10": "Map who controls the systems in one domain and what that permits.",
+            "11–12": "Map control of the systems in a real domain and present what it permits to a body that governs it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "GV",
+      "name": "Governance",
+      "themes": [
+        {
+          "theme": "Who decides what a system may do",
+          "description": "Who actually decides what a system may do, traced to named accountable people.",
+          "bands": {
+            "K–2": "Say who decides what a class computer is allowed to do, by name.",
+            "3–5": "Trace who decides what one school system may do, to a named person.",
+            "6–8": "Trace one real system to a named decision-maker, with a checker.",
+            "9–10": "Trace one real system to a named decision-maker.",
+            "11–12": "Trace a system in real use to its named accountable people and confirm with them that they hold the decision."
+          }
+        },
+        {
+          "theme": "A gate, and why it is a person",
+          "description": "A gate is a person because accountability requires somebody who can be asked and answer.",
+          "bands": {
+            "K–2": "Say why there should be a person you can ask when a computer says no.",
+            "3–5": "Find the person behind one rule a system enforces at school, or say there is none.",
+            "6–8": "Identify a gate in a real system and the person behind it, or its absence, with a checker.",
+            "9–10": "Identify a gate in a real system and the person behind it, or its absence.",
+            "11–12": "Identify the gates in a real deployment, name the person behind each, and report the ones with nobody."
+          }
+        },
+        {
+          "theme": "Auditing something you cannot see inside",
+          "description": "Auditing a system you cannot inspect, and the techniques that work from outside.",
+          "bands": {
+            "K–2": "Work out what a black box does by trying things and watching, and say what you still cannot tell.",
+            "3–5": "Test a system from the outside to find one thing it does, and say what testing cannot show.",
+            "6–8": "Design an external audit for a system you have no access to, with a checker.",
+            "9–10": "Design an external audit for a system you have no access to.",
+            "11–12": "Design and run an external audit of a real system you cannot inspect, and publish the method with the findings."
+          }
+        },
+        {
+          "theme": "Regulation and its lag",
+          "description": "Regulatory lag, why it exists, and what fills the gap in the interval.",
+          "bands": {
+            "K–2": "Say why rules for new things arrive after the things do.",
+            "3–5": "Find one new technology with no rules yet and say what fills the gap.",
+            "6–8": "Identify one regulatory gap and what is currently filling it, with a checker.",
+            "9–10": "Identify one gap and what is currently filling it.",
+            "11–12": "Identify a real regulatory gap affecting a real organisation and write the interim policy it should adopt."
+          }
+        },
+        {
+          "theme": "An impact assessment worth reading",
+          "description": "An impact assessment that would change a decision, versus one that documents a decision.",
+          "bands": {
+            "K–2": "Before doing something big in class, write what might go wrong for whom, and let it change the plan.",
+            "3–5": "Read a short assessment of a project's effects and say whether it could have changed the decision.",
+            "6–8": "Read one impact assessment and state whether it could have changed anything, with a checker.",
+            "9–10": "Read one and state whether it could have changed anything.",
+            "11–12": "Read a real impact assessment for a real deployment, state whether it could have changed anything, and write the one that could."
+          }
+        },
+        {
+          "theme": "Redress when a system is wrong",
+          "description": "Redress when a system is wrong: the route, its cost, and who can actually use it.",
+          "bands": {
+            "K–2": "Say what you would do if a computer got something about you wrong, and who would fix it.",
+            "3–5": "Map how somebody would get a wrong system decision fixed, and what it would cost them.",
+            "6–8": "Map a real redress route and identify who is excluded by its cost, with a checker.",
+            "9–10": "Map a real redress route and identify who is excluded by its cost.",
+            "11–12": "Map the redress route for a system in real use, test it with a real or worked case, and report who it excludes."
+          }
+        },
+        {
+          "theme": "Open weights and the argument about them",
+          "description": "Open weights: the strongest argument on each side, stated by somebody who holds neither.",
+          "bands": {
+            "K–2": "Say one good and one bad thing about giving everyone a powerful tool.",
+            "3–5": "State the best reason for sharing a model openly and the best reason against, fairly.",
+            "6–8": "Present both cases on open weights to a standard each side would accept, with a checker.",
+            "9–10": "Present both cases to a standard each side would accept.",
+            "11–12": "Present both cases to a real audience holding both views, and have each side confirm their case was stated fairly."
+          }
+        },
+        {
+          "theme": "Compute, energy and water",
+          "description": "Compute, energy and water as physical inputs with locations and local consequences.",
+          "bands": {
+            "K–2": "Say that a helper runs on big computers that use electricity and water, and where they might be.",
+            "3–5": "Find where one data centre is and what it uses from the place around it.",
+            "6–8": "Locate one data centre and identify its local resource impact, with a checker.",
+            "9–10": "Locate one data centre and identify its local resource impact.",
+            "11–12": "Locate the data centres behind a real deployment, identify their local impacts, and include them in the deployment's accounting."
+          }
+        },
+        {
+          "theme": "International agreement and its limits",
+          "description": "International agreement, what it can bind, and where it stops.",
+          "bands": {
+            "K–2": "Say what countries can agree together about new machines, and what they cannot make each other do.",
+            "3–5": "Find one agreement between countries about technology and say who enforces it.",
+            "6–8": "Identify one international agreement and the enforcement it actually has, with a checker.",
+            "9–10": "Identify one agreement and the enforcement it actually has.",
+            "11–12": "Identify the agreements that touch a real deployment and what each actually binds, for the people accountable for it."
+          }
+        },
+        {
+          "theme": "The refusal that is written down",
+          "description": "A refusal written down, versioned, and repealable only in public.",
+          "bands": {
+            "K–2": "Write one thing your class will never let a helper do, and say how the rule could be changed in public.",
+            "3–5": "Write one refusal for a school system and the way it could be changed openly.",
+            "6–8": "Write one refusal and the procedure by which it could be repealed, with a checker.",
+            "9–10": "Write one refusal and the procedure by which it could be repealed.",
+            "11–12": "Write a real refusal for a real organisation, versioned, with its public repeal procedure, and get it adopted."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "FU",
+      "name": "The next decades",
+      "themes": [
+        {
+          "theme": "Work, and what it is for",
+          "description": "Work and what it is for, asked before asking what should be automated.",
+          "bands": {
+            "K–2": "Say why people work, beyond money, and ask three adults the same.",
+            "3–5": "Write your own answer to what work is for and compare it with three people's.",
+            "6–8": "Write your own answer to what work is for and test it against three people's, with a checker.",
+            "9–10": "Write your own answer and test it against three people's.",
+            "11–12": "Write your answer, test it against three people from different work, and publish the comparison."
+          }
+        },
+        {
+          "theme": "Education after the answer is free",
+          "description": "What education is for once retrieval is free, which was always the real question.",
+          "bands": {
+            "K–2": "Say what school is for when a helper can answer any question.",
+            "3–5": "Argue what should be taught now that answers are easy to get.",
+            "6–8": "Argue what should be taught that was not being taught before, with a checker.",
+            "9–10": "Argue what should be taught that was not being taught before.",
+            "11–12": "Argue it to a real audience of educators and record what they would change."
+          }
+        },
+        {
+          "theme": "What only people can do",
+          "description": "What only people can do, argued carefully rather than asserted comfortably.",
+          "bands": {
+            "K–2": "Say one thing only a person can do, and let a friend argue against it.",
+            "3–5": "Make the case for something only people can do and have a classmate attack it.",
+            "6–8": "Make the argument for what only people can do and have somebody attack it, with a checker.",
+            "9–10": "Make the argument and have somebody attack it.",
+            "11–12": "Make the argument in public, have it attacked by somebody who disagrees, and revise it on the record."
+          }
+        },
+        {
+          "theme": "Care as the durable economy",
+          "description": "Care as the economy that does not automate away, and what that implies about its pay.",
+          "bands": {
+            "K–2": "Say why looking after people is work a machine cannot take over, and whether it is paid enough.",
+            "3–5": "Follow the idea that caring work will remain to what it means for how carers are paid.",
+            "6–8": "Follow the argument about care work to its conclusion about wages, with a checker.",
+            "9–10": "Follow the argument to its conclusion about wages.",
+            "11–12": "Follow the argument to wages for a real care sector and present the conclusion to people who set them."
+          }
+        },
+        {
+          "theme": "Deciding what not to build",
+          "description": "Deciding not to build something, and the institutional conditions that allow that decision.",
+          "bands": {
+            "K–2": "Say one thing people decided not to make, and why.",
+            "3–5": "Find one thing that was deliberately not built and say what let people decide that.",
+            "6–8": "Identify one thing that was not built and why, with a checker.",
+            "9–10": "Identify one thing that was not built, and why.",
+            "11–12": "Identify a real case of deciding not to build, and the institutional conditions that allowed it, for a body facing the same decision."
+          }
+        },
+        {
+          "theme": "A technology that arrived before its rules",
+          "description": "A technology arriving before its rules, and what happens in the interval.",
+          "bands": {
+            "K–2": "Find one old invention that arrived before the rules for it, and what happened first.",
+            "3–5": "Find a historical technology that came before its rules and say what the gap cost.",
+            "6–8": "Find a historical parallel and state what the interval cost, with a checker.",
+            "9–10": "Find a historical parallel and state what the interval cost.",
+            "11–12": "Find the parallel, state the cost, and apply the lesson to a real technology in its interval now."
+          }
+        },
+        {
+          "theme": "Being a citizen of a technical society",
+          "description": "Citizenship in a society whose infrastructure you cannot inspect.",
+          "bands": {
+            "K–2": "Say what you would need to know to understand the machines around you.",
+            "3–5": "List what a person needs to understand to be a good citizen when machines they cannot see make decisions.",
+            "6–8": "Identify what you would need to be a competent citizen in a technical society, with a checker.",
+            "9–10": "Identify what you would need to be a competent citizen here.",
+            "11–12": "Identify what competent citizenship requires here and design the education that would provide it."
+          }
+        },
+        {
+          "theme": "Explaining this to somebody older",
+          "description": "Explaining this to somebody older, without condescension and without overclaiming.",
+          "bands": {
+            "K–2": "Explain to a grandparent what a chat helper is, and let them say if it made sense.",
+            "3–5": "Explain a model to somebody older without talking down, and be marked by them.",
+            "6–8": "Explain this to somebody older, without condescension or overclaiming, and be assessed by them.",
+            "9–10": "Explain this to somebody older, without condescension or overclaiming, and be assessed by them on both.",
+            "11–12": "Explain it to older people in a real setting and be assessed by them, then revise the explanation."
+          }
+        },
+        {
+          "theme": "Explaining it to somebody younger",
+          "description": "Explaining it to somebody younger, who will live with the consequences longer.",
+          "bands": {
+            "K–2": "Explain to a younger child what a helper can and cannot do, and ask what they understood.",
+            "3–5": "Explain a model to a younger pupil who will live with it longer, and be marked by them.",
+            "6–8": "Explain this to somebody younger and be assessed by them, with a checker present.",
+            "9–10": "Explain this to somebody younger, who will live with the consequences longer, and be assessed by them.",
+            "11–12": "Explain it to younger people in a real setting, be assessed by them, and record what they asked that you had not thought of."
+          }
+        },
+        {
+          "theme": "The world you would choose",
+          "description": "The world you would choose, written down, because a preference not stated is not a preference.",
+          "bands": {
+            "K–2": "Draw or write the world you would like machines to help make, clearly enough that a friend could disagree.",
+            "3–5": "Write the future you would choose specifically enough for a classmate to argue with.",
+            "6–8": "Write the world you would choose, specifically enough to be disagreed with, with a checker.",
+            "9–10": "Write it, specifically enough to be disagreed with.",
+            "11–12": "Write it, publish it, and hold a real discussion with people who disagree."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "BU",
+      "name": "Building with a model",
+      "themes": [
+        {
+          "theme": "Deciding whether a model belongs here at all",
+          "description": "The prior question, asked before design.",
+          "bands": {
+            "K–2": "Say one class job that should not use a helper, and why.",
+            "3–5": "Argue one case where a school should not use a model at all.",
+            "6–8": "Argue one case for not using a model in a described system, with a checker.",
+            "9–10": "Argue one case for not using a model at all in a system that was going to have one.",
+            "11–12": "Argue the case for a real proposed system to the people who want it, and record the decision."
+          }
+        },
+        {
+          "theme": "What the system does when the model is wrong",
+          "description": "Designing for the error rather than the success case.",
+          "bands": {
+            "K–2": "Say what should happen when a helper gives a wrong answer in a game.",
+            "3–5": "Design what a school tool does when its model is wrong.",
+            "6–8": "Specify the failure behaviour for one described system, with a checker.",
+            "9–10": "Specify the failure behaviour for one system.",
+            "11–12": "Specify and test the failure behaviour of a real system before it is deployed."
+          }
+        },
+        {
+          "theme": "A human in the loop, meaningfully",
+          "description": "The difference between review and rubber-stamping.",
+          "bands": {
+            "K–2": "Say the difference between really checking and just pressing OK.",
+            "3–5": "Design a checking step a person could actually use to change a result.",
+            "6–8": "Design a review step that could realistically change an outcome, with a checker.",
+            "9–10": "Design a review step that could realistically change an outcome.",
+            "11–12": "Design the review step for a real system and measure how often it changes an outcome."
+          }
+        },
+        {
+          "theme": "Evaluation before deployment",
+          "description": "Testing against the cases that matter rather than the cases that are easy.",
+          "bands": {
+            "K–2": "Test a helper on the hard questions, not just the easy ones, before trusting it.",
+            "3–5": "Build a set of hard test questions for a school tool before using it.",
+            "6–8": "Build an evaluation set including hard cases for a described system, with a checker.",
+            "9–10": "Build an evaluation set including hard cases.",
+            "11–12": "Build and run an evaluation set with hard cases for a real system, and report the failures before launch."
+          }
+        },
+        {
+          "theme": "The data you are allowed to use",
+          "description": "Provenance, licence and consent for training or retrieval.",
+          "bands": {
+            "K–2": "Say whether you are allowed to use someone's story in a project, and how you would ask.",
+            "3–5": "Check one data source for where it came from and whether you may use it.",
+            "6–8": "Audit one data source for provenance, licence and consent, with a checker.",
+            "9–10": "Audit one data source for provenance, licence and consent before using it.",
+            "11–12": "Audit every data source of a real system for all three and stop the ones that fail."
+          }
+        },
+        {
+          "theme": "Cost per interaction",
+          "description": "What a system costs to run, and who pays as it scales.",
+          "bands": {
+            "K–2": "Say that every question to a helper costs money and energy, and guess how much for a class.",
+            "3–5": "Work out what one school tool costs per use and at a hundred uses.",
+            "6–8": "Cost one described system at three volumes, with a checker.",
+            "9–10": "Cost one system per interaction at three volumes and say who pays as it scales.",
+            "11–12": "Cost a real system at three volumes and present who pays as it scales."
+          }
+        },
+        {
+          "theme": "Monitoring after launch",
+          "description": "Drift, and the measurement that detects it.",
+          "bands": {
+            "K–2": "Say how you would notice if a helper started getting worse over time.",
+            "3–5": "Decide what to watch to know a school tool is drifting, and when to raise the alarm.",
+            "6–8": "Specify what you would monitor for a described system and the alert threshold, with a checker.",
+            "9–10": "Specify what you would monitor and the alert threshold.",
+            "11–12": "Specify and run monitoring for a real system, and show one drift it caught."
+          }
+        },
+        {
+          "theme": "A user who does not know it is a model",
+          "description": "Disclosure treated as a design requirement of the interface rather than a legal footnote.",
+          "bands": {
+            "K–2": "Say why people should always be told when they are talking to a machine.",
+            "3–5": "Design how a school tool tells users they are talking to a model.",
+            "6–8": "Design the disclosure for one interface, with a checker.",
+            "9–10": "Design the disclosure for one interface.",
+            "11–12": "Design and test the disclosure for a real interface with real users, and check they understood it."
+          }
+        },
+        {
+          "theme": "Turning it off",
+          "description": "The conditions for withdrawal, agreed before launch.",
+          "bands": {
+            "K–2": "Say when a helper should be switched off, before you start using it.",
+            "3–5": "Write the conditions under which a school tool would be withdrawn.",
+            "6–8": "Write the withdrawal criteria for a described system, with a checker.",
+            "9–10": "Write the withdrawal criteria for a system, agreed before it launches.",
+            "11–12": "Write the withdrawal criteria for a real system before launch and get them agreed by the people who could invoke them."
+          }
+        },
+        {
+          "theme": "Documenting the system for whoever inherits it",
+          "description": "What the next team needs and rarely receives.",
+          "bands": {
+            "K–2": "Write what the next class would need to know to use a tool you set up.",
+            "3–5": "Write the notes the next team would need to run a school tool.",
+            "6–8": "Produce the handover documentation for a described system, with a checker.",
+            "9–10": "Produce the handover documentation the next team would need and rarely receives.",
+            "11–12": "Produce the handover documentation for a real system and have the inheriting team run it from the documentation alone."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "EV",
+      "name": "Evaluating a system",
+      "themes": [
+        {
+          "theme": "What a benchmark measures",
+          "description": "The gap between the benchmark and the deployment.",
+          "bands": {
+            "K–2": "Say why a test with easy questions does not show what a helper does in real life.",
+            "3–5": "Look at one test a model passed and say what it did not test.",
+            "6–8": "Identify one benchmark and what it does not test, with a checker.",
+            "9–10": "Identify one benchmark and what it does not test.",
+            "11–12": "Identify the benchmarks cited for a system in real use and what each fails to test about that use."
+          }
+        },
+        {
+          "theme": "Building your own test set",
+          "description": "Testing on your cases rather than somebody else’s.",
+          "bands": {
+            "K–2": "Make your own list of questions to test a helper on things your class cares about.",
+            "3–5": "Build a small test set for a real school task instead of using somebody else's.",
+            "6–8": "Assemble a test set for a real task, with a checker.",
+            "9–10": "Assemble a test set for a real task from your own cases rather than somebody else's.",
+            "11–12": "Assemble a test set for a real organisation's task with the people who do it, and run it."
+          }
+        },
+        {
+          "theme": "Measuring the failures that matter most",
+          "description": "Weighting errors by consequence rather than counting them.",
+          "bands": {
+            "K–2": "Say which mistakes by a helper would matter most, and count those first.",
+            "3–5": "Weight a set of model errors by how much harm each would do.",
+            "6–8": "Weight one error set by consequence, with a checker.",
+            "9–10": "Weight one error set by consequence rather than by count, and rank the failures.",
+            "11–12": "Weight a real system's errors by consequence with the people affected, and report the weighted result."
+          }
+        },
+        {
+          "theme": "Red-teaming without theatre",
+          "description": "Adversarial testing that produces findings rather than a report.",
+          "bands": {
+            "K–2": "Try to make a helper say something wrong on purpose and write down what worked.",
+            "3–5": "Try to break a school tool on purpose and record what you found.",
+            "6–8": "Run one red-team exercise on a described system and record findings, with a checker.",
+            "9–10": "Run one red-team exercise and record findings.",
+            "11–12": "Run a red-team exercise on a real system with a scope agreed in advance and deliver findings that were fixed."
+          }
+        },
+        {
+          "theme": "Testing with the people affected",
+          "description": "Evaluation that includes the people the system acts on.",
+          "bands": {
+            "K–2": "Ask the people a tool is used on what they think of it.",
+            "3–5": "Design a test of a school tool that includes the pupils it is used on.",
+            "6–8": "Design an evaluation that includes the people the system acts on, with a checker.",
+            "9–10": "Design an evaluation that includes them.",
+            "11–12": "Design and run an evaluation of a real system with the people it acts on, and publish their findings alongside yours."
+          }
+        },
+        {
+          "theme": "A result that does not replicate",
+          "description": "Variance across identical runs, and reporting the spread rather than the best result.",
+          "bands": {
+            "K–2": "Ask a helper the same question five times and notice the answers change.",
+            "3–5": "Run a model test five times and report the range, not the best.",
+            "6–8": "Run one evaluation five times and report the spread, with a checker.",
+            "9–10": "Run one evaluation five times and report the spread.",
+            "11–12": "Run a real evaluation five times, report the spread, and correct a published best-run claim."
+          }
+        },
+        {
+          "theme": "Comparing two systems fairly",
+          "description": "Matched conditions, and the comparisons that are meaningless.",
+          "bands": {
+            "K–2": "Compare two helpers with the same questions, not different ones.",
+            "3–5": "Design a fair test between two tools with the same conditions for both.",
+            "6–8": "Design a fair comparison between two systems, with a checker.",
+            "9–10": "Design a fair comparison between two systems under matched conditions.",
+            "11–12": "Design and run a fair comparison for a real choice between systems, and report it to the people choosing."
+          }
+        },
+        {
+          "theme": "Evaluating for a subgroup",
+          "description": "Aggregate performance hiding a failure for a specific group.",
+          "bands": {
+            "K–2": "Check whether a helper works as well for everyone in the class, not just most.",
+            "3–5": "Split a test result by group and find one group the tool fails.",
+            "6–8": "Disaggregate one evaluation by subgroup, with a checker.",
+            "9–10": "Disaggregate one evaluation by subgroup and report what the aggregate hid.",
+            "11–12": "Disaggregate a real evaluation, find the group the aggregate hid, and report it."
+          }
+        },
+        {
+          "theme": "Publishing an evaluation of somebody’s product",
+          "description": "Evaluating somebody else’s product accurately, defensibly, and in public.",
+          "bands": {
+            "K–2": "Write a fair review of a helper, saying what you tested.",
+            "3–5": "Write a review of a real tool that its makers could not call unfair.",
+            "6–8": "Write an evaluation of somebody's product to a standard you would defend, with a checker.",
+            "9–10": "Write one to a standard you would defend.",
+            "11–12": "Publish an evaluation of a real product to a defensible standard and respond to the maker's reply."
+          }
+        },
+        {
+          "theme": "The evaluation you would want run on you",
+          "description": "Applying your own standard to your own system.",
+          "bands": {
+            "K–2": "Test your own project the way you would test someone else's.",
+            "3–5": "Apply your own test standard to something you built and say the result honestly.",
+            "6–8": "Apply your own standard to your own system and report the result, with a checker.",
+            "9–10": "Apply the evaluation you would want run on you to your own system and report the result.",
+            "11–12": "Apply your standard to a real system you built, publish the result, and act on it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "DS",
+      "name": "Data and what trains it",
+      "themes": [
+        {
+          "theme": "Where a dataset came from",
+          "description": "Tracing provenance, and the point at which it becomes untraceable.",
+          "bands": {
+            "K–2": "Ask where the pictures in a class app came from, and how far back anyone can say.",
+            "3–5": "Trace one dataset back to where it came from until the trail stops.",
+            "6–8": "Trace one dataset as far back as it goes and mark where it becomes untraceable, with a checker.",
+            "9–10": "Trace one dataset as far back as it goes.",
+            "11–12": "Trace the datasets behind a real system as far as they go and report where provenance ends, for the people accountable."
+          }
+        },
+        {
+          "theme": "Consent that was never given",
+          "description": "Data collected for one purpose used for another.",
+          "bands": {
+            "K–2": "Say whether it is fair to use someone's photo for something they did not agree to.",
+            "3–5": "Find one case where data collected for one thing was used for another, and say what was wrong.",
+            "6–8": "Identify one case of data reused without consent and state the issue, with a checker.",
+            "9–10": "Identify one case of data collected for one purpose and used for another, and state the issue.",
+            "11–12": "Identify a real case in a real organisation's data and state the issue to the people who can remedy it."
+          }
+        },
+        {
+          "theme": "Licences, and what they actually permit",
+          "description": "Reading a data licence for what it allows downstream.",
+          "bands": {
+            "K–2": "Say what a 'you may use this' label on a picture lets you do and not do.",
+            "3–5": "Read one data licence and list what it lets somebody do afterwards.",
+            "6–8": "Read one licence and state the downstream permissions, with a checker.",
+            "9–10": "Read one licence and state the permissions.",
+            "11–12": "Read the licences of a real system's data and state, for its builders, what each permits and forbids."
+          }
+        },
+        {
+          "theme": "Scraping, and the argument about it",
+          "description": "The case for and against training on scraped material, each stated as its holders would.",
+          "bands": {
+            "K–2": "Say one reason it might be fine to learn from everything online, and one reason it might not.",
+            "3–5": "State the case for and against training on scraped material, fairly, as each side would.",
+            "6–8": "Present both cases on scraping to a standard each side would accept, with a checker.",
+            "9–10": "Present both to a standard each side would accept.",
+            "11–12": "Present both cases to a real audience holding both views and have each confirm their case was stated fairly."
+          }
+        },
+        {
+          "theme": "The workers who labelled it",
+          "description": "The annotation labour behind a dataset, and its conditions.",
+          "bands": {
+            "K–2": "Say that people label the pictures and words a helper learns from, and ask who they are.",
+            "3–5": "Describe the people who labelled one dataset and how they were treated.",
+            "6–8": "Describe the labour behind one dataset and its conditions, with a checker.",
+            "9–10": "Describe the annotation labour behind one dataset and the conditions it was done under.",
+            "11–12": "Describe the labour behind a real system's data, with sources, for the people who deploy it."
+          }
+        },
+        {
+          "theme": "Personal data inside a training set",
+          "description": "Recognising it, and what removal would require.",
+          "bands": {
+            "K–2": "Say how you might tell whether a dataset has real people's private details in it.",
+            "3–5": "Check a small dataset for names, addresses and other personal details.",
+            "6–8": "Assess one dataset for personal data and what removal would require, with a checker.",
+            "9–10": "Assess one dataset for personal data and state what removal would require.",
+            "11–12": "Assess a real dataset for personal data, state what removal would require, and start it."
+          }
+        },
+        {
+          "theme": "Synthetic data and what it inherits",
+          "description": "What generated data carries from what generated it.",
+          "bands": {
+            "K–2": "Say why a picture made by a helper looks like the pictures it learned from.",
+            "3–5": "Find one thing generated data carries from the data it was made from.",
+            "6–8": "Identify the inheritance in one case of synthetic data, with a checker.",
+            "9–10": "Identify what synthetic data inherits from its source in one real case.",
+            "11–12": "Identify what synthetic data in a real pipeline inherits from its source and document it for its users."
+          }
+        },
+        {
+          "theme": "A dataset withdrawn after publication",
+          "description": "What happens to models already trained on it.",
+          "bands": {
+            "K–2": "Say what happens to a drawing you learned from if someone takes it back afterwards.",
+            "3–5": "Describe what happens to a model already trained on a dataset that is later withdrawn.",
+            "6–8": "Describe the practical consequences of a dataset withdrawal for models trained on it, with a checker.",
+            "9–10": "Describe the practical consequences of a dataset withdrawal for models already trained on it.",
+            "11–12": "Describe the practical consequences for a real system of a real withdrawal, and the response the organisation should make."
+          }
+        },
+        {
+          "theme": "Documentation a dataset should carry",
+          "description": "What a datasheet contains and why it is usually absent.",
+          "bands": {
+            "K–2": "Write a label for a class dataset: what it is, where it came from, what it is for.",
+            "3–5": "Write a short datasheet for a school dataset.",
+            "6–8": "Write a datasheet for one dataset, with a checker.",
+            "9–10": "Write a datasheet for one dataset that had none, covering what it contains and how it was made.",
+            "11–12": "Write the datasheet for a dataset in real use that had none, and get it adopted."
+          }
+        },
+        {
+          "theme": "Data you would refuse to use",
+          "description": "Drawing your own line on data you will not use, and writing it down before it is tested.",
+          "bands": {
+            "K–2": "Say one kind of information you would never use in a project, and why.",
+            "3–5": "Write your own rule for data you will not use, before anyone asks you to.",
+            "6–8": "Write your own refusal on data and its reasoning, with a checker.",
+            "9–10": "Write your own refusal and its reasoning.",
+            "11–12": "Write your refusal, publish it with your reasoning, and hold to it in a real case."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "EC",
+      "name": "Value, work and who captures it",
+      "themes": [
+        {
+          "theme": "Who pays and who benefits",
+          "description": "Tracing the value from a deployed system to the parties involved.",
+          "bands": {
+            "K–2": "For one app at school, say who pays for it and who gets something from it.",
+            "3–5": "Map who pays and who benefits from one school system.",
+            "6–8": "Map the flow of value for one described deployment, with a checker.",
+            "9–10": "Map who pays and who benefits across one real deployment.",
+            "11–12": "Map the value flow for a real deployment and present it to the parties who did not know their place in it."
+          }
+        },
+        {
+          "theme": "A task automated and a wage removed",
+          "description": "The specific arithmetic, at the level of a real job.",
+          "bands": {
+            "K–2": "Say what happens to the person's pay when a machine does part of their job.",
+            "3–5": "Do the sums for one real job when part of it is automated.",
+            "6–8": "Do the arithmetic for one real role when a task is automated, with a checker.",
+            "9–10": "Do the wage arithmetic for one real role when part of it is automated.",
+            "11–12": "Do the arithmetic for a real role with the person who holds it, and present it to the people deciding."
+          }
+        },
+        {
+          "theme": "Productivity gains and where they land",
+          "description": "Whether gains reach wages, prices or margins.",
+          "bands": {
+            "K–2": "Say who gets the benefit when a machine makes work faster: the worker, the customer, or the owner.",
+            "3–5": "Trace one case where machines made work faster and say who gained.",
+            "6–8": "Trace one documented case of productivity gains to where they landed, with a checker.",
+            "9–10": "Trace one documented case of productivity gains to wages, prices or margins.",
+            "11–12": "Trace a real case in a real sector to wages, prices or margins, and publish the finding."
+          }
+        },
+        {
+          "theme": "The cost that moved rather than vanished",
+          "description": "Work pushed onto users, contractors or the public.",
+          "bands": {
+            "K–2": "Find one thing a machine 'saved' that somebody else now has to do.",
+            "3–5": "Find one cost that a system moved onto customers or the public instead of removing.",
+            "6–8": "Identify one cost that moved onto users or the public rather than disappearing, with a checker.",
+            "9–10": "Identify one cost that moved onto users or the public rather than disappearing.",
+            "11–12": "Identify the moved costs of a real deployment and add them to its business case."
+          }
+        },
+        {
+          "theme": "Infrastructure and who owns it",
+          "description": "Compute concentration as an economic fact.",
+          "bands": {
+            "K–2": "Say who owns the big computers that helpers run on.",
+            "3–5": "Map who owns one layer of the computing behind a system.",
+            "6–8": "Map the ownership in one layer of the stack, with a checker.",
+            "9–10": "Map the ownership in one layer of the stack.",
+            "11–12": "Map the ownership behind a real deployment across the stack and present the dependencies to the organisation."
+          }
+        },
+        {
+          "theme": "Small organisations and access",
+          "description": "Whether capability is genuinely available at small scale.",
+          "bands": {
+            "K–2": "Say whether a small club could afford the same tools as a big company.",
+            "3–5": "Work out what one capability would cost a small organisation.",
+            "6–8": "Cost one capability for a small organisation, with a checker.",
+            "9–10": "Cost one capability for a small organisation.",
+            "11–12": "Cost a capability for a real small organisation and advise them honestly on whether it is available to them."
+          }
+        },
+        {
+          "theme": "A market with three suppliers",
+          "description": "What competition looks like when the barrier is capital.",
+          "bands": {
+            "K–2": "Say what happens to prices when only three shops sell something.",
+            "3–5": "Describe what competition looks like when only a few companies can afford to build.",
+            "6–8": "Describe the dynamics in one market with few suppliers, with a checker.",
+            "9–10": "Describe the dynamics in one such market.",
+            "11–12": "Describe the dynamics of a real concentrated market for the people who buy from it."
+          }
+        },
+        {
+          "theme": "Public procurement of these systems",
+          "description": "What a public body should require before buying.",
+          "bands": {
+            "K–2": "Say what a school should ask before buying a helper.",
+            "3–5": "Write what a public body should require before buying a system.",
+            "6–8": "Write the requirements a public body should insist on, with a checker.",
+            "9–10": "Write the requirements you would insist on.",
+            "11–12": "Write the requirements for a real public procurement and get them into the tender."
+          }
+        },
+        {
+          "theme": "Taxation, and where the value is booked",
+          "description": "Where the profit is recorded versus where the work happened.",
+          "bands": {
+            "K–2": "Say why a company might count its money in one country when the work happened in another.",
+            "3–5": "Trace where one company records its profit and where its work was done.",
+            "6–8": "Trace one company's booked profit against where the work was done, with a checker.",
+            "9–10": "Trace one company's booked profit against where the work was actually done.",
+            "11–12": "Trace a real company's booked profit against where its work happened and present the gap to a body that could act."
+          }
+        },
+        {
+          "theme": "An alternative ownership model",
+          "description": "Cooperatives, public options and what each would require.",
+          "bands": {
+            "K–2": "Say how a tool could be owned by the people who use it, like a club.",
+            "3–5": "Argue for one different way to own a system, such as a cooperative.",
+            "6–8": "Argue one alternative ownership model concretely, with a checker.",
+            "9–10": "Argue one alternative ownership model concretely, including what it would require.",
+            "11–12": "Argue an alternative ownership model for a real system to the people who could adopt it, with what it would require."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "PR",
+      "name": "Your own practice",
+      "themes": [
+        {
+          "theme": "Deciding what you will not do",
+          "description": "A personal line, written before it is tested.",
+          "bands": {
+            "K–2": "Say one thing you will never use a helper for, and one time it would be tempting.",
+            "3–5": "Write your own line for using models and one situation that would test it.",
+            "6–8": "Write your own line and one case that would test it, with a checker.",
+            "9–10": "Write your own line and one case that would test it.",
+            "11–12": "Write your line, hold it in a real case that tested it, and record what it cost."
+          }
+        },
+        {
+          "theme": "Working on something you have doubts about",
+          "description": "Voicing a concern usefully rather than resigning or going quiet.",
+          "bands": {
+            "K–2": "Practise saying you are worried about a group project in a way that helps.",
+            "3–5": "Prepare how to raise a worry about a school project without quitting or going quiet.",
+            "6–8": "Prepare a conversation voicing a concern about work you have doubts about, with a checker.",
+            "9–10": "Prepare a conversation that voices a concern about work you have doubts about, usefully.",
+            "11–12": "Have the real conversation about real work you have doubts about, and record what changed."
+          }
+        },
+        {
+          "theme": "Keeping your own judgement sharp",
+          "description": "Practising the thing you have delegated.",
+          "bands": {
+            "K–2": "Do a sum or a drawing yourself this week that a helper could do, to keep the skill.",
+            "3–5": "Plan and follow a week of practising a skill you usually delegate.",
+            "6–8": "Design a practice schedule for a delegated skill and run it, with a checker.",
+            "9–10": "Design a practice schedule for a skill you have delegated, and run it.",
+            "11–12": "Design and run a practice schedule for a term, and measure whether the judgement held."
+          }
+        },
+        {
+          "theme": "Reading outside the field",
+          "description": "The disciplines that see this differently and are worth reading.",
+          "bands": {
+            "K–2": "Read a story or a book about machines from a different point of view and say what surprised you.",
+            "3–5": "Read one piece about technology from a different subject and say what it changed for you.",
+            "6–8": "Read one outside source and state what it changed, with a checker.",
+            "9–10": "Read one outside source and state what it changed.",
+            "11–12": "Read outside sources for a term, state what each changed, and bring one into your real work."
+          }
+        },
+        {
+          "theme": "Explaining your work to somebody it affects",
+          "description": "Accountability to the person on the other end.",
+          "bands": {
+            "K–2": "Tell someone how a tool you set up affects them, and listen to what they say.",
+            "3–5": "Explain a school project to somebody it affects and write down their response.",
+            "6–8": "Explain your work to somebody it affects and record their response, with a checker.",
+            "9–10": "Explain your work to somebody it affects, and record their response.",
+            "11–12": "Explain real work to real people it affects, record their responses, and change the work where warranted."
+          }
+        },
+        {
+          "theme": "Being wrong publicly",
+          "description": "Correcting in public a position you argued for, and what that costs and buys.",
+          "bands": {
+            "K–2": "Say in front of the class that you changed your mind, and why.",
+            "3–5": "Write a correction of something you argued before, for everyone to see.",
+            "6–8": "Write a correction of a real past position, with a checker.",
+            "9–10": "Write a correction of a real past position.",
+            "11–12": "Publish a correction of a real position you argued for, and record what it cost and bought."
+          }
+        },
+        {
+          "theme": "The colleague who disagrees with you",
+          "description": "Keeping a working relationship across a genuine disagreement.",
+          "bands": {
+            "K–2": "Keep working well with a friend after you disagreed about something real.",
+            "3–5": "Describe how you would keep working with a classmate you truly disagree with.",
+            "6–8": "Describe how you would hold a working relationship across a genuine disagreement, with a checker.",
+            "9–10": "Describe how you would hold a working relationship across a genuine disagreement.",
+            "11–12": "Hold a real working relationship across a real disagreement, and write what it required."
+          }
+        },
+        {
+          "theme": "Hype, and your own contribution to it",
+          "description": "Auditing your own claims for overstatement.",
+          "bands": {
+            "K–2": "Find one thing you said about a helper that was more than true, and say it properly.",
+            "3–5": "Check three things you said about a technology for exaggeration.",
+            "6–8": "Audit three of your own claims about technology for overstatement, with a checker.",
+            "9–10": "Audit three of your own claims about technology for overstatement.",
+            "11–12": "Audit your public claims over a year, correct the overstatements, and publish the audit."
+          }
+        },
+        {
+          "theme": "What you would want your work judged on",
+          "description": "A standard stated in advance rather than after.",
+          "bands": {
+            "K–2": "Say how you would like your project to be judged, before it is finished.",
+            "3–5": "Write the standard you want your work judged by, in advance.",
+            "6–8": "Write the standard you would want your own work judged against, with a checker.",
+            "9–10": "Write the standard you would want your own work judged against.",
+            "11–12": "Write the standard for real work in advance, publish it, and have the work judged against it."
+          }
+        },
+        {
+          "theme": "The thing you would tell somebody starting",
+          "description": "Advice that is specific enough to act on.",
+          "bands": {
+            "K–2": "Tell a younger child one useful thing about using helpers well.",
+            "3–5": "Write one piece of advice for somebody starting to use models, specific enough to act on.",
+            "6–8": "Write advice for somebody starting, specific enough to act on, for a real reader, with a checker.",
+            "9–10": "Write the advice you would give somebody starting, specific enough to act on, for a real reader.",
+            "11–12": "Write it for a real person starting, give it to them, and revise it from what they did with it."
+          }
+        }
+      ]
+    }
+  ]
+}
