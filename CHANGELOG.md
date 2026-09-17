@@ -4,6 +4,23 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.76.0] — 2026-09-17
+
+### Added — the Multilateral OS across five bands
+- **`data/promotions/multilateral-os.json`** through the band-suffix
+  override: ten tracks (assessing need, coordination, accountability to
+  people served, programme practice, staff and security, law, mandate
+  and status, budgets, donors and audit, getting things to people,
+  information, rumour and media, after the emergency), 100 themes, five
+  distinct sentences each on the band ladder — 500 rows; no block id,
+  code, credential or transfer check changed. Band-suffix rows
+  7,750 → 7,250; the ratchet lowered.
+- The override now resolves per track: this pack is the first where two
+  tracks share a theme name (*Communicating a decision people will not
+  like*, in accountability and in information), so the normaliser, the
+  dashboard count and the test key override rows by track and theme
+  rather than by theme alone.
+
 ## [0.75.0] — 2026-09-17
 
 ### Added — the Global Health OS across five bands
