@@ -677,14 +677,14 @@ def test_education_os_canonical_injection():
     check("institute: every principle carries its strands", all(isinstance(x.get("strands"), list) and x["strands"] for x in inst["principles"]))
 
 
-KNOWN_BAND_SUFFIX_ROWS = 8250       # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); 9,250 Corporate OS (v0.72.0); 8,750 Science OS (v0.73.0); 8,250 Robotics OS (v0.74.0); the ratchet only falls
+KNOWN_BAND_SUFFIX_ROWS = 7750       # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); 9,250 Corporate OS (v0.72.0); 8,750 Science OS (v0.73.0); 8,250 Robotics OS (v0.74.0); 7,750 Global Health OS (v0.75.0); the ratchet only falls
 BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch & Scale",
                        "Civic Leadership Legacy : Louisiana", "Basic Life Skills & Self-Reliance",
                        "Cognition.X : Louisiana OS"}
 BAND_AUTHORED_THEMES = {"Cognition.X : Louisiana OS": 100}   # two spec parts, one pack
 # packs whose source rows carried the suffix and were overridden through an
 # `override: band-suffix` promotion (v0.72.0): themes overridden, rows expected
-BAND_OVERRIDDEN_PACKS = {"Cognition.X : Corporate OS": (100, 500), "Cognition.X : Science OS": (100, 500), "Cognition.X : Robotics OS": (100, 500)}
+BAND_OVERRIDDEN_PACKS = {"Cognition.X : Corporate OS": (100, 500), "Cognition.X : Science OS": (100, 500), "Cognition.X : Robotics OS": (100, 500), "Cognition.X : Global Health OS": (100, 500)}
 
 
 def test_band_differentiated_descriptions():

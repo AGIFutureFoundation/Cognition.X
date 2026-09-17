@@ -4,6 +4,21 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.75.0] — 2026-09-17
+
+### Added — the Global Health OS across five bands
+- **`data/promotions/global-health-os.json`** through the band-suffix
+  override: ten tracks (primary care at the community, mothers and
+  newborns, infection and outbreak, long conditions, the system around
+  the worker, food and nutrition, water, sanitation and shelter,
+  adolescents and young people, emergency and displacement, ethics at
+  the household door), 100 themes, five distinct sentences each on the
+  band ladder — the younger bands are the child's honest analogue with an
+  adult, never clinical advice; 6–8 in role with a checker; 9–10 the
+  task; 11–12 under supervision in a real programme, to its standard —
+  500 rows; no block id, code, credential or transfer check changed.
+  Band-suffix rows 8,250 → 7,750; the ratchet lowered.
+
 ## [0.74.0] — 2026-09-17
 
 ### Added — the Robotics OS across five bands
