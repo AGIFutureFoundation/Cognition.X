@@ -4,6 +4,24 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.78.0] — 2026-09-17
+
+### Added — Non-Profit Practice across five bands; the sector-OS debt closed
+- **`data/promotions/non-profit-practice.json`** through the band-suffix
+  override: ten tracks (volunteers, board and governance, grants and
+  funders, outcomes and measurement, staff and sustainability, coalitions
+  and the city, programme design, the people served, telling people
+  about it, risk and safeguarding), 100 themes, five distinct sentences
+  each on the band ladder — 500 rows; no block id, code, credential or
+  transfer check changed. Band-suffix rows 6,750 → 6,250; the ratchet
+  lowered.
+- With this pack, prompt 1 of `docs/NEXT_STEPS_2.md` is complete: all
+  seven sector-OS packs are authored across five bands (3,500 rows, the
+  entire sector-OS share of the suffix debt). What remains suffixed —
+  6,250 rows in 25 community and regional packs — has empty source
+  descriptions and needs no override; it is prompt 2, `bands` in the
+  pack specs.
+
 ## [0.77.0] — 2026-09-17
 
 ### Added — the Sapient OS across five bands

@@ -27,7 +27,8 @@ history is in [`CHANGELOG.md`](https://github.com/AGIFutureFoundation/Cognition.
 |---|---|
 | v0.70.0 | The studio in space, round two: a hall's own room loads from glTF or GLB with embedded buffers (offline, refused otherwise) and is drawn under the stations; the studio's simulated, live and under-18 lines stand in the room as signs; scene JSON export |
 | v0.69.0 | The studio in space: every scenario opens as a WebXR room (immersive VR or AR where the browser offers it, a magic window everywhere else, the HTML buttons always beside it), scoring stays in the studio, glTF 2.0 export for any engine or OpenXR world, no tracking kept, `docs/XR_REVIEW.md` sets the stances, register PL-21 |
-| **v0.77.0** | The Sapient OS authored across all five bands through the override: 100 themes, 500 rows, no block id changed; band-suffix rows 7,250 → 6,750 |
+| **v0.78.0** | Non-Profit Practice authored across all five bands through the override — the seventh and last sector pack, closing the sector-OS share of the description debt (3,500 rows since v0.72.0): 100 themes, 500 rows, no block id changed; band-suffix rows 6,750 → 6,250 |
+| v0.77.0 | The Sapient OS authored across all five bands through the override: 100 themes, 500 rows, no block id changed; band-suffix rows 7,250 → 6,750 |
 | v0.76.0 | The Multilateral OS authored across all five bands through the override: 100 themes, 500 rows, no block id changed; band-suffix rows 7,750 → 7,250 |
 | v0.75.0 | The Global Health OS authored across all five bands through the override: 100 themes, 500 rows, no block id changed; band-suffix rows 8,250 → 7,750 |
 | v0.74.0 | The Robotics OS authored across all five bands through the override: 100 themes, 500 rows, no block id changed; band-suffix rows 8,750 → 8,250 |
