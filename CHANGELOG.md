@@ -4,6 +4,21 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.73.0] — 2026-09-17
+
+### Added — the Science OS across five bands
+- **`data/promotions/science-os.json`** through the band-suffix override:
+  ten tracks (the question, method and measurement, data and its
+  handling, reproducibility, community and consequence, the lab as a
+  place, writing it, money and the grant, working with people, from
+  result to use), 100 themes, five distinct sentences each on the band
+  ladder — 500 rows; no block id, code, credential or transfer check
+  changed. Band-suffix rows 9,250 → 8,750; the ratchet lowered.
+- **`tools/author_override.py`** assembles an override promotion from
+  authored band sentences and refuses a theme the source does not carry
+  with a suffix, a duplicate, a short sentence or a suffixed one, so the
+  remaining five sector packs follow the same shape.
+
 ## [0.72.0] — 2026-09-17
 
 ### Added — the description override, and the Corporate OS across five bands

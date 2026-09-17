@@ -1,0 +1,1167 @@
+{
+  "pack": "Cognition.X : Science OS",
+  "override": "band-suffix",
+  "note": "The counted exception to fill-empty-only: every theme here exists in the source with a band-suffixed description (the documented content debt); this promotion replaces exactly those rows with five authored sentences per theme. The normaliser refuses any other target. Track names, prefixes, codes, credentials and transfer checks are untouched.",
+  "tracks": [
+    {
+      "prefix": "QU",
+      "name": "The question",
+      "themes": [
+        {
+          "theme": "What makes a question answerable",
+          "description": "The difference between a question that is interesting and one that has a possible answer.",
+          "bands": {
+            "K–2": "Ask a 'why' question about something in the room and, with an adult, turn it into one you could test today.",
+            "3–5": "Take one big question from class and write two smaller ones you could actually answer with what is in the school.",
+            "6–8": "Take a vague question and produce three answerable versions of it, and have a teacher say which one a class could test.",
+            "9–10": "Take a vague question and produce three answerable versions of it.",
+            "11–12": "Take a real research question from a lab, department or partner, produce three answerable versions, and get one adopted for a real study."
+          }
+        },
+        {
+          "theme": "Reading a paper properly",
+          "description": "Reading structure first, methods second, abstract last, and where the real claim sits.",
+          "bands": {
+            "K–2": "Look at a science book page with an adult: find the picture, the big claim, and one thing that shows it is true.",
+            "3–5": "Read a short science article and write the claim and the evidence on two separate lines.",
+            "6–8": "Read one short paper structure first, methods second, abstract last, and summarise the claim and the evidence separately for a checker.",
+            "9–10": "Read one paper this way and summarise the claim and the evidence separately.",
+            "11–12": "Read three papers this way for a real journal club or lab meeting, and present where each claim exceeds its evidence."
+          }
+        },
+        {
+          "theme": "What has already been tried",
+          "description": "Finding what has been tried, including the attempts that were never published.",
+          "bands": {
+            "K–2": "Before doing an experiment, ask two people whether they have tried it and what happened.",
+            "3–5": "Find out what a classmate or a book already tried on your question before you start, and write it down.",
+            "6–8": "Produce a prior-work summary for a school project that includes at least one attempt that did not work, with a teacher checking sources.",
+            "9–10": "Produce a prior-work summary that includes at least one unpublished or null result.",
+            "11–12": "Produce a prior-work summary for a real study that includes unpublished or null results, and have a specialist confirm nothing major is missing."
+          }
+        },
+        {
+          "theme": "Framing a hypothesis you could be wrong about",
+          "description": "Framing so that a result could contradict you, which is the whole point of the exercise.",
+          "bands": {
+            "K–2": "Say what you think will happen in a class experiment, and what you would see if you were wrong.",
+            "3–5": "Write a prediction for a school experiment and the result that would prove it wrong.",
+            "6–8": "State a hypothesis for a real school experiment and the exact observation that would falsify it, checked by a teacher.",
+            "9–10": "State your hypothesis and the observation that would falsify it.",
+            "11–12": "State the hypothesis and the falsifying observation for a real study, in writing, before data is collected, and have a colleague sign it."
+          }
+        },
+        {
+          "theme": "Scope: the study you can actually run",
+          "description": "Scoping to the study you can actually run with the time, money and access you have.",
+          "bands": {
+            "K–2": "Plan an experiment you could finish in one lesson with what is in the classroom.",
+            "3–5": "Cut a big project idea down to what you can do in a week with school materials, and say what you left out.",
+            "6–8": "Cut a proposed school study to what the real time, materials and access permit, and name what you lost, with a checker.",
+            "9–10": "Cut a proposed study to what your real constraints permit, and name what you lost.",
+            "11–12": "Cut a real proposed study to its real constraints with the people who hold the budget and the access, and document what was lost and why."
+          }
+        },
+        {
+          "theme": "Preregistration and why it stings",
+          "description": "Committing to the analysis before seeing the data, and why that feels like a cost.",
+          "bands": {
+            "K–2": "Before an experiment, tell an adult exactly how you will decide who won, and stick to it.",
+            "3–5": "Write down before a school experiment how you will measure the result, and do not change it afterwards.",
+            "6–8": "Write a preregistration for a small school study, including how the data will be analysed, and lodge it with a teacher before collecting anything.",
+            "9–10": "Write a preregistration for a small study, including the analysis plan.",
+            "11–12": "Write and lodge a preregistration for a real study on a public registry or with a real supervisor, including the analysis plan."
+          }
+        },
+        {
+          "theme": "Talking to somebody who disagrees early",
+          "description": "Finding disagreement early, when it is cheap, rather than at review, when it is not.",
+          "bands": {
+            "K–2": "Tell a friend your experiment idea and listen to one reason it might not work.",
+            "3–5": "Present a project idea to a classmate who might disagree, and write down their objection.",
+            "6–8": "Present a real project question to somebody likely to object, record the objection, and say what you changed.",
+            "9–10": "Present your question to somebody likely to object and record their objection.",
+            "11–12": "Present a real study question to a critical specialist before design is fixed, and document the objections and the design changes they caused."
+          }
+        },
+        {
+          "theme": "The literature that contradicts you",
+          "description": "The literature that undercuts your idea is the most valuable literature you will read.",
+          "bands": {
+            "K–2": "Find one thing in a book that says the opposite of what you thought, and tell an adult.",
+            "3–5": "Find one source that disagrees with your class project idea and say why it might be right.",
+            "6–8": "Find the strongest contrary source for a school project and state what it would take to reconcile the two, checked by a teacher.",
+            "9–10": "Find the strongest contrary paper and state what it would take to reconcile.",
+            "11–12": "Find the strongest contrary paper to a real study, reconcile or concede in writing, and present the result to the team."
+          }
+        },
+        {
+          "theme": "Deciding not to run it",
+          "description": "Stopping before you start, and why that decision is almost never rewarded.",
+          "bands": {
+            "K–2": "Say why you might decide not to do an experiment, and what would change your mind.",
+            "3–5": "Write the case for not doing one school project, and what would make it worth doing.",
+            "6–8": "Write the case for not running one proposed school study, and the conditions that would change it, for a teacher to judge.",
+            "9–10": "Write the case for not running one study, and the conditions that would change it.",
+            "11–12": "Write the case for not running a real proposed study, present it to the people who wanted it, and record the decision."
+          }
+        },
+        {
+          "theme": "Writing the question down before the method",
+          "description": "Writing the question first fixes the method to the question rather than the reverse.",
+          "bands": {
+            "K–2": "Say your question out loud before choosing what to do, and have an adult write it down.",
+            "3–5": "Write your question on one page before deciding how to answer it, and date it.",
+            "6–8": "Produce a one-page question document for a school study, dated before any method is chosen, checked by a teacher.",
+            "9–10": "Produce a one-page question document dated before any method is chosen.",
+            "11–12": "Produce a dated question document for a real study and show, at the end, where the method served the question and where it did not."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "ME",
+      "name": "Method and measurement",
+      "themes": [
+        {
+          "theme": "Choosing an instrument",
+          "description": "Selecting an instrument for the measurement you need, not the one already on the bench.",
+          "bands": {
+            "K–2": "Pick the right measuring tool for a class job — ruler, scale or cup — and say why.",
+            "3–5": "Choose a measuring instrument for a school experiment and say why it is precise enough.",
+            "6–8": "Justify an instrument choice for a real school experiment against the precision the question requires, with a teacher checking.",
+            "9–10": "Justify an instrument choice against the precision the question requires.",
+            "11–12": "Justify an instrument choice for a real study in writing, against the precision required and the alternatives available, for a supervisor to approve."
+          }
+        },
+        {
+          "theme": "Calibration and the drift you did not see",
+          "description": "Calibration as a schedule rather than an event, and the drift that hides between them.",
+          "bands": {
+            "K–2": "Check a scale reads zero with nothing on it before weighing, and tell an adult if it does not.",
+            "3–5": "Check a measuring instrument against something known before a school experiment, and write what you found.",
+            "6–8": "Produce a calibration record for a school instrument over several sessions and identify the drift it would have caught.",
+            "9–10": "Produce a calibration record and identify the drift it would have caught.",
+            "11–12": "Set up and keep a calibration schedule for a real instrument, and show the drift the schedule caught that an event would have missed."
+          }
+        },
+        {
+          "theme": "Controls, and what each one rules out",
+          "description": "Every control rules out one specific alternative explanation. Naming which.",
+          "bands": {
+            "K–2": "In a class experiment, say what the 'nothing changed' cup is for.",
+            "3–5": "For a school experiment, name the control and say what it rules out.",
+            "6–8": "For a real school protocol, state what each control eliminates, checked by a teacher.",
+            "9–10": "For a real protocol, state what each control eliminates.",
+            "11–12": "For a real study protocol, state what each control eliminates and add the control the protocol was missing."
+          }
+        },
+        {
+          "theme": "Sample size before data collection",
+          "description": "Deciding how many before collecting any, and what happens when you decide after.",
+          "bands": {
+            "K–2": "Say how many times you would repeat a test before believing the answer, and why.",
+            "3–5": "Decide how many measurements a school experiment needs before starting, and explain why that number.",
+            "6–8": "Perform a simple sample-size calculation for a school study and state its assumptions, with a teacher checking.",
+            "9–10": "Perform a sample size calculation and state its assumptions.",
+            "11–12": "Perform and document a sample-size calculation for a real study, state the assumptions, and have them challenged by a statistician or supervisor."
+          }
+        },
+        {
+          "theme": "Blinding, where it is possible",
+          "description": "Blinding where the design permits it, and being explicit where it does not.",
+          "bands": {
+            "K–2": "Do a taste or sound test where the person guessing cannot see the answer, and say why that matters.",
+            "3–5": "Design a school experiment where the person judging does not know which is which.",
+            "6–8": "Identify where blinding is possible in a real school study and where it is not, with reasons, checked by a teacher.",
+            "9–10": "Identify where blinding is possible in your work and where it is not, with reasons.",
+            "11–12": "Identify blinding for a real study in its protocol, with reasons where it is impossible, and have the protocol reviewed."
+          }
+        },
+        {
+          "theme": "Recording what you did as you do it",
+          "description": "Recording contemporaneously, because reconstructed records are a different kind of record.",
+          "bands": {
+            "K–2": "Write or draw each step of an experiment as you do it, not afterwards.",
+            "3–5": "Keep a log of a school experiment as it happens, with times.",
+            "6–8": "Keep a contemporaneous log for one full school procedure and have a teacher compare it with what they saw.",
+            "9–10": "Keep a contemporaneous log for one full procedure.",
+            "11–12": "Keep contemporaneous records for a real procedure to a standard an audit would accept, and have them audited."
+          }
+        },
+        {
+          "theme": "The protocol deviation and logging it",
+          "description": "A deviation from protocol is data about the study; hiding it is data about you.",
+          "bands": {
+            "K–2": "When you do a step differently from the plan, tell an adult and write it down.",
+            "3–5": "When a school experiment goes off plan, write what changed and why.",
+            "6–8": "Log a real deviation in a school experiment with its cause and its likely effect on the result.",
+            "9–10": "Log a real deviation with its cause and its likely effect.",
+            "11–12": "Log real deviations for a study and present them with the results so a reader can weigh them."
+          }
+        },
+        {
+          "theme": "Contamination, error and honest failure",
+          "description": "Distinguishing contamination, instrument error and a genuine negative result.",
+          "bands": {
+            "K–2": "When an experiment gives a strange answer, say whether the tool, the mess, or the idea was the reason.",
+            "3–5": "Take one odd result from a school experiment and say whether it was contamination, instrument error, or real.",
+            "6–8": "Take three anomalous results from school experiments and classify each with the evidence, checked by a teacher.",
+            "9–10": "Take three anomalous results and classify each with the evidence.",
+            "11–12": "Take three anomalous results from a real study, classify each with the evidence, and record the decision in the study's record."
+          }
+        },
+        {
+          "theme": "A method somebody else could repeat",
+          "description": "Writing a method somebody else could execute without asking you a question.",
+          "bands": {
+            "K–2": "Write an experiment's steps so a classmate can do it without asking you anything.",
+            "3–5": "Give your written method to a classmate and count the questions they had to ask.",
+            "6–8": "Hand your method to somebody who has not seen it and record every question they ask, then fix the method.",
+            "9–10": "Hand your method to somebody who has not seen it and record every question they ask.",
+            "11–12": "Hand a real method to an outside person, record every question, and publish the corrected method with the study."
+          }
+        },
+        {
+          "theme": "When the method decides the answer",
+          "description": "When the method constrains the answer, and how to notice that before publication.",
+          "bands": {
+            "K–2": "Say how measuring in a different way could change the answer of a class experiment.",
+            "3–5": "Find one choice in a school experiment that limits what you could find out.",
+            "6–8": "Identify one methodological choice in a real school study that bounds what could be concluded, checked by a teacher.",
+            "9–10": "Identify one methodological choice in your work that bounds what you could conclude.",
+            "11–12": "Identify the method-bound conclusions in a real study and write them into its limitations before publication."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "DA",
+      "name": "Data and its handling",
+      "themes": [
+        {
+          "theme": "Raw data, kept raw",
+          "description": "Raw data is never edited. Everything else is a derived copy with a recorded transformation.",
+          "bands": {
+            "K–2": "Keep your first measurements on their own page and never rub them out; copy them to work on.",
+            "3–5": "Keep the original data sheet of a school experiment untouched and work only on a copy.",
+            "6–8": "Produce a folder structure for a school project that makes overwriting the raw data difficult, checked by a teacher.",
+            "9–10": "Produce a directory structure that makes overwriting raw data difficult.",
+            "11–12": "Set up and enforce a raw-data policy for a real project, with the structure and permissions that make overwriting impossible."
+          }
+        },
+        {
+          "theme": "Version control for things that are not code",
+          "description": "Versioning notebooks, protocols, spreadsheets and images, not only code.",
+          "bands": {
+            "K–2": "Save your experiment sheet with a new name each time you change it, so the old one is still there.",
+            "3–5": "Keep numbered versions of a school project document and say what changed in each.",
+            "6–8": "Set up and demonstrate versioning for one non-code artefact — a protocol, a spreadsheet, an image — in a school project.",
+            "9–10": "Set up and demonstrate versioning for one non-code artefact.",
+            "11–12": "Set up versioning for every non-code artefact of a real project and show a colleague how to recover any version."
+          }
+        },
+        {
+          "theme": "Missing data and what you do about it",
+          "description": "Missingness is information. Recording why a value is absent before deciding what to do.",
+          "bands": {
+            "K–2": "When a measurement is missing, write why it is missing instead of making one up.",
+            "3–5": "Mark every missing value in a school dataset with the reason it is missing.",
+            "6–8": "Classify the missing values in one school dataset by cause, and say what you did about each, with a teacher checking.",
+            "9–10": "Classify the missing values in one dataset by cause.",
+            "11–12": "Classify missingness in a real dataset by cause, choose and justify the handling for each, and document it in the analysis record."
+          }
+        },
+        {
+          "theme": "Outliers: investigate before excluding",
+          "description": "An outlier is a hypothesis about an error until you have investigated it.",
+          "bands": {
+            "K–2": "When one measurement looks wrong, check it again before crossing it out.",
+            "3–5": "Find one odd number in a school dataset, investigate it, and say whether to keep it.",
+            "6–8": "Investigate one outlier in a school dataset and document the decision to keep or exclude it, with a teacher checking.",
+            "9–10": "Investigate one outlier and document the decision to keep or exclude.",
+            "11–12": "Investigate every outlier in a real dataset, document each decision, and show the analysis both with and without them."
+          }
+        },
+        {
+          "theme": "Statistics you understand versus statistics you cite",
+          "description": "Using the test you can explain, and citing nothing you could not derive the meaning of.",
+          "bands": {
+            "K–2": "Explain what an average is using a handful of measurements, in your own words.",
+            "3–5": "Explain one way of summarising data — average, range or median — in writing, without jargon.",
+            "6–8": "Explain one statistical test used in a school project, in writing, without jargon, to a classmate who then explains it back.",
+            "9–10": "Explain one statistical test you use, in writing, without jargon.",
+            "11–12": "Explain every statistical test in a real analysis in writing without jargon, and remove any you cannot."
+          }
+        },
+        {
+          "theme": "P-values and what they do not mean",
+          "description": "What a p-value is, what it is not, and the four claims routinely made that it cannot support.",
+          "bands": {
+            "K–2": "Say what it means when a result could have happened by chance.",
+            "3–5": "Explain, with a coin-flip example, why a surprising result can still be chance.",
+            "6–8": "Correct two misstatements about p-values from real published text, with a teacher checking.",
+            "9–10": "Correct four misstatements about p-values from real published text.",
+            "11–12": "Correct four misstatements about p-values in real published text and write the correct sentence for each, for a real audience."
+          }
+        },
+        {
+          "theme": "Plotting the data before modelling it",
+          "description": "Looking at the data before modelling it, because the plot finds what the model assumes away.",
+          "bands": {
+            "K–2": "Draw a picture of your measurements before saying what they show.",
+            "3–5": "Plot a school dataset before working out any summary, and say what the plot shows.",
+            "6–8": "Produce the diagnostic plots for one school dataset before any model is fitted, and say what they rule out.",
+            "9–10": "Produce the diagnostic plots for one dataset before any model is fitted.",
+            "11–12": "Produce and archive the diagnostic plots for a real dataset before modelling, and show what the plots found that the model would have assumed away."
+          }
+        },
+        {
+          "theme": "Sharing data somebody else can use",
+          "description": "A dataset somebody else can use has a dictionary, units, provenance and a licence.",
+          "bands": {
+            "K–2": "Label your measurements with what they are and what unit they are in so a friend can read them.",
+            "3–5": "Share a school dataset with a heading for every column and the units written in.",
+            "6–8": "Publish one small school dataset with a dictionary, units, provenance and a licence, checked by a teacher.",
+            "9–10": "Publish one small dataset with all four present.",
+            "11–12": "Publish a real dataset with all four present to a repository, and have an outside person use it without asking a question."
+          }
+        },
+        {
+          "theme": "Consent and human data",
+          "description": "Consent for human data, what it covered, and the analysis it does not permit.",
+          "bands": {
+            "K–2": "Ask a classmate before writing down anything about them, and say what you will use it for.",
+            "3–5": "Write a consent note for a class survey saying what is collected and what it is for.",
+            "6–8": "Read one consent form and state an analysis it would not authorise, with a teacher checking.",
+            "9–10": "Read one consent form and state an analysis it would not authorise.",
+            "11–12": "Review the consent for a real dataset, state what it does and does not authorise, and stop one analysis it would not."
+          }
+        },
+        {
+          "theme": "Deleting nothing quietly",
+          "description": "Nothing is deleted quietly. Removal is recorded with a reason and a name.",
+          "bands": {
+            "K–2": "If you remove a measurement, write why and put your name next to it.",
+            "3–5": "Keep a list of anything removed from a school dataset, with the reason and who removed it.",
+            "6–8": "Demonstrate a deletion log for one real removal in a school project.",
+            "9–10": "Demonstrate a deletion log for one real removal.",
+            "11–12": "Keep a deletion log for a real project and have it audited against the raw data."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "RP",
+      "name": "Reproducibility",
+      "themes": [
+        {
+          "theme": "Replication as a compliment",
+          "description": "Somebody replicating your work is treating it as important. Responding accordingly.",
+          "bands": {
+            "K–2": "Let a classmate repeat your experiment and be glad if they get the same answer.",
+            "3–5": "Give a classmate everything they need to repeat your school experiment, before they ask.",
+            "6–8": "Prepare the package a replicator would need for a school study, before anyone asks, checked by a teacher.",
+            "9–10": "Prepare the package a replicator would need, before anyone asks.",
+            "11–12": "Prepare and publish the replication package for a real study, and respond to a real replication attempt on the record."
+          }
+        },
+        {
+          "theme": "Your own results, one year later",
+          "description": "Attempting your own result a year later, which is the cheapest reproducibility test there is.",
+          "bands": {
+            "K–2": "Repeat an experiment you did last term using only your old notes, and see if it matches.",
+            "3–5": "Redo a school experiment from last year from your own records alone.",
+            "6–8": "Reproduce one of your own school results from your own records alone, and record what was missing from them.",
+            "9–10": "Reproduce one of your own results from your own records alone.",
+            "11–12": "Reproduce a real result of your own from records alone a year on, and report the outcome to the team either way."
+          }
+        },
+        {
+          "theme": "A lab notebook a stranger could follow",
+          "description": "A notebook written for a stranger, because in two years you are the stranger.",
+          "bands": {
+            "K–2": "Write your experiment notes so someone who was not there could follow them.",
+            "3–5": "Have a classmate follow one page of your science notebook and say where they got lost.",
+            "6–8": "Have somebody unfamiliar follow one of your notebook entries and fix what they could not follow.",
+            "9–10": "Have somebody unfamiliar follow one of your notebook entries.",
+            "11–12": "Have an outside person follow a real notebook entry for a real procedure, and adopt the notebook standard that follows."
+          }
+        },
+        {
+          "theme": "Code and environment, captured",
+          "description": "Capturing the environment as well as the code, since versions decide results.",
+          "bands": {
+            "K–2": "Write down which app or tool you used so someone else can use the same one.",
+            "3–5": "Record the exact tools and versions used for a school data project.",
+            "6–8": "Produce a runnable environment specification for one school analysis, checked by a teacher.",
+            "9–10": "Produce a runnable environment specification for one analysis.",
+            "11–12": "Produce an environment specification for a real analysis and have it run by somebody else on a different machine."
+          }
+        },
+        {
+          "theme": "The result that will not reproduce",
+          "description": "The result that will not reproduce, and the interval before you know which of you is wrong.",
+          "bands": {
+            "K–2": "When a friend gets a different answer, work out together who was right without falling out.",
+            "3–5": "When a school experiment cannot be repeated, write what each side did differently.",
+            "6–8": "Document a failed reproduction of a school result fairly, from both sides, with a teacher checking.",
+            "9–10": "Document a failed reproduction fairly, from both sides.",
+            "11–12": "Document a real failed reproduction fairly from both sides, and publish or share it with the original authors."
+          }
+        },
+        {
+          "theme": "Publishing a null result",
+          "description": "Publishing a null result, where to publish it, and why it matters to people you will never meet.",
+          "bands": {
+            "K–2": "Tell the class when an experiment did not work, and what you learned from it.",
+            "3–5": "Write up a school experiment that found nothing, as carefully as one that did.",
+            "6–8": "Draft a null-result write-up for a school study to the same standard as a positive one.",
+            "9–10": "Draft a null result write-up to publication standard.",
+            "11–12": "Write up a real null result to publication standard and submit it where null results are published."
+          }
+        },
+        {
+          "theme": "Correcting the record",
+          "description": "Correcting the record: the mechanisms, their speed, and the reputational arithmetic.",
+          "bands": {
+            "K–2": "When you made a mistake in a class chart, fix it and tell everyone what changed.",
+            "3–5": "Write a correction note for a school report that had an error, saying what was wrong.",
+            "6–8": "Draft a correction for a real or worked error in a school report, following what a journal would need.",
+            "9–10": "Draft a correction for a real or worked error.",
+            "11–12": "Issue a real correction through the real mechanism, and record how long it took and what it cost."
+          }
+        },
+        {
+          "theme": "Preprints and peer review",
+          "description": "Preprints, peer review, and what each one does and does not certify.",
+          "bands": {
+            "K–2": "Say the difference between showing a friend your work and having a teacher check it.",
+            "3–5": "Explain what it means for other scientists to check a paper before it is published.",
+            "6–8": "Explain to a non-specialist what peer review does and does not guarantee, with a teacher checking.",
+            "9–10": "Explain to a non-specialist what peer review does and does not guarantee.",
+            "11–12": "Explain peer review and preprints to a real non-specialist audience and answer their questions accurately."
+          }
+        },
+        {
+          "theme": "Fraud, error and the space between",
+          "description": "Fraud, error, and the large space between them where most problems actually live.",
+          "bands": {
+            "K–2": "Say the difference between a mistake and cheating in a class experiment.",
+            "3–5": "Sort three cases of wrong results into mistake, carelessness, or cheating, and say why.",
+            "6–8": "Classify three documented cases and defend each classification, with a teacher checking.",
+            "9–10": "Classify three documented cases and defend each classification.",
+            "11–12": "Classify three documented cases for a real training session, defend each, and state the institutional response each warranted."
+          }
+        },
+        {
+          "theme": "What reproducibility costs and who pays",
+          "description": "Reproducibility has a cost, it falls on somebody, and pretending otherwise is why it does not happen.",
+          "bands": {
+            "K–2": "Say what it would take to redo a class experiment, and who would have to give the time.",
+            "3–5": "Work out how long it would take to repeat a school project, and who would pay for that time.",
+            "6–8": "Cost the reproducibility work for one school project and identify who pays, with a teacher checking.",
+            "9–10": "Cost the reproducibility work for one project and identify who pays.",
+            "11–12": "Cost the reproducibility work for a real project, identify who pays, and put it in the real budget."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CO",
+      "name": "Community and consequence",
+      "themes": [
+        {
+          "theme": "Authorship, honestly assigned",
+          "description": "Authorship criteria, applied honestly, including the conversation held before the work starts.",
+          "bands": {
+            "K–2": "Put every name on a group poster that did real work, and say what each person did.",
+            "3–5": "Agree before a group project who will be named and for what, and write it down.",
+            "6–8": "Apply a published authorship standard to a school group project and write the order down, with a teacher checking.",
+            "9–10": "Apply a published authorship standard to a real project and write the order down.",
+            "11–12": "Apply a published authorship standard to a real project with the co-authors, before the work starts, and record the agreement."
+          }
+        },
+        {
+          "theme": "Peer review as a service you owe",
+          "description": "Reviewing is a debt to a system that reviewed you, and it is done properly or not at all.",
+          "bands": {
+            "K–2": "Check a friend's experiment kindly and carefully, and tell them one thing to fix.",
+            "3–5": "Review a classmate's project write-up with a checklist and say what would make it better.",
+            "6–8": "Write one review of a school report to a standard you would be glad to receive, with a teacher checking.",
+            "9–10": "Write one review to a standard you would be glad to receive.",
+            "11–12": "Write a real peer review for a real manuscript to that standard, and have the editor's or author's response confirm it was useful."
+          }
+        },
+        {
+          "theme": "Explaining your work to a non-specialist",
+          "description": "Explaining your work without condescension and without losing the qualifications that matter.",
+          "bands": {
+            "K–2": "Explain your experiment to a younger child in one minute, then ask if they understood.",
+            "3–5": "Explain a school project to a family member in three minutes, and be corrected on one thing.",
+            "6–8": "Explain a school project in five minutes to somebody outside the subject, and be corrected.",
+            "9–10": "Explain your work in five minutes to somebody outside the field, and be corrected.",
+            "11–12": "Explain real research in five minutes to a real non-specialist audience, be corrected, and revise the explanation."
+          }
+        },
+        {
+          "theme": "Dual use and thinking about it early",
+          "description": "Dual use considered at design time, when the design can still change.",
+          "bands": {
+            "K–2": "Say one good and one bad way somebody could use something you made.",
+            "3–5": "Write how a school invention could be used well and how it could be misused.",
+            "6–8": "Write the dual-use paragraph for a school project, honestly, with a teacher checking.",
+            "9–10": "Write the dual-use paragraph for your own work, honestly.",
+            "11–12": "Write the dual-use assessment for real work at design time, and change the design where it warrants."
+          }
+        },
+        {
+          "theme": "Funding and the influence it carries",
+          "description": "Where funding comes from, what it shapes, and what has to be declared.",
+          "bands": {
+            "K–2": "Say who paid for the things used in a class experiment and whether that changes anything.",
+            "3–5": "Find out who paid for a school science resource and whether that might shape what it says.",
+            "6–8": "Trace the funding of one paper and state what it could have influenced, with a teacher checking.",
+            "9–10": "Trace the funding of one paper and state what it could have influenced.",
+            "11–12": "Trace the funding of a real body of work, state what it could have influenced, and write the disclosure that should accompany it."
+          }
+        },
+        {
+          "theme": "Conflicts of interest in research, declared",
+          "description": "Declaring interests, including the ones that feel too small to mention.",
+          "bands": {
+            "K–2": "Say when judging a friend's experiment would be hard to do fairly.",
+            "3–5": "Write down anything that might make you unfair about a classmate's project.",
+            "6–8": "Write your own declaration of interests for a school project and have a classmate challenge its completeness.",
+            "9–10": "Write your own declaration and have somebody challenge its completeness.",
+            "11–12": "Write a real declaration of interests for a real submission, and have it challenged by a colleague and an office."
+          }
+        },
+        {
+          "theme": "Mentoring somebody junior",
+          "description": "Mentoring as a structured obligation rather than an ambient goodwill.",
+          "bands": {
+            "K–2": "Help a younger child with an experiment by asking questions instead of doing it for them.",
+            "3–5": "Agree with a younger student what help you will give them and when.",
+            "6–8": "Agree a written mentoring arrangement with a younger student, with expectations on both sides, checked by a teacher.",
+            "9–10": "Agree a written mentoring arrangement with expectations on both sides.",
+            "11–12": "Run a real mentoring arrangement for a term against written expectations and review it with the mentee."
+          }
+        },
+        {
+          "theme": "Leaving academia well",
+          "description": "Leaving research without treating it as a failure, and what transfers.",
+          "bands": {
+            "K–2": "Say three things a scientist can do that are useful outside a laboratory.",
+            "3–5": "List three jobs a scientist's skills would fit outside research, and say why.",
+            "6–8": "Map a scientist's skills onto three non-academic roles, specifically, with a teacher checking.",
+            "9–10": "Map your research skills onto three non-academic roles, specifically.",
+            "11–12": "Map a real researcher's skills onto three real roles with somebody in each, and write the honest gap for each."
+          }
+        },
+        {
+          "theme": "Science advice to a government",
+          "description": "Advising government: the difference between evidence and a recommendation, and who owns each.",
+          "bands": {
+            "K–2": "Tell the difference between what you found out and what you think people should do.",
+            "3–5": "Write what an experiment showed and, separately, what you would recommend.",
+            "6–8": "Write a one-page advice note for a school council that separates the evidence from the recommendation.",
+            "9–10": "Write a one-page advice note that separates the two explicitly.",
+            "11–12": "Write a real advice note for a real body that separates evidence from recommendation, and record how each part was used."
+          }
+        },
+        {
+          "theme": "The public who paid for it",
+          "description": "Public money, public accountability, and what the public is actually owed.",
+          "bands": {
+            "K–2": "Explain your experiment to a visitor in words they would understand.",
+            "3–5": "Write a short plain-language summary of a school project for parents.",
+            "6–8": "Produce the plain-language summary that should accompany a school project, tested on a parent.",
+            "9–10": "Produce the plain-language summary that should accompany your work.",
+            "11–12": "Produce the plain-language summary for real publicly funded work, test it on the public, and publish it with the work."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "EQ",
+      "name": "The lab as a place",
+      "themes": [
+        {
+          "theme": "Walking into a lab you do not know",
+          "description": "The induction that should happen, and what to establish before touching anything.",
+          "bands": {
+            "K–2": "Before starting in a new science room, find the exits, the sink and the adult in charge.",
+            "3–5": "Do a school lab induction and write down one thing nobody told you.",
+            "6–8": "Complete a real lab induction and list what you were not told, for the person who runs it.",
+            "9–10": "Complete an induction and list what you were not told.",
+            "11–12": "Complete a real induction, list the gaps, and rewrite the induction so the next person is told."
+          }
+        },
+        {
+          "theme": "Shared equipment and the booking sheet",
+          "description": "The social system around a scarce instrument, and what breaks it.",
+          "bands": {
+            "K–2": "Take turns with a class microscope using a list, and say why the list is fair.",
+            "3–5": "Design a fair rota for one piece of shared school equipment.",
+            "6–8": "Design a booking arrangement for a real shared instrument that survives a busy week, with a teacher checking.",
+            "9–10": "Design a booking arrangement that survives a busy week.",
+            "11–12": "Design and run a booking arrangement for a real shared instrument for a month, and revise it from what broke."
+          }
+        },
+        {
+          "theme": "A machine you did not train on",
+          "description": "The line between capable and qualified, and who decides.",
+          "bands": {
+            "K–2": "Say which class tools you are allowed to use alone and which need an adult.",
+            "3–5": "List which school equipment you are trained on and which you are not.",
+            "6–8": "Identify what you may operate in a real lab and what you may not, and who decides, with a teacher checking.",
+            "9–10": "Identify what you may operate and what you may not.",
+            "11–12": "Identify and document operating permissions for a real lab's equipment, and get the missing training scheduled."
+          }
+        },
+        {
+          "theme": "Chemical storage and incompatibility",
+          "description": "What may not be stored together, and the reason each pairing is prohibited.",
+          "bands": {
+            "K–2": "Say why some things in the kitchen or classroom must not be kept together.",
+            "3–5": "Find two things in a school lab that must not be stored together, and say why.",
+            "6–8": "Audit one school storage area against the incompatibility rules, with a teacher checking.",
+            "9–10": "Audit one storage area against the rules.",
+            "11–12": "Audit a real chemical store against the rules, fix what you can, and report the rest to the responsible person."
+          }
+        },
+        {
+          "theme": "Waste streams",
+          "description": "Where each kind of waste goes, and the cost of getting it wrong.",
+          "bands": {
+            "K–2": "Sort classroom waste into the right bins and say what goes where.",
+            "3–5": "Sort five kinds of school lab waste correctly and say what happens if you get one wrong.",
+            "6–8": "Classify ten waste items from a real lab correctly, with a teacher checking.",
+            "9–10": "Classify ten waste items from a real lab correctly and state where each goes.",
+            "11–12": "Audit a real lab's waste streams for a week and report the misclassifications to the people who made them."
+          }
+        },
+        {
+          "theme": "Housekeeping as a scientific control",
+          "description": "A contaminated bench is a source of error, not only a tidiness problem.",
+          "bands": {
+            "K–2": "Clean your work space before an experiment and say why mess can change the result.",
+            "3–5": "Find one way a messy bench could spoil a school experiment.",
+            "6–8": "Trace one contamination pathway in a real school lab space, with a teacher checking.",
+            "9–10": "Trace one contamination pathway in a real space.",
+            "11–12": "Trace contamination pathways in a real lab and change one housekeeping practice on the evidence."
+          }
+        },
+        {
+          "theme": "The equipment log",
+          "description": "What a maintenance and fault log is for, and reading one before running.",
+          "bands": {
+            "K–2": "Before using a class tool, check whether anyone wrote that it is broken.",
+            "3–5": "Read the log for one piece of school equipment before using it.",
+            "6–8": "Read a real equipment log and identify a fault that would affect your work, with a teacher checking.",
+            "9–10": "Read a log and identify a fault that would affect your work.",
+            "11–12": "Keep and read a real equipment log for a month and show a fault it caught before it spoiled a run."
+          }
+        },
+        {
+          "theme": "A breakdown mid-experiment",
+          "description": "What to preserve, what to record, and the decisions that keep the run salvageable.",
+          "bands": {
+            "K–2": "Say what you would do if a class tool stopped working halfway through an experiment.",
+            "3–5": "Write what to save and what to write down if a school experiment breaks down halfway.",
+            "6–8": "Write the breakdown procedure for one real school experiment, checked by a teacher.",
+            "9–10": "Write the breakdown procedure for one experiment.",
+            "11–12": "Write the breakdown procedure for a real experiment, and use or rehearse it with the team."
+          }
+        },
+        {
+          "theme": "Cost per run",
+          "description": "What an experiment costs in consumables, time and instrument hours.",
+          "bands": {
+            "K–2": "Count what one class experiment uses up and say roughly what it costs.",
+            "3–5": "Work out what one school experiment costs in materials and time.",
+            "6–8": "Cost one real school experiment fully — consumables, time, instrument hours — with a teacher checking.",
+            "9–10": "Cost one real experiment fully in consumables, time and instrument hours.",
+            "11–12": "Cost a real experiment fully and put the figure into the project's budget."
+          }
+        },
+        {
+          "theme": "Leaving a bench for the next person",
+          "description": "The handover that makes shared space work.",
+          "bands": {
+            "K–2": "Leave your work space so the next person can start straight away, and ask them if it was.",
+            "3–5": "Hand over a school bench to the next group and have them say what was missing.",
+            "6–8": "Hand over a real bench and have the recipient assess it, with a teacher checking.",
+            "9–10": "Hand over a bench and have the recipient assess it.",
+            "11–12": "Hand over a real bench to the standard of a written handover, and have the assessment recorded."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "WR",
+      "name": "Writing it",
+      "themes": [
+        {
+          "theme": "The paper as an argument",
+          "description": "Structure that carries a claim, rather than a chronology of what you did.",
+          "bands": {
+            "K–2": "Tell the story of your experiment as 'I wanted to know, so I did, and I found', not as everything in order.",
+            "3–5": "Rewrite a school report so it starts with the claim, not with what you did first.",
+            "6–8": "Restructure one draft school report around its argument, with a teacher checking.",
+            "9–10": "Restructure one draft around its argument.",
+            "11–12": "Restructure a real manuscript around its argument with the co-authors, and record what moved."
+          }
+        },
+        {
+          "theme": "Methods somebody could follow",
+          "description": "Writing the section that most determines whether the work is reproducible.",
+          "bands": {
+            "K–2": "Write your steps so a classmate can do the experiment from the paper alone.",
+            "3–5": "Give your written method to a classmate and see if they can do it without asking.",
+            "6–8": "Have somebody attempt your method from the text alone and fix where they failed.",
+            "9–10": "Have somebody attempt your method from the text alone.",
+            "11–12": "Have an outside person attempt a real method from the text alone before submission, and revise the section."
+          }
+        },
+        {
+          "theme": "Figures that carry the finding",
+          "description": "A figure is the part most readers actually read; designing it accordingly.",
+          "bands": {
+            "K–2": "Draw one picture that shows what your experiment found without needing words.",
+            "3–5": "Draw a chart of a school result that shows the finding on its own.",
+            "6–8": "Redraw one school figure so it states the finding without the caption, checked by a teacher.",
+            "9–10": "Redraw one figure so it states the finding without the caption.",
+            "11–12": "Redraw every figure in a real manuscript so each states its finding, and test them on a reader who sees only the figures."
+          }
+        },
+        {
+          "theme": "The abstract, written last",
+          "description": "What belongs in it, and the claim it must not exceed.",
+          "bands": {
+            "K–2": "Say your experiment in three sentences after you finish, not before.",
+            "3–5": "Write a three-sentence summary of a school project that does not claim more than you found.",
+            "6–8": "Write an abstract for a school report that does not overreach the result, checked by a teacher.",
+            "9–10": "Write an abstract that does not overreach the result.",
+            "11–12": "Write a real abstract last, have a colleague check every claim against the results, and submit it."
+          }
+        },
+        {
+          "theme": "Limitations, written honestly",
+          "description": "The section that builds credibility rather than spending it.",
+          "bands": {
+            "K–2": "Say one thing your experiment could not tell you.",
+            "3–5": "Write two things a school experiment could not show, honestly.",
+            "6–8": "Write limitations for a school report that a reviewer would not have to add, checked by a teacher.",
+            "9–10": "Write limitations that a reviewer would not have to add.",
+            "11–12": "Write the limitations for a real manuscript, and check after review that none had to be added."
+          }
+        },
+        {
+          "theme": "Citation as accuracy",
+          "description": "Citing what a source actually says, having read it.",
+          "bands": {
+            "K–2": "When you say a book told you something, show the page.",
+            "3–5": "Check three facts in a school report against the sources they came from.",
+            "6–8": "Verify ten citations in a real draft — that each source says what it is cited for.",
+            "9–10": "Verify ten citations in a real draft against what each source actually says.",
+            "11–12": "Verify every citation in a real manuscript against the sources, and correct the ones that did not say it."
+          }
+        },
+        {
+          "theme": "Responding to review",
+          "description": "Separating the point from the tone, and answering the strongest version.",
+          "bands": {
+            "K–2": "When someone criticises your work rudely but correctly, fix the thing and say thank you.",
+            "3–5": "Answer a harsh comment on a school project by fixing what was right about it.",
+            "6–8": "Write a response to a hostile but correct review of a school report, answering the strongest version.",
+            "9–10": "Write a response to a hostile but correct review.",
+            "11–12": "Write the response to a real review, hostile and correct, and have the resubmission accepted or the reason recorded."
+          }
+        },
+        {
+          "theme": "A title that is findable and true",
+          "description": "The two constraints, which are usually in tension.",
+          "bands": {
+            "K–2": "Give your experiment a title that says what you found and that a friend could search for.",
+            "3–5": "Write three titles for a school project and pick the one that is both true and findable.",
+            "6–8": "Write three titles for a school report and defend one, checked by a teacher.",
+            "9–10": "Write three titles for a real report and defend one as both findable and true.",
+            "11–12": "Write three titles for a real manuscript, defend one to the co-authors, and check it against search after publication."
+          }
+        },
+        {
+          "theme": "Writing with co-authors",
+          "description": "Version control, ownership of sections, and the argument resolved before submission.",
+          "bands": {
+            "K–2": "Agree with a partner who writes which part of a poster before starting.",
+            "3–5": "Agree who writes which section of a group report and how you will merge them.",
+            "6–8": "Agree a writing protocol with a co-author on a school project — versions, sections, how disagreements are settled.",
+            "9–10": "Agree a writing protocol with a co-author.",
+            "11–12": "Agree and follow a writing protocol with real co-authors through a real submission."
+          }
+        },
+        {
+          "theme": "The plain-language summary",
+          "description": "Explaining the work to the people who funded it, without loss.",
+          "bands": {
+            "K–2": "Explain your experiment to a grandparent so they understand what you found.",
+            "3–5": "Write a plain-language summary of a school project and test it on someone at home.",
+            "6–8": "Write one plain-language summary and test it on a non-specialist, with a teacher checking.",
+            "9–10": "Write one and test it on a non-specialist.",
+            "11–12": "Write the plain-language summary for real work, test it on the funders' audience, and publish it alongside."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "FN",
+      "name": "Money and the grant",
+      "themes": [
+        {
+          "theme": "Where research money comes from",
+          "description": "The funders, their purposes, and what each is actually buying.",
+          "bands": {
+            "K–2": "Say who pays for science at a school, a hospital or a museum.",
+            "3–5": "Find out who funds one kind of science and what they want from it.",
+            "6–8": "Map the funders relevant to one field and their priorities, with a teacher checking.",
+            "9–10": "Map the funders relevant to your field and their priorities.",
+            "11–12": "Map the real funders for a real research area, their priorities and their cycles, for a team's planning."
+          }
+        },
+        {
+          "theme": "Reading a call properly",
+          "description": "What the call is asking for, and the applications it will not fund whatever their quality.",
+          "bands": {
+            "K–2": "Read the rules of a class competition and say what it is really asking for.",
+            "3–5": "Read a competition or grant notice and say what it would not fund, whatever the quality.",
+            "6–8": "Assess one real funding call for fit with a school project before writing anything.",
+            "9–10": "Assess one call for fit before writing anything.",
+            "11–12": "Assess a real call for a real project, decide with the team whether to apply, and record why."
+          }
+        },
+        {
+          "theme": "A budget that is real",
+          "description": "Costing work honestly, including the parts routinely under-costed.",
+          "bands": {
+            "K–2": "Make a list of everything a class experiment needs and what each thing costs.",
+            "3–5": "Build a full budget for a school project, including the things people forget.",
+            "6–8": "Build a full budget for a small school project, including the parts routinely under-costed, checked by a teacher.",
+            "9–10": "Build a full budget for a small project.",
+            "11–12": "Build the full budget for a real proposal to the funder's rules, and have a finance office check it."
+          }
+        },
+        {
+          "theme": "Costing people",
+          "description": "Staff time as the dominant cost, and the effects of under-costing it.",
+          "bands": {
+            "K–2": "Work out how many hours of people's time a class project takes, and count it as a cost.",
+            "3–5": "Add people's time to a school project budget and see how much of the total it is.",
+            "6–8": "Cost the people on one school project properly, with a teacher checking.",
+            "9–10": "Cost the people on one project properly.",
+            "11–12": "Cost the people on a real proposal at real rates including overheads, and defend it to the finance office."
+          }
+        },
+        {
+          "theme": "The case for support",
+          "description": "Making an argument to somebody outside your specialism in limited space.",
+          "bands": {
+            "K–2": "Explain to someone who was not there why your experiment matters, in one minute.",
+            "3–5": "Write one page saying why a school project deserves the materials it needs.",
+            "6–8": "Write a two-page case for a school project and test it on a non-specialist, with a teacher checking.",
+            "9–10": "Write a two-page case and test it on a non-specialist.",
+            "11–12": "Write the case for support for a real proposal, test it on a non-specialist reviewer, and submit it."
+          }
+        },
+        {
+          "theme": "Rejection, and reading the feedback",
+          "description": "What review feedback tells you and what it does not.",
+          "bands": {
+            "K–2": "When a project is not chosen, read why and say one thing you would change.",
+            "3–5": "Read the feedback on a school entry that lost and decide what to do differently.",
+            "6–8": "Analyse one real rejection of a school project and decide whether to resubmit, with a teacher checking.",
+            "9–10": "Analyse one rejection and decide whether to resubmit.",
+            "11–12": "Analyse a real rejection with the team, decide on resubmission, and record what the feedback did and did not tell you."
+          }
+        },
+        {
+          "theme": "Reporting to a funder",
+          "description": "What is owed, when, and the report that keeps a relationship rather than closing it.",
+          "bands": {
+            "K–2": "Tell the person who gave you materials what you did with them.",
+            "3–5": "Write a short report to whoever paid for a school project on what was done.",
+            "6–8": "Write one interim report for a school project to the person who funded it, checked by a teacher.",
+            "9–10": "Write one interim report to a real funder in the format and by the date they set.",
+            "11–12": "Write a real interim report to a real funder on time, to their format, with the honest gaps in it."
+          }
+        },
+        {
+          "theme": "Underspend and overspend",
+          "description": "What each means, and the conversation that has to happen early.",
+          "bands": {
+            "K–2": "Say what you would do if a class project had money left over, or ran out.",
+            "3–5": "Work through what happens if a school project spends too little or too much.",
+            "6–8": "Model underspend and overspend against a real school project budget and say what conversation each needs.",
+            "9–10": "Model underspend and overspend against a real budget and name the conversation each needs.",
+            "11–12": "Model both against a real grant budget and have the early conversation with the funder or office that each requires."
+          }
+        },
+        {
+          "theme": "Funding that shapes the question",
+          "description": "Recognising when the money is choosing the work.",
+          "bands": {
+            "K–2": "Say how a prize might make you choose an experiment you did not really want to do.",
+            "3–5": "Find one example where the money on offer changed what a project was about.",
+            "6–8": "Identify one instance where funding shaped a research question and state what you would do, with a teacher checking.",
+            "9–10": "Identify one instance and state what you would do.",
+            "11–12": "Identify a real instance in your own field or team, state what you would do, and do it or record why not."
+          }
+        },
+        {
+          "theme": "The gap between grants",
+          "description": "The structural insecurity of research careers, and planning against it.",
+          "bands": {
+            "K–2": "Say what a scientist might do when one project ends and the next has not started.",
+            "3–5": "Plan what a researcher could do during a gap between two funded projects.",
+            "6–8": "Plan for one funding gap for a real research group, with a teacher checking.",
+            "9–10": "Plan for one real funding gap, covering the money, the work and the people.",
+            "11–12": "Plan for a real funding gap with the people affected, including the money, the work and the people, and act on it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "TE",
+      "name": "Working with people",
+      "themes": [
+        {
+          "theme": "A group with one instrument and four people",
+          "description": "Coordinating scarce resources without the loudest person winning.",
+          "bands": {
+            "K–2": "Share one class instrument between four fairly, without the loudest getting it first.",
+            "3–5": "Design a fair way for a group of four to share one piece of school equipment.",
+            "6–8": "Design an allocation for a real shared instrument that survives disagreement, with a teacher checking.",
+            "9–10": "Design an allocation that survives disagreement.",
+            "11–12": "Design and run an allocation for a real group's instrument for a term, and revise it after the first disagreement."
+          }
+        },
+        {
+          "theme": "A supervisor relationship that works",
+          "description": "What to ask for, what to expect, and what to do when it is not there.",
+          "bands": {
+            "K–2": "Tell your teacher what help you need for a project and when you will show progress.",
+            "3–5": "Agree with a teacher what you expect from each other on a school project.",
+            "6–8": "Agree written expectations with a supervisor for a school project, with a teacher checking.",
+            "9–10": "Agree written expectations with a supervisor.",
+            "11–12": "Agree written expectations with a real supervisor and review them together after three months."
+          }
+        },
+        {
+          "theme": "Disagreeing about a result",
+          "description": "Holding a technical disagreement without it becoming a personal one.",
+          "bands": {
+            "K–2": "When you and a partner get different answers, argue about the numbers, not each other.",
+            "3–5": "Hold a disagreement about a school result to a conclusion without it getting personal.",
+            "6–8": "Run a structured disagreement about a school result to a conclusion, with a teacher observing.",
+            "9–10": "Run a structured disagreement to a conclusion.",
+            "11–12": "Run a structured disagreement about a real result in a real group and record the conclusion and how it was reached."
+          }
+        },
+        {
+          "theme": "A collaborator in another country",
+          "description": "Time zones, equipment differences, and the assumptions that do not travel.",
+          "bands": {
+            "K–2": "Find out what is different about a school day in another country and what it would change if you worked together.",
+            "3–5": "Plan how you would share a project with a class in another country, including the time difference.",
+            "6–8": "Write a collaboration protocol for a real cross-border school project, with a teacher checking.",
+            "9–10": "Write a collaboration protocol for a real cross-border project, naming the assumptions that do not travel.",
+            "11–12": "Write and agree a collaboration protocol with a real partner abroad, including the assumptions that did not travel."
+          }
+        },
+        {
+          "theme": "Data sharing inside a team",
+          "description": "Who holds what, who may use it, and what is agreed before collection.",
+          "bands": {
+            "K–2": "Agree with your group who keeps the results and who may use them.",
+            "3–5": "Write down before a group project who holds the data and who may use it.",
+            "6–8": "Draft a within-team data agreement for a school project, with a teacher checking.",
+            "9–10": "Draft a within-team data agreement for a real project before collection starts.",
+            "11–12": "Draft and sign a within-team data agreement for a real project before collection begins."
+          }
+        },
+        {
+          "theme": "Somebody is not delivering",
+          "description": "Addressing it early, factually, and without making it about character.",
+          "bands": {
+            "K–2": "Tell a group member kindly and early that their part is not done, and ask what is in the way.",
+            "3–5": "Prepare what you would say to a classmate who has not done their part of a project.",
+            "6–8": "Prepare the conversation for a real group where somebody is not delivering — early, factual, not about character.",
+            "9–10": "Prepare the early, factual conversation with a real teammate who is not delivering.",
+            "11–12": "Have the real conversation in a real group, early and factually, and record what changed."
+          }
+        },
+        {
+          "theme": "Credit inside a group",
+          "description": "Recognising contributions that do not appear in an author list.",
+          "bands": {
+            "K–2": "Say what each person in your group did, including the jobs nobody sees.",
+            "3–5": "Write a record of who did what in a group project, including work that is not in the write-up.",
+            "6–8": "Produce a contribution record for one school project, with a teacher checking.",
+            "9–10": "Produce a contribution record for one project.",
+            "11–12": "Produce and publish a contribution record for a real project, agreed by every contributor."
+          }
+        },
+        {
+          "theme": "A team member in difficulty",
+          "description": "Noticing, and the boundary between support and clinical judgement.",
+          "bands": {
+            "K–2": "Notice when a group member is unhappy and tell a trusted adult.",
+            "3–5": "Say the signs that a classmate is struggling and who you would go to.",
+            "6–8": "Identify the referral you would make for a real teammate in difficulty, and the boundary you would keep, with a teacher checking.",
+            "9–10": "Identify the referral you would make for a real teammate in difficulty, and the boundary you keep.",
+            "11–12": "Make a real referral for a real team member, keeping to the boundary, and record the support that followed."
+          }
+        },
+        {
+          "theme": "Onboarding somebody new",
+          "description": "The month that determines whether they become productive or stall.",
+          "bands": {
+            "K–2": "Show a new classmate how the science room works in their first week.",
+            "3–5": "Write a first-week plan for a new member of a school project group.",
+            "6–8": "Write a first-month plan for a new member of a real group, with a teacher checking.",
+            "9–10": "Write a first-month plan for a real newcomer that gets them productive rather than stalled.",
+            "11–12": "Write and run a first-month plan for a real newcomer, and review with them what made the difference."
+          }
+        },
+        {
+          "theme": "A group after its leader leaves",
+          "description": "Continuity of knowledge, data and direction.",
+          "bands": {
+            "K–2": "Say what a group should write down so it can carry on if the leader leaves.",
+            "3–5": "Write a plan for a school club to carry on when its leader leaves.",
+            "6–8": "Write the continuity plan for a real group — knowledge, data and direction — with a teacher checking.",
+            "9–10": "Write the continuity plan for a real group.",
+            "11–12": "Write the continuity plan for a real group with its leader, and test it against a real or rehearsed departure."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "IM",
+      "name": "From result to use",
+      "themes": [
+        {
+          "theme": "What happens after publication",
+          "description": "The realistic path from a paper to anything changing, and its timescale.",
+          "bands": {
+            "K–2": "Follow one science discovery to something it changed in daily life.",
+            "3–5": "Trace one real discovery from a paper to a thing people use, and how long it took.",
+            "6–8": "Trace one real result to its use, or to its absence of use, with a teacher checking.",
+            "9–10": "Trace one real result to its use, or to its absence of use.",
+            "11–12": "Trace a real result from your own field to its use or non-use, and present the timescale and the reasons to the team."
+          }
+        },
+        {
+          "theme": "Translation, and the valley in the middle",
+          "description": "The stage where most results stop, and why it is under-funded.",
+          "bands": {
+            "K–2": "Say why a good idea might never become a real thing.",
+            "3–5": "Find one discovery that stopped before becoming useful, and say where it stopped.",
+            "6–8": "Identify where one real result would stall between paper and use, with a teacher checking.",
+            "9–10": "Identify where one real result would stall between paper and use, and why.",
+            "11–12": "Identify where a real result would stall and what it would cost to carry it across, for the people who could fund it."
+          }
+        },
+        {
+          "theme": "Talking to a practitioner",
+          "description": "What a clinician, engineer or teacher needs that a paper does not provide.",
+          "bands": {
+            "K–2": "Ask a nurse, a builder or a teacher what they would need to know to use a science fact.",
+            "3–5": "Present a school result to someone who does the job it affects and write down their questions.",
+            "6–8": "Present one real result to a practitioner and record their questions, with a teacher checking.",
+            "9–10": "Present one result to a practitioner and record their questions.",
+            "11–12": "Present a real result to real practitioners, record their questions, and revise the output so it answers them."
+          }
+        },
+        {
+          "theme": "Intellectual property, briefly",
+          "description": "What can be protected, what is disclosed by publishing, and the timing.",
+          "bands": {
+            "K–2": "Say what happens when you tell everyone your idea before you finish it.",
+            "3–5": "Say what publishing a school invention would give away and what could be protected.",
+            "6–8": "State what publishing would disclose in one real case, with a teacher checking.",
+            "9–10": "State what publishing would disclose in one case.",
+            "11–12": "State what publishing would disclose for real work, take it to the office that decides, and record the decision on timing."
+          }
+        },
+        {
+          "theme": "A spin-out, and whether it should exist",
+          "description": "The honest test for whether a company is the right vehicle.",
+          "bands": {
+            "K–2": "Say whether an invention should become a shop, a gift, or a lesson, and why.",
+            "3–5": "Apply a simple written test to a school invention to decide whether it should become a company.",
+            "6–8": "Apply the honest test for a company to one real result, with a teacher checking.",
+            "9–10": "Apply the honest company test to one real result and write the answer.",
+            "11–12": "Apply the test to a real result with the people who would form the company, and record the honest answer."
+          }
+        },
+        {
+          "theme": "Standards and where research enters them",
+          "description": "How evidence becomes a specification, and the bodies that do it.",
+          "bands": {
+            "K–2": "Find one rule everyone follows — a safety mark, a size — and say who decided it.",
+            "3–5": "Find one standard that came from evidence, and the body that made it.",
+            "6–8": "Identify the standards body for one field and how evidence enters its rules, with a teacher checking.",
+            "9–10": "Identify the standards body for one field.",
+            "11–12": "Identify the standards body for real work and map the route by which a real result would enter a specification."
+          }
+        },
+        {
+          "theme": "Media, and the sentence that gets quoted",
+          "description": "Preparing the one sentence, so it is yours rather than invented.",
+          "bands": {
+            "K–2": "Say your experiment's finding in one sentence a newspaper could print correctly.",
+            "3–5": "Write the one sentence you would want a reporter to quote about a school project.",
+            "6–8": "Write the one sentence for a real result and test it against a mock interview, with a teacher checking.",
+            "9–10": "Write it and test it against a journalist.",
+            "11–12": "Write the sentence for real work, test it in a real press or public setting, and check what was quoted."
+          }
+        },
+        {
+          "theme": "Overclaiming, and the cost of it",
+          "description": "The specific damage done by a result oversold, to the field and to the next result.",
+          "bands": {
+            "K–2": "Find a headline that says more than the science did, and say what it should have said.",
+            "3–5": "Find one case where a result was oversold and say what harm it did.",
+            "6–8": "Find one case of overclaiming and describe the damage to the field and the next result, with a teacher checking.",
+            "9–10": "Find one real case of overclaiming and describe the damage to the field and the next result.",
+            "11–12": "Find a real case in your own field, describe the damage, and write the claim the evidence actually supported."
+          }
+        },
+        {
+          "theme": "Evidence that changed a policy",
+          "description": "What made it usable, which is rarely its novelty.",
+          "bands": {
+            "K–2": "Find one rule at school or home that changed because of something people found out.",
+            "3–5": "Find one law or rule that changed because of evidence, and say what made the evidence usable.",
+            "6–8": "Present one case of evidence changing a policy and identify the operative factor, with a teacher checking.",
+            "9–10": "Present one case and identify the operative factor.",
+            "11–12": "Present a real case to a real audience and identify the operative factor, then apply it to a result of your own."
+          }
+        },
+        {
+          "theme": "The result that should not be used yet",
+          "description": "Saying so publicly, against commercial or institutional pressure to let it be used now.",
+          "bands": {
+            "K–2": "Say why a new idea might need more testing before people use it.",
+            "3–5": "Write what you would say if someone wanted to use a school result before it was checked.",
+            "6–8": "Write the statement you would make about a result that should not be used yet, with a teacher checking.",
+            "9–10": "Write the public statement you would make that a real result should not be used yet.",
+            "11–12": "Make the statement, publicly and on the record, for a real result under real pressure to use it now."
+          }
+        }
+      ]
+    }
+  ]
+}
