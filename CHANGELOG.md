@@ -4,6 +4,18 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.77.0] — 2026-09-17
+
+### Added — the Sapient OS across five bands
+- **`data/promotions/sapient-os.json`** through the band-suffix override:
+  ten tracks (understanding a model, using one at work or school, harms
+  plainly, governance, the next decades, building with a model,
+  evaluating a system, data and what trains it, value, work and who
+  captures it, your own practice), 100 themes, five distinct sentences
+  each on the band ladder — 500 rows; no block id, code, credential or
+  transfer check changed. Band-suffix rows 7,250 → 6,750; the ratchet
+  lowered.
+
 ## [0.76.0] — 2026-09-17
 
 ### Added — the Multilateral OS across five bands
