@@ -1,0 +1,1167 @@
+{
+  "pack": "Cognition.X : Global Health OS",
+  "override": "band-suffix",
+  "note": "The counted exception to fill-empty-only: every theme here exists in the source with a band-suffixed description (the documented content debt); this promotion replaces exactly those rows with five authored sentences per theme. The normaliser refuses any other target. Track names, prefixes, codes, credentials and transfer checks are untouched.",
+  "tracks": [
+    {
+      "prefix": "PC",
+      "name": "Primary care at the community",
+      "themes": [
+        {
+          "theme": "What a community health worker actually does",
+          "description": "The actual scope of the role, and the boundary at which it stops and refers.",
+          "bands": {
+            "K–2": "Say what a health helper in your community does, and one thing they send to a doctor instead.",
+            "3–5": "Describe the job of a community health worker and where it stops and a clinic takes over.",
+            "6–8": "State the scope of a real community health role and its referral boundary, and be corrected by somebody who holds it.",
+            "9–10": "State the scope and the referral boundary, and be corrected by a supervisor.",
+            "11–12": "State the scope and referral boundary of a real role for a real team, be corrected by the supervisor, and write the corrected version into its induction."
+          }
+        },
+        {
+          "theme": "A household visit, structured",
+          "description": "A household visit with a structure, so the same things are covered every time.",
+          "bands": {
+            "K–2": "Practise a pretend visit with a checklist so you ask the same things every time.",
+            "3–5": "Carry out a role-played household visit from a checklist and fill in the record.",
+            "6–8": "Conduct a structured visit in role under observation and complete the record, with a checker.",
+            "9–10": "Conduct a structured visit under observation and complete the record.",
+            "11–12": "Conduct real structured visits under supervision, complete the records, and have the structure reviewed against what the visits found."
+          }
+        },
+        {
+          "theme": "Danger signs and when to refer",
+          "description": "The danger signs that mean refer now, memorised rather than looked up.",
+          "bands": {
+            "K–2": "Learn the signs that mean 'get an adult now' — very hot, cannot breathe well, cannot wake — and say them from memory.",
+            "3–5": "Recite the danger signs a health worker must act on at once, and what they do for each.",
+            "6–8": "Recite the danger signs and demonstrate the referral action for each in role, with a checker.",
+            "9–10": "Recite the danger signs and demonstrate the referral action for each.",
+            "11–12": "Recite the danger signs and demonstrate each referral action under assessment, and teach them to a new worker."
+          }
+        },
+        {
+          "theme": "Growth, nutrition and the chart",
+          "description": "Growth monitoring, the chart, and what a flattening line is telling you.",
+          "bands": {
+            "K–2": "Measure a plant or a pet every week, draw the line, and say what a flat line would mean.",
+            "3–5": "Plot a series of a child's weights on a growth chart and point to where the line stops rising.",
+            "6–8": "Plot a real anonymised series on a growth chart and identify the point at which action was required, with a checker.",
+            "9–10": "Plot a real series and identify the point at which action was required.",
+            "11–12": "Plot real series under supervision, identify each point where action was required, and check the action that was taken."
+          }
+        },
+        {
+          "theme": "Immunisation and the cold chain",
+          "description": "Immunisation schedules and the cold chain that decides whether the vaccine works.",
+          "bands": {
+            "K–2": "Say why some medicines must stay cold, and check a fridge thermometer with an adult.",
+            "3–5": "Read a fridge temperature record and find the day the vaccines got too warm.",
+            "6–8": "Check a real cold-chain record and identify a break, with a checker.",
+            "9–10": "Check a cold chain record and identify a break.",
+            "11–12": "Audit a real cold chain over a month, identify every break, and report what happened to the vaccines affected."
+          }
+        },
+        {
+          "theme": "Malaria, pneumonia, diarrhoea: the big three",
+          "description": "The three conditions that kill the most children, and what community-level action does.",
+          "bands": {
+            "K–2": "Name the three illnesses that hurt the most children in the world, and one thing that helps with each.",
+            "3–5": "For the three big childhood illnesses, say what a community worker can do for each.",
+            "6–8": "Demonstrate the assessment and classification for each of the three in role, with a checker.",
+            "9–10": "Demonstrate the assessment and classification for each of the three.",
+            "11–12": "Demonstrate assessment and classification for all three under supervision, and be assessed on real or simulated cases to the programme standard."
+          }
+        },
+        {
+          "theme": "Stock, resupply and running out",
+          "description": "Stock, consumption rates, and forecasting so the resupply arrives before the shortage.",
+          "bands": {
+            "K–2": "Count the class supplies used in a week and work out when they will run out.",
+            "3–5": "From how fast a supply is used, work out when to reorder so it arrives in time.",
+            "6–8": "Calculate a resupply quantity from real consumption data, with a checker.",
+            "9–10": "Calculate a resupply quantity from real consumption data.",
+            "11–12": "Run the resupply calculation for a real post for three months and show the stockout it prevented."
+          }
+        },
+        {
+          "theme": "The register and why it is filled in",
+          "description": "The register: why it is filled in, who reads it, and what it is not for.",
+          "bands": {
+            "K–2": "Fill in a class attendance register neatly and say who reads it.",
+            "3–5": "Complete a practice health register correctly and say who sees it and who does not.",
+            "6–8": "Complete a register correctly in role and state who sees it and who does not, with a checker.",
+            "9–10": "Complete a register correctly and state who sees it and who does not.",
+            "11–12": "Complete real registers under supervision and explain to a new worker who reads them and what they are not for."
+          }
+        },
+        {
+          "theme": "Working with a facility that is far away",
+          "description": "Working when the facility is hours away, and what that distance changes.",
+          "bands": {
+            "K–2": "Work out how long it takes to get to the nearest doctor from your home, and what you would need for the trip.",
+            "3–5": "Map how far the clinic is from a community and what the journey needs.",
+            "6–8": "Map the actual referral time for a real community and design around it, with a checker.",
+            "9–10": "Map the actual referral time and design around it.",
+            "11–12": "Map real referral times for a real catchment and redesign the referral plan with the facility."
+          }
+        },
+        {
+          "theme": "Being from the community you serve",
+          "description": "Serving the community you belong to: the trust it buys and the confidentiality it strains.",
+          "bands": {
+            "K–2": "Say why it is hard to keep a secret about a friend, and why a health helper must.",
+            "3–5": "Describe why knowing everyone makes a health worker's job easier and harder.",
+            "6–8": "Describe a real or realistic confidentiality conflict and the boundary you would hold, with a checker.",
+            "9–10": "Describe a real confidentiality conflict and the boundary you would hold.",
+            "11–12": "Describe a real confidentiality conflict you faced or observed, the boundary held, and what it cost, for a peer group."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "MN",
+      "name": "Mothers and newborns",
+      "themes": [
+        {
+          "theme": "Antenatal contact and what it is for",
+          "description": "What antenatal contact is actually for, beyond attendance being counted.",
+          "bands": {
+            "K–2": "Say why a mother-to-be visits a nurse before the baby comes.",
+            "3–5": "List what each pregnancy check-up is for, not just that it happened.",
+            "6–8": "State the purpose of each antenatal contact and what it screens for, with a checker.",
+            "9–10": "State the purpose of each contact and what it screens for.",
+            "11–12": "State the purpose of each contact for a real programme and audit a set of records for whether each purpose was met."
+          }
+        },
+        {
+          "theme": "Danger signs in pregnancy",
+          "description": "Danger signs in pregnancy, recognised and acted on without waiting for confirmation.",
+          "bands": {
+            "K–2": "Say one sign that means a pregnant person needs help straight away, and whom to tell.",
+            "3–5": "Recognise the pregnancy danger signs in a story and say what to do.",
+            "6–8": "Recognise the signs in scenarios and demonstrate the action in role, with a checker.",
+            "9–10": "Recognise the signs in scenarios and demonstrate the action.",
+            "11–12": "Recognise and act on the signs under supervised assessment, and teach the recognition to families."
+          }
+        },
+        {
+          "theme": "Birth preparedness and transport",
+          "description": "Birth preparedness including the transport plan, which is the part that usually fails.",
+          "bands": {
+            "K–2": "Plan how a family would get to a hospital quickly, including who drives.",
+            "3–5": "Write a birth plan for a story family with a named way of getting to care.",
+            "6–8": "Complete a birth plan in role with a named transport arrangement, with a checker.",
+            "9–10": "Complete a birth plan with a named transport arrangement.",
+            "11–12": "Complete real birth plans with real families under supervision, and follow whether the transport arrangement held."
+          }
+        },
+        {
+          "theme": "The first hour after birth",
+          "description": "The first hour after birth and the small number of things that matter most in it.",
+          "bands": {
+            "K–2": "Say the most important things a newborn needs in its first hour: warmth, breathing, feeding.",
+            "3–5": "List the first-hour steps for a newborn in order.",
+            "6–8": "Demonstrate the first-hour sequence on a model, with a checker.",
+            "9–10": "Demonstrate the first-hour newborn sequence on a model to the programme standard.",
+            "11–12": "Demonstrate the first-hour sequence under assessment to the programme standard, and support it at a real birth under supervision."
+          }
+        },
+        {
+          "theme": "Newborn danger signs",
+          "description": "Newborn danger signs, which differ from adult signs and are easily missed.",
+          "bands": {
+            "K–2": "Say how a newborn shows it is unwell differently from a grown-up.",
+            "3–5": "Recognise newborn danger signs in a story and say what to do.",
+            "6–8": "Identify newborn danger signs in scenarios and state the action, with a checker.",
+            "9–10": "Identify newborn danger signs in scenarios and state the action.",
+            "11–12": "Identify newborn danger signs under supervised assessment and teach them to new parents in their words."
+          }
+        },
+        {
+          "theme": "Postnatal contact",
+          "description": "Postnatal contact, its timing, and the period when most deaths actually occur.",
+          "bands": {
+            "K–2": "Say why a nurse visits a new baby and mother in the first days.",
+            "3–5": "List the visits after a birth and what each one checks.",
+            "6–8": "State the postnatal schedule and what each visit checks, with a checker.",
+            "9–10": "State the schedule and what each visit checks.",
+            "11–12": "State the schedule for a real programme and audit real records for the visits that were missed in the highest-risk days."
+          }
+        },
+        {
+          "theme": "Feeding, and the advice that is safe to give",
+          "description": "Feeding advice that is safe to give at community level, and where it stops.",
+          "bands": {
+            "K–2": "Say what a baby eats in its first months, and who to ask if it is not feeding well.",
+            "3–5": "Say what feeding advice a helper may give and what must go to a nurse.",
+            "6–8": "State what feeding advice you may give at community level and what you must refer, with a checker.",
+            "9–10": "State what you may advise and what you must refer.",
+            "11–12": "State the boundary for a real programme, apply it in supervised contacts, and record every referral made."
+          }
+        },
+        {
+          "theme": "Loss, and sitting with it",
+          "description": "Sitting with loss, without a script that makes it easier for you and harder for them.",
+          "bands": {
+            "K–2": "Say what you would do to be kind to a friend who is sad, without trying to fix it.",
+            "3–5": "Practise being with somebody who has lost someone, and name what you would not say.",
+            "6–8": "Practise the presence in role, and name what you would not say, with a checker.",
+            "9–10": "Practise the presence, and name what you would not say.",
+            "11–12": "Support a real family after a loss under supervision, and debrief what was said and not said."
+          }
+        },
+        {
+          "theme": "Referral that actually happens",
+          "description": "A referral that actually happens: the follow-up that turns advice into arrival.",
+          "bands": {
+            "K–2": "When you send a friend to an adult for help, check later that they went.",
+            "3–5": "Follow a story referral from advice to arrival and find where it could have failed.",
+            "6–8": "Track one referral in role or record to completion and identify where it nearly failed, with a checker.",
+            "9–10": "Track one referral to completion and identify where it nearly failed.",
+            "11–12": "Track real referrals to completion for a month and redesign the follow-up from where they nearly failed."
+          }
+        },
+        {
+          "theme": "A maternal death review",
+          "description": "A maternal death review as learning rather than blame, and what it requires of the room.",
+          "bands": {
+            "K–2": "Say why people look at what went wrong after a sad event, to learn rather than to blame.",
+            "3–5": "Explain why a review after a death is for learning, and what it needs from the people in the room.",
+            "6–8": "Take part in a simulated review and identify one system change it produced, with a checker.",
+            "9–10": "Participate in a review process and identify one system change it produced.",
+            "11–12": "Participate in a real review under its rules and follow one system change it produced through to practice."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "IN",
+      "name": "Infection and outbreak",
+      "themes": [
+        {
+          "theme": "Hand hygiene as a system, not a poster",
+          "description": "Hand hygiene as a supplied, timed, monitored system rather than an instruction.",
+          "bands": {
+            "K–2": "Check whether your class has soap and water where hands get washed, and tell an adult if not.",
+            "3–5": "Watch when people at school actually wash their hands and count how often it happens.",
+            "6–8": "Audit hand hygiene at real moments and report compliance honestly, with a checker.",
+            "9–10": "Audit hand hygiene at real moments and report compliance honestly.",
+            "11–12": "Audit hand hygiene at a real site, report honestly, and fix one supply or timing problem the audit found."
+          }
+        },
+        {
+          "theme": "Waste, sharps and the injury",
+          "description": "Sharps, waste streams, and the injury that happens during disposal rather than use.",
+          "bands": {
+            "K–2": "Say what to do if you find a needle on the ground: do not touch, tell an adult.",
+            "3–5": "Show how sharp things are disposed of safely and what to do if someone is pricked.",
+            "6–8": "Demonstrate safe disposal and state the post-exposure procedure, with a checker.",
+            "9–10": "Demonstrate safe disposal and state the post-exposure procedure.",
+            "11–12": "Demonstrate safe disposal under assessment, and audit a real site's sharps handling against the post-exposure procedure."
+          }
+        },
+        {
+          "theme": "An outbreak: the first suspicion",
+          "description": "The first suspicion of an outbreak, and the cost of waiting for certainty.",
+          "bands": {
+            "K–2": "Say what you would do if lots of classmates got the same illness at once.",
+            "3–5": "Say when several similar illnesses become something to report, and to whom.",
+            "6–8": "Describe the threshold at which you would report a suspected outbreak, and to whom, with a checker.",
+            "9–10": "Describe the threshold at which you would report, and to whom.",
+            "11–12": "Describe the threshold for a real setting, agree it with the reporting authority, and rehearse the report."
+          }
+        },
+        {
+          "theme": "Contact tracing without surveillance",
+          "description": "Contact tracing that finds contacts without building a surveillance record.",
+          "bands": {
+            "K–2": "Work out who a sick classmate sat with this week, and say why that helps.",
+            "3–5": "Design a way to find who a sick person met without keeping a list forever.",
+            "6–8": "Design a tracing process and state what it does not retain, with a checker.",
+            "9–10": "Design a tracing process and state what it does not retain.",
+            "11–12": "Design a tracing process for a real setting, state what it does not retain, and have it reviewed for what it should not."
+          }
+        },
+        {
+          "theme": "Isolation that a household can sustain",
+          "description": "Isolation a household can actually sustain, given one room and shared water.",
+          "bands": {
+            "K–2": "Say how a family in one room could keep a sick person a bit apart.",
+            "3–5": "Plan how a story family with one room and shared water could isolate someone.",
+            "6–8": "Design an isolation plan for a real household constraint, with a checker.",
+            "9–10": "Design an isolation plan for a real household constraint.",
+            "11–12": "Design isolation plans with real households under supervision, and record which parts they could sustain."
+          }
+        },
+        {
+          "theme": "Vaccination in a rumour environment",
+          "description": "Vaccination where rumour is present, which is answered by relationships, not correction.",
+          "bands": {
+            "K–2": "Listen to a worry a friend has about an injection before saying anything about the facts.",
+            "3–5": "Practise a conversation that starts from what a person is worried about, not from what is true.",
+            "6–8": "Prepare and run a conversation in role that starts from the concern rather than the fact, with a checker.",
+            "9–10": "Prepare a conversation that starts from the concern rather than the fact.",
+            "11–12": "Have real conversations under supervision that start from the concern, and record what changed and what did not."
+          }
+        },
+        {
+          "theme": "Protecting the health worker",
+          "description": "Protecting the health worker, who is the resource that cannot be resupplied.",
+          "bands": {
+            "K–2": "Say how a helper stays safe while helping someone who is ill.",
+            "3–5": "List the ways a health worker could catch an illness and what protects them.",
+            "6–8": "Identify your own exposure risks in a real or simulated role and the controls that exist for each, with a checker.",
+            "9–10": "Identify your own exposure risks and the controls that exist for each.",
+            "11–12": "Identify exposure risks for a real team and audit whether each control actually exists."
+          }
+        },
+        {
+          "theme": "Data reporting during an outbreak",
+          "description": "Reporting during an outbreak, when the data is worst and matters most.",
+          "bands": {
+            "K–2": "Count and report something quickly and check you counted right.",
+            "3–5": "Fill in a practice outbreak report against the clock and check it for mistakes.",
+            "6–8": "Complete an outbreak report under time pressure and check it for errors, with a checker.",
+            "9–10": "Complete an outbreak report under time pressure and check it for errors.",
+            "11–12": "Complete real or exercise outbreak reports under time pressure, check them, and report the error rate honestly."
+          }
+        },
+        {
+          "theme": "When the advice changes",
+          "description": "When the advice changes, and saying so without destroying the credibility of the next message.",
+          "bands": {
+            "K–2": "Say how you would tell friends a rule changed without them stopping trusting you.",
+            "3–5": "Write a short message explaining a changed instruction so people still believe the next one.",
+            "6–8": "Draft the message explaining a changed instruction, with a checker.",
+            "9–10": "Draft the message explaining a changed instruction.",
+            "11–12": "Draft and deliver a real changed-advice message to a real community, and record how it was received."
+          }
+        },
+        {
+          "theme": "After: what the community remembers",
+          "description": "What the community remembers afterwards, which shapes the next outbreak more than any plan.",
+          "bands": {
+            "K–2": "Ask an adult what they remember about a time lots of people were ill.",
+            "3–5": "Interview somebody about a past outbreak and write what stayed with them.",
+            "6–8": "Interview somebody about a past outbreak and record what stayed with them, with a checker.",
+            "9–10": "Interview somebody about a past outbreak and record what stayed with them.",
+            "11–12": "Interview several people about a past outbreak and present what stayed with them to the people planning for the next one."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "NC",
+      "name": "Long conditions",
+      "themes": [
+        {
+          "theme": "Hypertension found in a living room",
+          "description": "Hypertension found at home, the measurement, and what community-level follow-up looks like.",
+          "bands": {
+            "K–2": "With an adult, watch a blood pressure reading being taken and say why it is done twice.",
+            "3–5": "Take a practice blood pressure reading twice and say what number would need a doctor.",
+            "6–8": "Measure correctly, twice, and state the referral threshold, with a checker.",
+            "9–10": "Measure correctly, twice, and state the referral threshold.",
+            "11–12": "Measure correctly under assessment and run community follow-up for real readings under supervision."
+          }
+        },
+        {
+          "theme": "Diabetes and the daily work of it",
+          "description": "Diabetes as daily work done by the person, not by the clinic.",
+          "bands": {
+            "K–2": "Say what a person with diabetes has to do every single day.",
+            "3–5": "Build a daily routine for a story person with diabetes and find where it is hard to keep.",
+            "6–8": "Build a daily routine in role with somebody and identify its failure points, with a checker.",
+            "9–10": "Build a daily routine with somebody and identify its failure points.",
+            "11–12": "Build daily routines with real people under supervision and review the failure points after a month."
+          }
+        },
+        {
+          "theme": "Adherence and why people stop",
+          "description": "Why people stop taking medicine, which is rarely the reason assumed.",
+          "bands": {
+            "K–2": "Say why someone might stop taking medicine even when it helps.",
+            "3–5": "Interview an adult about a time they stopped a treatment and write the real reason.",
+            "6–8": "Interview somebody who stopped a medicine and record the actual reasons, with a checker.",
+            "9–10": "Interview somebody who stopped and record the actual reasons.",
+            "11–12": "Interview several people who stopped, record the reasons, and present them to the people who assumed different ones."
+          }
+        },
+        {
+          "theme": "Mental health at the community level",
+          "description": "Mental health at community level: what may be supported, and what must be referred.",
+          "bands": {
+            "K–2": "Say what you can do for a sad friend and when you should get an adult.",
+            "3–5": "Say what a community helper may do for someone's mental health and what must go to a professional.",
+            "6–8": "State the boundary and demonstrate a referral conversation in role, with a checker.",
+            "9–10": "State the boundary and demonstrate a referral conversation.",
+            "11–12": "State the boundary for a real programme and make real referrals under supervision, recording each."
+          }
+        },
+        {
+          "theme": "Disability, and the household around it",
+          "description": "Disability and the household around it, including the person doing the caring.",
+          "bands": {
+            "K–2": "Say who helps a person who needs care at home, and what the helper needs too.",
+            "3–5": "Describe what a family caring for somebody needs, including the carer.",
+            "6–8": "Assess a story or role-played household's support need including the carer's, with a checker.",
+            "9–10": "Assess a household's support need including the carer's.",
+            "11–12": "Assess real households under supervision including the carer's need, and link each to the support that exists."
+          }
+        },
+        {
+          "theme": "Palliative care where there is no hospice",
+          "description": "Palliative care where there is no hospice, delivered by family with support.",
+          "bands": {
+            "K–2": "Say how a family can help someone who is very ill feel comfortable at home.",
+            "3–5": "Plan how a family could keep somebody comfortable at home with help.",
+            "6–8": "Build a home comfort-care plan in role with the family as the deliverer, with a checker.",
+            "9–10": "Build a home care plan for comfort, with the family as the deliverer.",
+            "11–12": "Build home care plans with real families under supervision, and review them with the family after a week."
+          }
+        },
+        {
+          "theme": "Pain relief and the law on it",
+          "description": "Pain relief, the law that restricts it, and the gap that leaves people in.",
+          "bands": {
+            "K–2": "Say why some medicines are only given by certain people.",
+            "3–5": "Find out which pain medicines a community worker may and may not give where you live.",
+            "6–8": "State the legal position on pain relief where you are and the route that exists, with a checker.",
+            "9–10": "State the legal position where you are and the route that exists.",
+            "11–12": "State the legal position for a real programme, map the route, and document one real case where the gap left someone in pain."
+          }
+        },
+        {
+          "theme": "The medicine that is out of stock",
+          "description": "The medicine that is out of stock, and what you do in the interval.",
+          "bands": {
+            "K–2": "Say what a helper should do when the medicine cupboard is empty.",
+            "3–5": "Write what to do in the weeks when a medicine has run out, and who to tell.",
+            "6–8": "Describe the interim plan and the escalation for a real or described stockout, with a checker.",
+            "9–10": "Describe the interim plan and the escalation for a real stockout.",
+            "11–12": "Manage a real stockout under supervision: the interim plan, the escalation, and the record of who went without."
+          }
+        },
+        {
+          "theme": "A care plan a family can run",
+          "description": "A care plan a family can actually run, written in their words.",
+          "bands": {
+            "K–2": "Write a simple plan for looking after a sick pet or plant in words a younger child could follow.",
+            "3–5": "Write a care plan for a story family in the family's own words and read it back to them.",
+            "6–8": "Write a care plan in role with a family in their words and have them read it back, with a checker.",
+            "9–10": "Write one with a family and have them read it back.",
+            "11–12": "Write care plans with real families under supervision, have them read back, and revise after the first week of use."
+          }
+        },
+        {
+          "theme": "Living with something for thirty years",
+          "description": "Thirty years of a condition, and what changes across that time.",
+          "bands": {
+            "K–2": "Talk to an adult who has had the same condition a long time about what changed.",
+            "3–5": "Map how a long condition changes over a life and what help each stage needs.",
+            "6–8": "Map the stages of one long condition and what support each needs, with a checker.",
+            "9–10": "Map the stages of one long condition and what support each needs.",
+            "11–12": "Map the stages of a real condition with somebody living it, and match each stage to the support that exists locally."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SY",
+      "name": "The system around the worker",
+      "themes": [
+        {
+          "theme": "Supervision that helps rather than checks",
+          "description": "Supervision that develops rather than inspects, and what to ask for from it.",
+          "bands": {
+            "K–2": "Tell your teacher what you want help with before they check your work.",
+            "3–5": "Write your own list of what you want from a supervisor meeting and bring it.",
+            "6–8": "Prepare a supervision session with your own agenda, in role, with a checker.",
+            "9–10": "Prepare a supervision session with your own agenda.",
+            "11–12": "Prepare and lead a real supervision session on your own agenda, and record what it produced."
+          }
+        },
+        {
+          "theme": "Being paid, on time, as a health worker",
+          "description": "Being paid on time as a health worker, and what happens to services when you are not.",
+          "bands": {
+            "K–2": "Say what happens to a job when the person doing it is not paid.",
+            "3–5": "Describe what would happen to a village clinic if its workers were paid late.",
+            "6–8": "Document the payment process for a real or described role and the point at which it breaks, with a checker.",
+            "9–10": "Document the payment process and the point at which it breaks.",
+            "11–12": "Document the real payment process for a real cadre, the break points, and raise them with the office that pays."
+          }
+        },
+        {
+          "theme": "The referral chain and its breaks",
+          "description": "The referral chain, its breaks, and where a patient is most likely to be lost.",
+          "bands": {
+            "K–2": "Draw the path from a sick person at home to a doctor, and mark where they might get lost.",
+            "3–5": "Trace a story patient from home to hospital and mark where the chain could break.",
+            "6–8": "Trace one real referral chain end to end and mark the break points, with a checker.",
+            "9–10": "Trace one chain end to end and mark the break points.",
+            "11–12": "Trace real referral chains for a real catchment, mark the breaks, and propose the fix for the most common one."
+          }
+        },
+        {
+          "theme": "Data that goes up and never comes back",
+          "description": "Data that goes up and never comes back, and what would change if it did.",
+          "bands": {
+            "K–2": "Count something for the class and say what you would want to know back from the count.",
+            "3–5": "Pick one number a clinic reports upward and say what the clinic could do if it came back.",
+            "6–8": "Identify one indicator a real post reports and what you would do with it returned, with a checker.",
+            "9–10": "Identify one indicator you report and what you would do with it returned.",
+            "11–12": "Identify the indicators a real post reports, get one returned, and use it to change something."
+          }
+        },
+        {
+          "theme": "Working with traditional practitioners",
+          "description": "Working alongside traditional practitioners, who are usually consulted first.",
+          "bands": {
+            "K–2": "Say who people in your community ask first when they are unwell.",
+            "3–5": "Describe how a health worker could work alongside a traditional healer respectfully.",
+            "6–8": "Describe a working relationship with a traditional practitioner that neither dismisses nor endorses, with a checker.",
+            "9–10": "Describe a working relationship that neither dismisses nor endorses.",
+            "11–12": "Build a real working relationship with a traditional practitioner under supervision, and document the referrals in both directions."
+          }
+        },
+        {
+          "theme": "A ministry, a donor and a project cycle",
+          "description": "A ministry, a donor and a project cycle, and how the three shape your work.",
+          "bands": {
+            "K–2": "Say who pays for the nurse at a clinic and who decides what they do.",
+            "3–5": "Map who pays for one health role and when that money ends.",
+            "6–8": "Map the funding behind a real health role and its end date, with a checker.",
+            "9–10": "Map the funding behind your own role and its end date.",
+            "11–12": "Map the funding behind a real team's roles, their end dates, and the plan for each ending."
+          }
+        },
+        {
+          "theme": "When the project ends",
+          "description": "When the project ends: what continues, what stops, and who was told.",
+          "bands": {
+            "K–2": "Say what happens to a club when the person who ran it leaves.",
+            "3–5": "Write what continues and what stops when a story project ends, and who was told.",
+            "6–8": "Write the honest continuity plan for a real or described project ending, with a checker.",
+            "9–10": "Write the honest continuity plan for a project ending.",
+            "11–12": "Write the continuity plan for a real project ending with the people affected, and follow what actually continued."
+          }
+        },
+        {
+          "theme": "Career progression for a CHW",
+          "description": "Career progression for a community health worker, where it exists and where it does not.",
+          "bands": {
+            "K–2": "Say what a health helper could become after years of doing the job.",
+            "3–5": "Find out what a community health worker can progress to where you live.",
+            "6–8": "Map the available progression for community health workers where you are, including its absence, with a checker.",
+            "9–10": "Map the available progression where you are, including its absence.",
+            "11–12": "Map the real progression for a real cadre, present its absence honestly, and propose one step to the people who could create it."
+          }
+        },
+        {
+          "theme": "Speaking for your community upward",
+          "description": "Speaking upward for your community, with evidence rather than anecdote.",
+          "bands": {
+            "K–2": "Tell the head teacher one thing your class needs, with a reason.",
+            "3–5": "Prepare a short request to a school leader for your community with a number in it.",
+            "6–8": "Prepare one representation for a community with data and a specific ask, with a checker.",
+            "9–10": "Prepare one representation with data and a specific ask.",
+            "11–12": "Make a real representation upward for a real community with data and a specific ask, and record the answer."
+          }
+        },
+        {
+          "theme": "What you cannot fix and must still face",
+          "description": "What you cannot fix, and continuing to work without pretending you can.",
+          "bands": {
+            "K–2": "Say one thing you cannot fix for a friend, and how you can still help.",
+            "3–5": "Name one problem a health worker cannot fix and how they keep working anyway.",
+            "6–8": "Name one real thing a health worker cannot fix and describe how you would hold it, with a checker.",
+            "9–10": "Name one thing a health worker cannot fix and describe how you hold it while continuing to work.",
+            "11–12": "Name one you have faced in real work, describe how you hold it, and share it with peers who face the same."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "NU",
+      "name": "Food and nutrition",
+      "themes": [
+        {
+          "theme": "What a household actually eats",
+          "description": "Assessing intake without a clinic, and the questions that get an honest answer.",
+          "bands": {
+            "K–2": "Write down everything your family ate yesterday, honestly.",
+            "3–5": "Ask a story family what they ate this week with questions that get an honest answer.",
+            "6–8": "Complete a household food assessment in role, with a checker.",
+            "9–10": "Complete a household food assessment with a real family under supervision.",
+            "11–12": "Complete real household food assessments under supervision and compare them with what the households first said."
+          }
+        },
+        {
+          "theme": "Malnutrition recognised at the door",
+          "description": "The signs a community worker may act on, and the referral that follows.",
+          "bands": {
+            "K–2": "Say how you might tell that a child is not getting enough food, and whom to tell.",
+            "3–5": "Recognise the signs of malnutrition in a story and say what to do.",
+            "6–8": "Identify the signs and demonstrate the referral in role, with a checker.",
+            "9–10": "Identify the signs and demonstrate the referral.",
+            "11–12": "Identify the signs and make real referrals under supervision, to the programme standard."
+          }
+        },
+        {
+          "theme": "Feeding a child who will not eat",
+          "description": "The common causes, and the ones that are medical rather than behavioural.",
+          "bands": {
+            "K–2": "Say some reasons a little child might refuse food.",
+            "3–5": "Sort reasons a child will not eat into everyday ones and ones that need a nurse.",
+            "6–8": "Distinguish behavioural and medical causes in described cases, with a checker.",
+            "9–10": "Distinguish the causes in described cases.",
+            "11–12": "Distinguish the causes in real cases under supervision and refer the medical ones."
+          }
+        },
+        {
+          "theme": "Supplementary feeding and its rules",
+          "description": "What the programme provides, who qualifies, and the discharge criteria.",
+          "bands": {
+            "K–2": "Say who gets extra food from a feeding programme and why.",
+            "3–5": "Read the rules of a feeding programme and say who qualifies and when they leave it.",
+            "6–8": "State the criteria for one real programme, with a checker.",
+            "9–10": "State the criteria for one real programme.",
+            "11–12": "State and apply the criteria for a real programme under supervision, including discharge."
+          }
+        },
+        {
+          "theme": "Food security across a year",
+          "description": "Lean seasons, and planning that is annual rather than monthly.",
+          "bands": {
+            "K–2": "Say which months food is hardest to get where you live, and why.",
+            "3–5": "Map a story family's year and find its hardest month.",
+            "6–8": "Map a household's year and its hardest month, with a checker.",
+            "9–10": "Map a household's year and its hardest month.",
+            "11–12": "Map the year for real households under supervision and plan for the hardest month with them."
+          }
+        },
+        {
+          "theme": "Cooking, fuel and what it costs",
+          "description": "Fuel as a food cost, and the compromises households make when it rises.",
+          "bands": {
+            "K–2": "Say what you need to cook a meal besides the food, and what it costs.",
+            "3–5": "Work out the cost of cooking fuel for a family for a week against their food.",
+            "6–8": "Cost cooking fuel against food for one household, with a checker.",
+            "9–10": "Cost cooking fuel against food for one household.",
+            "11–12": "Cost fuel against food for real households and present the trade-offs they make to the programme that advises them."
+          }
+        },
+        {
+          "theme": "Water for food and water for drinking",
+          "description": "Two supplies, often the same one, and the risk when they are.",
+          "bands": {
+            "K–2": "Say where your home's water for cooking and drinking comes from.",
+            "3–5": "Trace all the ways a story household uses water and where each comes from.",
+            "6–8": "Trace one household's water uses, with a checker.",
+            "9–10": "Trace one real household's water uses and where each supply comes from.",
+            "11–12": "Trace real households' water uses under supervision and identify the risk where one supply serves both."
+          }
+        },
+        {
+          "theme": "Growing something at a household scale",
+          "description": "What is realistic on the land actually available.",
+          "bands": {
+            "K–2": "Grow something to eat in a pot and say what it needed.",
+            "3–5": "Plan what a family could grow on a small real plot.",
+            "6–8": "Design a plan for a real plot, with a checker.",
+            "9–10": "Design a growing plan for a real household plot with the land actually available.",
+            "11–12": "Design and support a plan for a real household plot through one season, and record what grew."
+          }
+        },
+        {
+          "theme": "Advice that is affordable to follow",
+          "description": "Nutrition advice priced against the household it is given to.",
+          "bands": {
+            "K–2": "Say whether a food you would suggest costs more than a family can pay.",
+            "3–5": "Price one piece of food advice against a story family's budget.",
+            "6–8": "Cost your own advice for one household, with a checker.",
+            "9–10": "Cost your own nutrition advice against one real household's budget.",
+            "11–12": "Cost your advice for real households under supervision and change the advice the households cannot afford."
+          }
+        },
+        {
+          "theme": "Food aid and the market around it",
+          "description": "What distribution does to local prices and producers.",
+          "bands": {
+            "K–2": "Say what happens to a shop when free food is given out nearby.",
+            "3–5": "Describe what free food distribution does to the people who sell food locally.",
+            "6–8": "Describe the market effect in one real case, with a checker.",
+            "9–10": "Describe what a real food distribution did to local prices and producers.",
+            "11–12": "Describe the market effect of a real distribution with evidence from local sellers, for the people who plan the next one."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "WS",
+      "name": "Water, sanitation and shelter",
+      "themes": [
+        {
+          "theme": "Where the water comes from",
+          "description": "Tracing a household supply to its source and the risks along it.",
+          "bands": {
+            "K–2": "Follow your home's water back as far as you can and say where it might get dirty.",
+            "3–5": "Trace a story household's water from source to cup and mark the risks.",
+            "6–8": "Trace one real supply end to end, with a checker.",
+            "9–10": "Trace one real water supply end to end and mark the risks along it.",
+            "11–12": "Trace real supplies for a real community and report the risk points to the people responsible for them."
+          }
+        },
+        {
+          "theme": "Making water safe at home",
+          "description": "The methods, their real effectiveness and what each costs.",
+          "bands": {
+            "K–2": "Say three ways to make water safer to drink.",
+            "3–5": "Compare two ways of making water safe on how well they work and what they cost.",
+            "6–8": "Compare three methods on cost and effect, with a checker.",
+            "9–10": "Compare three methods on cost and effect.",
+            "11–12": "Compare methods for real households and help each choose one they can sustain."
+          }
+        },
+        {
+          "theme": "A latrine that people will use",
+          "description": "Design, distance, privacy and the reasons facilities go unused.",
+          "bands": {
+            "K–2": "Say what makes a toilet somewhere people are willing to go.",
+            "3–5": "Assess a school toilet for whether people actually use it, and why.",
+            "6–8": "Assess one real facility for actual use, with a checker.",
+            "9–10": "Assess one real latrine for whether people actually use it, and why.",
+            "11–12": "Assess real facilities for actual use and present the reasons for disuse to the people who build them."
+          }
+        },
+        {
+          "theme": "Handwashing where water is carried",
+          "description": "Making it possible when every litre was walked for.",
+          "bands": {
+            "K–2": "Design a handwashing spot that uses very little water.",
+            "3–5": "Build a tippy-tap or similar station for a place with carried water.",
+            "6–8": "Design a station for a real constraint, with a checker.",
+            "9–10": "Design a handwashing station for a real place where every litre is carried.",
+            "11–12": "Design and install stations with real households and check after a month whether they are used."
+          }
+        },
+        {
+          "theme": "Waste that has nowhere to go",
+          "description": "Household and community waste, and what happens in the absence of a service.",
+          "bands": {
+            "K–2": "Say where rubbish goes when nobody collects it, and what that causes.",
+            "3–5": "Map where a community's waste goes when there is no collection.",
+            "6–8": "Map one community's waste flow, with a checker.",
+            "9–10": "Map one real community's waste flow in the absence of a collection service.",
+            "11–12": "Map a real community's waste flow and present it to the body that should collect it."
+          }
+        },
+        {
+          "theme": "Drainage and standing water",
+          "description": "The connection to vector-borne disease, made concrete.",
+          "bands": {
+            "K–2": "Find standing water near school and say why mosquitoes like it.",
+            "3–5": "Find the standing water in one area and say what disease risk it carries.",
+            "6–8": "Identify the standing water in one real area and its risk, with a checker.",
+            "9–10": "Identify the standing water in one area and its risk.",
+            "11–12": "Survey standing water across a real area, rank the risks, and act on the highest with the community."
+          }
+        },
+        {
+          "theme": "A shelter that is dry in the rains",
+          "description": "What fails first, and what a household can do before the season.",
+          "bands": {
+            "K–2": "Check whether your home has anywhere the rain gets in, and what could be done before the rains.",
+            "3–5": "Assess a story shelter before the rainy season and say what fails first.",
+            "6–8": "Assess one real shelter before a rainy season, with a checker.",
+            "9–10": "Assess one shelter before a rainy season.",
+            "11–12": "Assess real shelters before a rainy season under supervision and help households act on what fails first."
+          }
+        },
+        {
+          "theme": "Crowding and what it transmits",
+          "description": "Occupancy as a health variable, described without blame.",
+          "bands": {
+            "K–2": "Say why illnesses spread faster when many people share a small room.",
+            "3–5": "Describe how the number of people in a room affects health, without blaming anyone.",
+            "6–8": "Assess one household honestly for crowding and its risks, with a checker.",
+            "9–10": "Assess one real household's occupancy honestly and describe the risk without blame.",
+            "11–12": "Assess real households honestly under supervision and describe occupancy without blame in the records."
+          }
+        },
+        {
+          "theme": "Menstrual health and the facilities for it",
+          "description": "What is required, and what its absence costs in school and work attendance.",
+          "bands": {
+            "K–2": "Say why a school needs private toilets with water for everyone.",
+            "3–5": "Assess whether a school has what girls need to stay in school every day of the month.",
+            "6–8": "Assess one real facility against the requirement, with a checker.",
+            "9–10": "Assess one facility against the requirement.",
+            "11–12": "Assess real facilities against the requirement and present the attendance cost of the gaps to the school or employer."
+          }
+        },
+        {
+          "theme": "Repairing a broken water point",
+          "description": "Who owns it, who fixes it, and why so many stay broken.",
+          "bands": {
+            "K–2": "Find out who fixes the tap at school when it breaks.",
+            "3–5": "Find out who owns a community water point and who is supposed to fix it.",
+            "6–8": "Trace responsibility for one real water point, with a checker.",
+            "9–10": "Trace responsibility for one water point.",
+            "11–12": "Trace responsibility for real broken water points and get one repaired by the responsible party."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "AD",
+      "name": "Adolescents and young people",
+      "themes": [
+        {
+          "theme": "A service a young person will actually attend",
+          "description": "Hours, privacy, cost and the staff attitude that decides it.",
+          "bands": {
+            "K–2": "Say what would make you want to go to a doctor's room, and what would put you off.",
+            "3–5": "Assess a service from a young person's point of view: hours, privacy, cost, and how staff treat you.",
+            "6–8": "Assess one real service from a young person's position, with a checker.",
+            "9–10": "Assess one service from a young person's position.",
+            "11–12": "Assess real services with real young people and present the findings to the services."
+          }
+        },
+        {
+          "theme": "Confidentiality and its limits, explained first",
+          "description": "Saying what is confidential and what is not, before anything is disclosed.",
+          "bands": {
+            "K–2": "Say what a helper keeps private and the one time they must tell someone, before you tell them anything.",
+            "3–5": "Practise explaining what is confidential and what is not before somebody shares.",
+            "6–8": "Deliver the confidentiality explanation in role, with a checker.",
+            "9–10": "Deliver the confidentiality explanation in role, before anything is disclosed, to an assessor.",
+            "11–12": "Deliver the explanation in real contacts under supervision, and be assessed on its accuracy and timing."
+          }
+        },
+        {
+          "theme": "Puberty, and the information that arrives late",
+          "description": "What is asked, and who is available to answer.",
+          "bands": {
+            "K–2": "Say who you could ask about how bodies change as you grow.",
+            "3–5": "Find out who young people can ask about puberty where you live, and whether they are easy to reach.",
+            "6–8": "Identify who answers these questions locally, with a checker.",
+            "9–10": "Identify who answers these questions locally.",
+            "11–12": "Map who answers these questions locally, find the gaps, and propose who should fill them."
+          }
+        },
+        {
+          "theme": "Sexual health information that is accurate",
+          "description": "What may be provided at community level and where it must refer.",
+          "bands": {
+            "K–2": "Say who a young person should talk to about their body and staying safe.",
+            "3–5": "Say what a community worker may say about sexual health and what must go to a clinic.",
+            "6–8": "State the boundary that applies to a community role, with a checker.",
+            "9–10": "State the sexual-health information boundary that applies to your role and where it refers.",
+            "11–12": "State the boundary for a real role, apply it under supervision, and refer every case beyond it."
+          }
+        },
+        {
+          "theme": "Mental health in adolescence",
+          "description": "Recognition, the referral, and the harm of treating distress as behaviour.",
+          "bands": {
+            "K–2": "Say the difference between a friend being naughty and a friend being upset.",
+            "3–5": "Tell distress from behaviour in a story about a young person, and say what to do.",
+            "6–8": "Distinguish distress and behaviour in described cases, with a checker.",
+            "9–10": "Distinguish distress from behaviour in described adolescent cases and say what each needs.",
+            "11–12": "Distinguish the two in real cases under supervision and refer distress rather than punishing it."
+          }
+        },
+        {
+          "theme": "Substance use without a lecture",
+          "description": "Engagement that keeps a young person talking to you.",
+          "bands": {
+            "K–2": "Practise listening to a friend who did something risky without telling them off first.",
+            "3–5": "Run a role-play conversation that keeps a young person talking instead of lecturing them.",
+            "6–8": "Run one conversation in role that keeps the young person talking, with a checker.",
+            "9–10": "Run one role-played substance-use conversation that keeps the young person talking.",
+            "11–12": "Run real conversations under supervision and be assessed on whether the young person came back."
+          }
+        },
+        {
+          "theme": "School, work and the choice between them",
+          "description": "The economics behind a decision often described as motivation.",
+          "bands": {
+            "K–2": "Say why some children have to work instead of going to school.",
+            "3–5": "Work out the money behind a story family's choice between school and work.",
+            "6–8": "Map the real economics for one household's school-or-work decision, with a checker.",
+            "9–10": "Map the real economics for one household.",
+            "11–12": "Map the economics for real households and present them to the programme that calls the choice motivation."
+          }
+        },
+        {
+          "theme": "Young people who are already parents",
+          "description": "Support without judgement, and the services that exist.",
+          "bands": {
+            "K–2": "Say what a very young parent might need help with.",
+            "3–5": "Find the services that exist for young parents where you live.",
+            "6–8": "Identify the local services for young parents, with a checker.",
+            "9–10": "Identify the local services that exist for young parents and how each is reached.",
+            "11–12": "Identify the local services, test whether a young parent can actually reach each, and report the gaps."
+          }
+        },
+        {
+          "theme": "Violence, and what a young person can be asked",
+          "description": "Recognition and referral, and the questions not to ask.",
+          "bands": {
+            "K–2": "Say who you would tell if someone was hurting you or a friend.",
+            "3–5": "Say what a helper should and should not ask a young person who may have been hurt.",
+            "6–8": "State what you would and would not ask, with a checker.",
+            "9–10": "State what you would and would not ask a young person who may have experienced violence.",
+            "11–12": "State what you would and would not ask, apply it under supervision, and make the referrals the answers require."
+          }
+        },
+        {
+          "theme": "A young person as a peer educator",
+          "description": "What the role can carry, and the boundary that protects them.",
+          "bands": {
+            "K–2": "Teach a classmate one health fact, and say what you would leave to an adult.",
+            "3–5": "Define what a young helper can teach other young people and where an adult must step in.",
+            "6–8": "Define the peer-educator role and its limits, with a checker.",
+            "9–10": "Define a peer-educator role and the limits that protect the young person holding it.",
+            "11–12": "Define, run and review a real peer-educator role with its limits protecting the young person holding it."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "EM",
+      "name": "Emergency and displacement",
+      "themes": [
+        {
+          "theme": "The first seventy-two hours",
+          "description": "What is decided early that determines everything after.",
+          "bands": {
+            "K–2": "Say the first three things a family needs after a flood or storm.",
+            "3–5": "Write what matters most in the first three days after a disaster, in order.",
+            "6–8": "Write the first-72-hour priorities for a described emergency, with a checker.",
+            "9–10": "Write the first-72-hour priorities for a described emergency, in order.",
+            "11–12": "Write the first-72-hour priorities for a real setting with the people who would act, and rehearse them."
+          }
+        },
+        {
+          "theme": "Triage in a place with no hospital",
+          "description": "Sorting by what can be done rather than by what is needed.",
+          "bands": {
+            "K–2": "Say how you decide who to help first when several people are hurt.",
+            "3–5": "Sort story casualties by who can be helped with what is there.",
+            "6–8": "Perform triage on described cases, with a checker.",
+            "9–10": "Perform triage on described cases, sorting by what can be done rather than by what is needed.",
+            "11–12": "Perform triage under assessment in an exercise, to the standard of the responding body."
+          }
+        },
+        {
+          "theme": "A displaced population arriving",
+          "description": "What is needed first, and the order it is actually needed in.",
+          "bands": {
+            "K–2": "Say what a family arriving with nothing needs first: water, shelter, safety.",
+            "3–5": "Put in order what a group of arriving families need, and why that order.",
+            "6–8": "Sequence the response for a described arrival, with a checker.",
+            "9–10": "Sequence the response for a described arrival.",
+            "11–12": "Sequence the response for a real or exercise arrival with the agencies involved, and record what came out of order."
+          }
+        },
+        {
+          "theme": "Continuity of chronic care in an emergency",
+          "description": "The insulin, the anti-retroviral, the blood pressure medicine that stops.",
+          "bands": {
+            "K–2": "Say why someone who takes medicine every day is in danger in an emergency.",
+            "3–5": "Plan how a story person with diabetes would keep their medicine in an emergency.",
+            "6–8": "Plan continuity for three chronic conditions in a described emergency, with a checker.",
+            "9–10": "Plan continuity for three chronic conditions.",
+            "11–12": "Plan continuity for real patients with chronic conditions in a real preparedness plan, and test it."
+          }
+        },
+        {
+          "theme": "Immunisation during displacement",
+          "description": "Restarting a schedule with incomplete records.",
+          "bands": {
+            "K–2": "Say what a nurse could do for a child whose vaccine card was lost.",
+            "3–5": "Describe how to restart vaccinations for a child with no records.",
+            "6–8": "Describe the approach with no records available, with a checker.",
+            "9–10": "Describe the approach with no records available.",
+            "11–12": "Apply the no-records approach under supervision in a real or exercise setting, and record the decisions."
+          }
+        },
+        {
+          "theme": "Mental health in acute crisis",
+          "description": "Psychological first aid, and what it is not.",
+          "bands": {
+            "K–2": "Say how to be calm and kind with someone who is very frightened.",
+            "3–5": "Practise psychological first aid: look, listen, link — and say what it is not.",
+            "6–8": "Demonstrate the psychological first aid approach in role and state its limits, with a checker.",
+            "9–10": "Demonstrate the approach and state its limits.",
+            "11–12": "Demonstrate psychological first aid under assessment and provide it under supervision in a real or exercise setting."
+          }
+        },
+        {
+          "theme": "Separated children",
+          "description": "The immediate obligations and the tracing process.",
+          "bands": {
+            "K–2": "Say what to do if you find a child on their own who has lost their family.",
+            "3–5": "State what must happen immediately for a separated child, and who is told.",
+            "6–8": "State the obligations and the referral for a separated child, with a checker.",
+            "9–10": "State the immediate obligations for a separated child and the referral that follows.",
+            "11–12": "State and apply the obligations for separated children under supervision, to the standard of the child-protection body."
+          }
+        },
+        {
+          "theme": "Working when you are also affected",
+          "description": "Delivering care in an emergency that is happening to you.",
+          "bands": {
+            "K–2": "Say how a helper feels when the emergency happened to them too, and what they need.",
+            "3–5": "Describe what support a health worker needs when the disaster hit their own home.",
+            "6–8": "Describe what support you would need to work in an emergency that is happening to you, with a checker.",
+            "9–10": "Describe what support you would need to deliver care in an emergency happening to you.",
+            "11–12": "Describe the support for a real team that would be affected, and build it into the preparedness plan."
+          }
+        },
+        {
+          "theme": "Coordination with agencies arriving",
+          "description": "Being the local knowledge in a room of newcomers.",
+          "bands": {
+            "K–2": "Say what you would tell helpers arriving from far away about your community.",
+            "3–5": "Prepare a short briefing about your area for helpers who have never been there.",
+            "6–8": "Prepare the briefing you would give to arriving agencies, with a checker.",
+            "9–10": "Prepare the local briefing you would give to agencies arriving with no knowledge of the area.",
+            "11–12": "Prepare and deliver the local briefing in a real or exercise coordination meeting, and record what the newcomers had not known."
+          }
+        },
+        {
+          "theme": "When the emergency stops being one",
+          "description": "The transition to ordinary services, and what is lost in it.",
+          "bands": {
+            "K–2": "Say what changes when the helpers go home after an emergency.",
+            "3–5": "Describe what is lost when emergency help ends and ordinary services take over.",
+            "6–8": "Describe the transition for one service, with a checker.",
+            "9–10": "Describe the transition for one service.",
+            "11–12": "Describe the transition for a real service with the people who run it, and plan for what would otherwise be lost."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "ET",
+      "name": "Ethics at the household door",
+      "themes": [
+        {
+          "theme": "Consent from somebody who cannot refuse you",
+          "description": "A health worker at the door carries authority; taking consent honestly anyway.",
+          "bands": {
+            "K–2": "Ask a friend properly before helping them, and let them say no.",
+            "3–5": "Practise asking permission in a way that makes 'no' a real option.",
+            "6–8": "Describe how you make refusal genuinely available at a household door, with a checker.",
+            "9–10": "Describe how you make refusal genuinely available.",
+            "11–12": "Make refusal genuinely available in real contacts under supervision, and record the refusals that followed."
+          }
+        },
+        {
+          "theme": "What you know about your neighbours",
+          "description": "Confidentiality where you live among the people you serve.",
+          "bands": {
+            "K–2": "Say why a helper must not tell other people what they learn at someone's home.",
+            "3–5": "Describe a situation where knowing a neighbour's secret would be hard, and what you would do.",
+            "6–8": "Describe one real or realistic confidentiality conflict and your boundary, with a checker.",
+            "9–10": "Describe one real conflict and your boundary.",
+            "11–12": "Describe a real conflict you faced, the boundary you held, and what it cost, for peers who will face the same."
+          }
+        },
+        {
+          "theme": "A household that declines advice",
+          "description": "Respecting refusal, and the small number of cases where you may not.",
+          "bands": {
+            "K–2": "Say what to do when a family does not want your help, and the one time you must tell an adult anyway.",
+            "3–5": "Sort story refusals into ones to respect and ones where a child is in danger.",
+            "6–8": "Distinguish the two categories in described cases, with a checker.",
+            "9–10": "Distinguish refusals to respect from the narrow cases where you may not, in described situations.",
+            "11–12": "Distinguish the two categories in real cases under supervision and act correctly on each."
+          }
+        },
+        {
+          "theme": "Recording what people tell you",
+          "description": "What goes in the register, what stays with you, and what is written nowhere.",
+          "bands": {
+            "K–2": "Say which things a helper writes down and which they keep only in their head.",
+            "3–5": "Sort ten things a person might say into: write in the record, keep to yourself, write nowhere.",
+            "6–8": "Classify ten described disclosures correctly, with a checker.",
+            "9–10": "Classify ten described disclosures into the register, kept with you, or written nowhere.",
+            "11–12": "Classify real disclosures correctly under supervision and be audited on the records."
+          }
+        },
+        {
+          "theme": "Working for a project and living in a village",
+          "description": "The dual role and what it costs when the project ends.",
+          "bands": {
+            "K–2": "Say what is hard about being a helper to your own neighbours.",
+            "3–5": "Describe what a village health worker loses when the project that pays them ends.",
+            "6–8": "Describe how you would manage the dual role, with a checker.",
+            "9–10": "Describe how you would manage the dual role.",
+            "11–12": "Describe how you manage the dual role in real work, and what you will do when the project ends."
+          }
+        },
+        {
+          "theme": "Gifts, favours and the relationship",
+          "description": "What may be accepted, and why the rule protects you.",
+          "bands": {
+            "K–2": "Say why a helper should not take presents for helping.",
+            "3–5": "Say what a health worker may accept from a family and what they must refuse, and why.",
+            "6–8": "State your position on gifts and its reasoning, with a checker.",
+            "9–10": "State your position on gifts and favours from households, and the reasoning that protects you.",
+            "11–12": "State your position, apply it in real work, and explain it to a family without giving offence."
+          }
+        },
+        {
+          "theme": "Reporting something you were told in confidence",
+          "description": "The narrow circumstances, and the obligation to say so first.",
+          "bands": {
+            "K–2": "Say the one kind of secret a helper has to tell a grown-up, and why they say so first.",
+            "3–5": "Name when a health worker must report something told in confidence, and how they warn people first.",
+            "6–8": "Identify the circumstances that apply where you work, with a checker.",
+            "9–10": "Identify the circumstances that apply where you work.",
+            "11–12": "Identify the circumstances for a real role, state them to every household first, and follow them when they arise."
+          }
+        },
+        {
+          "theme": "Being asked to do more than your scope",
+          "description": "The pressure to help beyond training, and holding the line kindly.",
+          "bands": {
+            "K–2": "Practise saying kindly that something is a job for a nurse, not for you.",
+            "3–5": "Practise refusing to do something beyond your training while keeping the person's trust.",
+            "6–8": "Rehearse one refusal that keeps the relationship, with a checker.",
+            "9–10": "Rehearse one refusal that keeps the relationship.",
+            "11–12": "Make real refusals beyond scope under supervision and be assessed on both the refusal and the relationship."
+          }
+        },
+        {
+          "theme": "Data about a community leaving it",
+          "description": "Where household data goes and who benefits from it.",
+          "bands": {
+            "K–2": "Say where the information a helper collects goes, and who gets something from it.",
+            "3–5": "Trace where a story community's health data goes and who benefits.",
+            "6–8": "Trace one dataset out of a real community, with a checker.",
+            "9–10": "Trace one dataset from the household door out of the community and name who benefits.",
+            "11–12": "Trace a real dataset out of a real community and report to the community who benefits from it."
+          }
+        },
+        {
+          "theme": "When the right answer is not available",
+          "description": "Acting well with an inadequate option, and recording that it was inadequate.",
+          "bands": {
+            "K–2": "Say what you would do when there is no good choice, only a less bad one.",
+            "3–5": "Describe a situation with no good option and what you would write down about it.",
+            "6–8": "Describe one case with only an inadequate option and what you would record, with a checker.",
+            "9–10": "Describe one case and what you recorded.",
+            "11–12": "Describe a real case where the right answer was unavailable, what you did, and the record you made that it was inadequate."
+          }
+        }
+      ]
+    }
+  ]
+}
