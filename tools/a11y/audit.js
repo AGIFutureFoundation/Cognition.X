@@ -30,6 +30,13 @@ const CLICKS = {
   'trades-network': ['.tab[data-r="regions"]', '.tab[data-r="unions"]', '.tab[data-r="sims"]', '.tab[data-r="flipped"]', '.tab[data-r="districts"]'],
   'louisiana#/roles': ['#rolechips [data-role="teacher"]', '#rolechips [data-role="assessor"]', '#rolechips [data-role="parent"]', '#rolechips [data-role="homeschool"]', '#rolechips [data-role="parishadmin"]', '#rolechips [data-role="stateadmin"]'],
 };
+// views that need in-page steps first (v0.71.0): the studio open on a scenario, then the WebXR room
+const STEPS = {
+  'trades-network': [
+    ['studio open', async page => { await page.evaluate(() => openSim(Object.keys(simByKind)[0], D.regions[0].id)); }],
+    ['studio → Open in 3D / VR', async page => { await page.evaluate(() => openSim(Object.keys(simByKind)[0], D.regions[0].id)); await page.waitForTimeout(300); await page.click('#simhost .cxsim-xr'); }],
+  ],
+};
 const only = process.argv[2];
 
 (async () => {
@@ -37,9 +44,10 @@ const only = process.argv[2];
   const b = await chromium.launch({ executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium' });
   const page = await b.newPage({ viewport: { width: 1280, height: 900 } });
   const report = { generated: new Date().toISOString().slice(0, 10), axe: null, runs: [] };
-  async function run(label, u, click) {
+  async function run(label, u, click, steps) {
     await page.goto('about:blank'); await page.goto(u); await page.waitForTimeout(u.includes('education-os') ? 2500 : 900);
     if (click) { await page.click(click); await page.waitForTimeout(700); }
+    if (steps) { await steps(page); await page.waitForTimeout(700); }
     await page.addScriptTag({ content: axeSrc });
     const r = await page.evaluate(async () => {
       const res = await axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'] }, resultTypes: ['violations', 'incomplete'] });
@@ -63,6 +71,7 @@ const only = process.argv[2];
       await run(`${app} ${h}`, url(app, h));
       for (const c of (CLICKS[app + h] || (h === '#' ? CLICKS[app] : null) || [])) await run(`${app} ${h} → ${c}`, url(app, h), c);
     }
+    for (const [name, steps] of (STEPS[app] || [])) await run(`${app} ${name}`, url(app, '#/sims'), null, steps);
   }
   await b.close();
   const out = path.join(ROOT, 'docs', 'ACCESSIBILITY.json');

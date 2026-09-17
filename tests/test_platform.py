@@ -807,6 +807,59 @@ def test_docs_numbers_match_dataset():
     check("wiki Home block count current", f"{blocks:,}" in home, f"expected {blocks:,}")
 
 
+def test_system_review_2():
+    """v0.71.0 — the second system review's claims are held: the documents
+    exist with the shape they promise, their numbers match the sources they
+    cite, the stale claims it corrected stay corrected, and the tools it
+    committed are the ones the claims rest on."""
+    import subprocess
+    rev = (ROOT / "docs" / "SYSTEM_REVIEW_2.md").read_text(encoding="utf-8")
+    nxt = (ROOT / "docs" / "NEXT_STEPS_2.md").read_text(encoding="utf-8")
+    # the register's counts, as the review states them
+    c = json.loads((ROOT / "data" / "policy" / "controls.json").read_text(encoding="utf-8"))
+    cs = c["controls"] if isinstance(c, dict) else c
+    n, met, part, opn = len(cs), *[sum(1 for x in cs if x["status"] == k) for k in ("met", "partial", "open")]
+    check("review 2: register counts match", f"{n} controls — {met} met, {part} partial, {opn} open" in rev, f"{n}/{met}/{part}/{opn}")
+    # the dataset numbers, as the review and the dashboard state them
+    rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
+    empty = sum(1 for r in rows if not r["description"].strip())
+    suffix = sum(1 for r in rows if re.search(r"— at [^—]+$", r["description"]))
+    check("review 2: empty-description count matches", f"{empty:,} rows" in rev, str(empty))
+    check("review 2: band-suffix count matches", f"{suffix:,} rows" in rev, str(suffix))
+    real = len({r["credential"] for r in rows} - {"Explorer", "Builder", "Practitioner", "Lead"})
+    dq = (ROOT / "docs" / "DATA_QUALITY.md").read_text(encoding="utf-8")
+    check("data quality headline counts real credentials", f"{real:,} credentials**" in dq, str(real))
+    check("wiki Home agrees on credentials", f"{real:,} credentials" in (ROOT / "docs" / "wiki" / "Home.md").read_text(encoding="utf-8"))
+    # the accessibility re-run covers the studio and its XR room
+    a11y = json.loads((ROOT / "docs" / "ACCESSIBILITY.json").read_text(encoding="utf-8"))
+    labels = [r["label"] for r in a11y["runs"]]
+    check("a11y: the studio and the XR room are audited views", any("studio open" in l for l in labels) and any("Open in 3D / VR" in l for l in labels))
+    check("a11y: at least 47 views audited", len(a11y["runs"]) >= 47, str(len(a11y["runs"])))
+    check("review 2: audit view count matches", f"**{len(a11y['runs'])} views**" in rev)
+    check("audit runner carries the in-page steps", "STEPS" in (ROOT / "tools" / "a11y" / "audit.js").read_text(encoding="utf-8"))
+    # the next ten prompts have the shape the first ten had
+    heads = re.findall(r"^## (\d+) — ", nxt, re.M)
+    check("next steps 2: ten numbered prompts", heads == [str(i) for i in range(1, 11)], str(heads))
+    for part_name in ("**Why.**", "**Evidence.**", "**Steps.**", "**Acceptance.**"):
+        check(f"next steps 2: every prompt has {part_name}", nxt.count(part_name) >= 10, str(nxt.count(part_name)))
+    check("next steps 2: standing rules carried forward", "Never overwrite a non-empty source field" in nxt and "A simulation is practice" in nxt)
+    check("first prompt set marked complete", "> **Complete.**" in (ROOT / "docs" / "NEXT_STEPS_OPUS5.md").read_text(encoding="utf-8"))
+    # the corrected claims stay corrected
+    roadmap = (ROOT / "docs" / "ROADMAP.md").read_text(encoding="utf-8")
+    check("roadmap no longer lists shipped work as open", "Open: the full WCAG" not in roadmap and "Remaining federation work: W3C" not in roadmap)
+    xr_lines = len((ROOT / "tools" / "xr" / "engine.js").read_text(encoding="utf-8").splitlines())
+    m = re.search(r"~(\d+) lines", (ROOT / "docs" / "XR_REVIEW.md").read_text(encoding="utf-8"))
+    check("XR review states the engine's size within 15%", m and abs(int(m.group(1)) - xr_lines) <= xr_lines * 0.15, f"doc {m and m.group(1)} vs {xr_lines}")
+    # the tools the claims rest on are in the repository
+    sweep = (ROOT / "tools" / "view_sweep.js").read_text(encoding="utf-8")
+    check("view sweep tool committed with a compare mode", "--compare" in sweep and "normalise" in sweep)
+    tags = (ROOT / "tools" / "release_tags.py").read_text(encoding="utf-8")
+    check("release-tag checker exists and CI runs it", "--check" in tags and "release_tags.py --check" in (ROOT / ".github" / "workflows" / "validate.yml").read_text(encoding="utf-8"))
+    r = subprocess.run([sys.executable, str(ROOT / "tools" / "release_tags.py"), "--backfill", "--dry-run"], capture_output=True, text=True, cwd=ROOT)
+    check("release-tag backfill runs", r.returncode == 0 and "tags" in r.stdout, r.stdout[-120:] + r.stderr[-120:])
+    check("versioning wiki still documents the tag step", "git tag -a vX.Y.Z" in (ROOT / "docs" / "wiki" / "Versioning-and-Releases.md").read_text(encoding="utf-8"))
+
+
 def main():
     for fn in [v for k, v in sorted(globals().items()) if k.startswith("test_")]:
         try:

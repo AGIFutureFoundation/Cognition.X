@@ -1,9 +1,17 @@
 # Accessibility audit — WCAG 2.2 AA
 
-*Prompt 4 of the ranked next steps. First full audit: v0.53.0 (2026-09-15).
-Re-run any time with `node tools/a11y/audit.js`; the committed result is
-[`docs/ACCESSIBILITY.json`](ACCESSIBILITY.json) and `tests/test_platform.py`
-fails if it carries a WCAG-tagged violation.*
+*Prompt 4 of the ranked next steps. First full audit: v0.53.0 (2026-09-15);
+re-run at v0.71.0 (2026-09-17) with the Simulation Studio and its WebXR
+room added as views. Re-run any time with `node tools/a11y/audit.js`; the
+committed result is [`docs/ACCESSIBILITY.json`](ACCESSIBILITY.json) and
+`tests/test_platform.py` fails if it carries a WCAG-tagged violation.*
+
+**At v0.71.0: 47 views, 0 WCAG-tagged violations, 5,309 focusable
+elements, 0 without a name, 0 click-only controls.** The two views added
+are the studio open on a scenario and the same studio with *Open in 3D /
+VR* pressed: the 3D panel's buttons, file input and canvas all carry
+names, the canvas is described, and the only finding on either is the
+documented `heading-order` deviation below (38 nodes across the run).
 
 ## What was tested
 

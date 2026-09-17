@@ -92,8 +92,10 @@ reason (`docs/AGENT_LEARNING.md`, the Education OS's Swarm Architecture
 view).
 
 **Accessibility (WCAG 2.2 AA; Section 508; state digital-accessibility
-standards).** Audited across 45 views at v0.53.0 and re-run at v0.54.0
-with zero WCAG-tagged violations; see [`ACCESSIBILITY.md`](ACCESSIBILITY.md).
+standards).** Audited across 45 views at v0.53.0, re-run at v0.54.0 and
+again at v0.71.0 across 47 views including the Simulation Studio and its
+WebXR room, with zero WCAG-tagged violations each time; see
+[`ACCESSIBILITY.md`](ACCESSIBILITY.md).
 The new privacy dialog is a native `<dialog>` with a labelled heading,
 keyboard close and focus return.
 
