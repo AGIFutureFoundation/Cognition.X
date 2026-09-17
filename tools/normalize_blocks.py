@@ -139,13 +139,43 @@ PLACEHOLDER_CHECKS = {
 }
 
 
+SUFFIX_RE = re.compile(r"^(?P<shared>.+?) — at (?P<band>K–2|3–5|6–8|9–10|11–12)$")
+
+
+def override_description(row, bands):
+    """The second deliberate exception to fill-empty-only (v0.72.0): a
+    promotion declaring `"override": "band-suffix"` may replace a NON-EMPTY
+    description, but only one that is the documented content debt — the
+    shared sentence with its "— at <band>" suffix, for the row's own band —
+    and only with the authored sentence for that band. Anything else is
+    refused with the row id, so an authored source sentence can never be
+    overwritten. Returns the new description or None when the row is not a
+    suffix row (already authored, or empty: the fill-empty path owns those)."""
+    m = SUFFIX_RE.match(row["description"].strip())
+    if not m:
+        if row["description"].strip():
+            raise SystemExit(f"override refused: {row['block_id'] if 'block_id' in row else row['code']} "
+                             f"({row['pack']!r}, theme {row['theme']!r}) carries an authored description, not a band suffix")
+        return None
+    if m.group("band") != row["grade"]:
+        raise SystemExit(f"override refused: {row.get('block_id', row['code'])} suffix names {m.group('band')!r} but the row's band is {row['grade']!r}")
+    if sorted(bands) != sorted(BANDS) or len({str(bands[b]).strip() for b in BANDS}) != 5 or any(not str(bands[b]).strip() for b in BANDS):
+        raise SystemExit(f"promotion {row['pack']!r}, theme {row['theme']!r}: bands must name the five bands with five distinct non-empty sentences")
+    if any(" — at " in str(bands[b]) for b in BANDS):
+        raise SystemExit(f"promotion {row['pack']!r}, theme {row['theme']!r}: a band sentence must not carry the '— at <band>' suffix")
+    return str(bands[row["grade"]]).strip()
+
+
 def apply_promotions(rows):
     """Fill empty track/code/level/description on legacy rows from
     data/promotions/*.json (keyed by exact theme text; empty fields only),
-    and replace known-placeholder transfer checks with authored ones."""
+    and replace known-placeholder transfer checks with authored ones. A
+    promotion declaring `"override": "band-suffix"` additionally replaces
+    band-suffixed descriptions on rows that already carry a track — see
+    override_description() for the rule and the refusals."""
     if not PROMOTIONS.is_dir():
         return
-    promos = {}
+    promos, overriders = {}, {}
     for path in sorted(PROMOTIONS.glob("*.json")):
         spec = json.loads(path.read_text(encoding="utf-8"))
         themap = {}
@@ -155,9 +185,21 @@ def apply_promotions(rows):
                                        th["description"], th.get("transfer_check"),
                                        track.get("credential"), th.get("bands"))
         promos[spec["pack"]] = themap
-    filled = checks = creds = 0
+        if spec.get("override"):
+            if spec["override"] != "band-suffix":
+                raise SystemExit(f"{path.name}: the only override kind is \"band-suffix\", got {spec['override']!r}")
+            if not all(th.get("bands") for t in spec["tracks"] for th in t["themes"]):
+                raise SystemExit(f"{path.name}: an override promotion must carry bands on every theme")
+            overriders[spec["pack"]] = path.name
+    filled = checks = creds = overrode = 0
     for r in rows:
         themap = promos.get(r["pack"])
+        if themap and r["track"] and r["pack"] in overriders and r["theme"] in themap and r["grade"] in BAND_LEVEL:
+            new = override_description(r, themap[r["theme"]][6])
+            if new is not None:
+                r["description"] = new
+                overrode += 1
+            continue
         if not themap or r["track"] or r["theme"] not in themap or r["grade"] not in BAND_LEVEL:
             continue
         name, prefix, ti, desc, check, cred, bands = themap[r["theme"]]
@@ -191,6 +233,9 @@ def apply_promotions(rows):
         print(f"promotions: filled {filled} legacy rows from {len(promos)} pack(s)"
               + (f"; replaced {checks} placeholder transfer checks" if checks else "")
               + (f"; corrected {creds} level-word credentials to the promotion's named credential" if creds else ""))
+    if overrode:
+        print(f"promotions: overrode {overrode} band-suffix descriptions with authored band sentences "
+              f"({', '.join(sorted(overriders.values()))}) — the counted exception, docs/DATA_QUALITY.md")
 
 
 # Level derivation for foundation-library rows that use single grades,

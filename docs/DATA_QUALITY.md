@@ -31,7 +31,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Money, Benefits & Entitlements | 250 | 5 | 100% | 100% | 100% | 0% | 27 |
 | Reentry & Recovery Pathways | 250 | 5 | 100% | 100% | 100% | 0% | 21 |
 | Neighbourhood, Safety & Civic Voice | 250 | 5 | 100% | 100% | 100% | 0% | 23 |
-| Cognition.X : Corporate OS | 1160 | 10 | 43% | 43% | 100% | 0% | 26 |
+| Cognition.X : Corporate OS | 1160 | 10 | 43% | 0% | 100% | 0% | 26 |
 | Cognition.X : Science OS | 1160 | 10 | 43% | 43% | 100% | 0% | 25 |
 | Cognition.X : Robotics OS | 1140 | 10 | 43% | 43% | 100% | 0% | 26 |
 | Cognition.X : Global Health OS | 1160 | 10 | 43% | 43% | 100% | 0% | 28 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 100% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 55% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 53% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
@@ -75,6 +75,16 @@ evidence, failure modes and a note per track. Validated by
 
 - Blocks carrying at least one standards code: **252** of 17,450 (1%) — lss-k12 (block: 52 entries, 299 codes) · ngss-ets-robotics (track-band: 20 entries, 32 codes)
 - Tracks with a transfer-check rubric: **30** of 225 (13%) — the core-spine tracks the Louisiana ledger credits.
+
+## Description overrides
+
+The pipeline never overwrites a non-empty source field, with two counted
+exceptions. The second (v0.72.0): a promotion declaring
+`"override": "band-suffix"` replaces a band-suffixed description — the
+content debt above, and nothing else — with an authored sentence for that
+band; the normaliser refuses any other target with the row id.
+
+- Rows whose band-suffix description was replaced by an authored band sentence: **500** across 1 pack(s) (Cognition.X : Corporate OS).
 
 ## Credential naming
 
