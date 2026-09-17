@@ -23,6 +23,7 @@ The repository carries three things:
 | Cognition.X States (custom curriculum + compliance checklist for all 50 states) | [`apps/states/`](apps/states/) | HTML |
 | Cognition.X Platform (the working model: system map + runnable loop) | [`apps/platform/`](apps/platform/) | HTML |
 | The film kit (product films, five narrated feature shorts and the pitch deck, rendered from the apps themselves) | [`tools/film/`](tools/film/) · [briefs](docs/film/PRODUCTION_BRIEFS.md) | Node + ffmpeg |
+| White papers and promo films for three organisation modules (Institute Track, Tenderloin pilot, Club edition), no affiliation claimed | [`docs/whitepapers/`](docs/whitepapers/) · [`tools/film/orgs/`](tools/film/orgs/) | Markdown · Node + ffmpeg |
 | Docs, roadmap and wiki source | [`docs/`](docs/) | Markdown |
 
 ## Quick start
