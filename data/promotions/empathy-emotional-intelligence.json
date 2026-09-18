@@ -1,0 +1,479 @@
+{
+  "pack": "Empathy & Emotional Intelligence",
+  "partial_bands": true,
+  "note": "Promotion to the tracked schema (v0.93.0, prompt 3 tranche four). Each theme in this pack names rows spanning only some of the five bands — a sliding, sometimes wrap-around window of three or four — not all five (the original bands mechanism) and not exactly one (unbanded). \"partial_bands\": true fills each row's empty description from its theme's own per-grade sentence, authored only for the grades that theme actually has. track/code are not filled by this promotion (see tools/normalize_blocks.py apply_promotions): this pack's natural sub-groupings do not form the 50-block tracked shape. Theme text, grouping and grade spans are copied verbatim from data/blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "SA",
+      "name": "Self-Awareness",
+      "themes": [
+        {
+          "theme": "Naming what you feel before you act (SA)",
+          "bands": {
+            "K–2": "Ask an adult to help you name a feeling before you react to it.",
+            "3–5": "Name a feeling and where it shows up in your body, with an adult's help.",
+            "6–8": "Name three feelings from this week and where each showed up in your body, checked by someone.",
+            "9–10": "Name and track your own feelings before reacting to them, on your own."
+          }
+        },
+        {
+          "theme": "Where it lands in your body (SA)",
+          "bands": {
+            "3–5": "Notice where a feeling shows up in your body, with an adult's help.",
+            "6–8": "Describe your earliest physical signal for a feeling, checked by someone.",
+            "9–10": "Catch your own earliest physical signal for a feeling, deliberately, on your own.",
+            "11–12": "Teach someone else how to catch their own earliest physical signal."
+          }
+        },
+        {
+          "theme": "The gap between the trigger and the reaction (SA)",
+          "bands": {
+            "6–8": "Notice the gap between something happening and your reaction to it, with a checker.",
+            "9–10": "Use the gap between a trigger and your reaction on your own, for real.",
+            "11–12": "Teach someone else how to use the gap between a trigger and a reaction."
+          }
+        },
+        {
+          "theme": "What you are like when you are tired (SA)",
+          "bands": {
+            "9–10": "Name your own tired-mode behaviours and one person who could confirm them.",
+            "11–12": "Explain to someone else your own tired-mode behaviours and how to spot them.",
+            "K–2": "Ask an adult what you're like when you're tired."
+          }
+        },
+        {
+          "theme": "The story you tell about yourself (SA)",
+          "bands": {
+            "11–12": "Help someone else find facts that don't fit a belief they hold about themselves.",
+            "K–2": "Ask an adult to help you find one fact that doesn't fit a belief about yourself.",
+            "3–5": "Find two facts that don't fit a belief you hold about yourself, with an adult's help."
+          }
+        },
+        {
+          "theme": "What you are actually good at (SA)",
+          "bands": {
+            "K–2": "Ask an adult to help you list three things you're good at, with evidence.",
+            "3–5": "List three things you're good at, with evidence, and one you thought you had, with help.",
+            "6–8": "List three things you're good at with evidence, checked by someone else."
+          }
+        },
+        {
+          "theme": "Your own history in the room (SA)",
+          "bands": {
+            "3–5": "Notice when a reaction didn't match the size of an event, with an adult's help.",
+            "6–8": "Describe a moment your reaction didn't match an event's size, checked by someone.",
+            "9–10": "Recognize on your own when your own reaction doesn't match an event's size."
+          }
+        },
+        {
+          "theme": "Boundaries you can actually hold (SA)",
+          "bands": {
+            "6–8": "State one boundary and hold it once, with a checker watching.",
+            "9–10": "State and hold a real boundary on your own, even when it costs something.",
+            "11–12": "Teach someone else how to state and hold a real boundary."
+          }
+        },
+        {
+          "theme": "Being wrong in public (SA)",
+          "bands": {
+            "9–10": "Change your mind in front of others and describe what it cost, on your own.",
+            "11–12": "Help someone else practice changing their mind in front of others.",
+            "K–2": "Ask an adult what happens when someone changes their mind in front of others."
+          }
+        },
+        {
+          "theme": "What you do with praise (SA)",
+          "bands": {
+            "11–12": "Explain to someone else how praise can distort judgement, from your own experience.",
+            "K–2": "Ask an adult how praise can feel confusing sometimes.",
+            "3–5": "Describe your own response to praise, with an adult's help."
+          }
+        },
+        {
+          "theme": "The thing you avoid (SA)",
+          "bands": {
+            "K–2": "Ask an adult to help you do a small thing you've been avoiding.",
+            "3–5": "Do a thing you've been avoiding and describe the difference from the dread, with help.",
+            "6–8": "Do a real thing you've been avoiding and describe the gap from the dread, checked by someone."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "AO",
+      "name": "Other-Awareness",
+      "themes": [
+        {
+          "theme": "Reading a face without deciding what it means (AO)",
+          "bands": {
+            "3–5": "Describe someone's expression, then check it with them, with an adult's help.",
+            "6–8": "Describe someone's state, check it with them, and record how far off you were, checked by someone.",
+            "9–10": "Read someone's state and verify it with them yourself, on your own."
+          }
+        },
+        {
+          "theme": "Asking instead of assuming (AO)",
+          "bands": {
+            "6–8": "Ask a checking question instead of assuming, with a checker watching.",
+            "9–10": "Ask three checking questions this week and record what you had assumed, on your own.",
+            "11–12": "Teach someone else why asking beats assuming."
+          }
+        },
+        {
+          "theme": "The person who is not saying anything (AO)",
+          "bands": {
+            "9–10": "Identify the quietest person in a room and what you learned by watching, on your own.",
+            "11–12": "Teach someone else how to notice the quietest person in a room.",
+            "K–2": "Ask an adult to help you notice a quiet person in a room."
+          }
+        },
+        {
+          "theme": "Different does not mean less (AO)",
+          "bands": {
+            "11–12": "Help someone else understand a practice they found strange, from the inside.",
+            "K–2": "Ask an adult about a practice that seemed strange to you.",
+            "3–5": "Describe a practice you found strange, then explain it from the inside, with an adult's help."
+          }
+        },
+        {
+          "theme": "Listening without preparing a reply (AO)",
+          "bands": {
+            "K–2": "Repeat back what an adult said until they agree you got it right.",
+            "3–5": "Repeat back what someone said until they agree you have it, with an adult watching.",
+            "6–8": "Repeat back what someone said until they agree you have it, checked by someone."
+          }
+        },
+        {
+          "theme": "When somebody is having a worse day than you (AO)",
+          "bands": {
+            "3–5": "Make a small adjustment for someone having a hard day, with an adult's help.",
+            "6–8": "Describe an adjustment you made for someone and what it cost you, checked by someone.",
+            "9–10": "Make a real adjustment for someone having a worse day, on your own."
+          }
+        },
+        {
+          "theme": "The cost of being new (AO)",
+          "bands": {
+            "6–8": "Enter a room where you're the newcomer and describe it, with a checker.",
+            "9–10": "Enter a room where you're the newcomer and describe it, on your own.",
+            "11–12": "Help a newcomer feel less alone in a room you know well."
+          }
+        },
+        {
+          "theme": "People who do not like you (AO)",
+          "bands": {
+            "9–10": "Describe a working relationship with someone who doesn't like you, on your own.",
+            "11–12": "Teach someone else how to maintain a working relationship with someone who dislikes them.",
+            "K–2": "Ask an adult what to do when someone doesn't seem to like you."
+          }
+        },
+        {
+          "theme": "What the other person is protecting (AO)",
+          "bands": {
+            "11–12": "Teach someone else how to state another person's stake in a dispute fairly.",
+            "K–2": "Ask an adult what the other person in an argument might be protecting.",
+            "3–5": "State the other person's stake in a dispute in words they'd accept, with an adult's help."
+          }
+        },
+        {
+          "theme": "Reading a group, not just a person (AO)",
+          "bands": {
+            "K–2": "Ask an adult to help you notice something a whole group is doing.",
+            "3–5": "Describe a group behaviour and who was carrying it, with an adult's help.",
+            "6–8": "Describe a group behaviour and who was carrying it, checked by someone."
+          }
+        },
+        {
+          "theme": "The limits of empathy (AO)",
+          "bands": {
+            "3–5": "Name a situation you'd tell an adult about instead of handling it yourself, with help.",
+            "6–8": "Name three situations you would refer, and to whom exactly, checked by someone.",
+            "9–10": "Know exactly which situations to refer, and to whom, on your own."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "RR",
+      "name": "Repair & Resolution",
+      "themes": [
+        {
+          "theme": "Coming down (RR)",
+          "bands": {
+            "6–8": "Use a calming method in a real moment, with a checker aware.",
+            "9–10": "Use your own calming method in a real moment and describe what it did, on your own.",
+            "11–12": "Teach someone else a calming method that works in a real moment."
+          }
+        },
+        {
+          "theme": "Saying the hard thing kindly (RR)",
+          "bands": {
+            "9–10": "Deliver a real piece of hard feedback and record the response, on your own.",
+            "11–12": "Teach someone else how to deliver hard feedback kindly.",
+            "K–2": "Ask an adult how to say something hard, kindly."
+          }
+        },
+        {
+          "theme": "Apologising properly (RR)",
+          "bands": {
+            "11–12": "Teach someone else what makes an apology meet all three tests.",
+            "K–2": "Make a small apology with an adult's help, and see how it lands.",
+            "3–5": "Make a repair that meets the tests for a real apology, with an adult's help."
+          }
+        },
+        {
+          "theme": "Receiving an apology (RR)",
+          "bands": {
+            "K–2": "Tell an adult about an apology you received and what you did with it.",
+            "3–5": "Describe an apology you received and what you did with it, with an adult's help.",
+            "6–8": "Describe an apology you received and what you did with it, checked by someone."
+          }
+        },
+        {
+          "theme": "Repair when you were both wrong (RR)",
+          "bands": {
+            "3–5": "Describe a two-sided repair and who moved first, with an adult's help.",
+            "6–8": "Describe a two-sided repair and who moved first, checked by someone.",
+            "9–10": "Carry out a two-sided repair yourself and describe who moved first, on your own."
+          }
+        },
+        {
+          "theme": "When repair is not appropriate (RR)",
+          "bands": {
+            "6–8": "Name a situation where a repair wouldn't be right, checked by someone.",
+            "9–10": "Name three situations where you would not run a repair, and why, on your own.",
+            "11–12": "Teach someone else when repair is not the right move."
+          }
+        },
+        {
+          "theme": "Conflict that is about resources (RR)",
+          "bands": {
+            "9–10": "Take a real conflict and identify what it's actually about, on your own.",
+            "11–12": "Teach someone else how to tell a resource conflict from other kinds.",
+            "K–2": "Ask an adult if an argument is really about something to share."
+          }
+        },
+        {
+          "theme": "Staying in a hard conversation (RR)",
+          "bands": {
+            "11–12": "Help someone else stay in a difficult conversation to its end.",
+            "K–2": "Stay in a small hard conversation with an adult's support.",
+            "3–5": "Stay in a difficult conversation to its end, with an adult nearby."
+          }
+        },
+        {
+          "theme": "Holding a line while staying warm (RR)",
+          "bands": {
+            "K–2": "Refuse something small with an adult's help and stay friendly.",
+            "3–5": "Refuse something real and keep the relationship intact, with an adult's help.",
+            "6–8": "Refuse something real and keep the relationship intact, checked by someone."
+          }
+        },
+        {
+          "theme": "The conversation you are dreading (RR)",
+          "bands": {
+            "3–5": "Have a small dreaded conversation with an adult's help and describe the gap.",
+            "6–8": "Have a dreaded conversation and describe the gap from the dread, checked by someone.",
+            "9–10": "Have a real dreaded conversation on your own and describe the gap."
+          }
+        },
+        {
+          "theme": "Repair with somebody younger than you (RR)",
+          "bands": {
+            "6–8": "Make a repair to a younger person, with a checker aware.",
+            "9–10": "Make a repair to a younger person and describe their reaction, on your own.",
+            "11–12": "Teach someone else how to make a repair with someone younger than them."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "RM",
+      "name": "Reading the Room",
+      "themes": [
+        {
+          "theme": "Who is idle (RM)",
+          "bands": {
+            "9–10": "Observe a session and name the idle person before anything happens, on your own.",
+            "11–12": "Teach someone else how to spot who is idle before it becomes a problem.",
+            "K–2": "Ask an adult to help you notice who isn't doing anything in a group."
+          }
+        },
+        {
+          "theme": "Where the energy is (RM)",
+          "bands": {
+            "11–12": "Teach someone else how to redirect a session toward its real energy.",
+            "K–2": "Ask an adult where the energy in a room seems to be.",
+            "3–5": "Notice where the energy in a room is, with an adult's help."
+          }
+        },
+        {
+          "theme": "The seat you take (RM)",
+          "bands": {
+            "K–2": "Change where you sit with an adult's help and notice what changes.",
+            "3–5": "Change where you sit or stand and record what changed, with an adult's help.",
+            "6–8": "Change where you sit or stand and record what changed, checked by someone."
+          }
+        },
+        {
+          "theme": "Who is talking to whom (RM)",
+          "bands": {
+            "3–5": "Draw a simple map of who talked to whom in a room, with an adult's help.",
+            "6–8": "Draw the real conversation map of a room, checked by someone.",
+            "9–10": "Draw the real conversation map of a room on your own, accurately."
+          }
+        },
+        {
+          "theme": "The moment before it goes wrong (RM)",
+          "bands": {
+            "6–8": "Describe a moment you caught before it went wrong, with a checker.",
+            "9–10": "Catch a moment before it goes wrong and describe what you did, on your own.",
+            "11–12": "Teach someone else how to catch the moment before something goes wrong."
+          }
+        },
+        {
+          "theme": "Silence that is comfortable and silence that is not (RM)",
+          "bands": {
+            "9–10": "Describe both comfortable and uncomfortable silence, from rooms you were in, on your own.",
+            "11–12": "Teach someone else the difference between comfortable and uncomfortable silence.",
+            "K–2": "Ask an adult about a quiet moment that felt different from another quiet moment."
+          }
+        },
+        {
+          "theme": "Being watched changes the room (RM)",
+          "bands": {
+            "11–12": "Teach someone else how being watched changes a room.",
+            "K–2": "Ask an adult if a room feels different when people are watching.",
+            "3–5": "Observe a room twice, visibly and quietly, and compare, with an adult's help."
+          }
+        },
+        {
+          "theme": "A room with a newcomer in it (RM)",
+          "bands": {
+            "K–2": "Ask an adult what a room does to someone new.",
+            "3–5": "Describe what a room did to a newcomer and what you changed, with an adult's help.",
+            "6–8": "Describe what a room did to a newcomer and what you changed, checked by someone."
+          }
+        },
+        {
+          "theme": "The room after something happened (RM)",
+          "bands": {
+            "3–5": "Describe a room right after something happened, with an adult's help.",
+            "6–8": "Describe such a room and what you did first, checked by someone.",
+            "9–10": "Read a room right after something happened and act first, on your own."
+          }
+        },
+        {
+          "theme": "Handing the room over (RM)",
+          "bands": {
+            "6–8": "Hand a room over once, with a checker watching what you had to stop doing.",
+            "9–10": "Hand a room over and describe what you had to stop doing, on your own.",
+            "11–12": "Teach someone else how to hand a room over well."
+          }
+        },
+        {
+          "theme": "When to do nothing (RM)",
+          "bands": {
+            "9–10": "Describe a time you did nothing on purpose and were right, on your own.",
+            "11–12": "Teach someone else when doing nothing is the right move.",
+            "K–2": "Ask an adult about a time doing nothing was the right choice."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "EW",
+      "name": "Emotions at Work",
+      "themes": [
+        {
+          "theme": "The colleague who is struggling (EW)",
+          "bands": {
+            "11–12": "Teach someone else how to structurally help a struggling colleague.",
+            "K–2": "Ask an adult how to help a friend who's struggling.",
+            "3–5": "Help a struggling classmate in one small structural way, with an adult's help."
+          }
+        },
+        {
+          "theme": "Feedback that can be used (EW)",
+          "bands": {
+            "K–2": "Give one piece of feedback to a friend and ask if it helped, with an adult nearby.",
+            "3–5": "Give feedback and have the person tell you if it landed, with an adult's help.",
+            "6–8": "Give usable feedback and confirm whether it landed, checked by someone."
+          }
+        },
+        {
+          "theme": "Working with somebody you find difficult (EW)",
+          "bands": {
+            "3–5": "Try one way to work with someone you find difficult, with an adult's help.",
+            "6–8": "Build a working method for someone difficult and test if it holds, checked by someone.",
+            "9–10": "Build and test your own working method for someone you find difficult, on your own."
+          }
+        },
+        {
+          "theme": "The customer, member or family in front of you (EW)",
+          "bands": {
+            "6–8": "Change one interaction by starting from the other person's stake, with a checker.",
+            "9–10": "Change a real interaction by starting from the other person's stake, on your own.",
+            "11–12": "Teach someone else to start an interaction from the other person's stake."
+          }
+        },
+        {
+          "theme": "Power you did not ask for (EW)",
+          "bands": {
+            "9–10": "Describe a conversation your role changed without meaning to, on your own.",
+            "11–12": "Teach someone else how unasked-for power changes a conversation.",
+            "K–2": "Ask an adult if being older sometimes gives you extra power without asking."
+          }
+        },
+        {
+          "theme": "Saying no at work (EW)",
+          "bands": {
+            "11–12": "Teach someone else how to refuse something properly at work.",
+            "K–2": "Practice saying no to a small task with an adult's help.",
+            "3–5": "Refuse something and record what happened, with an adult's help."
+          }
+        },
+        {
+          "theme": "Being managed badly (EW)",
+          "bands": {
+            "K–2": "Ask an adult what to do when someone in charge isn't being fair.",
+            "3–5": "Do one thing upward that improves your own conditions, with an adult's help.",
+            "6–8": "Do a real thing upward that improves your own conditions, checked by someone."
+          }
+        },
+        {
+          "theme": "The meeting where nobody says the real thing (EW)",
+          "bands": {
+            "3–5": "Notice when nobody's saying the real thing in a group, with an adult's help.",
+            "6–8": "Name the real thing in a meeting and describe the room's response, checked by someone.",
+            "9–10": "Name the real thing in a real meeting and describe the response, on your own."
+          }
+        },
+        {
+          "theme": "Emotional labour, counted (EW)",
+          "bands": {
+            "6–8": "Count a week of emotional labour on a team, checked by someone.",
+            "9–10": "Count a week of emotional labour and name who carries most, on your own.",
+            "11–12": "Teach someone else how to count and name emotional labour on a team."
+          }
+        },
+        {
+          "theme": "Handing over a person, not a case (EW)",
+          "bands": {
+            "9–10": "Describe a handover and what you did to protect the relationship, on your own.",
+            "11–12": "Teach someone else how to hand over a person, not just a case.",
+            "K–2": "Ask an adult what it means to care about a person, not just their problem."
+          }
+        },
+        {
+          "theme": "Leaving well (EW)",
+          "bands": {
+            "11–12": "Describe your own exit plan for a role you hold and share it with someone.",
+            "K–2": "Ask an adult what it means to leave something well.",
+            "3–5": "Describe your own plan for leaving a role well, with an adult's help."
+          }
+        }
+      ]
+    }
+  ]
+}

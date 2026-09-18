@@ -20,7 +20,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Civic & Leadership | 111 | 0 | 100% | 0% | 100% | 0% | 49 |
 | Health & Community | 111 | 0 | 98% | 0% | 100% | 0% | 45 |
 | Language, Culture & Communication | 111 | 0 | 100% | 0% | 100% | 0% | 43 |
-| Empathy & Emotional Intelligence | 167 | 0 | 0% | 0% | 100% | 19% | 37 |
+| Empathy & Emotional Intelligence | 167 | 0 | 100% | 0% | 100% | 19% | 37 |
 | Community & Relationship Practice | 167 | 0 | 0% | 0% | 100% | 0% | 32 |
 | Preventive Health & Everyday Care | 250 | 5 | 100% | 0% | 100% | 0% | 30 |
 | Basic Life Skills & Self-Reliance | 250 | 5 | 100% | 0% | 100% | 0% | 93 |

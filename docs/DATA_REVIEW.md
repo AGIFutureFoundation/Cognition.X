@@ -54,12 +54,14 @@ sections; the only other diff is the fonts `<link>`).
    filter. Found that Empathy & Emotional Intelligence and Community &
    Relationship Practice do **not** fit `unbanded`: their 55 themes
    each recur across three or four grades in an irregular pattern
-   (never all five, never exactly one row), so a third promotion kind
-   — matching on `(theme, grade)` directly — is needed before they can
-   be filled; scoped in `docs/NEXT_STEPS_2.md` prompt 3, not yet built.
-   K–12, Trade School, Regional and the two `—`-grade rows above remain
-   out of scope until the grade filter extends from `BAND_LEVEL` to
-   `GRADE_LEVEL`.
+   (never all five, never exactly one row). *Update (v0.93.0):* added
+   a third promotion kind, `"partial_bands": true`, filling each grade
+   a theme actually has from that grade's own authored sentence, and
+   used it to fill Empathy & Emotional Intelligence's 167 rows.
+   Community & Relationship Practice (the same pattern) is the next
+   tranche. K–12, Trade School, Regional and Health & Community's two
+   `—`-grade rows remain out of scope until the grade filter extends
+   from `BAND_LEVEL` to `GRADE_LEVEL`.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

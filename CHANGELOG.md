@@ -4,6 +4,35 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.93.0] — 2026-09-18
+
+### Added — prompt 3, tranche four: a `"partial_bands": true` promotion mechanism, and Empathy & Emotional Intelligence's 167 empty descriptions filled
+- `tools/normalize_blocks.py` gains a third promotion kind for packs where
+  a theme's rows span only SOME of the five bands — a sliding, sometimes
+  wrap-around window of three or four grades, never all five (the
+  original `bands` mechanism) and never exactly one (`"unbanded"`, v0.90.0).
+  A promotion declaring `"partial_bands": true` carries a `bands` dict per
+  theme with only the keys that theme's rows actually use; each grade's
+  row is filled from that grade's own authored sentence, with no
+  "— at ‹band›" suffix (new `partial_band_description()` helper).
+  `track`/`code` stay deferred, for the same tracked-shape reason as
+  `unbanded`. Validated at parse time: every theme's `bands` must be a
+  non-empty, incomplete subset of the five bands with distinct,
+  non-empty sentences; `partial_bands` cannot combine with `unbanded` or
+  `override`.
+- **`data/promotions/empathy-emotional-intelligence.json`** is the first
+  `partial_bands` promotion: 55 themes (Self-Awareness, Other-Awareness,
+  Repair & Resolution, Reading the Room, Emotions at Work), each theme's
+  rows spanning exactly the 3 or 4 grades its real rows carry — 167
+  rows, matching the pack's actual grade spans exactly. No block id,
+  code, track, level, credential or transfer check changed.
+- `tests/test_platform.py` gains `test_partial_band_descriptions()` and
+  `PARTIAL_BANDS_FILLED_PACKS`; `KNOWN_EMPTY_DESCRIPTION_ROWS` falls
+  5,758 → 5,591. Dataset-wide description coverage holds at 67% (a
+  167-row pack barely moves the rounded percentage).
+- Community & Relationship Practice (167 rows, the same irregular
+  span pattern) fits the same mechanism and is the next tranche.
+
 ## [0.92.0] — 2026-09-18
 
 ### Added — prompt 3, tranche three: Health & Community's 109 empty descriptions filled; a structural finding on the remaining foundation packs

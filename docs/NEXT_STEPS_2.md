@@ -109,19 +109,22 @@ python3 tools/normalize_blocks.py && python3 tests/test_platform.py
 
 ---
 
-## 3 — The 6,200 empty descriptions, filled through promotions *(tranche one — Future-Work — done in v0.90.0, 111 rows; tranche two — Civic & Leadership and Language, Culture & Communication — done in v0.91.0, 222 rows; tranche three — Health & Community — done in v0.92.0, 109 of 111 rows)*
+## 3 — The 6,200 empty descriptions, filled through promotions *(tranche one — Future-Work — done in v0.90.0, 111 rows; tranche two — Civic & Leadership and Language, Culture & Communication — done in v0.91.0, 222 rows; tranche three — Health & Community — done in v0.92.0, 109 of 111 rows; tranche four — a new `partial_bands` mechanism, and Empathy & Emotional Intelligence — done in v0.93.0, 167 rows)*
 
-**Wrinkle found in v0.92.0.** Empathy & Emotional Intelligence and
-Community & Relationship Practice (167 rows each) do not fit the
-`unbanded` mechanism used for tranches one through three: each of
-their 55 themes recurs across three or four grades in an irregular
-pattern — never all five bands (so the original `bands` fill doesn't
-apply) and never exactly one row (so `unbanded` doesn't either). A
-third promotion kind, matching a description to its own `(theme,
-grade)` pair, is needed before these two packs can be filled. K–12,
-Trade School, Regional, and Health & Community's two `—`-grade rows
-remain out of scope until `apply_promotions()`'s grade filter is
-extended from `BAND_LEVEL` to `GRADE_LEVEL`.
+**Wrinkle found in v0.92.0, resolved in v0.93.0.** Empathy & Emotional
+Intelligence and Community & Relationship Practice (167 rows each) do
+not fit the `unbanded` mechanism used for tranches one through three:
+each of their 55 themes recurs across three or four grades in an
+irregular, sometimes wrap-around pattern — never all five bands (so
+the original `bands` fill doesn't apply) and never exactly one row (so
+`unbanded` doesn't either). v0.93.0 added a third promotion kind,
+`"partial_bands": true`, filling each grade a theme actually has from
+that theme's own per-grade sentence, and used it to author Empathy &
+Emotional Intelligence. Community & Relationship Practice (the same
+pattern) is the next tranche. K–12, Trade School, Regional, and Health
+& Community's two `—`-grade rows remain out of scope until
+`apply_promotions()`'s grade filter is extended from `BAND_LEVEL` to
+`GRADE_LEVEL`.
 
 **Why.** 36% of rows have no description at all: 5,200 in the sector-OS
 packs and 1,000 in the nine foundation packs (K–12, Trade School,

@@ -177,6 +177,22 @@ def unbanded_description(desc):
     return d
 
 
+def partial_band_description(bands, grade):
+    """Validate a `"partial_bands": true` promotion theme's sentence for one
+    grade (see apply_promotions): the theme's rows span only some of the
+    five bands — a sliding, sometimes wrap-around window of three or four —
+    so `bands` carries only the keys the theme actually has rows at, each a
+    complete standalone sentence for a learner at that one grade, with no
+    suffix. Returns the trimmed sentence for `grade`, or None if `grade`
+    has no authored sentence or the sentence fails the check."""
+    if not isinstance(bands, dict) or grade not in bands:
+        return None
+    d = str(bands[grade]).strip()
+    if len(d) < 40 or not d.endswith(".") or " — at " in d:
+        return None
+    return d
+
+
 def apply_promotions(rows):
     """Fill empty track/code/level/description on legacy rows from
     data/promotions/*.json (keyed by exact theme text; empty fields only),
@@ -193,17 +209,27 @@ def apply_promotions(rows):
     grade is already the row's own column) and would recreate the exact
     band-suffix content debt the override mechanism exists to remove. This
     is still plain fill-empty, not a new counted exception: the field
-    starts empty and stays that way until a promotion supplies it."""
+    starts empty and stays that way until a promotion supplies it.
+
+    A promotion declaring `"partial_bands": true` is for a foundation pack
+    where each theme's rows span only SOME of the five bands — a sliding,
+    sometimes wrap-around window of three or four (Empathy & Emotional
+    Intelligence, Community & Relationship Practice) — rather than all
+    five (the original `bands` mechanism) or exactly one (`unbanded`).
+    There, a theme's `bands` carries only the keys it actually has rows
+    at; each grade's row is filled from that grade's own sentence, with
+    no suffix. Also plain fill-empty, and `track`/`code` are left
+    deferred for the same tracked-shape reason as `unbanded`."""
     if not PROMOTIONS.is_dir():
         return
-    promos, overriders, overmap, unbanded = {}, {}, {}, set()
+    promos, overriders, overmap, unbanded, partial_bands_packs = {}, {}, {}, set(), set()
     for path in sorted(PROMOTIONS.glob("*.json")):
         spec = json.loads(path.read_text(encoding="utf-8"))
         themap = {}
         for track in spec["tracks"]:
             for i, th in enumerate(track["themes"]):
                 themap[th["theme"]] = (track["name"], track["prefix"], i,
-                                       th["description"], th.get("transfer_check"),
+                                       th.get("description", ""), th.get("transfer_check"),
                                        track.get("credential"), th.get("bands"))
                 # override rows already carry a track, so a theme name that two
                 # tracks share (the Multilateral OS has one) resolves per track
@@ -219,6 +245,17 @@ def apply_promotions(rows):
             if any(th.get("bands") for t in spec["tracks"] for th in t["themes"]):
                 raise SystemExit(f"{path.name}: an unbanded promotion may not carry bands (one row per theme already names the grade)")
             unbanded.add(spec["pack"])
+        if spec.get("partial_bands"):
+            if spec.get("unbanded") or spec.get("override"):
+                raise SystemExit(f"{path.name}: partial_bands cannot combine with unbanded or override")
+            for t in spec["tracks"]:
+                for th in t["themes"]:
+                    b = th.get("bands")
+                    if not b or not set(b) <= set(BANDS) or len(b) >= len(BANDS):
+                        raise SystemExit(f"{path.name}: a partial_bands theme must carry a non-empty, incomplete subset of {BANDS}: {th['theme']!r}")
+                    if len({str(v).strip() for v in b.values()}) != len(b) or any(not str(v).strip() for v in b.values()):
+                        raise SystemExit(f"{path.name}: a partial_bands theme's sentences must be distinct and non-empty: {th['theme']!r}")
+            partial_bands_packs.add(spec["pack"])
     filled = checks = creds = overrode = 0
     for r in rows:
         themap = promos.get(r["pack"])
@@ -233,9 +270,10 @@ def apply_promotions(rows):
         name, prefix, ti, desc, check, cred, bands = themap[r["theme"]]
         bi = BANDS.index(r["grade"])
         is_unbanded = r["pack"] in unbanded
-        if not is_unbanded:
-            # An unbanded promotion's themes are grouped for the file's own
-            # readability only: each names exactly one row, not a 10-theme,
+        is_partial = r["pack"] in partial_bands_packs
+        if not is_unbanded and not is_partial:
+            # An unbanded or partial_bands promotion's themes are grouped for
+            # the file's own readability only: neither forms a 10-theme,
             # 50-block track, so filling `track`/`code` here would create a
             # track that fails the tracked-shape check in test_dataset().
             # Those two stay deferred; light_fill() still assigns `code` and
@@ -248,7 +286,12 @@ def apply_promotions(rows):
         # shape and rules as a pack spec's); otherwise the shared sentence
         # takes the documented "— at <band>" suffix
         if not r["description"]:
-            if bands:
+            if is_partial:
+                d = partial_band_description(bands, r["grade"])
+                if d is None:
+                    raise SystemExit(f"partial_bands promotion {r['pack']!r}, theme {r['theme']!r}: no valid sentence authored for grade {r['grade']!r}")
+                r["description"] = d
+            elif bands:
                 if sorted(bands) != sorted(BANDS) or len({str(bands[b]).strip() for b in BANDS}) != 5 or any(not str(bands[b]).strip() for b in BANDS):
                     raise SystemExit(f"promotion {r['pack']!r}, theme {r['theme']!r}: bands must name the five bands with five distinct non-empty sentences")
                 r["description"] = str(bands[r["grade"]]).strip()
