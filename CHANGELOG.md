@@ -4,6 +4,37 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.97.0] — 2026-09-18
+
+### Added — prompt 3 continuation: Regional's 111 empty descriptions filled, and the `unbanded` distinctness check scoped to themes, not rows
+- **`data/promotions/regional.json`** is a new `unbanded` promotion: 83
+  themes across ten tracks — eight per-region tracks (Greater New
+  Orleans, the Capital Region, the Bayou Region, Acadiana, Southwest
+  Louisiana, Central Louisiana, Northwest Louisiana, Northeast
+  Louisiana; nine themes each, region name embedded in the theme text),
+  a cross-region-foundations track (four themes whose text never names
+  a region, so all rows sharing one of those themes get its one
+  sentence verbatim), and an industry-clusters track (seven themes at
+  the adult-route grade `9–12 · adult`) — 111 rows, no suffix,
+  `track`/`code` left deferred like every other `unbanded` pack. No
+  block id, code, track, level, credential, or transfer check changed.
+- `tests/test_platform.py`'s `test_unbanded_descriptions()` distinctness
+  check now groups by theme before comparing, not by row: it first
+  checks every row of a given theme shares that theme's one sentence,
+  then checks distinct themes have distinct sentences. Every existing
+  `unbanded` pack has exactly one row per theme, so this is a no-op for
+  them; Regional's four cross-region themes (each repeated verbatim
+  across 8 rows, one per named region, since the theme text itself
+  doesn't vary by region) now pass correctly instead of failing a
+  same-sentence-twice check that was never the actual invariant.
+  `UNBANDED_FILLED_PACKS` gains Regional; `KNOWN_EMPTY_DESCRIPTION_ROWS`
+  falls 5,313 → 5,202. Dataset-wide description coverage rises from
+  69% to 70%.
+- What remains of prompt 3: Health & Community's 2 grade-`—` rows (now
+  reachable, an addition to its existing promotion); then the sector-OS
+  and Education OS empty descriptions (5,200 rows), whose theme/grade
+  structure has not yet been verified.
+
 ## [0.96.0] — 2026-09-18
 
 ### Added — prompt 3 continuation: Trade School's 47 empty descriptions filled through the `unbanded` mechanism
