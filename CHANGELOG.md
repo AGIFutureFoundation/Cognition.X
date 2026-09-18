@@ -4,6 +4,21 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.85.0] — 2026-09-18
+
+### Added — prompt 2, tranche seven: Arts & Craft Trades and Energy, Grid & the Home across five bands
+- **`data/pack_specs/arts-craft-trades-louisiana.json`** and
+  **`data/pack_specs/energy-grid-home.json`** now carry `bands` on
+  every theme: five tracks each, ten themes, five distinct sentences on
+  the band ladder — 500 rows across the two packs; no block id, code,
+  credential or transfer check changed. Both are pack-spec-based (not
+  promotions); `bands` reaches them through the same direct path used
+  for SmartCiti.X, Trades in the Classroom, Trades Across School
+  Subjects, the three culture packs, Digital Life and Law — no override
+  needed regardless of the shared description already being non-empty,
+  since `generate_pack.py` rebuilds each pack's CSV fresh from its spec
+  every time. Band-suffix rows 3,000 → 2,500.
+
 ## [0.84.0] — 2026-09-18
 
 ### Added — prompt 2, tranche six: Water, Land & Climate and Making, Repair & Reuse across five bands

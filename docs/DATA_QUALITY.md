@@ -39,7 +39,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Cognition.X : Sapient OS | 1120 | 10 | 44% | 0% | 100% | 0% | 25 |
 | Non-Profit Practice | 1150 | 10 | 43% | 0% | 100% | 0% | 25 |
 | Cognition.X : Education OS | 660 | 0 | 0% | 0% | 100% | 0% | 113 |
-| Arts & Craft Trades : Louisiana Makers | 250 | 5 | 100% | 100% | 100% | 0% | 75 |
+| Arts & Craft Trades : Louisiana Makers | 250 | 5 | 100% | 0% | 100% | 0% | 75 |
 | Arts, Making Media & Performance | 250 | 5 | 100% | 0% | 100% | 0% | 82 |
 | Civic Leadership Legacy : The Institute Model | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
 | Civic Leadership Legacy : California | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
@@ -48,7 +48,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Culinary Trades : The Louisiana Kitchen | 250 | 5 | 100% | 0% | 100% | 0% | 85 |
 | Digital Life, Data & AI | 250 | 5 | 100% | 0% | 100% | 0% | 54 |
 | Emergency Preparedness & First Response | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
-| Energy, Grid & the Home | 250 | 5 | 100% | 100% | 100% | 0% | 94 |
+| Energy, Grid & the Home | 250 | 5 | 100% | 0% | 100% | 0% | 94 |
 | Food, Cooking & Nutrition | 250 | 5 | 100% | 100% | 100% | 0% | 82 |
 | Law, Contracts & Everyday Rights | 250 | 5 | 100% | 0% | 100% | 0% | 104 |
 | Learning States & Universal Access | 250 | 5 | 100% | 100% | 100% | 0% | 94 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 17% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 14% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 

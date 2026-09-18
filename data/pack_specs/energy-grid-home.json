@@ -10,52 +10,122 @@
         {
           "theme": "The path from pole to plug",
           "description": "Service line, meter, panel, circuit, outlet — the one-way street electricity takes into a home.",
-          "transfer_check": "Trace and sketch the actual path from your building's meter to one outlet, naming each stage you can safely observe."
+          "transfer_check": "Trace and sketch the actual path from your building's meter to one outlet, naming each stage you can safely observe.",
+          "bands": {
+            "K–2": "Ask an adult where the wire outside connects to your house.",
+            "3–5": "Trace where power enters your home from outside, with an adult's help.",
+            "6–8": "Trace a real power path from pole to a real outlet, with a checker.",
+            "9–10": "Explain, using real wiring, the full path from pole to plug.",
+            "11–12": "Teach someone else how to trace the real path electricity takes into a home."
+          }
         },
         {
           "theme": "The breaker panel is a map",
           "description": "What a breaker does, why it trips, and labelling the panel so 3 a.m. problems take one minute.",
-          "transfer_check": "Test and correctly label every breaker in a real panel, and demonstrate finding the right one for a named outlet."
+          "transfer_check": "Test and correctly label every breaker in a real panel, and demonstrate finding the right one for a named outlet.",
+          "bands": {
+            "K–2": "Look at the breaker panel with an adult and point at a switch.",
+            "3–5": "Find one labeled breaker in a real panel, with an adult's help.",
+            "6–8": "Read a real breaker panel and identify what each switch controls, with a checker.",
+            "9–10": "Read and use a real breaker panel confidently, on your own.",
+            "11–12": "Teach someone else how to read a real breaker panel like a map."
+          }
         },
         {
           "theme": "Watts, volts and the kettle that dims the lights",
           "description": "Power as a rate, why some appliances are heavy loads, and what an overloaded circuit feels like before it fails.",
-          "transfer_check": "Rank five real household appliances by wattage from their plates, and identify which two must not share one circuit."
+          "transfer_check": "Rank five real household appliances by wattage from their plates, and identify which two must not share one circuit.",
+          "bands": {
+            "K–2": "Notice the lights flicker when a big appliance turns on, with an adult.",
+            "3–5": "Explain that some appliances use more power than others, with an adult.",
+            "6–8": "Calculate a real appliance's basic power draw, with a checker.",
+            "9–10": "Explain, using real numbers, why a real appliance dims the lights.",
+            "11–12": "Teach someone else the real relationship between watts, volts and current."
+          }
         },
         {
           "theme": "Cords, plugs and the sockets that scorch",
           "description": "Damaged leads, loose sockets, daisy-chained extension strips — the household electrical fires that announce themselves first.",
-          "transfer_check": "Inspect one real room's cords, plugs and strips against a checklist and remove or report every fault found."
+          "transfer_check": "Inspect one real room's cords, plugs and strips against a checklist and remove or report every fault found.",
+          "bands": {
+            "K–2": "Tell an adult if a cord looks frayed or damaged.",
+            "3–5": "Spot a real damaged cord or plug, with an adult's help.",
+            "6–8": "Identify a real fire hazard from a cord or socket, with a checker.",
+            "9–10": "Inspect real cords and sockets for hazards on your own.",
+            "11–12": "Teach someone else how to spot a real scorched socket or damaged cord."
+          }
         },
         {
           "theme": "Water and electricity in the same room",
           "description": "Why bathrooms and kitchens have special rules, and what a GFCI/RCD actually detects.",
-          "transfer_check": "Locate and test every GFCI/RCD protecting wet areas in a real home using its test button, and log the result."
+          "transfer_check": "Locate and test every GFCI/RCD protecting wet areas in a real home using its test button, and log the result.",
+          "bands": {
+            "K–2": "Never touch a plug with wet hands, with an adult reminding you.",
+            "3–5": "Explain why water and electricity are dangerous together, with an adult.",
+            "6–8": "Identify a real electrical hazard near water, with a checker.",
+            "9–10": "Assess a real bathroom or kitchen for electrical-water hazards, on your own.",
+            "11–12": "Teach someone else the real dangers of water and electricity together."
+          }
         },
         {
           "theme": "When the power goes out",
           "description": "Reading whether it is your breaker, your building or your street, and the safe order of checks.",
-          "transfer_check": "Given a staged or real outage, run the diagnostic order — panel, neighbours, provider's outage map — and state the correct next call."
+          "transfer_check": "Given a staged or real outage, run the diagnostic order — panel, neighbours, provider's outage map — and state the correct next call.",
+          "bands": {
+            "K–2": "Stay calm and find an adult when the lights go out.",
+            "3–5": "Know one safe thing to do during a power outage, with an adult's help.",
+            "6–8": "Prepare for a real power outage using a checklist, with a checker.",
+            "9–10": "Prepare yourself and a household for a real power outage, on your own.",
+            "11–12": "Lead a real household's power outage preparation and response."
+          }
         },
         {
           "theme": "The meter and the bill it writes",
           "description": "Reading your own meter, kWh as the unit you are billed in, and matching a month's bill to a month's life.",
-          "transfer_check": "Read a real meter on two dates, compute the kWh used, and reconcile it against the bill for the same period."
+          "transfer_check": "Read a real meter on two dates, compute the kWh used, and reconcile it against the bill for the same period.",
+          "bands": {
+            "K–2": "Look at the numbers on a power meter with an adult.",
+            "3–5": "Read a simple electricity meter, with an adult's help.",
+            "6–8": "Read a real electricity bill and understand its charges, with a checker.",
+            "9–10": "Manage a real household's energy costs on your own.",
+            "11–12": "Explain to someone else how to read and reduce a real energy bill."
+          }
         },
         {
           "theme": "Batteries: small, large and dangerous",
           "description": "From AA to power bank to e-bike pack — charging habits, swelling cells, and why some batteries must never meet the bin.",
-          "transfer_check": "Audit the batteries in one household, flag any damaged or swollen cell, and take one to a genuine recycling point."
+          "transfer_check": "Audit the batteries in one household, flag any damaged or swollen cell, and take one to a genuine recycling point.",
+          "bands": {
+            "K–2": "Ask an adult before touching any battery you find.",
+            "3–5": "Learn one safety rule for handling batteries, with an adult's help.",
+            "6–8": "Identify a real battery hazard and safe handling, with a checker.",
+            "9–10": "Handle and store real batteries safely on your own.",
+            "11–12": "Teach someone else the real hazards and safe handling of different batteries."
+          }
         },
         {
           "theme": "Generators, inverters and backup power",
           "description": "What can run a fridge overnight, carbon monoxide and the generator that must stay outside, and sizing a backup honestly.",
-          "transfer_check": "Size a backup source for three named essentials in your home, from their real wattages, and state where it would safely run."
+          "transfer_check": "Size a backup source for three named essentials in your home, from their real wattages, and state where it would safely run.",
+          "bands": {
+            "K–2": "Watch an adult explain what a generator does.",
+            "3–5": "Learn what a generator is for, with an adult's help.",
+            "6–8": "Identify a real safe way to use a generator, with a checker.",
+            "9–10": "Use a real generator or backup power source safely, on your own.",
+            "11–12": "Teach someone else the real safety rules for generators and backup power."
+          }
         },
         {
           "theme": "Calling the professional",
           "description": "The line between owner-safe work and licensed work, and describing an electrical problem so the electrician arrives prepared.",
-          "transfer_check": "Write the call-out description for one real or staged electrical fault — symptoms, location, panel photo — that a stranger could act on."
+          "transfer_check": "Write the call-out description for one real or staged electrical fault — symptoms, location, panel photo — that a stranger could act on.",
+          "bands": {
+            "K–2": "Ask an adult who fixes electrical problems.",
+            "3–5": "Learn when to call an electrician instead of fixing it yourself, with an adult.",
+            "6–8": "Identify a real electrical problem that needs a professional, with a checker.",
+            "9–10": "Judge, for a real problem, when to call a professional, on your own.",
+            "11–12": "Explain to someone else the real line between DIY and professional electrical work."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "Where the heat leaks out",
           "description": "Draughts, glazing, loft and wall — the order in which a home loses heat and the cheap fixes that come first.",
-          "transfer_check": "Survey one real home for heat loss with hands, candle or camera, and rank the three worst leaks with a fix for each."
+          "transfer_check": "Survey one real home for heat loss with hands, candle or camera, and rank the three worst leaks with a fix for each.",
+          "bands": {
+            "K–2": "Feel for a draft near a window with an adult.",
+            "3–5": "Find one place where heat escapes a home, with an adult's help.",
+            "6–8": "Identify a real heat-loss point in a building, with a checker.",
+            "9–10": "Diagnose and fix a real heat-loss problem in a home, on your own.",
+            "11–12": "Explain to someone else how to find and fix real heat loss in a building."
+          }
         },
         {
           "theme": "The heating system you actually have",
           "description": "Furnace, boiler, heat pump, resistive — identifying the system, its fuel and its one owner-serviceable part.",
-          "transfer_check": "Identify a real home's heating type, locate its filter or service point, and perform or schedule the due maintenance."
+          "transfer_check": "Identify a real home's heating type, locate its filter or service point, and perform or schedule the due maintenance.",
+          "bands": {
+            "K–2": "Ask an adult what makes the house warm in winter.",
+            "3–5": "Name the type of heating system your home uses, with an adult.",
+            "6–8": "Identify a real heating system's type and how it works, with a checker.",
+            "9–10": "Explain, using a real system, how your home is actually heated.",
+            "11–12": "Explain to someone else how to identify and understand a real heating system."
+          }
         },
         {
           "theme": "Thermostats and the schedule that saves",
           "description": "Setbacks, schedules and why heating an empty house is the quietest money leak in the home.",
-          "transfer_check": "Program a real thermostat with a weekly schedule matched to actual occupancy and estimate the saving from the setback."
+          "transfer_check": "Program a real thermostat with a weekly schedule matched to actual occupancy and estimate the saving from the setback.",
+          "bands": {
+            "K–2": "Watch an adult set the thermostat, with their help.",
+            "3–5": "Read a real thermostat's current setting, with an adult's help.",
+            "6–8": "Set a real thermostat schedule that saves energy, with a checker.",
+            "9–10": "Program a real thermostat schedule that saves real money, on your own.",
+            "11–12": "Teach someone else how to set a real thermostat schedule for savings."
+          }
         },
         {
           "theme": "Hot water: the second-biggest bill",
           "description": "Tank versus on-demand, the temperature that scalds versus the temperature that breeds legionella, and the shower's share.",
-          "transfer_check": "Measure a real tap's hot water temperature, compare it to the safe band, and adjust or report accordingly."
+          "transfer_check": "Measure a real tap's hot water temperature, compare it to the safe band, and adjust or report accordingly.",
+          "bands": {
+            "K–2": "Ask an adult why the shower water gets hot.",
+            "3–5": "Learn that heating water costs money, with an adult's help.",
+            "6–8": "Identify a real way to reduce hot water costs, with a checker.",
+            "9–10": "Reduce your own real household's hot water costs, on your own.",
+            "11–12": "Explain to someone else why hot water is often the second-biggest energy cost."
+          }
         },
         {
           "theme": "Damp, mould and the air a home breathes",
           "description": "Condensation versus penetration, extraction fans, and why sealing a home tight without ventilating it grows mould.",
-          "transfer_check": "Find and diagnose one real damp or condensation site, and apply or specify the ventilation-first remedy."
+          "transfer_check": "Find and diagnose one real damp or condensation site, and apply or specify the ventilation-first remedy.",
+          "bands": {
+            "K–2": "Tell an adult if you see a dark spot on a wall.",
+            "3–5": "Spot a real sign of damp or mould, with an adult's help.",
+            "6–8": "Identify a real cause of damp or mould in a home, with a checker.",
+            "9–10": "Diagnose and address real damp or mould in a home, on your own.",
+            "11–12": "Explain to someone else the real causes and fixes for damp and mould."
+          }
         },
         {
           "theme": "Keeping cool without drowning the bill",
           "description": "Shade, cross-ventilation, fans and when air conditioning earns its cost — heat management as a sequence, not a switch.",
-          "transfer_check": "Cool one real room through a hot day using a written non-AC sequence first, logging temperatures at each step."
+          "transfer_check": "Cool one real room through a hot day using a written non-AC sequence first, logging temperatures at each step.",
+          "bands": {
+            "K–2": "Use a fan instead of the air conditioner on a mild day, with an adult.",
+            "3–5": "Name one way to stay cool without high cost, with an adult's help.",
+            "6–8": "Identify a real affordable cooling strategy, with a checker.",
+            "9–10": "Manage real cooling costs in your own household, on your own.",
+            "11–12": "Advise someone else on real affordable strategies to stay cool."
+          }
         },
         {
           "theme": "The cold snap and the heat wave",
           "description": "Frozen pipes, overwhelmed grids and the people most at risk two doors away — extremes as household and neighbourhood events.",
-          "transfer_check": "Write your household's extreme-temperature plan — pipes, power, and the two neighbours you will check — and rehearse one part."
+          "transfer_check": "Write your household's extreme-temperature plan — pipes, power, and the two neighbours you will check — and rehearse one part.",
+          "bands": {
+            "K–2": "Dress warmly or stay in shade when an adult says the weather is extreme.",
+            "3–5": "Know one safety step for extreme heat or cold, with an adult's help.",
+            "6–8": "Prepare for a real extreme weather event using a checklist, with a checker.",
+            "9–10": "Prepare yourself and a household for a real extreme weather event, on your own.",
+            "11–12": "Lead a real household's preparation for an extreme heat or cold event."
+          }
         },
         {
           "theme": "Fuel poverty and the help that exists",
           "description": "When heat competes with food: tariffs, grants, insulation schemes and the entitlements that go unclaimed.",
-          "transfer_check": "Map the energy-cost support available at your own address — programs, eligibility, application route — into a half-page guide."
+          "transfer_check": "Map the energy-cost support available at your own address — programs, eligibility, application route — into a half-page guide.",
+          "bands": {
+            "K–2": "Ask an adult what happens if a family can't pay to keep warm.",
+            "3–5": "Learn that some families struggle to pay for heat, with an adult's help.",
+            "6–8": "Identify a real assistance program for energy costs, with a checker.",
+            "9–10": "Find and apply for real energy assistance for a household in need, on your own.",
+            "11–12": "Guide someone else to real assistance programs for fuel poverty."
+          }
         },
         {
           "theme": "Reading an efficiency label",
           "description": "Energy ratings on appliances and homes: what the letters measure, and lifetime cost versus sticker price.",
-          "transfer_check": "Compare two real appliances by projected lifetime energy cost and defend a purchase choice with the arithmetic shown."
+          "transfer_check": "Compare two real appliances by projected lifetime energy cost and defend a purchase choice with the arithmetic shown.",
+          "bands": {
+            "K–2": "Look at a sticker on a new appliance with an adult.",
+            "3–5": "Find the efficiency rating on a real appliance, with an adult's help.",
+            "6–8": "Read a real efficiency label and what it means for cost, with a checker.",
+            "9–10": "Use real efficiency labels to make a real purchasing decision, on your own.",
+            "11–12": "Explain to someone else how to read a real efficiency label correctly."
+          }
         },
         {
           "theme": "The retrofit, in the right order",
           "description": "Insulate, seal, ventilate, then upgrade the heat source — why the order matters and what each step costs and saves.",
-          "transfer_check": "Draft a sequenced retrofit plan for a real dwelling with rough costs, and justify why your step one comes first."
+          "transfer_check": "Draft a sequenced retrofit plan for a real dwelling with rough costs, and justify why your step one comes first.",
+          "bands": {
+            "K–2": "Ask an adult what order to fix things in an old house.",
+            "3–5": "Name one home improvement that saves energy, with an adult's help.",
+            "6–8": "Identify the real correct order of energy retrofit steps, with a checker.",
+            "9–10": "Plan a real energy retrofit in the correct order, on your own.",
+            "11–12": "Advise someone else on the real correct order for an energy retrofit."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "The machine the size of a country",
           "description": "Generation, transmission, distribution — the grid as one synchronised machine that must balance every second.",
-          "transfer_check": "Explain to someone else, with a drawing, why the grid must match supply to demand instantly and what happens when it cannot."
+          "transfer_check": "Explain to someone else, with a drawing, why the grid must match supply to demand instantly and what happens when it cannot.",
+          "bands": {
+            "K–2": "Ask an adult how electricity gets to every house.",
+            "3–5": "Learn that power plants connect to every home, with an adult's help.",
+            "6–8": "Explain how a real regional grid connects power plants to homes, with a checker.",
+            "9–10": "Explain, using real infrastructure, how the grid works as one machine.",
+            "11–12": "Teach someone else how the real grid functions as a country-sized machine."
+          }
         },
         {
           "theme": "The sources and their trade-offs",
           "description": "Coal, gas, nuclear, hydro, wind, solar — what each costs, emits, and does when the wind drops or the river runs low.",
-          "transfer_check": "Build an honest one-page comparison of three generation sources using published capacity and emissions data."
+          "transfer_check": "Build an honest one-page comparison of three generation sources using published capacity and emissions data.",
+          "bands": {
+            "K–2": "Name one way electricity is made, with an adult.",
+            "3–5": "Name two ways electricity can be made, with an adult's help.",
+            "6–8": "Compare two real energy sources and their trade-offs, with a checker.",
+            "9–10": "Compare real energy sources' trade-offs using real evidence, on your own.",
+            "11–12": "Explain to someone else the real trade-offs across major energy sources."
+          }
         },
         {
           "theme": "Your region's actual mix",
           "description": "Finding the real-time generation mix where you live, and how it shifts by hour and season.",
-          "transfer_check": "Pull your region's live or published generation mix on two different days and explain one difference between them."
+          "transfer_check": "Pull your region's live or published generation mix on two different days and explain one difference between them.",
+          "bands": {
+            "K–2": "Ask an adult what kind of power plant is near your home.",
+            "3–5": "Learn what real sources power your area, with an adult's help.",
+            "6–8": "Identify your real region's actual energy mix, with a checker.",
+            "9–10": "Research and explain your real region's actual energy mix, on your own.",
+            "11–12": "Explain to someone else the real evidence behind your region's energy mix."
+          }
         },
         {
           "theme": "Peak hours and the duck curve",
           "description": "Why evening demand is expensive, what solar does to the daytime curve, and when a kWh is cheapest to use.",
-          "transfer_check": "Shift two real household loads off peak hours for a week and show the timing change (and saving, where tariffs allow)."
+          "transfer_check": "Shift two real household loads off peak hours for a week and show the timing change (and saving, where tariffs allow).",
+          "bands": {
+            "K–2": "Notice when your family uses the most electricity, with an adult.",
+            "3–5": "Learn that power use changes throughout the day, with an adult's help.",
+            "6–8": "Identify a real peak usage period and why it matters, with a checker.",
+            "9–10": "Explain, using real data, what the duck curve shows about grid demand.",
+            "11–12": "Explain to someone else the real challenge the duck curve poses for grids."
+          }
         },
         {
           "theme": "Storage: the missing piece",
           "description": "Batteries, pumped hydro and why storing electricity at scale is the grid's hardest problem.",
-          "transfer_check": "Calculate how long a named home battery could run your fridge and lights from their real wattages, and compare to a real outage duration."
+          "transfer_check": "Calculate how long a named home battery could run your fridge and lights from their real wattages, and compare to a real outage duration.",
+          "bands": {
+            "K–2": "Ask an adult why a flashlight needs batteries stored up.",
+            "3–5": "Explain what energy storage is for, with an adult's help.",
+            "6–8": "Identify a real grid-scale storage technology and its role, with a checker.",
+            "9–10": "Explain, using real examples, why storage is the grid's missing piece.",
+            "11–12": "Explain to someone else the real state of grid-scale energy storage."
+          }
         },
         {
           "theme": "Blackouts, brownouts and how grids fail",
           "description": "Cascading failure, load shedding and the famous outages — what actually went wrong and what changed after.",
-          "transfer_check": "Take one documented major blackout, map its failure chain, and identify the step where intervention could have stopped it."
+          "transfer_check": "Take one documented major blackout, map its failure chain, and identify the step where intervention could have stopped it.",
+          "bands": {
+            "K–2": "Ask an adult what happens when too many things use power at once.",
+            "3–5": "Learn the difference between a blackout and a brownout, with an adult.",
+            "6–8": "Identify a real cause of a grid failure, with a checker.",
+            "9–10": "Explain, using a real event, how and why a grid actually failed.",
+            "11–12": "Explain to someone else the real mechanisms behind grid failures."
+          }
         },
         {
           "theme": "Rooftops that generate",
           "description": "Home solar honestly: orientation, payback, export tariffs and the sales pitches that skip the denominator.",
-          "transfer_check": "Assess a real roof for solar — orientation, shading, rough yield — and produce a payback estimate you can defend."
+          "transfer_check": "Assess a real roof for solar — orientation, shading, rough yield — and produce a payback estimate you can defend.",
+          "bands": {
+            "K–2": "Ask an adult what solar panels on a roof do.",
+            "3–5": "Learn that some roofs make their own power, with an adult's help.",
+            "6–8": "Explain how a real rooftop solar system works, with a checker.",
+            "9–10": "Evaluate a real rooftop solar option for a home, on your own.",
+            "11–12": "Advise someone else on real rooftop generation options and their trade-offs."
+          }
         },
         {
           "theme": "The electric vehicle and the house",
           "description": "Charging levels, what an EV does to a home's load, and the car battery as future grid storage.",
-          "transfer_check": "Plan home charging for a named EV on a real electrical service — charger level, circuit, schedule — within the panel's capacity."
+          "transfer_check": "Plan home charging for a named EV on a real electrical service — charger level, circuit, schedule — within the panel's capacity.",
+          "bands": {
+            "K–2": "Ask an adult if a car can plug into the wall like a phone.",
+            "3–5": "Learn that electric cars charge at home, with an adult's help.",
+            "6–8": "Identify a real requirement for home electric vehicle charging, with a checker.",
+            "9–10": "Evaluate a real home's readiness for electric vehicle charging, on your own.",
+            "11–12": "Advise someone else on real home charging setup for an electric vehicle."
+          }
         },
         {
           "theme": "Who pays for the wires",
           "description": "Standing charges, network costs and why your bill has lines that are not energy — the grid as shared infrastructure.",
-          "transfer_check": "Decompose one real energy bill line by line and explain, in plain words, what each charge pays for."
+          "transfer_check": "Decompose one real energy bill line by line and explain, in plain words, what each charge pays for.",
+          "bands": {
+            "K–2": "Ask an adult who pays to build the power lines.",
+            "3–5": "Learn that the wires cost money to build and maintain, with an adult.",
+            "6–8": "Identify who real grid infrastructure costs fall on, with a checker.",
+            "9–10": "Explain, using real billing, how grid infrastructure costs are recovered.",
+            "11–12": "Explain to someone else the real economics of who pays for the grid."
+          }
         },
         {
           "theme": "The transition, without the slogans",
           "description": "Decarbonising a grid: what is genuinely hard, what is already solved, and how to read claims from every side.",
-          "transfer_check": "Take one energy-transition claim from current media, check it against grid data, and deliver a verdict with sources."
+          "transfer_check": "Take one energy-transition claim from current media, check it against grid data, and deliver a verdict with sources.",
+          "bands": {
+            "K–2": "Ask an adult if the way we make electricity is changing.",
+            "3–5": "Learn that energy sources are changing over time, with an adult's help.",
+            "6–8": "Identify a real fact about the energy transition, without slogans, with a checker.",
+            "9–10": "Explain the real energy transition honestly, weighing real trade-offs.",
+            "11–12": "Explain to someone else the real energy transition, evidence over slogans."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "The stopcock and the sixty seconds that matter",
           "description": "Where water enters, how to shut it off, and why every household member should be able to do it in the dark.",
-          "transfer_check": "Locate and operate the main water shutoff in a real dwelling, then time a second household member doing it cold."
+          "transfer_check": "Locate and operate the main water shutoff in a real dwelling, then time a second household member doing it cold.",
+          "bands": {
+            "K–2": "Ask an adult where the water shut-off is at home.",
+            "3–5": "Find the real water shut-off valve, with an adult's help.",
+            "6–8": "Locate and operate a real stopcock quickly, with a checker.",
+            "9–10": "Shut off real water quickly in an emergency, on your own.",
+            "11–12": "Teach someone else why finding the stopcock in advance actually matters."
+          }
         },
         {
           "theme": "The drip that becomes a flood",
           "description": "Reading early leak signs — stains, warping, the spinning meter with everything off — and the escalation each deserves.",
-          "transfer_check": "Run a whole-home leak check including the meter-still test, and document findings with photos."
+          "transfer_check": "Run a whole-home leak check including the meter-still test, and document findings with photos.",
+          "bands": {
+            "K–2": "Tell an adult if you see a dripping pipe.",
+            "3–5": "Notice a real small leak before it gets worse, with an adult's help.",
+            "6–8": "Identify a real leak's severity and urgency, with a checker.",
+            "9–10": "Diagnose and respond to a real leak before it floods, on your own.",
+            "11–12": "Explain to someone else why a real small drip can become a real flood."
+          }
         },
         {
           "theme": "Drains: what goes down and what must not",
           "description": "Fats, wipes and the fatberg economy; the trap under every sink and the smell that means it has failed.",
-          "transfer_check": "Clear or demonstrate clearing a real trap safely, and write the household's what-not-to-flush rules on one card."
+          "transfer_check": "Clear or demonstrate clearing a real trap safely, and write the household's what-not-to-flush rules on one card.",
+          "bands": {
+            "K–2": "Ask an adult what should never go down the drain.",
+            "3–5": "Name one thing that shouldn't go down a drain, with an adult's help.",
+            "6–8": "Identify a real substance that damages real drains, with a checker.",
+            "9–10": "Manage real household drain use responsibly, on your own.",
+            "11–12": "Explain to someone else what real substances never belong in a drain."
+          }
         },
         {
           "theme": "Gas: the smell that is a command",
           "description": "What natural gas smells like and why, the do-nots (switches, flames, phones indoors), and the evacuation-then-call order.",
-          "transfer_check": "Recite and walk the gas-leak response for your own home, including where the gas shutoff is and the number called from outside."
+          "transfer_check": "Recite and walk the gas-leak response for your own home, including where the gas shutoff is and the number called from outside.",
+          "bands": {
+            "K–2": "Tell an adult right away if you smell something like rotten eggs.",
+            "3–5": "Know that a gas smell means leave immediately, with an adult's help.",
+            "6–8": "Respond correctly to a real gas smell, with a checker.",
+            "9–10": "Respond correctly and quickly to a real gas leak smell, on your own.",
+            "11–12": "Teach someone else why a real gas smell is a command, not a suggestion."
+          }
         },
         {
           "theme": "Carbon monoxide: the one with no smell",
           "description": "Where CO comes from, the symptoms mistaken for flu, and the alarm that is not optional.",
-          "transfer_check": "Verify working CO alarms in the right locations of a real home, test them, and fix or escalate any gap."
+          "transfer_check": "Verify working CO alarms in the right locations of a real home, test them, and fix or escalate any gap.",
+          "bands": {
+            "K–2": "Ask an adult why a house needs a special alarm besides a smoke alarm.",
+            "3–5": "Learn that carbon monoxide has no smell, with an adult's help.",
+            "6–8": "Identify a real carbon monoxide risk and detector need, with a checker.",
+            "9–10": "Ensure a real home has working carbon monoxide protection, on your own.",
+            "11–12": "Explain to someone else the real danger of an odourless gas like carbon monoxide."
+          }
         },
         {
           "theme": "Water heaters, boilers and the annual visit",
           "description": "The service schedule that keeps combustion appliances safe, and the signs (soot, yellow flame, pilot outages) that cannot wait.",
-          "transfer_check": "Check a real combustion appliance for the visible warning signs and confirm or book its service record."
+          "transfer_check": "Check a real combustion appliance for the visible warning signs and confirm or book its service record.",
+          "bands": {
+            "K–2": "Ask an adult why the water heater needs to be checked sometimes.",
+            "3–5": "Learn that heaters need regular checks, with an adult's help.",
+            "6–8": "Identify what a real annual boiler or heater check involves, with a checker.",
+            "9–10": "Schedule and understand a real annual maintenance visit, on your own.",
+            "11–12": "Explain to someone else why a real annual check on a heater matters."
+          }
         },
         {
           "theme": "Hard water, soft water and what scale does",
           "description": "Mineral content, kettle fur, dying heating elements — and whether treatment is worth it where you live.",
-          "transfer_check": "Test or look up your local water hardness and inspect one real appliance for scale, recommending treat or tolerate with reasons."
+          "transfer_check": "Test or look up your local water hardness and inspect one real appliance for scale, recommending treat or tolerate with reasons.",
+          "bands": {
+            "K–2": "Ask an adult why a kettle sometimes has white bits inside.",
+            "3–5": "Learn what hard water leaves behind, with an adult's help.",
+            "6–8": "Identify real scale buildup and its cause, with a checker.",
+            "9–10": "Manage real hard water effects in a home, on your own.",
+            "11–12": "Explain to someone else what real hard water does to pipes and appliances."
+          }
         },
         {
           "theme": "Sewage, septic and where it all goes",
           "description": "Mains drainage versus septic, what a treatment plant does, and the household's end of the bargain.",
-          "transfer_check": "Trace where your own wastewater actually goes — to which works or tank — and list the two household behaviours that most protect it."
+          "transfer_check": "Trace where your own wastewater actually goes — to which works or tank — and list the two household behaviours that most protect it.",
+          "bands": {
+            "K–2": "Ask an adult where the toilet water goes.",
+            "3–5": "Learn where wastewater goes after flushing, with an adult's help.",
+            "6–8": "Trace a real sewage or septic system's path, with a checker.",
+            "9–10": "Explain, using real infrastructure, how a real septic or sewage system works.",
+            "11–12": "Explain to someone else the real difference between sewage and septic systems."
+          }
         },
         {
           "theme": "The utility bill quartet",
           "description": "Water, gas, electric, connectivity: metering, estimated bills, and catching the error that repeats every month.",
-          "transfer_check": "Audit a household's four utility bills for one quarter, verify each against meters or usage, and dispute or explain any anomaly."
+          "transfer_check": "Audit a household's four utility bills for one quarter, verify each against meters or usage, and dispute or explain any anomaly.",
+          "bands": {
+            "K–2": "Look at a stack of bills with an adult and count them.",
+            "3–5": "Name the different utility bills a home might get, with an adult's help.",
+            "6–8": "Read a real set of utility bills and their charges, with a checker.",
+            "9–10": "Manage a real household's full set of utility bills, on your own.",
+            "11–12": "Advise someone else on managing a real quartet of utility bills."
+          }
         },
         {
           "theme": "Turning a home off and on again",
           "description": "The vacancy checklist: what gets shut, drained and unplugged before an absence, and the restart order that avoids surprises.",
-          "transfer_check": "Write and execute (or fully rehearse) the shutdown and restart checklist for a real dwelling before and after an absence."
+          "transfer_check": "Write and execute (or fully rehearse) the shutdown and restart checklist for a real dwelling before and after an absence.",
+          "bands": {
+            "K–2": "Ask an adult what happens when a family moves into a new home.",
+            "3–5": "Learn that utilities need to be turned on when moving in, with an adult.",
+            "6–8": "Identify the real steps to activate utilities in a new home, with a checker.",
+            "9–10": "Set up real utilities for a new home on your own.",
+            "11–12": "Guide someone else through real utility setup and shutdown for a move."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "Finding the hogs",
           "description": "Measuring what each appliance really draws — the heaters, dryers and always-on boxes that dominate a bill.",
-          "transfer_check": "Meter or plate-audit ten real appliances, rank them by monthly cost, and name the top three with figures."
+          "transfer_check": "Meter or plate-audit ten real appliances, rank them by monthly cost, and name the top three with figures.",
+          "bands": {
+            "K–2": "Ask an adult which appliance uses the most electricity.",
+            "3–5": "Guess which real appliance uses the most power, with an adult.",
+            "6–8": "Identify a real energy-hungry appliance in a home, with a checker.",
+            "9–10": "Find and address a real high-energy appliance's usage, on your own.",
+            "11–12": "Teach someone else how to find the real biggest energy users in a home."
+          }
         },
         {
           "theme": "Standby: the load that never sleeps",
           "description": "Phantom draw across a modern home — what it sums to over a year and which devices deserve a true off.",
-          "transfer_check": "Measure or estimate your home's total standby load, then eliminate part of it and show the before-and-after."
+          "transfer_check": "Measure or estimate your home's total standby load, then eliminate part of it and show the before-and-after.",
+          "bands": {
+            "K–2": "Turn off a device instead of leaving it plugged in, with an adult.",
+            "3–5": "Learn that plugged-in devices use power even when off, with an adult.",
+            "6–8": "Identify a real standby power drain and reduce it, with a checker.",
+            "9–10": "Reduce real standby power use across a household, on your own.",
+            "11–12": "Explain to someone else how real standby power adds up over time."
+          }
         },
         {
           "theme": "Light: the solved problem",
           "description": "LED economics, lumens versus watts, and the fixtures still burning money in most buildings.",
-          "transfer_check": "Survey one building's lighting, compute the payback of converting what remains, and convert at least one fixture."
+          "transfer_check": "Survey one building's lighting, compute the payback of converting what remains, and convert at least one fixture.",
+          "bands": {
+            "K–2": "Turn off a light when leaving a room, with an adult.",
+            "3–5": "Compare a real old bulb to a real efficient one, with an adult's help.",
+            "6–8": "Identify a real efficient lighting choice and its savings, with a checker.",
+            "9–10": "Convert a real home's lighting to efficient options, on your own.",
+            "11–12": "Explain to someone else why lighting is a real largely solved efficiency problem."
+          }
         },
         {
           "theme": "The laundry equation",
           "description": "Temperature, load size and the dryer's outsized cost — the washing habits that halve the energy per clean shirt.",
-          "transfer_check": "Run one week's laundry under changed rules (full loads, lower temp, line-dry where possible) and quantify the difference."
+          "transfer_check": "Run one week's laundry under changed rules (full loads, lower temp, line-dry where possible) and quantify the difference.",
+          "bands": {
+            "K–2": "Help sort laundry by color with an adult.",
+            "3–5": "Help choose a real efficient laundry setting, with an adult's help.",
+            "6–8": "Choose real efficient laundry settings and timing, with a checker.",
+            "9–10": "Run real household laundry efficiently, on your own.",
+            "11–12": "Explain to someone else the real cost trade-offs in laundry choices."
+          }
         },
         {
           "theme": "The kitchen's energy order",
           "description": "Kettle, microwave, hob, oven — matching the tool to the job, and the lids, batch bakes and fridge habits that add up.",
-          "transfer_check": "Cook one meal twice — habitual versus energy-ordered — and compare the measured or estimated energy of each."
+          "transfer_check": "Cook one meal twice — habitual versus energy-ordered — and compare the measured or estimated energy of each.",
+          "bands": {
+            "K–2": "Ask an adult which is faster, a microwave or an oven.",
+            "3–5": "Compare real cooking methods for speed and energy, with an adult's help.",
+            "6–8": "Identify a real efficient cooking method for a task, with a checker.",
+            "9–10": "Choose real efficient cooking methods deliberately, on your own.",
+            "11–12": "Explain to someone else the real energy order of common cooking methods."
+          }
         },
         {
           "theme": "One degree and one hour",
           "description": "What a single thermostat degree and a single heating hour actually cost across a season — small levers, honestly sized.",
-          "transfer_check": "Compute, for your real home and tariff, the seasonal value of one degree of setback, and decide whether to take it."
+          "transfer_check": "Compute, for your real home and tariff, the seasonal value of one degree of setback, and decide whether to take it.",
+          "bands": {
+            "K–2": "Notice that a warmer or cooler setting changes comfort, with an adult.",
+            "3–5": "Learn that a small thermostat change saves energy, with an adult's help.",
+            "6–8": "Calculate a real saving from one degree or one hour of setback, with a checker.",
+            "9–10": "Apply a real one-degree or one-hour saving strategy, on your own.",
+            "11–12": "Explain to someone else the real math behind small thermostat changes."
+          }
         },
         {
           "theme": "Reading your own usage curve",
           "description": "Smart meter data and bill histories as a diary of the household — spotting the anomaly, the season and the habit in the graph.",
-          "transfer_check": "Chart a year of your real usage, annotate three features with their household causes, and flag one anomaly worth chasing."
+          "transfer_check": "Chart a year of your real usage, annotate three features with their household causes, and flag one anomaly worth chasing.",
+          "bands": {
+            "K–2": "Look at a chart of energy use with an adult.",
+            "3–5": "Read a simple real energy usage chart, with an adult's help.",
+            "6–8": "Read a real household's usage curve and spot a pattern, with a checker.",
+            "9–10": "Analyse your own real usage curve to find savings, on your own.",
+            "11–12": "Teach someone else how to read and act on a real usage curve."
+          }
         },
         {
           "theme": "The tariff you are actually on",
           "description": "Flat, time-of-use, prepay — what you are on, what you should be on, and switching without being switched.",
-          "transfer_check": "Identify your current tariff, price one realistic alternative against your real usage, and execute or justify declining the switch."
+          "transfer_check": "Identify your current tariff, price one realistic alternative against your real usage, and execute or justify declining the switch.",
+          "bands": {
+            "K–2": "Ask an adult what a tariff or rate plan is.",
+            "3–5": "Learn that electricity has different price plans, with an adult's help.",
+            "6–8": "Identify a real household's actual tariff and its terms, with a checker.",
+            "9–10": "Evaluate your own real tariff against alternatives, on your own.",
+            "11–12": "Advise someone else on choosing a real tariff suited to their usage."
+          }
         },
         {
           "theme": "The building you do not control",
           "description": "Saving energy as a tenant or in a shared building: what you may change, what needs the landlord, and how to ask so it happens.",
-          "transfer_check": "Write and send (or fully draft) one well-evidenced efficiency request to a real landlord or building manager."
+          "transfer_check": "Write and send (or fully draft) one well-evidenced efficiency request to a real landlord or building manager.",
+          "bands": {
+            "K–2": "Ask an adult why a rented home might be hard to change.",
+            "3–5": "Learn that renters can't always change a building, with an adult's help.",
+            "6–8": "Identify a real energy-saving option available to a renter, with a checker.",
+            "9–10": "Manage real energy use in a building you don't own, on your own.",
+            "11–12": "Advise someone else on real options when you don't control the building."
+          }
         },
         {
           "theme": "The household energy budget",
           "description": "Setting a target, assigning the levers, and reviewing monthly — energy as a managed budget rather than an arriving surprise.",
-          "transfer_check": "Set a costed reduction target for one real household, run it for a month, and publish the result against target."
+          "transfer_check": "Set a costed reduction target for one real household, run it for a month, and publish the result against target.",
+          "bands": {
+            "K–2": "Help count how much a family spends on things, with an adult.",
+            "3–5": "Help make a simple real energy spending plan, with an adult's help.",
+            "6–8": "Build a real household energy budget, with a checker.",
+            "9–10": "Manage a real household's energy budget on your own.",
+            "11–12": "Advise someone else on building a real workable household energy budget."
+          }
         }
       ]
     }
