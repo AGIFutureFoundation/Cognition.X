@@ -27,8 +27,8 @@ authored descriptions. Neither is hidden — both are counted here.
 | Water, Land & Climate | 250 | 5 | 100% | 0% | 100% | 0% | 92 |
 | Care Across a Life | 250 | 5 | 100% | 0% | 100% | 0% | 92 |
 | Making, Repair & Reuse | 250 | 5 | 100% | 0% | 100% | 0% | 83 |
-| Housing & Tenancy | 250 | 5 | 100% | 100% | 100% | 0% | 39 |
-| Money, Benefits & Entitlements | 250 | 5 | 100% | 100% | 100% | 0% | 27 |
+| Housing & Tenancy | 250 | 5 | 100% | 0% | 100% | 0% | 39 |
+| Money, Benefits & Entitlements | 250 | 5 | 100% | 0% | 100% | 0% | 27 |
 | Reentry & Recovery Pathways | 250 | 5 | 100% | 100% | 100% | 0% | 21 |
 | Neighbourhood, Safety & Civic Voice | 250 | 5 | 100% | 100% | 100% | 0% | 23 |
 | Cognition.X : Corporate OS | 1160 | 10 | 43% | 0% | 100% | 0% | 26 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 5% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 2% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
@@ -84,7 +84,7 @@ exceptions. The second (v0.72.0): a promotion declaring
 content debt above, and nothing else — with an authored sentence for that
 band; the normaliser refuses any other target with the row id.
 
-- Rows whose band-suffix description was replaced by an authored band sentence: **3,500** across 7 pack(s) (Cognition.X : Corporate OS, Cognition.X : Global Health OS, Cognition.X : Multilateral OS, Cognition.X : Robotics OS, Cognition.X : Sapient OS, Cognition.X : Science OS, Non-Profit Practice).
+- Rows whose band-suffix description was replaced by an authored band sentence: **4,000** across 9 pack(s) (Cognition.X : Corporate OS, Cognition.X : Global Health OS, Cognition.X : Multilateral OS, Cognition.X : Robotics OS, Cognition.X : Sapient OS, Cognition.X : Science OS, Housing & Tenancy, Money, Benefits & Entitlements, Non-Profit Practice).
 
 ## Credential naming
 
