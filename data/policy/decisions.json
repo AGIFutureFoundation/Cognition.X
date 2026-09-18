@@ -1,0 +1,26 @@
+{
+ "spec": "cx-boarddecision/1",
+ "note": "The curriculum review board's decisions, as one canonical file — docs/BOARD_PACKET.md and the data-quality dashboard (docs/DATA_QUALITY.md) both read it, replacing the earlier convention of stating a decision's status in prose across several documents by hand. Fields: id (stable, never reused), date (ISO, null before a real sitting records one), motion (what the board is asked), outcome (\"proposed\" | \"adopted\" | \"rejected\" | \"open\" — \"open\" is for a question with no drafted motion yet), signed_by (names/roles once minuted, empty until then), and an optional decision-specific note. tools/normalize_blocks.py's credential_decision_ready() gates a promotion's credential correction on outcome==\"adopted\" ONLY when that promotion names this decision's id via a `\"decision\"` key on its track; a promotion naming no decision id is unaffected (see BD-1) — this file records status, it does not retroactively gate correction already shipped before the mechanism existed. tools/cohort_report.py lists every decision whose outcome is not \"adopted\" as open, for the board's agenda.",
+ "decisions": [
+  {
+   "id": "BD-1",
+   "date": null,
+   "motion": "Adopt the 24 proposed credential names correcting the bare level word \"Practitioner\" left on 1,228 rows (24 tracks, five community packs) by the v0.1.0 import — docs/DATA_REVIEW.md Finding 6, the full list in docs/BOARD_PACKET.md.",
+   "outcome": "proposed",
+   "signed_by": [],
+   "note": "Applied through the pipeline since v0.52.0 as the one deliberate, counted exception to fill-empty-only (data/promotions/*.json carry the names; tools/normalize_blocks.py applies them). This decision predates the decision-gate mechanism and does not gate that application — the correction is unconditional and stays that way regardless of this record's outcome. Flipping this to \"adopted\" once a real board sits records the fact; it changes no dataset output."
+  },
+  {
+   "id": "BD-2",
+   "date": null,
+   "motion": "Resolve the Empathy & Emotional Intelligence pack's \"Emotions at Work\" (EW) theme group — 33 rows still carrying the bare word \"Practitioner\", the only one of the pack's five theme groups with no credential name.",
+   "outcome": "open",
+   "signed_by": [],
+   "options": [
+    "complete_track — author the 17 blocks the group is short of the standard 50-block/five-band track shape, then name its credential like the pack's other four groups (Self-Reader, Other-Reader, Repairer, Room-Reader)",
+    "retire_field — leave the group at its current 3-to-7-band-per-theme shape and remove the credential field's meaning for these rows rather than force a person-and-capability name onto an incomplete grouping"
+   ],
+   "note": "No motion is drafted yet — unlike BD-1, this is a shape question for the board to settle first (docs/DATA_REVIEW.md Finding 6, \"What remains\"), not a name to vote on. tests/test_platform.py exercises the gate mechanism itself with a fixture decision rather than pre-empting this choice with an authored name."
+  }
+ ]
+}

@@ -97,3 +97,20 @@ scope so it can only shrink.
 
 - Rows whose credential is a bare level word: **33** (0% of the dataset), across **0 tracks** in 0 packs.
 - Distinct credential strings: **1,431** — of which **1** is a level word (Practitioner), leaving **1,430** real credentials.
+
+## Board decisions
+
+`data/policy/decisions.json` (`cx-boarddecision/1`) is the one file
+docs/BOARD_PACKET.md and this dashboard both read for a decision's
+status — no more editing prose in each by hand. A promotion may name a
+decision id on a track; its credential correction then applies only
+once that id is recorded here as adopted (`tools/normalize_blocks.py`
+`credential_decision_ready`); a promotion naming none, like the
+original 24 tracks above, is unaffected and applies unconditionally.
+
+| id | motion | outcome |
+|---|---|---|
+| BD-1 | Adopt the 24 proposed credential names correcting the bare level word "Practitioner" left on 1,228 rows (24 tracks, five community packs) by… | **proposed** |
+| BD-2 | Resolve the Empathy & Emotional Intelligence pack's "Emotions at Work" (EW) theme group — 33 rows still carrying the bare word "Practitioner… | **open** |
+
+2 of 2 decisions are open (not yet adopted) — see `tools/cohort_report.py`'s packet for the full motion text.

@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "data" / "source" / "Cognition.X_all_blocks.csv"
 GENERATED = ROOT / "data" / "generated"
 PROMOTIONS = ROOT / "data" / "promotions"
+DECISIONS = ROOT / "data" / "policy" / "decisions.json"
 OUT_CSV = ROOT / "data" / "blocks.csv"
 OUT_MANIFEST = ROOT / "data" / "manifest.json"
 
@@ -193,6 +194,30 @@ def partial_band_description(bands, grade):
     return d
 
 
+def load_decisions():
+    """The review board's decisions, as data (`cx-boarddecision/1`,
+    `data/policy/decisions.json`) — see docs/BOARD_PACKET.md and
+    docs/GOVERNANCE.md. Returns the set of decision ids whose recorded
+    `outcome` is "adopted". A promotion's `credential` correction is
+    gated on membership here only when that promotion also names a
+    `decision` id (see credential_decision_ready); a promotion with no
+    `decision` id is unaffected — the original Finding-6 correction
+    (v0.52.0) predates this mechanism and stays unconditional, exactly
+    as shipped, so recording its decision here (still "proposed") never
+    changes dataset output."""
+    if not DECISIONS.exists():
+        return set()
+    doc = json.loads(DECISIONS.read_text(encoding="utf-8"))
+    return {d["id"] for d in doc.get("decisions", []) if d.get("outcome") == "adopted"}
+
+
+def credential_decision_ready(decision_id, adopted_ids):
+    """Whether a promotion's credential correction may fire: unconditionally
+    when it names no `decision` id, or only once that id is in `adopted_ids`
+    (see load_decisions)."""
+    return decision_id is None or decision_id in adopted_ids
+
+
 def apply_promotions(rows):
     """Fill empty track/code/level/description on legacy rows from
     data/promotions/*.json (keyed by exact theme text; empty fields only),
@@ -238,7 +263,7 @@ def apply_promotions(rows):
             for i, th in enumerate(track["themes"]):
                 themap[th["theme"]] = (track["name"], track["prefix"], i,
                                        th.get("description", ""), th.get("transfer_check"),
-                                       track.get("credential"), th.get("bands"))
+                                       track.get("credential"), th.get("bands"), track.get("decision"))
                 # override rows already carry a track, so a theme name that two
                 # tracks share (the Multilateral OS has one) resolves per track
                 overmap[(spec["pack"], track["name"], th["theme"])] = th.get("bands")
@@ -275,6 +300,7 @@ def apply_promotions(rows):
                     if len({str(v).strip() for v in b.values()}) != len(b) or any(not str(v).strip() for v in b.values()):
                         raise SystemExit(f"{path.name}: a partial_bands theme's sentences must be distinct and non-empty: {th['theme']!r}")
             partial_bands_packs.add(spec["pack"])
+    adopted_decisions = load_decisions()
     filled = checks = creds = overrode = 0
     for r in rows:
         themap = promos.get(r["pack"])
@@ -286,7 +312,7 @@ def apply_promotions(rows):
             continue
         if not themap or r["track"] or r["theme"] not in themap or r["grade"] not in GRADE_LEVEL:
             continue
-        name, prefix, ti, desc, check, cred, bands = themap[r["theme"]]
+        name, prefix, ti, desc, check, cred, bands, decision_id = themap[r["theme"]]
         is_unbanded = r["pack"] in unbanded
         is_partial = r["pack"] in partial_bands_packs
         if not is_unbanded and not is_partial:
@@ -331,8 +357,11 @@ def apply_promotions(rows):
         # `credential` in a promotion replaces a bare level word ("Practitioner")
         # that the v0.1.0 import used where a credential name belonged. A real
         # credential name is never overwritten. Counted and printed so the
-        # correction is always visible (docs/DATA_REVIEW.md, Finding 6).
-        if cred and r["credential"].strip() in LEVEL_WORDS:
+        # correction is always visible (docs/DATA_REVIEW.md, Finding 6). A
+        # promotion may also name a `decision` id (data/policy/decisions.json,
+        # docs/BOARD_PACKET.md): the correction then fires only once that
+        # decision is recorded as adopted — see load_decisions().
+        if cred and r["credential"].strip() in LEVEL_WORDS and credential_decision_ready(decision_id, adopted_decisions):
             r["credential"] = cred
             creds += 1
     if filled:

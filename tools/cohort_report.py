@@ -15,7 +15,10 @@ into the packet the board reads at a sitting (docs/BOARD_PACKET.md):
   5. the v1.0 gate status that evidence alone can establish: a full track
      with witnessed checks reported by at least one site. The rest of the
      gate — an unmodified release, a credential issued, keys exchanged, the
-     board's own review — is the board's record and is printed as a form.
+     board's own review — is the board's record and is printed as a form;
+  6. open board decisions (data/policy/decisions.json, cx-boarddecision/1) —
+     every decision not yet adopted or rejected, so the standing agenda is
+     always in the packet rather than remembered separately.
 
 Usage:
     python3 tools/cohort_report.py [evidence.json ...] [--out packet.md]
@@ -118,6 +121,17 @@ def build(paths):
           "| Records-office keys exchanged with another office | cannot be read from evidence | Offices: ____________ ⇄ ____________ on ________ |",
           "| This board has reviewed the packs the cohort used | see section 5 | Packs approved: ____________ at sitting ________ |",
           "", "When every row carries a date, v1.0 is cut (`docs/ROADMAP.md`, *The path to v1.0*)."]
+    decisions_path = ROOT / "data" / "policy" / "decisions.json"
+    decisions = json.loads(decisions_path.read_text(encoding="utf-8"))["decisions"] if decisions_path.exists() else []
+    open_decisions = [d for d in decisions if d["outcome"] != "adopted"]
+    L += ["", "## 7. Open board decisions", "",
+          "From `data/policy/decisions.json` (`cx-boarddecision/1`) — the board's",
+          "standing agenda, not evidence this cohort produced.", ""]
+    if open_decisions:
+        for d in open_decisions:
+            L.append(f"- **{d['id']}** [{d['outcome']}]: {d['motion']}")
+    else:
+        L.append("None open — every recorded decision has been adopted or rejected.")
     return "\n".join(L) + "\n"
 
 

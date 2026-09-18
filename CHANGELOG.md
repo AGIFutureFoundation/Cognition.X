@@ -4,6 +4,40 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.110.0] — 2026-09-18
+
+### Added — the board's decisions as data (prompt 9)
+- **`data/policy/decisions.json`** (`cx-boarddecision/1`, new): the review
+  board's decisions in one file — id, date, motion, outcome, who signed —
+  instead of prose duplicated across `docs/BOARD_PACKET.md`,
+  `docs/DATA_REVIEW.md` and the data-quality dashboard. Records `BD-1`
+  (the 24 proposed credential names from v0.52.0, outcome `proposed`,
+  for-the-record only) and `BD-2` (the Empathy & Emotional Intelligence
+  "Emotions at Work" group's 33 still-bare-"Practitioner" rows, outcome
+  `open` — the two-way shape choice from Finding 6's "What remains").
+- `tools/normalize_blocks.py`: a promotion's track may now name a
+  `"decision"` id; the new `credential_decision_ready()` gates that
+  track's credential correction on the id being recorded as `"adopted"`
+  in `data/policy/decisions.json`. A track naming no id — all 24 existing
+  ones — is unaffected: the correction applies exactly as it has since
+  v0.52.0. **`blocks.csv` is byte-for-byte unchanged** ("corrected 1195
+  level-word credentials" prints identically before and after).
+- `docs/BOARD_PACKET.md`, `docs/DATA_QUALITY.md` (new "Board decisions"
+  section) and `tools/cohort_report.py` (new "## 7. Open board decisions"
+  section) all read the one file rather than carrying their own copy of
+  a decision's status.
+- **Finding:** the prompt's own acceptance criteria were in tension —
+  gating the *existing* 24-track correction on "adopted" would have
+  silently reverted 1,195 rows, since no real board has met. Resolved by
+  scoping the gate to promotions that opt in via a `decision` id, leaving
+  the grandfathered correction untouched. "With a fixture decision the 33
+  rows resolve" is proven directly against `credential_decision_ready()`
+  with fixture ids in `tests/test_platform.py`, rather than by drafting a
+  name for `BD-2` that would pre-empt a curriculum shape decision this
+  prompt doesn't own.
+- Both suites pass: `python3 tests/test_platform.py` (1,946 checks, +12
+  from this change) and the browser smoke suite (223 assertions).
+
 ## [0.109.0] — 2026-09-18
 
 ### Added — the Education OS template's second diet, close-out (prompt 7)
