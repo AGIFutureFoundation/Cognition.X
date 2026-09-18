@@ -130,7 +130,11 @@ sections; the only other diff is the fonts `<link>`).
    Global Health OS, Science OS, Multilateral OS, Non-Profit Practice);
    the shared generic-action dictionary now covers 735 sentences
    (Sapient OS ∪ Robotics OS), so each further pack needs progressively
-   fewer new ones.
+   fewer new ones. *Update (v0.101.0):* shipped Global Health OS (349
+   themes, 660 rows) — 112 reused from the shared dictionary, 237
+   authored fresh for global-health-practice content. Five packs
+   remain (Corporate OS, Education OS, Science OS, Multilateral OS,
+   Non-Profit Practice); the shared dictionary is now 852 sentences.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic
