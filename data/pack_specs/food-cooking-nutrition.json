@@ -10,52 +10,122 @@
         {
           "theme": "A kitchen you can find things in",
           "description": "Stations, storage and why every working kitchen puts the knife, the board and the bin within one step of each other.",
-          "transfer_check": "Reorganise one real kitchen work area so a named dish can be made without crossing the room, and show the before and after."
+          "transfer_check": "Reorganise one real kitchen work area so a named dish can be made without crossing the room, and show the before and after.",
+          "bands": {
+            "K–2": "Help put dishes away in the right spot, with an adult.",
+            "3–5": "Find a real kitchen tool where it belongs, with an adult's help.",
+            "6–8": "Organise a real kitchen area so tools are easy to find, with a checker.",
+            "9–10": "Set up a real kitchen workspace for efficient real cooking, on your own.",
+            "11–12": "Teach someone else how to organise a real kitchen for real efficiency."
+          }
         },
         {
           "theme": "The knife and the hand that holds it",
           "description": "Grip, claw, board stability and the three cuts that cover most of cooking.",
-          "transfer_check": "Demonstrate the claw grip and produce even slices, dice and rough chop from real vegetables."
+          "transfer_check": "Demonstrate the claw grip and produce even slices, dice and rough chop from real vegetables.",
+          "bands": {
+            "K–2": "Watch an adult cut something with a knife safely.",
+            "3–5": "Learn one safe knife grip, with an adult's help.",
+            "6–8": "Use a real knife safely with correct grip and technique, with a checker.",
+            "9–10": "Use a real knife safely and skillfully on your own.",
+            "11–12": "Teach someone else safe, skillful real knife technique."
+          }
         },
         {
           "theme": "Heat: what pans and ovens actually do",
           "description": "Conduction, radiant heat and preheating — why the pan matters more than the recipe line that names it.",
-          "transfer_check": "Cook the same ingredient in a cold-start and a preheated pan and explain the difference you can see and taste."
+          "transfer_check": "Cook the same ingredient in a cold-start and a preheated pan and explain the difference you can see and taste.",
+          "bands": {
+            "K–2": "Ask an adult why a pan gets hot on the stove.",
+            "3–5": "Learn what heat does to real food, with an adult's help.",
+            "6–8": "Explain how a real pan or oven transfers heat to food, with a checker.",
+            "9–10": "Control real heat deliberately for a real cooking result, on your own.",
+            "11–12": "Teach someone else how to control real heat for a specific cooking outcome."
+          }
         },
         {
           "theme": "Fire, burns and the kitchen that bites",
           "description": "Pan fires, steam, hot sugar and the responses that must be automatic before they are needed.",
-          "transfer_check": "Walk a real kitchen and state, for each hazard found, the correct first response — including why water never goes on an oil fire."
+          "transfer_check": "Walk a real kitchen and state, for each hazard found, the correct first response — including why water never goes on an oil fire.",
+          "bands": {
+            "K–2": "Stay back from the stove unless an adult says it's okay.",
+            "3–5": "Know one kitchen fire safety rule, with an adult's help.",
+            "6–8": "Identify a real kitchen fire or burn hazard, with a checker.",
+            "9–10": "Respond correctly to a real kitchen burn or fire risk, on your own.",
+            "11–12": "Teach someone else the real safety rules for fire and burns in a kitchen."
+          }
         },
         {
           "theme": "Clean as you go",
           "description": "The wash-rinse-sanitise order, cloths that spread rather than clean, and leaving a station ready for the next person.",
-          "transfer_check": "Cook one simple dish and finish with the station inspection-clean, narrating the order you cleaned in and why."
+          "transfer_check": "Cook one simple dish and finish with the station inspection-clean, narrating the order you cleaned in and why.",
+          "bands": {
+            "K–2": "Wipe up a small spill right away, with an adult.",
+            "3–5": "Clean up while cooking instead of leaving a mess, with an adult's help.",
+            "6–8": "Keep a real cooking space clean throughout a real task, with a checker.",
+            "9–10": "Clean as you go through a real full cooking session, on your own.",
+            "11–12": "Teach someone else why cleaning as you go matters in a real kitchen."
+          }
         },
         {
           "theme": "Cold: the fridge as a system",
           "description": "Cold chain, shelf order, and why raw meat lives at the bottom.",
-          "transfer_check": "Audit a real fridge against safe shelf order and temperature, fix what is wrong, and log what you changed."
+          "transfer_check": "Audit a real fridge against safe shelf order and temperature, fix what is wrong, and log what you changed.",
+          "bands": {
+            "K–2": "Ask an adult why some food goes in the fridge.",
+            "3–5": "Learn why cold keeps real food safe, with an adult's help.",
+            "6–8": "Identify real correct fridge storage for different foods, with a checker.",
+            "9–10": "Organise a real fridge for safety and efficiency, on your own.",
+            "11–12": "Explain to someone else how a real fridge works as a food-safety system."
+          }
         },
         {
           "theme": "Measuring, tasting, adjusting",
           "description": "Weights beat cups, tasting is a step not a treat, and salt-acid-fat-heat as the levers of adjustment.",
-          "transfer_check": "Season a bland base (soup or grain) to genuinely good by iterating taste-adjust-taste, recording each move you made."
+          "transfer_check": "Season a bland base (soup or grain) to genuinely good by iterating taste-adjust-taste, recording each move you made.",
+          "bands": {
+            "K–2": "Measure an ingredient with an adult's help.",
+            "3–5": "Measure a real ingredient accurately, with an adult's help.",
+            "6–8": "Taste and adjust a real dish's seasoning, with a checker.",
+            "9–10": "Measure, taste and adjust a real dish confidently, on your own.",
+            "11–12": "Teach someone else how to taste and adjust a real dish like a cook."
+          }
         },
         {
           "theme": "The recipe as a plan, not a script",
           "description": "Reading a recipe once through, mise en place, and knowing which lines are law and which are suggestion.",
-          "transfer_check": "Prepare full mise en place for a new recipe, then cook it without re-reading, marking beforehand the two lines that must not be improvised."
+          "transfer_check": "Prepare full mise en place for a new recipe, then cook it without re-reading, marking beforehand the two lines that must not be improvised.",
+          "bands": {
+            "K–2": "Follow a simple recipe step with an adult.",
+            "3–5": "Follow a real simple recipe's steps in order, with an adult's help.",
+            "6–8": "Adapt a real recipe slightly based on what's available, with a checker.",
+            "9–10": "Treat a real recipe as a flexible plan, adapting it on your own.",
+            "11–12": "Teach someone else how to read a real recipe as a plan, not a rulebook."
+          }
         },
         {
           "theme": "Tools you do not need",
           "description": "What a knife, a pan and a pot replace, and how to judge a gadget before it takes the drawer.",
-          "transfer_check": "Cook a dish 'as seen' that normally uses a specialised gadget, using only basic tools, and compare results."
+          "transfer_check": "Cook a dish 'as seen' that normally uses a specialised gadget, using only basic tools, and compare results.",
+          "bands": {
+            "K–2": "Ask an adult if a fancy gadget is really needed to cook.",
+            "3–5": "Learn that simple tools can do a real job well, with an adult's help.",
+            "6–8": "Identify a real unnecessary kitchen gadget, with a checker.",
+            "9–10": "Cook a real dish using only essential real tools, on your own.",
+            "11–12": "Explain to someone else why real basic tools often outperform gadgets."
+          }
         },
         {
           "theme": "A meal from a bare cupboard",
           "description": "The pantry backbone — grain, allium, fat, acid, tinned protein — and building dinner when there is 'nothing in'.",
-          "transfer_check": "Cook a complete meal using only what is already in a real cupboard, listing what you used and what the meal cost."
+          "transfer_check": "Cook a complete meal using only what is already in a real cupboard, listing what you used and what the meal cost.",
+          "bands": {
+            "K–2": "Help make a snack from what's in the kitchen, with an adult.",
+            "3–5": "Make a simple real meal from limited ingredients, with an adult's help.",
+            "6–8": "Cook a real meal from a real sparse set of ingredients, with a checker.",
+            "9–10": "Cook a real satisfying meal from a real bare cupboard, on your own.",
+            "11–12": "Teach someone else how to cook a real meal from what's actually available."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "Energy, and where it hides",
           "description": "Calories as fuel, portion reality versus package fiction, and the drinks that are meals.",
-          "transfer_check": "Estimate the energy in one of your own typical days, then check against labels and a reference and report where you were most wrong."
+          "transfer_check": "Estimate the energy in one of your own typical days, then check against labels and a reference and report where you were most wrong.",
+          "bands": {
+            "K–2": "Ask an adult which foods give you energy to run and play.",
+            "3–5": "Name a real food that gives energy, with an adult's help.",
+            "6–8": "Identify where real energy hides in different real foods, with a checker.",
+            "9–10": "Explain, using real evidence, where energy hides in a real meal.",
+            "11–12": "Teach someone else how to identify where real energy hides in food."
+          }
         },
         {
           "theme": "Protein, and who needs how much",
           "description": "What protein is for, the plant and animal sources, and need across childhood, training, pregnancy and old age.",
-          "transfer_check": "Plan one real day of meals that meets the protein need of a named person unlike yourself, with sources shown."
+          "transfer_check": "Plan one real day of meals that meets the protein need of a named person unlike yourself, with sources shown.",
+          "bands": {
+            "K–2": "Ask an adult which foods help you grow strong.",
+            "3–5": "Name a real food that's high in protein, with an adult's help.",
+            "6–8": "Identify real protein needs for different people, with a checker.",
+            "9–10": "Explain, using real evidence, how much protein a real person needs.",
+            "11–12": "Teach someone else the real evidence behind protein needs."
+          }
         },
         {
           "theme": "Carbohydrates: the fast and the slow",
           "description": "Whole versus refined, fibre as the difference, and why the same sugar behaves differently inside an apple and a soda.",
-          "transfer_check": "Swap one refined staple in your week for a whole version and record the swap's cost, taste and how it held your hunger."
+          "transfer_check": "Swap one refined staple in your week for a whole version and record the swap's cost, taste and how it held your hunger.",
+          "bands": {
+            "K–2": "Ask an adult why some snacks make you tired quickly.",
+            "3–5": "Learn the difference between fast and slow real carbs, with an adult.",
+            "6–8": "Identify a real fast versus real slow carbohydrate food, with a checker.",
+            "9–10": "Explain, using real examples, the difference between fast and slow carbs.",
+            "11–12": "Teach someone else the real science behind fast and slow carbohydrates."
+          }
         },
         {
           "theme": "Fats: needed, chosen, hidden",
           "description": "Cooking fats, essential fats and the fats that arrive uninvited in packaged food.",
-          "transfer_check": "Find the fat content and type in five packaged foods you actually eat and rank them against what you assumed."
+          "transfer_check": "Find the fat content and type in five packaged foods you actually eat and rank them against what you assumed.",
+          "bands": {
+            "K–2": "Ask an adult why some food needs oil or butter.",
+            "3–5": "Learn that fats are needed but should be chosen wisely, with an adult.",
+            "6–8": "Identify a real hidden source of fat in a food, with a checker.",
+            "9–10": "Explain, using real evidence, how to choose real fats wisely.",
+            "11–12": "Teach someone else the real evidence on needed, chosen and hidden fats."
+          }
         },
         {
           "theme": "Reading a label in twenty seconds",
           "description": "Per-100g versus per-portion, the ingredient list as a story told in descending order, and the claims on the front that mean nothing.",
-          "transfer_check": "Given two competing products, pick the better one using only the label, and defend the pick in four sentences."
+          "transfer_check": "Given two competing products, pick the better one using only the label, and defend the pick in four sentences.",
+          "bands": {
+            "K–2": "Look at the picture on a food label with an adult.",
+            "3–5": "Find the sugar amount on a real food label, with an adult's help.",
+            "6–8": "Read a real food label quickly for key facts, with a checker.",
+            "9–10": "Read and compare real food labels quickly and accurately, on your own.",
+            "11–12": "Teach someone else how to read a real food label in twenty seconds."
+          }
         },
         {
           "theme": "Vitamins, minerals and the short list that runs low",
           "description": "Iron, iodine, B12, vitamin D and calcium — who actually runs short, and the foods that fix it before pills do.",
-          "transfer_check": "For a named diet (vegan, low-dairy, low-sun), identify the likely gap and plan a week of real foods that closes it."
+          "transfer_check": "For a named diet (vegan, low-dairy, low-sun), identify the likely gap and plan a week of real foods that closes it.",
+          "bands": {
+            "K–2": "Ask an adult why eating vegetables matters.",
+            "3–5": "Name a real vitamin or mineral your body needs, with an adult's help.",
+            "6–8": "Identify a real nutrient people commonly run low on, with a checker.",
+            "9–10": "Explain, using real evidence, which real nutrients run low most often.",
+            "11–12": "Teach someone else the real short list of nutrients worth watching."
+          }
         },
         {
           "theme": "Water, caffeine and what you drink all day",
           "description": "Hydration reality versus myth, caffeine's arc through a day, and the quiet calories in what pours.",
-          "transfer_check": "Log everything you drink for three days and redesign the pattern with one change you can keep."
+          "transfer_check": "Log everything you drink for three days and redesign the pattern with one change you can keep.",
+          "bands": {
+            "K–2": "Drink water when you're thirsty, with an adult's reminder.",
+            "3–5": "Learn that what you drink matters as much as food, with an adult.",
+            "6–8": "Identify a real drink's effect on hydration or energy, with a checker.",
+            "9–10": "Evaluate your own real daily drink choices, on your own.",
+            "11–12": "Explain to someone else the real effects of common daily drinks."
+          }
         },
         {
           "theme": "Ultra-processed: what the term actually marks",
           "description": "The formulation-versus-food distinction, why these products are engineered to be easy to keep eating, and where the evidence stands.",
-          "transfer_check": "Sort a week of your own shopping into whole, processed and ultra-processed, and name the one swap with the best effort-to-benefit ratio."
+          "transfer_check": "Sort a week of your own shopping into whole, processed and ultra-processed, and name the one swap with the best effort-to-benefit ratio.",
+          "bands": {
+            "K–2": "Ask an adult what makes some food come in a shiny package.",
+            "3–5": "Learn that some foods are made with many extra steps, with an adult.",
+            "6–8": "Identify what real makes a food 'ultra-processed', with a checker.",
+            "9–10": "Explain, using real evidence, what the term actually marks.",
+            "11–12": "Explain to someone else the real evidence behind ultra-processed food."
+          }
         },
         {
           "theme": "Diets, claims and who profits",
           "description": "Reading a nutrition claim like a Signal Reader: the study behind the headline, the influencer's sponsor, the before-after photo.",
-          "transfer_check": "Take one current diet claim from your feed, trace its evidence, and deliver a verdict a friend could act on."
+          "transfer_check": "Take one current diet claim from your feed, trace its evidence, and deliver a verdict a friend could act on.",
+          "bands": {
+            "K–2": "Ask an adult if every food claim on TV is true.",
+            "3–5": "Learn that not every food claim is trustworthy, with an adult's help.",
+            "6–8": "Identify a real questionable diet claim and who benefits, with a checker.",
+            "9–10": "Evaluate a real diet claim critically, on your own.",
+            "11–12": "Explain to someone else how to evaluate a real diet claim and its motives."
+          }
         },
         {
           "theme": "Eating patterns that hold",
           "description": "Why patterns beat rules: regular meals, plates built around plants and protein, and change that survives a bad week.",
-          "transfer_check": "Design one realistic weekly eating pattern for yourself, follow it for a week, and report what held and what needs redesign."
+          "transfer_check": "Design one realistic weekly eating pattern for yourself, follow it for a week, and report what held and what needs redesign.",
+          "bands": {
+            "K–2": "Eat regular meals with your family, with an adult.",
+            "3–5": "Keep a simple real eating routine for a week, with an adult's help.",
+            "6–8": "Build a real sustainable eating pattern, with a checker.",
+            "9–10": "Build and maintain your own real sustainable eating pattern, on your own.",
+            "11–12": "Coach someone else on building a real eating pattern that actually holds."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "The week on one page",
           "description": "Meal planning that survives reality: anchor meals, flex nights and the leftovers written into the plan.",
-          "transfer_check": "Write a one-page plan for a real week, cook it, and mark what the plan got wrong for next time."
+          "transfer_check": "Write a one-page plan for a real week, cook it, and mark what the plan got wrong for next time.",
+          "bands": {
+            "K–2": "Help pick meals for a few days, with an adult.",
+            "3–5": "Help plan a simple real meal schedule for a week, with an adult's help.",
+            "6–8": "Plan a real week of meals on one page, with a checker.",
+            "9–10": "Plan a real full week of meals on your own.",
+            "11–12": "Teach someone else how to plan a real week of meals efficiently."
+          }
         },
         {
           "theme": "The list, and the shop that follows it",
           "description": "Building a list from the plan, the store's layout as persuasion, and endcaps designed to break your budget.",
-          "transfer_check": "Do one real shop from a written list, note every deviation and what triggered it, and total the cost of the deviations."
+          "transfer_check": "Do one real shop from a written list, note every deviation and what triggered it, and total the cost of the deviations.",
+          "bands": {
+            "K–2": "Help write a shopping list with an adult.",
+            "3–5": "Write a real shopping list from a meal plan, with an adult's help.",
+            "6–8": "Shop using a real list without impulse extras, with a checker.",
+            "9–10": "Shop efficiently from a real list on your own.",
+            "11–12": "Teach someone else how to shop from a real list without overspending."
+          }
         },
         {
           "theme": "Price per unit, not price per package",
           "description": "Unit pricing, brand ladders and when the big pack is actually the expensive one.",
-          "transfer_check": "In a real aisle, find three cases where the obvious choice loses on unit price, with photos or figures."
+          "transfer_check": "In a real aisle, find three cases where the obvious choice loses on unit price, with photos or figures.",
+          "bands": {
+            "K–2": "Compare two prices with an adult's help.",
+            "3–5": "Compare real prices of two similar items, with an adult's help.",
+            "6–8": "Calculate a real price per unit to compare options, with a checker.",
+            "9–10": "Compare real price per unit to find the best value, on your own.",
+            "11–12": "Teach someone else how to calculate and compare real price per unit."
+          }
         },
         {
           "theme": "Feeding four for less",
           "description": "The cheap backbone proteins and grains, stretching meat, and the cuisines that mastered low-cost cooking long ago.",
-          "transfer_check": "Cook a family-sized meal under a set per-head budget and publish the costed recipe."
+          "transfer_check": "Cook a family-sized meal under a set per-head budget and publish the costed recipe.",
+          "bands": {
+            "K–2": "Help make a meal stretch further, with an adult.",
+            "3–5": "Plan a real cheap meal for a family, with an adult's help.",
+            "6–8": "Plan a real affordable meal that feeds several people, with a checker.",
+            "9–10": "Plan and cook a real affordable meal for four or more, on your own.",
+            "11–12": "Teach someone else how to feed several real people affordably."
+          }
         },
         {
           "theme": "Cooking once, eating thrice",
           "description": "Batch cooking, the fridge-freezer relay, and containers that make leftovers get eaten instead of feared.",
-          "transfer_check": "Batch-cook one base and serve it as three genuinely different meals across a week."
+          "transfer_check": "Batch-cook one base and serve it as three genuinely different meals across a week.",
+          "bands": {
+            "K–2": "Help save leftovers for later, with an adult.",
+            "3–5": "Cook extra food to eat again later, with an adult's help.",
+            "6–8": "Plan a real batch-cook that yields several real meals, with a checker.",
+            "9–10": "Batch-cook a real meal that stretches across several days, on your own.",
+            "11–12": "Teach someone else how to batch-cook efficiently for real multiple meals."
+          }
         },
         {
           "theme": "Waste: the food you paid for and threw away",
           "description": "Date labels decoded (use-by versus best-before), storage that extends life, and the bin audit that changes behaviour.",
-          "transfer_check": "Audit one week of a real household's discarded food, price it, and change two storage or planning habits in response."
+          "transfer_check": "Audit one week of a real household's discarded food, price it, and change two storage or planning habits in response.",
+          "bands": {
+            "K–2": "Help use up leftover food instead of throwing it away, with an adult.",
+            "3–5": "Notice food that got wasted and why, with an adult's help.",
+            "6–8": "Reduce real food waste in a real kitchen, with a checker.",
+            "9–10": "Track and reduce your own real household's food waste, on your own.",
+            "11–12": "Explain to someone else the real cost of food waste and how to cut it."
+          }
         },
         {
           "theme": "The seasons and the price of distance",
           "description": "Why produce has a season and a price curve, and what freezing and tinning preserve of it.",
-          "transfer_check": "Compare the price and origin of one vegetable across fresh-in-season, fresh-out-of-season, frozen and tinned, and pick a policy for your household."
+          "transfer_check": "Compare the price and origin of one vegetable across fresh-in-season, fresh-out-of-season, frozen and tinned, and pick a policy for your household.",
+          "bands": {
+            "K–2": "Ask an adult why some fruit costs more in winter.",
+            "3–5": "Learn that food costs change with the real season, with an adult.",
+            "6–8": "Identify a real seasonal food's price pattern, with a checker.",
+            "9–10": "Explain, using real evidence, how season and distance affect real price.",
+            "11–12": "Explain to someone else the real economics of seasonal food pricing."
+          }
         },
         {
           "theme": "Feeding people who eat differently",
           "description": "Allergy, faith, choice and medical diets at one table — planning one meal that works for everyone without cooking four dinners.",
-          "transfer_check": "Plan and cook one meal that safely serves a real mixed table (including one allergy or restriction), and explain your cross-contact controls."
+          "transfer_check": "Plan and cook one meal that safely serves a real mixed table (including one allergy or restriction), and explain your cross-contact controls.",
+          "bands": {
+            "K–2": "Ask an adult why a friend can't eat the same snack as you.",
+            "3–5": "Learn that some people need different real foods, with an adult.",
+            "6–8": "Plan a real meal that accommodates a real dietary need, with a checker.",
+            "9–10": "Plan a real meal for someone with a real different dietary need, on your own.",
+            "11–12": "Teach someone else how to plan for real diverse dietary needs."
+          }
         },
         {
           "theme": "When money runs short before the week does",
           "description": "Food banks, community meals, benefits that cover food, and cooking through a genuinely empty stretch with dignity.",
-          "transfer_check": "Map the food support within reach of your own address — eligibility, hours, what to bring — into a half-page guide someone could use tomorrow."
+          "transfer_check": "Map the food support within reach of your own address — eligibility, hours, what to bring — into a half-page guide someone could use tomorrow.",
+          "bands": {
+            "K–2": "Ask an adult what happens if food runs low before payday.",
+            "3–5": "Learn one way to stretch food when money is tight, with an adult.",
+            "6–8": "Plan a real meal on a real very tight remaining budget, with a checker.",
+            "9–10": "Manage real food needs when money runs short, on your own.",
+            "11–12": "Guide someone else through managing real food needs on a shortfall."
+          }
         },
         {
           "theme": "Hosting: the meal as an event",
           "description": "Scaling a recipe, the timeline written backwards from sitting down, and the dishes that let the host be at their own table.",
-          "transfer_check": "Host a real meal for four or more: publish your backwards timeline and serve everything within fifteen minutes of plan."
+          "transfer_check": "Host a real meal for four or more: publish your backwards timeline and serve everything within fifteen minutes of plan.",
+          "bands": {
+            "K–2": "Help set the table for guests, with an adult.",
+            "3–5": "Help plan a simple meal for guests, with an adult's help.",
+            "6–8": "Plan a real meal event for guests, with a checker.",
+            "9–10": "Plan and host a real meal event for guests, on your own.",
+            "11–12": "Teach someone else how to plan and host a real successful meal event."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "The invisible passengers",
           "description": "Bacteria, viruses and toxins in food — which ones cause most illness, and the four controls (clean, separate, cook, chill) that stop them.",
-          "transfer_check": "For one real meal you cook, name the hazard most likely present at each step and the control you applied."
+          "transfer_check": "For one real meal you cook, name the hazard most likely present at each step and the control you applied.",
+          "bands": {
+            "K–2": "Wash your hands before eating, with an adult.",
+            "3–5": "Learn that germs can ride on real food, with an adult's help.",
+            "6–8": "Identify a real food safety risk from unseen contamination, with a checker.",
+            "9–10": "Manage real invisible food-safety risks in your own cooking, on your own.",
+            "11–12": "Explain to someone else the real invisible risks food can carry."
+          }
         },
         {
           "theme": "Temperature: the danger zone",
           "description": "The 5–60°C band, safe internal temperatures by food, and why a thermometer beats every rule of thumb.",
-          "transfer_check": "Cook a protein to its safe internal temperature verified with a real thermometer, and chart the cooling of the leftovers into safe storage."
+          "transfer_check": "Cook a protein to its safe internal temperature verified with a real thermometer, and chart the cooling of the leftovers into safe storage.",
+          "bands": {
+            "K–2": "Ask an adult why food shouldn't sit out too long.",
+            "3–5": "Learn that food left out too long can go bad, with an adult.",
+            "6–8": "Identify the real danger zone temperature range, with a checker.",
+            "9–10": "Keep real food out of the real danger zone, on your own.",
+            "11–12": "Teach someone else the real temperature danger zone and why it matters."
+          }
         },
         {
           "theme": "Cross-contact and the separate board",
           "description": "Raw-to-ready pathways: boards, cloths, hands and the sink itself as the crossing points.",
-          "transfer_check": "Prepare a raw-meat dish and a salad in one session with demonstrably zero cross-contact, narrating your controls."
+          "transfer_check": "Prepare a raw-meat dish and a salad in one session with demonstrably zero cross-contact, narrating your controls.",
+          "bands": {
+            "K–2": "Use a different plate for raw and cooked food, with an adult.",
+            "3–5": "Learn why raw and cooked food need separate boards, with an adult.",
+            "6–8": "Prevent real cross-contact between raw and cooked food, with a checker.",
+            "9–10": "Practice real cross-contact prevention in your own cooking, on your own.",
+            "11–12": "Teach someone else why real cross-contact prevention matters."
+          }
         },
         {
           "theme": "Hands, hair and being clean enough to cook",
           "description": "When handwashing actually matters, gloves as false comfort, and cooking while ill.",
-          "transfer_check": "Demonstrate the full handwash at the moments that require it during one cooking session, and name the two moments people skip."
+          "transfer_check": "Demonstrate the full handwash at the moments that require it during one cooking session, and name the two moments people skip.",
+          "bands": {
+            "K–2": "Wash your hands and tie back hair before cooking, with an adult.",
+            "3–5": "Follow real hygiene basics before cooking, with an adult's help.",
+            "6–8": "Practice real proper hygiene before and during cooking, with a checker.",
+            "9–10": "Maintain real proper hygiene throughout a real cooking session, on your own.",
+            "11–12": "Teach someone else the real hygiene standards for cooking safely."
+          }
         },
         {
           "theme": "Leftovers: the second life of a meal",
           "description": "Cooling fast, reheating hot, the counting of days, and the foods that do not get a second chance (rice included).",
-          "transfer_check": "Take real leftovers through cool-store-reheat with times and temperatures logged, and bin-or-keep three fridge items with reasons."
+          "transfer_check": "Take real leftovers through cool-store-reheat with times and temperatures logged, and bin-or-keep three fridge items with reasons.",
+          "bands": {
+            "K–2": "Help put leftovers in the fridge, with an adult.",
+            "3–5": "Store real leftovers safely, with an adult's help.",
+            "6–8": "Store and reheat real leftovers safely, with a checker.",
+            "9–10": "Store, reheat and judge real leftovers' safety on your own.",
+            "11–12": "Teach someone else how to give real leftovers a safe second life."
+          }
         },
         {
           "theme": "Allergens: the eight that matter most",
           "description": "The major allergens, reading them off labels and menus, and why 'a little bit' is not safe.",
-          "transfer_check": "Screen a real packaged meal and a restaurant menu for a named allergen, including the may-contain judgement call."
+          "transfer_check": "Screen a real packaged meal and a restaurant menu for a named allergen, including the may-contain judgement call.",
+          "bands": {
+            "K–2": "Ask an adult if a friend can't eat something you're having.",
+            "3–5": "Name a real common food allergen, with an adult's help.",
+            "6–8": "Identify the real eight major allergens, with a checker.",
+            "9–10": "Check a real recipe or product for real major allergens, on your own.",
+            "11–12": "Teach someone else the real eight major allergens and why they matter."
+          }
         },
         {
           "theme": "Preserving: the old technologies",
           "description": "Salt, sugar, acid, heat and cold — how jam, pickles and tins actually work, and where home preserving goes dangerous (botulism and the low-acid jar).",
-          "transfer_check": "Make one safe high-acid preserve with correct process, and explain why the same jar of green beans would need a pressure canner."
+          "transfer_check": "Make one safe high-acid preserve with correct process, and explain why the same jar of green beans would need a pressure canner.",
+          "bands": {
+            "K–2": "Ask an adult how food used to be kept without a fridge.",
+            "3–5": "Learn one real old way of preserving food, with an adult's help.",
+            "6–8": "Identify a real traditional food preservation method, with a checker.",
+            "9–10": "Explain, using real methods, how food was preserved before refrigeration.",
+            "11–12": "Teach someone else a real traditional food preservation technique."
+          }
         },
         {
           "theme": "Water you can cook with",
           "description": "When tap water is the standard, when it is not (advisories, travel, wells), and making water safe.",
-          "transfer_check": "Find your own water supplier's latest quality report, and demonstrate one field method of making questionable water safe."
+          "transfer_check": "Find your own water supplier's latest quality report, and demonstrate one field method of making questionable water safe.",
+          "bands": {
+            "K–2": "Ask an adult before drinking water you're not sure about.",
+            "3–5": "Learn that some water needs to be treated before cooking, with an adult.",
+            "6–8": "Identify a real safe versus unsafe water source for cooking, with a checker.",
+            "9–10": "Judge a real water source's safety for cooking on your own.",
+            "11–12": "Explain to someone else how to make water safe for real cooking."
+          }
         },
         {
           "theme": "When food goes wrong anyway",
           "description": "Recognising food poisoning, who is at real risk (pregnant, young, old, immunocompromised), and when it is a clinic call.",
-          "transfer_check": "Given three illness scenarios, decide home-care versus clinic versus emergency for each, and name the food rule that was likely broken."
+          "transfer_check": "Given three illness scenarios, decide home-care versus clinic versus emergency for each, and name the food rule that was likely broken.",
+          "bands": {
+            "K–2": "Tell an adult right away if you feel sick after eating.",
+            "3–5": "Know what to do if food seems to have made someone sick, with an adult.",
+            "6–8": "Identify a real foodborne illness sign and response, with a checker.",
+            "9–10": "Respond correctly to a real suspected foodborne illness, on your own.",
+            "11–12": "Explain to someone else the real steps to take when food goes wrong."
+          }
         },
         {
           "theme": "Feeding the vulnerable",
           "description": "The stricter rules for infants, pregnancy and elders: the foods excluded, the temperatures raised, the dates hardened.",
-          "transfer_check": "Adapt one family recipe so it is safe for a named vulnerable eater, listing each change and the rule behind it."
+          "transfer_check": "Adapt one family recipe so it is safe for a named vulnerable eater, listing each change and the rule behind it.",
+          "bands": {
+            "K–2": "Be extra careful feeding a baby or older relative, with an adult.",
+            "3–5": "Learn that some people need extra food safety care, with an adult.",
+            "6–8": "Identify real extra precautions for a vulnerable person, with a checker.",
+            "9–10": "Apply real extra food safety precautions for a vulnerable person, on your own.",
+            "11–12": "Teach someone else the real extra care needed feeding vulnerable people."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "Where dinner comes from",
           "description": "The chain from farm to plate — growing, processing, moving, selling — and the hands it passes through.",
-          "transfer_check": "Trace one item from your own plate back to its origin as far as evidence allows, documenting each link you can verify."
+          "transfer_check": "Trace one item from your own plate back to its origin as far as evidence allows, documenting each link you can verify.",
+          "bands": {
+            "K–2": "Ask an adult where the food on your plate came from.",
+            "3–5": "Trace one real ingredient back to its real source, with an adult's help.",
+            "6–8": "Trace a real meal's ingredients back to their real origins, with a checker.",
+            "9–10": "Trace a real meal's full supply chain back to its origins, on your own.",
+            "11–12": "Teach someone else how to trace a real meal back to where it came from."
+          }
         },
         {
           "theme": "The dish that carries a people",
           "description": "Food as heritage: why dishes migrate with people, and what a recipe preserves that a museum cannot.",
-          "transfer_check": "Learn one dish from someone of a tradition not your own, cook it to their approval, and record its story as they tell it."
+          "transfer_check": "Learn one dish from someone of a tradition not your own, cook it to their approval, and record its story as they tell it.",
+          "bands": {
+            "K–2": "Learn about a food from your family's culture, with an adult.",
+            "3–5": "Learn the story behind a real cultural dish, with an adult's help.",
+            "6–8": "Explain what a real dish reveals about a real culture's history, with a checker.",
+            "9–10": "Research and explain a real dish's cultural significance, on your own.",
+            "11–12": "Teach someone else how a real dish carries a people's history."
+          }
         },
         {
           "theme": "The family recipe as an archive",
           "description": "Oral recipes, the pinch and the handful, and writing down what an elder cooks before it is lost.",
-          "transfer_check": "Document one real family or community recipe from its keeper — quantities, technique and story — into a form a stranger could cook from."
+          "transfer_check": "Document one real family or community recipe from its keeper — quantities, technique and story — into a form a stranger could cook from.",
+          "bands": {
+            "K–2": "Ask a family member for a recipe they love, with an adult.",
+            "3–5": "Write down a real family recipe, with an adult's help.",
+            "6–8": "Record a real family recipe with its story, with a checker.",
+            "9–10": "Document a real family recipe as a piece of family history, on your own.",
+            "11–12": "Help someone else preserve a real family recipe as a living archive."
+          }
         },
         {
           "theme": "The table as a practice",
           "description": "Shared meals and what they measurably do for households, and the hospitality codes different cultures build around food.",
-          "transfer_check": "Run a device-free shared meal with real people, applying one hospitality practice from a culture you researched, and reflect on what changed."
+          "transfer_check": "Run a device-free shared meal with real people, applying one hospitality practice from a culture you researched, and reflect on what changed.",
+          "bands": {
+            "K–2": "Sit down and eat a meal together with family, with an adult.",
+            "3–5": "Notice what happens at a real shared family meal, with an adult's help.",
+            "6–8": "Explain the real value of a shared table practice, with a checker.",
+            "9–10": "Build a real regular shared-table practice in your own life, on your own.",
+            "11–12": "Explain to someone else why the real table matters as a practice, not just eating."
+          }
         },
         {
           "theme": "What food costs the planet",
           "description": "Land, water and emissions by food type — the honest hierarchy, and why the biggest lever is usually waste, not the exotic swap.",
-          "transfer_check": "Rank five of your staple foods by environmental footprint using published data, and make one evidence-based change you can sustain."
+          "transfer_check": "Rank five of your staple foods by environmental footprint using published data, and make one evidence-based change you can sustain.",
+          "bands": {
+            "K–2": "Ask an adult if growing food uses water and land.",
+            "3–5": "Learn that different foods use different resources, with an adult.",
+            "6–8": "Identify a real food's real environmental cost, with a checker.",
+            "9–10": "Explain, using real evidence, the real environmental cost of a food choice.",
+            "11–12": "Explain to someone else the real trade-offs in food's environmental cost."
+          }
         },
         {
           "theme": "The people who grow and serve",
           "description": "Farm labour, kitchen labour and delivery labour: the working conditions inside the price of a meal.",
-          "transfer_check": "Investigate the labour behind one food you buy weekly and present what its price does and does not pay for."
+          "transfer_check": "Investigate the labour behind one food you buy weekly and present what its price does and does not pay for.",
+          "bands": {
+            "K–2": "Ask an adult who grows the food you eat.",
+            "3–5": "Name a real job involved in growing or serving food, with an adult.",
+            "6–8": "Identify several real roles in the real food supply chain, with a checker.",
+            "9–10": "Research the real people and labor behind a real meal, on your own.",
+            "11–12": "Explain to someone else the real labor behind the food we eat."
+          }
         },
         {
           "theme": "Food deserts and food swamps",
           "description": "Why some neighbourhoods have six chicken shops and no greengrocer, and what access actually determines about diet.",
-          "transfer_check": "Map real food access within walking distance of two different addresses in your area and compare what a week's healthy shop would take at each."
+          "transfer_check": "Map real food access within walking distance of two different addresses in your area and compare what a week's healthy shop would take at each.",
+          "bands": {
+            "K–2": "Ask an adult if every neighbourhood has a grocery store nearby.",
+            "3–5": "Learn that some places lack real access to healthy food, with an adult.",
+            "6–8": "Identify a real food desert or food swamp and its cause, with a checker.",
+            "9–10": "Research a real food access issue in a real community, on your own.",
+            "11–12": "Advocate for a real solution to a real food access problem."
+          }
         },
         {
           "theme": "Marketing on a plate",
           "description": "How food is sold — to children especially: placement, packaging, cartoon spokesmen and the school-adjacent economy.",
-          "transfer_check": "Collect five food marketing techniques aimed at children from real shelves or screens and redesign one advert to sell the honest version."
+          "transfer_check": "Collect five food marketing techniques aimed at children from real shelves or screens and redesign one advert to sell the honest version.",
+          "bands": {
+            "K–2": "Ask an adult why a cereal box looks so exciting.",
+            "3–5": "Notice how real food packaging tries to get your attention, with an adult.",
+            "6–8": "Identify a real marketing technique used to sell food, with a checker.",
+            "9–10": "Evaluate real food marketing critically before buying, on your own.",
+            "11–12": "Explain to someone else how real food marketing shapes what we choose."
+          }
         },
         {
           "theme": "Growing something you eat",
           "description": "One pot, one windowsill, one bed: the shortest possible supply chain and what tending it teaches.",
-          "transfer_check": "Grow one edible plant from start to harvest, log its care, and cook what you grew."
+          "transfer_check": "Grow one edible plant from start to harvest, log its care, and cook what you grew.",
+          "bands": {
+            "K–2": "Plant a seed and water it, with an adult.",
+            "3–5": "Grow a simple plant from seed and watch it, with an adult's help.",
+            "6–8": "Grow a real edible plant successfully, with a checker.",
+            "9–10": "Grow real food on your own, from planting to harvest.",
+            "11–12": "Teach someone else how to grow a real food plant successfully."
+          }
         },
         {
           "theme": "Feeding the future",
           "description": "How the food system might feed ten billion — precision agriculture, alternative proteins, redistribution — and how to judge each claim.",
-          "transfer_check": "Take one 'future of food' claim, examine the strongest evidence for and against, and stake a defensible position in one page."
+          "transfer_check": "Take one 'future of food' claim, examine the strongest evidence for and against, and stake a defensible position in one page.",
+          "bands": {
+            "K–2": "Ask an adult how there will be enough food for everyone someday.",
+            "3–5": "Learn that feeding everyone in the future takes planning, with an adult.",
+            "6–8": "Identify a real challenge in feeding a growing population, with a checker.",
+            "9–10": "Explain, using real evidence, a real challenge in future food systems.",
+            "11–12": "Explain to someone else the real challenges of feeding the future."
+          }
         }
       ]
     }

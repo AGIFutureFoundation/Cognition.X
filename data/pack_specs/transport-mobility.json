@@ -10,52 +10,122 @@
         {
           "theme": "Reading a network map",
           "description": "Lines, interchanges and frequency — a transit map as a graph of what is actually reachable, and what the map exaggerates.",
-          "transfer_check": "Plan and complete (or fully paper-run) a three-leg journey on a real network using only its map and timetable."
+          "transfer_check": "Plan and complete (or fully paper-run) a three-leg journey on a real network using only its map and timetable.",
+          "bands": {
+            "K–2": "Point at your stop on a simple bus map, with an adult.",
+            "3–5": "Find a real route on a real transit map, with an adult's help.",
+            "6–8": "Read a real network map to plan a real trip, with a checker.",
+            "9–10": "Plan a real trip using a real network map on your own.",
+            "11–12": "Teach someone else how to read a real transit network map confidently."
+          }
         },
         {
           "theme": "Fares, passes and the cheapest way in",
           "description": "Singles, caps, passes and concessions — pricing a month of real travel and the discounts people never claim.",
-          "transfer_check": "Price one month of your actual journeys three ways and identify the cheapest legitimate option, including any concession you qualify for."
+          "transfer_check": "Price one month of your actual journeys three ways and identify the cheapest legitimate option, including any concession you qualify for.",
+          "bands": {
+            "K–2": "Ask an adult how much a bus or train ride costs.",
+            "3–5": "Learn about a real fare or pass option, with an adult's help.",
+            "6–8": "Compare real fare options to find the cheapest way in, with a checker.",
+            "9–10": "Choose the real cheapest fare option for your own real travel, on your own.",
+            "11–12": "Advise someone else on the real cheapest way to pay for transit."
+          }
         },
         {
           "theme": "The timetable and the truth",
           "description": "Scheduled versus real service, live trackers, and building the buffer that makes you on time without waiting your life away.",
-          "transfer_check": "Compare scheduled and actual arrivals for one route across five observations and derive the buffer you would actually use."
+          "transfer_check": "Compare scheduled and actual arrivals for one route across five observations and derive the buffer you would actually use.",
+          "bands": {
+            "K–2": "Ask an adult if the bus always comes exactly on time.",
+            "3–5": "Learn that a real timetable is a guide, not a guarantee, with an adult.",
+            "6–8": "Compare a real timetable to real actual service, with a checker.",
+            "9–10": "Plan a real trip accounting for real timetable unreliability, on your own.",
+            "11–12": "Explain to someone else the real gap between a timetable and reality."
+          }
         },
         {
           "theme": "The last mile",
           "description": "The gap between the stop and the door — walking routes, shared bikes and scooters, and judging each option's real cost and risk.",
-          "transfer_check": "Solve one real last-mile problem two different ways and compare them on time, cost and safety."
+          "transfer_check": "Solve one real last-mile problem two different ways and compare them on time, cost and safety.",
+          "bands": {
+            "K–2": "Ask an adult how you get from the bus stop to your door.",
+            "3–5": "Learn what the real 'last mile' of a trip means, with an adult.",
+            "6–8": "Plan a real solution for the real last mile of a journey, with a checker.",
+            "9–10": "Plan your own real last-mile solution for a real trip, on your own.",
+            "11–12": "Advise someone else on solving the real last-mile problem for their trip."
+          }
         },
         {
           "theme": "Travelling with wheels, bags and small people",
           "description": "Buggies, luggage, wheelchairs and toddlers on transit — the accessible routes, the boarding rules and the etiquette that matters.",
-          "transfer_check": "Plan a fully step-free journey on a real network for a named passenger with a mobility constraint, verifying each link's accessibility."
+          "transfer_check": "Plan a fully step-free journey on a real network for a named passenger with a mobility constraint, verifying each link's accessibility.",
+          "bands": {
+            "K–2": "Help carry something on a bus trip, with an adult.",
+            "3–5": "Learn how to manage bags on a real transit trip, with an adult's help.",
+            "6–8": "Plan a real trip with extra gear like bags or a stroller, with a checker.",
+            "9–10": "Manage a real complex trip with wheels, bags or children, on your own.",
+            "11–12": "Advise someone else on travelling with real extra gear or dependents."
+          }
         },
         {
           "theme": "Night travel and the safety calculus",
           "description": "Late services, lit routes, staffed stations and the trade-offs people quietly make — planning night moves deliberately.",
-          "transfer_check": "Plan a late-night journey home from a real venue with a primary and a fallback, and state the safety reasoning for each choice."
+          "transfer_check": "Plan a late-night journey home from a real venue with a primary and a fallback, and state the safety reasoning for each choice.",
+          "bands": {
+            "K–2": "Stay close to an adult when travelling at night.",
+            "3–5": "Learn one safety tip for real travel after dark, with an adult's help.",
+            "6–8": "Assess a real night travel route for real safety, with a checker.",
+            "9–10": "Plan your own real night travel with a real safety calculation, on your own.",
+            "11–12": "Advise someone else on the real safety calculus for travelling at night."
+          }
         },
         {
           "theme": "When the service falls over",
           "description": "Strikes, closures, stranded platforms — rerouting in the moment and knowing your rights to refunds and alternatives.",
-          "transfer_check": "Given a real or staged disruption, produce a reroute within ten minutes and file (or fully draft) the refund claim the rules allow."
+          "transfer_check": "Given a real or staged disruption, produce a reroute within ten minutes and file (or fully draft) the refund claim the rules allow.",
+          "bands": {
+            "K–2": "Stay with an adult if a bus doesn't come.",
+            "3–5": "Know one backup plan if real transit is disrupted, with an adult's help.",
+            "6–8": "Plan a real backup route when service is disrupted, with a checker.",
+            "9–10": "Handle a real service disruption on your own, with a backup plan.",
+            "11–12": "Teach someone else how to plan for a real transit service failure."
+          }
         },
         {
           "theme": "Intercity: coach, rail and the booking game",
           "description": "Advance fares, split tickets, railcards and the hour when prices change — long-distance travel bought well.",
-          "transfer_check": "Price one real intercity trip three ways at two booking horizons and document the cheapest defensible combination."
+          "transfer_check": "Price one real intercity trip three ways at two booking horizons and document the cheapest defensible combination.",
+          "bands": {
+            "K–2": "Ask an adult how you'd travel to a faraway city.",
+            "3–5": "Learn about a real coach or train option between cities, with an adult.",
+            "6–8": "Compare real intercity travel options and booking strategies, with a checker.",
+            "9–10": "Book a real intercity trip strategically for the best price, on your own.",
+            "11–12": "Advise someone else on the real booking game for intercity travel."
+          }
         },
         {
           "theme": "Taxis, rideshare and the meter",
           "description": "When a cab is the right tool, estimating a fare before riding, surge pricing, and the licensed-versus-unlicensed line.",
-          "transfer_check": "Estimate a real taxi/rideshare fare before booking, compare the actual, and verify the vehicle and driver checks you should always make."
+          "transfer_check": "Estimate a real taxi/rideshare fare before booking, compare the actual, and verify the vehicle and driver checks you should always make.",
+          "bands": {
+            "K–2": "Ask an adult how a taxi charges for a ride.",
+            "3–5": "Learn how a real taxi or rideshare fare is calculated, with an adult.",
+            "6–8": "Compare a real taxi and rideshare fare for the same trip, with a checker.",
+            "9–10": "Choose the real most cost-effective option between taxi and rideshare, on your own.",
+            "11–12": "Explain to someone else how real taxi and rideshare pricing actually works."
+          }
         },
         {
           "theme": "Your personal mobility budget",
           "description": "Time, money and energy across all modes — auditing how you actually move and redesigning the pattern on evidence.",
-          "transfer_check": "Log every journey for one week with time and cost, then redesign your default mode for one regular trip and trial it."
+          "transfer_check": "Log every journey for one week with time and cost, then redesign your default mode for one regular trip and trial it.",
+          "bands": {
+            "K–2": "Help count how much a family spends getting around, with an adult.",
+            "3–5": "Help track real transport spending for a week, with an adult's help.",
+            "6–8": "Build a real personal mobility budget, with a checker.",
+            "9–10": "Manage your own real mobility budget across trip types, on your own.",
+            "11–12": "Advise someone else on building a real workable personal mobility budget."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "The machine under you",
           "description": "Frame, drivetrain, brakes, contact points — naming the parts and knowing which failures stop a ride versus end one.",
-          "transfer_check": "Identify every major component on a real bike and classify five common faults as ride-on, fix-first or walk-home."
+          "transfer_check": "Identify every major component on a real bike and classify five common faults as ride-on, fix-first or walk-home.",
+          "bands": {
+            "K–2": "Point at the wheels and pedals of a bike, with an adult.",
+            "3–5": "Name the real main parts of a real bicycle, with an adult's help.",
+            "6–8": "Identify a real bicycle's key parts and their function, with a checker.",
+            "9–10": "Explain how a real bicycle's parts work together, on your own.",
+            "11–12": "Teach someone else the real mechanics of how a bicycle actually works."
+          }
         },
         {
           "theme": "The M-check before you roll",
           "description": "The two-minute pre-ride inspection — brakes, wheels, headset, drivetrain — that catches most mechanical surprises.",
-          "transfer_check": "Perform a full M-check on a real bike, find the planted or genuine fault, and fix or flag it correctly."
+          "transfer_check": "Perform a full M-check on a real bike, find the planted or genuine fault, and fix or flag it correctly.",
+          "bands": {
+            "K–2": "Watch an adult check a bike before riding.",
+            "3–5": "Check a real bike's tyres and brakes before riding, with an adult.",
+            "6–8": "Perform a real M-check on a bicycle before riding, with a checker.",
+            "9–10": "Perform a real full M-check on your own bike before every ride.",
+            "11–12": "Teach someone else how to perform a real M-check correctly."
+          }
         },
         {
           "theme": "Fixing the flat",
           "description": "Removing a wheel, finding the cause, patching or replacing the tube, and getting the wheel back on straight.",
-          "transfer_check": "Repair a real puncture end to end, including finding what caused it, and ride the result."
+          "transfer_check": "Repair a real puncture end to end, including finding what caused it, and ride the result.",
+          "bands": {
+            "K–2": "Watch an adult fix a flat bike tyre and ask questions.",
+            "3–5": "Learn one step of fixing a real flat tyre, with an adult's help.",
+            "6–8": "Fix a real flat bicycle tyre, with a checker.",
+            "9–10": "Fix a real flat bicycle tyre on your own, start to finish.",
+            "11–12": "Teach someone else how to fix a real flat tyre from start to finish."
+          }
         },
         {
           "theme": "Brakes and gears that actually work",
           "description": "Cable tension, pad wear and indexing — the two adjustments that transform most neglected bikes.",
-          "transfer_check": "Adjust the brakes and index the gears on a real bike until both pass a named performance test."
+          "transfer_check": "Adjust the brakes and index the gears on a real bike until both pass a named performance test.",
+          "bands": {
+            "K–2": "Squeeze the brakes on a bike gently, with an adult.",
+            "3–5": "Check that real brakes and gears work properly, with an adult's help.",
+            "6–8": "Adjust a real bicycle's brakes or gears, with a checker.",
+            "9–10": "Maintain your own real bicycle's brakes and gears, on your own.",
+            "11–12": "Teach someone else how to keep real brakes and gears working well."
+          }
         },
         {
           "theme": "Riding in traffic",
           "description": "Road position, eye contact, the door zone and the left-turning lorry — the defensive craft of city cycling.",
-          "transfer_check": "Ride (or walk-and-narrate) a real urban route, calling out position choices and the two highest-risk conflict points."
+          "transfer_check": "Ride (or walk-and-narrate) a real urban route, calling out position choices and the two highest-risk conflict points.",
+          "bands": {
+            "K–2": "Ride a bike only where an adult says it's safe.",
+            "3–5": "Learn one real traffic safety rule for riding, with an adult's help.",
+            "6–8": "Ride a real bicycle safely in real traffic, with a checker.",
+            "9–10": "Ride a real bicycle safely and confidently in real traffic, on your own.",
+            "11–12": "Teach someone else safe, confident real riding technique in traffic."
+          }
         },
         {
           "theme": "Locks, theft and keeping the bike",
           "description": "Lock types, locking technique, registration and where bikes actually get stolen — defence in depth for a parked bike.",
-          "transfer_check": "Lock a real bike correctly in a public rack, register its frame number, and critique three locking jobs you find nearby."
+          "transfer_check": "Lock a real bike correctly in a public rack, register its frame number, and critique three locking jobs you find nearby.",
+          "bands": {
+            "K–2": "Watch an adult lock up a bike properly and ask why.",
+            "3–5": "Learn one real way to lock a bike securely, with an adult's help.",
+            "6–8": "Lock a real bicycle securely against real theft, with a checker.",
+            "9–10": "Secure your own real bicycle properly every time, on your own.",
+            "11–12": "Teach someone else the real best practices to prevent bicycle theft."
+          }
         },
         {
           "theme": "Carrying things and people",
           "description": "Racks, panniers, trailers and child seats — turning a bike into a vehicle that does errands.",
-          "transfer_check": "Complete a real shopping or school-run trip by bike with the load properly mounted, and report what worked and what shifted."
+          "transfer_check": "Complete a real shopping or school-run trip by bike with the load properly mounted, and report what worked and what shifted.",
+          "bands": {
+            "K–2": "Watch an adult carry something on a bike safely.",
+            "3–5": "Learn a real safe way to carry something on a bike, with an adult.",
+            "6–8": "Carry a real load safely on a bicycle, with a checker.",
+            "9–10": "Carry real cargo or a passenger safely on a bicycle, on your own.",
+            "11–12": "Teach someone else how to safely carry real cargo or passengers by bike."
+          }
         },
         {
           "theme": "The electric assist",
           "description": "E-bikes and e-scooters: motors, range reality, charging safely (the battery fire problem), and the laws that differ by vehicle.",
-          "transfer_check": "For one real e-vehicle, state its legal class and rules where you live, and demonstrate or describe its safe charging setup."
+          "transfer_check": "For one real e-vehicle, state its legal class and rules where you live, and demonstrate or describe its safe charging setup.",
+          "bands": {
+            "K–2": "Ask an adult how an electric bike is different.",
+            "3–5": "Learn what a real electric assist does on a bike, with an adult.",
+            "6–8": "Explain how a real e-bike's assist works, with a checker.",
+            "9–10": "Evaluate a real e-bike as an option for your own travel, on your own.",
+            "11–12": "Explain to someone else the real trade-offs of an electric-assist bicycle."
+          }
         },
         {
           "theme": "Weather, night and the visible rider",
           "description": "Lights, reflectives, rain technique and ice honesty — extending the riding year without extending the risk.",
-          "transfer_check": "Equip a real bike for legal, effective night riding and demonstrate the visibility difference from a driver's viewpoint."
+          "transfer_check": "Equip a real bike for legal, effective night riding and demonstrate the visibility difference from a driver's viewpoint.",
+          "bands": {
+            "K–2": "Wear bright colours when riding, with an adult.",
+            "3–5": "Learn one way to be seen while riding, with an adult's help.",
+            "6–8": "Prepare a real bicycle and rider to be visible in bad conditions, with a checker.",
+            "9–10": "Prepare your own real bike and gear for weather and night riding, on your own.",
+            "11–12": "Teach someone else how to stay visible in real bad weather or night riding."
+          }
         },
         {
           "theme": "The service schedule",
           "description": "What wears on a bike, the maintenance calendar, and the jobs worth paying a shop to do.",
-          "transfer_check": "Write and begin the twelve-month maintenance plan for a real bike, performing this month's items yourself."
+          "transfer_check": "Write and begin the twelve-month maintenance plan for a real bike, performing this month's items yourself.",
+          "bands": {
+            "K–2": "Watch an adult clean and oil a bike chain.",
+            "3–5": "Learn one real bike maintenance task, with an adult's help.",
+            "6–8": "Follow a real bicycle maintenance schedule, with a checker.",
+            "9–10": "Maintain your own real bicycle on a proper schedule, on your own.",
+            "11–12": "Teach someone else a real bicycle maintenance schedule that actually works."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "What a car really costs",
           "description": "Depreciation, insurance, fuel, maintenance, parking — total cost of ownership versus the sticker that gets all the attention.",
-          "transfer_check": "Compute the honest annual cost of one real car (or a planned one) and its cost per kilometre against the alternatives."
+          "transfer_check": "Compute the honest annual cost of one real car (or a planned one) and its cost per kilometre against the alternatives.",
+          "bands": {
+            "K–2": "Ask an adult if a car costs more than just the price tag.",
+            "3–5": "Learn one real hidden cost of owning a car, with an adult's help.",
+            "6–8": "Identify a real full cost of car ownership beyond the price, with a checker.",
+            "9–10": "Calculate a real full cost of owning a car, on your own.",
+            "11–12": "Explain to someone else the real full cost of car ownership over time."
+          }
         },
         {
           "theme": "Buying used without being had",
           "description": "History checks, the walk-around, the test drive script and the seller's silences — inspecting value instead of paint.",
-          "transfer_check": "Run a full pre-purchase inspection on a real used car (or an accompanied case), including its documented history, and deliver a buy/walk verdict."
+          "transfer_check": "Run a full pre-purchase inspection on a real used car (or an accompanied case), including its documented history, and deliver a buy/walk verdict.",
+          "bands": {
+            "K–2": "Ask an adult what to check before buying a used toy.",
+            "3–5": "Learn one thing to check on a real used item before buying, with an adult.",
+            "6–8": "Identify a real red flag when buying a real used car, with a checker.",
+            "9–10": "Evaluate a real used car purchase carefully, on your own.",
+            "11–12": "Teach someone else how to buy a real used car without being taken advantage of."
+          }
         },
         {
           "theme": "The fluids and the five-minute check",
           "description": "Oil, coolant, brake fluid, washer, tyres — the monthly bonnet-up routine that prevents the expensive surprise.",
-          "transfer_check": "Perform the complete fluid-and-tyre check on a real car and correct or top up at least one item found low."
+          "transfer_check": "Perform the complete fluid-and-tyre check on a real car and correct or top up at least one item found low.",
+          "bands": {
+            "K–2": "Watch an adult check the oil in a car and ask why.",
+            "3–5": "Learn one real fluid a car needs checked, with an adult's help.",
+            "6–8": "Perform a real five-minute fluid check on a car, with a checker.",
+            "9–10": "Perform a real five-minute fluid check on your own car, on your own.",
+            "11–12": "Teach someone else how to perform a real quick fluid check."
+          }
         },
         {
           "theme": "Tyres: the only part touching the road",
           "description": "Pressure, tread, age and the legal limits — and what each says about how the car is being used.",
-          "transfer_check": "Measure pressure and tread on all tyres of a real car, adjust to specification, and judge each tyre's remaining life."
+          "transfer_check": "Measure pressure and tread on all tyres of a real car, adjust to specification, and judge each tyre's remaining life.",
+          "bands": {
+            "K–2": "Look at a car's tyres with an adult and ask why they matter.",
+            "3–5": "Learn one real thing to check about a tyre, with an adult's help.",
+            "6–8": "Check real tyre tread and pressure correctly, with a checker.",
+            "9–10": "Check and maintain real tyres on your own vehicle, on your own.",
+            "11–12": "Teach someone else why real tyres are the only part touching the road."
+          }
         },
         {
           "theme": "Warning lights and the sounds of trouble",
           "description": "Which dashboard lights mean stop now, which mean soon, and describing a noise so a mechanic can hear it too.",
-          "transfer_check": "Classify ten real warning lights by urgency from the handbook, and write one fault description a garage could diagnose from."
+          "transfer_check": "Classify ten real warning lights by urgency from the handbook, and write one fault description a garage could diagnose from.",
+          "bands": {
+            "K–2": "Ask an adult what a light on the car dashboard means.",
+            "3–5": "Learn one real dashboard warning light, with an adult's help.",
+            "6–8": "Identify a real dashboard warning light and its meaning, with a checker.",
+            "9–10": "Diagnose a real warning light or sound and respond appropriately, on your own.",
+            "11–12": "Teach someone else how to interpret real warning lights and sounds."
+          }
         },
         {
           "theme": "The garage relationship",
           "description": "Getting quotes, understanding the invoice, declining the upsell and knowing fair prices for common jobs.",
-          "transfer_check": "Obtain two quotes for one real repair or service, compare them line by line, and negotiate or choose with reasons stated."
+          "transfer_check": "Obtain two quotes for one real repair or service, compare them line by line, and negotiate or choose with reasons stated.",
+          "bands": {
+            "K–2": "Ask an adult who fixes a car when it breaks.",
+            "3–5": "Learn what a real mechanic does, with an adult's help.",
+            "6–8": "Identify a real trustworthy garage relationship's traits, with a checker.",
+            "9–10": "Build a real trustworthy relationship with a real garage, on your own.",
+            "11–12": "Advise someone else on building a real good relationship with a garage."
+          }
         },
         {
           "theme": "Insurance, claims and the day it goes wrong",
           "description": "Cover levels, excesses, the at-the-scene checklist and the claim that gets paid because the evidence was gathered.",
-          "transfer_check": "Rehearse the full collision-scene procedure — safety, photos, details, admissions avoided — and file a complete mock claim."
+          "transfer_check": "Rehearse the full collision-scene procedure — safety, photos, details, admissions avoided — and file a complete mock claim.",
+          "bands": {
+            "K–2": "Ask an adult why every car needs insurance to drive.",
+            "3–5": "Learn what car insurance protects against, with an adult's help.",
+            "6–8": "Identify what a real insurance claim process involves, with a checker.",
+            "9–10": "File or understand a real insurance claim process, on your own.",
+            "11–12": "Guide someone else through a real insurance claim after an accident."
+          }
         },
         {
           "theme": "Breakdowns and the hard shoulder",
           "description": "Where to stop, when to exit the vehicle, warning others and waiting safely — the breakdown as a safety event first.",
-          "transfer_check": "Walk through a staged breakdown on three road types and state the correct positioning, signals and calls for each."
+          "transfer_check": "Walk through a staged breakdown on three road types and state the correct positioning, signals and calls for each.",
+          "bands": {
+            "K–2": "Stay in the car and wait for an adult if it breaks down.",
+            "3–5": "Learn one real safety step for a car breakdown, with an adult's help.",
+            "6–8": "Respond safely to a real car breakdown, with a checker.",
+            "9–10": "Handle a real car breakdown safely on your own.",
+            "11–12": "Teach someone else the real safe procedure for a roadside breakdown."
+          }
         },
         {
           "theme": "Sharing, renting, borrowing",
           "description": "Car clubs, rentals and the borrowed car — insurance realities, damage walk-arounds and the deposits that vanish.",
-          "transfer_check": "Complete a real or mock rental including the documented walk-around, and identify the two contract clauses most likely to cost you."
+          "transfer_check": "Complete a real or mock rental including the documented walk-around, and identify the two contract clauses most likely to cost you.",
+          "bands": {
+            "K–2": "Ask an adult if you can share a ride with a friend's family.",
+            "3–5": "Learn about a real way to share transportation, with an adult's help.",
+            "6–8": "Compare a real car-sharing or rental option to owning, with a checker.",
+            "9–10": "Evaluate real car-sharing or rental options for your own needs, on your own.",
+            "11–12": "Advise someone else on the real trade-offs of sharing versus owning."
+          }
         },
         {
           "theme": "Do you even need it",
           "description": "The annual review: kilometres driven, cost per trip, and the honest comparison against a life with fewer or no cars.",
-          "transfer_check": "Run the keep/replace/sell analysis for one real household car with a year's actual usage data, and present the recommendation."
+          "transfer_check": "Run the keep/replace/sell analysis for one real household car with a year's actual usage data, and present the recommendation.",
+          "bands": {
+            "K–2": "Ask an adult if walking or biking could work instead of driving.",
+            "3–5": "Consider a real alternative to owning a car, with an adult's help.",
+            "6–8": "Evaluate whether a real car is actually needed for your situation, with a checker.",
+            "9–10": "Decide, using real evidence, whether you actually need a car, on your own.",
+            "11–12": "Advise someone else on honestly evaluating whether they need a real car."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "Crossing as a skill",
           "description": "Sightlines, parked-car screens, signal phases and the crossing choices that fail — pedestrian craft taken seriously at every age.",
-          "transfer_check": "Assess three real crossing points near a school or home, rank their risk with reasons, and demonstrate the safest use of the worst one."
+          "transfer_check": "Assess three real crossing points near a school or home, rank their risk with reasons, and demonstrate the safest use of the worst one.",
+          "bands": {
+            "K–2": "Look both ways before crossing with an adult.",
+            "3–5": "Cross a real street safely by looking both ways, with an adult's help.",
+            "6–8": "Cross a real street safely at a real intersection, with a checker.",
+            "9–10": "Cross real streets safely and confidently on your own, every time.",
+            "11–12": "Teach a younger child the real skill of crossing a street safely."
+          }
         },
         {
           "theme": "Speed and what it does",
           "description": "Stopping distances, survival curves and why 30 versus 50 is the difference between an injury and a funeral.",
-          "transfer_check": "Compute stopping distances at three speeds for a real road and match each against its actual sightlines and crossings."
+          "transfer_check": "Compute stopping distances at three speeds for a real road and match each against its actual sightlines and crossings.",
+          "bands": {
+            "K–2": "Ask an adult why cars go slower near a school.",
+            "3–5": "Learn that real speed changes how dangerous a crash is, with an adult.",
+            "6–8": "Explain the real relationship between speed and crash severity, with a checker.",
+            "9–10": "Explain, using real data, why speed matters so much for safety.",
+            "11–12": "Explain to someone else the real physics behind speed and crash outcomes."
+          }
         },
         {
           "theme": "The blind spots of big vehicles",
           "description": "Trucks, buses and the zones where a person disappears — positioning around large vehicles as a survival rule.",
-          "transfer_check": "From a parked large vehicle's driver seat (or accurate diagram), map its blind zones and demonstrate the safe positions around it."
+          "transfer_check": "From a parked large vehicle's driver seat (or accurate diagram), map its blind zones and demonstrate the safe positions around it.",
+          "bands": {
+            "K–2": "Stay where a truck driver can see you, with an adult.",
+            "3–5": "Learn that real big vehicles have blind spots, with an adult's help.",
+            "6–8": "Identify a real blind spot around a real large vehicle, with a checker.",
+            "9–10": "Position yourself safely around real large vehicles, on your own.",
+            "11–12": "Teach someone else about the real blind spots of large vehicles."
+          }
         },
         {
           "theme": "Distraction: the phone in the hand",
           "description": "What attention actually is on the road, the seconds a glance costs at speed, and the norms shifting around it.",
-          "transfer_check": "Measure reaction-time degradation under distraction in a safe simulated task and translate the result into metres at road speed."
+          "transfer_check": "Measure reaction-time degradation under distraction in a safe simulated task and translate the result into metres at road speed.",
+          "bands": {
+            "K–2": "Ask an adult why looking at a phone while walking is risky.",
+            "3–5": "Learn that a real phone distracts from real road safety, with an adult.",
+            "6–8": "Identify a real risk of distraction near roads, with a checker.",
+            "9–10": "Avoid real distraction near roads on your own, every time.",
+            "11–12": "Explain to someone else the real evidence on distraction and road risk."
+          }
         },
         {
           "theme": "Impairment: alcohol, drugs, exhaustion",
           "description": "What each does to driving, the limits and the myths, and stopping an impaired person from driving without a fight.",
-          "transfer_check": "Rehearse and script the intervention that takes keys from an impaired driver, and state the legal limits and alternatives where you live."
+          "transfer_check": "Rehearse and script the intervention that takes keys from an impaired driver, and state the legal limits and alternatives where you live.",
+          "bands": {
+            "K–2": "Ask an adult why some people shouldn't drive.",
+            "3–5": "Learn that being tired or unwell affects real driving, with an adult.",
+            "6–8": "Identify a real form of impairment that affects road safety, with a checker.",
+            "9–10": "Recognise real impairment in yourself or others before driving, on your own.",
+            "11–12": "Explain to someone else the real evidence on impairment and road risk."
+          }
         },
         {
           "theme": "Children near roads",
           "description": "Why children misjudge speed and distance, the walking-bus and the taught routines that build safe pedestrians.",
-          "transfer_check": "Design and walk a safe school route for a real child, teaching them its three decision points and testing their recall."
+          "transfer_check": "Design and walk a safe school route for a real child, teaching them its three decision points and testing their recall.",
+          "bands": {
+            "K–2": "Hold an adult's hand whenever you are near a real road.",
+            "3–5": "Follow a real road safety rule near traffic, with an adult's help.",
+            "6–8": "Identify a real risk to children near roads, with a checker.",
+            "9–10": "Model real safe behaviour near roads for a younger child, on your own.",
+            "11–12": "Teach someone else how to keep children safe near real roads."
+          }
         },
         {
           "theme": "Seatbelts, helmets and child seats",
           "description": "Restraints fitted right — the belt path, the helmet angle, the child seat stages — and the fittings that silently fail.",
-          "transfer_check": "Fit and verify one real restraint (child seat, helmet or belt) against its manual, and find the deliberate or genuine fitting error."
+          "transfer_check": "Fit and verify one real restraint (child seat, helmet or belt) against its manual, and find the deliberate or genuine fitting error.",
+          "bands": {
+            "K–2": "Buckle your seatbelt every time, with an adult.",
+            "3–5": "Wear a real helmet or seatbelt correctly, with an adult's help.",
+            "6–8": "Use real safety equipment correctly every time, with a checker.",
+            "9–10": "Ensure real safety equipment is used correctly for yourself and others.",
+            "11–12": "Teach someone else the real correct use of seatbelts, helmets and child seats."
+          }
         },
         {
           "theme": "First on scene",
           "description": "Arriving at a road collision: scene safety, the call that gets the right response, and what to do and not do before help arrives.",
-          "transfer_check": "Run a full staged first-on-scene response — protect, assess, call, assist — narrating each decision in order."
+          "transfer_check": "Run a full staged first-on-scene response — protect, assess, call, assist — narrating each decision in order.",
+          "bands": {
+            "K–2": "Tell an adult right away if you see an accident.",
+            "3–5": "Know to get an adult's help if you see a real accident, with their help.",
+            "6–8": "Identify the real first steps to take at a real accident scene, with a checker.",
+            "9–10": "Respond appropriately as real first on scene at an accident, on your own.",
+            "11–12": "Teach someone else the real correct steps to take as first on scene."
+          }
         },
         {
           "theme": "Reading a street's design",
           "description": "Widths, corners, crossings and parking as decisions someone made — why some streets calm traffic and others invite it.",
-          "transfer_check": "Audit one real street for design-induced risk and propose two concrete changes with the evidence behind each."
+          "transfer_check": "Audit one real street for design-induced risk and propose two concrete changes with the evidence behind each.",
+          "bands": {
+            "K–2": "Notice a crosswalk painted on a road, with an adult.",
+            "3–5": "Notice a real street design feature meant for safety, with an adult.",
+            "6–8": "Read a real street's design for its safety features, with a checker.",
+            "9–10": "Evaluate a real street's design for its safety strengths and gaps, on your own.",
+            "11–12": "Explain to someone else how to read a real street's design for safety."
+          }
         },
         {
           "theme": "Getting a road fixed",
           "description": "Reporting hazards, the authority responsible, and the campaign that turns a dangerous junction into an agenda item.",
-          "transfer_check": "Report one real road hazard through the official channel and draft the follow-up escalation to the responsible authority."
+          "transfer_check": "Report one real road hazard through the official channel and draft the follow-up escalation to the responsible authority.",
+          "bands": {
+            "K–2": "Tell an adult about a broken sidewalk or pothole.",
+            "3–5": "Report a real road hazard to an adult, with their help.",
+            "6–8": "Identify the real process for reporting a road hazard, with a checker.",
+            "9–10": "Report a real road hazard through the correct process, on your own.",
+            "11–12": "Guide someone else through getting a real dangerous road fixed."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "The trip as a project",
           "description": "Route, timing, fallbacks and the single sheet that holds a journey together when the phone dies.",
-          "transfer_check": "Produce the one-page plan for a real multi-leg journey — times, references, fallbacks, contacts — and travel (or simulate) from it alone."
+          "transfer_check": "Produce the one-page plan for a real multi-leg journey — times, references, fallbacks, contacts — and travel (or simulate) from it alone.",
+          "bands": {
+            "K–2": "Help plan a family day out, with an adult.",
+            "3–5": "Help plan a real simple trip's steps, with an adult's help.",
+            "6–8": "Plan a real trip as a project with steps and a timeline, with a checker.",
+            "9–10": "Plan a real trip from start to finish as a project, on your own.",
+            "11–12": "Teach someone else how to plan a real trip as a structured project."
+          }
         },
         {
           "theme": "Documents and the border",
           "description": "Passports, visas, validity windows and the checks that happen before the airport — paperwork as the first leg of the trip.",
-          "transfer_check": "For a real or chosen destination, compile the full document checklist for a named traveller and verify each item's validity dates."
+          "transfer_check": "For a real or chosen destination, compile the full document checklist for a named traveller and verify each item's validity dates.",
+          "bands": {
+            "K–2": "Ask an adult what papers are needed to travel far away.",
+            "3–5": "Learn what a real travel document is used for, with an adult's help.",
+            "6–8": "Identify a real required document for a real type of travel, with a checker.",
+            "9–10": "Prepare your own real travel documents correctly, on your own.",
+            "11–12": "Guide someone else through preparing the real documents needed to travel."
+          }
         },
         {
           "theme": "Money on the move",
           "description": "Cards abroad, exchange margins, the ATM decline at midnight — and the backup layer that keeps a trip alive.",
-          "transfer_check": "Design the payment setup for a real trip — primary, backup, emergency cash — and state the fees each choice carries."
+          "transfer_check": "Design the payment setup for a real trip — primary, backup, emergency cash — and state the fees each choice carries.",
+          "bands": {
+            "K–2": "Ask an adult how you pay for things on a trip.",
+            "3–5": "Learn one real way to manage money while travelling, with an adult.",
+            "6–8": "Plan real money management for a real trip, with a checker.",
+            "9–10": "Manage your own real money safely and efficiently while travelling.",
+            "11–12": "Advise someone else on real strategies for managing money on the move."
+          }
         },
         {
           "theme": "Luggage: what actually comes",
           "description": "Packing lists, weight limits and the things you cannot carry — travelling with everything needed and nothing dragged.",
-          "transfer_check": "Pack for a defined real trip within an airline's actual limits, justify every item, and pass a prohibited-items check."
+          "transfer_check": "Pack for a defined real trip within an airline's actual limits, justify every item, and pass a prohibited-items check.",
+          "bands": {
+            "K–2": "Help pack a small bag for a trip, with an adult.",
+            "3–5": "Pack a real bag for a real trip, with an adult's help.",
+            "6–8": "Pack real luggage efficiently for a real trip, with a checker.",
+            "9–10": "Pack real luggage efficiently and appropriately on your own.",
+            "11–12": "Teach someone else how to pack real luggage well for any trip."
+          }
         },
         {
           "theme": "Delays, cancellations and your rights",
           "description": "Compensation regimes, rerouting duties and the difference between what carriers owe and what they offer.",
-          "transfer_check": "For one real or case-study disruption, determine the passenger's actual entitlement under the applicable rules and draft the claim."
+          "transfer_check": "For one real or case-study disruption, determine the passenger's actual entitlement under the applicable rules and draft the claim.",
+          "bands": {
+            "K–2": "Ask an adult what happens if a trip gets delayed.",
+            "3–5": "Learn that travellers have real rights when delayed, with an adult.",
+            "6–8": "Identify a real right you have during a real travel delay, with a checker.",
+            "9–10": "Assert your own real rights during a real delay or cancellation, on your own.",
+            "11–12": "Guide someone else through asserting real rights during travel disruption."
+          }
         },
         {
           "theme": "Health on the road",
           "description": "Vaccinations, medication across borders, travel insurance that pays, and the clinic-finding skill in an unfamiliar place.",
-          "transfer_check": "Build the health plan for a real destination — jabs, meds paperwork, insurance terms verified, nearest care mapped."
+          "transfer_check": "Build the health plan for a real destination — jabs, meds paperwork, insurance terms verified, nearest care mapped.",
+          "bands": {
+            "K–2": "Ask an adult what to pack in case you feel sick on a trip.",
+            "3–5": "Learn one real health precaution for travel, with an adult's help.",
+            "6–8": "Prepare a real health plan for a real trip, with a checker.",
+            "9–10": "Manage your own real health needs while travelling, on your own.",
+            "11–12": "Advise someone else on real health preparation for travel."
+          }
         },
         {
           "theme": "Arriving somewhere you cannot read",
           "description": "Navigation without the language: scripts, transliteration, offline maps and the phrases that move you.",
-          "transfer_check": "Navigate a planned route using a map and transport system in a language you do not speak (real or faithfully simulated), documenting each solved obstacle."
+          "transfer_check": "Navigate a planned route using a map and transport system in a language you do not speak (real or faithfully simulated), documenting each solved obstacle.",
+          "bands": {
+            "K–2": "Ask an adult what to do if signs are in a different language.",
+            "3–5": "Learn one real strategy for a place with unfamiliar signs, with an adult.",
+            "6–8": "Navigate a real unfamiliar place with limited language, with a checker.",
+            "9–10": "Navigate a real place where you can't read the signs, on your own.",
+            "11–12": "Teach someone else real strategies for navigating an unfamiliar place."
+          }
         },
         {
           "theme": "The risks worth planning for",
           "description": "Petty theft, scams aimed at travellers, and the registered-itinerary habit — proportionate caution without paranoia.",
-          "transfer_check": "Write the risk plan for a real trip: top three realistic risks, the mitigation for each, and who holds your itinerary."
+          "transfer_check": "Write the risk plan for a real trip: top three realistic risks, the mitigation for each, and who holds your itinerary.",
+          "bands": {
+            "K–2": "Ask an adult what could go wrong on a trip.",
+            "3–5": "Name a real risk worth planning for on a trip, with an adult's help.",
+            "6–8": "Identify real risks worth planning for on a real trip, with a checker.",
+            "9–10": "Plan for real risks on your own real trip, on your own.",
+            "11–12": "Advise someone else on the real risks worth planning for on a trip."
+          }
         },
         {
           "theme": "Travelling lighter on the world",
           "description": "The emissions ladder of travel modes, honest offsetting, and the trip design that trades little joy for much carbon.",
-          "transfer_check": "Compute the footprint of one real planned trip two ways (as planned, redesigned) and decide with the numbers in view."
+          "transfer_check": "Compute the footprint of one real planned trip two ways (as planned, redesigned) and decide with the numbers in view.",
+          "bands": {
+            "K–2": "Ask an adult how travel affects the planet.",
+            "3–5": "Learn one real way travel can be lighter on the world, with an adult.",
+            "6–8": "Identify a real way to reduce a real trip's environmental impact, with a checker.",
+            "9–10": "Plan a real trip that's lighter on the world, on your own.",
+            "11–12": "Explain to someone else how to travel with a real lighter footprint."
+          }
         },
         {
           "theme": "The journey you organise for others",
           "description": "Leading a group move — the school trip, the family visit, the team away-day — where the planner owns everyone's contingencies.",
-          "transfer_check": "Plan and run (or fully rehearse) a group journey for four or more, including the briefing, the rally points and the lost-person procedure."
+          "transfer_check": "Plan and run (or fully rehearse) a group journey for four or more, including the briefing, the rally points and the lost-person procedure.",
+          "bands": {
+            "K–2": "Help plan a small outing for a younger sibling, with an adult.",
+            "3–5": "Help organise a real trip for someone else, with an adult's help.",
+            "6–8": "Organise a real journey on behalf of someone else, with a checker.",
+            "9–10": "Organise a real journey for someone else, on your own.",
+            "11–12": "Lead the real organisation of a journey for a group of others."
+          }
         }
       ]
     }
