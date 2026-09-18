@@ -1,7 +1,7 @@
-# Cognition.X v0.100.0 — SHA-256 of every built app; verify with: sha256sum -c apps/CHECKSUMS.sha256
-f74245a6d428c5815d54ae5240eef2e597dadf9a0e5725b5af08829e012b79e9  apps/education-os/index.html
-15b60d5e001576badde1eaee7dafd4c849455b80ab01392f68dbd515157a5557  apps/flow-hub/index.html
-7459446711c0261c4cf1397105ed8f3cc7f8cea8ea59a9d8417bb5f993183a94  apps/louisiana/index.html
-d25dfe537e1b9d43afe18e7acece5890a6202a5f10c7277f3de31cc659a45d3a  apps/platform/index.html
-43c1a17ec8fe4dffacc601b6b7d44e31faed96d1392dad2f9fcb552bbbbc3359  apps/states/index.html
-33ad71f2ef16997822a51c73e9b9e8ccb0513ff6cb6ab626a644492367625f1d  apps/trades-network/index.html
+# Cognition.X v0.101.0 — SHA-256 of every built app; verify with: sha256sum -c apps/CHECKSUMS.sha256
+6e9bfbe757f63d0ebff37b0da5207c1385626934a803863bb058e1b8e35de9cd  apps/education-os/index.html
+c6d57485da3bc6467aaa9f8793f68b9532d2fc6e830d4c82e984ca540d4de792  apps/flow-hub/index.html
+76fed9628b72793086ce1704724bd77f76fcb0d9c5339dc654b64829c6980853  apps/louisiana/index.html
+c0e987ea3ca95cbfaabca409c0943bb2777c09afe51ebc70f2ff6899ede6dbf9  apps/platform/index.html
+3af15ff848efa10a48d6d888e4eb5ea2081261cf50f10e8cf3e83ab9bbeef40b  apps/states/index.html
+781bacb8b8493e21aa9915088f845f176f9e0cc4765a1addf16d6a4bc6414a99  apps/trades-network/index.html
