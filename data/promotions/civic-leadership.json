@@ -1,0 +1,469 @@
+{
+  "pack": "Civic & Leadership",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema (v0.91.0, prompt 3 tranche two). Each theme in this pack names exactly one row at one grade band, not five rows across the ladder, so \"unbanded\": true fills each row's empty description with its own complete sentence directly — no per-band suffix, since the row already names its own grade. track/code are not filled by this promotion (see tools/normalize_blocks.py apply_promotions): this pack's natural sub-groupings do not form the 50-block tracked shape. Theme text and grouping are copied verbatim from data/blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "CF",
+      "name": "Civic Framework & Governance",
+      "themes": [
+        {
+          "theme": "Who decides here (CF)",
+          "description": "Name the decider behind three real school rules and how you found out."
+        },
+        {
+          "theme": "A rule and a reason (CF)",
+          "description": "Ask for the reason behind a class rule and report the answer received."
+        },
+        {
+          "theme": "Taking turns is a system (CF)",
+          "description": "Run a turn-taking system for an activity so nobody gets skipped."
+        },
+        {
+          "theme": "Saying what you think, safely (CF)",
+          "description": "Disagree with a classmate's idea in a role-play without naming or blaming them."
+        },
+        {
+          "theme": "Somebody cleans this room (CF)",
+          "description": "Name three people whose work a school depends on and thank one in person."
+        },
+        {
+          "theme": "A promise you keep (CF)",
+          "description": "Make and keep a week-long class commitment, recorded publicly."
+        },
+        {
+          "theme": "How a class decision is made (CF)",
+          "description": "Chair a five-minute class decision and produce the written record."
+        },
+        {
+          "theme": "Minutes are memory (CF)",
+          "description": "Take minutes of a real meeting and have two attendees confirm them."
+        },
+        {
+          "theme": "Majority is not everyone (CF)",
+          "description": "Run a vote and then state what will be done for those who lost it."
+        },
+        {
+          "theme": "Your town has a shape (CF)",
+          "description": "Map an address to its ward, district and board seat and name the office holder."
+        },
+        {
+          "theme": "Public money is somebody's money (CF)",
+          "description": "Trace something in a classroom back to the budget line that paid for it."
+        },
+        {
+          "theme": "Asking a grown-up institution (CF)",
+          "description": "Send a real request to a real office and log what comes back."
+        },
+        {
+          "theme": "Reading a sign, reading a rule (CF)",
+          "description": "Find a posted public rule, explain it plainly, and identify who set it."
+        },
+        {
+          "theme": "Fair is a word people argue about (CF)",
+          "description": "Argue both sides of a fairness case and say which side you would choose and why."
+        },
+        {
+          "theme": "Three branches, one town (CF)",
+          "description": "Diagram a parish's three governing functions and name a real holder of each."
+        },
+        {
+          "theme": "The meeting that actually decides (CF)",
+          "description": "Identify the decisive meeting for a local issue and prove it from the record."
+        },
+        {
+          "theme": "Public records, and how to ask (CF)",
+          "description": "File a real records request and document the response or the silence."
+        },
+        {
+          "theme": "Reading a budget line (CF)",
+          "description": "Locate a real budget line, explain it, and state what a ten percent change would do."
+        },
+        {
+          "theme": "Testimony is a skill (CF)",
+          "description": "Deliver two minutes of testimony to a panel and pass the observer's rubric."
+        },
+        {
+          "theme": "Who is not in the room (CF)",
+          "description": "Audit a real decision for who was absent and propose how they would be reached."
+        },
+        {
+          "theme": "Conflict without wreckage (CF)",
+          "description": "Mediate a scripted dispute to a written agreement both sides sign."
+        },
+        {
+          "theme": "The letter that gets answered (CF)",
+          "description": "Write a letter that receives a substantive reply, and file both."
+        },
+        {
+          "theme": "Local government, in detail (CF)",
+          "description": "Trace an ordinance from proposal to adoption and name every gate it passed."
+        },
+        {
+          "theme": "School governance, in detail (CF)",
+          "description": "Map a real school decision to the exact body with authority over it."
+        },
+        {
+          "theme": "Budgets as policy (CF)",
+          "description": "Compare two years of a real budget and write what changed in priority terms."
+        },
+        {
+          "theme": "Data for a civic argument (CF)",
+          "description": "Build a civic argument on public data and state its three biggest weaknesses."
+        },
+        {
+          "theme": "Running a public meeting (CF)",
+          "description": "Chair a public meeting with a real agenda and produce approved minutes."
+        },
+        {
+          "theme": "The ethics of asking (CF)",
+          "description": "Complete a real conflict-of-interest disclosure for a project and have it reviewed."
+        },
+        {
+          "theme": "Working with a reporter (CF)",
+          "description": "Give an on-record interview in a simulation and produce an accurate account of it."
+        },
+        {
+          "theme": "When the answer is no (CF)",
+          "description": "Take a refused request, diagnose why, and produce a revised route to yes."
+        },
+        {
+          "theme": "Drafting an ordinance (CF)",
+          "description": "Draft a real local ordinance and have it reviewed by a practicing attorney."
+        },
+        {
+          "theme": "Fiscal notes (CF)",
+          "description": "Produce a fiscal note for a proposal that a finance officer accepts."
+        },
+        {
+          "theme": "Coalitions across difference (CF)",
+          "description": "Assemble a coalition of three parties with a written statement all three sign."
+        },
+        {
+          "theme": "Institutional memory (CF)",
+          "description": "Hand over a documented civic project that a successor can run unaided."
+        },
+        {
+          "theme": "Succession and the bench (CF)",
+          "description": "Recruit and train a named successor who runs one session without you."
+        },
+        {
+          "theme": "The public case (CF)",
+          "description": "Present a complete public case to a panel that includes a dissenting member."
+        },
+        {
+          "theme": "Leaving a place better (CF)",
+          "description": "Publish an honest outcome report on a real project, including its failures."
+        }
+      ]
+    },
+    {
+      "prefix": "PS",
+      "name": "Public Service",
+      "themes": [
+        {
+          "theme": "Helpers with badges (PS)",
+          "description": "Name four public workers you have met and say what each one does."
+        },
+        {
+          "theme": "The building belongs to you (PS)",
+          "description": "Visit a public building and report one thing anyone may use there."
+        },
+        {
+          "theme": "Waiting your turn for help (PS)",
+          "description": "Explain to a younger child why a queue exists and how to ask for help in one."
+        },
+        {
+          "theme": "Everybody gets a turn (PS)",
+          "description": "Give three examples of things everyone in a town may use."
+        },
+        {
+          "theme": "When you need help fast (PS)",
+          "description": "Complete an emergency call script correctly under observation."
+        },
+        {
+          "theme": "Thank the work, not the person (PS)",
+          "description": "Interview a public worker about their hours and report what was learned."
+        },
+        {
+          "theme": "What a department does (PS)",
+          "description": "Explain a real department to a peer using only what has been verified."
+        },
+        {
+          "theme": "Forms, and why they exist (PS)",
+          "description": "Complete a real public form correctly and describe where it goes next."
+        },
+        {
+          "theme": "The counter and the queue (PS)",
+          "description": "Observe a real service point for thirty minutes and report three friction points."
+        },
+        {
+          "theme": "Rules people can read (PS)",
+          "description": "Rewrite a real public notice in plain language and test it on a family."
+        },
+        {
+          "theme": "Getting there (PS)",
+          "description": "Map the true travel cost of a service for one neighbourhood."
+        },
+        {
+          "theme": "Nobody should be visible (PS)",
+          "description": "Find an unnecessarily identifying step in a real service and propose its removal."
+        },
+        {
+          "theme": "Complaints are information (PS)",
+          "description": "File a real, fair complaint and track what it changed."
+        },
+        {
+          "theme": "The person behind the desk (PS)",
+          "description": "Conduct and write up an interview the subject agrees is accurate."
+        },
+        {
+          "theme": "How a public job is filled (PS)",
+          "description": "Map a real public job from posting to first day, with dates and requirements."
+        },
+        {
+          "theme": "Procurement, plainly (PS)",
+          "description": "Trace a real purchase through its approval steps and name each safeguard."
+        },
+        {
+          "theme": "Service levels (PS)",
+          "description": "Measure a real service's response time and present it without assigning blame."
+        },
+        {
+          "theme": "The emergency plan (PS)",
+          "description": "Explain a parish's plan for one hazard and find a gap in it."
+        },
+        {
+          "theme": "Public health, publicly (PS)",
+          "description": "Map a real school-to-health-department route from end to end."
+        },
+        {
+          "theme": "Housing, water, waste (PS)",
+          "description": "Trace a utility from its source to a tap or bin and name every operator involved."
+        },
+        {
+          "theme": "Front-line ethics (PS)",
+          "description": "Resolve three scripted counter dilemmas and defend each decision made."
+        },
+        {
+          "theme": "Volunteering that helps (PS)",
+          "description": "Run a volunteer shift that the host confirms reduced their workload."
+        },
+        {
+          "theme": "Public administration (PS)",
+          "description": "Diagram an agency from its mandate to its front line and name the failure point."
+        },
+        {
+          "theme": "Grants and how they work (PS)",
+          "description": "Write a real grant application and submit it with a named sponsor."
+        },
+        {
+          "theme": "Casework (PS)",
+          "description": "Complete a supervised case file to resolution or a documented handover."
+        },
+        {
+          "theme": "Data and dignity (PS)",
+          "description": "Design a service data plan that a privacy officer approves."
+        },
+        {
+          "theme": "Interpreting and access (PS)",
+          "description": "Audit a real service for access and produce a costed remediation list."
+        },
+        {
+          "theme": "Emergency operations (PS)",
+          "description": "Run a tabletop exercise in a named role and produce the log of it."
+        },
+        {
+          "theme": "Contracts and accountability (PS)",
+          "description": "Read a real contract and write the three questions its overseer should ask."
+        },
+        {
+          "theme": "The public workforce (PS)",
+          "description": "Analyse a real vacancy pattern and propose two retention measures."
+        },
+        {
+          "theme": "Designing a service (PS)",
+          "description": "Design a service and pass review by a panel that includes a serving administrator."
+        },
+        {
+          "theme": "Cost per outcome (PS)",
+          "description": "Produce a defensible cost-per-outcome figure for a real program."
+        },
+        {
+          "theme": "Regulation and inspection (PS)",
+          "description": "Shadow or reconstruct an inspection and write what it did and did not fix."
+        },
+        {
+          "theme": "Interagency work (PS)",
+          "description": "Broker a written agreement between two real organisations."
+        },
+        {
+          "theme": "Public communication in a crisis (PS)",
+          "description": "Deliver a crisis briefing under questioning and pass the observer's rubric."
+        },
+        {
+          "theme": "Evaluation without theatre (PS)",
+          "description": "Publish an evaluation that reports at least one negative finding honestly."
+        },
+        {
+          "theme": "A career in public service (PS)",
+          "description": "Produce a costed five-year plan into a named public role and defend it."
+        }
+      ]
+    },
+    {
+      "prefix": "CB",
+      "name": "Coalition Building",
+      "themes": [
+        {
+          "theme": "Asking together (CB)",
+          "description": "Get two classmates to join a small ask and report what happened."
+        },
+        {
+          "theme": "What do we actually want (CB)",
+          "description": "Turn a class complaint into one sentence and get five people to say it back."
+        },
+        {
+          "theme": "Listening is the work (CB)",
+          "description": "Interview three classmates about a problem and report their words, not your own."
+        },
+        {
+          "theme": "Nobody has to join (CB)",
+          "description": "Invite five people to something and accept every no without argument."
+        },
+        {
+          "theme": "Keeping a promise together (CB)",
+          "description": "Run a three-person commitment for a week and report the drop-outs honestly."
+        },
+        {
+          "theme": "Telling the story straight (CB)",
+          "description": "Retell an event accurately after hearing an exaggerated version of it."
+        },
+        {
+          "theme": "The one-sentence ask (CB)",
+          "description": "Write an ask that names the person, the action and the deadline."
+        },
+        {
+          "theme": "Who else cares (CB)",
+          "description": "Map ten people affected by an issue and rank them by their stake in it."
+        },
+        {
+          "theme": "The meeting people come back to (CB)",
+          "description": "Run three meetings where attendance does not fall."
+        },
+        {
+          "theme": "Roles, not heroes (CB)",
+          "description": "Assign four roles for a project and have each one fulfilled by its owner."
+        },
+        {
+          "theme": "A poster that works (CB)",
+          "description": "Produce a poster that a stranger can act on without asking a question."
+        },
+        {
+          "theme": "Counting supporters honestly (CB)",
+          "description": "Report a real supporter count with each category kept separate."
+        },
+        {
+          "theme": "Talking to someone who disagrees (CB)",
+          "description": "Hold a five-minute disagreement that both sides describe as respectful."
+        },
+        {
+          "theme": "When it does not work (CB)",
+          "description": "Close an unsuccessful effort with a written account its members endorse."
+        },
+        {
+          "theme": "Power mapping (CB)",
+          "description": "Produce a power map for a real issue and defend every arrow drawn on it."
+        },
+        {
+          "theme": "The campaign plan (CB)",
+          "description": "Write a campaign plan with a named stop condition and follow it through."
+        },
+        {
+          "theme": "Turnout is arithmetic (CB)",
+          "description": "Predict attendance within twenty percent for a real event and report the miss."
+        },
+        {
+          "theme": "The public narrative (CB)",
+          "description": "Deliver a three-minute public narrative that an observer verifies as accurate."
+        },
+        {
+          "theme": "Media without exaggeration (CB)",
+          "description": "Place an accurate story and document what was declined to be said."
+        },
+        {
+          "theme": "Digital organising, honestly (CB)",
+          "description": "Run a consented list and report the gap between followers and turnout."
+        },
+        {
+          "theme": "Safety and de-escalation (CB)",
+          "description": "Serve as a trained marshal in a supervised action with no incident."
+        },
+        {
+          "theme": "The negotiated win (CB)",
+          "description": "Take a scripted offer to a group decision with the trade-offs written down."
+        },
+        {
+          "theme": "Issue research (CB)",
+          "description": "Produce an issue brief that survives review by someone on the other side."
+        },
+        {
+          "theme": "Legal and permitted (CB)",
+          "description": "Obtain a real permit and brief participants on their rights and limits."
+        },
+        {
+          "theme": "Coalition agreements (CB)",
+          "description": "Draft an agreement that three organisations sign before any action."
+        },
+        {
+          "theme": "Fundraising in the open (CB)",
+          "description": "Run a transparent fundraise and publish a full account of it."
+        },
+        {
+          "theme": "Working with elected officials (CB)",
+          "description": "Secure a meeting, brief a staffer, and report the outcome accurately."
+        },
+        {
+          "theme": "The other side's best argument (CB)",
+          "description": "Write the opposing brief and have an opponent confirm it is fair."
+        },
+        {
+          "theme": "Burnout and the long campaign (CB)",
+          "description": "Run a rota with documented rest and no volunteer working two weeks straight."
+        },
+        {
+          "theme": "Measuring a campaign (CB)",
+          "description": "Publish a campaign evaluation that separates outputs from outcomes."
+        },
+        {
+          "theme": "Leading a coalition (CB)",
+          "description": "Chair a live coalition through a contested decision to a signed outcome."
+        },
+        {
+          "theme": "Policy from the outside (CB)",
+          "description": "Convert a demand into a proposal a public official calls implementable."
+        },
+        {
+          "theme": "Handing it over (CB)",
+          "description": "Hand over a live effort that continues for a month without you."
+        },
+        {
+          "theme": "Accountability after the win (CB)",
+          "description": "Track a won commitment for a term and publish whether it was kept."
+        },
+        {
+          "theme": "When you were wrong (CB)",
+          "description": "Publish a correction of your own campaign's claim and keep the coalition intact."
+        },
+        {
+          "theme": "Building the bench (CB)",
+          "description": "Train three successors who each lead one component unaided."
+        },
+        {
+          "theme": "The tribute standard (CB)",
+          "description": "Present a full leadership portfolio to a panel that includes a community elder."
+        }
+      ]
+    }
+  ]
+}

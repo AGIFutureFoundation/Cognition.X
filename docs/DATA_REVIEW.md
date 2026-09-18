@@ -46,10 +46,14 @@ sections; the only other diff is the fonts `<link>`).
    band ladder), filled through a new `"unbanded": true` promotion
    (`tools/normalize_blocks.py`); `track`/`code` are left as they were
    (`LB-<n>` codes), since these packs' natural sub-groupings don't
-   form the tracked 50-block shape. Five more foundation packs fit the
-   same mechanism and are the next tranche of `docs/NEXT_STEPS_2.md`
-   prompt 3; K–12, Trade School and Regional use single grades or adult
-   bands and need a further extension.
+   form the tracked 50-block shape. *Update (v0.91.0):* Civic &
+   Leadership and Language, Culture & Communication (222 more rows)
+   filled the same way. Three more foundation packs (Empathy &
+   Emotional Intelligence, Community & Relationship Practice, and most
+   of Health & Community) fit the same mechanism and are the next
+   tranche of `docs/NEXT_STEPS_2.md` prompt 3; K–12, Trade School and
+   Regional use single grades or adult bands and need a further
+   extension.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

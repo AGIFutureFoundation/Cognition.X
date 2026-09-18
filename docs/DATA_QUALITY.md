@@ -17,9 +17,9 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trade School | 47 | 0 | 0% | 0% | 100% | 0% | 17 |
 | Future-Work | 111 | 0 | 100% | 0% | 100% | 0% | 14 |
 | Regional | 111 | 0 | 0% | 0% | 100% | 0% | 18 |
-| Civic & Leadership | 111 | 0 | 0% | 0% | 100% | 0% | 49 |
+| Civic & Leadership | 111 | 0 | 100% | 0% | 100% | 0% | 49 |
 | Health & Community | 111 | 0 | 0% | 0% | 100% | 0% | 45 |
-| Language, Culture & Communication | 111 | 0 | 0% | 0% | 100% | 0% | 43 |
+| Language, Culture & Communication | 111 | 0 | 100% | 0% | 100% | 0% | 43 |
 | Empathy & Emotional Intelligence | 167 | 0 | 0% | 0% | 100% | 19% | 37 |
 | Community & Relationship Practice | 167 | 0 | 0% | 0% | 100% | 0% | 32 |
 | Preventive Health & Everyday Care | 250 | 5 | 100% | 0% | 100% | 0% | 30 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 65% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 66% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
