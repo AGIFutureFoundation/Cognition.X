@@ -1,0 +1,587 @@
+{
+  "pack": "Neighbourhood, Safety & Civic Voice",
+  "override": "band-suffix",
+  "note": "Promotion to the tracked schema (v0.89.0). This pack's track and description were already non-empty in the raw source import, carrying the band-suffix content debt from the start (not a fill-empty case). \"override\": \"band-suffix\" replaces exactly those suffixed rows with authored band sentences, the same counted exception used for the sector-OS packs (v0.72.0) and Housing & Tenancy / Money, Benefits & Entitlements (v0.88.0). Track names, prefixes and the shared description text are copied verbatim from data/source/Cognition.X_all_blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "NB",
+      "name": "The block: who is on it and what it holds",
+      "themes": [
+        {
+          "theme": "The block: what is actually on it",
+          "description": "Surveying what is actually on your block, rather than what you assume is.",
+          "bands": {
+            "K–2": "Walk your block with an adult and name what you see.",
+            "3–5": "List one real thing that's actually on your block, with an adult's help.",
+            "6–8": "Survey a real block for what is actually on it, with a checker.",
+            "9–10": "Survey a real block accurately, rather than by assumption, on your own.",
+            "11–12": "Teach someone else how to survey a real block for what is actually there."
+          }
+        },
+        {
+          "theme": "Who works here and who lives here",
+          "description": "Who works here and who lives here, and why the distinction changes everything.",
+          "bands": {
+            "K–2": "Ask an adult who works on your street and who lives there.",
+            "3–5": "Learn one real difference between who works and who lives somewhere.",
+            "6–8": "Identify why the real distinction between workers and residents matters, checked.",
+            "9–10": "Explain, for a real block, why the worker/resident distinction changes things, alone.",
+            "11–12": "Explain to someone else why the real worker/resident distinction changes everything."
+          }
+        },
+        {
+          "theme": "The businesses that will let you use a bathroom",
+          "description": "Which businesses will let somebody use a bathroom, which is infrastructure.",
+          "bands": {
+            "K–2": "Ask an adult which stores let people use the bathroom.",
+            "3–5": "Learn one real business nearby that allows bathroom use, with an adult.",
+            "6–8": "Identify why a real bathroom-access business counts as infrastructure, checked.",
+            "9–10": "Map real bathroom-access businesses as actual neighbourhood infrastructure, alone.",
+            "11–12": "Explain to someone else why real bathroom access counts as infrastructure."
+          }
+        },
+        {
+          "theme": "Where people gather and why there",
+          "description": "Where people gather, and the reasons — shade, power, a bench, a doorway.",
+          "bands": {
+            "K–2": "Ask an adult where people like to sit and talk outside.",
+            "3–5": "Name one real reason people gather in a certain spot, with an adult.",
+            "6–8": "Identify the real reasons people gather where they do, with a checker.",
+            "9–10": "Explain, for a real spot, the actual reasons it draws people together, alone.",
+            "11–12": "Explain to someone else the real reasons — shade, power, a bench — people gather."
+          }
+        },
+        {
+          "theme": "Services within four blocks",
+          "description": "Services within four blocks, mapped by what they actually do and when they open.",
+          "bands": {
+            "K–2": "Ask an adult what's nearby that can help people.",
+            "3–5": "Name one real service within a few blocks of home, with an adult's help.",
+            "6–8": "Identify what real services exist within four blocks and what they do, checked.",
+            "9–10": "Map real services within four blocks by what they do and when, on your own.",
+            "11–12": "Explain to someone else how to map real nearby services by function and hours."
+          }
+        },
+        {
+          "theme": "What the block was ten years ago",
+          "description": "What the block was ten years ago, and what that explains about now.",
+          "bands": {
+            "K–2": "Ask an adult what your street looked like a long time ago.",
+            "3–5": "Learn one real thing about what the block was like years ago, with an adult.",
+            "6–8": "Identify what real change explains something true about the block now, checked.",
+            "9–10": "Research, for a real block, what it was ten years ago and why that matters now.",
+            "11–12": "Explain to someone else what a real block's past ten years explains about today."
+          }
+        },
+        {
+          "theme": "Who is new and who is leaving",
+          "description": "Who is new and who is leaving, which is the block changing in real time.",
+          "bands": {
+            "K–2": "Ask an adult if new neighbours have moved in nearby.",
+            "3–5": "Notice one real sign that a neighbourhood is changing, with an adult.",
+            "6–8": "Identify the real signs of who is arriving and who is leaving, with a checker.",
+            "9–10": "Track, for a real block, who is arriving and leaving as change in real time, alone.",
+            "11–12": "Explain to someone else how tracking real arrivals and departures reveals change."
+          }
+        },
+        {
+          "theme": "The corner everybody avoids and why",
+          "description": "The corner everybody avoids, and the specific reasons rather than the reputation.",
+          "bands": {
+            "K–2": "Ask an adult if there's a corner people try to avoid.",
+            "3–5": "Learn one real reason people avoid a certain corner, with an adult's help.",
+            "6–8": "Identify the real, specific reasons a corner gets avoided, with a checker.",
+            "9–10": "Investigate, for a real corner, the actual reasons behind avoiding it, alone.",
+            "11–12": "Explain to someone else the real reasons behind an avoided corner, not the rumor."
+          }
+        },
+        {
+          "theme": "What the block does well",
+          "description": "What the block does well, which is usually invisible to people who do not live on it.",
+          "bands": {
+            "K–2": "Ask an adult what's good about your street.",
+            "3–5": "Name one real thing your block does well, with an adult's help.",
+            "6–8": "Identify what real a block does well that outsiders don't notice, checked.",
+            "9–10": "Document, for a real block, what it does well that is usually invisible, alone.",
+            "11–12": "Explain to someone else what a real block does well that outsiders miss."
+          }
+        },
+        {
+          "theme": "A map you could hand to somebody arriving",
+          "description": "A map you could hand to somebody who arrived today.",
+          "bands": {
+            "K–2": "Draw a simple picture of your street for a new kid, with an adult.",
+            "3–5": "Make one real note that would help someone new find their way, with an adult.",
+            "6–8": "Identify what real belongs on a map for someone arriving today, with a checker.",
+            "9–10": "Build a real map you could hand to somebody who just arrived, on your own.",
+            "11–12": "Explain to someone else how to build a real map worth handing to a newcomer."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SF",
+      "name": "Safety: what is a call, what is a report, what is neither",
+      "themes": [
+        {
+          "theme": "What is an emergency and what is not",
+          "description": "What is an emergency, what is not, and the cost of getting the classification wrong.",
+          "bands": {
+            "K–2": "Ask an adult what counts as a real emergency.",
+            "3–5": "Learn one real example of what counts as an emergency, with an adult.",
+            "6–8": "Identify the real cost of misclassifying an emergency, with a checker.",
+            "9–10": "Classify a real situation correctly as an emergency or not, on your own.",
+            "11–12": "Explain to someone else the real cost of getting that classification wrong."
+          }
+        },
+        {
+          "theme": "Calling 911 and what happens next",
+          "description": "Calling 911: what is asked, what happens, and what you can request.",
+          "bands": {
+            "K–2": "Ask an adult what happens when you call 911.",
+            "3–5": "Learn one real thing that's asked when you call 911, with an adult.",
+            "6–8": "Identify what real happens after a 911 call is placed, with a checker.",
+            "9–10": "Make a real 911 call and know what to ask for, on your own.",
+            "11–12": "Explain to someone else what a real 911 call is asked, and how it proceeds."
+          }
+        },
+        {
+          "theme": "Non-emergency lines and what they reach",
+          "description": "Non-emergency lines, what they reach, and their actual response times.",
+          "bands": {
+            "K–2": "Ask an adult if there's a number to call that isn't 911.",
+            "3–5": "Learn one real thing a non-emergency line can help with, with an adult.",
+            "6–8": "Identify what real a non-emergency line reaches and its response time, checked.",
+            "9–10": "Use a real non-emergency line correctly for a non-urgent issue, on your own.",
+            "11–12": "Explain to someone else the real response times a non-emergency line reaches."
+          }
+        },
+        {
+          "theme": "A crisis team instead of a patrol car",
+          "description": "Requesting a crisis team rather than a patrol response, where that exists.",
+          "bands": {
+            "K–2": "Ask an adult who else besides police might help someone.",
+            "3–5": "Learn that a real crisis team can sometimes respond instead, with an adult.",
+            "6–8": "Identify where a real crisis-team option exists and how to request it, checked.",
+            "9–10": "Request a real crisis team response where that option actually exists, alone.",
+            "11–12": "Explain to someone else where a real crisis-team alternative exists and how."
+          }
+        },
+        {
+          "theme": "Reporting a crime as a witness",
+          "description": "Reporting as a witness: what is expected and what is voluntary.",
+          "bands": {
+            "K–2": "Ask an adult what to do if you see something happen.",
+            "3–5": "Learn one real thing expected of a witness report, with an adult's help.",
+            "6–8": "Identify what real is expected versus voluntary in a witness report, checked.",
+            "9–10": "File a real witness report knowing what is expected and what is voluntary, alone.",
+            "11–12": "Explain to someone else what a real witness report expects and what it doesn't."
+          }
+        },
+        {
+          "theme": "Reporting one as a victim",
+          "description": "Reporting as a victim, and the support that should accompany it.",
+          "bands": {
+            "K–2": "Ask an adult what to do if something bad happens to you.",
+            "3–5": "Learn one real kind of support that should come with a victim report.",
+            "6–8": "Identify what real support should accompany a victim's report, with a checker.",
+            "9–10": "File a real victim report and secure the support that should accompany it, alone.",
+            "11–12": "Explain to someone else the real support that should accompany a victim report."
+          }
+        },
+        {
+          "theme": "What you are not obliged to say",
+          "description": "What you are not obliged to say, which is the least-known item on this page.",
+          "bands": {
+            "K–2": "Ask an adult if you have to answer every question a stranger asks.",
+            "3–5": "Learn one real thing you are not obliged to say to police, with an adult.",
+            "6–8": "Identify the real limits on what must be said in a given encounter, checked.",
+            "9–10": "Navigate a real encounter knowing what is and isn't obliged to be said, alone.",
+            "11–12": "Explain to someone else the real, least-known limits on what must be said."
+          }
+        },
+        {
+          "theme": "De-escalating something on the street",
+          "description": "De-escalating on the street, and when to leave rather than continue.",
+          "bands": {
+            "K–2": "Ask an adult how to stay calm if something scary happens outside.",
+            "3–5": "Learn one real way to de-escalate a tense street situation, with an adult.",
+            "6–8": "Identify when real de-escalation is possible versus when to leave, checked.",
+            "9–10": "De-escalate a real street situation, or leave, correctly judging which, alone.",
+            "11–12": "Explain to someone else the real judgment between de-escalating and leaving."
+          }
+        },
+        {
+          "theme": "Looking after somebody until help arrives",
+          "description": "Staying with somebody until help arrives, and what is safe to do.",
+          "bands": {
+            "K–2": "Ask an adult what to do if someone is hurt nearby.",
+            "3–5": "Learn one real safe thing to do while waiting for help, with an adult.",
+            "6–8": "Identify what real is safe to do while staying with someone until help arrives.",
+            "9–10": "Stay with a real person safely until help arrives, doing what is safe, alone.",
+            "11–12": "Explain to someone else what is real and safe to do while waiting for help."
+          }
+        },
+        {
+          "theme": "After: the report number and what it unlocks",
+          "description": "The report number afterwards, and what it unlocks later.",
+          "bands": {
+            "K–2": "Ask an adult why a number on a paper matters after something happens.",
+            "3–5": "Learn one real thing a report number can unlock later, with an adult.",
+            "6–8": "Identify what real a report number unlocks afterward, with a checker.",
+            "9–10": "Use a real report number afterward for what it actually unlocks, on your own.",
+            "11–12": "Explain to someone else what a real report number unlocks later on."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CE",
+      "name": "Code enforcement: the complaint that actually moves",
+      "themes": [
+        {
+          "theme": "A code violation, defined",
+          "description": "What a code violation is, and the difference between annoying and actionable.",
+          "bands": {
+            "K–2": "Ask an adult what it means when a building breaks a rule.",
+            "3–5": "Learn one real example of a code violation, with an adult's help.",
+            "6–8": "Identify the real difference between annoying and actionable, with a checker.",
+            "9–10": "Determine, for a real problem, whether it is annoying or actionable, on your own.",
+            "11–12": "Explain to someone else the real difference between annoying and actionable."
+          }
+        },
+        {
+          "theme": "The complaint that gets an inspector out",
+          "description": "The complaint that actually gets an inspector out, and how it differs from one that does not.",
+          "bands": {
+            "K–2": "Ask an adult how to tell someone about a broken thing at a building.",
+            "3–5": "Learn one real thing a strong complaint includes, with an adult's help.",
+            "6–8": "Identify what real makes a complaint actually get an inspector out, checked.",
+            "9–10": "Write and file a real complaint that actually gets an inspector out, alone.",
+            "11–12": "Explain to someone else how a real complaint differs from one that gets ignored."
+          }
+        },
+        {
+          "theme": "311 and what it can and cannot do",
+          "description": "311 or its local equivalent: what it can do, and where it stops.",
+          "bands": {
+            "K–2": "Ask an adult what number to call about a problem on the street.",
+            "3–5": "Learn one real thing 311 or its local line can actually do, with an adult.",
+            "6–8": "Identify what real 311 can do and where its power stops, with a checker.",
+            "9–10": "Use a real 311-type line for what it can actually accomplish, on your own.",
+            "11–12": "Explain to someone else what a real 311-type line can do and where it stops."
+          }
+        },
+        {
+          "theme": "Documenting a building-wide problem",
+          "description": "Documenting a building-wide problem so it reads as systemic rather than personal.",
+          "bands": {
+            "K–2": "Ask an adult to help you write down a problem you saw.",
+            "3–5": "Learn one real way to document a problem beyond one unit, with an adult.",
+            "6–8": "Identify what real makes a problem read as systemic, not personal, checked.",
+            "9–10": "Document a real building-wide problem so it reads as systemic, on your own.",
+            "11–12": "Explain to someone else how to document a real problem as systemic, not personal."
+          }
+        },
+        {
+          "theme": "Getting neighbours to complain together",
+          "description": "Getting neighbours to complain together, which changes the response.",
+          "bands": {
+            "K–2": "Ask an adult if neighbours could ask for help together.",
+            "3–5": "Learn one real reason neighbours complaining together helps, with an adult.",
+            "6–8": "Identify why a real joint complaint changes the response, with a checker.",
+            "9–10": "Organize real neighbours to complain together and change the response, alone.",
+            "11–12": "Explain to someone else why a real joint complaint changes the response."
+          }
+        },
+        {
+          "theme": "The inspection and standing present at it",
+          "description": "The inspection, and standing present at it, which changes what is recorded.",
+          "bands": {
+            "K–2": "Ask an adult what happens when an inspector visits.",
+            "3–5": "Learn one real reason being present at an inspection helps, with an adult.",
+            "6–8": "Identify what real changes when you stand present at an inspection, checked.",
+            "9–10": "Stand present at a real inspection and change what actually gets recorded, alone.",
+            "11–12": "Explain to someone else what real standing present at an inspection changes."
+          }
+        },
+        {
+          "theme": "A notice of violation and its deadlines",
+          "description": "A notice of violation, its deadlines, and what happens when they pass.",
+          "bands": {
+            "K–2": "Ask an adult what a warning paper on a building might mean.",
+            "3–5": "Learn one real deadline that comes with a notice of violation, with an adult.",
+            "6–8": "Identify the real deadlines a notice of violation carries, with a checker.",
+            "9–10": "Track a real notice of violation's deadlines and what happens if missed, alone.",
+            "11–12": "Explain to someone else what a real notice of violation's deadlines actually mean."
+          }
+        },
+        {
+          "theme": "Escalating when nothing happens",
+          "description": "Escalation when nothing happens, in the order that works.",
+          "bands": {
+            "K–2": "Ask an adult what to do if nobody fixes a problem you reported.",
+            "3–5": "Learn one real next step when a complaint gets no response, with an adult.",
+            "6–8": "Identify the real order of escalation steps that actually works, with a checker.",
+            "9–10": "Escalate a real unanswered complaint in the order that actually works, alone.",
+            "11–12": "Explain to someone else the real order of escalation steps that works."
+          }
+        },
+        {
+          "theme": "Retaliation and the protection against it",
+          "description": "Retaliation, the protection that exists, and how it is evidenced.",
+          "bands": {
+            "K–2": "Ask an adult what it means if someone gets punished for complaining.",
+            "3–5": "Learn one real protection that exists against retaliation, with an adult.",
+            "6–8": "Identify the real protection against retaliation and how it's proven, checked.",
+            "9–10": "Document real retaliation in a way that actually evidences the protection, alone.",
+            "11–12": "Explain to someone else the real protection against retaliation and its proof."
+          }
+        },
+        {
+          "theme": "A building that finally gets fixed",
+          "description": "A building that finally got fixed, read for what actually caused the change.",
+          "bands": {
+            "K–2": "Ask an adult what finally happens after a building gets fixed.",
+            "3–5": "Name one real reason a building finally got fixed, with an adult's help.",
+            "6–8": "Identify the real cause that actually got a building's problem fixed, checked.",
+            "9–10": "Analyze, for a real case, what actually caused the change that fixed it, alone.",
+            "11–12": "Explain to someone else what real cause finally fixed a stubborn building problem."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CV",
+      "name": "The city: departments, hearings, and where a decision is made",
+      "themes": [
+        {
+          "theme": "Which department decides what",
+          "description": "Which department decides what, which is the question most complaints get wrong.",
+          "bands": {
+            "K–2": "Ask an adult which office handles a certain problem.",
+            "3–5": "Learn one real department and what it decides, with an adult's help.",
+            "6–8": "Identify the real department that decides a given kind of complaint, checked.",
+            "9–10": "Direct a real complaint to the department that actually decides it, alone.",
+            "11–12": "Explain to someone else how to find the real department behind a complaint."
+          }
+        },
+        {
+          "theme": "Supervisors, districts and who yours is",
+          "description": "Your district, your representative, and their actual remit.",
+          "bands": {
+            "K–2": "Ask an adult who represents your neighbourhood at city hall.",
+            "3–5": "Learn who real represents your district, with an adult's help.",
+            "6–8": "Identify the real remit of your district's representative, with a checker.",
+            "9–10": "Determine, for a real issue, whether your representative's remit covers it, alone.",
+            "11–12": "Explain to someone else the real remit of a district representative."
+          }
+        },
+        {
+          "theme": "A commission, a board and a hearing",
+          "description": "Commissions, boards and hearings: what each is and which decides.",
+          "bands": {
+            "K–2": "Ask an adult what a meeting where people decide things is called.",
+            "3–5": "Learn one real difference between a commission, a board and a hearing.",
+            "6–8": "Identify what real each of a commission, board or hearing actually decides, checked.",
+            "9–10": "Determine, for a real issue, which real body — commission, board, hearing — decides it.",
+            "11–12": "Explain to someone else the real differences among a commission, board and hearing."
+          }
+        },
+        {
+          "theme": "Where a budget decision is actually made",
+          "description": "Where a budget decision is actually made, which is rarely the meeting it is announced at.",
+          "bands": {
+            "K–2": "Ask an adult where money decisions for the city get made.",
+            "3–5": "Learn one real place where a budget decision actually happens, with an adult.",
+            "6–8": "Identify where a real budget decision is actually made, with a checker.",
+            "9–10": "Trace, for a real budget item, where the decision was actually made, alone.",
+            "11–12": "Explain to someone else where a real budget decision gets made, rarely at the meeting."
+          }
+        },
+        {
+          "theme": "Public comment: the rules and the two minutes",
+          "description": "Public comment: the rules, the two minutes, and what the format rewards.",
+          "bands": {
+            "K–2": "Ask an adult what it means to speak up at a meeting.",
+            "3–5": "Learn one real rule about speaking during public comment, with an adult.",
+            "6–8": "Identify what real the two-minute public comment format actually rewards, checked.",
+            "9–10": "Use a real two-minute public comment slot for what the format actually rewards.",
+            "11–12": "Explain to someone else what a real public comment format rewards and why."
+          }
+        },
+        {
+          "theme": "Reading an agenda before the meeting",
+          "description": "Reading an agenda before the meeting, and finding the item that matters.",
+          "bands": {
+            "K–2": "Ask an adult to show you a list of what a meeting will talk about.",
+            "3–5": "Learn one real reason to read an agenda before a meeting, with an adult.",
+            "6–8": "Identify the real item on an agenda that actually matters to you, with a checker.",
+            "9–10": "Read a real agenda beforehand and find the item that actually matters, alone.",
+            "11–12": "Explain to someone else how to read a real agenda to find what matters."
+          }
+        },
+        {
+          "theme": "A public record request",
+          "description": "A public records request: how it is filed and what it can obtain.",
+          "bands": {
+            "K–2": "Ask an adult how to find out what the city wrote down about something.",
+            "3–5": "Learn one real thing a public records request can obtain, with an adult.",
+            "6–8": "Identify how a real public records request is filed and what it obtains, checked.",
+            "9–10": "File a real public records request correctly for what it can obtain, alone.",
+            "11–12": "Explain to someone else how a real public records request is filed and works."
+          }
+        },
+        {
+          "theme": "Finding the staff person who knows",
+          "description": "Finding the staff member who actually knows, rather than the one who answers.",
+          "bands": {
+            "K–2": "Ask an adult who at an office actually knows the answer.",
+            "3–5": "Learn one real way to find the staff person who actually knows, with an adult.",
+            "6–8": "Identify the real difference between who answers and who actually knows, checked.",
+            "9–10": "Find the real staff member who actually knows, not just the one who answers, alone.",
+            "11–12": "Explain to someone else how to find the real staff person who actually knows."
+          }
+        },
+        {
+          "theme": "Coalitions and who is already working on it",
+          "description": "Coalitions already working on it, and joining rather than duplicating.",
+          "bands": {
+            "K–2": "Ask an adult if other people are already trying to fix the same problem.",
+            "3–5": "Learn one real reason to join others instead of starting over, with an adult.",
+            "6–8": "Identify a real coalition already working on a given issue, with a checker.",
+            "9–10": "Join a real coalition already working on an issue rather than duplicating it.",
+            "11–12": "Explain to someone else why joining a real existing coalition beats duplicating it."
+          }
+        },
+        {
+          "theme": "Following a decision after it is made",
+          "description": "Following a decision after the meeting, which is when most efforts stop.",
+          "bands": {
+            "K–2": "Ask an adult what happens after a big meeting decision is made.",
+            "3–5": "Learn one real reason to follow up after a decision, with an adult's help.",
+            "6–8": "Identify what real happens to a decision after the meeting ends, with a checker.",
+            "9–10": "Follow a real decision after the meeting, when most efforts actually stop, alone.",
+            "11–12": "Explain to someone else why following a real decision after the meeting matters most."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "VO",
+      "name": "Voice: speaking at a meeting that decides something",
+      "themes": [
+        {
+          "theme": "Two minutes, and what to put in them",
+          "description": "Two minutes: the structure that fits, and what has to be cut.",
+          "bands": {
+            "K–2": "Ask an adult to help you say something important in a short time.",
+            "3–5": "Learn one real structure that fits into two minutes, with an adult's help.",
+            "6–8": "Identify what real has to be cut to fit a two-minute structure, with a checker.",
+            "9–10": "Build real two minutes of remarks using a structure that actually fits, alone.",
+            "11–12": "Explain to someone else the real structure that makes two minutes work."
+          }
+        },
+        {
+          "theme": "Telling one story rather than five",
+          "description": "One story told properly rather than five told partly.",
+          "bands": {
+            "K–2": "Ask an adult to help you tell one good story instead of many.",
+            "3–5": "Learn one real reason telling one story beats telling five, with an adult.",
+            "6–8": "Identify why a real single, complete story lands better than five partial ones.",
+            "9–10": "Tell one real story properly rather than five told only partly, on your own.",
+            "11–12": "Explain to someone else why one real complete story beats five partial ones."
+          }
+        },
+        {
+          "theme": "Numbers a room will remember",
+          "description": "The one or two numbers a room will actually retain.",
+          "bands": {
+            "K–2": "Ask an adult to help you pick one number that matters.",
+            "3–5": "Learn one real number worth remembering for a talk, with an adult's help.",
+            "6–8": "Identify the one or two real numbers a room will actually retain, checked.",
+            "9–10": "Choose the real one or two numbers a room will actually retain, on your own.",
+            "11–12": "Explain to someone else how to choose real numbers that a room will retain."
+          }
+        },
+        {
+          "theme": "Speaking when you are angry",
+          "description": "Speaking when angry, using the anger without being led by it.",
+          "bands": {
+            "K–2": "Ask an adult how to talk calmly when you're upset.",
+            "3–5": "Learn one real way to use anger without being led by it, with an adult.",
+            "6–8": "Identify the real difference between using anger and being led by it, checked.",
+            "9–10": "Speak in a real angry moment using the anger without being led by it, alone.",
+            "11–12": "Explain to someone else the real skill of using anger without being led by it."
+          }
+        },
+        {
+          "theme": "Speaking when you are frightened",
+          "description": "Speaking when frightened, and the preparation that carries you through it.",
+          "bands": {
+            "K–2": "Ask an adult how to talk even when you're scared.",
+            "3–5": "Learn one real preparation that helps when speaking while frightened.",
+            "6–8": "Identify what real preparation carries someone through frightened speech, checked.",
+            "9–10": "Prepare for and deliver real remarks while frightened, using that preparation, alone.",
+            "11–12": "Explain to someone else the real preparation that carries a frightened speaker through."
+          }
+        },
+        {
+          "theme": "Writing it down first",
+          "description": "Writing it down first, which is what makes the two minutes survive nerves.",
+          "bands": {
+            "K–2": "Ask an adult to help you write down what you want to say first.",
+            "3–5": "Learn one real reason writing something down first helps, with an adult.",
+            "6–8": "Identify why real writing something down first survives nerves better, checked.",
+            "9–10": "Write real remarks down first so they survive nerves during delivery, alone.",
+            "11–12": "Explain to someone else why writing real remarks down first survives nerves."
+          }
+        },
+        {
+          "theme": "Bringing five people instead of one",
+          "description": "Bringing five people rather than one, and what that changes in the room.",
+          "bands": {
+            "K–2": "Ask an adult if friends could come along to help you speak up.",
+            "3–5": "Learn one real reason bringing others changes a room, with an adult's help.",
+            "6–8": "Identify what real changes in a room when five people show up, not one, checked.",
+            "9–10": "Organize real people to attend together and change what the room does, alone.",
+            "11–12": "Explain to someone else what real bringing five people changes in a room."
+          }
+        },
+        {
+          "theme": "What happens after you speak",
+          "description": "What happens after you speak, and the follow-up that decides whether it mattered.",
+          "bands": {
+            "K–2": "Ask an adult what happens after someone finishes talking at a meeting.",
+            "3–5": "Learn one real follow-up step after speaking at a meeting, with an adult.",
+            "6–8": "Identify the real follow-up that decides whether speaking mattered, checked.",
+            "9–10": "Do the real follow-up after speaking that decides whether it mattered, alone.",
+            "11–12": "Explain to someone else the real follow-up that decides whether speaking mattered."
+          }
+        },
+        {
+          "theme": "Being quoted, and being misquoted",
+          "description": "Being quoted and being misquoted, and correcting the record.",
+          "bands": {
+            "K–2": "Ask an adult what to do if someone repeats your words wrong.",
+            "3–5": "Learn one real way to correct being misquoted, with an adult's help.",
+            "6–8": "Identify the real steps for correcting a record when misquoted, with a checker.",
+            "9–10": "Correct a real misquote in the record using the actual correction steps, alone.",
+            "11–12": "Explain to someone else the real steps for correcting a record when misquoted."
+          }
+        },
+        {
+          "theme": "Doing it again next month",
+          "description": "Doing it again next month, because one appearance is an event and repetition is pressure.",
+          "bands": {
+            "K–2": "Ask an adult why speaking up once might not be enough.",
+            "3–5": "Learn one real reason to speak up again next month, with an adult's help.",
+            "6–8": "Identify why a real single appearance is an event, not a habit, with a checker.",
+            "9–10": "Plan to show up and speak again for real next month, building a habit, alone.",
+            "11–12": "Explain to someone else why a real single appearance is an event, but repetition is power."
+          }
+        }
+      ]
+    }
+  ]
+}

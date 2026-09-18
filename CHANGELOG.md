@@ -4,6 +4,28 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.89.0] — 2026-09-18
+
+### Added — prompt 2, tranche eleven: Reentry & Recovery Pathways and Neighbourhood, Safety & Civic Voice across five bands — prompt 2 closed
+- **`data/promotions/reentry-recovery-pathways.json`** and
+  **`data/promotions/neighbourhood-safety-civic-voice.json`** are
+  brand-new promotion files, following the same pattern as v0.88.0:
+  neither pack had an existing promotion or pack_spec file, and their
+  `track` and `description` were already non-empty directly in the raw
+  source. Each declares `"override": "band-suffix"`, copies its five
+  tracks and fifty themes verbatim from
+  `data/source/Cognition.X_all_blocks.csv` with the suffix stripped,
+  and carries `bands` on every theme — 500 rows across the two packs;
+  no block id, code, credential or transfer check changed.
+- The description-override count (`docs/DATA_QUALITY.md`) rises from
+  4,000 rows / 9 packs to 4,500 rows / 11 packs. Band-suffix rows
+  500 → 0 — every band-suffix row in the dataset now carries an
+  authored per-band sentence.
+- **This closes prompt 2 of `docs/NEXT_STEPS_2.md` entirely**: all
+  eleven tranches, 6,250 rows across every community pack, are done.
+  `tests/test_platform.py`'s `BAND_OVERRIDDEN_PACKS` gains both packs;
+  `KNOWN_BAND_SUFFIX_ROWS` ratchets to 0.
+
 ## [0.88.0] — 2026-09-18
 
 ### Added — prompt 2, tranche ten: Housing & Tenancy and Money, Benefits & Entitlements across five bands, the first override-based community packs
