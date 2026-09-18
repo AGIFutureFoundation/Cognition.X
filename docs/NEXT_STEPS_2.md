@@ -80,7 +80,7 @@ python3 tests/test_platform.py
 
 ---
 
-## 2 — The community packs' band sentences, by pack importance
+## 2 — The community packs' band sentences, by pack importance *(tranche one — SmartCiti.X New Orleans Trades and the States OS — done in v0.79.0, 500 rows; `tools/author_bands.py` for the remaining tranches)*
 
 **Why.** The remaining 6,293 suffixed rows sit in 25 community and
 regional packs of 250 (and the States OS), where the source description

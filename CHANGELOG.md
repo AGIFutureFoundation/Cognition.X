@@ -4,6 +4,22 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.79.0] — 2026-09-18
+
+### Added — prompt 2, tranche one: SmartCiti.X New Orleans Trades and the States OS across five bands
+- **`data/pack_specs/smartcitix-new-orleans-trades.json`** and
+  **`data/pack_specs/states-os-blueprint.json`** now carry `bands` on
+  every theme: five tracks each, ten themes, five distinct sentences on
+  the band ladder — 500 rows across the two packs; no block id, code,
+  credential or transfer check changed. Unlike the seven sector-OS packs,
+  these source descriptions were empty, so no override was needed —
+  `bands` reaches them through the existing fill-empty path.
+  Band-suffix rows 6,250 → 5,750; the ratchet lowered.
+- **`tools/author_bands.py`** inserts validated authored band sentences
+  into a pack spec (five distinct, non-suffixed, ≥ 40-character
+  sentences per theme, every theme covered) so the remaining tranches
+  follow the same shape.
+
 ## [0.78.0] — 2026-09-17
 
 ### Added — Non-Profit Practice across five bands; the sector-OS debt closed
