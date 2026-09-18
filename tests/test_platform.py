@@ -777,7 +777,7 @@ UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture
 # with grade "—"; they stay empty until that filter is extended.
 UNBANDED_KNOWN_GAPS = {"Health & Community": 2}
 
-KNOWN_EMPTY_DESCRIPTION_ROWS = 5591  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); 5,758 after Health & Community (v0.92.0, prompt 3 tranche three, 109 of its 111 rows — the other 2 use grade "—" and are out of scope); 5,591 after Empathy & Emotional Intelligence (v0.93.0, prompt 3 tranche four, 167 rows, the first "partial_bands" promotion); the ratchet only falls
+KNOWN_EMPTY_DESCRIPTION_ROWS = 5424  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); 5,758 after Health & Community (v0.92.0, prompt 3 tranche three, 109 of its 111 rows — the other 2 use grade "—" and are out of scope); 5,591 after Empathy & Emotional Intelligence (v0.93.0, prompt 3 tranche four, 167 rows, the first "partial_bands" promotion); 5,424 after Community & Relationship Practice (v0.94.0, prompt 3 tranche five, 167 rows); the ratchet only falls
 
 
 def test_unbanded_descriptions():
@@ -818,7 +818,7 @@ def test_unbanded_descriptions():
 # of three or four — Empathy & Emotional Intelligence, Community &
 # Relationship Practice), promoted with `"partial_bands": true` so each
 # grade a theme actually has gets its own authored sentence, no suffix.
-PARTIAL_BANDS_FILLED_PACKS = {"Empathy & Emotional Intelligence"}
+PARTIAL_BANDS_FILLED_PACKS = {"Empathy & Emotional Intelligence", "Community & Relationship Practice"}
 
 
 def test_partial_band_descriptions():

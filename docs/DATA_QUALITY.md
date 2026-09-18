@@ -21,7 +21,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Health & Community | 111 | 0 | 98% | 0% | 100% | 0% | 45 |
 | Language, Culture & Communication | 111 | 0 | 100% | 0% | 100% | 0% | 43 |
 | Empathy & Emotional Intelligence | 167 | 0 | 100% | 0% | 100% | 19% | 37 |
-| Community & Relationship Practice | 167 | 0 | 0% | 0% | 100% | 0% | 32 |
+| Community & Relationship Practice | 167 | 0 | 100% | 0% | 100% | 0% | 32 |
 | Preventive Health & Everyday Care | 250 | 5 | 100% | 0% | 100% | 0% | 30 |
 | Basic Life Skills & Self-Reliance | 250 | 5 | 100% | 0% | 100% | 0% | 93 |
 | Water, Land & Climate | 250 | 5 | 100% | 0% | 100% | 0% | 92 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 67% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 68% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 

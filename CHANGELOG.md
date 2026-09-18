@@ -4,6 +4,29 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.94.0] — 2026-09-18
+
+### Added — prompt 3, tranche five: Community & Relationship Practice's 167 empty descriptions filled — prompt 3's foundation-pack work now closed except for K–12, Trade School, Regional and two grade-`—` rows
+- **`data/promotions/community-relationship-practice.json`** is a new
+  `partial_bands` promotion: 55 themes across five natural groupings
+  (Forming Relationships, Family Connection, Conflict & Community
+  Repair, Belonging, Serving Communities Unlike Your Own), each theme's
+  rows spanning exactly the 3 or 4 grades its real rows carry — 167
+  rows, matching the pack's actual grade spans exactly (verified
+  programmatically before writing the file, as with Empathy in v0.93.0).
+  No block id, code, track, level, credential or transfer check changed.
+- `tests/test_platform.py`'s `PARTIAL_BANDS_FILLED_PACKS` gains the
+  pack; `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 5,591 → 5,424. Dataset-wide
+  description coverage rises from 67% to 68%.
+- This closes every foundation pack reachable by the `unbanded` and
+  `partial_bands` mechanisms. What remains of prompt 3: K–12 (64 rows),
+  Trade School (47 rows), Regional (111 rows), and Health & Community's
+  2 `—`-grade rows — these use single grades or adult-route markers
+  outside `apply_promotions()`'s `BAND_LEVEL` filter and need that
+  filter extended to `GRADE_LEVEL`; then the sector-OS and Education OS
+  empty descriptions (5,200 rows), whose theme/grade structure has not
+  yet been verified.
+
 ## [0.93.0] — 2026-09-18
 
 ### Added — prompt 3, tranche four: a `"partial_bands": true` promotion mechanism, and Empathy & Emotional Intelligence's 167 empty descriptions filled

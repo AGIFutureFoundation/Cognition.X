@@ -109,7 +109,7 @@ python3 tools/normalize_blocks.py && python3 tests/test_platform.py
 
 ---
 
-## 3 — The 6,200 empty descriptions, filled through promotions *(tranche one — Future-Work — done in v0.90.0, 111 rows; tranche two — Civic & Leadership and Language, Culture & Communication — done in v0.91.0, 222 rows; tranche three — Health & Community — done in v0.92.0, 109 of 111 rows; tranche four — a new `partial_bands` mechanism, and Empathy & Emotional Intelligence — done in v0.93.0, 167 rows)*
+## 3 — The 6,200 empty descriptions, filled through promotions *(tranche one — Future-Work — done in v0.90.0, 111 rows; tranche two — Civic & Leadership and Language, Culture & Communication — done in v0.91.0, 222 rows; tranche three — Health & Community — done in v0.92.0, 109 of 111 rows; tranche four — a new `partial_bands` mechanism, and Empathy & Emotional Intelligence — done in v0.93.0, 167 rows; tranche five — Community & Relationship Practice — done in v0.94.0, 167 rows, closing every foundation pack reachable by `unbanded`/`partial_bands`)*
 
 **Wrinkle found in v0.92.0, resolved in v0.93.0.** Empathy & Emotional
 Intelligence and Community & Relationship Practice (167 rows each) do
