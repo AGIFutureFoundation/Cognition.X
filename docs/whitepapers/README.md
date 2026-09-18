@@ -15,6 +15,14 @@ disclaimer) and a promo film recorded from the app itself.
 The papers' appendices are generated from the built app and the
 dataset (`data/blocks.csv`), so a paper says what the module says.
 
+A fourth film, `tools/film/orgs/unspoken-smiles.js`, frames Unspoken
+Smiles (the oral-health NGO founded by Jean Paul Laurent) the same way
+but has no dedicated module or white paper: it plays content that
+already exists in the general dataset — the peer-educator ladder in
+the Health & Community pack and the separate Oral Health Peer track —
+because it happens to cover the same domain, not because it was
+written for them.
+
 ## Regenerate
 
 ```bash
