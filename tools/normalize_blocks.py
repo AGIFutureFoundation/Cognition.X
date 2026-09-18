@@ -242,7 +242,18 @@ def apply_promotions(rows):
                 # override rows already carry a track, so a theme name that two
                 # tracks share (the Multilateral OS has one) resolves per track
                 overmap[(spec["pack"], track["name"], th["theme"])] = th.get("bands")
-        promos[spec["pack"]] = themap
+        # A pack can be the target of more than one promotion file (v0.99.0):
+        # the sector-OS packs already carry a "band-suffix" override promotion
+        # from prompt 2, and prompt 3 adds a second, unbanded promotion for
+        # the same pack's still-empty foundation rows. Merge themaps across
+        # files targeting the same pack; a theme both files promote is a real
+        # authoring conflict (ambiguous which sentence wins), not something to
+        # silently resolve by file order, so it's refused loudly.
+        existing = promos.setdefault(spec["pack"], {})
+        collide = set(existing) & set(themap)
+        if collide:
+            raise SystemExit(f"{path.name}: theme(s) already promoted for pack {spec['pack']!r} by another promotion file: {sorted(collide)[:5]}")
+        existing.update(themap)
         if spec.get("override"):
             if spec["override"] != "band-suffix":
                 raise SystemExit(f"{path.name}: the only override kind is \"band-suffix\", got {spec['override']!r}")

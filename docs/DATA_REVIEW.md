@@ -95,6 +95,28 @@ sections; the only other diff is the fonts `<link>`).
    What remains of prompt 3: the sector-OS and Education OS empty
    descriptions (5,200 rows), whose theme/grade structure needs a
    Python scan of `data/blocks.csv` before assuming a mechanism.
+   *Update (v0.99.0):* scanned it. All 8 remaining packs share one
+   shape: every empty row carries grade `11–12 · adult` and empty
+   `track`, using one of several hundred distinct short generic
+   action-phrase themes ("Track progress", "Address bias") reused
+   verbatim across dozens to hundreds of named credentials within the
+   pack — `unbanded` fits, confirmed by checking that rows sharing a
+   theme carry varying transfer-check wording (different verification
+   modes for the same action) but always the same action. Shipped
+   Sapient OS as the pilot (357 themes, 620 rows) and, in the process,
+   found and fixed a real bug: `apply_promotions()` built one themap
+   per pack name, so a second promotion file targeting a pack an
+   earlier file already covered (every sector-OS pack already has a
+   prompt-2 `"band-suffix"` override promotion) silently discarded the
+   new file's themes — it parsed, validated, and ran, but filled
+   nothing. Now merges themaps across files per pack, refusing loudly
+   on a genuine theme collision. `test_unbanded_descriptions()` was
+   narrowed to scope each pack's checked rows to what an `unbanded`
+   promotion actually declared, so it can't conflate unbanded fills
+   with unrelated band-authored or override content sharing the pack.
+   Seven packs remain (Corporate OS, Education OS, Global Health OS,
+   Science OS, Multilateral OS, Non-Profit Practice, Robotics OS),
+   roughly 2,570 more distinct sentences across them.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic
