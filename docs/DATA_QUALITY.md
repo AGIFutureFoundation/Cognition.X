@@ -46,11 +46,11 @@ authored descriptions. Neither is hidden — both are counted here.
 | Civic Leadership Legacy : Louisiana | 250 | 5 | 100% | 0% | 100% | 0% | 117 |
 | Civic Leadership Legacy : Texas | 250 | 5 | 100% | 100% | 100% | 0% | 88 |
 | Culinary Trades : The Louisiana Kitchen | 250 | 5 | 100% | 0% | 100% | 0% | 85 |
-| Digital Life, Data & AI | 250 | 5 | 100% | 100% | 100% | 0% | 54 |
+| Digital Life, Data & AI | 250 | 5 | 100% | 0% | 100% | 0% | 54 |
 | Emergency Preparedness & First Response | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 | Energy, Grid & the Home | 250 | 5 | 100% | 100% | 100% | 0% | 94 |
 | Food, Cooking & Nutrition | 250 | 5 | 100% | 100% | 100% | 0% | 82 |
-| Law, Contracts & Everyday Rights | 250 | 5 | 100% | 100% | 100% | 0% | 104 |
+| Law, Contracts & Everyday Rights | 250 | 5 | 100% | 0% | 100% | 0% | 104 |
 | Learning States & Universal Access | 250 | 5 | 100% | 100% | 100% | 0% | 94 |
 | Cognition.X : Louisiana OS | 500 | 10 | 100% | 0% | 100% | 0% | 101 |
 | Music : Creation to Industry | 250 | 5 | 100% | 0% | 100% | 0% | 85 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 25% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 22% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 

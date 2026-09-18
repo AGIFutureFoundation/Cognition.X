@@ -4,6 +4,19 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.82.0] — 2026-09-18
+
+### Added — prompt 2, tranche four: Digital Life and Law across five bands
+- **`data/pack_specs/digital-life-data-ai.json`** and
+  **`data/pack_specs/law-contracts-everyday-rights.json`** now carry
+  `bands` on every theme: five tracks each, ten themes, five distinct
+  sentences on the band ladder — 500 rows across the two packs; no
+  block id, code, credential or transfer check changed. As with the
+  earlier tranches, `bands` reaches them through the existing
+  fill-empty path with no override needed. Band-suffix rows 4,500 →
+  4,000; the ratchet lowered. The remaining tranche is the life-skills
+  family.
+
 ## [0.81.0] — 2026-09-18
 
 ### Added — prompt 2, tranche three: the three culture packs across five bands
