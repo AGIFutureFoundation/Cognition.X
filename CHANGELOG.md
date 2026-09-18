@@ -4,6 +4,39 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.95.0] — 2026-09-18
+
+### Added — prompt 3 continuation: `apply_promotions()`'s grade filter extended to `GRADE_LEVEL`, and K–12's 64 empty descriptions filled
+- `tools/normalize_blocks.py`'s `apply_promotions()` gated every fill on
+  `r["grade"] in BAND_LEVEL` (the five standard bands only), which kept it
+  from reaching foundation packs whose rows use single grades or
+  adult-route markers — K–12 (grades `K` through `12`), Trade School
+  (`11–12 · adult`), Regional (a mix), and Health & Community's two
+  `—`-grade capstones. The filter now checks `GRADE_LEVEL` (the superset
+  already used by `light_fill()` for level derivation), and the `bi`
+  computation that assumed a `BANDS` index moved inside the guarded
+  block that only runs for the standard five-band mechanism, so it never
+  runs on a grade that isn't in `BANDS`. No behavior change for any
+  existing promotion.
+- **`data/promotions/k12.json`** is a new `unbanded` promotion: 64
+  themes, each naming exactly one row at one of the 13 single grades K
+  through 12 (K–12's own narrative arc, "the Depot," from counting parts
+  in kindergarten through capstone placement in twelfth grade) — 64
+  rows, no suffix, `track`/`code` left deferred like every other
+  `unbanded` pack. No block id, code, track, level, credential or
+  transfer check changed.
+- `tests/test_platform.py`'s `UNBANDED_FILLED_PACKS` gains K–12;
+  `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 5,424 → 5,360. Dataset-wide
+  description coverage rises from 68% to 69%.
+- What remains of prompt 3: Trade School (47 rows) and Regional (111
+  rows, 4 of its 83 themes each repeated verbatim across 8 rows — one
+  per named region — which will need `test_unbanded_descriptions()`'s
+  distinctness check scoped to distinct themes, not rows), then Health
+  & Community's 2 grade-`—` rows (now reachable — an addition to its
+  existing promotion); then the sector-OS and Education OS empty
+  descriptions (5,200 rows), whose theme/grade structure has not yet
+  been verified.
+
 ## [0.94.0] — 2026-09-18
 
 ### Added — prompt 3, tranche five: Community & Relationship Practice's 167 empty descriptions filled — prompt 3's foundation-pack work now closed except for K–12, Trade School, Regional and two grade-`—` rows

@@ -1,0 +1,287 @@
+{
+  "pack": "K–12",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema is out of scope: K–12's 64 themes each name exactly one row at one single grade (K through 12), not a five-band ladder, so this fills description only through the unbanded mechanism (v0.95.0, prompt 3 continuation) after apply_promotions()'s grade filter was extended from BAND_LEVEL to GRADE_LEVEL to reach single-grade rows. track/code/level stay as they were (LB-<n> codes, level derived structurally by light_fill()).",
+  "tracks": [
+    {
+      "prefix": "K5",
+      "name": "K–5 Foundations",
+      "themes": [
+        {
+          "theme": "Counting the Depot",
+          "description": "Count a set of twelve mixed depot parts and match each count to its numeral."
+        },
+        {
+          "theme": "Shapes that Roll",
+          "description": "Build a rolling bot base out of named shapes and explain why each one was chosen."
+        },
+        {
+          "theme": "More or Fewer",
+          "description": "Solve two add-and-subtract stories about parts moving through the depot."
+        },
+        {
+          "theme": "Measure and Compare",
+          "description": "Compare two depot objects on two attributes and explain the comparison in a drawing."
+        },
+        {
+          "theme": "Summer Bridge K→1: Gears in the Garden",
+          "description": "Count and compare a harvest from the garden and name one matching gear pair."
+        },
+        {
+          "theme": "Adding to Ten",
+          "description": "Solve three add-and-subtract-within-twenty stories about the depot's gears."
+        },
+        {
+          "theme": "Place Value at the Depot",
+          "description": "Represent a two-digit inventory count two different ways."
+        },
+        {
+          "theme": "Measuring with Bots",
+          "description": "Measure an object with a bot-sized unit and read a clock to the half hour."
+        },
+        {
+          "theme": "Shapes and Halves",
+          "description": "Partition a shape into halves and describe the split in writing."
+        },
+        {
+          "theme": "Summer Bridge 1→2: The Belt Camp",
+          "description": "Solve two belt stories within twenty and measure and compare two belt sections."
+        },
+        {
+          "theme": "Gear Tooth Operations II",
+          "description": "Solve a two-step gear story with a total under one hundred."
+        },
+        {
+          "theme": "Depot Inventory to 1,000",
+          "description": "Add and subtract three-digit inventory totals and explain the work."
+        },
+        {
+          "theme": "The Repair Log",
+          "description": "Produce a repair log that carries a measurement, a time and a bar graph."
+        },
+        {
+          "theme": "Belt Sections",
+          "description": "Partition a rectangle into rows and columns and count the resulting squares."
+        },
+        {
+          "theme": "Summer Bridge 2→3: Sorting Floor Camp",
+          "description": "Build an array from a load and write its equal-groups sentence."
+        },
+        {
+          "theme": "Pattern & Sequence Bots",
+          "description": "Extend a multiplication pattern and explain the rule that generates it."
+        },
+        {
+          "theme": "Fractions on the Conveyor I",
+          "description": "Place fractions on a number line and compare two belt speeds."
+        },
+        {
+          "theme": "Gauge Reader",
+          "description": "Solve an area problem and read a scaled bar graph correctly."
+        },
+        {
+          "theme": "Depot Inspection",
+          "description": "Recall multiplication facts fluently and write up a hand-written inspection report."
+        },
+        {
+          "theme": "Summer Bridge 3→4: Crane Yard Camp",
+          "description": "Solve a multi-step load problem and find a fraction of a belt run."
+        },
+        {
+          "theme": "Crane Arm Fold",
+          "description": "Solve a multi-step word problem and interpret its remainder in context."
+        },
+        {
+          "theme": "Fractions on the Conveyor II",
+          "description": "Add and subtract fractions with unlike denominators in a belt problem."
+        },
+        {
+          "theme": "Measure the Machine",
+          "description": "Measure and sketch angles on a linkage and convert between units."
+        },
+        {
+          "theme": "Lines, Angles and the Coast",
+          "description": "Classify shapes by their lines and angles and write the engineering note in cursive."
+        },
+        {
+          "theme": "Summer Bridge 4→5: Pump Station Camp",
+          "description": "Read a gauge to the hundredth and measure an angle on the pump station."
+        },
+        {
+          "theme": "Weather & Water Sensors I",
+          "description": "Do decimal computation on a gauge log and justify an alert decision from it."
+        },
+        {
+          "theme": "Belt at Three-Quarter Speed",
+          "description": "Multiply and divide fractions to solve a pump-station speed problem."
+        },
+        {
+          "theme": "Flood Alert Data",
+          "description": "Convert units to find a tank's volume and plot the data with a written conclusion."
+        },
+        {
+          "theme": "Depot Map Coordinates",
+          "description": "Plot and interpret points on a map and classify the shapes it contains."
+        },
+        {
+          "theme": "Summer Bridge 5→6: Port Preview",
+          "description": "Plot and read a yard map and solve one rate problem from it."
+        }
+      ]
+    },
+    {
+      "prefix": "YT",
+      "name": "6–8 Yard & Terminal Systems",
+      "themes": [
+        {
+          "theme": "Ratios & Gear Trains",
+          "description": "Build a ratio table and unit-rate problem and sketch the matching gear train."
+        },
+        {
+          "theme": "Python Foundations I",
+          "description": "Write and evaluate an expression for a belt and debug a short loop."
+        },
+        {
+          "theme": "Container Geometry",
+          "description": "Find area, surface area and coordinate distance in a yard layout."
+        },
+        {
+          "theme": "Sensors & Noise I",
+          "description": "Describe the center and spread of a sensor set and pick the reliable one."
+        },
+        {
+          "theme": "Summer Bridge 6→7: Terminal Summer Crew",
+          "description": "Solve a proportion problem using a set of sensor readings."
+        },
+        {
+          "theme": "Proportional Torque",
+          "description": "Reason proportionally with a percent margin on a load calculation."
+        },
+        {
+          "theme": "Motor Margin Equations",
+          "description": "Solve a two-step equation and an inequality on a power budget."
+        },
+        {
+          "theme": "Coordinate Robots I",
+          "description": "Solve a scale drawing and a circle problem for a gantry."
+        },
+        {
+          "theme": "Sensor Sampling",
+          "description": "Draw a probability and sampling inference from a sensor log."
+        },
+        {
+          "theme": "Summer Bridge 7→8: Grain Terminal Summer Crew",
+          "description": "Build a linear model of a belt and trace a relay through it."
+        },
+        {
+          "theme": "Linear Motion Models",
+          "description": "Write and solve a linear model and a system of equations for a sweep."
+        },
+        {
+          "theme": "Servo Sweep Functions",
+          "description": "Interpret the rate and initial value of a function in context."
+        },
+        {
+          "theme": "Coordinate Robots II & Pythagorean Reach",
+          "description": "Run a transformation sequence and find a Pythagorean reach for an arm."
+        },
+        {
+          "theme": "Circuits, Relays & Sensors II",
+          "description": "Interpret bivariate data and diagnose a relay fault from it."
+        },
+        {
+          "theme": "Summer Bridge 8→9: Terminal Onboarding Camp",
+          "description": "Pass a safety-gate sign-off and solve a linear system on a line."
+        }
+      ]
+    },
+    {
+      "prefix": "TC",
+      "name": "9–10 Twin & Calibration Systems",
+      "themes": [
+        {
+          "theme": "Terminal Onboarding & Linear Models",
+          "description": "Pass a safety-gate sign-off and justify a belt's linear model with units."
+        },
+        {
+          "theme": "Linear Systems & Control",
+          "description": "Solve, graph and interpret a system of equations and inequalities on a line."
+        },
+        {
+          "theme": "Functions of Motion",
+          "description": "Interpret and build functions that describe a motion profile."
+        },
+        {
+          "theme": "Statistics & the Controller Patch",
+          "description": "Pass a code review and interpret a line of fit and correlation on a data set."
+        },
+        {
+          "theme": "Summer Bridge 9→10: Twin Summer Lab",
+          "description": "Find a scale factor for a twin and read an SPC chart."
+        },
+        {
+          "theme": "Scale the Twin",
+          "description": "Prove congruence and similarity on a rig and find a scale factor from two lengths."
+        },
+        {
+          "theme": "The Calcasieu Assembly Calibration",
+          "description": "Apply similarity and right-triangle trigonometry to new stroke lengths on an arm."
+        },
+        {
+          "theme": "Two-Link Arm & Torque",
+          "description": "Use the law of cosines to decide a reach and balance the vectors on an actuator."
+        },
+        {
+          "theme": "Weld Paths & Thermal Systems",
+          "description": "Build a coordinate-geometry weld path and diagnose a relay fault in a cell."
+        },
+        {
+          "theme": "Summer Bridge 10→11: Site Induction",
+          "description": "Apply trigonometry to a two-link arm and earn an OSHA 10 card."
+        }
+      ]
+    },
+    {
+      "prefix": "CP",
+      "name": "11–12 Capstone & Credentialing",
+      "themes": [
+        {
+          "theme": "PLC & Industrial Networks",
+          "description": "Fit a polynomial and rational model to a line, trace a fault and document it."
+        },
+        {
+          "theme": "Predictive Fatigue Diagnostics",
+          "description": "Solve an exponential and logarithmic problem on a reliability curve and write the work order."
+        },
+        {
+          "theme": "Statistics for Quality",
+          "description": "Build a control chart and defend a sampling plan from it."
+        },
+        {
+          "theme": "AI-CAD & Trig Models",
+          "description": "Build a trigonometric model of a vibration and report a twin-to-scan discrepancy."
+        },
+        {
+          "theme": "Summer Bridge 11→12: Capstone Summer",
+          "description": "Get a capstone brief accepted by the employer panel."
+        },
+        {
+          "theme": "Capstone Design",
+          "description": "Get a capstone proposal accepted by the employer panel."
+        },
+        {
+          "theme": "Industry-Based Certifications",
+          "description": "Earn an industry-based certification such as NCCER Core, OSHA 10, AWS, EPA 608, CompTIA or PTEC."
+        },
+        {
+          "theme": "Capstone Build & Work-Based Learning",
+          "description": "Pass an employer-judged capstone and get its hours countersigned."
+        },
+        {
+          "theme": "Ledger, Placement & Launch",
+          "description": "Get a credential ledger verified by an employer and a placement confirmed."
+        }
+      ]
+    }
+  ]
+}
