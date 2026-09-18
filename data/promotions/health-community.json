@@ -1,0 +1,473 @@
+{
+  "pack": "Health & Community",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema (v0.92.0, prompt 3 tranche three). Each theme in this pack names exactly one row at one grade band, not five rows across the ladder, so \"unbanded\": true fills each row's empty description with its own complete sentence directly — no per-band suffix, since the row already names its own grade. track/code are not filled by this promotion (see tools/normalize_blocks.py apply_promotions): this pack's natural sub-groupings do not form the 50-block tracked shape. This promotion covers 109 of the pack's 111 rows; two rows (grade —, adult-route capstones) use a grade value outside the five standard bands and are out of scope until apply_promotions is extended to match on GRADE_LEVEL as well as BAND_LEVEL. Theme text and grouping are copied verbatim from data/blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "OH",
+      "name": "Oral Health",
+      "themes": [
+        {
+          "theme": "Two minutes, twice a day (OH)",
+          "description": "Demonstrate the full two-minute brushing pattern on a model, unprompted."
+        },
+        {
+          "theme": "Sugar is a clock (OH)",
+          "description": "Sort a day of snacks into clock-resets and clock-restarts and explain why."
+        },
+        {
+          "theme": "The wobbly tooth (OH)",
+          "description": "Tell a younger child what to do about a wobbly tooth, correctly and kindly."
+        },
+        {
+          "theme": "Why teeth hurt (OH)",
+          "description": "Explain to a peer what is happening inside a tooth that hurts."
+        },
+        {
+          "theme": "Fluoride, honestly (OH)",
+          "description": "Read three toothpaste labels and pick correctly for a named age group."
+        },
+        {
+          "theme": "The screening day (OH)",
+          "description": "Run the greeting-and-queue role in a mock screening day without touching anyone."
+        },
+        {
+          "theme": "Teaching a smaller kid (OH)",
+          "description": "Teach a younger group a lesson with an observer scoring the teach-back."
+        },
+        {
+          "theme": "The mouth is the body (OH)",
+          "description": "Explain a health connection with a source, naming what cannot be concluded from it."
+        },
+        {
+          "theme": "Access, plainly (OH)",
+          "description": "Map the real barriers in an area and rank them by what a program could move."
+        },
+        {
+          "theme": "The referral, not the diagnosis (OH)",
+          "description": "Handle three scripted cases correctly: a clear referral, a keep-watching, and one outside scope."
+        },
+        {
+          "theme": "Water, waste and the clinic (OH)",
+          "description": "Audit a mock clinic day for waste and propose three changes with their costs."
+        },
+        {
+          "theme": "Running the demo table (OH)",
+          "description": "Run a demo table for forty-five minutes, scored on setup, teaching and boundaries."
+        },
+        {
+          "theme": "Designing a campaign (OH)",
+          "description": "Design and defend a two-week campaign with a measurement plan that collects no health data."
+        },
+        {
+          "theme": "Consent and the child (OH)",
+          "description": "Produce a consent pack for a mock event and pass a review against the data rule."
+        },
+        {
+          "theme": "Training the next cohort (OH)",
+          "description": "Train two new peer educators and have them pass the observer check."
+        },
+        {
+          "theme": "Working with a clinic (OH)",
+          "description": "Build a referral pathway with a named clinic role for every step."
+        },
+        {
+          "theme": "The numbers you may keep (OH)",
+          "description": "Produce a one-page program dashboard from counts only, defending every omission."
+        },
+        {
+          "theme": "Careers in oral health (OH)",
+          "description": "Map a two-year and six-year path with named local programs and their entry requirements."
+        },
+        {
+          "theme": "Infection control, from the outside (OH)",
+          "description": "Pass the written infection-control principles check used for pre-assistant programs."
+        },
+        {
+          "theme": "The community survey (OH)",
+          "description": "Run a survey with a stated method and publish its limitations alongside results."
+        },
+        {
+          "theme": "Standing up a program (OH)",
+          "description": "Present a full program plan to a panel with a named clinic partner and a real budget."
+        },
+        {
+          "theme": "The fellowship bridge (OH)",
+          "description": "Assemble a portfolio and complete a real application package for a named program."
+        }
+      ]
+    },
+    {
+      "prefix": "VS",
+      "name": "Vision Health",
+      "themes": [
+        {
+          "theme": "Eyes do a job (VS)",
+          "description": "Show a partner three things eyes do, and one rule about keeping them safe."
+        },
+        {
+          "theme": "Can you see the board? (VS)",
+          "description": "Ask for a seat change correctly in a role-play, without embarrassment."
+        },
+        {
+          "theme": "Sun, screens and rest (VS)",
+          "description": "Run the twenty-twenty-twenty timer for a whole lesson and remind the class once."
+        },
+        {
+          "theme": "Glasses are tools (VS)",
+          "description": "Teach a younger child how to carry and clean glasses safely."
+        },
+        {
+          "theme": "Light and letters (VS)",
+          "description": "Explain to a peer why the back row is harder, using a drawing."
+        },
+        {
+          "theme": "The chart, explained (VS)",
+          "description": "Set up a chart at the correct distance and explain the task without judging any answer."
+        },
+        {
+          "theme": "Headaches and homework (VS)",
+          "description": "Sort five scenarios into rest, tell an adult, or referral."
+        },
+        {
+          "theme": "Screens, honestly (VS)",
+          "description": "Present the evidence-and-limits version of screen use to a class without overclaiming."
+        },
+        {
+          "theme": "Teaching a smaller kid (VS)",
+          "description": "Run a mock chart station for a younger group with an observer scoring your boundary."
+        },
+        {
+          "theme": "Why some children cannot see the board (VS)",
+          "description": "Explain refractive error to a family audience without diagnosing anyone."
+        },
+        {
+          "theme": "Access, plainly (VS)",
+          "description": "Map the barriers in a school and rank what a program could actually move."
+        },
+        {
+          "theme": "The referral, not the reading (VS)",
+          "description": "Handle four scripted cases correctly, including one that looks clear where you refer anyway."
+        },
+        {
+          "theme": "Eye safety at work (VS)",
+          "description": "Audit a mock shop for eye hazards and specify correct protection for each."
+        },
+        {
+          "theme": "Running the screening station (VS)",
+          "description": "Run a forty-five-minute mock station scored on setup, kindness and boundaries."
+        },
+        {
+          "theme": "The glasses that get lost (VS)",
+          "description": "Design a repair-and-spares scheme with a real cost and a named keeper."
+        },
+        {
+          "theme": "Designing a campaign (VS)",
+          "description": "Design and defend a campaign with a measurement plan that collects no health data."
+        },
+        {
+          "theme": "Consent and the child (VS)",
+          "description": "Produce a vision-screening consent pack for a mock day and pass the data-rule review."
+        },
+        {
+          "theme": "Working with the eye clinic (VS)",
+          "description": "Build a referral pathway with a named clinic role at every step and a follow-up owner."
+        },
+        {
+          "theme": "Training the next cohort (VS)",
+          "description": "Train two new vision educators and have them pass the observer check."
+        },
+        {
+          "theme": "The numbers you may keep (VS)",
+          "description": "Produce a one-page program dashboard from counts only and defend every omission."
+        },
+        {
+          "theme": "Careers in eye care (VS)",
+          "description": "Map a two-year and six-year path into eye care with named local programs."
+        },
+        {
+          "theme": "Optics you can hold (VS)",
+          "description": "Build and explain a working lens demonstration, predicting and verifying the focal point."
+        },
+        {
+          "theme": "The community survey (VS)",
+          "description": "Run a vision survey with a stated method and publish its limitations alongside results."
+        },
+        {
+          "theme": "Standing up a screening program (VS)",
+          "description": "Present a full vision screening plan to a panel with a named eye-clinic partner and a real budget."
+        }
+      ]
+    },
+    {
+      "prefix": "HR",
+      "name": "Hearing Health",
+      "themes": [
+        {
+          "theme": "Ears do a job (HR)",
+          "description": "Use the I-did-not-hear-that signal correctly three times in a lesson."
+        },
+        {
+          "theme": "Too loud is a feeling (HR)",
+          "description": "Identify three too-loud places in a school and say what you would do."
+        },
+        {
+          "theme": "Nothing in the ear (HR)",
+          "description": "Teach the ear-safety rule to a younger child and explain why, kindly."
+        },
+        {
+          "theme": "Talking so people can hear (HR)",
+          "description": "Run a two-minute talking-turn where every rule is kept."
+        },
+        {
+          "theme": "How sound gets in (HR)",
+          "description": "Explain with a drawing why quiet time after loud time matters."
+        },
+        {
+          "theme": "\"He ignores me\" (HR)",
+          "description": "Sort eight classroom scenarios into tell-an-adult and referral, correctly refusing to guess a cause."
+        },
+        {
+          "theme": "Watching faces (HR)",
+          "description": "Spot a copying pattern in a role-play and describe it without naming a cause."
+        },
+        {
+          "theme": "Ear infections and colds (HR)",
+          "description": "Explain to a peer why hearing can come and go, and why that still means see someone."
+        },
+        {
+          "theme": "Quiet is a resource (HR)",
+          "description": "Audit a classroom for noise and propose three no-cost changes."
+        },
+        {
+          "theme": "The referral instead of the consequence (HR)",
+          "description": "Convert four discipline write-ups into referrals in a role-play with a teacher observer."
+        },
+        {
+          "theme": "Access, plainly (HR)",
+          "description": "Map the barriers in an area and rank what a program could actually move."
+        },
+        {
+          "theme": "The boundary, hard (HR)",
+          "description": "Handle four scripted cases correctly, including one where someone asks you to just look."
+        },
+        {
+          "theme": "Hearing conservation at work (HR)",
+          "description": "Fit and check protection for three shop scenarios and justify each choice."
+        },
+        {
+          "theme": "Running the quiet room (HR)",
+          "description": "Run a forty-five-minute mock station scored on quiet, kindness and boundaries."
+        },
+        {
+          "theme": "Devices and batteries (HR)",
+          "description": "Build a device-support routine for a school week with a named owner for each step."
+        },
+        {
+          "theme": "The classroom strategies sheet (HR)",
+          "description": "Produce a strategies sheet and pass a review proving it names no child and no cause."
+        },
+        {
+          "theme": "Consent and the child (HR)",
+          "description": "Produce a hearing-screening consent pack for a mock day and pass the data-rule review."
+        },
+        {
+          "theme": "Working with audiology (HR)",
+          "description": "Build a referral pathway with a named audiology role at every step and a follow-up owner."
+        },
+        {
+          "theme": "Deaf and hard-of-hearing culture (HR)",
+          "description": "Present the distinction between access and cure to a class without condescension."
+        },
+        {
+          "theme": "Training the next cohort (HR)",
+          "description": "Train two new hearing educators and have them pass the observer check."
+        },
+        {
+          "theme": "Careers in hearing (HR)",
+          "description": "Map a two-year and six-year path into hearing health with named local programs."
+        },
+        {
+          "theme": "The physics you can measure (HR)",
+          "description": "Measure and present a noise map of a school with correct units and stated limits."
+        },
+        {
+          "theme": "The community survey (HR)",
+          "description": "Run a hearing survey with a stated method and publish its limitations alongside results."
+        },
+        {
+          "theme": "Standing up a hearing program (HR)",
+          "description": "Present a full hearing program plan to a panel with a named audiology partner and a real budget."
+        }
+      ]
+    },
+    {
+      "prefix": "NU",
+      "name": "Nutrition & Food Systems",
+      "themes": [
+        {
+          "theme": "Food does a job (NU)",
+          "description": "Name three things you did today that food helped you do."
+        },
+        {
+          "theme": "Water counts (NU)",
+          "description": "Find every place in a school a person can drink water, and report one that is broken."
+        },
+        {
+          "theme": "Everybody’s body is different (NU)",
+          "description": "Interrupt a body comment in a role-play, kindly, and change the subject."
+        },
+        {
+          "theme": "Hands before food (NU)",
+          "description": "Teach the twenty-second wash to a younger child and watch them do it."
+        },
+        {
+          "theme": "Cold, hot, and the middle (NU)",
+          "description": "Sort a shopping list into cold, cupboard and freezer and justify three choices."
+        },
+        {
+          "theme": "Clean as you go (NU)",
+          "description": "Run a five-minute clean-down and pass an observer checklist."
+        },
+        {
+          "theme": "Sharp is safe (NU)",
+          "description": "Prepare one board of vegetables with no correction from the observer."
+        },
+        {
+          "theme": "Heat, and what it does (NU)",
+          "description": "Cook one dish start to finish with the observer's hands in their pockets."
+        },
+        {
+          "theme": "Leftovers, honestly (NU)",
+          "description": "Plan the second life of one cooked dish and say when it stops being safe."
+        },
+        {
+          "theme": "Six dishes: the first three (NU)",
+          "description": "Cook three dishes unaided across three sessions, scored on edibility, safety and clean-down."
+        },
+        {
+          "theme": "Six dishes: the second three (NU)",
+          "description": "Cook three more dishes, teaching the family-taught one back to the group."
+        },
+        {
+          "theme": "Cooking for the cupboard you have (NU)",
+          "description": "Rewrite one of six dishes for a named, restricted cupboard and cook that version."
+        },
+        {
+          "theme": "What a price actually says (NU)",
+          "description": "Cost six dishes per serving from real local prices and publish the sheet."
+        },
+        {
+          "theme": "Reading a label without judging one (NU)",
+          "description": "Explain a food label to a peer without using the words good, bad, clean or junk."
+        },
+        {
+          "theme": "Growing one thing (NU)",
+          "description": "Grow and harvest one thing and report the honest yield, including a failure."
+        },
+        {
+          "theme": "Where food comes from (NU)",
+          "description": "Map the chain for one dish and name two points where it could fail."
+        },
+        {
+          "theme": "Hunger is a systems problem (NU)",
+          "description": "Describe a school's food-access route end to end and find where a child would be visible."
+        },
+        {
+          "theme": "The dignity design (NU)",
+          "description": "Redesign a real access route in a school to remove every identifying step."
+        },
+        {
+          "theme": "School food, and how it is decided (NU)",
+          "description": "Attend or read the minutes of a food-decision meeting and write the ask you would make."
+        },
+        {
+          "theme": "Culture is not a deficiency (NU)",
+          "description": "Collect two dishes from families in the room and add them to the cooking set, taught by them."
+        },
+        {
+          "theme": "The words we do not use (NU)",
+          "description": "Run a session where an observer counts zero refused phrases from you."
+        },
+        {
+          "theme": "Noticing and handing over (NU)",
+          "description": "Pass a scripted scenario set with no investigating and no disclosure beyond the named adult."
+        },
+        {
+          "theme": "Working with the food-access partner (NU)",
+          "description": "Walk a food-access route with the named partner and sign the pathway page."
+        },
+        {
+          "theme": "Running a kitchen program (NU)",
+          "description": "Present a costed plan for one term to a panel including the clinical and food-access partners."
+        }
+      ]
+    },
+    {
+      "prefix": "CH",
+      "name": "Community Health",
+      "themes": [
+        {
+          "theme": "A person who helps you feel better (CH)",
+          "description": "Name three people you could tell if you did not feel well."
+        },
+        {
+          "theme": "Kindness has a shape (CH)",
+          "description": "Complete three scripted check-ins without giving advice."
+        },
+        {
+          "theme": "A clinic is a place, not a punishment (CH)",
+          "description": "Walk a peer through a clinic visit from start to finish."
+        },
+        {
+          "theme": "Waiting with someone (CH)",
+          "description": "Sit with a scripted partner for five minutes without offering a fix."
+        },
+        {
+          "theme": "Telling an adult, properly (CH)",
+          "description": "Pass a notice-and-hand-over scenario set with no investigating."
+        },
+        {
+          "theme": "Community health workers (CH)",
+          "description": "Interview or profile a community health role and its published limits."
+        },
+        {
+          "theme": "Consent, plainly (CH)",
+          "description": "Run a consent conversation a family confirms they understood."
+        },
+        {
+          "theme": "Counting without naming (CH)",
+          "description": "Design a count sheet a privacy reviewer approves."
+        },
+        {
+          "theme": "First aid and its limits (CH)",
+          "description": "Hold a current first-aid certificate from a named certifying body."
+        },
+        {
+          "theme": "The referral pathway, walked (CH)",
+          "description": "Walk a real pathway end to end and sign the partner page."
+        },
+        {
+          "theme": "Caring for a carer (CH)",
+          "description": "Map real carer supports in an area and produce a usable one-page guide."
+        },
+        {
+          "theme": "Access as the real barrier (CH)",
+          "description": "Produce an access map for a clinic that the clinic accepts as accurate."
+        },
+        {
+          "theme": "Standing up a community program (CH)",
+          "description": "Present a costed program plan to a panel including the clinical partner."
+        },
+        {
+          "theme": "Working with a clinic as an equal (CH)",
+          "description": "Broker and sign a referral pathway with a named clinical partner."
+        },
+        {
+          "theme": "Handing the program on (CH)",
+          "description": "Hand over a running program that continues one term without you."
+        }
+      ]
+    }
+  ]
+}

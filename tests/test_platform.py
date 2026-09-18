@@ -769,9 +769,15 @@ def test_band_differentiated_descriptions():
 # exactly one row (not five spanning the band ladder), promoted with
 # `"unbanded": true` so the empty description fills in as one complete
 # sentence with no per-band suffix.
-UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture & Communication"}
+UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture & Communication", "Health & Community"}
 
-KNOWN_EMPTY_DESCRIPTION_ROWS = 5867  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); the ratchet only falls
+# Rows an unbanded promotion cannot reach: grade values outside the five
+# standard bands (BAND_LEVEL), which apply_promotions() requires for any
+# fill-empty path. Health & Community carries two adult-route capstones
+# with grade "—"; they stay empty until that filter is extended.
+UNBANDED_KNOWN_GAPS = {"Health & Community": 2}
+
+KNOWN_EMPTY_DESCRIPTION_ROWS = 5758  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); 5,758 after Health & Community (v0.92.0, prompt 3 tranche three, 109 of its 111 rows — the other 2 use grade "—" and are out of scope); the ratchet only falls
 
 
 def test_unbanded_descriptions():
@@ -792,10 +798,12 @@ def test_unbanded_descriptions():
     suffix = re.compile(r"— at .{1,20}$")
     for pack in UNBANDED_FILLED_PACKS:
         pr = [r for r in rows if r["pack"] == pack]
-        check(f"unbanded fill: {pack} — no row is empty", pr and all(r["description"].strip() for r in pr))
-        check(f"unbanded fill: {pack} — no row carries the band suffix", not [r for r in pr if suffix.search(r["description"])])
-        check(f"unbanded fill: {pack} — every description is a full sentence", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in pr))
-        check(f"unbanded fill: {pack} — descriptions are distinct (one row per theme)", len({r["description"] for r in pr}) == len(pr))
+        known_gap = UNBANDED_KNOWN_GAPS.get(pack, 0)
+        filled_pr = [r for r in pr if r["description"].strip()]
+        check(f"unbanded fill: {pack} — no row is empty beyond the known gap", pr and len(pr) - len(filled_pr) == known_gap, f"{len(pr) - len(filled_pr)} empty, known gap {known_gap}")
+        check(f"unbanded fill: {pack} — no row carries the band suffix", not [r for r in filled_pr if suffix.search(r["description"])])
+        check(f"unbanded fill: {pack} — every filled description is a full sentence", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in filled_pr))
+        check(f"unbanded fill: {pack} — filled descriptions are distinct (one row per theme)", len({r["description"] for r in filled_pr}) == len(filled_pr))
         promo = [p for p in (ROOT / "data" / "promotions").glob("*.json") if json.loads(p.read_text(encoding="utf-8"))["pack"] == pack]
         check(f"unbanded fill: {pack} — declared as an unbanded promotion", promo and json.loads(promo[0].read_text(encoding="utf-8")).get("unbanded") is True)
     check("normalize_blocks: unbanded_description accepts a full sentence",

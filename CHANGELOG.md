@@ -4,6 +4,35 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.92.0] — 2026-09-18
+
+### Added — prompt 3, tranche three: Health & Community's 109 empty descriptions filled; a structural finding on the remaining foundation packs
+- **`data/promotions/health-community.json`** is a new `"unbanded": true`
+  promotion file: 109 of the pack's 111 themes (Oral Health, Vision
+  Health, Hearing Health, Nutrition & Food Systems, Community Health),
+  each with one authored description, no suffix. The remaining two
+  rows carry grade `—` (adult-route capstones) and are outside
+  `apply_promotions()`'s `BAND_LEVEL` filter — a further tooling
+  extension, not this tranche's scope.
+- `tests/test_platform.py` gains `UNBANDED_KNOWN_GAPS` so
+  `test_unbanded_descriptions()` correctly expects those two rows to
+  stay empty rather than treating them as a regression;
+  `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 5,867 → 5,758. Dataset-wide
+  description coverage rises from 66% to 67%.
+- **Finding**: Empathy & Emotional Intelligence and Community &
+  Relationship Practice (167 rows each) do **not** fit the `unbanded`
+  mechanism, unlike every other tranche-two/three foundation pack.
+  Each of their 55 themes recurs across three or four grades in an
+  irregular pattern (not always all five bands, and not exactly one
+  row), so neither the original `bands` mechanism (which requires all
+  five) nor `unbanded` (which requires exactly one row per theme)
+  applies as-is. Filling these two packs needs a third promotion kind
+  matching on `(theme, grade)` pairs directly — scoped as a follow-up,
+  not attempted here to avoid rushing a new mechanism.
+- K–12, Trade School, Regional, and Health & Community's two `—`-grade
+  rows remain out of scope pending an extension from `BAND_LEVEL` to
+  `GRADE_LEVEL` in `apply_promotions()`.
+
 ## [0.91.0] — 2026-09-18
 
 ### Added — prompt 3, tranche two: Civic & Leadership and Language, Culture & Communication's 222 empty descriptions filled
