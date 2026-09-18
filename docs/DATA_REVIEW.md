@@ -48,12 +48,18 @@ sections; the only other diff is the fonts `<link>`).
    (`LB-<n>` codes), since these packs' natural sub-groupings don't
    form the tracked 50-block shape. *Update (v0.91.0):* Civic &
    Leadership and Language, Culture & Communication (222 more rows)
-   filled the same way. Three more foundation packs (Empathy &
-   Emotional Intelligence, Community & Relationship Practice, and most
-   of Health & Community) fit the same mechanism and are the next
-   tranche of `docs/NEXT_STEPS_2.md` prompt 3; K–12, Trade School and
-   Regional use single grades or adult bands and need a further
-   extension.
+   filled the same way. *Update (v0.92.0):* Health & Community (109 of
+   111 rows) filled the same way; its two `—`-grade adult-route
+   capstones stay empty, out of `apply_promotions()`'s `BAND_LEVEL`
+   filter. Found that Empathy & Emotional Intelligence and Community &
+   Relationship Practice do **not** fit `unbanded`: their 55 themes
+   each recur across three or four grades in an irregular pattern
+   (never all five, never exactly one row), so a third promotion kind
+   — matching on `(theme, grade)` directly — is needed before they can
+   be filled; scoped in `docs/NEXT_STEPS_2.md` prompt 3, not yet built.
+   K–12, Trade School, Regional and the two `—`-grade rows above remain
+   out of scope until the grade filter extends from `BAND_LEVEL` to
+   `GRADE_LEVEL`.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic
