@@ -10,52 +10,122 @@
         {
           "theme": "Measure twice (MK)",
           "description": "Marking out and measuring before cutting — the discipline that decides whether parts fit.",
-          "transfer_check": "Mark out and cut a piece to a stated dimension within tolerance, showing the marking before the cut."
+          "transfer_check": "Mark out and cut a piece to a stated dimension within tolerance, showing the marking before the cut.",
+          "bands": {
+            "K–2": "Measure a piece of paper twice before cutting it, with an adult.",
+            "3–5": "Measure a real piece of material twice before cutting, with an adult.",
+            "6–8": "Measure a real piece accurately twice before cutting, with a checker.",
+            "9–10": "Measure and cut a real piece accurately on your own, every time.",
+            "11–12": "Teach someone else why measuring twice before cutting actually matters."
+          }
         },
         {
           "theme": "The first joint (MK)",
           "description": "Joining two pieces of wood so they stay joined — the basic joints and choosing between them.",
-          "transfer_check": "Make one wood joint that holds under load, and name where you would use it and where you would not."
+          "transfer_check": "Make one wood joint that holds under load, and name where you would use it and where you would not.",
+          "bands": {
+            "K–2": "Fit two blocks together with an adult's help.",
+            "3–5": "Join two simple pieces together, with an adult's help.",
+            "6–8": "Make a real basic joint correctly, with a checker.",
+            "9–10": "Make a real strong joint on your own, choosing the right type.",
+            "11–12": "Teach someone else how to make a real joint that holds under load."
+          }
         },
         {
           "theme": "Cutting metal (MK)",
           "description": "Hacksaw, snips and files — cutting and finishing metal safely at the bench.",
-          "transfer_check": "Cut and file a piece of metal to a line safely, finishing the edge so it passes a finger test."
+          "transfer_check": "Cut and file a piece of metal to a line safely, finishing the edge so it passes a finger test.",
+          "bands": {
+            "K–2": "Watch an adult cut a piece of metal safely.",
+            "3–5": "Learn one safety rule for cutting metal, with an adult's help.",
+            "6–8": "Cut a real piece of metal safely and accurately, with a checker.",
+            "9–10": "Cut real metal safely and accurately on your own.",
+            "11–12": "Teach someone else safe, accurate technique for cutting real metal."
+          }
         },
         {
           "theme": "Sewing something that lasts (MK)",
           "description": "The stitches and seams that survive washing and wearing — sewing as construction, not decoration.",
-          "transfer_check": "Sew one seam and one fastening that survive a wash and a pull test, by hand or machine."
+          "transfer_check": "Sew one seam and one fastening that survive a wash and a pull test, by hand or machine.",
+          "bands": {
+            "K–2": "Practice a simple stitch on fabric, with an adult.",
+            "3–5": "Sew a simple seam that holds, with an adult's help.",
+            "6–8": "Sew a real seam that will last, with a checker.",
+            "9–10": "Sew a real durable item on your own, from start to finish.",
+            "11–12": "Teach someone else how to sew a real seam that actually lasts."
+          }
         },
         {
           "theme": "Working with clay or concrete (MK)",
           "description": "Mixing, forming and curing — the wet materials that become permanent, and the timing that governs them.",
-          "transfer_check": "Mix and form one small piece in clay or concrete with correct proportions, and cure it to a sound result."
+          "transfer_check": "Mix and form one small piece in clay or concrete with correct proportions, and cure it to a sound result.",
+          "bands": {
+            "K–2": "Shape a small piece of clay with an adult.",
+            "3–5": "Mix and shape a simple material like clay, with an adult's help.",
+            "6–8": "Work a real batch of clay or concrete correctly, with a checker.",
+            "9–10": "Mix and work real clay or concrete for a real project, on your own.",
+            "11–12": "Teach someone else how to properly mix and work real clay or concrete."
+          }
         },
         {
           "theme": "Drawing what you will build (MK)",
           "description": "The working drawing — dimensions, views, materials list — good enough that someone else could build it.",
-          "transfer_check": "Produce a dimensioned working drawing with a materials list that another maker builds from without asking you anything."
+          "transfer_check": "Produce a dimensioned working drawing with a materials list that another maker builds from without asking you anything.",
+          "bands": {
+            "K–2": "Draw a simple picture of something you want to make, with an adult.",
+            "3–5": "Sketch a plan before making something, with an adult's help.",
+            "6–8": "Draw a real accurate plan before building, with a checker.",
+            "9–10": "Draw a real detailed plan for a real build, on your own.",
+            "11–12": "Teach someone else how to draw a real plan that a build can follow."
+          }
         },
         {
           "theme": "Finishing (MK)",
           "description": "Sanding, sealing, painting and edges — the last ten percent that makes a made thing look meant.",
-          "transfer_check": "Take one made piece through sanding, sealing or painting to a finish somebody would put in their home."
+          "transfer_check": "Take one made piece through sanding, sealing or painting to a finish somebody would put in their home.",
+          "bands": {
+            "K–2": "Sand a rough edge smooth with an adult's help.",
+            "3–5": "Sand or smooth a real made object, with an adult's help.",
+            "6–8": "Finish a real made object properly, with a checker.",
+            "9–10": "Finish a real made object to a professional standard, on your own.",
+            "11–12": "Teach someone else the real techniques for a professional finish."
+          }
         },
         {
           "theme": "Making for somebody specific (MK)",
           "description": "Building to a real person's need and measurements, checked with them before, during and after.",
-          "transfer_check": "Build one object to a real person's stated need and measurements, checked with them before, during, and at handover."
+          "transfer_check": "Build one object to a real person's stated need and measurements, checked with them before, during, and at handover.",
+          "bands": {
+            "K–2": "Make a simple gift for someone you know, with an adult.",
+            "3–5": "Make something for a specific person's real need, with an adult's help.",
+            "6–8": "Make a real item to a real person's specification, with a checker.",
+            "9–10": "Make a real item to someone else's specification, on your own.",
+            "11–12": "Take a real client brief and deliver a made item that meets it."
+          }
         },
         {
           "theme": "The prototype that failed (MK)",
           "description": "Reading a failure for its lesson — what broke, why, and the change the next version carries.",
-          "transfer_check": "Break or find the failure in a prototype, diagnose why, and show the change the next version carries."
+          "transfer_check": "Break or find the failure in a prototype, diagnose why, and show the change the next version carries.",
+          "bands": {
+            "K–2": "Try again after a block tower falls down, with an adult.",
+            "3–5": "Learn from a real failed first attempt, with an adult's help.",
+            "6–8": "Diagnose why a real prototype failed and fix it, with a checker.",
+            "9–10": "Iterate a real failed prototype into a working version, on your own.",
+            "11–12": "Teach someone else how to learn systematically from a real prototype failure."
+          }
         },
         {
           "theme": "Costing what you made (MK)",
           "description": "Materials, time and overhead totalled honestly — what the thing actually cost to make.",
-          "transfer_check": "Cost one real made object honestly — materials, time, overhead — and state the price it would need to be worth making."
+          "transfer_check": "Cost one real made object honestly — materials, time, overhead — and state the price it would need to be worth making.",
+          "bands": {
+            "K–2": "Count how many blocks something used, with an adult.",
+            "3–5": "Add up the real cost of materials used, with an adult's help.",
+            "6–8": "Calculate a real item's true material and time cost, with a checker.",
+            "9–10": "Cost a real made item accurately, including your own time, on your own.",
+            "11–12": "Teach someone else how to accurately cost a real made item for sale."
+          }
         }
       ],
       "credential": "Workshop Maker"
@@ -67,52 +137,122 @@
         {
           "theme": "Diagnose before you open it (RP)",
           "description": "The questions and checks that find a fault before a screwdriver moves — symptom, history, most likely cause.",
-          "transfer_check": "Diagnose one real fault to a most-likely cause using questions and checks alone, before any tool touches it."
+          "transfer_check": "Diagnose one real fault to a most-likely cause using questions and checks alone, before any tool touches it.",
+          "bands": {
+            "K–2": "Ask an adult what might be wrong with a broken toy before fixing it.",
+            "3–5": "Guess what's wrong with something broken before opening it, with an adult.",
+            "6–8": "Diagnose a real broken item's problem before opening it, with a checker.",
+            "9–10": "Diagnose a real broken item's actual fault on your own, before opening it.",
+            "11–12": "Teach someone else a systematic method for diagnosing a real fault first."
+          }
         },
         {
           "theme": "The four repairs every household needs (RP)",
           "description": "The repeating household repairs — leaks, sticking, wobbles, blockages — mastered as standard procedures.",
-          "transfer_check": "Complete two of the four standard household repairs on real faults, following the taught procedure."
+          "transfer_check": "Complete two of the four standard household repairs on real faults, following the taught procedure.",
+          "bands": {
+            "K–2": "Watch an adult fix something simple around the house.",
+            "3–5": "Learn one basic household repair, with an adult's help.",
+            "6–8": "Perform a real basic household repair correctly, with a checker.",
+            "9–10": "Perform the real common household repairs on your own, competently.",
+            "11–12": "Teach someone else the four real repairs every household eventually needs."
+          }
         },
         {
           "theme": "Fixing clothes (RP)",
           "description": "Buttons, hems, tears and zips — the clothing repairs that keep garments in service for years.",
-          "transfer_check": "Repair a real garment — button, hem, tear or zip — so the repair survives a wash and the garment returns to use."
+          "transfer_check": "Repair a real garment — button, hem, tear or zip — so the repair survives a wash and the garment returns to use.",
+          "bands": {
+            "K–2": "Watch an adult sew a button back on, with their help.",
+            "3–5": "Sew a button or small tear, with an adult's help.",
+            "6–8": "Repair a real torn or damaged garment, with a checker.",
+            "9–10": "Repair real clothing competently on your own.",
+            "11–12": "Teach someone else how to repair real common clothing damage."
+          }
         },
         {
           "theme": "Small engines (RP)",
           "description": "The small engine's usual failures — fuel, spark, air — diagnosed in order on a real machine.",
-          "transfer_check": "Work the fuel-spark-air sequence on a real non-starting small engine and get it running or isolate the failed system."
+          "transfer_check": "Work the fuel-spark-air sequence on a real non-starting small engine and get it running or isolate the failed system.",
+          "bands": {
+            "K–2": "Watch an adult check something with a small motor, like a fan.",
+            "3–5": "Learn one part of a small engine, with an adult's help.",
+            "6–8": "Diagnose a real small engine problem, with a checker.",
+            "9–10": "Service or repair a real small engine on your own.",
+            "11–12": "Teach someone else how to service a real small engine properly."
+          }
         },
         {
           "theme": "Electronics that can be fixed (RP)",
           "description": "The electronic repairs still open to a careful amateur — connections, batteries, switches — and the line where danger starts.",
-          "transfer_check": "Complete one safe electronics repair — connection, battery, switch — and state exactly where the amateur line is and why."
+          "transfer_check": "Complete one safe electronics repair — connection, battery, switch — and state exactly where the amateur line is and why.",
+          "bands": {
+            "K–2": "Watch an adult check a device with a loose cord.",
+            "3–5": "Learn one safe thing to check on a broken device, with an adult.",
+            "6–8": "Diagnose a real fixable electronics problem safely, with a checker.",
+            "9–10": "Repair a real piece of fixable electronics safely, on your own.",
+            "11–12": "Teach someone else how to safely diagnose and fix real electronics."
+          }
         },
         {
           "theme": "Furniture (RP)",
           "description": "Loose joints, broken legs and worn surfaces — bringing real furniture back to use.",
-          "transfer_check": "Bring one real piece of furniture back to use — joint, leg or surface — with before and after evidence."
+          "transfer_check": "Bring one real piece of furniture back to use — joint, leg or surface — with before and after evidence.",
+          "bands": {
+            "K–2": "Watch an adult tighten a wobbly chair leg.",
+            "3–5": "Help fix a wobbly piece of furniture, with an adult's help.",
+            "6–8": "Repair a real piece of damaged furniture, with a checker.",
+            "9–10": "Repair real furniture competently on your own.",
+            "11–12": "Teach someone else how to repair common real furniture problems."
+          }
         },
         {
           "theme": "Bicycles (RP)",
           "description": "The bicycle as the repairable machine — punctures, brakes and gears serviced with basic tools.",
-          "transfer_check": "Fix a real puncture and adjust brakes or gears to a working standard, then ride the result."
+          "transfer_check": "Fix a real puncture and adjust brakes or gears to a working standard, then ride the result.",
+          "bands": {
+            "K–2": "Watch an adult check the air in a bike tyre.",
+            "3–5": "Learn to check and add air to a bike tyre, with an adult's help.",
+            "6–8": "Fix a real bicycle flat or adjust real brakes, with a checker.",
+            "9–10": "Maintain and repair a real bicycle competently on your own.",
+            "11–12": "Teach someone else how to maintain and repair a real bicycle."
+          }
         },
         {
           "theme": "Repair as a public act (RP)",
           "description": "Repair cafés and fix-it events — repairing in public so the skill and the habit spread.",
-          "transfer_check": "Take part in or stage a repair event: fix one item in front of others and talk one person through what you did."
+          "transfer_check": "Take part in or stage a repair event: fix one item in front of others and talk one person through what you did.",
+          "bands": {
+            "K–2": "Fix something small for a neighbour with an adult's help.",
+            "3–5": "Help repair something for someone else, with an adult's help.",
+            "6–8": "Repair a real item for someone in your community, with a checker.",
+            "9–10": "Offer real repair help to your community, on your own.",
+            "11–12": "Organise a real community repair event and teach others there."
+          }
         },
         {
           "theme": "When not to repair (RP)",
           "description": "Judging repair against replacement honestly — safety, parts, cost and the repair that throws good money after bad.",
-          "transfer_check": "Judge three real broken items repair-versus-replace with safety, parts and cost stated, and defend each verdict."
+          "transfer_check": "Judge three real broken items repair-versus-replace with safety, parts and cost stated, and defend each verdict.",
+          "bands": {
+            "K–2": "Ask an adult when a broken toy is too broken to fix.",
+            "3–5": "Learn one sign that something isn't worth fixing, with an adult.",
+            "6–8": "Decide correctly when a real repair isn't worth it, with a checker.",
+            "9–10": "Judge, for a real item, whether repair or replacement makes sense, on your own.",
+            "11–12": "Teach someone else how to judge when a real repair is not worth doing."
+          }
         },
         {
           "theme": "Teaching a repair (RP)",
           "description": "Walking somebody else through a repair with their hands on the tools, not yours.",
-          "transfer_check": "Teach one repair with the learner's hands on the tools throughout, until they complete it without you."
+          "transfer_check": "Teach one repair with the learner's hands on the tools throughout, until they complete it without you.",
+          "bands": {
+            "K–2": "Show a friend how you fixed something small, with an adult.",
+            "3–5": "Teach a friend a simple repair you learned, with an adult's help.",
+            "6–8": "Teach a real repair skill to someone else, with a checker.",
+            "9–10": "Teach a real repair skill clearly and safely to someone else, on your own.",
+            "11–12": "Design and lead a real repair-teaching session for a group."
+          }
         }
       ],
       "credential": "Everyday Repairer"
@@ -124,52 +264,122 @@
         {
           "theme": "Where a thing goes when you throw it (RU)",
           "description": "Following real waste from your bin to its end — landfill, export, recycling — and what actually happens there.",
-          "transfer_check": "Follow one real discarded item's actual path — bin to end — as far as evidence allows, documenting each stage."
+          "transfer_check": "Follow one real discarded item's actual path — bin to end — as far as evidence allows, documenting each stage.",
+          "bands": {
+            "K–2": "Ask an adult where trash goes after the truck picks it up.",
+            "3–5": "Trace where thrown-away things actually go, with an adult's help.",
+            "6–8": "Trace a real item's path after disposal, with a checker.",
+            "9–10": "Explain, using real local systems, where your waste actually ends up.",
+            "11–12": "Teach someone else how to trace real waste from bin to final destination."
+          }
         },
         {
           "theme": "What a material is worth (RU)",
           "description": "Metals, textiles, timber and plastic as materials with prices — reading value in what others discard.",
-          "transfer_check": "Price three salvageable materials at real local buyers and identify one discarded item near you worth recovering."
+          "transfer_check": "Price three salvageable materials at real local buyers and identify one discarded item near you worth recovering.",
+          "bands": {
+            "K–2": "Sort recyclables by type with an adult's help.",
+            "3–5": "Sort real materials by what they're worth recycled, with an adult.",
+            "6–8": "Identify a real material's recycling or resale value, with a checker.",
+            "9–10": "Assess a real material's actual worth for reuse or resale, on your own.",
+            "11–12": "Explain to someone else how real material value is determined in reuse markets."
+          }
         },
         {
           "theme": "Designed to fail (RU)",
           "description": "Recognising designed-in failure — glued batteries, unavailable parts — and buying against it.",
-          "transfer_check": "Tear down or research one product for designed-in failure — glued cells, absent parts — and name the buying rule that avoids it."
+          "transfer_check": "Tear down or research one product for designed-in failure — glued cells, absent parts — and name the buying rule that avoids it.",
+          "bands": {
+            "K–2": "Notice a toy that breaks quickly and ask an adult why.",
+            "3–5": "Explain that some things are made to wear out fast, with an adult.",
+            "6–8": "Identify a real example of planned obsolescence, with a checker.",
+            "9–10": "Evaluate a real product for signs of planned obsolescence, on your own.",
+            "11–12": "Explain to someone else the real evidence and ethics of planned obsolescence."
+          }
         },
         {
           "theme": "Taking apart to use again (RU)",
           "description": "Disassembly as harvesting — recovering fasteners, timber, motors and parts without destroying them.",
-          "transfer_check": "Disassemble one real discarded object without destroying it, harvesting and sorting its usable parts."
+          "transfer_check": "Disassemble one real discarded object without destroying it, harvesting and sorting its usable parts.",
+          "bands": {
+            "K–2": "Take apart an old toy safely with an adult to see what's inside.",
+            "3–5": "Take apart a real broken item safely for parts, with an adult's help.",
+            "6–8": "Salvage real useful parts from a real broken item, with a checker.",
+            "9–10": "Disassemble a real item safely to salvage useful materials, on your own.",
+            "11–12": "Teach someone else how to safely salvage real reusable materials."
+          }
         },
         {
           "theme": "Plastics, honestly (RU)",
           "description": "The plastic types, which are genuinely recycled where you live, and reducing the ones that are not.",
-          "transfer_check": "Sort a week of your real plastic by type, verify which types your locality genuinely recycles, and cut one that it does not."
+          "transfer_check": "Sort a week of your real plastic by type, verify which types your locality genuinely recycles, and cut one that it does not.",
+          "bands": {
+            "K–2": "Ask an adult why some plastic can be recycled and some can't.",
+            "3–5": "Learn one real difference between recyclable and non-recyclable plastic, with an adult.",
+            "6–8": "Identify a real plastic type and its actual recyclability, with a checker.",
+            "9–10": "Explain, honestly and with evidence, the real limits of plastic recycling.",
+            "11–12": "Explain to someone else the real truth about which plastics actually get recycled."
+          }
         },
         {
           "theme": "Building from what exists (RU)",
           "description": "Designing from the salvage pile — letting available materials shape what gets made.",
-          "transfer_check": "Design and build one useful object from salvage only, letting the found materials shape the design."
+          "transfer_check": "Design and build one useful object from salvage only, letting the found materials shape the design.",
+          "bands": {
+            "K–2": "Build something new from old blocks, with an adult.",
+            "3–5": "Build something useful from real reclaimed materials, with an adult's help.",
+            "6–8": "Build a real functional item from real reclaimed materials, with a checker.",
+            "9–10": "Design and build a real item entirely from reclaimed materials, on your own.",
+            "11–12": "Teach someone else how to design and build from real reclaimed materials."
+          }
         },
         {
           "theme": "Food that would be wasted (RU)",
           "description": "Rescuing edible surplus safely — gleaning, sharing and preserving what would have been thrown.",
-          "transfer_check": "Rescue real surplus food safely — glean, share or preserve — and account for what was saved and how it stayed safe."
+          "transfer_check": "Rescue real surplus food safely — glean, share or preserve — and account for what was saved and how it stayed safe.",
+          "bands": {
+            "K–2": "Help use up leftover food instead of throwing it away, with an adult.",
+            "3–5": "Plan a meal from food that would otherwise be wasted, with an adult.",
+            "6–8": "Rescue and use real food that would otherwise be wasted, with a checker.",
+            "9–10": "Plan real meals around food that would be wasted, on your own.",
+            "11–12": "Organise a real food-rescue effort in your community."
+          }
         },
         {
           "theme": "Water and materials in a workshop (RU)",
           "description": "Running a workshop lean — offcuts, solvents and water managed so little is wasted or dumped.",
-          "transfer_check": "Audit one real workshop's offcuts, solvents and water for a week and change one practice that cuts the waste."
+          "transfer_check": "Audit one real workshop's offcuts, solvents and water for a week and change one practice that cuts the waste.",
+          "bands": {
+            "K–2": "Turn off the water tap when not using it, with an adult.",
+            "3–5": "Reuse a real workshop material instead of wasting it, with an adult's help.",
+            "6–8": "Reduce real water and material waste in a real workshop task, with a checker.",
+            "9–10": "Run a real workshop task with minimal water and material waste, on your own.",
+            "11–12": "Teach someone else how to minimise real waste in a real workshop."
+          }
         },
         {
           "theme": "The lifetime of a thing (RU)",
           "description": "An object's whole life traced — materials, use, repairs, afterlife — and the choices that lengthen it.",
-          "transfer_check": "Trace one owned object's whole life — materials, use, repairs, likely afterlife — and name the choice that most lengthens it."
+          "transfer_check": "Trace one owned object's whole life — materials, use, repairs, likely afterlife — and name the choice that most lengthens it.",
+          "bands": {
+            "K–2": "Ask an adult how long a favourite toy has lasted.",
+            "3–5": "Estimate how long a real object should last, with an adult's help.",
+            "6–8": "Assess a real object's expected lifetime and care needs, with a checker.",
+            "9–10": "Extend a real object's lifetime through proper care, on your own.",
+            "11–12": "Explain to someone else how to assess and extend a real object's lifetime."
+          }
         },
         {
           "theme": "Selling something second-hand (RU)",
           "description": "Pricing, describing and selling used goods honestly — the second-hand transaction done well from both sides.",
-          "transfer_check": "Sell one real used item honestly — condition described, fair price researched — through to a completed handover."
+          "transfer_check": "Sell one real used item honestly — condition described, fair price researched — through to a completed handover.",
+          "bands": {
+            "K–2": "Help set up a small table to sell old toys, with an adult.",
+            "3–5": "Help price a real used item to sell, with an adult's help.",
+            "6–8": "Sell a real second-hand item fairly and honestly, with a checker.",
+            "9–10": "Sell real second-hand items on your own, fairly priced and described.",
+            "11–12": "Teach someone else how to run a real, honest second-hand sale."
+          }
         }
       ],
       "credential": "Reuse Steward"
@@ -181,52 +391,122 @@
         {
           "theme": "The tool that will hurt you (TL)",
           "description": "Each tool's specific danger named before first use — and the habits that keep hands whole.",
-          "transfer_check": "Name each tool's specific danger before using three of them, and demonstrate the habit that guards each."
+          "transfer_check": "Name each tool's specific danger before using three of them, and demonstrate the habit that guards each.",
+          "bands": {
+            "K–2": "Point out a sharp tool an adult says not to touch.",
+            "3–5": "Name one tool that needs an adult's supervision, with their help.",
+            "6–8": "Identify a real tool's specific hazard and how to avoid it, with a checker.",
+            "9–10": "Use a real hazardous tool safely and correctly, on your own.",
+            "11–12": "Teach someone else the real hazards of a tool and how to use it safely."
+          }
         },
         {
           "theme": "Sharpening (TL)",
           "description": "Restoring an edge — knives, chisels, blades — and why a sharp tool is the safer one.",
-          "transfer_check": "Restore a real edge — knife, chisel or blade — to a working sharpness test, safely."
+          "transfer_check": "Restore a real edge — knife, chisel or blade — to a working sharpness test, safely.",
+          "bands": {
+            "K–2": "Watch an adult sharpen a pencil and ask why it matters.",
+            "3–5": "Learn why a dull tool is more dangerous, with an adult's help.",
+            "6–8": "Sharpen a real blade or tool correctly, with a checker.",
+            "9–10": "Sharpen real tools correctly and safely, on your own.",
+            "11–12": "Teach someone else how to properly sharpen a real tool."
+          }
         },
         {
           "theme": "Setting up a bench (TL)",
           "description": "A working bench arranged for real work — height, light, holding, and everything findable.",
-          "transfer_check": "Arrange a real work area for a named job — height, light, holding, findability — and complete the job at it."
+          "transfer_check": "Arrange a real work area for a named job — height, light, holding, findability — and complete the job at it.",
+          "bands": {
+            "K–2": "Help set up a small clean space to work, with an adult.",
+            "3–5": "Set up a simple work area with an adult's help.",
+            "6–8": "Set up a real workbench safely and efficiently, with a checker.",
+            "9–10": "Set up a real efficient, safe workbench on your own.",
+            "11–12": "Teach someone else how to set up a real efficient workshop bench."
+          }
         },
         {
           "theme": "Borrowing rather than buying (TL)",
           "description": "Tool libraries, lending and sharing — getting capability without owning everything.",
-          "transfer_check": "Source one needed tool without buying — library, loan or share — and return it on time in the condition received."
+          "transfer_check": "Source one needed tool without buying — library, loan or share — and return it on time in the condition received.",
+          "bands": {
+            "K–2": "Ask to borrow a toy instead of buying one, with an adult.",
+            "3–5": "Borrow a tool you need instead of buying it, with an adult's help.",
+            "6–8": "Borrow a real tool responsibly and return it in good condition, with a checker.",
+            "9–10": "Borrow real tools responsibly on your own, maintaining trust.",
+            "11–12": "Set up a real tool-sharing system for a group or community."
+          }
         },
         {
           "theme": "Maintaining what you use (TL)",
           "description": "Cleaning, oiling and storing tools so they outlive their owner.",
-          "transfer_check": "Clean, oil and correctly store the tools after a real session, and fix one neglected tool found in the box."
+          "transfer_check": "Clean, oil and correctly store the tools after a real session, and fix one neglected tool found in the box.",
+          "bands": {
+            "K–2": "Wipe down a tool after using it, with an adult.",
+            "3–5": "Clean and store a real tool properly, with an adult's help.",
+            "6–8": "Maintain a real tool correctly after use, with a checker.",
+            "9–10": "Maintain your own real tools on a proper schedule, on your own.",
+            "11–12": "Teach someone else a real tool maintenance routine that extends tool life."
+          }
         },
         {
           "theme": "Power tools, properly (TL)",
           "description": "The power tools' rules — guards, grip, workpiece held, cord managed — demonstrated before speed.",
-          "transfer_check": "Demonstrate one power tool's full safe operation — guards, grip, workpiece held, cord managed — under observation."
+          "transfer_check": "Demonstrate one power tool's full safe operation — guards, grip, workpiece held, cord managed — under observation.",
+          "bands": {
+            "K–2": "Watch an adult use a power tool safely from a distance.",
+            "3–5": "Learn one safety rule for power tools, with an adult's help.",
+            "6–8": "Use a real power tool safely and correctly, with a checker.",
+            "9–10": "Use real power tools safely and correctly on your own.",
+            "11–12": "Teach someone else safe, correct use of a real power tool."
+          }
         },
         {
           "theme": "Measuring instruments (TL)",
           "description": "Squares, levels, gauges and calipers — reading them truly and checking them against themselves.",
-          "transfer_check": "Use a square, level and caliper or gauge on real work, and check one instrument against itself for truth."
+          "transfer_check": "Use a square, level and caliper or gauge on real work, and check one instrument against itself for truth.",
+          "bands": {
+            "K–2": "Use a ruler to measure something with an adult's help.",
+            "3–5": "Use a real measuring tool correctly, with an adult's help.",
+            "6–8": "Use a real precision measuring instrument correctly, with a checker.",
+            "9–10": "Choose and use the right real measuring instrument for a task, on your own.",
+            "11–12": "Teach someone else how to choose and use real precision instruments."
+          }
         },
         {
           "theme": "The workshop that others use (TL)",
           "description": "Shared workshop discipline — induction, booking, leaving the machine as found — so the space survives its users.",
-          "transfer_check": "Complete a shared-workshop session by its rules — induction, booking, machine left as found — with the log signed."
+          "transfer_check": "Complete a shared-workshop session by its rules — induction, booking, machine left as found — with the log signed.",
+          "bands": {
+            "K–2": "Put toys back where they belong after playing, with an adult.",
+            "3–5": "Leave a shared work area tidy for the next person, with an adult's help.",
+            "6–8": "Leave a real shared workshop properly organised, with a checker.",
+            "9–10": "Maintain a real shared workshop's order and safety, on your own.",
+            "11–12": "Set standards for a real shared workshop that others actually follow."
+          }
         },
         {
           "theme": "Dust, fumes and noise (TL)",
           "description": "The slow injuries of a workshop — extraction, masks and ear protection actually used.",
-          "transfer_check": "Set up and actually use the right extraction, mask and ear protection for one real dusty or loud task."
+          "transfer_check": "Set up and actually use the right extraction, mask and ear protection for one real dusty or loud task.",
+          "bands": {
+            "K–2": "Wear ear protection near a loud tool, with an adult.",
+            "3–5": "Learn one way to protect yourself from workshop hazards, with an adult.",
+            "6–8": "Identify and mitigate a real dust, fume or noise hazard, with a checker.",
+            "9–10": "Protect yourself from real workshop hazards on your own, every time.",
+            "11–12": "Teach someone else how to identify and control real workshop hazards."
+          }
         },
         {
           "theme": "Making a jig (TL)",
           "description": "Building the helper that makes repetition accurate — the jig as stored precision.",
-          "transfer_check": "Design and build a jig for one repetitive task and show it producing identical results across five repetitions."
+          "transfer_check": "Design and build a jig for one repetitive task and show it producing identical results across five repetitions.",
+          "bands": {
+            "K–2": "Use a simple guide to help cut something straight, with an adult.",
+            "3–5": "Use a simple jig to make a task easier, with an adult's help.",
+            "6–8": "Make a real simple jig to improve a repeated task, with a checker.",
+            "9–10": "Design and make a real jig that improves accuracy or safety, on your own.",
+            "11–12": "Teach someone else how to design a real jig for a repeated task."
+          }
         }
       ],
       "credential": "Workshop Hand"
@@ -238,52 +518,122 @@
         {
           "theme": "Charging for your work (TR)",
           "description": "Pricing labour and materials so the work pays — the quote, the day rate and the job that loses money.",
-          "transfer_check": "Produce a real quote for a defined job — labour, materials, margin — and defend the number line by line."
+          "transfer_check": "Produce a real quote for a defined job — labour, materials, margin — and defend the number line by line.",
+          "bands": {
+            "K–2": "Ask an adult why people get paid for making things.",
+            "3–5": "Learn that skilled work has a fair price, with an adult's help.",
+            "6–8": "Set a real fair price for a made item or repair, with a checker.",
+            "9–10": "Price your own real work fairly, accounting for time and skill.",
+            "11–12": "Advise someone else on real fair pricing for their skilled work."
+          }
         },
         {
           "theme": "The first customer (TR)",
           "description": "The first paid job end to end — agreement, delivery, payment and the review that brings the second.",
-          "transfer_check": "Complete one real paid or barter job end to end: agreement, delivery, payment and the review asked for."
+          "transfer_check": "Complete one real paid or barter job end to end: agreement, delivery, payment and the review asked for.",
+          "bands": {
+            "K–2": "Show a finished project to a family member with an adult.",
+            "3–5": "Show your made item to someone who might want it, with an adult.",
+            "6–8": "Present a real made item to a real potential customer, with a checker.",
+            "9–10": "Find and serve your own real first customer, on your own.",
+            "11–12": "Coach someone else through landing their real first customer."
+          }
         },
         {
           "theme": "A workshop as a business (TR)",
           "description": "The numbers under a small workshop — costs, throughput, break-even — read from a real or modelled month.",
-          "transfer_check": "Model one real or hypothetical workshop's month — costs, throughput, break-even — and state what it must charge to live."
+          "transfer_check": "Model one real or hypothetical workshop's month — costs, throughput, break-even — and state what it must charge to live.",
+          "bands": {
+            "K–2": "Ask an adult what it takes to run a shop.",
+            "3–5": "Name one thing a workshop business needs, with an adult's help.",
+            "6–8": "Identify a real cost a workshop business must cover, with a checker.",
+            "9–10": "Plan a real workshop business's basic costs and pricing, on your own.",
+            "11–12": "Advise someone else on the real basics of running a workshop as a business."
+          }
         },
         {
           "theme": "Apprenticeship here (TR)",
           "description": "The apprenticeship routes where you live — trades, entry, pay during training — mapped from real providers.",
-          "transfer_check": "Map the actual apprenticeship routes for one trade where you live — entry, pay, duration — from the real providers."
+          "transfer_check": "Map the actual apprenticeship routes for one trade where you live — entry, pay, duration — from the real providers.",
+          "bands": {
+            "K–2": "Ask an adult how someone learns a trade by working with an expert.",
+            "3–5": "Learn what an apprentice does, with an adult's help.",
+            "6–8": "Identify a real local apprenticeship path in a trade, with a checker.",
+            "9–10": "Research and pursue a real local apprenticeship path, on your own.",
+            "11–12": "Guide someone else toward a real local apprenticeship in a trade."
+          }
         },
         {
           "theme": "Certification that raises a wage (TR)",
           "description": "The tickets and certificates that measurably raise pay in a trade, and the cheapest path to each.",
-          "transfer_check": "Identify one certification with documented wage impact in a local trade and lay out its cheapest real path."
+          "transfer_check": "Identify one certification with documented wage impact in a local trade and lay out its cheapest real path.",
+          "bands": {
+            "K–2": "Ask an adult why some jobs need a special card or paper.",
+            "3–5": "Learn that some skills need a certificate, with an adult's help.",
+            "6–8": "Identify a real certification that raises a trade wage, with a checker.",
+            "9–10": "Pursue a real wage-raising certification in your trade, on your own.",
+            "11–12": "Advise someone else on which real certification is worth pursuing."
+          }
         },
         {
           "theme": "Working for somebody else (TR)",
           "description": "Being employed in a trade — the site rules, the expectations and the reputation that follows you.",
-          "transfer_check": "Hold or simulate one week under trade-site rules — timekeeping, standards, instructions taken — with the supervisor's assessment."
+          "transfer_check": "Hold or simulate one week under trade-site rules — timekeeping, standards, instructions taken — with the supervisor's assessment.",
+          "bands": {
+            "K–2": "Ask an adult what it's like to work for a boss.",
+            "3–5": "Learn what it means to be employed by someone, with an adult's help.",
+            "6–8": "Identify a real trade-off between working for others and for yourself, with a checker.",
+            "9–10": "Weigh real employment versus self-employment in your trade, on your own.",
+            "11–12": "Advise someone else weighing real employment options in a trade."
+          }
         },
         {
           "theme": "Teaching your trade (TR)",
           "description": "Passing a trade on — breaking skills into teachable steps and supervising early work without doing it.",
-          "transfer_check": "Break one trade skill into teachable steps and supervise a learner's first real attempt without taking over."
+          "transfer_check": "Break one trade skill into teachable steps and supervise a learner's first real attempt without taking over.",
+          "bands": {
+            "K–2": "Show a friend a simple thing you learned to make, with an adult.",
+            "3–5": "Teach a friend a small skill you know, with an adult's help.",
+            "6–8": "Teach a real trade skill clearly to someone else, with a checker.",
+            "9–10": "Teach a real trade skill effectively to a beginner, on your own.",
+            "11–12": "Design and lead a real lesson that teaches your trade to others."
+          }
         },
         {
           "theme": "The trade that is disappearing (TR)",
           "description": "A local trade in decline studied honestly — why it is fading and what its skills still transfer to.",
-          "transfer_check": "Document one declining local trade from a practitioner interview and name where its skills still transfer."
+          "transfer_check": "Document one declining local trade from a practitioner interview and name where its skills still transfer.",
+          "bands": {
+            "K–2": "Ask an adult about a job that isn't common anymore.",
+            "3–5": "Learn about a trade that's becoming rare, with an adult's help.",
+            "6–8": "Identify a real declining trade and why, with a checker.",
+            "9–10": "Research a real declining trade and its remaining opportunities, on your own.",
+            "11–12": "Explain to someone else the real forces behind a disappearing trade."
+          }
         },
         {
           "theme": "The trade that is arriving (TR)",
           "description": "The new trades appearing locally — solar, e-bikes, retrofit — and the earliest route in.",
-          "transfer_check": "Investigate one arriving trade locally — solar, e-bikes, retrofit — and map its earliest real entry route."
+          "transfer_check": "Investigate one arriving trade locally — solar, e-bikes, retrofit — and map its earliest real entry route.",
+          "bands": {
+            "K–2": "Ask an adult about a new kind of job that didn't used to exist.",
+            "3–5": "Learn about a new trade that's growing, with an adult's help.",
+            "6–8": "Identify a real emerging trade and its skill requirements, with a checker.",
+            "9–10": "Research a real emerging trade as a possible path, on your own.",
+            "11–12": "Explain to someone else the real skills an emerging trade actually requires."
+          }
         },
         {
           "theme": "A career that lasts thirty years (TR)",
           "description": "A trade career mapped across decades — the body, the tools, the moves into teaching, inspecting or owning.",
-          "transfer_check": "Chart one real tradesperson's actual career across decades from an interview, marking the moves that saved their body and pay."
+          "transfer_check": "Chart one real tradesperson's actual career across decades from an interview, marking the moves that saved their body and pay.",
+          "bands": {
+            "K–2": "Ask an adult what job they'd like to have for a long time.",
+            "3–5": "Think about a trade you might want to do for years, with an adult.",
+            "6–8": "Identify a real trade's long-term career path and sustainability, with a checker.",
+            "9–10": "Plan your own real long-term trade career path, on your own.",
+            "11–12": "Advise someone else on building a real thirty-year career in a trade."
+          }
         }
       ],
       "credential": "Trade Pathfinder"

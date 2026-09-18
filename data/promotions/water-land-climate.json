@@ -10,52 +10,122 @@
         {
           "theme": "Where your water comes from (WA)",
           "description": "Tracing your own water back — river, well, tank or main — and who keeps it safe along the way.",
-          "transfer_check": "Trace your own tap or well water to its actual source and draw the path, naming who safeguards each stage."
+          "transfer_check": "Trace your own tap or well water to its actual source and draw the path, naming who safeguards each stage.",
+          "bands": {
+            "K–2": "Ask an adult where the water from the tap comes from.",
+            "3–5": "Trace where your home's water comes from, with an adult's help.",
+            "6–8": "Trace a real water source to your tap, with a checker.",
+            "9–10": "Explain, using real local sources, exactly where your water comes from.",
+            "11–12": "Teach someone else how to trace their own real water source to the tap."
+          }
         },
         {
           "theme": "Where it goes afterwards (WA)",
           "description": "The path of used water from your drain — sewer, septic or ground — and your household's end of that bargain.",
-          "transfer_check": "Trace your own wastewater to its actual destination — works, tank or ground — and state your household's two protective behaviours."
+          "transfer_check": "Trace your own wastewater to its actual destination — works, tank or ground — and state your household's two protective behaviours.",
+          "bands": {
+            "K–2": "Ask an adult where water goes after it goes down the drain.",
+            "3–5": "Explain simply where used water goes, with an adult's help.",
+            "6–8": "Trace a real drain's path to treatment or disposal, with a checker.",
+            "9–10": "Explain, using real infrastructure, where your wastewater actually goes.",
+            "11–12": "Teach someone else how to trace real wastewater from drain to discharge."
+          }
         },
         {
           "theme": "When the water is not safe (WA)",
           "description": "The signs and notices of unsafe water, and the boil, filter and treat options ranked by what they remove.",
-          "transfer_check": "Demonstrate one correct treatment method — boil, filter or disinfect — and match three contamination types to the method that removes each."
+          "transfer_check": "Demonstrate one correct treatment method — boil, filter or disinfect — and match three contamination types to the method that removes each.",
+          "bands": {
+            "K–2": "Ask an adult before drinking water that looks or smells odd.",
+            "3–5": "Name one sign that water might not be safe, with an adult's help.",
+            "6–8": "Identify a real unsafe water sign and what to do, with a checker.",
+            "9–10": "Judge a real water source's safety on your own before using it.",
+            "11–12": "Explain to someone else how to recognise a real unsafe water situation."
+          }
         },
         {
           "theme": "Carrying water (WA)",
           "description": "Moving and storing water without contaminating it — clean containers, covered storage and the ladle rule.",
-          "transfer_check": "Collect, carry and store water for one day's household use without contaminating it, narrating the rules you followed."
+          "transfer_check": "Collect, carry and store water for one day's household use without contaminating it, narrating the rules you followed.",
+          "bands": {
+            "K–2": "Help carry a small container of water safely, with an adult.",
+            "3–5": "Carry water safely without spilling, with an adult's help.",
+            "6–8": "Carry a real load of water safely and efficiently, with a checker.",
+            "9–10": "Manage carrying real water for a household task, on your own.",
+            "11–12": "Teach someone else safe, efficient techniques for carrying real water."
+          }
         },
         {
           "theme": "Too much water (WA)",
           "description": "Flooding where you live — where it comes from, what it touches first, and the household moves before and after.",
-          "transfer_check": "Read your address's flood exposure from official maps and state the household action sequence at three warning lead times."
+          "transfer_check": "Read your address's flood exposure from official maps and state the household action sequence at three warning lead times.",
+          "bands": {
+            "K–2": "Point out a puddle after rain and ask an adult why it's there.",
+            "3–5": "Explain what happens when it rains too much in one place, with an adult.",
+            "6–8": "Identify a real flood risk sign in a neighbourhood, with a checker.",
+            "9–10": "Assess a real flood risk for a property on your own.",
+            "11–12": "Explain to someone else how to read the real signs of a coming flood."
+          }
         },
         {
           "theme": "Too little water (WA)",
           "description": "Drought and scarcity — rationing a household honestly, and the uses that go first.",
-          "transfer_check": "Ration a real or simulated day on a fixed water budget, allocating by priority and logging where every litre went."
+          "transfer_check": "Ration a real or simulated day on a fixed water budget, allocating by priority and logging where every litre went.",
+          "bands": {
+            "K–2": "Ask an adult why some places don't get enough rain.",
+            "3–5": "Explain what a drought means for a place, with an adult's help.",
+            "6–8": "Identify a real sign of drought stress in a local area, with a checker.",
+            "9–10": "Assess a real area's drought conditions and their local impact, on your own.",
+            "11–12": "Explain to someone else how a real drought affects a community over time."
+          }
         },
         {
           "theme": "Testing what you drink (WA)",
           "description": "The simple tests and observations that say something real about water, and reading an official quality report.",
-          "transfer_check": "Perform one simple water test or observation on a real source and correctly read an official quality report for your supply."
+          "transfer_check": "Perform one simple water test or observation on a real source and correctly read an official quality report for your supply.",
+          "bands": {
+            "K–2": "Watch an adult test water and ask what they're checking for.",
+            "3–5": "Learn one thing a water test checks for, with an adult's help.",
+            "6–8": "Read a real water test result and what it means, with a checker.",
+            "9–10": "Get and interpret a real water test for your own household, on your own.",
+            "11–12": "Explain to someone else how to get and read a real water test."
+          }
         },
         {
           "theme": "The pipe that leaks (WA)",
           "description": "Finding a leak with the meter-still test, the repairs within reach, and what a slow drip costs over a year.",
-          "transfer_check": "Run the meter-still leak test on a real dwelling and repair or precisely specify one leak found, with its yearly cost computed."
+          "transfer_check": "Run the meter-still leak test on a real dwelling and repair or precisely specify one leak found, with its yearly cost computed.",
+          "bands": {
+            "K–2": "Tell an adult if you see a dripping pipe or faucet.",
+            "3–5": "Notice signs of a leaking pipe and tell an adult, with their help.",
+            "6–8": "Identify a real pipe leak and what it costs, with a checker.",
+            "9–10": "Diagnose and report a real pipe leak on your own.",
+            "11–12": "Explain to someone else how to spot a real leak before it gets expensive."
+          }
         },
         {
           "theme": "Water and money (WA)",
           "description": "What water costs where you live — the bill, the tariff, the subsidy — and using the price to find the waste.",
-          "transfer_check": "Read one real water bill against the meter and tariff, and identify the household's most expensive water habit with figures."
+          "transfer_check": "Read one real water bill against the meter and tariff, and identify the household's most expensive water habit with figures.",
+          "bands": {
+            "K–2": "Ask an adult why the water bill has a number on it.",
+            "3–5": "Read a simple water bill with an adult's help.",
+            "6–8": "Read a real water bill and understand what it charges for, with a checker.",
+            "9–10": "Manage a real household's water costs on your own.",
+            "11–12": "Explain to someone else how to read and reduce a real water bill."
+          }
         },
         {
           "theme": "Water that is shared (WA)",
           "description": "Wells, standpipes and irrigation shared by many — the rules, rotas and disputes of a common source.",
-          "transfer_check": "Document the rules of one real shared water source — who may take, when, who maintains — and how one past dispute was settled."
+          "transfer_check": "Document the rules of one real shared water source — who may take, when, who maintains — and how one past dispute was settled.",
+          "bands": {
+            "K–2": "Take turns using a shared water source fairly, with an adult.",
+            "3–5": "Explain why a shared well or tap needs fair rules, with an adult's help.",
+            "6–8": "Identify a real fair-use rule for a shared water source, with a checker.",
+            "9–10": "Negotiate real fair use of a shared water resource, on your own.",
+            "11–12": "Mediate a real disagreement over shared water use fairly."
+          }
         }
       ],
       "credential": "Water Reader"
@@ -67,52 +137,122 @@
         {
           "theme": "What this ground is made of (LD)",
           "description": "Reading your local soil and rock — what drains, what slips, what grows — from a hole you dug yourself.",
-          "transfer_check": "Dig or expose one real soil profile, classify what you find, and state what it means for drainage and growing."
+          "transfer_check": "Dig or expose one real soil profile, classify what you find, and state what it means for drainage and growing.",
+          "bands": {
+            "K–2": "Dig in the dirt and look at what's in it, with an adult.",
+            "3–5": "Describe what the soil near you looks and feels like, with an adult.",
+            "6–8": "Identify a real local soil type and its properties, with a checker.",
+            "9–10": "Assess real local ground conditions for a real purpose, on your own.",
+            "11–12": "Explain to someone else what the real ground under a place is made of."
+          }
         },
         {
           "theme": "Who owns the ground you stand on (LD)",
           "description": "Titles, tenancies and commons — the ownership map of your own area and where it is recorded.",
-          "transfer_check": "Find the recorded ownership of one real parcel through the official registry and explain the record to somebody else."
+          "transfer_check": "Find the recorded ownership of one real parcel through the official registry and explain the record to somebody else.",
+          "bands": {
+            "K–2": "Ask an adult who owns the yard or park you're standing on.",
+            "3–5": "Explain that land has an owner, with an adult's help.",
+            "6–8": "Identify a real property's ownership record, with a checker.",
+            "9–10": "Look up a real property's ownership on your own.",
+            "11–12": "Explain to someone else how to trace real land ownership."
+          }
         },
         {
           "theme": "Land that is losing itself (LD)",
           "description": "Erosion and degradation — the signs of ground leaving, and the plantings and barriers that hold it.",
-          "transfer_check": "Survey one real site for erosion signs and install or specify the planting or barrier that would hold it."
+          "transfer_check": "Survey one real site for erosion signs and install or specify the planting or barrier that would hold it.",
+          "bands": {
+            "K–2": "Notice dirt washing away after rain, with an adult.",
+            "3–5": "Explain what erosion does to land, with an adult's help.",
+            "6–8": "Identify a real sign of erosion and a way to slow it, with a checker.",
+            "9–10": "Assess and address real erosion on a piece of land, on your own.",
+            "11–12": "Explain to someone else the real causes and fixes for land erosion."
+          }
         },
         {
           "theme": "Growing something on purpose (LD)",
           "description": "Preparing a bed, choosing what suits the soil and season, and tending one deliberate crop to harvest.",
-          "transfer_check": "Prepare a bed, plant a crop suited to your soil and season, and tend it to harvest with a care log."
+          "transfer_check": "Prepare a bed, plant a crop suited to your soil and season, and tend it to harvest with a care log.",
+          "bands": {
+            "K–2": "Plant a seed in soil and water it, with an adult.",
+            "3–5": "Grow a simple plant in real soil, with an adult's help.",
+            "6–8": "Grow a real plant successfully in real ground, with a checker.",
+            "9–10": "Cultivate real ground for a real growing purpose, on your own.",
+            "11–12": "Teach someone else how to prepare real ground for successful growing."
+          }
         },
         {
           "theme": "The land nobody uses (LD)",
           "description": "Vacant lots and margins — who actually owns them, and the lawful routes to putting them to use.",
-          "transfer_check": "Identify one real vacant parcel, find its actual owner through records, and outline the lawful route to a community use."
+          "transfer_check": "Identify one real vacant parcel, find its actual owner through records, and outline the lawful route to a community use.",
+          "bands": {
+            "K–2": "Point out an empty lot and ask an adult why nothing's there.",
+            "3–5": "Notice an unused piece of land nearby, with an adult's help.",
+            "6–8": "Identify a real vacant land's potential use, with a checker.",
+            "9–10": "Propose a real use for a real vacant lot, on your own.",
+            "11–12": "Advocate for a real productive use of an unused piece of land."
+          }
         },
         {
           "theme": "Mapping what is here (LD)",
           "description": "Making a real map of a real place — boundaries, water, slopes, uses — accurate enough for someone else to follow.",
-          "transfer_check": "Produce a real map of one place — boundaries, water, slope, uses — accurate enough for a stranger to navigate by."
+          "transfer_check": "Produce a real map of one place — boundaries, water, slope, uses — accurate enough for a stranger to navigate by.",
+          "bands": {
+            "K–2": "Draw a simple map of your yard with an adult.",
+            "3–5": "Make a simple map of a real space, with an adult's help.",
+            "6–8": "Map a real piece of land's features accurately, with a checker.",
+            "9–10": "Survey and map a real piece of land on your own.",
+            "11–12": "Teach someone else how to accurately map a real piece of ground."
+          }
         },
         {
           "theme": "Land and the law here (LD)",
           "description": "The land rules that bind where you live — zoning, building, clearing — and where a decision can be looked up.",
-          "transfer_check": "Look up the actual rules governing one real land question where you live and state what is allowed, forbidden and permitted-with-approval."
+          "transfer_check": "Look up the actual rules governing one real land question where you live and state what is allowed, forbidden and permitted-with-approval.",
+          "bands": {
+            "K–2": "Ask an adult why you can't just build anything anywhere.",
+            "3–5": "Explain that land has rules about what can be built, with an adult.",
+            "6–8": "Identify a real local zoning rule for a piece of land, with a checker.",
+            "9–10": "Research real zoning rules for a real piece of land, on your own.",
+            "11–12": "Explain to someone else the real zoning rules that govern local land use."
+          }
         },
         {
           "theme": "Restoring a piece of ground (LD)",
           "description": "Taking one degraded patch back — clearing, soil, planting, protection — and keeping it alive past the first season.",
-          "transfer_check": "Take one small degraded patch through clearing, soil work and planting, and keep it alive past a season with evidence."
+          "transfer_check": "Take one small degraded patch through clearing, soil work and planting, and keep it alive past a season with evidence.",
+          "bands": {
+            "K–2": "Help clean up trash from a small patch of ground, with an adult.",
+            "3–5": "Help restore a small piece of degraded ground, with an adult's help.",
+            "6–8": "Plan a real restoration for a real degraded piece of land, with a checker.",
+            "9–10": "Carry out real restoration work on a real piece of ground, on your own.",
+            "11–12": "Lead a real land restoration project and teach others the method."
+          }
         },
         {
           "theme": "What lives here (LD)",
           "description": "Surveying the species of one real place, and what their presence or absence says about its health.",
-          "transfer_check": "Conduct a species survey of one real place and interpret what two presences or absences say about its health."
+          "transfer_check": "Conduct a species survey of one real place and interpret what two presences or absences say about its health.",
+          "bands": {
+            "K–2": "Name one animal or plant you see outside, with an adult.",
+            "3–5": "List several real plants and animals in a local area, with an adult.",
+            "6–8": "Survey the real living things on a piece of land, with a checker.",
+            "9–10": "Conduct a real biodiversity survey of a piece of land, on your own.",
+            "11–12": "Explain to someone else what a real survey reveals about what lives on a plot."
+          }
         },
         {
           "theme": "The land under a city (LD)",
           "description": "Sealed ground, drains and heat — what paving does to water and temperature, and the green that repairs it.",
-          "transfer_check": "Map sealed and green ground on one real block and measure or estimate the difference it makes to runoff or heat."
+          "transfer_check": "Map sealed and green ground on one real block and measure or estimate the difference it makes to runoff or heat.",
+          "bands": {
+            "K–2": "Ask an adult what's under the sidewalk you're standing on.",
+            "3–5": "Explain that pipes and cables run under city streets, with an adult.",
+            "6–8": "Identify a real piece of infrastructure under a city street, with a checker.",
+            "9–10": "Explain, using real infrastructure maps, what lies beneath a real street.",
+            "11–12": "Explain to someone else the real hidden infrastructure layer beneath a city."
+          }
         }
       ],
       "credential": "Land Reader"
@@ -124,52 +264,122 @@
         {
           "theme": "What the elders describe (CL)",
           "description": "Collecting older residents' accounts of past seasons and comparing them honestly to the record.",
-          "transfer_check": "Record one elder's account of past seasons and check two of its specifics against the instrumental record, reporting honestly."
+          "transfer_check": "Record one elder's account of past seasons and check two of its specifics against the instrumental record, reporting honestly.",
+          "bands": {
+            "K–2": "Ask a grandparent what the weather was like when they were young, with an adult.",
+            "3–5": "Listen to an older person describe past weather patterns, with an adult.",
+            "6–8": "Compare a real elder's account of past weather to today, with a checker.",
+            "9–10": "Record and analyse a real elder's account of local climate change, on your own.",
+            "11–12": "Explain to someone else what real elder testimony reveals about local climate shifts."
+          }
         },
         {
           "theme": "Keeping a record (CL)",
           "description": "A simple weather log kept properly — instrument, time, place — until it becomes data.",
-          "transfer_check": "Keep a daily weather log — instrument, time, place — for two weeks and present it as usable data."
+          "transfer_check": "Keep a daily weather log — instrument, time, place — for two weeks and present it as usable data.",
+          "bands": {
+            "K–2": "Draw the weather each day for a week, with an adult.",
+            "3–5": "Keep a simple weather log for a week, with an adult's help.",
+            "6–8": "Keep a real accurate weather record for a month, with a checker.",
+            "9–10": "Maintain a real ongoing local weather or climate record, on your own.",
+            "11–12": "Teach someone else how to keep a real useful climate record."
+          }
         },
         {
           "theme": "Heat (CL)",
           "description": "Extreme heat where you live — who it endangers, the hours that matter, and cooling a body and a room.",
-          "transfer_check": "Write and rehearse a heat-day plan for a real household naming the dangerous hours, the cooling method and the person checked on."
+          "transfer_check": "Write and rehearse a heat-day plan for a real household naming the dangerous hours, the cooling method and the person checked on.",
+          "bands": {
+            "K–2": "Drink water and stay in shade on a hot day, with an adult.",
+            "3–5": "Explain why heat can be dangerous, with an adult's help.",
+            "6–8": "Identify a real heat risk sign and appropriate response, with a checker.",
+            "9–10": "Manage real heat risk for yourself and others, on your own.",
+            "11–12": "Explain to someone else the real dangers of heat and how to prevent harm."
+          }
         },
         {
           "theme": "Cold (CL)",
           "description": "Cold snaps — the household risks from pipes to lungs, and protecting the people heating one room.",
-          "transfer_check": "Prepare a real dwelling and household for a cold snap against a checklist — pipes, heating, the one warm room — and demonstrate it."
+          "transfer_check": "Prepare a real dwelling and household for a cold snap against a checklist — pipes, heating, the one warm room — and demonstrate it.",
+          "bands": {
+            "K–2": "Put on a coat when it's cold outside, with an adult.",
+            "3–5": "Explain why cold can be dangerous, with an adult's help.",
+            "6–8": "Identify a real cold-weather risk sign and appropriate response, with a checker.",
+            "9–10": "Manage real cold risk for yourself and others, on your own.",
+            "11–12": "Explain to someone else the real dangers of cold and how to prevent harm."
+          }
         },
         {
           "theme": "The season that moved (CL)",
           "description": "Shifting rains and growing seasons — reading the change in local planting, prices and water.",
-          "transfer_check": "Document one local seasonal shift — planting date, rain arrival, price curve — from two independent local sources."
+          "transfer_check": "Document one local seasonal shift — planting date, rain arrival, price curve — from two independent local sources.",
+          "bands": {
+            "K–2": "Ask an adult if the seasons feel the same as before.",
+            "3–5": "Notice if a season seems to start earlier or later than expected, with an adult.",
+            "6–8": "Identify a real shift in a local seasonal pattern, with a checker.",
+            "9–10": "Document a real seasonal shift using local evidence, on your own.",
+            "11–12": "Explain to someone else the real evidence for a shifting local season."
+          }
         },
         {
           "theme": "Storms (CL)",
           "description": "The storms your region actually gets, their warning signs, and the before-during-after sequence for a household.",
-          "transfer_check": "Run the before-during-after sequence for your region's storm type in a household drill, with the kit and refuge demonstrated."
+          "transfer_check": "Run the before-during-after sequence for your region's storm type in a household drill, with the kit and refuge demonstrated.",
+          "bands": {
+            "K–2": "Go inside when an adult says a storm is coming.",
+            "3–5": "Learn one way to stay safe during a storm, with an adult's help.",
+            "6–8": "Prepare for a real storm using a safety checklist, with a checker.",
+            "9–10": "Prepare yourself and a household for a real storm, on your own.",
+            "11–12": "Lead a real household or group's storm preparation and response."
+          }
         },
         {
           "theme": "Air (CL)",
           "description": "What is in the air you breathe — smoke, dust, exhaust — reading an air quality index and acting on a bad day.",
-          "transfer_check": "Read today's actual air quality for your location, name its dominant source, and state the action the level calls for."
+          "transfer_check": "Read today's actual air quality for your location, name its dominant source, and state the action the level calls for.",
+          "bands": {
+            "K–2": "Ask an adult why some days the air feels bad to breathe.",
+            "3–5": "Explain what makes air quality good or bad, with an adult's help.",
+            "6–8": "Check a real local air quality reading and what it means, with a checker.",
+            "9–10": "Monitor real local air quality and adjust your activity, on your own.",
+            "11–12": "Explain to someone else how to read and respond to a real air quality index."
+          }
         },
         {
           "theme": "Reading a forecast properly (CL)",
           "description": "Probability, timing and range in a real forecast — what it promises, what it cannot, and planning with it.",
-          "transfer_check": "Take one real multi-day forecast, explain its probabilities and limits, and make one genuine plan that uses it correctly."
+          "transfer_check": "Take one real multi-day forecast, explain its probabilities and limits, and make one genuine plan that uses it correctly.",
+          "bands": {
+            "K–2": "Look at a weather picture with an adult and guess what it means.",
+            "3–5": "Read a simple weather forecast, with an adult's help.",
+            "6–8": "Read a real forecast correctly, including its uncertainty, with a checker.",
+            "9–10": "Read and act on a real forecast's full information, on your own.",
+            "11–12": "Teach someone else how to properly read a real forecast, including its limits."
+          }
         },
         {
           "theme": "Adaptation that is affordable (CL)",
           "description": "The cheap adaptations first — shade, storage, drainage, timing — ranked by cost against protection.",
-          "transfer_check": "Rank three low-cost adaptations for a real dwelling by cost against protection, and implement the first."
+          "transfer_check": "Rank three low-cost adaptations for a real dwelling by cost against protection, and implement the first.",
+          "bands": {
+            "K–2": "Help an adult find a cheap way to stay cool or warm.",
+            "3–5": "Name one affordable way to adapt to weather changes, with an adult.",
+            "6–8": "Identify a real affordable adaptation for a local climate risk, with a checker.",
+            "9–10": "Implement a real affordable adaptation for your own home, on your own.",
+            "11–12": "Advise a real household on affordable adaptations to a local climate risk."
+          }
         },
         {
           "theme": "Arguing about it honestly (CL)",
           "description": "Disagreeing about climate with evidence and respect — the claims, the sources, and the difference between the two.",
-          "transfer_check": "Hold a structured disagreement on one climate claim using cited evidence on both sides, and state what would change your mind."
+          "transfer_check": "Hold a structured disagreement on one climate claim using cited evidence on both sides, and state what would change your mind.",
+          "bands": {
+            "K–2": "Listen when grown-ups disagree about weather and stay calm, with an adult.",
+            "3–5": "Notice that people can disagree about climate topics, with an adult's help.",
+            "6–8": "Present a real climate argument honestly, with evidence, with a checker.",
+            "9–10": "Argue a real climate position honestly, engaging evidence fairly, on your own.",
+            "11–12": "Facilitate a real honest discussion about a contested climate topic."
+          }
         }
       ],
       "credential": "Local Climate Reader"
@@ -181,52 +391,122 @@
         {
           "theme": "Where the power comes from (EN)",
           "description": "Your own electricity traced to its sources — the plants, lines and fuels behind the local socket.",
-          "transfer_check": "Trace your own electricity to its actual generation mix from published data and present the chain socket-to-source."
+          "transfer_check": "Trace your own electricity to its actual generation mix from published data and present the chain socket-to-source.",
+          "bands": {
+            "K–2": "Ask an adult where electricity comes from.",
+            "3–5": "Trace where your home's power comes from, with an adult's help.",
+            "6–8": "Trace a real power source to your home, with a checker.",
+            "9–10": "Explain, using real local sources, exactly where your power comes from.",
+            "11–12": "Teach someone else how to trace their own real electricity source."
+          }
         },
         {
           "theme": "When the power is out (EN)",
           "description": "Running the essentials through an outage — light, food, phones — safely and in the right order.",
-          "transfer_check": "Run a two-hour household blackout drill covering light, one hot meal and phone charging, every method used safely."
+          "transfer_check": "Run a two-hour household blackout drill covering light, one hot meal and phone charging, every method used safely.",
+          "bands": {
+            "K–2": "Stay calm and find a flashlight with an adult when the lights go out.",
+            "3–5": "Know one safe thing to do during a power outage, with an adult's help.",
+            "6–8": "Prepare for a real power outage using a checklist, with a checker.",
+            "9–10": "Prepare yourself and a household for a real power outage, on your own.",
+            "11–12": "Lead a real household's power outage preparation and response."
+          }
         },
         {
           "theme": "Reading a meter and a bill (EN)",
           "description": "The kilowatt-hour as the unit you buy — reading your meter and reconciling it with the bill.",
-          "transfer_check": "Read your real meter on two dates, compute the kilowatt-hours used, and reconcile them against the bill."
+          "transfer_check": "Read your real meter on two dates, compute the kilowatt-hours used, and reconcile them against the bill.",
+          "bands": {
+            "K–2": "Look at the numbers on a power meter with an adult.",
+            "3–5": "Read a simple electricity meter, with an adult's help.",
+            "6–8": "Read a real electricity bill and understand its charges, with a checker.",
+            "9–10": "Manage a real household's energy costs on your own.",
+            "11–12": "Explain to someone else how to read and reduce a real energy bill."
+          }
         },
         {
           "theme": "Heat that escapes (EN)",
           "description": "Finding where warmth leaves a dwelling and the sealing and insulation that pay for themselves first.",
-          "transfer_check": "Survey a real dwelling for heat loss and implement or specify the two cheapest effective fixes, payback estimated."
+          "transfer_check": "Survey a real dwelling for heat loss and implement or specify the two cheapest effective fixes, payback estimated.",
+          "bands": {
+            "K–2": "Feel for a draft near a window with an adult.",
+            "3–5": "Find one place where heat escapes a home, with an adult's help.",
+            "6–8": "Identify a real heat-loss point in a building, with a checker.",
+            "9–10": "Diagnose and fix a real heat-loss problem in a home, on your own.",
+            "11–12": "Explain to someone else how to find and fix real heat loss in a building."
+          }
         },
         {
           "theme": "Cooking fuel (EN)",
           "description": "The fuels people cook with — their cost, smoke and danger — and the safest option a household can reach.",
-          "transfer_check": "Compare the real cooking fuels available to your household on cost, smoke and safety, and demonstrate the safest setup."
+          "transfer_check": "Compare the real cooking fuels available to your household on cost, smoke and safety, and demonstrate the safest setup.",
+          "bands": {
+            "K–2": "Ask an adult what makes the stove get hot.",
+            "3–5": "Name the fuel a stove or oven uses, with an adult's help.",
+            "6–8": "Identify a real cooking fuel's cost and safety considerations, with a checker.",
+            "9–10": "Choose and use a real cooking fuel safely and economically, on your own.",
+            "11–12": "Explain to someone else the real trade-offs between different cooking fuels."
+          }
         },
         {
           "theme": "Sun and wind on this site (EN)",
           "description": "Reading one real site for solar and wind potential — orientation, shading, exposure — before believing a brochure.",
-          "transfer_check": "Assess one real site's solar or wind potential — orientation, shading, exposure — and deliver a defensible yes/no with reasons."
+          "transfer_check": "Assess one real site's solar or wind potential — orientation, shading, exposure — and deliver a defensible yes/no with reasons.",
+          "bands": {
+            "K–2": "Notice how sunny or windy your yard is, with an adult.",
+            "3–5": "Observe a real site's sun and wind exposure, with an adult's help.",
+            "6–8": "Assess a real site's solar or wind energy potential, with a checker.",
+            "9–10": "Evaluate a real site for solar or wind energy potential, on your own.",
+            "11–12": "Advise on a real site's renewable energy potential, with evidence."
+          }
         },
         {
           "theme": "Storing energy (EN)",
           "description": "Batteries and other stores — what they hold, what they cost, and matching a store to a real need.",
-          "transfer_check": "Size a battery or store for one named real need from actual wattages, and show the arithmetic."
+          "transfer_check": "Size a battery or store for one named real need from actual wattages, and show the arithmetic.",
+          "bands": {
+            "K–2": "Ask an adult why a flashlight needs batteries.",
+            "3–5": "Explain what a battery does, with an adult's help.",
+            "6–8": "Identify a real energy storage option and its use case, with a checker.",
+            "9–10": "Evaluate a real energy storage solution for a household need, on your own.",
+            "11–12": "Explain to someone else the real trade-offs of different energy storage options."
+          }
         },
         {
           "theme": "The energy in a thing (EN)",
           "description": "The energy embedded in objects and food — why making, moving and wasting things is an energy question.",
-          "transfer_check": "Estimate the embedded energy of one everyday object from its materials and transport, and present the chain."
+          "transfer_check": "Estimate the embedded energy of one everyday object from its materials and transport, and present the chain.",
+          "bands": {
+            "K–2": "Ask an adult why food gives you energy to run.",
+            "3–5": "Explain that food and fuel both carry energy, with an adult's help.",
+            "6–8": "Compare the real energy content of different fuels or foods, with a checker.",
+            "9–10": "Calculate the real energy content or use of something, on your own.",
+            "11–12": "Explain to someone else how to think about the real energy embedded in a thing."
+          }
         },
         {
           "theme": "Working on the grid (EN)",
           "description": "The jobs that keep power flowing — lines, plants, meters — and the training routes into them locally.",
-          "transfer_check": "Map two real local routes into energy work — the roles, the training, the entry requirements — from actual providers."
+          "transfer_check": "Map two real local routes into energy work — the roles, the training, the entry requirements — from actual providers.",
+          "bands": {
+            "K–2": "Ask an adult what a person who fixes power lines does.",
+            "3–5": "Name a job that keeps the power grid working, with an adult's help.",
+            "6–8": "Identify a real grid worker's role and its importance, with a checker.",
+            "9–10": "Evaluate a real grid-related job as a possible path, on your own.",
+            "11–12": "Explain to someone else what real grid work actually involves."
+          }
         },
         {
           "theme": "Energy and who decides (EN)",
           "description": "Tariffs, subsidies and siting — where energy decisions are made near you and how a resident is heard.",
-          "transfer_check": "Identify where one real energy decision near you is made — tariff, siting, subsidy — and submit or draft a resident's input to it."
+          "transfer_check": "Identify where one real energy decision near you is made — tariff, siting, subsidy — and submit or draft a resident's input to it.",
+          "bands": {
+            "K–2": "Ask an adult who decides how much the electricity costs.",
+            "3–5": "Name who sets electricity rates and rules, with an adult's help.",
+            "6–8": "Identify a real decision-maker in local energy policy, with a checker.",
+            "9–10": "Explain, using a real example, how local energy decisions get made.",
+            "11–12": "Explain to someone else the real actors and process behind local energy decisions."
+          }
         }
       ],
       "credential": "Home Energy Reader"
@@ -238,52 +518,122 @@
         {
           "theme": "The hazard map of here (RS)",
           "description": "The ranked, evidenced list of what can actually happen at your address — flood, storm, fire, slide.",
-          "transfer_check": "Build the ranked, evidenced hazard list for your own address from official maps and records."
+          "transfer_check": "Build the ranked, evidenced hazard list for your own address from official maps and records.",
+          "bands": {
+            "K–2": "Ask an adult what kind of bad weather happens near your home.",
+            "3–5": "Learn one hazard your area faces, with an adult's help.",
+            "6–8": "Read a real local hazard map and what it shows, with a checker.",
+            "9–10": "Interpret a real hazard map for your own area, on your own.",
+            "11–12": "Explain to someone else how to read a real local hazard map correctly."
+          }
         },
         {
           "theme": "The household plan (RS)",
           "description": "One written plan a household has rehearsed — contacts, rally points, kit and the leave triggers.",
-          "transfer_check": "Write the household emergency plan — contacts, rally points, kit, leave triggers — and run its drill with the real occupants."
+          "transfer_check": "Write the household emergency plan — contacts, rally points, kit, leave triggers — and run its drill with the real occupants.",
+          "bands": {
+            "K–2": "Help make a family emergency plan with an adult.",
+            "3–5": "Help write a simple emergency plan, with an adult's help.",
+            "6–8": "Build a real household emergency plan, with a checker.",
+            "9–10": "Build and maintain a real household emergency plan, on your own.",
+            "11–12": "Help another family build a real emergency plan for their situation."
+          }
         },
         {
           "theme": "The building you are in (RS)",
           "description": "Reading a building's weak points against local hazards — roof, openings, exits — and the fixes in reach.",
-          "transfer_check": "Assess one real building's weak points against your local hazards and fix or specify the two worst, with photos."
+          "transfer_check": "Assess one real building's weak points against your local hazards and fix or specify the two worst, with photos.",
+          "bands": {
+            "K–2": "Ask an adult if your home or school is built to be safe in a storm.",
+            "3–5": "Name one thing that makes a building more storm-safe, with an adult.",
+            "6–8": "Assess a real building's resilience to a local hazard, with a checker.",
+            "9–10": "Evaluate a real building's resilience and recommend improvements, on your own.",
+            "11–12": "Advise on real building resilience improvements against a local hazard."
+          }
         },
         {
           "theme": "Warning that arrives in time (RS)",
           "description": "The official warning channels where you live, tested on your own devices, and what each level demands.",
-          "transfer_check": "Verify every official warning channel for your area on your own devices, tested, and state what each alert level demands."
+          "transfer_check": "Verify every official warning channel for your area on your own devices, tested, and state what each alert level demands.",
+          "bands": {
+            "K–2": "Listen for a warning signal and go to an adult if you hear one.",
+            "3–5": "Know what a real warning signal sounds like, with an adult's help.",
+            "6–8": "Respond correctly to a real emergency warning, with a checker.",
+            "9–10": "Set up and respond to real emergency warning systems, on your own.",
+            "11–12": "Teach someone else how to set up and respond to real emergency warnings."
+          }
         },
         {
           "theme": "The first seventy-two hours (RS)",
           "description": "Water, food, light, warmth and information for three days on your own shelf.",
-          "transfer_check": "Assemble or audit a real 72-hour kit for your household's actual members and gaps found made good."
+          "transfer_check": "Assemble or audit a real 72-hour kit for your household's actual members and gaps found made good.",
+          "bands": {
+            "K–2": "Help pack a small emergency bag with an adult.",
+            "3–5": "Help gather emergency supplies for 72 hours, with an adult's help.",
+            "6–8": "Build a real 72-hour emergency kit, with a checker.",
+            "9–10": "Build and maintain a real 72-hour emergency kit, on your own.",
+            "11–12": "Help another household build a real 72-hour emergency kit."
+          }
         },
         {
           "theme": "After the water goes down (RS)",
           "description": "Re-entry done safely — structure, power, contamination — and the documentation that starts recovery.",
-          "transfer_check": "Walk a staged or documented re-entry — structure, power, contamination checks in order — and start the claim documentation."
+          "transfer_check": "Walk a staged or documented re-entry — structure, power, contamination checks in order — and start the claim documentation.",
+          "bands": {
+            "K–2": "Ask an adult what happens after a flood ends.",
+            "3–5": "Name one thing people do after a flood recedes, with an adult's help.",
+            "6–8": "Identify real post-flood safety and cleanup steps, with a checker.",
+            "9–10": "Carry out real post-disaster cleanup safely, on your own.",
+            "11–12": "Guide someone else through real safe post-disaster recovery steps."
+          }
         },
         {
           "theme": "Insurance and what it does not cover (RS)",
           "description": "Reading a policy for the hazard exclusions, and the public help that exists where insurance does not.",
-          "transfer_check": "Read one real policy against your hazard list and report every exclusion that matters, with the public backstops named."
+          "transfer_check": "Read one real policy against your hazard list and report every exclusion that matters, with the public backstops named.",
+          "bands": {
+            "K–2": "Ask an adult what insurance is for and why families have it.",
+            "3–5": "Explain simply what insurance protects against, with an adult's help.",
+            "6–8": "Identify a real gap in a real insurance policy's coverage, with a checker.",
+            "9–10": "Evaluate a real insurance policy for real coverage gaps, on your own.",
+            "11–12": "Advise someone else on real insurance gaps for a local hazard."
+          }
         },
         {
           "theme": "Rebuilding differently (RS)",
           "description": "Building back against the next event — elevation, materials, siting — instead of repeating the loss.",
-          "transfer_check": "For one real or documented damaged dwelling, specify the build-back changes that beat the next event, roughly costed."
+          "transfer_check": "For one real or documented damaged dwelling, specify the build-back changes that beat the next event, roughly costed.",
+          "bands": {
+            "K–2": "Ask an adult why people sometimes rebuild a house differently after damage.",
+            "3–5": "Name one way a rebuilt home might be made safer, with an adult.",
+            "6–8": "Identify a real resilient rebuilding practice, with a checker.",
+            "9–10": "Recommend real resilient rebuilding practices for a damaged property, on your own.",
+            "11–12": "Advise a real community on resilient rebuilding after a real disaster."
+          }
         },
         {
           "theme": "Who is hardest hit (RS)",
           "description": "Why the same event lands unequally — age, money, mobility, location — and planning for the street, not just the house.",
-          "transfer_check": "Map, with consent, the vulnerable households on one street and agree the check-in protocol that activates in an event."
+          "transfer_check": "Map, with consent, the vulnerable households on one street and agree the check-in protocol that activates in an event.",
+          "bands": {
+            "K–2": "Ask an adult why some people have a harder time after a storm.",
+            "3–5": "Name one reason a disaster affects some people more, with an adult.",
+            "6–8": "Identify a real vulnerable group in a disaster's real impact, with a checker.",
+            "9–10": "Assess who is hardest hit by a real local hazard and why, on your own.",
+            "11–12": "Advocate for a real vulnerable group's needs in disaster planning."
+          }
         },
         {
           "theme": "Recording it for next time (RS)",
           "description": "The event log — what happened, when, what worked — kept so the next response starts smarter.",
-          "transfer_check": "Write the event log of one real drill or incident — what happened, when, what worked — and change one plan because of it."
+          "transfer_check": "Write the event log of one real drill or incident — what happened, when, what worked — and change one plan because of it.",
+          "bands": {
+            "K–2": "Help write down what happened during a storm, with an adult.",
+            "3–5": "Keep a simple record of a real event for next time, with an adult's help.",
+            "6–8": "Record a real disaster's lessons for future preparation, with a checker.",
+            "9–10": "Document a real disaster's lessons systematically, on your own.",
+            "11–12": "Lead a real after-action review to improve future disaster response."
+          }
         }
       ],
       "credential": "Resilience Planner"
