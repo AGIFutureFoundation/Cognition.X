@@ -365,6 +365,12 @@ FACT_LAYERS = {
     # v0.68.0; the same __CXFACT: mechanism now carries them too.
     "siteIndex":    ("data/education_os/site_index.json", lambda d: d["entries"]),
     "seEditions":   ("data/education_os/se_editions.json", lambda d: d["entries"]),
+    # v0.109.0 (roadmap prompt 7 close-out): the three literals that closed the gap to the
+    # template's 4.2 MB target — the Build Status table, the authored Future-Work track
+    # content and its second pack. Same __CXFACT: mechanism, injected at build time.
+    "buildStatus":  ("data/education_os/build_status.json", lambda d: d["entries"]),
+    "fxAuthored":   ("data/education_os/fx_authored.json",  lambda d: d["entries"]),
+    "fxPack2":      ("data/education_os/fx_pack2.json",     lambda d: d["entries"]),
 }
 
 

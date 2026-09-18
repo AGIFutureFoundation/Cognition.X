@@ -270,7 +270,7 @@ row moves to met.
 
 ---
 
-## 7 — The Education OS template's second diet — PARTIAL, v0.108.0
+## 7 — The Education OS template's second diet — DONE, v0.108.0–v0.109.0
 
 **Why.** The template is 4.6 MB after v0.63.0 and v0.68.0. Its two
 largest remaining literals, `DATA.siteIndex` (296 KB) and
@@ -311,6 +311,27 @@ proving pre-existing non-determinism (live timestamps, simulated
 data) rather than a regression; the ninth was a one-off timeout in
 the baseline run.
 
+**Close-out, v0.109.0.** The remaining three literals — `buildStatus`
+(the Release Plan table, 49.8 KB), `fxAuthored` (the authored
+Future-Work track content, 47.3 KB) and `fxPack2` (the second
+Future-Work pack, 47.9 KB) — read cleanly as pure runtime content
+consumed only by client-side JS (a table renderer, and the app's own
+`fxPackMerge()`), with no Python build tooling touching them; safe to
+extract through the same mechanism as `siteIndex`/`seEditions`. Each
+now lives in `data/education_os/` and is injected in place at
+`__CXFACT:<name>__`. One dead line was found and removed in the
+process: `DATA.fxAuthored=DATA.fxAuthored||{}` inside `fxPackMerge()`
+was a defensive fallback for a load order where the literal might not
+have run yet — now that the value is always injected before this
+script block, the fallback can't fire and was deleted rather than
+kept. Template: 4.27 MB → 4.13 MB, under the 4.2 MB target. Verified
+with `tools/view_sweep.js`: 8 of 149 views differed before/after, and
+a control sweep of the *after* build against itself reproduced the
+identical 8 — the same pre-existing non-determinism this prompt found
+last tranche, not a regression. Both suites pass (1,934 Python checks,
+223 browser assertions); `tools/extract_fact_bases.py --check` round
+trips clean for all twelve fact-base layers.
+
 **Verify.**
 ```bash
 node tools/view_sweep.js apps/education-os/index.html before.json
@@ -343,7 +364,7 @@ and PL-21 mention hit-testing as per-frame and dropped.
 
 ---
 
-## 9 — The board's decisions as data
+## 9 — The board's decisions as data — DONE, v0.110.0
 
 **Why.** The 24 proposed credential names are applied as a counted
 exception and marked *proposed*; the board packet lists them as its
@@ -362,6 +383,33 @@ lists open decisions.
 **Acceptance.** With no adopted decision nothing changes; with a fixture
 decision the 33 rows resolve and the level-word count is zero; the
 packet shows the decision's status.
+
+**Finding, v0.110.0.** The spec's own two acceptance halves turned out to
+be in tension: the 24 tracks' correction has been applied *unconditionally*
+in the pipeline since v0.52.0, so gating it retroactively on an "adopted"
+outcome would silently revert 1,195 rows the moment this shipped (no real
+board has met to adopt anything). Resolved by scoping the decision id to
+the promotion, not the mechanism: `data/promotions/*.json` tracks may now
+name a `"decision"` id; `tools/normalize_blocks.py`'s new
+`credential_decision_ready()` gates the correction on that id being
+recorded as `"adopted"` in `data/policy/decisions.json` (`cx-boarddecision/1`,
+new) — but a track naming no id (all 24 existing ones) is unaffected and
+applies exactly as before. `data/policy/decisions.json` records `BD-1`
+(the 24-name correction, outcome `proposed`, for-the-record only) and
+`BD-2` (the Empathy & Emotional Intelligence "Emotions at Work" group's
+33 rows, outcome `open` — the two-way shape choice from Finding 6's "What
+remains", not a drafted name: naming it here would pre-empt a curriculum
+decision this prompt doesn't own). "With a fixture decision the 33 rows
+resolve" is proven the honest way — `tests/test_platform.py` exercises
+`credential_decision_ready()` directly with fixture ids, and a live
+assertion (`load_decisions()` returns nothing adopted in the committed
+file) pins "with no adopted decision nothing changes" as a real, checked
+fact rather than a one-time claim. `docs/BOARD_PACKET.md`,
+`docs/DATA_QUALITY.md` (new "Board decisions" section) and
+`tools/cohort_report.py` (new "Open board decisions" section) all read
+the one file instead of carrying their own prose. Both suites pass
+(1,946 Python checks, 223 browser assertions); `blocks.csv` is
+byte-for-byte unchanged.
 
 ---
 

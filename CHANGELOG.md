@@ -4,6 +4,73 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.110.0] — 2026-09-18
+
+### Added — the board's decisions as data (prompt 9)
+- **`data/policy/decisions.json`** (`cx-boarddecision/1`, new): the review
+  board's decisions in one file — id, date, motion, outcome, who signed —
+  instead of prose duplicated across `docs/BOARD_PACKET.md`,
+  `docs/DATA_REVIEW.md` and the data-quality dashboard. Records `BD-1`
+  (the 24 proposed credential names from v0.52.0, outcome `proposed`,
+  for-the-record only) and `BD-2` (the Empathy & Emotional Intelligence
+  "Emotions at Work" group's 33 still-bare-"Practitioner" rows, outcome
+  `open` — the two-way shape choice from Finding 6's "What remains").
+- `tools/normalize_blocks.py`: a promotion's track may now name a
+  `"decision"` id; the new `credential_decision_ready()` gates that
+  track's credential correction on the id being recorded as `"adopted"`
+  in `data/policy/decisions.json`. A track naming no id — all 24 existing
+  ones — is unaffected: the correction applies exactly as it has since
+  v0.52.0. **`blocks.csv` is byte-for-byte unchanged** ("corrected 1195
+  level-word credentials" prints identically before and after).
+- `docs/BOARD_PACKET.md`, `docs/DATA_QUALITY.md` (new "Board decisions"
+  section) and `tools/cohort_report.py` (new "## 7. Open board decisions"
+  section) all read the one file rather than carrying their own copy of
+  a decision's status.
+- **Finding:** the prompt's own acceptance criteria were in tension —
+  gating the *existing* 24-track correction on "adopted" would have
+  silently reverted 1,195 rows, since no real board has met. Resolved by
+  scoping the gate to promotions that opt in via a `decision` id, leaving
+  the grandfathered correction untouched. "With a fixture decision the 33
+  rows resolve" is proven directly against `credential_decision_ready()`
+  with fixture ids in `tests/test_platform.py`, rather than by drafting a
+  name for `BD-2` that would pre-empt a curriculum shape decision this
+  prompt doesn't own.
+- Both suites pass: `python3 tests/test_platform.py` (1,946 checks, +12
+  from this change) and the browser smoke suite (223 assertions).
+
+## [0.109.0] — 2026-09-18
+
+### Added — the Education OS template's second diet, close-out (prompt 7)
+- **`data/education_os/build_status.json`**, **`data/education_os/fx_authored.json`**
+  and **`data/education_os/fx_pack2.json`** are three new canonical
+  files, extracted from the Education OS app's template — the three
+  literals v0.108.0 identified but left unexamined. `DATA.buildStatus`
+  (the Build Status / Release Plan table, 56 dated entries) was 49.8
+  KB; `DATA.fxAuthored` (the authored Future-Work track content, keyed
+  by sector-OS edition) was 47.3 KB; `DATA.fxPack2` (a second
+  Future-Work pack merged in at runtime by the app's own
+  `fxPackMerge()`) was 47.9 KB. All three are pure runtime content
+  read only by client-side JS — no Python build tooling touches them —
+  so they extract through the same `__CXFACT:<name>__` mechanism as
+  `siteIndex`/`seEditions`: `tools/build_education_os.py` injects the
+  canonical JSON in place at build time, `tools/extract_fact_bases.py`
+  round-trips it back.
+- `apps/education-os/template.html` shrinks from 4.27 MB to 4.13 MB
+  (−145 KB), closing the 4.2 MB target set in `docs/NEXT_STEPS_2.md` #7.
+- **Cleanup found in the process:** `fxPackMerge()` carried a
+  defensive `DATA.fxAuthored=DATA.fxAuthored||{}` fallback for a load
+  order where the literal might not yet have run. Since the value is
+  now always injected before this script block executes, the
+  fallback can never fire — removed rather than kept.
+- Verified with `tools/view_sweep.js`: 8 of 149 views differ
+  before/after, and a control sweep of the *after* build against
+  itself reproduces the identical 8 — the same pre-existing
+  non-determinism (live timestamps, simulated data) v0.108.0 found,
+  not a regression.
+- Both suites pass: `python3 tests/test_platform.py` (1,934 checks)
+  and the browser smoke suite (223 assertions); checksums and the SBOM
+  regenerated.
+
 ## [0.108.0] — 2026-09-18
 
 ### Added — the Education OS template's second diet (prompt 7)

@@ -1,0 +1,1367 @@
+{
+ "note": "The Education OS app's authored Future-Work track content, keyed by sector-OS edition then track id as [credential, [[description, transfer check] x10]] — canonical here since v0.109.0 (prompt 7, the template diet close-out: this literal was 47.3 KB in apps/education-os/template.html; extracted once by hand and now round-tripped by tools/extract_fact_bases.py, injected in place by tools/build_education_os.py at the __CXFACT:fxAuthored__ placeholder). The builder, block base, layer registry, ladder and conformance runner all read this object directly; a track absent here renders hollow by the app's own refusal rule.",
+ "entries": {
+  "corp": {
+   "ON": [
+    "Workplace Explorer",
+    [
+     [
+      "What actually happens on a first day, what to bring, and the three things worth asking before lunch.",
+      "Write the first-day plan you would want, then run somebody else through theirs."
+     ],
+     [
+      "A job description is a negotiating document; the role is what you are held to. Learning to read the gap.",
+      "State your own role in two sentences and check it against your manager."
+     ],
+     [
+      "Who signs off what, who is consulted, and who only needs telling. The map nobody hands you.",
+      "Draw the decision map for one real task and confirm it with two colleagues."
+     ],
+     [
+      "The five systems that gate the work, and getting access before the access is urgent.",
+      "List every system your first task needs and show a working login for each."
+     ],
+     [
+      "Questions that make you look careful rather than lost, and when to batch them.",
+      "Ask three prepared questions in one sitting and record the answers usefully."
+     ],
+     [
+      "What competence looks like at ninety days, described before you get there rather than after.",
+      "Write your own ninety-day expectations and have them corrected by somebody senior."
+     ],
+     [
+      "Probation measures reliability far more than brilliance, and the evidence is mostly ordinary.",
+      "Keep a two-week record of commitments made and commitments kept."
+     ],
+     [
+      "A working relationship is built from predictable updates, not from being liked.",
+      "Run one structured check-in with an agenda you wrote."
+     ],
+     [
+      "The documented process and the real process differ. Finding the person who knows the second.",
+      "Document one real process as actually performed and have it verified."
+     ],
+     [
+      "When the work is materially different from what was advertised, and what to do about it early.",
+      "Write the comparison, name what changed, and identify who can address it."
+     ]
+    ]
+   ],
+   "SK": [
+    "Practitioner of the Trade",
+    [
+     [
+      "Identifying the one capability the role genuinely rests on, underneath the task list.",
+      "Name it, defend the choice, and show how you would measure improvement in it."
+     ],
+     [
+      "Deliberate practice inside paid work, without pretending it is not happening.",
+      "Design a practice loop inside a real task and run it for two weeks."
+     ],
+     [
+      "Knowledge leaves with people. Extracting it before the last day, not on it.",
+      "Run a handover interview and produce something a successor could use."
+     ],
+     [
+      "Writing something down is a skill with technique, and it is the cheapest leverage available.",
+      "Document a task so a stranger completes it correctly without asking you."
+     ],
+     [
+      "The avoided task is usually the one where the gap is largest. Approaching it deliberately.",
+      "Pick the avoided thing, break it into three steps, and complete the first."
+     ],
+     [
+      "Employer-funded qualifications exist, are underused, and have a process with a deadline.",
+      "Find one you are eligible for, identify the approver, and draft the request."
+     ],
+     [
+      "Which of your skills you keep when the employer changes, and which evaporate at the door.",
+      "Sort your current skills into the two lists and justify each placement."
+     ],
+     [
+      "Automation changes the shape of a task before it removes it. Reading the change early.",
+      "Describe one task in your work that has changed shape, and what it demands now."
+     ],
+     [
+      "Teaching is the fastest way to find the holes in what you just learned.",
+      "Teach one thing to a colleague and record where their questions found gaps."
+     ],
+     [
+      "Evidence of competence that lives with you rather than in an employer system.",
+      "Assemble a portfolio entry you could show after leaving, with nothing confidential in it."
+     ]
+    ]
+   ],
+   "SF": [
+    "Safety Practitioner",
+    [
+     [
+      "Every safety rule encodes an incident. Reading the rule back to the harm it prevents.",
+      "Take three rules where you work and state the harm each one is protecting against."
+     ],
+     [
+      "The right to stop unsafe work, where it comes from, and how to use it without theatre.",
+      "Rehearse the stop-work sentence and identify who you say it to."
+     ],
+     [
+      "Reporting routes, what protection exists, and the difference between a report and a complaint.",
+      "Identify the route where you work and the protection attached to it."
+     ],
+     [
+      "A near miss is the only free data a system gets. Why they go unreported and how to fix that.",
+      "Log one near miss properly and trace what happens to the record."
+     ],
+     [
+      "Fatigue is a hazard with the same standing as a chemical or a height, and is treated as weakness.",
+      "Map your own fatigue risk across a real week and identify one controllable factor."
+     ],
+     [
+      "Every workplace has a normalised shortcut. Naming yours and understanding why it persists.",
+      "Identify the shortcut, describe the pressure creating it, and propose the fix."
+     ],
+     [
+      "Protective equipment that does not fit is not protective equipment, and fit is a right.",
+      "Check the fit of your own equipment against its specification and report the gap."
+     ],
+     [
+      "The hours after an incident: preserving the scene, the record, and your own account.",
+      "Write the account you would need to give, from a real or documented incident."
+     ],
+     [
+      "Raising a concern about a colleague, which is the hardest safety act and the most necessary.",
+      "Prepare the conversation, name the fact, and separate it from the person."
+     ],
+     [
+      "Being asked to break a rule by somebody with authority over you, and the response prepared in advance.",
+      "Write the response you would give, and identify the escalation route if it fails."
+     ]
+    ]
+   ],
+   "VO": [
+    "Voice at Work",
+    [
+     [
+      "Reading your own contract for the four clauses that will matter, before they matter.",
+      "Locate notice, hours, duties and termination in your own contract and summarise each."
+     ],
+     [
+      "Working time, rest breaks, and the difference between what is offered and what is required.",
+      "State the legal minimum where you are and compare it to your actual pattern."
+     ],
+     [
+      "Reading a payslip line by line, and what to do when the number is wrong.",
+      "Reconcile one payslip against hours worked and the stated rate."
+     ],
+     [
+      "A grievance is a process with steps and timescales, and it works better written than spoken.",
+      "Draft a grievance for a real or worked example, following the actual process."
+     ],
+     [
+      "What a union is, what it can and cannot do, and how membership actually functions.",
+      "Explain to somebody else what a union does, without slogans in either direction."
+     ],
+     [
+      "When a problem is yours alone and when it is shared, and why that changes the route.",
+      "Take one workplace problem and argue both framings."
+     ],
+     [
+      "Discrimination, the categories protected where you are, and the specific route for it.",
+      "Identify the route and the time limit that applies where you work."
+     ],
+     [
+      "Disclosure in the public interest: what is protected, what is not, and the order of steps.",
+      "Map the internal route and the point at which external disclosure becomes protected."
+     ],
+     [
+      "Redundancy as a process with consultation, selection and entitlement, each contestable.",
+      "Calculate the notice and payment owed in a worked example."
+     ],
+     [
+      "Leaving without burning what you built, and what you are entitled to take.",
+      "Write a resignation and handover that a former manager would give a reference after."
+     ]
+    ]
+   ],
+   "LD": [
+    "Lead Practitioner",
+    [
+     [
+      "The shift from doing the work to being accountable for it, and what changes on day one.",
+      "Write down what you will stop doing yourself, and tell your team."
+     ],
+     [
+      "Delegating the whole task with the authority attached, and staying available without hovering.",
+      "Delegate one real task with a written brief and an agreed check-in."
+     ],
+     [
+      "Preparing a hard conversation so that the fact leads and the judgement follows.",
+      "Script the opening two sentences of a real conversation and have them critiqued."
+     ],
+     [
+      "Describing performance in observable behaviour rather than a number, and why the number distorts.",
+      "Rewrite one scored assessment as a description of what was observed."
+     ],
+     [
+      "Hiring against a real constraint, and what you can offer when money is not it.",
+      "Write the honest pitch for a role you would have to fill."
+     ],
+     [
+      "Noticing that somebody is struggling, and the boundary between support and diagnosis.",
+      "Rehearse the opening question, and name the referral you would not attempt yourself."
+     ],
+     [
+      "Enforcing a rule you would not have written, and being honest about that with your team.",
+      "Explain one such rule to your team without pretending you agree."
+     ],
+     [
+      "Managing your own manager: what to escalate, when, and in what form.",
+      "Write one escalation that gives a decision-maker exactly what a decision needs."
+     ],
+     [
+      "A team after a departure is a different team, and pretending otherwise costs more.",
+      "Run a redistribution conversation and publish what changed for whom."
+     ],
+     [
+      "The obligations of the role, and the ones people wrongly assume come with it.",
+      "Write the two lists and check them against your organisation’s actual policy."
+     ]
+    ]
+   ]
+  },
+  "sci": {
+   "QU": [
+    "Research Explorer",
+    [
+     [
+      "The difference between a question that is interesting and one that has a possible answer.",
+      "Take a vague question and produce three answerable versions of it."
+     ],
+     [
+      "Reading structure first, methods second, abstract last, and where the real claim sits.",
+      "Read one paper this way and summarise the claim and the evidence separately."
+     ],
+     [
+      "Finding what has been tried, including the attempts that were never published.",
+      "Produce a prior-work summary that includes at least one unpublished or null result."
+     ],
+     [
+      "Framing so that a result could contradict you, which is the whole point of the exercise.",
+      "State your hypothesis and the observation that would falsify it."
+     ],
+     [
+      "Scoping to the study you can actually run with the time, money and access you have.",
+      "Cut a proposed study to what your real constraints permit, and name what you lost."
+     ],
+     [
+      "Committing to the analysis before seeing the data, and why that feels like a cost.",
+      "Write a preregistration for a small study, including the analysis plan."
+     ],
+     [
+      "Finding disagreement early, when it is cheap, rather than at review, when it is not.",
+      "Present your question to somebody likely to object and record their objection."
+     ],
+     [
+      "The literature that undercuts your idea is the most valuable literature you will read.",
+      "Find the strongest contrary paper and state what it would take to reconcile."
+     ],
+     [
+      "Stopping before you start, and why that decision is almost never rewarded.",
+      "Write the case for not running one study, and the conditions that would change it."
+     ],
+     [
+      "Writing the question first fixes the method to the question rather than the reverse.",
+      "Produce a one-page question document dated before any method is chosen."
+     ]
+    ]
+   ],
+   "ME": [
+    "Method Practitioner",
+    [
+     [
+      "Selecting an instrument for the measurement you need, not the one already on the bench.",
+      "Justify an instrument choice against the precision the question requires."
+     ],
+     [
+      "Calibration as a schedule rather than an event, and the drift that hides between them.",
+      "Produce a calibration record and identify the drift it would have caught."
+     ],
+     [
+      "Every control rules out one specific alternative explanation. Naming which.",
+      "For a real protocol, state what each control eliminates."
+     ],
+     [
+      "Deciding how many before collecting any, and what happens when you decide after.",
+      "Perform a sample size calculation and state its assumptions."
+     ],
+     [
+      "Blinding where the design permits it, and being explicit where it does not.",
+      "Identify where blinding is possible in your work and where it is not, with reasons."
+     ],
+     [
+      "Recording contemporaneously, because reconstructed records are a different kind of record.",
+      "Keep a contemporaneous log for one full procedure."
+     ],
+     [
+      "A deviation from protocol is data about the study; hiding it is data about you.",
+      "Log a real deviation with its cause and its likely effect."
+     ],
+     [
+      "Distinguishing contamination, instrument error and a genuine negative result.",
+      "Take three anomalous results and classify each with the evidence."
+     ],
+     [
+      "Writing a method somebody else could execute without asking you a question.",
+      "Hand your method to somebody who has not seen it and record every question they ask."
+     ],
+     [
+      "When the method constrains the answer, and how to notice that before publication.",
+      "Identify one methodological choice in your work that bounds what you could conclude."
+     ]
+    ]
+   ],
+   "DA": [
+    "Data Practitioner",
+    [
+     [
+      "Raw data is never edited. Everything else is a derived copy with a recorded transformation.",
+      "Produce a directory structure that makes overwriting raw data difficult."
+     ],
+     [
+      "Versioning notebooks, protocols, spreadsheets and images, not only code.",
+      "Set up and demonstrate versioning for one non-code artefact."
+     ],
+     [
+      "Missingness is information. Recording why a value is absent before deciding what to do.",
+      "Classify the missing values in one dataset by cause."
+     ],
+     [
+      "An outlier is a hypothesis about an error until you have investigated it.",
+      "Investigate one outlier and document the decision to keep or exclude."
+     ],
+     [
+      "Using the test you can explain, and citing nothing you could not derive the meaning of.",
+      "Explain one statistical test you use, in writing, without jargon."
+     ],
+     [
+      "What a p-value is, what it is not, and the four claims routinely made that it cannot support.",
+      "Correct four misstatements about p-values from real published text."
+     ],
+     [
+      "Looking at the data before modelling it, because the plot finds what the model assumes away.",
+      "Produce the diagnostic plots for one dataset before any model is fitted."
+     ],
+     [
+      "A dataset somebody else can use has a dictionary, units, provenance and a licence.",
+      "Publish one small dataset with all four present."
+     ],
+     [
+      "Consent for human data, what it covered, and the analysis it does not permit.",
+      "Read one consent form and state an analysis it would not authorise."
+     ],
+     [
+      "Nothing is deleted quietly. Removal is recorded with a reason and a name.",
+      "Demonstrate a deletion log for one real removal."
+     ]
+    ]
+   ],
+   "RP": [
+    "Reproducibility Lead",
+    [
+     [
+      "Somebody replicating your work is treating it as important. Responding accordingly.",
+      "Prepare the package a replicator would need, before anyone asks."
+     ],
+     [
+      "Attempting your own result a year later, which is the cheapest reproducibility test there is.",
+      "Reproduce one of your own results from your own records alone."
+     ],
+     [
+      "A notebook written for a stranger, because in two years you are the stranger.",
+      "Have somebody unfamiliar follow one of your notebook entries."
+     ],
+     [
+      "Capturing the environment as well as the code, since versions decide results.",
+      "Produce a runnable environment specification for one analysis."
+     ],
+     [
+      "The result that will not reproduce, and the interval before you know which of you is wrong.",
+      "Document a failed reproduction fairly, from both sides."
+     ],
+     [
+      "Publishing a null result, where to publish it, and why it matters to people you will never meet.",
+      "Draft a null result write-up to publication standard."
+     ],
+     [
+      "Correcting the record: the mechanisms, their speed, and the reputational arithmetic.",
+      "Draft a correction for a real or worked error."
+     ],
+     [
+      "Preprints, peer review, and what each one does and does not certify.",
+      "Explain to a non-specialist what peer review does and does not guarantee."
+     ],
+     [
+      "Fraud, error, and the large space between them where most problems actually live.",
+      "Classify three documented cases and defend each classification."
+     ],
+     [
+      "Reproducibility has a cost, it falls on somebody, and pretending otherwise is why it does not happen.",
+      "Cost the reproducibility work for one project and identify who pays."
+     ]
+    ]
+   ],
+   "CO": [
+    "Research Citizen",
+    [
+     [
+      "Authorship criteria, applied honestly, including the conversation held before the work starts.",
+      "Apply a published authorship standard to a real project and write the order down."
+     ],
+     [
+      "Reviewing is a debt to a system that reviewed you, and it is done properly or not at all.",
+      "Write one review to a standard you would be glad to receive."
+     ],
+     [
+      "Explaining your work without condescension and without losing the qualifications that matter.",
+      "Explain your work in five minutes to somebody outside the field, and be corrected by them."
+     ],
+     [
+      "Dual use considered at design time, when the design can still change.",
+      "Write the dual-use paragraph for your own work, honestly."
+     ],
+     [
+      "Where funding comes from, what it shapes, and what has to be declared.",
+      "Trace the funding of one paper and state what it could have influenced."
+     ],
+     [
+      "Declaring interests, including the ones that feel too small to mention.",
+      "Write your own declaration and have somebody challenge its completeness."
+     ],
+     [
+      "Mentoring as a structured obligation rather than an ambient goodwill.",
+      "Agree a written mentoring arrangement with expectations on both sides."
+     ],
+     [
+      "Leaving research without treating it as a failure, and what transfers.",
+      "Map your research skills onto three non-academic roles, specifically."
+     ],
+     [
+      "Advising government: the difference between evidence and a recommendation, and who owns each.",
+      "Write a one-page advice note that separates the two explicitly."
+     ],
+     [
+      "Public money, public accountability, and what the public is actually owed.",
+      "Produce the plain-language summary that should accompany your work."
+     ]
+    ]
+   ]
+  },
+  "rob": {
+   "MC": [
+    "Machine Explorer",
+    [
+     [
+      "Counting degrees of freedom on a real mechanism and predicting what it cannot reach.",
+      "Count them on a physical rig and demonstrate an unreachable pose."
+     ],
+     [
+      "Forward and inverse kinematics understood by moving something with your hands first.",
+      "Predict an end-effector position, then measure it."
+     ],
+     [
+      "What each sensor physically responds to, and the thing it is routinely assumed to sense instead.",
+      "For three sensors, state the physical quantity and one common misreading."
+     ],
+     [
+      "Actuators, the force available, and the limits that are structural rather than software.",
+      "Identify the limiting component in a real actuator chain."
+     ],
+     [
+      "Power budgets, and why the stated runtime and the observed runtime differ.",
+      "Measure actual runtime under load and reconcile it with the specification."
+     ],
+     [
+      "Calibrating a real machine, and the error that calibration cannot remove.",
+      "Calibrate a rig and quantify the residual error."
+     ],
+     [
+      "Mechanical failure has an acoustic signature before it has a functional one.",
+      "Identify a fault by sound and confirm it by inspection."
+     ],
+     [
+      "Maintenance as a scheduled discipline that prevents the failure rather than diagnosing it.",
+      "Produce and follow a maintenance schedule for one machine."
+     ],
+     [
+      "Reading a schematic well enough to find a component you have never seen.",
+      "Locate three components on hardware using only the schematic."
+     ],
+     [
+      "Building something that moves, which is where every abstraction gets tested.",
+      "Build a mechanism that performs one repeatable motion, and document its limits."
+     ]
+    ]
+   ],
+   "SA": [
+    "Robot Safety Practitioner",
+    [
+     [
+      "Guarding, interlocks and emergency stops: what each protects and the order they act in.",
+      "Trace the stop circuit on a real cell and identify every trigger."
+     ],
+     [
+      "The working envelope, how it is defined, and why standing in it is the recurring incident.",
+      "Mark the envelope physically and demonstrate the safe approach."
+     ],
+     [
+      "Speed and separation monitoring, and the assumptions underneath the safe distance.",
+      "State the assumptions behind one published separation distance."
+     ],
+     [
+      "A collaborative robot has reduced force, not zero force, and the distinction gets people hurt.",
+      "Demonstrate the force limit and state what it does not protect against."
+     ],
+     [
+      "Isolating energy before work, including the stored energy people forget.",
+      "Perform a full isolation and identify every stored energy source."
+     ],
+     [
+      "Risk assessment before the first run, written by the people who will operate it.",
+      "Produce a risk assessment for a real cell and have an operator challenge it."
+     ],
+     [
+      "A documented case where the safety system did its job, read for what made it work.",
+      "Present one case and identify the specific control that held."
+     ],
+     [
+      "A documented case where it did not, read without hindsight bias.",
+      "Present one case and identify what was knowable at the time."
+     ],
+     [
+      "Training somebody else on a cell, which is where your own gaps surface.",
+      "Train one person and be assessed on their competence, not yours."
+     ],
+     [
+      "The stop you hesitated on, and building the reflex before you need it.",
+      "Rehearse the stop until it is automatic, and log the response time."
+     ]
+    ]
+   ],
+   "CT": [
+    "Control Practitioner",
+    [
+     [
+      "Open loop and closed loop, felt on a real system rather than derived on a board.",
+      "Run the same task both ways and measure the difference."
+     ],
+     [
+      "Tuning a system that oscillates, and why the fast solution is usually the wrong one.",
+      "Tune a real loop and document each change and its effect."
+     ],
+     [
+      "The sense-plan-act cycle, its timing, and what happens when one stage is late.",
+      "Instrument the cycle and find the stage that limits it."
+     ],
+     [
+      "The gap between a plan made in a model and a world that was not in the model.",
+      "Run a planned motion in a disturbed environment and record the divergence."
+     ],
+     [
+      "Teleoperation, latency, and the operator behaviours that latency produces.",
+      "Operate under induced delay and describe how your own behaviour changed."
+     ],
+     [
+      "Autonomy levels described by what the human must still do, not by marketing.",
+      "Classify three real systems by what the human is required to do."
+     ],
+     [
+      "Handover between human and machine, which is where most autonomy incidents occur.",
+      "Design and test a handover protocol with an explicit acknowledgement step."
+     ],
+     [
+      "The failure mode you designed for, and proving the design actually handles it.",
+      "Induce the anticipated failure and verify the response."
+     ],
+     [
+      "The failure mode you did not, and building the system so it is at least visible.",
+      "Identify one unhandled failure and add detection for it."
+     ],
+     [
+      "Logging enough to reconstruct a failure without logging so much that nobody reads it.",
+      "Define a logging policy and reconstruct one incident from it alone."
+     ]
+    ]
+   ],
+   "DT": [
+    "Physical Data Steward",
+    [
+     [
+      "What an episode of robot data actually contains, including what was captured incidentally.",
+      "Inventory every stream in one episode, including the unintended ones."
+     ],
+     [
+      "Consent before recording, from everybody in the space and not only the operator.",
+      "Produce the consent process for a real workspace recording."
+     ],
+     [
+      "A workspace is somebody’s workplace, and recording it is recording their working day.",
+      "Write the notice a worker in that space is owed, and have one review it."
+     ],
+     [
+      "Designing capture so faces are never recorded, rather than recorded and then removed.",
+      "Demonstrate a capture configuration where faces are not acquired at all."
+     ],
+     [
+      "Constraint integrity: a dataset that preserves what was physically impossible in the scene.",
+      "Verify that one dataset’s constraints survived its processing pipeline."
+     ],
+     [
+      "Labelling that survives independent review, with the ambiguous cases marked rather than guessed.",
+      "Label a sample, have it independently relabelled, and reconcile the disagreements."
+     ],
+     [
+      "Who owns an episode you contributed, and what the licence actually permits.",
+      "Read one dataset licence and state what a downstream user may do."
+     ],
+     [
+      "Export, jurisdiction, and where the data physically comes to rest.",
+      "Trace one dataset’s path from capture to storage, naming each jurisdiction."
+     ],
+     [
+      "Withdrawal after the fact, and whether the architecture makes it possible at all.",
+      "Test a withdrawal request against a real pipeline and report where it fails."
+     ],
+     [
+      "The standard: a dataset you would be content to appear in yourself.",
+      "Apply the test to a real dataset and state what would have to change."
+     ]
+    ]
+   ],
+   "WK": [
+    "Work & Machines Lead",
+    [
+     [
+      "The job before automation and after, described by the person doing it rather than the vendor.",
+      "Interview somebody whose work was automated and write their account."
+     ],
+     [
+      "Tasks that should not be automated, and the reasons that are not efficiency reasons.",
+      "Argue one such case in your own workplace."
+     ],
+     [
+      "Retraining that starts before the equipment arrives, which is the only time it works.",
+      "Draft a retraining timeline anchored to an installation date."
+     ],
+     [
+      "Maintenance as a career rather than a consolation, and what it actually requires.",
+      "Map the competencies of a maintenance role and assess yourself against them."
+     ],
+     [
+      "Negotiating automation collectively, and what has historically been won.",
+      "Find one real agreement and identify what was secured."
+     ],
+     [
+      "Measuring what changed, including the effects that were not in the business case.",
+      "Design the measurement, including one effect the business case omitted."
+     ],
+     [
+      "The skill that became more valuable, and noticing it early enough to invest.",
+      "Identify one such skill in your trade and evidence the claim."
+     ],
+     [
+      "The skill that became less valuable, and saying so without pretending otherwise.",
+      "Identify one and describe the honest transition from it."
+     ],
+     [
+      "Teaching a machine your trade, and what is lost in the demonstrations.",
+      "Record a demonstration set and state what the machine cannot learn from it."
+     ],
+     [
+      "A workshop that adopted machines and kept its people, and the decisions that made that possible.",
+      "Present one case and identify the decisions that were not automatic."
+     ]
+    ]
+   ]
+  },
+  "gh": {
+   "PC": [
+    "Community Health Explorer",
+    [
+     [
+      "The actual scope of the role, and the boundary at which it stops and refers.",
+      "State the scope and the referral boundary, and be corrected by a supervisor."
+     ],
+     [
+      "A household visit with a structure, so the same things are covered every time.",
+      "Conduct a structured visit under observation and complete the record."
+     ],
+     [
+      "The danger signs that mean refer now, memorised rather than looked up.",
+      "Recite the danger signs and demonstrate the referral action for each."
+     ],
+     [
+      "Growth monitoring, the chart, and what a flattening line is telling you.",
+      "Plot a real series and identify the point at which action was required."
+     ],
+     [
+      "Immunisation schedules and the cold chain that decides whether the vaccine works.",
+      "Check a cold chain record and identify a break."
+     ],
+     [
+      "The three conditions that kill the most children, and what community-level action does.",
+      "Demonstrate the assessment and classification for each of the three."
+     ],
+     [
+      "Stock, consumption rates, and forecasting so the resupply arrives before the shortage.",
+      "Calculate a resupply quantity from real consumption data."
+     ],
+     [
+      "The register: why it is filled in, who reads it, and what it is not for.",
+      "Complete a register correctly and state who sees it and who does not."
+     ],
+     [
+      "Working when the facility is hours away, and what that distance changes.",
+      "Map the actual referral time and design around it."
+     ],
+     [
+      "Serving the community you belong to: the trust it buys and the confidentiality it strains.",
+      "Describe a real confidentiality conflict and the boundary you would hold."
+     ]
+    ]
+   ],
+   "MN": [
+    "Maternal & Newborn Practitioner",
+    [
+     [
+      "What antenatal contact is actually for, beyond attendance being counted.",
+      "State the purpose of each contact and what it screens for."
+     ],
+     [
+      "Danger signs in pregnancy, recognised and acted on without waiting for confirmation.",
+      "Recognise the signs in scenarios and demonstrate the action."
+     ],
+     [
+      "Birth preparedness including the transport plan, which is the part that usually fails.",
+      "Complete a birth plan with a named transport arrangement."
+     ],
+     [
+      "The first hour after birth and the small number of things that matter most in it.",
+      "Demonstrate the first-hour sequence."
+     ],
+     [
+      "Newborn danger signs, which differ from adult signs and are easily missed.",
+      "Identify newborn danger signs in scenarios and state the action."
+     ],
+     [
+      "Postnatal contact, its timing, and the period when most deaths actually occur.",
+      "State the schedule and what each visit checks."
+     ],
+     [
+      "Feeding advice that is safe to give at community level, and where it stops.",
+      "State what you may advise and what you must refer."
+     ],
+     [
+      "Sitting with loss, without a script that makes it easier for you and harder for them.",
+      "Practise the presence, and name what you would not say."
+     ],
+     [
+      "A referral that actually happens: the follow-up that turns advice into arrival.",
+      "Track one referral to completion and identify where it nearly failed."
+     ],
+     [
+      "A maternal death review as learning rather than blame, and what it requires of the room.",
+      "Participate in a review process and identify one system change it produced."
+     ]
+    ]
+   ],
+   "IN": [
+    "Infection Practitioner",
+    [
+     [
+      "Hand hygiene as a supplied, timed, monitored system rather than an instruction.",
+      "Audit hand hygiene at real moments and report compliance honestly."
+     ],
+     [
+      "Sharps, waste streams, and the injury that happens during disposal rather than use.",
+      "Demonstrate safe disposal and state the post-exposure procedure."
+     ],
+     [
+      "The first suspicion of an outbreak, and the cost of waiting for certainty.",
+      "Describe the threshold at which you would report, and to whom."
+     ],
+     [
+      "Contact tracing that finds contacts without building a surveillance record.",
+      "Design a tracing process and state what it does not retain."
+     ],
+     [
+      "Isolation a household can actually sustain, given one room and shared water.",
+      "Design an isolation plan for a real household constraint."
+     ],
+     [
+      "Vaccination where rumour is present, which is answered by relationships, not correction.",
+      "Prepare a conversation that starts from the concern rather than the fact."
+     ],
+     [
+      "Protecting the health worker, who is the resource that cannot be resupplied.",
+      "Identify your own exposure risks and the controls that exist for each."
+     ],
+     [
+      "Reporting during an outbreak, when the data is worst and matters most.",
+      "Complete an outbreak report under time pressure and check it for errors."
+     ],
+     [
+      "When the advice changes, and saying so without destroying the credibility of the next message.",
+      "Draft the message explaining a changed instruction."
+     ],
+     [
+      "What the community remembers afterwards, which shapes the next outbreak more than any plan.",
+      "Interview somebody about a past outbreak and record what stayed with them."
+     ]
+    ]
+   ],
+   "NC": [
+    "Long Conditions Practitioner",
+    [
+     [
+      "Hypertension found at home, the measurement, and what community-level follow-up looks like.",
+      "Measure correctly, twice, and state the referral threshold."
+     ],
+     [
+      "Diabetes as daily work done by the person, not by the clinic.",
+      "Build a daily routine with somebody and identify its failure points."
+     ],
+     [
+      "Why people stop taking medicine, which is rarely the reason assumed.",
+      "Interview somebody who stopped and record the actual reasons."
+     ],
+     [
+      "Mental health at community level: what may be supported, and what must be referred.",
+      "State the boundary and demonstrate a referral conversation."
+     ],
+     [
+      "Disability and the household around it, including the person doing the caring.",
+      "Assess a household’s support need including the carer’s."
+     ],
+     [
+      "Palliative care where there is no hospice, delivered by family with support.",
+      "Build a home care plan for comfort, with the family as the deliverer."
+     ],
+     [
+      "Pain relief, the law that restricts it, and the gap that leaves people in.",
+      "State the legal position where you are and the route that exists."
+     ],
+     [
+      "The medicine that is out of stock, and what you do in the interval.",
+      "Describe the interim plan and the escalation for a real stockout."
+     ],
+     [
+      "A care plan a family can actually run, written in their words.",
+      "Write one with a family and have them read it back."
+     ],
+     [
+      "Thirty years of a condition, and what changes across that time.",
+      "Map the stages of one long condition and what support each needs."
+     ]
+    ]
+   ],
+   "SY": [
+    "Health System Citizen",
+    [
+     [
+      "Supervision that develops rather than inspects, and what to ask for from it.",
+      "Prepare a supervision session with your own agenda."
+     ],
+     [
+      "Being paid on time as a health worker, and what happens to services when you are not.",
+      "Document the payment process and the point at which it breaks."
+     ],
+     [
+      "The referral chain, its breaks, and where a patient is most likely to be lost.",
+      "Trace one chain end to end and mark the break points."
+     ],
+     [
+      "Data that goes up and never comes back, and what would change if it did.",
+      "Identify one indicator you report and what you would do with it returned."
+     ],
+     [
+      "Working alongside traditional practitioners, who are usually consulted first.",
+      "Describe a working relationship that neither dismisses nor endorses."
+     ],
+     [
+      "A ministry, a donor and a project cycle, and how the three shape your work.",
+      "Map the funding behind your own role and its end date."
+     ],
+     [
+      "When the project ends: what continues, what stops, and who was told.",
+      "Write the honest continuity plan for a project ending."
+     ],
+     [
+      "Career progression for a community health worker, where it exists and where it does not.",
+      "Map the available progression where you are, including its absence."
+     ],
+     [
+      "Speaking upward for your community, with evidence rather than anecdote.",
+      "Prepare one representation with data and a specific ask."
+     ],
+     [
+      "What you cannot fix, and continuing to work without pretending you can.",
+      "Name one, and describe how you hold it."
+     ]
+    ]
+   ]
+  },
+  "mlt": {
+   "NE": [
+    "Assessment Practitioner",
+    [
+     [
+      "Establishing who is affected before deciding what they need.",
+      "Produce an affected-population estimate with its method stated."
+     ],
+     [
+      "Rapid assessment that reports its own uncertainty rather than hiding it.",
+      "Publish an assessment with explicit confidence bounds."
+     ],
+     [
+      "Counting a population in motion, where every method has a known failure.",
+      "Compare two counting methods and state what each misses."
+     ],
+     [
+      "The data the community already holds, and why it is usually collected again.",
+      "Find existing local data and use it rather than duplicating it."
+     ],
+     [
+      "Assessment fatigue: the harm of repeatedly asking people to describe their worst month.",
+      "Redesign an assessment to reduce burden and state what you gave up."
+     ],
+     [
+      "Disaggregation that changes a decision, rather than disaggregation as a compliance box.",
+      "Disaggregate one dataset and identify a decision it changes."
+     ],
+     [
+      "The gap between what is needed and what is fundable, stated rather than absorbed.",
+      "Produce both lists side by side for one context."
+     ],
+     [
+      "Reporting a need smaller than expected, which is professionally harder than the reverse.",
+      "Write the finding and the covering note."
+     ],
+     [
+      "Assessing during active conflict, where access bias is the dominant error.",
+      "State the access bias in one assessment and its likely direction."
+     ],
+     [
+      "Publishing something that disappoints the organisation that paid for it.",
+      "Draft the publication and the conversation preceding it."
+     ]
+    ]
+   ],
+   "CD": [
+    "Coordination Practitioner",
+    [
+     [
+      "What the cluster system coordinates, and what it does not.",
+      "Attend or reconstruct a cluster meeting and state what was actually decided."
+     ],
+     [
+      "A meeting worth attending, and how to make one, or leave one.",
+      "Redesign one recurring meeting around a decision it must produce."
+     ],
+     [
+      "How duplication happens without anybody intending it.",
+      "Trace one real duplication to its cause."
+     ],
+     [
+      "Sharing that somebody is served without sharing anything about them.",
+      "Design a deduplication approach that transmits no personal record."
+     ],
+     [
+      "Localisation as budget, decision rights and risk transfer, not as vocabulary.",
+      "Assess one partnership against those three, honestly."
+     ],
+     [
+      "Being the international agency in a national room, and what that costs the room.",
+      "Describe one meeting from the other participants’ position."
+     ],
+     [
+      "Handover to a national actor, planned from the start rather than at the end.",
+      "Write a handover plan with dates and named recipients."
+     ],
+     [
+      "Consortium bids, who leads, and where the overhead actually lands.",
+      "Map the money flow in one consortium structure."
+     ],
+     [
+      "Exit as a designed phase with criteria, not an event triggered by a funding date.",
+      "Write exit criteria for a running programme."
+     ],
+     [
+      "When coordination itself becomes the obstacle, and saying so.",
+      "Identify one coordination cost that exceeds its benefit and argue it."
+     ]
+    ]
+   ],
+   "AC": [
+    "Accountability Lead",
+    [
+     [
+      "A complaint mechanism people actually use, which is usually not the one that was built.",
+      "Test a mechanism from a user’s position and report what stopped you."
+     ],
+     [
+      "Feedback that changes a programme, and the loop that closes back to the person.",
+      "Trace one piece of feedback to a change and to the person being told."
+     ],
+     [
+      "Consent where refusal has a cost, which is most of this sector.",
+      "Describe how you would make refusal genuinely available."
+     ],
+     [
+      "Protection from sexual exploitation and abuse: the standards, the reporting, the obligation.",
+      "State your own obligations and the reporting route precisely."
+     ],
+     [
+      "Reporting a colleague, which is the hardest obligation in the sector.",
+      "Rehearse the report and identify the protection available to you."
+     ],
+     [
+      "Communicating a decision people will not like, without hiding behind a policy.",
+      "Deliver a difficult decision in role and be critiqued on it."
+     ],
+     [
+      "Participation that transfers a decision rather than producing a photograph.",
+      "Identify one decision you would genuinely transfer, and to whom."
+     ],
+     [
+      "Accountability while leaving, which is when it is least convenient and most owed.",
+      "Write the exit communication to the people served."
+     ],
+     [
+      "Do no harm, examined against a real programme rather than recited.",
+      "Apply the framework to a real programme and find one harm."
+     ],
+     [
+      "What people said they wanted, recorded and set beside what was delivered.",
+      "Produce the two lists for one programme."
+     ]
+    ]
+   ],
+   "PR": [
+    "Programme Practitioner",
+    [
+     [
+      "A logframe you could defend to somebody sceptical, including its assumptions.",
+      "Defend one logframe’s causal chain under challenge."
+     ],
+     [
+      "Indicators that survive contact with a real context rather than a proposal.",
+      "Test three indicators against field reality and revise them."
+     ],
+     [
+      "Cash versus in-kind: the evidence, and the conditions under which each is right.",
+      "Argue the choice for one specific context."
+     ],
+     [
+      "Targeting, and the people the targeting criteria exclude.",
+      "Identify who your targeting excludes and whether that is defensible."
+     ],
+     [
+      "Monitoring when access is limited, and the bias that introduces.",
+      "Design remote monitoring and state its blind spot."
+     ],
+     [
+      "Changing a programme mid-cycle, and the permission that requires.",
+      "Draft a revision request with the evidence for it."
+     ],
+     [
+      "Reporting failure to a donor, which is the report that improves the sector.",
+      "Write a failure report you would actually send."
+     ],
+     [
+      "What an audit looks for, and preparing without theatre.",
+      "Prepare one audit trail and have it tested."
+     ],
+     [
+      "Procurement under time pressure, and the controls that must not be dropped.",
+      "Identify the controls that survive an emergency and those that do not."
+     ],
+     [
+      "Closing a programme well, which takes longer than anybody budgets.",
+      "Produce a closure plan with a realistic timeline."
+     ]
+    ]
+   ],
+   "SF": [
+    "Staff & Security Lead",
+    [
+     [
+      "Duty of care to national staff, who carry the most risk and receive the least.",
+      "Compare the provisions for national and international staff in one organisation."
+     ],
+     [
+      "Security as a decision the team shares rather than one imposed from a capital.",
+      "Run a security decision that includes the people bearing the risk."
+     ],
+     [
+      "Stress and the year after a deployment, which is when most of it arrives.",
+      "Identify the support available at three, six and twelve months."
+     ],
+     [
+      "The evacuation that takes some people and not others, thought about beforehand.",
+      "Write the criteria in advance and test them against a scenario."
+     ],
+     [
+      "Recruiting locally and paying properly, and the market distortion argument examined.",
+      "Argue both sides of the local pay question and take a position."
+     ],
+     [
+      "Language, translation, and the power held by whoever translates.",
+      "Identify what your programme loses to translation."
+     ],
+     [
+      "A team across time zones and cultures, where the default meeting time is a decision.",
+      "Redesign a meeting pattern that does not always cost the same people."
+     ],
+     [
+      "Whistleblowing inside an agency, the protection claimed and the protection real.",
+      "Map the route and the actual protection at each step."
+     ],
+     [
+      "Burnout as a structural outcome rather than a personal failure.",
+      "Identify the structural drivers in one real team."
+     ],
+     [
+      "Why people leave the sector, asked of people who left.",
+      "Interview somebody who left and record their account without defending the sector."
+     ]
+    ]
+   ]
+  },
+  "sap": {
+   "UN": [
+    "Model Literacy Explorer",
+    [
+     [
+      "What a language model is, mechanically, at the level that predicts its behaviour.",
+      "Explain it to somebody else and have them predict a failure from your explanation."
+     ],
+     [
+      "Training data, its origins, and what that implies about what a model reflects.",
+      "Identify what a given model was trained on, and what that omits."
+     ],
+     [
+      "Fluency and accuracy are separate properties, and fluency is the one you perceive.",
+      "Find a fluent wrong answer and explain why it reads as confident."
+     ],
+     [
+      "Stated confidence is not calibrated probability, and treating it as one is the common error.",
+      "Collect five confident answers and check them."
+     ],
+     [
+      "Prompting as a skill with technique, limits, and diminishing returns.",
+      "Improve one task’s output measurably and document what changed."
+     ],
+     [
+      "Asking the same question five ways to see the variance the single answer hides.",
+      "Run the experiment and report the spread."
+     ],
+     [
+      "Checking an answer in a domain where you cannot judge it, which is the real problem.",
+      "Design a verification route for a domain outside your expertise."
+     ],
+     [
+      "Fabrication as a property of the mechanism rather than a defect to be patched out.",
+      "Explain why it happens, from the mechanism."
+     ],
+     [
+      "What a model cannot know about you, and the inferences it will make anyway.",
+      "List what it actually has and what it is inferring."
+     ],
+     [
+      "Reading a model card for the limitations rather than the benchmarks.",
+      "Read one and state three limitations in your own words."
+     ]
+    ]
+   ],
+   "US": [
+    "Assisted Work Practitioner",
+    [
+     [
+      "Identifying the tasks where assistance genuinely helps, from evidence rather than habit.",
+      "Test one task both ways and measure the difference."
+     ],
+     [
+      "The tasks where it degrades the work, including ones where the degradation is invisible.",
+      "Find one and describe how the failure would be missed."
+     ],
+     [
+      "Disclosure: when to say you used one, to whom, and in what form.",
+      "Write a disclosure statement for one real piece of work."
+     ],
+     [
+      "The line between your work and assisted work, drawn by you before somebody draws it for you.",
+      "Define your own line and defend it."
+     ],
+     [
+      "Where the output goes, who retains it, and what that means for what you paste in.",
+      "Read one service’s retention terms and state what leaves your control."
+     ],
+     [
+      "Confidential information and the box: the rule, and the reason people break it.",
+      "Identify what you may not paste, and the pressure that would make you."
+     ],
+     [
+      "A model in a hiring decision, and what a candidate is owed.",
+      "State what an applicant should be told, and the recourse they should have."
+     ],
+     [
+      "A model marking your work, and the appeal route that should exist.",
+      "Design the appeal route you would want."
+     ],
+     [
+      "Refusing to use one, and making the refusal legible rather than merely stubborn.",
+      "Write the refusal in terms somebody could act on."
+     ],
+     [
+      "Keeping a skill you have delegated, which requires deliberately not delegating it sometimes.",
+      "Design a practice schedule for one delegated skill."
+     ]
+    ]
+   ],
+   "HA": [
+    "Harms Analyst",
+    [
+     [
+      "Bias you can measure, the metrics that exist, and what each metric misses.",
+      "Apply one fairness metric to a real output set and state its blind spot."
+     ],
+     [
+      "Bias you cannot measure, which is most of it, and reasoning about it anyway.",
+      "Identify one unmeasurable bias in a real system and argue its likely direction."
+     ],
+     [
+      "Automating a decision about a person, and the threshold at which that becomes unacceptable.",
+      "Take one decision and argue where the line sits."
+     ],
+     [
+      "Services whose value proposition is surveillance, recognised from the design.",
+      "Identify the surveillance in one product presented as convenience."
+     ],
+     [
+      "Synthetic media of a real person, and what that person is owed.",
+      "State the obligations, and the recourse that currently exists."
+     ],
+     [
+      "Persuasion delivered warmly, and why warmth defeats scepticism.",
+      "Analyse one persuasive interaction and identify the mechanism."
+     ],
+     [
+      "Dependency and what it costs, including the capabilities that quietly stop being practised.",
+      "Audit your own dependence on one system and what you would lose."
+     ],
+     [
+      "Children interacting with systems that reason, and the protections that do not yet exist.",
+      "State what protection you would require, and why the current position fails it."
+     ],
+     [
+      "Work that disappears, described by the people whose work it was.",
+      "Find one account and present it without softening."
+     ],
+     [
+      "Concentration of ownership, and why it is a governance question rather than a market one.",
+      "Map who controls the systems in one domain and what that permits."
+     ]
+    ]
+   ],
+   "GV": [
+    "Governance Practitioner",
+    [
+     [
+      "Who actually decides what a system may do, traced to named accountable people.",
+      "Trace one real system to a named decision-maker."
+     ],
+     [
+      "A gate is a person because accountability requires somebody who can be asked and answer.",
+      "Identify a gate in a real system and the person behind it, or its absence."
+     ],
+     [
+      "Auditing a system you cannot inspect, and the techniques that work from outside.",
+      "Design an external audit for a system you have no access to."
+     ],
+     [
+      "Regulatory lag, why it exists, and what fills the gap in the interval.",
+      "Identify one gap and what is currently filling it."
+     ],
+     [
+      "An impact assessment that would change a decision, versus one that documents a decision.",
+      "Read one and state whether it could have changed anything."
+     ],
+     [
+      "Redress when a system is wrong: the route, its cost, and who can actually use it.",
+      "Map a real redress route and identify who is excluded by its cost."
+     ],
+     [
+      "Open weights: the strongest argument on each side, stated by somebody who holds neither.",
+      "Present both cases to a standard each side would accept."
+     ],
+     [
+      "Compute, energy and water as physical inputs with locations and local consequences.",
+      "Locate one data centre and identify its local resource impact."
+     ],
+     [
+      "International agreement, what it can bind, and where it stops.",
+      "Identify one agreement and the enforcement it actually has."
+     ],
+     [
+      "A refusal written down, versioned, and repealable only in public.",
+      "Write one refusal and the procedure by which it could be repealed."
+     ]
+    ]
+   ],
+   "FU": [
+    "Citizen of a Technical Society",
+    [
+     [
+      "Work and what it is for, asked before asking what should be automated.",
+      "Write your own answer and test it against three people’s."
+     ],
+     [
+      "What education is for once retrieval is free, which was always the real question.",
+      "Argue what should be taught that was not being taught before."
+     ],
+     [
+      "What only people can do, argued carefully rather than asserted comfortably.",
+      "Make the argument and have somebody attack it."
+     ],
+     [
+      "Care as the economy that does not automate away, and what that implies about its pay.",
+      "Follow the argument to its conclusion about wages."
+     ],
+     [
+      "Deciding not to build something, and the institutional conditions that allow that decision.",
+      "Identify one thing that was not built, and why."
+     ],
+     [
+      "A technology arriving before its rules, and what happens in the interval.",
+      "Find a historical parallel and state what the interval cost."
+     ],
+     [
+      "Citizenship in a society whose infrastructure you cannot inspect.",
+      "Identify what you would need to be a competent citizen here."
+     ],
+     [
+      "Explaining this to somebody older, without condescension and without overclaiming.",
+      "Do it, and be assessed by them."
+     ],
+     [
+      "Explaining it to somebody younger, who will live with the consequences longer.",
+      "Do it, and be assessed by them."
+     ],
+     [
+      "The world you would choose, written down, because a preference not stated is not a preference.",
+      "Write it, specifically enough to be disagreed with."
+     ]
+    ]
+   ]
+  }
+ }
+}

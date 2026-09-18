@@ -1,14 +1,15 @@
 # The Curriculum Review Board — first-meeting packet
 
-> Everything the board needs for its first sitting, drawn from the repository at the version in `VERSION` and checked by the tests: the checklist as a working form, the standing queue in the order the governance page sets, and the first decision on the agenda. The process itself is [`GOVERNANCE.md`](GOVERNANCE.md); the cohort side is [`COHORT_ONBOARDING.md`](COHORT_ONBOARDING.md); `tools/cohort_report.py` turns a cohort's evidence into the packet for every sitting after this one.
+> Everything the board needs for its first sitting, drawn from the repository at the version in `VERSION` and checked by the tests: the checklist as a working form, the standing queue in the order the governance page sets, and the decisions on the agenda. Every decision's canonical status — id, motion, outcome, who signed — lives in one file, [`data/policy/decisions.json`](../data/policy/decisions.json) (`cx-boarddecision/1`), not in this prose; adopting, rejecting or amending one is a data edit there rather than an edit to several documents. The process itself is [`GOVERNANCE.md`](GOVERNANCE.md); the cohort side is [`COHORT_ONBOARDING.md`](COHORT_ONBOARDING.md); `tools/cohort_report.py` turns a cohort's evidence — and the open decisions — into the packet for every sitting after this one.
 
 ## Sitting one — agenda
 
 1. Seat the board: three to seven reviewers, at minimum a practising educator, a rotating subject-matter reviewer, and an accessibility/equity reviewer; recusals recorded (`GOVERNANCE.md`, *The board*).
 2. Adopt the six-point checklist below as the standard and the form.
-3. **First decision: the 24 proposed credential names** (Finding 6, `DATA_REVIEW.md`; applied through the pipeline in v0.52.0 as a counted correction, proposed and not yet adopted). Adopt, amend or return each; the names live in `data/promotions/*.json` and a change is a PATCH release.
-4. Order the standing queue (below) and assign the first pack to a reviewer pair.
-5. Set the cadence: one pack per sitting until the classroom-facing packs are clear; evidence packets from cohorts at every sitting.
+3. **First decision — BD-1, the 24 proposed credential names** (Finding 6, `DATA_REVIEW.md`; applied through the pipeline in v0.52.0 as a counted correction, proposed and not yet adopted). Adopt, amend or return each; the names live in `data/promotions/*.json`, the decision's record in `data/policy/decisions.json`, and a change to either is a PATCH release.
+4. **Second decision — BD-2, the Empathy & Emotional Intelligence "Emotions at Work" group** (Finding 6, "What remains"): complete it as a full 50-block track and name its credential, or retire the credential field on its 33 rows. No motion is drafted — this is the shape choice the group needs before there is a name to vote on; the board's answer goes straight into `data/policy/decisions.json`.
+5. Order the standing queue (below) and assign the first pack to a reviewer pair.
+6. Set the cadence: one pack per sitting until the classroom-facing packs are clear; evidence packets — and the open-decisions list — from cohorts at every sitting.
 
 ## The review checklist — as a form
 
@@ -55,6 +56,31 @@ Each replaced the bare level word *Practitioner* that arrived with the v0.1.0 im
 | Water, Land & Climate | Climate, read locally | **Local Climate Reader** |
 | Water, Land & Climate | Energy where you live | **Home Energy Reader** |
 | Water, Land & Climate | Resilience when it arrives | **Resilience Planner** |
+
+Recorded as `BD-1` in `data/policy/decisions.json`, outcome `proposed`. This
+correction is unconditional in the pipeline already (`tools/normalize_blocks.py`)
+and does not wait on the board's sign-off to apply — adopting `BD-1` records
+the board's decision; it changes no dataset output.
+
+## Second decision — the Empathy & Emotional Intelligence "Emotions at Work" group
+
+Thirty-three rows — eleven themes, three to seven bands each — still carry
+the bare word *Practitioner*: the pack's fifth theme group, the only one of
+the five with no credential name (the other four are already *Self-Reader*,
+*Other-Reader*, *Repairer*, *Room-Reader* in the dataset). It has no
+50-block/five-band shape to hang a name on the way the 24 tracks above do.
+Recorded as `BD-2` in `data/policy/decisions.json`, outcome `open` — no
+motion is drafted because the choice comes first:
+
+| Option | What it means |
+|---|---|
+| `complete_track` | Author the 17 blocks the group is short of the standard shape, then draft a name in the pack's own style for the board's next sitting. |
+| `retire_field` | Leave the group at its current shape and remove the credential field's meaning for these rows, rather than force a name onto an incomplete grouping. |
+
+Once the board picks, `data/promotions/empathy-emotional-intelligence.json`
+names the credential (if `complete_track`) and `BD-2`'s outcome moves to
+`adopted` in the same change — `tools/normalize_blocks.py`'s
+`credential_decision_ready()` applies the correction only once that happens.
 
 ## The standing queue
 

@@ -197,6 +197,49 @@ def test_credential_naming_debt_does_not_grow():
           not new_offenders, f"{new_offenders}")
 
 
+def test_board_decisions_gate_credential_correction():
+    """cx-boarddecision/1 (data/policy/decisions.json, roadmap prompt 9): the
+    credential correction above is the one deliberate exception to
+    fill-empty-only. A promotion's track may name a `decision` id; the
+    correction then fires only once that id is recorded as adopted —
+    proven here with fixture ids, not the committed file, so this test
+    never depends on what the board has actually decided."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from normalize_blocks import credential_decision_ready
+    check("no decision id: the correction fires unconditionally (BD-1, grandfathered from before this mechanism existed)",
+          credential_decision_ready(None, set()))
+    check("a named decision id with no adopted decisions at all: withheld",
+          not credential_decision_ready("FIXTURE-1", set()))
+    check("a named decision id while a DIFFERENT one is adopted: still withheld",
+          not credential_decision_ready("FIXTURE-1", {"FIXTURE-OTHER"}))
+    check("a named decision id once that exact id is adopted (a fixture decision): fires",
+          credential_decision_ready("FIXTURE-1", {"FIXTURE-1"}))
+
+
+def test_board_decisions_file():
+    """data/policy/decisions.json: shape validation, plus the live claim that
+    grounds "with no adopted decision nothing changes" — nothing in the
+    committed file is adopted yet, so load_decisions() returns empty and no
+    gated correction can be firing silently. A decision going live belongs
+    in the same change as updating this check and the ratchets above."""
+    doc = json.loads((ROOT / "data" / "policy" / "decisions.json").read_text(encoding="utf-8"))
+    check("decisions.json declares its spec", doc.get("spec") == "cx-boarddecision/1")
+    decisions = doc.get("decisions", [])
+    check("at least one decision is recorded", len(decisions) > 0)
+    ids = [d.get("id") for d in decisions]
+    check("every decision id is present and unique", all(ids) and len(ids) == len(set(ids)), ids)
+    allowed = {"proposed", "adopted", "rejected", "open"}
+    bad = [d.get("id") for d in decisions if d.get("outcome") not in allowed]
+    check("every decision carries a valid outcome", not bad, bad)
+    missing = [d.get("id") for d in decisions if not d.get("motion") or "signed_by" not in d or "date" not in d]
+    check("every decision carries a motion, a date field and a signed_by list", not missing, missing)
+    sys.path.insert(0, str(ROOT / "tools"))
+    from normalize_blocks import load_decisions
+    adopted = load_decisions()
+    check("no committed decision is adopted yet — nothing changes silently",
+          not adopted, f"adopted: {adopted}")
+
+
 # ---------------------------------------------------------------- honesty stances
 LOCAL_NUMBER = re.compile(r"\b(?:Local|Lodge|Chapter|Branch)\s+(?:No\.?\s*)?\d+", re.I)
 
@@ -627,9 +670,11 @@ def test_v1_gate_materials():
     check("onboarding: names the checksum step and the unmodified-release rule", "sha256sum -c apps/CHECKSUMS.sha256" in onb and "unmodified" in onb)
     r = subprocess.run([sys.executable, str(ROOT / "tools" / "cohort_report.py")], capture_output=True, text=True, cwd=ROOT)
     check("cohort report: runs on the sample evidence", r.returncode == 0, r.stderr[-200:])
-    for sec in ("## 1. The cohort at a glance", "## 3. Revision priorities", "## 5. Standing-queue status", "## 6. The v1.0 gate"):
+    for sec in ("## 1. The cohort at a glance", "## 3. Revision priorities", "## 5. Standing-queue status", "## 6. The v1.0 gate", "## 7. Open board decisions"):
         check(f"cohort report: has section {sec[3:24]}", sec in r.stdout)
     check("cohort report: evidence proposes, the board disposes", "Evidence proposes; the board disposes" in r.stdout)
+    check("cohort report: lists both open decisions (neither is adopted yet)",
+          "BD-1" in r.stdout and "BD-2" in r.stdout)
 
 
 def test_durable_lists_and_restore():

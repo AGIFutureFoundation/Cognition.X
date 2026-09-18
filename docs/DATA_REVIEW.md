@@ -316,10 +316,15 @@ changed.
 | | Energy where you live | Home Energy Reader |
 | | Resilience when it arrives | Resilience Planner |
 
-**Status: proposed, not adopted.** `docs/GOVERNANCE.md` reserves authored
-curriculum content to the review board; these names are drafting for it
-and are its first agenda item. Adopting, renaming or rejecting any of
-them is a data edit to the promotion file and a PATCH release.
+**Status: proposed, not adopted — recorded as `BD-1` in
+`data/policy/decisions.json`** (`cx-boarddecision/1`, added v0.109.0;
+`docs/BOARD_PACKET.md` reads the same file rather than carrying its own
+copy of this status). `docs/GOVERNANCE.md` reserves authored curriculum
+content to the review board; these names are drafting for it and are its
+first agenda item. Adopting, renaming or rejecting any of them is a data
+edit to the promotion file and a PATCH release; the correction itself
+predates this decision record and applies unconditionally regardless of
+`BD-1`'s outcome (`tools/normalize_blocks.py` `credential_decision_ready`).
 
 **What remains.** 33 rows — the *Empathy & Emotional Intelligence* pack's
 (EW) theme group — still carry “Practitioner”. They have no track to
@@ -327,5 +332,11 @@ hang a credential on: eleven themes with three-to-seven bands each, not
 the 50-block shape, so the promotion mechanism cannot reach them without
 first authoring the missing blocks. The ratchet in `tests/test_platform.py`
 now reads **33 rows · 0 tracks · 0 split tracks** and can only go down.
-The board's choice: complete the group as a track (17 authored blocks) or
-retire the credential field on those rows.
+The board's choice — complete the group as a track (17 authored blocks) or
+retire the credential field on those rows — is recorded as the open
+decision `BD-2` in `data/policy/decisions.json`; this is also where the
+decision-gate mechanism this file's promotions have used unconditionally
+since v0.52.0 was generalized (v0.109.0) so a *future* credential
+correction can be made contingent on a board decision's outcome, proven
+with a fixture decision in `tests/test_platform.py` rather than by
+pre-empting `BD-2` with an authored name.

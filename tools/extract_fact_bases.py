@@ -38,7 +38,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = ROOT / "apps" / "education-os" / "template.html"
 BUILT = ROOT / "apps" / "education-os" / "index.html"
 LAYERS = ["regions", "regionHubs", "parishes", "wlb", "wlbPrinciples", "lak12", "lak12Threads",
-          "siteIndex", "seEditions"]
+          "siteIndex", "seEditions", "buildStatus", "fxAuthored", "fxPack2"]
 
 
 def _literal_from_template(t, name):
@@ -89,7 +89,8 @@ def extract():
         "standards:wlb.standards,seal:wlb.seal},"
         "principles:wlbPrinciples.map(x=>({p:x.p,src:x.src,teach:x.teach,strands:x.strands})),"
         "k12:{grades:lak12,threads:lak12Threads},"
-        "siteIndex:siteIndex,seEditions:seEditions}));")
+        "siteIndex:siteIndex,seEditions:seEditions,"
+        "buildStatus:buildStatus,fxAuthored:fxAuthored,fxPack2:fxPack2}));")
     with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as f:
         f.write(js)
         path = f.name
@@ -157,6 +158,44 @@ def documents(fb):
                      "Illustrative presets only — no company relationships implied, per the "
                      "app's own disclaimer text."),
             "entries": fb["seEditions"],
+        },
+        ROOT / "data" / "education_os" / "build_status.json": {
+            "note": ("The Education OS app's Build Status / Release Plan table — canonical "
+                     "here since v0.109.0 (prompt 7, the template diet close-out: this "
+                     "literal was 49.8 KB in apps/education-os/template.html; extracted once "
+                     "by hand and now round-tripped by tools/extract_fact_bases.py, injected "
+                     "in place by tools/build_education_os.py at the __CXFACT:buildStatus__ "
+                     "placeholder). Each row is [component, status, production step] for one "
+                     "dated release entry; the app's Build Status view renders this array "
+                     "verbatim."),
+            "entries": fb["buildStatus"],
+        },
+        ROOT / "data" / "education_os" / "fx_authored.json": {
+            "note": ("The Education OS app's authored Future-Work track content, keyed by "
+                     "sector-OS edition then track id as [credential, [[description, "
+                     "transfer check] x10]] — canonical here since v0.109.0 (prompt 7, the "
+                     "template diet close-out: this literal was 47.3 KB in "
+                     "apps/education-os/template.html; extracted once by hand and now "
+                     "round-tripped by tools/extract_fact_bases.py, injected in place by "
+                     "tools/build_education_os.py at the __CXFACT:fxAuthored__ placeholder). "
+                     "The builder, block base, layer registry, ladder and conformance runner "
+                     "all read this object directly; a track absent here renders hollow by "
+                     "the app's own refusal rule."),
+            "entries": fb["fxAuthored"],
+        },
+        ROOT / "data" / "education_os" / "fx_pack2.json": {
+            "note": ("The Education OS app's second Future-Work pack — additional tracks "
+                     "merged into DATA.fxEditions and DATA.fxAuthored at runtime by the "
+                     "app's own fxPackMerge() — canonical here since v0.109.0 (prompt 7, the "
+                     "template diet close-out: this literal was 47.9 KB in "
+                     "apps/education-os/template.html; extracted once by hand and now "
+                     "round-tripped by tools/extract_fact_bases.py, injected in place by "
+                     "tools/build_education_os.py at the __CXFACT:fxPack2__ placeholder). "
+                     "Keyed by sector-OS edition to a list of [track id, track title, "
+                     "credential, [[title, description, transfer check] x10]] rows; a track "
+                     "id colliding with an existing one in the same edition is refused by "
+                     "the app's own merge guard, not by this file."),
+            "entries": fb["fxPack2"],
         },
     }
 

@@ -140,6 +140,28 @@ def main():
         f"({', '.join(sorted(creds & LEVEL_WORDS)) or 'none'}), leaving "
         f"**{len(creds - LEVEL_WORDS):,}** real credentials.",
         "",
+        "## Board decisions",
+        "",
+        "`data/policy/decisions.json` (`cx-boarddecision/1`) is the one file",
+        "docs/BOARD_PACKET.md and this dashboard both read for a decision's",
+        "status — no more editing prose in each by hand. A promotion may name a",
+        "decision id on a track; its credential correction then applies only",
+        "once that id is recorded here as adopted (`tools/normalize_blocks.py`",
+        "`credential_decision_ready`); a promotion naming none, like the",
+        "original 24 tracks above, is unaffected and applies unconditionally.",
+        "",
+        "| id | motion | outcome |", "|---|---|---|",
+    ]
+    decisions_path = ROOT / "data" / "policy" / "decisions.json"
+    decisions = json.loads(decisions_path.read_text(encoding="utf-8"))["decisions"] if decisions_path.exists() else []
+    for d in decisions:
+        motion = d["motion"]
+        lines.append(f"| {d['id']} | {motion[:140] + '…' if len(motion) > 140 else motion} | **{d['outcome']}** |")
+    lines += [
+        "",
+        f"{sum(1 for d in decisions if d['outcome'] != 'adopted')} of {len(decisions)} decisions are open "
+        "(not yet adopted) — see `tools/cohort_report.py`'s packet for the full motion text.",
+        "",
     ]
     text = "\n".join(lines)
     changed = (not OUT.exists()) or OUT.read_text(encoding="utf-8") != text
