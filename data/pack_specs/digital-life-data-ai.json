@@ -10,52 +10,122 @@
         {
           "theme": "What a device knows about you",
           "description": "The sensors, logs and identifiers a phone or laptop carries, and which of them keep working when the screen is off.",
-          "transfer_check": "Open the settings of a real device and list three things it records that you did not switch on."
+          "transfer_check": "Open the settings of a real device and list three things it records that you did not switch on.",
+          "bands": {
+            "K–2": "Name one thing a tablet remembers, with an adult looking at settings together.",
+            "3–5": "Find two things a family device remembers about its use, with an adult.",
+            "6–8": "List three sensors or logs on a real device that work even with the screen off, with a checker.",
+            "9–10": "Audit a real device's sensors and logs and say which keep working with the screen off.",
+            "11–12": "Explain to a younger user, with evidence from settings, what a device tracks and why it matters."
+          }
         },
         {
           "theme": "An account is a key, not a place",
           "description": "What an account actually is, what the provider holds, and what you lose the day it is closed or locked.",
-          "transfer_check": "Pick one account you rely on and write down what would be lost if it vanished tonight, then export or copy the one thing that matters most."
+          "transfer_check": "Pick one account you rely on and write down what would be lost if it vanished tonight, then export or copy the one thing that matters most.",
+          "bands": {
+            "K–2": "Say what a login and password are for, with an adult's help.",
+            "3–5": "Explain why a shared family account still needs its own password for you.",
+            "6–8": "Explain what a provider can see or do with your account, with a checker.",
+            "9–10": "Explain, for a real account you use, exactly what the provider holds and controls.",
+            "11–12": "Teach someone new to a service what an account actually is and is not, in their own words."
+          }
         },
         {
           "theme": "Passwords, passkeys and the second factor",
           "description": "Why one strong secret per account beats one clever secret everywhere, and what a second factor actually defends against.",
-          "transfer_check": "Turn on a second factor for a real account and explain what attack it just blocked."
+          "transfer_check": "Turn on a second factor for a real account and explain what attack it just blocked.",
+          "bands": {
+            "K–2": "Help an adult pick a strong password by making it long and silly together.",
+            "3–5": "Make up one long, strong password of your own for a practice account.",
+            "6–8": "Set up a second factor on a real account, with a checker confirming it works.",
+            "9–10": "Set up passkeys or a second factor on every real account that offers one.",
+            "11–12": "Explain to a household why one strong secret per account beats reusing one clever one."
+          }
         },
         {
           "theme": "Recovery: proving you are you",
           "description": "Recovery emails, codes and trusted contacts — the quiet path attackers love and owners forget.",
-          "transfer_check": "Run the account-recovery path for one of your accounts before you need it and record where it broke or held."
+          "transfer_check": "Run the account-recovery path for one of your accounts before you need it and record where it broke or held.",
+          "bands": {
+            "K–2": "Tell an adult which grown-up should be able to help you get back into an account.",
+            "3–5": "Write down a trusted adult's name as your account's recovery contact.",
+            "6–8": "Set a real recovery email or code for one of your own accounts, with a checker.",
+            "9–10": "Configure recovery methods on your own real accounts without help.",
+            "11–12": "Set up and explain a family's recovery plan across several real accounts."
+          }
         },
         {
           "theme": "The shared device",
           "description": "Profiles, guest modes and what a borrowed or family device remembers of the person who used it.",
-          "transfer_check": "Set up a shared device so two people can use it without reading each other's messages, and demonstrate it."
+          "transfer_check": "Set up a shared device so two people can use it without reading each other's messages, and demonstrate it.",
+          "bands": {
+            "K–2": "Find your own profile picture on a shared family tablet, with an adult.",
+            "3–5": "Switch to your own profile on a shared device without mixing up files.",
+            "6–8": "Set up a guest mode on a shared device correctly, with a checker.",
+            "9–10": "Configure a shared device's profiles so no one sees another's files by accident.",
+            "11–12": "Set up a household's shared devices with profiles and guest modes for every member."
+          }
         },
         {
           "theme": "Updates, backups and the boring habits",
           "description": "What an update actually patches, what a backup actually restores, and the schedule that makes both invisible.",
-          "transfer_check": "Restore one real file from a backup you made yourself."
+          "transfer_check": "Restore one real file from a backup you made yourself.",
+          "bands": {
+            "K–2": "Watch an adult install an update and ask what it changed.",
+            "3–5": "Remind an adult when a device says it needs an update.",
+            "6–8": "Run a real update and a real backup on a device, with a checker confirming both worked.",
+            "9–10": "Keep a real device updated and backed up on your own schedule.",
+            "11–12": "Set up automatic updates and backups for a household's devices and explain why each matters."
+          }
         },
         {
           "theme": "When a device is lost or taken",
           "description": "Remote lock, remote wipe and the order of phone calls in the first hour after a device disappears.",
-          "transfer_check": "Write the first-hour checklist for your own device, with the real account names, and test that you can trigger the lock."
+          "transfer_check": "Write the first-hour checklist for your own device, with the real account names, and test that you can trigger the lock.",
+          "bands": {
+            "K–2": "Practice saying who to tell first if a family tablet goes missing, with an adult.",
+            "3–5": "Name the first three calls to make if a device is lost, with an adult checking.",
+            "6–8": "Use a real device's remote lock feature in a practice run, with a checker.",
+            "9–10": "Remote-lock or wipe a real lost device and make the right calls in the right order.",
+            "11–12": "Write a lost-device plan for a household and walk someone else through it."
+          }
         },
         {
           "theme": "Scams that arrive as messages",
           "description": "Phishing, smishing and the urgent-parcel text: the shapes these take and the two checks that defeat most of them.",
-          "transfer_check": "Take a real suspicious message you or your family received and show, step by step, how you decided what it was."
+          "transfer_check": "Take a real suspicious message you or your family received and show, step by step, how you decided what it was.",
+          "bands": {
+            "K–2": "Point out one thing that looks wrong in a fake message an adult shows you.",
+            "3–5": "Spot two warning signs in a practice phishing text with an adult.",
+            "6–8": "Correctly identify a real phishing or smishing attempt, with a checker.",
+            "9–10": "Correctly identify and report a real scam message without help.",
+            "11–12": "Teach a family member the shapes scam messages take, using real examples you've seen."
+          }
         },
         {
           "theme": "Permissions: what an app may touch",
           "description": "Camera, contacts, location, files — reading an app's permissions as a list of things it can do without asking again.",
-          "transfer_check": "Audit the permissions of three installed apps and revoke one grant that the app does not need to do its job."
+          "transfer_check": "Audit the permissions of three installed apps and revoke one grant that the app does not need to do its job.",
+          "bands": {
+            "K–2": "Point at the camera or microphone icon when an app asks to use it, with an adult.",
+            "3–5": "Say no to one app permission that seems unnecessary, with an adult's help.",
+            "6–8": "Review a real app's permission list and turn off one unneeded one, with a checker.",
+            "9–10": "Audit every app on your own device and correct unneeded permissions.",
+            "11–12": "Explain to someone else how to read an app's permission request before granting it."
+          }
         },
         {
           "theme": "The account after a life change",
           "description": "Moving out, breaking up, leaving a job, a death in the family — the accounts that must change hands or be closed, and how.",
-          "transfer_check": "For one real or rehearsed life change, list the accounts affected and complete the handover or closure steps for one of them."
+          "transfer_check": "For one real or rehearsed life change, list the accounts affected and complete the handover or closure steps for one of them.",
+          "bands": {
+            "K–2": "Ask an adult what happens to an account when someone moves house.",
+            "3–5": "List two accounts that would need updating if your family moved, with an adult.",
+            "6–8": "Update one real account's details after a real change, with a checker.",
+            "9–10": "Handle your own account changes after a real move, job or relationship change.",
+            "11–12": "Guide a family member through updating their accounts after a major life change."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "Where a claim was born",
           "description": "Tracing a screenshot, quote or statistic back to the first place it appeared, and what changes along the way.",
-          "transfer_check": "Take one claim from today's feed and trace it to its original source, noting each hop."
+          "transfer_check": "Take one claim from today's feed and trace it to its original source, noting each hop.",
+          "bands": {
+            "K–2": "Ask an adult where a surprising claim in a video first came from.",
+            "3–5": "Trace a simple claim back to the first place it was posted, with an adult.",
+            "6–8": "Trace a real screenshot or quote back to its original source, with a checker.",
+            "9–10": "Trace a real viral claim back to where it was first posted, on your own.",
+            "11–12": "Show someone else, step by step, how you traced a real claim back to its origin."
+          }
         },
         {
           "theme": "Who is speaking and who is paying",
           "description": "Bylines, about pages, sponsors and the difference between a newsroom, a marketer and a stranger with a logo.",
-          "transfer_check": "For one article you read this week, identify the author, the publisher and the likeliest source of money, with evidence."
+          "transfer_check": "For one article you read this week, identify the author, the publisher and the likeliest source of money, with evidence.",
+          "bands": {
+            "K–2": "Point out the name of who made a video, with an adult's help.",
+            "3–5": "Find the 'about' page of a website and say who runs it, with an adult.",
+            "6–8": "Identify who is speaking and who paid for a real piece of content, with a checker.",
+            "9–10": "Identify sponsorship or bias in a real byline or about page on your own.",
+            "11–12": "Explain to someone else the difference between a reporter, an advertiser and a sponsor."
+          }
         },
         {
           "theme": "The picture that proves too much",
           "description": "Old photos in new stories, crops that change meaning, and generated images — the checks that take under two minutes.",
-          "transfer_check": "Run a reverse-image search on a real image from your feed and report what it was originally."
+          "transfer_check": "Run a reverse-image search on a real image from your feed and report what it was originally.",
+          "bands": {
+            "K–2": "Notice when a photo an adult shows you looks old or out of place.",
+            "3–5": "Spot one clue that a photo might be from a different event, with an adult.",
+            "6–8": "Check a real photo's origin using a reverse image search, with a checker.",
+            "9–10": "Verify a real photo's date and context on your own before believing it.",
+            "11–12": "Teach someone else to check a suspicious photo's origin and context."
+          }
         },
         {
           "theme": "Numbers that feel true",
           "description": "Percentages without denominators, axes that start at nine hundred, and averages that hide the person in front of you.",
-          "transfer_check": "Find one misleading number or chart in the wild and rewrite it so it says the honest version."
+          "transfer_check": "Find one misleading number or chart in the wild and rewrite it so it says the honest version.",
+          "bands": {
+            "K–2": "Notice when a chart an adult shows you looks stretched or squished.",
+            "3–5": "Spot a chart axis that doesn't start at zero, with an adult's help.",
+            "6–8": "Find the missing denominator in a real percentage claim, with a checker.",
+            "9–10": "Catch a real misleading statistic and explain what's missing, on your own.",
+            "11–12": "Explain to someone else why a real number 'feels true' but is actually misleading."
+          }
         },
         {
           "theme": "The feed is an argument",
           "description": "Ranking, recommendation and why two people searching the same words see different worlds.",
-          "transfer_check": "Compare the same search or topic across two accounts or devices and document three differences in what was shown."
+          "transfer_check": "Compare the same search or topic across two accounts or devices and document three differences in what was shown.",
+          "bands": {
+            "K–2": "Notice that your tablet shows different things than an adult's, with their help.",
+            "3–5": "Compare what you and a family member see in the same app, with an adult.",
+            "6–8": "Explain why two real searches on the same term differ, with a checker.",
+            "9–10": "Explain, for a real feed, how ranking shapes what you see and why.",
+            "11–12": "Teach someone else how a real recommendation feed is built to keep them there."
+          }
         },
         {
           "theme": "Headlines and the gap before the click",
           "description": "What a headline is for, what it leaves out, and the habit of reading before sharing.",
-          "transfer_check": "Take three headlines, predict the substance of each story, then read them and score your predictions."
+          "transfer_check": "Take three headlines, predict the substance of each story, then read them and score your predictions.",
+          "bands": {
+            "K–2": "Guess what a headline an adult reads aloud might be hiding.",
+            "3–5": "Read a real headline and guess what it leaves out, with an adult.",
+            "6–8": "Compare a real headline to its article and name what's missing, with a checker.",
+            "9–10": "Read past a real headline before forming an opinion, on your own, every time.",
+            "11–12": "Show someone else how a real headline was written to get a click, not to inform."
+          }
         },
         {
           "theme": "Checking without an expert",
           "description": "Lateral reading: leaving the page to see what others say about the source before believing the source about itself.",
-          "transfer_check": "Fact-check one unfamiliar site by lateral reading and deliver a verdict with two independent confirmations."
+          "transfer_check": "Fact-check one unfamiliar site by lateral reading and deliver a verdict with two independent confirmations.",
+          "bands": {
+            "K–2": "Ask an adult to open another tab to check a claim together.",
+            "3–5": "Open a second website to check a claim, with an adult's help.",
+            "6–8": "Use lateral reading to check a real claim across other sources, with a checker.",
+            "9–10": "Fact-check a real claim using lateral reading on your own, without an expert.",
+            "11–12": "Teach someone else the lateral-reading method using a real claim you checked."
+          }
         },
         {
           "theme": "When the truth is genuinely unsettled",
           "description": "Live events, early science and rumours in a crisis — holding a question open without falling for the first confident answer.",
-          "transfer_check": "Pick one unsettled question in the news and write what is known, what is claimed, and what would settle it."
+          "transfer_check": "Pick one unsettled question in the news and write what is known, what is claimed, and what would settle it.",
+          "bands": {
+            "K–2": "Say 'we don't know yet' about a fast-changing story, with an adult.",
+            "3–5": "Notice that a breaking-news story keeps changing, with an adult's help.",
+            "6–8": "Track how a real unfolding story's facts changed over a week, with a checker.",
+            "9–10": "Hold uncertainty about a real unsettled event without repeating early rumours.",
+            "11–12": "Explain to someone else why early reports on a real crisis are often wrong, and why."
+          }
         },
         {
           "theme": "Your own share button",
           "description": "What resharing asserts, who inherits the correction when you are wrong, and the repair that actually works.",
-          "transfer_check": "Write and, where real, post the correction for something you or someone near you shared that turned out false."
+          "transfer_check": "Write and, where real, post the correction for something you or someone near you shared that turned out false.",
+          "bands": {
+            "K–2": "Ask an adult before sharing something you saw online.",
+            "3–5": "Explain to an adult why you want to share something before you do it.",
+            "6–8": "Decide whether to share a real post and explain your reasoning, with a checker.",
+            "9–10": "Decide, on your own, whether a real post is worth resharing and correct it if needed.",
+            "11–12": "Explain to someone else what resharing asserts and who owns the correction afterward."
+          }
         },
         {
           "theme": "Archives, receipts and what persists",
           "description": "Screenshots, archive links and edit histories — keeping evidence of what was said when it matters later.",
-          "transfer_check": "Capture one page with an archive service and explain when the archive, not the live page, is the record you want."
+          "transfer_check": "Capture one page with an archive service and explain when the archive, not the live page, is the record you want.",
+          "bands": {
+            "K–2": "Take a screenshot with an adult's help to save something important.",
+            "3–5": "Save a screenshot of something that might disappear, with an adult.",
+            "6–8": "Use an archive link to save a real page before it changes, with a checker.",
+            "9–10": "Archive a real page or edit history on your own before it disappears.",
+            "11–12": "Teach someone else how to keep a durable record of a real online claim."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "The trail you cannot see",
           "description": "Location history, search history, purchase records — the logs that accumulate by default and who can read them.",
-          "transfer_check": "Download or view one of your own data histories and name two things in it you did not expect."
+          "transfer_check": "Download or view one of your own data histories and name two things in it you did not expect.",
+          "bands": {
+            "K–2": "Ask an adult what a map app remembers about where you've been.",
+            "3–5": "Name one thing an app records about you without you seeing it, with an adult.",
+            "6–8": "Find your own real location history or search history, with a checker.",
+            "9–10": "Review and clear your own real location or search history on your own.",
+            "11–12": "Explain to someone else what a trail of invisible data looks like, using a real example."
+          }
         },
         {
           "theme": "What 'free' is paid with",
           "description": "Advertising, profiling and the trade behind a free service, read from the privacy policy's first honest paragraph.",
-          "transfer_check": "For one free service you use, state in two sentences what it collects and how it earns, citing its own policy."
+          "transfer_check": "For one free service you use, state in two sentences what it collects and how it earns, citing its own policy.",
+          "bands": {
+            "K–2": "Ask an adult why a free game keeps showing ads while you play.",
+            "3–5": "Explain that a free app makes money some other way, with an adult's help.",
+            "6–8": "Identify what a real free service is paid with, with a checker.",
+            "9–10": "Explain, for a real free service you use, exactly what you trade for it.",
+            "11–12": "Teach someone else the business model behind a real 'free' product."
+          }
         },
         {
           "theme": "Settings that actually matter",
           "description": "The five privacy switches worth finding on any service, and the many that are decoration.",
-          "transfer_check": "Change three privacy settings on a real account and explain what each now prevents."
+          "transfer_check": "Change three privacy settings on a real account and explain what each now prevents.",
+          "bands": {
+            "K–2": "Find one privacy setting on a family device with an adult.",
+            "3–5": "Turn on one privacy setting on a practice account, with an adult.",
+            "6–8": "Find and adjust two of the five privacy switches that matter on a real service, with a checker.",
+            "9–10": "Adjust all five key privacy settings on your own real accounts.",
+            "11–12": "Write a short guide to the five privacy settings worth finding on any service."
+          }
         },
         {
           "theme": "Other people's data in your hands",
           "description": "The photo with someone else in it, the contact list you upload, the group chat you screenshot — being trustworthy with data about others.",
-          "transfer_check": "Before sharing one real photo or screenshot involving another person, run a consent check and record the outcome."
+          "transfer_check": "Before sharing one real photo or screenshot involving another person, run a consent check and record the outcome.",
+          "bands": {
+            "K–2": "Ask a friend before posting a photo with them in it, with an adult watching.",
+            "3–5": "Ask permission before sharing a photo of a friend, with an adult's help.",
+            "6–8": "Get real consent before posting a real photo or contact list, with a checker.",
+            "9–10": "Handle other people's data responsibly in a real situation, on your own.",
+            "11–12": "Explain to someone else why the photo or contact list they hold belongs partly to others too."
+          }
         },
         {
           "theme": "Children, elders and the ones you manage",
           "description": "Accounts you run for someone else: what protection looks like without surveillance, at every age.",
-          "transfer_check": "For one account you manage for another person, write the rules you follow and review them with that person at their level."
+          "transfer_check": "For one account you manage for another person, write the rules you follow and review them with that person at their level.",
+          "bands": {
+            "K–2": "Help a younger sibling pick a safe picture for their profile, with an adult.",
+            "3–5": "Help set up a safe account for a younger sibling, with an adult's help.",
+            "6–8": "Set up and manage a real account for someone younger or older who needs help, with a checker.",
+            "9–10": "Manage a real account for a dependent, on your own, protecting their data properly.",
+            "11–12": "Advise a family on setting up safe accounts for children or elders in their care."
+          }
         },
         {
           "theme": "What an employer or school may see",
           "description": "Managed devices, monitored networks and the difference between your account and their account with your name on it.",
-          "transfer_check": "List which of your daily tools are managed by an institution and what each can log, then move one personal habit off them."
+          "transfer_check": "List which of your daily tools are managed by an institution and what each can log, then move one personal habit off them.",
+          "bands": {
+            "K–2": "Ask an adult what a school computer can see that you do.",
+            "3–5": "Name one thing a monitored school network might track, with an adult.",
+            "6–8": "Identify what a real managed device or monitored network actually sees, with a checker.",
+            "9–10": "Distinguish, for a real managed device, what is monitored from what is private.",
+            "11–12": "Explain to someone else the real difference between a personal and a managed device."
+          }
         },
         {
           "theme": "Data breaches and what to do after",
           "description": "Breach notices, credential stuffing and the reset-and-rotate routine that limits the damage.",
-          "transfer_check": "Check a real email address against a breach-notification service and complete the follow-up for anything found."
+          "transfer_check": "Check a real email address against a breach-notification service and complete the follow-up for anything found.",
+          "bands": {
+            "K–2": "Ask an adult what to do if a service says your information leaked.",
+            "3–5": "Explain why you'd need a new password after a leak, with an adult's help.",
+            "6–8": "Respond correctly to a real breach notice by resetting a password, with a checker.",
+            "9–10": "Handle a real breach notice on your own — reset, rotate, and check for reuse.",
+            "11–12": "Teach someone else the reset-and-rotate response to a real data breach."
+          }
         },
         {
           "theme": "Asking for your data back",
           "description": "Access, export and deletion requests — the rights that exist where you live and the buttons that exercise them.",
-          "transfer_check": "Submit one real export or deletion request and report what came back and how long it took."
+          "transfer_check": "Submit one real export or deletion request and report what came back and how long it took.",
+          "bands": {
+            "K–2": "Ask an adult what happens when you ask a company to delete something.",
+            "3–5": "Ask an adult to help you find a company's 'delete my data' option.",
+            "6–8": "Submit a real data access or deletion request, with a checker.",
+            "9–10": "Exercise your own real right to access, export or delete your data.",
+            "11–12": "Explain to someone else how the right to ask for your data back actually works."
+          }
         },
         {
           "theme": "Faces, voices and biometrics",
           "description": "What is different about data you cannot change — face, voice, fingerprint — and where it is being collected.",
-          "transfer_check": "Identify two places your biometrics are held, and for one of them find the policy on how it is stored and removed."
+          "transfer_check": "Identify two places your biometrics are held, and for one of them find the policy on how it is stored and removed.",
+          "bands": {
+            "K–2": "Notice that your face unlocks a family tablet, with an adult.",
+            "3–5": "Explain why a fingerprint can't be changed like a password, with an adult.",
+            "6–8": "Explain what makes biometric data different from a password, with a checker.",
+            "9–10": "Decide, for a real service, whether to enable biometric login and why.",
+            "11–12": "Explain to someone else the real risk of data you cannot change once it leaks."
+          }
         },
         {
           "theme": "A smaller footprint on purpose",
           "description": "Aliases, minimal sign-ups and deleting the account you no longer use — shrinking the trail without leaving modern life.",
-          "transfer_check": "Close one dormant account fully and document the steps so someone else could follow them."
+          "transfer_check": "Close one dormant account fully and document the steps so someone else could follow them.",
+          "bands": {
+            "K–2": "Help an adult delete an old account you don't use anymore.",
+            "3–5": "Find one unused account to delete, with an adult's help.",
+            "6–8": "Delete a real unused account or minimise a real sign-up, with a checker.",
+            "9–10": "Reduce your own real digital footprint on purpose, deleting what you don't need.",
+            "11–12": "Help someone else audit and shrink their real digital footprint."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "What the machine is actually doing",
           "description": "Pattern, prediction and training data — a working model of how an AI system produces an answer, without the mathematics.",
-          "transfer_check": "Explain to someone else, with one concrete example, why an AI system can be fluent and wrong at the same time."
+          "transfer_check": "Explain to someone else, with one concrete example, why an AI system can be fluent and wrong at the same time.",
+          "bands": {
+            "K–2": "Ask an adult how a talking toy guesses what to say next.",
+            "3–5": "Explain that an AI guesses the next word from patterns, with an adult's help.",
+            "6–8": "Explain pattern and prediction in a real AI tool's output, with a checker.",
+            "9–10": "Explain, using a real example, how training data shapes a real AI's answers.",
+            "11–12": "Teach someone else a working model of how a real AI tool actually works."
+          }
         },
         {
           "theme": "The question shapes the answer",
           "description": "Context, constraints and examples: asking in a way that gets useful work instead of confident filler.",
-          "transfer_check": "Take one real task, ask an AI twice — once vaguely, once well — and present both answers with the differences marked."
+          "transfer_check": "Take one real task, ask an AI twice — once vaguely, once well — and present both answers with the differences marked.",
+          "bands": {
+            "K–2": "Ask a question two different ways and see the different answers, with an adult.",
+            "3–5": "Rewrite a question to get a better answer from a helper tool, with an adult.",
+            "6–8": "Rewrite a real prompt with context and examples to get a better answer, with a checker.",
+            "9–10": "Craft a real prompt with constraints and examples to get a reliably better answer.",
+            "11–12": "Teach someone else how to shape a real question to get a useful AI answer."
+          }
         },
         {
           "theme": "Checking the machine's work",
           "description": "Verification habits for facts, citations, code and arithmetic that come out of a model.",
-          "transfer_check": "Find and document one real error in an AI answer, and show the check that caught it."
+          "transfer_check": "Find and document one real error in an AI answer, and show the check that caught it.",
+          "bands": {
+            "K–2": "Ask an adult to double-check something a helper tool said.",
+            "3–5": "Check one fact a helper tool gave you against a book or an adult.",
+            "6–8": "Verify a real AI-generated fact, citation or calculation, with a checker.",
+            "9–10": "Verify real AI output — facts, code, citations — on your own before using it.",
+            "11–12": "Teach someone else a verification habit for real AI-generated work."
+          }
         },
         {
           "theme": "What not to paste into the box",
           "description": "Secrets, other people's data and anything you could not stand to see again — what leaves your hands when you prompt.",
-          "transfer_check": "Write the do-not-paste list for your own life or workplace and apply it to three real prompts."
+          "transfer_check": "Write the do-not-paste list for your own life or workplace and apply it to three real prompts.",
+          "bands": {
+            "K–2": "Ask an adult before typing your name into a helper tool.",
+            "3–5": "Name one thing you should never type into a helper tool, with an adult.",
+            "6–8": "Identify what should never go into a real AI tool's prompt box, with a checker.",
+            "9–10": "Keep real secrets and others' data out of a real AI tool, on your own.",
+            "11–12": "Explain to someone else what never belongs in an AI prompt and why."
+          }
         },
         {
           "theme": "Where AI already decides about you",
           "description": "Feeds, prices, applications, moderation — the systems already scoring you, and which decisions you can appeal to a human.",
-          "transfer_check": "Identify two automated decisions that touched you this month and find the appeal or review path for one."
+          "transfer_check": "Identify two automated decisions that touched you this month and find the appeal or review path for one.",
+          "bands": {
+            "K–2": "Ask an adult if a computer helped decide what ad you saw.",
+            "3–5": "Name one place a computer might already be deciding things for you, with an adult.",
+            "6–8": "Identify a real system — a feed, a price, an application — shaped by AI, with a checker.",
+            "9–10": "Identify, for a real decision affecting you, where AI already played a role.",
+            "11–12": "Explain to someone else the real systems already using AI to decide about people."
+          }
         },
         {
           "theme": "Generated media and the shrinking proof",
           "description": "Voices, faces and events that never happened — what deepfakes change about evidence, and the verification that still works.",
-          "transfer_check": "Given one suspect clip or image, run a provenance check and deliver a verdict with your reasoning."
+          "transfer_check": "Given one suspect clip or image, run a provenance check and deliver a verdict with your reasoning.",
+          "bands": {
+            "K–2": "Ask an adult if a funny video of an animal talking is real.",
+            "3–5": "Spot one sign that a picture or video might be fake, with an adult.",
+            "6–8": "Identify a real generated image, voice or video, with a checker.",
+            "9–10": "Verify a real suspicious piece of media on your own before trusting it.",
+            "11–12": "Teach someone else how to spot and verify real generated media."
+          }
         },
         {
           "theme": "Doing your own work with the machine in the room",
           "description": "The line between help and substitution in school and work, and how to use AI while still becoming good at the thing.",
-          "transfer_check": "For one real assignment or task, write the usage rule you followed and show what you did yourself and what the tool did."
+          "transfer_check": "For one real assignment or task, write the usage rule you followed and show what you did yourself and what the tool did.",
+          "bands": {
+            "K–2": "Draw your own picture even when a helper tool could draw one, with an adult.",
+            "3–5": "Write your own sentence first, then compare it to a helper tool's, with an adult.",
+            "6–8": "Use a real AI tool for help without letting it replace your own real work, with a checker.",
+            "9–10": "Draw the line, on your own real assignment, between help and substitution.",
+            "11–12": "Explain to someone else where the line sits between AI help and doing the work yourself."
+          }
         },
         {
           "theme": "When the machine should not be alone",
           "description": "Medical, legal, financial and safety calls: where AI output is a draft for a human, never the decision.",
-          "transfer_check": "Take one high-stakes question, get an AI answer, then show what a qualified human source added or corrected."
+          "transfer_check": "Take one high-stakes question, get an AI answer, then show what a qualified human source added or corrected.",
+          "bands": {
+            "K–2": "Ask an adult before believing a helper tool's advice about being sick.",
+            "3–5": "Name one kind of decision a helper tool shouldn't make alone, with an adult.",
+            "6–8": "Identify a real medical, legal or safety decision that needs a human, with a checker.",
+            "9–10": "Recognise a real high-stakes decision where AI output alone is not enough.",
+            "11–12": "Explain to someone else why medical, legal or safety calls need a human in the loop."
+          }
         },
         {
           "theme": "The people inside the pipeline",
           "description": "Data labellers, moderators, artists and authors — whose work trains a model and what fairness to them looks like.",
-          "transfer_check": "Trace one AI product to two kinds of human labour it depends on, with sources."
+          "transfer_check": "Trace one AI product to two kinds of human labour it depends on, with sources.",
+          "bands": {
+            "K–2": "Ask an adult who helps teach a helper tool what is right and wrong.",
+            "3–5": "Name one kind of worker who helps make AI tools work, with an adult.",
+            "6–8": "Identify a real worker's role — labeller, moderator, artist — behind a real AI tool, with a checker.",
+            "9–10": "Explain, for a real AI product, whose labour trained or moderated it.",
+            "11–12": "Explain to someone else the real people whose work is inside an AI pipeline."
+          }
         },
         {
           "theme": "Saying no to the tool",
           "description": "Tasks where the honest answer is not to automate — and how to decline well when the pressure is to use it anyway.",
-          "transfer_check": "Name one real task you chose to do without AI, and defend the choice in a paragraph that convinces a sceptic."
+          "transfer_check": "Name one real task you chose to do without AI, and defend the choice in a paragraph that convinces a sceptic.",
+          "bands": {
+            "K–2": "Choose to do a task by hand instead of asking a helper tool, with an adult.",
+            "3–5": "Pick one task you'll do yourself instead of using a helper tool, with an adult.",
+            "6–8": "Identify a real task better done without automation, with a checker.",
+            "9–10": "Choose, for a real task, to say no to the tool and explain why.",
+            "11–12": "Teach someone else how to recognise when the honest answer is not to automate."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "The person on the other end",
           "description": "Why distance and screens loosen conduct, and the habits that keep a human in view when you type.",
-          "transfer_check": "Rewrite one real heated message — yours or a public one — so it could be said across a kitchen table."
+          "transfer_check": "Rewrite one real heated message — yours or a public one — so it could be said across a kitchen table.",
+          "bands": {
+            "K–2": "Say something kind to a friend online with an adult watching.",
+            "3–5": "Explain why a screen makes it easier to say something mean, with an adult.",
+            "6–8": "Identify a real message that forgot there was a person on the other end, with a checker.",
+            "9–10": "Catch yourself before sending a real message you wouldn't say in person.",
+            "11–12": "Explain to someone else why distance online loosens conduct, using a real example."
+          }
         },
         {
           "theme": "Groups, chats and the rules nobody wrote",
           "description": "Norms in group chats, servers and comment sections: reading them fast and knowing which ones you can change.",
-          "transfer_check": "Write down the actual rules of one group you belong to, and confirm them against what happens there in practice."
+          "transfer_check": "Write down the actual rules of one group you belong to, and confirm them against what happens there in practice.",
+          "bands": {
+            "K–2": "Notice one rule a family group chat follows, with an adult.",
+            "3–5": "Name one unwritten rule of a group chat you're in, with an adult's help.",
+            "6–8": "Read the norms of a real group chat or server correctly, with a checker.",
+            "9–10": "Read and follow the unwritten norms of a real group chat or server on your own.",
+            "11–12": "Explain to a new member the unwritten rules of a real group you belong to."
+          }
         },
         {
           "theme": "Harassment: naming it early",
           "description": "The line between disagreement, pile-on and campaign, and why targets are told it is smaller than it is.",
-          "transfer_check": "Given one real or case-study thread, mark where it crossed the line and say what the first responder should have done."
+          "transfer_check": "Given one real or case-study thread, mark where it crossed the line and say what the first responder should have done.",
+          "bands": {
+            "K–2": "Tell an adult if someone keeps saying mean things to you online.",
+            "3–5": "Explain the difference between one mean comment and many, with an adult.",
+            "6–8": "Identify a real pattern of pile-on or campaign behaviour, with a checker.",
+            "9–10": "Name a real harassment pattern early and act on it, on your own.",
+            "11–12": "Explain to someone else the line between disagreement, pile-on and campaign."
+          }
         },
         {
           "theme": "Blocking, muting, reporting",
           "description": "The tools every platform hides in a different menu, what each one actually does, and when each is the right size.",
-          "transfer_check": "Demonstrate block, mute and report on a platform you use, and match each to a situation where it is the correct tool."
+          "transfer_check": "Demonstrate block, mute and report on a platform you use, and match each to a situation where it is the correct tool.",
+          "bands": {
+            "K–2": "Find the block button with an adult's help on a family device.",
+            "3–5": "Use a mute or block button on a practice account, with an adult.",
+            "6–8": "Correctly block, mute or report a real account, with a checker.",
+            "9–10": "Choose the right tool — block, mute or report — for a real situation, on your own.",
+            "11–12": "Show someone else where every platform hides these tools and when to use each."
+          }
         },
         {
           "theme": "Being the bystander who moves",
           "description": "Documenting, checking on the target, refusing the amplification — what help looks like when the pile-on is happening.",
-          "transfer_check": "For one witnessed or case-study incident, carry out the bystander steps and record what you did and in what order."
+          "transfer_check": "For one witnessed or case-study incident, carry out the bystander steps and record what you did and in what order.",
+          "bands": {
+            "K–2": "Tell an adult if you see someone being mean to a friend online.",
+            "3–5": "Check on a friend who got a mean comment, with an adult's help.",
+            "6–8": "Document and check on a real target of online harassment, with a checker.",
+            "9–10": "Act as a bystander who moves — documenting, checking, refusing to amplify — on a real case.",
+            "11–12": "Teach someone else what an effective bystander does when harm is happening online."
+          }
         },
         {
           "theme": "The mistake that is public forever",
           "description": "Old posts, resurfaced jokes and the difference between accountability and permanent exile — for others and for your younger self.",
-          "transfer_check": "Audit your own oldest visible posts and decide, item by item, what stands, what goes, and what needs a public note."
+          "transfer_check": "Audit your own oldest visible posts and decide, item by item, what stands, what goes, and what needs a public note.",
+          "bands": {
+            "K–2": "Ask an adult before posting something you might regret later.",
+            "3–5": "Think about whether a post could embarrass you later, with an adult.",
+            "6–8": "Find and reflect on an old post that no longer fits who you are, with a checker.",
+            "9–10": "Address a real old post of your own that resurfaced, on your own.",
+            "11–12": "Explain to someone else the difference between accountability and pile-on for old posts."
+          }
         },
         {
           "theme": "Arguing so it is worth it",
           "description": "Steel-manning, asking one real question, and leaving a thread while it is still a conversation.",
-          "transfer_check": "Enter one genuine disagreement online and produce the exchange where you stated the other side to their satisfaction."
+          "transfer_check": "Enter one genuine disagreement online and produce the exchange where you stated the other side to their satisfaction.",
+          "bands": {
+            "K–2": "Ask a friend one real question instead of arguing, with an adult's help.",
+            "3–5": "Practice steel-manning a friend's point before disagreeing, with an adult.",
+            "6–8": "Ask one real clarifying question in a real disagreement, with a checker.",
+            "9–10": "Argue a real disagreement online worth having, on your own, and know when to leave it.",
+            "11–12": "Teach someone else how to steel-man an opponent's point before responding."
+          }
         },
         {
           "theme": "Money, strangers and the long con",
           "description": "Romance scams, fake marketplaces and investment 'friends' — the patience of online fraud and the tells across weeks.",
-          "transfer_check": "Map one documented long con onto a timeline and mark the three earliest moments it could have been caught."
+          "transfer_check": "Map one documented long con onto a timeline and mark the three earliest moments it could have been caught.",
+          "bands": {
+            "K–2": "Tell an adult if a stranger online asks you for anything.",
+            "3–5": "Name one sign of a scam a stranger might try online, with an adult.",
+            "6–8": "Identify a real romance scam or fake marketplace listing, with a checker.",
+            "9–10": "Recognise and avoid a real long-con scam on your own.",
+            "11–12": "Explain to someone else the shape of a real romance scam or investment con."
+          }
         },
         {
           "theme": "Time, attention and the design against you",
           "description": "Streaks, autoplay and infinite scroll — mechanics built to keep you, and the counter-moves that give the hour back.",
-          "transfer_check": "Measure one week of your own use of one app, change one mechanic (off autoplay, no badges), and report the difference."
+          "transfer_check": "Measure one week of your own use of one app, change one mechanic (off autoplay, no badges), and report the difference.",
+          "bands": {
+            "K–2": "Notice when a game or app tries to keep you playing, with an adult.",
+            "3–5": "Name one design trick — like a streak — that keeps you using an app, with an adult.",
+            "6–8": "Identify a real design mechanic built to keep you scrolling, with a checker.",
+            "9–10": "Change a real setting to resist a design mechanic built against your attention.",
+            "11–12": "Explain to someone else how streaks, autoplay and infinite scroll are built to keep them there."
+          }
         },
         {
           "theme": "Repairing harm you caused",
           "description": "The apology that names the act, the correction that reaches the audience, and what repair looks like when deletion is not enough.",
-          "transfer_check": "For one real or rehearsed case where your post harmed someone, deliver the repair: named apology, correction to the same audience, and one changed habit."
+          "transfer_check": "For one real or rehearsed case where your post harmed someone, deliver the repair: named apology, correction to the same audience, and one changed habit.",
+          "bands": {
+            "K–2": "Say sorry and mean it after hurting a friend's feelings, with an adult's help.",
+            "3–5": "Write an apology that names what you did, with an adult checking it.",
+            "6–8": "Write a real apology that names the act and reaches the people harmed, with a checker.",
+            "9–10": "Repair real harm you caused online, on your own, including reaching those affected.",
+            "11–12": "Explain to someone else what makes an apology or correction actually land."
+          }
         }
       ]
     }

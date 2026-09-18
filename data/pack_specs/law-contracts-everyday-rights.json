@@ -10,52 +10,122 @@
         {
           "theme": "Where rules come from",
           "description": "Constitutions, statutes, regulations, case law and bylaws — the layers of law and which one governs the thing in front of you.",
-          "transfer_check": "For one everyday rule that binds you, identify which layer of law it comes from and find its actual text."
+          "transfer_check": "For one everyday rule that binds you, identify which layer of law it comes from and find its actual text.",
+          "bands": {
+            "K–2": "Name a classroom rule and who made it, with a teacher's help.",
+            "3–5": "Explain the difference between a class rule and a town rule, with an adult.",
+            "6–8": "Name a real statute, regulation and bylaw and how each is different, with a checker.",
+            "9–10": "Trace a real rule to whether it comes from a statute, regulation or bylaw, on your own.",
+            "11–12": "Explain to someone else where a real rule they follow actually comes from."
+          }
         },
         {
           "theme": "Civil versus criminal",
           "description": "Who sues whom, who prosecutes, and why the same act can be both — the two systems' different players, standards and stakes.",
-          "transfer_check": "Sort five real scenarios into civil, criminal or both, naming the parties and the standard of proof for each."
+          "transfer_check": "Sort five real scenarios into civil, criminal or both, naming the parties and the standard of proof for each.",
+          "bands": {
+            "K–2": "Say the difference between an accident and breaking a rule on purpose, with an adult.",
+            "3–5": "Explain why some wrongs are 'against a person' and some are 'against everyone', with an adult.",
+            "6–8": "Sort three real cases into civil and criminal correctly, with a checker.",
+            "9–10": "Explain, for a real news story, whether it is a civil or criminal matter and why.",
+            "11–12": "Explain to someone else why the same real act could be both a civil and a criminal matter."
+          }
         },
         {
           "theme": "The courts, from the inside",
           "description": "What courtrooms actually do all day — the hierarchy, who the people in it are, and what an ordinary hearing looks like.",
-          "transfer_check": "Observe a real public hearing (in person or official stream) and report who did what, in the correct terms."
+          "transfer_check": "Observe a real public hearing (in person or official stream) and report who did what, in the correct terms.",
+          "bands": {
+            "K–2": "Draw a picture of a courtroom with an adult, naming one person in it.",
+            "3–5": "Name two people who work in a real courtroom, with an adult's help.",
+            "6–8": "Explain what a real court actually does day to day, with a checker.",
+            "9–10": "Explain the real hierarchy of courts and who hears what, on your own.",
+            "11–12": "Explain to someone else what happens inside a real courtroom on an ordinary day."
+          }
         },
         {
           "theme": "Finding the actual rule",
           "description": "Legal research for civilians: official sources, current versions, and the difference between the law and a blog about the law.",
-          "transfer_check": "Answer one real legal question about your own life from primary official sources, citing the provision itself."
+          "transfer_check": "Answer one real legal question about your own life from primary official sources, citing the provision itself.",
+          "bands": {
+            "K–2": "Look up a simple rule in a book with an adult's help.",
+            "3–5": "Find a real rule using an official website, with an adult.",
+            "6–8": "Find a real current rule from an official source and confirm it's current, with a checker.",
+            "9–10": "Do real legal research as a civilian, on your own, from official sources.",
+            "11–12": "Teach someone else how to find and confirm a real current rule for themselves."
+          }
         },
         {
           "theme": "Deadlines: the rights that expire",
           "description": "Limitation periods, notice windows and appeal clocks — why being right runs out, and diarising the dates that matter.",
-          "transfer_check": "For three real claim types, find the applicable time limit where you live and compute the deadline from a given event date."
+          "transfer_check": "For three real claim types, find the applicable time limit where you live and compute the deadline from a given event date.",
+          "bands": {
+            "K–2": "Ask an adult why some tickets or forms have a due date.",
+            "3–5": "Name one deadline that matters to your family, with an adult's help.",
+            "6–8": "Identify a real limitation period or notice window on a real matter, with a checker.",
+            "9–10": "Track a real deadline — limitation, notice, appeal — on your own, without missing it.",
+            "11–12": "Explain to someone else why a real right can expire if you miss its deadline."
+          }
         },
         {
           "theme": "Getting help you can afford",
           "description": "Legal aid, law centres, pro bono, ombudsmen and fixed-fee clinics — the map of low-cost help and who qualifies.",
-          "transfer_check": "Map the free and low-cost legal help available for one problem type at your own address, with eligibility rules verified."
+          "transfer_check": "Map the free and low-cost legal help available for one problem type at your own address, with eligibility rules verified.",
+          "bands": {
+            "K–2": "Ask an adult who helps people who can't pay a lawyer.",
+            "3–5": "Name one place that offers free legal help, with an adult's help.",
+            "6–8": "Find a real legal aid or pro bono service for a real need, with a checker.",
+            "9–10": "Find and use a real affordable legal help option on your own.",
+            "11–12": "Guide someone else to a real free or fixed-fee legal help service."
+          }
         },
         {
           "theme": "The letter before action",
           "description": "Setting out a grievance formally: facts, ask, deadline — the letter that resolves most disputes before any court sees them.",
-          "transfer_check": "Draft a complete letter before action for a real or realistic dispute, meeting the format a court would later respect."
+          "transfer_check": "Draft a complete letter before action for a real or realistic dispute, meeting the format a court would later respect.",
+          "bands": {
+            "K–2": "Help write a short, polite complaint letter with an adult.",
+            "3–5": "Write a simple complaint with a fact and an ask, with an adult's help.",
+            "6–8": "Write a real letter before action with facts, ask and deadline, with a checker.",
+            "9–10": "Write a real formal grievance letter on your own that gets a response.",
+            "11–12": "Help someone else write a real letter before action that states a clear ask and deadline."
+          }
         },
         {
           "theme": "Small claims: court without the lawyers",
           "description": "The small-claims track end to end — filing, fees, evidence bundles and the hearing where you speak for yourself.",
-          "transfer_check": "Prepare a complete mock small claim: forms filled, evidence bundled, and your three-minute case stated aloud."
+          "transfer_check": "Prepare a complete mock small claim: forms filled, evidence bundled, and your three-minute case stated aloud.",
+          "bands": {
+            "K–2": "Ask an adult what happens when two neighbours can't agree and go to a small court.",
+            "3–5": "Explain what small claims court is for, with an adult's help.",
+            "6–8": "Walk through a real small-claims filing step, with a checker.",
+            "9–10": "File or prepare a real small-claims case on your own, from evidence to filing.",
+            "11–12": "Guide someone else through a real small-claims case end to end."
+          }
         },
         {
           "theme": "Mediation and the deal that beats the verdict",
           "description": "Negotiated and mediated settlement — why most disputes should end in a room, not a courtroom, and how to settle well.",
-          "transfer_check": "Take one side of a role-played dispute through a structured mediation to a written settlement both sides sign."
+          "transfer_check": "Take one side of a role-played dispute through a structured mediation to a written settlement both sides sign.",
+          "bands": {
+            "K–2": "Help two friends work out a disagreement without a grown-up deciding for them.",
+            "3–5": "Explain why talking it out can beat a strict ruling, with an adult's help.",
+            "6–8": "Explain why a real dispute might be better settled than tried, with a checker.",
+            "9–10": "Prepare for a real mediated settlement on your own, weighing it against a trial.",
+            "11–12": "Explain to someone else why most real disputes should settle rather than go to trial."
+          }
         },
         {
           "theme": "When the law itself is the problem",
           "description": "Challenging rules: consultation responses, judicial review in outline, and the civic route from unjust rule to changed rule.",
-          "transfer_check": "Find one live consultation or proposed rule affecting you and submit (or fully draft) a reasoned formal response."
+          "transfer_check": "Find one live consultation or proposed rule affecting you and submit (or fully draft) a reasoned formal response.",
+          "bands": {
+            "K–2": "Tell an adult about a rule you think is unfair.",
+            "3–5": "Write down why a rule seems unfair, with an adult's help.",
+            "6–8": "Write a real consultation response to a rule you think is wrong, with a checker.",
+            "9–10": "Challenge a real rule on your own — consultation, review or otherwise.",
+            "11–12": "Help someone else challenge a real rule they believe is the problem."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "When a promise becomes binding",
           "description": "Offer, acceptance, consideration, intention — the ingredients that turn words into obligations, including the ones spoken aloud.",
-          "transfer_check": "Analyse five everyday exchanges and rule which formed a contract, naming the missing ingredient where none did."
+          "transfer_check": "Analyse five everyday exchanges and rule which formed a contract, naming the missing ingredient where none did.",
+          "bands": {
+            "K–2": "Shake hands on a trade of toys with a friend, with an adult watching.",
+            "3–5": "Explain what makes a trade fair and agreed, with an adult's help.",
+            "6–8": "Name the ingredients of a real binding agreement, with a checker.",
+            "9–10": "Explain, for a real deal, whether offer, acceptance and consideration are all present.",
+            "11–12": "Teach someone else the ingredients that make a real promise legally binding."
+          }
         },
         {
           "theme": "Reading before signing",
           "description": "A method for real documents: parties, obligations, money, term, exit, liability — the six answers to extract from any contract.",
-          "transfer_check": "Extract the six-answer summary from a real contract you are actually subject to, in one page a friend could rely on."
+          "transfer_check": "Extract the six-answer summary from a real contract you are actually subject to, in one page a friend could rely on.",
+          "bands": {
+            "K–2": "Look at a simple form with an adult before anyone signs it.",
+            "3–5": "Find the names of the people in a real simple agreement, with an adult.",
+            "6–8": "Find the parties, obligations and money in a real document, with a checker.",
+            "9–10": "Read a real document methodically for parties, obligations, money and term, on your own.",
+            "11–12": "Teach someone else a method for reading a real document before they sign."
+          }
         },
         {
           "theme": "The clauses that bite",
           "description": "Auto-renewal, unilateral change, arbitration, indemnity, liquidated damages — the standard traps and the flags they fly.",
-          "transfer_check": "Locate and explain three bite-clauses across real contracts or terms of service, and state what each costs you if triggered."
+          "transfer_check": "Locate and explain three bite-clauses across real contracts or terms of service, and state what each costs you if triggered.",
+          "bands": {
+            "K–2": "Ask an adult what a 'gotcha' rule in a game's fine print might mean.",
+            "3–5": "Spot one surprising rule buried in fine print, with an adult's help.",
+            "6–8": "Identify a real auto-renewal or arbitration clause in a document, with a checker.",
+            "9–10": "Identify and evaluate a real biting clause — renewal, arbitration, indemnity — on your own.",
+            "11–12": "Explain to someone else what a real biting clause could cost them."
+          }
         },
         {
           "theme": "Terms of service: the contract nobody reads",
           "description": "What you actually agree to online — licences to your content, data terms, termination at will — and the summaries that surface it.",
-          "transfer_check": "Audit the terms of one service you use daily and report the three most consequential things you had agreed to unknowingly."
+          "transfer_check": "Audit the terms of one service you use daily and report the three most consequential things you had agreed to unknowingly.",
+          "bands": {
+            "K–2": "Ask an adult what happens when you tap 'I agree' on an app.",
+            "3–5": "Find one real thing an app's terms let it do, with an adult's help.",
+            "6–8": "Find what a real app's terms actually grant it over your content, with a checker.",
+            "9–10": "Read a real terms of service and identify what you actually agreed to, on your own.",
+            "11–12": "Explain to someone else what a real 'I agree' click actually commits them to."
+          }
         },
         {
           "theme": "Negotiating before ink",
           "description": "What is negotiable (more than you think), asking in writing, and the walk-away number decided in advance.",
-          "transfer_check": "Negotiate one real agreement's term (price, date, clause) with the exchange documented, or run the full role-play to signed changes."
+          "transfer_check": "Negotiate one real agreement's term (price, date, clause) with the exchange documented, or run the full role-play to signed changes.",
+          "bands": {
+            "K–2": "Ask a friend if a trade could be a little different before agreeing, with an adult.",
+            "3–5": "Ask for a small change to a deal before agreeing, with an adult's help.",
+            "6–8": "Propose a real change to a real agreement in writing, with a checker.",
+            "9–10": "Negotiate a real term of a real agreement in writing, on your own.",
+            "11–12": "Coach someone else on negotiating a real term before they sign."
+          }
         },
         {
           "theme": "Breach: when the other side fails",
           "description": "Material versus minor breach, mitigation, and the remedies ladder from cure period to damages.",
-          "transfer_check": "For a real or case-study breach, classify it, state your mitigation duty, and draft the remedy demand in the right order."
+          "transfer_check": "For a real or case-study breach, classify it, state your mitigation duty, and draft the remedy demand in the right order.",
+          "bands": {
+            "K–2": "Say what happens when a friend breaks a promise in a game, with an adult.",
+            "3–5": "Explain the difference between a small broken promise and a big one, with an adult.",
+            "6–8": "Sort a real broken promise into major or minor breach, with a checker.",
+            "9–10": "Identify a real breach and the remedy it opens up, on your own.",
+            "11–12": "Explain to someone else the real remedies available when the other side fails."
+          }
         },
         {
           "theme": "Getting out",
           "description": "Cancellation rights, cooling-off periods, termination clauses and the exit executed cleanly versus the exit that costs you.",
-          "transfer_check": "Exit or mock-exit one real subscription or agreement using its own terms, on time, in writing, with proof retained."
+          "transfer_check": "Exit or mock-exit one real subscription or agreement using its own terms, on time, in writing, with proof retained.",
+          "bands": {
+            "K–2": "Ask an adult how to return something you no longer want.",
+            "3–5": "Find the return policy on a real receipt, with an adult's help.",
+            "6–8": "Find a real cancellation right or cooling-off period, with a checker.",
+            "9–10": "Exercise a real cancellation right or termination clause on your own.",
+            "11–12": "Explain to someone else how a real cooling-off period actually works."
+          }
         },
         {
           "theme": "Deposits, guarantees and standing behind others",
           "description": "Security deposits, guarantors and co-signing — the promises that activate when someone else fails.",
-          "transfer_check": "Explain a real guarantee or deposit's exact trigger and exposure, and advise a role-played friend asked to co-sign, with reasons."
+          "transfer_check": "Explain a real guarantee or deposit's exact trigger and exposure, and advise a role-played friend asked to co-sign, with reasons.",
+          "bands": {
+            "K–2": "Ask an adult what a deposit is when renting a bike.",
+            "3–5": "Explain why a deposit is held and when it comes back, with an adult.",
+            "6–8": "Explain a real guarantor's or co-signer's obligation, with a checker.",
+            "9–10": "Evaluate a real deposit, guarantee or co-sign request before agreeing to it.",
+            "11–12": "Explain to someone else the real risk of standing behind another person's promise."
+          }
         },
         {
           "theme": "The informal deal with family and friends",
           "description": "Loans to brothers, flats shared with friends — why the closest deals need the clearest writing, and the note that saves the relationship.",
-          "transfer_check": "Draft a fair one-page written agreement for a real or realistic informal arrangement between people who trust each other."
+          "transfer_check": "Draft a fair one-page written agreement for a real or realistic informal arrangement between people who trust each other.",
+          "bands": {
+            "K–2": "Ask an adult why it's good to write down a loan between friends.",
+            "3–5": "Write down a simple loan agreement with a friend, with an adult's help.",
+            "6–8": "Write a real simple agreement for a loan or shared flat, with a checker.",
+            "9–10": "Put a real informal deal with family or friends into writing, on your own.",
+            "11–12": "Help someone else formalise a real informal deal to avoid a later dispute."
+          }
         },
         {
           "theme": "Signing for the future: powers and wills",
           "description": "Powers of attorney, advance decisions and wills — the documents that speak when you cannot, and what happens without them.",
-          "transfer_check": "Complete the will-and-powers checklist for a named adult: what exists, what is missing, and the exact route to fix one gap."
+          "transfer_check": "Complete the will-and-powers checklist for a named adult: what exists, what is missing, and the exact route to fix one gap.",
+          "bands": {
+            "K–2": "Ask an adult what a will is, in simple words.",
+            "3–5": "Explain why grown-ups plan for who decides things later, with an adult.",
+            "6–8": "Explain what a real power of attorney or advance decision does, with a checker.",
+            "9–10": "Explain the real documents — power of attorney, advance decision, will — and their purpose.",
+            "11–12": "Guide someone else through why and how these real future-signing documents matter."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "What you are owed when you buy",
           "description": "Satisfactory quality, as described, fit for purpose — the rights attached to every purchase whether the shop likes it or not.",
-          "transfer_check": "For three real purchases, state the statutory rights attached to each and the remedy ladder if it fails."
+          "transfer_check": "For three real purchases, state the statutory rights attached to each and the remedy ladder if it fails.",
+          "bands": {
+            "K–2": "Ask an adult what a fair toy purchase should include.",
+            "3–5": "Name what a real product should be — working and as described, with an adult.",
+            "6–8": "Explain a real product's right to be of satisfactory quality, with a checker.",
+            "9–10": "Assert a real right — quality, as described, fit for purpose — on your own purchase.",
+            "11–12": "Explain to someone else the real rights that come with any purchase."
+          }
         },
         {
           "theme": "Returns: policy versus law",
           "description": "The store's goodwill policy and your legal rights are different things — knowing which you are invoking and when each is stronger.",
-          "transfer_check": "Handle one real or staged return correctly, explicitly identifying whether you used policy or law, and why."
+          "transfer_check": "Handle one real or staged return correctly, explicitly identifying whether you used policy or law, and why.",
+          "bands": {
+            "K–2": "Ask an adult if a store has to take something back.",
+            "3–5": "Explain the difference between a store's kindness and a real rule, with an adult.",
+            "6–8": "Distinguish a real store's return policy from your actual legal right, with a checker.",
+            "9–10": "Assert your real legal right when a store's policy falls short, on your own.",
+            "11–12": "Explain to someone else the real difference between store goodwill and legal right."
+          }
         },
         {
           "theme": "The faulty thing",
           "description": "Repair, replace, refund — the sequence, the burden of proof windows, and the evidence to gather before the second failure.",
-          "transfer_check": "Run a real or mock faulty-goods claim through the full sequence in writing, with the evidence file that wins it."
+          "transfer_check": "Run a real or mock faulty-goods claim through the full sequence in writing, with the evidence file that wins it.",
+          "bands": {
+            "K–2": "Ask an adult what to do with a broken toy from a store.",
+            "3–5": "Explain the order of repair, replace, refund, with an adult's help.",
+            "6–8": "Follow the real repair-replace-refund sequence for a faulty item, with a checker.",
+            "9–10": "Handle a real faulty purchase on your own, in the right order, with proof.",
+            "11–12": "Guide someone else through a real faulty-goods claim, sequence and proof."
+          }
         },
         {
           "theme": "Services that disappoint",
           "description": "Reasonable care and skill — holding builders, salons, garages and installers to the standard, and pricing the put-right.",
-          "transfer_check": "Draft the complaint and remedy demand for a real or case-study substandard service, quantifying the cost to cure."
+          "transfer_check": "Draft the complaint and remedy demand for a real or case-study substandard service, quantifying the cost to cure.",
+          "bands": {
+            "K–2": "Ask an adult what to do if a haircut goes badly.",
+            "3–5": "Explain that a service should be done with reasonable care, with an adult.",
+            "6–8": "Explain a real service provider's duty of reasonable care and skill, with a checker.",
+            "9–10": "Hold a real service provider to reasonable care and skill, on your own.",
+            "11–12": "Explain to someone else how to hold a real tradesperson accountable for poor work."
+          }
         },
         {
           "theme": "Distance and doorstep buying",
           "description": "Online, phone and doorstep purchases — the cooling-off rights, the return-shipping rules and the exceptions that surprise.",
-          "transfer_check": "Exercise (or fully mock) a cooling-off cancellation for an online purchase inside its window, with the notices done right."
+          "transfer_check": "Exercise (or fully mock) a cooling-off cancellation for an online purchase inside its window, with the notices done right.",
+          "bands": {
+            "K–2": "Ask an adult why buying online is different from a shop.",
+            "3–5": "Explain what a cooling-off period is for online buying, with an adult.",
+            "6–8": "Explain a real cooling-off right for a real online or doorstep purchase, with a checker.",
+            "9–10": "Exercise a real cooling-off right on a real distance purchase, on your own.",
+            "11–12": "Explain to someone else how real distance-selling rights protect a buyer."
+          }
         },
         {
           "theme": "Chargebacks and paying protected",
           "description": "Card protections, chargeback windows and why how you pay changes what you can recover when it goes wrong.",
-          "transfer_check": "File or fully draft one chargeback or card-protection claim with the transaction evidence assembled to standard."
+          "transfer_check": "File or fully draft one chargeback or card-protection claim with the transaction evidence assembled to standard.",
+          "bands": {
+            "K–2": "Ask an adult why paying with a card can be safer than cash.",
+            "3–5": "Explain one protection a card offers that cash doesn't, with an adult.",
+            "6–8": "Explain a real chargeback window and card protection, with a checker.",
+            "9–10": "File a real chargeback or use card protection on your own, within the window.",
+            "11–12": "Explain to someone else why how you pay changes your real protection."
+          }
         },
         {
           "theme": "The complaint that gets results",
           "description": "Escalation done properly: the right person, the factual timeline, the specific ask and the deadline — firm without fury.",
-          "transfer_check": "Write and send (or finalise) a real complaint with timeline, evidence, ask and deadline, and log the response against it."
+          "transfer_check": "Write and send (or finalise) a real complaint with timeline, evidence, ask and deadline, and log the response against it.",
+          "bands": {
+            "K–2": "Practice a polite complaint about a broken toy, with an adult.",
+            "3–5": "Write a simple, factual complaint, with an adult's help.",
+            "6–8": "Write a real complaint that escalates properly with facts and timeline, with a checker.",
+            "9–10": "Escalate a real complaint to the right person on your own, and get a result.",
+            "11–12": "Coach someone else on writing a real complaint that actually gets a result."
+          }
         },
         {
           "theme": "The ombudsman and the free referee",
           "description": "Sector ombudsmen and ADR schemes — the free escalation most consumers never use, and how to hand them a winnable file.",
-          "transfer_check": "Identify the correct ombudsman for one real dispute type and prepare the complete referral file to its requirements."
+          "transfer_check": "Identify the correct ombudsman for one real dispute type and prepare the complete referral file to its requirements.",
+          "bands": {
+            "K–2": "Ask an adult who helps when a company won't fix things.",
+            "3–5": "Name a free helper who settles disputes, with an adult's help.",
+            "6–8": "Find a real sector ombudsman or ADR scheme for a real dispute, with a checker.",
+            "9–10": "Escalate a real unresolved dispute to a real ombudsman on your own.",
+            "11–12": "Explain to someone else how a real ombudsman scheme works and when to use it."
+          }
         },
         {
           "theme": "Scams dressed as sellers",
           "description": "Fake shops, counterfeit goods, subscription traps and recovery scams — the purchase that was never a purchase.",
-          "transfer_check": "Autopsy one real scam listing or trap: mark its tells, state the reporting channels used, and the victim's actual recovery options."
+          "transfer_check": "Autopsy one real scam listing or trap: mark its tells, state the reporting channels used, and the victim's actual recovery options.",
+          "bands": {
+            "K–2": "Ask an adult before buying anything from someone online.",
+            "3–5": "Name one sign of a fake online shop, with an adult's help.",
+            "6–8": "Identify a real fake shop or counterfeit listing, with a checker.",
+            "9–10": "Recognise and avoid a real scam seller on your own before paying.",
+            "11–12": "Explain to someone else the real warning signs of a scam seller."
+          }
         },
         {
           "theme": "Debt collection and your actual obligations",
           "description": "What collectors may and may not do, statute-barred debt, and the difference between owing and being harassed.",
-          "transfer_check": "Respond to a real or scripted collection letter correctly: verify the debt, know the rules the collector must follow, and draft the reply."
+          "transfer_check": "Respond to a real or scripted collection letter correctly: verify the debt, know the rules the collector must follow, and draft the reply.",
+          "bands": {
+            "K–2": "Ask an adult what happens if a bill isn't paid.",
+            "3–5": "Explain that debt collectors must follow rules too, with an adult.",
+            "6–8": "Explain a real collector's limits and a real statute-barred debt, with a checker.",
+            "9–10": "Verify a real debt collection claim against your actual obligations, on your own.",
+            "11–12": "Explain to someone else what a real debt collector may and may not do."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "Employee, worker, contractor",
           "description": "The status categories, the rights attached to each, and the misclassification that quietly removes protections.",
-          "transfer_check": "Classify three real working arrangements (yours or case studies) by status and list two rights that change across them."
+          "transfer_check": "Classify three real working arrangements (yours or case studies) by status and list two rights that change across them.",
+          "bands": {
+            "K–2": "Ask an adult what different jobs a grown-up can have at work.",
+            "3–5": "Name a difference between a full-time job and doing odd jobs, with an adult.",
+            "6–8": "Sort a real job into employee, worker or contractor, with a checker.",
+            "9–10": "Identify a real job's status and the rights that attach to it, on your own.",
+            "11–12": "Explain to someone else the real rights that come with each work status."
+          }
         },
         {
           "theme": "The employment contract decoded",
           "description": "Pay, hours, notice, probation, restrictive covenants — reading the job offer as the contract it is.",
-          "transfer_check": "Produce the six-answer summary of a real employment contract or offer, flagging any clause you would question before signing."
+          "transfer_check": "Produce the six-answer summary of a real employment contract or offer, flagging any clause you would question before signing.",
+          "bands": {
+            "K–2": "Ask an adult what a work agreement says about pay.",
+            "3–5": "Find the pay and hours in a real simple job description, with an adult.",
+            "6–8": "Find pay, hours, notice and probation in a real contract, with a checker.",
+            "9–10": "Read a real employment contract for pay, hours, notice and restrictions, on your own.",
+            "11–12": "Teach someone else how to read a real employment contract before signing."
+          }
         },
         {
           "theme": "Wages: getting what was promised",
           "description": "Minimum wage arithmetic, payslip reading, unlawful deductions and the overtime that never appears.",
-          "transfer_check": "Audit a real payslip against contract and law — rate, hours, deductions — and draft the query for any discrepancy found."
+          "transfer_check": "Audit a real payslip against contract and law — rate, hours, deductions — and draft the query for any discrepancy found.",
+          "bands": {
+            "K–2": "Ask an adult how you'd know if you got paid the right amount.",
+            "3–5": "Check a simple pay calculation against a rate, with an adult's help.",
+            "6–8": "Check a real payslip against minimum wage arithmetic, with a checker.",
+            "9–10": "Verify a real payslip on your own and flag an unlawful deduction.",
+            "11–12": "Explain to someone else how to check a real payslip for errors or unlawful deductions."
+          }
         },
         {
           "theme": "Hours, breaks and saying no",
           "description": "Working time limits, rest rights and the pressure to be always available — the boundaries the law already drew.",
-          "transfer_check": "Compare one real working pattern to the applicable limits and rest rights, and script the conversation any breach requires."
+          "transfer_check": "Compare one real working pattern to the applicable limits and rest rights, and script the conversation any breach requires.",
+          "bands": {
+            "K–2": "Ask an adult why workers get breaks during a long day.",
+            "3–5": "Explain why rest matters during a work day, with an adult's help.",
+            "6–8": "Explain a real working-time limit and rest right, with a checker.",
+            "9–10": "Assert a real rest right on your own when pressured to skip it.",
+            "11–12": "Explain to someone else the real limits on hours and the right to rest."
+          }
         },
         {
           "theme": "Leave: the time that is yours",
           "description": "Holiday, sickness, parental and carer leave — what accrues, what needs notice and what cannot be refused.",
-          "transfer_check": "Compute a real worker's leave entitlement for the year and correctly process (or mock) one request and one sickness absence."
+          "transfer_check": "Compute a real worker's leave entitlement for the year and correctly process (or mock) one request and one sickness absence.",
+          "bands": {
+            "K–2": "Ask an adult what happens when someone is sick and can't go to work.",
+            "3–5": "Name one kind of leave a worker can take, with an adult's help.",
+            "6–8": "Explain a real type of leave — holiday, sick, parental — and what it accrues, with a checker.",
+            "9–10": "Calculate your own real leave entitlement and what it accrues.",
+            "11–12": "Explain to someone else how real leave entitlements work and accrue."
+          }
         },
         {
           "theme": "Discrimination and the protected ground",
           "description": "The protected characteristics, direct and indirect discrimination, and reasonable adjustment as a right rather than a favour.",
-          "transfer_check": "Analyse two case-study workplace scenarios: identify the protected ground, the discrimination type, and the remedy route for each."
+          "transfer_check": "Analyse two case-study workplace scenarios: identify the protected ground, the discrimination type, and the remedy route for each.",
+          "bands": {
+            "K–2": "Ask an adult why it's wrong to treat someone unfairly for who they are.",
+            "3–5": "Name one protected characteristic, with an adult's help.",
+            "6–8": "Identify a real example of direct or indirect discrimination, with a checker.",
+            "9–10": "Recognise a real discrimination case and the protected ground involved, on your own.",
+            "11–12": "Explain to someone else the real protected characteristics and what discrimination looks like."
+          }
         },
         {
           "theme": "Harassment at work",
           "description": "Naming it, logging it, reporting it — the evidence diary and the routes inside and beyond the employer.",
-          "transfer_check": "Build a correct incident log from a scripted harassment scenario and map its escalation route through and past the employer."
+          "transfer_check": "Build a correct incident log from a scripted harassment scenario and map its escalation route through and past the employer.",
+          "bands": {
+            "K–2": "Tell an adult if someone at school keeps being mean to you.",
+            "3–5": "Explain why you should write down what happened if someone is unkind, with an adult.",
+            "6–8": "Log a real incident with facts and dates, with a checker.",
+            "9–10": "Report a real workplace harassment incident on your own, with a proper evidence log.",
+            "11–12": "Guide someone else through reporting real workplace harassment properly."
+          }
         },
         {
           "theme": "Discipline and the fair process",
           "description": "Investigations, hearings, accompaniment and appeals — what a fair procedure owes you when the employer moves against you.",
-          "transfer_check": "Role-play the employee side of a disciplinary hearing with a companion, exercising each procedural right at the correct moment."
+          "transfer_check": "Role-play the employee side of a disciplinary hearing with a companion, exercising each procedural right at the correct moment.",
+          "bands": {
+            "K–2": "Ask an adult what happens when a rule is broken at school, step by step.",
+            "3–5": "Name one step of a fair process when someone breaks a rule, with an adult.",
+            "6–8": "Explain a real fair disciplinary process — investigation, hearing, appeal, with a checker.",
+            "9–10": "Navigate a real disciplinary process on your own, knowing your rights at each step.",
+            "11–12": "Explain to someone else what a real fair disciplinary process must include."
+          }
         },
         {
           "theme": "Losing the job",
           "description": "Notice, redundancy rules, unfair dismissal and the settlement agreement — the endings, and the rights attached to each.",
-          "transfer_check": "For one real or case-study dismissal, determine its type, the entitlements owed, and the challenge deadline, with the first letter drafted."
+          "transfer_check": "For one real or case-study dismissal, determine its type, the entitlements owed, and the challenge deadline, with the first letter drafted.",
+          "bands": {
+            "K–2": "Ask an adult what happens if a grown-up's job ends.",
+            "3–5": "Explain what notice means when a job ends, with an adult's help.",
+            "6–8": "Explain real redundancy rules and unfair dismissal, with a checker.",
+            "9–10": "Evaluate a real job loss for notice, redundancy or unfair dismissal, on your own.",
+            "11–12": "Explain to someone else the real options when a job ends unfairly."
+          }
         },
         {
           "theme": "Organising: rights in numbers",
           "description": "Unions, collective bargaining and protected activity — what workers may lawfully do together and how that changes the deal.",
-          "transfer_check": "Find the recognised union or body for one real workplace and explain what protected steps starting to organise there would involve."
+          "transfer_check": "Find the recognised union or body for one real workplace and explain what protected steps starting to organise there would involve.",
+          "bands": {
+            "K–2": "Ask an adult why workers sometimes join a group together.",
+            "3–5": "Explain what a union is for, with an adult's help.",
+            "6–8": "Explain a real protected organising activity, with a checker.",
+            "9–10": "Explain, for a real workplace, what collective bargaining actually changes.",
+            "11–12": "Explain to someone else the real rights workers have when they organise together."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "Your rights have names",
           "description": "The charter, constitution or convention where you live — the actual named rights, and what each does and does not protect.",
-          "transfer_check": "For your own jurisdiction, list the instrument and five named rights, matching each to one real situation it governs."
+          "transfer_check": "For your own jurisdiction, list the instrument and five named rights, matching each to one real situation it governs.",
+          "bands": {
+            "K–2": "Ask an adult to name one right you have.",
+            "3–5": "Name two rights you have, with an adult's help.",
+            "6–8": "Find where your real rights are written down, with a checker.",
+            "9–10": "Identify, for a real situation, which of your written rights applies.",
+            "11–12": "Explain to someone else where their real rights come from and what they say."
+          }
         },
         {
           "theme": "Stopped by the police",
           "description": "Stop, search and questioning — what officers may require, what you must provide, and the calm scripts that protect everyone.",
-          "transfer_check": "Role-play two police encounters correctly: state your actual obligations, exercise your actual rights, and note the record to make after."
+          "transfer_check": "Role-play two police encounters correctly: state your actual obligations, exercise your actual rights, and note the record to make after.",
+          "bands": {
+            "K–2": "Ask an adult what to do if a police officer talks to you.",
+            "3–5": "Name one thing you can calmly say if stopped, with an adult's help.",
+            "6–8": "Explain what a real officer may and may not require during a stop, with a checker.",
+            "9–10": "Explain your real rights during a stop and search, on your own.",
+            "11–12": "Explain to someone else exactly what happens, and what rights apply, during a real stop."
+          }
         },
         {
           "theme": "Arrest and the hours that follow",
           "description": "The caution, the phone call, the duty lawyer and the custody clock — the rights that exist precisely when you are least able to look them up.",
-          "transfer_check": "Recite and apply the post-arrest rights sequence for your jurisdiction in a staged scenario, including invoking the duty lawyer."
+          "transfer_check": "Recite and apply the post-arrest rights sequence for your jurisdiction in a staged scenario, including invoking the duty lawyer.",
+          "bands": {
+            "K–2": "Ask an adult who you'd call if something scary happened.",
+            "3–5": "Name the one phone call you'd want if something went wrong, with an adult.",
+            "6–8": "Explain a real caution and the right to a phone call, with a checker.",
+            "9–10": "Explain the real sequence — caution, call, duty lawyer, custody — on your own.",
+            "11–12": "Explain to someone else what actually happens in the real hours after an arrest."
+          }
         },
         {
           "theme": "Protest and the public square",
           "description": "Assembly and speech rights, notification rules, police powers at protests and the line where protection ends.",
-          "transfer_check": "Plan a lawful demonstration for a cause: the notifications, the rules on route and sound, and the legal-observer arrangements."
+          "transfer_check": "Plan a lawful demonstration for a cause: the notifications, the rules on route and sound, and the legal-observer arrangements.",
+          "bands": {
+            "K–2": "Ask an adult why people sometimes gather to share an opinion outside.",
+            "3–5": "Explain what a peaceful protest is for, with an adult's help.",
+            "6–8": "Explain a real notification rule for a public gathering, with a checker.",
+            "9–10": "Explain real assembly and speech rights and their limits, on your own.",
+            "11–12": "Explain to someone else the real rules and rights around a public protest."
+          }
         },
         {
           "theme": "Your file: what the state holds",
           "description": "Records access rights — police records, agency files, credit and health data — and the request that opens them.",
-          "transfer_check": "Submit (or fully prepare) one real access request to a public body for your own records, to its formal requirements."
+          "transfer_check": "Submit (or fully prepare) one real access request to a public body for your own records, to its formal requirements.",
+          "bands": {
+            "K–2": "Ask an adult if the school keeps notes about you.",
+            "3–5": "Name one record an agency might keep about a person, with an adult.",
+            "6–8": "Find what a real agency holds on you and how to request it, with a checker.",
+            "9–10": "Request a real record the state or an agency holds about you, on your own.",
+            "11–12": "Guide someone else through requesting their real state or agency file."
+          }
         },
         {
           "theme": "The official decision against you",
           "description": "Benefits refused, permits denied, fines issued — reading the decision letter, the reasons, and the review and appeal ladder.",
-          "transfer_check": "Take one real or case-study adverse decision and draft the first-stage challenge inside its deadline, addressing the stated reasons."
+          "transfer_check": "Take one real or case-study adverse decision and draft the first-stage challenge inside its deadline, addressing the stated reasons.",
+          "bands": {
+            "K–2": "Ask an adult what to do if a rule seems to be applied unfairly to you.",
+            "3–5": "Explain one way to ask a decision to be looked at again, with an adult.",
+            "6–8": "Read a real official decision letter for the appeal route, with a checker.",
+            "9–10": "Appeal a real official decision on your own, using the stated route.",
+            "11–12": "Guide someone else through appealing a real official decision."
+          }
         },
         {
           "theme": "Voting and the machinery of elections",
           "description": "Registration, eligibility, the ballot's journey and the count — the process behind the cross in the box.",
-          "transfer_check": "Verify your own registration, explain your ballot's path from booth to count, and correctly handle one edge case (moving, absence, spoiled paper)."
+          "transfer_check": "Verify your own registration, explain your ballot's path from booth to count, and correctly handle one edge case (moving, absence, spoiled paper).",
+          "bands": {
+            "K–2": "Ask an adult what happens when grown-ups vote.",
+            "3–5": "Explain why a ballot is counted carefully, with an adult's help.",
+            "6–8": "Explain real voter registration and eligibility rules, with a checker.",
+            "9–10": "Explain a real ballot's journey from casting to counting, on your own.",
+            "11–12": "Explain to someone else the real machinery that makes an election count."
+          }
         },
         {
           "theme": "Jury service and the citizen's bench",
           "description": "Selection, duties, deliberation and the juror's oath — the one week the justice system runs on you.",
-          "transfer_check": "From a case summary, deliberate in a mock jury to a verdict, applying the standard of proof and the judge's directions."
+          "transfer_check": "From a case summary, deliberate in a mock jury to a verdict, applying the standard of proof and the judge's directions.",
+          "bands": {
+            "K–2": "Ask an adult what a jury does in a courtroom.",
+            "3–5": "Explain why regular people help decide a real case, with an adult.",
+            "6–8": "Explain a real juror's selection and duties, with a checker.",
+            "9–10": "Explain the real deliberation process and a juror's oath, on your own.",
+            "11–12": "Explain to someone else why jury service matters and what it actually involves."
+          }
         },
         {
           "theme": "The border and the status",
           "description": "Citizenship, residence and visas in outline — what status determines, and helping someone find competent immigration help.",
-          "transfer_check": "For one case-study person, identify what their status allows and bars, and locate the regulated adviser route for their question."
+          "transfer_check": "For one case-study person, identify what their status allows and bars, and locate the regulated adviser route for their question.",
+          "bands": {
+            "K–2": "Ask an adult what it means to be a citizen of a place.",
+            "3–5": "Name one difference between a visitor and a citizen, with an adult.",
+            "6–8": "Explain a real status — citizenship, residence, visa — in outline, with a checker.",
+            "9–10": "Explain what a real immigration status determines, on your own.",
+            "11–12": "Explain to someone else the real outline of citizenship, residence and visa status."
+          }
         },
         {
           "theme": "Holding power to account",
           "description": "Freedom of information, public meetings, complaints against officials and the press — the accountability toolkit in civilian hands.",
-          "transfer_check": "File (or fully draft) one real freedom-of-information request on a matter you care about, scoped so it cannot be refused as too broad."
+          "transfer_check": "File (or fully draft) one real freedom-of-information request on a matter you care about, scoped so it cannot be refused as too broad.",
+          "bands": {
+            "K–2": "Ask an adult how people find out what a government is doing.",
+            "3–5": "Name one way people can ask a government a question, with an adult.",
+            "6–8": "Use a real freedom-of-information request or public meeting, with a checker.",
+            "9–10": "File a real freedom-of-information request or complaint against power, on your own.",
+            "11–12": "Guide someone else through holding real power to account with a real tool."
+          }
         }
       ]
     }
