@@ -40,12 +40,12 @@ authored descriptions. Neither is hidden — both are counted here.
 | Non-Profit Practice | 1150 | 10 | 43% | 0% | 100% | 0% | 25 |
 | Cognition.X : Education OS | 660 | 0 | 0% | 0% | 100% | 0% | 113 |
 | Arts & Craft Trades : Louisiana Makers | 250 | 5 | 100% | 100% | 100% | 0% | 75 |
-| Arts, Making Media & Performance | 250 | 5 | 100% | 100% | 100% | 0% | 82 |
+| Arts, Making Media & Performance | 250 | 5 | 100% | 0% | 100% | 0% | 82 |
 | Civic Leadership Legacy : The Institute Model | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
 | Civic Leadership Legacy : California | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
 | Civic Leadership Legacy : Louisiana | 250 | 5 | 100% | 0% | 100% | 0% | 117 |
 | Civic Leadership Legacy : Texas | 250 | 5 | 100% | 100% | 100% | 0% | 88 |
-| Culinary Trades : The Louisiana Kitchen | 250 | 5 | 100% | 100% | 100% | 0% | 85 |
+| Culinary Trades : The Louisiana Kitchen | 250 | 5 | 100% | 0% | 100% | 0% | 85 |
 | Digital Life, Data & AI | 250 | 5 | 100% | 100% | 100% | 0% | 54 |
 | Emergency Preparedness & First Response | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 | Energy, Grid & the Home | 250 | 5 | 100% | 100% | 100% | 0% | 94 |
@@ -53,7 +53,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Law, Contracts & Everyday Rights | 250 | 5 | 100% | 100% | 100% | 0% | 104 |
 | Learning States & Universal Access | 250 | 5 | 100% | 100% | 100% | 0% | 94 |
 | Cognition.X : Louisiana OS | 500 | 10 | 100% | 0% | 100% | 0% | 101 |
-| Music : Creation to Industry | 250 | 5 | 100% | 100% | 100% | 0% | 85 |
+| Music : Creation to Industry | 250 | 5 | 100% | 0% | 100% | 0% | 85 |
 | Parish Launch & Scale | 250 | 5 | 100% | 0% | 100% | 0% | 120 |
 | SmartCiti.X : New Orleans Trades | 250 | 5 | 100% | 0% | 100% | 0% | 100 |
 | Cognition.X : States OS | 250 | 5 | 100% | 0% | 100% | 0% | 96 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 30% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 25% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 

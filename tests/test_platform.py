@@ -677,12 +677,13 @@ def test_education_os_canonical_injection():
     check("institute: every principle carries its strands", all(isinstance(x.get("strands"), list) and x["strands"] for x in inst["principles"]))
 
 
-KNOWN_BAND_SUFFIX_ROWS = 5250       # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); 9,250 Corporate OS (v0.72.0); 8,750 Science OS (v0.73.0); 8,250 Robotics OS (v0.74.0); 7,750 Global Health OS (v0.75.0); 7,250 Multilateral OS (v0.76.0); 6,750 Sapient OS (v0.77.0); 6,250 Non-Profit Practice (v0.78.0, all seven sector packs); 5,750 SmartCiti.X New Orleans Trades + States OS (v0.79.0, prompt 2 tranche one); 5,250 Trades in the Classroom + Trades Across School Subjects (v0.80.0, prompt 2 tranche two); the ratchet only falls
+KNOWN_BAND_SUFFIX_ROWS = 4500        # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); 9,250 Corporate OS (v0.72.0); 8,750 Science OS (v0.73.0); 8,250 Robotics OS (v0.74.0); 7,750 Global Health OS (v0.75.0); 7,250 Multilateral OS (v0.76.0); 6,750 Sapient OS (v0.77.0); 6,250 Non-Profit Practice (v0.78.0, all seven sector packs); 5,750 SmartCiti.X New Orleans Trades + States OS (v0.79.0, prompt 2 tranche one); 5,250 Trades in the Classroom + Trades Across School Subjects (v0.80.0, prompt 2 tranche two); 4,500 Music + Culinary Trades + Arts, Making Media & Performance (v0.81.0, prompt 2 tranche three, the three culture packs); the ratchet only falls
 BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch & Scale",
                        "Civic Leadership Legacy : Louisiana", "Basic Life Skills & Self-Reliance",
                        "Cognition.X : Louisiana OS", "SmartCiti.X : New Orleans Trades",
                        "Cognition.X : States OS", "Trades in the Classroom : Flipped & Gamified",
-                       "Trades Across School Subjects"}
+                       "Trades Across School Subjects", "Music : Creation to Industry",
+                       "Culinary Trades : The Louisiana Kitchen", "Arts, Making Media & Performance"}
 BAND_AUTHORED_THEMES = {"Cognition.X : Louisiana OS": 100}   # two spec parts, one pack
 # packs whose source rows carried the suffix and were overridden through an
 # `override: band-suffix` promotion (v0.72.0): themes overridden, rows expected

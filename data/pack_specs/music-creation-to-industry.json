@@ -10,52 +10,122 @@
     {
      "theme": "Finding the pulse",
      "description": "Beat, subdivision and the second-line clap: feeling time in the body before counting it, and the Louisiana habit of putting the accent where the street puts it.",
-     "transfer_check": "Keep steady time with a metronome at three tempos while clapping the second-line pattern, then recorded and self-checked against the click."
+     "transfer_check": "Keep steady time with a metronome at three tempos while clapping the second-line pattern, then recorded and self-checked against the click.",
+     "bands": {
+      "K–2": "Clap along to a song with an adult and find the steady beat.",
+      "3–5": "Clap a steady beat to three different songs and say which was fastest.",
+      "6–8": "Clap a beat and its subdivision together for one song, with a checker.",
+      "9–10": "Clap a beat and its subdivision together for one real song, and say where the accent falls.",
+      "11–12": "Lead a group in clapping a real song's pulse and subdivision, and defend where the accent falls and why."
+     }
     },
     {
      "theme": "The voice as the first instrument",
      "description": "Breath, pitch-matching and the speaking voice turned into the singing voice; care of the instrument you were born with.",
-     "transfer_check": "Match twelve played pitches by voice within a semitone, recorded, and sing a four-line melody in tune with a drone."
+     "transfer_check": "Match twelve played pitches by voice within a semitone, recorded, and sing a four-line melody in tune with a drone.",
+     "bands": {
+      "K–2": "Sing a note back to an adult as closely as you can match it.",
+      "3–5": "Match pitch to three notes played for you and say which was hardest.",
+      "6–8": "Match pitch on five notes and describe one thing that helps breath support, with a checker.",
+      "9–10": "Match pitch on five real notes and describe one habit that protects your speaking and singing voice.",
+      "11–12": "Match pitch reliably across a real range and teach a beginner one habit that protects the voice."
+     }
     },
     {
      "theme": "One instrument, honestly",
      "description": "A first real instrument — guitar, keyboard, horn, accordion, drum — its parts, its care, and the first ten notes played cleanly.",
-     "transfer_check": "Play a one-octave scale and a four-bar phrase cleanly on a real instrument, and demonstrate tuning and basic maintenance on it."
+     "transfer_check": "Play a one-octave scale and a four-bar phrase cleanly on a real instrument, and demonstrate tuning and basic maintenance on it.",
+     "bands": {
+      "K–2": "Hold a real instrument with an adult and play one clean note.",
+      "3–5": "Play three clean notes on a real instrument and name one part of it.",
+      "6–8": "Play ten clean notes on a real instrument and name its parts, with a checker.",
+      "9–10": "Play the first ten notes of a real instrument cleanly and explain how you care for it.",
+      "11–12": "Play a real instrument's first ten notes cleanly for an audience and explain its care and its parts."
+     }
     },
     {
      "theme": "Hearing intervals and chords",
      "description": "Training the ear to name what it hears: intervals, major and minor, the I–IV–V that most songs live on.",
-     "transfer_check": "Identify by ear eight intervals and six chord qualities played at random, scoring at least three in four."
+     "transfer_check": "Identify by ear eight intervals and six chord qualities played at random, scoring at least three in four.",
+     "bands": {
+      "K–2": "Say whether two notes played together sound happy or sad.",
+      "3–5": "Tell apart a major and a minor chord played for you.",
+      "6–8": "Name three intervals played for you and say if a chord is major or minor, with a checker.",
+      "9–10": "Name three real intervals by ear and identify a I–IV–V progression in a real song.",
+      "11–12": "Identify intervals and a I–IV–V progression by ear in a real song, and teach the trick to someone else."
+     }
     },
     {
      "theme": "Reading and not reading",
      "description": "Notation, tablature, chord charts and the Nashville numbers — and the ear-first tradition that built jazz and zydeco without them.",
-     "transfer_check": "Read a lead sheet well enough to play its melody and chords, and learn a second tune entirely by ear from a recording."
+     "transfer_check": "Read a lead sheet well enough to play its melody and chords, and learn a second tune entirely by ear from a recording.",
+     "bands": {
+      "K–2": "Follow a simple picture of a song's shape with an adult while it plays.",
+      "3–5": "Follow a chord chart for one real song while it plays.",
+      "6–8": "Read a simple chord chart for one real song and play along, with a checker.",
+      "9–10": "Read a real chord chart or tab for one song and play along, and explain what the ear-first tradition does instead.",
+      "11–12": "Read and play from a real chart, and explain to a beginner why ear-first traditions built whole genres without one."
+     }
     },
     {
      "theme": "The Louisiana grooves",
      "description": "Second line, the zydeco two-step, the Cajun waltz, swamp pop and bounce: what makes each one itself, felt in the feet and the hands.",
-     "transfer_check": "Play or clap four distinct Louisiana grooves at correct feel and tempo, naming what distinguishes each, for a listener who can tell the difference."
+     "transfer_check": "Play or clap four distinct Louisiana grooves at correct feel and tempo, naming what distinguishes each, for a listener who can tell the difference.",
+     "bands": {
+      "K–2": "Move your feet to a Louisiana rhythm with an adult and say how it feels.",
+      "3–5": "Move to three real Louisiana grooves and say which is which.",
+      "6–8": "Identify three real Louisiana grooves by ear and clap one, with a checker.",
+      "9–10": "Identify three real Louisiana grooves by ear and clap the pattern that makes one of them itself.",
+      "11–12": "Identify and demonstrate a real Louisiana groove for an audience, and explain what makes it itself."
+     }
     },
     {
      "theme": "Playing with others",
      "description": "Listening, locking to the drummer, leaving space and passing the lead — the ensemble skills no solo practice teaches.",
-     "transfer_check": "Hold a part in a three-person ensemble through a full tune without dropping time, then trade a four-bar solo with another player."
+     "transfer_check": "Hold a part in a three-person ensemble through a full tune without dropping time, then trade a four-bar solo with another player.",
+     "bands": {
+      "K–2": "Take turns playing one note each with a friend, in time.",
+      "3–5": "Play a simple pattern with a partner without rushing or slowing down.",
+      "6–8": "Play a simple part with a partner and leave space for their lead, with a checker.",
+      "9–10": "Play a real part with a partner, locking to their time and leaving space for their lead.",
+      "11–12": "Play a real ensemble part, listening across the group and passing the lead cleanly at least once."
+     }
     },
     {
      "theme": "Practice that works",
      "description": "The loop, the slow-down, the metronome and the log: getting better on purpose instead of by accident.",
-     "transfer_check": "Keep a two-week practice log with a target phrase, and demonstrate it at a tempo 20% faster than on day one."
+     "transfer_check": "Keep a two-week practice log with a target phrase, and demonstrate it at a tempo 20% faster than on day one.",
+     "bands": {
+      "K–2": "Practise one short phrase five times in a row with an adult watching.",
+      "3–5": "Practise a short phrase with a metronome and say if it got easier.",
+      "6–8": "Practise one phrase with a metronome and log what changed, with a checker.",
+      "9–10": "Practise a real phrase with a metronome and a log, and show what changed over a week.",
+      "11–12": "Run a real week-long practice log with a metronome and slow-down technique, and show the measured improvement."
+     }
     },
     {
      "theme": "Instrument technology",
      "description": "Tuning systems, strings, reeds, mouthpieces, the accordion's bellows and the electric signal: knowing the machine you play.",
-     "transfer_check": "Change strings or a reed (or service an accordion bellows or a drum head) and return the instrument to playing pitch."
+     "transfer_check": "Change strings or a reed (or service an accordion bellows or a drum head) and return the instrument to playing pitch.",
+     "bands": {
+      "K–2": "Look at how your instrument makes a sound with an adult and name one part.",
+      "3–5": "Tune a real instrument with help and say what tuning means.",
+      "6–8": "Tune a real instrument by yourself and name one part that shapes its sound, with a checker.",
+      "9–10": "Tune a real instrument and explain one part of its technology that shapes tone.",
+      "11–12": "Tune and explain a real instrument's technology — strings, reeds or signal — to someone new to it."
+     }
     },
     {
      "theme": "Protecting the ear and the body",
      "description": "Hearing loss is permanent; repetitive strain is real. Earplugs, posture, breaks, and the musician's long body.",
-     "transfer_check": "Measure a rehearsal's sound level with a phone meter, choose protection for it, and demonstrate a posture and warm-up routine for your instrument."
+     "transfer_check": "Measure a rehearsal's sound level with a phone meter, choose protection for it, and demonstrate a posture and warm-up routine for your instrument.",
+     "bands": {
+      "K–2": "Say why loud sound can hurt your ears, and use ear protection with an adult.",
+      "3–5": "Say one habit that protects a musician's ears or body.",
+      "6–8": "Name two habits that protect a musician's hearing and body, with a checker.",
+      "9–10": "Name two real habits that protect a musician's hearing and body, and use one during practice.",
+      "11–12": "Design and follow a real hearing and body-care routine for a musician, and teach it to a bandmate."
+     }
     }
    ]
   },
@@ -67,52 +137,122 @@
     {
      "theme": "Where songs come from",
      "description": "The hook, the title and the line you cannot shake: catching an idea and keeping it before it leaves.",
-     "transfer_check": "Collect twenty song ideas in a week — titles, lines, hummed phrases — and develop one into a hook with a recorded eight bars."
+     "transfer_check": "Collect twenty song ideas in a week — titles, lines, hummed phrases — and develop one into a hook with a recorded eight bars.",
+     "bands": {
+      "K–2": "Say one idea you would put in a song, with an adult helping.",
+      "3–5": "Write down one line or title you cannot stop thinking about.",
+      "6–8": "Catch one song idea and keep it in a notebook before it leaves, with a checker.",
+      "9–10": "Catch a real song idea — a hook or title — and hold it in a notebook before it leaves.",
+      "11–12": "Catch and develop a real idea into a working title or hook, and defend why it is worth keeping."
+     }
     },
     {
      "theme": "Lyric craft",
      "description": "Rhyme, meter, the concrete image over the vague feeling, and the first line's job of earning the second.",
-     "transfer_check": "Write a verse and chorus with a consistent meter and a concrete image in every line, then revise it after reading it aloud to someone."
+     "transfer_check": "Write a verse and chorus with a consistent meter and a concrete image in every line, then revise it after reading it aloud to someone.",
+     "bands": {
+      "K–2": "Make two words rhyme together, with an adult helping you find them.",
+      "3–5": "Write two lines that rhyme about something you saw today.",
+      "6–8": "Write four lines using rhyme and one concrete image, with a checker.",
+      "9–10": "Write four real lines using rhyme, meter and a concrete image instead of a vague feeling.",
+      "11–12": "Write a real verse where the first line earns the second, using rhyme, meter and concrete image throughout."
+     }
     },
     {
      "theme": "Melody over changes",
      "description": "Writing a tune that moves: contour, range, repetition with variation, and a melody a stranger can sing back.",
-     "transfer_check": "Write a melody over a given four-chord progression that a listener can sing back after two hearings."
+     "transfer_check": "Write a melody over a given four-chord progression that a listener can sing back after two hearings.",
+     "bands": {
+      "K–2": "Hum a simple tune with an adult that goes up and down.",
+      "3–5": "Hum a short tune over a simple chord and see if a friend can sing it back.",
+      "6–8": "Write a short melody over a chord and have someone sing it back, with a checker.",
+      "9–10": "Write a real melody over changes and have a stranger sing it back after one hearing.",
+      "11–12": "Write and test a real melody's contour and repetition, refined until a stranger sings it back accurately."
+     }
     },
     {
      "theme": "Harmony choices",
      "description": "The three chords, the fourth one, the borrowed chord and the turnaround — how harmony colours a line.",
-     "transfer_check": "Reharmonise a simple melody two ways and explain, on the instrument, what each change does to the feeling."
+     "transfer_check": "Reharmonise a simple melody two ways and explain, on the instrument, what each change does to the feeling.",
+     "bands": {
+      "K–2": "Play two chords with an adult and say which sounds more like an ending.",
+      "3–5": "Play three chords in a row and say which one feels like a turn.",
+      "6–8": "Play four chords including a borrowed one and say what it changes, with a checker.",
+      "9–10": "Play a real progression with a borrowed chord and explain what colour it adds to the line.",
+      "11–12": "Choose and defend a real harmony including a turnaround, explaining what each chord does to the song."
+     }
     },
     {
      "theme": "Form",
      "description": "Verse, chorus, bridge; the 12-bar blues; the jazz head and the AABA — the shapes songs come in and why.",
-     "transfer_check": "Map the form of three recorded songs from different Louisiana genres and write an original song in one of those forms."
+     "transfer_check": "Map the form of three recorded songs from different Louisiana genres and write an original song in one of those forms.",
+     "bands": {
+      "K–2": "Say which part of a song repeats: the chorus.",
+      "3–5": "Label the verse and chorus of a real song.",
+      "6–8": "Label verse, chorus and bridge in a real song, with a checker.",
+      "9–10": "Label a real song's full form — verse, chorus, bridge — and say why it is shaped that way.",
+      "11–12": "Analyse a real song's form against a named shape (12-bar, AABA) and defend the match."
+     }
     },
     {
      "theme": "Arranging for the band",
      "description": "Who plays what, when to stop, the intro and the ending — turning a song into a piece a band can play.",
-     "transfer_check": "Write a one-page arrangement (intro, sections, dynamics, ending) for a four-piece band and rehearse it with them once."
+     "transfer_check": "Write a one-page arrangement (intro, sections, dynamics, ending) for a four-piece band and rehearse it with them once.",
+     "bands": {
+      "K–2": "Say who plays first and who plays last in a simple group song.",
+      "3–5": "Decide with a group who plays what for one simple song.",
+      "6–8": "Arrange one song for three instruments, deciding who plays what, with a checker.",
+      "9–10": "Arrange a real song for a small band, deciding the intro, the ending and who plays what.",
+      "11–12": "Arrange and rehearse a real song for a band, with a written chart and a defended ending."
+     }
     },
     {
      "theme": "The horn section and the rhythm section",
      "description": "Writing parts: a horn line that fits the vocal, a bass line that locks to the kick, a keyboard part that leaves room.",
-     "transfer_check": "Write and notate or chart a two-horn line and a bass part for an existing song, and hear them played by real players."
+     "transfer_check": "Write and notate or chart a two-horn line and a bass part for an existing song, and hear them played by real players.",
+     "bands": {
+      "K–2": "Say which instrument keeps the beat in a band.",
+      "3–5": "Point out the bass and the drums doing their jobs in a real song.",
+      "6–8": "Write a simple bass line that locks to the drum in one song, with a checker.",
+      "9–10": "Write a real bass line that locks to the kick and a keyboard part that leaves room.",
+      "11–12": "Write real horn and rhythm parts that fit together, and have a band play them as written."
+     }
     },
     {
      "theme": "Co-writing",
      "description": "Two people in a room: the split, the credit, and the habits that make collaboration work instead of end.",
-     "transfer_check": "Co-write a complete song with a partner, agree the split in writing before finishing, and each perform the other's contribution."
+     "transfer_check": "Co-write a complete song with a partner, agree the split in writing before finishing, and each perform the other's contribution.",
+     "bands": {
+      "K–2": "Write one line of a song with a friend, taking turns.",
+      "3–5": "Write half a song with a partner and agree who did what.",
+      "6–8": "Co-write four lines with a partner and agree the split, with a checker.",
+      "9–10": "Co-write a real verse with a partner, agreeing the split and the credit in writing.",
+      "11–12": "Co-write a real song with a partner through to finish, with a written split-sheet habit that made it work."
+     }
     },
     {
      "theme": "Demoing the song",
      "description": "The phone, the sketch and the honest rough: a demo that shows the song, not the production.",
-     "transfer_check": "Record a clear voice-and-instrument demo of an original song, under three minutes, that a stranger can understand on one listen."
+     "transfer_check": "Record a clear voice-and-instrument demo of an original song, under three minutes, that a stranger can understand on one listen.",
+     "bands": {
+      "K–2": "Record yourself singing a short line on a phone with an adult.",
+      "3–5": "Record a rough phone demo of one song idea.",
+      "6–8": "Record a phone demo of one song that shows the idea, not polish, with a checker.",
+      "9–10": "Record a real phone demo of one song that shows the song, not the production.",
+      "11–12": "Record and share a real honest demo of a finished song, defended as showing the song rather than the polish."
+     }
     },
     {
      "theme": "Copyright at birth",
      "description": "What you own the moment a song is fixed, what registration adds, and what a split sheet is for.",
-     "transfer_check": "Fill in a split sheet for a co-written song and complete a copyright-registration form correctly (submission optional and at the writer's choice)."
+     "transfer_check": "Fill in a split sheet for a co-written song and complete a copyright-registration form correctly (submission optional and at the writer's choice).",
+     "bands": {
+      "K–2": "Say that the moment you make up a song, it is yours.",
+      "3–5": "Say what it means that a song is yours the moment you write it down.",
+      "6–8": "State what you own the moment a song is fixed and what a split sheet is for, with a checker.",
+      "9–10": "State what you own the moment a song is fixed, what registration adds, and complete a split sheet.",
+      "11–12": "Complete a real split sheet for a co-written song and explain to the co-writer what each protection means."
+     }
     }
    ]
   },
@@ -124,52 +264,122 @@
     {
      "theme": "The set list",
      "description": "Building an hour: opener, the lull, the peak, the encore; keys and tempos that flow; the song you cut.",
-     "transfer_check": "Build and play a forty-five-minute set list with written reasoning for its order, then revise it after one performance."
+     "transfer_check": "Build and play a forty-five-minute set list with written reasoning for its order, then revise it after one performance.",
+     "bands": {
+      "K–2": "Pick which song to play first and which to play last, with an adult.",
+      "3–5": "Put three songs in an order that starts strong and ends strong.",
+      "6–8": "Order five songs into an opener, a peak and an encore, with a checker.",
+      "9–10": "Order a real set of songs into an opener, a peak and an encore, and say which song you cut and why.",
+      "11–12": "Build and defend a real hour-long set list with keys and tempos that flow, cutting one song on purpose."
+     }
     },
     {
      "theme": "Sound check",
      "description": "The stage plot, the input list and the monitor mix: getting the sound right before the door opens.",
-     "transfer_check": "Produce a stage plot and input list for your act and run a sound check with a sound engineer using them."
+     "transfer_check": "Produce a stage plot and input list for your act and run a sound check with a sound engineer using them.",
+     "bands": {
+      "K–2": "Say your name into a microphone with an adult before a show.",
+      "3–5": "Check that each instrument can be heard before a small performance.",
+      "6–8": "Write a simple stage plot for one band and check each input, with a checker.",
+      "9–10": "Write a real stage plot and input list, and get the monitor mix right before doors.",
+      "11–12": "Run a real sound check from stage plot to monitor mix, and get the room ready before doors open."
+     }
     },
     {
      "theme": "The front line and the back line",
      "description": "Stage roles: who leads, who cues, who counts in; the bandleader's hand and the sideman's ear.",
-     "transfer_check": "Lead a band through a set — counting in, cueing endings, calling an unplanned tune — and be followed cleanly."
+     "transfer_check": "Lead a band through a set — counting in, cueing endings, calling an unplanned tune — and be followed cleanly.",
+     "bands": {
+      "K–2": "Say who starts a song in your group performance.",
+      "3–5": "Practise who leads and who follows in a small group song.",
+      "6–8": "Assign who leads, cues and counts in for one song, with a checker.",
+      "9–10": "Assign real stage roles — who leads, who cues, who counts in — for a band performance.",
+      "11–12": "Lead a real band from a defined role, cueing and counting in, and explain the ear behind each cue."
+     }
     },
     {
      "theme": "Playing the room",
      "description": "Reading an audience, the dance floor and the listening room; when to talk, when to play, when to stop.",
-     "transfer_check": "Perform for a live audience and afterwards describe three things you changed in the moment because of what the room did."
+     "transfer_check": "Perform for a live audience and afterwards describe three things you changed in the moment because of what the room did.",
+     "bands": {
+      "K–2": "Say if people in the room look happy while you perform.",
+      "3–5": "Watch an audience and say if they want you to keep playing or stop.",
+      "6–8": "Read an audience during a short performance and adjust one thing, with a checker.",
+      "9–10": "Read a real audience during a set and decide when to talk, play or stop.",
+      "11–12": "Read a real room across a full set and adjust the set list live, defending each call."
+     }
     },
     {
      "theme": "The second line and the street",
      "description": "Performing outdoors and on the move: the brass band tradition, the parade permit, the crowd, the weather.",
-     "transfer_check": "Play in a moving or outdoor ensemble for at least twenty minutes, keeping the tune together without amplification."
+     "transfer_check": "Play in a moving or outdoor ensemble for at least twenty minutes, keeping the tune together without amplification.",
+     "bands": {
+      "K–2": "Walk in a line while playing or singing, with an adult.",
+      "3–5": "Perform something outdoors and say what was different from indoors.",
+      "6–8": "Plan an outdoor performance considering weather and crowd, with a checker.",
+      "9–10": "Plan a real outdoor performance — the permit, the crowd, the weather — for a brass or street tradition.",
+      "11–12": "Plan and perform a real street or second-line set, handling weather, permit and crowd on the day."
+     }
     },
     {
      "theme": "The gig economy",
      "description": "The call, the load-in, the settle-up and the tax form: what a gig actually involves from booking to being paid.",
-     "transfer_check": "Handle one real or simulated gig end to end — confirmation, load-in list, set, invoice — with every document produced."
+     "transfer_check": "Handle one real or simulated gig end to end — confirmation, load-in list, set, invoice — with every document produced.",
+     "bands": {
+      "K–2": "Say what you would want in exchange for playing music for someone.",
+      "3–5": "List what happens before, during and after a small performance.",
+      "6–8": "List the steps of a gig from the call to being paid, with a checker.",
+      "9–10": "List the real steps of a gig — the call, the load-in, the settle-up — and what a tax form asks for.",
+      "11–12": "Book and complete a real gig end to end, from the call to the settle-up and the tax record."
+     }
     },
     {
      "theme": "Stage tech",
      "description": "Cables, DI boxes, gain structure and feedback: enough live sound to save your own show.",
-     "transfer_check": "Set up a small PA for a duo — correct gain structure, no feedback, a monitor mix — and troubleshoot a fault introduced by the assessor."
+     "transfer_check": "Set up a small PA for a duo — correct gain structure, no feedback, a monitor mix — and troubleshoot a fault introduced by the assessor.",
+     "bands": {
+      "K–2": "Plug in a cable with an adult and say what it does.",
+      "3–5": "Connect an instrument to an amplifier and check the sound is clean.",
+      "6–8": "Connect a simple signal chain and identify feedback if it happens, with a checker.",
+      "9–10": "Connect a real signal chain with a DI box and fix one feedback problem.",
+      "11–12": "Set up and troubleshoot a real live sound chain, fixing gain and feedback issues under time pressure."
+     }
     },
     {
      "theme": "The festival stage",
      "description": "The 45-minute set and the 15-minute changeover: preparation, the advance, the stage manager's clock.",
-     "transfer_check": "Execute a timed festival-style changeover and set under twenty minutes total, meeting a stage manager's schedule."
+     "transfer_check": "Execute a timed festival-style changeover and set under twenty minutes total, meeting a stage manager's schedule.",
+     "bands": {
+      "K–2": "Say how fast you would need to set up if your turn was short.",
+      "3–5": "Time how long it takes to set up and pack up a small performance.",
+      "6–8": "Plan a set that fits a short changeover time, with a checker.",
+      "9–10": "Plan a real 45-minute set with a 15-minute changeover, timed and rehearsed.",
+      "11–12": "Advance and run a real festival slot within its changeover window, coordinating with the stage manager."
+     }
     },
     {
      "theme": "Merch and the table",
      "description": "The shirt, the record, the QR code and the person at the table: selling at the show honestly.",
-     "transfer_check": "Plan, cost and run a merch table for one show, reconciling stock and cash at the end."
+     "transfer_check": "Plan, cost and run a merch table for one show, reconciling stock and cash at the end.",
+     "bands": {
+      "K–2": "Make one thing to give away after a performance, with an adult.",
+      "3–5": "Set up a small table to share something you made after a show.",
+      "6–8": "Set up a merch table with priced items after a performance, with a checker.",
+      "9–10": "Set up a real merch table with priced items and a way to pay, honestly.",
+      "11–12": "Run a real merch table at a show, tracking sales and handling money honestly."
+     }
     },
     {
      "theme": "Working with the venue",
      "description": "Promoter, sound engineer, the contract, the door split and the guarantee: the deal behind the show.",
-     "transfer_check": "Read a real venue performance agreement, explain its terms in plain words, and negotiate one term with a role-playing promoter."
+     "transfer_check": "Read a real venue performance agreement, explain its terms in plain words, and negotiate one term with a role-playing promoter.",
+     "bands": {
+      "K–2": "Ask a grown-up what a place needs from you before you perform there.",
+      "3–5": "Find out what a real venue needs before a performance — a time, a sound check.",
+      "6–8": "Write down what a venue and a performer each agree to before a show, with a checker.",
+      "9–10": "Write the real deal points between performer and venue — the split, the guarantee.",
+      "11–12": "Negotiate and document a real venue deal — sound engineer, split, guarantee — before a show."
+     }
     }
    ]
   },
@@ -181,52 +391,122 @@
     {
      "theme": "Signal path",
      "description": "Microphone to preamp to converter to the DAW and back to the speakers: the chain and where it breaks.",
-     "transfer_check": "Draw the full signal path of a recording setup and trace a silent channel to its fault."
+     "transfer_check": "Draw the full signal path of a recording setup and trace a silent channel to its fault.",
+     "bands": {
+      "K–2": "Say what happens when you speak into a microphone with an adult.",
+      "3–5": "Trace how sound gets from a microphone to a speaker.",
+      "6–8": "Trace a signal from microphone to speaker, naming each stage, with a checker.",
+      "9–10": "Trace a real signal path from mic to preamp to converter to DAW, and find where it breaks.",
+      "11–12": "Trace and troubleshoot a real signal path end to end, finding and fixing a break in the chain."
+     }
     },
     {
      "theme": "Microphones",
      "description": "Dynamic and condenser, polar patterns, placement and the room: the first decision that shapes every recording.",
-     "transfer_check": "Record the same source with three microphone placements and identify each by ear, explaining the differences."
+     "transfer_check": "Record the same source with three microphone placements and identify each by ear, explaining the differences.",
+     "bands": {
+      "K–2": "Talk close and far from a microphone with an adult and hear the difference.",
+      "3–5": "Compare how two different microphones sound on the same voice.",
+      "6–8": "Compare a dynamic and a condenser mic on the same source, with a checker.",
+      "9–10": "Compare a dynamic and a condenser mic's polar pattern and placement on a real source.",
+      "11–12": "Choose and place a real microphone for a real source, defending the choice against the room."
+     }
     },
     {
      "theme": "Tracking",
      "description": "Takes, the click, punching in and comping: capturing a performance and keeping the best of it.",
-     "transfer_check": "Track a song in a DAW with a click, punch in a fix, and comp a lead vocal from three takes."
+     "transfer_check": "Track a song in a DAW with a click, punch in a fix, and comp a lead vocal from three takes.",
+     "bands": {
+      "K–2": "Try singing a line more than once and pick your favourite with an adult.",
+      "3–5": "Record two takes of one line and pick the better one.",
+      "6–8": "Record three takes of one phrase and comp the best parts, with a checker.",
+      "9–10": "Record several real takes with a click and comp the best performance.",
+      "11–12": "Track and comp a real performance across multiple takes to a usable final recording."
+     }
     },
     {
      "theme": "The producer's job",
      "description": "The sound, the performance and the decision: what a producer does that a musician and an engineer don't.",
-     "transfer_check": "Produce a two-minute recording for another artist — choosing arrangement, take and sound — and explain each decision."
+     "transfer_check": "Produce a two-minute recording for another artist — choosing arrangement, take and sound — and explain each decision.",
+     "bands": {
+      "K–2": "Say who decides what a recording should sound like overall.",
+      "3–5": "Say one decision a producer makes that a player does not.",
+      "6–8": "Name two decisions a producer makes beyond playing or engineering, with a checker.",
+      "9–10": "Name the decisions a real producer makes about sound and performance in a session.",
+      "11–12": "Act as producer on a real session, making and defending the sound and performance calls."
+     }
     },
     {
      "theme": "Editing",
      "description": "Timing, tuning and the ethics of it: what to fix, what to leave, and telling the artist.",
-     "transfer_check": "Edit a tracked performance for timing and tuning, keeping an untouched version, and defend where you stopped."
+     "transfer_check": "Edit a tracked performance for timing and tuning, keeping an untouched version, and defend where you stopped.",
+     "bands": {
+      "K–2": "Say if a recording should be fixed if a note sounds a little wrong.",
+      "3–5": "Decide whether to fix or keep a small mistake in a recording.",
+      "6–8": "Edit one recording, fixing timing or tuning, and say what you left, with a checker.",
+      "9–10": "Edit a real recording, deciding what to fix, what to leave, and telling the artist why.",
+      "11–12": "Edit a real take with a clear ethic about what to fix, and explain the choices to the artist."
+     }
     },
     {
      "theme": "Mixing",
      "description": "Balance, EQ, compression and space: making twenty tracks into one record.",
-     "transfer_check": "Mix a multitrack session to a reference, with documented moves, and improve it after a listen on a second system."
+     "transfer_check": "Mix a multitrack session to a reference, with documented moves, and improve it after a listen on a second system.",
+     "bands": {
+      "K–2": "Turn two sounds up and down with an adult until they sound balanced.",
+      "3–5": "Balance the volume of two tracks so neither drowns the other.",
+      "6–8": "Balance three tracks and adjust one with EQ, with a checker.",
+      "9–10": "Balance and EQ several real tracks into one coherent mix.",
+      "11–12": "Mix a real multi-track recording into a finished balance using EQ, compression and space."
+     }
     },
     {
      "theme": "Mastering",
      "description": "The last mile: loudness, translation, formats and the version that goes out.",
-     "transfer_check": "Master a mix to a streaming loudness target and produce correctly formatted files for streaming and CD."
+     "transfer_check": "Master a mix to a streaming loudness target and produce correctly formatted files for streaming and CD.",
+     "bands": {
+      "K–2": "Say why the same song sounds different on different speakers.",
+      "3–5": "Listen to one song on two different speakers and say what changed.",
+      "6–8": "Compare a mix on two playback systems and note one difference, with a checker.",
+      "9–10": "Compare a real mix across systems and describe what mastering would fix.",
+      "11–12": "Master a real mix for loudness and translation across formats, and defend the final version."
+     }
     },
     {
      "theme": "Session craft",
      "description": "The session musician's world: the chart, the call, the first take that counts.",
-     "transfer_check": "Play a session part from a chart with two takes, as recorded and judged by the person who called the session."
+     "transfer_check": "Play a session part from a chart with two takes, as recorded and judged by the person who called the session.",
+     "bands": {
+      "K–2": "Play a short part correctly on the first try, with an adult listening.",
+      "3–5": "Read a simple chart and play it correctly on the first try.",
+      "6–8": "Read a chart and deliver a usable take on the first or second try, with a checker.",
+      "9–10": "Read a real chart cold and deliver a usable take quickly, as a session player would.",
+      "11–12": "Deliver a real session take from a chart under time pressure, to a standard a producer would keep."
+     }
     },
     {
      "theme": "Home studio",
      "description": "Building one honestly on a budget: the interface, the treatment, the one good microphone.",
-     "transfer_check": "Design a home studio under a set budget with an itemised list, and record a usable vocal in it."
+     "transfer_check": "Design a home studio under a set budget with an itemised list, and record a usable vocal in it.",
+     "bands": {
+      "K–2": "Find the quietest corner of a room with an adult to record in.",
+      "3–5": "Find the best-sounding spot in a room to record a voice.",
+      "6–8": "Set up a basic home recording spot with one microphone, with a checker.",
+      "9–10": "Set up a real home studio on a budget — interface, treatment, one good mic.",
+      "11–12": "Build and record in a real home studio setup, defending each budget choice."
+     }
     },
     {
      "theme": "Deliverables",
      "description": "Stems, metadata, ISRC codes, artwork specs and the file that actually ships.",
-     "transfer_check": "Prepare a finished release package — masters, stems, metadata, codes, artwork — that passes a distributor's checklist."
+     "transfer_check": "Prepare a finished release package — masters, stems, metadata, codes, artwork — that passes a distributor's checklist.",
+     "bands": {
+      "K–2": "Give a friend your recording with your name on it.",
+      "3–5": "Label a recording with a title and your name before sharing it.",
+      "6–8": "Prepare one track with basic metadata and a file name, with a checker.",
+      "9–10": "Prepare real stems and metadata for a track that is ready to ship.",
+      "11–12": "Prepare a real delivery package — stems, metadata, ISRC, artwork specs — to a professional standard."
+     }
     }
    ]
   },
@@ -238,52 +518,122 @@
     {
      "theme": "Two copyrights",
      "description": "The song and the recording are two different properties with two different owners: the fact everything else rests on.",
-     "transfer_check": "Take three real records and identify, from public sources, who owns the composition and who owns the master."
+     "transfer_check": "Take three real records and identify, from public sources, who owns the composition and who owns the master.",
+     "bands": {
+      "K–2": "Say that a song and a recording of it are two different things.",
+      "3–5": "Say why the person who wrote a song and the person who recorded it might be different.",
+      "6–8": "State the two copyrights in a song and name an owner of each, with a checker.",
+      "9–10": "State the two copyrights in a real song and name a real owner of each.",
+      "11–12": "Explain the two copyrights for a real song to someone new to the industry, with real examples."
+     }
     },
     {
      "theme": "Publishing",
      "description": "Performing-rights organisations, mechanicals and the publisher's job: how a song earns when it isn't you playing it.",
-     "transfer_check": "Register (or complete the forms to register) with a performing-rights organisation and explain the mechanical and performance royalty for one song."
+     "transfer_check": "Register (or complete the forms to register) with a performing-rights organisation and explain the mechanical and performance royalty for one song.",
+     "bands": {
+      "K–2": "Say that someone gets paid when a song plays on the radio.",
+      "3–5": "Say what a publisher does for a songwriter.",
+      "6–8": "Name one performing-rights organisation and what it collects, with a checker.",
+      "9–10": "Name a real performing-rights organisation and explain what a mechanical royalty is.",
+      "11–12": "Explain real publishing income streams to a songwriter deciding whether to sign."
+     }
     },
     {
      "theme": "Royalties",
      "description": "Streams, radio, sync and live: where each dollar comes from and how little some of them are.",
-     "transfer_check": "Compute the earnings of a song at published rates across four income streams and present them on one page."
+     "transfer_check": "Compute the earnings of a song at published rates across four income streams and present them on one page.",
+     "bands": {
+      "K–2": "Say that playing a song on the radio or online can earn money.",
+      "3–5": "Name two ways a song earns money: streaming and radio.",
+      "6–8": "Name three royalty sources and say which pays least, with a checker.",
+      "9–10": "Name real royalty sources — streams, radio, sync, live — and compare their real rates.",
+      "11–12": "Compare real royalty statements across sources and explain the gap to an artist."
+     }
     },
     {
      "theme": "The manager",
      "description": "What a manager does, what they take, and the contract you should never sign without reading.",
-     "transfer_check": "Annotate a sample management agreement clause by clause and name the three you would negotiate."
+     "transfer_check": "Annotate a sample management agreement clause by clause and name the three you would negotiate.",
+     "bands": {
+      "K–2": "Say what a helper who looks after your music career might do.",
+      "3–5": "Say one thing a manager does for a musician.",
+      "6–8": "Name two things a manager does and one thing to check before signing, with a checker.",
+      "9–10": "Name what a real manager does, what they take, and what to check in a contract.",
+      "11–12": "Review a real management contract and identify what to negotiate before signing."
+     }
     },
     {
      "theme": "The booking agent and the promoter",
      "description": "How a tour is built: the agent's routing, the promoter's risk, the guarantee and the split.",
-     "transfer_check": "Route a five-date regional tour with realistic drives, venues and a costed budget that breaks even."
+     "transfer_check": "Route a five-date regional tour with realistic drives, venues and a costed budget that breaks even.",
+     "bands": {
+      "K–2": "Say who helps a musician find places to play.",
+      "3–5": "Say what a booking agent does for a touring musician.",
+      "6–8": "Name the agent's and promoter's roles in building a tour, with a checker.",
+      "9–10": "Name a real agent's routing role and a real promoter's risk in one tour.",
+      "11–12": "Map a real tour's routing, guarantee and split between agent and promoter."
+     }
     },
     {
      "theme": "Labels and distribution",
      "description": "Major, independent and self-release: what each gives, what each takes, and how a record reaches a phone.",
-     "transfer_check": "Compare three release paths for one recording on cost, ownership and reach, and choose one with reasons."
+     "transfer_check": "Compare three release paths for one recording on cost, ownership and reach, and choose one with reasons.",
+     "bands": {
+      "K–2": "Say how a song gets from a musician to your phone.",
+      "3–5": "Name one way a musician can share a song: a label or by themselves.",
+      "6–8": "Compare a label deal and self-release on what each gives and takes, with a checker.",
+      "9–10": "Compare a real major, independent and self-release path on what each gives and takes.",
+      "11–12": "Advise an artist choosing between real label and self-release paths, with the trade-offs stated plainly."
+     }
     },
     {
      "theme": "Sync licensing",
      "description": "Film, television, advertising and games: the license, the fee and the pitch.",
-     "transfer_check": "Prepare a sync pitch package for one track — metadata, instrumental, one-sheet — to a real brief."
+     "transfer_check": "Prepare a sync pitch package for one track — metadata, instrumental, one-sheet — to a real brief.",
+     "bands": {
+      "K–2": "Say that a song in a movie or ad had to be allowed to be there.",
+      "3–5": "Say what it means when a song is used in a commercial.",
+      "6–8": "Name what a sync license covers and what it pays, with a checker.",
+      "9–10": "Name a real sync license's scope and fee for a film, TV or game use.",
+      "11–12": "Pitch a real song for a real sync opportunity and explain the license terms."
+     }
     },
     {
      "theme": "The music-business roles map",
      "description": "A&R, publicist, tour manager, merch, entertainment lawyer, music supervisor: the jobs around the music.",
-     "transfer_check": "Map twelve music-industry roles with what each does and who pays them, and interview one working person in any of them."
+     "transfer_check": "Map twelve music-industry roles with what each does and who pays them, and interview one working person in any of them.",
+     "bands": {
+      "K–2": "Name one job other than musician that works in music.",
+      "3–5": "Name two jobs in the music business besides performing.",
+      "6–8": "Name four music-business roles and what each does, with a checker.",
+      "9–10": "Name real music-business roles — A&R, publicist, tour manager — and what each does.",
+      "11–12": "Map a real project's team across roles and explain who does what and why."
+     }
     },
     {
      "theme": "Louisiana's music economy",
      "description": "Festivals, venues, cultural districts, co-ops and the state's music program: the industry where you live.",
-     "transfer_check": "Produce a one-page map of your parish's or region's music economy — venues, festivals, organisations, training — with sources."
+     "transfer_check": "Produce a one-page map of your parish's or region's music economy — venues, festivals, organisations, training — with sources.",
+     "bands": {
+      "K–2": "Name one place near you where music happens.",
+      "3–5": "Name one Louisiana festival or venue that supports musicians.",
+      "6–8": "Name two parts of Louisiana's music economy and one program that supports it, with a checker.",
+      "9–10": "Name real Louisiana venues, festivals and programs that support a working musician.",
+      "11–12": "Map the real Louisiana music economy for a working musician's career path, with named institutions."
+     }
     },
     {
      "theme": "Building a career",
      "description": "The plan, the team, the day job and the long game: careers in music are built, not struck.",
-     "transfer_check": "Write a two-year music career plan with milestones, income sources and the people you need, and review it with a working musician."
+     "transfer_check": "Write a two-year music career plan with milestones, income sources and the people you need, and review it with a working musician.",
+     "bands": {
+      "K–2": "Say one thing you would want to be true about your music life when you grow up.",
+      "3–5": "Say one step someone could take toward a career in music.",
+      "6–8": "Name a plan, a team member and a day job that could support a music career, with a checker.",
+      "9–10": "Sketch a real plan for a music career including a day job and a long game.",
+      "11–12": "Build and defend a real multi-year career plan in music, including team, income and the long game."
+     }
     }
    ]
   }
