@@ -4,6 +4,18 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.86.0] — 2026-09-18
+
+### Added — prompt 2, tranche eight: the three Civic Leadership Legacy packs across five bands
+- **`data/pack_specs/civic-leadership-institute-model.json`**,
+  **`civic-leadership-legacy-california.json`**, and
+  **`civic-leadership-legacy-texas.json`** now carry `bands` on every
+  theme: five tracks each, ten themes, five distinct sentences on the
+  band ladder — 750 rows across the three packs; no block id, code,
+  credential or transfer check changed. All three are pack-spec-based;
+  `bands` reaches them through the same direct path used for the other
+  pack-spec packs — no override needed. Band-suffix rows 2,500 → 1,750.
+
 ## [0.85.0] — 2026-09-18
 
 ### Added — prompt 2, tranche seven: Arts & Craft Trades and Energy, Grid & the Home across five bands

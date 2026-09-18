@@ -41,10 +41,10 @@ authored descriptions. Neither is hidden — both are counted here.
 | Cognition.X : Education OS | 660 | 0 | 0% | 0% | 100% | 0% | 113 |
 | Arts & Craft Trades : Louisiana Makers | 250 | 5 | 100% | 0% | 100% | 0% | 75 |
 | Arts, Making Media & Performance | 250 | 5 | 100% | 0% | 100% | 0% | 82 |
-| Civic Leadership Legacy : The Institute Model | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
-| Civic Leadership Legacy : California | 250 | 5 | 100% | 100% | 100% | 0% | 90 |
+| Civic Leadership Legacy : The Institute Model | 250 | 5 | 100% | 0% | 100% | 0% | 90 |
+| Civic Leadership Legacy : California | 250 | 5 | 100% | 0% | 100% | 0% | 90 |
 | Civic Leadership Legacy : Louisiana | 250 | 5 | 100% | 0% | 100% | 0% | 117 |
-| Civic Leadership Legacy : Texas | 250 | 5 | 100% | 100% | 100% | 0% | 88 |
+| Civic Leadership Legacy : Texas | 250 | 5 | 100% | 0% | 100% | 0% | 88 |
 | Culinary Trades : The Louisiana Kitchen | 250 | 5 | 100% | 0% | 100% | 0% | 85 |
 | Digital Life, Data & AI | 250 | 5 | 100% | 0% | 100% | 0% | 54 |
 | Emergency Preparedness & First Response | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 14% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 10% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
