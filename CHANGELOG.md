@@ -4,6 +4,22 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.87.0] — 2026-09-18
+
+### Added — prompt 2, tranche nine: Food/Nutrition, Learning States, and Transport & Mobility across five bands
+- **`data/pack_specs/food-cooking-nutrition.json`**,
+  **`learning-states-universal-access.json`**, and
+  **`transport-mobility.json`** now carry `bands` on every theme: five
+  tracks each, ten themes, five distinct sentences on the band ladder —
+  750 rows across the three packs; no block id, code, credential or
+  transfer check changed. All three are pack-spec-based; `bands`
+  reaches them through the same direct path used for the other
+  pack-spec packs — no override needed. Band-suffix rows 1,750 →
+  1,000. This closes out every pack-spec-based (no-override) community
+  pack; only the four packs needing a new override promotion remain
+  for prompt 2 (Housing & Tenancy, Money Benefits & Entitlements,
+  Reentry & Recovery Pathways, Neighbourhood Safety & Civic Voice).
+
 ## [0.86.0] — 2026-09-18
 
 ### Added — prompt 2, tranche eight: the three Civic Leadership Legacy packs across five bands

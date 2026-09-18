@@ -49,9 +49,9 @@ authored descriptions. Neither is hidden — both are counted here.
 | Digital Life, Data & AI | 250 | 5 | 100% | 0% | 100% | 0% | 54 |
 | Emergency Preparedness & First Response | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 | Energy, Grid & the Home | 250 | 5 | 100% | 0% | 100% | 0% | 94 |
-| Food, Cooking & Nutrition | 250 | 5 | 100% | 100% | 100% | 0% | 82 |
+| Food, Cooking & Nutrition | 250 | 5 | 100% | 0% | 100% | 0% | 82 |
 | Law, Contracts & Everyday Rights | 250 | 5 | 100% | 0% | 100% | 0% | 104 |
-| Learning States & Universal Access | 250 | 5 | 100% | 100% | 100% | 0% | 94 |
+| Learning States & Universal Access | 250 | 5 | 100% | 0% | 100% | 0% | 94 |
 | Cognition.X : Louisiana OS | 500 | 10 | 100% | 0% | 100% | 0% | 101 |
 | Music : Creation to Industry | 250 | 5 | 100% | 0% | 100% | 0% | 85 |
 | Parish Launch & Scale | 250 | 5 | 100% | 0% | 100% | 0% | 120 |
@@ -59,9 +59,9 @@ authored descriptions. Neither is hidden — both are counted here.
 | Cognition.X : States OS | 250 | 5 | 100% | 0% | 100% | 0% | 96 |
 | Trades Across School Subjects | 250 | 5 | 100% | 0% | 100% | 0% | 87 |
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
-| Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
+| Transport & Mobility | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 10% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 5% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
