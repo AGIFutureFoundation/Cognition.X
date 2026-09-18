@@ -4,6 +4,24 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.102.0] — 2026-09-18
+
+### Added — prompt 3 final piece: Multilateral OS's 650 empty descriptions filled, shared dictionary now at 1,048 sentences
+- **`data/promotions/multilateral-os-practice-steps.json`** is a new
+  `unbanded` promotion: 352 themes, 650 rows, no suffix, `track`/`code`
+  left deferred. 156 of the 352 themes reuse an exact sentence already
+  promoted for Sapient OS, Robotics OS or Global Health OS; the other
+  196 are new and authored for this pack's multilateral/international-organization
+  field-practice domain (diplomacy, humanitarian response,
+  peacekeeping, protection, cross-agency coordination). No block id,
+  code, track, level, credential, or transfer check changed.
+- `tests/test_platform.py`'s `UNBANDED_FILLED_PACKS` gains
+  Multilateral OS; `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 3,280 → 2,630.
+  Dataset-wide description coverage rises from 81% to 84%.
+- Four packs remain — Corporate OS, Education OS, Science OS,
+  Non-Profit Practice — drawing from a shared generic-action dictionary
+  now at 1,048 sentences across four packs.
+
 ## [0.101.0] — 2026-09-18
 
 ### Added — prompt 3 final piece: Global Health OS's 660 empty descriptions filled, shared dictionary now at 852 sentences

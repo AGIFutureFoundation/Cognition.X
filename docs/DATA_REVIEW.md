@@ -135,6 +135,11 @@ sections; the only other diff is the fonts `<link>`).
    authored fresh for global-health-practice content. Five packs
    remain (Corporate OS, Education OS, Science OS, Multilateral OS,
    Non-Profit Practice); the shared dictionary is now 852 sentences.
+   *Update (v0.102.0):* shipped Multilateral OS (352 themes, 650 rows)
+   — 156 reused from the shared dictionary, 196 authored fresh for its
+   diplomacy/humanitarian/peacekeeping field-practice content. Four
+   packs remain (Corporate OS, Education OS, Science OS, Non-Profit
+   Practice); the shared dictionary is now 1,048 sentences.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic
