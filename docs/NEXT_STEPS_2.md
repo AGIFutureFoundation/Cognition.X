@@ -168,7 +168,7 @@ python3 tools/normalize_blocks.py --report && python3 tools/data_quality.py
 
 ---
 
-## 4 — One shared runtime for the voice and tour helpers
+## 4 — One shared runtime for the voice and tour helpers — DONE in v0.107.0
 
 **Why.** `chooseVoice`, `say`, `tourShow` and `tourEnd` are defined
 separately in four templates (Flow Hub, Louisiana, States, Trades
@@ -188,6 +188,30 @@ existing voice and tour checks before and after.
 **Acceptance.** One definition of each helper in the repository; every
 template shrinks; the browser suite's voice and tour assertions pass
 unchanged; the footprint budgets hold.
+
+**Finding, v0.107.0.** Only `chooseVoice` and `say` were actually
+duplicated — byte-identical logic (the three-persona table, the
+speechSynthesis preference list, the sentence-by-sentence utterance
+drift) modulo the `localStorage` key each app reads. `tourShow` and
+`tourEnd` are not: each app's guided tour is a genuinely different
+implementation (own DOM strategy, own navigation — `go(view)` versus
+`location.hash` behind a 120/220/240ms `setTimeout`, own CSS class and
+accent color) that happens to share a function name. Forcing them into
+one shared function would trade real behavior-preservation risk for a
+cosmetic line count, so only `chooseVoice`/`say` moved to
+`tools/voice/engine.js` as `CXVOICE`, injected after the studio engine
+in `tools/runtime_lib.py`'s `body_snippet()`; each template keeps a
+one-line alias, and the voice-picker `change` handler now also calls
+`CXVOICE.setMode(...)`. Dead, write-only `voiceOn` state (assigned,
+never read, in Flow Hub and Louisiana) was dropped in the same change.
+Also found: the browser suite has no dedicated voice or tour
+assertions to hold unchanged (the acceptance criterion above assumed
+some existed) — verified instead with a live-page Playwright check
+across all four apps confirming `window.CXVOICE` loads with no page
+errors and that driving `#voicepick`'s real `change` event updates
+`CXVOICE.getMode()`. Four templates shrink by 140 lines (26 added);
+both suites pass unchanged (1,919 Python checks, 223 browser
+assertions).
 
 **Verify.**
 ```bash
