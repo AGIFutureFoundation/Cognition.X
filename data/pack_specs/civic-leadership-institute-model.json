@@ -10,52 +10,122 @@
         {
           "theme": "The most noble of professions",
           "description": "Public service taught as a craft with roles, crews, evidence and credentials — the founding principle, practiced rather than recited.",
-          "transfer_check": "Complete one documented act of public service where you live and present it to a real audience beyond your classroom or family."
+          "transfer_check": "Complete one documented act of public service where you live and present it to a real audience beyond your classroom or family.",
+          "bands": {
+            "K–2": "Help a classmate and tell an adult how it felt.",
+            "3–5": "Explain why helping others at school matters, with an adult's help.",
+            "6–8": "Explain why real public service is called a noble profession, with a checker.",
+            "9–10": "Reflect on a real act of public service you performed, on your own.",
+            "11–12": "Explain to someone else why real public service deserves that description."
+          }
         },
         {
           "theme": "The leader's story as a text",
           "description": "Reading a real public servant's record — the wins, the compromises, the record — as curriculum, not hagiography.",
-          "transfer_check": "Record a leader's-story interview with an experienced public servant and present its two most teachable decisions."
+          "transfer_check": "Record a leader's-story interview with an experienced public servant and present its two most teachable decisions.",
+          "bands": {
+            "K–2": "Tell an adult a short story about someone who helped others.",
+            "3–5": "Read a simple story about a real leader, with an adult's help.",
+            "6–8": "Read a real leader's story and identify its lesson, with a checker.",
+            "9–10": "Analyse a real leader's story as a text with lessons to draw, on your own.",
+            "11–12": "Teach someone else how to read a real leader's story critically."
+          }
         },
         {
           "theme": "Bringing everyone along",
           "description": "The principle that a win that leaves people behind is unfinished — coalition maintenance as daily leadership work.",
-          "transfer_check": "For one real group decision you were part of, name who was at risk of being left behind and show what brought them along — or what should have."
+          "transfer_check": "For one real group decision you were part of, name who was at risk of being left behind and show what brought them along — or what should have.",
+          "bands": {
+            "K–2": "Invite a classmate who is left out to join a game, with an adult.",
+            "3–5": "Include someone who was left out of an activity, with an adult's help.",
+            "6–8": "Bring a real excluded person into a group activity, with a checker.",
+            "9–10": "Practice real inclusive leadership in a group you're part of, on your own.",
+            "11–12": "Teach someone else how to bring everyone along in a real group effort."
+          }
         },
         {
           "theme": "Decisions that account for lives",
           "description": "Impact thinking: tracing who a decision touches before making it, with the wide-ranging-impacts principle as the discipline.",
-          "transfer_check": "Take one live local decision and map every group it touches, presenting the impact map before stating your own position."
+          "transfer_check": "Take one live local decision and map every group it touches, presenting the impact map before stating your own position.",
+          "bands": {
+            "K–2": "Think about how a choice affects a friend, with an adult.",
+            "3–5": "Consider how a real decision affects other people, with an adult's help.",
+            "6–8": "Weigh a real decision's effect on other real people, with a checker.",
+            "9–10": "Make a real decision that accounts for its effect on real lives, on your own.",
+            "11–12": "Explain to someone else how to weigh a real decision's human cost."
+          }
         },
         {
           "theme": "The mentorship chain",
           "description": "Being mentored and mentoring in both directions — the legacy chain as the model's transmission system.",
-          "transfer_check": "Establish one real mentoring link in each direction: a session where you learn from someone ahead, and one where you pass a skill behind."
+          "transfer_check": "Establish one real mentoring link in each direction: a session where you learn from someone ahead, and one where you pass a skill behind.",
+          "bands": {
+            "K–2": "Help a younger student with something you know, with an adult.",
+            "3–5": "Mentor a younger student in something you're good at, with an adult's help.",
+            "6–8": "Mentor a real younger person in a real skill, with a checker.",
+            "9–10": "Mentor a real younger person while being mentored yourself, on your own.",
+            "11–12": "Explain to someone else how a real mentorship chain sustains itself."
+          }
         },
         {
           "theme": "The placement principle",
           "description": "Hands inside a real institution — why the model insists on placements, seminars and stipends rather than classroom civics alone.",
-          "transfer_check": "Complete a placement, shadow day or structured volunteer shift with a real public body, confirmed by a supervisor."
+          "transfer_check": "Complete a placement, shadow day or structured volunteer shift with a real public body, confirmed by a supervisor.",
+          "bands": {
+            "K–2": "Visit a real workplace with an adult and ask what people do there.",
+            "3–5": "Learn about a real job by visiting or asking, with an adult's help.",
+            "6–8": "Complete a real short placement or shadow at a real organisation, with a checker.",
+            "9–10": "Complete a real substantive placement at a real organisation, on your own.",
+            "11–12": "Explain to someone else why a real placement teaches what a classroom cannot."
+          }
         },
         {
           "theme": "The seminar circle",
           "description": "The weekly cohort habit — field experience brought to a circle that questions it, reflection as part of the work.",
-          "transfer_check": "Run or take a speaking role in a seminar circle on a live local issue, presenting field evidence and taking questions on it."
+          "transfer_check": "Run or take a speaking role in a seminar circle on a live local issue, presenting field evidence and taking questions on it.",
+          "bands": {
+            "K–2": "Sit in a circle and share an idea with classmates, with an adult.",
+            "3–5": "Discuss a real topic in a small group, with an adult's help.",
+            "6–8": "Participate in a real seminar-style discussion, with a checker.",
+            "9–10": "Lead a real seminar-style discussion on a real topic, on your own.",
+            "11–12": "Facilitate a real seminar circle that draws out quieter voices."
+          }
         },
         {
           "theme": "The record you build",
           "description": "The service ledger — hours, artifacts, references, credentials — evidence that opens doors, kept from the first act of service.",
-          "transfer_check": "Assemble your own service ledger to date in a form a scholarship or employer could verify."
+          "transfer_check": "Assemble your own service ledger to date in a form a scholarship or employer could verify.",
+          "bands": {
+            "K–2": "Keep a small folder of things you're proud of, with an adult.",
+            "3–5": "Keep a simple record of things you've done, with an adult's help.",
+            "6–8": "Build a real record of your own real activities and growth, with a checker.",
+            "9–10": "Build a real substantive record of your own leadership work, on your own.",
+            "11–12": "Advise someone else on building a real record that reflects their growth."
+          }
         },
         {
           "theme": "Leading without the title",
           "description": "Influence before office — organizing, convening and counting votes as a private citizen, where most leadership actually happens.",
-          "transfer_check": "Move one real small change without holding any position — document who you convened, what you asked, and what moved."
+          "transfer_check": "Move one real small change without holding any position — document who you convened, what you asked, and what moved.",
+          "bands": {
+            "K–2": "Help organise a game without being asked, with an adult.",
+            "3–5": "Take initiative on a real group task without being asked, with an adult.",
+            "6–8": "Lead a real group effort without holding a formal title, with a checker.",
+            "9–10": "Lead a real group effort informally, without a title, on your own.",
+            "11–12": "Explain to someone else how real leadership works without a title."
+          }
         },
         {
           "theme": "Living large: joy as a leadership discipline",
           "description": "The twelfth principle — enjoying the work and sharing the joy — as sustainability, not indulgence.",
-          "transfer_check": "Identify what genuinely sustains you in service, schedule it into one real month of commitments, and report whether the work improved."
+          "transfer_check": "Identify what genuinely sustains you in service, schedule it into one real month of commitments, and report whether the work improved.",
+          "bands": {
+            "K–2": "Celebrate a small win with friends, with an adult.",
+            "3–5": "Celebrate a real group's success together, with an adult's help.",
+            "6–8": "Build real joy and celebration into a group's real work, with a checker.",
+            "9–10": "Practice real joy as a deliberate leadership discipline, on your own.",
+            "11–12": "Explain to someone else why real joy is a leadership discipline, not a luxury."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "Counting before the vote",
           "description": "The Speaker's craft generalized — knowing where every stakeholder stands before the meeting that decides.",
-          "transfer_check": "Before one real group decision, produce the written count — who is for, against, movable — and compare it to the outcome."
+          "transfer_check": "Before one real group decision, produce the written count — who is for, against, movable — and compare it to the outcome.",
+          "bands": {
+            "K–2": "Ask friends what they want before choosing a game, with an adult.",
+            "3–5": "Ask a group what they think before deciding, with an adult's help.",
+            "6–8": "Count real support for an idea before a real vote, with a checker.",
+            "9–10": "Count real support accurately before a real vote, on your own.",
+            "11–12": "Teach someone else how to count votes accurately before proposing something."
+          }
         },
         {
           "theme": "What the other side needs",
           "description": "Interests under positions — finding what an opponent must have, as distinct from what they say they want.",
-          "transfer_check": "In one real or role-played negotiation, state the other side's underlying interests to their satisfaction before proposing terms."
+          "transfer_check": "In one real or role-played negotiation, state the other side's underlying interests to their satisfaction before proposing terms.",
+          "bands": {
+            "K–2": "Ask a friend why they want something different, with an adult.",
+            "3–5": "Ask what the other side of a disagreement actually wants, with an adult.",
+            "6–8": "Identify what a real opposing side actually needs, with a checker.",
+            "9–10": "Identify a real opposing side's real needs, on your own.",
+            "11–12": "Teach someone else how to find out what an opposing side genuinely needs."
+          }
         },
         {
           "theme": "The trade that makes the deal",
           "description": "Log-rolling honestly — trading across issues so both sides win something they value more than what they give.",
-          "transfer_check": "Construct and close one real or simulated two-issue trade where both parties confirm they gained."
+          "transfer_check": "Construct and close one real or simulated two-issue trade where both parties confirm they gained.",
+          "bands": {
+            "K–2": "Trade one toy for another fairly, with an adult.",
+            "3–5": "Make a fair trade with a friend, with an adult's help.",
+            "6–8": "Propose a real trade that makes a real deal possible, with a checker.",
+            "9–10": "Negotiate a real trade that closes a real deal, on your own.",
+            "11–12": "Teach someone else how to find the trade that actually makes a deal work."
+          }
         },
         {
           "theme": "Opposing ideas strengthen consensus",
           "description": "The tolerance principle — running a room where dissent improves the outcome instead of fracturing it.",
-          "transfer_check": "Chair one real discussion with genuine disagreement, and show where an opposing idea changed the final text."
+          "transfer_check": "Chair one real discussion with genuine disagreement, and show where an opposing idea changed the final text.",
+          "bands": {
+            "K–2": "Listen to a different idea from a friend, with an adult.",
+            "3–5": "Consider an idea you disagree with, with an adult's help.",
+            "6–8": "Use a real opposing idea to strengthen a real group decision, with a checker.",
+            "9–10": "Incorporate real opposing ideas into a stronger real consensus, on your own.",
+            "11–12": "Explain to someone else why real opposition strengthens real consensus."
+          }
         },
         {
           "theme": "The agenda is the power",
           "description": "What gets discussed, in what order, decided by whom — agenda-setting as the quietest form of control, used transparently.",
-          "transfer_check": "Draft the agenda for one real meeting and annotate each ordering choice with the outcome it serves, shared openly with the group."
+          "transfer_check": "Draft the agenda for one real meeting and annotate each ordering choice with the outcome it serves, shared openly with the group.",
+          "bands": {
+            "K–2": "Ask an adult who decides what a meeting talks about first.",
+            "3–5": "Notice that what's discussed first shapes a meeting, with an adult.",
+            "6–8": "Identify how a real agenda shapes a real meeting's outcome, with a checker.",
+            "9–10": "Set a real agenda that shapes a real meeting's outcome, on your own.",
+            "11–12": "Explain to someone else why controlling the agenda is real power."
+          }
         },
         {
           "theme": "The coalition map",
           "description": "Allies, opponents, persuadables and the unengaged — mapping a real issue's landscape before spending effort.",
-          "transfer_check": "Produce a coalition map for one concrete local change and have one person on it confirm their placement is accurate."
+          "transfer_check": "Produce a coalition map for one concrete local change and have one person on it confirm their placement is accurate.",
+          "bands": {
+            "K–2": "Ask an adult who agrees with a friend's idea.",
+            "3–5": "Notice who supports a real idea and who doesn't, with an adult.",
+            "6–8": "Map a real coalition of support around an idea, with a checker.",
+            "9–10": "Build and map a real coalition around a real goal, on your own.",
+            "11–12": "Teach someone else how to map a real coalition of support."
+          }
         },
         {
           "theme": "Holding a fragile majority",
           "description": "Keeping a coalition together under pressure — the maintenance calls, the credit sharing, the defection you see coming.",
-          "transfer_check": "For one real or case-study coalition, identify its most likely defector and design the specific move that keeps them."
+          "transfer_check": "For one real or case-study coalition, identify its most likely defector and design the specific move that keeps them.",
+          "bands": {
+            "K–2": "Keep a small group of friends agreeing on a game, with an adult.",
+            "3–5": "Keep a group agreeing on a plan even when it's shaky, with an adult.",
+            "6–8": "Hold together a real fragile group agreement, with a checker.",
+            "9–10": "Hold together a real fragile majority through a real decision, on your own.",
+            "11–12": "Explain to someone else how to hold a real fragile majority together."
+          }
         },
         {
           "theme": "Losing well",
           "description": "The vote you lose — conceding without burning the room, and positioning for the next round.",
-          "transfer_check": "After a real or simulated loss, deliver the concession that keeps relationships and names the condition under which you return."
+          "transfer_check": "After a real or simulated loss, deliver the concession that keeps relationships and names the condition under which you return.",
+          "bands": {
+            "K–2": "Say something kind after losing a game, with an adult.",
+            "3–5": "Accept losing a game or vote gracefully, with an adult's help.",
+            "6–8": "Lose a real vote or decision gracefully, with a checker.",
+            "9–10": "Lose a real vote or decision gracefully, on your own.",
+            "11–12": "Teach someone else how to lose a real vote without damaging future work."
+          }
         },
         {
           "theme": "The public negotiation",
           "description": "Negotiating with an audience watching — what changes when the room has cameras, and what must never change.",
-          "transfer_check": "Run one negotiation twice — private and with observers — and report what the audience changed and what you refused to let it change."
+          "transfer_check": "Run one negotiation twice — private and with observers — and report what the audience changed and what you refused to let it change.",
+          "bands": {
+            "K–2": "Ask an adult what happens when grown-ups negotiate in front of everyone.",
+            "3–5": "Watch a real negotiation happen in public, with an adult's help.",
+            "6–8": "Identify what makes a real public negotiation different, with a checker.",
+            "9–10": "Conduct a real negotiation with the public watching, on your own.",
+            "11–12": "Explain to someone else the real pressures of negotiating in public."
+          }
         },
         {
           "theme": "The deal that holds",
           "description": "Writing agreements that survive — specificity, verification and the follow-through that makes the next deal possible.",
-          "transfer_check": "Draft one real agreement's terms so both sides can verify compliance, and check it against what actually happened after."
+          "transfer_check": "Draft one real agreement's terms so both sides can verify compliance, and check it against what actually happened after.",
+          "bands": {
+            "K–2": "Keep a promise you made to a friend, with an adult.",
+            "3–5": "Keep a real agreement you made with someone, with an adult's help.",
+            "6–8": "Make a real deal that both sides actually keep, with a checker.",
+            "9–10": "Structure a real deal so it actually holds over time, on your own.",
+            "11–12": "Teach someone else how to structure a real deal that lasts."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "Reading yourself first",
           "description": "Self-awareness under pressure — naming what you feel in the moment it starts steering you, before it speaks for you.",
-          "transfer_check": "Keep a one-week trigger log of real moments emotion started steering you, naming each feeling and what it wanted you to do."
+          "transfer_check": "Keep a one-week trigger log of real moments emotion started steering you, naming each feeling and what it wanted you to do.",
+          "bands": {
+            "K–2": "Name how you feel about something, with an adult's help.",
+            "3–5": "Notice and name your own feeling before reacting, with an adult.",
+            "6–8": "Identify your own real emotional state before acting, with a checker.",
+            "9–10": "Recognise your own real emotions before responding, on your own.",
+            "11–12": "Teach someone else how to read their own emotional state first."
+          }
         },
         {
           "theme": "The pause that saves the meeting",
           "description": "Self-regulation — the practiced beat between provocation and response, and the techniques that create it.",
-          "transfer_check": "Demonstrate your pause technique in one real provocation — what you felt, what you did instead — verified by someone present."
+          "transfer_check": "Demonstrate your pause technique in one real provocation — what you felt, what you did instead — verified by someone present.",
+          "bands": {
+            "K–2": "Take a breath before reacting to something upsetting, with an adult.",
+            "3–5": "Pause before responding to something frustrating, with an adult's help.",
+            "6–8": "Use a real pause to avoid a real bad reaction, with a checker.",
+            "9–10": "Use a real deliberate pause in a real tense moment, on your own.",
+            "11–12": "Teach someone else how a real pause can save a real meeting."
+          }
         },
         {
           "theme": "Reading the room",
           "description": "Attunement at group scale — energy, alliances and unspoken objections read from faces, seating and silence.",
-          "transfer_check": "After one real meeting, write the room-read — who was with, against, checked out — and verify it with a participant."
+          "transfer_check": "After one real meeting, write the room-read — who was with, against, checked out — and verify it with a participant.",
+          "bands": {
+            "K–2": "Notice if friends seem happy or upset, with an adult.",
+            "3–5": "Notice the mood of a group you're in, with an adult's help.",
+            "6–8": "Read a real room's mood accurately, with a checker.",
+            "9–10": "Read a real room's mood and adjust your approach, on your own.",
+            "11–12": "Teach someone else how to read a real room before speaking."
+          }
         },
         {
           "theme": "Empathy without surrender",
           "description": "Feeling with someone while still disagreeing — empathy as understanding, not capitulation.",
-          "transfer_check": "In one real disagreement, restate the other person's feeling and position to their satisfaction, then still state your own."
+          "transfer_check": "In one real disagreement, restate the other person's feeling and position to their satisfaction, then still state your own.",
+          "bands": {
+            "K–2": "Understand a friend's feelings without giving up your own idea, with an adult.",
+            "3–5": "Show empathy while still holding your own view, with an adult's help.",
+            "6–8": "Show real empathy without abandoning your real position, with a checker.",
+            "9–10": "Balance real empathy with holding your real position, on your own.",
+            "11–12": "Explain to someone else the real difference between empathy and surrender."
+          }
         },
         {
           "theme": "The de-escalation",
           "description": "Bringing a hot person down — tone, space, acknowledgment — the sequence that works and the responses that inflame.",
-          "transfer_check": "Demonstrate the de-escalation sequence in one real or role-played confrontation through to a lowered temperature."
+          "transfer_check": "Demonstrate the de-escalation sequence in one real or role-played confrontation through to a lowered temperature.",
+          "bands": {
+            "K–2": "Help calm down an upset friend, with an adult.",
+            "3–5": "Help calm a tense situation between friends, with an adult's help.",
+            "6–8": "De-escalate a real tense situation, with a checker.",
+            "9–10": "De-escalate a real conflict on your own.",
+            "11–12": "Teach someone else real de-escalation technique for a tense moment."
+          }
         },
         {
           "theme": "Anger, used well",
           "description": "The emotion that signals injustice — feeling anger, extracting its information, and choosing its expression.",
-          "transfer_check": "Take one real thing that angers you, name the injustice inside it, and channel it into one constructive act, documented."
+          "transfer_check": "Take one real thing that angers you, name the injustice inside it, and channel it into one constructive act, documented.",
+          "bands": {
+            "K–2": "Notice when you feel angry and tell an adult calmly.",
+            "3–5": "Express anger calmly instead of yelling, with an adult's help.",
+            "6–8": "Channel real anger productively in a real situation, with a checker.",
+            "9–10": "Use real anger productively without losing control, on your own.",
+            "11–12": "Explain to someone else how real anger can be used well, not suppressed."
+          }
         },
         {
           "theme": "Receiving the blow",
           "description": "Criticism, defeat and public embarrassment — absorbing hits without either collapse or counterattack.",
-          "transfer_check": "After one real piece of hard criticism, produce the sorted response: what was true, what was not, what you changed."
+          "transfer_check": "After one real piece of hard criticism, produce the sorted response: what was true, what was not, what you changed.",
+          "bands": {
+            "K–2": "Take a disappointment calmly with an adult's help.",
+            "3–5": "Handle real criticism or bad news calmly, with an adult's help.",
+            "6–8": "Receive real difficult news or criticism composedly, with a checker.",
+            "9–10": "Receive a real setback or criticism composedly, on your own.",
+            "11–12": "Teach someone else how to receive a real hard blow with composure."
+          }
         },
         {
           "theme": "The apology that repairs",
           "description": "Naming the act, feeling its cost, changing the behavior — apology as repair work, not performance.",
-          "transfer_check": "Deliver one real apology that names the act and the cost, and report the changed behavior two weeks on."
+          "transfer_check": "Deliver one real apology that names the act and the cost, and report the changed behavior two weeks on.",
+          "bands": {
+            "K–2": "Say a real sorry that names what you did, with an adult's help.",
+            "3–5": "Write an apology that names what you did wrong, with an adult's help.",
+            "6–8": "Give a real apology that names the act and repairs harm, with a checker.",
+            "9–10": "Give a real apology that actually repairs real harm, on your own.",
+            "11–12": "Teach someone else what makes a real apology actually repair something."
+          }
         },
         {
           "theme": "Emotional labor, shared fairly",
           "description": "Who calms, who comforts, who absorbs — seeing the invisible emotional work in any team and distributing it deliberately.",
-          "transfer_check": "Map the emotional labor in one real group and redistribute one recurring piece of it, with the group's agreement."
+          "transfer_check": "Map the emotional labor in one real group and redistribute one recurring piece of it, with the group's agreement.",
+          "bands": {
+            "K–2": "Help a friend feel better and ask someone else to help too, with an adult.",
+            "3–5": "Share the work of comforting others with a friend, with an adult's help.",
+            "6–8": "Share real emotional support work fairly within a group, with a checker.",
+            "9–10": "Share real emotional labor fairly in a group you lead, on your own.",
+            "11–12": "Explain to someone else why real emotional labor needs to be shared fairly."
+          }
         },
         {
           "theme": "The steady presence",
           "description": "The capstone: being the person a room stabilizes around in difficulty — composure as a practiced public skill.",
-          "transfer_check": "Hold the steady role through one real difficult event — meeting, emergency drill, hard conversation — with a witness's account of what you did."
+          "transfer_check": "Hold the steady role through one real difficult event — meeting, emergency drill, hard conversation — with a witness's account of what you did.",
+          "bands": {
+            "K–2": "Stay calm when a friend is upset, with an adult nearby.",
+            "3–5": "Stay calm and steady when others are upset, with an adult's help.",
+            "6–8": "Provide a real steady presence during a real stressful moment, with a checker.",
+            "9–10": "Be a real steady presence for others during a real crisis, on your own.",
+            "11–12": "Teach someone else how to be a real steady presence under pressure."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "The eight slots of any place",
           "description": "The localizer as literacy — capital, legislature, local unit, standards, seal, industries, placements, partner — resolved for wherever you stand.",
-          "transfer_check": "Resolve all eight localization slots for your own state or country from official sources, on one page."
+          "transfer_check": "Resolve all eight localization slots for your own state or country from official sources, on one page.",
+          "bands": {
+            "K–2": "Ask an adult who runs your town and what they do.",
+            "3–5": "Name one official who runs a real local place, with an adult's help.",
+            "6–8": "Identify the real key offices that govern any place, with a checker.",
+            "9–10": "Map the real eight key roles that govern any place, on your own.",
+            "11–12": "Teach someone else how to identify the real governing roles in any place."
+          }
         },
         {
           "theme": "Your three governments",
           "description": "Local, state/provincial, national — what each actually does for the block you live on, wherever that is.",
-          "transfer_check": "For your own address, produce the who-does-what card: six common public matters each matched to the correct level and office."
+          "transfer_check": "For your own address, produce the who-does-what card: six common public matters each matched to the correct level and office.",
+          "bands": {
+            "K–2": "Ask an adult about the different levels of government.",
+            "3–5": "Name the different levels of government, with an adult's help.",
+            "6–8": "Identify a real issue and which government handles it, with a checker.",
+            "9–10": "Explain, for a real issue, which of your three governments handles it.",
+            "11–12": "Teach someone else how to identify which real government handles what."
+          }
         },
         {
           "theme": "The meeting that is open to you",
           "description": "Open-meeting rules exist almost everywhere — finding the local body's schedule and taking the citizen's seat.",
-          "transfer_check": "Attend or watch one real public meeting of your local body and report one decision, who voted how, and who it affects."
+          "transfer_check": "Attend or watch one real public meeting of your local body and report one decision, who voted how, and who it affects.",
+          "bands": {
+            "K–2": "Ask an adult if regular people can go to town meetings.",
+            "3–5": "Learn that some government meetings are open to anyone, with an adult.",
+            "6–8": "Find a real open public meeting you could attend, with a checker.",
+            "9–10": "Attend a real open public meeting on your own.",
+            "11–12": "Guide someone else to a real open meeting relevant to their concern."
+          }
         },
         {
           "theme": "The record you may request",
           "description": "Public-records rights in your jurisdiction — what is requestable, how, and the request done correctly.",
-          "transfer_check": "Submit or fully prepare one real public-records request under your jurisdiction's actual rules."
+          "transfer_check": "Submit or fully prepare one real public-records request under your jurisdiction's actual rules.",
+          "bands": {
+            "K–2": "Ask an adult if you can see a school's records.",
+            "3–5": "Learn that some government records are public, with an adult's help.",
+            "6–8": "Identify a real public record you could request, with a checker.",
+            "9–10": "Request a real public record on your own.",
+            "11–12": "Guide someone else through requesting a real public record."
+          }
         },
         {
           "theme": "The vote, wherever you are",
           "description": "Registration, the ballot's shape and the down-ballot lines — your jurisdiction's actual voting machinery mastered.",
-          "transfer_check": "Verify a real registration and produce a plain-language guide to every line of your actual ballot's next election."
+          "transfer_check": "Verify a real registration and produce a plain-language guide to every line of your actual ballot's next election.",
+          "bands": {
+            "K–2": "Ask an adult how people vote in an election.",
+            "3–5": "Learn how a real person casts a vote, with an adult's help.",
+            "6–8": "Explain how a real citizen can vote from anywhere, with a checker.",
+            "9–10": "Explain, using real rules, how to vote wherever you live, on your own.",
+            "11–12": "Guide someone else through voting correctly wherever they are."
+          }
         },
         {
           "theme": "Speaking to power, on the record",
           "description": "Public comment, testimony and the letter that gets answered — the citizen's formal voice in any system.",
-          "transfer_check": "Deliver (or fully rehearse to real rules) one formal public comment or submission to a real body on a live matter."
+          "transfer_check": "Deliver (or fully rehearse to real rules) one formal public comment or submission to a real body on a live matter.",
+          "bands": {
+            "K–2": "Practice telling an adult your opinion clearly.",
+            "3–5": "Speak up about a real concern to an adult, with their help.",
+            "6–8": "Speak to a real official on the record, with a checker.",
+            "9–10": "Speak to a real official on the record, on your own.",
+            "11–12": "Coach someone else on speaking to real power effectively on the record."
+          }
         },
         {
           "theme": "The duty of accurate speech",
           "description": "Civic information hygiene — verifying before repeating, correcting your own errors, and the transparency principle in daily speech.",
-          "transfer_check": "Fact-check three circulating civic claims against primary sources and publish the corrected versions where you first saw them."
+          "transfer_check": "Fact-check three circulating civic claims against primary sources and publish the corrected versions where you first saw them.",
+          "bands": {
+            "K–2": "Tell the truth about what happened, with an adult.",
+            "3–5": "Describe a real event accurately, with an adult's help.",
+            "6–8": "Give a real accurate account of an event to an official, with a checker.",
+            "9–10": "Give real accurate testimony or public comment, on your own.",
+            "11–12": "Explain to someone else why accuracy is a real civic duty."
+          }
         },
         {
           "theme": "Jury, census, service",
           "description": "The duties that arrive by mail — jury service, the census, selective obligations — met as the system's load-bearing acts.",
-          "transfer_check": "For your jurisdiction, explain each summons-borne duty and simulate one — a mock deliberation to verdict, or a census-style enumeration done right."
+          "transfer_check": "For your jurisdiction, explain each summons-borne duty and simulate one — a mock deliberation to verdict, or a census-style enumeration done right.",
+          "bands": {
+            "K–2": "Ask an adult what a jury does in a courtroom.",
+            "3–5": "Learn what jury duty and the census are, with an adult's help.",
+            "6–8": "Identify a real civic duty like jury service or the census, with a checker.",
+            "9–10": "Fulfil a real civic duty like jury service or the census, on your own.",
+            "11–12": "Explain to someone else why these real civic duties matter."
+          }
         },
         {
           "theme": "The office you could hold",
           "description": "The lowest rungs of elected and appointed office where you live — what they decide, what running requires.",
-          "transfer_check": "Identify three real entry-level offices or appointed seats open to someone like you, with each one's actual filing requirements."
+          "transfer_check": "Identify three real entry-level offices or appointed seats open to someone like you, with each one's actual filing requirements.",
+          "bands": {
+            "K–2": "Ask an adult if a kid could ever be in charge of something.",
+            "3–5": "Learn about a real local office someone could run for, with an adult.",
+            "6–8": "Identify a real local office you could realistically run for, with a checker.",
+            "9–10": "Research a real local office and what running for it takes, on your own.",
+            "11–12": "Advise someone else on considering a real local office to run for."
+          }
         },
         {
           "theme": "The ceiling you push past",
           "description": "The affirmative principle localized — who has been blocked where you live, the data that shows it, and the push that is yours to make.",
-          "transfer_check": "Identify one barrier data shows still standing in your own community and complete one documented act that pushes against it."
+          "transfer_check": "Identify one barrier data shows still standing in your own community and complete one documented act that pushes against it.",
+          "bands": {
+            "K–2": "Try something a little hard and keep going, with an adult.",
+            "3–5": "Push past a real challenge in a group activity, with an adult's help.",
+            "6–8": "Identify a real barrier and push past it, with a checker.",
+            "9–10": "Push past a real limiting barrier in your own civic life, on your own.",
+            "11–12": "Help someone else push past a real ceiling they've hit."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "What you see is what you get",
           "description": "The transparency principle — removing the liability of hidden positions and moving on to the work.",
-          "transfer_check": "For one real matter where you hold an unpopular view, state it plainly to the relevant group and document what transparency cost and bought."
+          "transfer_check": "For one real matter where you hold an unpopular view, state it plainly to the relevant group and document what transparency cost and bought.",
+          "bands": {
+            "K–2": "Be honest about what actually happened, with an adult.",
+            "3–5": "Tell the truth even when it's hard, with an adult's help.",
+            "6–8": "Give a real honest account even when it's uncomfortable, with a checker.",
+            "9–10": "Give a real honest account of a real situation, on your own.",
+            "11–12": "Explain to someone else why real transparency matters under pressure."
+          }
         },
         {
           "theme": "The hopeless case",
           "description": "Taking on what others dismiss — why the model insists on the cases nobody wants, and what taking one actually requires.",
-          "transfer_check": "Take one real dismissed case — a person, a request, a cause written off — and carry it one documented step further than anyone had."
+          "transfer_check": "Take one real dismissed case — a person, a request, a cause written off — and carry it one documented step further than anyone had.",
+          "bands": {
+            "K–2": "Keep trying to help even when it seems hard, with an adult.",
+            "3–5": "Keep helping in a real difficult situation, with an adult's help.",
+            "6–8": "Persist ethically in a real seemingly hopeless situation, with a checker.",
+            "9–10": "Act ethically in a real difficult, seemingly hopeless situation, on your own.",
+            "11–12": "Explain to someone else how to act ethically in a real hopeless case."
+          }
         },
         {
           "theme": "The conflict of interest",
           "description": "Seeing your own conflicts before others do — disclosure, recusal and the appearance that matters as much as the fact.",
-          "transfer_check": "Audit your own real roles for conflicts, disclose one properly in its actual setting, and state where recusal would be required."
+          "transfer_check": "Audit your own real roles for conflicts, disclose one properly in its actual setting, and state where recusal would be required.",
+          "bands": {
+            "K–2": "Tell an adult if you might be treated differently because you know someone.",
+            "3–5": "Notice when helping a friend might be unfair to others, with an adult.",
+            "6–8": "Identify a real conflict of interest, with a checker.",
+            "9–10": "Recognise and disclose a real conflict of interest, on your own.",
+            "11–12": "Explain to someone else how to identify and handle a real conflict of interest."
+          }
         },
         {
           "theme": "The gift and the favor",
           "description": "What may be accepted, what obligates, and the favor economy that corrupts by inches.",
-          "transfer_check": "For three real scenarios from your own context, rule accept/decline/disclose with reasons, and check them against any written code that applies."
+          "transfer_check": "For three real scenarios from your own context, rule accept/decline/disclose with reasons, and check them against any written code that applies.",
+          "bands": {
+            "K–2": "Ask an adult if it's okay to accept a gift for doing a job.",
+            "3–5": "Learn why accepting gifts for favors can be a problem, with an adult.",
+            "6–8": "Identify a real inappropriate gift or favor, with a checker.",
+            "9–10": "Navigate a real gift or favor situation ethically, on your own.",
+            "11–12": "Explain to someone else the real rules around gifts and favors in public life."
+          }
         },
         {
           "theme": "Loyalty's limit",
           "description": "The friend, the boss, the party — where loyalty ends and complicity begins, decided before the moment arrives.",
-          "transfer_check": "Write your own loyalty lines for your real roles — what you would refuse whom — and test one against a case study honestly."
+          "transfer_check": "Write your own loyalty lines for your real roles — what you would refuse whom — and test one against a case study honestly.",
+          "bands": {
+            "K–2": "Ask an adult what to do if a friend does something wrong.",
+            "3–5": "Learn that loyalty has limits when something is wrong, with an adult.",
+            "6–8": "Identify a real point where loyalty must yield to ethics, with a checker.",
+            "9–10": "Recognise a real limit to loyalty in an ethical dilemma, on your own.",
+            "11–12": "Explain to someone else where real loyalty's limit actually is."
+          }
         },
         {
           "theme": "Dissent inside the team",
           "description": "Disagreeing upward and inward — the loyal dissent that improves decisions, delivered so it can be heard.",
-          "transfer_check": "Deliver one real dissent to a decision your own group favors — in the room, on the record — and report its reception and result."
+          "transfer_check": "Deliver one real dissent to a decision your own group favors — in the room, on the record — and report its reception and result.",
+          "bands": {
+            "K–2": "Say you disagree with a friend's plan kindly, with an adult.",
+            "3–5": "Voice disagreement with a team's plan respectfully, with an adult's help.",
+            "6–8": "Voice real dissent within a real team appropriately, with a checker.",
+            "9–10": "Voice real dissent within a real team while staying constructive, on your own.",
+            "11–12": "Explain to someone else how to handle real dissent inside a team well."
+          }
         },
         {
           "theme": "The whistle",
           "description": "When internal dissent is exhausted — the escalation ladder, its protections where you live, and its real costs.",
-          "transfer_check": "For a case-study wrong, map the full escalation ladder in your jurisdiction — internal to external — with each step's protections and risks."
+          "transfer_check": "For a case-study wrong, map the full escalation ladder in your jurisdiction — internal to external — with each step's protections and risks.",
+          "bands": {
+            "K–2": "Tell an adult right away if something seems very wrong.",
+            "3–5": "Report a real serious problem to a trusted adult, with their help.",
+            "6–8": "Recognise a real situation that requires whistleblowing, with a checker.",
+            "9–10": "Recognise and respond to a real whistleblowing situation appropriately.",
+            "11–12": "Explain to someone else the real weight and protections of whistleblowing."
+          }
         },
         {
           "theme": "Power used for the blocked",
           "description": "The affirmative-push principle as ethics — spending your own access on those the ceiling still holds down.",
-          "transfer_check": "Spend one real unit of your own access — an introduction, a nomination, a platform — on someone blocked, documented with their consent."
+          "transfer_check": "Spend one real unit of your own access — an introduction, a nomination, a platform — on someone blocked, documented with their consent.",
+          "bands": {
+            "K–2": "Help a friend who is being left out, with an adult.",
+            "3–5": "Use your position to help someone who's stuck, with an adult's help.",
+            "6–8": "Use real influence to help someone who is blocked, with a checker.",
+            "9–10": "Use your own real influence to help someone genuinely blocked, on your own.",
+            "11–12": "Explain to someone else why real power should serve the blocked, not the powerful."
+          }
         },
         {
           "theme": "The account you owe",
           "description": "Accountability as practice — reporting back to the people affected, in their room, before they ask.",
-          "transfer_check": "After one real responsibility you held, deliver the unprompted account to those affected — what you did, what went wrong, what changes."
+          "transfer_check": "After one real responsibility you held, deliver the unprompted account to those affected — what you did, what went wrong, what changes.",
+          "bands": {
+            "K–2": "Explain to an adult why you made a choice.",
+            "3–5": "Explain your real decision to someone affected by it, with an adult.",
+            "6–8": "Give a real account of a real decision to those it affects, with a checker.",
+            "9–10": "Give a real account of your decisions to those affected, on your own.",
+            "11–12": "Explain to someone else why real leaders owe an account of their decisions."
+          }
         },
         {
           "theme": "The examined career",
           "description": "The capstone: your own record read the way you read a leader's — honestly, with the principles as the measure.",
-          "transfer_check": "Write the honest review of your own service record to date against the twelve principles, and set one measurable correction."
+          "transfer_check": "Write the honest review of your own service record to date against the twelve principles, and set one measurable correction.",
+          "bands": {
+            "K–2": "Think about whether you were fair to a friend, with an adult.",
+            "3–5": "Reflect on whether a real choice you made was fair, with an adult.",
+            "6–8": "Reflect honestly on a real past decision's ethics, with a checker.",
+            "9–10": "Regularly examine your own real decisions for their ethics, on your own.",
+            "11–12": "Explain to someone else why a real career needs regular ethical examination."
+          }
         }
       ]
     }

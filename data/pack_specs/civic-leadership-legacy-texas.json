@@ -10,52 +10,122 @@
         {
           "theme": "Education as the bridge",
           "description": "The founding story taught honestly — a segregated East Texas schoolroom, a train west, and education as the bridge across barriers that still stand.",
-          "transfer_check": "Research the schooling actually available in one Texas town in the 1940s and compare it, with evidence, to the same town today."
+          "transfer_check": "Research the schooling actually available in one Texas town in the 1940s and compare it, with evidence, to the same town today.",
+          "bands": {
+            "K–2": "Learn something new and share it with an adult.",
+            "3–5": "Explain how learning can open a real new door, with an adult's help.",
+            "6–8": "Identify a real education path that leads somewhere new, with a checker.",
+            "9–10": "Use real education as a deliberate bridge to a real goal, on your own.",
+            "11–12": "Explain to someone else why real education is a bridge, not just school."
+          }
         },
         {
           "theme": "Service as a craft, not a slogan",
           "description": "Public service with roles, crews, evidence and credentials — every course ending before a real audience.",
-          "transfer_check": "Complete one documented act of public service in your county and present it to a real audience beyond your classroom."
+          "transfer_check": "Complete one documented act of public service in your county and present it to a real audience beyond your classroom.",
+          "bands": {
+            "K–2": "Help someone with a real task and do it carefully, with an adult.",
+            "3–5": "Do a helping task carefully rather than just for show, with an adult.",
+            "6–8": "Perform a real act of service with genuine care and skill, with a checker.",
+            "9–10": "Approach real public service as a craft to be practiced, on your own.",
+            "11–12": "Explain to someone else why real service is a craft, not a slogan."
+          }
         },
         {
           "theme": "The public servants two streets away",
           "description": "Mapping who serves within reach — the county clerk, the librarian, the volunteer firefighter, the extension agent.",
-          "transfer_check": "Interview one working public servant about a typical day and present their real duties against what you had assumed."
+          "transfer_check": "Interview one working public servant about a typical day and present their real duties against what you had assumed.",
+          "bands": {
+            "K–2": "Ask an adult who works for your town government.",
+            "3–5": "Name a real local public servant near you, with an adult's help.",
+            "6–8": "Identify several real nearby public servants and their roles, with a checker.",
+            "9–10": "Research the real public servants who serve near where you live, on your own.",
+            "11–12": "Explain to someone else the real range of nearby roles that serve a community."
+          }
         },
         {
           "theme": "Who is missing from the room",
           "description": "Inclusion as a design decision: reading any civic room for who is absent and naming the barrier that kept them out.",
-          "transfer_check": "Observe one real public meeting and report who was present, who was affected but absent, and one barrier that plausibly explains it."
+          "transfer_check": "Observe one real public meeting and report who was present, who was affected but absent, and one barrier that plausibly explains it.",
+          "bands": {
+            "K–2": "Notice who isn't included in a group activity, with an adult.",
+            "3–5": "Notice who's missing from a real decision-making group, with an adult.",
+            "6–8": "Identify who is real missing from a real decision-making room, with a checker.",
+            "9–10": "Identify and address who is missing from a real real room, on your own.",
+            "11–12": "Explain to someone else why noticing who's missing from the room matters."
+          }
         },
         {
           "theme": "The placement inside a real agency",
           "description": "Shadow days, junior placements and supervised hours inside county offices, libraries and public programs, at every age.",
-          "transfer_check": "Complete a placement, shadow day or structured volunteer shift with a real public body, confirmed by a supervisor."
+          "transfer_check": "Complete a placement, shadow day or structured volunteer shift with a real public body, confirmed by a supervisor.",
+          "bands": {
+            "K–2": "Visit a real government office with an adult and ask what happens there.",
+            "3–5": "Learn about a real government agency by visiting, with an adult's help.",
+            "6–8": "Complete a real short placement inside a real agency, with a checker.",
+            "9–10": "Complete a real substantive placement inside a real agency, on your own.",
+            "11–12": "Explain to someone else what a real agency placement actually teaches."
+          }
         },
         {
           "theme": "The seminar circle",
           "description": "The weekly cohort habit — field experience brought back to a circle that questions it.",
-          "transfer_check": "Run or take a speaking role in a seminar circle on a live local issue, presenting field evidence and taking questions."
+          "transfer_check": "Run or take a speaking role in a seminar circle on a live local issue, presenting field evidence and taking questions.",
+          "bands": {
+            "K–2": "Sit in a circle and share an idea with classmates, with an adult.",
+            "3–5": "Discuss a real topic in a small group, with an adult's help.",
+            "6–8": "Participate in a real seminar-style discussion, with a checker.",
+            "9–10": "Lead a real seminar-style discussion on a real topic, on your own.",
+            "11–12": "Facilitate a real seminar circle that draws out quieter voices."
+          }
         },
         {
           "theme": "Mentorship in both directions",
           "description": "Being mentored by someone ahead and mentoring someone behind, with the leader's-story interview as a core text.",
-          "transfer_check": "Record a leader's-story interview with an experienced public servant or elder, and lead one session passing a skill to a younger learner."
+          "transfer_check": "Record a leader's-story interview with an experienced public servant or elder, and lead one session passing a skill to a younger learner.",
+          "bands": {
+            "K–2": "Help a younger student and learn from an older one, with an adult.",
+            "3–5": "Both give and receive help from others, with an adult's help.",
+            "6–8": "Practice real mentorship in both directions with a checker.",
+            "9–10": "Practice real two-way mentorship, giving and receiving, on your own.",
+            "11–12": "Explain to someone else why real mentorship flows in both directions."
+          }
         },
         {
           "theme": "Pushing past the ceiling",
           "description": "First-generation pathways and the blocked door as history, law and practice in Texas — with the debate included, not avoided.",
-          "transfer_check": "Research one Texan who broke a civic ceiling, and identify one barrier data shows still standing in your county, with the numbers."
+          "transfer_check": "Research one Texan who broke a civic ceiling, and identify one barrier data shows still standing in your county, with the numbers.",
+          "bands": {
+            "K–2": "Try something a little hard and keep going, with an adult.",
+            "3–5": "Push past a real challenge in a group activity, with an adult's help.",
+            "6–8": "Identify a real barrier and push past it, with a checker.",
+            "9–10": "Push past a real limiting barrier in your own civic life, on your own.",
+            "11–12": "Help someone else push past a real ceiling they've hit."
+          }
         },
         {
           "theme": "The record you build",
           "description": "The service ledger — hours, artifacts, references, credentials — as a portfolio that opens doors.",
-          "transfer_check": "Assemble your own service ledger to date in a form a scholarship or employer could verify."
+          "transfer_check": "Assemble your own service ledger to date in a form a scholarship or employer could verify.",
+          "bands": {
+            "K–2": "Keep a small folder of things you're proud of, with an adult.",
+            "3–5": "Keep a simple record of things you've done, with an adult's help.",
+            "6–8": "Build a real record of your own real activities and growth, with a checker.",
+            "9–10": "Build a real substantive record of your own leadership work, on your own.",
+            "11–12": "Advise someone else on building a real record that reflects their growth."
+          }
         },
         {
           "theme": "The on-ramp: from county seat to public life",
           "description": "The grade-12 pathways into Texas public service — public-affairs programs, civil service, the first paid public job.",
-          "transfer_check": "Map three real next-step routes into Texas public service — requirements, deadlines, first application step completed or drafted."
+          "transfer_check": "Map three real next-step routes into Texas public service — requirements, deadlines, first application step completed or drafted.",
+          "bands": {
+            "K–2": "Ask an adult what happens after finishing a school program.",
+            "3–5": "Learn about a real path from a home town to public life, with an adult.",
+            "6–8": "Identify a real on-ramp from a county seat to public life, with a checker.",
+            "9–10": "Plan your own real on-ramp from your county seat to public life, on your own.",
+            "11–12": "Guide someone else through a real on-ramp into public service from a small town."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "More counties than any state",
           "description": "Texas's 254 counties — why so many, what a county is actually responsible for, and where yours sits.",
-          "transfer_check": "Produce the one-page profile of your own county — population, seat, governing bodies, three services it actually runs — from official sources."
+          "transfer_check": "Produce the one-page profile of your own county — population, seat, governing bodies, three services it actually runs — from official sources.",
+          "bands": {
+            "K–2": "Ask an adult what county and city you live in.",
+            "3–5": "Learn your own real Texas county, with an adult's help.",
+            "6–8": "Explain why Texas has more counties than any other state, with a checker.",
+            "9–10": "Explain, using real numbers, why Texas has so many counties.",
+            "11–12": "Teach someone else why Texas ended up with more counties than any state."
+          }
         },
         {
           "theme": "The commissioners court",
           "description": "The county judge and four commissioners — the court that is not a court, and what it decides every Tuesday.",
-          "transfer_check": "Attend or watch one real commissioners court meeting and report one decision, who voted how, and who it affects."
+          "transfer_check": "Attend or watch one real commissioners court meeting and report one decision, who voted how, and who it affects.",
+          "bands": {
+            "K–2": "Ask an adult who makes decisions for your county.",
+            "3–5": "Name a real county commissioner, with an adult's help.",
+            "6–8": "Identify a real commissioners court's role, with a checker.",
+            "9–10": "Research a real commissioners court's actual decisions, on your own.",
+            "11–12": "Explain to someone else what a real commissioners court actually does."
+          }
         },
         {
           "theme": "The elected row: sheriff, clerk, tax assessor-collector",
           "description": "Texas's long ballot of county officers — sheriff, clerks, assessor-collector, constables, justices of the peace — each answering to voters.",
-          "transfer_check": "List your county's actual elected officers by name and office, and explain one real recent decision each made that touched residents."
+          "transfer_check": "List your county's actual elected officers by name and office, and explain one real recent decision each made that touched residents.",
+          "bands": {
+            "K–2": "Ask an adult who the sheriff is and what they do.",
+            "3–5": "Name a real elected county official, with an adult's help.",
+            "6–8": "Identify several real elected county row officials, with a checker.",
+            "9–10": "Research the real elected row and what each office does, on your own.",
+            "11–12": "Explain to someone else the real range of elected county row offices."
+          }
         },
         {
           "theme": "The school district and the board",
           "description": "Independent school districts as the education government — boards, superintendents, bond elections and the meeting that sets your school's fate.",
-          "transfer_check": "Attend or watch one real school board meeting in your district and report one decision made and its effect."
+          "transfer_check": "Attend or watch one real school board meeting in your district and report one decision made and its effect.",
+          "bands": {
+            "K–2": "Ask an adult who decides things about your school.",
+            "3–5": "Learn what a real school board does, with an adult's help.",
+            "6–8": "Identify a real decision a school board makes, with a checker.",
+            "9–10": "Attend or research a real school board meeting, on your own.",
+            "11–12": "Explain to someone else how a real school board's decisions reach the classroom."
+          }
         },
         {
           "theme": "The special districts nobody can name",
           "description": "MUDs, groundwater districts, hospital and appraisal districts — the boards that tax and decide, largely unwatched.",
-          "transfer_check": "Identify three special districts covering your own address, and for one find its board, budget and next public meeting."
+          "transfer_check": "Identify three special districts covering your own address, and for one find its board, budget and next public meeting.",
+          "bands": {
+            "K–2": "Ask an adult where the water for your town comes from.",
+            "3–5": "Learn that a special district manages real local water, with an adult.",
+            "6–8": "Identify a real special district and what it manages, with a checker.",
+            "9–10": "Research a real special district's role in your area, on your own.",
+            "11–12": "Explain to someone else how real special districts operate, unnoticed."
+          }
         },
         {
           "theme": "The property tax and the appraisal",
           "description": "Where county money comes from — the appraisal, the rate hearings, the homestead exemption — and protesting a valuation properly.",
-          "transfer_check": "Read one real appraisal notice, verify its facts, and file or fully draft the protest the rules allow."
+          "transfer_check": "Read one real appraisal notice, verify its facts, and file or fully draft the protest the rules allow.",
+          "bands": {
+            "K–2": "Ask an adult why houses have a value written down somewhere.",
+            "3–5": "Learn that homes get a real appraised value, with an adult's help.",
+            "6–8": "Explain how a real property tax and appraisal work together, with a checker.",
+            "9–10": "Explain, using a real bill, how appraisal drives property tax, on your own.",
+            "11–12": "Explain to someone else the real relationship between appraisal and tax."
+          }
         },
         {
           "theme": "The permit, the complaint, the record",
           "description": "The resident's three transactions — asking permission, reporting a problem, requesting a record under the Public Information Act.",
-          "transfer_check": "Complete one real county or city transaction (permit lookup, service request, or public-information request) and document the outcome."
+          "transfer_check": "Complete one real county or city transaction (permit lookup, service request, or public-information request) and document the outcome.",
+          "bands": {
+            "K–2": "Ask an adult what a permit is for and why it matters.",
+            "3–5": "Learn that building something needs a real permit, with an adult.",
+            "6–8": "Identify a real permit, complaint or record process, with a checker.",
+            "9–10": "Navigate a real permit, complaint, or record request process, on your own.",
+            "11–12": "Guide someone else through a real permit or complaint process."
+          }
         },
         {
           "theme": "Public comment that gets heard",
           "description": "The Open Meetings Act, the sign-up sheet, the three minutes — speaking to a Texas body so it enters the record.",
-          "transfer_check": "Deliver (or fully rehearse to the real rules) a public comment to a local body on a live agenda item, structured for the record."
+          "transfer_check": "Deliver (or fully rehearse to the real rules) a public comment to a local body on a live agenda item, structured for the record.",
+          "bands": {
+            "K–2": "Practice sharing your opinion clearly, with an adult.",
+            "3–5": "Share an opinion at a real meeting or with an adult's help.",
+            "6–8": "Give a real effective public comment at a real meeting, with a checker.",
+            "9–10": "Give a real effective public comment that actually gets heard, on your own.",
+            "11–12": "Coach someone else on giving real public comment that lands."
+          }
         },
         {
           "theme": "City and county: who does what",
           "description": "Home-rule cities, general-law towns and the unincorporated county — the services that switch at the city limit.",
-          "transfer_check": "For your own address, produce the who-fixes-what card: five common problems matched to the correct government and office."
+          "transfer_check": "For your own address, produce the who-fixes-what card: five common problems matched to the correct government and office.",
+          "bands": {
+            "K–2": "Ask an adult if the city or the county fixes the road.",
+            "3–5": "Learn the difference between city and county jobs, with an adult.",
+            "6–8": "Sort a real local service into city or county responsibility, with a checker.",
+            "9–10": "Explain, for a real issue, whether the city or county is responsible.",
+            "11–12": "Teach someone else how to tell whether an issue is a real city or county matter."
+          }
         },
         {
           "theme": "When the county fails you",
           "description": "Escalation above the county — state oversight, the attorney general's opinions, the courts and the press.",
-          "transfer_check": "Take one real or case-study county failure and map its escalation ladder in order, drafting the first escalation document."
+          "transfer_check": "Take one real or case-study county failure and map its escalation ladder in order, drafting the first escalation document.",
+          "bands": {
+            "K–2": "Ask an adult what to do if a problem doesn't get fixed.",
+            "3–5": "Learn one step to take if county government doesn't help, with an adult.",
+            "6–8": "Identify a real escalation path when a county fails, with a checker.",
+            "9–10": "Escalate a real unresolved county government failure, on your own.",
+            "11–12": "Guide someone else through escalating a real county government failure."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "The capitol and the two chambers",
           "description": "The Texas House and Senate, districts and leadership — and the Lieutenant Governor's unusual power over the Senate's agenda.",
-          "transfer_check": "Identify your actual state representative and senator by district lookup and summarise one bill each has authored recently."
+          "transfer_check": "Identify your actual state representative and senator by district lookup and summarise one bill each has authored recently.",
+          "bands": {
+            "K–2": "Ask an adult where laws for the state get made.",
+            "3–5": "Learn about the real state capitol building, with an adult's help.",
+            "6–8": "Identify the real two chambers of the state legislature, with a checker.",
+            "9–10": "Explain, using real roles, what each chamber of the legislature does.",
+            "11–12": "Teach someone else how the real two-chamber legislature actually functions."
+          }
         },
         {
           "theme": "One hundred and forty days, every other year",
           "description": "The biennial regular session and the special sessions only the Governor can call — why the calendar shapes everything.",
-          "transfer_check": "Find the most recent session's actual dates and explain, with one real example, what the compressed calendar did to a bill."
+          "transfer_check": "Find the most recent session's actual dates and explain, with one real example, what the compressed calendar did to a bill.",
+          "bands": {
+            "K–2": "Ask an adult if lawmakers work all year.",
+            "3–5": "Learn that Texas's legislature meets every other year, with an adult.",
+            "6–8": "Explain why the real limited session shapes what passes, with a checker.",
+            "9–10": "Explain, using real deadlines, how the 140-day session shapes real outcomes.",
+            "11–12": "Explain to someone else why Texas's real biennial session matters so much."
+          }
         },
         {
           "theme": "A bill's actual journey",
           "description": "Filing, committee, calendars, the floor, the other chamber, the Governor's desk — following one real bill, including where bills die.",
-          "transfer_check": "Track one real bill from the last session through each stage on the Legislature's own site and state where it stalled or how it passed."
+          "transfer_check": "Track one real bill from the last session through each stage on the Legislature's own site and state where it stalled or how it passed.",
+          "bands": {
+            "K–2": "Ask an adult how an idea becomes a real rule.",
+            "3–5": "Learn the basic steps a real bill follows, with an adult's help.",
+            "6–8": "Trace a real bill's journey through the real legislature, with a checker.",
+            "9–10": "Trace a real bill's actual journey from idea to law, on your own.",
+            "11–12": "Teach someone else the real journey a bill takes, not the simplified version."
+          }
         },
         {
           "theme": "The committee room is the real floor",
           "description": "Testimony, substitutes and the calendar committees — where bills actually live and die, and the citizen's chair at the table.",
-          "transfer_check": "Watch one real committee hearing (live or archived) and report the arguments, amendments and vote as the record shows."
+          "transfer_check": "Watch one real committee hearing (live or archived) and report the arguments, amendments and vote as the record shows.",
+          "bands": {
+            "K–2": "Ask an adult where the real decisions about a bill get made.",
+            "3–5": "Learn that committees do a lot of the real work, with an adult.",
+            "6–8": "Identify what real work happens in a real committee room, with a checker.",
+            "9–10": "Explain why the real committee room, not the floor, decides most bills.",
+            "11–12": "Explain to someone else why the real committee room is where bills live or die."
+          }
         },
         {
           "theme": "The budget the state must balance",
           "description": "The biennial budget, the comptroller's revenue estimate and the rainy-day fund — how Texas money is actually decided.",
-          "transfer_check": "From official documents, chart the state's five largest spending areas and follow one down to a program in your county."
+          "transfer_check": "From official documents, chart the state's five largest spending areas and follow one down to a program in your county.",
+          "bands": {
+            "K–2": "Ask an adult how the state decides what to spend money on.",
+            "3–5": "Learn that Texas must balance its real budget, with an adult.",
+            "6–8": "Identify a real major item in the state budget, with a checker.",
+            "9–10": "Trace a real state budget item to its real effect, on your own.",
+            "11–12": "Explain to someone else why Texas's real constitutional balance rule matters."
+          }
         },
         {
           "theme": "The agencies that carry out the words",
           "description": "Agencies, boards and the administrative code — how a passed law becomes a rule, a form and an inspector, and sunset review's regular reckoning.",
-          "transfer_check": "Pick one state rule that touches your life, find it in the administrative code, and trace it to the statute that authorised it."
+          "transfer_check": "Pick one state rule that touches your life, find it in the administrative code, and trace it to the statute that authorised it.",
+          "bands": {
+            "K–2": "Ask an adult who makes sure a rule actually happens.",
+            "3–5": "Learn that agencies carry out real laws, with an adult's help.",
+            "6–8": "Identify a real state agency that implements a real law, with a checker.",
+            "9–10": "Trace a real law to the real agency that carries it out, on your own.",
+            "11–12": "Explain to someone else how real agencies turn a law's words into action."
+          }
         },
         {
           "theme": "Testifying and the citizen's bill",
           "description": "The routes from resident to lawmaking — contacting members, registering a position, testifying, and the idea that becomes a filed bill.",
-          "transfer_check": "Draft a one-page bill proposal on a real local problem and deliver it (or rehearsed testimony for it) in proper form."
+          "transfer_check": "Draft a one-page bill proposal on a real local problem and deliver it (or rehearsed testimony for it) in proper form.",
+          "bands": {
+            "K–2": "Practice sharing your opinion clearly, with an adult.",
+            "3–5": "Share an opinion at a real hearing or with an adult's help.",
+            "6–8": "Give real testimony on a real bill at a hearing, with a checker.",
+            "9–10": "Give real effective testimony on a real bill, on your own.",
+            "11–12": "Coach someone else on testifying effectively on a real citizen's bill."
+          }
         },
         {
           "theme": "The courts above the county",
           "description": "Texas's twin high courts — Supreme Court and Court of Criminal Appeals — and how an ordinary case climbs to either.",
-          "transfer_check": "Map one real Texas case's path from filing to final ruling, naming each court correctly."
+          "transfer_check": "Map one real Texas case's path from filing to final ruling, naming each court correctly.",
+          "bands": {
+            "K–2": "Ask an adult what happens if people disagree about a law.",
+            "3–5": "Learn that real courts settle disagreements about laws, with an adult.",
+            "6–8": "Identify a real court above the county level and its role, with a checker.",
+            "9–10": "Explain, using a real case, how a real appeals court reviews a law.",
+            "11–12": "Explain to someone else the real role of courts above the county level."
+          }
         },
         {
           "theme": "The constitution amended and amended",
           "description": "Texas's long constitution and the amendment elections — reading the propositions before voting on them.",
-          "transfer_check": "Take one real past or pending amendment, translate its ballot language into plain words, and present the strongest case each way."
+          "transfer_check": "Take one real past or pending amendment, translate its ballot language into plain words, and present the strongest case each way.",
+          "bands": {
+            "K–2": "Ask an adult why a state's rulebook sometimes changes.",
+            "3–5": "Learn that Texas's constitution gets amended often, with an adult.",
+            "6–8": "Identify a real constitutional amendment and its purpose, with a checker.",
+            "9–10": "Explain, using real examples, why Texas amends its constitution so often.",
+            "11–12": "Explain to someone else the real pattern behind Texas's many amendments."
+          }
         },
         {
           "theme": "Counting votes across the aisle",
           "description": "Coalitions in a chamber where the calendar is the weapon — counting before the vote, and consensus that tolerates opposing ideas.",
-          "transfer_check": "For one real close vote, reconstruct the coalition: who moved, what they traded, and how the count was made."
+          "transfer_check": "For one real close vote, reconstruct the coalition: who moved, what they traded, and how the count was made.",
+          "bands": {
+            "K–2": "Work with someone who wants something different, with an adult.",
+            "3–5": "Cooperate with someone who disagrees with you, with an adult's help.",
+            "6–8": "Find real common ground across a real disagreement, with a checker.",
+            "9–10": "Build a real lasting agreement across the aisle, on your own.",
+            "11–12": "Explain to someone else how real change happens across the aisle in Texas."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "Registering and staying registered",
           "description": "Who may vote in Texas, the registration deadline, and the habit of checking your own record before it matters.",
-          "transfer_check": "Verify a real registration (yours or a consenting adult's) through the state's official portal and correct any detail found wrong."
+          "transfer_check": "Verify a real registration (yours or a consenting adult's) through the state's official portal and correct any detail found wrong.",
+          "bands": {
+            "K–2": "Ask an adult how grown-ups sign up to vote.",
+            "3–5": "Learn what voter registration means, with an adult's help.",
+            "6–8": "Explain the real steps to register and stay registered, with a checker.",
+            "9–10": "Register or verify your own real registration status, on your own.",
+            "11–12": "Guide someone else through real voter registration and keeping it current."
+          }
         },
         {
           "theme": "Primaries, runoffs and the general",
           "description": "Texas's open primaries, the majority-vote runoff, and reading which contest actually decides your district.",
-          "transfer_check": "For two offices on a real ballot, explain the rules that currently govern each and identify which stage effectively decides the seat."
+          "transfer_check": "For two offices on a real ballot, explain the rules that currently govern each and identify which stage effectively decides the seat.",
+          "bands": {
+            "K–2": "Ask an adult why there can be more than one round of voting.",
+            "3–5": "Learn that elections can have several real rounds, with an adult.",
+            "6–8": "Explain how a real primary, runoff and general election differ, with a checker.",
+            "9–10": "Explain, using a real race, how primaries and runoffs shape the outcome.",
+            "11–12": "Teach someone else how Texas's real primary-runoff-general sequence works."
+          }
         },
         {
           "theme": "The ID at the polling place",
           "description": "The identification rules as they currently stand, the declaration alternative, and helping a voter arrive prepared.",
-          "transfer_check": "Build the document checklist for three different real voters against the current official rules, citing the Secretary of State."
+          "transfer_check": "Build the document checklist for three different real voters against the current official rules, citing the Secretary of State.",
+          "bands": {
+            "K–2": "Ask an adult why you show an ID for some things.",
+            "3–5": "Learn that voting requires a real form of ID, with an adult's help.",
+            "6–8": "Identify a real accepted form of voter ID in Texas, with a checker.",
+            "9–10": "Prepare your own real acceptable ID before voting, on your own.",
+            "11–12": "Guide someone else through Texas's real voter ID requirements."
+          }
         },
         {
           "theme": "The ballot below the headlines",
           "description": "Judges, school boards, bond propositions and MUD elections — the down-ballot lines that move your money and your block.",
-          "transfer_check": "Obtain your actual sample ballot for a real election and produce a plain-language guide for every line below the top race."
+          "transfer_check": "Obtain your actual sample ballot for a real election and produce a plain-language guide for every line below the top race.",
+          "bands": {
+            "K–2": "Ask an adult about smaller choices on a ballot.",
+            "3–5": "Learn that ballots have many choices, not just the big ones, with an adult.",
+            "6–8": "Identify a real down-ballot race or measure, with a checker.",
+            "9–10": "Research a real down-ballot race or measure before voting, on your own.",
+            "11–12": "Explain to someone else why the real ballot below the headlines matters."
+          }
         },
         {
           "theme": "Early voting and election day",
           "description": "Texas's two-week early window, countywide vote centers where they exist, and mail ballots for those who qualify.",
-          "transfer_check": "Build the complete voting plan for two different real voters — one straightforward, one facing a barrier such as mobility or work hours."
+          "transfer_check": "Build the complete voting plan for two different real voters — one straightforward, one facing a barrier such as mobility or work hours.",
+          "bands": {
+            "K–2": "Ask an adult about the different days people can vote.",
+            "3–5": "Learn the real early voting period exists, with an adult's help.",
+            "6–8": "Explain the real options for early voting versus election day, with a checker.",
+            "9–10": "Choose and use a real voting time that works for you, on your own.",
+            "11–12": "Guide someone else through choosing when to cast a real vote."
+          }
         },
         {
           "theme": "Working the election",
           "description": "Election judges, clerks and poll watchers — the trained neighbours who run the machinery, and how to become one.",
-          "transfer_check": "Find your county's actual requirements and application to serve as an election worker and submit or fully prepare it."
+          "transfer_check": "Find your county's actual requirements and application to serve as an election worker and submit or fully prepare it.",
+          "bands": {
+            "K–2": "Ask an adult what a poll worker does on election day.",
+            "3–5": "Learn what a real poll worker's job involves, with an adult's help.",
+            "6–8": "Identify a real role someone could play working an election, with a checker.",
+            "9–10": "Volunteer or research a real role working a real election, on your own.",
+            "11–12": "Recruit someone else to work a real election in a real role."
+          }
         },
         {
           "theme": "Money in the open",
           "description": "Campaign finance disclosure and the Ethics Commission — following the money in one real race through the public filings.",
-          "transfer_check": "Pull the actual campaign finance filings for one recent local race and report its top contributors and spending, with sources."
+          "transfer_check": "Pull the actual campaign finance filings for one recent local race and report its top contributors and spending, with sources.",
+          "bands": {
+            "K–2": "Ask an adult why running for office costs so much money.",
+            "3–5": "Learn that campaign money must be reported, with an adult's help.",
+            "6–8": "Identify where real campaign finance information is disclosed, with a checker.",
+            "9–10": "Research real campaign finance disclosures for a real race, on your own.",
+            "11–12": "Explain to someone else how real campaign money transparency works."
+          }
         },
         {
           "theme": "The organized ask",
           "description": "Petitions, coalitions and the packed courthouse — moving an issue between elections, counting votes before the vote.",
-          "transfer_check": "Organize or fully plan an issue campaign for one concrete local change: the decision-maker, the coalition map, the count you need."
+          "transfer_check": "Organize or fully plan an issue campaign for one concrete local change: the decision-maker, the coalition map, the count you need.",
+          "bands": {
+            "K–2": "Ask a friend to help with something you care about, with an adult.",
+            "3–5": "Ask people to support a real cause, with an adult's help.",
+            "6–8": "Make a real organized ask for support on an issue, with a checker.",
+            "9–10": "Organise a real ask for support around a real issue, on your own.",
+            "11–12": "Teach someone else how to make a real effective organized ask."
+          }
         },
         {
           "theme": "Rumor season",
           "description": "Election misinformation in Texas's channels — the claims that recur, and the official sources that settle them.",
-          "transfer_check": "Fact-check three circulating election claims against the Secretary of State and county officials' records and publish the corrected version."
+          "transfer_check": "Fact-check three circulating election claims against the Secretary of State and county officials' records and publish the corrected version.",
+          "bands": {
+            "K–2": "Ask an adult before believing something you heard about an election.",
+            "3–5": "Check a real election rumor before believing it, with an adult's help.",
+            "6–8": "Verify a real election-season rumor against real sources, with a checker.",
+            "9–10": "Verify real election rumors on your own before spreading them.",
+            "11–12": "Teach someone else how to handle real rumor season around an election."
+          }
         },
         {
           "theme": "After the count",
           "description": "Canvass, certification, recounts and contests — how results become final and what a citizen can lawfully question.",
-          "transfer_check": "Trace one real Texas race from election night to certified result, naming each step and any challenge lodged."
+          "transfer_check": "Trace one real Texas race from election night to certified result, naming each step and any challenge lodged.",
+          "bands": {
+            "K–2": "Ask an adult what happens after votes are counted.",
+            "3–5": "Learn what happens after a real election ends, with an adult's help.",
+            "6–8": "Identify a real step that happens after a real vote count, with a checker.",
+            "9–10": "Explain, using a real example, what happens after a real count concludes.",
+            "11–12": "Explain to someone else the real process that follows an election count."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "A state of many weathers",
           "description": "Hurricane coast, tornado alley, flash-flood hills and drought plains — Texas's hazard map as its civic agenda.",
-          "transfer_check": "Map the hazards that shape your own county — surge zones, floodplains, drought status — from official sources."
+          "transfer_check": "Map the hazards that shape your own county — surge zones, floodplains, drought status — from official sources.",
+          "bands": {
+            "K–2": "Ask an adult why the weather is different in different parts of Texas.",
+            "3–5": "Learn that Texas has many different real climates, with an adult.",
+            "6–8": "Identify a real regional weather pattern within Texas, with a checker.",
+            "9–10": "Explain, using real geography, why Texas has so many climates.",
+            "11–12": "Teach someone else how Texas's real size creates such varied weather."
+          }
         },
         {
           "theme": "The hurricane and the contraflow",
           "description": "Watches, warnings, evacuation zones and the lessons written by Harvey and Rita — the governance of leaving the coast.",
-          "transfer_check": "Build a coastal household's hurricane plan against the county's actual guidance — zone, route, trigger, destination — and rehearse the leave decision."
+          "transfer_check": "Build a coastal household's hurricane plan against the county's actual guidance — zone, route, trigger, destination — and rehearse the leave decision.",
+          "bands": {
+            "K–2": "Practice what to do if a big storm is coming, with an adult.",
+            "3–5": "Learn one hurricane safety step, with an adult's help.",
+            "6–8": "Prepare for a real hurricane using a checklist, with a checker.",
+            "9–10": "Prepare yourself and a household for a real hurricane, on your own.",
+            "11–12": "Lead a real household's hurricane preparation, including evacuation routes."
+          }
         },
         {
           "theme": "The grid that stands alone",
           "description": "ERCOT's separate grid, the winter of Uri, and what a household and a block do when the power market fails.",
-          "transfer_check": "Prepare a real household for a multi-day outage in heat and in cold — essentials, medical needs, neighbours checked — and run a drill."
+          "transfer_check": "Prepare a real household for a multi-day outage in heat and in cold — essentials, medical needs, neighbours checked — and run a drill.",
+          "bands": {
+            "K–2": "Ask an adult why Texas has its own power system.",
+            "3–5": "Learn that Texas has a real separate power grid, with an adult's help.",
+            "6–8": "Explain what makes the real Texas grid different, with a checker.",
+            "9–10": "Explain, using real evidence, the real trade-offs of Texas's isolated grid.",
+            "11–12": "Explain to someone else the real risks and reasons behind Texas's own grid."
+          }
         },
         {
           "theme": "Flood: the water that wins",
           "description": "Flash floods and reservoir releases — reading the floodplain map, the low-water crossing rule, and insurance that actually covers water.",
-          "transfer_check": "Read your address's actual flood zone, state the action sequence for a warning at three lead times, and check what a real policy covers."
+          "transfer_check": "Read your address's actual flood zone, state the action sequence for a warning at three lead times, and check what a real policy covers.",
+          "bands": {
+            "K–2": "Stay away from flooded water and tell an adult.",
+            "3–5": "Know one real flood safety rule, with an adult's help.",
+            "6–8": "Identify a real flood risk sign and appropriate response, with a checker.",
+            "9–10": "Assess a real flood risk for a property or route, on your own.",
+            "11–12": "Explain to someone else why real floodwater is more dangerous than it looks."
+          }
         },
         {
           "theme": "Drought and the aquifer",
           "description": "Groundwater districts, the rule of capture and the shrinking aquifers — water law as neighbourhood politics.",
-          "transfer_check": "Trace your own water to its source, name the district that governs it, and summarise one live decision before that district."
+          "transfer_check": "Trace your own water to its source, name the district that governs it, and summarise one live decision before that district.",
+          "bands": {
+            "K–2": "Ask an adult why some places don't get enough rain.",
+            "3–5": "Learn what a real aquifer is, with an adult's help.",
+            "6–8": "Identify a real aquifer and its role in water supply, with a checker.",
+            "9–10": "Explain, using real data, how drought affects a real Texas aquifer.",
+            "11–12": "Explain to someone else the real relationship between drought and aquifers."
+          }
         },
         {
           "theme": "Heat as the quiet emergency",
           "description": "The deadliest weather — who heat kills, the cooling-center map, and the checking list two doors away.",
-          "transfer_check": "Write and rehearse a heat-emergency plan for a real household including one vulnerable neighbour's specific arrangements."
+          "transfer_check": "Write and rehearse a heat-emergency plan for a real household including one vulnerable neighbour's specific arrangements.",
+          "bands": {
+            "K–2": "Drink water and stay in shade on a hot day, with an adult.",
+            "3–5": "Explain why heat can be dangerous, with an adult's help.",
+            "6–8": "Identify a real heat risk sign and appropriate response, with a checker.",
+            "9–10": "Manage real heat risk for yourself and others, on your own.",
+            "11–12": "Explain to someone else why real extreme heat is an underrated emergency."
+          }
         },
         {
           "theme": "The border of water and the working coast",
           "description": "Ports, petrochemicals, fisheries and the Gulf — the anchor industries on the water and the arguments they generate.",
-          "transfer_check": "Profile one real water-dependent industry site near your region: its jobs and taxes, its permits, and one live controversy from both sides."
+          "transfer_check": "Profile one real water-dependent industry site near your region: its jobs and taxes, its permits, and one live controversy from both sides.",
+          "bands": {
+            "K–2": "Ask an adult what work happens near the ocean.",
+            "3–5": "Learn about real work that happens along the Texas coast, with an adult.",
+            "6–8": "Identify a real industry along the working Texas coast, with a checker.",
+            "9–10": "Research a real coastal industry and its real challenges, on your own.",
+            "11–12": "Explain to someone else the real economic importance of the working coast."
+          }
         },
         {
           "theme": "Mutual aid: the neighbour system",
           "description": "CERT teams, church networks and the truck-and-chainsaw culture — organized so help helps.",
-          "transfer_check": "Complete or map enrolment in one recognised local response group, and build the (consented) support map for one street."
+          "transfer_check": "Complete or map enrolment in one recognised local response group, and build the (consented) support map for one street.",
+          "bands": {
+            "K–2": "Help a neighbour with a small task, with an adult.",
+            "3–5": "Help a real neighbour during a hard time, with an adult's help.",
+            "6–8": "Organise a real mutual aid effort for neighbours, with a checker.",
+            "9–10": "Organise real mutual aid for your own neighbourhood, on your own.",
+            "11–12": "Lead a real neighbourhood mutual aid system during an emergency."
+          }
         },
         {
           "theme": "Recovery and who gets rebuilt",
           "description": "After the storm — FEMA, the GLO programs, insurance and elevation — and why the same event lands unequally.",
-          "transfer_check": "From one documented Texas disaster, chart the recovery programs and identify, with evidence, one group the paperwork left behind."
+          "transfer_check": "From one documented Texas disaster, chart the recovery programs and identify, with evidence, one group the paperwork left behind.",
+          "bands": {
+            "K–2": "Ask an adult what happens to a home after a disaster.",
+            "3–5": "Learn that some homes get rebuilt faster than others, with an adult.",
+            "6–8": "Identify a real inequity in a real disaster recovery process, with a checker.",
+            "9–10": "Advocate for a real fair recovery process after a real disaster, on your own.",
+            "11–12": "Advocate for a real vulnerable group's fair treatment in real disaster recovery."
+          }
         },
         {
           "theme": "Leading through the long emergency",
           "description": "The capstone: civic leadership where storm, grid and water are all in motion — weighing protection, retreat and cost with real neighbours in the room.",
-          "transfer_check": "Run or present a structured deliberation on one real local resilience decision — options, trade-offs, affected voices — and deliver the recommendation you would defend in public."
+          "transfer_check": "Run or present a structured deliberation on one real local resilience decision — options, trade-offs, affected voices — and deliver the recommendation you would defend in public.",
+          "bands": {
+            "K–2": "Stay calm and help others during a scary time, with an adult.",
+            "3–5": "Help keep others calm during a real ongoing emergency, with an adult.",
+            "6–8": "Lead a real small group through a real ongoing emergency, with a checker.",
+            "9–10": "Lead others through a real long emergency, on your own.",
+            "11–12": "Guide a real community through a real long, ongoing emergency."
+          }
         }
       ]
     }

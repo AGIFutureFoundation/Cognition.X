@@ -677,7 +677,7 @@ def test_education_os_canonical_injection():
     check("institute: every principle carries its strands", all(isinstance(x.get("strands"), list) and x["strands"] for x in inst["principles"]))
 
 
-KNOWN_BAND_SUFFIX_ROWS = 2500            # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); 9,250 Corporate OS (v0.72.0); 8,750 Science OS (v0.73.0); 8,250 Robotics OS (v0.74.0); 7,750 Global Health OS (v0.75.0); 7,250 Multilateral OS (v0.76.0); 6,750 Sapient OS (v0.77.0); 6,250 Non-Profit Practice (v0.78.0, all seven sector packs); 5,750 SmartCiti.X New Orleans Trades + States OS (v0.79.0, prompt 2 tranche one); 5,250 Trades in the Classroom + Trades Across School Subjects (v0.80.0, prompt 2 tranche two); 4,500 Music + Culinary Trades + Arts, Making Media & Performance (v0.81.0, prompt 2 tranche three, the three culture packs); 4,000 Digital Life, Data & AI + Law, Contracts & Everyday Rights (v0.82.0, prompt 2 tranche four); 3,500 Preventive Health & Everyday Care + Care Across a Life (v0.83.0, prompt 2 tranche five, the life-skills family begins); 3,000 Water, Land & Climate + Making, Repair & Reuse (v0.84.0, prompt 2 tranche six); 2,500 Arts & Craft Trades : Louisiana Makers + Energy, Grid & the Home (v0.85.0, prompt 2 tranche seven); the ratchet only falls
+KNOWN_BAND_SUFFIX_ROWS = 1750             # 11,250 before tranche one (v0.65.0); 10,750; 10,250; 9,750 after tranche three (v0.67.0); 9,250 Corporate OS (v0.72.0); 8,750 Science OS (v0.73.0); 8,250 Robotics OS (v0.74.0); 7,750 Global Health OS (v0.75.0); 7,250 Multilateral OS (v0.76.0); 6,750 Sapient OS (v0.77.0); 6,250 Non-Profit Practice (v0.78.0, all seven sector packs); 5,750 SmartCiti.X New Orleans Trades + States OS (v0.79.0, prompt 2 tranche one); 5,250 Trades in the Classroom + Trades Across School Subjects (v0.80.0, prompt 2 tranche two); 4,500 Music + Culinary Trades + Arts, Making Media & Performance (v0.81.0, prompt 2 tranche three, the three culture packs); 4,000 Digital Life, Data & AI + Law, Contracts & Everyday Rights (v0.82.0, prompt 2 tranche four); 3,500 Preventive Health & Everyday Care + Care Across a Life (v0.83.0, prompt 2 tranche five, the life-skills family begins); 3,000 Water, Land & Climate + Making, Repair & Reuse (v0.84.0, prompt 2 tranche six); 2,500 Arts & Craft Trades : Louisiana Makers + Energy, Grid & the Home (v0.85.0, prompt 2 tranche seven); 1,750 the three Civic Leadership Legacy packs (v0.86.0, prompt 2 tranche eight); the ratchet only falls
 BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch & Scale",
                        "Civic Leadership Legacy : Louisiana", "Basic Life Skills & Self-Reliance",
                        "Cognition.X : Louisiana OS", "SmartCiti.X : New Orleans Trades",
@@ -687,7 +687,9 @@ BAND_AUTHORED_PACKS = {"Emergency Preparedness & First Response", "Parish Launch
                        "Digital Life, Data & AI", "Law, Contracts & Everyday Rights",
                        "Preventive Health & Everyday Care", "Care Across a Life",
                        "Water, Land & Climate", "Making, Repair & Reuse",
-                       "Arts & Craft Trades : Louisiana Makers", "Energy, Grid & the Home"}
+                       "Arts & Craft Trades : Louisiana Makers", "Energy, Grid & the Home",
+                       "Civic Leadership Legacy : The Institute Model",
+                       "Civic Leadership Legacy : California", "Civic Leadership Legacy : Texas"}
 BAND_AUTHORED_THEMES = {"Cognition.X : Louisiana OS": 100}   # two spec parts, one pack
 # packs whose source rows carried the suffix and were overridden through an
 # `override: band-suffix` promotion (v0.72.0): themes overridden, rows expected
