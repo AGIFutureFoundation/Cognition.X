@@ -4,6 +4,42 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.108.0] — 2026-09-18
+
+### Added — the Education OS template's second diet (prompt 7)
+- **`data/education_os/site_index.json`** and **`data/education_os/se_editions.json`**
+  are two new canonical files, extracted once from the Education OS
+  app's template. `DATA.siteIndex` (the app's site-search index: one
+  `[view id, title, description, keywords]` entry per view, 149
+  entries) was a 296 KB literal; `DATA.seEditions` (the Special
+  Editions illustrative-preset content, 4 entries) was 54 KB. Both now
+  live behind the same `__CXFACT:<name>__` placeholder mechanism the
+  Louisiana/WLB fact bases and the sector-block library already use —
+  `tools/build_education_os.py` injects the canonical JSON in place at
+  build time, and `tools/extract_fact_bases.py` round-trips it back
+  (`--check` in CI).
+- `apps/education-os/template.html` shrinks from 4.62 MB to 4.27 MB
+  (−350 KB, −7.6%). This is short of the 4.2 MB target in
+  `docs/NEXT_STEPS_2.md` #7 — see the finding below.
+- **Finding:** the prompt (written at v0.71.0) named a second 152 KB
+  literal, `platformConformance`, as the other target. That literal no
+  longer exists — it was refactored into a live-computed function
+  (`function platformConformance(){...}`) at some point since. The
+  actual second-largest current literal is `seEditions` (54 KB, not
+  152 KB); the next three candidates after that — `buildStatus` (~50
+  KB), `fxPack2` (~48 KB), `fxAuthored` (~47 KB) — would need to move
+  too to reach the 4.2 MB target, and are noted in `docs/PERFORMANCE.md`
+  as a follow-up tranche rather than extracted sight-unseen in this one.
+- Verified with `tools/view_sweep.js`: hashed all 149 views on the
+  original build and the rebuilt one. 9 views differ — but a control
+  sweep (the same rebuilt file against itself, run twice) shows the
+  identical 8 of those 9 differ between two runs of one unchanged
+  file (the ninth was a one-off timeout in the "before" run), proving
+  the differences are pre-existing non-determinism in the app (live
+  timestamps, simulated data), not a regression from this change.
+- Both suites pass: `python3 tests/test_platform.py` (1,925 checks)
+  and the browser smoke suite (223 assertions).
+
 ## [0.107.0] — 2026-09-18
 
 ### Added — one shared runtime for the voice engine (prompt 4)

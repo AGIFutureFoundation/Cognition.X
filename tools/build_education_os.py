@@ -359,6 +359,12 @@ FACT_LAYERS = {
     "wlbPrinciples": ("data/wlb/institute.json",        lambda d: d["principles"]),
     "lak12":        ("data/louisiana/k12_program.json", lambda d: d["grades"]),
     "lak12Threads": ("data/louisiana/k12_program.json", lambda d: d["threads"]),
+    # v0.108.0 (roadmap prompt 7, the template diet): the site-search index and
+    # the Special Editions content were the two largest literals left in the
+    # template (296 KB and 54 KB) after the sector library moved out at
+    # v0.68.0; the same __CXFACT: mechanism now carries them too.
+    "siteIndex":    ("data/education_os/site_index.json", lambda d: d["entries"]),
+    "seEditions":   ("data/education_os/se_editions.json", lambda d: d["entries"]),
 }
 
 

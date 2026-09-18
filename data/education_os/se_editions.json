@@ -1,0 +1,2013 @@
+{
+ "note": "The Education OS app's Special Editions (Enterprise/illustrative preset organizations) — canonical here since v0.108.0 (prompt 7, the template diet: this literal was 54 KB in apps/education-os/template.html; extracted once by hand and now round-tripped by tools/extract_fact_bases.py, injected in place by tools/build_education_os.py at the __CXFACT:seEditions__ placeholder). Illustrative presets only — no company relationships implied, per the app's own disclaimer text.",
+ "entries": [
+  {
+   "k": "PR",
+   "name": "Parks & Recreation Edition",
+   "short": "Parks & Rec",
+   "aff": "Designed for the needs of municipal parks and recreation departments and organisations like them. This platform has NO affiliation with, endorsement from, partnership with, or contact of any kind with the National Recreation and Park Association, any city or county parks department, or any recreation authority. Nothing here is authorised by them and nothing should be represented as theirs.",
+   "thesis": "A parks department is not a youth agency that happens to own fields. It is a public works operation that also runs programmes: it holds the pool, the gym, the diamonds and the shelter, it answers to a city budget written in facility terms, and its programme staff are often seasonal, hired in April and gone in September. Nothing here assumes a year-round youth worker, a curriculum budget, or a room that is not also booked for something else at six. What a parks department actually has that nobody else does is space, water, ground and the legal right to let anybody in — and this edition is built on those four assets rather than on staff it does not have.",
+   "needs": [
+    [
+     "Seasonal staff, hired in April",
+     "Most programme staff are eighteen to twenty-two, employed for one summer, trained in three days. Every session is written for them and no session assumes a returning adult."
+    ],
+    [
+     "The facility is the programme",
+     "The pool, the gym, the field and the shelter are the department’s real assets. Sessions are authored to the space rather than to a subject."
+    ],
+    [
+     "Booked at six for something else",
+     "No session may leave equipment out, occupy a room past its slot, or depend on a wall."
+    ],
+    [
+     "Registration exists but drop-in is the reality",
+     "Some programmes take enrolment; open gym and the pool do not. Both shapes are authored."
+    ],
+    [
+     "All ages, including seniors",
+     "A parks department serves eighty-year-olds and eight-year-olds on the same site on the same day. The bands include adults, not as an afterthought."
+    ],
+    [
+     "Fee-based and free run side by side",
+     "Some programmes must recover cost. Every session names whether it can run free and what it needs if it cannot."
+    ],
+    [
+     "Weather decides",
+     "Half of these programmes are outdoors. Every outdoor session names its indoor collapse."
+    ],
+    [
+     "Liability and water safety are the floor",
+     "Aquatics, contact and heights carry real risk and real law. Every session touching them names the certification actually required, and defers to it."
+    ]
+   ],
+   "strands": [
+    [
+     "PA",
+     "Water",
+     "The pool is the most valuable and most dangerous thing the department owns. Swimming as a survival skill, not a sport."
+    ],
+    [
+     "PB",
+     "Ground and sport",
+     "Fields, courts and the games people actually play on them, including the ones without leagues."
+    ],
+    [
+     "PC",
+     "Open space and the outdoors",
+     "Trails, parks, weather, night sky, growing things. The city’s land, used deliberately."
+    ],
+    [
+     "PD",
+     "The building on a rainy day",
+     "Gym, shelter, community room. What happens when the plan is cancelled, which is often."
+    ],
+    [
+     "PE",
+     "Older adults and all ages together",
+     "The department’s quiet second constituency, and the sessions where generations share a room."
+    ]
+   ],
+   "bands": [
+    [
+     "k",
+     "Children · 5–12"
+    ],
+    [
+     "y",
+     "Teens · 13–18"
+    ],
+    [
+     "d",
+     "Adults & older adults"
+    ]
+   ],
+   "units": [
+    {
+     "s": "PA",
+     "b": "k",
+     "code": "PA-K-1",
+     "t": "Float first, swim second",
+     "w": "Learning to be calm and horizontal before any stroke, because drowning is a panic event before it is a skill gap.",
+     "n": "A swimming lesson."
+    },
+    {
+     "s": "PA",
+     "b": "k",
+     "code": "PA-K-2",
+     "t": "Get out of the pool",
+     "w": "Every child practises exiting from the deep end unaided, at the wall and at the ladder.",
+     "n": "Water play."
+    },
+    {
+     "s": "PA",
+     "b": "k",
+     "code": "PA-K-3",
+     "t": "What a lifeguard is watching",
+     "w": "Children learn the scan, so they understand why the guard is not their friend right now.",
+     "n": "A safety talk."
+    },
+    {
+     "s": "PA",
+     "b": "y",
+     "code": "PA-Y-1",
+     "t": "Rescue without entering",
+     "w": "Reach, throw, do not go. The rule that keeps would-be rescuers alive.",
+     "n": "Lifeguard training."
+    },
+    {
+     "s": "PA",
+     "b": "y",
+     "code": "PA-Y-2",
+     "t": "The lifeguard job, honestly",
+     "w": "What the certification costs, what the shift is like and what it pays, from somebody doing it.",
+     "n": "A careers talk."
+    },
+    {
+     "s": "PA",
+     "b": "y",
+     "code": "PA-Y-3",
+     "t": "Open water is not a pool",
+     "w": "Current, cold shock, depth you cannot see, and why strong pool swimmers drown in rivers.",
+     "n": "A field trip."
+    },
+    {
+     "s": "PA",
+     "b": "d",
+     "code": "PA-D-1",
+     "t": "The adult who never learned",
+     "w": "A first swim session for adults, private enough that nobody has to be seen failing.",
+     "n": "A beginner class."
+    },
+    {
+     "s": "PA",
+     "b": "d",
+     "code": "PA-D-2",
+     "t": "Water with your child",
+     "w": "A parent learns the two things that matter at a pool with a small child, and the one that does not.",
+     "n": "Family swim."
+    },
+    {
+     "s": "PA",
+     "b": "d",
+     "code": "PA-D-3",
+     "t": "Moving without impact",
+     "w": "Water as the only exercise available to a body that hurts on land.",
+     "n": "Aqua aerobics."
+    },
+    {
+     "s": "PB",
+     "b": "k",
+     "code": "PB-K-1",
+     "t": "The game with no league",
+     "w": "Pick-up rules, self-officiating, and arguing fairly without an adult.",
+     "n": "Sports coaching."
+    },
+    {
+     "s": "PB",
+     "b": "k",
+     "code": "PB-K-2",
+     "t": "Everybody plays the whole time",
+     "w": "Games designed so nobody sits, nobody is picked last and nobody is out for long.",
+     "n": "Inclusion."
+    },
+    {
+     "s": "PB",
+     "b": "k",
+     "code": "PB-K-3",
+     "t": "The field is a machine",
+     "w": "How a diamond, a court or a pitch is laid out, and why. Ten minutes that changes how a child watches sport.",
+     "n": "Groundskeeping."
+    },
+    {
+     "s": "PB",
+     "b": "y",
+     "code": "PB-Y-1",
+     "t": "Referee a game",
+     "w": "Officiate for younger children, be wrong in public, and survive it.",
+     "n": "Volunteering."
+    },
+    {
+     "s": "PB",
+     "b": "y",
+     "code": "PB-Y-2",
+     "t": "Train for something in eight weeks",
+     "w": "A real, self-run programme toward a measurable thing, with no body data recorded.",
+     "n": "Fitness testing."
+    },
+    {
+     "s": "PB",
+     "b": "y",
+     "code": "PB-Y-3",
+     "t": "The sport nobody here plays",
+     "w": "Introduce one game from another country using the equipment already in the shed.",
+     "n": "Cultural awareness."
+    },
+    {
+     "s": "PB",
+     "b": "d",
+     "code": "PB-D-1",
+     "t": "Adult league that is not a war",
+     "w": "Setting up a league where the point is turning up on Thursday.",
+     "n": "Recreational sport."
+    },
+    {
+     "s": "PB",
+     "b": "d",
+     "code": "PB-D-2",
+     "t": "Coach your own kid’s team",
+     "w": "What a volunteer coach actually needs: the safeguarding rule, the practice plan and the boundary.",
+     "n": "Coach certification."
+    },
+    {
+     "s": "PB",
+     "b": "d",
+     "code": "PB-D-3",
+     "t": "Come back to a body that changed",
+     "w": "Returning to sport after injury, illness or twenty years, without the comparison.",
+     "n": "Rehabilitation."
+    },
+    {
+     "s": "PC",
+     "b": "k",
+     "code": "PC-K-1",
+     "t": "The park is full of things that are alive",
+     "w": "One hour naming what actually lives in this park, and writing it down.",
+     "n": "Nature study."
+    },
+    {
+     "s": "PC",
+     "b": "k",
+     "code": "PC-K-2",
+     "t": "Build a fire, safely, once",
+     "w": "Under supervision, with the department’s rules, in the place it is allowed.",
+     "n": "Camping skills."
+    },
+    {
+     "s": "PC",
+     "b": "k",
+     "code": "PC-K-3",
+     "t": "The night sky over a city",
+     "w": "What can and cannot be seen from here, and why. Light pollution as a civic fact.",
+     "n": "Astronomy."
+    },
+    {
+     "s": "PC",
+     "b": "y",
+     "code": "PC-Y-1",
+     "t": "Map your own neighbourhood park",
+     "w": "Survey what is there, what is broken and what is missing, and hand it to the department.",
+     "n": "A clean-up day."
+    },
+    {
+     "s": "PC",
+     "b": "y",
+     "code": "PC-Y-2",
+     "t": "Grow food in the ground here",
+     "w": "Soil, season and what will actually survive in this climate on this plot.",
+     "n": "Gardening club."
+    },
+    {
+     "s": "PC",
+     "b": "y",
+     "code": "PC-Y-3",
+     "t": "Trail work",
+     "w": "Real maintenance with real tools alongside the crew that does it for a living.",
+     "n": "Community service."
+    },
+    {
+     "s": "PC",
+     "b": "d",
+     "code": "PC-D-1",
+     "t": "Walk the whole park system",
+     "w": "A route across the city using only public land, mapped and published.",
+     "n": "A walking group."
+    },
+    {
+     "s": "PC",
+     "b": "d",
+     "code": "PC-D-2",
+     "t": "The plot you keep",
+     "w": "Community garden allotment, rules, water, and what to do in February.",
+     "n": "Horticulture."
+    },
+    {
+     "s": "PC",
+     "b": "d",
+     "code": "PC-D-3",
+     "t": "What this land was before",
+     "w": "The park’s own history, from the department’s own records.",
+     "n": "Local history."
+    },
+    {
+     "s": "PD",
+     "b": "k",
+     "code": "PD-K-1",
+     "t": "Rain plan, announced cheerfully",
+     "w": "A gym session that is the real plan, not the disappointment version.",
+     "n": "A contingency."
+    },
+    {
+     "s": "PD",
+     "b": "k",
+     "code": "PD-K-2",
+     "t": "Games with one ball and no net",
+     "w": "Fifteen games that need nothing the building does not already have.",
+     "n": "PE."
+    },
+    {
+     "s": "PD",
+     "b": "k",
+     "code": "PD-K-3",
+     "t": "Quiet corner in a loud gym",
+     "w": "A genuine alternative for the child who cannot do the gym today.",
+     "n": "Time out."
+    },
+    {
+     "s": "PD",
+     "b": "y",
+     "code": "PD-Y-1",
+     "t": "Run the open gym",
+     "w": "A teen sets up, runs and closes an open session with staff present but not leading.",
+     "n": "Supervision."
+    },
+    {
+     "s": "PD",
+     "b": "y",
+     "code": "PD-Y-2",
+     "t": "The shelter as a workshop",
+     "w": "Building something under the pavilion because the room is booked.",
+     "n": "Improvisation."
+    },
+    {
+     "s": "PD",
+     "b": "y",
+     "code": "PD-Y-3",
+     "t": "Book a room for your own thing",
+     "w": "Actually reserve municipal space, with the form, the rules and the accountability.",
+     "n": "Youth voice."
+    },
+    {
+     "s": "PD",
+     "b": "d",
+     "code": "PD-D-1",
+     "t": "The community room is yours",
+     "w": "How a resident books and runs something in a public building, start to finish.",
+     "n": "An outreach event."
+    },
+    {
+     "s": "PD",
+     "b": "d",
+     "code": "PD-D-2",
+     "t": "Cook in the shelter kitchen",
+     "w": "Using the department’s own kitchen within the health rules that apply.",
+     "n": "A cooking class."
+    },
+    {
+     "s": "PD",
+     "b": "d",
+     "code": "PD-D-3",
+     "t": "When the programme is cancelled",
+     "w": "What the department owes people when weather or staffing kills a session.",
+     "n": "Customer service."
+    },
+    {
+     "s": "PE",
+     "b": "k",
+     "code": "PE-K-1",
+     "t": "Interview somebody at the senior centre",
+     "w": "Three questions, recorded with permission, in the same building on the same day.",
+     "n": "An intergenerational event."
+    },
+    {
+     "s": "PE",
+     "b": "k",
+     "code": "PE-K-2",
+     "t": "Teach an adult a game",
+     "w": "The child is the expert for twenty minutes and the adult genuinely does not know.",
+     "n": "Role reversal."
+    },
+    {
+     "s": "PE",
+     "b": "k",
+     "code": "PE-K-3",
+     "t": "The park before you were born",
+     "w": "Ask three older residents what this park used to be.",
+     "n": "Oral history."
+    },
+    {
+     "s": "PE",
+     "b": "y",
+     "code": "PE-Y-1",
+     "t": "Work alongside older adults",
+     "w": "A shared task where age is irrelevant to the work.",
+     "n": "A volunteering programme."
+    },
+    {
+     "s": "PE",
+     "b": "y",
+     "code": "PE-Y-2",
+     "t": "Technology help that respects people",
+     "w": "Helping an older adult without taking the device.",
+     "n": "Digital inclusion."
+    },
+    {
+     "s": "PE",
+     "b": "y",
+     "code": "PE-Y-3",
+     "t": "The job at the senior centre",
+     "w": "Real employment in ageing services, its pay and its route in.",
+     "n": "A careers session."
+    },
+    {
+     "s": "PE",
+     "b": "d",
+     "code": "PE-D-1",
+     "t": "Falls, strength and the floor",
+     "w": "Getting up off the ground, practised, which is the single most protective skill in later life.",
+     "n": "Balance class."
+    },
+    {
+     "s": "PE",
+     "b": "d",
+     "code": "PE-D-2",
+     "t": "The room where nobody is a client",
+     "w": "A programme older adults run themselves, with the department only holding keys.",
+     "n": "Senior programming."
+    },
+    {
+     "s": "PE",
+     "b": "d",
+     "code": "PE-D-3",
+     "t": "Caring for somebody, and still coming",
+     "w": "What the department can hold so a carer can attend anything at all.",
+     "n": "Respite care."
+    }
+   ],
+   "ladder": [
+    [
+     "R1",
+     "You came",
+     "Turned up at a public facility that let you in without asking who you are.",
+     "You are on the site."
+    ],
+    [
+     "R2",
+     "You can use it safely",
+     "Water, court or tool competence certified by whoever must certify it.",
+     "The certification exists and is current."
+    ],
+    [
+     "R3",
+     "You keep coming",
+     "Regular enough that the seasonal staff know your name.",
+     "Somebody notices when you are not there."
+    ],
+    [
+     "R4",
+     "You help run it",
+     "Setting up, officiating, lifeguarding as a trainee — with an adult present, not leading.",
+     "A session ran because you were there."
+    ],
+    [
+     "R5",
+     "Seasonal staff, paid",
+     "On the department payroll for a season, with a wage and a supervisor.",
+     "You are employed."
+    ]
+   ],
+   "refusals": [
+    [
+     "No body data",
+     "No weights, heights, BMI, fitness scores or swim-time rankings attached to a person, at any age, for any purpose."
+    ],
+    [
+     "No certification this platform is not entitled to give",
+     "Aquatics, contact sport and heights are governed by real bodies with real law. Every session defers to the actual certification and claims none of its own."
+    ],
+    [
+     "No child excluded for inability to pay",
+     "Every session names whether it can run free, and any that cannot is marked as such rather than quietly gated."
+    ],
+    [
+     "No photograph without written guardian consent",
+     "And consent for a programme is not consent for promotion."
+    ],
+    [
+     "No competitive ranking of children",
+     "Nothing here produces a ladder, a table or a cut."
+    ],
+    [
+     "No claim on facility scheduling",
+     "The programme proposes nothing about how a department allocates its own space."
+    ]
+   ]
+  },
+  {
+   "k": "RU",
+   "name": "Rural & Agricultural Youth Edition",
+   "short": "Rural & Ag",
+   "aff": "Designed for the needs of rural school districts, extension offices, agricultural youth organisations and the communities they serve. This platform has NO affiliation with, endorsement from, partnership with, or contact of any kind with 4-H, the National FFA Organization, the Cooperative Extension System, USDA or any land-grant university. Nothing here uses their programme names, emblems or curricula, and nothing should be represented as theirs.",
+   "thesis": "Rural is not urban with fewer people. It is a different set of constraints: an hour each way on a bus, one adult who teaches four subjects, a seasonal calendar that pulls young people out of school for harvest because the family operation genuinely needs them, an economy where the best-paid local work is skilled and physical, and broadband that either is not there or is not affordable. The deficit framing that treats a rural young person as somebody to be prepared for leaving is both insulting and a policy failure, because it exports the talent that a place needs. This edition assumes the young person may stay, may leave, or may leave and come back, and that all three are legitimate. It is built for distance, seasonality and a community where everybody knows everybody, which is a safeguarding condition as much as a social one.",
+   "needs": [
+    [
+     "Distance is the first constraint",
+     "An hour on a bus each way is normal. Nothing here requires attendance more than once a week, and every unit has an asynchronous route."
+    ],
+    [
+     "One adult teaches everything",
+     "The agriculture teacher is also the shop teacher, the club advisor and the bus driver. Sessions must not need a specialist."
+    ],
+    [
+     "The season overrides the calendar",
+     "Planting, calving and harvest pull young people out. The curriculum is authored so that missing three weeks in October is not failure."
+    ],
+    [
+     "Connectivity cannot be assumed",
+     "Every unit names a route that works with no home internet and a phone with a data cap."
+    ],
+    [
+     "Real work, young",
+     "Many young people here already do serious physical work. The programme treats that as competence, not as a risk to be managed."
+    ],
+    [
+     "Everybody knows everybody",
+     "Confidentiality is structurally harder. Every unit touching a personal matter names an out-of-county route."
+    ],
+    [
+     "The best jobs are skilled and local",
+     "Line work, welding, diesel, health care, agronomy. The economy strand is built from what is actually hiring within an hour."
+    ],
+    [
+     "Leaving is not the goal, and neither is staying",
+     "Every unit that touches the future presents staying, leaving and returning as three legitimate paths, without ranking them."
+    ]
+   ],
+   "strands": [
+    [
+     "RA",
+     "Land, animals and the work",
+     "What the operation actually requires, treated as skilled work rather than as chores."
+    ],
+    [
+     "RB",
+     "Machines and repair",
+     "Diesel, hydraulics, welding, electrical. The most transferable skills in a rural economy."
+    ],
+    [
+     "RC",
+     "Business and the money in it",
+     "Margins, inputs, weather risk, and why a good year and a good farm are different things."
+    ],
+    [
+     "RD",
+     "Distance, connection and the internet you do not have",
+     "Getting an education, a job and a life across an hour of road and a poor connection."
+    ],
+    [
+     "RE",
+     "Staying, leaving and coming back",
+     "The future conversation, held honestly, without ranking the three answers."
+    ]
+   ],
+   "bands": [
+    [
+     "e",
+     "Younger · 8–12"
+    ],
+    [
+     "m",
+     "Middle & high · 13–18"
+    ],
+    [
+     "a",
+     "Young adults & families"
+    ]
+   ],
+   "units": [
+    {
+     "s": "RA",
+     "b": "e",
+     "code": "RA-E-1",
+     "t": "An animal is a responsibility with a schedule",
+     "w": "Daily care that does not pause for weekends or feelings.",
+     "n": "Pet ownership."
+    },
+    {
+     "s": "RA",
+     "b": "e",
+     "code": "RA-E-2",
+     "t": "Where the food in this house came from",
+     "w": "Trace one item on the table back to a field, ideally one you can see.",
+     "n": "Farm to table."
+    },
+    {
+     "s": "RA",
+     "b": "e",
+     "code": "RA-E-3",
+     "t": "Weather is not small talk",
+     "w": "Reading a forecast the way somebody who works outside reads it.",
+     "n": "Meteorology."
+    },
+    {
+     "s": "RA",
+     "b": "m",
+     "code": "RA-M-1",
+     "t": "Livestock health without a vet on site",
+     "w": "What you can assess, what you must call about, and the number to call.",
+     "n": "Veterinary training. This refers and stops."
+    },
+    {
+     "s": "RA",
+     "b": "m",
+     "code": "RA-M-2",
+     "t": "Soil is the asset",
+     "w": "Testing, structure and what depletes it, on the ground you actually work.",
+     "n": "Agronomy."
+    },
+    {
+     "s": "RA",
+     "b": "m",
+     "code": "RA-M-3",
+     "t": "The safety talk nobody gives",
+     "w": "PTOs, grain, augers, heights and chemicals — named plainly, because rural youth injury is real and preventable.",
+     "n": "A hazard poster."
+    },
+    {
+     "s": "RA",
+     "b": "a",
+     "code": "RA-A-1",
+     "t": "Succession, and the conversation nobody has",
+     "w": "How an operation passes to the next generation, and what happens when it does not.",
+     "n": "Estate planning. This names the professional and stops."
+    },
+    {
+     "s": "RA",
+     "b": "a",
+     "code": "RA-A-2",
+     "t": "Bringing somebody new into the operation",
+     "w": "Hiring, housing and paying help in a place with no labour pool.",
+     "n": "Employment law."
+    },
+    {
+     "s": "RA",
+     "b": "a",
+     "code": "RA-A-3",
+     "t": "The land you do not own",
+     "w": "Leasing, share arrangements and what each actually costs you.",
+     "n": "Legal advice."
+    },
+    {
+     "s": "RB",
+     "b": "e",
+     "code": "RB-E-1",
+     "t": "Take a small engine apart",
+     "w": "Real tools, real supervision, no obligation to reassemble.",
+     "n": "A STEM kit."
+    },
+    {
+     "s": "RB",
+     "b": "e",
+     "code": "RB-E-2",
+     "t": "Every machine is a system",
+     "w": "Fuel, air, spark, load — one framework that fits everything with an engine.",
+     "n": "Physics."
+    },
+    {
+     "s": "RB",
+     "b": "e",
+     "code": "RB-E-3",
+     "t": "The tool that will hurt you",
+     "w": "Supervised first use of one real tool, with the safety talk taken seriously.",
+     "n": "A demonstration."
+    },
+    {
+     "s": "RB",
+     "b": "m",
+     "code": "RB-M-1",
+     "t": "Weld a joint that holds",
+     "w": "Real material, real test, real failure. A skill that pays within a year.",
+     "n": "A welding class."
+    },
+    {
+     "s": "RB",
+     "b": "m",
+     "code": "RB-M-2",
+     "t": "Diagnose before you replace",
+     "w": "The discipline that separates a mechanic from a parts changer.",
+     "n": "Troubleshooting."
+    },
+    {
+     "s": "RB",
+     "b": "m",
+     "code": "RB-M-3",
+     "t": "Hydraulics, explained once",
+     "w": "Pressure, flow and why the loader stopped lifting.",
+     "n": "Engineering."
+    },
+    {
+     "s": "RB",
+     "b": "a",
+     "code": "RB-A-1",
+     "t": "The repair that saves the season",
+     "w": "Field-expedient fixes, and knowing which ones must not be permanent.",
+     "n": "Bodging."
+    },
+    {
+     "s": "RB",
+     "b": "a",
+     "code": "RB-A-2",
+     "t": "Certification that pays",
+     "w": "Which local tickets — welding, CDL, pesticide, electrical — actually raise a wage here, what each costs and where to sit it.",
+     "n": "A course list."
+    },
+    {
+     "s": "RB",
+     "b": "a",
+     "code": "RB-A-3",
+     "t": "Teach the young person on your crew",
+     "w": "Instructing safely when the learner is fifteen and capable.",
+     "n": "Supervision."
+    },
+    {
+     "s": "RC",
+     "b": "e",
+     "code": "RC-E-1",
+     "t": "What things cost",
+     "w": "Price a single input and a single output, and see the gap.",
+     "n": "Economics."
+    },
+    {
+     "s": "RC",
+     "b": "e",
+     "code": "RC-E-2",
+     "t": "Sell something you made",
+     "w": "A stall, a price, a float and an honest count at the end.",
+     "n": "A fundraiser."
+    },
+    {
+     "s": "RC",
+     "b": "e",
+     "code": "RC-E-3",
+     "t": "A good year and a bad year",
+     "w": "Two real seasons compared, without drama.",
+     "n": "Risk education."
+    },
+    {
+     "s": "RC",
+     "b": "m",
+     "code": "RC-M-1",
+     "t": "Read an operation’s numbers",
+     "w": "Inputs, yield, margin and debt service on a real or realistic set of figures.",
+     "n": "Accounting."
+    },
+    {
+     "s": "RC",
+     "b": "m",
+     "code": "RC-M-2",
+     "t": "Weather risk and what covers it",
+     "w": "Insurance, forward contracts and the plain version of what each does.",
+     "n": "Financial products."
+    },
+    {
+     "s": "RC",
+     "b": "m",
+     "code": "RC-M-3",
+     "t": "The value that leaves the county",
+     "w": "Where the margin goes after the truck leaves, and what adding value locally would take.",
+     "n": "Agribusiness theory."
+    },
+    {
+     "s": "RC",
+     "b": "a",
+     "code": "RC-A-1",
+     "t": "The side business that carries the farm",
+     "w": "Off-operation income, honestly, because most operations depend on it.",
+     "n": "Diversification."
+    },
+    {
+     "s": "RC",
+     "b": "a",
+     "code": "RC-A-2",
+     "t": "Grants and programmes that actually exist",
+     "w": "Which county and federal programmes are real for an operation this size, and the deadlines.",
+     "n": "A subsidy briefing."
+    },
+    {
+     "s": "RC",
+     "b": "a",
+     "code": "RC-A-3",
+     "t": "When it does not work",
+     "w": "Winding down, selling, or taking a job — said out loud, without shame, with the helpline for the pressure it brings.",
+     "n": "Business advice."
+    },
+    {
+     "s": "RD",
+     "b": "e",
+     "code": "RD-E-1",
+     "t": "The bus hour is yours",
+     "w": "Making an hour each way into something, with no connection and one device.",
+     "n": "Screen time."
+    },
+    {
+     "s": "RD",
+     "b": "e",
+     "code": "RD-E-2",
+     "t": "Download it before you leave town",
+     "w": "Working offline deliberately, which is a skill here rather than a workaround.",
+     "n": "Digital literacy."
+    },
+    {
+     "s": "RD",
+     "b": "e",
+     "code": "RD-E-3",
+     "t": "Write to somebody far away",
+     "w": "A real letter or message to a person outside the county who answers.",
+     "n": "Pen pals."
+    },
+    {
+     "s": "RD",
+     "b": "m",
+     "code": "RD-M-1",
+     "t": "Take a course that is not offered here",
+     "w": "Dual enrolment, distance and correspondence routes that genuinely work on this connection.",
+     "n": "Online learning."
+    },
+    {
+     "s": "RD",
+     "b": "m",
+     "code": "RD-M-2",
+     "t": "The interview you cannot drive to",
+     "w": "Video interviews from a place with poor upload, and where the good connection in this town is.",
+     "n": "Interview practice."
+    },
+    {
+     "s": "RD",
+     "b": "m",
+     "code": "RD-M-3",
+     "t": "Your county’s broadband, mapped",
+     "w": "Find out what is actually available and what the plan is, and write to whoever decides.",
+     "n": "Advocacy."
+    },
+    {
+     "s": "RD",
+     "b": "a",
+     "code": "RD-A-1",
+     "t": "Telehealth that works here",
+     "w": "What can genuinely be done remotely and what still requires the two-hour drive.",
+     "n": "Medical advice."
+    },
+    {
+     "s": "RD",
+     "b": "a",
+     "code": "RD-A-2",
+     "t": "Working remotely from a rural address",
+     "w": "Honestly: what jobs, what upload speed, what it pays.",
+     "n": "Remote work hype."
+    },
+    {
+     "s": "RD",
+     "b": "a",
+     "code": "RD-A-3",
+     "t": "The drive, costed",
+     "w": "What distance actually costs a household in fuel, time and vehicles.",
+     "n": "Complaining."
+    },
+    {
+     "s": "RE",
+     "b": "e",
+     "code": "RE-E-1",
+     "t": "Three people who left, three who stayed",
+     "w": "Ask six adults what they chose and why, without judging any answer.",
+     "n": "Careers advice."
+    },
+    {
+     "s": "RE",
+     "b": "e",
+     "code": "RE-E-2",
+     "t": "The map of an hour",
+     "w": "Everything reachable within an hour, drawn to scale. It is more than people think.",
+     "n": "Geography."
+    },
+    {
+     "s": "RE",
+     "b": "e",
+     "code": "RE-E-3",
+     "t": "What this place is good at",
+     "w": "Name the thing this county genuinely does well.",
+     "n": "Boosterism."
+    },
+    {
+     "s": "RE",
+     "b": "m",
+     "code": "RE-M-1",
+     "t": "The three paths, unranked",
+     "w": "Staying, leaving and returning presented with what each costs and gains, by people who did each.",
+     "n": "A college pitch."
+    },
+    {
+     "s": "RE",
+     "b": "m",
+     "code": "RE-M-2",
+     "t": "The job an hour away",
+     "w": "Real employers within commuting distance, their wages, and how people get in.",
+     "n": "A careers fair."
+    },
+    {
+     "s": "RE",
+     "b": "m",
+     "code": "RE-M-3",
+     "t": "Leaving well",
+     "w": "If you go: what to arrange, what to keep, and how not to lose the place.",
+     "n": "Encouragement to leave."
+    },
+    {
+     "s": "RE",
+     "b": "a",
+     "code": "RE-A-1",
+     "t": "Coming back at thirty",
+     "w": "What a returner needs — housing, work, childcare — and where it is missing here.",
+     "n": "Nostalgia."
+    },
+    {
+     "s": "RE",
+     "b": "a",
+     "code": "RE-A-2",
+     "t": "Being the adult who stayed",
+     "w": "Mentoring young people about the future without defending your own choice.",
+     "n": "A pep talk."
+    },
+    {
+     "s": "RE",
+     "b": "a",
+     "code": "RE-A-3",
+     "t": "What would have to change",
+     "w": "Name the three things that would make more young people able to choose to stay, and who decides each.",
+     "n": "A wish list."
+    }
+   ],
+   "ladder": [
+    [
+     "A1",
+     "You do the work",
+     "Real tasks on a real operation, competently and safely.",
+     "An adult who depends on it trusts you with it."
+    ],
+    [
+     "A2",
+     "You understand the system",
+     "You can explain why the work is done this way and what happens if it is not.",
+     "You can teach one part of it."
+    ],
+    [
+     "A3",
+     "You hold a ticket",
+     "One certification that raises a wage within an hour of here.",
+     "It is issued and current."
+    ],
+    [
+     "A4",
+     "You run something",
+     "A plot, an enterprise, a herd, a crew — with the numbers on paper.",
+     "It has a margin you can state."
+    ],
+    [
+     "A5",
+     "You chose, knowing",
+     "Staying, leaving or returning, decided with the real figures in front of you.",
+     "You can say what each other path would have cost."
+    ]
+   ],
+   "refusals": [
+    [
+     "No deficit framing",
+     "No unit describes a rural young person as behind, sheltered or needing to be prepared for leaving. Staying is not a failure state."
+    ],
+    [
+     "No unit requires home internet",
+     "Every one names a route that works with no connection and a phone on a data cap."
+    ],
+    [
+     "No agricultural safety advice beyond the named standard",
+     "Where a unit touches machinery, chemicals, confined spaces or livestock, it names the actual standard and the person who trains to it."
+    ],
+    [
+     "No veterinary, agronomic or financial advice",
+     "These units teach vocabulary and judgement about when to call. They name the professional and stop."
+    ],
+    [
+     "No personal matter handled in-county only",
+     "Anything confidential names an out-of-county route, because everybody knows everybody."
+    ],
+    [
+     "No use of any organisation’s programme names or emblems",
+     "Nothing here is 4-H, FFA or Extension material, and nothing may be presented as theirs."
+    ]
+   ]
+  },
+  {
+   "k": "MC",
+   "name": "Military-Connected Families Edition",
+   "short": "Military-connected",
+   "aff": "Designed for the needs of schools, youth programmes and families with a service-member parent. This platform has NO affiliation with, endorsement from, partnership with, or contact of any kind with the Department of Defense, DoDEA, any branch of the armed forces, any installation, or any military family organisation. Nothing here is authorised, cleared or endorsed by them, and nothing should be represented as theirs. This edition takes no position on any deployment, conflict or policy.",
+   "thesis": "A military-connected child changes school six to nine times before graduating, is routinely the newest person in the room, and lives on a calendar set by an institution that does not consult them. The two hard things are not what people assume. The first is transition: credits that do not transfer, a sport season joined in week eleven, an IEP that restarts, and the exhausting work of being new again. The second is ambiguous loss — a parent who is alive but absent, whose return date moves, and whose absence has no ritual and no sympathy card. Programmes for these families usually offer either patriotic ceremony or clinical referral, and most families need neither on a Tuesday. They need the ordinary thing done well: a school that can enrol you in a day, an adult who knows your name in week one, and somewhere to put the part of you that is waiting.",
+   "needs": [
+    [
+     "You will be new again",
+     "A move every two to three years. Every unit is authored so that arriving mid-year is normal rather than remedial."
+    ],
+    [
+     "Credits and records must move fast",
+     "Transcripts, IEPs, immunisations and sport eligibility. The transition strand is administrative because that is where children actually get hurt."
+    ],
+    [
+     "The calendar belongs to somebody else",
+     "Deployment, training, field exercises and duty. Nothing here requires a parent to be present on a fixed date."
+    ],
+    [
+     "Ambiguous loss is the real condition",
+     "A parent alive, absent, and returning on a date that moves. Named plainly, without pathologising a normal response to an abnormal situation."
+    ],
+    [
+     "Reintegration is harder than departure",
+     "The return is often the hardest month of the cycle, and almost nothing is written for it."
+    ],
+    [
+     "Not every family lives on an installation",
+     "Most do not. Every unit works for a family in a civilian school with no installation nearby."
+    ],
+    [
+     "Guard and Reserve families are alone",
+     "Mobilised from a community with no other military families in it, which is the least-served case and is authored for directly."
+    ],
+    [
+     "This is not recruitment, and not politics",
+     "No unit promotes service, discourages it, or takes a position on any conflict. The programme serves the child in front of it."
+    ]
+   ],
+   "strands": [
+    [
+     "MA",
+     "Being new, again",
+     "The mechanics of arriving: records, credits, sport, the first week, and the fourth school."
+    ],
+    [
+     "MB",
+     "When a parent is away",
+     "Ambiguous loss, the moving date, communication, and the ordinary week in the middle of it."
+    ],
+    [
+     "MC",
+     "Coming home",
+     "Reintegration, changed people, changed households, and the month nobody writes about."
+    ],
+    [
+     "MD",
+     "The parent who stayed",
+     "The at-home parent or carer running a household alone on somebody else’s calendar."
+    ],
+    [
+     "ME",
+     "Your own future",
+     "Choices about service, education and place, made without pressure in either direction."
+    ]
+   ],
+   "bands": [
+    [
+     "c",
+     "Children · 5–10"
+    ],
+    [
+     "t",
+     "Teens · 11–18"
+    ],
+    [
+     "f",
+     "Parents, carers & staff"
+    ]
+   ],
+   "units": [
+    {
+     "s": "MA",
+     "b": "c",
+     "code": "MA-C-1",
+     "t": "The first week, planned",
+     "w": "A named adult, a named peer and a named place, arranged before the child arrives.",
+     "n": "An orientation tour."
+    },
+    {
+     "s": "MA",
+     "b": "c",
+     "code": "MA-C-2",
+     "t": "Your things arrive later",
+     "w": "The gap between moving and having your stuff, and what helps.",
+     "n": "Moving advice."
+    },
+    {
+     "s": "MA",
+     "b": "c",
+     "code": "MA-C-3",
+     "t": "Saying goodbye properly",
+     "w": "A leaving ritual at the old school, because unfinished goodbyes accumulate.",
+     "n": "A farewell party."
+    },
+    {
+     "s": "MA",
+     "b": "t",
+     "code": "MA-T-1",
+     "t": "Credits, chased",
+     "w": "Find out exactly what transferred and what did not, in week one, and who fixes it.",
+     "n": "Guidance counselling."
+    },
+    {
+     "s": "MA",
+     "b": "t",
+     "code": "MA-T-2",
+     "t": "The sport season you joined late",
+     "w": "Eligibility rules, the compact that may protect you, and the coach conversation.",
+     "n": "Athletics policy."
+    },
+    {
+     "s": "MA",
+     "b": "t",
+     "code": "MA-T-3",
+     "t": "Being new for the sixth time",
+     "w": "What actually works, from people who have done it, without pretending it is easy.",
+     "n": "Resilience training."
+    },
+    {
+     "s": "MA",
+     "b": "f",
+     "code": "MA-F-1",
+     "t": "Enrol in one day",
+     "w": "The records pack a family keeps so any school can enrol a child immediately.",
+     "n": "A checklist."
+    },
+    {
+     "s": "MA",
+     "b": "f",
+     "code": "MA-F-2",
+     "t": "The IEP or 504 that must not restart",
+     "w": "What transfers, what a receiving school owes immediately, and how to insist.",
+     "n": "Special education law. This names the advocate and stops."
+    },
+    {
+     "s": "MA",
+     "b": "f",
+     "code": "MA-F-3",
+     "t": "The staff member who owns arrivals",
+     "w": "Making mid-year arrival somebody’s actual job at this school.",
+     "n": "A welcome committee."
+    },
+    {
+     "s": "MB",
+     "b": "c",
+     "code": "MB-C-1",
+     "t": "Where they are, on a map",
+     "w": "Concrete, age-appropriate, honest. Not knowing is worse than knowing.",
+     "n": "A geography lesson."
+    },
+    {
+     "s": "MB",
+     "b": "c",
+     "code": "MB-C-2",
+     "t": "A jar for the days",
+     "w": "Something physical for a child to hold a long absence with.",
+     "n": "A countdown. Countdowns break when the date moves; this one does not."
+    },
+    {
+     "s": "MB",
+     "b": "c",
+     "code": "MB-C-3",
+     "t": "The thing you send",
+     "w": "Making something that actually goes, and knowing it arrived.",
+     "n": "A care package drive."
+    },
+    {
+     "s": "MB",
+     "b": "t",
+     "code": "MB-T-1",
+     "t": "The date moved",
+     "w": "Naming the specific anger of an extension, which is legitimate and rarely allowed.",
+     "n": "Coping strategies."
+    },
+    {
+     "s": "MB",
+     "b": "t",
+     "code": "MB-T-2",
+     "t": "You are not the other parent",
+     "w": "Refusing the responsibility a teenager gets handed when one parent is gone.",
+     "n": "Taking on responsibility."
+    },
+    {
+     "s": "MB",
+     "b": "t",
+     "code": "MB-T-3",
+     "t": "Talking to them badly",
+     "w": "Bad connections, short calls, nothing to say, and how to keep it going anyway.",
+     "n": "Communication skills."
+    },
+    {
+     "s": "MB",
+     "b": "f",
+     "code": "MB-F-1",
+     "t": "Ambiguous loss, named",
+     "w": "The concept, given to a family plainly, because having a word for it helps more than advice does.",
+     "n": "Therapy. This module refers."
+    },
+    {
+     "s": "MB",
+     "b": "f",
+     "code": "MB-F-2",
+     "t": "The week nothing is wrong",
+     "w": "Ordinary maintenance during a long absence, which is most of it.",
+     "n": "Crisis support."
+    },
+    {
+     "s": "MB",
+     "b": "f",
+     "code": "MB-F-3",
+     "t": "What school should not do",
+     "w": "Assumptions, pity, assemblies and questions in front of the class. Written for staff.",
+     "n": "Awareness training."
+    },
+    {
+     "s": "MC",
+     "b": "c",
+     "code": "MC-C-1",
+     "t": "They are back and it is strange",
+     "w": "Permission for the reunion to feel wrong, which is normal and temporary.",
+     "n": "A homecoming."
+    },
+    {
+     "s": "MC",
+     "b": "c",
+     "code": "MC-C-2",
+     "t": "Your rules changed twice",
+     "w": "Two households becoming one again, from a child’s side.",
+     "n": "Discipline."
+    },
+    {
+     "s": "MC",
+     "b": "c",
+     "code": "MC-C-3",
+     "t": "Show them what they missed",
+     "w": "A child-led catch-up of the months, on the child’s terms.",
+     "n": "A scrapbook."
+    },
+    {
+     "s": "MC",
+     "b": "t",
+     "code": "MC-T-1",
+     "t": "You are not who you were either",
+     "w": "Both people changed. Renegotiating a relationship rather than restoring one.",
+     "n": "Family therapy."
+    },
+    {
+     "s": "MC",
+     "b": "t",
+     "code": "MC-T-2",
+     "t": "When they are different",
+     "w": "Noticing change in a parent, what to say, and who to tell if it frightens you.",
+     "n": "Diagnosis. This module names the route and stops."
+    },
+    {
+     "s": "MC",
+     "b": "t",
+     "code": "MC-T-3",
+     "t": "Giving back the jobs",
+     "w": "Handing back responsibilities you may not want to give up.",
+     "n": "Chores."
+    },
+    {
+     "s": "MC",
+     "b": "f",
+     "code": "MC-F-1",
+     "t": "The month nobody writes about",
+     "w": "Reintegration for the household: roles, money, discipline and sleep.",
+     "n": "A welcome home."
+    },
+    {
+     "s": "MC",
+     "b": "f",
+     "code": "MC-F-2",
+     "t": "Two parents, one household, again",
+     "w": "Renegotiating decisions after months of one person making all of them.",
+     "n": "Marriage advice."
+    },
+    {
+     "s": "MC",
+     "b": "f",
+     "code": "MC-F-3",
+     "t": "When the return is not the end",
+     "w": "Injury, illness or another deployment already scheduled. Named honestly.",
+     "n": "Reassurance."
+    },
+    {
+     "s": "MD",
+     "b": "c",
+     "code": "MD-C-1",
+     "t": "The parent who is here is tired",
+     "w": "Age-appropriate honesty about the at-home parent’s load, without making the child responsible.",
+     "n": "Parentification."
+    },
+    {
+     "s": "MD",
+     "b": "c",
+     "code": "MD-C-2",
+     "t": "One adult, everything",
+     "w": "How a household runs on one pair of hands, and what a child can genuinely help with.",
+     "n": "Chore charts."
+    },
+    {
+     "s": "MD",
+     "b": "c",
+     "code": "MD-C-3",
+     "t": "Somebody outside the house",
+     "w": "A named adult who is not a parent and is not going anywhere.",
+     "n": "Mentoring."
+    },
+    {
+     "s": "MD",
+     "b": "t",
+     "code": "MD-T-1",
+     "t": "Help without being the parent",
+     "w": "The line between contributing and carrying, drawn explicitly.",
+     "n": "Responsibility."
+    },
+    {
+     "s": "MD",
+     "b": "t",
+     "code": "MD-T-2",
+     "t": "Your own thing, protected",
+     "w": "Keeping one activity through a deployment, and what the household must do to protect it.",
+     "n": "Extracurriculars."
+    },
+    {
+     "s": "MD",
+     "b": "t",
+     "code": "MD-T-3",
+     "t": "When the at-home parent is struggling",
+     "w": "What a teenager may notice, who to tell, and that telling is not betrayal.",
+     "n": "Mental health first aid."
+    },
+    {
+     "s": "MD",
+     "b": "f",
+     "code": "MD-F-1",
+     "t": "Running it alone",
+     "w": "Practical single-handed household operation for the length of a deployment.",
+     "n": "Self-care."
+    },
+    {
+     "s": "MD",
+     "b": "f",
+     "code": "MD-F-2",
+     "t": "Your own work and this",
+     "w": "Employment that survives frequent moves, which is the hardest problem this population has.",
+     "n": "Career advice."
+    },
+    {
+     "s": "MD",
+     "b": "f",
+     "code": "MD-F-3",
+     "t": "Guard and Reserve, with nobody around",
+     "w": "Being the only mobilised family in a civilian town, and building support where none exists.",
+     "n": "Base services."
+    },
+    {
+     "s": "ME",
+     "b": "c",
+     "code": "ME-C-1",
+     "t": "What your parent does at work",
+     "w": "Age-appropriate, factual, and unglamorised.",
+     "n": "Career day."
+    },
+    {
+     "s": "ME",
+     "b": "c",
+     "code": "ME-C-2",
+     "t": "Places you have lived",
+     "w": "Turning six addresses into something a child is proud of rather than tired of.",
+     "n": "Third culture theory."
+    },
+    {
+     "s": "ME",
+     "b": "c",
+     "code": "ME-C-3",
+     "t": "Somewhere that stays",
+     "w": "Identifying the constant — a person, a game, a grandparent — that moves with you.",
+     "n": "Stability."
+    },
+    {
+     "s": "ME",
+     "b": "t",
+     "code": "ME-T-1",
+     "t": "Service, considered without pressure",
+     "w": "What enlistment, academies and ROTC actually involve, from people who did each, including people who left.",
+     "n": "Recruitment. Recruiters do not run this session."
+    },
+    {
+     "s": "ME",
+     "b": "t",
+     "code": "ME-T-2",
+     "t": "College with six transcripts",
+     "w": "Applying when your record is fragmented, and the benefits you may hold.",
+     "n": "Financial aid."
+    },
+    {
+     "s": "ME",
+     "b": "t",
+     "code": "ME-T-3",
+     "t": "Choosing a place to be from",
+     "w": "Deciding where home is, deliberately, when nowhere was automatic.",
+     "n": "Identity work."
+    },
+    {
+     "s": "ME",
+     "b": "f",
+     "code": "ME-F-1",
+     "t": "Education benefits, plainly",
+     "w": "What exists, who it transfers to and the deadlines, with the office that decides.",
+     "n": "Benefits advice. This module names the office."
+    },
+    {
+     "s": "ME",
+     "b": "f",
+     "code": "ME-F-2",
+     "t": "The last move",
+     "w": "Planning a final transition so a teenager finishes school in one place.",
+     "n": "Retirement planning."
+    },
+    {
+     "s": "ME",
+     "b": "f",
+     "code": "ME-F-3",
+     "t": "After service",
+     "w": "A household leaving the military, which is its own transition and rarely programmed for.",
+     "n": "Veteran services."
+    }
+   ],
+   "ladder": [
+    [
+     "C1",
+     "You arrived",
+     "You are enrolled, and one adult and one peer know your name in week one.",
+     "Somebody greeted you by name on day three."
+    ],
+    [
+     "C2",
+     "Your record moved",
+     "Credits, IEP, immunisations and eligibility all transferred without loss.",
+     "The transcript is whole."
+    ],
+    [
+     "C3",
+     "You kept one thing",
+     "One activity survived the move and the deployment.",
+     "You are still doing it."
+    ],
+    [
+     "C4",
+     "You helped the next one",
+     "You were the named peer for somebody arriving after you.",
+     "They stayed."
+    ],
+    [
+     "C5",
+     "You chose your own next",
+     "Service, study or place, decided without pressure in either direction.",
+     "You can state the alternatives you turned down."
+    ]
+   ],
+   "refusals": [
+    [
+     "No position on any conflict, deployment or policy",
+     "The programme serves the child in front of it and takes no view on why their parent is away."
+    ],
+    [
+     "No recruitment, and no discouragement",
+     "The service unit is run by people who served and people who left, and never by a recruiter."
+    ],
+    [
+     "No clinical judgement",
+     "Ambiguous loss is named as a normal response to an abnormal situation. Nothing here diagnoses, screens or scores, and every clinical route is a referral."
+    ],
+    [
+     "No disclosure of a family’s situation",
+     "Where a parent is, what they do and what happened are the family’s to share. No unit requires it and no roster records it."
+    ],
+    [
+     "No assumption of an installation",
+     "Every unit works for a family in a civilian school with no base within a hundred miles, which is most of them."
+    ],
+    [
+     "No ceremony in place of help",
+     "Nothing here substitutes a recognition event for the ordinary administrative work that actually helps."
+    ]
+   ]
+  },
+  {
+   "k": "RJ",
+   "name": "Reentry & Justice-Involved Youth Edition",
+   "short": "Reentry",
+   "aff": "Designed for the needs of juvenile justice education programmes, detention and secure school staff, reentry providers, probation departments and the young people they work with. This platform has NO affiliation with, endorsement from, partnership with, or contact of any kind with any court, correctional agency, probation department or provider. Nothing here is legal advice, and nothing here is a risk assessment, a screening instrument or a supervision tool.",
+   "thesis": "Education inside a facility is usually a placeholder: hours logged, credits that do not transfer, and a young person released in March with nothing to enrol in. The evidence about what decides reentry is not mysterious — school or work within the first fortnight, documents in hand, a place to sleep, and at least one adult who was there before and is still there after. Almost none of that is education, which is exactly why an education product has to be honest about its own edges. This edition is built around continuity: the same curriculum shape inside and outside, credits that actually move, a plan written before release rather than after, and a hard refusal to produce anything that could function as a record, a score or a supervision instrument. A young person’s file should not grow because they took a class.",
+   "needs": [
+    [
+     "Release dates move",
+     "Nothing may depend on completing a sequence. Every unit stands alone and everything partially done still counts."
+    ],
+    [
+     "Credits must transfer or the time was wasted",
+     "The single largest failure of education inside. Every unit is authored against a transferable credit shape."
+    ],
+    [
+     "The first fortnight decides it",
+     "School or work within fourteen days is the strongest lever anybody has. The plan is written before release, not after."
+    ],
+    [
+     "Inside and outside must be the same shape",
+     "A young person should recognise the curriculum on both sides of the door."
+    ],
+    [
+     "Staff are correctional first",
+     "The adult in the room may be a teacher, an officer, or both. Units name which adult can run them."
+    ],
+    [
+     "Wide skill range in one room",
+     "Two years to ten years of reading range in a single classroom is normal. Every unit has a non-reading route."
+    ],
+    [
+     "The record follows them",
+     "A criminal record shapes housing, work and school. The record strand is practical and refers all legal questions out."
+    ],
+    [
+     "Trauma is the baseline, not the exception",
+     "Universal design rather than screening: no unit requires disclosure, and none produces a psychological judgement."
+    ]
+   ],
+   "strands": [
+    [
+     "JA",
+     "School that counts",
+     "Credits, transcripts, enrolment and the diploma route that survives a move between systems."
+    ],
+    [
+     "JB",
+     "The record",
+     "What it is, who sees it, what can be sealed or expunged, and where to go — refers, never advises."
+    ],
+    [
+     "JC",
+     "The first fortnight",
+     "Documents, a bed, an appointment, an enrolment and a phone, in the fourteen days that decide the year."
+    ],
+    [
+     "JD",
+     "Work",
+     "Getting hired with a record, honestly, including which employers and licences are actually closed."
+    ],
+    [
+     "JE",
+     "People and repair",
+     "The adult who was there before and after; conflict, harm and what repair does and does not do."
+    ]
+   ],
+   "bands": [
+    [
+     "i",
+     "Inside"
+    ],
+    [
+     "o",
+     "First 90 days out"
+    ],
+    [
+     "s",
+     "Staff & providers"
+    ]
+   ],
+   "units": [
+    {
+     "s": "JA",
+     "b": "i",
+     "code": "JA-I-1",
+     "t": "What you have already earned",
+     "w": "Assemble every credit from every school onto one transcript while you have time.",
+     "n": "Busy work."
+    },
+    {
+     "s": "JA",
+     "b": "i",
+     "code": "JA-I-2",
+     "t": "A credit that will transfer",
+     "w": "Working against a shape a receiving district will accept, verified before you start.",
+     "n": "Seat time."
+    },
+    {
+     "s": "JA",
+     "b": "i",
+     "code": "JA-I-3",
+     "t": "The class you are actually behind in",
+     "w": "One subject, diagnosed without a test that feels like a test, with a plan.",
+     "n": "Remediation."
+    },
+    {
+     "s": "JA",
+     "b": "o",
+     "code": "JA-O-1",
+     "t": "Enrol in fourteen days",
+     "w": "The specific school, the specific person, the specific documents, with the appointment booked before release.",
+     "n": "A referral."
+    },
+    {
+     "s": "JA",
+     "b": "o",
+     "code": "JA-O-2",
+     "t": "When the school does not want you",
+     "w": "Rights on enrolment, alternative placement, and the advocate to call.",
+     "n": "Legal advice. This names the advocate and stops."
+    },
+    {
+     "s": "JA",
+     "b": "o",
+     "code": "JA-O-3",
+     "t": "GED, diploma or credential",
+     "w": "The three routes compared honestly on time, money and what employers here accept.",
+     "n": "A recommendation."
+    },
+    {
+     "s": "JA",
+     "b": "s",
+     "code": "JA-S-1",
+     "t": "Credit continuity across the door",
+     "w": "Making the inside programme produce credits the outside district accepts, which is an administrative fix, not a pedagogical one.",
+     "n": "A curriculum alignment."
+    },
+    {
+     "s": "JA",
+     "b": "s",
+     "code": "JA-S-2",
+     "t": "The handoff meeting",
+     "w": "Who must be in the room before release, and what leaves that room as a written plan.",
+     "n": "Case conferencing."
+    },
+    {
+     "s": "JA",
+     "b": "s",
+     "code": "JA-S-3",
+     "t": "Teaching a ten-year reading range",
+     "w": "Universal design in one room, without grouping anybody by level.",
+     "n": "Differentiation training."
+    },
+    {
+     "s": "JB",
+     "b": "i",
+     "code": "JB-I-1",
+     "t": "What your record actually says",
+     "w": "Understanding the difference between arrest, adjudication and conviction, and which you have.",
+     "n": "Legal advice. This explains vocabulary and stops."
+    },
+    {
+     "s": "JB",
+     "b": "i",
+     "code": "JB-I-2",
+     "t": "Who can see it",
+     "w": "Schools, employers, housing, licensing — what each can and cannot access in this state.",
+     "n": "A rights lecture."
+    },
+    {
+     "s": "JB",
+     "b": "i",
+     "code": "JB-I-3",
+     "t": "Sealing and expungement exist",
+     "w": "That they exist, roughly when, and the free legal clinic to ask. Nothing more.",
+     "n": "Legal help. This module refers only."
+    },
+    {
+     "s": "JB",
+     "b": "o",
+     "code": "JB-O-1",
+     "t": "The question on the form",
+     "w": "How to answer honestly and briefly when asked, and what may not be asked here.",
+     "n": "Coaching a story."
+    },
+    {
+     "s": "JB",
+     "b": "o",
+     "code": "JB-O-2",
+     "t": "Your file, requested",
+     "w": "How to obtain what is held about you, and why you should.",
+     "n": "Records access."
+    },
+    {
+     "s": "JB",
+     "b": "o",
+     "code": "JB-O-3",
+     "t": "The lawyer you can afford",
+     "w": "Free and low-cost legal help in this state, by name, for record matters.",
+     "n": "Legal services."
+    },
+    {
+     "s": "JB",
+     "b": "s",
+     "code": "JB-S-1",
+     "t": "Do not build a record",
+     "w": "Ensuring the education programme produces nothing that could function as evidence, a score or a supervision note.",
+     "n": "A data policy."
+    },
+    {
+     "s": "JB",
+     "b": "s",
+     "code": "JB-S-2",
+     "t": "What you may not ask",
+     "w": "The questions staff must not put to a young person, and why.",
+     "n": "Rapport building."
+    },
+    {
+     "s": "JB",
+     "b": "s",
+     "code": "JB-S-3",
+     "t": "Referring rather than advising",
+     "w": "Where the education boundary is on legal, clinical and immigration matters, and how to hold it under pressure.",
+     "n": "Professional development."
+    },
+    {
+     "s": "JC",
+     "b": "i",
+     "code": "JC-I-1",
+     "t": "The five documents, before you go",
+     "w": "ID, birth certificate, social security card, transcript, immunisations — obtained while somebody is still obliged to help.",
+     "n": "An exit checklist."
+    },
+    {
+     "s": "JC",
+     "b": "i",
+     "code": "JC-I-2",
+     "t": "Where you will sleep on night one",
+     "w": "Named, confirmed, with a second option, before the door opens.",
+     "n": "Discharge planning."
+    },
+    {
+     "s": "JC",
+     "b": "i",
+     "code": "JC-I-3",
+     "t": "The plan on one page",
+     "w": "Everything above, written down, held by the young person, not only by the agency.",
+     "n": "A case plan."
+    },
+    {
+     "s": "JC",
+     "b": "o",
+     "code": "JC-O-1",
+     "t": "Day one to day fourteen",
+     "w": "The specific sequence: phone, address, appointment, enrolment, first pay. In that order, for a reason.",
+     "n": "A schedule."
+    },
+    {
+     "s": "JC",
+     "b": "o",
+     "code": "JC-O-2",
+     "t": "The appointment you must not miss",
+     "w": "Probation, court and clinical dates, with what actually happens if transport fails.",
+     "n": "Compliance training."
+    },
+    {
+     "s": "JC",
+     "b": "o",
+     "code": "JC-O-3",
+     "t": "The people from before",
+     "w": "Deciding who you will and will not see, with somebody who is not judging the answer.",
+     "n": "Association rules."
+    },
+    {
+     "s": "JC",
+     "b": "s",
+     "code": "JC-S-1",
+     "t": "Start reentry on day one inside",
+     "w": "Everything in this strand happens at admission, not at discharge.",
+     "n": "Release preparation."
+    },
+    {
+     "s": "JC",
+     "b": "s",
+     "code": "JC-S-2",
+     "t": "The adult who is there before and after",
+     "w": "Building continuity of one relationship across the door, which is the strongest lever available.",
+     "n": "Mentor matching."
+    },
+    {
+     "s": "JC",
+     "b": "s",
+     "code": "JC-S-3",
+     "t": "When the plan fails in week two",
+     "w": "What the provider does when the bed, the school or the job falls through, without treating it as the young person’s failure.",
+     "n": "Accountability."
+    },
+    {
+     "s": "JD",
+     "b": "i",
+     "code": "JD-I-1",
+     "t": "Work that a record does not close",
+     "w": "Which sectors and licences are genuinely open here, checked rather than assumed.",
+     "n": "Optimism."
+    },
+    {
+     "s": "JD",
+     "b": "i",
+     "code": "JD-I-2",
+     "t": "A skill you can prove in ninety days",
+     "w": "One short credential started inside and finished outside.",
+     "n": "Vocational training."
+    },
+    {
+     "s": "JD",
+     "b": "i",
+     "code": "JD-I-3",
+     "t": "The application, practised",
+     "w": "Filling one out properly, including the parts that get people screened out before a human looks.",
+     "n": "Job readiness."
+    },
+    {
+     "s": "JD",
+     "b": "o",
+     "code": "JD-O-1",
+     "t": "The employer who hires",
+     "w": "Named local employers with a record-friendly practice, and the person to ask for.",
+     "n": "A job board."
+    },
+    {
+     "s": "JD",
+     "b": "o",
+     "code": "JD-O-2",
+     "t": "The first paycheque",
+     "w": "Getting paid, being paid correctly, and what to do when you are not.",
+     "n": "Financial literacy."
+    },
+    {
+     "s": "JD",
+     "b": "o",
+     "code": "JD-O-3",
+     "t": "Keeping it through week six",
+     "w": "What actually ends these jobs — transport, appointments, a bad shift — and the plan for each.",
+     "n": "Work ethic."
+    },
+    {
+     "s": "JD",
+     "b": "s",
+     "code": "JD-S-1",
+     "t": "Fidelity bonding and incentives",
+     "w": "The real mechanisms that reduce an employer’s risk, and how to use them.",
+     "n": "Persuasion."
+    },
+    {
+     "s": "JD",
+     "b": "s",
+     "code": "JD-S-2",
+     "t": "Do not place them anywhere",
+     "w": "Job quality matters more than job count; a bad placement at week two costs the year.",
+     "n": "Placement targets."
+    },
+    {
+     "s": "JD",
+     "b": "s",
+     "code": "JD-S-3",
+     "t": "Licences and occupational bars",
+     "w": "What this state actually forbids, so nobody is trained toward a closed door.",
+     "n": "A careers list."
+    },
+    {
+     "s": "JE",
+     "b": "i",
+     "code": "JE-I-1",
+     "t": "One adult, chosen by you",
+     "w": "Identifying and beginning a relationship with an adult who will still be there in six months.",
+     "n": "Assignment."
+    },
+    {
+     "s": "JE",
+     "b": "i",
+     "code": "JE-I-2",
+     "t": "The fight that starts in a look",
+     "w": "Conflict de-escalation in a setting where the stakes are real.",
+     "n": "Anger management."
+    },
+    {
+     "s": "JE",
+     "b": "i",
+     "code": "JE-I-3",
+     "t": "What you did, without a confession",
+     "w": "Thinking about harm without any requirement to disclose anything to anyone.",
+     "n": "A victim impact class."
+    },
+    {
+     "s": "JE",
+     "b": "o",
+     "code": "JE-O-1",
+     "t": "Repair, where it is wanted",
+     "w": "What restorative practice actually is, when it is appropriate, and when it is not.",
+     "n": "A mandated circle."
+    },
+    {
+     "s": "JE",
+     "b": "o",
+     "code": "JE-O-2",
+     "t": "Family that is not simple",
+     "w": "Going back to a household that is part of the story, with realistic options.",
+     "n": "Family reunification."
+    },
+    {
+     "s": "JE",
+     "b": "o",
+     "code": "JE-O-3",
+     "t": "Being somebody’s example",
+     "w": "The pressure of a younger sibling watching, without making it your job.",
+     "n": "Peer mentoring."
+    },
+    {
+     "s": "JE",
+     "b": "s",
+     "code": "JE-S-1",
+     "t": "The relationship is the intervention",
+     "w": "Continuity of one adult outperforms programme content; staffing should reflect that.",
+     "n": "A programme model."
+    },
+    {
+     "s": "JE",
+     "b": "s",
+     "code": "JE-S-2",
+     "t": "Trauma-responsive without screening",
+     "w": "Universal design instead of assessment, because screening creates records and records follow people.",
+     "n": "Trauma training."
+    },
+    {
+     "s": "JE",
+     "b": "s",
+     "code": "JE-S-3",
+     "t": "What this programme cannot claim",
+     "w": "Zero young people have used this. No recidivism, employment or enrolment outcome is claimed, and none should be inferred.",
+     "n": "Modesty."
+    }
+   ],
+   "ladder": [
+    [
+     "J1",
+     "You hold your own papers",
+     "The five documents, obtained before release, held by you.",
+     "You could enrol tomorrow."
+    ],
+    [
+     "J2",
+     "Your credits are on one transcript",
+     "Everything earned, inside and out, in one place a district will accept.",
+     "A registrar accepted it."
+    ],
+    [
+     "J3",
+     "You enrolled or started work within fourteen days",
+     "The strongest single lever anybody has.",
+     "A start date exists and you attended it."
+    ],
+    [
+     "J4",
+     "You are still there at week six",
+     "Past the point where most placements end.",
+     "Six weeks of attendance or pay."
+    ],
+    [
+     "J5",
+     "One adult, before and after",
+     "The same person knew you inside and is still there.",
+     "You can name them and they would answer."
+    ]
+   ],
+   "refusals": [
+    [
+     "No record, score or instrument",
+     "Nothing this programme produces may function as evidence, a risk score, a supervision note or anything that reaches a court. A young person’s file must not grow because they took a class."
+    ],
+    [
+     "No requirement to disclose or admit anything",
+     "No unit asks what a young person did, and participation never depends on saying."
+    ],
+    [
+     "No legal advice",
+     "Record, sealing, expungement and immigration questions name the free legal route and stop there, every time."
+    ],
+    [
+     "No screening or assessment",
+     "Trauma-responsive by universal design, never by instrument, because instruments create records and records follow people."
+    ],
+    [
+     "No participation reported as compliance",
+     "Nothing here is a condition of release, probation or privileges, and no attendance data is shared with supervision."
+    ],
+    [
+     "No outcome claimed",
+     "Zero young people have used this. No recidivism, employment or enrolment result is claimed and none may be inferred."
+    ]
+   ]
+  }
+ ]
+}
