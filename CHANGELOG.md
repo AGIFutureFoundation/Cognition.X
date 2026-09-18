@@ -4,6 +4,28 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.98.0] — 2026-09-18
+
+### Added — prompt 3 close-out: Health & Community's last 2 empty descriptions filled — every pack reachable by `unbanded`/`partial_bands` is now complete
+- **`data/promotions/health-community.json`** gains two themes to its
+  existing Oral Health track — "Adult educator sprint (OH)" and
+  "Family edition (OH)", the two grade-`—` adult-route capstones left
+  out of scope in v0.92.0 before `apply_promotions()`'s grade filter
+  reached `GRADE_LEVEL` (v0.95.0). This closes the pack at 111 of 111
+  rows (100% descriptions).
+- `tests/test_platform.py`: `UNBANDED_KNOWN_GAPS` drops to `{}` (kept
+  as an empty dict, not deleted, for the next pack that hits a genuine
+  gap); `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 5,202 → 5,200.
+- This closes every foundation pack reachable by the `unbanded` and
+  `partial_bands` mechanisms, including the packs reached only after
+  v0.95.0's `GRADE_LEVEL` extension (K–12, Trade School, Regional, and
+  now Health & Community's last two rows). What remains of prompt 3:
+  the sector-OS and Education OS empty descriptions (5,200 rows),
+  whose theme/grade structure has not yet been verified — the next
+  piece of work is a Python scan of `data/blocks.csv` to determine it
+  before assuming which mechanism (`bands`, `unbanded`,
+  `partial_bands`, or something new) applies to each.
+
 ## [0.97.0] — 2026-09-18
 
 ### Added — prompt 3 continuation: Regional's 111 empty descriptions filled, and the `unbanded` distinctness check scoped to themes, not rows
