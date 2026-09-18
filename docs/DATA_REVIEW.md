@@ -154,6 +154,14 @@ sections; the only other diff is the fonts `<link>`).
    family/community engagement, operations, budget, safety, equity,
    data). Two packs remain (Corporate OS, Science OS); the shared
    dictionary is now 1,396 sentences.
+   *Update (v0.105.0):* shipped Science OS (394 themes, 660 rows,
+   second promotion file distinct from its existing band-suffix
+   override) — 185 reused from the shared dictionary, 209 authored
+   fresh for its scientific research-practice content (research
+   methods, lab operations, publication, mentorship, collaboration,
+   tech transfer, sustainability, research integrity). One pack
+   remains (Corporate OS); the shared dictionary is now 1,605
+   sentences.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

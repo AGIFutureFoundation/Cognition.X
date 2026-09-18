@@ -1,0 +1,1637 @@
+{
+  "pack": "Cognition.X : Science OS",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema is out of scope (v0.105.0, prompt 3 final piece). Science OS's 660 empty-description rows use 394 distinct short generic action-phrase themes at the single adult-route grade \"11-12 . adult\", the same shape as Sapient OS (v0.99.0), Robotics OS (v0.100.0), Global Health OS (v0.101.0), Multilateral OS (v0.102.0), Non-Profit Practice (v0.103.0) and Education OS (v0.104.0) -- 185 of these 394 themes are worded identically to ones already promoted for those six packs and share the same sentence verbatim; the other 209 are new to this pack and authored fresh for its scientific research-practice domain (research methods, lab operations, publication, mentorship, collaboration, tech transfer, sustainability, research integrity). track/code/level stay as they were (this pack already carries a \"band-suffix\" override promotion from prompt 2, so this is a second promotion file for the same pack).",
+  "tracks": [
+    {
+      "prefix": "PSA",
+      "name": "Practice Steps A–B",
+      "themes": [
+        {
+          "theme": "Adapt content",
+          "description": "Change a real presentation or paper's content so it actually fits its intended audience."
+        },
+        {
+          "theme": "Adapt plans",
+          "description": "Change a real research plan because what you actually found changed the picture."
+        },
+        {
+          "theme": "Address authorship",
+          "description": "Resolve a real authorship dispute by the actual contribution each person made."
+        },
+        {
+          "theme": "Address concerns",
+          "description": "Respond to a real stakeholder's concern about an AI system with a specific action, not just reassurance."
+        },
+        {
+          "theme": "Address conflicts",
+          "description": "Resolve a real disagreement between partners working on the same health program."
+        },
+        {
+          "theme": "Address gaps",
+          "description": "Find a real gap in a multilateral response and fill it, not just note it."
+        },
+        {
+          "theme": "Address issues",
+          "description": "Fix a real, identified problem in a health program before it affects more people."
+        },
+        {
+          "theme": "Address violations",
+          "description": "Investigate a real policy violation in an AI system and correct it."
+        },
+        {
+          "theme": "Advance careers",
+          "description": "Help a real community health worker move into a role with more responsibility."
+        },
+        {
+          "theme": "Advance science",
+          "description": "Take a real, specific step that moves a field's actual understanding forward."
+        },
+        {
+          "theme": "Align directions",
+          "description": "Get a real lab or team actually pulling toward the same research question."
+        },
+        {
+          "theme": "Align perspectives",
+          "description": "Get real collaborators from different disciplines actually working from a shared understanding."
+        },
+        {
+          "theme": "Allocate budget",
+          "description": "Put a real school's limited budget where it will actually help students most."
+        },
+        {
+          "theme": "Amplify impact",
+          "description": "Take a real, working intervention and extend its effect further than it reached alone."
+        },
+        {
+          "theme": "Assess capacity",
+          "description": "Determine whether a real team or system can actually handle the AI workload asked of it."
+        },
+        {
+          "theme": "Assess competency",
+          "description": "Check whether a real operator can actually run a robotic system safely and correctly."
+        },
+        {
+          "theme": "Assess current",
+          "description": "Take stock of where a real AI practice actually stands today, not where it's assumed to stand."
+        },
+        {
+          "theme": "Assess diversity",
+          "description": "Check whether a real lab or program actually includes a range of backgrounds."
+        },
+        {
+          "theme": "Assess dynamics",
+          "description": "Read a real team's actual working relationships and name what's helping or hurting."
+        },
+        {
+          "theme": "Assess equipment",
+          "description": "Check a real piece of lab equipment and judge whether it's actually fit for use."
+        },
+        {
+          "theme": "Assess feasibility",
+          "description": "Judge whether a real study is actually doable with the time and resources you have."
+        },
+        {
+          "theme": "Assess fit",
+          "description": "Check whether a real program design actually fits the local context it's meant for."
+        },
+        {
+          "theme": "Assess goals",
+          "description": "Check whether a real research goal is actually achievable and worth pursuing."
+        },
+        {
+          "theme": "Assess hazards",
+          "description": "Identify a real hazard a health program's workers or clients are exposed to."
+        },
+        {
+          "theme": "Assess health risks",
+          "description": "Identify the real health risk a specific lab procedure actually poses."
+        },
+        {
+          "theme": "Assess interests",
+          "description": "Find out what a real student or collaborator is actually curious about."
+        },
+        {
+          "theme": "Assess needs",
+          "description": "Talk to real users to find out what they actually need from an AI system, not what was assumed."
+        },
+        {
+          "theme": "Assess potential",
+          "description": "Judge whether a real opportunity is actually worth a nonprofit's limited resources."
+        },
+        {
+          "theme": "Assess talent",
+          "description": "Judge a real candidate's actual ability to do the specific research task at hand."
+        },
+        {
+          "theme": "Assess usage",
+          "description": "Check how a real piece of equipment or resource is actually being used."
+        },
+        {
+          "theme": "Assess waste streams",
+          "description": "Identify the real waste a lab actually produces and where it actually goes."
+        },
+        {
+          "theme": "Audit current",
+          "description": "Check a real current process or record against what it's actually supposed to show."
+        },
+        {
+          "theme": "Audit resource usage",
+          "description": "Check a real lab's actual resource use against what it's supposed to need."
+        },
+        {
+          "theme": "Audit resources",
+          "description": "Review what a real lab actually has on hand against what it's recorded as having."
+        },
+        {
+          "theme": "Bridge science and practice",
+          "description": "Turn a real research finding into something a practitioner can actually use."
+        },
+        {
+          "theme": "Build belonging",
+          "description": "Take a real, specific action that helps a lab member actually feel they belong."
+        },
+        {
+          "theme": "Build capabilities",
+          "description": "Grow a real teacher or staff member's specific ability to do their job well."
+        },
+        {
+          "theme": "Build capacity",
+          "description": "Grow a real local team's ability to run a health program on their own."
+        },
+        {
+          "theme": "Build cohesion",
+          "description": "Take a real, specific step that gets a research team actually working as one."
+        },
+        {
+          "theme": "Build collaboration",
+          "description": "Start a real, working collaboration between researchers who hadn't worked together before."
+        },
+        {
+          "theme": "Build confidence",
+          "description": "Help a real student or junior researcher trust their own actual judgment."
+        },
+        {
+          "theme": "Build consensus",
+          "description": "Get real, different parties to actually agree on one course of action."
+        },
+        {
+          "theme": "Build frameworks",
+          "description": "Build a real conceptual framework that actually organizes a set of findings."
+        },
+        {
+          "theme": "Build networks",
+          "description": "Connect real health workers or organizations so they can actually support each other."
+        }
+      ]
+    },
+    {
+      "prefix": "PSB",
+      "name": "Practice Steps B–D",
+      "themes": [
+        {
+          "theme": "Build partnerships",
+          "description": "Form a real, working partnership with an organization a health program needs."
+        },
+        {
+          "theme": "Build relationships",
+          "description": "Build a real working relationship with a supplier or partner that a robotics program depends on."
+        },
+        {
+          "theme": "Build reputation",
+          "description": "Take a real, specific action that builds a researcher's actual standing in their field."
+        },
+        {
+          "theme": "Build skills",
+          "description": "Teach a real skill through practice until a student can actually use it."
+        },
+        {
+          "theme": "Build succession",
+          "description": "Prepare a real person to actually take over a role or project when needed."
+        },
+        {
+          "theme": "Build team cohesion",
+          "description": "Get a real research team to actually trust and rely on each other."
+        },
+        {
+          "theme": "Build theory",
+          "description": "Build a real theoretical account that actually explains a pattern in the data."
+        },
+        {
+          "theme": "Build trust",
+          "description": "Take a concrete action that earns a real user or team's trust in an AI system, not just a claim."
+        },
+        {
+          "theme": "Build understanding",
+          "description": "Help a real audience actually grasp a decision, not just be told about it."
+        },
+        {
+          "theme": "Capture knowledge",
+          "description": "Record what a real team actually knows about a robotic system before that knowledge is lost."
+        },
+        {
+          "theme": "Celebrate awards",
+          "description": "Recognize a real award or honor in a way that's specific to what earned it."
+        },
+        {
+          "theme": "Celebrate publications",
+          "description": "Mark a real published paper's release in a way the team actually notices."
+        },
+        {
+          "theme": "Celebrate successes",
+          "description": "Mark a real, specific research success, not just the big milestones."
+        },
+        {
+          "theme": "Celebrate wins",
+          "description": "Recognize a real, specific success in a health program to keep a team motivated."
+        },
+        {
+          "theme": "Clarify roles",
+          "description": "Write down who is actually responsible for what on a real AI project, and get agreement on it."
+        },
+        {
+          "theme": "Coach authors",
+          "description": "Help a real author improve a specific weakness in their actual manuscript."
+        },
+        {
+          "theme": "Coach speakers",
+          "description": "Help a real presenter improve a specific part of their actual talk."
+        },
+        {
+          "theme": "Communicate broadly",
+          "description": "Get a real research finding in front of an audience beyond just other researchers."
+        },
+        {
+          "theme": "Communicate impact",
+          "description": "Tell real stakeholders, in concrete terms, what a nonprofit's work actually achieved."
+        },
+        {
+          "theme": "Conduct analyses",
+          "description": "Run a real analysis on real data and report exactly what it shows."
+        },
+        {
+          "theme": "Conduct audits",
+          "description": "Run a real audit of an AI system from start to finish and produce the report."
+        },
+        {
+          "theme": "Conduct code review",
+          "description": "Review a real colleague's code and catch an actual bug or unclear step."
+        },
+        {
+          "theme": "Conduct drills",
+          "description": "Run a real incident drill for an AI system and record what it revealed."
+        },
+        {
+          "theme": "Conduct dry runs",
+          "description": "Run a real dry run of an experiment or talk before the actual event."
+        },
+        {
+          "theme": "Conduct inspections",
+          "description": "Inspect a real lab space or process and note what actually needs fixing."
+        },
+        {
+          "theme": "Conduct replication",
+          "description": "Run a real replication of a published result and report what you actually found."
+        },
+        {
+          "theme": "Conduct reviews",
+          "description": "Lead a real review of an AI system with the people responsible for it."
+        },
+        {
+          "theme": "Conduct testing",
+          "description": "Test a real AI system against its stated requirements before release."
+        },
+        {
+          "theme": "Conduct training",
+          "description": "Teach a real group the specific skill they need to safely operate a robotic system."
+        },
+        {
+          "theme": "Conduct training sessions",
+          "description": "Run a real training session that leaves attendees able to actually do the task."
+        },
+        {
+          "theme": "Connect disciplines",
+          "description": "Bring a real method or idea from one field into another where it's actually useful."
+        },
+        {
+          "theme": "Coordinate projects",
+          "description": "Keep a real, multi-person project's pieces actually moving together."
+        },
+        {
+          "theme": "Coordinate research",
+          "description": "Align real researchers' separate efforts so they actually add up to one study."
+        },
+        {
+          "theme": "Coordinate work",
+          "description": "Get real people's separate tasks to actually fit together without duplication."
+        },
+        {
+          "theme": "Craft messages",
+          "description": "Write a real message that actually moves its intended audience to act."
+        },
+        {
+          "theme": "Create content",
+          "description": "Produce real content that actually reaches and informs a nonprofit's audience."
+        },
+        {
+          "theme": "Create narratives",
+          "description": "Write a real, accurate story of a research project that a non-expert could follow."
+        },
+        {
+          "theme": "Create networks",
+          "description": "Build a real network of researchers a lab can actually call on for expertise."
+        },
+        {
+          "theme": "Create opportunities",
+          "description": "Open a real, specific opportunity for someone a program is meant to serve."
+        },
+        {
+          "theme": "Create safety",
+          "description": "Change a real health environment so it's actually safer for patients or workers."
+        },
+        {
+          "theme": "Create systems",
+          "description": "Build a real, working system a mission needs for a recurring task."
+        },
+        {
+          "theme": "Define goals",
+          "description": "State a real school goal specifically enough that you'd know if you hit it."
+        },
+        {
+          "theme": "Define impact metrics",
+          "description": "Decide, specifically, how a real research project's actual impact will be measured."
+        },
+        {
+          "theme": "Define outcomes",
+          "description": "State exactly what real outcome a health program is trying to achieve."
+        }
+      ]
+    },
+    {
+      "prefix": "PSC",
+      "name": "Practice Steps D–D",
+      "themes": [
+        {
+          "theme": "Deliver talks",
+          "description": "Give a real talk that actually communicates your finding to the audience in the room."
+        },
+        {
+          "theme": "Deliver training",
+          "description": "Teach a real group how to use or oversee an AI system, and check that it landed."
+        },
+        {
+          "theme": "Design curriculum",
+          "description": "Build a real training curriculum that teaches people what they need to know about an AI system."
+        },
+        {
+          "theme": "Design graphics",
+          "description": "Design a real figure that actually makes a complex result clear at a glance."
+        },
+        {
+          "theme": "Design studies",
+          "description": "Design a real study that could actually answer a health question, not just describe it."
+        },
+        {
+          "theme": "Develop agreements",
+          "description": "Write a real agreement that actually protects everyone's role in a collaboration."
+        },
+        {
+          "theme": "Develop business",
+          "description": "Build a real plan for turning a lab's discovery into something usable outside it."
+        },
+        {
+          "theme": "Develop curriculum",
+          "description": "Build a full curriculum for teaching a real skill related to AI practice."
+        },
+        {
+          "theme": "Develop hypotheses",
+          "description": "State a real, testable hypothesis specific enough that an experiment could refute it."
+        },
+        {
+          "theme": "Develop mous",
+          "description": "Write a real memorandum of understanding that actually sets clear terms between institutions."
+        },
+        {
+          "theme": "Develop partnerships",
+          "description": "Build a real, working partnership with an organization a mission actually needs."
+        },
+        {
+          "theme": "Develop pathways",
+          "description": "Build a real care pathway that a patient can actually follow through a health system."
+        },
+        {
+          "theme": "Develop plans",
+          "description": "Write a real plan for a specific AI initiative, with steps and a timeline."
+        },
+        {
+          "theme": "Develop programs",
+          "description": "Build a real program, from scratch, that trains or supports people working with robotics."
+        },
+        {
+          "theme": "Develop proposals",
+          "description": "Write a real research proposal specific enough that a reviewer could evaluate it."
+        },
+        {
+          "theme": "Develop protocols",
+          "description": "Write a step-by-step protocol for a real recurring AI task."
+        },
+        {
+          "theme": "Develop research software",
+          "description": "Build a real piece of software that a research project actually depends on."
+        },
+        {
+          "theme": "Develop skills",
+          "description": "Build a real, specific skill in a health worker through practice and feedback."
+        },
+        {
+          "theme": "Develop solutions",
+          "description": "Work out a genuine solution to a specific, real AI problem."
+        },
+        {
+          "theme": "Develop sops",
+          "description": "Write a real standard operating procedure precise enough that someone new could follow it."
+        },
+        {
+          "theme": "Develop standards",
+          "description": "Write a real standard a robotic system or its operators will be measured against."
+        },
+        {
+          "theme": "Develop strategies",
+          "description": "Set several real strategic options for an AI initiative and choose between them with reasons."
+        },
+        {
+          "theme": "Develop strategy",
+          "description": "Set the real strategic direction for an AI initiative and justify the choice."
+        },
+        {
+          "theme": "Develop technology",
+          "description": "Build a real piece of technology that solves a specific problem in the lab's work."
+        },
+        {
+          "theme": "Develop training programs",
+          "description": "Build a real training program that gets a new lab member actually up to speed."
+        },
+        {
+          "theme": "Diagnose issues",
+          "description": "Trace a real robotic system's problem back to its actual cause."
+        },
+        {
+          "theme": "Diagnose problems",
+          "description": "Find the real, specific cause of a failed experiment or process, not just a symptom."
+        },
+        {
+          "theme": "Diversify funding",
+          "description": "Bring in more than one real funding source so a health program doesn't depend on just one."
+        },
+        {
+          "theme": "Document agreements",
+          "description": "Write down a real agreement between parties clearly enough that both sides hold to it."
+        },
+        {
+          "theme": "Document approaches",
+          "description": "Write down a real method precisely enough that someone else could actually repeat it."
+        },
+        {
+          "theme": "Document code",
+          "description": "Write real documentation that lets someone else actually understand and use the code."
+        },
+        {
+          "theme": "Document decisions",
+          "description": "Record a real AI decision and the reasoning behind it, before it's forgotten."
+        },
+        {
+          "theme": "Document findings",
+          "description": "Write up what a real AI review found, in enough detail to act on."
+        },
+        {
+          "theme": "Document history",
+          "description": "Record a real project's actual history so its decisions aren't lost later."
+        },
+        {
+          "theme": "Document insights",
+          "description": "Write down a real insight from the work before it's forgotten."
+        },
+        {
+          "theme": "Document learnings",
+          "description": "Record what was actually learned from a real AI project, including what went wrong."
+        },
+        {
+          "theme": "Document lessons",
+          "description": "Write down what a real robotics project actually taught, including what went wrong."
+        },
+        {
+          "theme": "Document methods",
+          "description": "Write down exactly how a real AI task was carried out, step by step."
+        },
+        {
+          "theme": "Document outcomes",
+          "description": "Record a real project's actual outcome, including what didn't work."
+        },
+        {
+          "theme": "Document procedures",
+          "description": "Write down the exact real steps a robotics procedure follows, in order."
+        },
+        {
+          "theme": "Document process",
+          "description": "Write down the real steps a recurring AI process follows, as it's actually run."
+        },
+        {
+          "theme": "Document protocols",
+          "description": "Write a step-by-step protocol for a real recurring robotics task."
+        },
+        {
+          "theme": "Document reasoning",
+          "description": "Write down why a real AI decision was made, not just what was decided."
+        },
+        {
+          "theme": "Document results",
+          "description": "Record the real results of an AI test or initiative, as they actually came out."
+        }
+      ]
+    },
+    {
+      "prefix": "PSD",
+      "name": "Practice Steps D–F",
+      "themes": [
+        {
+          "theme": "Document solutions",
+          "description": "Write down the real solution to a specific robotics problem so someone else could apply it."
+        },
+        {
+          "theme": "Document standards",
+          "description": "Write down the real standard a lab actually follows for a specific procedure."
+        },
+        {
+          "theme": "Document systems",
+          "description": "Write down how a real AI system is actually built and how its parts fit together."
+        },
+        {
+          "theme": "Drive change",
+          "description": "Push through a real, specific organizational change, not just propose it."
+        },
+        {
+          "theme": "Enable independence",
+          "description": "Give a real student or researcher what they need to actually work on their own."
+        },
+        {
+          "theme": "Enable remote work",
+          "description": "Set up real tools and process so a lab member can actually work from elsewhere."
+        },
+        {
+          "theme": "Enable sharing",
+          "description": "Set up a real, working way for a lab to actually share its data or code."
+        },
+        {
+          "theme": "Enable transfer",
+          "description": "Help real knowledge move from one person or team to another before it's lost."
+        },
+        {
+          "theme": "Encourage voice",
+          "description": "Create a real, specific chance for a quieter lab member to actually be heard."
+        },
+        {
+          "theme": "Engage audiences",
+          "description": "Reach a real, specific audience with a message that actually lands."
+        },
+        {
+          "theme": "Engage media",
+          "description": "Get real media coverage of a nonprofit's work through an actual pitch, not luck."
+        },
+        {
+          "theme": "Engage stakeholders",
+          "description": "Bring real stakeholders into a real AI decision early enough that their input actually shapes it."
+        },
+        {
+          "theme": "Ensure access",
+          "description": "Confirm real people can actually reach and use a health service, not just that it exists."
+        },
+        {
+          "theme": "Ensure accuracy",
+          "description": "Check a real result against its source until you're confident it's actually correct."
+        },
+        {
+          "theme": "Ensure compliance",
+          "description": "Confirm a real AI system actually meets the rule it's supposed to follow."
+        },
+        {
+          "theme": "Ensure continuity",
+          "description": "Make sure a real AI system keeps running through a planned or unplanned disruption."
+        },
+        {
+          "theme": "Ensure integrity",
+          "description": "Confirm a real AI system's data or output hasn't been altered without anyone knowing."
+        },
+        {
+          "theme": "Ensure quality",
+          "description": "Confirm a real health service actually meets the quality standard it's supposed to."
+        },
+        {
+          "theme": "Ensure rigor",
+          "description": "Confirm a real assignment actually demands the level of thinking it claims to."
+        },
+        {
+          "theme": "Ensure security",
+          "description": "Take a real, concrete step that keeps lab data or systems actually protected."
+        },
+        {
+          "theme": "Establish backup systems",
+          "description": "Set up a real backup system that would actually recover lost lab data."
+        },
+        {
+          "theme": "Establish boards",
+          "description": "Set up a real advisory or oversight board with actual, defined authority."
+        },
+        {
+          "theme": "Establish guidelines",
+          "description": "Write real guidelines specific enough that a lab member knows what to actually do."
+        },
+        {
+          "theme": "Establish infrastructure",
+          "description": "Build the real, physical or digital infrastructure a research program actually needs."
+        },
+        {
+          "theme": "Establish norms",
+          "description": "Set a real, shared expectation for how a lab actually works day to day."
+        },
+        {
+          "theme": "Establish pipeline",
+          "description": "Build a real, repeatable pipeline that turns raw data into an actual result."
+        },
+        {
+          "theme": "Establish policies",
+          "description": "Put a real policy in place governing how an AI practice is run."
+        },
+        {
+          "theme": "Establish programs",
+          "description": "Set up a real program from its design through to its first delivery."
+        },
+        {
+          "theme": "Establish protocols",
+          "description": "Put a real, agreed protocol in place for how an AI incident is handled."
+        },
+        {
+          "theme": "Establish relationships",
+          "description": "Set up a real, working relationship with a partner a robotics program will depend on."
+        },
+        {
+          "theme": "Establish reporting system",
+          "description": "Build a real system for health workers to actually report data reliably."
+        },
+        {
+          "theme": "Establish review process",
+          "description": "Set up a real review step that actually catches errors before they ship."
+        },
+        {
+          "theme": "Establish standards",
+          "description": "Put a real standard in place that a robotic system or its operators must meet."
+        },
+        {
+          "theme": "Establish systems",
+          "description": "Put a real, working system in place to support a recurring health-program need."
+        },
+        {
+          "theme": "Establish version control",
+          "description": "Put a real version-control system in place that a team actually uses."
+        },
+        {
+          "theme": "Evaluate options",
+          "description": "Compare real robotics options side by side and recommend one, with reasons."
+        },
+        {
+          "theme": "Evaluate outcomes",
+          "description": "Judge, with real evidence, whether a research effort actually achieved its goal."
+        },
+        {
+          "theme": "Facilitate brainstorms",
+          "description": "Run a real brainstorming session that actually produces usable new ideas."
+        },
+        {
+          "theme": "Facilitate collaboration",
+          "description": "Get real teachers or students actually working together toward a shared task."
+        },
+        {
+          "theme": "Facilitate communication",
+          "description": "Help two real research groups actually understand what the other is doing."
+        },
+        {
+          "theme": "Facilitate connections",
+          "description": "Introduce two real people whose work actually benefits from knowing each other."
+        },
+        {
+          "theme": "Facilitate design",
+          "description": "Guide a real team through designing a study so it can actually answer its question."
+        },
+        {
+          "theme": "Facilitate exchange",
+          "description": "Set up a real, working exchange of ideas or resources between two groups."
+        },
+        {
+          "theme": "Facilitate meetings",
+          "description": "Run a real meeting between parties so it actually reaches a decision."
+        }
+      ]
+    },
+    {
+      "prefix": "PSE",
+      "name": "Practice Steps F–M",
+      "themes": [
+        {
+          "theme": "Facilitate practice",
+          "description": "Give a real trainee repeated, structured chances to actually practice a skill."
+        },
+        {
+          "theme": "Facilitate resolution",
+          "description": "Help real parties in a health-program disagreement reach an actual resolution."
+        },
+        {
+          "theme": "Facilitate translation",
+          "description": "Help a real finding move from the lab bench toward actual, practical use."
+        },
+        {
+          "theme": "Facilitate workshops",
+          "description": "Run a real workshop that leaves participants able to actually apply what they learned."
+        },
+        {
+          "theme": "Form teams",
+          "description": "Put together a real team whose combined skills actually match what a project needs."
+        },
+        {
+          "theme": "Foster integrity",
+          "description": "Take a real, specific action that reinforces honest research conduct in a lab."
+        },
+        {
+          "theme": "Foster positive culture",
+          "description": "Take a real, specific step that makes a lab's day-to-day culture actually better."
+        },
+        {
+          "theme": "Frame questions",
+          "description": "Sharpen a real research question until it's specific enough to actually test."
+        },
+        {
+          "theme": "Gather feedback",
+          "description": "Collect real feedback on an AI system directly from the people who use it."
+        },
+        {
+          "theme": "Generate hypotheses",
+          "description": "Come up with a real, testable explanation for a pattern you actually observed."
+        },
+        {
+          "theme": "Identify challenges",
+          "description": "Name the real, specific obstacle standing between a project and its goal."
+        },
+        {
+          "theme": "Identify communities",
+          "description": "Find the real community a piece of research would actually matter to."
+        },
+        {
+          "theme": "Identify conflicts",
+          "description": "Spot a real conflict of interest before it actually compromises a decision."
+        },
+        {
+          "theme": "Identify gaps",
+          "description": "Find a real gap between what an AI system is supposed to do and what it actually does."
+        },
+        {
+          "theme": "Identify hazards",
+          "description": "Find a real, specific hazard in a lab procedure before someone is actually hurt."
+        },
+        {
+          "theme": "Identify inefficiencies",
+          "description": "Find a real place where a robotics process wastes time or resources."
+        },
+        {
+          "theme": "Identify innovations",
+          "description": "Spot a real, working new approach worth spreading to other health programs."
+        },
+        {
+          "theme": "Identify journals",
+          "description": "Choose the real journal that actually fits a paper's scope and audience."
+        },
+        {
+          "theme": "Identify opportunities",
+          "description": "Spot a real place where an AI capability could genuinely help that isn't being used yet."
+        },
+        {
+          "theme": "Identify options",
+          "description": "Lay out the real, viable options available for a specific research decision."
+        },
+        {
+          "theme": "Identify partners",
+          "description": "Find a real partner organization a robotics program actually needs to succeed."
+        },
+        {
+          "theme": "Identify sources",
+          "description": "Trace a real AI system's data or behavior back to where it actually came from."
+        },
+        {
+          "theme": "Identify talents",
+          "description": "Notice a real, specific skill in a student or colleague worth developing further."
+        },
+        {
+          "theme": "Identify waste",
+          "description": "Find where a real lab process is actually wasting time, money, or materials."
+        },
+        {
+          "theme": "Implement conservation",
+          "description": "Put a real conservation measure into actual practice in a lab's operations."
+        },
+        {
+          "theme": "Implement controls",
+          "description": "Put a real control in place that limits what an AI system is allowed to do on its own."
+        },
+        {
+          "theme": "Implement corrections",
+          "description": "Fix a real, identified problem in an AI system and confirm the fix held."
+        },
+        {
+          "theme": "Implement disposal",
+          "description": "Carry out real, compliant disposal of a specific hazardous or lab material."
+        },
+        {
+          "theme": "Implement fixes",
+          "description": "Apply a real fix to a real AI system defect and verify it's gone."
+        },
+        {
+          "theme": "Implement protections",
+          "description": "Put a real safeguard in place that prevents a specific AI system misuse."
+        },
+        {
+          "theme": "Implement solutions",
+          "description": "Carry out a real, working solution to a specific AI problem, not just propose one."
+        },
+        {
+          "theme": "Implement systems",
+          "description": "Put a real system into working use within a health program."
+        },
+        {
+          "theme": "Improve climate",
+          "description": "Take a real, specific action that makes a lab's day-to-day climate better."
+        },
+        {
+          "theme": "Improve efficiency",
+          "description": "Get a real health program to do the same work with less wasted time or resource."
+        },
+        {
+          "theme": "Improve practices",
+          "description": "Change a real lab practice based on evidence that the old one wasn't working."
+        },
+        {
+          "theme": "Improve quality",
+          "description": "Make a real, measurable improvement to the quality of an AI system's output."
+        },
+        {
+          "theme": "Incubate ideas",
+          "description": "Give a real early-stage idea the specific support it needs to actually develop."
+        },
+        {
+          "theme": "Investigate concerns",
+          "description": "Look into a real, raised concern and determine what actually happened."
+        },
+        {
+          "theme": "Investigate incidents",
+          "description": "Look into a real robotic system incident and determine what actually happened."
+        },
+        {
+          "theme": "Investigate violations",
+          "description": "Look into a real reported violation and establish what actually happened."
+        },
+        {
+          "theme": "Launch research",
+          "description": "Get a real research project from proposal into its actual first phase of work."
+        },
+        {
+          "theme": "Learn from conflicts",
+          "description": "Change a real lab practice because of what an actual past conflict revealed."
+        },
+        {
+          "theme": "Maintain accessibility",
+          "description": "Keep a real resource or space actually usable for people who need accommodation."
+        },
+        {
+          "theme": "Maintain accuracy",
+          "description": "Keep a real, ongoing check that a dataset or record stays accurate over time."
+        }
+      ]
+    },
+    {
+      "prefix": "PSF",
+      "name": "Practice Steps M–M",
+      "themes": [
+        {
+          "theme": "Maintain compliance",
+          "description": "Keep a real AI system meeting a rule it's already meeting, as things around it change."
+        },
+        {
+          "theme": "Maintain continuity",
+          "description": "Keep a real robotic system's operation running through a planned or unplanned disruption."
+        },
+        {
+          "theme": "Maintain integrity",
+          "description": "Take the real, ongoing steps that keep a lab's research conduct honest."
+        },
+        {
+          "theme": "Maintain inventory",
+          "description": "Keep a real, accurate, current record of what a lab actually has in stock."
+        },
+        {
+          "theme": "Maintain quality",
+          "description": "Keep a real robotic system's output at the quality level it's supposed to hold."
+        },
+        {
+          "theme": "Maintain redundancy",
+          "description": "Keep a real backup system for a robotic component actually working and ready."
+        },
+        {
+          "theme": "Maintain standards",
+          "description": "Keep a real lab actually meeting the standard it's supposed to follow, day to day."
+        },
+        {
+          "theme": "Manage conflicts",
+          "description": "Work through a real disagreement between parties a mission depends on."
+        },
+        {
+          "theme": "Manage data",
+          "description": "Handle real mission data so it's accurate, secure and usable when needed."
+        },
+        {
+          "theme": "Manage deadlines",
+          "description": "Keep a real project's actual deadlines met without cutting corners on quality."
+        },
+        {
+          "theme": "Manage disputes",
+          "description": "Work through a real disagreement with a robotics supplier or partner to a resolution."
+        },
+        {
+          "theme": "Manage grants",
+          "description": "Oversee a real grant from application through reporting, meeting every requirement."
+        },
+        {
+          "theme": "Manage implementation",
+          "description": "Oversee a real plan through to its actual, working completion."
+        },
+        {
+          "theme": "Manage ip",
+          "description": "Handle a real invention or dataset's intellectual property so it's actually protected."
+        },
+        {
+          "theme": "Manage partnerships",
+          "description": "Keep a real institutional partnership actually delivering for both sides."
+        },
+        {
+          "theme": "Manage portfolio",
+          "description": "Balance a real set of projects so the lab's overall effort actually makes sense."
+        },
+        {
+          "theme": "Manage procurement",
+          "description": "Oversee real purchasing for a health program from request through to delivery."
+        },
+        {
+          "theme": "Manage repairs",
+          "description": "Get a real broken piece of equipment actually fixed and back in service."
+        },
+        {
+          "theme": "Manage resources",
+          "description": "Allocate a real health program's resources to where they'll actually do the most good."
+        },
+        {
+          "theme": "Manage revisions",
+          "description": "Track a real manuscript or proposal's changes through to its actual final version."
+        },
+        {
+          "theme": "Manage submissions",
+          "description": "Get a real manuscript or proposal submitted correctly and on time."
+        },
+        {
+          "theme": "Manage timelines",
+          "description": "Keep a real multi-step project's actual schedule realistic and on track."
+        },
+        {
+          "theme": "Manage transitions",
+          "description": "Guide a real move from an old process to a robotics-based one without losing continuity."
+        },
+        {
+          "theme": "Match mentors",
+          "description": "Pair a real mentee with the mentor whose actual experience fits their need."
+        },
+        {
+          "theme": "Match pairs",
+          "description": "Pair two real people whose skills or goals actually complement each other."
+        },
+        {
+          "theme": "Maximize sustainability",
+          "description": "Change a real lab practice so it actually uses fewer resources long-term."
+        },
+        {
+          "theme": "Measure impact",
+          "description": "Measure the real, concrete effect an AI system had on the outcome it was meant to change."
+        },
+        {
+          "theme": "Measure improvement",
+          "description": "Quantify how much better a real robotic system got after a specific change."
+        },
+        {
+          "theme": "Measure outcomes",
+          "description": "Measure the real health outcome a program achieved, not just the activity delivered."
+        },
+        {
+          "theme": "Measure productivity",
+          "description": "Track, with real evidence, how much a lab or researcher is actually producing."
+        },
+        {
+          "theme": "Measure progress",
+          "description": "Measure how far a real health program has actually gotten toward its goal."
+        },
+        {
+          "theme": "Measure reach",
+          "description": "Measure how many real people a nonprofit's program actually reaches."
+        },
+        {
+          "theme": "Measure satisfaction",
+          "description": "Find out, with real data, how satisfied users actually are with an AI system."
+        },
+        {
+          "theme": "Measure savings",
+          "description": "Quantify the real cost savings a nonprofit change actually produced."
+        },
+        {
+          "theme": "Measure societal benefit",
+          "description": "Assess, with real evidence, how a piece of research actually benefits people outside the lab."
+        },
+        {
+          "theme": "Measure success",
+          "description": "Define and then check whether a real robotics initiative actually met its goal."
+        },
+        {
+          "theme": "Measure understanding",
+          "description": "Check whether real users actually understood what an AI system told them."
+        },
+        {
+          "theme": "Mentor development",
+          "description": "Guide a real mentee's specific, actual growth over an extended period."
+        },
+        {
+          "theme": "Mentor leaders",
+          "description": "Help a real emerging leader develop the specific skills they'll actually need."
+        },
+        {
+          "theme": "Mentor talent",
+          "description": "Give a real, promising researcher the guidance that actually develops their ability."
+        },
+        {
+          "theme": "Monitor compliance",
+          "description": "Keep an ongoing check on whether a real AI system still meets the rule it's supposed to."
+        },
+        {
+          "theme": "Monitor conduct",
+          "description": "Keep an ongoing, real check that research conduct in a lab stays within bounds."
+        },
+        {
+          "theme": "Monitor landscape",
+          "description": "Track real developments in a field so a lab's plans stay relevant."
+        },
+        {
+          "theme": "Monitor progress",
+          "description": "Keep an ongoing, real check on how a health program is progressing toward its goal."
+        }
+      ]
+    },
+    {
+      "prefix": "PSG",
+      "name": "Practice Steps M–R",
+      "themes": [
+        {
+          "theme": "Monitor quality",
+          "description": "Keep an ongoing, real check that a lab's output actually meets its standard."
+        },
+        {
+          "theme": "Monitor well-being",
+          "description": "Keep a real, ongoing check on how lab members are actually doing."
+        },
+        {
+          "theme": "Navigate ip",
+          "description": "Work through a real intellectual-property question so a project can actually proceed."
+        },
+        {
+          "theme": "Network actively",
+          "description": "Build real, working relationships with other researchers, not just collect contacts."
+        },
+        {
+          "theme": "Offer feedback",
+          "description": "Give a real colleague specific, actionable feedback on their actual work."
+        },
+        {
+          "theme": "Offer support",
+          "description": "Give a real, specific form of support to a health worker or community facing a challenge."
+        },
+        {
+          "theme": "Optimize adoption",
+          "description": "Change how a real tool or method is introduced so more people actually use it."
+        },
+        {
+          "theme": "Optimize allocation",
+          "description": "Adjust how real resources are split across a health program so they do more good."
+        },
+        {
+          "theme": "Optimize efficiency",
+          "description": "Make a real, measurable improvement to how efficiently an AI system uses its resources."
+        },
+        {
+          "theme": "Optimize impact",
+          "description": "Adjust a real research effort so it produces more actual benefit for the same work."
+        },
+        {
+          "theme": "Optimize usage",
+          "description": "Change how a real resource is used so it actually serves more of the lab's needs."
+        },
+        {
+          "theme": "Optimize utilization",
+          "description": "Adjust a real schedule or process so equipment or staff time is actually used well."
+        },
+        {
+          "theme": "Optimize workflows",
+          "description": "Change a real lab workflow so it actually takes less time for the same result."
+        },
+        {
+          "theme": "Plan future",
+          "description": "Make a real decision now based on where a lab or project actually needs to be later."
+        },
+        {
+          "theme": "Plan migration",
+          "description": "Plan a real, working move of data or systems from one platform to another."
+        },
+        {
+          "theme": "Plan studies",
+          "description": "Design a real study's actual method before data collection begins."
+        },
+        {
+          "theme": "Plan sustainability",
+          "description": "Plan how a real health program will keep running after outside support ends."
+        },
+        {
+          "theme": "Plan upgrades",
+          "description": "Plan a real upgrade to an AI system so it doesn't break what already depends on it."
+        },
+        {
+          "theme": "Practice delivery",
+          "description": "Rehearse a real talk or defense until you can actually deliver it smoothly."
+        },
+        {
+          "theme": "Practice talks",
+          "description": "Give a real practice run of a talk to colleagues before the actual presentation."
+        },
+        {
+          "theme": "Prepare independence",
+          "description": "Get a real trainee ready to run their own project without day-to-day supervision."
+        },
+        {
+          "theme": "Prepare materials",
+          "description": "Get the real materials or reagents ready before an experiment actually needs them."
+        },
+        {
+          "theme": "Prepare presentations",
+          "description": "Build a real presentation that actually communicates the finding to its intended audience."
+        },
+        {
+          "theme": "Prepare reports",
+          "description": "Write a real, accurate report on a nonprofit program's activity and results."
+        },
+        {
+          "theme": "Prepare submissions",
+          "description": "Get a real manuscript or proposal ready to meet its venue's actual requirements."
+        },
+        {
+          "theme": "Present research",
+          "description": "Present a real finding to a real audience and field their actual questions."
+        },
+        {
+          "theme": "Prevent escalation",
+          "description": "Step in early on a real disagreement before it actually becomes a bigger conflict."
+        },
+        {
+          "theme": "Prevent failure",
+          "description": "Take a real, specific step that stops a likely failure before it actually happens."
+        },
+        {
+          "theme": "Promote adoption",
+          "description": "Get real potential users to actually try a new tool or method."
+        },
+        {
+          "theme": "Promote inclusion",
+          "description": "Change a real health program so an excluded group can actually take part."
+        },
+        {
+          "theme": "Prototype solutions",
+          "description": "Build a real, working prototype to test an idea before committing further resources."
+        },
+        {
+          "theme": "Provide coaching",
+          "description": "Give a real teacher specific, practice-based feedback they can actually use."
+        },
+        {
+          "theme": "Provide feedback",
+          "description": "Give a real, specific piece of feedback that actually helps improve a robotic system."
+        },
+        {
+          "theme": "Provide guidance",
+          "description": "Give a real, specific answer that actually helps someone make their next decision."
+        },
+        {
+          "theme": "Provide mentoring",
+          "description": "Give a real mentee sustained, specific guidance over the course of their project."
+        },
+        {
+          "theme": "Provide opportunities",
+          "description": "Open a real, concrete opportunity for a person a program serves."
+        },
+        {
+          "theme": "Provide support",
+          "description": "Help a real user solve a real problem they're having with an AI system."
+        },
+        {
+          "theme": "Provide training",
+          "description": "Teach a real person or team a specific skill they need to work with an AI system."
+        },
+        {
+          "theme": "Publish results",
+          "description": "Get a real, honest account of a finding through peer review and into print."
+        },
+        {
+          "theme": "Recruit talent",
+          "description": "Find and bring in a real, qualified person a health program actually needs."
+        },
+        {
+          "theme": "Reduce waste",
+          "description": "Find and cut a real source of wasted effort or resource in an AI process."
+        },
+        {
+          "theme": "Refine messages",
+          "description": "Sharpen a real message until an outside audience would actually understand it."
+        },
+        {
+          "theme": "Reinforce standards",
+          "description": "Take a real, specific action that keeps a lab's existing standard from slipping."
+        },
+        {
+          "theme": "Remove barriers",
+          "description": "Find and eliminate a real, specific obstacle standing between a student and success."
+        }
+      ]
+    },
+    {
+      "prefix": "PSH",
+      "name": "Practice Steps R–T",
+      "themes": [
+        {
+          "theme": "Report findings",
+          "description": "Write up what a real AI investigation found, for people who need to act on it."
+        },
+        {
+          "theme": "Report savings",
+          "description": "Report the real, specific savings a lab change actually produced."
+        },
+        {
+          "theme": "Resolve conflicts",
+          "description": "Work through a real disagreement between people or teams over a robotics decision."
+        },
+        {
+          "theme": "Resolve disputes",
+          "description": "Work through a real dispute between colleagues to an actual resolution."
+        },
+        {
+          "theme": "Resolve issues",
+          "description": "Fix a real, identified issue in an AI system and confirm it's actually resolved."
+        },
+        {
+          "theme": "Respond incidents",
+          "description": "React to a real AI system incident as it's happening and bring it under control."
+        },
+        {
+          "theme": "Respond to incidents",
+          "description": "Follow a real incident-response process for an AI system failure, from detection to resolution."
+        },
+        {
+          "theme": "Review applications",
+          "description": "Review a real application and judge it against the actual criteria."
+        },
+        {
+          "theme": "Review proposals",
+          "description": "Read a real research proposal and give feedback that would actually improve it."
+        },
+        {
+          "theme": "Review protocols",
+          "description": "Check a real experimental protocol for a flaw before it's actually run."
+        },
+        {
+          "theme": "Review submissions",
+          "description": "Read a real submitted manuscript and judge its actual scientific merit."
+        },
+        {
+          "theme": "Scale solutions",
+          "description": "Take a real health solution that worked in one place and expand it to more."
+        },
+        {
+          "theme": "Scale winners",
+          "description": "Take a real, working small-scale success and expand it without losing what worked."
+        },
+        {
+          "theme": "Scan for opportunities",
+          "description": "Look for a real, specific opportunity a lab could actually pursue next."
+        },
+        {
+          "theme": "Scan opportunities",
+          "description": "Review the real options available and flag the ones actually worth pursuing."
+        },
+        {
+          "theme": "Schedule maintenance",
+          "description": "Set a real, working maintenance schedule for a robotic system."
+        },
+        {
+          "theme": "Secure funding",
+          "description": "Get real funding committed for a health program before it's needed."
+        },
+        {
+          "theme": "Secure storage",
+          "description": "Set up real, secure storage for data or samples that actually protects them."
+        },
+        {
+          "theme": "Select approaches",
+          "description": "Choose the real method that actually fits a specific research question."
+        },
+        {
+          "theme": "Select systems",
+          "description": "Choose the real software or equipment system that actually fits a lab's need."
+        },
+        {
+          "theme": "Select venues",
+          "description": "Choose the real conference or journal that actually fits a piece of work."
+        },
+        {
+          "theme": "Set expectations",
+          "description": "Make clear, up front, exactly what a real program or role will and won't deliver."
+        },
+        {
+          "theme": "Set priorities",
+          "description": "Decide which real project actually matters most given the lab's limited time."
+        },
+        {
+          "theme": "Share findings",
+          "description": "Share the real findings of a mission review with the people who need to act on them."
+        },
+        {
+          "theme": "Share knowledge",
+          "description": "Pass on something real you learned about an AI system to someone who needs to know it."
+        },
+        {
+          "theme": "Share learnings",
+          "description": "Pass on what was actually learned from a real health program to another team."
+        },
+        {
+          "theme": "Share resources",
+          "description": "Make a real resource one team has actually available to another that needs it."
+        },
+        {
+          "theme": "Share tools",
+          "description": "Make a real tool or dataset actually available for other researchers to use."
+        },
+        {
+          "theme": "Strengthen community",
+          "description": "Take a real, specific action that makes a research community more connected."
+        },
+        {
+          "theme": "Strengthen ties",
+          "description": "Deepen a real, existing relationship between collaborators beyond a single project."
+        },
+        {
+          "theme": "Support advancement",
+          "description": "Help a real colleague take the specific next step in their actual career."
+        },
+        {
+          "theme": "Support analysis",
+          "description": "Give a real analyst the specific data or tool they need to finish their work."
+        },
+        {
+          "theme": "Support growth",
+          "description": "Help a real health program expand without losing what made it work."
+        },
+        {
+          "theme": "Support launch",
+          "description": "Give a real new project what it specifically needs to get off the ground."
+        },
+        {
+          "theme": "Support planning",
+          "description": "Help a real team build a plan grounded in what's actually feasible."
+        },
+        {
+          "theme": "Support projects",
+          "description": "Give a real project the specific resource or help it's actually missing."
+        },
+        {
+          "theme": "Support proposals",
+          "description": "Give a real proposal author the specific feedback or data they need."
+        },
+        {
+          "theme": "Support relationships",
+          "description": "Take a real, specific action that keeps a working relationship functioning well."
+        },
+        {
+          "theme": "Support resolution",
+          "description": "Help two real parties reach an actual resolution to their disagreement."
+        },
+        {
+          "theme": "Support reviews",
+          "description": "Give a real reviewer what they need to complete a thorough, fair review."
+        },
+        {
+          "theme": "Support use",
+          "description": "Help a real user actually get value out of a tool or dataset."
+        },
+        {
+          "theme": "Support well-being",
+          "description": "Take a real, specific action that supports a lab member's actual well-being."
+        },
+        {
+          "theme": "Synthesize findings",
+          "description": "Pull together real findings from more than one source into one clear conclusion."
+        },
+        {
+          "theme": "Teach methods",
+          "description": "Teach a real research method until a student can actually apply it themselves."
+        }
+      ]
+    },
+    {
+      "prefix": "PSI",
+      "name": "Practice Steps T–W",
+      "themes": [
+        {
+          "theme": "Teach writing",
+          "description": "Help a real student improve a specific, identifiable weakness in their scientific writing."
+        },
+        {
+          "theme": "Test approaches",
+          "description": "Try a real new approach on a small scale before committing a mission to it fully."
+        },
+        {
+          "theme": "Test ideas",
+          "description": "Run a real, small test of an idea before committing the lab's full resources to it."
+        },
+        {
+          "theme": "Test prototypes",
+          "description": "Put a real prototype through an actual test and record what happened."
+        },
+        {
+          "theme": "Test recovery procedures",
+          "description": "Run through a real recovery procedure for a robotic system to confirm it actually works."
+        },
+        {
+          "theme": "Test solutions",
+          "description": "Try a real proposed solution and check whether it actually solves the problem."
+        },
+        {
+          "theme": "Track adoption",
+          "description": "Measure, over time, how many real users are actually using an AI system."
+        },
+        {
+          "theme": "Track budgets",
+          "description": "Keep a real, accurate, ongoing record of a lab's spending against its budget."
+        },
+        {
+          "theme": "Track calibration",
+          "description": "Keep a real, ongoing record of when equipment was last actually calibrated."
+        },
+        {
+          "theme": "Track citations",
+          "description": "Keep a real, ongoing record of how a lab's published work is actually being cited."
+        },
+        {
+          "theme": "Track commercialization",
+          "description": "Keep a real, ongoing record of a discovery's progress toward actual commercial use."
+        },
+        {
+          "theme": "Track compliance",
+          "description": "Keep an ongoing, real check on whether a robotic system still meets its required standard."
+        },
+        {
+          "theme": "Track development",
+          "description": "Keep a real, ongoing record of a project's actual technical progress."
+        },
+        {
+          "theme": "Track efficiency",
+          "description": "Measure, over time, whether a real AI process is using less effort to do the same work."
+        },
+        {
+          "theme": "Track growth",
+          "description": "Keep a real, ongoing record of how a nonprofit or program is actually growing."
+        },
+        {
+          "theme": "Track impact",
+          "description": "Keep a real record of the impact a health program is actually having."
+        },
+        {
+          "theme": "Track improvements",
+          "description": "Keep a real record of every improvement made to an AI system and its measured effect."
+        },
+        {
+          "theme": "Track inventory",
+          "description": "Keep a real, accurate count of a robotics program's parts and equipment."
+        },
+        {
+          "theme": "Track metrics",
+          "description": "Keep a real, ongoing record of the numbers that show whether an AI system is working."
+        },
+        {
+          "theme": "Track outcomes",
+          "description": "Keep a real record of what actually happened after an AI system made a decision."
+        },
+        {
+          "theme": "Track partnerships",
+          "description": "Keep a real, ongoing record of a lab's active partnerships and their status."
+        },
+        {
+          "theme": "Track progress",
+          "description": "Keep a real, ongoing record of how far an AI initiative has actually gotten."
+        },
+        {
+          "theme": "Track reach",
+          "description": "Keep a real, ongoing record of how many people a program is actually reaching."
+        },
+        {
+          "theme": "Track requirements",
+          "description": "Keep a real record of which stated requirements an AI system has actually met."
+        },
+        {
+          "theme": "Track research application",
+          "description": "Keep a real, ongoing record of where a lab's research is actually being applied."
+        },
+        {
+          "theme": "Track retention",
+          "description": "Keep a real, ongoing record of whether students or staff are actually staying."
+        },
+        {
+          "theme": "Track savings",
+          "description": "Keep a real record of the cost savings a mission's changes have actually produced."
+        },
+        {
+          "theme": "Track submissions",
+          "description": "Keep a real, ongoing record of manuscripts or proposals and their actual status."
+        },
+        {
+          "theme": "Track success",
+          "description": "Keep a real, ongoing record of whether a specific effort is actually working."
+        },
+        {
+          "theme": "Track utilization",
+          "description": "Keep a real, ongoing record of how much a resource is actually being used."
+        },
+        {
+          "theme": "Train reviewers",
+          "description": "Teach real reviewers how to actually judge an AI system's output correctly."
+        },
+        {
+          "theme": "Train staff",
+          "description": "Teach a real group of staff the skill they need to safely work with an AI system."
+        },
+        {
+          "theme": "Train users",
+          "description": "Teach real end users how to actually get value from an AI system."
+        },
+        {
+          "theme": "Transfer knowledge",
+          "description": "Pass real, specific health knowledge from an expert to a local team that will keep using it."
+        },
+        {
+          "theme": "Translate findings",
+          "description": "Turn a real technical finding into language a non-specialist can actually use."
+        },
+        {
+          "theme": "Translate research",
+          "description": "Move a real research result toward an application someone outside the lab can use."
+        },
+        {
+          "theme": "Troubleshoot issues",
+          "description": "Work through a real robotic system problem step by step until it's actually fixed."
+        },
+        {
+          "theme": "Validate methods",
+          "description": "Confirm a real method actually produces the result it's supposed to before relying on it."
+        },
+        {
+          "theme": "Validate results",
+          "description": "Confirm a real AI system's result against an independent, trusted source."
+        },
+        {
+          "theme": "Validate standards",
+          "description": "Check that a real standard a lab follows is actually still appropriate."
+        },
+        {
+          "theme": "Write drafts",
+          "description": "Write a real first draft of a paper or proposal, even before it's polished."
+        },
+        {
+          "theme": "Write proposals",
+          "description": "Write a real grant proposal that accurately represents what a nonprofit will actually do."
+        }
+      ]
+    }
+  ]
+}
