@@ -1,0 +1,587 @@
+{
+  "pack": "Money, Benefits & Entitlements",
+  "override": "band-suffix",
+  "note": "Promotion to the tracked schema (v0.88.0). This pack's track and description were already non-empty in the raw source import, carrying the band-suffix content debt from the start (not a fill-empty case). \"override\": \"band-suffix\" replaces exactly those suffixed rows with authored band sentences, the same counted exception used for the sector-OS packs (v0.72.0). Track names, prefixes and the shared description text are copied verbatim from data/source/Cognition.X_all_blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "IN",
+      "name": "Income: what arrives, when, and from where",
+      "themes": [
+        {
+          "theme": "Where money comes from this month",
+          "description": "Naming every source of money for the coming month before deciding anything else.",
+          "bands": {
+            "K–2": "Ask an adult where the money for food and rent comes from.",
+            "3–5": "Name one real source of money that arrives this month, with an adult.",
+            "6–8": "Identify all the real sources of income arriving in a given month, with a checker.",
+            "9–10": "List and verify every real source of income for a given month, on your own.",
+            "11–12": "Explain to someone else how to trace all real income sources for a month."
+          }
+        },
+        {
+          "theme": "Pay periods and the gap between them",
+          "description": "Pay periods, the gap between them, and planning across the gap rather than into it.",
+          "bands": {
+            "K–2": "Ask an adult why pay doesn't come every single day.",
+            "3–5": "Learn that real pay arrives on a schedule, with an adult's help.",
+            "6–8": "Identify the real gap between two pay periods and its risk, with a checker.",
+            "9–10": "Plan real spending across the gap between two pay periods, on your own.",
+            "11–12": "Explain to someone else why the real gap between pay periods matters so much."
+          }
+        },
+        {
+          "theme": "Cash, cheque, card, and the fees on each",
+          "description": "Cash, cheque, card and app: the fee on each and what each costs to convert.",
+          "bands": {
+            "K–2": "Ask an adult what happens when you turn a cheque into cash.",
+            "3–5": "Learn that real cash, cheques and cards each work differently, with an adult.",
+            "6–8": "Identify the real fee attached to cashing a particular kind of payment, with a checker.",
+            "9–10": "Choose the real cheapest way to receive and use a given payment, on your own.",
+            "11–12": "Explain to someone else the real fees hidden in each way of getting paid."
+          }
+        },
+        {
+          "theme": "Gig income and the week it disappears",
+          "description": "Gig income and the week it does not arrive, which is a planning problem not a moral one.",
+          "bands": {
+            "K–2": "Ask an adult why some jobs pay a different amount every week.",
+            "3–5": "Learn that real gig income can go up and down, with an adult's help.",
+            "6–8": "Identify why a real gig-income week can disappear entirely, with a checker.",
+            "9–10": "Plan around a real week when gig income disappears, on your own.",
+            "11–12": "Explain to someone else why real gig income can vanish for a whole week."
+          }
+        },
+        {
+          "theme": "Under the table and what it forfeits",
+          "description": "Unreported work: what it forfeits — benefits, records, recourse — stated without moralising.",
+          "bands": {
+            "K–2": "Ask an adult why some jobs don't give you a real pay paper.",
+            "3–5": "Learn that real off-the-books pay has no paper trail, with an adult.",
+            "6–8": "Identify what real protections off-the-books pay forfeits, with a checker.",
+            "9–10": "Weigh, for a real job offer, what off-the-books pay actually forfeits, alone.",
+            "11–12": "Explain to someone else the real protections lost when pay goes unrecorded."
+          }
+        },
+        {
+          "theme": "Reporting income, and reporting it accurately",
+          "description": "Reporting income accurately, on time, and keeping the proof that you did.",
+          "bands": {
+            "K–2": "Ask an adult why you have to tell the truth about money earned.",
+            "3–5": "Learn that real income has to be reported accurately, with an adult.",
+            "6–8": "Identify what real counts as income that must be reported, with a checker.",
+            "9–10": "Report a real month's income accurately and completely, on your own.",
+            "11–12": "Explain to someone else why accurate real income reporting matters so much."
+          }
+        },
+        {
+          "theme": "A raise that costs more than it pays",
+          "description": "A raise that reduces total income once benefits are recalculated.",
+          "bands": {
+            "K–2": "Ask an adult why earning more money isn't always simply better.",
+            "3–5": "Learn that a real raise can sometimes cost benefits, with an adult's help.",
+            "6–8": "Identify why a real raise might cost more in lost benefits than it pays, checked.",
+            "9–10": "Calculate, for a real raise, whether it truly leaves someone better off, alone.",
+            "11–12": "Explain to someone else why a real raise can sometimes cost more than it pays."
+          }
+        },
+        {
+          "theme": "Irregular income and planning against it",
+          "description": "Irregular income, and budgeting on the floor rather than the average.",
+          "bands": {
+            "K–2": "Ask an adult how to plan when money doesn't come the same every month.",
+            "3–5": "Learn one real way to plan around income that changes, with an adult.",
+            "6–8": "Identify a real strategy for budgeting against irregular income, with a checker.",
+            "9–10": "Build a real budget that plans successfully against irregular income, alone.",
+            "11–12": "Advise someone else on real strategies for planning against irregular income."
+          }
+        },
+        {
+          "theme": "Somebody else’s money in your account",
+          "description": "Money in your account that is not yours, and the risk it creates.",
+          "bands": {
+            "K–2": "Ask an adult what to do if extra money shows up that isn't yours.",
+            "3–5": "Learn that real money in an account isn't always yours to keep, with an adult.",
+            "6–8": "Identify the real risk of holding someone else's money in your account, checked.",
+            "9–10": "Handle a real case of someone else's money appearing in an account, alone.",
+            "11–12": "Explain to someone else the real risks of holding someone else's money."
+          }
+        },
+        {
+          "theme": "When income stops",
+          "description": "When income stops: the first seventy-two hours and the order of calls.",
+          "bands": {
+            "K–2": "Ask an adult what happens if the money stops coming one month.",
+            "3–5": "Learn one real first step to take when income stops, with an adult's help.",
+            "6–8": "Identify the real first steps to take when a household's income stops, checked.",
+            "9–10": "Respond correctly to a real sudden stop in household income, on your own.",
+            "11–12": "Advise someone else on the real first steps to take when income stops."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "BN",
+      "name": "Benefits: the programmes and what each is for",
+      "themes": [
+        {
+          "theme": "SSI, SSDI and the difference",
+          "description": "SSI and SSDI: different programmes, different tests, and why the distinction decides everything after.",
+          "bands": {
+            "K–2": "Ask an adult why some grown-ups get a check from the government.",
+            "3–5": "Learn that SSI and SSDI are two real different programmes, with an adult.",
+            "6–8": "Identify the real difference between SSI and SSDI eligibility, with a checker.",
+            "9–10": "Determine, for a real case, whether SSI or SSDI actually applies, on your own.",
+            "11–12": "Explain to someone else the real difference between SSI and SSDI."
+          }
+        },
+        {
+          "theme": "CalFresh and what it buys",
+          "description": "CalFresh: what it covers, what it does not, and how the amount is calculated.",
+          "bands": {
+            "K–2": "Ask an adult what a food card is used for at the store.",
+            "3–5": "Learn what CalFresh actually helps a real family buy, with an adult.",
+            "6–8": "Identify what real items CalFresh benefits can and cannot buy, with a checker.",
+            "9–10": "Use a real CalFresh benefit correctly within its actual rules, on your own.",
+            "11–12": "Explain to someone else what CalFresh really buys and what it does not."
+          }
+        },
+        {
+          "theme": "General Assistance and its conditions",
+          "description": "General Assistance, its conditions, and the requirements that can end it.",
+          "bands": {
+            "K–2": "Ask an adult what help exists for someone with no other income.",
+            "3–5": "Learn one real condition attached to General Assistance, with an adult.",
+            "6–8": "Identify the real conditions that come with General Assistance, with a checker.",
+            "9–10": "Determine, for a real case, whether General Assistance conditions are met, alone.",
+            "11–12": "Explain to someone else the real conditions attached to General Assistance."
+          }
+        },
+        {
+          "theme": "Medi-Cal and staying enrolled",
+          "description": "Medi-Cal, and the actions that keep enrolment from lapsing.",
+          "bands": {
+            "K–2": "Ask an adult why some families get help paying for the doctor.",
+            "3–5": "Learn one real step needed to stay enrolled in Medi-Cal, with an adult.",
+            "6–8": "Identify the real steps required to stay enrolled in Medi-Cal, with a checker.",
+            "9–10": "Complete the real steps needed to keep Medi-Cal enrollment active, alone.",
+            "11–12": "Explain to someone else the real steps that keep Medi-Cal enrollment active."
+          }
+        },
+        {
+          "theme": "Veterans benefits and the office that holds them",
+          "description": "Veterans benefits, which office holds them, and the records each claim needs.",
+          "bands": {
+            "K–2": "Ask an adult what help exists for someone who served in the military.",
+            "3–5": "Learn which real office handles benefits for veterans, with an adult.",
+            "6–8": "Identify the real office responsible for a given veteran's benefit, with a checker.",
+            "9–10": "Direct a real veteran's benefits question to the office that actually handles it.",
+            "11–12": "Explain to someone else which real office holds which veterans benefit."
+          }
+        },
+        {
+          "theme": "Recertification: the letter you cannot miss",
+          "description": "Recertification: the letter that must not be missed, and building a system so it is not.",
+          "bands": {
+            "K–2": "Ask an adult why some letters in the mail are really important.",
+            "3–5": "Learn that a real benefits letter can require quick action, with an adult.",
+            "6–8": "Identify what real deadline a recertification letter actually carries, with a checker.",
+            "9–10": "Respond to a real recertification letter before its deadline, on your own.",
+            "11–12": "Explain to someone else why a real recertification letter cannot be missed."
+          }
+        },
+        {
+          "theme": "An overpayment notice",
+          "description": "An overpayment notice: what it claims, the response window, and the waiver route.",
+          "bands": {
+            "K–2": "Ask an adult what happens if too much money was sent by mistake.",
+            "3–5": "Learn that a real overpayment notice asks for money back, with an adult.",
+            "6–8": "Identify the real options available after receiving an overpayment notice, checked.",
+            "9–10": "Respond to a real overpayment notice using the options actually available, alone.",
+            "11–12": "Explain to someone else the real options for handling an overpayment notice."
+          }
+        },
+        {
+          "theme": "A denial, and the appeal that follows",
+          "description": "A denial and the appeal: the deadline, the form, and what evidence changes an outcome.",
+          "bands": {
+            "K–2": "Ask an adult what it means when an application gets a no.",
+            "3–5": "Learn that a real denial can be appealed, with an adult's help.",
+            "6–8": "Identify the real steps and deadline for appealing a benefits denial, checked.",
+            "9–10": "File a real appeal of a benefits denial within its actual deadline, alone.",
+            "11–12": "Explain to someone else the real steps and stakes of appealing a denial."
+          }
+        },
+        {
+          "theme": "Benefits cliffs and the earnings that trigger them",
+          "description": "Benefits cliffs, the earnings that trigger them, and calculating one before it happens.",
+          "bands": {
+            "K–2": "Ask an adult why earning a little more money can sometimes cause trouble.",
+            "3–5": "Learn that a real benefits cliff can cost more than it seems, with an adult.",
+            "6–8": "Identify the real earnings level that triggers a given benefits cliff, checked.",
+            "9–10": "Calculate, for a real case, the actual earnings that trigger a benefits cliff, alone.",
+            "11–12": "Explain to someone else how a real benefits cliff actually gets triggered."
+          }
+        },
+        {
+          "theme": "Representative payee: what it is and what it is not",
+          "description": "A representative payee: what the role permits, what it does not, and how it is changed.",
+          "bands": {
+            "K–2": "Ask an adult what it means when someone else manages a check for you.",
+            "3–5": "Learn that a real representative payee manages benefits for someone, with an adult.",
+            "6–8": "Identify what real authority a representative payee has and lacks, with a checker.",
+            "9–10": "Determine, for a real case, what a representative payee may and may not do, alone.",
+            "11–12": "Explain to someone else what a real representative payee is and is not allowed to do."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "PY",
+      "name": "Paying: rent, bills, and the order things get paid",
+      "themes": [
+        {
+          "theme": "Rent first, and why",
+          "description": "Rent first, and the reasoning that makes that rule hold in a bad month.",
+          "bands": {
+            "K–2": "Ask an adult why the home payment gets paid before other things.",
+            "3–5": "Learn one real reason rent gets paid before other bills, with an adult.",
+            "6–8": "Identify the real reasons rent is prioritized over other bills, with a checker.",
+            "9–10": "Order a real month's bills so rent is paid first, and explain why, alone.",
+            "11–12": "Explain to someone else the real logic behind paying rent first."
+          }
+        },
+        {
+          "theme": "A bill you cannot pay this month",
+          "description": "A bill you cannot pay: who to tell, when, and what asking early actually changes.",
+          "bands": {
+            "K–2": "Ask an adult what to do if there isn't enough money for a bill.",
+            "3–5": "Learn one real option when a bill can't be paid, with an adult's help.",
+            "6–8": "Identify the real options available when a bill can't be paid in full, checked.",
+            "9–10": "Choose and act on a real option for a bill that can't be paid, on your own.",
+            "11–12": "Advise someone else on the real options when a bill genuinely can't be paid."
+          }
+        },
+        {
+          "theme": "Which arrears are dangerous and which can wait",
+          "description": "Ranking arrears by consequence rather than by size or by who calls most.",
+          "bands": {
+            "K–2": "Ask an adult which unpaid bills are the most urgent.",
+            "3–5": "Learn that some real unpaid bills are worse to leave than others, with an adult.",
+            "6–8": "Identify which real arrears carry the most danger if left unpaid, with a checker.",
+            "9–10": "Rank a real set of arrears by actual danger and act accordingly, on your own.",
+            "11–12": "Explain to someone else how to judge real arrears by actual danger."
+          }
+        },
+        {
+          "theme": "Autopay and losing track",
+          "description": "Autopay: what it protects against and the specific way it causes overdrafts.",
+          "bands": {
+            "K–2": "Ask an adult what happens when a bill pays itself automatically.",
+            "3–5": "Learn that real autopay can make it easy to lose track, with an adult.",
+            "6–8": "Identify the real risk that comes with relying on autopay, with a checker.",
+            "9–10": "Track real autopay charges so nothing goes unnoticed, on your own.",
+            "11–12": "Explain to someone else the real risk of losing track behind autopay."
+          }
+        },
+        {
+          "theme": "Money orders, receipts and proof of payment",
+          "description": "Money orders, receipts and building proof of payment that survives a dispute.",
+          "bands": {
+            "K–2": "Ask an adult why a paper receipt matters after paying for something.",
+            "3–5": "Learn what a real money order or receipt actually proves, with an adult.",
+            "6–8": "Identify what real proof of payment a money order provides, with a checker.",
+            "9–10": "Obtain and keep real proof of payment for an important bill, on your own.",
+            "11–12": "Explain to someone else why real proof of payment protects a tenant or payer."
+          }
+        },
+        {
+          "theme": "A payment plan that is actually keepable",
+          "description": "A payment plan sized to what you can actually keep, not what stops the call.",
+          "bands": {
+            "K–2": "Ask an adult what it means to pay a big bill a little at a time.",
+            "3–5": "Learn one real feature of a payment plan that can actually be kept, with an adult.",
+            "6–8": "Identify what real makes a payment plan realistic to keep, with a checker.",
+            "9–10": "Negotiate a real payment plan that fits an actual budget, on your own.",
+            "11–12": "Advise someone else on what real makes a payment plan keepable."
+          }
+        },
+        {
+          "theme": "Utilities and the shut-off calendar",
+          "description": "Utilities, the shut-off calendar, and the protections that exist before it.",
+          "bands": {
+            "K–2": "Ask an adult what happens if the lights or water get turned off.",
+            "3–5": "Learn that real utilities can be shut off on a schedule, with an adult.",
+            "6–8": "Identify the real protections against utility shut-off in a given season, checked.",
+            "9–10": "Use real shut-off protections correctly to avoid losing a utility, on your own.",
+            "11–12": "Explain to someone else the real calendar and protections around utility shut-off."
+          }
+        },
+        {
+          "theme": "Phone: the bill that is also your address",
+          "description": "The phone bill, which is also your address for benefits, work and court.",
+          "bands": {
+            "K–2": "Ask an adult why a phone number matters so much to a family.",
+            "3–5": "Learn that a real phone number is how people get reached, with an adult.",
+            "6–8": "Identify why a real phone bill functions like an address for reaching someone, checked.",
+            "9–10": "Protect a real phone line as a critical point of contact, on your own.",
+            "11–12": "Explain to someone else why a real phone bill matters like an address does."
+          }
+        },
+        {
+          "theme": "Debt collectors and what they may do",
+          "description": "Debt collectors: what they may do, what they may not, and how to require writing.",
+          "bands": {
+            "K–2": "Ask an adult what happens if a bill goes unpaid for a long time.",
+            "3–5": "Learn one real limit on what a debt collector may do, with an adult.",
+            "6–8": "Identify the real limits on what a debt collector is allowed to do, checked.",
+            "9–10": "Respond to a real debt collector within the actual limits of their power, alone.",
+            "11–12": "Explain to someone else the real limits on debt collector behaviour."
+          }
+        },
+        {
+          "theme": "What a late fee compounds into",
+          "description": "A late fee compounded across a year, calculated rather than felt.",
+          "bands": {
+            "K–2": "Ask an adult why paying late can cost more money later.",
+            "3–5": "Learn that a real late fee can grow into a bigger problem, with an adult.",
+            "6–8": "Identify how a real late fee compounds into larger real debt, with a checker.",
+            "9–10": "Trace, for a real case, how a late fee compounded into a larger balance, alone.",
+            "11–12": "Explain to someone else how a real late fee compounds into serious debt."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SV",
+      "name": "Saving: keeping something when everything is claimed",
+      "themes": [
+        {
+          "theme": "Saving when there is nothing spare",
+          "description": "Saving when nothing is spare: the small, defended amount and why it changes decisions.",
+          "bands": {
+            "K–2": "Ask an adult how someone saves money when there's not much left.",
+            "3–5": "Learn one real trick for saving even a little money, with an adult.",
+            "6–8": "Identify a real strategy for saving when a budget has no spare room, checked.",
+            "9–10": "Build a real savings habit into a budget that has no spare room, on your own.",
+            "11–12": "Advise someone else on real strategies for saving with nothing spare."
+          }
+        },
+        {
+          "theme": "An emergency fund of forty dollars",
+          "description": "Forty dollars as a functioning emergency fund, and the emergencies it actually covers.",
+          "bands": {
+            "K–2": "Ask an adult why it helps to keep a little extra money aside.",
+            "3–5": "Learn what a real small emergency fund is actually for, with an adult.",
+            "6–8": "Identify what real emergency a forty-dollar fund can actually cover, checked.",
+            "9–10": "Build and protect a real small emergency fund over time, on your own.",
+            "11–12": "Explain to someone else why even a small real emergency fund matters."
+          }
+        },
+        {
+          "theme": "Where money can sit safely",
+          "description": "Where money can sit safely when a room is shared and an account is difficult.",
+          "bands": {
+            "K–2": "Ask an adult where it's safe to keep saved money.",
+            "3–5": "Learn one real safe place to keep saved money, with an adult's help.",
+            "6–8": "Identify the real risks and benefits of different places to keep money, checked.",
+            "9–10": "Choose a real safe place to hold savings for a given situation, on your own.",
+            "11–12": "Explain to someone else the real trade-offs among places to keep money safe."
+          }
+        },
+        {
+          "theme": "Bank accounts, and the reasons people do not have one",
+          "description": "Bank accounts, why people do not have one, and the routes back in.",
+          "bands": {
+            "K–2": "Ask an adult what a bank account is used for.",
+            "3–5": "Learn one real reason someone might not have a bank account, with an adult.",
+            "6–8": "Identify the real barriers that keep someone unbanked, with a checker.",
+            "9–10": "Evaluate, for a real case, whether opening an account clears the real barriers.",
+            "11–12": "Explain to someone else the real reasons people remain unbanked."
+          }
+        },
+        {
+          "theme": "Prepaid cards and their costs",
+          "description": "Prepaid cards, their fee structures, and what they cost over a year.",
+          "bands": {
+            "K–2": "Ask an adult what a card that isn't a bank card is used for.",
+            "3–5": "Learn one real cost that comes with a prepaid card, with an adult's help.",
+            "6–8": "Identify the real fees hidden in a prepaid card's terms, with a checker.",
+            "9–10": "Compare real prepaid card costs against other options, on your own.",
+            "11–12": "Explain to someone else the real costs a prepaid card can carry."
+          }
+        },
+        {
+          "theme": "Asset limits and the benefit they endanger",
+          "description": "Asset limits, which benefits carry them, and the saving that endangers a benefit.",
+          "bands": {
+            "K–2": "Ask an adult why saving too much money can sometimes cause a problem.",
+            "3–5": "Learn that a real benefit can have a limit on savings, with an adult.",
+            "6–8": "Identify the real asset limit that endangers a specific benefit, with a checker.",
+            "9–10": "Manage real savings so they don't cross a benefit's asset limit, on your own.",
+            "11–12": "Explain to someone else how a real asset limit can endanger a benefit."
+          }
+        },
+        {
+          "theme": "A goal with a date on it",
+          "description": "A goal with a date attached, which is the difference between saving and intending.",
+          "bands": {
+            "K–2": "Ask an adult to help you save for something you want by a certain day.",
+            "3–5": "Set one real savings goal with a date, with an adult's help.",
+            "6–8": "Identify what real makes a savings goal with a date achievable, with a checker.",
+            "9–10": "Build and track a real savings goal with a date to a working plan, alone.",
+            "11–12": "Advise someone else on setting a real savings goal with an achievable date."
+          }
+        },
+        {
+          "theme": "Saving for a deposit",
+          "description": "Saving toward a deposit, and the other costs that arrive with a tenancy.",
+          "bands": {
+            "K–2": "Ask an adult why someone saves money before moving into a new home.",
+            "3–5": "Learn one real reason people save for a deposit, with an adult's help.",
+            "6–8": "Identify the real size of deposit typically needed for a given case, checked.",
+            "9–10": "Build a real savings plan aimed at a housing deposit, on your own.",
+            "11–12": "Advise someone else on real strategies for saving toward a deposit."
+          }
+        },
+        {
+          "theme": "Saving for a document",
+          "description": "Saving for a document, which is often the cheapest unlock available.",
+          "bands": {
+            "K–2": "Ask an adult why getting an official paper sometimes costs money.",
+            "3–5": "Learn one real document that costs money to obtain, with an adult's help.",
+            "6–8": "Identify the real cost of a document a family actually needs, with a checker.",
+            "9–10": "Plan and save for a real document's actual cost, on your own.",
+            "11–12": "Explain to someone else why saving for a real document matters so much."
+          }
+        },
+        {
+          "theme": "Losing savings and starting again",
+          "description": "Losing savings and restarting without treating the loss as the end of it.",
+          "bands": {
+            "K–2": "Ask an adult what to do if saved money gets spent on an emergency.",
+            "3–5": "Learn that real savings can get wiped out and rebuilt, with an adult.",
+            "6–8": "Identify the real first steps to rebuild savings after losing them, checked.",
+            "9–10": "Rebuild real savings from zero after a genuine setback, on your own.",
+            "11–12": "Advise someone else on real steps to rebuild savings after a setback."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "RP",
+      "name": "Repair: arrears, debt, and getting back to level",
+      "themes": [
+        {
+          "theme": "Arrears: the number and the story behind it",
+          "description": "Arrears as a number and as a history, both of which matter in a negotiation.",
+          "bands": {
+            "K–2": "Ask an adult what it means to owe money for a while.",
+            "3–5": "Learn that a real arrears number has a real story behind it, with an adult.",
+            "6–8": "Identify the real story behind a given arrears number, with a checker.",
+            "9–10": "Reconstruct, for a real case, the story behind an arrears balance, on your own.",
+            "11–12": "Explain to someone else why the real story behind arrears matters as much as the number."
+          }
+        },
+        {
+          "theme": "Negotiating with the party you owe",
+          "description": "Negotiating with the party you owe, and what they can actually agree to.",
+          "bands": {
+            "K–2": "Ask an adult how to talk to someone you owe money to.",
+            "3–5": "Learn one real way to start a conversation about owed money, with an adult.",
+            "6–8": "Identify a real strategy for negotiating a debt down or out, with a checker.",
+            "9–10": "Negotiate a real debt with the party owed to a workable outcome, alone.",
+            "11–12": "Advise someone else on real strategies for negotiating with a creditor."
+          }
+        },
+        {
+          "theme": "Rent relief and the windows it opens",
+          "description": "Rent relief programmes, their windows, and the documents each requires.",
+          "bands": {
+            "K–2": "Ask an adult what it means when help pays part of a late rent bill.",
+            "3–5": "Learn that a real rent relief programme can open a window of help, with an adult.",
+            "6–8": "Identify the real window during which a rent relief programme applies, checked.",
+            "9–10": "Apply for real rent relief within the actual window it opens, on your own.",
+            "11–12": "Explain to someone else the real windows that rent relief programmes open."
+          }
+        },
+        {
+          "theme": "Credit reports and what is on yours",
+          "description": "Credit reports: obtaining yours, reading it, and what actually sits on it.",
+          "bands": {
+            "K–2": "Ask an adult what a credit report is and who keeps track.",
+            "3–5": "Learn one real thing that shows up on a credit report, with an adult.",
+            "6–8": "Identify what real items commonly appear on a credit report, with a checker.",
+            "9–10": "Obtain and read a real credit report for what it actually contains, alone.",
+            "11–12": "Explain to someone else what a real credit report actually tracks."
+          }
+        },
+        {
+          "theme": "Disputing something that is wrong",
+          "description": "Disputing an error, the process, and the timescales that apply.",
+          "bands": {
+            "K–2": "Ask an adult what to do if a paper says something untrue about you.",
+            "3–5": "Learn one real step to dispute a wrong item, with an adult's help.",
+            "6–8": "Identify the real process for disputing an incorrect credit item, with a checker.",
+            "9–10": "File a real dispute for an incorrect item and follow it through, on your own.",
+            "11–12": "Explain to someone else the real process for disputing something that is wrong."
+          }
+        },
+        {
+          "theme": "Bankruptcy: what it does and does not clear",
+          "description": "Bankruptcy: what it clears, what survives it, and who it suits.",
+          "bands": {
+            "K–2": "Ask an adult what it means to start over financially.",
+            "3–5": "Learn that a real bankruptcy clears some debts but not all, with an adult.",
+            "6–8": "Identify what real debts bankruptcy does and does not clear, with a checker.",
+            "9–10": "Evaluate, for a real case, whether bankruptcy would clear the debts at issue.",
+            "11–12": "Explain to someone else what a real bankruptcy actually clears and what remains."
+          }
+        },
+        {
+          "theme": "Court fees and waivers",
+          "description": "Court fees and the waiver that removes them, which is routinely not applied for.",
+          "bands": {
+            "K–2": "Ask an adult why going to court sometimes costs money.",
+            "3–5": "Learn that a real court fee can sometimes be waived, with an adult.",
+            "6–8": "Identify the real conditions that qualify someone for a fee waiver, checked.",
+            "9–10": "Apply for a real court fee waiver using the actual qualifying conditions, alone.",
+            "11–12": "Explain to someone else the real conditions that qualify for a fee waiver."
+          }
+        },
+        {
+          "theme": "A garnishment and its limits",
+          "description": "Garnishment, its limits, and the income that cannot be taken.",
+          "bands": {
+            "K–2": "Ask an adult what it means if part of a paycheck gets taken away.",
+            "3–5": "Learn that a real garnishment has a limit on how much it can take, with an adult.",
+            "6–8": "Identify the real legal limit on a given wage garnishment, with a checker.",
+            "9–10": "Check a real garnishment against the actual legal limit that applies, alone.",
+            "11–12": "Explain to someone else the real limits that bound a wage garnishment."
+          }
+        },
+        {
+          "theme": "Getting to level, then staying there",
+          "description": "Getting to level, and the specific habits that keep it from slipping back.",
+          "bands": {
+            "K–2": "Ask an adult what it means to finally catch up on bills.",
+            "3–5": "Learn one real habit that helps someone stay caught up, with an adult.",
+            "6–8": "Identify the real habits that keep a household caught up once it gets there, checked.",
+            "9–10": "Build a real plan to reach level and then actually stay there, on your own.",
+            "11–12": "Advise someone else on real habits that keep a household level long-term."
+          }
+        },
+        {
+          "theme": "The month after the last payment",
+          "description": "The month after the last payment, which is where most plans quietly fail.",
+          "bands": {
+            "K–2": "Ask an adult what changes the month after a debt is finally paid off.",
+            "3–5": "Learn one real thing that changes once a debt is paid off, with an adult.",
+            "6–8": "Identify what real opportunities open up the month after the last payment, checked.",
+            "9–10": "Plan, for a real case, what to do with the month after the last payment, alone.",
+            "11–12": "Advise someone else on real next steps for the month after the last payment."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,587 @@
+{
+  "pack": "Housing & Tenancy",
+  "override": "band-suffix",
+  "note": "Promotion to the tracked schema (v0.88.0). This pack's track and description were already non-empty in the raw source import, carrying the band-suffix content debt from the start (not a fill-empty case). \"override\": \"band-suffix\" replaces exactly those suffixed rows with authored band sentences, the same counted exception used for the sector-OS packs (v0.72.0). Track names, prefixes and the shared description text are copied verbatim from data/source/Cognition.X_all_blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "HS",
+      "name": "Housing and the room you live in",
+      "themes": [
+        {
+          "theme": "What a room has to do",
+          "description": "The minimum a room has to provide, what is negotiable, and what is not lawful to be without.",
+          "bands": {
+            "K–2": "Ask an adult what a bedroom needs to have, like a window.",
+            "3–5": "Name one thing every real room should have, with an adult's help.",
+            "6–8": "List the real minimum a room must provide, with a checker.",
+            "9–10": "Assess a real room against the real minimum it must provide, on your own.",
+            "11–12": "Explain to someone else what a real room is legally required to provide."
+          }
+        },
+        {
+          "theme": "Reading a building, floor by floor",
+          "description": "Reading a building: what is on each floor, who controls it, and where the problems concentrate.",
+          "bands": {
+            "K–2": "Walk through a building with an adult and point at each floor.",
+            "3–5": "Notice what's different on each real floor of a building, with an adult.",
+            "6–8": "Read a real building floor by floor for who controls what, with a checker.",
+            "9–10": "Read a real building's floors to find where problems concentrate, on your own.",
+            "11–12": "Teach someone else how to read a real building floor by floor."
+          }
+        },
+        {
+          "theme": "Shared kitchens, shared bathrooms, shared rules",
+          "description": "Shared kitchens and bathrooms: the written rules, the actual rules, and the gap between them.",
+          "bands": {
+            "K–2": "Follow the rules for a shared bathroom at home, with an adult.",
+            "3–5": "Name a real rule for a shared kitchen or bathroom, with an adult's help.",
+            "6–8": "Identify a real gap between written and actual shared-space rules, with a checker.",
+            "9–10": "Navigate a real shared kitchen or bathroom's rules on your own.",
+            "11–12": "Explain to someone else the real gap between written and lived shared rules."
+          }
+        },
+        {
+          "theme": "Heat, light and the hours they run",
+          "description": "Heating and lighting: when they are supposed to run and what to do when they do not.",
+          "bands": {
+            "K–2": "Ask an adult when the heat is supposed to come on.",
+            "3–5": "Learn when real heating and lighting are supposed to run, with an adult.",
+            "6–8": "Identify real heating or lighting hours and what to do if they fail, with a checker.",
+            "9–10": "Respond correctly when real heating or lighting fails to run, on your own.",
+            "11–12": "Explain to someone else the real standard for heating and lighting hours."
+          }
+        },
+        {
+          "theme": "What is yours and what is the building’s",
+          "description": "The boundary between your property and the building’s, which decides who fixes what.",
+          "bands": {
+            "K–2": "Ask an adult which things in a room belong to you.",
+            "3–5": "Name one thing that belongs to the building, not to you, with an adult.",
+            "6–8": "Identify a real boundary between personal and building property, with a checker.",
+            "9–10": "Determine, for a real repair, whose responsibility it actually is, on your own.",
+            "11–12": "Explain to someone else the real boundary that decides who fixes what."
+          }
+        },
+        {
+          "theme": "Noise, neighbours and the wall between",
+          "description": "Noise, the wall, and the difference between a nuisance and a habitability problem.",
+          "bands": {
+            "K–2": "Be quiet so you don't disturb a neighbour, with an adult.",
+            "3–5": "Learn one rule about noise and neighbours, with an adult's help.",
+            "6–8": "Distinguish a real nuisance from a real habitability problem, with a checker.",
+            "9–10": "Handle a real noise dispute with a neighbour appropriately, on your own.",
+            "11–12": "Explain to someone else the real difference between nuisance and habitability."
+          }
+        },
+        {
+          "theme": "Keys, locks and who else holds one",
+          "description": "Who holds a key to your room, what notice they owe you, and when entry is lawful.",
+          "bands": {
+            "K–2": "Ask an adult who else has a key to your home.",
+            "3–5": "Learn who real else might hold a key to a home, with an adult's help.",
+            "6–8": "Identify what real notice is owed before someone enters, with a checker.",
+            "9–10": "Determine when a real entry to your home is lawful, on your own.",
+            "11–12": "Explain to someone else the real rules on notice and lawful entry."
+          }
+        },
+        {
+          "theme": "Storage when there is none",
+          "description": "Storing what matters when there is no space, and what never goes in a shared area.",
+          "bands": {
+            "K–2": "Find a small place to keep your things, with an adult.",
+            "3–5": "Store something safely when space is tight, with an adult's help.",
+            "6–8": "Identify what real never goes in a shared storage area, with a checker.",
+            "9–10": "Store real belongings safely when space is genuinely limited, on your own.",
+            "11–12": "Advise someone else on real storage strategies when there is none."
+          }
+        },
+        {
+          "theme": "A room that is also a workplace",
+          "description": "A room that is also where you work, and the boundary that keeps it liveable.",
+          "bands": {
+            "K–2": "Ask an adult if you can do homework at the kitchen table.",
+            "3–5": "Learn one boundary for working in a shared real space, with an adult.",
+            "6–8": "Identify a real boundary that keeps a work-room liveable, with a checker.",
+            "9–10": "Maintain a real liveable boundary in a room that is also a workplace.",
+            "11–12": "Explain to someone else the real boundary between living and working in one room."
+          }
+        },
+        {
+          "theme": "What changes when somebody stays over",
+          "description": "What changes legally and practically when somebody stays, and the occupancy rule underneath it.",
+          "bands": {
+            "K–2": "Ask an adult what happens when a guest stays the night.",
+            "3–5": "Learn that a real guest staying long changes things, with an adult.",
+            "6–8": "Identify the real occupancy rule that applies when someone stays, with a checker.",
+            "9–10": "Explain, for a real situation, what legally and practically changes with a guest.",
+            "11–12": "Explain to someone else the real occupancy rule underneath a long stay."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "TN",
+      "name": "Tenancy: what a lease actually says",
+      "themes": [
+        {
+          "theme": "The document you signed and where it is",
+          "description": "Finding, reading and safely storing the document that governs where you live.",
+          "bands": {
+            "K–2": "Ask an adult to show you the paper that says you can live somewhere.",
+            "3–5": "Learn that a real lease is a paper an adult signed, with an adult's help.",
+            "6–8": "Locate a real lease and identify its key terms, with a checker.",
+            "9–10": "Keep a real lease safe and find any clause in it on your own.",
+            "11–12": "Explain to someone else why a real lease's location and terms matter."
+          }
+        },
+        {
+          "theme": "Rent: the amount, the date, the proof",
+          "description": "Rent: the exact amount, the exact date, and proof that it was paid.",
+          "bands": {
+            "K–2": "Ask an adult how much rent costs and when it's due.",
+            "3–5": "Learn the real amount and due date for rent, with an adult's help.",
+            "6–8": "Identify what real proof of rent payment should look like, with a checker.",
+            "9–10": "Track a real rent amount, due date and proof of payment, on your own.",
+            "11–12": "Explain to someone else why proof of rent payment matters so much."
+          }
+        },
+        {
+          "theme": "What the lease says you may do",
+          "description": "The rights the lease grants, read out of the document rather than assumed.",
+          "bands": {
+            "K–2": "Ask an adult what the rules of your home allow.",
+            "3–5": "Name one real thing a lease says a tenant may do, with an adult's help.",
+            "6–8": "Identify a real permission granted by a lease's actual text, with a checker.",
+            "9–10": "Determine, from a real lease, what it actually permits, on your own.",
+            "11–12": "Explain to someone else how to read a real lease for its permissions."
+          }
+        },
+        {
+          "theme": "What it says you may not",
+          "description": "The restrictions, including the ones that are unenforceable.",
+          "bands": {
+            "K–2": "Ask an adult what rules you're not allowed to break at home.",
+            "3–5": "Name one real thing a lease says a tenant may not do, with an adult.",
+            "6–8": "Identify a real restriction in a lease's actual text, with a checker.",
+            "9–10": "Determine, from a real lease, what it actually forbids, on your own.",
+            "11–12": "Explain to someone else how to read a real lease for its restrictions."
+          }
+        },
+        {
+          "theme": "Guests, and the rule that is really about occupancy",
+          "description": "Guest clauses, which are almost always about occupancy and rent rather than visitors.",
+          "bands": {
+            "K–2": "Ask an adult if a friend can stay over for a night.",
+            "3–5": "Learn that a real lease limits how long guests can stay, with an adult.",
+            "6–8": "Identify the real occupancy limit hiding behind a guest rule, with a checker.",
+            "9–10": "Apply a real occupancy rule correctly to a guest situation, on your own.",
+            "11–12": "Explain to someone else why guest rules are really occupancy rules."
+          }
+        },
+        {
+          "theme": "Rent increases and the limit on them",
+          "description": "Rent increases, the notice required, and the local limit if there is one.",
+          "bands": {
+            "K–2": "Ask an adult why rent sometimes goes up.",
+            "3–5": "Learn that a real rent increase has rules around it, with an adult.",
+            "6–8": "Identify the real limit that applies to a given rent increase, with a checker.",
+            "9–10": "Check a real rent increase against the limit that applies to it, on your own.",
+            "11–12": "Explain to someone else the real limits that govern rent increases."
+          }
+        },
+        {
+          "theme": "Subsidy: who pays which part",
+          "description": "Subsidy: which portion each party pays, and what happens when your income changes.",
+          "bands": {
+            "K–2": "Ask an adult who helps pay for a home besides the family.",
+            "3–5": "Learn that a real subsidy pays part of somebody's rent, with an adult.",
+            "6–8": "Identify which real party pays which share of a subsidized rent, with a checker.",
+            "9–10": "Work out, for a real case, who pays which part of subsidized rent, alone.",
+            "11–12": "Explain to someone else how a real rent subsidy actually gets split."
+          }
+        },
+        {
+          "theme": "Renewal, and what happens if nobody renews",
+          "description": "Renewal, holdover, and what your tenancy becomes if nobody signs anything.",
+          "bands": {
+            "K–2": "Ask an adult what happens when a paper needs signing again.",
+            "3–5": "Learn that a real lease sometimes needs renewing, with an adult's help.",
+            "6–8": "Identify what real happens to a tenancy if nobody renews it, with a checker.",
+            "9–10": "Determine, for a real lease, what happens if it isn't renewed, on your own.",
+            "11–12": "Explain to someone else what really happens when a lease goes unrenewed."
+          }
+        },
+        {
+          "theme": "Assignment, sublet and why it matters",
+          "description": "Assignment and sublet: what is permitted, what is a breach, and why it is the common trap.",
+          "bands": {
+            "K–2": "Ask an adult if someone else could live in your room instead.",
+            "3–5": "Learn that a real tenant can sometimes hand a lease to someone else.",
+            "6–8": "Distinguish a real assignment from a real sublet, with a checker.",
+            "9–10": "Determine, for a real lease, whether assignment or sublet is allowed, alone.",
+            "11–12": "Explain to someone else why assigning differs from subletting, and why it matters."
+          }
+        },
+        {
+          "theme": "When the landlord changes",
+          "description": "A change of landlord, what transfers with the building, and what does not.",
+          "bands": {
+            "K–2": "Ask an adult what happens if the person who owns your home changes.",
+            "3–5": "Learn that a real building can be sold to a new owner, with an adult.",
+            "6–8": "Identify what real stays the same when a landlord changes, with a checker.",
+            "9–10": "Determine, for a real sale, what obligations carry over to a new owner, alone.",
+            "11–12": "Explain to someone else what really changes and stays the same in a sale."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "HB",
+      "name": "Habitability: heat, water, vermin, repair",
+      "themes": [
+        {
+          "theme": "Heat that does not come on",
+          "description": "Heat that does not come on: the standard, the record, and the first three steps.",
+          "bands": {
+            "K–2": "Ask an adult what to do when the home feels too cold.",
+            "3–5": "Learn that a real home is supposed to have working heat, with an adult.",
+            "6–8": "Identify the real standard a home's heat must meet, with a checker.",
+            "9–10": "Respond correctly when a real home's heat fails to meet that standard.",
+            "11–12": "Explain to someone else the real standard for heat and how to enforce it."
+          }
+        },
+        {
+          "theme": "Water: pressure, temperature, and the days without",
+          "description": "Water pressure, temperature and outages, and the threshold that makes each actionable.",
+          "bands": {
+            "K–2": "Ask an adult what to do if the water stops working.",
+            "3–5": "Learn that real water should have pressure and heat, with an adult.",
+            "6–8": "Identify what real counts as a water outage worth reporting, with a checker.",
+            "9–10": "Document and report a real water outage correctly, on your own.",
+            "11–12": "Explain to someone else how a real water outage should be tracked and reported."
+          }
+        },
+        {
+          "theme": "Vermin, and the record that makes it actionable",
+          "description": "Vermin, and the difference between a complaint and a record that forces action.",
+          "bands": {
+            "K–2": "Tell an adult if you see a bug or mouse at home.",
+            "3–5": "Learn that a real vermin problem needs to be written down, with an adult.",
+            "6–8": "Identify what real record turns a vermin complaint into action, with a checker.",
+            "9–10": "Build a real record of a vermin problem that supports action, on your own.",
+            "11–12": "Explain to someone else why a real written record makes a vermin complaint actionable."
+          }
+        },
+        {
+          "theme": "Mould, damp and the thing behind the wall",
+          "description": "Mould and damp: what is visible, what is behind the wall, and who must investigate.",
+          "bands": {
+            "K–2": "Tell an adult if a wall looks wet or has spots on it.",
+            "3–5": "Learn that real mould often hides behind a wall, with an adult.",
+            "6–8": "Identify real signs of hidden damp or mould, with a checker.",
+            "9–10": "Investigate and document a real damp or mould problem, on your own.",
+            "11–12": "Explain to someone else why the real cause is usually behind the wall, not on it."
+          }
+        },
+        {
+          "theme": "A repair request that gets answered",
+          "description": "A repair request written so that it starts a clock and creates a record.",
+          "bands": {
+            "K–2": "Ask an adult to help you ask for something broken to be fixed.",
+            "3–5": "Learn what a real repair request needs to say, with an adult's help.",
+            "6–8": "Identify what makes a real repair request likely to get answered, with a checker.",
+            "9–10": "Write and send a real repair request that gets answered, on your own.",
+            "11–12": "Teach someone else how to write a real repair request that gets answered."
+          }
+        },
+        {
+          "theme": "A repair request that does not",
+          "description": "What to do when a repair request is ignored, in the order the steps actually work.",
+          "bands": {
+            "K–2": "Ask an adult what to do if nobody fixes something broken.",
+            "3–5": "Learn that a real repair request sometimes gets ignored, with an adult.",
+            "6–8": "Identify the real next step after an unanswered repair request, with a checker.",
+            "9–10": "Escalate a real unanswered repair request correctly, on your own.",
+            "11–12": "Explain to someone else the real escalation path when a repair goes unanswered."
+          }
+        },
+        {
+          "theme": "Photographs that will still mean something in six months",
+          "description": "Photographs with date, scale and location, which is what makes them evidence six months later.",
+          "bands": {
+            "K–2": "Ask an adult to take a picture of something broken at home.",
+            "3–5": "Learn what a real useful photograph of damage should show, with an adult.",
+            "6–8": "Identify what real detail a photograph needs to prove a problem later, with a checker.",
+            "9–10": "Take and label real photographs that will hold up months later, on your own.",
+            "11–12": "Teach someone else how to document real damage so it holds up later."
+          }
+        },
+        {
+          "theme": "The inspection, and what to ask for during it",
+          "description": "The inspection: being present, what to point at, and what to ask the inspector to write.",
+          "bands": {
+            "K–2": "Ask an adult what happens when someone comes to check the home.",
+            "3–5": "Learn what a real inspector looks at during a visit, with an adult.",
+            "6–8": "Identify what real questions to raise during an inspection, with a checker.",
+            "9–10": "Prepare for and participate in a real inspection effectively, on your own.",
+            "11–12": "Explain to someone else what to ask for during a real habitability inspection."
+          }
+        },
+        {
+          "theme": "Rent withholding: what it is and what it costs",
+          "description": "Rent withholding: the legal conditions, the escrow, and the risk it carries.",
+          "bands": {
+            "K–2": "Ask an adult what happens if rent isn't paid on time.",
+            "3–5": "Learn that withholding real rent is a serious step, with an adult's help.",
+            "6–8": "Identify the real risks of withholding rent over a repair dispute, with a checker.",
+            "9–10": "Weigh, for a real case, whether rent withholding is the right move, on your own.",
+            "11–12": "Explain to someone else the real costs and requirements of rent withholding."
+          }
+        },
+        {
+          "theme": "When the building is sold mid-complaint",
+          "description": "A sale mid-complaint, and keeping a record alive across an ownership change.",
+          "bands": {
+            "K–2": "Ask an adult what happens to a complaint if the home changes owners.",
+            "3–5": "Learn that a real complaint can outlast a change of owner, with an adult.",
+            "6–8": "Identify what real happens to an open complaint during a sale, with a checker.",
+            "9–10": "Carry a real habitability complaint through a change of ownership, alone.",
+            "11–12": "Explain to someone else what really happens to a complaint mid-sale."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "EV",
+      "name": "Eviction: notice, answer, hearing, outcome",
+      "themes": [
+        {
+          "theme": "A notice, and the clock it starts",
+          "description": "A notice starts a clock. Identifying which notice, which clock, and the date it ends.",
+          "bands": {
+            "K–2": "Ask an adult what a paper on the door might mean.",
+            "3–5": "Learn that a real notice starts a countdown, with an adult's help.",
+            "6–8": "Identify what real clock a given notice starts, with a checker.",
+            "9–10": "Determine, from a real notice, exactly what deadline it starts, on your own.",
+            "11–12": "Explain to someone else how a real notice's clock actually works."
+          }
+        },
+        {
+          "theme": "Three days, thirty days, sixty days",
+          "description": "The common notice periods, what each is for, and which of them is contestable.",
+          "bands": {
+            "K–2": "Ask an adult what the numbers on an official paper might mean.",
+            "3–5": "Learn that real notices come with different day counts, with an adult.",
+            "6–8": "Identify why a real notice carries three, thirty, or sixty days, with a checker.",
+            "9–10": "Determine, for a real case, which day count applies and why, on your own.",
+            "11–12": "Explain to someone else the real reasons behind different notice periods."
+          }
+        },
+        {
+          "theme": "The answer, and the deadline for filing it",
+          "description": "The answer: what it is, where it is filed, and the deadline that ends the option.",
+          "bands": {
+            "K–2": "Ask an adult what it means to answer an official paper.",
+            "3–5": "Learn that a real answer to a notice has its own deadline, with an adult.",
+            "6–8": "Identify the real deadline for filing an answer, with a checker.",
+            "9–10": "File a real answer to a notice before its deadline, on your own.",
+            "11–12": "Explain to someone else why missing a real answer deadline is so costly."
+          }
+        },
+        {
+          "theme": "What a hearing is actually like",
+          "description": "What a hearing is actually like, so the room is not the surprise.",
+          "bands": {
+            "K–2": "Ask an adult what happens in a room where a judge listens.",
+            "3–5": "Learn what a real hearing room and process look like, with an adult.",
+            "6–8": "Identify what real steps happen during a hearing, with a checker.",
+            "9–10": "Prepare for and participate in a real hearing, on your own.",
+            "11–12": "Explain to someone else what a real hearing is actually like, step by step."
+          }
+        },
+        {
+          "theme": "Evidence: what counts and what does not",
+          "description": "Evidence that counts, evidence that does not, and how it is presented.",
+          "bands": {
+            "K–2": "Ask an adult what proof means when telling someone what happened.",
+            "3–5": "Learn that real evidence has to actually prove something, with an adult.",
+            "6–8": "Identify what real evidence counts in a housing hearing, with a checker.",
+            "9–10": "Assemble real evidence that will actually count in a hearing, on your own.",
+            "11–12": "Explain to someone else the real difference between evidence and a story."
+          }
+        },
+        {
+          "theme": "Settlement, and what you give up in one",
+          "description": "Settlement: what it ends, what it costs, and what you sign away.",
+          "bands": {
+            "K–2": "Ask an adult what it means when two sides agree instead of fighting.",
+            "3–5": "Learn that a real settlement is a trade, with an adult's help.",
+            "6–8": "Identify what real terms a settlement typically trades away, with a checker.",
+            "9–10": "Evaluate a real settlement offer for what it actually costs, on your own.",
+            "11–12": "Explain to someone else what a real settlement gives up in exchange for certainty."
+          }
+        },
+        {
+          "theme": "Ellis Act: what it is and who it moves",
+          "description": "The Ellis Act, what it permits, who it moves, and what is owed to them.",
+          "bands": {
+            "K–2": "Ask an adult why a whole building sometimes has to move out.",
+            "3–5": "Learn that a real law lets owners exit the rental business, with an adult.",
+            "6–8": "Identify who a real Ellis Act eviction actually displaces, with a checker.",
+            "9–10": "Determine, for a real case, whether an Ellis Act eviction applies, on your own.",
+            "11–12": "Explain to someone else what a real Ellis Act eviction is and who it moves."
+          }
+        },
+        {
+          "theme": "Owner move-in and the questions it invites",
+          "description": "Owner move-in, its conditions, and the questions that test whether they are met.",
+          "bands": {
+            "K–2": "Ask an adult why an owner might want to live in their own building.",
+            "3–5": "Learn that a real owner can sometimes move into a rented unit, with an adult.",
+            "6–8": "Identify the real questions an owner move-in eviction should raise, with a checker.",
+            "9–10": "Investigate a real owner move-in claim for whether it holds up, on your own.",
+            "11–12": "Explain to someone else the real questions an owner move-in claim invites."
+          }
+        },
+        {
+          "theme": "A judgment, and what follows it",
+          "description": "A judgment and what follows: lockout timing, belongings, and the appeal window.",
+          "bands": {
+            "K–2": "Ask an adult what happens after a judge makes a final decision.",
+            "3–5": "Learn that a real judgment is a final decision with consequences, with an adult.",
+            "6–8": "Identify what real steps follow a housing judgment, with a checker.",
+            "9–10": "Navigate the real steps that follow a judgment, on your own.",
+            "11–12": "Explain to someone else what really follows a housing judgment, and for how long."
+          }
+        },
+        {
+          "theme": "Records: what an eviction leaves behind",
+          "description": "What an eviction leaves on a record, for how long, and what can be sealed.",
+          "bands": {
+            "K–2": "Ask an adult if a problem on paper can follow you.",
+            "3–5": "Learn that a real eviction can show up in records later, with an adult.",
+            "6–8": "Identify what real records an eviction case creates, with a checker.",
+            "9–10": "Assess, for a real case, what records an eviction will leave behind, alone.",
+            "11–12": "Explain to someone else what a real eviction record actually follows a person into."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "MV",
+      "name": "Moving: entry, transfer, exit, and what follows you",
+      "themes": [
+        {
+          "theme": "Coordinated entry, and how a place is offered",
+          "description": "Coordinated entry: how a placement is actually offered and what precedes the offer.",
+          "bands": {
+            "K–2": "Ask an adult how a family gets offered a new place to live.",
+            "3–5": "Learn that a real system matches families to housing, with an adult.",
+            "6–8": "Identify how a real coordinated entry system ranks and offers housing, with a checker.",
+            "9–10": "Navigate a real coordinated entry system to receive an offer, on your own.",
+            "11–12": "Explain to someone else how a real coordinated entry system actually works."
+          }
+        },
+        {
+          "theme": "The transfer request and its grounds",
+          "description": "A transfer request, its grounds, and the evidence each ground needs.",
+          "bands": {
+            "K–2": "Ask an adult why a family might need to move to a different home.",
+            "3–5": "Learn one real reason a family might request a transfer, with an adult.",
+            "6–8": "Identify the real grounds that support a housing transfer request, with a checker.",
+            "9–10": "File a real transfer request on grounds that will hold up, on your own.",
+            "11–12": "Explain to someone else what real grounds actually support a transfer request."
+          }
+        },
+        {
+          "theme": "Packing a life into what you can carry",
+          "description": "Packing a life into what can be carried, and deciding in advance rather than on the day.",
+          "bands": {
+            "K–2": "Help an adult pack a box of your things to move.",
+            "3–5": "Decide what real things matter most to pack first, with an adult's help.",
+            "6–8": "Identify what real priorities should guide packing under a deadline, with a checker.",
+            "9–10": "Plan and execute a real move within tight space and time limits, on your own.",
+            "11–12": "Advise someone else on real priorities for packing a life under pressure."
+          }
+        },
+        {
+          "theme": "Address changes: the fourteen places that need one",
+          "description": "The address change list: benefits, health, bank, phone, court, and eleven others.",
+          "bands": {
+            "K–2": "Ask an adult who needs to know when you move.",
+            "3–5": "Name a few real places that need to know about an address change, with an adult.",
+            "6–8": "Identify the real range of places an address change must reach, with a checker.",
+            "9–10": "Update a real address across all the places that actually need it, on your own.",
+            "11–12": "Explain to someone else the real full list of places an address change must reach."
+          }
+        },
+        {
+          "theme": "Mail, and losing it",
+          "description": "Mail, and the specific ways it is lost during a move, each of which is preventable.",
+          "bands": {
+            "K–2": "Ask an adult what happens to mail sent to an old address.",
+            "3–5": "Learn that real mail can get lost in a move, with an adult's help.",
+            "6–8": "Identify what real mail is most costly to lose in a move, with a checker.",
+            "9–10": "Protect real important mail through the transition of a move, on your own.",
+            "11–12": "Explain to someone else why losing real mail during a move can be so costly."
+          }
+        },
+        {
+          "theme": "Deposits, and getting one back",
+          "description": "Deposits: the conditions for return, the walkthrough, and the deadline for the itemised list.",
+          "bands": {
+            "K–2": "Ask an adult what a deposit is and where it goes.",
+            "3–5": "Learn what a real deposit is supposed to cover, with an adult's help.",
+            "6–8": "Identify what real steps help get a deposit back in full, with a checker.",
+            "9–10": "Document a move-out to get a real deposit back in full, on your own.",
+            "11–12": "Explain to someone else the real steps that maximize getting a deposit back."
+          }
+        },
+        {
+          "theme": "The first night somewhere new",
+          "description": "The first night in a new place, planned so that it is not improvised.",
+          "bands": {
+            "K–2": "Ask an adult what to bring for the first night in a new home.",
+            "3–5": "Name a real thing worth having ready for a first night, with an adult.",
+            "6–8": "Identify what real essentials matter most for a first night, with a checker.",
+            "9–10": "Plan a real first night in a new home so it goes smoothly, on your own.",
+            "11–12": "Advise someone else on what really matters for a first night in a new home."
+          }
+        },
+        {
+          "theme": "What follows you: records, arrears, reputation",
+          "description": "Records, arrears and reputation, and which of them actually follow you.",
+          "bands": {
+            "K–2": "Ask an adult if problems from one home can follow you to the next.",
+            "3–5": "Learn that real housing problems can follow a family, with an adult.",
+            "6–8": "Identify what real records or debts can follow someone between homes, with a checker.",
+            "9–10": "Manage real records and arrears so they don't block the next home, on your own.",
+            "11–12": "Explain to someone else what real housing history actually follows a person."
+          }
+        },
+        {
+          "theme": "Refusing an offer, and the cost of refusing",
+          "description": "Refusing an offer: the grounds, the consequence, and whether it resets a position.",
+          "bands": {
+            "K–2": "Ask an adult what happens if a family says no to an offered home.",
+            "3–5": "Learn that a real refusal of housing can have consequences, with an adult.",
+            "6–8": "Identify the real cost of refusing a housing offer, with a checker.",
+            "9–10": "Weigh, for a real offer, whether refusing is worth the real cost, on your own.",
+            "11–12": "Explain to someone else the real consequences of refusing a housing offer."
+          }
+        },
+        {
+          "theme": "Moving up: what a housing ladder actually is",
+          "description": "What a housing ladder is, whether it exists locally, and what a rung actually requires.",
+          "bands": {
+            "K–2": "Ask an adult what it means to move to a better home over time.",
+            "3–5": "Learn that real housing can improve step by step, with an adult's help.",
+            "6–8": "Identify the real steps that make up a housing ladder, with a checker.",
+            "9–10": "Plan a real path up a housing ladder for a given situation, on your own.",
+            "11–12": "Explain to someone else what a real housing ladder actually looks like."
+          }
+        }
+      ]
+    }
+  ]
+}
