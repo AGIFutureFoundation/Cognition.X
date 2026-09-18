@@ -219,7 +219,15 @@ def apply_promotions(rows):
     There, a theme's `bands` carries only the keys it actually has rows
     at; each grade's row is filled from that grade's own sentence, with
     no suffix. Also plain fill-empty, and `track`/`code` are left
-    deferred for the same tracked-shape reason as `unbanded`."""
+    deferred for the same tracked-shape reason as `unbanded`.
+
+    Grade filter (v0.95.0): rows are eligible whenever their `grade` is in
+    `GRADE_LEVEL`, not just the five standard `BANDS` — this reaches K–12,
+    Trade School and Regional's single-grade and adult-route rows, and
+    Health & Community's two `—`-grade capstones, none of which fit in
+    `BAND_LEVEL`. Those packs use `unbanded` (one sentence per theme; a
+    theme repeated verbatim across several rows, as Regional's four
+    cross-region themes are, still gets that one sentence on every row)."""
     if not PROMOTIONS.is_dir():
         return
     promos, overriders, overmap, unbanded, partial_bands_packs = {}, {}, {}, set(), set()
@@ -265,10 +273,9 @@ def apply_promotions(rows):
                 r["description"] = new
                 overrode += 1
             continue
-        if not themap or r["track"] or r["theme"] not in themap or r["grade"] not in BAND_LEVEL:
+        if not themap or r["track"] or r["theme"] not in themap or r["grade"] not in GRADE_LEVEL:
             continue
         name, prefix, ti, desc, check, cred, bands = themap[r["theme"]]
-        bi = BANDS.index(r["grade"])
         is_unbanded = r["pack"] in unbanded
         is_partial = r["pack"] in partial_bands_packs
         if not is_unbanded and not is_partial:
@@ -278,7 +285,10 @@ def apply_promotions(rows):
             # track that fails the tracked-shape check in test_dataset().
             # Those two stay deferred; light_fill() still assigns `code` and
             # `level` structurally, exactly as it does for every foundation
-            # row that receives no promotion at all.
+            # row that receives no promotion at all. bi only makes sense for
+            # the standard five-band mechanism, whose grades are always in
+            # BANDS by construction.
+            bi = BANDS.index(r["grade"])
             r["track"] = name
             r["code"] = r["code"] or f"{prefix}-{ti*5 + bi + 1}"
             r["level"] = r["level"] or BAND_LEVEL[r["grade"]]

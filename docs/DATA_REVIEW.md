@@ -68,7 +68,16 @@ sections; the only other diff is the fonts `<link>`).
    and Health & Community's two `—`-grade rows (needing the
    `BAND_LEVEL`→`GRADE_LEVEL` extension), then the sector-OS and
    Education OS empty descriptions, whose theme/grade structure has not
-   yet been verified.
+   yet been verified. *Update (v0.95.0):* extended the grade filter and
+   filled K–12's 64 rows through `unbanded` (one row per theme, at one
+   of 13 single grades K–12). Trade School (47 rows, one row per theme
+   at a single adult-route grade) fits the same mechanism directly.
+   Regional (111 rows) mostly fits it too, except four of its 83 themes
+   are each repeated verbatim across 8 rows, one per named region — the
+   `unbanded` distinctness check will need scoping to distinct themes,
+   not rows, before that pack can ship. Health & Community's two
+   `—`-grade rows are now reachable and just need adding to its
+   existing promotion.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

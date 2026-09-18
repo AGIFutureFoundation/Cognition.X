@@ -1,68 +1,68 @@
 block_id,pack,track,code,grade,level,credential,theme,description,transfer_check
-CX-K12-0001,K–12,,LB-1,K,Explorer,Cadet: Counter,Counting the Depot,,Count a novel set of 12 mixed parts and match the numeral
-CX-K12-0002,K–12,,LB-2,K,Explorer,Cadet: Shape Sorter,Shapes that Roll,,Build a bot base from named shapes
-CX-K12-0003,K–12,,LB-3,K,Explorer,Cadet: Feeder,More or Fewer,,Solve two add/subtract-within-10 stories about the depot
-CX-K12-0004,K–12,,LB-4,K,Explorer,Depot Cadet,Measure and Compare,,Compare two objects on two attributes and explain in a drawing
-CX-K12-0005,K–12,,LB-5,K,Explorer,Bridge: Gear Cadet,Summer Bridge K→1: Gears in the Garden,,Count and compare a novel harvest set; name one gear pair
-CX-K12-0006,K–12,,LB-6,1,Explorer,Gear Cadet: Counter,Adding to Ten,,Solve three novel add/subtract-within-20 gear stories
-CX-K12-0007,K–12,,LB-7,1,Explorer,Gear Cadet: Inventory,Place Value at the Depot,,Represent a two-digit inventory count two ways
-CX-K12-0008,K–12,,LB-8,1,Explorer,Gear Cadet: Measurer,Measuring with Bots,,Measure a novel object with a non-standard unit and read a clock to the half hour
-CX-K12-0009,K–12,,LB-9,1,Explorer,Gear Cadet,Shapes and Halves,,Partition a shape into halves and describe it in writing
-CX-K12-0010,K–12,,LB-10,1,Explorer,Bridge: Belt Cadet,Summer Bridge 1→2: The Belt Camp,,Solve two belt stories within 20; measure and compare two sections
-CX-K12-0011,K–12,,LB-11,2,Explorer,Belt Cadet: Operator,Gear Tooth Operations II,,Solve a two-step gear story within 100
-CX-K12-0012,K–12,,LB-12,2,Explorer,Belt Cadet: Inventory,"Depot Inventory to 1,000",,Add and subtract three-digit inventory totals with explanation
-CX-K12-0013,K–12,,LB-13,2,Explorer,Belt Cadet: Log Keeper,The Repair Log,,"Produce a repair log with measurement, time and a bar graph"
-CX-K12-0014,K–12,,LB-14,2,Explorer,Belt Cadet,Belt Sections,,Partition a rectangle into rows and columns and count the squares
-CX-K12-0015,K–12,,LB-15,2,Explorer,Bridge: Sequencer,Summer Bridge 2→3: Sorting Floor Camp,,Build an array from a novel load and write its equal-groups sentence
-CX-K12-0016,K–12,,LB-16,3,Explorer,Sequencer: Patterns,Pattern & Sequence Bots,,Extend and explain a novel multiplication pattern
-CX-K12-0017,K–12,,LB-17,3,Explorer,Sequencer: Belt Operator,Fractions on the Conveyor I,,Place fractions on a number line and compare two belt speeds
-CX-K12-0018,K–12,,LB-18,3,Explorer,Sequencer: Gauge Reader,Gauge Reader,,Solve a novel area problem and read a scaled bar graph
-CX-K12-0019,K–12,,LB-19,3,Explorer,Junior Systems Cadet,Depot Inspection,,Fluent multiplication facts and a hand-written inspection report
-CX-K12-0020,K–12,,LB-20,3,Explorer,Bridge: Shape Mechanic,Summer Bridge 3→4: Crane Yard Camp,,Multi-step load problem; a fraction of a novel belt
-CX-K12-0021,K–12,,LB-21,4,Explorer,Shape Mechanic: Crane,Crane Arm Fold,,Multi-step word problem with a remainder interpreted in context
-CX-K12-0022,K–12,,LB-22,4,Explorer,Shape Mechanic: Belt,Fractions on the Conveyor II,,Add and subtract fractions with unlike denominators in a novel belt problem
-CX-K12-0023,K–12,,LB-23,4,Explorer,Shape Mechanic: Gauge,Measure the Machine,,Measure and sketch angles on a novel linkage; convert units
-CX-K12-0024,K–12,,LB-24,4,Explorer,Shape Mechanic,"Lines, Angles and the Coast",,Classify shapes by lines and angles and write the cursive engineering note
-CX-K12-0025,K–12,,LB-25,4,Explorer,Bridge: Gauge Watcher,Summer Bridge 4→5: Pump Station Camp,,Read a gauge to the hundredth; measure a novel angle
-CX-K12-0026,K–12,,LB-26,5,Explorer,Gauge Watcher: Sensors,Weather & Water Sensors I,,Decimal computation on a novel gauge log with a justified alert decision
-CX-K12-0027,K–12,,LB-27,5,Explorer,Gauge Watcher: Belt,Belt at Three-Quarter Speed,,Fraction multiplication and division in a novel pump-station problem
-CX-K12-0028,K–12,,LB-28,5,Explorer,Gauge Watcher: Data,Flood Alert Data,,Volume and unit conversion on a novel tank; data plot with a written conclusion
-CX-K12-0029,K–12,,LB-29,5,Explorer,Junior Systems Cadet (Ignite Era complete),Depot Map Coordinates,,Plot and interpret points on a novel map; classify shapes
-CX-K12-0030,K–12,,LB-30,5,Explorer,Bridge: Field Technician I,Summer Bridge 5→6: Port Preview,,Plot and read a novel yard map; solve one rate problem
-CX-K12-0031,K–12,,LB-31,6,Builder,Drive Tech,Ratios & Gear Trains,,Novel ratio table and unit-rate problem with a gear-train sketch
-CX-K12-0032,K–12,,LB-32,6,Builder,Junior Programmer I,Python Foundations I,,Write and evaluate an expression for a novel belt; debug a three-line loop
-CX-K12-0033,K–12,,LB-33,6,Builder,Yard Geometer,Container Geometry,,"Area, surface area and coordinate distance on a novel yard layout"
-CX-K12-0034,K–12,,LB-34,6,Builder,Data Tech I,Sensors & Noise I,,Describe center and spread of a novel sensor set and pick the reliable one
-CX-K12-0035,K–12,,LB-35,6,Builder,Bridge: Field Technician II,Summer Bridge 6→7: Terminal Summer Crew,,Proportion problem on a novel sensor set
-CX-K12-0036,K–12,,LB-36,7,Builder,Torque Tech,Proportional Torque,,Proportional reasoning with a percent margin on a novel load
-CX-K12-0037,K–12,,LB-37,7,Builder,Power Tech,Motor Margin Equations,,Two-step equation and inequality on a novel power budget
-CX-K12-0038,K–12,,LB-38,7,Builder,Path Planner I,Coordinate Robots I,,Scale drawing and circle problem on a novel gantry
-CX-K12-0039,K–12,,LB-39,7,Builder,Data Tech II,Sensor Sampling,,Probability and sampling inference on a novel sensor log
-CX-K12-0040,K–12,,LB-40,7,Builder,Bridge: Field Technician III,Summer Bridge 7→8: Grain Terminal Summer Crew,,Linear model of a novel belt; relay traced
-CX-K12-0041,K–12,,LB-41,8,Builder,Motion Analyst,Linear Motion Models,,Write and solve a linear model and a system on a novel sweep
-CX-K12-0042,K–12,,LB-42,8,Builder,Function Analyst,Servo Sweep Functions,,Interpret rate and initial value of a novel function in context
-CX-K12-0043,K–12,,LB-43,8,Builder,Reach Analyst,Coordinate Robots II & Pythagorean Reach,,Transformation sequence and Pythagorean reach on a novel arm
-CX-K12-0044,K–12,,LB-44,8,Builder,Field Technician (Applied Mechanics complete),"Circuits, Relays & Sensors II",,Bivariate data interpretation and a relay fault diagnosis
-CX-K12-0045,K–12,,LB-45,8,Builder,Bridge: Cleared Trainee,Summer Bridge 8→9: Terminal Onboarding Camp,,Safety-gate sign-off; linear system solved on a novel line
-CX-K12-0046,K–12,,LB-46,9,Practitioner,Cleared Trainee,Terminal Onboarding & Linear Models,,Safety-gate sign-off; linear model of a novel belt with units justified
-CX-K12-0047,K–12,,LB-47,9,Practitioner,Controls Specialist I,Linear Systems & Control,,System of equations and inequalities on a novel line; graph and interpret
-CX-K12-0048,K–12,,LB-48,9,Practitioner,Motion Modeler,Functions of Motion,,Interpret and build functions for a novel motion profile
-CX-K12-0049,K–12,,LB-49,9,Practitioner,Systems Programmer I,Statistics & the Controller Patch,,Code review passed; line of fit and correlation interpreted on a novel data set
-CX-K12-0050,K–12,,LB-50,9,Practitioner,Bridge: Twin Calibrator,Summer Bridge 9→10: Twin Summer Lab,,Scale factor found on a novel twin; SPC chart read
-CX-K12-0051,K–12,,LB-51,10,Practitioner,Twin Calibrator I,Scale the Twin,,Congruence and similarity proof on a novel rig; scale factor from two lengths
-CX-K12-0052,K–12,,LB-52,10,Practitioner,Twin Calibrator · Kinematics Lead,The Calcasieu Assembly Calibration,,Similarity and right-triangle trigonometry on a novel arm with new stroke lengths
-CX-K12-0053,K–12,,LB-53,10,Practitioner,Reach Diagnostician · Load Analyst,Two-Link Arm & Torque,,Law of cosines reach decision and vector balance on a novel actuator
-CX-K12-0054,K–12,,LB-54,10,Practitioner,Mechatronic Systems Specialist (Mechatronic-Math Block complete),Weld Paths & Thermal Systems,,Coordinate-geometry weld path and relay diagnosis on a novel cell
-CX-K12-0055,K–12,,LB-55,10,Practitioner,Bridge: Automation Tech,Summer Bridge 10→11: Site Induction,,Trig on a novel two-link arm; OSHA 10 card
-CX-K12-0056,K–12,,LB-56,11,Lead,Automation Tech I,PLC & Industrial Networks,,Polynomial and rational model on a novel line; fault traced and documented
-CX-K12-0057,K–12,,LB-57,11,Lead,Reliability Analyst,Predictive Fatigue Diagnostics,,Exponential and logarithmic solution on a novel reliability curve with a work order
-CX-K12-0058,K–12,,LB-58,11,Lead,Quality Analyst,Statistics for Quality,,Control chart and inference on a novel process; sampling plan defended
-CX-K12-0059,K–12,,LB-59,11,Lead,AI-CAD Analyst,AI-CAD & Trig Models,,Trigonometric model of a novel vibration and a twin-to-scan discrepancy report
-CX-K12-0060,K–12,,LB-60,11,Lead,Bridge: Capstone Lead,Summer Bridge 11→12: Capstone Summer,,Capstone brief accepted by the employer panel
-CX-K12-0061,K–12,,LB-61,12,Lead,Capstone Lead,Capstone Design,,Capstone proposal accepted by the employer panel
-CX-K12-0062,K–12,,LB-62,12,Lead,Credentialed Trainee,Industry-Based Certifications,,"IBC earned (NCCER Core, OSHA 10, AWS, EPA 608, CompTIA, PTEC or equivalent)"
-CX-K12-0063,K–12,,LB-63,12,Lead,Apprentice,Capstone Build & Work-Based Learning,,Employer-judged capstone passed; hours countersigned
-CX-K12-0064,K–12,,LB-64,12,Lead,Credentialed Graduate (Specialized Tracks complete),"Ledger, Placement & Launch",,Credential ledger verified by an employer; placement confirmed
+CX-K12-0001,K–12,,LB-1,K,Explorer,Cadet: Counter,Counting the Depot,Count a set of twelve mixed depot parts and match each count to its numeral.,Count a novel set of 12 mixed parts and match the numeral
+CX-K12-0002,K–12,,LB-2,K,Explorer,Cadet: Shape Sorter,Shapes that Roll,Build a rolling bot base out of named shapes and explain why each one was chosen.,Build a bot base from named shapes
+CX-K12-0003,K–12,,LB-3,K,Explorer,Cadet: Feeder,More or Fewer,Solve two add-and-subtract stories about parts moving through the depot.,Solve two add/subtract-within-10 stories about the depot
+CX-K12-0004,K–12,,LB-4,K,Explorer,Depot Cadet,Measure and Compare,Compare two depot objects on two attributes and explain the comparison in a drawing.,Compare two objects on two attributes and explain in a drawing
+CX-K12-0005,K–12,,LB-5,K,Explorer,Bridge: Gear Cadet,Summer Bridge K→1: Gears in the Garden,Count and compare a harvest from the garden and name one matching gear pair.,Count and compare a novel harvest set; name one gear pair
+CX-K12-0006,K–12,,LB-6,1,Explorer,Gear Cadet: Counter,Adding to Ten,Solve three add-and-subtract-within-twenty stories about the depot's gears.,Solve three novel add/subtract-within-20 gear stories
+CX-K12-0007,K–12,,LB-7,1,Explorer,Gear Cadet: Inventory,Place Value at the Depot,Represent a two-digit inventory count two different ways.,Represent a two-digit inventory count two ways
+CX-K12-0008,K–12,,LB-8,1,Explorer,Gear Cadet: Measurer,Measuring with Bots,Measure an object with a bot-sized unit and read a clock to the half hour.,Measure a novel object with a non-standard unit and read a clock to the half hour
+CX-K12-0009,K–12,,LB-9,1,Explorer,Gear Cadet,Shapes and Halves,Partition a shape into halves and describe the split in writing.,Partition a shape into halves and describe it in writing
+CX-K12-0010,K–12,,LB-10,1,Explorer,Bridge: Belt Cadet,Summer Bridge 1→2: The Belt Camp,Solve two belt stories within twenty and measure and compare two belt sections.,Solve two belt stories within 20; measure and compare two sections
+CX-K12-0011,K–12,,LB-11,2,Explorer,Belt Cadet: Operator,Gear Tooth Operations II,Solve a two-step gear story with a total under one hundred.,Solve a two-step gear story within 100
+CX-K12-0012,K–12,,LB-12,2,Explorer,Belt Cadet: Inventory,"Depot Inventory to 1,000",Add and subtract three-digit inventory totals and explain the work.,Add and subtract three-digit inventory totals with explanation
+CX-K12-0013,K–12,,LB-13,2,Explorer,Belt Cadet: Log Keeper,The Repair Log,"Produce a repair log that carries a measurement, a time and a bar graph.","Produce a repair log with measurement, time and a bar graph"
+CX-K12-0014,K–12,,LB-14,2,Explorer,Belt Cadet,Belt Sections,Partition a rectangle into rows and columns and count the resulting squares.,Partition a rectangle into rows and columns and count the squares
+CX-K12-0015,K–12,,LB-15,2,Explorer,Bridge: Sequencer,Summer Bridge 2→3: Sorting Floor Camp,Build an array from a load and write its equal-groups sentence.,Build an array from a novel load and write its equal-groups sentence
+CX-K12-0016,K–12,,LB-16,3,Explorer,Sequencer: Patterns,Pattern & Sequence Bots,Extend a multiplication pattern and explain the rule that generates it.,Extend and explain a novel multiplication pattern
+CX-K12-0017,K–12,,LB-17,3,Explorer,Sequencer: Belt Operator,Fractions on the Conveyor I,Place fractions on a number line and compare two belt speeds.,Place fractions on a number line and compare two belt speeds
+CX-K12-0018,K–12,,LB-18,3,Explorer,Sequencer: Gauge Reader,Gauge Reader,Solve an area problem and read a scaled bar graph correctly.,Solve a novel area problem and read a scaled bar graph
+CX-K12-0019,K–12,,LB-19,3,Explorer,Junior Systems Cadet,Depot Inspection,Recall multiplication facts fluently and write up a hand-written inspection report.,Fluent multiplication facts and a hand-written inspection report
+CX-K12-0020,K–12,,LB-20,3,Explorer,Bridge: Shape Mechanic,Summer Bridge 3→4: Crane Yard Camp,Solve a multi-step load problem and find a fraction of a belt run.,Multi-step load problem; a fraction of a novel belt
+CX-K12-0021,K–12,,LB-21,4,Explorer,Shape Mechanic: Crane,Crane Arm Fold,Solve a multi-step word problem and interpret its remainder in context.,Multi-step word problem with a remainder interpreted in context
+CX-K12-0022,K–12,,LB-22,4,Explorer,Shape Mechanic: Belt,Fractions on the Conveyor II,Add and subtract fractions with unlike denominators in a belt problem.,Add and subtract fractions with unlike denominators in a novel belt problem
+CX-K12-0023,K–12,,LB-23,4,Explorer,Shape Mechanic: Gauge,Measure the Machine,Measure and sketch angles on a linkage and convert between units.,Measure and sketch angles on a novel linkage; convert units
+CX-K12-0024,K–12,,LB-24,4,Explorer,Shape Mechanic,"Lines, Angles and the Coast",Classify shapes by their lines and angles and write the engineering note in cursive.,Classify shapes by lines and angles and write the cursive engineering note
+CX-K12-0025,K–12,,LB-25,4,Explorer,Bridge: Gauge Watcher,Summer Bridge 4→5: Pump Station Camp,Read a gauge to the hundredth and measure an angle on the pump station.,Read a gauge to the hundredth; measure a novel angle
+CX-K12-0026,K–12,,LB-26,5,Explorer,Gauge Watcher: Sensors,Weather & Water Sensors I,Do decimal computation on a gauge log and justify an alert decision from it.,Decimal computation on a novel gauge log with a justified alert decision
+CX-K12-0027,K–12,,LB-27,5,Explorer,Gauge Watcher: Belt,Belt at Three-Quarter Speed,Multiply and divide fractions to solve a pump-station speed problem.,Fraction multiplication and division in a novel pump-station problem
+CX-K12-0028,K–12,,LB-28,5,Explorer,Gauge Watcher: Data,Flood Alert Data,Convert units to find a tank's volume and plot the data with a written conclusion.,Volume and unit conversion on a novel tank; data plot with a written conclusion
+CX-K12-0029,K–12,,LB-29,5,Explorer,Junior Systems Cadet (Ignite Era complete),Depot Map Coordinates,Plot and interpret points on a map and classify the shapes it contains.,Plot and interpret points on a novel map; classify shapes
+CX-K12-0030,K–12,,LB-30,5,Explorer,Bridge: Field Technician I,Summer Bridge 5→6: Port Preview,Plot and read a yard map and solve one rate problem from it.,Plot and read a novel yard map; solve one rate problem
+CX-K12-0031,K–12,,LB-31,6,Builder,Drive Tech,Ratios & Gear Trains,Build a ratio table and unit-rate problem and sketch the matching gear train.,Novel ratio table and unit-rate problem with a gear-train sketch
+CX-K12-0032,K–12,,LB-32,6,Builder,Junior Programmer I,Python Foundations I,Write and evaluate an expression for a belt and debug a short loop.,Write and evaluate an expression for a novel belt; debug a three-line loop
+CX-K12-0033,K–12,,LB-33,6,Builder,Yard Geometer,Container Geometry,"Find area, surface area and coordinate distance in a yard layout.","Area, surface area and coordinate distance on a novel yard layout"
+CX-K12-0034,K–12,,LB-34,6,Builder,Data Tech I,Sensors & Noise I,Describe the center and spread of a sensor set and pick the reliable one.,Describe center and spread of a novel sensor set and pick the reliable one
+CX-K12-0035,K–12,,LB-35,6,Builder,Bridge: Field Technician II,Summer Bridge 6→7: Terminal Summer Crew,Solve a proportion problem using a set of sensor readings.,Proportion problem on a novel sensor set
+CX-K12-0036,K–12,,LB-36,7,Builder,Torque Tech,Proportional Torque,Reason proportionally with a percent margin on a load calculation.,Proportional reasoning with a percent margin on a novel load
+CX-K12-0037,K–12,,LB-37,7,Builder,Power Tech,Motor Margin Equations,Solve a two-step equation and an inequality on a power budget.,Two-step equation and inequality on a novel power budget
+CX-K12-0038,K–12,,LB-38,7,Builder,Path Planner I,Coordinate Robots I,Solve a scale drawing and a circle problem for a gantry.,Scale drawing and circle problem on a novel gantry
+CX-K12-0039,K–12,,LB-39,7,Builder,Data Tech II,Sensor Sampling,Draw a probability and sampling inference from a sensor log.,Probability and sampling inference on a novel sensor log
+CX-K12-0040,K–12,,LB-40,7,Builder,Bridge: Field Technician III,Summer Bridge 7→8: Grain Terminal Summer Crew,Build a linear model of a belt and trace a relay through it.,Linear model of a novel belt; relay traced
+CX-K12-0041,K–12,,LB-41,8,Builder,Motion Analyst,Linear Motion Models,Write and solve a linear model and a system of equations for a sweep.,Write and solve a linear model and a system on a novel sweep
+CX-K12-0042,K–12,,LB-42,8,Builder,Function Analyst,Servo Sweep Functions,Interpret the rate and initial value of a function in context.,Interpret rate and initial value of a novel function in context
+CX-K12-0043,K–12,,LB-43,8,Builder,Reach Analyst,Coordinate Robots II & Pythagorean Reach,Run a transformation sequence and find a Pythagorean reach for an arm.,Transformation sequence and Pythagorean reach on a novel arm
+CX-K12-0044,K–12,,LB-44,8,Builder,Field Technician (Applied Mechanics complete),"Circuits, Relays & Sensors II",Interpret bivariate data and diagnose a relay fault from it.,Bivariate data interpretation and a relay fault diagnosis
+CX-K12-0045,K–12,,LB-45,8,Builder,Bridge: Cleared Trainee,Summer Bridge 8→9: Terminal Onboarding Camp,Pass a safety-gate sign-off and solve a linear system on a line.,Safety-gate sign-off; linear system solved on a novel line
+CX-K12-0046,K–12,,LB-46,9,Practitioner,Cleared Trainee,Terminal Onboarding & Linear Models,Pass a safety-gate sign-off and justify a belt's linear model with units.,Safety-gate sign-off; linear model of a novel belt with units justified
+CX-K12-0047,K–12,,LB-47,9,Practitioner,Controls Specialist I,Linear Systems & Control,"Solve, graph and interpret a system of equations and inequalities on a line.",System of equations and inequalities on a novel line; graph and interpret
+CX-K12-0048,K–12,,LB-48,9,Practitioner,Motion Modeler,Functions of Motion,Interpret and build functions that describe a motion profile.,Interpret and build functions for a novel motion profile
+CX-K12-0049,K–12,,LB-49,9,Practitioner,Systems Programmer I,Statistics & the Controller Patch,Pass a code review and interpret a line of fit and correlation on a data set.,Code review passed; line of fit and correlation interpreted on a novel data set
+CX-K12-0050,K–12,,LB-50,9,Practitioner,Bridge: Twin Calibrator,Summer Bridge 9→10: Twin Summer Lab,Find a scale factor for a twin and read an SPC chart.,Scale factor found on a novel twin; SPC chart read
+CX-K12-0051,K–12,,LB-51,10,Practitioner,Twin Calibrator I,Scale the Twin,Prove congruence and similarity on a rig and find a scale factor from two lengths.,Congruence and similarity proof on a novel rig; scale factor from two lengths
+CX-K12-0052,K–12,,LB-52,10,Practitioner,Twin Calibrator · Kinematics Lead,The Calcasieu Assembly Calibration,Apply similarity and right-triangle trigonometry to new stroke lengths on an arm.,Similarity and right-triangle trigonometry on a novel arm with new stroke lengths
+CX-K12-0053,K–12,,LB-53,10,Practitioner,Reach Diagnostician · Load Analyst,Two-Link Arm & Torque,Use the law of cosines to decide a reach and balance the vectors on an actuator.,Law of cosines reach decision and vector balance on a novel actuator
+CX-K12-0054,K–12,,LB-54,10,Practitioner,Mechatronic Systems Specialist (Mechatronic-Math Block complete),Weld Paths & Thermal Systems,Build a coordinate-geometry weld path and diagnose a relay fault in a cell.,Coordinate-geometry weld path and relay diagnosis on a novel cell
+CX-K12-0055,K–12,,LB-55,10,Practitioner,Bridge: Automation Tech,Summer Bridge 10→11: Site Induction,Apply trigonometry to a two-link arm and earn an OSHA 10 card.,Trig on a novel two-link arm; OSHA 10 card
+CX-K12-0056,K–12,,LB-56,11,Lead,Automation Tech I,PLC & Industrial Networks,"Fit a polynomial and rational model to a line, trace a fault and document it.",Polynomial and rational model on a novel line; fault traced and documented
+CX-K12-0057,K–12,,LB-57,11,Lead,Reliability Analyst,Predictive Fatigue Diagnostics,Solve an exponential and logarithmic problem on a reliability curve and write the work order.,Exponential and logarithmic solution on a novel reliability curve with a work order
+CX-K12-0058,K–12,,LB-58,11,Lead,Quality Analyst,Statistics for Quality,Build a control chart and defend a sampling plan from it.,Control chart and inference on a novel process; sampling plan defended
+CX-K12-0059,K–12,,LB-59,11,Lead,AI-CAD Analyst,AI-CAD & Trig Models,Build a trigonometric model of a vibration and report a twin-to-scan discrepancy.,Trigonometric model of a novel vibration and a twin-to-scan discrepancy report
+CX-K12-0060,K–12,,LB-60,11,Lead,Bridge: Capstone Lead,Summer Bridge 11→12: Capstone Summer,Get a capstone brief accepted by the employer panel.,Capstone brief accepted by the employer panel
+CX-K12-0061,K–12,,LB-61,12,Lead,Capstone Lead,Capstone Design,Get a capstone proposal accepted by the employer panel.,Capstone proposal accepted by the employer panel
+CX-K12-0062,K–12,,LB-62,12,Lead,Credentialed Trainee,Industry-Based Certifications,"Earn an industry-based certification such as NCCER Core, OSHA 10, AWS, EPA 608, CompTIA or PTEC.","IBC earned (NCCER Core, OSHA 10, AWS, EPA 608, CompTIA, PTEC or equivalent)"
+CX-K12-0063,K–12,,LB-63,12,Lead,Apprentice,Capstone Build & Work-Based Learning,Pass an employer-judged capstone and get its hours countersigned.,Employer-judged capstone passed; hours countersigned
+CX-K12-0064,K–12,,LB-64,12,Lead,Credentialed Graduate (Specialized Tracks complete),"Ledger, Placement & Launch",Get a credential ledger verified by an employer and a placement confirmed.,Credential ledger verified by an employer; placement confirmed
 CX-TRADE-0001,Trade School,,LB-1,11–12 · adult,Lead,Trade Foundations,Trade Foundations,,Read a novel schematic and produce a bill of materials with units
 CX-TRADE-0002,Trade School,,LB-2,11–12 · adult,Lead,Cleared for Site,"Safety, Clearance & Fitness for Duty",,Perform a full lock-out on a novel rig; pass the site-clearance checklist
 CX-TRADE-0003,Trade School,,LB-3,11–12 · adult,Lead,Trade Capstone,Trade Capstone & Placement,,Employer panel accepts the capstone; validator packet submitted
