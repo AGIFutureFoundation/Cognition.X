@@ -140,6 +140,12 @@ sections; the only other diff is the fonts `<link>`).
    diplomacy/humanitarian/peacekeeping field-practice content. Four
    packs remain (Corporate OS, Education OS, Science OS, Non-Profit
    Practice); the shared dictionary is now 1,048 sentences.
+   *Update (v0.103.0):* shipped Non-Profit Practice (348 themes, 650
+   rows, second promotion file distinct from its existing band-suffix
+   override) — 168 reused from the shared dictionary, 180 authored
+   fresh for its nonprofit governance/fundraising/donor-relations
+   content. Three packs remain (Corporate OS, Education OS, Science
+   OS); the shared dictionary is now 1,229 sentences.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

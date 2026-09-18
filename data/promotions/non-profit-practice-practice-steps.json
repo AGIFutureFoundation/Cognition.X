@@ -1,0 +1,1453 @@
+{
+  "pack": "Non-Profit Practice",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema is out of scope (v0.103.0, prompt 3 final piece). Non-Profit Practice's 650 empty-description rows use 348 distinct short generic action-phrase themes at the single adult-route grade \"11–12 . adult\", the same shape as Sapient OS (v0.99.0), Robotics OS (v0.100.0), Global Health OS (v0.101.0) and Multilateral OS (v0.102.0) -- 168 of these 348 themes are worded identically to ones already promoted for those four packs and share the same sentence verbatim; the other 180 are new to this pack and authored fresh for its nonprofit organizational-practice domain (governance, fundraising, donor relations, volunteers, evaluation). track/code/level stay as they were (LB-<n> codes, level derived structurally by light_fill()).",
+  "tracks": [
+    {
+      "prefix": "PSA",
+      "name": "Practice Steps A–B",
+      "themes": [
+        {
+          "theme": "Address concerns",
+          "description": "Respond to a real stakeholder's concern about an AI system with a specific action, not just reassurance."
+        },
+        {
+          "theme": "Address gaps",
+          "description": "Find a real gap in a multilateral response and fill it, not just note it."
+        },
+        {
+          "theme": "Address violations",
+          "description": "Investigate a real policy violation in an AI system and correct it."
+        },
+        {
+          "theme": "Adjust spending",
+          "description": "Change a real nonprofit's spending plan based on how the year is actually going."
+        },
+        {
+          "theme": "Adjust strategies",
+          "description": "Revise a real strategy mid-course based on what's actually happening."
+        },
+        {
+          "theme": "Align board and staff",
+          "description": "Get a real board and staff actually working from the same understanding of the mission."
+        },
+        {
+          "theme": "Align operations",
+          "description": "Change how a real nonprofit's day-to-day work runs so it actually matches its strategy."
+        },
+        {
+          "theme": "Amplify impact",
+          "description": "Take a real, working intervention and extend its effect further than it reached alone."
+        },
+        {
+          "theme": "Analyze costs",
+          "description": "Break down the real costs of running an AI system and show where they go."
+        },
+        {
+          "theme": "Analyze efficiency",
+          "description": "Break down where a real robotic process spends its time and find the slow step."
+        },
+        {
+          "theme": "Analyze findings",
+          "description": "Turn a set of raw findings from a real review into a conclusion someone else can act on."
+        },
+        {
+          "theme": "Analyze market",
+          "description": "Understand the real landscape of need and competition a nonprofit's program actually sits within."
+        },
+        {
+          "theme": "Analyze policy",
+          "description": "Break down a real policy's actual effect on the people a nonprofit serves."
+        },
+        {
+          "theme": "Analyze results",
+          "description": "Turn the raw results of a real test into a written conclusion with a recommendation."
+        },
+        {
+          "theme": "Apply insights",
+          "description": "Take a real insight from program data and change how a health program actually runs."
+        },
+        {
+          "theme": "Articulate values",
+          "description": "Put a real organization's values into words specific enough to guide an actual decision."
+        },
+        {
+          "theme": "Assess alignment",
+          "description": "Check whether a real AI system's behavior actually matches its stated goal."
+        },
+        {
+          "theme": "Assess capacity",
+          "description": "Determine whether a real team or system can actually handle the AI workload asked of it."
+        },
+        {
+          "theme": "Assess competence",
+          "description": "Check whether a real staff member or volunteer can actually do the task they're assigned."
+        },
+        {
+          "theme": "Assess competition",
+          "description": "Understand what other real organizations are doing in the same space, honestly."
+        },
+        {
+          "theme": "Assess compliance",
+          "description": "Check a real health program against the rule it's supposed to follow."
+        },
+        {
+          "theme": "Assess culture",
+          "description": "Understand the real local customs a program must actually work within."
+        },
+        {
+          "theme": "Assess current",
+          "description": "Take stock of where a real AI practice actually stands today, not where it's assumed to stand."
+        },
+        {
+          "theme": "Assess engagement",
+          "description": "Measure how actually engaged real donors, volunteers or members are, not just their numbers."
+        },
+        {
+          "theme": "Assess equity",
+          "description": "Check whether a real health program's benefits actually reach the groups it's meant to."
+        },
+        {
+          "theme": "Assess equity gaps",
+          "description": "Find a real, measurable equity gap in who a nonprofit's program actually reaches."
+        },
+        {
+          "theme": "Assess finances",
+          "description": "Review a real health program's finances and confirm they're sound."
+        },
+        {
+          "theme": "Assess needs",
+          "description": "Talk to real users to find out what they actually need from an AI system, not what was assumed."
+        },
+        {
+          "theme": "Assess operations",
+          "description": "Review a real nonprofit's day-to-day operations and find what's actually working."
+        },
+        {
+          "theme": "Assess potential",
+          "description": "Judge whether a real opportunity is actually worth a nonprofit's limited resources."
+        },
+        {
+          "theme": "Assess progress",
+          "description": "Check how far a real initiative has actually gotten toward its goal."
+        },
+        {
+          "theme": "Assess quality",
+          "description": "Check a real health service's quality against a real standard."
+        },
+        {
+          "theme": "Assess readiness",
+          "description": "Determine whether a real team or system is actually ready to take on an AI change."
+        },
+        {
+          "theme": "Assess revenue",
+          "description": "Review a real nonprofit's revenue streams and judge how reliable each one actually is."
+        },
+        {
+          "theme": "Assess skills",
+          "description": "Test whether a real team has the skills a robotic system's operation actually requires."
+        },
+        {
+          "theme": "Assess tech needs",
+          "description": "Determine what real technology a nonprofit's program actually needs to function."
+        },
+        {
+          "theme": "Benchmark compensation",
+          "description": "Compare real staff pay against comparable roles to confirm it's fair and competitive."
+        },
+        {
+          "theme": "Build alignment",
+          "description": "Get real staff, board and partners actually pulling toward the same goal."
+        },
+        {
+          "theme": "Build brand",
+          "description": "Build a real, recognizable identity for a nonprofit that its community can trust."
+        }
+      ]
+    },
+    {
+      "prefix": "PSB",
+      "name": "Practice Steps B–C",
+      "themes": [
+        {
+          "theme": "Build capacity",
+          "description": "Grow a real local team's ability to run a health program on their own."
+        },
+        {
+          "theme": "Build coalitions",
+          "description": "Bring together real, different organizations around one shared health goal."
+        },
+        {
+          "theme": "Build culture",
+          "description": "Build a real, shared way of working within a team that actually holds under pressure."
+        },
+        {
+          "theme": "Build engagement",
+          "description": "Get real donors or volunteers to actually deepen their involvement over time."
+        },
+        {
+          "theme": "Build funder relationships",
+          "description": "Build a real, working relationship with a funder that goes beyond a single grant."
+        },
+        {
+          "theme": "Build future",
+          "description": "Take a real, concrete step today that positions a nonprofit for where it needs to be later."
+        },
+        {
+          "theme": "Build governance",
+          "description": "Set up real governance structures that give a nonprofit's board actual oversight."
+        },
+        {
+          "theme": "Build logic",
+          "description": "Build a real logic model connecting a nonprofit's activities to the outcome they're meant to produce."
+        },
+        {
+          "theme": "Build loyalty",
+          "description": "Take a real, specific action that keeps a donor or volunteer coming back."
+        },
+        {
+          "theme": "Build partnerships",
+          "description": "Form a real, working partnership with an organization a health program needs."
+        },
+        {
+          "theme": "Build relationships",
+          "description": "Build a real working relationship with a supplier or partner that a robotics program depends on."
+        },
+        {
+          "theme": "Build reserves",
+          "description": "Set aside real funds so a nonprofit can weather an unexpected shortfall."
+        },
+        {
+          "theme": "Build resilience",
+          "description": "Strengthen a real health system so it can keep functioning through a shock."
+        },
+        {
+          "theme": "Build sustainability",
+          "description": "Change a real nonprofit's model so it can keep operating without constant emergency fundraising."
+        },
+        {
+          "theme": "Build trust",
+          "description": "Take a concrete action that earns a real user or team's trust in an AI system, not just a claim."
+        },
+        {
+          "theme": "Calculate costs",
+          "description": "Work out the real, full cost of running a robotic system, not just the sticker price."
+        },
+        {
+          "theme": "Capture learning",
+          "description": "Write down what was actually learned from running a real robotics project."
+        },
+        {
+          "theme": "Capture processes",
+          "description": "Write down a real, working process so it survives when the person who built it leaves."
+        },
+        {
+          "theme": "Cascade goals",
+          "description": "Break a real organizational goal down into specific targets each team can actually act on."
+        },
+        {
+          "theme": "Celebrate milestones",
+          "description": "Mark a real, specific milestone publicly to keep momentum and morale up."
+        },
+        {
+          "theme": "Clarify expectations",
+          "description": "Make sure real partners and staff know exactly what's expected of them."
+        },
+        {
+          "theme": "Clarify mission",
+          "description": "Sharpen a real mission statement until it actually guides a hard decision."
+        },
+        {
+          "theme": "Clarify roles",
+          "description": "Write down who is actually responsible for what on a real AI project, and get agreement on it."
+        },
+        {
+          "theme": "Clarify strategy",
+          "description": "Make a real strategy specific enough that staff know what to do differently because of it."
+        },
+        {
+          "theme": "Collect data",
+          "description": "Gather a real dataset for an AI purpose and document where each part came from."
+        },
+        {
+          "theme": "Communicate culture",
+          "description": "Show, through real actions, what a nonprofit's culture actually values."
+        },
+        {
+          "theme": "Communicate findings",
+          "description": "Present the findings of a real AI review to people who weren't in the room for it."
+        },
+        {
+          "theme": "Communicate impact",
+          "description": "Tell real stakeholders, in concrete terms, what a nonprofit's work actually achieved."
+        },
+        {
+          "theme": "Communicate results",
+          "description": "Share the real results of an AI test with the people who will act on them."
+        },
+        {
+          "theme": "Communicate value",
+          "description": "Explain, in concrete terms, the real value a robotic system delivers to the people who use it."
+        },
+        {
+          "theme": "Communicate vision",
+          "description": "Explain where a real robotics program is headed in terms a non-specialist can follow."
+        },
+        {
+          "theme": "Conduct advocacy",
+          "description": "Make the real case for a health policy change to the people who can actually change it."
+        },
+        {
+          "theme": "Conduct audit",
+          "description": "Carry out a complete audit of a real robotic system from start to finish."
+        },
+        {
+          "theme": "Conduct audits",
+          "description": "Run a real audit of an AI system from start to finish and produce the report."
+        },
+        {
+          "theme": "Conduct research",
+          "description": "Carry out real research that answers a specific question a nonprofit actually needs answered."
+        },
+        {
+          "theme": "Conduct tests",
+          "description": "Run a real test of a new approach before committing the whole organization to it."
+        },
+        {
+          "theme": "Coordinate action",
+          "description": "Get more than one real actor working on a health issue to actually work together."
+        },
+        {
+          "theme": "Coordinate initiatives",
+          "description": "Keep more than one real robotics effort moving together without them working at cross purposes."
+        },
+        {
+          "theme": "Craft messages",
+          "description": "Write a real message that actually moves its intended audience to act."
+        }
+      ]
+    },
+    {
+      "prefix": "PSC",
+      "name": "Practice Steps C–D",
+      "themes": [
+        {
+          "theme": "Create budgets",
+          "description": "Build a real, working budget that matches a nonprofit's actual plans."
+        },
+        {
+          "theme": "Create content",
+          "description": "Produce real content that actually reaches and informs a nonprofit's audience."
+        },
+        {
+          "theme": "Create messaging",
+          "description": "Draft real messaging that explains an AI change to the people it affects."
+        },
+        {
+          "theme": "Create network",
+          "description": "Build a real network of contacts a nonprofit can actually call on when needed."
+        },
+        {
+          "theme": "Create pathways",
+          "description": "Build a real, clear path for a patient to move through a health system's services."
+        },
+        {
+          "theme": "Create safety",
+          "description": "Change a real health environment so it's actually safer for patients or workers."
+        },
+        {
+          "theme": "Create systems",
+          "description": "Build a real, working system a mission needs for a recurring task."
+        },
+        {
+          "theme": "Cultivate donors",
+          "description": "Build a real relationship with a donor over time, not just at the ask."
+        },
+        {
+          "theme": "Cultivate partnerships",
+          "description": "Build a real, working partnership with another organization a nonprofit needs."
+        },
+        {
+          "theme": "Deepen relationships",
+          "description": "Take a real relationship with a supporter from occasional to genuinely engaged."
+        },
+        {
+          "theme": "Define brand",
+          "description": "Decide, concretely, what a real nonprofit's brand actually stands for."
+        },
+        {
+          "theme": "Define impact",
+          "description": "State exactly what real impact a nonprofit's program is meant to produce."
+        },
+        {
+          "theme": "Define outcomes",
+          "description": "State exactly what real outcome a health program is trying to achieve."
+        },
+        {
+          "theme": "Define roles",
+          "description": "Decide who does what on a real AI project and put it in writing."
+        },
+        {
+          "theme": "Define standards",
+          "description": "Write down the real standard a robotic system or its operators must meet."
+        },
+        {
+          "theme": "Demonstrate results",
+          "description": "Show real evidence that a nonprofit's program actually produced its intended result."
+        },
+        {
+          "theme": "Design benefits",
+          "description": "Design a real staff benefit that a nonprofit can actually afford and that people actually value."
+        },
+        {
+          "theme": "Design evaluations",
+          "description": "Design a real evaluation that could actually tell whether a program is working."
+        },
+        {
+          "theme": "Design orientation",
+          "description": "Design a real orientation that gets a new board member or staffer actually up to speed."
+        },
+        {
+          "theme": "Design pilots",
+          "description": "Design a real, small-scale pilot to test an idea before scaling it."
+        },
+        {
+          "theme": "Design programs",
+          "description": "Design a real health program from a community's actual need through to a working plan."
+        },
+        {
+          "theme": "Develop action plan",
+          "description": "Turn a real strategy into a specific, sequenced plan of action."
+        },
+        {
+          "theme": "Develop advocacy",
+          "description": "Build a real advocacy effort aimed at a specific, achievable policy change."
+        },
+        {
+          "theme": "Develop careers",
+          "description": "Help a real staff member grow into a role with more responsibility."
+        },
+        {
+          "theme": "Develop forecasts",
+          "description": "Build a real forecast of a nonprofit's likely revenue or need over the coming period."
+        },
+        {
+          "theme": "Develop innovations",
+          "description": "Create a real new approach to a health problem that didn't have a good one before."
+        },
+        {
+          "theme": "Develop leaders",
+          "description": "Grow a real staff member's ability to actually lead a team or program."
+        },
+        {
+          "theme": "Develop leadership",
+          "description": "Grow a real staff member or volunteer's ability to actually lead."
+        },
+        {
+          "theme": "Develop mindsets",
+          "description": "Help a real team shift how they think about a problem, not just what they do about it."
+        },
+        {
+          "theme": "Develop mitigation",
+          "description": "Design a real measure that reduces a specific, identified risk to a mission."
+        },
+        {
+          "theme": "Develop model",
+          "description": "Build a real program model that could actually be replicated elsewhere."
+        },
+        {
+          "theme": "Develop narratives",
+          "description": "Craft a real story about a nonprofit's work that's both true and compelling."
+        },
+        {
+          "theme": "Develop partnerships",
+          "description": "Build a real, working partnership with an organization a mission actually needs."
+        },
+        {
+          "theme": "Develop plan",
+          "description": "Write a real, working plan for a specific nonprofit initiative."
+        },
+        {
+          "theme": "Develop plans",
+          "description": "Write a real plan for a specific AI initiative, with steps and a timeline."
+        },
+        {
+          "theme": "Develop policies",
+          "description": "Draft a real policy for an AI practice, from the ground up."
+        },
+        {
+          "theme": "Develop programs",
+          "description": "Build a real program, from scratch, that trains or supports people working with robotics."
+        },
+        {
+          "theme": "Develop protocols",
+          "description": "Write a step-by-step protocol for a real recurring AI task."
+        },
+        {
+          "theme": "Develop relationships",
+          "description": "Build a real, working relationship with a partner a robotics program depends on."
+        }
+      ]
+    },
+    {
+      "prefix": "PSD",
+      "name": "Practice Steps D–E",
+      "themes": [
+        {
+          "theme": "Develop roles",
+          "description": "Define a real role clearly enough that the person in it knows what success looks like."
+        },
+        {
+          "theme": "Develop skills",
+          "description": "Build a real, specific skill in a health worker through practice and feedback."
+        },
+        {
+          "theme": "Develop staff",
+          "description": "Build a real staff member's specific skill through practice and feedback."
+        },
+        {
+          "theme": "Develop strategies",
+          "description": "Set several real strategic options for an AI initiative and choose between them with reasons."
+        },
+        {
+          "theme": "Develop strategy",
+          "description": "Set the real strategic direction for an AI initiative and justify the choice."
+        },
+        {
+          "theme": "Develop talent",
+          "description": "Grow a real health worker's abilities so they can take on more responsibility."
+        },
+        {
+          "theme": "Develop theory",
+          "description": "Build a real theory of change that connects a nonprofit's activities to its intended outcome."
+        },
+        {
+          "theme": "Develop tools",
+          "description": "Build a real, usable tool that helps a nonprofit team do its work."
+        },
+        {
+          "theme": "Develop training",
+          "description": "Build a training program that teaches a real, specific AI skill."
+        },
+        {
+          "theme": "Develop vision",
+          "description": "Set out a real, specific picture of what a nonprofit is working toward."
+        },
+        {
+          "theme": "Diversify donor base",
+          "description": "Bring in real donors from beyond a nonprofit's current, narrow base."
+        },
+        {
+          "theme": "Diversify funding",
+          "description": "Bring in more than one real funding source so a health program doesn't depend on just one."
+        },
+        {
+          "theme": "Diversify revenue",
+          "description": "Bring in more than one real revenue source so a nonprofit doesn't depend on just one."
+        },
+        {
+          "theme": "Document controls",
+          "description": "Write down the real financial controls a nonprofit actually follows."
+        },
+        {
+          "theme": "Document procedures",
+          "description": "Write down the exact real steps a robotics procedure follows, in order."
+        },
+        {
+          "theme": "Document results",
+          "description": "Record the real results of an AI test or initiative, as they actually came out."
+        },
+        {
+          "theme": "Drive change",
+          "description": "Push through a real, specific organizational change, not just propose it."
+        },
+        {
+          "theme": "Drive decisions",
+          "description": "Use real data to actually shape a nonprofit decision, not just inform a discussion."
+        },
+        {
+          "theme": "Drive improvement",
+          "description": "Push through a real, specific improvement to a robotic system, not just propose one."
+        },
+        {
+          "theme": "Enable learning",
+          "description": "Set up a real way for a nonprofit team to actually learn from what it's doing."
+        },
+        {
+          "theme": "Enable transfer",
+          "description": "Help real knowledge move from one person or team to another before it's lost."
+        },
+        {
+          "theme": "Enable voice",
+          "description": "Give real community members an actual say in a nonprofit's decisions."
+        },
+        {
+          "theme": "Engage audiences",
+          "description": "Reach a real, specific audience with a message that actually lands."
+        },
+        {
+          "theme": "Engage board members",
+          "description": "Get real board members actively involved, not just present at meetings."
+        },
+        {
+          "theme": "Engage communities",
+          "description": "Bring a real community into a health program's design, not just its delivery."
+        },
+        {
+          "theme": "Engage community",
+          "description": "Bring a real community into a nonprofit's work as partners, not just recipients."
+        },
+        {
+          "theme": "Engage media",
+          "description": "Get real media coverage of a nonprofit's work through an actual pitch, not luck."
+        },
+        {
+          "theme": "Engage regularly",
+          "description": "Keep a real, consistent cadence of contact with donors or volunteers."
+        },
+        {
+          "theme": "Engage stakeholders",
+          "description": "Bring real stakeholders into a real AI decision early enough that their input actually shapes it."
+        },
+        {
+          "theme": "Engage volunteers",
+          "description": "Give real volunteers meaningful work that actually uses their skills."
+        },
+        {
+          "theme": "Engage youth",
+          "description": "Bring real young people into a program's design and delivery, not just as recipients."
+        },
+        {
+          "theme": "Ensure accountability",
+          "description": "Make sure a real AI decision has a specific named person answerable for it."
+        },
+        {
+          "theme": "Ensure adherence",
+          "description": "Confirm a real robotic system is actually following its required standard."
+        },
+        {
+          "theme": "Ensure compliance",
+          "description": "Confirm a real AI system actually meets the rule it's supposed to follow."
+        },
+        {
+          "theme": "Ensure continuity",
+          "description": "Make sure a real AI system keeps running through a planned or unplanned disruption."
+        },
+        {
+          "theme": "Ensure controls",
+          "description": "Confirm a real nonprofit's financial controls are actually being followed."
+        },
+        {
+          "theme": "Ensure oversight",
+          "description": "Confirm a real board is actually exercising oversight, not just rubber-stamping."
+        },
+        {
+          "theme": "Ensure stability",
+          "description": "Take a real, concrete step that keeps a nonprofit's finances or staffing stable."
+        },
+        {
+          "theme": "Ensure sustainability",
+          "description": "Confirm a real AI practice can keep running without needing constant emergency intervention."
+        }
+      ]
+    },
+    {
+      "prefix": "PSE",
+      "name": "Practice Steps E–I",
+      "themes": [
+        {
+          "theme": "Ensure transparency",
+          "description": "Make a real nonprofit's decisions and finances actually visible to those it's accountable to."
+        },
+        {
+          "theme": "Establish agenda",
+          "description": "Set a real, working agenda that gets a meeting to an actual decision."
+        },
+        {
+          "theme": "Establish governance",
+          "description": "Set up who actually has authority over a real AI system's decisions."
+        },
+        {
+          "theme": "Establish mechanisms",
+          "description": "Put a real, working mechanism in place for a recurring mission need."
+        },
+        {
+          "theme": "Establish programs",
+          "description": "Set up a real program from its design through to its first delivery."
+        },
+        {
+          "theme": "Establish protocols",
+          "description": "Put a real, agreed protocol in place for how an AI incident is handled."
+        },
+        {
+          "theme": "Establish standards",
+          "description": "Put a real standard in place that a robotic system or its operators must meet."
+        },
+        {
+          "theme": "Establish systems",
+          "description": "Put a real, working system in place to support a recurring health-program need."
+        },
+        {
+          "theme": "Evaluate impact",
+          "description": "Judge the real, lasting effect a program had, not just its immediate activity."
+        },
+        {
+          "theme": "Evaluate results",
+          "description": "Judge whether a real health program's results actually met its goal."
+        },
+        {
+          "theme": "Evaluate viability",
+          "description": "Judge whether a real program idea is actually workable given a nonprofit's resources."
+        },
+        {
+          "theme": "Expand access",
+          "description": "Make a real nonprofit's program reach more of the people who need it."
+        },
+        {
+          "theme": "Facilitate growth",
+          "description": "Help a real nonprofit or program grow without losing what made it work."
+        },
+        {
+          "theme": "Facilitate meetings",
+          "description": "Run a real meeting between parties so it actually reaches a decision."
+        },
+        {
+          "theme": "Facilitate planning",
+          "description": "Run a real planning process that actually produces a plan people will use."
+        },
+        {
+          "theme": "Facilitate process",
+          "description": "Guide a real group through a process so it actually reaches a decision."
+        },
+        {
+          "theme": "Gather input",
+          "description": "Collect real input from the people affected by an AI decision before it's finalized."
+        },
+        {
+          "theme": "Gather stories",
+          "description": "Collect real stories from the people a nonprofit serves, with their consent."
+        },
+        {
+          "theme": "Generate insights",
+          "description": "Turn real program data into an insight someone can actually act on."
+        },
+        {
+          "theme": "Hold accountability",
+          "description": "Make sure a real person or team is actually answerable for a specific result."
+        },
+        {
+          "theme": "Identify barriers",
+          "description": "Name the real thing standing in the way of an AI initiative's progress."
+        },
+        {
+          "theme": "Identify candidates",
+          "description": "Find a real, qualified candidate a nonprofit actually needs for a role."
+        },
+        {
+          "theme": "Identify changes",
+          "description": "Spot a real change a nonprofit needs to make before it becomes urgent."
+        },
+        {
+          "theme": "Identify gaps",
+          "description": "Find a real gap between what an AI system is supposed to do and what it actually does."
+        },
+        {
+          "theme": "Identify improvements",
+          "description": "Find a specific, real change that would make an AI system meaningfully better."
+        },
+        {
+          "theme": "Identify inefficiencies",
+          "description": "Find a real place where a robotics process wastes time or resources."
+        },
+        {
+          "theme": "Identify issues",
+          "description": "Find a real, concrete issue with an AI system before it causes harm."
+        },
+        {
+          "theme": "Identify opportunities",
+          "description": "Spot a real place where an AI capability could genuinely help that isn't being used yet."
+        },
+        {
+          "theme": "Identify partners",
+          "description": "Find a real partner organization a robotics program actually needs to succeed."
+        },
+        {
+          "theme": "Identify policy priorities",
+          "description": "Decide which real policy issue a nonprofit should actually push on first."
+        },
+        {
+          "theme": "Identify risks",
+          "description": "Name a specific, real risk an AI system poses, not a generic category of risk."
+        },
+        {
+          "theme": "Identify savings",
+          "description": "Find a real place where a robotics program can cut cost without losing capability."
+        },
+        {
+          "theme": "Identify sources",
+          "description": "Trace a real AI system's data or behavior back to where it actually came from."
+        },
+        {
+          "theme": "Identify stakeholders",
+          "description": "Name the real people and groups a nonprofit decision will actually affect."
+        },
+        {
+          "theme": "Identify talent",
+          "description": "Spot a real person with the ability a mission needs, before a formal search begins."
+        },
+        {
+          "theme": "Implement changes",
+          "description": "Carry out a real, approved change to an AI system and confirm it worked as intended."
+        },
+        {
+          "theme": "Implement controls",
+          "description": "Put a real control in place that limits what an AI system is allowed to do on its own."
+        },
+        {
+          "theme": "Implement improvements",
+          "description": "Carry out a real, specific improvement to an AI system and measure the effect."
+        },
+        {
+          "theme": "Implement initiatives",
+          "description": "Carry out a real nonprofit initiative from its plan through to actual delivery."
+        }
+      ]
+    },
+    {
+      "prefix": "PSF",
+      "name": "Practice Steps I–M",
+      "themes": [
+        {
+          "theme": "Implement plans",
+          "description": "Put a real, approved plan into actual practice."
+        },
+        {
+          "theme": "Implement policies",
+          "description": "Put a real nonprofit policy into actual practice, not just onto paper."
+        },
+        {
+          "theme": "Implement programs",
+          "description": "Carry out a real health program from its plan through to actual delivery."
+        },
+        {
+          "theme": "Implement solutions",
+          "description": "Carry out a real, working solution to a specific AI problem, not just propose one."
+        },
+        {
+          "theme": "Implement systems",
+          "description": "Put a real system into working use within a health program."
+        },
+        {
+          "theme": "Improve communication",
+          "description": "Change how a real nonprofit team communicates so information actually gets through."
+        },
+        {
+          "theme": "Improve efficiency",
+          "description": "Get a real health program to do the same work with less wasted time or resource."
+        },
+        {
+          "theme": "Improve practice",
+          "description": "Change a real, everyday health-worker practice for the better, based on evidence."
+        },
+        {
+          "theme": "Improve processes",
+          "description": "Change a real AI-related process so it works better than it did before."
+        },
+        {
+          "theme": "Improve programs",
+          "description": "Make a real, specific improvement to a program based on what wasn't working."
+        },
+        {
+          "theme": "Increase retention",
+          "description": "Take a real, specific action that keeps more donors or staff from leaving."
+        },
+        {
+          "theme": "Increase revenue",
+          "description": "Take a real, specific action that grows a nonprofit's actual revenue."
+        },
+        {
+          "theme": "Increase unrestricted funds",
+          "description": "Bring in more real funding a nonprofit can actually use where it's needed most."
+        },
+        {
+          "theme": "Influence policy",
+          "description": "Get a real policymaker to actually change a policy based on health-program evidence."
+        },
+        {
+          "theme": "Inform decisions",
+          "description": "Use real data to actually shape a nonprofit's next decision."
+        },
+        {
+          "theme": "Learn and adapt",
+          "description": "Change a real nonprofit program based on what it actually learned from running it."
+        },
+        {
+          "theme": "Leverage resources",
+          "description": "Use a real existing resource more fully instead of asking for a new one."
+        },
+        {
+          "theme": "Leverage synergies",
+          "description": "Combine real strengths from two nonprofit programs so together they do more."
+        },
+        {
+          "theme": "Maintain compliance",
+          "description": "Keep a real AI system meeting a rule it's already meeting, as things around it change."
+        },
+        {
+          "theme": "Maintain focus",
+          "description": "Keep a real nonprofit team working on its priority instead of drifting to easier tasks."
+        },
+        {
+          "theme": "Maintain records",
+          "description": "Keep an accurate, real record of an AI system's decisions or changes over time."
+        },
+        {
+          "theme": "Maintain security",
+          "description": "Keep a real nonprofit's data and systems actually protected on an ongoing basis."
+        },
+        {
+          "theme": "Maintain systems",
+          "description": "Keep a real AI system running correctly through routine, ongoing upkeep."
+        },
+        {
+          "theme": "Manage assignments",
+          "description": "Assign real work to the right person and follow up to confirm it's done."
+        },
+        {
+          "theme": "Manage budgets",
+          "description": "Oversee more than one real budget across a mission's different activities."
+        },
+        {
+          "theme": "Manage campaigns",
+          "description": "Run a real fundraising or awareness campaign from plan through to close."
+        },
+        {
+          "theme": "Manage change",
+          "description": "Guide a real robotics change through to completion without losing people along the way."
+        },
+        {
+          "theme": "Manage claims",
+          "description": "Process a real insurance or benefits claim for a nonprofit through to resolution."
+        },
+        {
+          "theme": "Manage crises",
+          "description": "Lead a real nonprofit through an actual crisis without losing its mission focus."
+        },
+        {
+          "theme": "Manage finances",
+          "description": "Oversee a real nonprofit's finances so they're accurate and used as planned."
+        },
+        {
+          "theme": "Manage grants",
+          "description": "Oversee a real grant from application through reporting, meeting every requirement."
+        },
+        {
+          "theme": "Manage growth",
+          "description": "Steer a real AI system through a period of growing use without it falling over."
+        },
+        {
+          "theme": "Manage media",
+          "description": "Handle real media inquiries about a nonprofit accurately and on message."
+        },
+        {
+          "theme": "Manage oversight",
+          "description": "Run the real, ongoing process of reviewing an AI system's decisions."
+        },
+        {
+          "theme": "Manage relationships",
+          "description": "Oversee a real, ongoing relationship with a key donor or partner."
+        },
+        {
+          "theme": "Manage resources",
+          "description": "Allocate a real health program's resources to where they'll actually do the most good."
+        },
+        {
+          "theme": "Manage transition",
+          "description": "Guide a real move from an old system to an AI-based one without losing continuity."
+        },
+        {
+          "theme": "Manage transitions",
+          "description": "Guide a real move from an old process to a robotics-based one without losing continuity."
+        },
+        {
+          "theme": "Measure competency",
+          "description": "Test whether a real person can actually perform the robotics skill they were trained for."
+        }
+      ]
+    },
+    {
+      "prefix": "PSG",
+      "name": "Practice Steps M–P",
+      "themes": [
+        {
+          "theme": "Measure effectiveness",
+          "description": "Measure whether a real robotic system is actually achieving what it was built for."
+        },
+        {
+          "theme": "Measure engagement",
+          "description": "Measure how actually engaged real supporters are, with more than just attendance numbers."
+        },
+        {
+          "theme": "Measure impact",
+          "description": "Measure the real, concrete effect an AI system had on the outcome it was meant to change."
+        },
+        {
+          "theme": "Measure integrity",
+          "description": "Check whether a real nonprofit's actions actually match what it claims to stand for."
+        },
+        {
+          "theme": "Measure legitimacy",
+          "description": "Check whether a real community actually views a nonprofit as a legitimate partner."
+        },
+        {
+          "theme": "Measure loyalty",
+          "description": "Measure whether real donors or volunteers actually keep coming back over time."
+        },
+        {
+          "theme": "Measure outcomes",
+          "description": "Measure the real health outcome a program achieved, not just the activity delivered."
+        },
+        {
+          "theme": "Measure progress",
+          "description": "Measure how far a real health program has actually gotten toward its goal."
+        },
+        {
+          "theme": "Measure reach",
+          "description": "Measure how many real people a nonprofit's program actually reaches."
+        },
+        {
+          "theme": "Measure satisfaction",
+          "description": "Find out, with real data, how satisfied users actually are with an AI system."
+        },
+        {
+          "theme": "Measure savings",
+          "description": "Quantify the real cost savings a nonprofit change actually produced."
+        },
+        {
+          "theme": "Measure success",
+          "description": "Define and then check whether a real robotics initiative actually met its goal."
+        },
+        {
+          "theme": "Measure sustainability",
+          "description": "Check whether a real nonprofit program can actually keep running on its own resources."
+        },
+        {
+          "theme": "Mobilize support",
+          "description": "Turn real, latent goodwill into actual, active support for a nonprofit's cause."
+        },
+        {
+          "theme": "Model ethics",
+          "description": "Show, through a real decision, what ethical behavior actually looks like in practice."
+        },
+        {
+          "theme": "Monitor adherence",
+          "description": "Check, on an ongoing basis, whether a real AI practice is actually following its own rules."
+        },
+        {
+          "theme": "Monitor cash flow",
+          "description": "Keep an ongoing, real check on whether a nonprofit has enough cash to meet its obligations."
+        },
+        {
+          "theme": "Monitor context",
+          "description": "Keep an ongoing, real watch on how the situation around a mission is actually changing."
+        },
+        {
+          "theme": "Monitor effectiveness",
+          "description": "Track, over time, whether a real AI system is actually achieving what it was built for."
+        },
+        {
+          "theme": "Monitor progress",
+          "description": "Keep an ongoing, real check on how a health program is progressing toward its goal."
+        },
+        {
+          "theme": "Offer support",
+          "description": "Give a real, specific form of support to a health worker or community facing a challenge."
+        },
+        {
+          "theme": "Optimize allocation",
+          "description": "Adjust how real resources are split across a health program so they do more good."
+        },
+        {
+          "theme": "Optimize approach",
+          "description": "Adjust a real nonprofit approach so it delivers more for the same effort."
+        },
+        {
+          "theme": "Optimize performance",
+          "description": "Tune a real AI system so it performs measurably better on its actual task."
+        },
+        {
+          "theme": "Organize knowledge",
+          "description": "Structure a real nonprofit's know-how so people can actually find and use it."
+        },
+        {
+          "theme": "Orient board",
+          "description": "Bring a real new board member up to speed on their actual duties and the organization."
+        },
+        {
+          "theme": "Personalize engagement",
+          "description": "Tailor how a real nonprofit reaches out to a supporter based on what actually matters to them."
+        },
+        {
+          "theme": "Plan ahead",
+          "description": "Make a real decision now based on where a nonprofit will actually need to be later."
+        },
+        {
+          "theme": "Plan reserves",
+          "description": "Plan how much a real nonprofit needs to set aside and for what actual purpose."
+        },
+        {
+          "theme": "Plan succession",
+          "description": "Prepare a real plan for who takes over a health-program role when someone leaves."
+        },
+        {
+          "theme": "Plan sustainability",
+          "description": "Plan how a real health program will keep running after outside support ends."
+        },
+        {
+          "theme": "Plan transitions",
+          "description": "Plan more than one real transition a health program will go through over its life."
+        },
+        {
+          "theme": "Position programs",
+          "description": "Frame a real program so funders and partners understand what it actually does."
+        },
+        {
+          "theme": "Prepare candidates",
+          "description": "Get a real candidate ready to succeed in a role before they start it."
+        },
+        {
+          "theme": "Prepare reporting",
+          "description": "Get the real data and narrative ready before a funder report is actually due."
+        },
+        {
+          "theme": "Prepare reports",
+          "description": "Write a real, accurate report on a nonprofit program's activity and results."
+        },
+        {
+          "theme": "Prepare teams",
+          "description": "Get a real team ready with what it actually needs before a big push begins."
+        },
+        {
+          "theme": "Prevent burnout",
+          "description": "Take a real, specific step that protects staff or volunteers from burning out."
+        },
+        {
+          "theme": "Prevent fraud",
+          "description": "Put a real control in place that would actually catch or stop mission fraud."
+        }
+      ]
+    },
+    {
+      "prefix": "PSH",
+      "name": "Practice Steps P–S",
+      "themes": [
+        {
+          "theme": "Provide opportunities",
+          "description": "Open a real, concrete opportunity for a person a program serves."
+        },
+        {
+          "theme": "Provide support",
+          "description": "Help a real user solve a real problem they're having with an AI system."
+        },
+        {
+          "theme": "Provide training",
+          "description": "Teach a real person or team a specific skill they need to work with an AI system."
+        },
+        {
+          "theme": "Provide updates",
+          "description": "Give real stakeholders a timely, honest update on a nonprofit initiative's status."
+        },
+        {
+          "theme": "Recognize contributions",
+          "description": "Acknowledge a real, specific contribution a health worker or partner made."
+        },
+        {
+          "theme": "Recognize service",
+          "description": "Acknowledge a real volunteer or staff member's specific contribution."
+        },
+        {
+          "theme": "Recognize support",
+          "description": "Thank a real donor or partner in a way that's specific to what they actually gave."
+        },
+        {
+          "theme": "Recruit members",
+          "description": "Bring in a real new member who actually strengthens a nonprofit's board or network."
+        },
+        {
+          "theme": "Recruit talent",
+          "description": "Find and bring in a real, qualified person a health program actually needs."
+        },
+        {
+          "theme": "Recruit volunteers",
+          "description": "Find and bring in real volunteers with the skills a program actually needs."
+        },
+        {
+          "theme": "Reduce dependency",
+          "description": "Change a real nonprofit's funding mix so it depends less on a single source."
+        },
+        {
+          "theme": "Refine design",
+          "description": "Improve a real program's design based on what actually happened when it ran."
+        },
+        {
+          "theme": "Refine strategy",
+          "description": "Adjust a real strategy based on what's actually working and what isn't."
+        },
+        {
+          "theme": "Remove obstacles",
+          "description": "Clear a real, specific obstacle standing between a team and its goal."
+        },
+        {
+          "theme": "Report findings",
+          "description": "Write up what a real AI investigation found, for people who need to act on it."
+        },
+        {
+          "theme": "Report impact",
+          "description": "Report the real impact a nonprofit's program achieved, honestly, including shortfalls."
+        },
+        {
+          "theme": "Report outcomes",
+          "description": "Report the real result of an AI initiative, including where it fell short."
+        },
+        {
+          "theme": "Report results",
+          "description": "Share the real result of an AI test with the people who requested it."
+        },
+        {
+          "theme": "Report to funders",
+          "description": "Give a real funder an accurate, on-time report meeting every requirement of the grant."
+        },
+        {
+          "theme": "Retain leaders",
+          "description": "Take a real, specific action that keeps a valued leader from leaving."
+        },
+        {
+          "theme": "Retain staff",
+          "description": "Take a real, specific action that keeps a valued health worker from leaving."
+        },
+        {
+          "theme": "Retain talent",
+          "description": "Keep a real, skilled health worker engaged and growing so they don't leave."
+        },
+        {
+          "theme": "Retain volunteers",
+          "description": "Take a real, specific action that keeps volunteers coming back."
+        },
+        {
+          "theme": "Scale successes",
+          "description": "Take something that worked in one real robotics pilot and apply it somewhere else."
+        },
+        {
+          "theme": "Secure coverage",
+          "description": "Get real media or public attention for a nonprofit's work or cause."
+        },
+        {
+          "theme": "Segment donors",
+          "description": "Group real donors by what actually motivates their giving, to tailor outreach."
+        },
+        {
+          "theme": "Select tools",
+          "description": "Choose the real tool that actually fits a nonprofit's need and budget."
+        },
+        {
+          "theme": "Serve underrepresented",
+          "description": "Change a real program so it actually reaches a group it was missing before."
+        },
+        {
+          "theme": "Set policies",
+          "description": "Write a real, specific policy that actually governs how a nonprofit operates."
+        },
+        {
+          "theme": "Share findings",
+          "description": "Share the real findings of a mission review with the people who need to act on them."
+        },
+        {
+          "theme": "Share knowledge",
+          "description": "Pass on something real you learned about an AI system to someone who needs to know it."
+        },
+        {
+          "theme": "Share leadership",
+          "description": "Give real staff or community members actual decision-making authority, not just input."
+        },
+        {
+          "theme": "Share learnings",
+          "description": "Pass on what was actually learned from a real health program to another team."
+        },
+        {
+          "theme": "Share messages",
+          "description": "Get a real message out to the audience that actually needs to hear it."
+        },
+        {
+          "theme": "Share power",
+          "description": "Give a real community actual say over decisions that affect them."
+        },
+        {
+          "theme": "Steward donors",
+          "description": "Keep a real donor informed and appreciated between one gift and the next ask."
+        },
+        {
+          "theme": "Strengthen finances",
+          "description": "Take a real, concrete step that makes a nonprofit's finances more solid."
+        },
+        {
+          "theme": "Strengthen governance",
+          "description": "Improve a real board's actual practice of oversight and decision-making."
+        },
+        {
+          "theme": "Strengthen individual giving",
+          "description": "Grow real, individual donations, not just grants or major gifts."
+        }
+      ]
+    },
+    {
+      "prefix": "PSI",
+      "name": "Practice Steps S–W",
+      "themes": [
+        {
+          "theme": "Support adoption",
+          "description": "Help real users actually start using an AI system, not just make it available."
+        },
+        {
+          "theme": "Support engagement",
+          "description": "Give real, practical support that helps a supporter stay actively involved."
+        },
+        {
+          "theme": "Support integration",
+          "description": "Help a real new program or system actually connect with the rest of the organization."
+        },
+        {
+          "theme": "Support leadership",
+          "description": "Give a real emerging leader the backing they need to actually succeed."
+        },
+        {
+          "theme": "Support onboarding",
+          "description": "Help a real new staff member or volunteer actually get up to speed."
+        },
+        {
+          "theme": "Support oversight",
+          "description": "Give a real board the information it needs to actually exercise oversight."
+        },
+        {
+          "theme": "Support wellbeing",
+          "description": "Take a real, concrete step that supports the wellbeing of staff or community members."
+        },
+        {
+          "theme": "Sustain improvements",
+          "description": "Keep a real nonprofit improvement from quietly slipping back to how things were."
+        },
+        {
+          "theme": "Sustain involvement",
+          "description": "Keep real stakeholders actively engaged with a program past its initial launch."
+        },
+        {
+          "theme": "Sustain support",
+          "description": "Keep real donor or community support engaged past an initial campaign."
+        },
+        {
+          "theme": "Test approaches",
+          "description": "Try a real new approach on a small scale before committing a mission to it fully."
+        },
+        {
+          "theme": "Test models",
+          "description": "Try a real program model on a small scale before committing to it fully."
+        },
+        {
+          "theme": "Track engagement",
+          "description": "Keep a real, ongoing record of how engaged supporters actually are."
+        },
+        {
+          "theme": "Track execution",
+          "description": "Keep a real, ongoing check on whether a plan is actually being carried out."
+        },
+        {
+          "theme": "Track finances",
+          "description": "Keep a real, accurate, ongoing record of a nonprofit's financial position."
+        },
+        {
+          "theme": "Track funding",
+          "description": "Keep a real record of which funding a nonprofit has secured and what's still needed."
+        },
+        {
+          "theme": "Track growth",
+          "description": "Keep a real, ongoing record of how a nonprofit or program is actually growing."
+        },
+        {
+          "theme": "Track impact",
+          "description": "Keep a real record of the impact a health program is actually having."
+        },
+        {
+          "theme": "Track implementation",
+          "description": "Keep a real, ongoing check on whether a plan is actually being put into practice."
+        },
+        {
+          "theme": "Track improvements",
+          "description": "Keep a real record of every improvement made to an AI system and its measured effect."
+        },
+        {
+          "theme": "Track losses",
+          "description": "Keep a real, honest record of donors or volunteers a nonprofit is actually losing."
+        },
+        {
+          "theme": "Track metrics",
+          "description": "Keep a real, ongoing record of the numbers that show whether an AI system is working."
+        },
+        {
+          "theme": "Track outcomes",
+          "description": "Keep a real record of what actually happened after an AI system made a decision."
+        },
+        {
+          "theme": "Track performance",
+          "description": "Keep a real, ongoing record of how well an AI system is performing over time."
+        },
+        {
+          "theme": "Track progress",
+          "description": "Keep a real, ongoing record of how far an AI initiative has actually gotten."
+        },
+        {
+          "theme": "Track reach",
+          "description": "Keep a real, ongoing record of how many people a program is actually reaching."
+        },
+        {
+          "theme": "Track requirements",
+          "description": "Keep a real record of which stated requirements an AI system has actually met."
+        },
+        {
+          "theme": "Track results",
+          "description": "Keep a real, ongoing record of the results a program is actually producing."
+        },
+        {
+          "theme": "Track revenue",
+          "description": "Keep a real, ongoing record of a nonprofit's actual revenue against its plan."
+        },
+        {
+          "theme": "Track satisfaction",
+          "description": "Keep a real record of how satisfied users actually are with a robotic system."
+        },
+        {
+          "theme": "Track spending",
+          "description": "Keep a real, accurate record of what an AI initiative is actually costing."
+        },
+        {
+          "theme": "Train staff",
+          "description": "Teach a real group of staff the skill they need to safely work with an AI system."
+        },
+        {
+          "theme": "Train teams",
+          "description": "Teach a real team the specific skill they need to operate or oversee an AI system."
+        },
+        {
+          "theme": "Validate assumptions",
+          "description": "Test a real assumption behind a nonprofit's plan before betting the whole plan on it."
+        },
+        {
+          "theme": "Verify outcomes",
+          "description": "Confirm, with real evidence, that a claimed nonprofit outcome actually happened."
+        },
+        {
+          "theme": "Write proposals",
+          "description": "Write a real grant proposal that accurately represents what a nonprofit will actually do."
+        }
+      ]
+    }
+  ]
+}
