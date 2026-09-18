@@ -10,52 +10,122 @@
         {
           "theme": "Drawing what is there, not what you know",
           "description": "Observation over symbol — contour, negative space and the practice of trusting the eye against the brain's shorthand.",
-          "transfer_check": "Produce an observational drawing of a real object using contour and negative-space methods, alongside the from-memory version that shows the difference."
+          "transfer_check": "Produce an observational drawing of a real object using contour and negative-space methods, alongside the from-memory version that shows the difference.",
+          "bands": {
+            "K–2": "Draw a real object by looking at it, not by memory, with an adult.",
+            "3–5": "Draw a real object slowly, looking at its edges more than your paper.",
+            "6–8": "Draw one object using contour lines, looking more than drawing, with a checker.",
+            "9–10": "Draw a real object using contour and negative space, trusting the eye over habit.",
+            "11–12": "Draw a real complex object from observation alone, defending each choice against symbolic shorthand."
+          }
         },
         {
           "theme": "Light and the shape it makes",
           "description": "Value, shadow and form — how five tones turn a circle into a sphere.",
-          "transfer_check": "Render one real lit object in a five-value study where the light direction is unmistakable."
+          "transfer_check": "Render one real lit object in a five-value study where the light direction is unmistakable.",
+          "bands": {
+            "K–2": "Shine a light on a ball and draw the dark and light parts, with an adult.",
+            "3–5": "Draw a round object showing where the light and shadow fall.",
+            "6–8": "Draw a sphere using three values of shading, with a checker.",
+            "9–10": "Draw a real object using five tones of value to show its form.",
+            "11–12": "Draw a real still life using a full value range to convincingly render three-dimensional form."
+          }
         },
         {
           "theme": "Colour: the wheel and the why",
           "description": "Hue, value, saturation and the relationships — complement, analogue, temperature — that make palettes work.",
-          "transfer_check": "Mix and apply a deliberate limited palette for one image, and name the relationship rule the palette obeys."
+          "transfer_check": "Mix and apply a deliberate limited palette for one image, and name the relationship rule the palette obeys.",
+          "bands": {
+            "K–2": "Mix two paint colours together and see what happens, with an adult.",
+            "3–5": "Name two colours that sit opposite each other on a colour wheel.",
+            "6–8": "Mix a complementary colour pair and use them in a small piece, with a checker.",
+            "9–10": "Build a real palette using complement, analogue or temperature relationships.",
+            "11–12": "Design and defend a real palette for a piece, using colour theory to justify each choice."
+          }
         },
         {
           "theme": "Composition: where the eye goes",
           "description": "Framing, thirds, leading lines and the deliberate placement of what matters — the picture as a directed path.",
-          "transfer_check": "Recompose one weak image (yours or found) two different ways and explain which compositional move fixed it."
+          "transfer_check": "Recompose one weak image (yours or found) two different ways and explain which compositional move fixed it.",
+          "bands": {
+            "K–2": "Move a picture around a page until it looks good, with an adult.",
+            "3–5": "Place the main thing in a drawing off to one side instead of the middle.",
+            "6–8": "Compose a drawing using the rule of thirds, with a checker.",
+            "9–10": "Compose a real piece using leading lines and deliberate placement of what matters.",
+            "11–12": "Compose a real piece and explain the directed path you built for the viewer's eye."
+          }
         },
         {
           "theme": "The human figure, honestly",
           "description": "Proportion, gesture and the quick pose — drawing people as structures in motion rather than assembled features.",
-          "transfer_check": "Complete a set of timed gesture drawings from a live or video model, with the last showing measurably better proportion than the first."
+          "transfer_check": "Complete a set of timed gesture drawings from a live or video model, with the last showing measurably better proportion than the first.",
+          "bands": {
+            "K–2": "Draw a stick figure doing something active, with an adult.",
+            "3–5": "Draw a person in a quick pose, focused on the pose not the details.",
+            "6–8": "Draw three quick gesture poses in under a minute each, with a checker.",
+            "9–10": "Draw a real figure using proportion and gesture rather than assembled features.",
+            "11–12": "Draw a real model or reference through multiple quick gesture studies, defending the structural choices."
+          }
         },
         {
           "theme": "Materials and their opinions",
           "description": "Pencil, ink, paint, digital — what each medium wants to do, and choosing the tool for the intention.",
-          "transfer_check": "Execute the same small subject in three media and articulate what each medium gave and refused."
+          "transfer_check": "Execute the same small subject in three media and articulate what each medium gave and refused.",
+          "bands": {
+            "K–2": "Try drawing with two different tools and say which you liked, with an adult.",
+            "3–5": "Draw the same thing with pencil and then with ink and compare.",
+            "6–8": "Use two materials on one subject and describe what each does differently, with a checker.",
+            "9–10": "Choose a real material for a piece based on what it wants to do, and defend the choice.",
+            "11–12": "Complete a real piece in a deliberately chosen medium, defending why that medium served the intention."
+          }
         },
         {
           "theme": "Style: influence without theft",
           "description": "Studying artists you love, the master copy as a tool, and the line between learning from and passing off.",
-          "transfer_check": "Make one labelled master copy, then one original piece applying its lesson, and state exactly what was borrowed."
+          "transfer_check": "Make one labelled master copy, then one original piece applying its lesson, and state exactly what was borrowed.",
+          "bands": {
+            "K–2": "Look at an artist's work you like and try to draw something similar, with an adult.",
+            "3–5": "Copy part of a real artist's drawing as practice.",
+            "6–8": "Make a study copy of a real artist's work and say what you learned, with a checker.",
+            "9–10": "Make a real master copy as a learning tool and explain the line between learning and copying.",
+            "11–12": "Complete a real study in an admired artist's style and articulate where influence ends and originality begins."
+          }
         },
         {
           "theme": "The sketchbook habit",
           "description": "Daily pages, bad drawings on purpose, and the sketchbook as a private gym rather than a gallery.",
-          "transfer_check": "Keep a daily sketchbook for two weeks and present it with your own annotation of what improved and what to attack next."
+          "transfer_check": "Keep a daily sketchbook for two weeks and present it with your own annotation of what improved and what to attack next.",
+          "bands": {
+            "K–2": "Draw one small thing every day for a week, with an adult.",
+            "3–5": "Fill one page a day in a sketchbook for a week.",
+            "6–8": "Fill five sketchbook pages with quick, imperfect drawings, with a checker.",
+            "9–10": "Keep a real sketchbook practice for two weeks, treating it as private practice not a gallery.",
+            "11–12": "Maintain a real sketchbook habit across a month and select one page that shows real growth."
+          }
         },
         {
           "theme": "Critique: giving and taking",
           "description": "Describing before judging, the question behind the criticism, and hearing feedback as data rather than verdict.",
-          "transfer_check": "Give a structured critique of a peer's work (describe, analyse, suggest) and revise one of your own pieces from critique received."
+          "transfer_check": "Give a structured critique of a peer's work (describe, analyse, suggest) and revise one of your own pieces from critique received.",
+          "bands": {
+            "K–2": "Say one thing you notice about a friend's drawing, with an adult.",
+            "3–5": "Describe what you see in a classmate's drawing before saying if you like it.",
+            "6–8": "Describe two things in a peer's work before giving an opinion, with a checker.",
+            "9–10": "Give a real critique that describes before it judges, and receive one as data not verdict.",
+            "11–12": "Lead a real critique session, describing work precisely and receiving feedback as usable data."
+          }
         },
         {
           "theme": "Finishing and showing",
           "description": "When a piece is done, preparing work for a wall or a feed, and the small courage of putting it where people look.",
-          "transfer_check": "Finish, title and publicly display one work — physical or online — and document one response you received."
+          "transfer_check": "Finish, title and publicly display one work — physical or online — and document one response you received.",
+          "bands": {
+            "K–2": "Decide a drawing is done and show it to someone, with an adult.",
+            "3–5": "Pick your best drawing from the week and show it to someone.",
+            "6–8": "Prepare one finished piece to display, with a checker.",
+            "9–10": "Prepare a real piece for a wall or feed, deciding when it is truly finished.",
+            "11–12": "Prepare and present a real finished body of work publicly, defending the decision to show it."
+          }
         }
       ]
     },
@@ -67,52 +137,122 @@
         {
           "theme": "Listening as a skill",
           "description": "Active listening — picking out instruments, structure and production choices instead of letting music be wallpaper.",
-          "transfer_check": "Map one song's full structure and instrumentation from listening alone, verified against a second listener or source."
+          "transfer_check": "Map one song's full structure and instrumentation from listening alone, verified against a second listener or source.",
+          "bands": {
+            "K–2": "Listen to a song with an adult and point out the drums.",
+            "3–5": "Listen to a song and name two instruments you hear.",
+            "6–8": "Listen to a song and identify its structure — verse and chorus, with a checker.",
+            "9–10": "Listen actively to a real song and identify instruments, structure and one production choice.",
+            "11–12": "Analyse a real song's structure and production choices in a written or spoken breakdown."
+          }
         },
         {
           "theme": "Pulse, rhythm and the body's clock",
           "description": "Beat, subdivision and groove — internalising time before any instrument is touched.",
-          "transfer_check": "Clap or play three distinct rhythm patterns against a steady beat, holding each through a distraction."
+          "transfer_check": "Clap or play three distinct rhythm patterns against a steady beat, holding each through a distraction.",
+          "bands": {
+            "K–2": "Clap along to a steady beat with an adult.",
+            "3–5": "Clap a steady beat all the way through while a song plays.",
+            "6–8": "Clap a beat and its subdivision for one song, with a checker.",
+            "9–10": "Internalise a real song's pulse and subdivision without an instrument, then clap it exactly.",
+            "11–12": "Demonstrate real rhythmic internalisation across a complex groove, teaching it to a peer."
+          }
         },
         {
           "theme": "Pitch, melody and singing anyway",
           "description": "Matching pitch, carrying a melody, and why 'tone deaf' is almost always untrained rather than untrue.",
-          "transfer_check": "Sing or play back a short unfamiliar melody accurately after limited hearings, alone or in unison."
+          "transfer_check": "Sing or play back a short unfamiliar melody accurately after limited hearings, alone or in unison.",
+          "bands": {
+            "K–2": "Sing a note back to an adult as closely as you can.",
+            "3–5": "Sing a short simple tune back after hearing it once.",
+            "6–8": "Match pitch on five notes and carry a short melody, with a checker.",
+            "9–10": "Match pitch reliably and carry a real melody, understanding why 'tone deaf' is usually untrained.",
+            "11–12": "Train and demonstrate reliable pitch-matching across a real range, teaching the skill to someone unconfident."
+          }
         },
         {
           "theme": "Harmony: notes that agree and argue",
           "description": "Chords, progressions and the four chords under half the songs you know.",
-          "transfer_check": "Play or program a common progression and identify it by ear inside two real songs."
+          "transfer_check": "Play or program a common progression and identify it by ear inside two real songs.",
+          "bands": {
+            "K–2": "Play two notes together and say if they sound nice or strange, with an adult.",
+            "3–5": "Tell apart a chord that sounds finished from one that sounds unfinished.",
+            "6–8": "Play a simple chord progression and name one chord, with a checker.",
+            "9–10": "Play a real chord progression and identify the four chords under half the songs you know.",
+            "11–12": "Play and analyse a real progression, explaining the tension and resolution it creates."
+          }
         },
         {
           "theme": "Your first instrument, properly begun",
           "description": "Posture, tone production and the practice loop — beginning an instrument with habits that will not need undoing.",
-          "transfer_check": "Perform a simple piece on your instrument with assessed posture and tone, plus your practice log for the fortnight behind it."
+          "transfer_check": "Perform a simple piece on your instrument with assessed posture and tone, plus your practice log for the fortnight behind it.",
+          "bands": {
+            "K–2": "Hold a real instrument correctly with an adult and make one clean sound.",
+            "3–5": "Play three clean notes on a real instrument with correct posture.",
+            "6–8": "Play ten notes with correct posture and tone, with a checker.",
+            "9–10": "Play a real instrument's first exercises with habits that will not need undoing later.",
+            "11–12": "Demonstrate a real instrument's fundamentals to a beginner, modelling posture and tone from the start."
+          }
         },
         {
           "theme": "Reading and the other ways in",
           "description": "Notation, tab, chord charts and ear — the entry systems into written music and when each serves.",
-          "transfer_check": "Learn one short piece from written form (notation, tab or chart) without a recording, then verify against one."
+          "transfer_check": "Learn one short piece from written form (notation, tab or chart) without a recording, then verify against one.",
+          "bands": {
+            "K–2": "Follow along with a simple picture of a song while it plays, with an adult.",
+            "3–5": "Follow along on a chord chart while a friend plays one song.",
+            "6–8": "Read a simple chart or tab and play along, with a checker.",
+            "9–10": "Read a real chart, tab or ear-based system and say when each serves best.",
+            "11–12": "Compare real entry systems into music — notation, tab, ear — and use each to learn the same piece."
+          }
         },
         {
           "theme": "Playing with other people",
           "description": "Ensemble craft: listening across, entering together, and the discipline of being quiet enough.",
-          "transfer_check": "Rehearse and perform one piece with at least one other musician, holding your part against theirs."
+          "transfer_check": "Rehearse and perform one piece with at least one other musician, holding your part against theirs.",
+          "bands": {
+            "K–2": "Play one note when it is your turn with a friend, in time.",
+            "3–5": "Play a simple part with a partner, staying in time together.",
+            "6–8": "Play a part with a partner, entering together and leaving space, with a checker.",
+            "9–10": "Play in a real ensemble, entering together and being quiet enough to hear others.",
+            "11–12": "Perform in a real ensemble, demonstrating listening-across and disciplined entrances and space."
+          }
         },
         {
           "theme": "Making a track in the box",
           "description": "Loops, layers, arrangement — producing a piece of music in software from silence to bounce.",
-          "transfer_check": "Produce and export a one-minute original track with at least four intentional layers, and walk through your arrangement choices."
+          "transfer_check": "Produce and export a one-minute original track with at least four intentional layers, and walk through your arrangement choices.",
+          "bands": {
+            "K–2": "Add one sound to a simple music app with an adult.",
+            "3–5": "Layer two sounds in a music app to make something new.",
+            "6–8": "Layer loops into a short arrangement using software, with a checker.",
+            "9–10": "Produce a real short piece in software from loops to a finished bounce.",
+            "11–12": "Produce a real original arrangement in software, from silence to finished mixdown."
+          }
         },
         {
           "theme": "The song: words that are music",
           "description": "Lyric, hook and form — writing a song that says one thing and lands it.",
-          "transfer_check": "Write and perform (or demo) one original song with a defined hook, and state the single thing it says."
+          "transfer_check": "Write and perform (or demo) one original song with a defined hook, and state the single thing it says.",
+          "bands": {
+            "K–2": "Make up a short rhyme about your day with an adult.",
+            "3–5": "Write two lines that say one thing clearly.",
+            "6–8": "Write a short song section with a hook and one clear idea, with a checker.",
+            "9–10": "Write a real song with lyric, hook and form that says one thing and lands it.",
+            "11–12": "Write and perform a real complete song, defending that it says one thing and lands it."
+          }
         },
         {
           "theme": "Music in its cultures",
           "description": "Traditions, borrowings and the histories inside genres — listening to music as the record of the people who made it.",
-          "transfer_check": "Trace one genre you enjoy back through two of its source traditions with listening examples, and present the chain."
+          "transfer_check": "Trace one genre you enjoy back through two of its source traditions with listening examples, and present the chain.",
+          "bands": {
+            "K–2": "Say what kind of music your family likes, with an adult.",
+            "3–5": "Name one music tradition and one thing you know about it.",
+            "6–8": "Name two music traditions and one thing each borrowed from, with a checker.",
+            "9–10": "Research a real genre's history and one thing it borrowed from another tradition.",
+            "11–12": "Present a real genre's cultural history, tracing its borrowings and the people who made it."
+          }
         }
       ]
     },
@@ -124,52 +264,122 @@
         {
           "theme": "The frame is a choice",
           "description": "What is in, what is out, and where the camera stands — every shot as a decision about what the viewer may know.",
-          "transfer_check": "Photograph one subject five ways — distance, angle, framing — and explain what each frame lets the viewer believe."
+          "transfer_check": "Photograph one subject five ways — distance, angle, framing — and explain what each frame lets the viewer believe.",
+          "bands": {
+            "K–2": "Take a photo of something and say why you chose what is in it, with an adult.",
+            "3–5": "Take two photos of the same thing framed differently and compare.",
+            "6–8": "Take three photos with different framing and explain one choice, with a checker.",
+            "9–10": "Shoot a real scene with deliberate framing choices, explaining what each excludes.",
+            "11–12": "Shoot and defend a real sequence's framing, explaining what each shot lets the viewer know."
+          }
         },
         {
           "theme": "Light before lens",
           "description": "Finding, shaping and waiting for light — why the hour and the window beat the expensive camera.",
-          "transfer_check": "Shoot the same subject in three different lighting conditions and rank the results with the reasons visible in the images."
+          "transfer_check": "Shoot the same subject in three different lighting conditions and rank the results with the reasons visible in the images.",
+          "bands": {
+            "K–2": "Take a photo near a window and one far from it, with an adult.",
+            "3–5": "Take two photos in different light and say which looks better.",
+            "6–8": "Shoot the same subject in two light sources and compare, with a checker.",
+            "9–10": "Shoot a real subject using available light well, without relying on an expensive camera.",
+            "11–12": "Shoot and light a real subject deliberately, defending the choice of hour and window over gear."
+          }
         },
         {
           "theme": "Sound: half the picture",
           "description": "Why audiences forgive bad video and abandon bad audio — mic placement, room noise and the recorded room tone.",
-          "transfer_check": "Record the same short scene with camera audio and with a placed microphone, and present the difference."
+          "transfer_check": "Record the same short scene with camera audio and with a placed microphone, and present the difference.",
+          "bands": {
+            "K–2": "Record your voice and say if it sounds clear, with an adult.",
+            "3–5": "Record a short video and say if the sound is clear.",
+            "6–8": "Record with attention to mic placement and check room noise, with a checker.",
+            "9–10": "Record real audio with correct mic placement and manage room noise and tone.",
+            "11–12": "Record and clean real audio for a project, defending choices that audiences forgive video for but not sound."
+          }
         },
         {
           "theme": "The interview",
           "description": "Questions that open people, listening while operating, and the ethics of what your subject didn't realise they said.",
-          "transfer_check": "Record a five-minute interview with a real subject — framed, lit, mic'd — and cut its best two minutes honestly."
+          "transfer_check": "Record a five-minute interview with a real subject — framed, lit, mic'd — and cut its best two minutes honestly.",
+          "bands": {
+            "K–2": "Ask a grown-up one question and listen to their answer, with an adult.",
+            "3–5": "Ask someone three questions and listen without interrupting.",
+            "6–8": "Ask five open questions and listen while operating a camera, with a checker.",
+            "9–10": "Conduct a real interview with open questions, listening well while recording.",
+            "11–12": "Conduct and edit a real interview, handling the ethics of what a subject did not realise they said."
+          }
         },
         {
           "theme": "The edit: writing with footage",
           "description": "Selection, order and rhythm — how meaning is made in the cut, and made differently by a different cut.",
-          "transfer_check": "Cut the same footage into two versions with different meanings or moods, and screen both."
+          "transfer_check": "Cut the same footage into two versions with different meanings or moods, and screen both.",
+          "bands": {
+            "K–2": "Pick your favourite of two video clips to show, with an adult.",
+            "3–5": "Choose which of three clips to use and in what order.",
+            "6–8": "Edit three clips into an order that tells a small story, with a checker.",
+            "9–10": "Edit real footage, choosing selection, order and rhythm to make meaning.",
+            "11–12": "Edit a real project two different ways and explain how the cut changed the meaning."
+          }
         },
         {
           "theme": "The story in ninety seconds",
           "description": "Short-form structure: hook, turn, payoff — the discipline of a complete story inside a feed's attention span.",
-          "transfer_check": "Make a ninety-second piece with an identifiable hook, turn and payoff, and test it on a viewer who owes you nothing."
+          "transfer_check": "Make a ninety-second piece with an identifiable hook, turn and payoff, and test it on a viewer who owes you nothing.",
+          "bands": {
+            "K–2": "Tell a very short story in three sentences, with an adult.",
+            "3–5": "Tell a story in under a minute with a beginning, middle and end.",
+            "6–8": "Structure a ninety-second story with a hook, a turn and a payoff, with a checker.",
+            "9–10": "Edit a real ninety-second story with hook, turn and payoff inside the attention span.",
+            "11–12": "Produce a real short-form piece to a strict time limit, defending the discipline of the cut."
+          }
         },
         {
           "theme": "Truth and the edited image",
           "description": "Staging, cropping, colour and AI generation — where enhancement ends and deception begins, and the disclosure that keeps trust.",
-          "transfer_check": "Take one of your own images or clips, push it past the honest line deliberately, and mark the exact edit where it stopped being true."
+          "transfer_check": "Take one of your own images or clips, push it past the honest line deliberately, and mark the exact edit where it stopped being true.",
+          "bands": {
+            "K–2": "Say if a photo looks real or changed, with an adult.",
+            "3–5": "Spot one way a photo might be changed from the original.",
+            "6–8": "Compare an edited and unedited photo and say what changed, with a checker.",
+            "9–10": "Identify real edits, staging or generation in an image and where enhancement becomes deception.",
+            "11–12": "Analyse a real edited image's ethics and write the disclosure that would keep trust."
+          }
         },
         {
           "theme": "Faces, consent and the right to be unfilmed",
           "description": "Filming people: consent, minors, public space law and the human ask behind the legal minimum.",
-          "transfer_check": "Produce a short piece involving other people with documented consent, and state where law and courtesy diverged."
+          "transfer_check": "Produce a short piece involving other people with documented consent, and state where law and courtesy diverged.",
+          "bands": {
+            "K–2": "Ask before taking a picture of someone, with an adult.",
+            "3–5": "Ask permission before filming a friend and respect a no.",
+            "6–8": "Get consent from two people before filming them, with a checker.",
+            "9–10": "Get real informed consent before filming real people, including a minor's guardian.",
+            "11–12": "Handle a real filming consent scenario correctly, including public space law and a person's right to refuse."
+          }
         },
         {
           "theme": "Publishing and the platform's cut",
           "description": "Formats, thumbnails, captions and what each platform's machine rewards — distributing work without being distributed by it.",
-          "transfer_check": "Publish one piece properly prepared for two different platforms, and compare what each did to it and for it."
+          "transfer_check": "Publish one piece properly prepared for two different platforms, and compare what each did to it and for it.",
+          "bands": {
+            "K–2": "Show your video to a friend and see if they like it, with an adult.",
+            "3–5": "Post a short video and see what makes people watch it.",
+            "6–8": "Format one video for a platform with a thumbnail and caption, with a checker.",
+            "9–10": "Format a real video for a platform, choosing what its algorithm rewards without being ruled by it.",
+            "11–12": "Publish a real project across a platform's format constraints while defending your own creative intent."
+          }
         },
         {
           "theme": "The body of work",
           "description": "Projects over posts: series, consistency and the portfolio that shows a maker rather than a lucky upload.",
-          "transfer_check": "Plan and complete a three-piece series with a stated through-line, presented as a single body of work."
+          "transfer_check": "Plan and complete a three-piece series with a stated through-line, presented as a single body of work.",
+          "bands": {
+            "K–2": "Make three small pictures that go together, with an adult.",
+            "3–5": "Make three short videos on the same idea.",
+            "6–8": "Make a small series of three related pieces, with a checker.",
+            "9–10": "Build a real short series showing consistency of subject or style.",
+            "11–12": "Assemble a real portfolio of consistent work that shows a maker rather than one lucky upload."
+          }
         }
       ]
     },
@@ -181,52 +391,122 @@
         {
           "theme": "Standing there: presence before content",
           "description": "Stance, stillness, breath and the eyes — occupying a space before saying anything in it.",
-          "transfer_check": "Hold a stage or room entrance, pause and first line before an audience, with feedback on presence alone."
+          "transfer_check": "Hold a stage or room entrance, pause and first line before an audience, with feedback on presence alone.",
+          "bands": {
+            "K–2": "Stand still and take a breath before speaking to a group, with an adult.",
+            "3–5": "Stand quietly for five seconds before starting to speak.",
+            "6–8": "Stand still, breathe and hold the room for five seconds before speaking, with a checker.",
+            "9–10": "Occupy a real space with stillness and breath before saying anything.",
+            "11–12": "Command a real stage's stillness and presence before a word is spoken, assessed on the hold."
+          }
         },
         {
           "theme": "The voice that reaches the back",
           "description": "Breath support, projection, pace and the pause — a voice that carries without shouting.",
-          "transfer_check": "Deliver the same passage to the back of a real room quietly failing and then correctly projecting, confirmed by a listener there."
+          "transfer_check": "Deliver the same passage to the back of a real room quietly failing and then correctly projecting, confirmed by a listener there.",
+          "bands": {
+            "K–2": "Say a word loudly enough for someone across the room to hear, with an adult.",
+            "3–5": "Project your voice to reach the back of a room.",
+            "6–8": "Project a short line to reach the back of a room without shouting, with a checker.",
+            "9–10": "Project a real line with breath support, pace and a pause, reaching the back of a real room.",
+            "11–12": "Deliver a real speech projecting to a full room, using pace and pause deliberately."
+          }
         },
         {
           "theme": "Saying words you did not write",
           "description": "Text work: meaning first, memory second, and making a written line sound like it occurred to you.",
-          "transfer_check": "Perform a memorised minute of someone else's text with intention choices you can defend line by line."
+          "transfer_check": "Perform a memorised minute of someone else's text with intention choices you can defend line by line.",
+          "bands": {
+            "K–2": "Say a line from a book as if you meant it, with an adult.",
+            "3–5": "Memorise and say a short line someone else wrote.",
+            "6–8": "Perform a memorised line so it sounds like it occurred to you, with a checker.",
+            "9–10": "Perform a real memorised text with meaning first, sounding natural rather than recited.",
+            "11–12": "Perform a real scripted monologue, defending the choices that made someone else's words your own."
+          }
         },
         {
           "theme": "Improvising: yes, and the fear",
           "description": "Accepting offers, building with a partner and failing cheerfully in public — improvisation as trained generosity.",
-          "transfer_check": "Play three improv structures with a partner before observers, sustaining accept-and-build throughout."
+          "transfer_check": "Play three improv structures with a partner before observers, sustaining accept-and-build throughout.",
+          "bands": {
+            "K–2": "Add one idea to a friend's pretend game, with an adult.",
+            "3–5": "Build on a partner's idea in a made-up scene.",
+            "6–8": "Accept and build on a partner's offer in a short improvised scene, with a checker.",
+            "9–10": "Improvise a real scene, accepting offers and building generously with a partner.",
+            "11–12": "Perform real improvisation, failing cheerfully in public and building trust with a partner live."
+          }
         },
         {
           "theme": "The character who is not you",
           "description": "Body, voice, want — building someone else from observable choices rather than costume.",
-          "transfer_check": "Present the same short scene as two distinct characters, changed by observable physical and vocal choices only."
+          "transfer_check": "Present the same short scene as two distinct characters, changed by observable physical and vocal choices only.",
+          "bands": {
+            "K–2": "Pretend to be someone else for a minute, with an adult.",
+            "3–5": "Play a character different from yourself for a short scene.",
+            "6–8": "Build a character's body and voice for one short scene, with a checker.",
+            "9–10": "Build a real character from observable choices — body, voice, want — not costume.",
+            "11–12": "Perform a real character built from specific choices, defending them as more than costume."
+          }
         },
         {
           "theme": "The speech with a job to do",
           "description": "Persuading, honouring, explaining — occasion speeches structured for their actual purpose and audience.",
-          "transfer_check": "Write and deliver a three-minute speech for a real occasion and purpose, judged against whether it did its job."
+          "transfer_check": "Write and deliver a three-minute speech for a real occasion and purpose, judged against whether it did its job.",
+          "bands": {
+            "K–2": "Say why you like something to a group, with an adult.",
+            "3–5": "Give a short speech about why something matters to you.",
+            "6–8": "Give a short speech structured to persuade or explain, with a checker.",
+            "9–10": "Structure and deliver a real occasion speech for its actual purpose and audience.",
+            "11–12": "Deliver a real occasion speech — persuading, honouring, explaining — structured for its true purpose."
+          }
         },
         {
           "theme": "Nerves, and performing with them",
           "description": "What stage fright is physiologically, the preparation that shrinks it, and performing well while still afraid.",
-          "transfer_check": "Perform after deliberately rehearsing a personal pre-performance routine, and report what the nerves did and what you did back."
+          "transfer_check": "Perform after deliberately rehearsing a personal pre-performance routine, and report what the nerves did and what you did back.",
+          "bands": {
+            "K–2": "Say you feel nervous before speaking, and take a breath, with an adult.",
+            "3–5": "Notice what your body does when you are nervous to speak.",
+            "6–8": "Name what stage fright feels like and one thing that shrinks it, with a checker.",
+            "9–10": "Prepare for real stage fright and perform well while still feeling it.",
+            "11–12": "Perform a real piece while managing real nerves, and explain the preparation that shrank them."
+          }
         },
         {
           "theme": "The ensemble and the cue",
           "description": "Rehearsal discipline, hitting cues, and the offstage professionalism that companies are actually built on.",
-          "transfer_check": "Rehearse and perform a group piece hitting every entrance and cue, with the stage manager's log as evidence."
+          "transfer_check": "Rehearse and perform a group piece hitting every entrance and cue, with the stage manager's log as evidence.",
+          "bands": {
+            "K–2": "Wait for your turn to speak in a group activity, with an adult.",
+            "3–5": "Hit your cue to speak or move in a group scene.",
+            "6–8": "Hit two cues correctly in a rehearsed scene, with a checker.",
+            "9–10": "Hit real cues reliably in rehearsal, building the offstage discipline companies run on.",
+            "11–12": "Rehearse and perform in a real ensemble, demonstrating the professionalism that holds a company together."
+          }
         },
         {
           "theme": "The audience is part of the show",
           "description": "Reading a room, riding laughter and silence, and recovering the moment that just died.",
-          "transfer_check": "Perform one piece twice for different audiences and describe, specifically, what you adjusted between them and why."
+          "transfer_check": "Perform one piece twice for different audiences and describe, specifically, what you adjusted between them and why.",
+          "bands": {
+            "K–2": "Notice if people are laughing or quiet during a performance, with an adult.",
+            "3–5": "Notice how an audience reacts and adjust your pace.",
+            "6–8": "Read an audience's laughter or silence and adjust once, with a checker.",
+            "9–10": "Read a real audience and recover a moment that went quiet or died.",
+            "11–12": "Read and steer a real audience through a full performance, recovering a real dead moment live."
+          }
         },
         {
           "theme": "Putting on the show",
           "description": "The production itself: space, tickets, tech, front of house — the unglamorous machine around every performance.",
-          "transfer_check": "Take one named production role (stage manager, tech, producer, FOH) through a real event and deliver its checklist complete."
+          "transfer_check": "Take one named production role (stage manager, tech, producer, FOH) through a real event and deliver its checklist complete.",
+          "bands": {
+            "K–2": "Help set up chairs or props before a show, with an adult.",
+            "3–5": "Help set up one part of a performance space.",
+            "6–8": "Set up space, props and a simple ticket system for one show, with a checker.",
+            "9–10": "Run real front-of-house, tech and space logistics for a small performance.",
+            "11–12": "Produce a real show's full unglamorous machine — space, tickets, tech, front of house."
+          }
         }
       ]
     },
@@ -238,52 +518,122 @@
         {
           "theme": "Design is deciding for someone",
           "description": "Users, constraints and the brief — design as solving a person's problem rather than decorating your own.",
-          "transfer_check": "Write a real design brief from interviewing an actual user, with constraints and success criteria they confirm."
+          "transfer_check": "Write a real design brief from interviewing an actual user, with constraints and success criteria they confirm.",
+          "bands": {
+            "K–2": "Make something for a friend based on what they like, with an adult.",
+            "3–5": "Design something simple for another person's actual need.",
+            "6–8": "Design one object for a stated user need, not your own preference, with a checker.",
+            "9–10": "Design a real object for a real user's constraint, solving their problem not decorating your own.",
+            "11–12": "Design and defend a real object against a real brief and a real user's constraints."
+          }
         },
         {
           "theme": "Sketch, iterate, throw away",
           "description": "Many cheap versions before one dear one — ideation as volume, and the courage to bin the favourite.",
-          "transfer_check": "Produce ten distinct concept sketches for one brief, and defend which two advance and why the favourite died."
+          "transfer_check": "Produce ten distinct concept sketches for one brief, and defend which two advance and why the favourite died.",
+          "bands": {
+            "K–2": "Draw three quick versions of an idea and pick one, with an adult.",
+            "3–5": "Draw five quick versions of one idea before choosing.",
+            "6–8": "Sketch five cheap versions of an idea and discard four, with a checker.",
+            "9–10": "Iterate many cheap versions of a real design and discard the favourite if it is not the best.",
+            "11–12": "Run a real iterative design process, defending why the discarded favourite lost to the chosen one."
+          }
         },
         {
           "theme": "Materials: what wants to be what",
           "description": "Wood, fabric, clay, paper, plastic — properties, joins and the material honestly matched to the job.",
-          "transfer_check": "Choose and justify materials for one real object, and demonstrate the appropriate joining technique for your choice."
+          "transfer_check": "Choose and justify materials for one real object, and demonstrate the appropriate joining technique for your choice.",
+          "bands": {
+            "K–2": "Feel two materials and say which is bendier, with an adult.",
+            "3–5": "Compare two materials and say which suits a small project better.",
+            "6–8": "Choose the right material for one small build and say why, with a checker.",
+            "9–10": "Choose a real material honestly matched to a job, considering its properties and joins.",
+            "11–12": "Choose and defend a real material against its properties, joins and the job it must do."
+          }
         },
         {
           "theme": "Measure twice: precision as kindness",
           "description": "Marking out, tolerances and the accumulating error — precision as respect for the future assembler and user.",
-          "transfer_check": "Make a multi-part object where the parts actually fit, with your marking-out shown and measured against tolerance."
+          "transfer_check": "Make a multi-part object where the parts actually fit, with your marking-out shown and measured against tolerance.",
+          "bands": {
+            "K–2": "Measure something twice before cutting it, with an adult.",
+            "3–5": "Measure a piece twice and mark it before cutting.",
+            "6–8": "Measure and mark a piece to a stated tolerance, with a checker.",
+            "9–10": "Mark out a real piece to a tight tolerance, understanding accumulating error.",
+            "11–12": "Mark and cut a real assembly to a tolerance respectful of whoever assembles it next."
+          }
         },
         {
           "theme": "The tool and the respect it demands",
           "description": "Hand and power tools: capability, technique and the safety rules written in other people's scars.",
-          "transfer_check": "Demonstrate safe, correct technique on three tools appropriate to your level, including one you were newly trained on."
+          "transfer_check": "Demonstrate safe, correct technique on three tools appropriate to your level, including one you were newly trained on.",
+          "bands": {
+            "K–2": "Use a safe tool carefully with an adult watching.",
+            "3–5": "Use a hand tool correctly and put it away safely.",
+            "6–8": "Use two hand tools correctly and safely, with a checker.",
+            "9–10": "Use a real hand or power tool with correct technique and safety awareness.",
+            "11–12": "Demonstrate real tool competence and safety discipline, explaining the rules written in others' scars."
+          }
         },
         {
           "theme": "Type, layout and the designed page",
           "description": "Graphic design's core: hierarchy, alignment, contrast, whitespace — making information look like what it means.",
-          "transfer_check": "Redesign one genuinely bad real-world document or poster, and annotate each change with the principle it applies."
+          "transfer_check": "Redesign one genuinely bad real-world document or poster, and annotate each change with the principle it applies.",
+          "bands": {
+            "K–2": "Arrange words and a picture on a page so it looks tidy, with an adult.",
+            "3–5": "Arrange text and images on a page with clear hierarchy.",
+            "6–8": "Design a simple page using alignment and whitespace, with a checker.",
+            "9–10": "Design a real page using hierarchy, alignment, contrast and whitespace.",
+            "11–12": "Design a real page that makes information look like what it means, defended against a critique."
+          }
         },
         {
           "theme": "The prototype that answers a question",
           "description": "Building the cheapest thing that tests the riskiest assumption — prototyping as inquiry, not miniature manufacture.",
-          "transfer_check": "State one design's riskiest assumption, build the minimum prototype that tests it, and report the answer."
+          "transfer_check": "State one design's riskiest assumption, build the minimum prototype that tests it, and report the answer.",
+          "bands": {
+            "K–2": "Build a quick, rough version of an idea to test it, with an adult.",
+            "3–5": "Build a cheap test version of an idea before the real one.",
+            "6–8": "Build a cheap prototype testing one risky assumption, with a checker.",
+            "9–10": "Build a real cheap prototype that tests the riskiest assumption in a design.",
+            "11–12": "Build and test a real prototype as inquiry, defending what question it answered."
+          }
         },
         {
           "theme": "Repair, adapt, hack",
           "description": "Modifying and mending the made world — the confidence to open, alter and improve objects you own.",
-          "transfer_check": "Repair or usefully modify one real broken or inadequate object, documenting before, process and after."
+          "transfer_check": "Repair or usefully modify one real broken or inadequate object, documenting before, process and after.",
+          "bands": {
+            "K–2": "Fix something small that is broken, with an adult.",
+            "3–5": "Fix or improve something you own without an adult's help.",
+            "6–8": "Repair or modify one real object you own, with a checker.",
+            "9–10": "Repair or adapt a real object confidently, opening it to understand it first.",
+            "11–12": "Repair or significantly modify a real object, documenting the process and the improvement."
+          }
         },
         {
           "theme": "The critique of things",
           "description": "Why some objects delight and others infuriate — analysing the designed world's hits and crimes.",
-          "transfer_check": "Analyse one excellent and one terrible everyday object, and specify the design decisions responsible for each."
+          "transfer_check": "Analyse one excellent and one terrible everyday object, and specify the design decisions responsible for each.",
+          "bands": {
+            "K–2": "Say why you like or dislike an everyday object, with an adult.",
+            "3–5": "Name one object that is easy to use and one that is annoying.",
+            "6–8": "Analyse two designed objects for what works and what fails, with a checker.",
+            "9–10": "Analyse a real designed object's hits and crimes with specific reasoning.",
+            "11–12": "Write a real critique of a designed object's success and failure, grounded in design principles."
+          }
         },
         {
           "theme": "Making for someone, start to finish",
           "description": "The commission: brief, design, make, deliver — one complete arc ending in an object in its user's hands.",
-          "transfer_check": "Complete a real commission for a real person from brief to handover, with their assessment of it against the brief."
+          "transfer_check": "Complete a real commission for a real person from brief to handover, with their assessment of it against the brief.",
+          "bands": {
+            "K–2": "Make something for someone and give it to them, with an adult.",
+            "3–5": "Make a small object for a specific person's request.",
+            "6–8": "Take a brief, design and make one object for a real person, with a checker.",
+            "9–10": "Complete a real commission from brief through delivery for an actual user.",
+            "11–12": "Complete a real commission end to end — brief, design, make, deliver — to a real client's satisfaction."
+          }
         }
       ]
     }

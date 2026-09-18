@@ -80,7 +80,7 @@ python3 tests/test_platform.py
 
 ---
 
-## 2 — The community packs' band sentences, by pack importance *(tranche one — SmartCiti.X New Orleans Trades and the States OS — done in v0.79.0; tranche two — Trades in the Classroom and Trades Across School Subjects — done in v0.80.0, 1,000 rows so far; `tools/author_bands.py` for the remaining tranches)*
+## 2 — The community packs' band sentences, by pack importance *(tranche one — SmartCiti.X New Orleans Trades and the States OS — done in v0.79.0; tranche two — Trades in the Classroom and Trades Across School Subjects — done in v0.80.0; tranche three — Music, Culinary Trades and Arts, Making Media & Performance — done in v0.81.0, 1,750 rows so far; `tools/author_bands.py` for the remaining tranches)*
 
 **Why.** The remaining 6,293 suffixed rows sit in 25 community and
 regional packs of 250 (and the States OS), where the source description

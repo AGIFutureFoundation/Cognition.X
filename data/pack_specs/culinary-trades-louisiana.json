@@ -10,52 +10,122 @@
     {
      "theme": "The knife",
      "description": "Grip, the claw, the honed edge and the cuts — dice, julienne, chiffonade — that every kitchen speaks in.",
-     "transfer_check": "Produce a small dice, a julienne and a chiffonade to size on real vegetables, safely, in under ten minutes."
+     "transfer_check": "Produce a small dice, a julienne and a chiffonade to size on real vegetables, safely, in under ten minutes.",
+     "bands": {
+      "K–2": "Hold a butter knife properly with an adult and cut something soft.",
+      "3–5": "Cut a soft vegetable into pieces with a real knife and an adult watching.",
+      "6–8": "Cut one vegetable into a dice and a julienne, with a checker.",
+      "9–10": "Cut a real vegetable into a dice, a julienne and a chiffonade, using the claw grip.",
+      "11–12": "Demonstrate four real knife cuts cleanly and correctly to a checker, using proper grip throughout."
+     }
     },
     {
      "theme": "Mise en place",
      "description": "Everything in its place before the heat goes on: the prep list, the containers, the station that thinks ahead.",
-     "transfer_check": "Prep a complete mise en place for a three-component dish from a written recipe, checked by a cook before cooking begins."
+     "transfer_check": "Prep a complete mise en place for a three-component dish from a written recipe, checked by a cook before cooking begins.",
+     "bands": {
+      "K–2": "Put your ingredients in little bowls before you start cooking, with an adult.",
+      "3–5": "Lay out everything you need before starting a simple recipe.",
+      "6–8": "Prep and organise everything for one recipe before turning on heat, with a checker.",
+      "9–10": "Prep a real station — containers, prep list — for one dish before the heat goes on.",
+      "11–12": "Run a full real mise en place for a multi-step dish, timed, before service."
+     }
     },
     {
      "theme": "Heat",
      "description": "Sauté, sear, braise, fry and roast: what each does to food and how to know which one a dish needs.",
-     "transfer_check": "Cook one protein by three different methods and explain, on the plate, what each method changed."
+     "transfer_check": "Cook one protein by three different methods and explain, on the plate, what each method changed.",
+     "bands": {
+      "K–2": "Watch food cook two different ways with an adult and say which is faster.",
+      "3–5": "Cook one food by sautéing and another by boiling and compare.",
+      "6–8": "Use two cooking methods on the same food and say what each did, with a checker.",
+      "9–10": "Use sauté, sear or braise on a real dish and explain what heat did to the food.",
+      "11–12": "Choose and execute the correct heat method for a real dish, defending why that method fits."
+     }
     },
     {
      "theme": "Stocks and the flavor base",
      "description": "The trinity — onion, celery, bell pepper — and the stock underneath it: the foundation of the Louisiana pot.",
-     "transfer_check": "Make a stock from bones or shells and a properly sweated trinity, and use both in a finished dish."
+     "transfer_check": "Make a stock from bones or shells and a properly sweated trinity, and use both in a finished dish.",
+     "bands": {
+      "K–2": "Smell onion, celery and pepper cooking with an adult.",
+      "3–5": "Cook the trinity — onion, celery, pepper — and say what it smells like.",
+      "6–8": "Make a simple stock using the trinity as its base, with a checker.",
+      "9–10": "Make a real stock from the trinity and taste how it builds the pot's foundation.",
+      "11–12": "Build and defend a real stock as the flavor base for a Louisiana dish, tasted and adjusted."
+     }
     },
     {
      "theme": "Tasting and seasoning",
      "description": "Salt, acid, fat and heat; tasting at every stage; fixing a dish that is flat.",
-     "transfer_check": "Correct three deliberately under- or over-seasoned dishes by tasting, naming what each needed."
+     "transfer_check": "Correct three deliberately under- or over-seasoned dishes by tasting, naming what each needed.",
+     "bands": {
+      "K–2": "Taste a dish before and after adding a pinch of salt, with an adult.",
+      "3–5": "Taste a dish and say if it needs more salt or something sour.",
+      "6–8": "Taste a dish at two stages and fix one that is flat, with a checker.",
+      "9–10": "Taste a real dish and fix it using salt, acid, fat or heat.",
+      "11–12": "Taste and correct a real dish across its cooking stages, defending each seasoning decision."
+     }
     },
     {
      "theme": "The station",
      "description": "Line discipline: the call, the callback, the pass, and the cook who never leaves a burner unwatched.",
-     "transfer_check": "Work a station through a mock ticket rail with correct callbacks, plating to the pass on time."
+     "transfer_check": "Work a station through a mock ticket rail with correct callbacks, plating to the pass on time.",
+     "bands": {
+      "K–2": "Keep your cooking spot tidy while an adult cooks nearby.",
+      "3–5": "Call out what you need before you need it while helping cook.",
+      "6–8": "Run a small station calling out orders and keeping it clean, with a checker.",
+      "9–10": "Run a real station with the call, the callback and the pass, without leaving a burner unwatched.",
+      "11–12": "Run a real station under time pressure with full line discipline, call and callback intact."
+     }
     },
     {
      "theme": "Timing",
      "description": "Cooking four things at once so they land together: the countdown and the order of operations.",
-     "transfer_check": "Plate a three-component dish with every component hot and finished at the same moment, twice in a row."
+     "transfer_check": "Plate a three-component dish with every component hot and finished at the same moment, twice in a row.",
+     "bands": {
+      "K–2": "Cook two simple things so they finish at the same time, with an adult.",
+      "3–5": "Time two dishes to land on the plate together.",
+      "6–8": "Cook three items timed to finish together, with a checker.",
+      "9–10": "Cook a real multi-item dish timed so everything lands together.",
+      "11–12": "Execute a real timed ticket with several items landing together under kitchen pace."
+     }
     },
     {
      "theme": "Cleaning as you go",
      "description": "The sanitised station, the wiped board and the sink that is never full: cleanliness as speed.",
-     "transfer_check": "Cook a full prep session and finish with a station an inspector would pass, with no dedicated clean-up time."
+     "transfer_check": "Cook a full prep session and finish with a station an inspector would pass, with no dedicated clean-up time.",
+     "bands": {
+      "K–2": "Wipe up a spill right away while cooking with an adult.",
+      "3–5": "Clean your station after each step of cooking.",
+      "6–8": "Keep a station sanitised through a cooking task, with a checker.",
+      "9–10": "Keep a real station clean and sanitised through a full cooking task.",
+      "11–12": "Run a real station where cleanliness is speed, verified clean at every stage by a checker."
+     }
     },
     {
      "theme": "Kitchen safety",
      "description": "Burns, cuts, slips, the fryer, the fire suppression and the first-aid kit: staying whole in a dangerous room.",
-     "transfer_check": "Demonstrate safe fryer operation, knife handling and a wet-floor response, and locate and explain the kitchen's fire suppression."
+     "transfer_check": "Demonstrate safe fryer operation, knife handling and a wet-floor response, and locate and explain the kitchen's fire suppression.",
+     "bands": {
+      "K–2": "Say why you must be careful near the stove, with an adult.",
+      "3–5": "Name one kitchen danger and how to avoid it.",
+      "6–8": "Name three kitchen dangers and the safety rule for each, with a checker.",
+      "9–10": "Name real kitchen hazards — burns, cuts, the fryer — and the rule for each.",
+      "11–12": "Demonstrate real kitchen safety practice across hazards, including fire suppression and first aid response."
+     }
     },
     {
      "theme": "Speed with care",
      "description": "The rush: staying accurate when the tickets pile up, and knowing when to call for help.",
-     "transfer_check": "Complete a timed rush of eight tickets with zero errors, calling for help correctly at least once when overloaded."
+     "transfer_check": "Complete a timed rush of eight tickets with zero errors, calling for help correctly at least once when overloaded.",
+     "bands": {
+      "K–2": "Cook something a little faster without making a mess, with an adult.",
+      "3–5": "Cook two things quickly while staying accurate.",
+      "6–8": "Cook three items quickly and accurately under light time pressure, with a checker.",
+      "9–10": "Cook a real ticket accurately while tickets pile up, and know when to call for help.",
+      "11–12": "Work a real rush accurately under pressure, calling for help at the right moment."
+     }
     }
    ]
   },
@@ -67,52 +137,122 @@
     {
      "theme": "The roux",
      "description": "Blond to brick to dark: flour, fat, patience and the ratio; the smell that tells you it is done.",
-     "transfer_check": "Make a blond, a peanut-butter and a dark roux without scorching, and name which dishes each belongs to."
+     "transfer_check": "Make a blond, a peanut-butter and a dark roux without scorching, and name which dishes each belongs to.",
+     "bands": {
+      "K–2": "Watch flour and fat cook together with an adult and see the colour change.",
+      "3–5": "Cook a roux until it changes colour and say what stage it is at.",
+      "6–8": "Cook a roux to blond and to brick stage, naming each, with a checker.",
+      "9–10": "Cook a real roux through blond, brick and dark, and describe the smell at each stage.",
+      "11–12": "Cook and defend a real roux to a specified stage, judged by colour and smell alone."
+     }
     },
     {
      "theme": "Gumbo",
      "description": "Okra, filé and roux — the three ways — and the pot that means home in every part of the state.",
-     "transfer_check": "Cook a gumbo from a roux you made, seasoned to taste, and serve it to someone who grew up on it."
+     "transfer_check": "Cook a gumbo from a roux you made, seasoned to taste, and serve it to someone who grew up on it.",
+     "bands": {
+      "K–2": "Taste gumbo with an adult and say what is in it.",
+      "3–5": "Name two ways gumbo can be thickened: okra or filé.",
+      "6–8": "Name the three thickeners used in gumbo and one dish that uses each, with a checker.",
+      "9–10": "Make a real gumbo using one of the three thickening methods and explain the choice.",
+      "11–12": "Cook and defend a real gumbo's thickening method against the other two traditions."
+     }
     },
     {
      "theme": "Rice and jambalaya",
      "description": "Rice as the plate's foundation; red jambalaya and brown, and why the two towns argue.",
-     "transfer_check": "Cook rice perfectly by absorption and make a jambalaya in one of the two styles, explaining the choice."
+     "transfer_check": "Cook rice perfectly by absorption and make a jambalaya in one of the two styles, explaining the choice.",
+     "bands": {
+      "K–2": "Cook rice with an adult and say what it goes with.",
+      "3–5": "Cook rice and say the difference between red and brown jambalaya.",
+      "6–8": "Cook a simple jambalaya and explain red versus brown, with a checker.",
+      "9–10": "Cook a real jambalaya, red or brown, and explain why the two towns argue.",
+      "11–12": "Cook and defend a real jambalaya style, explaining the regional debate with evidence."
+     }
     },
     {
      "theme": "Red beans on Monday",
      "description": "The pot that feeds the week: soaking, the ham bone, the creaminess, and the tradition behind the day.",
-     "transfer_check": "Cook a pot of red beans to a creamy finish and cost it per serving as a Monday plate."
+     "transfer_check": "Cook a pot of red beans to a creamy finish and cost it per serving as a Monday plate.",
+     "bands": {
+      "K–2": "Help soak beans overnight with an adult.",
+      "3–5": "Cook red beans with a ham bone and say why Monday is the day.",
+      "6–8": "Cook red beans to creaminess and explain the tradition behind the day, with a checker.",
+      "9–10": "Cook real red beans to creaminess and explain the tradition and the ham bone's role.",
+      "11–12": "Cook and serve a real pot of red beans, defending the tradition and the technique that got it creamy."
+     }
     },
     {
      "theme": "The boucherie",
      "description": "Boudin, cracklins, andouille and the whole animal: the Cajun butchering tradition and its respect for every part.",
-     "transfer_check": "Make boudin or a fresh sausage from scratch under supervision, with correct grind, seasoning and casing."
+     "transfer_check": "Make boudin or a fresh sausage from scratch under supervision, with correct grind, seasoning and casing.",
+     "bands": {
+      "K–2": "Say that a whole animal can be used for many different foods, with an adult.",
+      "3–5": "Name two foods made from a whole animal, like boudin or cracklins.",
+      "6–8": "Name three boucherie foods and what part of the animal each uses, with a checker.",
+      "9–10": "Name real boucherie foods and explain the Cajun respect for using the whole animal.",
+      "11–12": "Explain and demonstrate real boucherie tradition, naming the products and the respect behind them."
+     }
     },
     {
      "theme": "Seafood",
      "description": "The boil, the étouffée, the oyster and the honest source: cooking the coast's food and knowing where it came from.",
-     "transfer_check": "Run a seafood boil for a table of six with correct timing and seasoning, naming the source of every species."
+     "transfer_check": "Run a seafood boil for a table of six with correct timing and seasoning, naming the source of every species.",
+     "bands": {
+      "K–2": "Taste a piece of seafood with an adult and say where it might be from.",
+      "3–5": "Say one way to cook seafood: boiled, or in a stew.",
+      "6–8": "Cook a simple seafood dish and name where the seafood came from, with a checker.",
+      "9–10": "Cook a real seafood dish — boil or étouffée — and know its honest source.",
+      "11–12": "Cook and source a real seafood dish, defending both the method and the supplier."
+     }
     },
     {
      "theme": "Sauce piquante and the stew",
      "description": "The Cajun stew and its sauce: browning, building, the long simmer and the tomato's role.",
-     "transfer_check": "Cook a sauce piquante or a smothered dish from raw ingredients, judged by a cook who makes it at home."
+     "transfer_check": "Cook a sauce piquante or a smothered dish from raw ingredients, judged by a cook who makes it at home.",
+     "bands": {
+      "K–2": "Watch a stew simmer for a long time with an adult.",
+      "3–5": "Say why a stew needs to cook a long time.",
+      "6–8": "Build a simple stew, browning first then simmering, with a checker.",
+      "9–10": "Build a real sauce piquante, browning and simmering long enough to develop flavor.",
+      "11–12": "Cook a real Cajun stew from browning through long simmer, defending the tomato's role."
+     }
     },
     {
      "theme": "The bread and the sweet",
      "description": "French bread, king cake, pralines and beignets: the sweet and baked side of the table.",
-     "transfer_check": "Bake one Louisiana bread or pastry and make one candy, both to a standard a market would sell."
+     "transfer_check": "Bake one Louisiana bread or pastry and make one candy, both to a standard a market would sell.",
+     "bands": {
+      "K–2": "Taste a sweet Louisiana treat with an adult and say what is in it.",
+      "3–5": "Name two Louisiana sweets: king cake or pralines.",
+      "6–8": "Name three Louisiana breads or sweets and one ingredient each, with a checker.",
+      "9–10": "Make or describe a real Louisiana sweet and its key technique.",
+      "11–12": "Make a real Louisiana bread or sweet to a finished standard, explaining its technique."
+     }
     },
     {
      "theme": "Creole and Cajun",
      "description": "Two tables, one state: the city and the country, the tomato and the roux, and what each word actually means.",
-     "transfer_check": "Cook the same dish in a Creole and a Cajun style and explain the difference to a diner in plain words."
+     "transfer_check": "Cook the same dish in a Creole and a Cajun style and explain the difference to a diner in plain words.",
+     "bands": {
+      "K–2": "Say that Louisiana has two kinds of cooking with an adult.",
+      "3–5": "Name one dish that is Creole and one that is Cajun.",
+      "6–8": "Name two differences between Creole and Cajun cooking, with a checker.",
+      "9–10": "Explain what Creole and Cajun actually mean, using a real dish from each.",
+      "11–12": "Explain the real distinction between Creole and Cajun cooking with named dishes and history."
+     }
     },
     {
      "theme": "The plate lunch",
      "description": "Feeding a working town at noon: the meat-and-two, the board, the line out the door.",
-     "transfer_check": "Plan, cook and serve a plate-lunch menu for twenty at a fixed price, delivering on time and on budget."
+     "transfer_check": "Plan, cook and serve a plate-lunch menu for twenty at a fixed price, delivering on time and on budget.",
+     "bands": {
+      "K–2": "Say what a working person might eat quickly at lunchtime, with an adult.",
+      "3–5": "Describe a real meat-and-two plate lunch to someone who has never had one.",
+      "6–8": "Plan a plate lunch with a meat and two sides, with a checker.",
+      "9–10": "Plan and cost a real plate lunch that could feed a working line at noon.",
+      "11–12": "Cook and serve a real plate lunch under time pressure, as a working kitchen would."
+     }
     }
    ]
   },
@@ -124,52 +264,122 @@
     {
      "theme": "Time and temperature",
      "description": "The danger zone, the thermometer and the clock: the two numbers that keep people out of hospital.",
-     "transfer_check": "Log the temperatures of five foods through a full service with a probe thermometer and act correctly on one that fails."
+     "transfer_check": "Log the temperatures of five foods through a full service with a probe thermometer and act correctly on one that fails.",
+     "bands": {
+      "K–2": "Check food is warm enough with an adult using a thermometer.",
+      "3–5": "Use a thermometer to check if food is at a safe temperature.",
+      "6–8": "Check two foods against the danger zone with a thermometer, with a checker.",
+      "9–10": "Check real food against time and temperature limits using a thermometer and a clock.",
+      "11–12": "Run a real time-and-temperature check across a service, logging and correcting any breach."
+     }
     },
     {
      "theme": "Cross-contamination",
      "description": "Boards, colours, hands and the raw-to-ready flow: keeping what is raw away from what is served.",
-     "transfer_check": "Set up a prep station with correct colour-coded boards and flow, and catch three planted contamination errors."
+     "transfer_check": "Set up a prep station with correct colour-coded boards and flow, and catch three planted contamination errors.",
+     "bands": {
+      "K–2": "Use a different colour board for raw food with an adult.",
+      "3–5": "Say why raw meat should not touch food that is ready to eat.",
+      "6–8": "Use colour-coded boards correctly for two food types, with a checker.",
+      "9–10": "Keep a real raw-to-ready flow clean using colour-coded boards and separate hands.",
+      "11–12": "Audit a real kitchen's cross-contamination controls and correct a real gap."
+     }
     },
     {
      "theme": "Receiving and storage",
      "description": "FIFO, labels, the walk-in and the reach-in: what arrives, where it goes, and when it leaves.",
-     "transfer_check": "Receive a delivery — checking temperatures, dates and condition — and store it with correct labels and rotation."
+     "transfer_check": "Receive a delivery — checking temperatures, dates and condition — and store it with correct labels and rotation.",
+     "bands": {
+      "K–2": "Help put groceries away in the right place with an adult.",
+      "3–5": "Put new food behind old food in storage — first in, first out.",
+      "6–8": "Receive and store food using FIFO and correct labels, with a checker.",
+      "9–10": "Receive a real delivery, label it, and store it correctly using FIFO.",
+      "11–12": "Run a real receiving and storage check across a walk-in, correcting a FIFO or label error."
+     }
     },
     {
      "theme": "Allergens",
      "description": "The major allergens, the label, the question you ask every table, and the plate you never guess about.",
-     "transfer_check": "Identify every allergen in a ten-item menu and demonstrate the correct response to an allergy declared mid-service."
+     "transfer_check": "Identify every allergen in a ten-item menu and demonstrate the correct response to an allergy declared mid-service.",
+     "bands": {
+      "K–2": "Say that some foods can make people sick, with an adult.",
+      "3–5": "Name one major allergen and a food that contains it.",
+      "6–8": "Name three major allergens and ask the allergen question for one dish, with a checker.",
+      "9–10": "Name the major allergens and correctly answer a real allergen question about a dish.",
+      "11–12": "Handle a real allergen question for a real dish, verifying the answer rather than guessing."
+     }
     },
     {
      "theme": "HACCP thinking",
      "description": "Hazards, critical control points and the log: the system behind every safe kitchen.",
-     "transfer_check": "Write a HACCP-style plan for one dish from delivery to plate with its critical points and limits."
+     "transfer_check": "Write a HACCP-style plan for one dish from delivery to plate with its critical points and limits.",
+     "bands": {
+      "K–2": "Say why grown-ups check food carefully at each step, with an adult.",
+      "3–5": "Name one step in cooking where something could go wrong.",
+      "6–8": "Name two critical control points in one recipe and how to check them, with a checker.",
+      "9–10": "Identify real critical control points in a dish and log a check at each.",
+      "11–12": "Build and run a real HACCP-style log for a dish's hazards and control points."
+     }
     },
     {
      "theme": "The health inspection",
      "description": "What the inspector checks, why, and how a kitchen stays ready every day, not just inspection day.",
-     "transfer_check": "Inspect a real or mock kitchen against the local health checklist and write up findings an operator could act on."
+     "transfer_check": "Inspect a real or mock kitchen against the local health checklist and write up findings an operator could act on.",
+     "bands": {
+      "K–2": "Say why a kitchen should always be clean, with an adult.",
+      "3–5": "Name one thing an inspector might check in a kitchen.",
+      "6–8": "Name three things a health inspector checks, with a checker.",
+      "9–10": "Explain what a real health inspection checks and how a kitchen stays ready daily.",
+      "11–12": "Prepare a real kitchen area for a mock inspection and pass a checker's review."
+     }
     },
     {
      "theme": "Sourcing Louisiana",
      "description": "Seafood docks, farms, the co-op and the seasons: buying close to home and knowing the supplier.",
-     "transfer_check": "Source the ingredients for one dish from local producers, documenting each source, price and season."
+     "transfer_check": "Source the ingredients for one dish from local producers, documenting each source, price and season.",
+     "bands": {
+      "K–2": "Say where the food on your plate might come from, with an adult.",
+      "3–5": "Name one local place food comes from, like a farm or a dock.",
+      "6–8": "Name two local sources of Louisiana food and one thing each supplies, with a checker.",
+      "9–10": "Name real Louisiana sources — docks, farms, co-ops — and what is in season now.",
+      "11–12": "Source a real dish from named local Louisiana suppliers, defending the seasonal choice."
+     }
     },
     {
      "theme": "Waste, cost and the compost",
      "description": "What is thrown away is money and ground: trim, portioning, stock from scraps, and where waste goes.",
-     "transfer_check": "Measure a kitchen's waste for one service, propose three reductions, and put one into practice."
+     "transfer_check": "Measure a kitchen's waste for one service, propose three reductions, and put one into practice.",
+     "bands": {
+      "K–2": "Say why you should not waste food, with an adult.",
+      "3–5": "Save vegetable scraps to make something else, like a stock.",
+      "6–8": "Turn kitchen trim into a stock or use, with a checker.",
+      "9–10": "Cost a real dish's waste and turn a trim into a usable stock or garnish.",
+      "11–12": "Audit a real kitchen's waste stream and propose a real cost-saving change."
+     }
     },
     {
      "theme": "The certification",
      "description": "What a food-safety certificate certifies, where you sit for it, and why practice here is not the same thing.",
-     "transfer_check": "Sit a practice food-safety exam, score it, and name the certifying body and process in your parish (the real exam is theirs, not this pack's)."
+     "transfer_check": "Sit a practice food-safety exam, score it, and name the certifying body and process in your parish (the real exam is theirs, not this pack's).",
+     "bands": {
+      "K–2": "Say that some jobs need a special paper to prove you know something, with an adult.",
+      "3–5": "Say what a food-safety certificate proves.",
+      "6–8": "Name what a food-safety certificate certifies and where you get it, with a checker.",
+      "9–10": "Explain what a real certification certifies and why practice here is not the same.",
+      "11–12": "Prepare for a real food-safety certification exam and explain the gap between practice and certification."
+     }
     },
     {
      "theme": "When something goes wrong",
      "description": "A recall, an illness, a complaint: the honest report, the trace-back, and doing right by the person.",
-     "transfer_check": "Work a mock foodborne-illness report from the complaint to the trace-back to the corrective action, documented."
+     "transfer_check": "Work a mock foodborne-illness report from the complaint to the trace-back to the corrective action, documented.",
+     "bands": {
+      "K–2": "Say what to do if food does not look or smell right, with an adult.",
+      "3–5": "Say who to tell if something seems wrong with food.",
+      "6–8": "Describe the steps if a customer complains about food, with a checker.",
+      "9–10": "Describe a real trace-back process for a food-safety complaint or recall.",
+      "11–12": "Write a real incident report for a food-safety problem, honest and complete."
+     }
     }
    ]
   },
@@ -181,52 +391,122 @@
     {
      "theme": "Greeting",
      "description": "The first thirty seconds: the welcome, the seat, the water, and the feeling that someone is glad you came.",
-     "transfer_check": "Greet and seat six parties in a mock service, observed for warmth, timing and accuracy."
+     "transfer_check": "Greet and seat six parties in a mock service, observed for warmth, timing and accuracy.",
+     "bands": {
+      "K–2": "Say hello and smile when someone visits, with an adult.",
+      "3–5": "Greet a real guest warmly and show them to a seat at the table.",
+      "6–8": "Greet a guest, seat them and offer water within thirty seconds, with a checker.",
+      "9–10": "Greet a real guest warmly and make the first thirty seconds feel like welcome.",
+      "11–12": "Run a real greeting sequence for arriving guests, coached and assessed on warmth and speed."
+     }
     },
     {
      "theme": "The menu, spoken",
      "description": "Describing dishes honestly — ingredients, preparation, heat — and answering the question you don't know.",
-     "transfer_check": "Describe every dish on a ten-item menu accurately from memory to a diner, including allergens and preparation."
+     "transfer_check": "Describe every dish on a ten-item menu accurately from memory to a diner, including allergens and preparation.",
+     "bands": {
+      "K–2": "Describe a food you like to a friend, with an adult.",
+      "3–5": "Describe one real dish on a menu honestly, without overselling it.",
+      "6–8": "Describe two dishes honestly, including one you do not know well, with a checker.",
+      "9–10": "Describe real menu items honestly and handle a question you do not know the answer to.",
+      "11–12": "Describe a full real menu section honestly to a guest, handling unknowns gracefully."
+     }
     },
     {
      "theme": "Taking the order",
      "description": "The ticket, the modifications, the allergy note and the kitchen that has to read it.",
-     "transfer_check": "Take orders for a four-top with modifications and an allergy, writing a ticket the kitchen executes without a question."
+     "transfer_check": "Take orders for a four-top with modifications and an allergy, writing a ticket the kitchen executes without a question.",
+     "bands": {
+      "K–2": "Write down what someone wants to eat, with an adult.",
+      "3–5": "Take a simple food order and write it clearly.",
+      "6–8": "Take an order with one modification and an allergy note, with a checker.",
+      "9–10": "Take a real order with modifications and allergy notes the kitchen can read.",
+      "11–12": "Take and relay a real complex order accurately, verified by the kitchen reading it correctly."
+     }
     },
     {
      "theme": "Timing service",
      "description": "Courses, the kitchen's pace, the table that is ahead and the one that is behind.",
-     "transfer_check": "Run three tables at different stages through a mock service without a table waiting on a course."
+     "transfer_check": "Run three tables at different stages through a mock service without a table waiting on a course.",
+     "bands": {
+      "K–2": "Say when a plate is ready to bring to the table, with an adult.",
+      "3–5": "Notice which table has been waiting longest for food.",
+      "6–8": "Track two tables' pace and say which needs attention, with a checker.",
+      "9–10": "Track several real tables' pace against the kitchen and adjust service timing.",
+      "11–12": "Manage real service timing across a section, balancing the kitchen's pace with the tables."
+     }
     },
     {
      "theme": "The bar basics",
      "description": "Service, responsible practice and the law: what a server may do, must refuse, and must check.",
-     "transfer_check": "Demonstrate responsible-service checks — identification, refusal, the intoxication signs — in role-play against the parish's rules."
+     "transfer_check": "Demonstrate responsible-service checks — identification, refusal, the intoxication signs — in role-play against the parish's rules.",
+     "bands": {
+      "K–2": "Say that some drinks are only for grown-ups, with an adult.",
+      "3–5": "Say one rule about serving drinks responsibly.",
+      "6–8": "Name two responsible-service rules and what a server must check, with a checker.",
+      "9–10": "Name real responsible-service law and what a server must check before serving.",
+      "11–12": "Apply real responsible-service law in a scenario, correctly refusing when required."
+     }
     },
     {
      "theme": "Handling the problem",
      "description": "A wrong plate, a long wait, a cold dish: fixing it fast and keeping the guest.",
-     "transfer_check": "Resolve three service problems in role-play so the guest leaves satisfied, and explain each recovery."
+     "transfer_check": "Resolve three service problems in role-play so the guest leaves satisfied, and explain each recovery.",
+     "bands": {
+      "K–2": "Say sorry and try to fix it if something goes wrong, with an adult.",
+      "3–5": "Say what to do if a plate comes out wrong.",
+      "6–8": "Fix a wrong order quickly and keep the guest happy, with a checker.",
+      "9–10": "Fix a real service problem fast while keeping the guest, and log what happened.",
+      "11–12": "Resolve a real service failure under pressure, keeping the guest and reporting honestly."
+     }
     },
     {
      "theme": "The room",
      "description": "Sections, sidework, resets and the floor plan: the invisible work that makes service look easy.",
-     "transfer_check": "Reset and prepare a full section for service to a checklist, and complete opening and closing sidework."
+     "transfer_check": "Reset and prepare a full section for service to a checklist, and complete opening and closing sidework.",
+     "bands": {
+      "K–2": "Keep your area of the table tidy, with an adult.",
+      "3–5": "Reset a real table completely and correctly after guests leave.",
+      "6–8": "Reset a table and manage sidework for one section, with a checker.",
+      "9–10": "Manage real sidework and resets across a full section during service.",
+      "11–12": "Run a real section's floor plan, sidework and resets to a professional standard."
+     }
     },
     {
      "theme": "Tips, wages and the law",
      "description": "How servers are actually paid: the tipped wage, the pool, the record, and your rights.",
-     "transfer_check": "Compute a week's pay for a tipped worker under the applicable wage rules and explain the tip-pooling rules in force."
+     "transfer_check": "Compute a week's pay for a tipped worker under the applicable wage rules and explain the tip-pooling rules in force.",
+     "bands": {
+      "K–2": "Say that servers are paid differently from other jobs, with an adult.",
+      "3–5": "Say what a tip is and why it matters to a server.",
+      "6–8": "Name the tipped wage and how a tip pool works, with a checker.",
+      "9–10": "Explain real tipped-wage law and how a tip pool is recorded.",
+      "11–12": "Explain a server's real rights under tipped-wage law, including the record they are owed."
+     }
     },
     {
      "theme": "The festival booth and the food truck",
      "description": "Service outdoors: the line, the cash, the heat, the health permit on the wall.",
-     "transfer_check": "Run a mock festival booth service for thirty minutes with correct cash handling, food safety and line management."
+     "transfer_check": "Run a mock festival booth service for thirty minutes with correct cash handling, food safety and line management.",
+     "bands": {
+      "K–2": "Say what is different about selling food outside, with an adult.",
+      "3–5": "Say one thing a food booth needs outdoors: a permit or a line.",
+      "6–8": "Name two things a food booth needs to run outdoors, with a checker.",
+      "9–10": "Run a real outdoor food service point handling line, cash and heat.",
+      "11–12": "Manage a real outdoor food operation's permit, line and cash under real conditions."
+     }
     },
     {
      "theme": "Hospitality as a craft",
      "description": "Why people come back: memory, care, and the restaurant as the neighbourhood's living room.",
-     "transfer_check": "Serve one real table start to finish and collect their honest account of the experience, with what you would change."
+     "transfer_check": "Serve one real table start to finish and collect their honest account of the experience, with what you would change.",
+     "bands": {
+      "K–2": "Say why people like coming back to a place that treats them well, with an adult.",
+      "3–5": "Say one reason people return to a restaurant.",
+      "6–8": "Name two things that make people return to a restaurant, with a checker.",
+      "9–10": "Explain why real hospitality — memory and care — brings guests back.",
+      "11–12": "Design and defend a real hospitality practice that would bring a guest back a second time."
+     }
     }
    ]
   },
@@ -238,52 +518,122 @@
     {
      "theme": "Plate cost",
      "description": "The recipe costed to the cent: ingredient, yield, portion, and the margin that pays the rent.",
-     "transfer_check": "Cost three dishes from invoices to the plate with yields, and set a menu price at a target food-cost percentage."
+     "transfer_check": "Cost three dishes from invoices to the plate with yields, and set a menu price at a target food-cost percentage.",
+     "bands": {
+      "K–2": "Count what a simple snack costs to make, with an adult.",
+      "3–5": "Add up the cost of ingredients for one simple dish.",
+      "6–8": "Cost one recipe to the cent including yield, with a checker.",
+      "9–10": "Cost a real recipe to the cent, including yield and portion, and find the margin.",
+      "11–12": "Cost a real menu item completely and set a price that protects the margin."
+     }
     },
     {
      "theme": "Menu design",
      "description": "What sells, what feeds the margin, and the page that guides a diner's eye.",
-     "transfer_check": "Design a one-page menu with costed items, engineered placement, and reasoning for every choice."
+     "transfer_check": "Design a one-page menu with costed items, engineered placement, and reasoning for every choice.",
+     "bands": {
+      "K–2": "Pick which foods to put first on a pretend menu, with an adult.",
+      "3–5": "Design a simple menu with your favourite three dishes.",
+      "6–8": "Design a menu page that guides the eye to two dishes, with a checker.",
+      "9–10": "Design a real menu page that guides a diner's eye toward margin-friendly dishes.",
+      "11–12": "Design and defend a real menu's layout and dish selection against sales and margin."
+     }
     },
     {
      "theme": "Labor",
      "description": "Scheduling, the wage bill and the crew: the biggest cost and the whole culture.",
-     "transfer_check": "Build a two-week staff schedule for a small restaurant within a labor budget, covering every service."
+     "transfer_check": "Build a two-week staff schedule for a small restaurant within a labor budget, covering every service.",
+     "bands": {
+      "K–2": "Say that people need to be paid fairly for cooking, with an adult.",
+      "3–5": "Say one cost of running a kitchen besides food.",
+      "6–8": "Name labor as a major kitchen cost and one scheduling choice, with a checker.",
+      "9–10": "Build a real staffing schedule for one shift within a wage budget.",
+      "11–12": "Build and defend a real weekly schedule and wage bill for a small kitchen."
+     }
     },
     {
      "theme": "Licenses and permits",
      "description": "Health, occupational, alcohol, signage and the fire marshal: the papers before the first plate.",
-     "transfer_check": "List every license and permit a food business needs in your parish, with the issuing office and cost of each."
+     "transfer_check": "List every license and permit a food business needs in your parish, with the issuing office and cost of each.",
+     "bands": {
+      "K–2": "Say that a restaurant needs permission before it opens, with an adult.",
+      "3–5": "Name one real permit a restaurant needs before it can legally open.",
+      "6–8": "Name three permits or licenses a restaurant needs, with a checker.",
+      "9–10": "List the real permits — health, alcohol, signage — a new restaurant needs.",
+      "11–12": "Assemble a real permit checklist for opening a food business, verified against local requirements."
+     }
     },
     {
      "theme": "The food truck",
      "description": "The smallest restaurant: the build, the commissary, the route and the permit.",
-     "transfer_check": "Write a food-truck plan with a costed build, a menu, a commissary arrangement and the parish permits."
+     "transfer_check": "Write a food-truck plan with a costed build, a menu, a commissary arrangement and the parish permits.",
+     "bands": {
+      "K–2": "Say what a restaurant on wheels might need, with an adult.",
+      "3–5": "Name one thing a food truck needs besides the truck.",
+      "6–8": "Name two things a food truck needs — a route and a permit, with a checker.",
+      "9–10": "Plan a real food truck's build, commissary and route.",
+      "11–12": "Plan and cost a real food truck business from build to permit to route."
+     }
     },
     {
      "theme": "The pop-up and the catering job",
      "description": "A business for a day: the quote, the deposit, the load-out, the invoice.",
-     "transfer_check": "Quote, plan and execute (or fully simulate) a catering job for forty, with contract, timeline and invoice."
+     "transfer_check": "Quote, plan and execute (or fully simulate) a catering job for forty, with contract, timeline and invoice.",
+     "bands": {
+      "K–2": "Say what it means to cook somewhere just for one day, with an adult.",
+      "3–5": "Say what a caterer needs to know before a job: how many people.",
+      "6–8": "Plan a one-day catering job with a quote and a deposit, with a checker.",
+      "9–10": "Write a real catering quote, deposit and invoice for a one-day job.",
+      "11–12": "Run a real pop-up or catering job end to end, from quote to invoice."
+     }
     },
     {
      "theme": "Suppliers and cash flow",
      "description": "Paying and getting paid: terms, the weekly order, and the month the money runs out.",
-     "transfer_check": "Build a thirteen-week cash-flow forecast for a small food business and identify the tight week."
+     "transfer_check": "Build a thirteen-week cash-flow forecast for a small food business and identify the tight week.",
+     "bands": {
+      "K–2": "Say that a kitchen needs to pay for its food, with an adult.",
+      "3–5": "Say what it means to owe a supplier money.",
+      "6–8": "Name a payment term and one cash-flow risk for a kitchen, with a checker.",
+      "9–10": "Explain real supplier payment terms and a cash-flow risk for a small kitchen.",
+      "11–12": "Model real cash flow for a small kitchen across a month with supplier terms."
+     }
     },
     {
      "theme": "Marketing a place",
      "description": "The neighbourhood, the plate-lunch board, the post and the regulars: being known without a budget.",
-     "transfer_check": "Create a month's marketing plan for a food business using only free and local channels, with one measurable goal."
+     "transfer_check": "Create a month's marketing plan for a food business using only free and local channels, with one measurable goal.",
+     "bands": {
+      "K–2": "Say how people find out about a good place to eat, with an adult.",
+      "3–5": "Say one way a restaurant lets people know it exists.",
+      "6–8": "Name two low-cost ways a restaurant gets known, with a checker.",
+      "9–10": "Design a real low-budget way to market a small restaurant to its neighbourhood.",
+      "11–12": "Run a real no-budget marketing plan for a place and measure whether regulars grew."
+     }
     },
     {
      "theme": "The career roles map",
      "description": "Cook, sous, chef, pastry, general manager, owner, caterer, purveyor, food writer: the jobs around the plate.",
-     "transfer_check": "Map twelve culinary-industry roles with what each does and how one moves between them, and interview one person in any of them."
+     "transfer_check": "Map twelve culinary-industry roles with what each does and how one moves between them, and interview one person in any of them.",
+     "bands": {
+      "K–2": "Name one job in a restaurant besides the cook, with an adult.",
+      "3–5": "Name two jobs in a restaurant: server and chef.",
+      "6–8": "Name four restaurant career roles and what each does, with a checker.",
+      "9–10": "Name real restaurant career roles — sous, pastry, GM — and what each does.",
+      "11–12": "Map a real restaurant's team by role and career path, from line cook to owner."
+     }
     },
     {
      "theme": "Louisiana's food economy",
      "description": "Restaurants, festivals, seafood, the culinary institutes and the tourism dollar: the industry where you live.",
-     "transfer_check": "Produce a one-page map of your parish's food economy — employers, festivals, training, suppliers — with sources."
+     "transfer_check": "Produce a one-page map of your parish's food economy — employers, festivals, training, suppliers — with sources.",
+     "bands": {
+      "K–2": "Name one Louisiana food business you know, with an adult.",
+      "3–5": "Name one part of Louisiana's food economy: restaurants or seafood.",
+      "6–8": "Name two parts of Louisiana's food economy and one institute that trains for it, with a checker.",
+      "9–10": "Name real parts of Louisiana's food economy and a culinary institute that trains for it.",
+      "11–12": "Map the real Louisiana food economy for a career path, with named institutions and sectors."
+     }
     }
    ]
   }

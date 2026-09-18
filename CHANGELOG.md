@@ -4,6 +4,19 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.81.0] — 2026-09-18
+
+### Added — prompt 2, tranche three: the three culture packs across five bands
+- **`data/pack_specs/music-creation-to-industry.json`**,
+  **`data/pack_specs/culinary-trades-louisiana.json`** and
+  **`data/pack_specs/arts-media-performance.json`** now carry `bands`
+  on every theme: five tracks each, ten themes, five distinct sentences
+  on the band ladder — 750 rows across the three packs; no block id,
+  code, credential or transfer check changed. As with tranches one and
+  two, these source descriptions were empty, so `bands` reaches them
+  through the existing fill-empty path with no override needed.
+  Band-suffix rows 5,250 → 4,500; the ratchet lowered.
+
 ## [0.80.0] — 2026-09-18
 
 ### Added — prompt 2, tranche two: Trades in the Classroom and Trades Across School Subjects across five bands
