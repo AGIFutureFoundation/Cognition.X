@@ -24,9 +24,9 @@ authored descriptions. Neither is hidden — both are counted here.
 | Community & Relationship Practice | 167 | 0 | 0% | 0% | 100% | 0% | 32 |
 | Preventive Health & Everyday Care | 250 | 5 | 100% | 0% | 100% | 0% | 30 |
 | Basic Life Skills & Self-Reliance | 250 | 5 | 100% | 0% | 100% | 0% | 93 |
-| Water, Land & Climate | 250 | 5 | 100% | 100% | 100% | 0% | 92 |
+| Water, Land & Climate | 250 | 5 | 100% | 0% | 100% | 0% | 92 |
 | Care Across a Life | 250 | 5 | 100% | 0% | 100% | 0% | 92 |
-| Making, Repair & Reuse | 250 | 5 | 100% | 100% | 100% | 0% | 83 |
+| Making, Repair & Reuse | 250 | 5 | 100% | 0% | 100% | 0% | 83 |
 | Housing & Tenancy | 250 | 5 | 100% | 100% | 100% | 0% | 39 |
 | Money, Benefits & Entitlements | 250 | 5 | 100% | 100% | 100% | 0% | 27 |
 | Reentry & Recovery Pathways | 250 | 5 | 100% | 100% | 100% | 0% | 21 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 20% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 17% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
