@@ -39,7 +39,7 @@ credential. Those rules rule the platforms out and the standards in.
 | Question | Decision | Why |
 |---|---|---|
 | Which door into headsets and phones? | **WebXR**, the browser's own API | It is the standard, it needs nothing loaded, it works inside the single file, and where it is absent the page still works. OpenXR is reached *through* the browser, never by a native build of our own. |
-| Which engine? | **A small WebGL renderer of our own** (`tools/xr/engine.js`, ~460 lines at v0.70.0), not three.js, Babylon or A-Frame | The CSP forbids loading them; bundling one adds 600 KB to six apps for boxes, quads and text. The scenes are simple by design. |
+| Which engine? | **A small WebGL renderer of our own** (`tools/xr/engine.js`, ~545 lines at v0.111.0), not three.js, Babylon or A-Frame | The CSP forbids loading them; bundling one adds 600 KB to six apps for boxes, quads and text. The scenes are simple by design. |
 | Which platform? | **None.** No Horizon, VRChat, Roblox, Spatial or Decentraland integration | Each requires accounts, a closed SDK, a server and data terms we could not hold to the consent-first stance, let alone for minors. |
 | What goes into a scene? | **A studio run as a room**: the floor, the studio law on a sign, one station per decision point in an arc around the learner, the current decision's options as slabs above its station | The Simulation Studio is the part of the platform that *is* rehearsal; everything else (ledger, records, evidence) has no honest 3D form. |
 | Who scores? | **The studio engine, as before.** The XR engine is a view: it listens to the studio's `cxsim` events and calls `choose()`/`next()` when a slab is selected | One source of truth for the run and the record; the honesty lines are not duplicated into a second engine. |
@@ -58,6 +58,18 @@ credential. Those rules rule the platforms out and the standards in.
   **Enter AR** appear when `navigator.xr` reports the session is
   supported; controller or gaze `select` picks a slab; pointer click
   picks in the window; arrow keys orbit.
+- **Stations against the room, AR placement (v0.111.0).** With no room
+  loaded, stations still stand in the fixed arc — unchanged, byte for
+  byte. With a room loaded, `CXXR.scene` takes its floor extent
+  (`CXXR.wallStations`, pure and Node-testable) and places one station
+  per decision along the walls instead, each facing the room's centre;
+  a room too small to place them on falls back to the arc. On a phone
+  offering AR surface placement, entering AR also requests the
+  `hit-test` optional feature; the first tap places the whole room —
+  stations included — at the surface hit, read for that one frame and
+  dropped exactly like the pose; every tap after that chooses a slab as
+  before. A runtime that refuses or ignores hit-test behaves exactly as
+  v0.70.0 did: placed at the device's own origin.
 - **The studio offers it everywhere.** `CXSIM.mount` shows *Open in 3D /
   VR* in the brief, on every decision, and in the debrief. Every host
   that mounts the studio — Trades Network, Louisiana (student and teacher
@@ -82,10 +94,12 @@ credential. Those rules rule the platforms out and the standards in.
   covers XR sessions; the register gains **PL-21** (met); the hosting
   headers allow `xr-spatial-tracking=(self)`.
 - **Tests.** The Python suite holds the engine to no network, no storage,
-  no randomness, presence in all six apps, valid scene and glTF output
-  (run in node); the browser suite opens the room in Trades Network,
-  proves WebGL draws it, mirrors a run step by step through the XR view's
-  own `act()`, exports glTF, and confirms the no-WebXR fallback message.
+  no randomness, presence in all six apps, valid scene and glTF output,
+  wall placement against a known-box room and byte-identical output with
+  no room (run in node); the browser suite opens the room in Trades
+  Network, proves WebGL draws it, mirrors a run step by step through the
+  XR view's own `act()`, exports glTF, and confirms the no-WebXR fallback
+  message.
 
 ## 4. Trying it
 
@@ -96,7 +110,9 @@ credential. Those rules rule the platforms out and the standards in.
   file (copy it to the device or host it per `docs/HOSTING.md`); **Enter
   VR** appears; point and select.
 - **A WebXR phone** (Chrome on Android with ARCore): **Enter AR** appears;
-  the stations stand on your floor.
+  where the runtime offers surface hit-testing, tap a real surface to
+  place the room there; otherwise the stations stand at the device's own
+  origin, as before.
 - **Another world:** *Export scene (glTF)* and import the file in Blender,
   Unity, Unreal, Godot or Hubs. Names and `extras` tell you which station
   is which decision.
@@ -114,9 +130,10 @@ credential. Those rules rule the platforms out and the standards in.
   decision points; there is no scene editor, and the specs stay text.
 - **Done in v0.70.0** from the earlier list: the room import, the
   youth line and the simulated/live lists as signs.
-- **Next, if a hall asks:** placing the stations against the loaded
-  room's walls instead of the fixed arc; a QR-style share of the scene
-  JSON between two devices in a hall (still a file). Each is a view;
-  none changes what a run is.
+- **Done in v0.111.0** from the earlier list: stations against the
+  loaded room's walls; AR surface placement via WebXR hit-test.
+- **Next, if a hall asks:** a QR-style share of the scene JSON between
+  two devices in a hall (still a file). A view; it changes nothing
+  about what a run is.
 
 Not legal advice. A scene is practice.

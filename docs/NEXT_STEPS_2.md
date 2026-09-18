@@ -341,7 +341,7 @@ node tools/view_sweep.js --compare before.json after.json
 
 ---
 
-## 8 — XR round three: stations against the room, AR placement
+## 8 — XR round three: stations against the room, AR placement — DONE, v0.111.0
 
 **Why.** A loaded room (v0.70.0) is drawn under stations that still stand
 in the fixed arc; on a phone in AR the stations stand at a fixed
@@ -361,6 +361,32 @@ register's PL-21 text extended.
 **Acceptance.** Node test: a room with a known box places stations on
 its walls; the no-room path is byte-identical; the privacy paragraph
 and PL-21 mention hit-testing as per-frame and dropped.
+
+**Finding, v0.111.0.** `CXXR.wallStations(size, n)` (new, pure, Node-
+testable) walks the perimeter of the room's floor footprint — derived
+from `bounds.size`, already floor-zeroed and centred by `parseGltf` —
+inset by a margin so a station stands clear of the wall, and yaws each
+one inward using the same "label faces the learner" convention the
+fixed arc already used (the arc turns out to be this formula's
+degenerate circular case). `CXXR.scene(sc, site, plan, room)` takes an
+optional 4th argument and only takes the wall-placement branch when a
+room is present and large enough to place stations on (under 1.5 m
+either horizontal dimension falls back to the arc, since crowding
+stations against a wall that close is worse than the arc); called with
+no 4th argument at all — every existing caller — the code path is the
+original arc, untouched, so output is provably byte-identical. AR
+placement: entering `immersive-ar` now also requests the `hit-test`
+optional feature (VR requests nothing new); the session's first
+`select` event reads `frame.getHitTestResults()`, builds a placement
+transform from the first result's pose, and is never read again — every
+later `select` picks a slab as before. A runtime that refuses or
+ignores the feature behaves exactly as v0.70.0 did (placed at the
+device's own origin). Both suites pass (1,954 Python checks, 223
+browser assertions); the AR hit-test path itself cannot be exercised
+by either suite (no headless WebXR device), so it is covered by static
+checks (the optional-feature request, the drop-on-read pattern) and a
+manual code review rather than a live run — named here rather than
+left implicit.
 
 ---
 

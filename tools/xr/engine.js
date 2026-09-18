@@ -67,9 +67,54 @@
                 option: [0.93, 0.93, 0.90, 1], picked: [0.85, 0.64, 0.25, 1], faded: [0.60, 0.60, 0.58, 1], sign: [0.12, 0.13, 0.16, 1], you: [0.85, 0.64, 0.25, 1] };
   function short(s, n) { s = String(s == null ? "" : s); return s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…" : s; }
 
-  CXXR.scene = function (sc, site, plan) {
+  /* ---------------- XR round three (v0.111.0): stations against a loaded room.
+     Pure and Node-testable — no DOM, no WebXR. Treats the room as a box already
+     floor-zeroed and centred (as CXXR.parseGltf leaves it): x/z span
+     [-size[0]/2, size[0]/2] and [-size[2]/2, size[2]/2], floor at y = 0. Walks
+     the four walls' perimeter (inset by `margin` so a station stands clear of
+     the wall face, starting at the front (-Z) wall to match the arc's own
+     forward-facing convention) and places `n` stations evenly along it, each
+     yawed to face the room's centre — the same "label faces the learner"
+     convention CXXR.scene's arc already uses (yaw = atan2(-nx, -nz) for a
+     point whose outward-facing direction from centre is (nx, 0, nz); the arc
+     case is the degenerate one where the wall is a circle). */
+  CXXR.wallStations = function (size, n, opts) {
+    opts = opts || {};
+    const margin = opts.margin != null ? opts.margin : 0.35;
+    const hx = Math.max(0.3, size[0] / 2 - margin), hz = Math.max(0.3, size[2] / 2 - margin);
+    const walls = [
+      { from: [-hx, 0, -hz], to: [hx, 0, -hz], normal: [0, 0, -1] },  // front, -Z
+      { from: [hx, 0, -hz], to: [hx, 0, hz], normal: [1, 0, 0] },     // right, +X
+      { from: [hx, 0, hz], to: [-hx, 0, hz], normal: [0, 0, 1] },     // back, +Z
+      { from: [-hx, 0, hz], to: [-hx, 0, -hz], normal: [-1, 0, 0] },  // left, -X
+    ];
+    const lens = walls.map(w => Math.hypot(w.to[0] - w.from[0], w.to[2] - w.from[2]));
+    const total = lens.reduce((a, b) => a + b, 0);
+    const out = [];
+    for (let i = 0; i < n; i++) {
+      // half-step in so with one station per wall they land at wall MIDPOINTS,
+      // not stacked in a corner
+      let t = total > 0 ? ((i + 0.5) / n) * total : 0, w = walls[0], wl = lens[0];
+      for (let k = 0; k < walls.length; k++) {
+        if (t < wl || k === walls.length - 1) { w = walls[k]; break; }
+        t -= wl; wl = lens[k + 1];
+      }
+      const f = wl > 0 ? t / wl : 0;
+      out.push({
+        position: [w.from[0] + (w.to[0] - w.from[0]) * f, 0.55, w.from[2] + (w.to[2] - w.from[2]) * f],
+        yaw: Math.atan2(-w.normal[0], -w.normal[2]),
+      });
+    }
+    return out;
+  };
+
+  CXXR.scene = function (sc, site, plan, room) {
     const steps = Array.isArray(plan) && plan.length ? plan : (sc.steps || []);
     const n = steps.length, R = 2.4, arc = Math.min(Math.PI * 1.4, 0.5 * n);
+    // a loaded room's own floor extent replaces the fixed arc; a room this
+    // small is treated as no room at all rather than crowding stations
+    const roomSize = room && Array.isArray(room.size) && room.size[0] >= 1.5 && room.size[2] >= 1.5 ? room.size : null;
+    const placements = roomSize ? CXXR.wallStations(roomSize, n) : null;
     const nodes = [
       { id: "floor", kind: "floor", name: "Floor", position: [0, -0.02, 0], size: [9, 0.04, 9], color: COL.floor },
       { id: "you", kind: "marker", name: "You (the learner)", position: [0, 0.01, 0], size: [0.5, 0.02, 0.5], color: COL.you },
@@ -86,10 +131,11 @@
     if (sc.youth)
       nodes.push({ id: "sign-youth", kind: "sign", name: "Under eighteen", position: [0, 0.95, -3.6], size: [2.6, 0.7, 0.06], color: [0.45, 0.16, 0.12, 1], text: "Under eighteen: " + sc.youth });
     steps.forEach((st, i) => {
-      const a = n === 1 ? 0 : -arc / 2 + arc * i / (n - 1);
-      const p = [Math.sin(a) * R, 0.55, -Math.cos(a) * R];
+      let p, yaw;
+      if (placements) { p = placements[i].position; yaw = placements[i].yaw; }
+      else { const a = n === 1 ? 0 : -arc / 2 + arc * i / (n - 1); p = [Math.sin(a) * R, 0.55, -Math.cos(a) * R]; yaw = -a; }
       nodes.push({ id: "station-" + i, kind: "station", name: "Decision " + (i + 1) + (st.kind === "complication" ? " (complication)" : ""),
-                   position: p, yaw: -a, size: [0.7, 1.1, 0.5], color: COL.station, step: st.id, index: i, text: short(st.prompt, 90) });
+                   position: p, yaw, size: [0.7, 1.1, 0.5], color: COL.station, step: st.id, index: i, text: short(st.prompt, 90) });
     });
     return { format: "cx-xrscene/1", scenario: sc.id, title: sc.title, site: site || sc.site_default || "", units: "metres", up: "+Y",
              law: (global.CXSIM && global.CXSIM.LAW) || "", note: "A scene is practice. It is not a witnessed check and never a credential.", nodes };
@@ -238,7 +284,7 @@
         <label class="cxsim-btn cxxr-roomlab">Load your hall's room <input type="file" class="cxxr-room" accept=".gltf,.glb,model/gltf+json,model/gltf-binary" style="display:none"></label>
         <button type="button" class="cxsim-btn cxxr-close">Close 3D</button></div>
       <canvas class="cxxr-canvas" width="960" height="540" tabindex="0" aria-label="The scenario as a room: drag or use the arrow keys to look around; click a slab to choose. The buttons above this view are the same choices."></canvas>
-      <p class="cxsim-note cxxr-note">A scene is practice, never a check, never a credential. The room is drawn from your device's position only while a VR or AR session runs; nothing about where you look or move is recorded or leaves this page. No hand, eye or face tracking is requested.</p>`;
+      <p class="cxsim-note cxxr-note">A scene is practice, never a check, never a credential. The room is drawn from your device's position only while a VR or AR session runs; nothing about where you look or move is recorded or leaves this page. On a phone that offers AR placement, one hit-test reading — the surface under your first tap — is used to place the room and dropped the same frame it arrives, exactly like the pose; no hand, eye or face tracking is requested.</p>`;
     simHost.insertAdjacentElement("afterend", panel);
     const canvas = panel.querySelector(".cxxr-canvas"), status = panel.querySelector(".cxxr-status");
     const gl = canvas.getContext("webgl", { xrCompatible: true, antialias: true, preserveDrawingBuffer: true }) || canvas.getContext("experimental-webgl");
@@ -278,7 +324,8 @@
     }
 
     // the run state this view mirrors (from the studio's events; never scored here)
-    const state = { site: opts.site || sc.site_default, plan: [], idx: -1, phase: "intro", options: [], picked: null, xr: null, mode: "window", room: null };
+    const state = { site: opts.site || sc.site_default, plan: [], idx: -1, phase: "intro", options: [], picked: null, xr: null, mode: "window", room: null,
+                    arTransform: null, arPlaced: false };
     let scene = CXXR.scene(sc, state.site, []);
     const drawables = () => {
       const out = [];
@@ -309,32 +356,40 @@
       return out;
     };
 
-    function drawScene(proj, view) {
+    function drawScene(proj, view, world) {
       const items = drawables();
       gl.useProgram(prog);
       const bind = (b, loc, n) => { gl.bindBuffer(gl.ARRAY_BUFFER, b); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, n, gl.FLOAT, false, 0, 0); };
-      const vp = M.mul(proj, view);
+      // v0.111.0: an AR session anchors the whole scene (room + stations) at
+      // the surface the learner tapped, rather than at the device's own
+      // origin — `world` premultiplies every model; VR and the window never
+      // pass one, so their frame is exactly as before.
+      const vp = world ? M.mul(proj, M.mul(view, world)) : M.mul(proj, view);
       if (state.room) {
         gl.disableVertexAttribArray(A.uv); gl.vertexAttrib2f(A.uv, 0, 0);
         gl.uniform1f(U.useTex, 0); gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, white); gl.uniform1i(U.tex, 0);
         state.room.gl.forEach(m => {
           bind(m.vb, A.pos, 3); bind(m.nb, A.norm, 3);
-          gl.uniformMatrix4fv(U.mvp, false, new Float32Array(M.mul(vp, m.model))); gl.uniformMatrix4fv(U.model, false, new Float32Array(m.model));
+          gl.uniformMatrix4fv(U.mvp, false, new Float32Array(M.mul(vp, m.model))); gl.uniformMatrix4fv(U.model, false, new Float32Array(world ? M.mul(world, m.model) : m.model));
           gl.uniform4fv(U.color, m.color); gl.drawArrays(gl.TRIANGLES, 0, m.count);
         });
       }
       bind(vb, A.pos, 3); bind(nb, A.norm, 3); bind(ub, A.uv, 2); gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ibuf);
       items.forEach(it => {
         gl.uniformMatrix4fv(U.mvp, false, new Float32Array(M.mul(vp, it.model)));
-        gl.uniformMatrix4fv(U.model, false, new Float32Array(it.model));
+        gl.uniformMatrix4fv(U.model, false, new Float32Array(world ? M.mul(world, it.model) : it.model));
         gl.uniform4fv(U.color, it.color); gl.uniform1f(U.useTex, it.tex ? 1 : 0);
         gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, it.tex || white); gl.uniform1i(U.tex, 0);
         gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
       });
       return items;
     }
-    // ray vs unit cube in each pickable's local space
-    function pick(origin, dir) {
+    // ray vs unit cube in each pickable's local space. `world` is the AR
+    // placement transform (see drawScene); a ray reported in reference-space
+    // (a controller pose, a hit-test result) is brought into the scene's own
+    // untransformed space by its inverse before the per-item test below.
+    function pick(origin, dir, world) {
+      if (world) { const invW = M.inv(world); origin = M.xf(invW, origin, 1); dir = M.xf(invW, dir, 0); }
       let best = null, bt = Infinity;
       drawables().forEach(it => {
         if (!it.pick) return;
@@ -392,17 +447,41 @@
     }
     async function enter(mode) {
       try {
-        const session = await xr.requestSession(mode, { optionalFeatures: ["local-floor"] });
+        // v0.111.0: AR alone also asks for hit-test — surface geometry the
+        // browser reports for one frame, to place the room; VR asks for
+        // nothing new. Absence is handled: a runtime that ignores or refuses
+        // the optional feature leaves hitTestSource null and AR behaves as
+        // before (placed at the device's own origin).
+        const wantsHitTest = mode === "immersive-ar";
+        const session = await xr.requestSession(mode, { optionalFeatures: wantsHitTest ? ["local-floor", "hit-test"] : ["local-floor"] });
         await gl.makeXRCompatible();
         session.updateRenderState({ baseLayer: new global.XRWebGLLayer(session, gl) });
         const ref = await session.requestReferenceSpace("local-floor").catch(() => session.requestReferenceSpace("local"));
-        state.mode = mode; state.xr = { session, ref }; global.cancelAnimationFrame(raf);
-        status.textContent = (mode === "immersive-ar" ? "AR" : "VR") + " session running. Look at a slab and select to choose; the page keeps nothing about where you look or move.";
+        let hitTestSource = null;
+        if (wantsHitTest && session.requestHitTestSource) {
+          try { const viewerSpace = await session.requestReferenceSpace("viewer"); hitTestSource = await session.requestHitTestSource({ space: viewerSpace }); } catch (e) { hitTestSource = null; }
+        }
+        state.mode = mode; state.xr = { session, ref }; state.arTransform = null; state.arPlaced = !hitTestSource; global.cancelAnimationFrame(raf);
+        status.textContent = mode === "immersive-ar"
+          ? (hitTestSource ? "AR session running. Tap a surface to place the room, then tap a slab to choose. Each tap's surface position is read for that one frame and dropped; nothing about where you look, point or move is recorded." : "AR session running. Look at a slab and select to choose; the page keeps nothing about where you look or move.")
+          : "VR session running. Look at a slab and select to choose; the page keeps nothing about where you look or move.";
         session.addEventListener("select", ev => {
+          if (mode === "immersive-ar" && hitTestSource && !state.arPlaced) {
+            // the FIRST tap in a hit-test AR session places the room; its
+            // surface pose is read this one frame, used to build the
+            // placement transform, and dropped — never stored, never sent.
+            const results = ev.frame.getHitTestResults(hitTestSource);
+            if (results.length) {
+              const pose = results[0].getPose(ref);
+              if (pose) { const m = pose.transform.matrix; state.arTransform = M.trs([m[12], m[13], m[14]], Math.atan2(m[8], m[10]), [1, 1, 1]); state.arPlaced = true; dirty = true; }
+            }
+            return;
+          }
           const fr = ev.frame, pose = fr.getPose(ev.inputSource.targetRaySpace, ref); if (!pose) return;
-          const m = pose.transform.matrix; act(pick([m[12], m[13], m[14]], norm([-m[8], -m[9], -m[10]])));
+          const m = pose.transform.matrix;
+          act(pick([m[12], m[13], m[14]], norm([-m[8], -m[9], -m[10]]), mode === "immersive-ar" ? state.arTransform : null));
         });
-        session.addEventListener("end", () => { state.mode = "window"; state.xr = null; dirty = true; status.textContent = "Session ended. Back in the window."; raf = global.requestAnimationFrame(renderWindow); });
+        session.addEventListener("end", () => { state.mode = "window"; state.xr = null; state.arTransform = null; state.arPlaced = false; dirty = true; status.textContent = "Session ended. Back in the window."; raf = global.requestAnimationFrame(renderWindow); });
         const loop = (t, frame) => {
           if (state.mode === "window") return;
           session.requestAnimationFrame(loop);
@@ -410,7 +489,8 @@
           const layer = session.renderState.baseLayer; gl.bindFramebuffer(gl.FRAMEBUFFER, layer.framebuffer);
           if (mode === "immersive-ar") { gl.clearColor(0, 0, 0, 0); } else { gl.clearColor(0.93, 0.92, 0.89, 1); }
           gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-          for (const view of pose.views) { const vp = layer.getViewport(view); gl.viewport(vp.x, vp.y, vp.width, vp.height); drawScene(Array.from(view.projectionMatrix), Array.from(view.transform.inverse.matrix)); }
+          const world = mode === "immersive-ar" && state.arTransform ? state.arTransform : null;
+          for (const view of pose.views) { const vp = layer.getViewport(view); gl.viewport(vp.x, vp.y, vp.width, vp.height); drawScene(Array.from(view.projectionMatrix), Array.from(view.transform.inverse.matrix), world); }
         };
         session.requestAnimationFrame(loop);
       } catch (e) { status.textContent = "Could not start the session (" + (e && e.message ? e.message : e) + "). The window view continues."; }
@@ -427,8 +507,12 @@
         if (state.room) state.room.gl.forEach(m => { gl.deleteBuffer(m.vb); gl.deleteBuffer(m.nb); });
         const uploaded = parsed.meshes.map(m => { const vb2 = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, vb2); gl.bufferData(gl.ARRAY_BUFFER, m.positions, gl.STATIC_DRAW); const nb2 = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, nb2); gl.bufferData(gl.ARRAY_BUFFER, m.normals, gl.STATIC_DRAW); return { vb: vb2, nb: nb2, count: m.positions.length / 3, model: m.model, color: m.color }; });
         state.room = { gl: uploaded, meshes: parsed.meshes.length, triangles: parsed.triangles, bounds: parsed.bounds };
+        // v0.111.0: stations move from the fixed arc onto the loaded room's own
+        // walls, derived from its floor extent (bounds.size) — a view change
+        // only; the plan and the run underneath are untouched.
+        scene = CXXR.scene(sc, state.site, state.plan, state.room.bounds);
         dirty = true;
-        status.textContent = "Room loaded: " + parsed.meshes.length + " mesh(es), " + parsed.triangles.toLocaleString() + " triangles, floor set to y = 0 and centred. It stays on this device.";
+        status.textContent = "Room loaded: " + parsed.meshes.length + " mesh(es), " + parsed.triangles.toLocaleString() + " triangles, floor set to y = 0 and centred, stations moved to its walls. It stays on this device.";
         return state.room;
       } catch (e) { status.textContent = "Could not read that file as glTF 2.0 with embedded buffers (" + (e && e.message ? e.message : e) + "). A .glb, or a .gltf whose buffers are data: URIs, is what this page can open offline."; return null; }
     }
@@ -446,7 +530,7 @@
     const onEvent = ev => {
       const d = ev.detail || {};
       state.phase = d.phase; state.idx = d.idx == null ? -1 : d.idx; state.plan = d.plan || state.plan; state.options = d.options || []; state.picked = d.picked == null ? null : d.picked;
-      if (d.plan && d.plan.length && scene.nodes.filter(n => n.kind === "station").length !== d.plan.length) scene = CXXR.scene(sc, state.site, d.plan);
+      if (d.plan && d.plan.length && scene.nodes.filter(n => n.kind === "station").length !== d.plan.length) scene = CXXR.scene(sc, state.site, d.plan, state.room && state.room.bounds);
       dirty = true;
     };
     simHost.addEventListener("cxsim", onEvent);
