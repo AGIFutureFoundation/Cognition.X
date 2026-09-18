@@ -146,6 +146,14 @@ sections; the only other diff is the fonts `<link>`).
    fresh for its nonprofit governance/fundraising/donor-relations
    content. Three packs remain (Corporate OS, Education OS, Science
    OS); the shared dictionary is now 1,229 sentences.
+   *Update (v0.104.0):* shipped Education OS (336 themes, 660 rows,
+   its first promotion file — no prior band-suffix override existed
+   for this pack) — 168 reused from the shared dictionary, 168
+   authored fresh for its school/district administrative and
+   pedagogical-practice content (curriculum, instruction, assessment,
+   family/community engagement, operations, budget, safety, equity,
+   data). Two packs remain (Corporate OS, Science OS); the shared
+   dictionary is now 1,396 sentences.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

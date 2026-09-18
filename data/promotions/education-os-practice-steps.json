@@ -1,0 +1,1405 @@
+{
+  "pack": "Cognition.X : Education OS",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema is out of scope (v0.104.0, prompt 3 final piece). Education OS's 660 empty-description rows use 336 distinct short generic action-phrase themes at the single adult-route grade \"11-12 . adult\", the same shape as Sapient OS (v0.99.0), Robotics OS (v0.100.0), Global Health OS (v0.101.0), Multilateral OS (v0.102.0) and Non-Profit Practice (v0.103.0) -- 168 of these 336 themes are worded identically to ones already promoted for those five packs and share the same sentence verbatim; the other 168 are new to this pack and authored fresh for its school/district administrative and pedagogical-practice domain (curriculum, instruction, assessment, family and community engagement, operations, budget, safety, equity, data). track/code/level stay as they were.",
+  "tracks": [
+    {
+      "prefix": "PSA",
+      "name": "Practice Steps A–A",
+      "themes": [
+        {
+          "theme": "Achieve accreditation",
+          "description": "Meet every requirement of a real accreditation standard for a health program."
+        },
+        {
+          "theme": "Adapt curriculum",
+          "description": "Change a real curriculum unit so it actually fits the students in front of you."
+        },
+        {
+          "theme": "Address barriers",
+          "description": "Find the real thing stopping a mission or program from delivering, and remove it."
+        },
+        {
+          "theme": "Address challenges",
+          "description": "Name a real classroom or school challenge and take an actual step to reduce it."
+        },
+        {
+          "theme": "Address concerns",
+          "description": "Respond to a real stakeholder's concern about an AI system with a specific action, not just reassurance."
+        },
+        {
+          "theme": "Adjust course",
+          "description": "Change a real course's pacing or content based on how students are actually doing in it."
+        },
+        {
+          "theme": "Adjust instruction",
+          "description": "Change what you're teaching, in the moment, because real students aren't getting it as taught."
+        },
+        {
+          "theme": "Adjust services",
+          "description": "Change a real support service so it actually matches what students currently need."
+        },
+        {
+          "theme": "Adjust strategies",
+          "description": "Revise a real strategy mid-course based on what's actually happening."
+        },
+        {
+          "theme": "Administer tests",
+          "description": "Give a real assessment under conditions that make its results actually trustworthy."
+        },
+        {
+          "theme": "Align curriculum",
+          "description": "Check a real curriculum against the standards it's supposed to teach and close the gap."
+        },
+        {
+          "theme": "Align goals",
+          "description": "Get a real school's stated goals to actually match what staff are doing day to day."
+        },
+        {
+          "theme": "Align teams",
+          "description": "Get a real team of teachers or staff actually pulling in the same direction."
+        },
+        {
+          "theme": "Align to standards",
+          "description": "Match a real lesson or unit to the specific standard it's meant to teach."
+        },
+        {
+          "theme": "Allocate budget",
+          "description": "Put a real school's limited budget where it will actually help students most."
+        },
+        {
+          "theme": "Allocate resources",
+          "description": "Decide how to split real resources across competing AI-practice needs and justify the split."
+        },
+        {
+          "theme": "Analyze data",
+          "description": "Turn raw sensor or operations data from a real robotic system into a specific finding."
+        },
+        {
+          "theme": "Analyze findings",
+          "description": "Turn a set of raw findings from a real review into a conclusion someone else can act on."
+        },
+        {
+          "theme": "Analyze performance",
+          "description": "Break down a real model's performance by segment and name the weakest one."
+        },
+        {
+          "theme": "Analyze results",
+          "description": "Turn the raw results of a real test into a written conclusion with a recommendation."
+        },
+        {
+          "theme": "Analyze trends",
+          "description": "Find a real trend in a robotic system's performance data over time and explain it."
+        },
+        {
+          "theme": "Analyze variance",
+          "description": "Explain why a real school's actual result differed from what was budgeted or planned."
+        },
+        {
+          "theme": "Assess accessibility",
+          "description": "Test a real AI system against accessibility needs and name what it fails."
+        },
+        {
+          "theme": "Assess alignment",
+          "description": "Check whether a real AI system's behavior actually matches its stated goal."
+        },
+        {
+          "theme": "Assess capabilities",
+          "description": "Determine what a real robotic system can and cannot actually do, tested, not assumed."
+        },
+        {
+          "theme": "Assess capacity",
+          "description": "Determine whether a real team or system can actually handle the AI workload asked of it."
+        },
+        {
+          "theme": "Assess collections",
+          "description": "Check whether a real school's data-collection process is actually capturing what it needs."
+        },
+        {
+          "theme": "Assess community",
+          "description": "Understand what a real school community actually needs, from the people who live it."
+        },
+        {
+          "theme": "Assess condition",
+          "description": "Inspect a real robotic system and report its actual physical condition."
+        },
+        {
+          "theme": "Assess culture",
+          "description": "Understand the real local customs a program must actually work within."
+        },
+        {
+          "theme": "Assess current",
+          "description": "Take stock of where a real AI practice actually stands today, not where it's assumed to stand."
+        },
+        {
+          "theme": "Assess engagement",
+          "description": "Measure how actually engaged real donors, volunteers or members are, not just their numbers."
+        },
+        {
+          "theme": "Assess environment",
+          "description": "Judge whether a real classroom or building actually supports learning and safety."
+        },
+        {
+          "theme": "Assess facilities",
+          "description": "Check a real school facility and identify what it actually needs to be usable and safe."
+        },
+        {
+          "theme": "Assess gaps",
+          "description": "Find a real, specific gap between where students are and where they need to be."
+        },
+        {
+          "theme": "Assess literacy",
+          "description": "Check whether real patients or community members actually understand the health information given to them."
+        },
+        {
+          "theme": "Assess mastery",
+          "description": "Confirm a real person has actually mastered a robotics skill, not just practiced it once."
+        },
+        {
+          "theme": "Assess needs",
+          "description": "Talk to real users to find out what they actually need from an AI system, not what was assumed."
+        }
+      ]
+    },
+    {
+      "prefix": "PSB",
+      "name": "Practice Steps A–C",
+      "themes": [
+        {
+          "theme": "Assess performance",
+          "description": "Measure a real AI system's performance against a real, stated target."
+        },
+        {
+          "theme": "Assess practices",
+          "description": "Review a real teaching or operational practice and judge whether it's actually working."
+        },
+        {
+          "theme": "Assess priorities",
+          "description": "Decide which real school need actually has to come first given limited resources."
+        },
+        {
+          "theme": "Assess quality",
+          "description": "Check a real health service's quality against a real standard."
+        },
+        {
+          "theme": "Assess readiness",
+          "description": "Determine whether a real team or system is actually ready to take on an AI change."
+        },
+        {
+          "theme": "Assess risks",
+          "description": "List the real risks of an AI decision and rank them by how much they matter."
+        },
+        {
+          "theme": "Assess satisfaction",
+          "description": "Find out, from real users, whether an AI system is actually meeting their needs."
+        },
+        {
+          "theme": "Assess strengths",
+          "description": "Identify what a real student, teacher, or program is actually already doing well."
+        },
+        {
+          "theme": "Assess student needs",
+          "description": "Find out, from real evidence, what a specific student actually needs to succeed."
+        },
+        {
+          "theme": "Assess teaching",
+          "description": "Observe real instruction and judge, specifically, what's working and what isn't."
+        },
+        {
+          "theme": "Audit current",
+          "description": "Check a real current process or record against what it's actually supposed to show."
+        },
+        {
+          "theme": "Build agency",
+          "description": "Give a real student a genuine say in a decision about their own learning."
+        },
+        {
+          "theme": "Build bridges",
+          "description": "Create a real, working connection between groups that previously didn't trust each other."
+        },
+        {
+          "theme": "Build capabilities",
+          "description": "Grow a real teacher or staff member's specific ability to do their job well."
+        },
+        {
+          "theme": "Build capacity",
+          "description": "Grow a real local team's ability to run a health program on their own."
+        },
+        {
+          "theme": "Build community",
+          "description": "Take a real, concrete step that makes a school feel like an actual community."
+        },
+        {
+          "theme": "Build leadership",
+          "description": "Grow a real teacher or student's capacity to actually lead, not just be led."
+        },
+        {
+          "theme": "Build ownership",
+          "description": "Get a real community to genuinely take charge of a health program, not just receive it."
+        },
+        {
+          "theme": "Build partnership",
+          "description": "Build a real, working relationship between a school and an outside organization."
+        },
+        {
+          "theme": "Build partnerships",
+          "description": "Form a real, working partnership with an organization a health program needs."
+        },
+        {
+          "theme": "Build relationships",
+          "description": "Build a real working relationship with a supplier or partner that a robotics program depends on."
+        },
+        {
+          "theme": "Build skills",
+          "description": "Teach a real skill through practice until a student can actually use it."
+        },
+        {
+          "theme": "Build support",
+          "description": "Line up the real people and resources a student or initiative actually needs."
+        },
+        {
+          "theme": "Build understanding",
+          "description": "Help a real audience actually grasp a decision, not just be told about it."
+        },
+        {
+          "theme": "Celebrate cultures",
+          "description": "Recognize a real student's or family's culture in a specific, genuine way."
+        },
+        {
+          "theme": "Celebrate growth",
+          "description": "Mark a real, specific instance of a student's growth, not just a final score."
+        },
+        {
+          "theme": "Collect data",
+          "description": "Gather a real dataset for an AI purpose and document where each part came from."
+        },
+        {
+          "theme": "Communicate clearly",
+          "description": "Say what a real decision means for real people, without jargon or hedging."
+        },
+        {
+          "theme": "Communicate expectations",
+          "description": "Tell real students or staff, specifically, what's expected of them and why."
+        },
+        {
+          "theme": "Communicate finances",
+          "description": "Explain a real school's finances honestly to people who have a right to know."
+        },
+        {
+          "theme": "Communicate outcomes",
+          "description": "Report the real outcome of an AI initiative to the people who need to know it."
+        },
+        {
+          "theme": "Communicate policies",
+          "description": "Explain a real policy to those it affects in terms they can actually use."
+        },
+        {
+          "theme": "Communicate progress",
+          "description": "Give real stakeholders an honest, current update on a health program's progress."
+        },
+        {
+          "theme": "Communicate regularly",
+          "description": "Keep a real, consistent line of communication open with families or staff."
+        },
+        {
+          "theme": "Communicate responses",
+          "description": "Give real, honest responses to real stakeholder concerns about a mission."
+        },
+        {
+          "theme": "Comply with requirements",
+          "description": "Meet a real regulatory or funding requirement, with evidence that it was met."
+        },
+        {
+          "theme": "Conduct drills",
+          "description": "Run a real incident drill for an AI system and record what it revealed."
+        },
+        {
+          "theme": "Conduct observations",
+          "description": "Watch real instruction directly and record what actually happened, not an impression."
+        }
+      ]
+    },
+    {
+      "prefix": "PSC",
+      "name": "Practice Steps C–D",
+      "themes": [
+        {
+          "theme": "Conduct research",
+          "description": "Carry out real research that answers a specific question a nonprofit actually needs answered."
+        },
+        {
+          "theme": "Conduct self-assessment",
+          "description": "Judge your own real practice honestly against a specific standard."
+        },
+        {
+          "theme": "Conduct self-review",
+          "description": "Review a real program or team's own work and name what needs to change."
+        },
+        {
+          "theme": "Coordinate activities",
+          "description": "Line up real people and schedules so an activity actually happens as planned."
+        },
+        {
+          "theme": "Coordinate efforts",
+          "description": "Align more than one real health initiative so they reinforce rather than duplicate each other."
+        },
+        {
+          "theme": "Coordinate instruction",
+          "description": "Get real teachers of the same subject actually teaching to a shared plan."
+        },
+        {
+          "theme": "Coordinate services",
+          "description": "Align real health services so a person doesn't fall between them."
+        },
+        {
+          "theme": "Coordinate support",
+          "description": "Connect a real student to the specific support they need, and follow up."
+        },
+        {
+          "theme": "Create channels",
+          "description": "Set up a real, working channel for communities to actually reach a mission with concerns."
+        },
+        {
+          "theme": "Create opportunities",
+          "description": "Open a real, specific opportunity for someone a program is meant to serve."
+        },
+        {
+          "theme": "Create pathways",
+          "description": "Build a real, clear path for a patient to move through a health system's services."
+        },
+        {
+          "theme": "Create plan",
+          "description": "Write a real, specific plan for a school initiative, not just a goal statement."
+        },
+        {
+          "theme": "Create welcoming",
+          "description": "Make a real school space or interaction one a newcomer would actually feel welcome in."
+        },
+        {
+          "theme": "Define goals",
+          "description": "State a real school goal specifically enough that you'd know if you hit it."
+        },
+        {
+          "theme": "Define metrics",
+          "description": "Choose the real metrics that will actually tell you whether an AI system is working."
+        },
+        {
+          "theme": "Define outcomes",
+          "description": "State exactly what real outcome a health program is trying to achieve."
+        },
+        {
+          "theme": "Deliver interventions",
+          "description": "Carry out a real academic or behavioral intervention as it was actually designed."
+        },
+        {
+          "theme": "Deliver training",
+          "description": "Teach a real group how to use or oversee an AI system, and check that it landed."
+        },
+        {
+          "theme": "Deploy systems",
+          "description": "Put a real new system into actual use, not just install it."
+        },
+        {
+          "theme": "Design assessments",
+          "description": "Build a real assessment that actually measures what it claims to measure."
+        },
+        {
+          "theme": "Design curriculum",
+          "description": "Build a real training curriculum that teaches people what they need to know about an AI system."
+        },
+        {
+          "theme": "Design interventions",
+          "description": "Design a real intervention matched to a specific student's actual need."
+        },
+        {
+          "theme": "Design program",
+          "description": "Build a real program's structure so it can actually be run and repeated."
+        },
+        {
+          "theme": "Design programs",
+          "description": "Design a real health program from a community's actual need through to a working plan."
+        },
+        {
+          "theme": "Design supports",
+          "description": "Design a real support structure that a specific group of students actually needs."
+        },
+        {
+          "theme": "Develop accommodations",
+          "description": "Write a real accommodation that actually removes a specific barrier for a student."
+        },
+        {
+          "theme": "Develop assessments",
+          "description": "Build a real assessment tool a teacher could actually use tomorrow."
+        },
+        {
+          "theme": "Develop budget",
+          "description": "Build a real school budget that matches what the school actually plans to do."
+        },
+        {
+          "theme": "Develop budgets",
+          "description": "Build a real, working budget for a health program."
+        },
+        {
+          "theme": "Develop curation",
+          "description": "Select and organize real curriculum materials so teachers can actually use them."
+        },
+        {
+          "theme": "Develop curriculum",
+          "description": "Build a full curriculum for teaching a real skill related to AI practice."
+        },
+        {
+          "theme": "Develop discipline policy",
+          "description": "Write a real discipline policy that's fair, specific, and actually followed."
+        },
+        {
+          "theme": "Develop improvement plans",
+          "description": "Write a real, specific plan to fix a named problem in a school or program."
+        },
+        {
+          "theme": "Develop leaders",
+          "description": "Grow a real staff member's ability to actually lead a team or program."
+        },
+        {
+          "theme": "Develop partnerships",
+          "description": "Build a real, working partnership with an organization a mission actually needs."
+        },
+        {
+          "theme": "Develop pathways",
+          "description": "Build a real care pathway that a patient can actually follow through a health system."
+        },
+        {
+          "theme": "Develop plans",
+          "description": "Write a real plan for a specific AI initiative, with steps and a timeline."
+        },
+        {
+          "theme": "Develop policies",
+          "description": "Draft a real policy for an AI practice, from the ground up."
+        }
+      ]
+    },
+    {
+      "prefix": "PSD",
+      "name": "Practice Steps D–E",
+      "themes": [
+        {
+          "theme": "Develop procedures",
+          "description": "Write a real procedure clear enough that someone new could actually follow it."
+        },
+        {
+          "theme": "Develop programs",
+          "description": "Build a real program, from scratch, that trains or supports people working with robotics."
+        },
+        {
+          "theme": "Develop protocols",
+          "description": "Write a step-by-step protocol for a real recurring AI task."
+        },
+        {
+          "theme": "Develop relationships",
+          "description": "Build a real, working relationship with a partner a robotics program depends on."
+        },
+        {
+          "theme": "Develop services",
+          "description": "Build a real service that meets a specific, named student or family need."
+        },
+        {
+          "theme": "Develop skills",
+          "description": "Build a real, specific skill in a health worker through practice and feedback."
+        },
+        {
+          "theme": "Develop staff",
+          "description": "Build a real staff member's specific skill through practice and feedback."
+        },
+        {
+          "theme": "Develop strategies",
+          "description": "Set several real strategic options for an AI initiative and choose between them with reasons."
+        },
+        {
+          "theme": "Develop strategy",
+          "description": "Set the real strategic direction for an AI initiative and justify the choice."
+        },
+        {
+          "theme": "Develop systems",
+          "description": "Build a real, working system a mission or program needs from scratch."
+        },
+        {
+          "theme": "Develop vision",
+          "description": "Set out a real, specific picture of what a nonprofit is working toward."
+        },
+        {
+          "theme": "Develop voice",
+          "description": "Give a real student a genuine, structured way to express their perspective."
+        },
+        {
+          "theme": "Differentiate instruction",
+          "description": "Change how you teach the same content so it actually reaches different learners."
+        },
+        {
+          "theme": "Document connections",
+          "description": "Write down a real relationship or referral so the next person can act on it."
+        },
+        {
+          "theme": "Document findings",
+          "description": "Write up what a real AI review found, in enough detail to act on."
+        },
+        {
+          "theme": "Drive improvements",
+          "description": "Carry out more than one real improvement to a robotic system and confirm they held."
+        },
+        {
+          "theme": "Empower students",
+          "description": "Give a real student actual responsibility and the trust that goes with it."
+        },
+        {
+          "theme": "Enable leadership",
+          "description": "Create a real opportunity for a student or staff member to actually lead."
+        },
+        {
+          "theme": "Engage community",
+          "description": "Bring a real community into a nonprofit's work as partners, not just recipients."
+        },
+        {
+          "theme": "Engage families",
+          "description": "Get a real family actively involved in a specific decision about their student."
+        },
+        {
+          "theme": "Engage parents",
+          "description": "Reach a real parent in a way that actually gets a response, not just a notice sent."
+        },
+        {
+          "theme": "Engage stakeholders",
+          "description": "Bring real stakeholders into a real AI decision early enough that their input actually shapes it."
+        },
+        {
+          "theme": "Ensure alignment",
+          "description": "Check that a real practice actually matches the policy or standard it's supposed to follow."
+        },
+        {
+          "theme": "Ensure compliance",
+          "description": "Confirm a real AI system actually meets the rule it's supposed to follow."
+        },
+        {
+          "theme": "Ensure continuity",
+          "description": "Make sure a real AI system keeps running through a planned or unplanned disruption."
+        },
+        {
+          "theme": "Ensure rigor",
+          "description": "Confirm a real assignment actually demands the level of thinking it claims to."
+        },
+        {
+          "theme": "Ensure safety",
+          "description": "Take a real, specific action that makes a school space or activity actually safer."
+        },
+        {
+          "theme": "Establish channels",
+          "description": "Set up a real, working channel for people to raise concerns about an AI system."
+        },
+        {
+          "theme": "Establish codes",
+          "description": "Set a real code of conduct specific enough that students know what it means in practice."
+        },
+        {
+          "theme": "Establish communities",
+          "description": "Build a real, ongoing group where members actually support each other's growth."
+        },
+        {
+          "theme": "Establish governance",
+          "description": "Set up who actually has authority over a real AI system's decisions."
+        },
+        {
+          "theme": "Establish metrics",
+          "description": "Choose the real numbers that will actually tell you whether a robotic system is working."
+        },
+        {
+          "theme": "Establish policies",
+          "description": "Put a real policy in place governing how an AI practice is run."
+        },
+        {
+          "theme": "Establish programs",
+          "description": "Set up a real program from its design through to its first delivery."
+        },
+        {
+          "theme": "Establish standards",
+          "description": "Put a real standard in place that a robotic system or its operators must meet."
+        },
+        {
+          "theme": "Establish systems",
+          "description": "Put a real, working system in place to support a recurring health-program need."
+        },
+        {
+          "theme": "Evaluate effectiveness",
+          "description": "Judge, with real evidence, whether a program actually produced its intended result."
+        },
+        {
+          "theme": "Evaluate impact",
+          "description": "Judge the real, lasting effect a program had, not just its immediate activity."
+        }
+      ]
+    },
+    {
+      "prefix": "PSE",
+      "name": "Practice Steps E–I",
+      "themes": [
+        {
+          "theme": "Evaluate readiness",
+          "description": "Check whether a real student or school is actually ready for the next step."
+        },
+        {
+          "theme": "Evaluate results",
+          "description": "Judge whether a real health program's results actually met its goal."
+        },
+        {
+          "theme": "Expand access",
+          "description": "Make a real nonprofit's program reach more of the people who need it."
+        },
+        {
+          "theme": "Explain results",
+          "description": "Tell a real audience what a set of results actually means for them."
+        },
+        {
+          "theme": "Facilitate collaboration",
+          "description": "Get real teachers or students actually working together toward a shared task."
+        },
+        {
+          "theme": "Facilitate growth",
+          "description": "Help a real nonprofit or program grow without losing what made it work."
+        },
+        {
+          "theme": "Facilitate inquiry",
+          "description": "Guide real students through their own question rather than handing them the answer."
+        },
+        {
+          "theme": "Facilitate learning",
+          "description": "Set up conditions where real students actually do the learning themselves."
+        },
+        {
+          "theme": "Facilitate planning",
+          "description": "Run a real planning process that actually produces a plan people will use."
+        },
+        {
+          "theme": "Facilitate recovery",
+          "description": "Help a real student make up specific, missed learning, not just missed time."
+        },
+        {
+          "theme": "Forecast needs",
+          "description": "Predict the real future need for a robotics resource, with a number attached."
+        },
+        {
+          "theme": "Gather data",
+          "description": "Collect real health data in the field, following its intended method."
+        },
+        {
+          "theme": "Gather feedback",
+          "description": "Collect real feedback on an AI system directly from the people who use it."
+        },
+        {
+          "theme": "Gather input",
+          "description": "Collect real input from the people affected by an AI decision before it's finalized."
+        },
+        {
+          "theme": "Guide decisions",
+          "description": "Use real evidence to actually shape a school decision, not just inform a discussion."
+        },
+        {
+          "theme": "Hire diverse staff",
+          "description": "Run a real hiring process that actually widens who applies and who's hired."
+        },
+        {
+          "theme": "Identify barriers",
+          "description": "Name the real thing standing in the way of an AI initiative's progress."
+        },
+        {
+          "theme": "Identify factors",
+          "description": "Name the real, specific factors driving an outcome, not just guess at them."
+        },
+        {
+          "theme": "Identify gaps",
+          "description": "Find a real gap between what an AI system is supposed to do and what it actually does."
+        },
+        {
+          "theme": "Identify issues",
+          "description": "Find a real, concrete issue with an AI system before it causes harm."
+        },
+        {
+          "theme": "Identify leaders",
+          "description": "Find the real people in a community who can actually lead a health initiative."
+        },
+        {
+          "theme": "Identify needs",
+          "description": "Find out what a real team or site actually needs from a robotic system."
+        },
+        {
+          "theme": "Identify opportunities",
+          "description": "Spot a real place where an AI capability could genuinely help that isn't being used yet."
+        },
+        {
+          "theme": "Identify partners",
+          "description": "Find a real partner organization a robotics program actually needs to succeed."
+        },
+        {
+          "theme": "Identify patterns",
+          "description": "Spot a real, repeating pattern in a robotic system's behavior or failures."
+        },
+        {
+          "theme": "Identify priorities",
+          "description": "Decide which of several real robotics needs should actually come first."
+        },
+        {
+          "theme": "Identify risks",
+          "description": "Name a specific, real risk an AI system poses, not a generic category of risk."
+        },
+        {
+          "theme": "Identify struggles",
+          "description": "Notice, from real evidence, exactly where a student is actually struggling."
+        },
+        {
+          "theme": "Identify student needs",
+          "description": "Find, from real evidence, what a specific student actually needs next."
+        },
+        {
+          "theme": "Identify supports",
+          "description": "Name the real, specific support a student or teacher actually needs."
+        },
+        {
+          "theme": "Identify talent",
+          "description": "Spot a real person with the ability a mission needs, before a formal search begins."
+        },
+        {
+          "theme": "Implement approaches",
+          "description": "Put a real teaching approach into actual practice, not just planning."
+        },
+        {
+          "theme": "Implement changes",
+          "description": "Carry out a real, approved change to an AI system and confirm it worked as intended."
+        },
+        {
+          "theme": "Implement consistently",
+          "description": "Apply a real practice the same way across classrooms so it actually holds."
+        },
+        {
+          "theme": "Implement controls",
+          "description": "Put a real control in place that limits what an AI system is allowed to do on its own."
+        },
+        {
+          "theme": "Implement feedback",
+          "description": "Change real practice because of feedback received, not just acknowledge it."
+        },
+        {
+          "theme": "Implement improvements",
+          "description": "Carry out a real, specific improvement to an AI system and measure the effect."
+        },
+        {
+          "theme": "Implement interventions",
+          "description": "Carry out a real, planned health intervention and confirm it reached its target group."
+        }
+      ]
+    },
+    {
+      "prefix": "PSF",
+      "name": "Practice Steps I–M",
+      "themes": [
+        {
+          "theme": "Implement practices",
+          "description": "Put a real practice into actual daily use, and check that it stuck."
+        },
+        {
+          "theme": "Implement programs",
+          "description": "Carry out a real health program from its plan through to actual delivery."
+        },
+        {
+          "theme": "Implement projects",
+          "description": "Carry a real project from plan through to actual completion."
+        },
+        {
+          "theme": "Implement restorative practices",
+          "description": "Run a real restorative conversation that repairs harm rather than just punishing it."
+        },
+        {
+          "theme": "Implement solutions",
+          "description": "Carry out a real, working solution to a specific AI problem, not just propose one."
+        },
+        {
+          "theme": "Implement strategies",
+          "description": "Carry out a chosen strategy for a real AI initiative and track whether it worked."
+        },
+        {
+          "theme": "Implement systems",
+          "description": "Put a real system into working use within a health program."
+        },
+        {
+          "theme": "Implement technology",
+          "description": "Put a real classroom technology into actual daily use, not just install it."
+        },
+        {
+          "theme": "Improve outcomes",
+          "description": "Take a real, specific step and show it actually moved a student outcome."
+        },
+        {
+          "theme": "Improve performance",
+          "description": "Make a real, measurable improvement to how a robotic system performs its task."
+        },
+        {
+          "theme": "Improve systems",
+          "description": "Change a real school system so it actually works better than before."
+        },
+        {
+          "theme": "Incorporate ideas",
+          "description": "Take a real idea from students or staff and actually put it into practice."
+        },
+        {
+          "theme": "Increase input",
+          "description": "Give real stakeholders an actual channel to influence a school decision."
+        },
+        {
+          "theme": "Inform decisions",
+          "description": "Use real data to actually shape a nonprofit's next decision."
+        },
+        {
+          "theme": "Inform instruction",
+          "description": "Use real assessment data to actually change what you teach next."
+        },
+        {
+          "theme": "Interpret data",
+          "description": "Read real school data and say, specifically, what it actually shows."
+        },
+        {
+          "theme": "Interpret findings",
+          "description": "Explain what a real set of findings actually means for a school's next step."
+        },
+        {
+          "theme": "Interpret results",
+          "description": "Read a real result and say what it actually means, not just what number it is."
+        },
+        {
+          "theme": "Intervene early",
+          "description": "Act on a real warning sign before a small problem becomes a large one."
+        },
+        {
+          "theme": "Invite participation",
+          "description": "Give a real family or student a specific, genuine way to take part."
+        },
+        {
+          "theme": "Learn from failures",
+          "description": "Change a real practice because a prior attempt actually didn't work."
+        },
+        {
+          "theme": "Leverage resources",
+          "description": "Use a real existing resource more fully instead of asking for a new one."
+        },
+        {
+          "theme": "Maintain facilities",
+          "description": "Keep a real school facility in the condition it actually needs to be safe and usable."
+        },
+        {
+          "theme": "Maintain infrastructure",
+          "description": "Keep a real school's systems (technology, physical plant) actually working."
+        },
+        {
+          "theme": "Maintain security",
+          "description": "Keep a real nonprofit's data and systems actually protected on an ongoing basis."
+        },
+        {
+          "theme": "Make decisions",
+          "description": "Make a real, consequential decision about an AI system and be able to explain it."
+        },
+        {
+          "theme": "Manage budgets",
+          "description": "Oversee more than one real budget across a mission's different activities."
+        },
+        {
+          "theme": "Manage constraints",
+          "description": "Get a real task done within the real time, money, or staff you actually have."
+        },
+        {
+          "theme": "Manage contractors",
+          "description": "Oversee a real outside contractor so the work actually meets the school's need."
+        },
+        {
+          "theme": "Manage handover",
+          "description": "Hand a real health program over to local ownership without losing continuity."
+        },
+        {
+          "theme": "Manage relationships",
+          "description": "Oversee a real, ongoing relationship with a key donor or partner."
+        },
+        {
+          "theme": "Manage spending",
+          "description": "Track a real budget line so spending actually stays within what was planned."
+        },
+        {
+          "theme": "Manage systems",
+          "description": "Keep a real school system running as intended, day to day."
+        },
+        {
+          "theme": "Map competencies",
+          "description": "Chart what a real student can actually do against the skills a program expects."
+        },
+        {
+          "theme": "Map curriculum",
+          "description": "Lay out a real curriculum's sequence so gaps and overlaps are actually visible."
+        },
+        {
+          "theme": "Map pathways",
+          "description": "Chart the real path a patient actually takes through a health system."
+        },
+        {
+          "theme": "Map standards",
+          "description": "Show exactly which real standard a specific lesson or unit is meant to teach."
+        },
+        {
+          "theme": "Measure climate",
+          "description": "Check, with real evidence, how safe and supported people actually feel at school."
+        }
+      ]
+    },
+    {
+      "prefix": "PSG",
+      "name": "Practice Steps M–P",
+      "themes": [
+        {
+          "theme": "Measure continuity",
+          "description": "Track whether a real program or relationship actually continues over time."
+        },
+        {
+          "theme": "Measure effectiveness",
+          "description": "Measure whether a real robotic system is actually achieving what it was built for."
+        },
+        {
+          "theme": "Measure empowerment",
+          "description": "Check, with real evidence, whether students actually have more say than before."
+        },
+        {
+          "theme": "Measure engagement",
+          "description": "Measure how actually engaged real supporters are, with more than just attendance numbers."
+        },
+        {
+          "theme": "Measure impact",
+          "description": "Measure the real, concrete effect an AI system had on the outcome it was meant to change."
+        },
+        {
+          "theme": "Measure inclusion",
+          "description": "Check, with real data, whether an AI system's benefits reach the groups it's meant to."
+        },
+        {
+          "theme": "Measure involvement",
+          "description": "Track how much real families or students are actually taking part."
+        },
+        {
+          "theme": "Measure outcomes",
+          "description": "Measure the real health outcome a program achieved, not just the activity delivered."
+        },
+        {
+          "theme": "Measure satisfaction",
+          "description": "Find out, with real data, how satisfied users actually are with an AI system."
+        },
+        {
+          "theme": "Measure success",
+          "description": "Define and then check whether a real robotics initiative actually met its goal."
+        },
+        {
+          "theme": "Measure wellbeing",
+          "description": "Check, with real evidence, how students are actually doing beyond their grades."
+        },
+        {
+          "theme": "Monitor adherence",
+          "description": "Check, on an ongoing basis, whether a real AI practice is actually following its own rules."
+        },
+        {
+          "theme": "Monitor adoption",
+          "description": "Track whether a real new practice is actually being used, not just introduced."
+        },
+        {
+          "theme": "Monitor compliance",
+          "description": "Keep an ongoing check on whether a real AI system still meets the rule it's supposed to."
+        },
+        {
+          "theme": "Monitor conditions",
+          "description": "Keep an ongoing, real check on a condition that could affect student learning."
+        },
+        {
+          "theme": "Monitor progress",
+          "description": "Keep an ongoing, real check on how a health program is progressing toward its goal."
+        },
+        {
+          "theme": "Monitor retention",
+          "description": "Track, with real numbers, whether students or staff are actually staying."
+        },
+        {
+          "theme": "Monitor spending",
+          "description": "Track a real health program's spending against its budget as it happens."
+        },
+        {
+          "theme": "Optimize allocation",
+          "description": "Adjust how real resources are split across a health program so they do more good."
+        },
+        {
+          "theme": "Optimize resources",
+          "description": "Get more real value out of the same resources an AI system already has."
+        },
+        {
+          "theme": "Optimize space",
+          "description": "Rearrange a real classroom or building so it actually works better for its use."
+        },
+        {
+          "theme": "Optimize spaces",
+          "description": "Change how real school spaces are used so more of them actually serve students."
+        },
+        {
+          "theme": "Personalize learning",
+          "description": "Adjust a real assignment so it actually matches one student's specific level and interest."
+        },
+        {
+          "theme": "Pilot approach",
+          "description": "Try a real new approach in one classroom before asking the whole school to use it."
+        },
+        {
+          "theme": "Pilot innovations",
+          "description": "Test a real new idea on a small scale before committing school-wide resources."
+        },
+        {
+          "theme": "Pilot test",
+          "description": "Run a real, small-scale test of a new tool or practice before full rollout."
+        },
+        {
+          "theme": "Plan improvements",
+          "description": "Write a real, specific plan for the next improvement, based on what you found."
+        },
+        {
+          "theme": "Plan maintenance",
+          "description": "Schedule the real, ongoing maintenance a real AI system needs to keep running."
+        },
+        {
+          "theme": "Plan routes",
+          "description": "Map out a real, safe, workable route for a specific transportation or evacuation need."
+        },
+        {
+          "theme": "Plan transitions",
+          "description": "Plan more than one real transition a health program will go through over its life."
+        },
+        {
+          "theme": "Plan upgrades",
+          "description": "Plan a real upgrade to an AI system so it doesn't break what already depends on it."
+        },
+        {
+          "theme": "Prepare documentation",
+          "description": "Get the real paperwork or evidence ready before it's actually due."
+        },
+        {
+          "theme": "Prepare students",
+          "description": "Get a real student genuinely ready for a specific next step, test, or transition."
+        },
+        {
+          "theme": "Prioritize projects",
+          "description": "Decide which real project actually matters most given the time and resources you have."
+        },
+        {
+          "theme": "Provide access",
+          "description": "Remove a real, specific barrier that was keeping a student from a resource."
+        },
+        {
+          "theme": "Provide coaching",
+          "description": "Give a real teacher specific, practice-based feedback they can actually use."
+        },
+        {
+          "theme": "Provide feedback",
+          "description": "Give a real, specific piece of feedback that actually helps improve a robotic system."
+        },
+        {
+          "theme": "Provide learning",
+          "description": "Deliver a real learning experience matched to what a student actually needs next."
+        }
+      ]
+    },
+    {
+      "prefix": "PSH",
+      "name": "Practice Steps P–S",
+      "themes": [
+        {
+          "theme": "Provide opportunities",
+          "description": "Open a real, concrete opportunity for a person a program serves."
+        },
+        {
+          "theme": "Provide orientation",
+          "description": "Get a real new student, family, or staff member actually oriented before they need it."
+        },
+        {
+          "theme": "Provide resources",
+          "description": "Get the real, specific resource a classroom or student actually needs."
+        },
+        {
+          "theme": "Provide services",
+          "description": "Deliver a real, specific service to the people a mission is meant to serve."
+        },
+        {
+          "theme": "Provide support",
+          "description": "Help a real user solve a real problem they're having with an AI system."
+        },
+        {
+          "theme": "Provide supports",
+          "description": "Put a real, specific support in place for a student who actually needs it."
+        },
+        {
+          "theme": "Provide training",
+          "description": "Teach a real person or team a specific skill they need to work with an AI system."
+        },
+        {
+          "theme": "Recruit students",
+          "description": "Reach real prospective students or families with information that actually helps them decide."
+        },
+        {
+          "theme": "Recruit substitutes",
+          "description": "Build a real, reliable pool of substitutes a school can actually call on."
+        },
+        {
+          "theme": "Refine approach",
+          "description": "Adjust a real approach based on what actually happened when you tried it."
+        },
+        {
+          "theme": "Refine continuously",
+          "description": "Make a real, small adjustment to a practice based on this week's actual results."
+        },
+        {
+          "theme": "Remove barriers",
+          "description": "Find and eliminate a real, specific obstacle standing between a student and success."
+        },
+        {
+          "theme": "Remove obstacles",
+          "description": "Clear a real, specific obstacle standing between a team and its goal."
+        },
+        {
+          "theme": "Report findings",
+          "description": "Write up what a real AI investigation found, for people who need to act on it."
+        },
+        {
+          "theme": "Report progress",
+          "description": "Give real stakeholders an honest, current report on how far a robotics project has gotten."
+        },
+        {
+          "theme": "Report results",
+          "description": "Share the real result of an AI test with the people who requested it."
+        },
+        {
+          "theme": "Research approaches",
+          "description": "Look into real evidence for an approach before adopting it school-wide."
+        },
+        {
+          "theme": "Resolve issues",
+          "description": "Fix a real, identified issue in an AI system and confirm it's actually resolved."
+        },
+        {
+          "theme": "Review effectiveness",
+          "description": "Check, with real evidence, whether a program is actually achieving what it set out to."
+        },
+        {
+          "theme": "Scale successes",
+          "description": "Take something that worked in one real robotics pilot and apply it somewhere else."
+        },
+        {
+          "theme": "Secure funding",
+          "description": "Get real funding committed for a health program before it's needed."
+        },
+        {
+          "theme": "Secure resources",
+          "description": "Get the real resources a health program needs lined up before work starts."
+        },
+        {
+          "theme": "Seek grants",
+          "description": "Find and apply for a real grant that actually matches a school's specific need."
+        },
+        {
+          "theme": "Select tools",
+          "description": "Choose the real tool that actually fits a nonprofit's need and budget."
+        },
+        {
+          "theme": "Set goals",
+          "description": "Write a real, specific goal with a student or team that you'd both know if you hit."
+        },
+        {
+          "theme": "Share accountability",
+          "description": "Give a real team shared, specific responsibility for a result, not just you."
+        },
+        {
+          "theme": "Share information",
+          "description": "Pass real, relevant information to the people who actually need it to do their job."
+        },
+        {
+          "theme": "Share insights",
+          "description": "Share a real insight from field experience with a team that can act on it."
+        },
+        {
+          "theme": "Share resources",
+          "description": "Make a real resource one team has actually available to another that needs it."
+        },
+        {
+          "theme": "Share results",
+          "description": "Tell a real audience, honestly, what a school's actual results were."
+        },
+        {
+          "theme": "Strengthen belonging",
+          "description": "Take a real, specific action that helps a student actually feel they belong."
+        },
+        {
+          "theme": "Support adoption",
+          "description": "Help real users actually start using an AI system, not just make it available."
+        },
+        {
+          "theme": "Support application",
+          "description": "Help a real student get through an application process they'd otherwise struggle with."
+        },
+        {
+          "theme": "Support decisions",
+          "description": "Give real decision-makers the specific information they need to decide well."
+        },
+        {
+          "theme": "Support enrollment",
+          "description": "Help a real family actually complete enrollment, not just start it."
+        },
+        {
+          "theme": "Support growth",
+          "description": "Help a real health program expand without losing what made it work."
+        },
+        {
+          "theme": "Support implementation",
+          "description": "Help a real team actually get a robotic system implemented, not just plan it."
+        },
+        {
+          "theme": "Support improvement",
+          "description": "Give a real team or teacher what they specifically need to actually improve."
+        }
+      ]
+    },
+    {
+      "prefix": "PSI",
+      "name": "Practice Steps S–V",
+      "themes": [
+        {
+          "theme": "Support learning",
+          "description": "Give a real student the specific help they need to learn a skill or concept."
+        },
+        {
+          "theme": "Support quality",
+          "description": "Take a real, specific action that keeps a program's quality from slipping."
+        },
+        {
+          "theme": "Support review",
+          "description": "Help a real team gather what it needs to review its own work honestly."
+        },
+        {
+          "theme": "Support transitions",
+          "description": "Help a real health program get through more than one change without losing momentum."
+        },
+        {
+          "theme": "Teach alternatives",
+          "description": "Show a real student another way to approach a problem when the first didn't work."
+        },
+        {
+          "theme": "Teach standards",
+          "description": "Teach a real lesson that actually delivers the specific standard it targets."
+        },
+        {
+          "theme": "Test usability",
+          "description": "Watch a real person try to use an AI system and note every place they got confused."
+        },
+        {
+          "theme": "Track achievement",
+          "description": "Keep a real, ongoing record of a student's actual academic achievement."
+        },
+        {
+          "theme": "Track adoption",
+          "description": "Measure, over time, how many real users are actually using an AI system."
+        },
+        {
+          "theme": "Track attainment",
+          "description": "Keep a real record of whether students are actually reaching a specific milestone."
+        },
+        {
+          "theme": "Track attendance",
+          "description": "Keep a real, accurate, ongoing record of whether students are actually present."
+        },
+        {
+          "theme": "Track compliance",
+          "description": "Keep an ongoing, real check on whether a robotic system still meets its required standard."
+        },
+        {
+          "theme": "Track costs",
+          "description": "Keep a real, accurate record of what a robotics program is actually costing."
+        },
+        {
+          "theme": "Track discipline",
+          "description": "Keep a real, accurate record of discipline actions and look for actual patterns."
+        },
+        {
+          "theme": "Track funding",
+          "description": "Keep a real record of which funding a nonprofit has secured and what's still needed."
+        },
+        {
+          "theme": "Track growth",
+          "description": "Keep a real, ongoing record of how a nonprofit or program is actually growing."
+        },
+        {
+          "theme": "Track impact",
+          "description": "Keep a real record of the impact a health program is actually having."
+        },
+        {
+          "theme": "Track improvements",
+          "description": "Keep a real record of every improvement made to an AI system and its measured effect."
+        },
+        {
+          "theme": "Track outcomes",
+          "description": "Keep a real record of what actually happened after an AI system made a decision."
+        },
+        {
+          "theme": "Track participation",
+          "description": "Keep a real record of who is actually taking part in a health program."
+        },
+        {
+          "theme": "Track performance",
+          "description": "Keep a real, ongoing record of how well an AI system is performing over time."
+        },
+        {
+          "theme": "Track progress",
+          "description": "Keep a real, ongoing record of how far an AI initiative has actually gotten."
+        },
+        {
+          "theme": "Track retention",
+          "description": "Keep a real, ongoing record of whether students or staff are actually staying."
+        },
+        {
+          "theme": "Track spending",
+          "description": "Keep a real, accurate record of what an AI initiative is actually costing."
+        },
+        {
+          "theme": "Track success",
+          "description": "Keep a real, ongoing record of whether a specific effort is actually working."
+        },
+        {
+          "theme": "Track usage",
+          "description": "Keep a real record of how an AI system is actually being used, not how it was intended to be used."
+        },
+        {
+          "theme": "Track variances",
+          "description": "Keep a real, ongoing check on where actual results differ from what was planned."
+        },
+        {
+          "theme": "Train staff",
+          "description": "Teach a real group of staff the skill they need to safely work with an AI system."
+        },
+        {
+          "theme": "Train teams",
+          "description": "Teach a real team the specific skill they need to operate or oversee an AI system."
+        },
+        {
+          "theme": "Understand standards",
+          "description": "Learn the real standard a health program is expected to meet."
+        },
+        {
+          "theme": "Update regularly",
+          "description": "Keep a real AI system's data or model current on a fixed, working schedule."
+        },
+        {
+          "theme": "Visualize results",
+          "description": "Turn real data into a chart or display that actually makes its meaning clear."
+        }
+      ]
+    }
+  ]
+}

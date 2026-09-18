@@ -38,7 +38,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Cognition.X : Multilateral OS | 1150 | 10 | 100% | 0% | 100% | 0% | 28 |
 | Cognition.X : Sapient OS | 1120 | 10 | 100% | 0% | 100% | 0% | 25 |
 | Non-Profit Practice | 1150 | 10 | 100% | 0% | 100% | 0% | 25 |
-| Cognition.X : Education OS | 660 | 0 | 0% | 0% | 100% | 0% | 113 |
+| Cognition.X : Education OS | 660 | 0 | 100% | 0% | 100% | 0% | 113 |
 | Arts & Craft Trades : Louisiana Makers | 250 | 5 | 100% | 0% | 100% | 0% | 75 |
 | Arts, Making Media & Performance | 250 | 5 | 100% | 0% | 100% | 0% | 82 |
 | Civic Leadership Legacy : The Institute Model | 250 | 5 | 100% | 0% | 100% | 0% | 90 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 88% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 92% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 

@@ -4,6 +4,25 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.104.0] — 2026-09-18
+
+### Added — prompt 3 final piece: Education OS's 660 empty descriptions filled, shared dictionary now at 1,396 sentences
+- **`data/promotions/education-os-practice-steps.json`** is a new
+  `unbanded` promotion (Education OS carried no prior promotion file):
+  336 themes, 660 rows, no suffix, `track`/`code` left deferred. 168 of
+  the 336 themes reuse an exact sentence already promoted for Sapient
+  OS, Robotics OS, Global Health OS, Multilateral OS or Non-Profit
+  Practice; the other 168 are new and authored for this pack's
+  school/district administrative and pedagogical-practice domain
+  (curriculum, instruction, assessment, family and community
+  engagement, operations, budget, safety, equity, data). No block id,
+  code, track, level, credential, or transfer check changed.
+- `tests/test_platform.py`'s `UNBANDED_FILLED_PACKS` gains Education
+  OS; `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 1,980 → 1,320. Dataset-wide
+  description coverage rises from 88% to 92%.
+- Two packs remain — Corporate OS, Science OS — drawing from a shared
+  generic-action dictionary now at 1,396 sentences across six packs.
+
 ## [0.103.0] — 2026-09-18
 
 ### Added — prompt 3 final piece: Non-Profit Practice's 650 empty descriptions filled, shared dictionary now at 1,229 sentences
