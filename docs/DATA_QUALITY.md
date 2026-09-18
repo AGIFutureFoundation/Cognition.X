@@ -18,7 +18,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Future-Work | 111 | 0 | 100% | 0% | 100% | 0% | 14 |
 | Regional | 111 | 0 | 100% | 0% | 100% | 0% | 18 |
 | Civic & Leadership | 111 | 0 | 100% | 0% | 100% | 0% | 49 |
-| Health & Community | 111 | 0 | 98% | 0% | 100% | 0% | 45 |
+| Health & Community | 111 | 0 | 100% | 0% | 100% | 0% | 45 |
 | Language, Culture & Communication | 111 | 0 | 100% | 0% | 100% | 0% | 43 |
 | Empathy & Emotional Intelligence | 167 | 0 | 100% | 0% | 100% | 19% | 37 |
 | Community & Relationship Practice | 167 | 0 | 100% | 0% | 100% | 0% | 32 |

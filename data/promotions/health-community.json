@@ -1,7 +1,7 @@
 {
   "pack": "Health & Community",
   "unbanded": true,
-  "note": "Promotion to the tracked schema (v0.92.0, prompt 3 tranche three). Each theme in this pack names exactly one row at one grade band, not five rows across the ladder, so \"unbanded\": true fills each row's empty description with its own complete sentence directly — no per-band suffix, since the row already names its own grade. track/code are not filled by this promotion (see tools/normalize_blocks.py apply_promotions): this pack's natural sub-groupings do not form the 50-block tracked shape. This promotion covers 109 of the pack's 111 rows; two rows (grade —, adult-route capstones) use a grade value outside the five standard bands and are out of scope until apply_promotions is extended to match on GRADE_LEVEL as well as BAND_LEVEL. Theme text and grouping are copied verbatim from data/blocks.csv; nothing else is touched.",
+  "note": "Promotion to the tracked schema (v0.92.0, prompt 3 tranche three; extended in v0.98.0). Each theme in this pack names exactly one row at one grade band, not five rows across the ladder, so \"unbanded\": true fills each row's empty description with its own complete sentence directly — no per-band suffix, since the row already names its own grade. track/code are not filled by this promotion (see tools/normalize_blocks.py apply_promotions): this pack's natural sub-groupings do not form the 50-block tracked shape. Originally covered 109 of the pack's 111 rows; the remaining two (grade —, adult-route capstones — \"Adult educator sprint (OH)\" and \"Family edition (OH)\") were out of scope until apply_promotions()'s grade filter was extended from BAND_LEVEL to GRADE_LEVEL in v0.95.0, and are now included, closing this pack at 111 of 111. Theme text and grouping are copied verbatim from data/blocks.csv; nothing else is touched.",
   "tracks": [
     {
       "prefix": "OH",
@@ -94,6 +94,14 @@
         {
           "theme": "The fellowship bridge (OH)",
           "description": "Assemble a portfolio and complete a real application package for a named program."
+        },
+        {
+          "theme": "Adult educator sprint (OH)",
+          "description": "Run a full community oral-health session on your own, from setup through close, with a supervisor present."
+        },
+        {
+          "theme": "Family edition (OH)",
+          "description": "Teach an oral-health routine to your own household and report honestly on what actually held for two weeks."
         }
       ]
     },

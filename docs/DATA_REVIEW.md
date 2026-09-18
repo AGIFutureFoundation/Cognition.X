@@ -88,7 +88,13 @@ sections; the only other diff is the fonts `<link>`).
    (each repeated verbatim across the 8 regions), and a 7-theme
    industry-cluster track. What remains: Health & Community's 2
    grade-`—` rows, then the sector-OS and Education OS empty
-   descriptions.
+   descriptions. *Update (v0.98.0):* filled Health & Community's last
+   2 rows, closing every foundation pack reachable by the `unbanded`
+   and `partial_bands` mechanisms — including the ones reached only
+   after the `GRADE_LEVEL` extension (K–12, Trade School, Regional).
+   What remains of prompt 3: the sector-OS and Education OS empty
+   descriptions (5,200 rows), whose theme/grade structure needs a
+   Python scan of `data/blocks.csv` before assuming a mechanism.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic
