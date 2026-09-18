@@ -14,7 +14,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Pack | Blocks | Tracks | Desc % | Band-suffix % | Code+level % | Level-word cred % | Min check len |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | K–12 | 64 | 0 | 100% | 0% | 100% | 0% | 34 |
-| Trade School | 47 | 0 | 0% | 0% | 100% | 0% | 17 |
+| Trade School | 47 | 0 | 100% | 0% | 100% | 0% | 17 |
 | Future-Work | 111 | 0 | 100% | 0% | 100% | 0% | 14 |
 | Regional | 111 | 0 | 0% | 0% | 100% | 0% | 18 |
 | Civic & Leadership | 111 | 0 | 100% | 0% | 100% | 0% | 49 |

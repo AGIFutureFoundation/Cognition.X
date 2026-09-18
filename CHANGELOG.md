@@ -4,6 +4,28 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.96.0] — 2026-09-18
+
+### Added — prompt 3 continuation: Trade School's 47 empty descriptions filled through the `unbanded` mechanism
+- **`data/promotions/trade-school.json`** is a new `unbanded` promotion:
+  47 themes across twelve trade families (three shared foundation/
+  capstone themes, then Electrical, Welding, Pipefitting, Mechatronics
+  & Maintenance, HVAC, Heavy Equipment, IT, Process Technology,
+  Uncrewed Aerial Systems, Marine, and Biomedical Equipment — four
+  themes each), every row at the single adult-route grade
+  `11–12 · adult` — 47 rows, no suffix, `track`/`code` left deferred
+  like every other `unbanded` pack. No block id, code, track, level,
+  credential, or transfer check changed.
+- `tests/test_platform.py`'s `UNBANDED_FILLED_PACKS` gains Trade
+  School; `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 5,360 → 5,313.
+- What remains of prompt 3: Regional (111 rows, 4 of its 83 themes
+  each repeated verbatim across 8 rows — one per named region — which
+  needs `test_unbanded_descriptions()`'s distinctness check scoped to
+  distinct themes, not rows), then Health & Community's 2 grade-`—`
+  rows (now reachable, an addition to its existing promotion); then
+  the sector-OS and Education OS empty descriptions (5,200 rows),
+  whose theme/grade structure has not yet been verified.
+
 ## [0.95.0] — 2026-09-18
 
 ### Added — prompt 3 continuation: `apply_promotions()`'s grade filter extended to `GRADE_LEVEL`, and K–12's 64 empty descriptions filled
