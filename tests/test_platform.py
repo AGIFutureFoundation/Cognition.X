@@ -769,7 +769,7 @@ def test_band_differentiated_descriptions():
 # exactly one row (not five spanning the band ladder), promoted with
 # `"unbanded": true` so the empty description fills in as one complete
 # sentence with no per-band suffix.
-UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture & Communication", "Health & Community", "K–12", "Trade School"}
+UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture & Communication", "Health & Community", "K–12", "Trade School", "Regional"}
 
 # Rows an unbanded promotion cannot reach: grade values outside the five
 # standard bands (BAND_LEVEL), which apply_promotions() requires for any
@@ -777,7 +777,7 @@ UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture
 # with grade "—"; they stay empty until that filter is extended.
 UNBANDED_KNOWN_GAPS = {"Health & Community": 2}
 
-KNOWN_EMPTY_DESCRIPTION_ROWS = 5313  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); 5,758 after Health & Community (v0.92.0, prompt 3 tranche three, 109 of its 111 rows — the other 2 use grade "—" and are out of scope); 5,591 after Empathy & Emotional Intelligence (v0.93.0, prompt 3 tranche four, 167 rows, the first "partial_bands" promotion); 5,424 after Community & Relationship Practice (v0.94.0, prompt 3 tranche five, 167 rows); 5,360 after K–12 (v0.95.0, prompt 3 continuation, 64 rows, the first pack reached after extending apply_promotions()'s grade filter from BAND_LEVEL to GRADE_LEVEL); 5,313 after Trade School (v0.96.0, prompt 3 continuation, 47 rows, one row per theme at the single adult-route grade "11–12 · adult"); the ratchet only falls
+KNOWN_EMPTY_DESCRIPTION_ROWS = 5202  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); 5,758 after Health & Community (v0.92.0, prompt 3 tranche three, 109 of its 111 rows — the other 2 use grade "—" and are out of scope); 5,591 after Empathy & Emotional Intelligence (v0.93.0, prompt 3 tranche four, 167 rows, the first "partial_bands" promotion); 5,424 after Community & Relationship Practice (v0.94.0, prompt 3 tranche five, 167 rows); 5,360 after K–12 (v0.95.0, prompt 3 continuation, 64 rows, the first pack reached after extending apply_promotions()'s grade filter from BAND_LEVEL to GRADE_LEVEL); 5,313 after Trade School (v0.96.0, prompt 3 continuation, 47 rows, one row per theme at the single adult-route grade "11–12 · adult"); 5,202 after Regional (v0.97.0, prompt 3 continuation, 111 rows across 83 themes — 4 of them repeated verbatim across 8 rows each, one per named region); the ratchet only falls
 
 
 def test_unbanded_descriptions():
@@ -803,7 +803,18 @@ def test_unbanded_descriptions():
         check(f"unbanded fill: {pack} — no row is empty beyond the known gap", pr and len(pr) - len(filled_pr) == known_gap, f"{len(pr) - len(filled_pr)} empty, known gap {known_gap}")
         check(f"unbanded fill: {pack} — no row carries the band suffix", not [r for r in filled_pr if suffix.search(r["description"])])
         check(f"unbanded fill: {pack} — every filled description is a full sentence", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in filled_pr))
-        check(f"unbanded fill: {pack} — filled descriptions are distinct (one row per theme)", len({r["description"] for r in filled_pr}) == len(filled_pr))
+        # Distinctness is checked per THEME, not per row: most unbanded packs
+        # have exactly one row per theme, but Regional (v0.97.0) repeats four
+        # of its themes verbatim across 8 rows each (one per named region,
+        # since the theme text itself doesn't vary by region) — those rows
+        # correctly share one sentence, and it's still one sentence per
+        # theme, never two different sentences for the same theme text.
+        by_theme = {}
+        for r in filled_pr:
+            by_theme.setdefault(r["theme"], set()).add(r["description"])
+        inconsistent = [t for t, descs in by_theme.items() if len(descs) != 1]
+        check(f"unbanded fill: {pack} — every row of a theme shares that theme's one sentence", not inconsistent, str(inconsistent[:3]))
+        check(f"unbanded fill: {pack} — filled descriptions are distinct (one sentence per theme)", len({next(iter(v)) for v in by_theme.values()}) == len(by_theme))
         promo = [p for p in (ROOT / "data" / "promotions").glob("*.json") if json.loads(p.read_text(encoding="utf-8"))["pack"] == pack]
         check(f"unbanded fill: {pack} — declared as an unbanded promotion", promo and json.loads(promo[0].read_text(encoding="utf-8")).get("unbanded") is True)
     check("normalize_blocks: unbanded_description accepts a full sentence",

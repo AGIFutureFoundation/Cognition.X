@@ -81,7 +81,14 @@ sections; the only other diff is the fonts `<link>`).
    filled the same way, confirming the mechanism needed no changes for
    a single adult-route grade. What remains: Regional (needs the
    distinctness-check change above), Health & Community's 2 rows, then
-   the sector-OS and Education OS empty descriptions.
+   the sector-OS and Education OS empty descriptions. *Update
+   (v0.97.0):* scoped `test_unbanded_descriptions()`'s distinctness
+   check to themes rather than rows, and filled Regional's 111 rows —
+   83 themes across 8 per-region tracks, a 4-theme cross-region track
+   (each repeated verbatim across the 8 regions), and a 7-theme
+   industry-cluster track. What remains: Health & Community's 2
+   grade-`—` rows, then the sector-OS and Education OS empty
+   descriptions.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

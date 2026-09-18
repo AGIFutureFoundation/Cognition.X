@@ -1,0 +1,399 @@
+{
+  "pack": "Regional",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema is out of scope: Regional's 83 themes each name a row at a single grade (K through 12, or the adult-route \"9-12 . adult\" for its seven industry-cluster themes), not a five-band ladder, so this fills description only through the unbanded mechanism (v0.97.0, prompt 3 continuation, the third pack reached after apply_promotions()'s grade filter was extended to GRADE_LEVEL in v0.95.0). Four cross-region themes (\"Counting our region\", \"Skills that transfer\", \"Regional site rotation\", \"Regional economics\") are repeated verbatim across 8 rows each -- one per named region -- since the theme text itself does not name a region; those rows correctly share one sentence, verified in tests/test_platform.py's per-theme (not per-row) distinctness check. track/code/level stay as they were (LB-<n> codes, level derived structurally by light_fill()).",
+  "tracks": [
+    {
+      "prefix": "GNO",
+      "name": "Greater New Orleans Track",
+      "themes": [
+        {
+          "theme": "Who works in Greater New Orleans?",
+          "description": "Match three real workers in Greater New Orleans to the three tools each one uses."
+        },
+        {
+          "theme": "Machines of Greater New Orleans",
+          "description": "Explain what job a machine used in Greater New Orleans actually does."
+        },
+        {
+          "theme": "How Greater New Orleans makes money",
+          "description": "Trace how a real product made in Greater New Orleans moves through its supply chain."
+        },
+        {
+          "theme": "Land, water and work in Greater New Orleans",
+          "description": "Place employers from Greater New Orleans on a map and explain the reasons for each spot."
+        },
+        {
+          "theme": "Jobs of 2035 in Greater New Orleans",
+          "description": "Present a forecast of what jobs Greater New Orleans will need in 2035 to a panel."
+        },
+        {
+          "theme": "Big projects of Greater New Orleans",
+          "description": "Run a cost-benefit analysis on a real project underway in Greater New Orleans."
+        },
+        {
+          "theme": "Pathways from Greater New Orleans school to Greater New Orleans work",
+          "description": "Build a pathway from school to work in Greater New Orleans with its hours and costs mapped out."
+        },
+        {
+          "theme": "Placement in Greater New Orleans",
+          "description": "Get a supervisor in Greater New Orleans to accept a completed placement."
+        },
+        {
+          "theme": "Capstone: Greater New Orleans 2035",
+          "description": "Get a capstone about Greater New Orleans's future accepted by a regional employer council panel."
+        }
+      ]
+    },
+    {
+      "prefix": "CAP",
+      "name": "the Capital Region Track",
+      "themes": [
+        {
+          "theme": "Who works in the Capital Region?",
+          "description": "Match three real workers in the Capital Region to the three tools each one uses."
+        },
+        {
+          "theme": "Machines of the Capital Region",
+          "description": "Explain what job a machine used in the Capital Region actually does."
+        },
+        {
+          "theme": "How the Capital Region makes money",
+          "description": "Trace how a real product made in the Capital Region moves through its supply chain."
+        },
+        {
+          "theme": "Land, water and work in the Capital Region",
+          "description": "Place employers from the Capital Region on a map and explain the reasons for each spot."
+        },
+        {
+          "theme": "Jobs of 2035 in the Capital Region",
+          "description": "Present a forecast of what jobs the Capital Region will need in 2035 to a panel."
+        },
+        {
+          "theme": "Big projects of the Capital Region",
+          "description": "Run a cost-benefit analysis on a real project underway in the Capital Region."
+        },
+        {
+          "theme": "Pathways from the Capital Region school to the Capital Region work",
+          "description": "Build a pathway from school to work in the Capital Region with its hours and costs mapped out."
+        },
+        {
+          "theme": "Placement in the Capital Region",
+          "description": "Get a supervisor in the Capital Region to accept a completed placement."
+        },
+        {
+          "theme": "Capstone: the Capital Region 2035",
+          "description": "Get a capstone about the Capital Region's future accepted by a regional employer council panel."
+        }
+      ]
+    },
+    {
+      "prefix": "BAY",
+      "name": "the Bayou Region Track",
+      "themes": [
+        {
+          "theme": "Who works in the Bayou Region?",
+          "description": "Match three real workers in the Bayou Region to the three tools each one uses."
+        },
+        {
+          "theme": "Machines of the Bayou Region",
+          "description": "Explain what job a machine used in the Bayou Region actually does."
+        },
+        {
+          "theme": "How the Bayou Region makes money",
+          "description": "Trace how a real product made in the Bayou Region moves through its supply chain."
+        },
+        {
+          "theme": "Land, water and work in the Bayou Region",
+          "description": "Place employers from the Bayou Region on a map and explain the reasons for each spot."
+        },
+        {
+          "theme": "Jobs of 2035 in the Bayou Region",
+          "description": "Present a forecast of what jobs the Bayou Region will need in 2035 to a panel."
+        },
+        {
+          "theme": "Big projects of the Bayou Region",
+          "description": "Run a cost-benefit analysis on a real project underway in the Bayou Region."
+        },
+        {
+          "theme": "Pathways from the Bayou Region school to the Bayou Region work",
+          "description": "Build a pathway from school to work in the Bayou Region with its hours and costs mapped out."
+        },
+        {
+          "theme": "Placement in the Bayou Region",
+          "description": "Get a supervisor in the Bayou Region to accept a completed placement."
+        },
+        {
+          "theme": "Capstone: the Bayou Region 2035",
+          "description": "Get a capstone about the Bayou Region's future accepted by a regional employer council panel."
+        }
+      ]
+    },
+    {
+      "prefix": "ACA",
+      "name": "Acadiana Track",
+      "themes": [
+        {
+          "theme": "Who works in Acadiana?",
+          "description": "Match three real workers in Acadiana to the three tools each one uses."
+        },
+        {
+          "theme": "Machines of Acadiana",
+          "description": "Explain what job a machine used in Acadiana actually does."
+        },
+        {
+          "theme": "How Acadiana makes money",
+          "description": "Trace how a real product made in Acadiana moves through its supply chain."
+        },
+        {
+          "theme": "Land, water and work in Acadiana",
+          "description": "Place employers from Acadiana on a map and explain the reasons for each spot."
+        },
+        {
+          "theme": "Jobs of 2035 in Acadiana",
+          "description": "Present a forecast of what jobs Acadiana will need in 2035 to a panel."
+        },
+        {
+          "theme": "Big projects of Acadiana",
+          "description": "Run a cost-benefit analysis on a real project underway in Acadiana."
+        },
+        {
+          "theme": "Pathways from Acadiana school to Acadiana work",
+          "description": "Build a pathway from school to work in Acadiana with its hours and costs mapped out."
+        },
+        {
+          "theme": "Placement in Acadiana",
+          "description": "Get a supervisor in Acadiana to accept a completed placement."
+        },
+        {
+          "theme": "Capstone: Acadiana 2035",
+          "description": "Get a capstone about Acadiana's future accepted by a regional employer council panel."
+        }
+      ]
+    },
+    {
+      "prefix": "SWLA",
+      "name": "Southwest Louisiana Track",
+      "themes": [
+        {
+          "theme": "Who works in Southwest Louisiana?",
+          "description": "Match three real workers in Southwest Louisiana to the three tools each one uses."
+        },
+        {
+          "theme": "Machines of Southwest Louisiana",
+          "description": "Explain what job a machine used in Southwest Louisiana actually does."
+        },
+        {
+          "theme": "How Southwest Louisiana makes money",
+          "description": "Trace how a real product made in Southwest Louisiana moves through its supply chain."
+        },
+        {
+          "theme": "Land, water and work in Southwest Louisiana",
+          "description": "Place employers from Southwest Louisiana on a map and explain the reasons for each spot."
+        },
+        {
+          "theme": "Jobs of 2035 in Southwest Louisiana",
+          "description": "Present a forecast of what jobs Southwest Louisiana will need in 2035 to a panel."
+        },
+        {
+          "theme": "Big projects of Southwest Louisiana",
+          "description": "Run a cost-benefit analysis on a real project underway in Southwest Louisiana."
+        },
+        {
+          "theme": "Pathways from Southwest Louisiana school to Southwest Louisiana work",
+          "description": "Build a pathway from school to work in Southwest Louisiana with its hours and costs mapped out."
+        },
+        {
+          "theme": "Placement in Southwest Louisiana",
+          "description": "Get a supervisor in Southwest Louisiana to accept a completed placement."
+        },
+        {
+          "theme": "Capstone: Southwest Louisiana 2035",
+          "description": "Get a capstone about Southwest Louisiana's future accepted by a regional employer council panel."
+        }
+      ]
+    },
+    {
+      "prefix": "CNLA",
+      "name": "Central Louisiana Track",
+      "themes": [
+        {
+          "theme": "Who works in Central Louisiana?",
+          "description": "Match three real workers in Central Louisiana to the three tools each one uses."
+        },
+        {
+          "theme": "Machines of Central Louisiana",
+          "description": "Explain what job a machine used in Central Louisiana actually does."
+        },
+        {
+          "theme": "How Central Louisiana makes money",
+          "description": "Trace how a real product made in Central Louisiana moves through its supply chain."
+        },
+        {
+          "theme": "Land, water and work in Central Louisiana",
+          "description": "Place employers from Central Louisiana on a map and explain the reasons for each spot."
+        },
+        {
+          "theme": "Jobs of 2035 in Central Louisiana",
+          "description": "Present a forecast of what jobs Central Louisiana will need in 2035 to a panel."
+        },
+        {
+          "theme": "Big projects of Central Louisiana",
+          "description": "Run a cost-benefit analysis on a real project underway in Central Louisiana."
+        },
+        {
+          "theme": "Pathways from Central Louisiana school to Central Louisiana work",
+          "description": "Build a pathway from school to work in Central Louisiana with its hours and costs mapped out."
+        },
+        {
+          "theme": "Placement in Central Louisiana",
+          "description": "Get a supervisor in Central Louisiana to accept a completed placement."
+        },
+        {
+          "theme": "Capstone: Central Louisiana 2035",
+          "description": "Get a capstone about Central Louisiana's future accepted by a regional employer council panel."
+        }
+      ]
+    },
+    {
+      "prefix": "NWLA",
+      "name": "Northwest Louisiana Track",
+      "themes": [
+        {
+          "theme": "Who works in Northwest Louisiana?",
+          "description": "Match three real workers in Northwest Louisiana to the three tools each one uses."
+        },
+        {
+          "theme": "Machines of Northwest Louisiana",
+          "description": "Explain what job a machine used in Northwest Louisiana actually does."
+        },
+        {
+          "theme": "How Northwest Louisiana makes money",
+          "description": "Trace how a real product made in Northwest Louisiana moves through its supply chain."
+        },
+        {
+          "theme": "Land, water and work in Northwest Louisiana",
+          "description": "Place employers from Northwest Louisiana on a map and explain the reasons for each spot."
+        },
+        {
+          "theme": "Jobs of 2035 in Northwest Louisiana",
+          "description": "Present a forecast of what jobs Northwest Louisiana will need in 2035 to a panel."
+        },
+        {
+          "theme": "Big projects of Northwest Louisiana",
+          "description": "Run a cost-benefit analysis on a real project underway in Northwest Louisiana."
+        },
+        {
+          "theme": "Pathways from Northwest Louisiana school to Northwest Louisiana work",
+          "description": "Build a pathway from school to work in Northwest Louisiana with its hours and costs mapped out."
+        },
+        {
+          "theme": "Placement in Northwest Louisiana",
+          "description": "Get a supervisor in Northwest Louisiana to accept a completed placement."
+        },
+        {
+          "theme": "Capstone: Northwest Louisiana 2035",
+          "description": "Get a capstone about Northwest Louisiana's future accepted by a regional employer council panel."
+        }
+      ]
+    },
+    {
+      "prefix": "NELA",
+      "name": "Northeast Louisiana Track",
+      "themes": [
+        {
+          "theme": "Who works in Northeast Louisiana?",
+          "description": "Match three real workers in Northeast Louisiana to the three tools each one uses."
+        },
+        {
+          "theme": "Machines of Northeast Louisiana",
+          "description": "Explain what job a machine used in Northeast Louisiana actually does."
+        },
+        {
+          "theme": "How Northeast Louisiana makes money",
+          "description": "Trace how a real product made in Northeast Louisiana moves through its supply chain."
+        },
+        {
+          "theme": "Land, water and work in Northeast Louisiana",
+          "description": "Place employers from Northeast Louisiana on a map and explain the reasons for each spot."
+        },
+        {
+          "theme": "Jobs of 2035 in Northeast Louisiana",
+          "description": "Present a forecast of what jobs Northeast Louisiana will need in 2035 to a panel."
+        },
+        {
+          "theme": "Big projects of Northeast Louisiana",
+          "description": "Run a cost-benefit analysis on a real project underway in Northeast Louisiana."
+        },
+        {
+          "theme": "Pathways from Northeast Louisiana school to Northeast Louisiana work",
+          "description": "Build a pathway from school to work in Northeast Louisiana with its hours and costs mapped out."
+        },
+        {
+          "theme": "Placement in Northeast Louisiana",
+          "description": "Get a supervisor in Northeast Louisiana to accept a completed placement."
+        },
+        {
+          "theme": "Capstone: Northeast Louisiana 2035",
+          "description": "Get a capstone about Northeast Louisiana's future accepted by a regional employer council panel."
+        }
+      ]
+    },
+    {
+      "prefix": "GEN",
+      "name": "Cross-Region Foundations",
+      "themes": [
+        {
+          "theme": "Counting our region",
+          "description": "Build a pictograph from a region's own data and explain what it shows."
+        },
+        {
+          "theme": "Skills that transfer",
+          "description": "Map a real job to five skills that would transfer to a different one."
+        },
+        {
+          "theme": "Regional site rotation",
+          "description": "Get site logs verified by four different hosts across a rotation."
+        },
+        {
+          "theme": "Regional economics",
+          "description": "Build a model of a region's economic growth under a real scenario."
+        }
+      ]
+    },
+    {
+      "prefix": "IND",
+      "name": "Industry Clusters",
+      "themes": [
+        {
+          "theme": "LNG & the energy transition",
+          "description": "Trace an LNG train from wellhead to ship along with its full safety envelope."
+        },
+        {
+          "theme": "Data centers & power",
+          "description": "Model a data-center campus's power load against its generation and its bill."
+        },
+        {
+          "theme": "Steel & advanced manufacturing",
+          "description": "Diagnose a process deviation in an electric-arc furnace and explain the fix."
+        },
+        {
+          "theme": "Healthcare & eldercare",
+          "description": "Design a care-team workflow that keeps a human decision at every gate."
+        },
+        {
+          "theme": "Ports, logistics & the river",
+          "description": "Schedule a full terminal day that stays within its rated limits."
+        },
+        {
+          "theme": "Aerospace, defense & cyber",
+          "description": "Run a cyber-physical incident drill from detection through response."
+        },
+        {
+          "theme": "Agriculture, forestry & food",
+          "description": "Plan a precision-farming season using its own season's data."
+        }
+      ]
+    }
+  ]
+}
