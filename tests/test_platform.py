@@ -777,7 +777,7 @@ UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture
 # with grade "—"; they stay empty until that filter is extended.
 UNBANDED_KNOWN_GAPS = {"Health & Community": 2}
 
-KNOWN_EMPTY_DESCRIPTION_ROWS = 5758  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); 5,758 after Health & Community (v0.92.0, prompt 3 tranche three, 109 of its 111 rows — the other 2 use grade "—" and are out of scope); the ratchet only falls
+KNOWN_EMPTY_DESCRIPTION_ROWS = 5591  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); 5,758 after Health & Community (v0.92.0, prompt 3 tranche three, 109 of its 111 rows — the other 2 use grade "—" and are out of scope); 5,591 after Empathy & Emotional Intelligence (v0.93.0, prompt 3 tranche four, 167 rows, the first "partial_bands" promotion); the ratchet only falls
 
 
 def test_unbanded_descriptions():
@@ -811,6 +811,49 @@ def test_unbanded_descriptions():
           == "Do the real task correctly, on your own, without any help at all.")
     for bad in ("too short.", "No trailing period", "A sentence with a suffix that is long enough — at 6–8"):
         check(f"normalize_blocks: unbanded_description refuses {bad!r}", unbanded_description(bad) is None)
+
+
+# v0.93.0 — prompt 3 tranche four: foundation packs where each theme's rows
+# span only SOME of the five bands (a sliding, sometimes wrap-around window
+# of three or four — Empathy & Emotional Intelligence, Community &
+# Relationship Practice), promoted with `"partial_bands": true` so each
+# grade a theme actually has gets its own authored sentence, no suffix.
+PARTIAL_BANDS_FILLED_PACKS = {"Empathy & Emotional Intelligence"}
+
+
+def test_partial_band_descriptions():
+    """v0.93.0 — prompt 3 tranche four: a foundation pack where each theme's
+    rows span only some of the five bands (never all five, never exactly
+    one) is promoted with `"partial_bands": true`
+    (tools/normalize_blocks.py `apply_promotions`, `partial_band_description`);
+    each grade the theme actually has gets its own authored sentence, never
+    a per-band suffix. Plain fill-empty, not a new counted exception, and
+    `track`/`code` stay deferred for the same tracked-shape reason as
+    `unbanded`."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from normalize_blocks import partial_band_description
+    rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
+    suffix = re.compile(r"— at .{1,20}$")
+    for pack in PARTIAL_BANDS_FILLED_PACKS:
+        pr = [r for r in rows if r["pack"] == pack]
+        check(f"partial_bands fill: {pack} — no row is empty", pr and all(r["description"].strip() for r in pr))
+        check(f"partial_bands fill: {pack} — no row carries the band suffix", not [r for r in pr if suffix.search(r["description"])])
+        check(f"partial_bands fill: {pack} — every description is a full sentence", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in pr))
+        by_theme = {}
+        for r in pr:
+            by_theme.setdefault(r["theme"], []).append(r["description"])
+        check(f"partial_bands fill: {pack} — sentences are distinct within each theme", all(len(set(v)) == len(v) for v in by_theme.values()))
+        check(f"partial_bands fill: {pack} — no theme spans all five bands", all(1 <= len(v) < 5 for v in by_theme.values()))
+        promo = [p for p in (ROOT / "data" / "promotions").glob("*.json") if json.loads(p.read_text(encoding="utf-8"))["pack"] == pack]
+        check(f"partial_bands fill: {pack} — declared as a partial_bands promotion", promo and json.loads(promo[0].read_text(encoding="utf-8")).get("partial_bands") is True)
+    good = {"K–2": "Do the small version with an adult, start to finish, and say what you noticed.",
+            "3–5": "Do the small version with an adult's help, and explain your choice."}
+    check("normalize_blocks: partial_band_description returns the sentence for an authored grade",
+          partial_band_description(good, "K–2") == good["K–2"])
+    check("normalize_blocks: partial_band_description refuses a grade the theme does not span",
+          partial_band_description(good, "6–8") is None)
+    for bad in ({"K–2": "too short."}, {"K–2": "No trailing period"}, {"K–2": "A sentence with a suffix that is long enough — at 6–8"}):
+        check(f"normalize_blocks: partial_band_description refuses {bad!r}", partial_band_description(bad, "K–2") is None)
 
 
 FOOTPRINT_BUDGET_MB = {"education-os": 6.5, "flow-hub": 2.6, "louisiana": 1.0, "platform": 0.3, "states": 0.65, "trades-network": 0.5}
