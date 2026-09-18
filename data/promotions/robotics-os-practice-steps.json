@@ -1,0 +1,1573 @@
+{
+  "pack": "Cognition.X : Robotics OS",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema is out of scope (v0.100.0, prompt 3 final piece). Robotics OS's 640 empty-description rows use 378 distinct short generic action-phrase themes at the single adult-route grade \"11–12 . adult\", the same shape as Sapient OS (v0.99.0) -- 120 of these 378 themes are worded identically to ones already promoted for Sapient OS (\"Track progress\", \"Address bias\", etc.) and share the same sentence verbatim, since the generic action they name doesn't depend on which sector-OS pack it's reused in; the other 258 are new to this pack and authored fresh. track/code/level stay as they were (LB-<n> codes, level derived structurally by light_fill()).",
+  "tracks": [
+    {
+      "prefix": "PSA",
+      "name": "Practice Steps A–A",
+      "themes": [
+        {
+          "theme": "Act on insights",
+          "description": "Take a concrete action based on a real insight about a robotic system, not just note it."
+        },
+        {
+          "theme": "Address concerns",
+          "description": "Respond to a real stakeholder's concern about an AI system with a specific action, not just reassurance."
+        },
+        {
+          "theme": "Address violations",
+          "description": "Investigate a real policy violation in an AI system and correct it."
+        },
+        {
+          "theme": "Analyze costs",
+          "description": "Break down the real costs of running an AI system and show where they go."
+        },
+        {
+          "theme": "Analyze data",
+          "description": "Turn raw sensor or operations data from a real robotic system into a specific finding."
+        },
+        {
+          "theme": "Analyze efficiency",
+          "description": "Break down where a real robotic process spends its time and find the slow step."
+        },
+        {
+          "theme": "Analyze patterns",
+          "description": "Find a real pattern in AI system behavior that wasn't obvious before you looked."
+        },
+        {
+          "theme": "Analyze quality",
+          "description": "Check a real robotic system's output against a quality standard and report the gap."
+        },
+        {
+          "theme": "Analyze results",
+          "description": "Turn the raw results of a real test into a written conclusion with a recommendation."
+        },
+        {
+          "theme": "Analyze trends",
+          "description": "Find a real trend in a robotic system's performance data over time and explain it."
+        },
+        {
+          "theme": "Analyze user experience",
+          "description": "Watch a real operator use a robotic system and identify where the experience breaks down."
+        },
+        {
+          "theme": "Analyze workflows",
+          "description": "Walk through a real robotics workflow and find the step that doesn't need to be there."
+        },
+        {
+          "theme": "Approve systems",
+          "description": "Sign off that a real robotic system meets its requirements before it goes live."
+        },
+        {
+          "theme": "Assess accessibility",
+          "description": "Test a real AI system against accessibility needs and name what it fails."
+        },
+        {
+          "theme": "Assess aging",
+          "description": "Check a real piece of robotic equipment for wear and estimate how much life it has left."
+        },
+        {
+          "theme": "Assess capabilities",
+          "description": "Determine what a real robotic system can and cannot actually do, tested, not assumed."
+        },
+        {
+          "theme": "Assess capacity",
+          "description": "Determine whether a real team or system can actually handle the AI workload asked of it."
+        },
+        {
+          "theme": "Assess compatibility",
+          "description": "Check whether a real AI system will actually work with the systems it needs to connect to."
+        },
+        {
+          "theme": "Assess competency",
+          "description": "Check whether a real operator can actually run a robotic system safely and correctly."
+        },
+        {
+          "theme": "Assess condition",
+          "description": "Inspect a real robotic system and report its actual physical condition."
+        },
+        {
+          "theme": "Assess connectivity",
+          "description": "Check whether a real robotic system's network connections are all actually working."
+        },
+        {
+          "theme": "Assess current",
+          "description": "Take stock of where a real AI practice actually stands today, not where it's assumed to stand."
+        },
+        {
+          "theme": "Assess current workflows",
+          "description": "Map how a real workflow using robotics actually runs today, before changing it."
+        },
+        {
+          "theme": "Assess customization",
+          "description": "Determine what changes a real site would actually need to fit a robotic system to its work."
+        },
+        {
+          "theme": "Assess debt",
+          "description": "Find a real piece of accumulated technical debt in a robotic system's software or setup."
+        },
+        {
+          "theme": "Assess designs",
+          "description": "Review a real robotic system's design and flag what won't hold up in practice."
+        },
+        {
+          "theme": "Assess environmental impact",
+          "description": "Measure the real environmental effect of running a robotic system, not just estimate it."
+        },
+        {
+          "theme": "Assess ergonomics",
+          "description": "Check whether a real robotic workstation is actually safe and comfortable for the people using it."
+        },
+        {
+          "theme": "Assess ethical issues",
+          "description": "Identify a real ethical concern raised by a robotic system's deployment and name it plainly."
+        },
+        {
+          "theme": "Assess impact",
+          "description": "Measure the real effect an AI system had after it was deployed, not just before."
+        },
+        {
+          "theme": "Assess mastery",
+          "description": "Confirm a real person has actually mastered a robotics skill, not just practiced it once."
+        },
+        {
+          "theme": "Assess requests",
+          "description": "Review a real request for a robotic system change and judge whether it's actually needed."
+        },
+        {
+          "theme": "Assess requirements",
+          "description": "Work out what a real AI project genuinely requires before work starts."
+        },
+        {
+          "theme": "Assess risks",
+          "description": "List the real risks of an AI decision and rank them by how much they matter."
+        },
+        {
+          "theme": "Assess satisfaction",
+          "description": "Find out, from real users, whether an AI system is actually meeting their needs."
+        },
+        {
+          "theme": "Assess scalability",
+          "description": "Determine whether a real AI system will keep working as its real load grows."
+        },
+        {
+          "theme": "Assess security",
+          "description": "Check a real robotic system for security weaknesses before it's trusted with real work."
+        },
+        {
+          "theme": "Assess sites",
+          "description": "Visit a real site and determine whether it's actually ready for a robotic system."
+        },
+        {
+          "theme": "Assess skills",
+          "description": "Test whether a real team has the skills a robotic system's operation actually requires."
+        },
+        {
+          "theme": "Assess technology trends",
+          "description": "Track real trends in robotics technology and say which one actually matters for the work at hand."
+        },
+        {
+          "theme": "Assess threats",
+          "description": "Identify the real threats facing an AI system and rank which ones matter most."
+        },
+        {
+          "theme": "Assess usability",
+          "description": "Watch a real person use an AI system and note where they got stuck."
+        }
+      ]
+    },
+    {
+      "prefix": "PSB",
+      "name": "Practice Steps A–C",
+      "themes": [
+        {
+          "theme": "Audit capacity",
+          "description": "Check whether a real robotic system can actually handle the load it's being asked to carry."
+        },
+        {
+          "theme": "Audit systems",
+          "description": "Run a full audit of a real robotic system's setup and produce the findings."
+        },
+        {
+          "theme": "Backup configurations",
+          "description": "Save a real robotic system's configuration so it can be restored exactly if something breaks."
+        },
+        {
+          "theme": "Build buy-in",
+          "description": "Get real stakeholders to actually support a robotics change, not just tolerate it."
+        },
+        {
+          "theme": "Build readiness",
+          "description": "Get a real site and team prepared enough that a robotic system deployment won't stall."
+        },
+        {
+          "theme": "Build relationships",
+          "description": "Build a real working relationship with a supplier or partner that a robotics program depends on."
+        },
+        {
+          "theme": "Build repository",
+          "description": "Build a real, organized collection of documentation or code for a robotic system."
+        },
+        {
+          "theme": "Build systems",
+          "description": "Build a real robotic system from its components and confirm it runs."
+        },
+        {
+          "theme": "Calculate costs",
+          "description": "Work out the real, full cost of running a robotic system, not just the sticker price."
+        },
+        {
+          "theme": "Calculate metrics",
+          "description": "Compute the real numbers that show whether a robotic system is meeting its target."
+        },
+        {
+          "theme": "Calculate returns",
+          "description": "Work out the real financial return a robotics investment actually produced."
+        },
+        {
+          "theme": "Calculate roi",
+          "description": "Calculate the real return on investment for a robotics project, in numbers people can act on."
+        },
+        {
+          "theme": "Capture knowledge",
+          "description": "Record what a real team actually knows about a robotic system before that knowledge is lost."
+        },
+        {
+          "theme": "Capture learning",
+          "description": "Write down what was actually learned from running a real robotics project."
+        },
+        {
+          "theme": "Capture lessons",
+          "description": "Record the specific lessons from a real robotics deployment that didn't go as planned."
+        },
+        {
+          "theme": "Collect data",
+          "description": "Gather a real dataset for an AI purpose and document where each part came from."
+        },
+        {
+          "theme": "Communicate improvements",
+          "description": "Tell real users what actually changed for the better in a robotic system."
+        },
+        {
+          "theme": "Communicate lessons",
+          "description": "Share what was learned from a real robotics project with people who'll run the next one."
+        },
+        {
+          "theme": "Communicate results",
+          "description": "Share the real results of an AI test with the people who will act on them."
+        },
+        {
+          "theme": "Communicate status",
+          "description": "Give real stakeholders an honest, current status of where a robotics project actually stands."
+        },
+        {
+          "theme": "Communicate updates",
+          "description": "Tell real users about a real change to an AI system before it affects them."
+        },
+        {
+          "theme": "Communicate value",
+          "description": "Explain, in concrete terms, the real value a robotic system delivers to the people who use it."
+        },
+        {
+          "theme": "Communicate vision",
+          "description": "Explain where a real robotics program is headed in terms a non-specialist can follow."
+        },
+        {
+          "theme": "Compare with standards",
+          "description": "Check a real robotic system against an industry standard and report where it falls short."
+        },
+        {
+          "theme": "Compute roi",
+          "description": "Work out the actual return a robotics investment produced, with real numbers."
+        },
+        {
+          "theme": "Conduct assessments",
+          "description": "Run a full assessment of a real robotic system or site and write up the findings."
+        },
+        {
+          "theme": "Conduct audit",
+          "description": "Carry out a complete audit of a real robotic system from start to finish."
+        },
+        {
+          "theme": "Conduct audits",
+          "description": "Run a real audit of an AI system from start to finish and produce the report."
+        },
+        {
+          "theme": "Conduct benchmark tests",
+          "description": "Run a real robotic system through a standard benchmark and record the result."
+        },
+        {
+          "theme": "Conduct certification",
+          "description": "Run the real process that certifies a person or system meets a robotics standard."
+        },
+        {
+          "theme": "Conduct compliance audits",
+          "description": "Check a real robotic system against the rules it must follow and document any gap."
+        },
+        {
+          "theme": "Conduct drills",
+          "description": "Run a real incident drill for an AI system and record what it revealed."
+        },
+        {
+          "theme": "Conduct sessions",
+          "description": "Run a real training or working session on a robotic system and confirm it landed."
+        },
+        {
+          "theme": "Conduct testing",
+          "description": "Test a real AI system against its stated requirements before release."
+        },
+        {
+          "theme": "Conduct training",
+          "description": "Teach a real group the specific skill they need to safely operate a robotic system."
+        },
+        {
+          "theme": "Configure alerts",
+          "description": "Set up alert thresholds on a real AI system so real problems get noticed in time."
+        },
+        {
+          "theme": "Coordinate initiatives",
+          "description": "Keep more than one real robotics effort moving together without them working at cross purposes."
+        },
+        {
+          "theme": "Coordinate maintenance",
+          "description": "Schedule and align real maintenance work on a robotic system across the people who do it."
+        },
+        {
+          "theme": "Coordinate suppliers",
+          "description": "Get more than one real supplier working to the same schedule for a robotics project."
+        },
+        {
+          "theme": "Coordinate teams",
+          "description": "Get more than one real team working on a robotic system to actually work together."
+        },
+        {
+          "theme": "Create documentation",
+          "description": "Write documentation for a real AI system that someone who didn't build it could actually use."
+        },
+        {
+          "theme": "Create guides",
+          "description": "Write a real, usable guide for operating or maintaining a robotic system."
+        }
+      ]
+    },
+    {
+      "prefix": "PSC",
+      "name": "Practice Steps C–D",
+      "themes": [
+        {
+          "theme": "Create materials",
+          "description": "Produce real training or reference materials for a robotic system."
+        },
+        {
+          "theme": "Create records",
+          "description": "Create a real, accurate record of a robotic system's setup, use, or maintenance."
+        },
+        {
+          "theme": "Create training",
+          "description": "Build a real training program that teaches a specific robotics skill."
+        },
+        {
+          "theme": "Define benchmark metrics",
+          "description": "Choose the real numbers that will actually show whether a robotic system meets its benchmark."
+        },
+        {
+          "theme": "Define metrics",
+          "description": "Choose the real metrics that will actually tell you whether an AI system is working."
+        },
+        {
+          "theme": "Define phases",
+          "description": "Break a real robotics project into phases with a clear finish line for each."
+        },
+        {
+          "theme": "Define slas",
+          "description": "Write a real service-level agreement for a robotic system that can actually be checked against."
+        },
+        {
+          "theme": "Define standards",
+          "description": "Write down the real standard a robotic system or its operators must meet."
+        },
+        {
+          "theme": "Define value metrics",
+          "description": "Choose the real numbers that will show whether a robotic system is delivering its value."
+        },
+        {
+          "theme": "Deliver results",
+          "description": "Complete a real AI initiative and show the result against what was promised."
+        },
+        {
+          "theme": "Deliver training",
+          "description": "Teach a real group how to use or oversee an AI system, and check that it landed."
+        },
+        {
+          "theme": "Design backups",
+          "description": "Design a real backup plan for a robotic system so a failure doesn't stop the work."
+        },
+        {
+          "theme": "Design configurations",
+          "description": "Design a real configuration for a robotic system that matches its actual intended use."
+        },
+        {
+          "theme": "Design for humans",
+          "description": "Design a real robotic system so the people working alongside it can do so safely and easily."
+        },
+        {
+          "theme": "Design inclusively",
+          "description": "Design a real AI system so people with different needs can actually use it."
+        },
+        {
+          "theme": "Design interfaces",
+          "description": "Design a real interface for a robotic system that an operator can actually use without confusion."
+        },
+        {
+          "theme": "Design networks",
+          "description": "Design the real network a robotic system needs to communicate reliably."
+        },
+        {
+          "theme": "Design solutions",
+          "description": "Design a real solution to a specific AI problem, not just describe the problem."
+        },
+        {
+          "theme": "Design systems",
+          "description": "Design a real robotic system from requirements through to a working design."
+        },
+        {
+          "theme": "Design test plans",
+          "description": "Write a real test plan that would actually catch a robotic system's likely failures."
+        },
+        {
+          "theme": "Design tests",
+          "description": "Design a real test that could tell you whether an AI system actually works, not just runs."
+        },
+        {
+          "theme": "Develop capabilities",
+          "description": "Build a new real capability into a robotic system that it didn't have before."
+        },
+        {
+          "theme": "Develop communications",
+          "description": "Draft the real message that will actually be used to tell people about a robotics change."
+        },
+        {
+          "theme": "Develop contingencies",
+          "description": "Write a real backup plan for what happens if a robotic system fails at a critical moment."
+        },
+        {
+          "theme": "Develop curricula",
+          "description": "Build a full curriculum for teaching a real robotics skill from the ground up."
+        },
+        {
+          "theme": "Develop curriculum",
+          "description": "Build a full curriculum for teaching a real skill related to AI practice."
+        },
+        {
+          "theme": "Develop docs",
+          "description": "Write the documentation a real robotic system needs, from a blank page."
+        },
+        {
+          "theme": "Develop guidelines",
+          "description": "Write real guidelines that tell operators exactly how to work with a robotic system safely."
+        },
+        {
+          "theme": "Develop guides",
+          "description": "Write a guide that helps someone actually operate or oversee a real AI system."
+        },
+        {
+          "theme": "Develop models",
+          "description": "Build a real model that predicts something useful about a robotic system's behavior."
+        },
+        {
+          "theme": "Develop plans",
+          "description": "Write a real plan for a specific AI initiative, with steps and a timeline."
+        },
+        {
+          "theme": "Develop programs",
+          "description": "Build a real program, from scratch, that trains or supports people working with robotics."
+        },
+        {
+          "theme": "Develop protocols",
+          "description": "Write a step-by-step protocol for a real recurring AI task."
+        },
+        {
+          "theme": "Develop relationships",
+          "description": "Build a real, working relationship with a partner a robotics program depends on."
+        },
+        {
+          "theme": "Develop schedules",
+          "description": "Build a real, working schedule for a robotics project or its maintenance."
+        },
+        {
+          "theme": "Develop solutions",
+          "description": "Work out a genuine solution to a specific, real AI problem."
+        },
+        {
+          "theme": "Develop standards",
+          "description": "Write a real standard a robotic system or its operators will be measured against."
+        },
+        {
+          "theme": "Develop training",
+          "description": "Build a training program that teaches a real, specific AI skill."
+        },
+        {
+          "theme": "Diagnose issues",
+          "description": "Trace a real robotic system's problem back to its actual cause."
+        },
+        {
+          "theme": "Document adherence",
+          "description": "Record whether a real robotic system is actually following the standard it's supposed to."
+        },
+        {
+          "theme": "Document changes",
+          "description": "Record what actually changed in a real AI system, and why."
+        },
+        {
+          "theme": "Document closure",
+          "description": "Write up how a real robotics issue was actually resolved and confirmed closed."
+        }
+      ]
+    },
+    {
+      "prefix": "PSD",
+      "name": "Practice Steps D–F",
+      "themes": [
+        {
+          "theme": "Document compliance",
+          "description": "Record how a real robotic system meets a specific compliance requirement."
+        },
+        {
+          "theme": "Document decisions",
+          "description": "Record a real AI decision and the reasoning behind it, before it's forgotten."
+        },
+        {
+          "theme": "Document findings",
+          "description": "Write up what a real AI review found, in enough detail to act on."
+        },
+        {
+          "theme": "Document learnings",
+          "description": "Record what was actually learned from a real AI project, including what went wrong."
+        },
+        {
+          "theme": "Document lessons",
+          "description": "Write down what a real robotics project actually taught, including what went wrong."
+        },
+        {
+          "theme": "Document procedures",
+          "description": "Write down the exact real steps a robotics procedure follows, in order."
+        },
+        {
+          "theme": "Document process",
+          "description": "Write down the real steps a recurring AI process follows, as it's actually run."
+        },
+        {
+          "theme": "Document protocols",
+          "description": "Write a step-by-step protocol for a real recurring robotics task."
+        },
+        {
+          "theme": "Document results",
+          "description": "Record the real results of an AI test or initiative, as they actually came out."
+        },
+        {
+          "theme": "Document setup",
+          "description": "Record exactly how a real robotic system was set up, so it could be rebuilt from the notes."
+        },
+        {
+          "theme": "Document solutions",
+          "description": "Write down the real solution to a specific robotics problem so someone else could apply it."
+        },
+        {
+          "theme": "Drive improvement",
+          "description": "Push through a real, specific improvement to a robotic system, not just propose one."
+        },
+        {
+          "theme": "Drive improvements",
+          "description": "Carry out more than one real improvement to a robotic system and confirm they held."
+        },
+        {
+          "theme": "Enable access",
+          "description": "Change a real robotic system so a person who needed access to it can actually get it."
+        },
+        {
+          "theme": "Ensure adherence",
+          "description": "Confirm a real robotic system is actually following its required standard."
+        },
+        {
+          "theme": "Ensure availability",
+          "description": "Keep a real robotic system running and accessible when it's actually needed."
+        },
+        {
+          "theme": "Ensure business continuity",
+          "description": "Make sure a real business process keeps running if a robotic system it depends on fails."
+        },
+        {
+          "theme": "Ensure compatibility",
+          "description": "Confirm a real robotic system actually works with the equipment or software around it."
+        },
+        {
+          "theme": "Ensure compliance",
+          "description": "Confirm a real AI system actually meets the rule it's supposed to follow."
+        },
+        {
+          "theme": "Ensure integration",
+          "description": "Confirm a real robotic system actually connects and works with the systems it needs to."
+        },
+        {
+          "theme": "Ensure seamless operation",
+          "description": "Confirm a real robotic system runs without visible disruption to the people relying on it."
+        },
+        {
+          "theme": "Ensure supply",
+          "description": "Make sure the real parts or materials a robotic system needs keep arriving on time."
+        },
+        {
+          "theme": "Establish baselines",
+          "description": "Record a real starting measurement so future AI system changes can be compared against it."
+        },
+        {
+          "theme": "Establish cadence",
+          "description": "Set a real, working rhythm for recurring robotics check-ins or maintenance."
+        },
+        {
+          "theme": "Establish chains",
+          "description": "Set up a real, working supply chain for a robotics program's parts or materials."
+        },
+        {
+          "theme": "Establish channels",
+          "description": "Set up a real, working channel for people to raise concerns about an AI system."
+        },
+        {
+          "theme": "Establish dashboards",
+          "description": "Build a real dashboard that shows a robotic system's status at a glance."
+        },
+        {
+          "theme": "Establish metrics",
+          "description": "Choose the real numbers that will actually tell you whether a robotic system is working."
+        },
+        {
+          "theme": "Establish protocols",
+          "description": "Put a real, agreed protocol in place for how an AI incident is handled."
+        },
+        {
+          "theme": "Establish relationships",
+          "description": "Set up a real, working relationship with a partner a robotics program will depend on."
+        },
+        {
+          "theme": "Establish standards",
+          "description": "Put a real standard in place that a robotic system or its operators must meet."
+        },
+        {
+          "theme": "Establish support process",
+          "description": "Set up a real process for getting help when a robotic system has a problem."
+        },
+        {
+          "theme": "Establish terms",
+          "description": "Set the real terms of a robotics contract or agreement and get them agreed."
+        },
+        {
+          "theme": "Evaluate capabilities",
+          "description": "Test what a real robotic system can actually do against what it's supposed to do."
+        },
+        {
+          "theme": "Evaluate options",
+          "description": "Compare real robotics options side by side and recommend one, with reasons."
+        },
+        {
+          "theme": "Evaluate suppliers",
+          "description": "Compare real robotics suppliers on cost, quality and reliability, and choose one."
+        },
+        {
+          "theme": "Execute if needed",
+          "description": "Be ready to carry out a specific robotics contingency plan, and actually run it if the trigger happens."
+        },
+        {
+          "theme": "Execute testing",
+          "description": "Run the real test plan against a robotic system and log every result."
+        },
+        {
+          "theme": "Extract data",
+          "description": "Pull real, usable data out of a robotic system's logs or sensors."
+        },
+        {
+          "theme": "Forecast demand",
+          "description": "Predict the real future load an AI system will need to handle, with a number attached."
+        },
+        {
+          "theme": "Forecast failures",
+          "description": "Predict, from real data, when a robotic system's part is likely to fail."
+        },
+        {
+          "theme": "Forecast needs",
+          "description": "Predict the real future need for a robotics resource, with a number attached."
+        }
+      ]
+    },
+    {
+      "prefix": "PSE",
+      "name": "Practice Steps G–I",
+      "themes": [
+        {
+          "theme": "Gather feedback",
+          "description": "Collect real feedback on an AI system directly from the people who use it."
+        },
+        {
+          "theme": "Gather input",
+          "description": "Collect real input from the people affected by an AI decision before it's finalized."
+        },
+        {
+          "theme": "Generate reports",
+          "description": "Produce a real report on a robotic system's status that someone else can act on."
+        },
+        {
+          "theme": "Grant certification",
+          "description": "Confirm a real person or system meets the standard and issue the certification."
+        },
+        {
+          "theme": "Handle claims",
+          "description": "Process a real warranty or insurance claim for a robotic system through to resolution."
+        },
+        {
+          "theme": "Handle disposal",
+          "description": "Dispose of a real piece of retired robotic equipment safely and correctly."
+        },
+        {
+          "theme": "Identify barriers",
+          "description": "Name the real thing standing in the way of an AI initiative's progress."
+        },
+        {
+          "theme": "Identify bottlenecks",
+          "description": "Find the real point where an AI system or process actually slows down."
+        },
+        {
+          "theme": "Identify costs",
+          "description": "Find the real costs of a robotics initiative that weren't obvious at first."
+        },
+        {
+          "theme": "Identify gaps",
+          "description": "Find a real gap between what an AI system is supposed to do and what it actually does."
+        },
+        {
+          "theme": "Identify improvements",
+          "description": "Find a specific, real change that would make an AI system meaningfully better."
+        },
+        {
+          "theme": "Identify inefficiencies",
+          "description": "Find a real place where a robotics process wastes time or resources."
+        },
+        {
+          "theme": "Identify issues",
+          "description": "Find a real, concrete issue with an AI system before it causes harm."
+        },
+        {
+          "theme": "Identify needs",
+          "description": "Find out what a real team or site actually needs from a robotic system."
+        },
+        {
+          "theme": "Identify opportunities",
+          "description": "Spot a real place where an AI capability could genuinely help that isn't being used yet."
+        },
+        {
+          "theme": "Identify partners",
+          "description": "Find a real partner organization a robotics program actually needs to succeed."
+        },
+        {
+          "theme": "Identify patterns",
+          "description": "Spot a real, repeating pattern in a robotic system's behavior or failures."
+        },
+        {
+          "theme": "Identify priorities",
+          "description": "Decide which of several real robotics needs should actually come first."
+        },
+        {
+          "theme": "Identify reductions",
+          "description": "Find a real place where cost or effort on an AI system can be cut without losing quality."
+        },
+        {
+          "theme": "Identify risks",
+          "description": "Name a specific, real risk an AI system poses, not a generic category of risk."
+        },
+        {
+          "theme": "Identify root causes",
+          "description": "Trace a real robotic system's failure back to its actual root cause, not just the symptom."
+        },
+        {
+          "theme": "Identify savings",
+          "description": "Find a real place where a robotics program can cut cost without losing capability."
+        },
+        {
+          "theme": "Implement changes",
+          "description": "Carry out a real, approved change to an AI system and confirm it worked as intended."
+        },
+        {
+          "theme": "Implement controls",
+          "description": "Put a real control in place that limits what an AI system is allowed to do on its own."
+        },
+        {
+          "theme": "Implement corrections",
+          "description": "Fix a real, identified problem in an AI system and confirm the fix held."
+        },
+        {
+          "theme": "Implement fixes",
+          "description": "Apply a real fix to a real AI system defect and verify it's gone."
+        },
+        {
+          "theme": "Implement improvements",
+          "description": "Carry out a real, specific improvement to an AI system and measure the effect."
+        },
+        {
+          "theme": "Implement safeguards",
+          "description": "Build a real safeguard into an AI system that stops it from doing real harm."
+        },
+        {
+          "theme": "Implement solutions",
+          "description": "Carry out a real, working solution to a specific AI problem, not just propose one."
+        },
+        {
+          "theme": "Implement strategies",
+          "description": "Carry out a chosen strategy for a real AI initiative and track whether it worked."
+        },
+        {
+          "theme": "Implement sustainability",
+          "description": "Change a real robotics operation so it can keep running without constant emergency fixes."
+        },
+        {
+          "theme": "Implement tuning",
+          "description": "Adjust a real robotic system's settings to improve its actual performance."
+        },
+        {
+          "theme": "Improve clarity",
+          "description": "Rewrite a real AI explanation so it's actually easier for someone to understand."
+        },
+        {
+          "theme": "Improve content",
+          "description": "Rewrite real robotics training content so it actually teaches the skill better."
+        },
+        {
+          "theme": "Improve design",
+          "description": "Make a real, specific change that makes an AI system's design genuinely better."
+        },
+        {
+          "theme": "Improve engagement",
+          "description": "Make a real robotics training program something people actually want to complete."
+        },
+        {
+          "theme": "Improve performance",
+          "description": "Make a real, measurable improvement to how a robotic system performs its task."
+        },
+        {
+          "theme": "Improve processes",
+          "description": "Change a real AI-related process so it works better than it did before."
+        },
+        {
+          "theme": "Improve services",
+          "description": "Make a real improvement to a robotics-related service based on what wasn't working."
+        },
+        {
+          "theme": "Integrate systems",
+          "description": "Connect a real robotic system to another real system it needs to work with."
+        },
+        {
+          "theme": "Investigate incidents",
+          "description": "Look into a real robotic system incident and determine what actually happened."
+        },
+        {
+          "theme": "Issue credentials",
+          "description": "Confirm a real person met the requirement and issue their robotics credential."
+        }
+      ]
+    },
+    {
+      "prefix": "PSF",
+      "name": "Practice Steps M–M",
+      "themes": [
+        {
+          "theme": "Maintain certification",
+          "description": "Keep a real certification current by meeting its ongoing requirements."
+        },
+        {
+          "theme": "Maintain certifications",
+          "description": "Keep more than one real robotics certification current across a team."
+        },
+        {
+          "theme": "Maintain continuity",
+          "description": "Keep a real robotic system's operation running through a planned or unplanned disruption."
+        },
+        {
+          "theme": "Maintain currency",
+          "description": "Keep a real AI system's information or model from going stale over time."
+        },
+        {
+          "theme": "Maintain documentation",
+          "description": "Keep a real AI system's documentation matching what the system actually does."
+        },
+        {
+          "theme": "Maintain quality",
+          "description": "Keep a real robotic system's output at the quality level it's supposed to hold."
+        },
+        {
+          "theme": "Maintain readiness",
+          "description": "Keep a real robotic system ready to run at the moment it's actually needed."
+        },
+        {
+          "theme": "Maintain records",
+          "description": "Keep an accurate, real record of an AI system's decisions or changes over time."
+        },
+        {
+          "theme": "Maintain redundancy",
+          "description": "Keep a real backup system for a robotic component actually working and ready."
+        },
+        {
+          "theme": "Maintain systems",
+          "description": "Keep a real AI system running correctly through routine, ongoing upkeep."
+        },
+        {
+          "theme": "Manage assets",
+          "description": "Keep track of a real robotics program's equipment and where each piece actually is."
+        },
+        {
+          "theme": "Manage certifications",
+          "description": "Oversee a real team's robotics certifications so none quietly lapse."
+        },
+        {
+          "theme": "Manage change",
+          "description": "Guide a real robotics change through to completion without losing people along the way."
+        },
+        {
+          "theme": "Manage contracts",
+          "description": "Oversee a real robotics vendor contract from signing through to delivery."
+        },
+        {
+          "theme": "Manage disposal",
+          "description": "Oversee the real, safe disposal of retired robotic equipment."
+        },
+        {
+          "theme": "Manage disputes",
+          "description": "Work through a real disagreement with a robotics supplier or partner to a resolution."
+        },
+        {
+          "theme": "Manage growth",
+          "description": "Steer a real AI system through a period of growing use without it falling over."
+        },
+        {
+          "theme": "Manage implementations",
+          "description": "Oversee a real robotics implementation from plan to working system."
+        },
+        {
+          "theme": "Manage inventory",
+          "description": "Keep an accurate, real count of the parts or units a robotics program has on hand."
+        },
+        {
+          "theme": "Manage launch",
+          "description": "Oversee the real launch of a robotic system into production use."
+        },
+        {
+          "theme": "Manage projects",
+          "description": "Run a real robotics project from start to finish, on time and on scope."
+        },
+        {
+          "theme": "Manage renewals",
+          "description": "Track and complete real certification or contract renewals before they lapse."
+        },
+        {
+          "theme": "Manage resistance",
+          "description": "Work through real pushback from people affected by an AI system change."
+        },
+        {
+          "theme": "Manage risks",
+          "description": "Actively reduce a specific, real risk a robotics program faces, not just log it."
+        },
+        {
+          "theme": "Manage rollout",
+          "description": "Oversee the real, staged rollout of a robotic system across more than one site."
+        },
+        {
+          "theme": "Manage suppliers",
+          "description": "Oversee a real robotics supplier relationship to keep it delivering what's needed."
+        },
+        {
+          "theme": "Manage transition",
+          "description": "Guide a real move from an old system to an AI-based one without losing continuity."
+        },
+        {
+          "theme": "Manage transitions",
+          "description": "Guide a real move from an old process to a robotics-based one without losing continuity."
+        },
+        {
+          "theme": "Manage updates",
+          "description": "Oversee a real, ongoing stream of updates to an AI system without breaking it."
+        },
+        {
+          "theme": "Manage vendors",
+          "description": "Oversee more than one real robotics vendor to keep them all delivering on time."
+        },
+        {
+          "theme": "Manage warranties",
+          "description": "Track a real piece of robotic equipment's warranty and use it when something breaks."
+        },
+        {
+          "theme": "Measure benefits",
+          "description": "Quantify the real benefit a robotic system produced, with a number."
+        },
+        {
+          "theme": "Measure competency",
+          "description": "Test whether a real person can actually perform the robotics skill they were trained for."
+        },
+        {
+          "theme": "Measure effectiveness",
+          "description": "Measure whether a real robotic system is actually achieving what it was built for."
+        },
+        {
+          "theme": "Measure footprint",
+          "description": "Measure the real physical or resource footprint a robotic system actually has."
+        },
+        {
+          "theme": "Measure gains",
+          "description": "Quantify the real improvement an AI system produced, with a number."
+        },
+        {
+          "theme": "Measure impact",
+          "description": "Measure the real, concrete effect an AI system had on the outcome it was meant to change."
+        },
+        {
+          "theme": "Measure improvement",
+          "description": "Quantify how much better a real robotic system got after a specific change."
+        },
+        {
+          "theme": "Measure inclusion",
+          "description": "Check, with real data, whether an AI system's benefits reach the groups it's meant to."
+        },
+        {
+          "theme": "Measure satisfaction",
+          "description": "Find out, with real data, how satisfied users actually are with an AI system."
+        },
+        {
+          "theme": "Measure success",
+          "description": "Define and then check whether a real robotics initiative actually met its goal."
+        },
+        {
+          "theme": "Minimize disruption",
+          "description": "Change how a robotics rollout is run so it causes as little real disruption as possible."
+        }
+      ]
+    },
+    {
+      "prefix": "PSG",
+      "name": "Practice Steps M–P",
+      "themes": [
+        {
+          "theme": "Monitor compliance",
+          "description": "Keep an ongoing check on whether a real AI system still meets the rule it's supposed to."
+        },
+        {
+          "theme": "Monitor performance",
+          "description": "Keep an ongoing, real check on how well an AI system is performing."
+        },
+        {
+          "theme": "Monitor status",
+          "description": "Keep an ongoing, real check on a robotic system's current operating status."
+        },
+        {
+          "theme": "Monitor systems",
+          "description": "Keep continuous watch over a real AI system's operation and catch problems early."
+        },
+        {
+          "theme": "Monitor threats",
+          "description": "Watch for real threats to a robotic system's security or safety on an ongoing basis."
+        },
+        {
+          "theme": "Negotiate agreements",
+          "description": "Reach a real agreement with a robotics partner that both sides will actually honor."
+        },
+        {
+          "theme": "Negotiate contracts",
+          "description": "Negotiate the real terms of a robotics contract before it's signed."
+        },
+        {
+          "theme": "Negotiate terms",
+          "description": "Work out real terms with a robotics supplier that protect both sides."
+        },
+        {
+          "theme": "Optimize costs",
+          "description": "Find a real way to reduce a robotics program's cost without cutting what it delivers."
+        },
+        {
+          "theme": "Optimize design",
+          "description": "Make a real, specific change that makes a robotic system's design genuinely better."
+        },
+        {
+          "theme": "Optimize efficiency",
+          "description": "Make a real, measurable improvement to how efficiently an AI system uses its resources."
+        },
+        {
+          "theme": "Optimize investment",
+          "description": "Get more real value out of a robotics investment that's already been made."
+        },
+        {
+          "theme": "Optimize investments",
+          "description": "Get more real value out of more than one existing robotics investment."
+        },
+        {
+          "theme": "Optimize performance",
+          "description": "Tune a real AI system so it performs measurably better on its actual task."
+        },
+        {
+          "theme": "Optimize service",
+          "description": "Improve a real robotics-related service so it delivers faster or more reliably."
+        },
+        {
+          "theme": "Optimize stock",
+          "description": "Adjust real inventory levels so a robotics program has what it needs without overstocking."
+        },
+        {
+          "theme": "Optimize systems",
+          "description": "Make a real, measurable improvement to how a whole AI system performs together."
+        },
+        {
+          "theme": "Optimize value",
+          "description": "Change a real AI system so it delivers more of the value it was built to deliver."
+        },
+        {
+          "theme": "Order parts",
+          "description": "Order the real part a robotic system needs, in time for when it's actually needed."
+        },
+        {
+          "theme": "Pilot approaches",
+          "description": "Try a real new approach on a small scale before rolling it out across a robotics program."
+        },
+        {
+          "theme": "Pilot new features",
+          "description": "Test a real new robotic system feature with a small group before a full rollout."
+        },
+        {
+          "theme": "Plan adoption",
+          "description": "Plan how real users will actually start using a new robotic system."
+        },
+        {
+          "theme": "Plan decommissioning",
+          "description": "Plan how a real robotic system will be retired without breaking what depends on it."
+        },
+        {
+          "theme": "Plan deployment",
+          "description": "Plan the real, staged deployment of a robotic system so early problems don't hit everyone at once."
+        },
+        {
+          "theme": "Plan integration",
+          "description": "Plan how a real robotic system will actually connect to the systems around it."
+        },
+        {
+          "theme": "Plan lifecycle",
+          "description": "Plan a real robotic system's whole lifecycle, from deployment through eventual retirement."
+        },
+        {
+          "theme": "Plan maintenance",
+          "description": "Schedule the real, ongoing maintenance a real AI system needs to keep running."
+        },
+        {
+          "theme": "Plan production",
+          "description": "Plan a real production run that a robotic system will need to support."
+        },
+        {
+          "theme": "Plan refactoring",
+          "description": "Plan how a real robotic system's software will be restructured without changing what it does."
+        },
+        {
+          "theme": "Plan refresh",
+          "description": "Plan when and how a real robotic system's hardware or software will be refreshed."
+        },
+        {
+          "theme": "Plan resources",
+          "description": "Work out what real resources an AI initiative will actually need, ahead of time."
+        },
+        {
+          "theme": "Plan timeline",
+          "description": "Build a real, working timeline for a robotics project with actual milestones."
+        },
+        {
+          "theme": "Plan upgrades",
+          "description": "Plan a real upgrade to an AI system so it doesn't break what already depends on it."
+        },
+        {
+          "theme": "Practice skills",
+          "description": "Practice a real robotics skill enough times, with feedback, to actually get reliable at it."
+        },
+        {
+          "theme": "Predict maintenance",
+          "description": "Predict, from real data, when a robotic system will next need maintenance."
+        },
+        {
+          "theme": "Prepare audits",
+          "description": "Get a real robotic system and its records ready for an upcoming audit."
+        },
+        {
+          "theme": "Prepare infrastructure",
+          "description": "Get the real physical or network infrastructure ready before a robotic system is installed."
+        },
+        {
+          "theme": "Prevent failures",
+          "description": "Change a real robotic system so a known kind of failure can't happen again."
+        },
+        {
+          "theme": "Prevent recurrence",
+          "description": "Fix a real robotics problem's root cause so it doesn't come back."
+        },
+        {
+          "theme": "Prioritize requests",
+          "description": "Decide which of several real robotics change requests to act on first, and justify the order."
+        },
+        {
+          "theme": "Protect data",
+          "description": "Put a real safeguard in place to protect a robotic system's data from loss or misuse."
+        },
+        {
+          "theme": "Provide feedback",
+          "description": "Give a real, specific piece of feedback that actually helps improve a robotic system."
+        }
+      ]
+    },
+    {
+      "prefix": "PSH",
+      "name": "Practice Steps P–T",
+      "themes": [
+        {
+          "theme": "Provide insights",
+          "description": "Turn real robotics data into an insight someone can actually act on."
+        },
+        {
+          "theme": "Provide support",
+          "description": "Help a real user solve a real problem they're having with an AI system."
+        },
+        {
+          "theme": "Provide training",
+          "description": "Teach a real person or team a specific skill they need to work with an AI system."
+        },
+        {
+          "theme": "Quality assurance",
+          "description": "Run real quality-assurance checks on a robotic system before it's trusted with real work."
+        },
+        {
+          "theme": "Recycle materials",
+          "description": "Recover and recycle real materials from retired robotic equipment."
+        },
+        {
+          "theme": "Redesign processes",
+          "description": "Rework a real robotics process so it actually works better than it did before."
+        },
+        {
+          "theme": "Refresh regularly",
+          "description": "Keep a real robotic system's software or data current on a fixed, working schedule."
+        },
+        {
+          "theme": "Renew certification",
+          "description": "Complete the real requirements to renew a robotics certification before it lapses."
+        },
+        {
+          "theme": "Report outcomes",
+          "description": "Report the real result of an AI initiative, including where it fell short."
+        },
+        {
+          "theme": "Report progress",
+          "description": "Give real stakeholders an honest, current report on how far a robotics project has gotten."
+        },
+        {
+          "theme": "Report results",
+          "description": "Share the real result of an AI test with the people who requested it."
+        },
+        {
+          "theme": "Report utilization",
+          "description": "Report how much a real robotic system is actually being used, not how much it was expected to be."
+        },
+        {
+          "theme": "Resolve conflicts",
+          "description": "Work through a real disagreement between people or teams over a robotics decision."
+        },
+        {
+          "theme": "Resolve issues",
+          "description": "Fix a real, identified issue in an AI system and confirm it's actually resolved."
+        },
+        {
+          "theme": "Resolve problems",
+          "description": "Fix a real, identified problem with a robotic system and confirm it's actually resolved."
+        },
+        {
+          "theme": "Respond incidents",
+          "description": "React to a real AI system incident as it's happening and bring it under control."
+        },
+        {
+          "theme": "Respond to incidents",
+          "description": "Follow a real incident-response process for an AI system failure, from detection to resolution."
+        },
+        {
+          "theme": "Retain expertise",
+          "description": "Keep a real person's robotics expertise available to the team, even as roles change."
+        },
+        {
+          "theme": "Risk management",
+          "description": "Actively manage a real, ongoing risk a robotics program faces, not just document it once."
+        },
+        {
+          "theme": "Scale adoption",
+          "description": "Grow real usage of a robotic system from a pilot group to a wider one."
+        },
+        {
+          "theme": "Scale successes",
+          "description": "Take something that worked in one real robotics pilot and apply it somewhere else."
+        },
+        {
+          "theme": "Scan landscape",
+          "description": "Survey the real robotics options available and compare them honestly."
+        },
+        {
+          "theme": "Schedule maintenance",
+          "description": "Set a real, working maintenance schedule for a robotic system."
+        },
+        {
+          "theme": "Schedule proactively",
+          "description": "Book real maintenance or reviews for a robotic system before a problem forces the issue."
+        },
+        {
+          "theme": "Scope changes",
+          "description": "Define exactly what a real robotics change will and won't include, before work starts."
+        },
+        {
+          "theme": "Set milestones",
+          "description": "Set real, checkable milestones for a robotics project so progress can be tracked."
+        },
+        {
+          "theme": "Share best practices",
+          "description": "Pass on a real, working practice from one robotics team or site to another."
+        },
+        {
+          "theme": "Share knowledge",
+          "description": "Pass on something real you learned about an AI system to someone who needs to know it."
+        },
+        {
+          "theme": "Share learning",
+          "description": "Pass on something real you learned about a robotic system to someone who needs to know it."
+        },
+        {
+          "theme": "Share updates",
+          "description": "Tell the real people who need to know about a real change to an AI system."
+        },
+        {
+          "theme": "Stay current",
+          "description": "Keep up with real, ongoing changes in robotics practice or standards that affect the work."
+        },
+        {
+          "theme": "Support implementation",
+          "description": "Help a real team actually get a robotic system implemented, not just plan it."
+        },
+        {
+          "theme": "Sustain commitment",
+          "description": "Keep real stakeholder support for a robotics initiative going past its initial launch."
+        },
+        {
+          "theme": "Sustain gains",
+          "description": "Keep a real robotics improvement from quietly slipping back to how things were before."
+        },
+        {
+          "theme": "Sustain progress",
+          "description": "Keep a real robotics initiative moving forward past its early momentum."
+        },
+        {
+          "theme": "Test failover",
+          "description": "Force a real AI system's backup to take over and confirm it actually works."
+        },
+        {
+          "theme": "Test fixes",
+          "description": "Confirm a real applied fix actually solves the problem it was meant to solve."
+        },
+        {
+          "theme": "Test functionality",
+          "description": "Check that every real, stated function of an AI system actually works as claimed."
+        },
+        {
+          "theme": "Test improvements",
+          "description": "Confirm a real, applied improvement to a robotic system actually delivered what it promised."
+        },
+        {
+          "theme": "Test plans",
+          "description": "Design and run a real test plan against a robotic system and record every result."
+        },
+        {
+          "theme": "Test readiness",
+          "description": "Confirm a real robotic system is actually ready before it's trusted with real work."
+        },
+        {
+          "theme": "Test recovery",
+          "description": "Force a real robotic system to fail on purpose and confirm it recovers correctly."
+        }
+      ]
+    },
+    {
+      "prefix": "PSI",
+      "name": "Practice Steps T–V",
+      "themes": [
+        {
+          "theme": "Test recovery procedures",
+          "description": "Run through a real recovery procedure for a robotic system to confirm it actually works."
+        },
+        {
+          "theme": "Test systems",
+          "description": "Run a real AI system through its paces before trusting it with real use."
+        },
+        {
+          "theme": "Test thoroughly",
+          "description": "Cover every realistic case you can think of when testing a real AI system, not just the easy ones."
+        },
+        {
+          "theme": "Test updates",
+          "description": "Confirm a real update to an AI system doesn't break what was already working."
+        },
+        {
+          "theme": "Test usability",
+          "description": "Watch a real person try to use an AI system and note every place they got confused."
+        },
+        {
+          "theme": "Track adoption",
+          "description": "Measure, over time, how many real users are actually using an AI system."
+        },
+        {
+          "theme": "Track competency",
+          "description": "Keep a real record of which real people have demonstrated a robotics competency."
+        },
+        {
+          "theme": "Track completion",
+          "description": "Keep a real record of which parts of a robotics project have actually been finished."
+        },
+        {
+          "theme": "Track compliance",
+          "description": "Keep an ongoing, real check on whether a robotic system still meets its required standard."
+        },
+        {
+          "theme": "Track costs",
+          "description": "Keep a real, accurate record of what a robotics program is actually costing."
+        },
+        {
+          "theme": "Track improvements",
+          "description": "Keep a real record of every improvement made to an AI system and its measured effect."
+        },
+        {
+          "theme": "Track incidents",
+          "description": "Keep a real record of every incident a robotic system has had and how it was resolved."
+        },
+        {
+          "theme": "Track inventory",
+          "description": "Keep a real, accurate count of a robotics program's parts and equipment."
+        },
+        {
+          "theme": "Track issues",
+          "description": "Keep a real, running log of every issue found in a robotic system."
+        },
+        {
+          "theme": "Track mastery",
+          "description": "Keep a real record of which people have actually demonstrated mastery of a robotics skill."
+        },
+        {
+          "theme": "Track metrics",
+          "description": "Keep a real, ongoing record of the numbers that show whether an AI system is working."
+        },
+        {
+          "theme": "Track outcomes",
+          "description": "Keep a real record of what actually happened after an AI system made a decision."
+        },
+        {
+          "theme": "Track performance",
+          "description": "Keep a real, ongoing record of how well an AI system is performing over time."
+        },
+        {
+          "theme": "Track progress",
+          "description": "Keep a real, ongoing record of how far an AI initiative has actually gotten."
+        },
+        {
+          "theme": "Track regulations",
+          "description": "Keep track of real regulatory changes that affect how a robotic system must be run."
+        },
+        {
+          "theme": "Track renewal",
+          "description": "Keep a real record of when a robotics certification or contract is due for renewal."
+        },
+        {
+          "theme": "Track requirements",
+          "description": "Keep a real record of which stated requirements an AI system has actually met."
+        },
+        {
+          "theme": "Track resource usage",
+          "description": "Keep a real, ongoing record of how much of a resource a robotic system actually uses."
+        },
+        {
+          "theme": "Track roi",
+          "description": "Keep a real, ongoing record of the return a robotics investment is actually producing."
+        },
+        {
+          "theme": "Track satisfaction",
+          "description": "Keep a real record of how satisfied users actually are with a robotic system."
+        },
+        {
+          "theme": "Track spending",
+          "description": "Keep a real, accurate record of what an AI initiative is actually costing."
+        },
+        {
+          "theme": "Track standards",
+          "description": "Keep track of which real standard a robotic system is currently being held to."
+        },
+        {
+          "theme": "Track usage",
+          "description": "Keep a real record of how an AI system is actually being used, not how it was intended to be used."
+        },
+        {
+          "theme": "Train staff",
+          "description": "Teach a real group of staff the skill they need to safely work with an AI system."
+        },
+        {
+          "theme": "Train support staff",
+          "description": "Teach real support staff how to actually help users of a robotic system."
+        },
+        {
+          "theme": "Train teams",
+          "description": "Teach a real team the specific skill they need to operate or oversee an AI system."
+        },
+        {
+          "theme": "Train users",
+          "description": "Teach real end users how to actually get value from an AI system."
+        },
+        {
+          "theme": "Troubleshoot issues",
+          "description": "Work through a real robotic system problem step by step until it's actually fixed."
+        },
+        {
+          "theme": "Update protocols",
+          "description": "Revise a real robotics protocol based on what actually happened the last time it was used."
+        },
+        {
+          "theme": "Validate approaches",
+          "description": "Confirm, with real evidence, that a proposed robotics approach actually works."
+        },
+        {
+          "theme": "Validate quality",
+          "description": "Confirm, against a real standard, that an AI system's output actually meets it."
+        },
+        {
+          "theme": "Validate solutions",
+          "description": "Confirm a real proposed solution to a robotics problem actually solves it."
+        },
+        {
+          "theme": "Validate systems",
+          "description": "Confirm a real AI system does what it's supposed to do before it's trusted with real use."
+        },
+        {
+          "theme": "Verify fixes",
+          "description": "Confirm a real applied fix to a robotic system actually resolved the problem."
+        },
+        {
+          "theme": "Verify readiness",
+          "description": "Confirm a real robotic system and its operators are actually ready before going live."
+        },
+        {
+          "theme": "Verify regulatory adherence",
+          "description": "Confirm a real robotic system actually meets the regulation it's required to follow."
+        },
+        {
+          "theme": "Visualize data",
+          "description": "Build a real chart or view that makes a robotic system's data understandable at a glance."
+        }
+      ]
+    }
+  ]
+}

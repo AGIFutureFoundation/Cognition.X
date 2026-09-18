@@ -4,6 +4,38 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.100.0] — 2026-09-18
+
+### Added — prompt 3 final piece: Robotics OS's 640 empty descriptions filled, sharing sentences across sector-OS packs
+- **`data/promotions/robotics-os-practice-steps.json`** is a new
+  `unbanded` promotion (a second promotion file for a pack that already
+  had a `"band-suffix"` override): 378 themes, 640 rows, no suffix,
+  `track`/`code` left deferred. 120 of the 378 themes are worded
+  identically to ones already promoted for Sapient OS in v0.99.0
+  ("Track progress", "Address bias", etc.) and reuse that exact
+  sentence, since the generic action a theme names doesn't depend on
+  which sector-OS pack happens to reuse it; the other 258 are new to
+  this pack and authored fresh. No block id, code, track, level,
+  credential, or transfer check changed.
+- **Two more test checks fixed for the same class of bug** the merge
+  fix in v0.99.0 was written to prevent: `test_band_differentiated_descriptions()`'s
+  override-declaration check and `test_partial_band_descriptions()`'s
+  partial_bands-declaration check both used `promo[0]` from an
+  unsorted `glob("*.json")`, assuming exactly one promotion file per
+  pack. CI caught the first one — Sapient OS's second promotion file
+  made the override check depend on filesystem glob order, passing
+  locally and failing on the GitHub Actions runner. Both now check
+  that *any* promotion file declares the property, not that the first
+  one `glob()` happens to return does.
+- `tests/test_platform.py`'s `UNBANDED_FILLED_PACKS` gains Robotics OS;
+  `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 4,580 → 3,940. Dataset-wide
+  description coverage rises from 73% to 77%.
+- Six packs remain — Corporate OS, Education OS, Global Health OS,
+  Science OS, Multilateral OS, Non-Profit Practice — each drawing
+  further from the shared generic-action-phrase dictionary now spanning
+  Sapient OS and Robotics OS (735 sentences), so each additional pack
+  needs progressively fewer new ones.
+
 ## [0.99.0] — 2026-09-18
 
 ### Added — prompt 3 final piece, pilot pack: Sapient OS's 620 empty descriptions filled, apply_promotions() now merges multiple promotion files per pack

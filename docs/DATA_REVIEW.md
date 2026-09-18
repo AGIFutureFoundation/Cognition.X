@@ -116,7 +116,21 @@ sections; the only other diff is the fonts `<link>`).
    with unrelated band-authored or override content sharing the pack.
    Seven packs remain (Corporate OS, Education OS, Global Health OS,
    Science OS, Multilateral OS, Non-Profit Practice, Robotics OS),
-   roughly 2,570 more distinct sentences across them.
+   roughly 2,570 more distinct sentences across them. *Update
+   (v0.100.0):* shipped Robotics OS (378 themes, 640 rows) — 120 of its
+   378 themes reused Sapient OS's exact sentences verbatim (same
+   generic action, different pack), so only 258 needed fresh authoring.
+   Also found and fixed two more instances of the class of bug the
+   v0.99.0 merge fix addressed: `test_band_differentiated_descriptions()`'s
+   override check and `test_partial_band_descriptions()`'s
+   partial_bands check both used `promo[0]` from an unsorted glob,
+   which CI's filesystem happened to break for Sapient OS's two-file
+   pack even though it passed locally — both now check "any file
+   declares it" instead. Six packs remain (Corporate OS, Education OS,
+   Global Health OS, Science OS, Multilateral OS, Non-Profit Practice);
+   the shared generic-action dictionary now covers 735 sentences
+   (Sapient OS ∪ Robotics OS), so each further pack needs progressively
+   fewer new ones.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic
