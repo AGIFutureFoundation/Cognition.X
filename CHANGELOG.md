@@ -4,6 +4,40 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.107.0] — 2026-09-18
+
+### Added — one shared runtime for the voice engine (prompt 4)
+- **`tools/voice/engine.js`** is a new `CXVOICE` engine holding
+  `chooseVoice()` and `say()`, the three-persona table, and the
+  speechSynthesis voice-preference list — previously defined verbatim,
+  byte for byte, in four app templates (Flow Hub, Louisiana, States,
+  Trades Network). `tools/runtime_lib.py` now injects it into every
+  app's shared runtime, right after the Simulation Studio engine.
+- Each of the four templates keeps a one-line alias
+  (`const chooseVoice = CXVOICE.chooseVoice; const say = CXVOICE.say;`)
+  so its own inline script is unchanged at the call site; the voice
+  picker's `change` handler now calls `CXVOICE.setMode(...)` alongside
+  its own `voiceMode` local. Dead, write-only `voiceOn` state (never
+  read anywhere) is dropped along with it. Every template shrinks:
+  140 lines removed, 26 added, across the four files.
+- **Finding:** the original prompt (`docs/NEXT_STEPS_2.md` #4) named
+  `tourShow`/`tourEnd` alongside `chooseVoice`/`say` as duplicated
+  helpers. They are not: each app's guided tour is a genuinely
+  different implementation — its own DOM strategy (a div built fresh
+  per step versus one box reused), its own navigation (`go(view)`
+  versus a `location.hash` change behind a 120/220/240ms
+  `setTimeout`), its own CSS class and accent color. Unifying them
+  would trade real behavior-preservation risk for a cosmetic line
+  count, so they stay authored per template; `tools/voice/engine.js`'s
+  header documents the finding.
+- Verified with a live-page check beyond the browser suite (which has
+  no dedicated voice/tour assertions to hold unchanged, also noted):
+  headless-loaded all four apps, confirmed `window.CXVOICE` exists
+  with no page errors, and drove each app's `#voicepick` `<select>`
+  through a real `change` event to confirm `CXVOICE.getMode()` tracks
+  it. Both suites pass: `python3 tests/test_platform.py` (1,919
+  checks) and the browser smoke suite (223 assertions).
+
 ## [0.106.0] — 2026-09-18
 
 ### Added — prompt 3 final piece, last pack: Corporate OS's 660 empty descriptions filled, closing prompt 3 entirely

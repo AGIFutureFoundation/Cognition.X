@@ -3711,41 +3711,11 @@ function renderRoles(){
 /* Three personas over a natural-voice preference list; text is spoken as
    sentence-level utterances with slight prosody drift, which reads far more
    human than one flat utterance. All on-device — nothing leaves the page. */
-const PERSONAS = { warm:{rate:.97,pitch:1.03,drift:.05}, steady:{rate:1.0,pitch:1.0,drift:.03}, brisk:{rate:1.12,pitch:1.02,drift:.02} };
 let voiceMode = "";
-try {
-  const v = store("cxla.voice");
-  voiceMode = ["warm","steady","brisk"].includes(v) ? v : (v === "on" ? "warm" : "");
-} catch(e){}
-let voiceOn = !!voiceMode;
-let pickedVoice = null;
-const VOICE_PREF = [/Google US English/i, /\bNatural\b/i, /\bNeural\b/i, /Samantha/i, /Aria/i, /Jenny/i, /Allison/i, /Karen/i, /Daniel/i];
-function chooseVoice(){
-  try{
-    const vs = speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang));
-    for (const re of VOICE_PREF){ const v = vs.find(x=>re.test(x.name)); if (v) return v; }
-    return vs.find(v=>v.default) || vs[0] || null;
-  }catch(e){ return null; }
-}
-try{ if ("speechSynthesis" in window){
-  pickedVoice = chooseVoice();
-  speechSynthesis.onvoiceschanged = () => { pickedVoice = chooseVoice(); };
-}}catch(e){}
-function say(text){
-  if (!voiceMode) return;
-  try { if (!("speechSynthesis" in window)) return;
-    const P = PERSONAS[voiceMode] || PERSONAS.steady;
-    speechSynthesis.cancel();
-    const parts = String(text).match(/[^.!?…]+[.!?…]*/g) || [String(text)];
-    parts.forEach((s,i)=>{
-      const u = new SpeechSynthesisUtterance(s.trim());
-      if (pickedVoice) u.voice = pickedVoice;
-      u.rate  = Math.max(.5, P.rate + (i%2 ? -P.drift : P.drift)/2);
-      u.pitch = Math.max(.5, P.pitch + (i===0 ? P.drift : 0));
-      speechSynthesis.speak(u);
-    });
-  } catch(e){}
-}
+try { voiceMode = CXVOICE.fromStored(store("cxla.voice")); } catch(e){}
+CXVOICE.setMode(voiceMode);
+const chooseVoice = CXVOICE.chooseVoice;
+const say = CXVOICE.say;
 
 /* ================= THE MAKERS' HALL (v0.48.0) =================
    Three culture-trade packs drawn as pathways from creation to the industry,
@@ -4039,7 +4009,7 @@ function initGuide(){
   const vp = $("#voicepick");
   vp.value = voiceMode;
   vp.addEventListener("change", ()=>{
-    voiceMode = vp.value; voiceOn = !!voiceMode; store("cxla.voice", vp.value || "off");
+    voiceMode = vp.value; CXVOICE.setMode(voiceMode); store("cxla.voice", vp.value || "off");
     if (voiceMode) say("Voice on. Press Guide and I'll walk you through the platform, one view at a time.");
   });
 }
