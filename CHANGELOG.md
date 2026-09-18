@@ -4,6 +4,18 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.80.0] — 2026-09-18
+
+### Added — prompt 2, tranche two: Trades in the Classroom and Trades Across School Subjects across five bands
+- **`data/pack_specs/trades-classroom-flipped.json`** and
+  **`data/pack_specs/trades-across-school-subjects.json`** now carry
+  `bands` on every theme: five tracks each, ten themes, five distinct
+  sentences on the band ladder — 500 rows across the two packs; no
+  block id, code, credential or transfer check changed. As with tranche
+  one, these source descriptions were empty, so `bands` reaches them
+  through the existing fill-empty path with no override needed.
+  Band-suffix rows 5,750 → 5,250; the ratchet lowered.
+
 ## [0.79.0] — 2026-09-18
 
 ### Added — prompt 2, tranche one: SmartCiti.X New Orleans Trades and the States OS across five bands

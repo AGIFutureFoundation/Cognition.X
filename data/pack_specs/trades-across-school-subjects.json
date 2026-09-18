@@ -10,52 +10,122 @@
     {
      "theme": "Who built this room?",
      "description": "Every classroom is a finished jobsite — walls, wires, pipes, air, light — and each part was somebody's trade.",
-     "transfer_check": "Point out five things in your own classroom and name the trade that made each one work."
+     "transfer_check": "Point out five things in your own classroom and name the trade that made each one work.",
+     "bands": {
+      "K–2": "Point to a wall, a light and a window in your room and say someone's job made each one.",
+      "3–5": "Point out five things in your own classroom and name the trade that made each one.",
+      "6–8": "Point out five things in your own classroom and name the trade that made each, with a checker.",
+      "9–10": "Point out five things in your own classroom and name the trade that made each one — walls, wires, pipes, air, light.",
+      "11–12": "Survey a real building's systems and name the trade behind each, verified against a real facilities plan."
+     }
     },
     {
      "theme": "Tools tell you the trade",
      "description": "Reading a worker by what they carry — the gauge, the trowel, the sling, the meter — and what each tool says the job needs.",
-     "transfer_check": "Match ten real or pictured tools to their trades and explain one match to somebody using what the tool measures or moves."
+     "transfer_check": "Match ten real or pictured tools to their trades and explain one match to somebody using what the tool measures or moves.",
+     "bands": {
+      "K–2": "Look at three tools and guess what job uses each one.",
+      "3–5": "Match five real tools to the trade that uses each and say why.",
+      "6–8": "Match ten real or pictured tools to their trades, with a checker.",
+      "9–10": "Match ten real or pictured tools to their trades and explain one match to somebody who does not know it.",
+      "11–12": "Match a real set of tools to their trades and explain the reasoning to someone unfamiliar with the craft."
+     }
     },
     {
      "theme": "A day in the work",
      "description": "What a working day actually holds for one trade — the start time, the crew, the tasks, the calls, the cleanup.",
-     "transfer_check": "Interview a working tradesperson (family, neighbor, or class visitor) and retell their day in order to somebody who wasn't there."
+     "transfer_check": "Interview a working tradesperson (family, neighbor, or class visitor) and retell their day in order to somebody who wasn't there.",
+     "bands": {
+      "K–2": "Ask a grown-up what they do all day at their job, and tell someone one thing.",
+      "3–5": "Interview an adult about their work day and write down three parts of it.",
+      "6–8": "Interview a working tradesperson and retell their day in order, with a checker.",
+      "9–10": "Interview a working tradesperson (family, neighbor, or class visitor) and retell their day in order — start, crew, tasks, cleanup.",
+      "11–12": "Interview a real tradesperson and write up their day accurately enough that they confirm it as true."
+     }
     },
     {
      "theme": "The crew, not the hero",
      "description": "Real work is done by crews — the lead, the safety eye, the new hand — and every trade has a way of teaching its next person.",
-     "transfer_check": "Do one real classroom job as a crew of three with named roles, then swap roles and do it again."
+     "transfer_check": "Do one real classroom job as a crew of three with named roles, then swap roles and do it again.",
+     "bands": {
+      "K–2": "Do a small job with two friends, each with a different part to do.",
+      "3–5": "Do a classroom task as a team of three with different jobs, then swap.",
+      "6–8": "Do one real classroom job as a crew of three with named roles, then swap, with a checker.",
+      "9–10": "Do one real classroom job as a crew of three with named roles, then swap roles and do it again.",
+      "11–12": "Run a real crew-based classroom job with named roles and rotation, and report what each role taught."
+     }
     },
     {
      "theme": "The union and the hall",
      "description": "What a union is in plain words — workers who band together, the hall where the trade gathers, the apprenticeship that pays you to learn.",
-     "transfer_check": "Explain to somebody, in your own words, what a union hall is and what an apprentice does there."
+     "transfer_check": "Explain to somebody, in your own words, what a union hall is and what an apprentice does there.",
+     "bands": {
+      "K–2": "Say what it means when workers join together to help each other.",
+      "3–5": "Explain in your own words what a union hall is.",
+      "6–8": "Explain what a union hall is and what an apprenticeship means, with a checker.",
+      "9–10": "Explain to somebody, in your own words, what a union hall is and what an apprenticeship pays you to do.",
+      "11–12": "Explain unions and apprenticeship to a real audience unfamiliar with either, verified against a real hall's materials."
+     }
     },
     {
      "theme": "The 37 families of work",
      "description": "The network's trade families as a map of the working world — from the crane to the kitchen to the classroom itself.",
-     "transfer_check": "Sort fifteen trade families into groups you invent, and defend your grouping to somebody who grouped them differently."
+     "transfer_check": "Sort fifteen trade families into groups you invent, and defend your grouping to somebody who grouped them differently.",
+     "bands": {
+      "K–2": "Sort five kinds of jobs into groups that go together.",
+      "3–5": "Sort ten trade families into groups you choose and say why they belong together.",
+      "6–8": "Sort fifteen trade families into groups you invent, with a checker.",
+      "9–10": "Sort fifteen trade families into groups you invent, and defend your grouping to somebody who disagrees.",
+      "11–12": "Sort the network's real trade families into a grouping and defend it against a real counter-argument."
+     }
     },
     {
      "theme": "My city works somewhere",
      "description": "Every region has its working ground — a port, a pump station, a rail yard — that a learner can see from public, safe ground.",
-     "transfer_check": "Find, on a real map of your region, three working sites from the network's city maps and name what moves or runs at each."
+     "transfer_check": "Find, on a real map of your region, three working sites from the network's city maps and name what moves or runs at each.",
+     "bands": {
+      "K–2": "Find a place near your home where people build or fix things.",
+      "3–5": "Find one real working site in your area — a port, a plant, a yard.",
+      "6–8": "Find three working sites from the network's city on a real map, with a checker.",
+      "9–10": "Find, on a real map of your region, three working sites from the network's city — safely, from public ground.",
+      "11–12": "Locate and document three real working sites in your region from public, safe ground, verified against the network map."
+     }
     },
     {
      "theme": "Skills you already have",
      "description": "Measuring, sorting, steady hands, clear directions — schoolwork skills that are already trade skills with different names.",
-     "transfer_check": "Name three things you can already do, match each to a trade that uses it, and demonstrate one of them."
+     "transfer_check": "Name three things you can already do, match each to a trade that uses it, and demonstrate one of them.",
+     "bands": {
+      "K–2": "Say one thing you are good at, like counting or being careful.",
+      "3–5": "Name two things you are good at and say what job might use each.",
+      "6–8": "Name three things you can already do and match each to a trade that uses it, with a checker.",
+      "9–10": "Name three things you can already do, match each to a trade that uses it, and describe how.",
+      "11–12": "Name real transferable skills you already hold and match each to a trade, with the connection defended in writing."
+     }
     },
     {
      "theme": "Safety is the first skill",
      "description": "Why every trade teaches safety before tools — the flagged line, the rated tag, the call made out loud.",
-     "transfer_check": "Walk one room or yard and point out three things a tradesperson would check before starting work there."
+     "transfer_check": "Walk one room or yard and point out three things a tradesperson would check before starting work there.",
+     "bands": {
+      "K–2": "Say why you check something is safe before you use it.",
+      "3–5": "Point out one thing a worker would check before starting a task.",
+      "6–8": "Walk one room and point out three things a tradesperson would check first, with a checker.",
+      "9–10": "Walk one room or yard and point out three things a tradesperson would check before starting work.",
+      "11–12": "Walk a real site and identify the safety checks a tradesperson would run, verified against a real safety checklist."
+     }
     },
     {
      "theme": "Trying it on",
      "description": "The honest tryout — a cardboard sim, a bench task, a hall visit — and how it differs from the real, certified thing.",
-     "transfer_check": "Complete one tabletop trade simulation and tell somebody one thing it taught you and one thing it cannot teach you."
+     "transfer_check": "Complete one tabletop trade simulation and tell somebody one thing it taught you and one thing it cannot teach you.",
+     "bands": {
+      "K–2": "Try a pretend version of a job and say what it was like.",
+      "3–5": "Complete a simple tabletop trade activity and say one thing it taught you.",
+      "6–8": "Complete one tabletop trade simulation and tell somebody what it taught, with a checker.",
+      "9–10": "Complete one tabletop trade simulation and tell somebody one thing it taught you and how it differs from the real thing.",
+      "11–12": "Complete a real trade simulation and write honestly how it differs from the certified, real-world version."
+     }
     }
    ]
   },
@@ -67,52 +137,122 @@
     {
      "theme": "Measure twice",
      "description": "Length, width, depth with real rulers and tapes — the jobsite's first mathematics, where an error costs material.",
-     "transfer_check": "Measure a real object three ways, record the numbers, and have a partner check one measurement against yours."
+     "transfer_check": "Measure a real object three ways, record the numbers, and have a partner check one measurement against yours.",
+     "bands": {
+      "K–2": "Measure something with a ruler two times and see if you get the same number.",
+      "3–5": "Measure a real object with a tape measure and have a friend check your number.",
+      "6–8": "Measure a real object three ways, record the numbers, and have a partner check, with a checker.",
+      "9–10": "Measure a real object three ways, record the numbers, and have a partner check one measurement.",
+      "11–12": "Measure real objects to jobsite tolerance and have your measurements independently verified."
+     }
     },
     {
      "theme": "Fractions on the cut list",
      "description": "Halves, quarters, eighths and sixteenths as carpenters actually use them — the tape measure as a fraction number line.",
-     "transfer_check": "Mark a strip of paper or wood at three fractional lengths from a cut list and prove one mark by folding or re-measuring."
+     "transfer_check": "Mark a strip of paper or wood at three fractional lengths from a cut list and prove one mark by folding or re-measuring.",
+     "bands": {
+      "K–2": "Find halves and quarters on a ruler or tape measure with an adult.",
+      "3–5": "Mark a piece of paper at half and quarter lengths using a ruler.",
+      "6–8": "Mark a strip at three fractional lengths from a cut list and prove it, with a checker.",
+      "9–10": "Mark a strip of paper or wood at three fractional lengths from a cut list and prove the marks are right.",
+      "11–12": "Cut real material to a fractional cut list and verify the cuts against the tape measure's own fraction lines."
+     }
     },
     {
      "theme": "The ratio in the mix",
      "description": "Mortar, concrete, dough and paint all obey ratios — scaling a recipe up and down without breaking it.",
-     "transfer_check": "Scale a real mix or recipe from four servings to ten, write both versions, and explain what stayed the same."
+     "transfer_check": "Scale a real mix or recipe from four servings to ten, write both versions, and explain what stayed the same.",
+     "bands": {
+      "K–2": "Mix two things together in a simple recipe and say what happens if you use too much of one.",
+      "3–5": "Scale a recipe from four servings to eight and write both versions.",
+      "6–8": "Scale a real mix from four servings to ten and write both versions, with a checker.",
+      "9–10": "Scale a real mix or recipe from four servings to ten, write both versions, and explain why the ratio must hold.",
+      "11–12": "Scale a real mortar, concrete or recipe mix by a real ratio, and verify the scaled batch holds its properties."
+     }
     },
     {
      "theme": "Area, volume and the order",
      "description": "How much paint, how much concrete, how much pipe — turning a room's numbers into a materials order.",
-     "transfer_check": "Compute the floor area and wall area of a real room and write the materials line for covering one of them."
+     "transfer_check": "Compute the floor area and wall area of a real room and write the materials line for covering one of them.",
+     "bands": {
+      "K–2": "Count the tiles or squares that cover a small space.",
+      "3–5": "Find the area of a real small room by counting or measuring.",
+      "6–8": "Compute the floor area and wall area of a real room, with a checker.",
+      "9–10": "Compute the floor area and wall area of a real room and write the materials list it implies.",
+      "11–12": "Compute area and volume for a real room and produce a real materials order from the numbers."
+     }
     },
     {
      "theme": "The right angle and the diagonal",
      "description": "The 3-4-5 triangle the trades have used for millennia — squaring a corner with arithmetic instead of guesswork.",
-     "transfer_check": "Square a real corner or rectangle using the 3-4-5 rule and show the check that proves it square."
+     "transfer_check": "Square a real corner or rectangle using the 3-4-5 rule and show the check that proves it square.",
+     "bands": {
+      "K–2": "Check if a corner is a square corner using a big triangle shape.",
+      "3–5": "Use a 3-4-5 triangle to check if a corner is square.",
+      "6–8": "Square a real corner using the 3-4-5 rule and show the check, with a checker.",
+      "9–10": "Square a real corner or rectangle using the 3-4-5 rule and show the check that proves it.",
+      "11–12": "Square a real corner using the 3-4-5 rule to jobsite tolerance and document the proof."
+     }
     },
     {
      "theme": "Slope, grade and fall",
      "description": "Roofs shed, ramps climb, drains fall — rise over run as the trades' working fraction.",
-     "transfer_check": "Measure the slope of a real ramp, roofline (from the ground) or drain and express it as rise over run."
+     "transfer_check": "Measure the slope of a real ramp, roofline (from the ground) or drain and express it as rise over run.",
+     "bands": {
+      "K–2": "Say whether a ramp near you goes up steeply or gently.",
+      "3–5": "Measure how steep a real ramp is using simple steps.",
+      "6–8": "Measure the slope of a real ramp or drain and express it as a fraction, with a checker.",
+      "9–10": "Measure the slope of a real ramp, roofline (from the ground) or drain and express it as rise over run.",
+      "11–12": "Measure and express the slope of a real structure as rise over run, verified against a code reference."
+     }
     },
     {
      "theme": "Load, span and the safe number",
      "description": "Why the chart on the crane and the table in the code book are mathematics with lives attached — reading limits, never exceeding them.",
-     "transfer_check": "Read one real rated capacity (a ladder, a strap, an elevator plate) and compute how many of a real load stay under it."
+     "transfer_check": "Read one real rated capacity (a ladder, a strap, an elevator plate) and compute how many of a real load stay under it.",
+     "bands": {
+      "K–2": "Say why a sign on a ladder tells you how much weight it can hold.",
+      "3–5": "Read the weight limit on a real ladder or strap and say what it means.",
+      "6–8": "Read one real rated capacity and compute a safety margin, with a checker.",
+      "9–10": "Read one real rated capacity (a ladder, a strap, an elevator plate) and compute a safe margin under it.",
+      "11–12": "Read a real rated capacity chart and compute the safe working load for a real scenario."
+     }
     },
     {
      "theme": "The estimate and the bid",
      "description": "Materials plus labor plus the margin — how a tradesperson turns arithmetic into a price the customer can trust.",
-     "transfer_check": "Write a one-page estimate for a small real task — materials, time, total — and defend one number in it."
+     "transfer_check": "Write a one-page estimate for a small real task — materials, time, total — and defend one number in it.",
+     "bands": {
+      "K–2": "Guess how much a small project would cost in materials.",
+      "3–5": "Write down what materials a small project would need and roughly what they cost.",
+      "6–8": "Write a one-page estimate for a small real task — materials, time, total, with a checker.",
+      "9–10": "Write a one-page estimate for a small real task — materials, time, total — and defend the numbers.",
+      "11–12": "Write a real one-page bid for a small task with materials, labor and margin, and defend it to a sceptical customer."
+     }
     },
     {
      "theme": "The meter is a number over time",
      "description": "Kilowatt-hours, gallons per minute, board feet per shift — rates as the mathematics of running work.",
-     "transfer_check": "Read a real meter (electric, water or gas) twice, a day apart, and compute the rate of use between readings."
+     "transfer_check": "Read a real meter (electric, water or gas) twice, a day apart, and compute the rate of use between readings.",
+     "bands": {
+      "K–2": "Look at a water or power meter with an adult and see the number change.",
+      "3–5": "Read a real meter twice, a day apart, and say how much changed.",
+      "6–8": "Read a real meter twice, a day apart, and compute the rate, with a checker.",
+      "9–10": "Read a real meter (electric, water or gas) twice, a day apart, and compute the rate of use.",
+      "11–12": "Read a real meter over several days and compute the rate of use, verified against the billed amount."
+     }
     },
     {
      "theme": "The tolerance",
      "description": "Close enough, said precisely — plus-or-minus as the machinist's honest promise, and why some work allows a sixteenth and some a thousandth.",
-     "transfer_check": "Measure five copies of the same object, state the spread, and propose a tolerance the maker could promise."
+     "transfer_check": "Measure five copies of the same object, state the spread, and propose a tolerance the maker could promise.",
+     "bands": {
+      "K–2": "Measure the same thing five times and say if you always got the exact same number.",
+      "3–5": "Measure five copies of the same object and say how much they differ.",
+      "6–8": "Measure five copies of the same object, state the spread, with a checker.",
+      "9–10": "Measure five copies of the same object, state the spread, and propose a tolerance that would be fair.",
+      "11–12": "Measure real parts, state the spread precisely, and propose a tolerance a machinist would accept."
+     }
     }
    ]
   },
@@ -124,52 +264,122 @@
     {
      "theme": "Water goes where water wants",
      "description": "Gravity, pressure and the siphon — the plumber's physics, from the P-trap under every sink to the pump station under the city.",
-     "transfer_check": "Demonstrate a working siphon or trap with tubing and water and explain why the water moves — or stays."
+     "transfer_check": "Demonstrate a working siphon or trap with tubing and water and explain why the water moves — or stays.",
+     "bands": {
+      "K–2": "Watch water flow downhill and say why it moves that way.",
+      "3–5": "Build a simple water path with tubing and explain why water flows down it.",
+      "6–8": "Demonstrate a working siphon or trap with tubing and water, with a checker.",
+      "9–10": "Demonstrate a working siphon or trap with tubing and water and explain why the water moves the way it does.",
+      "11–12": "Build and explain a real siphon or trap, connecting it to why the plumber's design under a sink actually works."
+     }
     },
     {
      "theme": "The circuit is a loop",
      "description": "Current, voltage and resistance in the electrician's terms — why the loop must close and why the breaker opens it.",
-     "transfer_check": "Build a battery-bulb-switch circuit, break it in two different places, and explain why the bulb dies both times."
+     "transfer_check": "Build a battery-bulb-switch circuit, break it in two different places, and explain why the bulb dies both times.",
+     "bands": {
+      "K–2": "Connect a battery to a light with wires and see when it lights up.",
+      "3–5": "Build a simple circuit with a battery, bulb and switch and say why it needs to be a loop.",
+      "6–8": "Build a battery-bulb-switch circuit and break it in two places, with a checker.",
+      "9–10": "Build a battery-bulb-switch circuit, break it in two different places, and explain why each break stops it.",
+      "11–12": "Build and troubleshoot a real circuit, explaining why an open loop and a breaker both stop current the same way."
+     }
     },
     {
      "theme": "Heat moves three ways",
      "description": "Conduction, convection, radiation — the insulator's science, from the wall's R-value to the coffee cup's sleeve.",
-     "transfer_check": "Wrap two identical containers of warm water differently, measure both after twenty minutes, and name the heat path you slowed."
+     "transfer_check": "Wrap two identical containers of warm water differently, measure both after twenty minutes, and name the heat path you slowed.",
+     "bands": {
+      "K–2": "Touch something warm and something cool and say which feels warmer.",
+      "3–5": "Wrap two cups of warm water differently and see which stays warm longer.",
+      "6–8": "Wrap two containers of warm water differently and measure both later, with a checker.",
+      "9–10": "Wrap two identical containers of warm water differently, measure both after twenty minutes, and explain the difference.",
+      "11–12": "Test insulation methods on identical warm containers and explain the result using conduction, convection and radiation."
+     }
     },
     {
      "theme": "The lever, the pulley and the crane",
      "description": "Mechanical advantage — how the rigger's block and the operator's boom multiply force, and what they pay for it in distance.",
-     "transfer_check": "Lift a real load with and without a simple pulley or lever and describe what got easier and what got longer."
+     "transfer_check": "Lift a real load with and without a simple pulley or lever and describe what got easier and what got longer.",
+     "bands": {
+      "K–2": "Try lifting something heavy with your hands, then with a stick as a lever.",
+      "3–5": "Try lifting a weight with and without a simple lever or pulley and compare the effort.",
+      "6–8": "Lift a real load with and without a simple pulley or lever, with a checker.",
+      "9–10": "Lift a real load with and without a simple pulley or lever and describe what got easier and what got longer.",
+      "11–12": "Test mechanical advantage with a real load and lever or pulley, and calculate the trade-off between force and distance."
+     }
     },
     {
      "theme": "Materials have moods",
      "description": "Wood moves, steel expands, concrete cures — the material science every trade respects, and the joints that forgive it.",
-     "transfer_check": "Find one real expansion joint, gap or cure date in your neighborhood and explain what it forgives."
+     "transfer_check": "Find one real expansion joint, gap or cure date in your neighborhood and explain what it forgives.",
+     "bands": {
+      "K–2": "Say what happens to wood or metal when it gets very hot or very cold.",
+      "3–5": "Find something near you that has a gap left on purpose for expansion.",
+      "6–8": "Find one real expansion joint or gap and explain what it is for, with a checker.",
+      "9–10": "Find one real expansion joint, gap or cure date in your neighborhood and explain what problem it solves.",
+      "11–12": "Find and document real material-movement evidence in your area and explain the engineering that accommodates it."
+     }
     },
     {
      "theme": "The chemistry of the cure",
      "description": "Concrete hardening, paint drying, bread rising — chemical change on the jobsite, and why time is an ingredient.",
-     "transfer_check": "Run one safe cure or set (plaster, glue, dough) at two temperatures and report which finished first and why that fits."
+     "transfer_check": "Run one safe cure or set (plaster, glue, dough) at two temperatures and report which finished first and why that fits.",
+     "bands": {
+      "K–2": "Watch glue or dough change over time and say what happened.",
+      "3–5": "Watch something set or rise over a day and record what changed.",
+      "6–8": "Run one safe cure or set at two temperatures and report what differed, with a checker.",
+      "9–10": "Run one safe cure or set (plaster, glue, dough) at two temperatures and report what differed.",
+      "11–12": "Run a real cure or set experiment at two temperatures and explain the chemistry behind the time difference."
+     }
     },
     {
      "theme": "The pendulum and the swing",
      "description": "The suspended load as physics — period, momentum, and why the crane operator's smooth hand is applied science.",
-     "transfer_check": "Swing a weight on a string at two lengths, time ten swings of each, and state what changed the period."
+     "transfer_check": "Swing a weight on a string at two lengths, time ten swings of each, and state what changed the period.",
+     "bands": {
+      "K–2": "Swing something on a string and say what makes it go faster or slower.",
+      "3–5": "Swing a weight on two different lengths of string and see which swings faster.",
+      "6–8": "Swing a weight on a string at two lengths and time ten swings of each, with a checker.",
+      "9–10": "Swing a weight on a string at two lengths, time ten swings of each, and state what changed and why.",
+      "11–12": "Test pendulum period at multiple string lengths and connect the physics to a crane operator's smooth control."
+     }
     },
     {
      "theme": "Sound, light and the signal",
      "description": "Why the signaller's hands beat shouting, how fiber carries light, and what the working world knows about noise.",
-     "transfer_check": "Send a short message across a noisy room two ways — voice and agreed hand signals — and report which survived."
+     "transfer_check": "Send a short message across a noisy room two ways — voice and agreed hand signals — and report which survived.",
+     "bands": {
+      "K–2": "Send a message to a friend across the room without talking loudly.",
+      "3–5": "Send a message two ways — quietly and with a hand signal — and see which works better in a noisy room.",
+      "6–8": "Send a message across a noisy room two ways and compare, with a checker.",
+      "9–10": "Send a short message across a noisy room two ways — voice and agreed hand signal — and compare which worked.",
+      "11–12": "Test message transmission by voice versus signal in real noise, and connect the result to why signalers use hands."
+     }
     },
     {
      "theme": "Weather is a jobsite fact",
      "description": "Wind on the glass lift, rain on the pour, heat on the crew — reading a forecast the way a foreman does.",
-     "transfer_check": "Take a real three-day forecast and mark which day you would pour, lift or paint outdoors, with the reason."
+     "transfer_check": "Take a real three-day forecast and mark which day you would pour, lift or paint outdoors, with the reason.",
+     "bands": {
+      "K–2": "Look at tomorrow's weather and say if it would be a good day to play outside.",
+      "3–5": "Check a three-day forecast and say which day would be best for an outdoor project.",
+      "6–8": "Take a real forecast and mark the best day for an outdoor task, with a checker.",
+      "9–10": "Take a real three-day forecast and mark which day you would pour, lift or paint outdoors and why.",
+      "11–12": "Read a real forecast and make a real go/no-go call for outdoor work, defended with the specific weather risk."
+     }
     },
     {
      "theme": "The experiment is a test fit",
      "description": "Hypothesis, trial, measurement, revision — the scientific method as every tradesperson's dry fit before the glue.",
-     "transfer_check": "Design and run one fair test of a small working question (which tape holds more, which route drains faster) and report it honestly."
+     "transfer_check": "Design and run one fair test of a small working question (which tape holds more, which route drains faster) and report it honestly.",
+     "bands": {
+      "K–2": "Try two different ways to fix something and see which works better.",
+      "3–5": "Test which of two tapes holds better and record your result.",
+      "6–8": "Design and run one fair test of a small working question, with a checker.",
+      "9–10": "Design and run one fair test of a small working question (which tape holds more, which joint is stronger).",
+      "11–12": "Design, run and report a real fair test of a working question, with controls and a clear conclusion."
+     }
     }
    ]
   },
@@ -181,52 +391,122 @@
     {
      "theme": "The label is the law",
      "description": "Rated tags, warning labels, ingredient lists — the short texts the working world obeys, and how to read one completely.",
-     "transfer_check": "Read one real safety or rating label aloud, then state what it permits, what it forbids, and what it never says."
+     "transfer_check": "Read one real safety or rating label aloud, then state what it permits, what it forbids, and what it never says.",
+     "bands": {
+      "K–2": "Read a label on a food package with an adult and say what it tells you.",
+      "3–5": "Read a warning label on something at home and say what it means.",
+      "6–8": "Read one real safety or rating label aloud and state what it permits, with a checker.",
+      "9–10": "Read one real safety or rating label aloud, then state what it permits, what it forbids, and what happens if ignored.",
+      "11–12": "Read and interpret a real rated label completely, cross-checked against its manufacturer's own documentation."
+     }
     },
     {
      "theme": "Directions that cannot be misread",
      "description": "Writing steps the way the trades need them — one action per line, in order, testable — because ambiguity on a jobsite costs.",
-     "transfer_check": "Write instructions for a small real task and have somebody follow them exactly, without you speaking, to a working result."
+     "transfer_check": "Write instructions for a small real task and have somebody follow them exactly, without you speaking, to a working result.",
+     "bands": {
+      "K–2": "Write three steps for a simple task so a friend could follow them.",
+      "3–5": "Write instructions for making something and have a friend follow them exactly.",
+      "6–8": "Write instructions for a small real task and have somebody follow them exactly, with a checker.",
+      "9–10": "Write instructions for a small real task and have somebody follow them exactly, then fix any step that confused them.",
+      "11–12": "Write and test real one-action-per-line instructions on someone unfamiliar with the task, and revise for ambiguity."
+     }
     },
     {
      "theme": "The drawing is a sentence",
      "description": "Plans, symbols and the legend — reading a simple drawing the way a builder does, from title block to scale.",
-     "transfer_check": "Draw a labeled plan of a real room to a stated scale that lets somebody find one hidden object from it."
+     "transfer_check": "Draw a labeled plan of a real room to a stated scale that lets somebody find one hidden object from it.",
+     "bands": {
+      "K–2": "Draw a simple map of your room with the big things labeled.",
+      "3–5": "Draw a labeled plan of a room with a rough scale.",
+      "6–8": "Draw a labeled plan of a real room to a stated scale, with a checker.",
+      "9–10": "Draw a labeled plan of a real room to a stated scale that lets somebody find one real object from it alone.",
+      "11–12": "Draw a real scaled plan with symbols and a legend that a builder could read without further explanation."
+     }
     },
     {
      "theme": "The manual and the index",
      "description": "Finding the one page that matters in a thick book — the tradesperson's fast reading: index, headings, diagrams first.",
-     "transfer_check": "Given a real manual (appliance, tool or car), find the answer to a stated question and cite the page you found it on."
+     "transfer_check": "Given a real manual (appliance, tool or car), find the answer to a stated question and cite the page you found it on.",
+     "bands": {
+      "K–2": "Find one page in a book that answers a question, using the picture or the words.",
+      "3–5": "Use the index of a real manual to find an answer quickly.",
+      "6–8": "Given a real manual, find the answer to a stated question, with a checker.",
+      "9–10": "Given a real manual (appliance, tool or car), find the answer to a stated question using the index first.",
+      "11–12": "Navigate a real technical manual to answer a specific question, timed, using only headings and index."
+     }
     },
     {
      "theme": "The log and the handover",
      "description": "The steward's log, the watch log, the shift note — writing what happened so the next crew starts smart.",
-     "transfer_check": "Keep a log of one real activity, then hand it to somebody who continues the task using only what you wrote."
+     "transfer_check": "Keep a log of one real activity, then hand it to somebody who continues the task using only what you wrote.",
+     "bands": {
+      "K–2": "Write down what you did today so someone else could pick up where you left off.",
+      "3–5": "Keep a short log of one activity so the next person knows what happened.",
+      "6–8": "Keep a log of one real activity, then hand it to somebody who continues the task, with a checker.",
+      "9–10": "Keep a log of one real activity, then hand it to somebody who continues the task using only your log.",
+      "11–12": "Keep a real handover log and verify a real successor can continue the task using only what you wrote."
+     }
     },
     {
      "theme": "Words of the trade",
      "description": "Every craft's vocabulary is exact — joist and stud, live and neutral, port and starboard — and precision of word is precision of work.",
-     "transfer_check": "Teach somebody five exact terms from one trade, then have them use each correctly describing a real object."
+     "transfer_check": "Teach somebody five exact terms from one trade, then have them use each correctly describing a real object.",
+     "bands": {
+      "K–2": "Learn two special words that a job uses and say what they mean.",
+      "3–5": "Learn three exact words from one trade and use each correctly in a sentence.",
+      "6–8": "Teach somebody five exact terms from one trade, with a checker.",
+      "9–10": "Teach somebody five exact terms from one trade, then have them use each correctly in a sentence.",
+      "11–12": "Teach real trade vocabulary to someone unfamiliar and verify their correct, precise use of each term."
+     }
     },
     {
      "theme": "The estimate is persuasion with numbers",
      "description": "The written bid as an argument — clear scope, honest price, plain terms — and why the clearest writer often wins the job.",
-     "transfer_check": "Write a five-sentence bid for a small task that states scope, price and one term, and have a reader say what they'd ask before signing."
+     "transfer_check": "Write a five-sentence bid for a small task that states scope, price and one term, and have a reader say what they'd ask before signing.",
+     "bands": {
+      "K–2": "Say why telling someone a fair price for a small job matters.",
+      "3–5": "Write a short note offering to do a small task for a fair price.",
+      "6–8": "Write a five-sentence bid for a small task that states scope and price, with a checker.",
+      "9–10": "Write a five-sentence bid for a small task that states scope, price and one term clearly.",
+      "11–12": "Write a real bid for a small task, clear enough that a real customer accepts it on the writing alone."
+     }
     },
     {
      "theme": "Interviewing the work",
      "description": "Asking a working person real questions — open, specific, respectful — and listening for the detail worth writing down.",
-     "transfer_check": "Prepare five questions, interview somebody about their work, and write the one paragraph that captures what surprised you."
+     "transfer_check": "Prepare five questions, interview somebody about their work, and write the one paragraph that captures what surprised you.",
+     "bands": {
+      "K–2": "Ask a grown-up one good question about their job and listen to the answer.",
+      "3–5": "Prepare three questions and interview someone about their work.",
+      "6–8": "Prepare five questions, interview somebody about their work, with a checker.",
+      "9–10": "Prepare five questions, interview somebody about their work, and write the one part worth remembering.",
+      "11–12": "Prepare and conduct a real interview about work, and write up the detail that most needed telling."
+     }
     },
     {
      "theme": "The story of a build",
      "description": "Narrating work honestly — beginning, struggle, fix, finish — the crew's story told so the next crew learns from it.",
-     "transfer_check": "Write or tell the true story of one thing you built or fixed, including the mistake, to an audience that asks questions."
+     "transfer_check": "Write or tell the true story of one thing you built or fixed, including the mistake, to an audience that asks questions.",
+     "bands": {
+      "K–2": "Tell someone about something you made, including a part that was hard.",
+      "3–5": "Write the story of something you built, including a mistake you fixed.",
+      "6–8": "Write or tell the true story of one thing you built or fixed, with a checker.",
+      "9–10": "Write or tell the true story of one thing you built or fixed, including the mistake and the fix.",
+      "11–12": "Write a real, honest build story including failure and repair, so the next crew could learn from it."
+     }
     },
     {
      "theme": "The public notice",
      "description": "Permits in windows, meeting agendas, the posted schedule — the civic texts of the working city, and how to read what they commit.",
-     "transfer_check": "Find one real posted permit, notice or agenda in your area and explain to somebody what it authorizes and who granted it."
+     "transfer_check": "Find one real posted permit, notice or agenda in your area and explain to somebody what it authorizes and who granted it.",
+     "bands": {
+      "K–2": "Find a sign posted somewhere and say what it is telling people.",
+      "3–5": "Find a real posted notice and explain what it means.",
+      "6–8": "Find one real posted permit, notice or agenda and explain what it commits, with a checker.",
+      "9–10": "Find one real posted permit, notice or agenda in your area and explain to somebody what it commits people to.",
+      "11–12": "Find and interpret a real civic notice, explaining its legal commitment to someone unfamiliar with the process."
+     }
     }
    ]
   },
@@ -238,52 +518,122 @@
     {
      "theme": "The city is built work",
      "description": "Streets, mains, wires, levees — a city as the sum of finished jobs, most of them invisible until they fail.",
-     "transfer_check": "Walk one block and list ten pieces of built work in order of what would be missed first if it stopped."
+     "transfer_check": "Walk one block and list ten pieces of built work in order of what would be missed first if it stopped.",
+     "bands": {
+      "K–2": "Walk around and point out three things that were built by someone.",
+      "3–5": "Walk one block and list five pieces of built work you see.",
+      "6–8": "Walk one block and list ten pieces of built work in order of importance, with a checker.",
+      "9–10": "Walk one block and list ten pieces of built work in order of what would be missed first if it failed.",
+      "11–12": "Survey a real block's infrastructure and rank it by consequence of failure, verified against a real utility map."
+     }
     },
     {
      "theme": "Who decides what gets built",
      "description": "Bonds, budgets, councils and boards — the civic machinery that turns taxes into pump stations and schools.",
-     "transfer_check": "Find one real public project in your parish or city budget and name the body that approved it and the money that funds it."
+     "transfer_check": "Find one real public project in your parish or city budget and name the body that approved it and the money that funds it.",
+     "bands": {
+      "K–2": "Say who decides if a new park or school gets built in your town.",
+      "3–5": "Find out who decides what gets built in your town — a council, a vote, a budget.",
+      "6–8": "Find one real public project and name the body that decided it, with a checker.",
+      "9–10": "Find one real public project in your parish or city budget and name the body that decided to fund it.",
+      "11–12": "Trace a real public project from its decision-making body through its budget line, verified against public records."
+     }
     },
     {
      "theme": "A short history of the union",
      "description": "Why workers organized — hours, safety, the wage — and what apprenticeship halls did for the people who built your city.",
-     "transfer_check": "Tell the story of one real historical labor milestone, from a source you can name, to somebody who hadn't heard it."
+     "transfer_check": "Tell the story of one real historical labor milestone, from a source you can name, to somebody who hadn't heard it.",
+     "bands": {
+      "K–2": "Say why workers might join together to ask for safer conditions.",
+      "3–5": "Find one story about workers organizing for something fair, like safety or pay.",
+      "6–8": "Tell the story of one real historical labor milestone, with a checker.",
+      "9–10": "Tell the story of one real historical labor milestone, from a source you can name.",
+      "11–12": "Research and present one real labor milestone with a named, verifiable source and its lasting effect."
+     }
     },
     {
      "theme": "The port made the city",
      "description": "New Orleans on its river, Oakland on its bay, San Francisco on its gate — how working water shaped where people live.",
-     "transfer_check": "For one of the network's regions, explain from a map why the city stands where it does and what still moves through it."
+     "transfer_check": "For one of the network's regions, explain from a map why the city stands where it does and what still moves through it.",
+     "bands": {
+      "K–2": "Say why a city near water might have grown up right there.",
+      "3–5": "Find why one city on the network map is located where it is, near water.",
+      "6–8": "Explain from a map why one network city stands where it does, with a checker.",
+      "9–10": "For one of the network's regions, explain from a map why the city stands where it does.",
+      "11–12": "Explain, with real geographic evidence, why a real port city's location shaped its economy and layout."
+     }
     },
     {
      "theme": "The strike, the deal and the contract",
      "description": "How disagreement at work becomes negotiation — the contract as a civic document both sides sign and both sides keep.",
-     "transfer_check": "Role-play a two-side negotiation over a classroom rule to a written one-line agreement both sides initial."
+     "transfer_check": "Role-play a two-side negotiation over a classroom rule to a written one-line agreement both sides initial.",
+     "bands": {
+      "K–2": "Say what two people should do when they disagree about something: talk it out.",
+      "3–5": "Role-play two sides disagreeing about a rule and reaching an agreement.",
+      "6–8": "Role-play a two-side negotiation over a classroom rule to a written agreement, with a checker.",
+      "9–10": "Role-play a two-side negotiation over a classroom rule to a written one-line agreement.",
+      "11–12": "Role-play a real-style labor negotiation to a written, signed agreement both sides accept."
+     }
     },
     {
      "theme": "The inspector works for you",
      "description": "Codes, permits and inspections as public promises — why the stamp on the drawing protects people who never read it.",
-     "transfer_check": "Explain, using one real example (an elevator plate, a restaurant grade, a permit), who inspected it and who is protected."
+     "transfer_check": "Explain, using one real example (an elevator plate, a restaurant grade, a permit), who inspected it and who is protected.",
+     "bands": {
+      "K–2": "Say why someone checks that a building or ride is safe before people use it.",
+      "3–5": "Find a real inspection sticker or stamp and say what it promises.",
+      "6–8": "Explain, using one real example, what an inspection stamp protects, with a checker.",
+      "9–10": "Explain, using one real example (an elevator plate, a restaurant grade, a permit), what the stamp protects and for whom.",
+      "11–12": "Explain a real inspection or code system, verified against the actual regulation it enforces."
+     }
     },
     {
      "theme": "The storm and the crews",
      "description": "Who restores the grid, drains the street, reopens the school — the working city's emergency shape, from Gulf hurricanes to Bay quakes.",
-     "transfer_check": "Chart which crews, in what order, brought one real past storm's neighborhood back — from news or a firsthand account."
+     "transfer_check": "Chart which crews, in what order, brought one real past storm's neighborhood back — from news or a firsthand account.",
+     "bands": {
+      "K–2": "Say who comes to help fix things after a big storm.",
+      "3–5": "List three kinds of workers who help a town recover after a storm.",
+      "6–8": "Chart which crews restored one real past storm's neighborhood, in order, with a checker.",
+      "9–10": "Chart which crews, in what order, brought one real past storm's neighborhood back online.",
+      "11–12": "Chart a real storm recovery timeline by crew and order, verified against a real news or utility account."
+     }
     },
     {
      "theme": "Work that includes everybody",
      "description": "Who historically got the good trades and who was kept out — and what halls, schools and laws have done to open the door.",
-     "transfer_check": "Compare an old and a new photograph or roster of the same trade and describe, with respect, what changed and what still should."
+     "transfer_check": "Compare an old and a new photograph or roster of the same trade and describe, with respect, what changed and what still should.",
+     "bands": {
+      "K–2": "Say why it is fair for anyone, no matter who they are, to be able to try a job.",
+      "3–5": "Compare an old photo of workers to a new one and say what changed.",
+      "6–8": "Compare an old and a new photograph or roster of the same trade, with a checker.",
+      "9–10": "Compare an old and a new photograph or roster of the same trade and describe what changed and why.",
+      "11–12": "Compare real historical and current workforce data for a trade and describe honestly what opened the door."
+     }
     },
     {
      "theme": "The apprentice's civic ladder",
      "description": "Apprenticeship as a public institution — registered programs, journey cards, and the taxes and codes that stand behind them.",
-     "transfer_check": "Chart the registered apprenticeship path for one trade in your region from the program's own public materials."
+     "transfer_check": "Chart the registered apprenticeship path for one trade in your region from the program's own public materials.",
+     "bands": {
+      "K–2": "Say what steps someone climbs to become really good at a job over time.",
+      "3–5": "Chart the steps of becoming a trained worker in one trade, from beginner to expert.",
+      "6–8": "Chart the registered apprenticeship path for one trade in your region, with a checker.",
+      "9–10": "Chart the registered apprenticeship path for one trade in your region from the public registry.",
+      "11–12": "Chart and verify a real registered apprenticeship path against its public registry and the codes that stand behind it."
+     }
     },
     {
      "theme": "Your seat in the working city",
      "description": "The learner as a future voter, neighbor and maybe tradesperson — where to stand on the next bond, the next hall, the next storm.",
-     "transfer_check": "Attend or watch one real public meeting that touches built work and report the one decision you would have voted on, and how."
+     "transfer_check": "Attend or watch one real public meeting that touches built work and report the one decision you would have voted on, and how.",
+     "bands": {
+      "K–2": "Say one thing you could vote on or care about when you grow up in your town.",
+      "3–5": "Say one real local decision you might one day have a say in as a voter.",
+      "6–8": "Attend or watch one real public meeting that touches built work, with a checker.",
+      "9–10": "Attend or watch one real public meeting that touches built work and report what was decided.",
+      "11–12": "Attend a real public meeting on built work and report the decision and where you would stand on the next one."
+     }
     }
    ]
   }

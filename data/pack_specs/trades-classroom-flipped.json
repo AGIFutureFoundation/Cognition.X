@@ -10,52 +10,122 @@
     {
      "theme": "Why the hands get the classroom",
      "description": "The core trade of the flipped model — lecture moves home so the teacher's live hours go to the bench, where struggle is visible and help is immediate.",
-     "transfer_check": "Take one lesson you know well, split it into an at-home watch and an in-class build, and say what the teacher now sees that lecturing hid."
+     "transfer_check": "Take one lesson you know well, split it into an at-home watch and an in-class build, and say what the teacher now sees that lecturing hid.",
+     "bands": {
+      "K–2": "Say why doing something with your hands in class is more fun than only watching or listening.",
+      "3–5": "Explain why building at school and watching at home might help you learn a skill better.",
+      "6–8": "Take one lesson and split it into a short at-home watch and an in-class build, with a checker.",
+      "9–10": "Take one lesson you know well, split it into an at-home watch and an in-class build, and say why the split helps.",
+      "11–12": "Take a real course unit, split it into flipped cycles, and defend the split to a teacher planning the same move."
+     }
     },
     {
      "theme": "The seven-minute watch",
      "description": "What an at-home segment must be — one concept, under ten minutes, ending in a question the class will answer at the bench.",
-     "transfer_check": "Script and record a seven-minute concept segment for one trade skill, ending on the question the next day's build answers."
+     "transfer_check": "Script and record a seven-minute concept segment for one trade skill, ending on the question the next day's build answers.",
+     "bands": {
+      "K–2": "Watch a short video about one skill with an adult and say the one thing it taught.",
+      "3–5": "Watch a short video on one skill and write the one question it left you with.",
+      "6–8": "Script a short concept video for one skill ending in a question, with a checker.",
+      "9–10": "Script and record a seven-minute concept segment for one trade skill, ending on a question the class will answer at the bench.",
+      "11–12": "Script, record and pilot a seven-minute concept segment for a real class, and revise it from what the bench answers showed."
+     }
     },
     {
      "theme": "The bench is the lesson plan",
      "description": "Designing the in-class build: stations, materials, the one skill each station proves, and the rotation that keeps every hand busy.",
-     "transfer_check": "Design a four-station bench plan for one class period, with the skill each station proves and the rotation timed on paper."
+     "transfer_check": "Design a four-station bench plan for one class period, with the skill each station proves and the rotation timed on paper.",
+     "bands": {
+      "K–2": "Plan four small stations for a class activity and say what each one teaches.",
+      "3–5": "Design three stations for a class period and say what skill each one proves.",
+      "6–8": "Design a four-station bench plan for one class period, with a checker.",
+      "9–10": "Design a four-station bench plan for one class period, with the skill each station proves and the rotation that keeps every hand busy.",
+      "11–12": "Design and run a real four-station bench plan for a class, and revise the rotation from what kept hands idle."
+     }
     },
     {
      "theme": "When the watch doesn't happen",
      "description": "The no-homework reality — the two-minute catch-up corner, the partner brief, and why the build must survive an unprepared third of the room.",
-     "transfer_check": "Add a catch-up path to a flipped lesson so a student who never saw the watch still builds meaningfully, and test it on someone cold."
+     "transfer_check": "Add a catch-up path to a flipped lesson so a student who never saw the watch still builds meaningfully, and test it on someone cold.",
+     "bands": {
+      "K–2": "Say what a teacher could do for a student who missed the homework video.",
+      "3–5": "Design a two-minute catch-up for a student who did not see the video.",
+      "6–8": "Add a catch-up path to a flipped lesson for a student who never saw the watch, with a checker.",
+      "9–10": "Add a catch-up path to a flipped lesson so a student who never saw the watch still finishes the build.",
+      "11–12": "Add and test a catch-up path in a real class where a third of students had not watched, and report what it saved."
+     }
     },
     {
      "theme": "The transfer check closes the loop",
      "description": "Every flipped cycle ends the Cognition.X way — a check on real material, witnessed, recorded — not a quiz about the video.",
-     "transfer_check": "Write the transfer check for one flipped cycle so it can only be passed at the bench, never by quoting the video."
+     "transfer_check": "Write the transfer check for one flipped cycle so it can only be passed at the bench, never by quoting the video.",
+     "bands": {
+      "K–2": "Show an adult one real thing you can do, instead of just answering questions about it.",
+      "3–5": "Write one check that proves a skill on real material, not a quiz about a video.",
+      "6–8": "Write the transfer check for one flipped cycle so it can only be passed at the bench, with a checker.",
+      "9–10": "Write the transfer check for one flipped cycle so it can only be passed at the bench, on real material, witnessed.",
+      "11–12": "Write and run the transfer check for a real flipped cycle, witnessed and recorded, and defend why a quiz could not replace it."
+     }
     },
     {
      "theme": "Flipping a trade versus flipping a subject",
      "description": "What changes when the content is a craft — safety gates before tools, demonstration before description, and the mentor's eye on form.",
-     "transfer_check": "Take a safety-gated tool skill and show which parts may flip home (concept, hazard map) and which must never (first live use), with reasons."
+     "transfer_check": "Take a safety-gated tool skill and show which parts may flip home (concept, hazard map) and which must never (first live use), with reasons.",
+     "bands": {
+      "K–2": "Say one thing you must be shown in person before you try it yourself, like using scissors safely.",
+      "3–5": "Say why a tool skill needs a demonstration first, even if the idea can be explained at home.",
+      "6–8": "Take a safety-gated tool skill and show which parts may flip home and which must stay live, with a checker.",
+      "9–10": "Take a safety-gated tool skill and show which parts may flip home (concept, hazard ID) and which must stay live (first use).",
+      "11–12": "Take a real safety-gated skill, design its flip split with a mentor's input, and defend the line between home and bench."
+     }
     },
     {
      "theme": "The teacher and the tradesperson teach together",
      "description": "The co-taught bench — the teacher runs the room, the union mentor runs the craft, and the lesson plan names who owns which minute.",
-     "transfer_check": "Co-plan one bench session with a real or role-played trade mentor, the plan naming who leads each segment and why."
+     "transfer_check": "Co-plan one bench session with a real or role-played trade mentor, the plan naming who leads each segment and why.",
+     "bands": {
+      "K–2": "Say what a teacher and a visiting worker could each teach best in one lesson.",
+      "3–5": "Plan a lesson where a teacher and a visiting tradesperson each teach a different part.",
+      "6–8": "Co-plan one bench session with a real or role-played trade mentor, with a checker.",
+      "9–10": "Co-plan one bench session with a real or role-played trade mentor, the plan naming who owns which minute.",
+      "11–12": "Co-plan and run a real bench session with a mentor, naming who owns each minute, and record what each partner added."
+     }
     },
     {
      "theme": "Homework the family can join",
      "description": "At-home segments designed for the kitchen table — a parent measures, a sibling times, the household becomes the first crew.",
-     "transfer_check": "Design one at-home segment that requires a second person in the household, and collect what that person noticed."
+     "transfer_check": "Design one at-home segment that requires a second person in the household, and collect what that person noticed.",
+     "bands": {
+      "K–2": "Do a short homework task with a family member measuring or timing something with you.",
+      "3–5": "Design an at-home task that needs a second person in the house to help.",
+      "6–8": "Design one at-home segment that requires a second person in the household, with a checker.",
+      "9–10": "Design one at-home segment that requires a second person in the household, and check that it still teaches the concept.",
+      "11–12": "Design and pilot a real at-home segment needing a household partner, and report what families said about it."
+     }
     },
     {
      "theme": "Evidence over impressions",
      "description": "Reading a flipped unit honestly — watch-completion is not learning; the bench record and the check ledger are the truth.",
-     "transfer_check": "Compare watch-completion data with bench outcomes for one unit (real or supplied) and name one student the video numbers misjudged."
+     "transfer_check": "Compare watch-completion data with bench outcomes for one unit (real or supplied) and name one student the video numbers misjudged.",
+     "bands": {
+      "K–2": "Say why finishing the homework does not always mean you learned the skill.",
+      "3–5": "Compare who watched the video with who could actually do the skill at the bench.",
+      "6–8": "Compare watch-completion data with bench outcomes for one unit, with a checker.",
+      "9–10": "Compare watch-completion data with bench outcomes for one unit (real or supplied) and say what the gap tells you.",
+      "11–12": "Compare real watch-completion and bench data for a unit you ran, and change one thing in the design from the gap."
+     }
     },
     {
      "theme": "Scaling from one lesson to a course",
      "description": "The term arc — sequencing flipped cycles so skills stack toward a credential, with review benches where the stack wobbles.",
-     "transfer_check": "Map a nine-week course as a chain of flipped cycles ending in one credential, marking the two review benches and what each re-proves."
+     "transfer_check": "Map a nine-week course as a chain of flipped cycles ending in one credential, marking the two review benches and what each re-proves.",
+     "bands": {
+      "K–2": "Plan three lessons in a row that each build on the one before.",
+      "3–5": "Map five flipped lessons in an order where each skill leads to the next.",
+      "6–8": "Map a nine-week course as a chain of flipped cycles, with a checker.",
+      "9–10": "Map a nine-week course as a chain of flipped cycles ending in one credential, marking review benches where the stack wobbles.",
+      "11–12": "Map and run a real nine-week flipped course toward one credential, and identify where the review benches actually caught wobble."
+     }
     }
    ]
   },
@@ -67,52 +137,122 @@
     {
      "theme": "Why games work when they work",
      "description": "The honest core of gamification — visible progress, near-term goals, safe failure — and the flow channel between boredom and panic.",
-     "transfer_check": "Take one skill you coach and mark its flow channel: the version that bores, the version that panics, and the step between."
+     "transfer_check": "Take one skill you coach and mark its flow channel: the version that bores, the version that panics, and the step between.",
+     "bands": {
+      "K–2": "Say why a game is fun when it is not too easy and not too hard.",
+      "3–5": "Find the point in a game where it stops being boring and starts being frustrating, and mark the middle.",
+      "6–8": "Take one skill and mark its flow channel — the version that bores and the version that panics, with a checker.",
+      "9–10": "Take one skill you coach and mark its flow channel: the version that bores, the version that panics, and the one in between.",
+      "11–12": "Take a real skill you teach, map its flow channel with data from learners, and tune one activity to sit inside it."
+     }
     },
     {
      "theme": "Points that mean something",
      "description": "XP tied to demonstrated blocks, never attendance — if a point can be earned without competence, it will be, and the currency dies.",
-     "transfer_check": "Design the point rule for one unit so every point maps to a passed transfer check, and show how a hollow point would be impossible."
+     "transfer_check": "Design the point rule for one unit so every point maps to a passed transfer check, and show how a hollow point would be impossible.",
+     "bands": {
+      "K–2": "Say why a point should only be given for something you actually did well.",
+      "3–5": "Design a rule so points can only be earned by doing the real skill, not just showing up.",
+      "6–8": "Design the point rule for one unit so every point maps to a passed check, with a checker.",
+      "9–10": "Design the point rule for one unit so every point maps to a passed transfer check, never to attendance.",
+      "11–12": "Design and defend the point economy for a real unit so every point traces to a witnessed transfer check."
+     }
     },
     {
      "theme": "The quest is a project with a story",
      "description": "Wrapping a real build in a narrative worth finishing — the quest's goal, obstacle, and artifact the learner keeps.",
-     "transfer_check": "Rewrite one classroom build as a quest card — goal, obstacle, artifact — and run it past a learner for the 'would you start it' test."
+     "transfer_check": "Rewrite one classroom build as a quest card — goal, obstacle, artifact — and run it past a learner for the 'would you start it' test.",
+     "bands": {
+      "K–2": "Turn a class project into a story with a goal and a prize at the end.",
+      "3–5": "Rewrite one classroom task as a quest with a goal, a problem, and a thing you keep.",
+      "6–8": "Rewrite one classroom build as a quest card — goal, obstacle, artifact, with a checker.",
+      "9–10": "Rewrite one classroom build as a quest card — goal, obstacle, artifact — and run it with a small group.",
+      "11–12": "Rewrite and run a real classroom build as a quest with a class, and report whether the story changed engagement."
+     }
     },
     {
      "theme": "Guilds: the crew as the unit",
      "description": "Small mixed crews with rotating roles — lead, safety, scribe, quartermaster — because the trades work in crews and so should the class.",
-     "transfer_check": "Form (or design) a four-person guild with rotating roles for a two-week quest, and write the rotation that gives everyone every seat."
+     "transfer_check": "Form (or design) a four-person guild with rotating roles for a two-week quest, and write the rotation that gives everyone every seat.",
+     "bands": {
+      "K–2": "Work in a small team with a friend where each person has a different job.",
+      "3–5": "Form a four-person team with rotating jobs — lead, safety, note-taker, supply — for one project.",
+      "6–8": "Design a four-person guild with rotating roles for a two-week quest, with a checker.",
+      "9–10": "Form (or design) a four-person guild with rotating roles for a two-week quest, and say why crews model real trade work.",
+      "11–12": "Form and run real four-person guilds with rotating roles for a two-week unit, and report how the rotation changed outcomes."
+     }
     },
     {
      "theme": "Leaderboards that don't humiliate",
      "description": "Ranking crews not children, celebrating gains not totals — the design line between motivation and public shame.",
-     "transfer_check": "Design the unit's progress display so a struggling learner is never bottom of a public list, and explain what is celebrated instead."
+     "transfer_check": "Design the unit's progress display so a struggling learner is never bottom of a public list, and explain what is celebrated instead.",
+     "bands": {
+      "K–2": "Say a way to celebrate improvement without making the last person feel bad.",
+      "3–5": "Design a progress board that shows teams getting better, not just who is winning.",
+      "6–8": "Design the unit's progress display so a struggling learner is never bottom of a public list, with a checker.",
+      "9–10": "Design the unit's progress display so a struggling learner is never bottom of a public list, celebrating gains not totals.",
+      "11–12": "Design and use a real progress display for a class that celebrates gains without ranking children, and check nobody felt shamed."
+     }
     },
     {
      "theme": "Badges are credentials in costume",
      "description": "Mapping the game's badges one-to-one onto the credential ladder — Explorer to Lead — so the fun layer and the real ledger agree.",
-     "transfer_check": "Map a unit's badge set onto real credential levels so earning the badge and earning the level are the same event, shown on one page."
+     "transfer_check": "Map a unit's badge set onto real credential levels so earning the badge and earning the level are the same event, shown on one page.",
+     "bands": {
+      "K–2": "Say why earning a badge in a game should mean you can really do the thing.",
+      "3–5": "Match three game badges to three real skill levels so the fun and the real skill agree.",
+      "6–8": "Map a unit's badges onto real credential levels so earning one means earning the other, with a checker.",
+      "9–10": "Map a unit's badge set onto real credential levels so earning the badge and earning the credential are the same act.",
+      "11–12": "Map a real unit's badges onto the credential ladder and verify no badge can be earned without the matching credential."
+     }
     },
     {
      "theme": "The boss fight is a transfer check",
      "description": "The unit's climax as its assessment — a timed, witnessed, real-material challenge the whole quest trained for.",
-     "transfer_check": "Design a boss-fight assessment for one unit that is exactly its transfer check staged with stakes, and name the witness role."
+     "transfer_check": "Design a boss-fight assessment for one unit that is exactly its transfer check staged with stakes, and name the witness role.",
+     "bands": {
+      "K–2": "Design a final challenge for a game that proves you learned the whole thing.",
+      "3–5": "Design a final timed challenge for a unit that uses everything you practised.",
+      "6–8": "Design a boss-fight assessment for one unit that is exactly its transfer check, with a checker.",
+      "9–10": "Design a boss-fight assessment for one unit that is exactly its transfer check scaled up — timed, witnessed, real material.",
+      "11–12": "Design and run a real boss-fight assessment that is the unit's own transfer check, witnessed and recorded."
+     }
     },
     {
      "theme": "Failure costs a retry, not a record",
      "description": "Lives, respawns and the retry loop — failure priced in time and another attempt, never carried as a permanent mark.",
-     "transfer_check": "Write the retry rule for one boss fight: what a failed attempt costs, what it never costs, and when the next attempt opens."
+     "transfer_check": "Write the retry rule for one boss fight: what a failed attempt costs, what it never costs, and when the next attempt opens.",
+     "bands": {
+      "K–2": "Say why losing a level in a game should let you try again, not end the game.",
+      "3–5": "Write a rule for what a failed attempt at a challenge costs — just time, not a permanent mark.",
+      "6–8": "Write the retry rule for one boss fight: what a failed attempt costs, with a checker.",
+      "9–10": "Write the retry rule for one boss fight: what a failed attempt costs, what it never becomes (a permanent record).",
+      "11–12": "Write and apply the retry rule for a real assessment, and confirm no failed attempt is ever recorded as a permanent mark."
+     }
     },
     {
      "theme": "The economy stays honest",
      "description": "Auditing the game — point inflation, badge farming, the shortcut a clever twelve-year-old will find in week two.",
-     "transfer_check": "Red-team your own game design: find two exploits a clever learner would find, and patch the rules to close both."
+     "transfer_check": "Red-team your own game design: find two exploits a clever learner would find, and patch the rules to close both.",
+     "bands": {
+      "K–2": "Find a way someone could cheat a game's point system, and say how to stop it.",
+      "3–5": "Find one shortcut a clever classmate could use to get points without doing the real work.",
+      "6–8": "Red-team your own game design: find two exploits a learner would find, with a checker.",
+      "9–10": "Red-team your own game design: find two exploits a clever learner would find, and close both before it runs.",
+      "11–12": "Red-team and patch a real game design, finding and closing the exploits a real learner actually tried."
+     }
     },
     {
      "theme": "The game ends, the craft continues",
      "description": "Graduating from the game layer — the moment the artifact, the crew and the credential matter more than the points, by design.",
-     "transfer_check": "Interview a learner finishing a gamified unit and record, in their words, what they would keep doing with no points at all."
+     "transfer_check": "Interview a learner finishing a gamified unit and record, in their words, what they would keep doing with no points at all.",
+     "bands": {
+      "K–2": "Say what matters more once you finish a game: the points, or the thing you made.",
+      "3–5": "Ask a friend finishing a project what they are proudest of — the badge or the build.",
+      "6–8": "Interview a learner finishing a gamified unit and record what mattered most to them, with a checker.",
+      "9–10": "Interview a learner finishing a gamified unit and record, in their words, what the credential meant beyond the points.",
+      "11–12": "Interview learners finishing a real gamified course and report, honestly, whether the craft outlasted the game layer."
+     }
     }
    ]
   },
@@ -124,52 +264,122 @@
     {
      "theme": "What a union is, in one class period",
      "description": "The union explained straight — the hall, the local, the apprenticeship, the dispatch — as civic institutions a student can walk into.",
-     "transfer_check": "Teach a ten-minute plain-language explainer of hall, local, apprenticeship and dispatch, and take three student questions live."
+     "transfer_check": "Teach a ten-minute plain-language explainer of hall, local, apprenticeship and dispatch, and take three student questions live.",
+     "bands": {
+      "K–2": "Say what it means when workers join together to ask for something fair.",
+      "3–5": "Explain in your own words what a union hall is, using a picture or a story.",
+      "6–8": "Teach a ten-minute plain-language explainer of hall, local and apprenticeship, with a checker.",
+      "9–10": "Teach a ten-minute plain-language explainer of hall, local, apprenticeship and dispatch to a real or role-played group.",
+      "11–12": "Teach and refine a plain-language explainer of union institutions for a real class, checked against a real hall's own materials."
+     }
     },
     {
      "theme": "Finding the current local",
      "description": "Why this curriculum never hard-codes local numbers — locals merge and renumber — and how the regional council is always the front door.",
-     "transfer_check": "For one trade in your region, contact or look up the building-trades or labor council listing and record the current local's name and hall."
+     "transfer_check": "For one trade in your region, contact or look up the building-trades or labor council listing and record the current local's name and hall.",
+     "bands": {
+      "K–2": "Say why a phone number written down today might not work next year.",
+      "3–5": "Find out why groups sometimes change their name or number over time.",
+      "6–8": "For one trade in your region, look up the current building-trades council, with a checker.",
+      "9–10": "For one trade in your region, contact or look up the building-trades or labor council that is always the current front door.",
+      "11–12": "For a real trade in your region, verify the current council contact and document why it, not a fixed number, is the stable route."
+     }
     },
     {
      "theme": "The mentor in the room",
      "description": "What a working tradesperson brings to a classroom bench — form, war stories, the standard of done — and how to make their hour count.",
-     "transfer_check": "Host (or fully plan) one mentor bench hour: the skill they demonstrate, the three questions students ask, the thank-you that brings them back."
+     "transfer_check": "Host (or fully plan) one mentor bench hour: the skill they demonstrate, the three questions students ask, the thank-you that brings them back.",
+     "bands": {
+      "K–2": "Ask a visiting adult to show you one thing they are good at.",
+      "3–5": "Plan one thing you would ask a visiting worker to show your class.",
+      "6–8": "Plan one mentor bench hour: the skill they demonstrate and the questions ready, with a checker.",
+      "9–10": "Host (or fully plan) one mentor bench hour: the skill they demonstrate, the three questions ready, and what students do with the hour.",
+      "11–12": "Host a real mentor bench hour, plan its content with the mentor, and report what students actually took from it."
+     }
     },
     {
      "theme": "The hall visit",
      "description": "Taking a class to a training center — what to watch on the apprentices' floor, and the etiquette of a working hall.",
-     "transfer_check": "Plan a hall or training-center visit end to end: the request through the council, the floor rules briefed, and the one thing each student must observe."
+     "transfer_check": "Plan a hall or training-center visit end to end: the request through the council, the floor rules briefed, and the one thing each student must observe.",
+     "bands": {
+      "K–2": "Plan a class trip to see people working, and one rule for behaving well as a guest.",
+      "3–5": "Plan what your class would watch and ask about on a visit to a training center.",
+      "6–8": "Plan a hall or training-center visit end to end: the request through the council, with a checker.",
+      "9–10": "Plan a hall or training-center visit end to end: the request through the council, what to watch, the etiquette of a working hall.",
+      "11–12": "Plan and, where possible, run a real hall visit end to end, and report what the etiquette of a working hall actually required."
+     }
     },
     {
      "theme": "Apprenticeship: earn while you learn",
      "description": "The apprenticeship pathway as it really works — application windows, aptitude tests, the wage ladder, the journey card at the end.",
-     "transfer_check": "Chart the real apprenticeship pathway for one trade in your region — application to journey card — from the program's own published materials."
+     "transfer_check": "Chart the real apprenticeship pathway for one trade in your region — application to journey card — from the program's own published materials.",
+     "bands": {
+      "K–2": "Say what it means to be paid while you are still learning a job.",
+      "3–5": "Find out what an apprentice does and how they get paid while training.",
+      "6–8": "Chart the real apprenticeship pathway for one trade in your region: application, wage steps, with a checker.",
+      "9–10": "Chart the real apprenticeship pathway for one trade in your region — application windows, aptitude tests, the wage ladder, the journey card.",
+      "11–12": "Chart and verify a real apprenticeship pathway for one trade, cross-checked against the council's own published steps."
+     }
     },
     {
      "theme": "111 doors: reading the network roster",
      "description": "Using the Trades Network's regional roster — 37 trade families across three regions — to match a student's bench evidence to trades worth visiting.",
-     "transfer_check": "Take one student's bench record and shortlist three trade families from the network roster with the evidence line that suggests each."
+     "transfer_check": "Take one student's bench record and shortlist three trade families from the network roster with the evidence line that suggests each.",
+     "bands": {
+      "K–2": "Match one thing you like doing to a job that uses that skill.",
+      "3–5": "Sort three trade families in the network roster and pick the one that interests you most.",
+      "6–8": "Take one student's bench record and shortlist three trade families from the network, with a checker.",
+      "9–10": "Take one student's bench record and shortlist three trade families from the network's regional roster that fit their evidence.",
+      "11–12": "Take a real student's bench record, shortlist real trade families from the network roster, and defend the match with evidence."
+     }
     },
     {
      "theme": "What the simulation is and is not",
      "description": "The honesty stance, verbatim and non-negotiable — a simulator teaches control discipline; it is never equipment certification, union credit, or standing.",
-     "transfer_check": "Write the one-paragraph honesty notice for a classroom simulation station, and have a trade mentor confirm it claims nothing false."
+     "transfer_check": "Write the one-paragraph honesty notice for a classroom simulation station, and have a trade mentor confirm it claims nothing false.",
+     "bands": {
+      "K–2": "Say why practising something pretend is not the same as doing the real job.",
+      "3–5": "Write one sentence that says a classroom practice is not a real certificate.",
+      "6–8": "Write the one-paragraph honesty notice for a classroom simulation station, with a checker.",
+      "9–10": "Write the one-paragraph honesty notice for a classroom simulation station, and have a mentor confirm it is exactly right.",
+      "11–12": "Write, post and have a real mentor verify the honesty notice for a real simulation station, verbatim and non-negotiable."
+     }
     },
     {
      "theme": "The employer and the hall together",
      "description": "How signatory contractors, the hall and the school triangle — who provides material, who provides witnesses, who provides the first job.",
-     "transfer_check": "Map the triangle for one local project: the signatory contractor, the hall, and the school, with what each contributes named."
+     "transfer_check": "Map the triangle for one local project: the signatory contractor, the hall, and the school, with what each contributes named.",
+     "bands": {
+      "K–2": "Say who might give the tools and who might give the teacher on a real building job.",
+      "3–5": "Draw a triangle of the school, a worker's hall, and a company, and say what each gives.",
+      "6–8": "Map the triangle for one local project: contractor, hall and school, with a checker.",
+      "9–10": "Map the triangle for one local project: the signatory contractor, the hall, and the school — who provides what.",
+      "11–12": "Map a real local project's triangle of contractor, hall and school, verified with someone from each side."
+     }
     },
     {
      "theme": "Two coasts, one model",
      "description": "What transfers between the Gulf and the Bay — the crafts and the model — and what stays local: the sites, the councils, the locals.",
-     "transfer_check": "Compare one trade family's entry across two network regions and write what a student moving between them keeps and must redo."
+     "transfer_check": "Compare one trade family's entry across two network regions and write what a student moving between them keeps and must redo.",
+     "bands": {
+      "K–2": "Say one thing that is the same and one thing that is different between two faraway towns.",
+      "3–5": "Compare one trade in two different network regions and say what is the same and what is local.",
+      "6–8": "Compare one trade family's entry across two network regions, with a checker.",
+      "9–10": "Compare one trade family's entry across two network regions and write what a student would find the same and what differs.",
+      "11–12": "Compare a real trade family across two real network regions and present what transfers and what stays strictly local."
+     }
     },
     {
      "theme": "The pathway is a person's",
      "description": "Consent and ownership at the door — a student's bench record travels to a hall only when the student sends it.",
-     "transfer_check": "Write the consent sentence a student reads before their record goes to any hall, and the exact steps that happen only after they agree."
+     "transfer_check": "Write the consent sentence a student reads before their record goes to any hall, and the exact steps that happen only after they agree.",
+     "bands": {
+      "K–2": "Say why nobody should share your school work with someone else without asking you first.",
+      "3–5": "Write one sentence saying a student's own record should only go somewhere with their OK.",
+      "6–8": "Write the consent sentence a student reads before their record goes to any hall, with a checker.",
+      "9–10": "Write the consent sentence a student reads before their record goes to any hall, naming who decides and when.",
+      "11–12": "Write and test the consent language a real student would read before their record ever reaches a hall, checked for clarity."
+     }
     }
    ]
   },
@@ -181,52 +391,122 @@
     {
      "theme": "The studio's one law",
      "description": "Safety and honesty fused — nothing energized, suspended or moving is practiced live in a classroom studio, and no sim claims to certify.",
-     "transfer_check": "Write the studio's one-page law — what may be simulated, what must never be live, what no sim claims — and post it where the stations stand."
+     "transfer_check": "Write the studio's one-page law — what may be simulated, what must never be live, what no sim claims — and post it where the stations stand.",
+     "bands": {
+      "K–2": "Say the one rule that keeps a pretend activity safe: nothing real and dangerous happens.",
+      "3–5": "Write the one rule that a classroom practice must never do something a real dangerous job would do.",
+      "6–8": "Write the studio's one-page law: what may be simulated, what must never be live, with a checker.",
+      "9–10": "Write the studio's one-page law — what may be simulated, what must never be live in a classroom, and what a sim never claims.",
+      "11–12": "Write and post the studio's one-page law for a real studio, and check every simulation station against it."
+     }
     },
     {
      "theme": "Choosing what to simulate",
      "description": "The selection test — simulate what is dangerous, expensive or rare in real life, and practice live what is safe, cheap and common.",
-     "transfer_check": "Sort ten trade skills into simulate versus practice-live using the dangerous/expensive/rare test, defending the two hardest calls."
+     "transfer_check": "Sort ten trade skills into simulate versus practice-live using the dangerous/expensive/rare test, defending the two hardest calls.",
+     "bands": {
+      "K–2": "Say why you would only pretend to do something that is too dangerous to really do.",
+      "3–5": "Sort five activities into safe-to-do-for-real and only-safe-to-pretend.",
+      "6–8": "Sort ten trade skills into simulate versus practice-live using danger and cost, with a checker.",
+      "9–10": "Sort ten trade skills into simulate versus practice-live using the dangerous/expensive/rare test.",
+      "11–12": "Sort a real trade's skill list into simulate versus practice-live, and defend the line to a mentor who does the job."
+     }
     },
     {
      "theme": "Cardboard first",
      "description": "Low-fidelity simulation as the honest start — the crane from string and weight, the circuit on paper — fidelity earned, never assumed.",
-     "transfer_check": "Build a sub-$20 tabletop simulation of one control discipline (swing, sequence, pressure) and show a partner what it truly teaches."
+     "transfer_check": "Build a sub-$20 tabletop simulation of one control discipline (swing, sequence, pressure) and show a partner what it truly teaches.",
+     "bands": {
+      "K–2": "Build a pretend crane or machine out of string and paper and show how it moves.",
+      "3–5": "Build a simple cheap model of a real machine using household things.",
+      "6–8": "Build a sub-$20 tabletop simulation of one control discipline, with a checker.",
+      "9–10": "Build a sub-$20 tabletop simulation of one control discipline (swing, sequence, signal) and say what fidelity it earns.",
+      "11–12": "Build and test a real low-cost tabletop simulation, and defend why its fidelity is honestly earned, not assumed."
+     }
     },
     {
      "theme": "The regional scenario",
      "description": "Localizing every sim to the region's real sites — the port berth, the pump station, the transit yard — so the classroom faces its own city.",
-     "transfer_check": "Adapt one network simulation scenario to a real site in your own region, changing only the local facts and keeping the discipline."
+     "transfer_check": "Adapt one network simulation scenario to a real site in your own region, changing only the local facts and keeping the discipline.",
+     "bands": {
+      "K–2": "Change a pretend story so it is about a real place near you.",
+      "3–5": "Rewrite a practice scenario so it uses a real site from your own town.",
+      "6–8": "Adapt one network simulation scenario to a real site in your own region, with a checker.",
+      "9–10": "Adapt one network simulation scenario to a real site in your own region, changing what the site actually requires.",
+      "11–12": "Adapt and pilot a real network scenario for a real local site, verified against what that site's own conditions demand."
+     }
     },
     {
      "theme": "The control discipline rubric",
      "description": "Scoring a sim run the way the trades do — smoothness, order, calls made aloud — the rubrics the SmartCiti.X simulators share.",
-     "transfer_check": "Score two learners on the same sim with a three-line control-discipline rubric and defend the difference with observed moments."
+     "transfer_check": "Score two learners on the same sim with a three-line control-discipline rubric and defend the difference with observed moments.",
+     "bands": {
+      "K–2": "Watch two friends do a task and say which one did it more smoothly.",
+      "3–5": "Score two classmates on the same task using three simple rules — smooth, in order, called out loud.",
+      "6–8": "Score two learners on the same sim with a three-line control-discipline rubric, with a checker.",
+      "9–10": "Score two learners on the same sim with a three-line control-discipline rubric: smoothness, order, calls made aloud.",
+      "11–12": "Score real learners on a real sim run with the shared control-discipline rubric, and check your scores against a mentor's."
+     }
     },
     {
      "theme": "Failure drills",
      "description": "Simulating the day it goes wrong — the drifted gauge, the failed lift, the flagged line — because judgment is trained on bad days.",
-     "transfer_check": "Insert one realistic failure into a sim scenario and record how a learner detects, calls and recovers it, against the drill card."
+     "transfer_check": "Insert one realistic failure into a sim scenario and record how a learner detects, calls and recovers it, against the drill card.",
+     "bands": {
+      "K–2": "Practise what to do if something goes wrong during a pretend activity.",
+      "3–5": "Add one thing that goes wrong on purpose to a practice scenario, and see what happens.",
+      "6–8": "Insert one realistic failure into a sim scenario and record what a learner does, with a checker.",
+      "9–10": "Insert one realistic failure into a sim scenario and record how a learner detects and responds to it.",
+      "11–12": "Insert and run a real failure drill in a real sim, and record a learner's detection and response for review."
+     }
     },
     {
      "theme": "The debrief is half the sim",
      "description": "The after-action habit — what happened, what was called, what changes next run — in the crew's own words within five minutes.",
-     "transfer_check": "Run a five-minute structured debrief after a sim and produce the crew's own three-line change list for the next run."
+     "transfer_check": "Run a five-minute structured debrief after a sim and produce the crew's own three-line change list for the next run.",
+     "bands": {
+      "K–2": "After an activity, say one thing that happened and one thing you would do differently.",
+      "3–5": "Talk with your group right after an activity about what happened and what to change next time.",
+      "6–8": "Run a five-minute structured debrief after a sim, with a checker.",
+      "9–10": "Run a five-minute structured debrief after a sim and produce the crew's own three-line summary of what happened and what changes.",
+      "11–12": "Run and record a real five-minute debrief after a sim run, in the crew's own words, within five minutes of finishing."
+     }
     },
     {
      "theme": "Sim to bench to site",
      "description": "The graduation chain — simulation proves discipline, the bench proves hands, the supervised site visit proves the world — in that order.",
-     "transfer_check": "Chart one skill's chain from sim through bench to supervised observation, naming the gate that opens each stage."
+     "transfer_check": "Chart one skill's chain from sim through bench to supervised observation, naming the gate that opens each stage.",
+     "bands": {
+      "K–2": "Say the order you would learn something: watch, practise pretend, then try for real with help.",
+      "3–5": "Put in order three steps for learning a skill: simulate, practise at the bench, then watch it done for real.",
+      "6–8": "Chart one skill's chain from sim through bench to supervised observation, with a checker.",
+      "9–10": "Chart one skill's chain from sim through bench to supervised observation, naming what each stage proves.",
+      "11–12": "Chart a real skill's full chain from sim to bench to supervised site observation, verified with a mentor at each stage."
+     }
     },
     {
      "theme": "The studio's logbook",
      "description": "Recording runs like a working site — who ran, what scenario, what score, what failed — the studio's own five honest numbers.",
-     "transfer_check": "Design the studio logbook page and keep it faithfully for one full session, then read one improvement out of your own data."
+     "transfer_check": "Design the studio logbook page and keep it faithfully for one full session, then read one improvement out of your own data.",
+     "bands": {
+      "K–2": "Keep a simple list of what you did each time you practised something.",
+      "3–5": "Design a page that records who did an activity, what happened, and the result.",
+      "6–8": "Design the studio logbook page and keep it for one session, with a checker.",
+      "9–10": "Design the studio logbook page and keep it faithfully for one full session, then check it against what actually happened.",
+      "11–12": "Design and keep a real studio logbook across a real unit, and audit it for the five honest numbers a working site would keep."
+     }
     },
     {
      "theme": "Machines in the studio",
      "description": "Where agents and robots join honestly — a tutor that watches for the missed call, a sim that adapts its difficulty to keep flow — under the consent-first data rules.",
-     "transfer_check": "Specify one adaptive behavior for a sim station (what it watches, how it adjusts) and the consent line covering what it records."
+     "transfer_check": "Specify one adaptive behavior for a sim station (what it watches, how it adjusts) and the consent line covering what it records.",
+     "bands": {
+      "K–2": "Say one way a computer program could notice when you make a mistake and help you fix it.",
+      "3–5": "Design one way a simulation could get harder or easier depending on how well you are doing.",
+      "6–8": "Specify one adaptive behavior for a sim station: what it watches, how it adjusts, with a checker.",
+      "9–10": "Specify one adaptive behavior for a sim station (what it watches, how it adjusts) to keep a learner in flow.",
+      "11–12": "Specify and pilot one real adaptive behavior for a sim station, and verify it kept a real learner in the flow channel."
+     }
     }
    ]
   },
@@ -238,52 +518,122 @@
     {
      "theme": "The case to the board",
      "description": "Making the district case in the district's own terms — engagement, completion, pathways to wages — with the evidence lines that carry a board vote.",
-     "transfer_check": "Draft the one-page board memo proposing a flipped trades program, with three evidence lines and the specific vote requested."
+     "transfer_check": "Draft the one-page board memo proposing a flipped trades program, with three evidence lines and the specific vote requested.",
+     "bands": {
+      "K–2": "Practise explaining to a grown-up why a new class idea would be good for students.",
+      "3–5": "Write three reasons a school board should agree to try a new trades class.",
+      "6–8": "Draft a one-page board memo proposing a flipped trades program, with a checker.",
+      "9–10": "Draft the one-page board memo proposing a flipped trades program, with three evidence lines that can survive challenge.",
+      "11–12": "Draft and present a real board memo for a flipped trades program, with evidence lines that held up under real questioning."
+     }
     },
     {
      "theme": "Credit where credit is due",
      "description": "Getting bench hours onto the transcript — CTE credit, elective credit, the credential ladder mapped to the district's own units.",
-     "transfer_check": "Map one trades course onto your district's actual credit structure, naming the credit type and the policy that permits it."
+     "transfer_check": "Map one trades course onto your district's actual credit structure, naming the credit type and the policy that permits it.",
+     "bands": {
+      "K–2": "Say why the work you do in a trades class should count for something on your report card.",
+      "3–5": "Match one trades class activity to a school subject it could count as credit for.",
+      "6–8": "Map one trades course onto your district's actual credit structure, with a checker.",
+      "9–10": "Map one trades course onto your district's actual credit structure, naming the credit type and the credential ladder.",
+      "11–12": "Map a real trades course onto a real district's credit structure, verified against the district's own course catalogue."
+     }
     },
     {
      "theme": "The master schedule fight",
      "description": "Where the bench hours live — block scheduling, the double period, the after-school hall hour — and what each choice costs.",
-     "transfer_check": "Place a trades course into a real bell schedule from your district and name the two conflicts it creates and your resolution of each."
+     "transfer_check": "Place a trades course into a real bell schedule from your district and name the two conflicts it creates and your resolution of each.",
+     "bands": {
+      "K–2": "Say what time of day would work best for a hands-on class, and why.",
+      "3–5": "Find a real school schedule and say where a hands-on class could fit.",
+      "6–8": "Place a trades course into a real bell schedule from your district, with a checker.",
+      "9–10": "Place a trades course into a real bell schedule from your district and name the trade-off each placement costs.",
+      "11–12": "Place and defend a trades course inside a real district's bell schedule, with the real trade-offs it would cost that district."
+     }
     },
     {
      "theme": "The classroom becomes a studio",
      "description": "Facilities honestly assessed — power, ventilation, storage, sight lines — and the shop a school already has hiding in it.",
-     "transfer_check": "Survey one real school space for studio conversion and produce the gap list: what it has, what it needs, what it can never host."
+     "transfer_check": "Survey one real school space for studio conversion and produce the gap list: what it has, what it needs, what it can never host.",
+     "bands": {
+      "K–2": "Look at a room and say what it would need to become a workshop: power, space, storage.",
+      "3–5": "Check a real classroom for power outlets, air flow and storage, and say what is missing.",
+      "6–8": "Survey one real school space for studio conversion and produce the gap list, with a checker.",
+      "9–10": "Survey one real school space for studio conversion and produce the gap list: what exists, what is missing.",
+      "11–12": "Survey and cost a real school space for studio conversion, with a verified gap list a district could act on."
+     }
     },
     {
      "theme": "Insurance, liability and the permission slip",
      "description": "The risk paperwork done right — district counsel, the mentor's clearances, the studio law attached to the consent form.",
-     "transfer_check": "Assemble the permission packet for a sim studio unit — activities, supervision, the honesty notice — ready for a counsel read."
+     "transfer_check": "Assemble the permission packet for a sim studio unit — activities, supervision, the honesty notice — ready for a counsel read.",
+     "bands": {
+      "K–2": "Say why a grown-up must sign a form before you can do something a little risky.",
+      "3–5": "Say what a permission slip for a hands-on activity should tell a parent.",
+      "6–8": "Assemble the permission packet for a sim studio unit: activities, supervision, with a checker.",
+      "9–10": "Assemble the permission packet for a sim studio unit — activities, supervision, mentor clearances, the studio law attached.",
+      "11–12": "Assemble a real permission packet for a real studio unit, checked by district counsel for completeness."
+     }
     },
     {
      "theme": "Finding the teachers",
      "description": "Staffing the model — the CTE teacher, the crossover academic, the tradesperson-in-residence — and the certification path each rides.",
-     "transfer_check": "Identify the three staffing routes your state actually permits for trades instruction and match a real course to the one that fits."
+     "transfer_check": "Identify the three staffing routes your state actually permits for trades instruction and match a real course to the one that fits.",
+     "bands": {
+      "K–2": "Say what kind of grown-up could teach a hands-on class: someone who knows the craft, or a regular teacher who learns it.",
+      "3–5": "List two kinds of adults who could teach a trades class and what each would need to learn.",
+      "6–8": "Identify the staffing routes your state actually permits for trades instruction, with a checker.",
+      "9–10": "Identify the three staffing routes your state actually permits for trades instruction and the certification path each requires.",
+      "11–12": "Identify and verify a real state's staffing routes for trades instruction against its actual certification rules."
+     }
     },
     {
      "theme": "The district and the council sign",
      "description": "The formal compact — district and regional labor council, mentor pipelines, hall visits, the annual review both sides attend.",
-     "transfer_check": "Draft the two-page district-council compact with the five commitments each side makes and the annual review clause."
+     "transfer_check": "Draft the two-page district-council compact with the five commitments each side makes and the annual review clause.",
+     "bands": {
+      "K–2": "Say what two groups might promise each other to work together well.",
+      "3–5": "Write two things a school and a workers' group could each promise the other.",
+      "6–8": "Draft the two-page district-council compact with commitments each side keeps, with a checker.",
+      "9–10": "Draft the two-page district-council compact with the five commitments each side keeps: mentors, visits, an annual review.",
+      "11–12": "Draft a real district-council compact with real commitments, reviewed against what each side could actually deliver."
+     }
     },
     {
      "theme": "Equity is a roster question",
      "description": "Who is in the room — recruiting the students the trades have historically missed, and reading the roster honestly each term.",
-     "transfer_check": "Compare a trades course roster (real or supplied) to the school's population shape, name the gap, and write the outreach step for next term."
+     "transfer_check": "Compare a trades course roster (real or supplied) to the school's population shape, name the gap, and write the outreach step for next term.",
+     "bands": {
+      "K–2": "Say why it matters that everyone gets a fair chance to try a hands-on class.",
+      "3–5": "Look at who is in a class and say whether it includes students of every kind.",
+      "6–8": "Compare a trades course roster to the school's population, with a checker.",
+      "9–10": "Compare a trades course roster (real or supplied) to the school's population share and note the gaps honestly.",
+      "11–12": "Compare a real trades course roster to a real school's population share, and report the gaps without softening them."
+     }
     },
     {
      "theme": "Measuring what matters",
      "description": "The program's five honest numbers — enrolled, benched, checked, credentialed, placed-into-pathway — reported to the board unvarnished.",
-     "transfer_check": "Build the five-number report card for one term of a trades program and present it, bad number included, in a three-minute board brief."
+     "transfer_check": "Build the five-number report card for one term of a trades program and present it, bad number included, in a three-minute board brief.",
+     "bands": {
+      "K–2": "Say five numbers a school could count to know if a class was working: who came, who finished, who got better.",
+      "3–5": "Design a simple five-number report card for a class program.",
+      "6–8": "Build the five-number report card for one term of a trades program, with a checker.",
+      "9–10": "Build the five-number report card for one term of a trades program: enrolled, benched, checked, credentialed, placed.",
+      "11–12": "Build and present a real five-number report card for a real term, unvarnished, to the people who would act on it."
+     }
     },
     {
      "theme": "From one school to the district, to the network",
      "description": "Scaling the compact — the second school copies the playbook, the district joins the regional network, the network trades lessons across coasts.",
-     "transfer_check": "Write the adoption memo that takes your pilot to a second named school, listing what transfers verbatim and what the new school must localize."
+     "transfer_check": "Write the adoption memo that takes your pilot to a second named school, listing what transfers verbatim and what the new school must localize.",
+     "bands": {
+      "K–2": "Say what you would tell a friend at another school if your class idea worked well.",
+      "3–5": "Write a short note telling another school how your class idea worked and how to copy it.",
+      "6–8": "Write the adoption memo that takes your pilot to a second named school, with a checker.",
+      "9–10": "Write the adoption memo that takes your pilot to a second named school, listing what transfers and what is local.",
+      "11–12": "Write and deliver a real adoption memo to a real second school, tracking what transferred and what needed rework."
+     }
     }
    ]
   }
