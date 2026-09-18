@@ -1,0 +1,267 @@
+{
+  "pack": "Trade School",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema is out of scope: Trade School's 47 themes each name exactly one row at the single adult-route grade \"11–12 · adult\", not a five-band ladder, so this fills description only through the unbanded mechanism (v0.96.0, prompt 3 continuation, the second pack reached after apply_promotions()'s grade filter was extended from BAND_LEVEL to GRADE_LEVEL in v0.95.0). track/code/level stay as they were (LB-<n> codes, level derived structurally by light_fill()).",
+  "tracks": [
+    {
+      "prefix": "CORE",
+      "name": "Trade Foundations & Capstone",
+      "themes": [
+        {
+          "theme": "Trade Foundations",
+          "description": "Read a schematic you have not seen before and produce a complete bill of materials with units."
+        },
+        {
+          "theme": "Safety, Clearance & Fitness for Duty",
+          "description": "Perform a full lock-out on an unfamiliar rig and pass the site-clearance checklist."
+        },
+        {
+          "theme": "Trade Capstone & Placement",
+          "description": "Get a capstone accepted by an employer panel and submit the validator packet."
+        }
+      ]
+    },
+    {
+      "prefix": "ELEC",
+      "name": "Electrical",
+      "themes": [
+        {
+          "theme": "Circuits & Code",
+          "description": "Wire and test a branch circuit you have not built before so it meets code."
+        },
+        {
+          "theme": "Motors & Controls",
+          "description": "Diagnose a motor-control fault on equipment you have not seen before."
+        },
+        {
+          "theme": "Industrial Wiring & PLC I/O",
+          "description": "Terminate and verify every point on a PLC I/O panel."
+        },
+        {
+          "theme": "Electrical Practicum",
+          "description": "Earn an employer sign-off and pass the algebra qualifier for the electrical trade."
+        }
+      ]
+    },
+    {
+      "prefix": "WELD",
+      "name": "Welding",
+      "themes": [
+        {
+          "theme": "SMAW Fundamentals",
+          "description": "Make a fillet weld on an unfamiliar joint that passes visual inspection."
+        },
+        {
+          "theme": "GMAW / FCAW",
+          "description": "Make a multi-pass weld that meets the written procedure."
+        },
+        {
+          "theme": "Blueprint, Layout & Fabrication",
+          "description": "Fabricate an assembly straight from a drawing you have not built before."
+        },
+        {
+          "theme": "Welding Practicum",
+          "description": "Pass a full set of weld tests run to D1.1 procedures for the trade."
+        }
+      ]
+    },
+    {
+      "prefix": "PIPE",
+      "name": "Pipefitting",
+      "themes": [
+        {
+          "theme": "Pipe Systems & Math",
+          "description": "Compute and cut a rolling offset for a pipe run you have not seen before."
+        },
+        {
+          "theme": "Joining & Testing",
+          "description": "Assemble and pressure-test a spool you have not built before."
+        },
+        {
+          "theme": "Isometrics & Process Systems",
+          "description": "Build a run from an unfamiliar isometric and trace its process."
+        },
+        {
+          "theme": "Pipefitting Practicum",
+          "description": "Earn an employer sign-off for the pipefitting trade."
+        }
+      ]
+    },
+    {
+      "prefix": "MECH",
+      "name": "Mechatronics & Maintenance",
+      "themes": [
+        {
+          "theme": "Mechanical Systems",
+          "description": "Align a motor-pump set you have not seen before to its tolerance."
+        },
+        {
+          "theme": "Fluid Power",
+          "description": "Diagnose a fluid-power fault on a system you have not seen before."
+        },
+        {
+          "theme": "PLC & Automation",
+          "description": "Program and verify an automated cell you have not built before."
+        },
+        {
+          "theme": "Mechatronics Practicum",
+          "description": "Earn an employer sign-off and be ready to sit the SMSCP exam."
+        }
+      ]
+    },
+    {
+      "prefix": "HVAC",
+      "name": "HVAC & Cooling",
+      "themes": [
+        {
+          "theme": "Refrigeration Cycle",
+          "description": "Chart an unfamiliar refrigeration cycle and pass the 608 core practice test."
+        },
+        {
+          "theme": "Electrical for HVAC",
+          "description": "Diagnose a control fault on HVAC equipment you have not seen before."
+        },
+        {
+          "theme": "Chillers, CRAC & Airflow",
+          "description": "Restore the cooling margin in a data hall you have not worked in before."
+        },
+        {
+          "theme": "HVAC Practicum",
+          "description": "Earn the 608 Universal certification and an employer sign-off."
+        }
+      ]
+    },
+    {
+      "prefix": "HEQ",
+      "name": "Heavy Equipment",
+      "themes": [
+        {
+          "theme": "Equipment Systems & Safety",
+          "description": "Complete a pre-operation inspection on equipment you have not run before."
+        },
+        {
+          "theme": "Rigging & Signals",
+          "description": "Compute an unfamiliar lift and signal it safely."
+        },
+        {
+          "theme": "Simulator & Yard Operations",
+          "description": "Complete a yard sequence you have not run before within its limits."
+        },
+        {
+          "theme": "Heavy Equipment Practicum",
+          "description": "Earn an employer sign-off for the heavy-equipment trade."
+        }
+      ]
+    },
+    {
+      "prefix": "IT",
+      "name": "Information Technology",
+      "themes": [
+        {
+          "theme": "Hardware & Networks",
+          "description": "Build and verify a network segment you have not set up before."
+        },
+        {
+          "theme": "Systems & Cloud Ops",
+          "description": "Automate a monitoring task you have not built before."
+        },
+        {
+          "theme": "Cyber & OT Security",
+          "description": "Isolate an OT anomaly you have not seen before and document it."
+        },
+        {
+          "theme": "IT Practicum",
+          "description": "Earn a certification and an employer sign-off for the IT trade."
+        }
+      ]
+    },
+    {
+      "prefix": "PROC",
+      "name": "Process Technology",
+      "themes": [
+        {
+          "theme": "Process Systems",
+          "description": "Trace an unfamiliar P&ID and explain the loop it controls."
+        },
+        {
+          "theme": "Instrumentation & Control",
+          "description": "Tune a control loop you have not worked on before to within its limits."
+        },
+        {
+          "theme": "Process Safety & Cryogenics",
+          "description": "Run a permit-to-work scenario you have not seen before."
+        },
+        {
+          "theme": "Process Practicum",
+          "description": "Earn an employer sign-off for the process trade."
+        }
+      ]
+    },
+    {
+      "prefix": "UAS",
+      "name": "Uncrewed Aerial Systems",
+      "themes": [
+        {
+          "theme": "Flight & Airspace",
+          "description": "Pass a Part 107 practice set you have not seen before."
+        },
+        {
+          "theme": "Sensors & Survey",
+          "description": "Plan and fly, in simulation, a survey grid you have not flown before."
+        },
+        {
+          "theme": "Coastal Telemetry",
+          "description": "QA an unfamiliar telemetry set and report it with its margin of error."
+        },
+        {
+          "theme": "UAS Practicum",
+          "description": "Earn a certificate and an employer sign-off for the UAS trade."
+        }
+      ]
+    },
+    {
+      "prefix": "MAR",
+      "name": "Marine",
+      "themes": [
+        {
+          "theme": "Vessel Systems",
+          "description": "Explain an unfamiliar ballast problem in physical terms."
+        },
+        {
+          "theme": "Shipfitting & Marine Fabrication",
+          "description": "Fit a hull section you have not built before to its drawing."
+        },
+        {
+          "theme": "Port Operations & Logistics",
+          "description": "Schedule a container-move sequence you have not planned before."
+        },
+        {
+          "theme": "Marine Practicum",
+          "description": "Earn an employer sign-off for the marine trade."
+        }
+      ]
+    },
+    {
+      "prefix": "BIO",
+      "name": "Biomedical Equipment",
+      "themes": [
+        {
+          "theme": "Healthcare Environment & Safety",
+          "description": "Pass a clinical-safety scenario you have not seen before."
+        },
+        {
+          "theme": "Device Calibration & Metrology",
+          "description": "Calibrate a device you have not worked on before to its tolerance."
+        },
+        {
+          "theme": "Clinical Systems & Networks",
+          "description": "Diagnose a device-network fault you have not seen before."
+        },
+        {
+          "theme": "Biomed Practicum",
+          "description": "Earn an employer sign-off for the biomedical-equipment trade."
+        }
+      ]
+    }
+  ]
+}

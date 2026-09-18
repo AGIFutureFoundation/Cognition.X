@@ -63,53 +63,53 @@ CX-K12-0061,K–12,,LB-61,12,Lead,Capstone Lead,Capstone Design,Get a capstone p
 CX-K12-0062,K–12,,LB-62,12,Lead,Credentialed Trainee,Industry-Based Certifications,"Earn an industry-based certification such as NCCER Core, OSHA 10, AWS, EPA 608, CompTIA or PTEC.","IBC earned (NCCER Core, OSHA 10, AWS, EPA 608, CompTIA, PTEC or equivalent)"
 CX-K12-0063,K–12,,LB-63,12,Lead,Apprentice,Capstone Build & Work-Based Learning,Pass an employer-judged capstone and get its hours countersigned.,Employer-judged capstone passed; hours countersigned
 CX-K12-0064,K–12,,LB-64,12,Lead,Credentialed Graduate (Specialized Tracks complete),"Ledger, Placement & Launch",Get a credential ledger verified by an employer and a placement confirmed.,Credential ledger verified by an employer; placement confirmed
-CX-TRADE-0001,Trade School,,LB-1,11–12 · adult,Lead,Trade Foundations,Trade Foundations,,Read a novel schematic and produce a bill of materials with units
-CX-TRADE-0002,Trade School,,LB-2,11–12 · adult,Lead,Cleared for Site,"Safety, Clearance & Fitness for Duty",,Perform a full lock-out on a novel rig; pass the site-clearance checklist
-CX-TRADE-0003,Trade School,,LB-3,11–12 · adult,Lead,Trade Capstone,Trade Capstone & Placement,,Employer panel accepts the capstone; validator packet submitted
-CX-TRADE-0004,Trade School,,LB-4,11–12 · adult,Lead,Electrical I,Circuits & Code,,Wire and test a novel branch circuit to code
-CX-TRADE-0005,Trade School,,LB-5,11–12 · adult,Lead,Electrical II,Motors & Controls,,Diagnose a novel motor-control fault
-CX-TRADE-0006,Trade School,,LB-6,11–12 · adult,Lead,Electrical III,Industrial Wiring & PLC I/O,,Terminate and verify a PLC I/O panel
-CX-TRADE-0007,Trade School,,LB-7,11–12 · adult,Lead,Electrical Pre-Apprentice,Electrical Practicum,,Employer sign-off; algebra qualifier passed
-CX-TRADE-0008,Trade School,,LB-8,11–12 · adult,Lead,Welder I,SMAW Fundamentals,,Fillet weld passes visual inspection on a novel joint
-CX-TRADE-0009,Trade School,,LB-9,11–12 · adult,Lead,Welder II,GMAW / FCAW,,Multi-pass weld to procedure
-CX-TRADE-0010,Trade School,,LB-10,11–12 · adult,Lead,Fabricator,"Blueprint, Layout & Fabrication",,Fabricate a novel assembly from a drawing
-CX-TRADE-0011,Trade School,,LB-11,11–12 · adult,Lead,Welding Pre-Apprentice,Welding Practicum,,Weld tests per D1.1 procedures
-CX-TRADE-0012,Trade School,,LB-12,11–12 · adult,Lead,Pipefitter I,Pipe Systems & Math,,Compute and cut a novel rolling offset
-CX-TRADE-0013,Trade School,,LB-13,11–12 · adult,Lead,Pipefitter II,Joining & Testing,,Assemble and pressure-test a novel spool
-CX-TRADE-0014,Trade School,,LB-14,11–12 · adult,Lead,Pipefitter III,Isometrics & Process Systems,,Build from a novel isometric; trace the process
-CX-TRADE-0015,Trade School,,LB-15,11–12 · adult,Lead,Pipefitting Pre-Apprentice,Pipefitting Practicum,,Employer sign-off
-CX-TRADE-0016,Trade School,,LB-16,11–12 · adult,Lead,Maintenance Tech I,Mechanical Systems,,Align a novel motor-pump set to tolerance
-CX-TRADE-0017,Trade School,,LB-17,11–12 · adult,Lead,Maintenance Tech II,Fluid Power,,Diagnose a novel fluid-power fault
-CX-TRADE-0018,Trade School,,LB-18,11–12 · adult,Lead,Automation Tech,PLC & Automation,,Program and verify a novel automated cell
-CX-TRADE-0019,Trade School,,LB-19,11–12 · adult,Lead,Mechatronics Pre-Apprentice,Mechatronics Practicum,,Employer sign-off; SMSCP exam readiness
-CX-TRADE-0020,Trade School,,LB-20,11–12 · adult,Lead,HVAC I,Refrigeration Cycle,,Chart a novel cycle; pass the 608 core practice
-CX-TRADE-0021,Trade School,,LB-21,11–12 · adult,Lead,HVAC II,Electrical for HVAC,,Diagnose a novel control fault
-CX-TRADE-0022,Trade School,,LB-22,11–12 · adult,Lead,Cooling Tech,"Chillers, CRAC & Airflow",,Restore a novel data-hall cooling margin
-CX-TRADE-0023,Trade School,,LB-23,11–12 · adult,Lead,HVAC Pre-Apprentice,HVAC Practicum,,608 Universal; employer sign-off
-CX-TRADE-0024,Trade School,,LB-24,11–12 · adult,Lead,Operator I,Equipment Systems & Safety,,Complete a novel pre-operation inspection
-CX-TRADE-0025,Trade School,,LB-25,11–12 · adult,Lead,Rigger,Rigging & Signals,,Compute a novel lift; signal it safely
-CX-TRADE-0026,Trade School,,LB-26,11–12 · adult,Lead,Operator II,Simulator & Yard Operations,,Complete a novel yard sequence within limits
-CX-TRADE-0027,Trade School,,LB-27,11–12 · adult,Lead,Heavy Equipment Pre-Apprentice,Heavy Equipment Practicum,,Employer sign-off
-CX-TRADE-0028,Trade School,,LB-28,11–12 · adult,Lead,IT Tech I,Hardware & Networks,,Build and verify a novel network segment
-CX-TRADE-0029,Trade School,,LB-29,11–12 · adult,Lead,IT Tech II,Systems & Cloud Ops,,Automate a novel monitoring task
-CX-TRADE-0030,Trade School,,LB-30,11–12 · adult,Lead,Cyber Tech,Cyber & OT Security,,Isolate a novel OT anomaly and document it
-CX-TRADE-0031,Trade School,,LB-31,11–12 · adult,Lead,IT Pre-Apprentice,IT Practicum,,Certification; employer sign-off
-CX-TRADE-0032,Trade School,,LB-32,11–12 · adult,Lead,Process Tech I,Process Systems,,Trace a novel P&ID and explain the loop
-CX-TRADE-0033,Trade School,,LB-33,11–12 · adult,Lead,Process Tech II,Instrumentation & Control,,Tune a novel loop within limits
-CX-TRADE-0034,Trade School,,LB-34,11–12 · adult,Lead,Process Tech III,Process Safety & Cryogenics,,Run a novel permit-to-work scenario
-CX-TRADE-0035,Trade School,,LB-35,11–12 · adult,Lead,Process Pre-Apprentice,Process Practicum,,Employer sign-off
-CX-TRADE-0036,Trade School,,LB-36,11–12 · adult,Lead,UAS I,Flight & Airspace,,Pass a novel Part 107 practice set
-CX-TRADE-0037,Trade School,,LB-37,11–12 · adult,Lead,Survey Tech,Sensors & Survey,,Plan and fly (simulated) a novel survey grid
-CX-TRADE-0038,Trade School,,LB-38,11–12 · adult,Lead,Telemetry Tech,Coastal Telemetry,,QA a novel telemetry set; report with a margin
-CX-TRADE-0039,Trade School,,LB-39,11–12 · adult,Lead,UAS Pre-Apprentice,UAS Practicum,,Certificate; employer sign-off
-CX-TRADE-0040,Trade School,,LB-40,11–12 · adult,Lead,Marine Tech I,Vessel Systems,,Explain a novel ballast problem physically
-CX-TRADE-0041,Trade School,,LB-41,11–12 · adult,Lead,Shipfitter,Shipfitting & Marine Fabrication,,Fit a novel hull section to drawing
-CX-TRADE-0042,Trade School,,LB-42,11–12 · adult,Lead,Port Tech,Port Operations & Logistics,,Schedule a novel container move sequence
-CX-TRADE-0043,Trade School,,LB-43,11–12 · adult,Lead,Marine Pre-Apprentice,Marine Practicum,,Employer sign-off
-CX-TRADE-0044,Trade School,,LB-44,11–12 · adult,Lead,Biomed Tech I,Healthcare Environment & Safety,,Pass a novel clinical-safety scenario
-CX-TRADE-0045,Trade School,,LB-45,11–12 · adult,Lead,Biomed Tech II,Device Calibration & Metrology,,Calibrate a novel device to tolerance
-CX-TRADE-0046,Trade School,,LB-46,11–12 · adult,Lead,Biomed Tech III,Clinical Systems & Networks,,Diagnose a novel device-network fault
-CX-TRADE-0047,Trade School,,LB-47,11–12 · adult,Lead,Biomed Pre-Apprentice,Biomed Practicum,,Employer sign-off
+CX-TRADE-0001,Trade School,,LB-1,11–12 · adult,Lead,Trade Foundations,Trade Foundations,Read a schematic you have not seen before and produce a complete bill of materials with units.,Read a novel schematic and produce a bill of materials with units
+CX-TRADE-0002,Trade School,,LB-2,11–12 · adult,Lead,Cleared for Site,"Safety, Clearance & Fitness for Duty",Perform a full lock-out on an unfamiliar rig and pass the site-clearance checklist.,Perform a full lock-out on a novel rig; pass the site-clearance checklist
+CX-TRADE-0003,Trade School,,LB-3,11–12 · adult,Lead,Trade Capstone,Trade Capstone & Placement,Get a capstone accepted by an employer panel and submit the validator packet.,Employer panel accepts the capstone; validator packet submitted
+CX-TRADE-0004,Trade School,,LB-4,11–12 · adult,Lead,Electrical I,Circuits & Code,Wire and test a branch circuit you have not built before so it meets code.,Wire and test a novel branch circuit to code
+CX-TRADE-0005,Trade School,,LB-5,11–12 · adult,Lead,Electrical II,Motors & Controls,Diagnose a motor-control fault on equipment you have not seen before.,Diagnose a novel motor-control fault
+CX-TRADE-0006,Trade School,,LB-6,11–12 · adult,Lead,Electrical III,Industrial Wiring & PLC I/O,Terminate and verify every point on a PLC I/O panel.,Terminate and verify a PLC I/O panel
+CX-TRADE-0007,Trade School,,LB-7,11–12 · adult,Lead,Electrical Pre-Apprentice,Electrical Practicum,Earn an employer sign-off and pass the algebra qualifier for the electrical trade.,Employer sign-off; algebra qualifier passed
+CX-TRADE-0008,Trade School,,LB-8,11–12 · adult,Lead,Welder I,SMAW Fundamentals,Make a fillet weld on an unfamiliar joint that passes visual inspection.,Fillet weld passes visual inspection on a novel joint
+CX-TRADE-0009,Trade School,,LB-9,11–12 · adult,Lead,Welder II,GMAW / FCAW,Make a multi-pass weld that meets the written procedure.,Multi-pass weld to procedure
+CX-TRADE-0010,Trade School,,LB-10,11–12 · adult,Lead,Fabricator,"Blueprint, Layout & Fabrication",Fabricate an assembly straight from a drawing you have not built before.,Fabricate a novel assembly from a drawing
+CX-TRADE-0011,Trade School,,LB-11,11–12 · adult,Lead,Welding Pre-Apprentice,Welding Practicum,Pass a full set of weld tests run to D1.1 procedures for the trade.,Weld tests per D1.1 procedures
+CX-TRADE-0012,Trade School,,LB-12,11–12 · adult,Lead,Pipefitter I,Pipe Systems & Math,Compute and cut a rolling offset for a pipe run you have not seen before.,Compute and cut a novel rolling offset
+CX-TRADE-0013,Trade School,,LB-13,11–12 · adult,Lead,Pipefitter II,Joining & Testing,Assemble and pressure-test a spool you have not built before.,Assemble and pressure-test a novel spool
+CX-TRADE-0014,Trade School,,LB-14,11–12 · adult,Lead,Pipefitter III,Isometrics & Process Systems,Build a run from an unfamiliar isometric and trace its process.,Build from a novel isometric; trace the process
+CX-TRADE-0015,Trade School,,LB-15,11–12 · adult,Lead,Pipefitting Pre-Apprentice,Pipefitting Practicum,Earn an employer sign-off for the pipefitting trade.,Employer sign-off
+CX-TRADE-0016,Trade School,,LB-16,11–12 · adult,Lead,Maintenance Tech I,Mechanical Systems,Align a motor-pump set you have not seen before to its tolerance.,Align a novel motor-pump set to tolerance
+CX-TRADE-0017,Trade School,,LB-17,11–12 · adult,Lead,Maintenance Tech II,Fluid Power,Diagnose a fluid-power fault on a system you have not seen before.,Diagnose a novel fluid-power fault
+CX-TRADE-0018,Trade School,,LB-18,11–12 · adult,Lead,Automation Tech,PLC & Automation,Program and verify an automated cell you have not built before.,Program and verify a novel automated cell
+CX-TRADE-0019,Trade School,,LB-19,11–12 · adult,Lead,Mechatronics Pre-Apprentice,Mechatronics Practicum,Earn an employer sign-off and be ready to sit the SMSCP exam.,Employer sign-off; SMSCP exam readiness
+CX-TRADE-0020,Trade School,,LB-20,11–12 · adult,Lead,HVAC I,Refrigeration Cycle,Chart an unfamiliar refrigeration cycle and pass the 608 core practice test.,Chart a novel cycle; pass the 608 core practice
+CX-TRADE-0021,Trade School,,LB-21,11–12 · adult,Lead,HVAC II,Electrical for HVAC,Diagnose a control fault on HVAC equipment you have not seen before.,Diagnose a novel control fault
+CX-TRADE-0022,Trade School,,LB-22,11–12 · adult,Lead,Cooling Tech,"Chillers, CRAC & Airflow",Restore the cooling margin in a data hall you have not worked in before.,Restore a novel data-hall cooling margin
+CX-TRADE-0023,Trade School,,LB-23,11–12 · adult,Lead,HVAC Pre-Apprentice,HVAC Practicum,Earn the 608 Universal certification and an employer sign-off.,608 Universal; employer sign-off
+CX-TRADE-0024,Trade School,,LB-24,11–12 · adult,Lead,Operator I,Equipment Systems & Safety,Complete a pre-operation inspection on equipment you have not run before.,Complete a novel pre-operation inspection
+CX-TRADE-0025,Trade School,,LB-25,11–12 · adult,Lead,Rigger,Rigging & Signals,Compute an unfamiliar lift and signal it safely.,Compute a novel lift; signal it safely
+CX-TRADE-0026,Trade School,,LB-26,11–12 · adult,Lead,Operator II,Simulator & Yard Operations,Complete a yard sequence you have not run before within its limits.,Complete a novel yard sequence within limits
+CX-TRADE-0027,Trade School,,LB-27,11–12 · adult,Lead,Heavy Equipment Pre-Apprentice,Heavy Equipment Practicum,Earn an employer sign-off for the heavy-equipment trade.,Employer sign-off
+CX-TRADE-0028,Trade School,,LB-28,11–12 · adult,Lead,IT Tech I,Hardware & Networks,Build and verify a network segment you have not set up before.,Build and verify a novel network segment
+CX-TRADE-0029,Trade School,,LB-29,11–12 · adult,Lead,IT Tech II,Systems & Cloud Ops,Automate a monitoring task you have not built before.,Automate a novel monitoring task
+CX-TRADE-0030,Trade School,,LB-30,11–12 · adult,Lead,Cyber Tech,Cyber & OT Security,Isolate an OT anomaly you have not seen before and document it.,Isolate a novel OT anomaly and document it
+CX-TRADE-0031,Trade School,,LB-31,11–12 · adult,Lead,IT Pre-Apprentice,IT Practicum,Earn a certification and an employer sign-off for the IT trade.,Certification; employer sign-off
+CX-TRADE-0032,Trade School,,LB-32,11–12 · adult,Lead,Process Tech I,Process Systems,Trace an unfamiliar P&ID and explain the loop it controls.,Trace a novel P&ID and explain the loop
+CX-TRADE-0033,Trade School,,LB-33,11–12 · adult,Lead,Process Tech II,Instrumentation & Control,Tune a control loop you have not worked on before to within its limits.,Tune a novel loop within limits
+CX-TRADE-0034,Trade School,,LB-34,11–12 · adult,Lead,Process Tech III,Process Safety & Cryogenics,Run a permit-to-work scenario you have not seen before.,Run a novel permit-to-work scenario
+CX-TRADE-0035,Trade School,,LB-35,11–12 · adult,Lead,Process Pre-Apprentice,Process Practicum,Earn an employer sign-off for the process trade.,Employer sign-off
+CX-TRADE-0036,Trade School,,LB-36,11–12 · adult,Lead,UAS I,Flight & Airspace,Pass a Part 107 practice set you have not seen before.,Pass a novel Part 107 practice set
+CX-TRADE-0037,Trade School,,LB-37,11–12 · adult,Lead,Survey Tech,Sensors & Survey,"Plan and fly, in simulation, a survey grid you have not flown before.",Plan and fly (simulated) a novel survey grid
+CX-TRADE-0038,Trade School,,LB-38,11–12 · adult,Lead,Telemetry Tech,Coastal Telemetry,QA an unfamiliar telemetry set and report it with its margin of error.,QA a novel telemetry set; report with a margin
+CX-TRADE-0039,Trade School,,LB-39,11–12 · adult,Lead,UAS Pre-Apprentice,UAS Practicum,Earn a certificate and an employer sign-off for the UAS trade.,Certificate; employer sign-off
+CX-TRADE-0040,Trade School,,LB-40,11–12 · adult,Lead,Marine Tech I,Vessel Systems,Explain an unfamiliar ballast problem in physical terms.,Explain a novel ballast problem physically
+CX-TRADE-0041,Trade School,,LB-41,11–12 · adult,Lead,Shipfitter,Shipfitting & Marine Fabrication,Fit a hull section you have not built before to its drawing.,Fit a novel hull section to drawing
+CX-TRADE-0042,Trade School,,LB-42,11–12 · adult,Lead,Port Tech,Port Operations & Logistics,Schedule a container-move sequence you have not planned before.,Schedule a novel container move sequence
+CX-TRADE-0043,Trade School,,LB-43,11–12 · adult,Lead,Marine Pre-Apprentice,Marine Practicum,Earn an employer sign-off for the marine trade.,Employer sign-off
+CX-TRADE-0044,Trade School,,LB-44,11–12 · adult,Lead,Biomed Tech I,Healthcare Environment & Safety,Pass a clinical-safety scenario you have not seen before.,Pass a novel clinical-safety scenario
+CX-TRADE-0045,Trade School,,LB-45,11–12 · adult,Lead,Biomed Tech II,Device Calibration & Metrology,Calibrate a device you have not worked on before to its tolerance.,Calibrate a novel device to tolerance
+CX-TRADE-0046,Trade School,,LB-46,11–12 · adult,Lead,Biomed Tech III,Clinical Systems & Networks,Diagnose a device-network fault you have not seen before.,Diagnose a novel device-network fault
+CX-TRADE-0047,Trade School,,LB-47,11–12 · adult,Lead,Biomed Pre-Apprentice,Biomed Practicum,Earn an employer sign-off for the biomedical-equipment trade.,Employer sign-off
 CX-FWORK-0001,Future-Work,,LB-1,K–2,Explorer,Robot Spotter,Machines that move (RB),"Identify the sensor, brain and motor on a toy robot and say what each part does.","Identify sensor, brain and motor on a novel toy robot"
 CX-FWORK-0002,Future-Work,,LB-2,K–2,Explorer,Sequencer I,Follow the line (RB),Program a simple path with two turns for a robot to follow.,Program a novel path with two turns
 CX-FWORK-0003,Future-Work,,LB-3,K–2,Explorer,Gripper Builder,Grippers and hands (RB),Use a gripper to pick up an object without crushing it.,Gripper picks up a novel object without crushing it
