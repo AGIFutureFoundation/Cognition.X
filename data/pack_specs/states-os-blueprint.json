@@ -10,52 +10,122 @@
     {
      "theme": "The water that made your state",
      "description": "Every state is shaped by one water story — a river, a coast, a lake, an aquifer — and the map of the state is the map of that water.",
-     "transfer_check": "On a real map, trace your state's defining water body and mark three towns that exist where they do because of it."
+     "transfer_check": "On a real map, trace your state's defining water body and mark three towns that exist where they do because of it.",
+     "bands": {
+      "K–2": "On a map with an adult, find the big water your state is known for and one town beside it.",
+      "3–5": "On a real map, trace your state's main water body and mark two towns that grew beside it.",
+      "6–8": "On a real map, trace your state's defining water body and mark three towns that exist because of it, with a checker.",
+      "9–10": "On a real map, trace your state's defining water body and mark three towns that exist where they do because of it.",
+      "11–12": "Present your state's water story to a group from a real map: the defining water, three towns it explains, and one it no longer explains."
+     }
     },
     {
      "theme": "The watershed you stand in",
      "description": "Rain that lands on your roof goes somewhere — reading your own watershed from ridge to river to outlet.",
-     "transfer_check": "Follow a drop of rain from your own roof to the sea (or basin) on a map, naming each stream and river it joins."
+     "transfer_check": "Follow a drop of rain from your own roof to the sea (or basin) on a map, naming each stream and river it joins.",
+     "bands": {
+      "K–2": "Watch where rain from your roof goes and follow it to the nearest stream on a map with an adult.",
+      "3–5": "Follow a drop of rain from your roof to the nearest river on a map, naming each stream.",
+      "6–8": "Follow a drop of rain from your roof to the sea or basin on a map, naming each stream and river, with a checker.",
+      "9–10": "Follow a drop of rain from your own roof to the sea (or basin) on a map, naming each stream and river it joins.",
+      "11–12": "Present your watershed to a group from ridge to outlet, with every named stream, and where the water is measured on the way."
+     }
     },
     {
      "theme": "Who owns the water",
      "description": "Water rights, districts and compacts — the law that moves your state's water, and the neighbors it is shared with.",
-     "transfer_check": "Name the body that governs water where you live and one real agreement or rule it enforces, from its own public materials."
+     "transfer_check": "Name the body that governs water where you live and one real agreement or rule it enforces, from its own public materials.",
+     "bands": {
+      "K–2": "Say who decides how the water in your town is shared.",
+      "3–5": "Name the body that governs water where you live and one rule it has.",
+      "6–8": "Name the body that governs water where you live and one real agreement or rule it enforces, with a checker.",
+      "9–10": "Name the body that governs water where you live and one real agreement or rule it enforces with a neighbouring state or district.",
+      "11–12": "Present the water governance of your state to a group: the body, the rights, the compacts, and one real dispute."
+     }
     },
     {
      "theme": "The land in four surfaces",
      "description": "Your state as farmland, forest, range and city — reading the land-use map and what each surface asks of its stewards.",
-     "transfer_check": "From a land-use or satellite map, estimate your state's four surfaces in rough proportions and check one against a published figure."
+     "transfer_check": "From a land-use or satellite map, estimate your state's four surfaces in rough proportions and check one against a published figure.",
+     "bands": {
+      "K–2": "Look at a satellite map with an adult and point to farm, forest and city.",
+      "3–5": "From a land-use map, guess how much of your state is farmland, forest, range and city.",
+      "6–8": "From a land-use or satellite map, estimate your state's four surfaces in rough proportions, with a checker.",
+      "9–10": "From a land-use or satellite map, estimate your state's four surfaces in rough proportions and check one against a public figure.",
+      "11–12": "Present your state's four surfaces to a group with public figures and what each surface asks of the people who steward it."
+     }
     },
     {
      "theme": "The soil underneath",
      "description": "What your state's ground grows and carries — soil, bedrock and the reason the farms and the cities sit where they sit.",
-     "transfer_check": "Dig or examine one real soil sample from your area and match it to your state's soil story in one paragraph."
+     "transfer_check": "Dig or examine one real soil sample from your area and match it to your state's soil story in one paragraph.",
+     "bands": {
+      "K–2": "Dig up some soil with an adult and say what it feels like and what grows in it.",
+      "3–5": "Examine one soil sample from your area and say what it is good for growing.",
+      "6–8": "Examine one real soil sample from your area and match it to your state's soil story, with a checker.",
+      "9–10": "Dig or examine one real soil sample from your area and match it to your state's soil story and what it grows.",
+      "11–12": "Present real soil samples to a group with the state's soil map and why the farms and cities sit where they do."
+     }
     },
     {
      "theme": "The species that means home",
      "description": "Every state names its animals and plants — and behind each symbol is a habitat with a condition worth knowing.",
-     "transfer_check": "Pick one official state species, find its real habitat status from a public source, and tell somebody what it needs."
+     "transfer_check": "Pick one official state species, find its real habitat status from a public source, and tell somebody what it needs.",
+     "bands": {
+      "K–2": "Name your state's animal or flower and where it lives.",
+      "3–5": "Pick one official state species and find out whether its home is doing well.",
+      "6–8": "Pick one official state species, find its real habitat status from a public source, and report it, with a checker.",
+      "9–10": "Pick one official state species, find its real habitat status from a public source, and tell what condition its home is in.",
+      "11–12": "Present a state species' habitat status to a group from public sources, with what is being done about it."
+     }
     },
     {
      "theme": "Water in, water out",
      "description": "Your town's intake and outfall — where drinking water enters and treated water leaves, the two pipes every citizen should be able to point to.",
-     "transfer_check": "Locate (publicly) your community's water source and its treatment outfall and explain the journey between them."
+     "transfer_check": "Locate (publicly) your community's water source and its treatment outfall and explain the journey between them.",
+     "bands": {
+      "K–2": "Ask an adult where your tap water comes from.",
+      "3–5": "Find out publicly where your community's drinking water comes from.",
+      "6–8": "Locate publicly your community's water source and its treatment outfall, with a checker.",
+      "9–10": "Locate (publicly) your community's water source and its treatment outfall and explain the journey between them.",
+      "11–12": "Present the two pipes to a group — intake and outfall — with the treatment between them and who runs each."
+     }
     },
     {
      "theme": "The working water",
      "description": "Barges, irrigation, cooling, fisheries — the jobs your state's water does beyond drinking.",
-     "transfer_check": "Identify two real working uses of water in your state and one place each can be safely observed from public ground."
+     "transfer_check": "Identify two real working uses of water in your state and one place each can be safely observed from public ground.",
+     "bands": {
+      "K–2": "Name two jobs that water does in your state besides drinking.",
+      "3–5": "Identify two ways your state's water works — boats, farms, fishing, cooling.",
+      "6–8": "Identify two real working uses of water in your state and one place each can be safely observed, with a checker.",
+      "9–10": "Identify two real working uses of water in your state and one place each can be safely observed.",
+      "11–12": "Present the working water of your state to a group, with the jobs behind each use and where each can be seen."
+     }
     },
     {
      "theme": "When the water turns",
      "description": "Flood, drought, freeze or surge — your state's water in its dangerous mood, and the systems built to answer it.",
-     "transfer_check": "Find one real flood-control or drought structure in your region and explain what it holds back or holds in."
+     "transfer_check": "Find one real flood-control or drought structure in your region and explain what it holds back or holds in.",
+     "bands": {
+      "K–2": "Say what your state's water does when it is dangerous — flood, drought, freeze or surge.",
+      "3–5": "Find one real flood or drought structure in your region and say what it protects.",
+      "6–8": "Find one real flood-control or drought structure in your region and explain what it holds back, with a checker.",
+      "9–10": "Find one real flood-control or drought structure in your region and explain what it holds back and for whom.",
+      "11–12": "Present the built answer to your state's dangerous water to a group, with one structure, its capacity and its limits."
+     }
     },
     {
      "theme": "Stewardship is local",
      "description": "The cleanup, the gauge, the planting — one real act of water stewardship a learner can join where they live.",
-     "transfer_check": "Take part in (or concretely plan) one real local stewardship act — a cleanup, a monitoring day, a planting — and log what was done."
+     "transfer_check": "Take part in (or concretely plan) one real local stewardship act — a cleanup, a monitoring day, a planting — and log what was done.",
+     "bands": {
+      "K–2": "Join a clean-up or a planting with an adult and say what you did.",
+      "3–5": "Take part in one real local water stewardship act — a cleanup, a planting — and record it.",
+      "6–8": "Take part in or concretely plan one real local stewardship act, with a checker.",
+      "9–10": "Take part in (or concretely plan) one real local stewardship act — a cleanup, a monitoring, a planting — and record what it did.",
+      "11–12": "Organise one real stewardship act for a group and record its result for the body that manages the water."
+     }
     }
    ]
   },
@@ -67,52 +137,122 @@
     {
      "theme": "What your state makes",
      "description": "Every state has a working spine — the industries that pay its wages — and a map of where that work actually happens.",
-     "transfer_check": "Name your state's three largest real industries from a public source and place each on the map where it concentrates."
+     "transfer_check": "Name your state's three largest real industries from a public source and place each on the map where it concentrates.",
+     "bands": {
+      "K–2": "Name one thing your state is known for making or growing.",
+      "3–5": "Name your state's three biggest industries from a public source.",
+      "6–8": "Name your state's three largest real industries from a public source and place each on the map, with a checker.",
+      "9–10": "Name your state's three largest real industries from a public source and place each on the map where the work happens.",
+      "11–12": "Present your state's working spine to a group: the three largest industries, where each happens, and what each pays."
+     }
     },
     {
      "theme": "The corridor with a name",
      "description": "The ship channel, the tech valley, the auto alley, the corn belt — your state's famous working corridor and why it runs where it runs.",
-     "transfer_check": "Identify your state's best-known working corridor and explain, from geography, why it is there and not elsewhere."
+     "transfer_check": "Identify your state's best-known working corridor and explain, from geography, why it is there and not elsewhere.",
+     "bands": {
+      "K–2": "Find the famous working road or river of your state on a map.",
+      "3–5": "Identify your state's best-known working corridor and say where it runs.",
+      "6–8": "Identify your state's best-known working corridor and explain from geography why it runs there, with a checker.",
+      "9–10": "Identify your state's best-known working corridor and explain, from geography, why it is where it is.",
+      "11–12": "Present the corridor to a group with its geography, its history and the trades that staff it."
+     }
     },
     {
      "theme": "The jobs behind the product",
      "description": "One product your state is known for, unfolded into the trades and professions that touch it from raw to sold.",
-     "transfer_check": "Take one real product of your state and list eight distinct jobs it passes through, checking two with someone who works one."
+     "transfer_check": "Take one real product of your state and list eight distinct jobs it passes through, checking two with someone who works one.",
+     "bands": {
+      "K–2": "Pick one thing your state makes and name three jobs that touch it.",
+      "3–5": "Take one real product of your state and list five jobs it passes through.",
+      "6–8": "Take one real product of your state and list eight distinct jobs it passes through, checking each, with a checker.",
+      "9–10": "Take one real product of your state and list eight distinct jobs it passes through, checking each against a real posting or profile.",
+      "11–12": "Unfold a real product of your state for a group into the trades and professions from raw to sold, with a real posting for each."
+     }
     },
     {
      "theme": "The port, the rail and the road",
      "description": "How your state's goods leave — the freight map of ports, railheads and interstates a working state depends on.",
-     "transfer_check": "Trace one real export of your state from its origin to its exit point (port, railhead or highway) on a map."
+     "transfer_check": "Trace one real export of your state from its origin to its exit point (port, railhead or highway) on a map.",
+     "bands": {
+      "K–2": "Say how things made in your state leave it — by ship, train or truck.",
+      "3–5": "Trace one real export of your state to where it leaves.",
+      "6–8": "Trace one real export of your state from its origin to its exit point, with a checker.",
+      "9–10": "Trace one real export of your state from its origin to its exit point (port, railhead or highway).",
+      "11–12": "Present your state's freight map to a group with one real export traced end to end."
+     }
     },
     {
      "theme": "The paycheck geography",
      "description": "Where your state's wages are high and low, and the honest reasons — industry mix, cost, distance — behind the pattern.",
-     "transfer_check": "Compare median pay in two real counties of your state from public data and give one grounded reason for the gap."
+     "transfer_check": "Compare median pay in two real counties of your state from public data and give one grounded reason for the gap.",
+     "bands": {
+      "K–2": "Say whether people earn more in the city or the country in your state, and one reason.",
+      "3–5": "Compare pay in two real counties of your state from public data.",
+      "6–8": "Compare median pay in two real counties of your state from public data and give one grounded reason, with a checker.",
+      "9–10": "Compare median pay in two real counties of your state from public data and give one grounded reason for the difference.",
+      "11–12": "Present the paycheck geography of your state to a group with public data and the honest reasons — industry, cost, distance."
+     }
     },
     {
      "theme": "The old industry's shadow",
      "description": "The mill, the mine, the plant that closed — what your state's last economic turn left behind, and what grew in its place.",
-     "transfer_check": "Find one real former industrial site in your region and record what it was, what it is, and who remembers it."
+     "transfer_check": "Find one real former industrial site in your region and record what it was, what it is, and who remembers it.",
+     "bands": {
+      "K–2": "Find an old mill, mine or factory near you and ask what it was.",
+      "3–5": "Find one former industrial site in your region and record what it was and what it is now.",
+      "6–8": "Find one real former industrial site in your region and record what it was, what it is, and what grew in its place, with a checker.",
+      "9–10": "Find one real former industrial site in your region and record what it was, what it is, and what grew in its place.",
+      "11–12": "Present one industrial turn of your state to a group: what closed, what it left, what grew, and who it left behind."
+     }
     },
     {
      "theme": "The next industry's seed",
      "description": "What your state is betting on next — the announced plants, grants and training programs, read critically.",
-     "transfer_check": "Find one real announced investment or program in your state and state what it promises, who funds it, and what would prove it worked."
+     "transfer_check": "Find one real announced investment or program in your state and state what it promises, who funds it, and what would prove it worked.",
+     "bands": {
+      "K–2": "Find one new thing being built in your state and say what it will make.",
+      "3–5": "Find one real announced plant or programme in your state and say what it promises.",
+      "6–8": "Find one real announced investment or programme in your state and state what it promises and what is uncertain, with a checker.",
+      "9–10": "Find one real announced investment or program in your state and state what it promises, what it depends on, and what is uncertain.",
+      "11–12": "Present a real announced investment to a group read critically: the promise, the conditions, and the record of similar promises."
+     }
     },
     {
      "theme": "The trades behind the corridor",
      "description": "The union halls and training centers that staff your state's working spine — the pathway map from school to corridor.",
-     "transfer_check": "Identify the regional labor or trades council serving your area and one real apprenticeship program it can point you to."
+     "transfer_check": "Identify the regional labor or trades council serving your area and one real apprenticeship program it can point you to.",
+     "bands": {
+      "K–2": "Say where a person learns a trade in your state.",
+      "3–5": "Identify the trades council or training centre serving your area.",
+      "6–8": "Identify the regional labour or trades council serving your area and one real apprenticeship it offers, with a checker.",
+      "9–10": "Identify the regional labor or trades council serving your area and one real apprenticeship that staffs the corridor.",
+      "11–12": "Map the pathway from school to corridor for a group: the councils, the training centres, and the real apprenticeships."
+     }
     },
     {
      "theme": "Small works too",
      "description": "The shop, the farm, the crew of five — counting the small enterprises that carry most of your state's working life.",
-     "transfer_check": "Interview one real small-business owner or worker in your area about what their week actually holds, and retell it fairly."
+     "transfer_check": "Interview one real small-business owner or worker in your area about what their week actually holds, and retell it fairly.",
+     "bands": {
+      "K–2": "Ask someone who runs a small shop or farm what their week is like.",
+      "3–5": "Interview one real small-business owner or worker about their week.",
+      "6–8": "Interview one real small-business owner or worker in your area about what their week actually contains, with a checker.",
+      "9–10": "Interview one real small-business owner or worker in your area about what their week actually contains.",
+      "11–12": "Present the small enterprises of your area to a group from real interviews, with what carries most of the working life."
+     }
     },
     {
      "theme": "Your seat in the corridor",
      "description": "Matching your own bench evidence to your state's working spine — the honest shortlist of where you could stand in it.",
-     "transfer_check": "From your own ledger or portfolio, shortlist two real state industries you could serve and the next concrete step toward each."
+     "transfer_check": "From your own ledger or portfolio, shortlist two real state industries you could serve and the next concrete step toward each.",
+     "bands": {
+      "K–2": "Say one job in your state you would like to try, and why.",
+      "3–5": "From your own work so far, name two real state industries you could serve.",
+      "6–8": "From your own ledger or portfolio, shortlist two real state industries you could serve and say why, with a checker.",
+      "9–10": "From your own ledger or portfolio, shortlist two real state industries you could serve and the evidence for each.",
+      "11–12": "Present your honest shortlist to a group with the evidence, and the next real step toward one of them."
+     }
     }
    ]
   },
@@ -124,52 +264,122 @@
     {
      "theme": "What your state grows",
      "description": "The crops and herds your state actually raises — the agriculture map behind the grocery shelf.",
-     "transfer_check": "Name your state's three largest real farm products from a public source and find one of them raised within a day's drive."
+     "transfer_check": "Name your state's three largest real farm products from a public source and find one of them raised within a day's drive.",
+     "bands": {
+      "K–2": "Name one thing your state grows and find it in a shop.",
+      "3–5": "Name your state's three biggest farm products from a public source.",
+      "6–8": "Name your state's three largest real farm products from a public source and find one of them in a shop, with a checker.",
+      "9–10": "Name your state's three largest real farm products from a public source and find one of them in a shop with its origin.",
+      "11–12": "Present the agriculture map behind the shelf to a group, with public figures and one product traced to the shelf."
+     }
     },
     {
      "theme": "The dish that names you",
      "description": "Every state has a table identity — the dish, the harvest, the festival food — and a history of who brought it.",
-     "transfer_check": "Cook or help cook one dish your state is known for and tell its real origin story while it's eaten."
+     "transfer_check": "Cook or help cook one dish your state is known for and tell its real origin story while it's eaten.",
+     "bands": {
+      "K–2": "Help cook a dish your state is known for and say where it came from.",
+      "3–5": "Cook or help cook one dish your state is known for and tell its origin story.",
+      "6–8": "Cook or help cook one dish your state is known for and tell its real origin story, with a checker.",
+      "9–10": "Cook or help cook one dish your state is known for and tell its real origin story while it is eaten.",
+      "11–12": "Cook and serve a state dish for a group and tell its real origin story, with the people who brought it named."
+     }
     },
     {
      "theme": "From field to shelf",
      "description": "One local food followed all the way — grower, hauler, processor, grader, grocer — the chain made visible.",
-     "transfer_check": "Trace one real local food from its farm or dock to a shelf you can touch, naming each hand it passed through."
+     "transfer_check": "Trace one real local food from its farm or dock to a shelf you can touch, naming each hand it passed through.",
+     "bands": {
+      "K–2": "Follow one food from a farm to your table with an adult, naming who touched it.",
+      "3–5": "Trace one local food from farm to shelf, naming each hand.",
+      "6–8": "Trace one real local food from its farm or dock to a shelf you can touch, naming each hand, with a checker.",
+      "9–10": "Trace one real local food from its farm or dock to a shelf you can touch, naming each hand between.",
+      "11–12": "Present one real local food chain to a group, every hand named, with what each is paid."
+     }
     },
     {
      "theme": "The market and the season",
      "description": "What is actually in season in your state, month by month — eating the calendar instead of the freight.",
-     "transfer_check": "Build your state's real 12-month harvest calendar for five foods and shop one week from what is in season now."
+     "transfer_check": "Build your state's real 12-month harvest calendar for five foods and shop one week from what is in season now.",
+     "bands": {
+      "K–2": "Say which fruit or vegetable is in season now where you live.",
+      "3–5": "Build a calendar of when three local foods are in season.",
+      "6–8": "Build your state's real 12-month harvest calendar for five foods, with a checker.",
+      "9–10": "Build your state's real 12-month harvest calendar for five foods and shop one week from what is in season.",
+      "11–12": "Build and publish your state's harvest calendar for a group, and cook a seasonal week from it."
+     }
     },
     {
      "theme": "The waters' harvest",
      "description": "Fish, shellfish and the working boats — or the lakes and rivers' catch — as part of your state's table.",
-     "transfer_check": "Identify one real caught-or-farmed water food of your state and where it lands, and prepare or observe it prepared."
+     "transfer_check": "Identify one real caught-or-farmed water food of your state and where it lands, and prepare or observe it prepared.",
+     "bands": {
+      "K–2": "Name one fish or shellfish from your state's waters.",
+      "3–5": "Identify one real water food of your state and where it lands.",
+      "6–8": "Identify one real caught-or-farmed water food of your state and where it lands, with a checker.",
+      "9–10": "Identify one real caught-or-farmed water food of your state and where it lands, and prepare it.",
+      "11–12": "Present your state's water harvest to a group: the catch, the boats, where it lands, and a dish made from it."
+     }
     },
     {
      "theme": "Feeding everyone",
      "description": "Food banks, school meals, markets that take benefits — how your state's table reaches the people the market misses.",
-     "transfer_check": "Locate two real programs that feed people in your area and record how a family actually reaches each."
+     "transfer_check": "Locate two real programs that feed people in your area and record how a family actually reaches each.",
+     "bands": {
+      "K–2": "Say how families get food when money is short, and who helps.",
+      "3–5": "Locate two real programmes that feed people in your area.",
+      "6–8": "Locate two real programs that feed people in your area and record how a family actually reaches each, with a checker.",
+      "9–10": "Locate two real programs that feed people in your area and record how a family actually reaches each one.",
+      "11–12": "Map for a group how your state's table reaches people the market misses, with each programme's real route in."
+     }
     },
     {
      "theme": "The kitchen as a lab",
      "description": "Ratios, heat, cure and rise — the science and math of your state's cooking, at the stove.",
-     "transfer_check": "Scale one real recipe up by half, execute it, and record where the math held and where the cook's judgment took over."
+     "transfer_check": "Scale one real recipe up by half, execute it, and record where the math held and where the cook's judgment took over.",
+     "bands": {
+      "K–2": "Help double a recipe with an adult and see whether it still works.",
+      "3–5": "Scale one recipe up by half and record what worked.",
+      "6–8": "Scale one real recipe up by half, execute it, and record where the maths held and where it did not, with a checker.",
+      "9–10": "Scale one real recipe up by half, execute it, and record where the math held and where the cooking did not.",
+      "11–12": "Run a kitchen-as-lab session for a group: ratios, heat, cure and rise, with one scaled recipe recorded."
+     }
     },
     {
      "theme": "The table as history",
      "description": "Migration written in menus — which peoples brought which dishes to your state, and what the food remembers.",
-     "transfer_check": "Pick one dish on your state's table and trace, from real sources, the community that carried it there."
+     "transfer_check": "Pick one dish on your state's table and trace, from real sources, the community that carried it there.",
+     "bands": {
+      "K–2": "Pick one dish your family eats and ask who brought it to your state.",
+      "3–5": "Pick one dish on your state's table and find which community brought it.",
+      "6–8": "Pick one dish on your state's table and trace, from real sources, the community that carried it, with a checker.",
+      "9–10": "Pick one dish on your state's table and trace, from real sources, the community that carried it here.",
+      "11–12": "Present migration written in menus to a group: three dishes, three communities, real sources."
+     }
     },
     {
      "theme": "Waste not",
      "description": "What your state's table throws away — and the compost, gleaning and recovery systems that close the loop.",
-     "transfer_check": "Run one week of your own household food-waste log and make one change that measurably shrinks it."
+     "transfer_check": "Run one week of your own household food-waste log and make one change that measurably shrinks it.",
+     "bands": {
+      "K–2": "For a week, notice what food your family throws away and change one thing.",
+      "3–5": "Keep a week's food-waste log at home and make one change.",
+      "6–8": "Run one week of your own household food-waste log and make one change that shrinks it, with a checker.",
+      "9–10": "Run one week of your own household food-waste log and make one change that measurably shrinks it.",
+      "11–12": "Run a food-waste log for a group or household and connect the result to your state's compost, gleaning and recovery systems."
+     }
     },
     {
      "theme": "Host a table",
      "description": "The capstone: plan, source and serve one meal that is your state on a plate — seasonal, local where possible, storied.",
-     "transfer_check": "Host a real meal for others built from your state's foods, and tell each dish's story before it is served."
+     "transfer_check": "Host a real meal for others built from your state's foods, and tell each dish's story before it is served.",
+     "bands": {
+      "K–2": "Help make a meal from things grown in your state and tell one story about it.",
+      "3–5": "Plan and help serve one meal from your state's foods with a story for each dish.",
+      "6–8": "Plan, source and serve one meal that is your state on a plate, with a story per dish, with a checker.",
+      "9–10": "Host a real meal for others built from your state's foods, and tell each dish's story before it is eaten.",
+      "11–12": "Host a real meal for a group, seasonal and local, with each dish's real story told and sourced."
+     }
     }
    ]
   },
@@ -181,52 +391,122 @@
     {
      "theme": "The sound of your state",
      "description": "Every state has a sound — a music it gave or keeps — and the halls, porches and stations where it lives.",
-     "transfer_check": "Listen to one musical tradition your state is known for, live where possible, and name two of its real makers past or present."
+     "transfer_check": "Listen to one musical tradition your state is known for, live where possible, and name two of its real makers past or present.",
+     "bands": {
+      "K–2": "Listen to a song your state is known for and say what instruments you hear.",
+      "3–5": "Listen to one musical tradition of your state and name two places it lives.",
+      "6–8": "Listen to one musical tradition your state is known for, live where possible, and name two places it lives, with a checker.",
+      "9–10": "Listen to one musical tradition your state is known for, live where possible, and name two halls, porches or stations where it lives.",
+      "11–12": "Present your state's sound to a group with live or recorded examples and the places that keep it alive."
+     }
     },
     {
      "theme": "The languages of home",
      "description": "The languages actually spoken in your state's homes — indigenous, settler, immigrant — and where each is heard today.",
-     "transfer_check": "From public data, name the three most-spoken home languages in your state besides English and learn a real greeting in one."
+     "transfer_check": "From public data, name the three most-spoken home languages in your state besides English and learn a real greeting in one.",
+     "bands": {
+      "K–2": "Say which languages you hear spoken where you live.",
+      "3–5": "Find the three most-spoken home languages in your state besides English.",
+      "6–8": "From public data, name the three most-spoken home languages in your state besides English and where each is heard, with a checker.",
+      "9–10": "From public data, name the three most-spoken home languages in your state besides English and where each is heard today.",
+      "11–12": "Present the languages of home to a group from public data, with where each is heard and what services exist in it."
+     }
     },
     {
      "theme": "The peoples first here",
      "description": "The Native nations of your state's ground — their names, their present-day governments, and the places that carry their words.",
-     "transfer_check": "Name the Native nations historically and presently connected to your area, from their own or public sources, and one place-name that keeps their language."
+     "transfer_check": "Name the Native nations historically and presently connected to your area, from their own or public sources, and one place-name that keeps their language.",
+     "bands": {
+      "K–2": "Learn the name of a Native nation connected to your area.",
+      "3–5": "Name the Native nations connected to your area, from their own sources.",
+      "6–8": "Name the Native nations historically and presently connected to your area, from their own sources, with a checker.",
+      "9–10": "Name the Native nations historically and presently connected to your area, from their own sources, with their present-day governments.",
+      "11–12": "Present the Native nations of your ground to a group from their own sources, with their governments today and the places that carry their words."
+     }
     },
     {
      "theme": "The festival calendar",
      "description": "What your state gathers to celebrate — the fairs, feasts and parades — and the crews of real work behind each.",
-     "transfer_check": "Attend or study one real festival of your state and list five kinds of work that made it happen."
+     "transfer_check": "Attend or study one real festival of your state and list five kinds of work that made it happen.",
+     "bands": {
+      "K–2": "Go to a local festival with an adult and name three jobs that made it happen.",
+      "3–5": "Attend or study one real festival of your state and list three kinds of work behind it.",
+      "6–8": "Attend or study one real festival of your state and list five kinds of work that made it happen, with a checker.",
+      "9–10": "Attend or study one real festival of your state and list five kinds of work that made it happen.",
+      "11–12": "Present a real festival to a group as a crew of real work: five kinds of work, who does each, and what it costs."
+     }
     },
     {
      "theme": "The story your state tells",
      "description": "The founding tales, the tall tales, and the truths underneath — reading state legend with respect and honesty.",
-     "transfer_check": "Take one famous story your state tells about itself and check it against a historical source, reporting what held and what grew."
+     "transfer_check": "Take one famous story your state tells about itself and check it against a historical source, reporting what held and what grew.",
+     "bands": {
+      "K–2": "Tell a famous story about your state and ask an adult if it is true.",
+      "3–5": "Take one famous story your state tells and check it against a history source.",
+      "6–8": "Take one famous story your state tells about itself and check it against a historical source, with a checker.",
+      "9–10": "Take one famous story your state tells about itself and check it against a historical source, respectfully and honestly.",
+      "11–12": "Present a state legend to a group beside the historical record, with what the legend remembers and what it forgets."
+     }
     },
     {
      "theme": "The makers' craft",
      "description": "The craft your state is known for — quilts, boats, pottery, saddles, instruments — and the hands still making it.",
-     "transfer_check": "Find one living practitioner of a craft your state is known for and document one piece from their hands, with permission."
+     "transfer_check": "Find one living practitioner of a craft your state is known for and document one piece from their hands, with permission.",
+     "bands": {
+      "K–2": "Find a craft your state is known for and see one real piece.",
+      "3–5": "Find one living maker of a craft your state is known for and describe one piece.",
+      "6–8": "Find one living practitioner of a craft your state is known for and document one piece, with a checker.",
+      "9–10": "Find one living practitioner of a craft your state is known for and document one piece from their hands.",
+      "11–12": "Document a living craft of your state for a group: the practitioner, the piece, the process, and how it passes on."
+     }
     },
     {
      "theme": "The writers and the games",
      "description": "The books set in your state and the teams it cheers — culture as the shared calendar of a place.",
-     "transfer_check": "Read one work set in your state (or follow one storied team's season) and explain to somebody what it shows about home."
+     "transfer_check": "Read one work set in your state (or follow one storied team's season) and explain to somebody what it shows about home.",
+     "bands": {
+      "K–2": "Read a picture book set in your state or cheer a team, and say what it showed you.",
+      "3–5": "Read one book set in your state or follow one team's season and explain what it says about the place.",
+      "6–8": "Read one work set in your state (or follow one storied team's season) and explain to somebody what it says about the place, with a checker.",
+      "9–10": "Read one work set in your state (or follow one storied team's season) and explain to somebody what it says about the place.",
+      "11–12": "Present the shared calendar of your state to a group: one book, one team, and what each tells outsiders about home."
+     }
     },
     {
      "theme": "The quiet cultures",
      "description": "The communities your state's brochure forgets — and the food, faith and festivals they keep anyway.",
-     "transfer_check": "Identify one community tradition in your area that gets little attention and document it respectfully, with its keepers' consent."
+     "transfer_check": "Identify one community tradition in your area that gets little attention and document it respectfully, with its keepers' consent.",
+     "bands": {
+      "K–2": "Find a tradition in your area that not many people know about.",
+      "3–5": "Identify one community tradition in your area that gets little attention.",
+      "6–8": "Identify one community tradition in your area that gets little attention and document it respectfully, with a checker.",
+      "9–10": "Identify one community tradition in your area that gets little attention and document it respectfully.",
+      "11–12": "Document a quiet culture of your area for a group, with its keepers' consent and in their words."
+     }
     },
     {
      "theme": "Culture is taught",
      "description": "How your state's culture actually passes on — the aunties, the youth krewes, the apprentice pipelines of art.",
-     "transfer_check": "Learn one small cultural skill from an elder or keeper — a step, a stitch, a verse — and perform or produce it for them."
+     "transfer_check": "Learn one small cultural skill from an elder or keeper — a step, a stitch, a verse — and perform or produce it for them.",
+     "bands": {
+      "K–2": "Learn one step, stitch or verse from an older person and show it.",
+      "3–5": "Learn one small cultural skill from an elder and pass it to a classmate.",
+      "6–8": "Learn one small cultural skill from an elder or keeper and pass it on, with a checker.",
+      "9–10": "Learn one small cultural skill from an elder or keeper — a step, a stitch, a verse — and pass it to somebody else.",
+      "11–12": "Learn a cultural skill from a keeper and teach it to a group, with the keeper's account of how they learned it."
+     }
     },
     {
      "theme": "Add your verse",
      "description": "The capstone: make one thing — a song, a dish, a piece, a recorded story — that adds honestly to your state's culture.",
-     "transfer_check": "Create and share one original piece rooted in your state's tradition, and record one keeper's response to it."
+     "transfer_check": "Create and share one original piece rooted in your state's tradition, and record one keeper's response to it.",
+     "bands": {
+      "K–2": "Make one thing — a song, a picture, a story — about your state and share it.",
+      "3–5": "Make one original piece rooted in your state's tradition and share it.",
+      "6–8": "Create and share one original piece rooted in your state's tradition and record one keeper's response, with a checker.",
+      "9–10": "Create and share one original piece rooted in your state's tradition, and record one keeper's response to it.",
+      "11–12": "Create and present an original piece rooted in your state's tradition to a group, with a keeper's recorded response."
+     }
     }
    ]
   },
@@ -238,52 +518,122 @@
     {
      "theme": "Your state's hazard, by name",
      "description": "Hurricane, tornado, wildfire, blizzard, quake, flood — every state has a signature hazard, and naming it is the first preparation.",
-     "transfer_check": "Name your state's principal natural hazard from its own emergency agency's materials and the season or sign it comes with."
+     "transfer_check": "Name your state's principal natural hazard from its own emergency agency's materials and the season or sign it comes with.",
+     "bands": {
+      "K–2": "Name the weather your state must be ready for.",
+      "3–5": "Name your state's main natural hazard from its emergency agency.",
+      "6–8": "Name your state's principal natural hazard from its own emergency agency's materials and what it does, with a checker.",
+      "9–10": "Name your state's principal natural hazard from its own emergency agency's materials and the season it comes in.",
+      "11–12": "Present your state's hazard to a group from the agency's own materials: what it is, when it comes, and what the agency asks of households."
+     }
     },
     {
      "theme": "The storm your state remembers",
      "description": "The named disaster your state still talks about — what happened, who answered, and what changed after.",
-     "transfer_check": "Interview someone who remembers your state's defining disaster (or study firsthand accounts) and retell it accurately in five minutes."
+     "transfer_check": "Interview someone who remembers your state's defining disaster (or study firsthand accounts) and retell it accurately in five minutes.",
+     "bands": {
+      "K–2": "Ask an adult about the big storm or disaster they remember.",
+      "3–5": "Interview someone who remembers your state's biggest disaster and write what changed.",
+      "6–8": "Interview someone who remembers your state's defining disaster (or study firsthand accounts) and record what changed after, with a checker.",
+      "9–10": "Interview someone who remembers your state's defining disaster (or study firsthand accounts) and record what happened, who answered, and what changed.",
+      "11–12": "Record oral histories of your state's defining disaster for a group and present what changed after, checked against the public record."
+     }
     },
     {
      "theme": "The warning and the watch",
      "description": "How the alert actually reaches you — the sirens, phones, radios and neighbors of your state's warning chain.",
-     "transfer_check": "Map the real warning chain for your household — every channel an alert would arrive by — and test one of them."
+     "transfer_check": "Map the real warning chain for your household — every channel an alert would arrive by — and test one of them.",
+     "bands": {
+      "K–2": "Say how you would know a storm was coming — the siren, the phone, a neighbour.",
+      "3–5": "List every way a warning would reach your home.",
+      "6–8": "Map the real warning chain for your household — every channel an alert would arrive by — with a checker.",
+      "9–10": "Map the real warning chain for your household — every channel an alert would arrive by — and test one.",
+      "11–12": "Map and test the warning chain for a group or building, and fix the household that would not hear it."
+     }
     },
     {
      "theme": "The family plan",
      "description": "Go or stay, meet where, carry what — the one-page household plan your state's hazard demands.",
-     "transfer_check": "Write and rehearse your household's real one-page plan for your state's hazard, with every member holding a role."
+     "transfer_check": "Write and rehearse your household's real one-page plan for your state's hazard, with every member holding a role.",
+     "bands": {
+      "K–2": "With an adult, decide where your family would meet if you had to leave home.",
+      "3–5": "Write a one-page family plan for your state's hazard: go or stay, meet where, carry what.",
+      "6–8": "Write and rehearse your household's one-page plan for your state's hazard, with a checker.",
+      "9–10": "Write and rehearse your household's real one-page plan for your state's hazard, with every member knowing their part.",
+      "11–12": "Write, rehearse and time a real one-page plan for a household or group, and revise it from the rehearsal."
+     }
     },
     {
      "theme": "The kit that fits your state",
      "description": "Not a generic kit — yours: the water, warmth, cooling, documents and days-of-supply your state's hazard actually requires.",
-     "transfer_check": "Assemble the real kit your state's hazard calls for, and defend two items you added and one you left out."
+     "transfer_check": "Assemble the real kit your state's hazard calls for, and defend two items you added and one you left out.",
+     "bands": {
+      "K–2": "Help pack a box of things your family would need if the power went out for a day.",
+      "3–5": "Assemble a kit for your state's hazard and say why each item is in it.",
+      "6–8": "Assemble the real kit your state's hazard calls for and defend two items you added, with a checker.",
+      "9–10": "Assemble the real kit your state's hazard calls for, and defend two items you added and one you left out.",
+      "11–12": "Assemble and audit a real kit for a group against the agency's list, with the additions your state's hazard demands."
+     }
     },
     {
      "theme": "The crews that answer",
      "description": "Who moves when it hits — utility crews, guard units, mutual aid, church kitchens — your state's response in order.",
-     "transfer_check": "Chart which crews restored one real past event in your state, in order, from news or firsthand accounts."
+     "transfer_check": "Chart which crews restored one real past event in your state, in order, from news or firsthand accounts.",
+     "bands": {
+      "K–2": "Name three kinds of people who help after a storm.",
+      "3–5": "Chart who restored one past event in your state, in order.",
+      "6–8": "Chart which crews restored one real past event in your state, in order, from news or firsthand accounts, with a checker.",
+      "9–10": "Chart which crews restored one real past event in your state, in order, from news or firsthand accounts.",
+      "11–12": "Present your state's response in order to a group — crews, guard, mutual aid, kitchens — from real accounts of one event."
+     }
     },
     {
      "theme": "The built defenses",
      "description": "Levees, snow fences, firebreaks, surge gates, safe rooms — the structures your state built against its weather.",
-     "transfer_check": "Visit or locate one real defensive structure in your region and explain what it defends against and its limits."
+     "transfer_check": "Visit or locate one real defensive structure in your region and explain what it defends against and its limits.",
+     "bands": {
+      "K–2": "Find one thing built near you to keep the weather out, and say what it does.",
+      "3–5": "Locate one real defensive structure in your region and say what it defends against.",
+      "6–8": "Visit or locate one real defensive structure in your region and explain what it defends against and its limit, with a checker.",
+      "9–10": "Visit or locate one real defensive structure in your region and explain what it defends against and what would overtop it.",
+      "11–12": "Present the built defences of your region to a group: one structure visited, its design event, and its limits."
+     }
     },
     {
      "theme": "The season's rhythm",
      "description": "Planting, harvest, first freeze, fire season — reading your state's year the way its farmers and foresters do.",
-     "transfer_check": "Build your state's real seasonal calendar of six working dates and verify two against a farmer, forecaster or almanac."
+     "transfer_check": "Build your state's real seasonal calendar of six working dates and verify two against a farmer, forecaster or almanac.",
+     "bands": {
+      "K–2": "Say when the farmers near you plant and harvest.",
+      "3–5": "Build a calendar of six working dates in your state's year.",
+      "6–8": "Build your state's real seasonal calendar of six working dates and verify two against a farmer or forester, with a checker.",
+      "9–10": "Build your state's real seasonal calendar of six working dates and verify two against a farmer or forester.",
+      "11–12": "Build and verify your state's working calendar for a group, with the people who live by each date."
+     }
     },
     {
      "theme": "Neighbor is a verb",
      "description": "The block-level truth of every disaster — the checklist of doors to knock, and the neighbors who need the first knock.",
-     "transfer_check": "Make the real check-on list for your street or building — who needs the first knock and why — and agree it with one neighbor."
+     "transfer_check": "Make the real check-on list for your street or building — who needs the first knock and why — and agree it with one neighbor.",
+     "bands": {
+      "K–2": "Say which neighbour you would check on first in a storm, and why.",
+      "3–5": "Make a check-on list for your street: who needs the first knock.",
+      "6–8": "Make the real check-on list for your street or building — who needs the first knock and why — with a checker.",
+      "9–10": "Make the real check-on list for your street or building — who needs the first knock and what they would need.",
+      "11–12": "Make and share the check-on list for a real street or building with the neighbours on it, and agree who knocks."
+     }
     },
     {
      "theme": "Memory into readiness",
      "description": "The capstone: turn your state's disaster memory into one durable readiness artifact for the people around you.",
-     "transfer_check": "Produce one real readiness artifact — a laminated plan, a kit day, a recorded elder interview — and put it in use where you live."
+     "transfer_check": "Produce one real readiness artifact — a laminated plan, a kit day, a recorded elder interview — and put it in use where you live.",
+     "bands": {
+      "K–2": "Make one thing that helps your family be ready — a plan on the fridge, a packed bag.",
+      "3–5": "Produce one readiness artefact — a plan, a kit day, an elder's story — for the people around you.",
+      "6–8": "Produce one real readiness artifact — a laminated plan, a kit day, a recorded elder interview — for the people around you, with a checker.",
+      "9–10": "Produce one real readiness artifact — a laminated plan, a kit day, a recorded elder interview — that the people around you would use.",
+      "11–12": "Produce a durable readiness artifact for a group from your state's disaster memory, and hand it to the people who will use it."
+     }
     }
    ]
   }

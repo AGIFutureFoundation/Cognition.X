@@ -10,52 +10,122 @@
     {
      "theme": "A city that works by water",
      "description": "Why New Orleans exists where it does — the river trade above it, the Gulf below it, and what a port city's work looks like from the levee.",
-     "transfer_check": "Find, on a real map, the port facility nearest your parish and name two things that actually move through it."
+     "transfer_check": "Find, on a real map, the port facility nearest your parish and name two things that actually move through it.",
+     "bands": {
+      "K–2": "Find the river and the port on a map of New Orleans with an adult and name one thing that comes in by ship.",
+      "3–5": "On a real map, find the port facility nearest your parish and name one thing that moves through it.",
+      "6–8": "Find the nearest port facility on a real map, name two things that move through it, and have a teacher check your source.",
+      "9–10": "Find, on a real map, the port facility nearest your parish and name two things that actually move through it.",
+      "11–12": "Find the nearest port facility, name two things that move through it from a public source, and present the port's place in the parish economy to a class or a hall."
+     }
     },
     {
      "theme": "The crane above the wharf",
      "description": "What the operator of a wharf crane really controls — slew, trolley and hoist — and why every lift is three motions managed at once.",
-     "transfer_check": "Watch a real container or cargo lift, from public ground or on film, and narrate the three motions by name as they happen."
+     "transfer_check": "Watch a real container or cargo lift, from public ground or on film, and narrate the three motions by name as they happen.",
+     "bands": {
+      "K–2": "Watch a crane on film with an adult and point to the three ways it moves.",
+      "3–5": "Watch a cargo lift on film and name the three motions the operator manages.",
+      "6–8": "Watch a real container or cargo lift, from public ground or on film, and narrate the three motions to a checker.",
+      "9–10": "Watch a real container or cargo lift, from public ground or on film, and narrate the three motions as they happen.",
+      "11–12": "Narrate a real lift's three motions for a group, from public ground, and explain why each is managed at once."
+     }
     },
     {
      "theme": "Rigging: the load speaks through the sling",
      "description": "Slings, hitches and rated hardware — how a load's weight and balance decide the rig, and why the tag on the strap is the law of the lift.",
-     "transfer_check": "Examine a real ratchet strap or lifting sling, find its rated tag, and explain to someone why a frayed one is retired on the spot."
+     "transfer_check": "Examine a real ratchet strap or lifting sling, find its rated tag, and explain to someone why a frayed one is retired on the spot.",
+     "bands": {
+      "K–2": "Look at the tag on a real strap with an adult and find the number that says how much it can hold.",
+      "3–5": "Find the rated tag on a real strap or sling and say what the number means.",
+      "6–8": "Examine a real ratchet strap or sling, find its rated tag, and explain the rating to a checker.",
+      "9–10": "Examine a real ratchet strap or lifting sling, find its rated tag, and explain to someone what the rating means and why it is the law of the lift.",
+      "11–12": "Examine real rigging hardware, find every rated tag, and teach a group why the tag is the law of the lift and what an unrated strap costs."
+     }
     },
     {
      "theme": "The signal hand",
      "description": "The standard crane hand signals — one signaller, one language, no shouting over the wind.",
-     "transfer_check": "Learn five standard crane hand signals and demonstrate them to a partner who writes down what each one commands."
+     "transfer_check": "Learn five standard crane hand signals and demonstrate them to a partner who writes down what each one commands.",
+     "bands": {
+      "K–2": "Learn two crane hand signals and show them to a friend.",
+      "3–5": "Learn three standard crane hand signals and demonstrate them to a partner.",
+      "6–8": "Learn five standard crane hand signals and demonstrate them to a partner who writes down what each means, with a checker.",
+      "9–10": "Learn five standard crane hand signals and demonstrate them to a partner who writes down what each one means.",
+      "11–12": "Learn the standard crane hand signals and run a signalling drill for a group, with one signaller and no shouting, assessed on the record."
+     }
     },
     {
      "theme": "Swing is the enemy",
      "description": "A suspended load is a pendulum: why smooth starts and stops tame the swing, and why a hurried operator makes the load dangerous.",
-     "transfer_check": "Hang a small weight on a string, move your hand like a crane, and show how a slow start keeps the swing small while a jerk makes it wild."
+     "transfer_check": "Hang a small weight on a string, move your hand like a crane, and show how a slow start keeps the swing small while a jerk makes it wild.",
+     "bands": {
+      "K–2": "Hang a weight on a string and show how a slow start keeps it from swinging.",
+      "3–5": "Hang a small weight on a string, move your hand like a crane, and show how a slow start keeps it still.",
+      "6–8": "Hang a weight on a string, move it like a crane, and show a checker how smooth starts and stops tame the swing.",
+      "9–10": "Hang a small weight on a string, move your hand like a crane, and show how a slow start keeps the swing tame while a jerk makes it dangerous.",
+      "11–12": "Demonstrate swing control with a pendulum rig for a group and relate each motion to a real crane's controls."
+     }
     },
     {
      "theme": "The box that ate the waterfront",
      "description": "Containerization — how one steel box remade longshore work, the wharves, and what a New Orleans dock job is today.",
-     "transfer_check": "Compare a photograph of a New Orleans wharf before containers with one today, and name three kinds of work that changed."
+     "transfer_check": "Compare a photograph of a New Orleans wharf before containers with one today, and name three kinds of work that changed.",
+     "bands": {
+      "K–2": "Look at an old and a new photo of a wharf with an adult and say one thing that changed.",
+      "3–5": "Compare a photo of a New Orleans wharf before containers with one today and name two changes.",
+      "6–8": "Compare wharf photographs before and after containerisation and name three changes in the work, with a checker.",
+      "9–10": "Compare a photograph of a New Orleans wharf before containers with one today, and name three things about the work that changed.",
+      "11–12": "Present the before-and-after of containerisation to a group with three changes in the work and what each meant for the crafts."
+     }
     },
     {
      "theme": "Weather rules the river",
      "description": "Fog on the water, wind limits on the boom, and the river's stage — the conditions that stop a lift no matter the schedule.",
-     "transfer_check": "Look up today's Mississippi River stage at New Orleans on the public gauge and state what that number means for the docks."
+     "transfer_check": "Look up today's Mississippi River stage at New Orleans on the public gauge and state what that number means for the docks.",
+     "bands": {
+      "K–2": "Look up today's river level at New Orleans with an adult and say whether it is high or low.",
+      "3–5": "Look up today's Mississippi River stage at New Orleans and say what it means for the boats.",
+      "6–8": "Look up today's river stage on the public gauge and state what it means for a lift, with a checker.",
+      "9–10": "Look up today's Mississippi River stage at New Orleans on the public gauge and state what it means for work on the wharf.",
+      "11–12": "Track the river stage and wind for a week and write the conditions under which a real wharf would stop a lift, with the source."
+     }
     },
     {
      "theme": "Who works the port",
      "description": "Longshore workers, operating engineers, teamsters and their halls — the crafts a single ship call brings to the wharf together.",
-     "transfer_check": "From one real job posting or union page for port work in Louisiana, list the craft, the hall, and one requirement for the seat."
+     "transfer_check": "From one real job posting or union page for port work in Louisiana, list the craft, the hall, and one requirement for the seat.",
+     "bands": {
+      "K–2": "Name two jobs people do at a port, like loading a ship or driving a crane.",
+      "3–5": "From a real port job page, name the job and what it does.",
+      "6–8": "From one real job posting or union page for port work in Louisiana, list the craft and the hall, with a checker.",
+      "9–10": "From one real job posting or union page for port work in Louisiana, list the craft, the hall, and what the work is.",
+      "11–12": "From real postings and hall pages, map the crafts a single ship call brings to a Louisiana wharf and present the map to a group."
+     }
     },
     {
      "theme": "From ship to shelf",
      "description": "The intermodal chain — wharf to rail yard to truck to warehouse — and where the port's work touches your own parish.",
-     "transfer_check": "Pick one product in your home and trace, in writing, a plausible path it took from a ship's hold to your shelf."
+     "transfer_check": "Pick one product in your home and trace, in writing, a plausible path it took from a ship's hold to your shelf.",
+     "bands": {
+      "K–2": "Pick one thing in your home and guess how it got from a ship to you.",
+      "3–5": "Pick one product in your home and draw a likely path from a ship to your shelf.",
+      "6–8": "Pick one product and trace, in writing, a plausible path from a ship's hold to your shelf, with a checker.",
+      "9–10": "Pick one product in your home and trace, in writing, a plausible path it took from a ship's hold to your shelf.",
+      "11–12": "Trace a real product's path from a real port through rail, truck and warehouse to your parish, with sources, for a group."
+     }
     },
     {
      "theme": "The paper trail of a lift",
      "description": "Manifests, tallies and inspection logs — why the count must match, and how paper protects both the cargo and the crew.",
-     "transfer_check": "Receive a real delivery of any kind, check the packing note against what arrived, and record one discrepancy or a clean count."
+     "transfer_check": "Receive a real delivery of any kind, check the packing note against what arrived, and record one discrepancy or a clean count.",
+     "bands": {
+      "K–2": "When a parcel arrives, check with an adult that what is inside matches the note.",
+      "3–5": "Receive a real delivery, check the packing note against what arrived, and note any difference.",
+      "6–8": "Receive a real delivery of any kind, check the packing note against what arrived, and record the result, with a checker.",
+      "9–10": "Receive a real delivery of any kind, check the packing note against what arrived, and record the result the way a tally clerk would.",
+      "11–12": "Run a tally for a real delivery to a group or organisation, reconcile the manifest, and record the discrepancy the way a wharf would."
+     }
     }
    ]
   },
@@ -67,52 +137,122 @@
     {
      "theme": "Call before you dig",
      "description": "Louisiana 811 — the one call that finds every buried line before a shovel does, and the waiting time the law demands.",
-     "transfer_check": "Find Louisiana 811 and write down the exact steps and the waiting period a real dig at your own address would require."
+     "transfer_check": "Find Louisiana 811 and write down the exact steps and the waiting period a real dig at your own address would require.",
+     "bands": {
+      "K–2": "Say why you must ask before digging in the ground, and who you call.",
+      "3–5": "Find Louisiana 811 and say what it is for and how long you wait.",
+      "6–8": "Find Louisiana 811 and write down the steps and the waiting period for a real dig, with a checker.",
+      "9–10": "Find Louisiana 811 and write down the exact steps and the waiting period a real dig at your address would require.",
+      "11–12": "Make or walk through a real 811 request for a real dig, record every step and date, and brief a group on the waiting period the law demands."
+     }
     },
     {
      "theme": "The flags and their colours",
      "description": "The marking code painted on the street — red for electric, yellow for gas, blue for water — a public language anyone can read.",
-     "transfer_check": "Find real locate marks or flags in your neighbourhood and decode at least two colours for someone who never noticed them."
+     "transfer_check": "Find real locate marks or flags in your neighbourhood and decode at least two colours for someone who never noticed them.",
+     "bands": {
+      "K–2": "Find painted marks or little flags on a street with an adult and say what colour means what.",
+      "3–5": "Find real locate marks in your neighbourhood and decode two colours.",
+      "6–8": "Find real locate marks or flags and decode at least two colours for a checker.",
+      "9–10": "Find real locate marks or flags in your neighbourhood and decode at least two colours for someone who does not know the code.",
+      "11–12": "Photograph and decode every locate colour on a real street for a group, and explain what a wrong reading would hit."
+     }
     },
     {
      "theme": "A trench is not a hole",
      "description": "Why trench walls fail without warning, what a cubic metre of soil weighs, and why nobody enters an unprotected cut — ever.",
-     "transfer_check": "Weigh a small bucket of damp soil, scale the number up to a collapsed trench wall, and state the weight that would land on a worker."
+     "transfer_check": "Weigh a small bucket of damp soil, scale the number up to a collapsed trench wall, and state the weight that would land on a worker.",
+     "bands": {
+      "K–2": "Weigh a bucket of damp soil with an adult and say how heavy a whole wall of it would be.",
+      "3–5": "Weigh a bucket of damp soil and scale the number up to a trench wall.",
+      "6–8": "Weigh a bucket of damp soil, scale it to a collapsed trench wall, and state the rule that nobody enters an unprotected cut, with a checker.",
+      "9–10": "Weigh a small bucket of damp soil, scale the number up to a collapsed trench wall, and state why nobody enters an unprotected cut.",
+      "11–12": "Present the trench-weight arithmetic to a group with real soil and state the rule as a stop-work authority."
+     }
     },
     {
      "theme": "Shoring, shielding, sloping",
      "description": "The three protections that make a trench survivable, and how the depth and the soil pick between them.",
-     "transfer_check": "From photographs of three real excavations, identify which protection each one uses — or flag the one using none."
+     "transfer_check": "From photographs of three real excavations, identify which protection each one uses — or flag the one using none.",
+     "bands": {
+      "K–2": "Look at photos of holes in the ground and say which ones look safe to be in.",
+      "3–5": "From photographs of three excavations, say which protection each uses.",
+      "6–8": "From photographs of three real excavations, identify which protection each uses or fails to use, with a checker.",
+      "9–10": "From photographs of three real excavations, identify which protection each one uses — or fails to use — and why.",
+      "11–12": "Classify a set of real excavation photographs for a group and state, for each, the protection the depth and soil required."
+     }
     },
     {
      "theme": "Water under everything",
      "description": "New Orleans digs into a high water table: why cuts flood from below, and what dewatering means before the real work starts.",
-     "transfer_check": "After a rain, note how long water stands in the lowest spot near your home, and explain what that says about digging there."
+     "transfer_check": "After a rain, note how long water stands in the lowest spot near your home, and explain what that says about digging there.",
+     "bands": {
+      "K–2": "After rain, watch how long a puddle stays in the lowest spot near home.",
+      "3–5": "After a rain, note how long water stands in the lowest spot near home and say why.",
+      "6–8": "After a rain, time how long water stands in the lowest spot near home and explain what it means for a trench, with a checker.",
+      "9–10": "After a rain, note how long water stands in the lowest spot near your home, and explain what that means for a cut in that ground.",
+      "11–12": "Measure standing water after rain at a real site and explain to a group what dewatering would be needed before a cut."
+     }
     },
     {
      "theme": "The line you did not expect",
      "description": "Striking a buried utility — what the alarm moment is, why all work stops at once, and who must be called before anything moves again.",
-     "transfer_check": "Write the stop-work steps for a struck gas line as five short commands, and have someone read them back correctly."
+     "transfer_check": "Write the stop-work steps for a struck gas line as five short commands, and have someone read them back correctly.",
+     "bands": {
+      "K–2": "Say what to do if a digger hits a pipe: stop, get away, tell an adult.",
+      "3–5": "Write the steps for a struck gas line as short commands.",
+      "6–8": "Write the stop-work steps for a struck gas line as five commands and have someone read them back, with a checker.",
+      "9–10": "Write the stop-work steps for a struck gas line as five short commands, and have someone read them back to you.",
+      "11–12": "Run a stop-work drill for a struck line with a group, from the commands you wrote, and record the response."
+     }
     },
     {
      "theme": "Grade means exactly",
      "description": "A trench is cut to a number, not a feeling — levels, lasers and string lines, and why half a bucket too deep is rework.",
-     "transfer_check": "With a string and a line level, set a level line across a real span at home and prove it with a second measurement."
+     "transfer_check": "With a string and a line level, set a level line across a real span at home and prove it with a second measurement.",
+     "bands": {
+      "K–2": "Use a string and a level with an adult to make a straight line across a table.",
+      "3–5": "With a string and a line level, set a level line across a real span at home.",
+      "6–8": "With a string and a line level, set a level line across a real span and prove it with a second check, with a checker.",
+      "9–10": "With a string and a line level, set a level line across a real span at home and prove it with a second method.",
+      "11–12": "Set and prove grade across a real span for a group with two methods, and explain what half a bucket too deep costs."
+     }
     },
     {
      "theme": "Soil tells its story",
      "description": "Clay, sand and fill — reading what comes out of the ground, and why the spoil pile stands back from the edge it came from.",
-     "transfer_check": "Sample soil from two spots near home, compare how each holds together when damp, and say which would stand in a wall longer."
+     "transfer_check": "Sample soil from two spots near home, compare how each holds together when damp, and say which would stand in a wall longer.",
+     "bands": {
+      "K–2": "Take soil from two spots and see which one holds together when wet.",
+      "3–5": "Sample soil from two spots near home and compare how each holds together when damp.",
+      "6–8": "Sample soil from two spots, compare how each holds together when damp, and say what each would do in a trench, with a checker.",
+      "9–10": "Sample soil from two spots near home, compare how each holds together when damp, and say what each would do in a trench wall.",
+      "11–12": "Classify real soil samples for a group and state where the spoil pile must stand for each."
+     }
     },
     {
      "theme": "The competent person",
      "description": "One named person inspects the trench each shift and after every rain — what that duty covers and why it cannot be shared.",
-     "transfer_check": "Write the checklist a trench inspection must walk through after a Louisiana thunderstorm, and defend each line."
+     "transfer_check": "Write the checklist a trench inspection must walk through after a Louisiana thunderstorm, and defend each line.",
+     "bands": {
+      "K–2": "Say who checks a hole is safe before anyone works in it.",
+      "3–5": "Write what a trench inspection must check after a storm.",
+      "6–8": "Write the checklist a trench inspection must walk through after a Louisiana thunderstorm, with a checker.",
+      "9–10": "Write the checklist a trench inspection must walk through after a Louisiana thunderstorm, and who may sign it.",
+      "11–12": "Write and walk the inspection checklist at a real or mock trench for a group, as the named competent person."
+     }
     },
     {
      "theme": "Backfill and the street you leave",
      "description": "Compaction in lifts, restoring the surface, and why a shortcut under the pavement becomes everyone's pothole.",
-     "transfer_check": "Find one patched utility cut in a real street, judge how the patch is holding, and explain what was done well or poorly."
+     "transfer_check": "Find one patched utility cut in a real street, judge how the patch is holding, and explain what was done well or poorly.",
+     "bands": {
+      "K–2": "Find a patch in a real road and say whether it is holding.",
+      "3–5": "Find one patched utility cut in a real street and judge how the patch is holding.",
+      "6–8": "Find one patched utility cut in a real street, judge how it is holding, and explain what a bad backfill does, with a checker.",
+      "9–10": "Find one patched utility cut in a real street, judge how the patch is holding, and explain what shortcut would explain a failure.",
+      "11–12": "Survey the utility patches on a real street for a group and explain compaction in lifts against what you found."
+     }
     }
    ]
   },
@@ -124,52 +264,122 @@
     {
      "theme": "A bowl between levee and lake",
      "description": "The city's shape — below sea level, ringed by levees, drained by machines — and why every drop of rain must be lifted out.",
-     "transfer_check": "On a real elevation map, find your own ground height relative to the river and the lake, and state where your rain goes."
+     "transfer_check": "On a real elevation map, find your own ground height relative to the river and the lake, and state where your rain goes.",
+     "bands": {
+      "K–2": "On a map with an adult, find whether your home is higher or lower than the river.",
+      "3–5": "On a real elevation map, find your own ground height relative to the river and the lake.",
+      "6–8": "On a real elevation map, find your ground height relative to the river and the lake and explain why rain must be lifted out, with a checker.",
+      "9–10": "On a real elevation map, find your own ground height relative to the river and the lake, and explain why every drop of rain must be pumped.",
+      "11–12": "Present the bowl to a group from the real elevation map: levees, lake, your ground, and the machines that keep it dry."
+     }
     },
     {
      "theme": "The pump stations",
      "description": "The drainage pump stations and their giant screws — machinery a century old still working every storm, and the crews who run it.",
-     "transfer_check": "Locate the drainage pump station nearest your parish on a public map and report what area it drains and where the water lands."
+     "transfer_check": "Locate the drainage pump station nearest your parish on a public map and report what area it drains and where the water lands.",
+     "bands": {
+      "K–2": "Find the nearest pump station on a map with an adult.",
+      "3–5": "Locate the nearest drainage pump station on a public map and say what area it drains.",
+      "6–8": "Locate the nearest drainage pump station on a public map and report what area it serves, with a checker.",
+      "9–10": "Locate the drainage pump station nearest your parish on a public map and report what area it drains and how old it is.",
+      "11–12": "Present the nearest pump station's area, age and crews to a group from public sources."
+     }
     },
     {
      "theme": "The catch basin on your corner",
      "description": "The street's first drain — where it leads, why leaves defeat it, and what a blocked basin does to the block above it.",
-     "transfer_check": "Find the nearest storm drain, inspect it from above without entering the street, and report whether it is clear and where its water goes."
+     "transfer_check": "Find the nearest storm drain, inspect it from above without entering the street, and report whether it is clear and where its water goes.",
+     "bands": {
+      "K–2": "Find the nearest storm drain with an adult and say whether it is blocked.",
+      "3–5": "Find the nearest storm drain, look at it from the kerb, and report whether it is clear.",
+      "6–8": "Find the nearest storm drain, inspect it from above without entering the street, and report its state, with a checker.",
+      "9–10": "Find the nearest storm drain, inspect it from above without entering the street, and report where it leads and whether it is clear.",
+      "11–12": "Survey the storm drains on a real block for a group and report which would flood the block above them."
+     }
     },
     {
      "theme": "Canals seen and unseen",
      "description": "Outfall canals in the open air and culverts under the neutral ground — the hidden second city that carries the water away.",
-     "transfer_check": "Trace, on a map, the path a storm's water takes from your street to open water, naming each canal or culvert it uses."
+     "transfer_check": "Trace, on a map, the path a storm's water takes from your street to open water, naming each canal or culvert it uses.",
+     "bands": {
+      "K–2": "On a map with an adult, follow where the rain from your street goes.",
+      "3–5": "Trace on a map where a storm's water goes from your street to open water.",
+      "6–8": "Trace, on a map, the path storm water takes from your street to open water, naming each canal or culvert, with a checker.",
+      "9–10": "Trace, on a map, the path a storm's water takes from your street to open water, naming each canal, culvert and pump on the way.",
+      "11–12": "Present the full drainage path from a real street to open water to a group, with the hidden canals named."
+     }
     },
     {
      "theme": "The storm's schedule",
      "description": "Hurricane season's rhythm, watch against warning, and the days-before timeline on which real preparation runs.",
-     "transfer_check": "Build a 72-hour countdown checklist for your own household from the public parish guidance, and post it where it can be read."
+     "transfer_check": "Build a 72-hour countdown checklist for your own household from the public parish guidance, and post it where it can be read.",
+     "bands": {
+      "K–2": "With an adult, make a list of what to do the day before a big storm.",
+      "3–5": "Build a three-day countdown checklist for your household from the parish guidance.",
+      "6–8": "Build a 72-hour countdown checklist for your household from the public parish guidance, with a checker.",
+      "9–10": "Build a 72-hour countdown checklist for your own household from the public parish guidance, watch against warning.",
+      "11–12": "Build and rehearse a 72-hour countdown for a real household or group from the parish guidance, and time the rehearsal."
+     }
     },
     {
      "theme": "Secure the machine, then leave",
      "description": "How crews prepare equipment for a storm they will not stay to watch — fuel, elevation, tie-down, records — and why people leave on time.",
-     "transfer_check": "Write the shutdown-and-secure list for one real machine you have access to — a mower, a generator, a vehicle — before a named storm."
+     "transfer_check": "Write the shutdown-and-secure list for one real machine you have access to — a mower, a generator, a vehicle — before a named storm.",
+     "bands": {
+      "K–2": "Help an adult put away outdoor things before a storm and say why you leave on time.",
+      "3–5": "Write the shutdown list for one real machine at home before a storm.",
+      "6–8": "Write the shutdown-and-secure list for one real machine you have access to, with a checker.",
+      "9–10": "Write the shutdown-and-secure list for one real machine you have access to — a mower, a generator, a boat — and why the crew leaves on time.",
+      "11–12": "Write and run the secure-and-leave procedure for real equipment before a real or drill evacuation, with the records a crew would keep."
+     }
     },
     {
      "theme": "After the wind: reading a damaged site",
      "description": "Walking a site after a storm — what to photograph, what to report, and the one rule that never bends: a downed line is untouchable.",
-     "transfer_check": "From photographs of storm damage, list the hazards in the order a crew must treat them, putting any wire first."
+     "transfer_check": "From photographs of storm damage, list the hazards in the order a crew must treat them, putting any wire first.",
+     "bands": {
+      "K–2": "Look at a photo of storm damage and say the one thing you must never touch.",
+      "3–5": "From photographs of storm damage, list the dangers in the order to deal with them.",
+      "6–8": "From photographs of storm damage, list the hazards in the order a crew must treat them, downed lines first, with a checker.",
+      "9–10": "From photographs of storm damage, list the hazards in the order a crew must treat them, putting the downed line first and untouchable.",
+      "11–12": "Walk a real or simulated damaged site for a group, photograph and report in crew order, with the downed line rule stated first."
+     }
     },
     {
      "theme": "Mould, muck and the gut-out",
      "description": "Flood recovery labour — what wet walls become, the protective gear the work demands, and why speed matters in the first week.",
-     "transfer_check": "List the protective equipment a gut-out crew wears and match each item to the specific hazard it answers."
+     "transfer_check": "List the protective equipment a gut-out crew wears and match each item to the specific hazard it answers.",
+     "bands": {
+      "K–2": "Say what a person wears to clean out a flooded room and why.",
+      "3–5": "List the protective gear a gut-out crew wears and what each protects against.",
+      "6–8": "List the protective equipment a gut-out crew wears and match each item to its hazard, with a checker.",
+      "9–10": "List the protective equipment a gut-out crew wears and match each item to the specific hazard of wet walls and mould.",
+      "11–12": "Kit out and brief a real or simulated gut-out crew, item by hazard, and explain why the first week matters."
+     }
     },
     {
      "theme": "The generator's place",
      "description": "Temporary power after a storm — and the placement rule that decides between help and tragedy: outdoors, away from windows, always.",
-     "transfer_check": "Find a real generator's rating plate, in person or in its manual, and mark on a sketch of your home the one safe place it could run."
+     "transfer_check": "Find a real generator's rating plate, in person or in its manual, and mark on a sketch of your home the one safe place it could run.",
+     "bands": {
+      "K–2": "Say where a generator must never run: inside, or near a window.",
+      "3–5": "Find a real generator's rating plate and mark on a sketch where it may run.",
+      "6–8": "Find a real generator's rating plate, in person or in its manual, and mark on a sketch of a home where it may safely run, with a checker.",
+      "9–10": "Find a real generator's rating plate, in person or in its manual, and mark on a sketch of your home the only places it may run.",
+      "11–12": "Place and brief a real generator for a group — rating, distance, exhaust, cords — and state the rule that decides between help and tragedy."
+     }
     },
     {
      "theme": "Rebuild higher",
      "description": "Base flood elevation, elevation certificates, and why the rebuilt house stands on piers its neighbour lacks.",
-     "transfer_check": "Look up whether your address sits in a mapped flood zone and report the base flood elevation the maps assign it."
+     "transfer_check": "Look up whether your address sits in a mapped flood zone and report the base flood elevation the maps assign it.",
+     "bands": {
+      "K–2": "With an adult, look up whether your home is in a flood zone.",
+      "3–5": "Look up whether your address is in a mapped flood zone and what the base flood elevation is.",
+      "6–8": "Look up your address's flood zone and base flood elevation and explain what it means for a rebuilt house, with a checker.",
+      "9–10": "Look up whether your address sits in a mapped flood zone and report the base flood elevation and what an elevation certificate would show.",
+      "11–12": "Present flood zone, base flood elevation and elevation certificates for a real address to a group, with what the piers on a rebuilt house are for."
+     }
     }
    ]
   },
@@ -181,52 +391,122 @@
     {
      "theme": "The grid you can see from the street",
      "description": "Poles, transformers, service drops and the meter — the last mile of the grid, readable from your own kerb.",
-     "transfer_check": "From the ground and eyes only, sketch the path power takes from the nearest pole to your meter, naming each piece."
+     "transfer_check": "From the ground and eyes only, sketch the path power takes from the nearest pole to your meter, naming each piece.",
+     "bands": {
+      "K–2": "From the pavement with an adult, point to the pole, the wire and the meter on your home.",
+      "3–5": "From the ground, sketch the path power takes from the nearest pole to your meter.",
+      "6–8": "From the ground and eyes only, sketch the path power takes from the nearest pole to your meter, naming each part, with a checker.",
+      "9–10": "From the ground and eyes only, sketch the path power takes from the nearest pole to your meter, naming pole, transformer, drop and meter.",
+      "11–12": "Sketch and present the last mile of the grid for a real block to a group, from the kerb, naming every component."
+     }
     },
     {
      "theme": "Why the lights go out in Louisiana",
      "description": "Wind, water and trees against wires — what actually breaks in a storm, and why the same corners go dark first.",
-     "transfer_check": "After any outage in your parish, find the utility's public cause statement and restate it in one plain sentence."
+     "transfer_check": "After any outage in your parish, find the utility's public cause statement and restate it in one plain sentence.",
+     "bands": {
+      "K–2": "After a power cut, ask an adult what the power company said caused it.",
+      "3–5": "After any outage, find the utility's public cause statement and say it in your own words.",
+      "6–8": "After any outage in your parish, find the utility's public cause statement and restate it plainly, with a checker.",
+      "9–10": "After any outage in your parish, find the utility's public cause statement and restate it in plain words, naming what actually broke.",
+      "11–12": "Compile the causes of a season's outages in a real parish from public statements and present which corners go dark first and why."
+     }
     },
     {
      "theme": "The line crew's ladder of safety",
      "description": "De-energize, test, ground — the fixed order a crew works through before touching anything, and why the order never varies.",
-     "transfer_check": "Explain the three steps and their order to someone else, and have them tell you what goes wrong if step two is skipped."
+     "transfer_check": "Explain the three steps and their order to someone else, and have them tell you what goes wrong if step two is skipped.",
+     "bands": {
+      "K–2": "Say the three things a line crew does before touching a wire: turn off, test, ground.",
+      "3–5": "Explain de-energise, test, ground and their order to someone else.",
+      "6–8": "Explain the three steps and their order to someone else, and have them say what goes wrong if the order changes, with a checker.",
+      "9–10": "Explain the three steps and their order to someone else, and have them tell you what goes wrong if any step is skipped or swapped.",
+      "11–12": "Teach the ladder of safety to a group and assess each person on the order and its reasons."
+     }
     },
     {
      "theme": "Downed line discipline",
      "description": "Every downed wire is live until the utility says otherwise — the distance rule and the shuffle-step exit that keep bystanders alive.",
-     "transfer_check": "Teach a family member the keep-back rule and the feet-together shuffle exit, and have them repeat both back correctly."
+     "transfer_check": "Teach a family member the keep-back rule and the feet-together shuffle exit, and have them repeat both back correctly.",
+     "bands": {
+      "K–2": "Say the rule about a fallen wire: stay far away, it is live, tell an adult.",
+      "3–5": "Teach a family member the keep-back rule and the feet-together shuffle exit.",
+      "6–8": "Teach a family member the keep-back rule and the shuffle exit, and have them show it back, with a checker.",
+      "9–10": "Teach a family member the keep-back rule and the feet-together shuffle exit, and have them demonstrate both back to you.",
+      "11–12": "Run a downed-line drill for a group — the distance rule, the shuffle exit, the call — and assess each person."
+     }
     },
     {
      "theme": "The order of restoration",
      "description": "Hospitals and pump stations first, the biggest lines before the smallest — why restoration is a triage and your block may wait.",
-     "transfer_check": "Rank six fictional outage sites in restoration order and defend the ranking the way a utility would."
+     "transfer_check": "Rank six fictional outage sites in restoration order and defend the ranking the way a utility would.",
+     "bands": {
+      "K–2": "Say who should get power back first after a storm, and why.",
+      "3–5": "Put six pretend outage sites in the order the power should come back, with reasons.",
+      "6–8": "Rank six fictional outage sites in restoration order and defend the ranking, with a checker.",
+      "9–10": "Rank six fictional outage sites in restoration order and defend the ranking the way a utility would.",
+      "11–12": "Rank a real or simulated set of outage sites for a group as a utility would, and defend why a block may wait."
+     }
     },
     {
      "theme": "Mutual aid: crews from far away",
      "description": "The convoys after a hurricane — how utilities lend crews across states, and what it takes to work a grid you have never seen.",
-     "transfer_check": "Find one news account of mutual-aid crews working a Louisiana storm and report where they came from and what they restored."
+     "transfer_check": "Find one news account of mutual-aid crews working a Louisiana storm and report where they came from and what they restored.",
+     "bands": {
+      "K–2": "Find a picture of trucks from other states helping after a Louisiana storm and say why they came.",
+      "3–5": "Find one news account of mutual-aid crews working a Louisiana storm and say where they came from.",
+      "6–8": "Find one news account of mutual-aid crews working a Louisiana storm and report where they came from and how they worked, with a checker.",
+      "9–10": "Find one news account of mutual-aid crews working a Louisiana storm and report where they came from and what it takes to work an unknown grid.",
+      "11–12": "Present mutual aid to a group from real accounts: who lends crews, how they are briefed, and what they need from a grid they have never seen."
+     }
     },
     {
      "theme": "The meter and what it meters",
      "description": "Reading your own meter — kilowatt-hours as a number you can watch, and what the reading says about the house behind it.",
-     "transfer_check": "Read your real meter twice, a day apart, and turn the difference into the cost of that day at your utility's rate."
+     "transfer_check": "Read your real meter twice, a day apart, and turn the difference into the cost of that day at your utility's rate.",
+     "bands": {
+      "K–2": "Read the meter at home with an adult and see the number change the next day.",
+      "3–5": "Read your real meter twice, a day apart, and work out how much power the day used.",
+      "6–8": "Read your real meter twice, a day apart, and turn the difference into the cost of that day, with a checker.",
+      "9–10": "Read your real meter twice, a day apart, and turn the difference into the cost of that day at the published rate.",
+      "11–12": "Read a real meter over a week for a group, turn the readings into cost, and explain what the reading says about the house."
+     }
     },
     {
      "theme": "Solar, batteries and the island question",
      "description": "Why rooftop solar goes dark in an outage unless it can island — the safety reason lineworkers insist on it.",
-     "transfer_check": "Explain to someone why a solar roof alone does not power the house in a blackout, and what equipment changes that."
+     "transfer_check": "Explain to someone why a solar roof alone does not power the house in a blackout, and what equipment changes that.",
+     "bands": {
+      "K–2": "Say why solar panels on a roof stop working when the power goes out.",
+      "3–5": "Explain to someone why a solar roof alone does not power the house in a blackout.",
+      "6–8": "Explain to someone why a solar roof does not power the house in a blackout, and what islanding means, with a checker.",
+      "9–10": "Explain to someone why a solar roof alone does not power the house in a blackout, and what it would need to island safely.",
+      "11–12": "Explain islanding to a group, including the safety reason lineworkers insist on it, and what a battery changes."
+     }
     },
     {
      "theme": "Tools that keep you alive",
      "description": "Insulated tools, tested gloves and cover-up — awareness of the equipment that stands between a lineworker and the voltage.",
-     "transfer_check": "From a supplier's real catalogue page, identify the voltage class printed on a lineworker's glove and what the date stamp means."
+     "transfer_check": "From a supplier's real catalogue page, identify the voltage class printed on a lineworker's glove and what the date stamp means.",
+     "bands": {
+      "K–2": "Look at a picture of a lineworker's gloves and say why they are special.",
+      "3–5": "From a supplier's catalogue page, find the voltage class on a lineworker's glove.",
+      "6–8": "From a supplier's real catalogue page, identify the voltage class printed on a lineworker's glove and what it means, with a checker.",
+      "9–10": "From a supplier's real catalogue page, identify the voltage class printed on a lineworker's glove and what testing it requires.",
+      "11–12": "Present the insulated tools, gloves and cover-up to a group from real catalogue pages, with the voltage classes and the testing each requires."
+     }
     },
     {
      "theme": "From apprentice to lineworker",
      "description": "The pathway up the pole — apprenticeship years, climbing school, storm rotations — a career built one certified step at a time.",
-     "transfer_check": "Find one real lineworker apprenticeship serving Louisiana and write its entry requirements and its length."
+     "transfer_check": "Find one real lineworker apprenticeship serving Louisiana and write its entry requirements and its length.",
+     "bands": {
+      "K–2": "Say what a person has to learn to become a lineworker.",
+      "3–5": "Find one real lineworker apprenticeship in Louisiana and say what it asks for.",
+      "6–8": "Find one real lineworker apprenticeship serving Louisiana and write its entry requirements, with a checker.",
+      "9–10": "Find one real lineworker apprenticeship serving Louisiana and write its entry requirements and its years.",
+      "11–12": "Map the real pathway from apprentice to lineworker in Louisiana for a group, with entry requirements, years and storm rotations."
+     }
     }
    ]
   },
@@ -238,52 +518,122 @@
     {
      "theme": "What a union hall is",
      "description": "The hiring hall — dispatch lists, locals and the difference between looking for a job and being sent to one.",
-     "transfer_check": "Find one real trades local serving your parish and report what work it dispatches and how a new name gets on its list."
+     "transfer_check": "Find one real trades local serving your parish and report what work it dispatches and how a new name gets on its list.",
+     "bands": {
+      "K–2": "Say what a union hall is: a place where workers are sent to jobs.",
+      "3–5": "Find one real trades local serving your parish and say what work it sends people to.",
+      "6–8": "Find one real trades local serving your parish and report what work it dispatches and how, with a checker.",
+      "9–10": "Find one real trades local serving your parish and report what work it dispatches and how a person gets on the list.",
+      "11–12": "Present the hiring hall to a group from real local pages: dispatch lists, the difference between looking and being sent, and how to get on."
+     }
     },
     {
      "theme": "Apprenticeship: earn while you learn",
      "description": "Registered apprenticeship — paid hours on real work, classroom hours beside them, and a wage that steps up on schedule.",
-     "transfer_check": "Find one registered apprenticeship in Louisiana on the public registry and write down its entry requirements and starting wage."
+     "transfer_check": "Find one registered apprenticeship in Louisiana on the public registry and write down its entry requirements and starting wage.",
+     "bands": {
+      "K–2": "Say what an apprentice is: someone paid to learn a trade.",
+      "3–5": "Find one registered apprenticeship in Louisiana and write what it pays and how long it lasts.",
+      "6–8": "Find one registered apprenticeship in Louisiana on the public registry and write down its hours, wage and length, with a checker.",
+      "9–10": "Find one registered apprenticeship in Louisiana on the public registry and write down its hours, wage steps and classroom time.",
+      "11–12": "Compare three real Louisiana apprenticeships from the registry for a group: hours, wage steps, classroom time and how to apply."
+     }
     },
     {
      "theme": "The journey card",
      "description": "What journey-level status certifies — verified hours and verified skill — and why the card travels wherever the craft is worked.",
-     "transfer_check": "Interview or read an account of one journeyworker and report what their card required and where it has taken them."
+     "transfer_check": "Interview or read an account of one journeyworker and report what their card required and where it has taken them.",
+     "bands": {
+      "K–2": "Say what it means when someone has finished learning a trade.",
+      "3–5": "Read about one journeyworker and say what their card required.",
+      "6–8": "Read an account of one journeyworker and report what their card required and where it lets them work, with a checker.",
+      "9–10": "Interview or read an account of one journeyworker and report what their card required and why it travels.",
+      "11–12": "Interview a real journeyworker for a group and report what the card certifies, what it required, and where it has taken them."
+     }
     },
     {
      "theme": "Hours that count",
      "description": "On-the-job hours and related instruction — the ledger an apprentice keeps, and why unlogged work is work that never happened.",
-     "transfer_check": "Keep a one-week log of your own practice at any skill, in apprentice form: date, hours, task, and who could verify it."
+     "transfer_check": "Keep a one-week log of your own practice at any skill, in apprentice form: date, hours, task, and who could verify it.",
+     "bands": {
+      "K–2": "Keep a chart for a week of when you practised something, with the time.",
+      "3–5": "Keep a one-week log of practice at any skill: date, hours, task.",
+      "6–8": "Keep a one-week log of your own practice at any skill, in apprentice form, and have it checked.",
+      "9–10": "Keep a one-week log of your own practice at any skill, in apprentice form: date, hours, task, and who saw it.",
+      "11–12": "Keep an apprentice-form log for a month, have it signed by a witness each week, and present why unlogged work never happened."
+     }
     },
     {
      "theme": "The simulator and the seat",
      "description": "What a training simulator honestly teaches — smooth inputs, swing management, ordered procedure — and the line it never crosses: no simulator hour counts as equipment certification.",
-     "transfer_check": "After any simulator or game that models real work, write two skills it truly built and two claims it could never certify, and say why."
+     "transfer_check": "After any simulator or game that models real work, write two skills it truly built and two claims it could never certify, and say why.",
+     "bands": {
+      "K–2": "After a game that is like a real job, say one thing it taught you and one thing it could not.",
+      "3–5": "After any simulator or game that models real work, write one skill it built and one it could not.",
+      "6–8": "After a simulator or game that models real work, write two skills it built and two it could not, with a checker.",
+      "9–10": "After any simulator or game that models real work, write two skills it truly built and two it cannot, and why no simulator hour counts.",
+      "11–12": "Present the simulator's honest line to a group: what it teaches, what it never can, and why no simulator hour counts toward a journey card."
+     }
     },
     {
      "theme": "Credentials that travel",
      "description": "OSHA cards, craft certifications and the port's TWIC — which papers real Louisiana postings ask for, by name.",
-     "transfer_check": "From one real Louisiana trades posting, list every credential it names and where each one is actually obtained."
+     "transfer_check": "From one real Louisiana trades posting, list every credential it names and where each one is actually obtained.",
+     "bands": {
+      "K–2": "Say what a safety card is and why a worker carries one.",
+      "3–5": "From one real Louisiana trades posting, list the papers it asks for.",
+      "6–8": "From one real Louisiana trades posting, list every credential it names and where each is earned, with a checker.",
+      "9–10": "From one real Louisiana trades posting, list every credential it names and where each one is obtained.",
+      "11–12": "Map the credentials named across several real Louisiana postings for a group, with where each is earned and what it costs."
+     }
     },
     {
      "theme": "Tools of your own",
      "description": "The starter toolbox — what a first-year actually needs, the care that makes tools last, and the inventory habit that keeps them.",
-     "transfer_check": "Inventory the real tools in your home, mark each one's condition, and restore one neglected tool to working order."
+     "transfer_check": "Inventory the real tools in your home, mark each one's condition, and restore one neglected tool to working order.",
+     "bands": {
+      "K–2": "Find the tools at home with an adult, say what each is for, and put one back in good order.",
+      "3–5": "Inventory the real tools in your home and mark each one's condition.",
+      "6–8": "Inventory the real tools in your home, mark each one's condition, and restore one neglected tool, with a checker.",
+      "9–10": "Inventory the real tools in your home, mark each one's condition, and restore one neglected tool to working order.",
+      "11–12": "Build and cost a real first-year toolbox for a group, with the care and inventory habit that keeps it."
+     }
     },
     {
      "theme": "The safety culture you join",
      "description": "Stop-work authority and the near-miss report — why the newest person on site can halt it, and why writing up the close call is craft, not weakness.",
-     "transfer_check": "Write up one real near-miss you have witnessed anywhere, in report form: what happened, what almost happened, what changes."
+     "transfer_check": "Write up one real near-miss you have witnessed anywhere, in report form: what happened, what almost happened, what changes.",
+     "bands": {
+      "K–2": "Tell an adult about one time something nearly went wrong, and what would stop it next time.",
+      "3–5": "Write up one near-miss you have seen: what happened and what would prevent it.",
+      "6–8": "Write up one real near-miss you have witnessed anywhere, in report form, with a checker.",
+      "9–10": "Write up one real near-miss you have witnessed anywhere, in report form: what happened, what nearly happened, what would prevent it.",
+      "11–12": "Run a near-miss reporting session for a group, write up the reports, and explain stop-work authority as the newest person's right."
+     }
     },
     {
      "theme": "Money of the trade",
      "description": "Prevailing wage, overtime and per diem — reading a trades paycheque, and the arithmetic of a storm week's hours.",
-     "transfer_check": "Given a real prevailing-wage rate for one Louisiana craft, compute a 50-hour storm week's gross pay with overtime, on paper."
+     "transfer_check": "Given a real prevailing-wage rate for one Louisiana craft, compute a 50-hour storm week's gross pay with overtime, on paper.",
+     "bands": {
+      "K–2": "Add up what a worker earns in a week from an hourly rate, with an adult.",
+      "3–5": "Given a real hourly rate for one Louisiana craft, work out a 40-hour week's pay.",
+      "6–8": "Given a real prevailing-wage rate for one Louisiana craft, compute a 50-hour storm week's pay with overtime, with a checker.",
+      "9–10": "Given a real prevailing-wage rate for one Louisiana craft, compute a 50-hour storm week's pay including overtime and per diem.",
+      "11–12": "Read a real trades paycheque line by line for a group and compute a storm week from the published prevailing wage."
+     }
     },
     {
      "theme": "Your parish, your work",
      "description": "The projects around you — port expansions, drainage work, restoration contracts — and which crafts each one is hiring right now.",
-     "transfer_check": "Name two active construction, port or drainage projects in your parish and, from public sources, list the crafts working each."
+     "transfer_check": "Name two active construction, port or drainage projects in your parish and, from public sources, list the crafts working each.",
+     "bands": {
+      "K–2": "Name one big building or digging project happening near you.",
+      "3–5": "Name two real projects in your parish and one kind of worker each needs.",
+      "6–8": "Name two active construction, port or drainage projects in your parish and which crafts each is hiring, with a checker.",
+      "9–10": "Name two active construction, port or drainage projects in your parish and, from public sources, which crafts each one is hiring right now.",
+      "11–12": "Map the active projects in a real parish for a group with the crafts each is hiring, from public sources, as a live pathway board."
+     }
     }
    ]
   }

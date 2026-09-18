@@ -55,13 +55,13 @@ authored descriptions. Neither is hidden — both are counted here.
 | Cognition.X : Louisiana OS | 500 | 10 | 100% | 0% | 100% | 0% | 101 |
 | Music : Creation to Industry | 250 | 5 | 100% | 100% | 100% | 0% | 85 |
 | Parish Launch & Scale | 250 | 5 | 100% | 0% | 100% | 0% | 120 |
-| SmartCiti.X : New Orleans Trades | 250 | 5 | 100% | 100% | 100% | 0% | 100 |
-| Cognition.X : States OS | 250 | 5 | 100% | 100% | 100% | 0% | 96 |
+| SmartCiti.X : New Orleans Trades | 250 | 5 | 100% | 0% | 100% | 0% | 100 |
+| Cognition.X : States OS | 250 | 5 | 100% | 0% | 100% | 0% | 96 |
 | Trades Across School Subjects | 250 | 5 | 100% | 100% | 100% | 0% | 87 |
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 100% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 100% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 35% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 64% · band-suffix 32% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
