@@ -31,7 +31,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Money, Benefits & Entitlements | 250 | 5 | 100% | 0% | 100% | 0% | 27 |
 | Reentry & Recovery Pathways | 250 | 5 | 100% | 0% | 100% | 0% | 21 |
 | Neighbourhood, Safety & Civic Voice | 250 | 5 | 100% | 0% | 100% | 0% | 23 |
-| Cognition.X : Corporate OS | 1160 | 10 | 43% | 0% | 100% | 0% | 26 |
+| Cognition.X : Corporate OS | 1160 | 10 | 100% | 0% | 100% | 0% | 26 |
 | Cognition.X : Science OS | 1160 | 10 | 100% | 0% | 100% | 0% | 25 |
 | Cognition.X : Robotics OS | 1140 | 10 | 100% | 0% | 100% | 0% | 26 |
 | Cognition.X : Global Health OS | 1160 | 10 | 100% | 0% | 100% | 0% | 28 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 96% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 100% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 

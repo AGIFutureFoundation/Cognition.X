@@ -162,6 +162,15 @@ sections; the only other diff is the fonts `<link>`).
    tech transfer, sustainability, research integrity). One pack
    remains (Corporate OS); the shared dictionary is now 1,605
    sentences.
+   *Update (v0.106.0):* shipped Corporate OS (415 themes, 660 rows,
+   second promotion file distinct from its existing band-suffix
+   override) — 211 reused from the shared dictionary, 204 authored
+   fresh for its corporate HR/organizational-practice content (talent,
+   culture, DEI, wellness, innovation, change management, employee
+   relations). This is the eighth and last pack in prompt 3's final
+   piece: the dataset now carries zero empty descriptions, and the
+   shared generic-action dictionary built across all eight packs holds
+   1,809 sentences. Prompt 3 is closed.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

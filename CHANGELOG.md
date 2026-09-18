@@ -4,6 +4,27 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.106.0] — 2026-09-18
+
+### Added — prompt 3 final piece, last pack: Corporate OS's 660 empty descriptions filled, closing prompt 3 entirely
+- **`data/promotions/corporate-os-practice-steps.json`** is a new
+  `unbanded` promotion (a second promotion file for a pack that
+  already had a `"band-suffix"` override): 415 themes, 660 rows, no
+  suffix, `track`/`code` left deferred. 211 of the 415 themes reuse an
+  exact sentence already promoted for one of the seven prior packs;
+  the other 204 are new and authored for this pack's corporate
+  HR/organizational-practice domain (talent, culture, DEI, wellness,
+  innovation, change management, employee relations). No block id,
+  code, track, level, credential, or transfer check changed.
+- `tests/test_platform.py`'s `UNBANDED_FILLED_PACKS` gains Corporate
+  OS; `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 660 → 0. Dataset-wide
+  description coverage reaches **100%**.
+- This is the eighth and last pack in prompt 3's final piece. Prompt 3
+  (docs/NEXT_STEPS_2.md #3) is now fully closed: the dataset carries
+  zero empty descriptions, and the shared generic-action dictionary
+  built across the eight `unbanded` sector-OS/Education OS packs holds
+  1,809 sentences.
+
 ## [0.105.0] — 2026-09-18
 
 ### Added — prompt 3 final piece: Science OS's 660 empty descriptions filled, shared dictionary now at 1,605 sentences
