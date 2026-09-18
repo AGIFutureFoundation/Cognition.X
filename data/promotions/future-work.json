@@ -1,0 +1,469 @@
+{
+  "pack": "Future-Work",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema (v0.90.0, prompt 3 tranche one). Each theme in this pack names exactly one row at one grade band, not five rows across the ladder, so \"unbanded\": true fills each row's empty description with its own complete sentence directly — no per-band suffix, since the row already names its own grade. Theme text and grouping are copied verbatim from data/blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "RB",
+      "name": "Robotics",
+      "themes": [
+        {
+          "theme": "Machines that move (RB)",
+          "description": "Identify the sensor, brain and motor on a toy robot and say what each part does."
+        },
+        {
+          "theme": "Follow the line (RB)",
+          "description": "Program a simple path with two turns for a robot to follow."
+        },
+        {
+          "theme": "Grippers and hands (RB)",
+          "description": "Use a gripper to pick up an object without crushing it."
+        },
+        {
+          "theme": "Robots in our parish (RB)",
+          "description": "Match three real robots to three real jobs and explain what each person there does."
+        },
+        {
+          "theme": "Sensors and decisions (RB)",
+          "description": "Program a robot to stop safely at the edge of a surface it has never seen."
+        },
+        {
+          "theme": "Gears, ratios and torque (RB)",
+          "description": "Choose the right gear pair for a load the robot has never lifted before."
+        },
+        {
+          "theme": "Build a sorter (RB)",
+          "description": "Build a sorter that correctly separates a mixed batch of parts most of the time."
+        },
+        {
+          "theme": "Drones and the coast (RB)",
+          "description": "Plan a survey grid for a drone flying over an unfamiliar stretch of coastline."
+        },
+        {
+          "theme": "The robot arm (RB)",
+          "description": "Program a robot arm to stack a pattern of blocks it has not stacked before."
+        },
+        {
+          "theme": "Robots help people (RB)",
+          "description": "Write a design brief for a robot that solves a real need for a real user."
+        },
+        {
+          "theme": "Microcontrollers (RB)",
+          "description": "Wire and read a sensor a microcontroller has never seen, using its datasheet."
+        },
+        {
+          "theme": "Motors and drivers (RB)",
+          "description": "Drive an unfamiliar motor safely within its rated limits."
+        },
+        {
+          "theme": "Closed-loop control (RB)",
+          "description": "Tune a line-following robot's control loop until it stops oscillating."
+        },
+        {
+          "theme": "Kinematics in the plane (RB)",
+          "description": "Compute how far an arm can reach for a configuration it has not been given before."
+        },
+        {
+          "theme": "Vision basics (RB)",
+          "description": "Get a vision system to detect a new class of object it hasn't been trained to see before."
+        },
+        {
+          "theme": "Mobile robots and mapping (RB)",
+          "description": "Map an unfamiliar room to within ten percent accuracy."
+        },
+        {
+          "theme": "Safety and the cell (RB)",
+          "description": "Risk-assess a robot work cell laid out in a way not seen before."
+        },
+        {
+          "theme": "Cobots on the line (RB)",
+          "description": "Program a collaborative robot to perform a pick-and-place task it hasn't done before."
+        },
+        {
+          "theme": "Regional robot capstone (RB)",
+          "description": "Present a robotics project to a partner panel and have it accepted."
+        },
+        {
+          "theme": "Industrial robot programming (RB)",
+          "description": "Program an industrial robot to weld or pick along a path it has not run before."
+        },
+        {
+          "theme": "PLCs and automation cells (RB)",
+          "description": "Program a PLC to sequence an automation cell it has not controlled before."
+        },
+        {
+          "theme": "Sensors, PID and tuning (RB)",
+          "description": "Tune a control loop to meet a specification it has not been tuned to before."
+        },
+        {
+          "theme": "Machine vision and inspection (RB)",
+          "description": "Build a machine-vision inspection for a part it has not inspected before."
+        },
+        {
+          "theme": "Autonomous mobile robots (RB)",
+          "description": "Navigate an autonomous mobile robot through a course it has not run before."
+        },
+        {
+          "theme": "Marine and subsea robotics (RB)",
+          "description": "Pilot a remotely operated vehicle through an inspection it has not performed before."
+        },
+        {
+          "theme": "Ag robotics and precision farming (RB)",
+          "description": "Plan a field pass for an agricultural robot over ground it has not covered before."
+        },
+        {
+          "theme": "Robot maintenance and troubleshooting (RB)",
+          "description": "Diagnose a fault on a robot that has not failed in that way before."
+        },
+        {
+          "theme": "Healthcare and surgical robotics (RB)",
+          "description": "Explain an unfamiliar clinical workflow that a surgical robot supports."
+        },
+        {
+          "theme": "Robot systems integration (RB)",
+          "description": "Integrate a robotic work cell that has not been assembled before."
+        },
+        {
+          "theme": "Advanced control and simulation (RB)",
+          "description": "Validate a digital twin against a physical rig it has not been checked against."
+        },
+        {
+          "theme": "ROS 2 and robot software (RB)",
+          "description": "Build a ROS 2 package to run a robot task it has not been programmed for before."
+        },
+        {
+          "theme": "Humanoids and legged robots (RB)",
+          "description": "Analyze a gait case for a legged robot it has not walked through before."
+        },
+        {
+          "theme": "Robotics for the mill and the port (RB)",
+          "description": "Complete a robotics task on site and have the supervisor accept the work."
+        },
+        {
+          "theme": "Robot safety certification (RB)",
+          "description": "Produce a safety file for a robot system that has not been certified before."
+        },
+        {
+          "theme": "Robotics venture (RB)",
+          "description": "Build a business case for a robotics client the venture has not served before."
+        },
+        {
+          "theme": "Apprenticeship and certification on-ramp (RB)",
+          "description": "Pass a mock certification exam for a robotics apprenticeship."
+        },
+        {
+          "theme": "Robotics capstone and defense (RB)",
+          "description": "Defend a robotics capstone project before an employer and Teacher Leader panel."
+        }
+      ]
+    },
+    {
+      "prefix": "AG",
+      "name": "Agents & Automation",
+      "themes": [
+        {
+          "theme": "Helpers that follow instructions (AG)",
+          "description": "Write a three-step instruction that another crew can follow without help."
+        },
+        {
+          "theme": "Check the helper (AG)",
+          "description": "Find the wrong count hidden in an unfamiliar helper's answer."
+        },
+        {
+          "theme": "Who decides? (AG)",
+          "description": "Explain who actually decides in a story the learner has not read before."
+        },
+        {
+          "theme": "Our crew agent (AG)",
+          "description": "Show a family member how to ask the crew's agent a question."
+        },
+        {
+          "theme": "Prompts and briefs (AG)",
+          "description": "Brief an unfamiliar task so an agent gets it right the first time."
+        },
+        {
+          "theme": "Verify and audit (AG)",
+          "description": "Audit an unfamiliar agent answer using two independent checks."
+        },
+        {
+          "theme": "Tools and steps (AG)",
+          "description": "Plan a chain of tools needed to complete an unfamiliar task."
+        },
+        {
+          "theme": "Data the agent learns from (AG)",
+          "description": "Spot the bias hidden in a dataset the learner has not seen before."
+        },
+        {
+          "theme": "Agents at work in our parish (AG)",
+          "description": "Interview a workplace the learner has not visited and report how agents are used there."
+        },
+        {
+          "theme": "Build a helper (AG)",
+          "description": "Build a helper that correctly answers an unfamiliar set of questions, with sources."
+        },
+        {
+          "theme": "How language models work (AG)",
+          "description": "Explain why a language model failed on a case it has not seen before."
+        },
+        {
+          "theme": "The agent loop: plan, act, observe (AG)",
+          "description": "Trace an unfamiliar agent run through its plan, act and observe steps."
+        },
+        {
+          "theme": "Evaluation and test sets (AG)",
+          "description": "Evaluate a version of an agent the learner has not evaluated before."
+        },
+        {
+          "theme": "Retrieval and sources (AG)",
+          "description": "Build a question-answering system over parish documents it has not indexed before, with sources."
+        },
+        {
+          "theme": "Guardrails and overrides (AG)",
+          "description": "Design guardrails for a task the learner has not guarded before."
+        },
+        {
+          "theme": "Agents and the machine (AG)",
+          "description": "Catch a wrong sensor reading an agent has passed along uncritically."
+        },
+        {
+          "theme": "Ethics, privacy and the law (AG)",
+          "description": "Run a privacy review on an agent design the learner has not reviewed before."
+        },
+        {
+          "theme": "Multi-agent crews (AG)",
+          "description": "Run a two-agent task the learner has not coordinated before."
+        },
+        {
+          "theme": "Agent capstone for a partner (AG)",
+          "description": "Present an agent project to a partner and have it accepted."
+        },
+        {
+          "theme": "Agent frameworks (Hermes runtime) (AG)",
+          "description": "Ship a tool-using agent built on a runtime the learner has not shipped on before."
+        },
+        {
+          "theme": "Protocols: NANDA registry and x402 (AG)",
+          "description": "Register an agent and call another agent the learner has not called before."
+        },
+        {
+          "theme": "Prompt engineering and specification (AG)",
+          "description": "Specify an unfamiliar task so an agent passes at least ninety-five percent of its test set."
+        },
+        {
+          "theme": "Evaluation engineering (AG)",
+          "description": "Build an evaluation suite for an agent capability the learner has not evaluated before."
+        },
+        {
+          "theme": "Data annotation and quality (AG)",
+          "description": "Annotate an unfamiliar dataset to an agreement score of at least 0.7."
+        },
+        {
+          "theme": "Automation for local business (AG)",
+          "description": "Deploy an automated workflow behind an approval gate for a business need not seen before."
+        },
+        {
+          "theme": "Agents in public service (AG)",
+          "description": "Design a public-service agent, with a human in the loop, for a case not seen before."
+        },
+        {
+          "theme": "Security and adversarial inputs (AG)",
+          "description": "Red-team an unfamiliar agent and fix the weakness that is found."
+        },
+        {
+          "theme": "Agent operations (AG)",
+          "description": "Run an incident drill on an agent failure the learner has not drilled before."
+        },
+        {
+          "theme": "Hive memory and swarm orchestration (AG)",
+          "description": "Orchestrate a three-agent job the learner has not orchestrated before."
+        },
+        {
+          "theme": "Fine-tuning and small models (AG)",
+          "description": "Fine-tune a small model to a specification the learner has not tuned to before."
+        },
+        {
+          "theme": "Agents for the data center and the mill (AG)",
+          "description": "Complete an agent workflow on site and have the supervisor accept the work."
+        },
+        {
+          "theme": "AI governance and compliance (AG)",
+          "description": "Produce a governance file for an AI system the learner has not governed before."
+        },
+        {
+          "theme": "Human factors and override design (AG)",
+          "description": "User-test an override interface with people who have not used it before."
+        },
+        {
+          "theme": "Agent product studio (AG)",
+          "description": "Present an agent product to a client and have it accepted."
+        },
+        {
+          "theme": "Research methods in AI (AG)",
+          "description": "Replicate a published AI result the learner has not replicated before."
+        },
+        {
+          "theme": "Certification and college on-ramp (AG)",
+          "description": "Pass a mock certification exam for AI and automation work."
+        },
+        {
+          "theme": "Agents capstone and defense (AG)",
+          "description": "Defend an agents capstone project before an employer and Teacher Leader panel."
+        }
+      ]
+    },
+    {
+      "prefix": "DC",
+      "name": "Data Centers & Infrastructure",
+      "themes": [
+        {
+          "theme": "Where the internet lives (DC)",
+          "description": "Label the parts of an unfamiliar picture of a data center."
+        },
+        {
+          "theme": "Hot and cold (DC)",
+          "description": "Measure and compare an unfamiliar hot and cold pair of readings."
+        },
+        {
+          "theme": "Power to the plug (DC)",
+          "description": "Trace the path electricity takes from an unfamiliar power plant to a plug."
+        },
+        {
+          "theme": "The people of the data center (DC)",
+          "description": "Match five real jobs to five real people who work in a data center."
+        },
+        {
+          "theme": "Bits, bytes and storage (DC)",
+          "description": "Size the storage a new need actually requires."
+        },
+        {
+          "theme": "Networks: how messages travel (DC)",
+          "description": "Route a message through a network it has not traveled before."
+        },
+        {
+          "theme": "Keeping servers cool (DC)",
+          "description": "Improve the airflow of a server rack the learner has not cooled before."
+        },
+        {
+          "theme": "Electricity and circuits (DC)",
+          "description": "Wire a safe circuit the learner has not wired before."
+        },
+        {
+          "theme": "Water, land and the big building (DC)",
+          "description": "Present a fair set of questions about a data center to a panel that has not heard them before."
+        },
+        {
+          "theme": "Build a mini data center (DC)",
+          "description": "Get a small cluster to serve a page it has not served before."
+        },
+        {
+          "theme": "Server hardware (DC)",
+          "description": "Identify and correctly seat components in a server the learner has not opened before."
+        },
+        {
+          "theme": "Structured cabling and fiber (DC)",
+          "description": "Terminate and test a cable run the learner has not terminated before."
+        },
+        {
+          "theme": "Networking fundamentals (DC)",
+          "description": "Build a network segment the learner has not built before."
+        },
+        {
+          "theme": "Power distribution (DC)",
+          "description": "Trace a single-line power diagram the learner has not traced before."
+        },
+        {
+          "theme": "Cooling systems (DC)",
+          "description": "Compute the power usage effectiveness of a cooling setup the learner has not measured before."
+        },
+        {
+          "theme": "Monitoring and controls (DC)",
+          "description": "Respond correctly to an alarm the learner has not seen before."
+        },
+        {
+          "theme": "Safety in the critical environment (DC)",
+          "description": "Pass a safety scenario set in a critical environment the learner has not faced before."
+        },
+        {
+          "theme": "Energy, gas and the grid (DC)",
+          "description": "Model a load case for the grid the learner has not modeled before."
+        },
+        {
+          "theme": "Data center crew capstone (DC)",
+          "description": "Present a data center crew project to a Teacher Leader panel and have it accepted."
+        },
+        {
+          "theme": "Hardware technician (A+ prep) (DC)",
+          "description": "Pass a practice set of A+ hardware technician questions the learner has not seen before."
+        },
+        {
+          "theme": "Network technician (Network+ prep) (DC)",
+          "description": "Fix a network fault the learner has not diagnosed before."
+        },
+        {
+          "theme": "Electrical for data centers (DC)",
+          "description": "Diagnose a power fault safely in a system the learner has not diagnosed before."
+        },
+        {
+          "theme": "HVAC-R and liquid cooling (DC)",
+          "description": "Chart a cooling fault the learner has not charted before."
+        },
+        {
+          "theme": "Fiber optics and construction (DC)",
+          "description": "Splice and test a fiber link the learner has not spliced before."
+        },
+        {
+          "theme": "Linux and systems administration (DC)",
+          "description": "Automate a system administration task the learner has not automated before."
+        },
+        {
+          "theme": "Security and physical access (DC)",
+          "description": "Run a physical access security drill the learner has not run before."
+        },
+        {
+          "theme": "Critical facilities operations (DC)",
+          "description": "Execute a method of procedure the learner has not executed before."
+        },
+        {
+          "theme": "Site placement I (DC)",
+          "description": "Complete a site placement task and have the supervisor accept the work."
+        },
+        {
+          "theme": "Data center design and capacity (DC)",
+          "description": "Design a small data center site the learner has not designed before."
+        },
+        {
+          "theme": "Power systems II (DC)",
+          "description": "Commission a UPS system the learner has not commissioned before."
+        },
+        {
+          "theme": "Cooling II and thermal management (DC)",
+          "description": "Solve a hotspot problem the learner has not solved before."
+        },
+        {
+          "theme": "Cloud and AI infrastructure (DC)",
+          "description": "Size a compute cluster for a workload the learner has not sized before."
+        },
+        {
+          "theme": "Controls and DCIM (DC)",
+          "description": "Tune a setpoint schedule the learner has not tuned before."
+        },
+        {
+          "theme": "Sustainability, water and community (DC)",
+          "description": "Audit a site sustainability report the learner has not audited before."
+        },
+        {
+          "theme": "Certification prep (CDCP / Server+ / EPA 608) (DC)",
+          "description": "Pass a mock certification exam for data center technical work."
+        },
+        {
+          "theme": "Site placement II (Learn and Earn) (DC)",
+          "description": "Complete an employer-supervised placement and have the panel accept the work."
+        },
+        {
+          "theme": "Data center capstone and defense (DC)",
+          "description": "Defend a data center capstone project before an employer and Teacher Leader panel."
+        }
+      ]
+    }
+  ]
+}

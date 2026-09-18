@@ -110,117 +110,117 @@ CX-TRADE-0044,Trade School,,LB-44,11–12 · adult,Lead,Biomed Tech I,Healthcare
 CX-TRADE-0045,Trade School,,LB-45,11–12 · adult,Lead,Biomed Tech II,Device Calibration & Metrology,,Calibrate a novel device to tolerance
 CX-TRADE-0046,Trade School,,LB-46,11–12 · adult,Lead,Biomed Tech III,Clinical Systems & Networks,,Diagnose a novel device-network fault
 CX-TRADE-0047,Trade School,,LB-47,11–12 · adult,Lead,Biomed Pre-Apprentice,Biomed Practicum,,Employer sign-off
-CX-FWORK-0001,Future-Work,,LB-1,K–2,Explorer,Robot Spotter,Machines that move (RB),,"Identify sensor, brain and motor on a novel toy robot"
-CX-FWORK-0002,Future-Work,,LB-2,K–2,Explorer,Sequencer I,Follow the line (RB),,Program a novel path with two turns
-CX-FWORK-0003,Future-Work,,LB-3,K–2,Explorer,Gripper Builder,Grippers and hands (RB),,Gripper picks up a novel object without crushing it
-CX-FWORK-0004,Future-Work,,LB-4,K–2,Explorer,Robot Mapper,Robots in our parish (RB),,Match three robots to three jobs and say what the person does
-CX-FWORK-0005,Future-Work,,LB-5,3–5,Explorer,Sensor Tech I,Sensors and decisions (RB),,Robot stops at a novel edge
-CX-FWORK-0006,Future-Work,,LB-6,3–5,Explorer,Gear Tech,"Gears, ratios and torque (RB)",,Pick the gear pair for a novel load
-CX-FWORK-0007,Future-Work,,LB-7,3–5,Explorer,Sorter Builder,Build a sorter (RB),,Sorter beats 90% on a novel mix
-CX-FWORK-0008,Future-Work,,LB-8,3–5,Explorer,Junior Pilot,Drones and the coast (RB),,Plan a novel survey grid
-CX-FWORK-0009,Future-Work,,LB-9,3–5,Explorer,Arm Operator I,The robot arm (RB),,Arm stacks a novel pattern
-CX-FWORK-0010,Future-Work,,LB-10,3–5,Explorer,Assistive Designer I,Robots help people (RB),,Design brief for a novel user need
-CX-FWORK-0011,Future-Work,,LB-11,6–8,Builder,Embedded I,Microcontrollers (RB),,Wire and read a novel sensor from its datasheet
-CX-FWORK-0012,Future-Work,,LB-12,6–8,Builder,Motion I,Motors and drivers (RB),,Drive a novel motor within its rating
-CX-FWORK-0013,Future-Work,,LB-13,6–8,Builder,Control I,Closed-loop control (RB),,Tune a novel line follower until it stops oscillating
-CX-FWORK-0014,Future-Work,,LB-14,6–8,Builder,Kinematics I,Kinematics in the plane (RB),,Compute a novel reach
-CX-FWORK-0015,Future-Work,,LB-15,6–8,Builder,Vision I,Vision basics (RB),,Detect a novel object class
-CX-FWORK-0016,Future-Work,,LB-16,6–8,Builder,Mobile I,Mobile robots and mapping (RB),,Map a novel room within 10%
-CX-FWORK-0017,Future-Work,,LB-17,6–8,Builder,Cell Safety,Safety and the cell (RB),,Risk-assess a novel cell layout
-CX-FWORK-0018,Future-Work,,LB-18,6–8,Builder,Cobot I,Cobots on the line (RB),,Program a novel pick-and-place
-CX-FWORK-0019,Future-Work,,LB-19,6–8,Builder,Robotics Crew,Regional robot capstone (RB),,Partner panel accepts
-CX-FWORK-0020,Future-Work,,LB-20,9–10,Practitioner,Robot Programmer I,Industrial robot programming (RB),,Program a novel weld or pick path
-CX-FWORK-0021,Future-Work,,LB-21,9–10,Practitioner,PLC I,PLCs and automation cells (RB),,Program a novel cell sequence
-CX-FWORK-0022,Future-Work,,LB-22,9–10,Practitioner,Control II,"Sensors, PID and tuning (RB)",,Tune a novel loop to specification
-CX-FWORK-0023,Future-Work,,LB-23,9–10,Practitioner,Vision II,Machine vision and inspection (RB),,Build a novel inspection
-CX-FWORK-0024,Future-Work,,LB-24,9–10,Practitioner,AMR I,Autonomous mobile robots (RB),,Navigate a novel course
-CX-FWORK-0025,Future-Work,,LB-25,9–10,Practitioner,ROV I,Marine and subsea robotics (RB),,Pilot a novel inspection (pool or simulator)
-CX-FWORK-0026,Future-Work,,LB-26,9–10,Practitioner,Ag-Robotics I,Ag robotics and precision farming (RB),,Plan a novel field pass
-CX-FWORK-0027,Future-Work,,LB-27,9–10,Practitioner,Robot Tech I,Robot maintenance and troubleshooting (RB),,Diagnose a novel fault
-CX-FWORK-0028,Future-Work,,LB-28,9–10,Practitioner,Health-Robotics I,Healthcare and surgical robotics (RB),,Explain a novel clinical workflow
-CX-FWORK-0029,Future-Work,,LB-29,11–12,Lead,Integrator I,Robot systems integration (RB),,Integrate a novel cell
-CX-FWORK-0030,Future-Work,,LB-30,11–12,Lead,Simulation I,Advanced control and simulation (RB),,Validate a novel twin against the rig
-CX-FWORK-0031,Future-Work,,LB-31,11–12,Lead,Robot Software I,ROS 2 and robot software (RB),,Build a novel ROS package
-CX-FWORK-0032,Future-Work,,LB-32,11–12,Lead,Advanced Mechanisms,Humanoids and legged robots (RB),,Analyze a novel gait case
-CX-FWORK-0033,Future-Work,,LB-33,11–12,Lead,Industrial Placement,Robotics for the mill and the port (RB),,Site supervisor accepts a novel task
-CX-FWORK-0034,Future-Work,,LB-34,11–12,Lead,Safety Cert Prep,Robot safety certification (RB),,Produce a novel safety file
-CX-FWORK-0035,Future-Work,,LB-35,11–12,Lead,Robotics Venture,Robotics venture (RB),,Business case for a novel client
-CX-FWORK-0036,Future-Work,,LB-36,11–12,Lead,Certification Prep,Apprenticeship and certification on-ramp (RB),,Mock certification passed
-CX-FWORK-0037,Future-Work,,LB-37,11–12,Lead,Robotics Capstone,Robotics capstone and defense (RB),,Employer and Teacher Leader panel accepts
-CX-FWORK-0038,Future-Work,,LB-38,K–2,Explorer,Clear Briefer,Helpers that follow instructions (AG),,Write a novel three-step instruction another crew can follow
-CX-FWORK-0039,Future-Work,,LB-39,K–2,Explorer,Checker I,Check the helper (AG),,Find the wrong count in a novel helper answer
-CX-FWORK-0040,Future-Work,,LB-40,K–2,Explorer,Decider,Who decides? (AG),,Explain who decides in a novel story
-CX-FWORK-0041,Future-Work,,LB-41,K–2,Explorer,Agent Buddy,Our crew agent (AG),,Show a family member how to ask the agent
-CX-FWORK-0042,Future-Work,,LB-42,3–5,Explorer,Briefer I,Prompts and briefs (AG),,Brief a novel task so the agent gets it right first time
-CX-FWORK-0043,Future-Work,,LB-43,3–5,Explorer,Verifier I,Verify and audit (AG),,Audit a novel agent answer with two checks
-CX-FWORK-0044,Future-Work,,LB-44,3–5,Explorer,Planner I,Tools and steps (AG),,Plan a novel tool chain
-CX-FWORK-0045,Future-Work,,LB-45,3–5,Explorer,Data Steward I,Data the agent learns from (AG),,Spot a novel biased dataset
-CX-FWORK-0046,Future-Work,,LB-46,3–5,Explorer,Agent Mapper,Agents at work in our parish (AG),,Interview report on a novel workplace
-CX-FWORK-0047,Future-Work,,LB-47,3–5,Explorer,Builder I,Build a helper (AG),,"Helper answers a novel question set correctly, with sources"
-CX-FWORK-0048,Future-Work,,LB-48,6–8,Builder,LM Literacy,How language models work (AG),,Explain a novel failure
-CX-FWORK-0049,Future-Work,,LB-49,6–8,Builder,Agent Ops I,"The agent loop: plan, act, observe (AG)",,Trace a novel agent run
-CX-FWORK-0050,Future-Work,,LB-50,6–8,Builder,Evaluator I,Evaluation and test sets (AG),,Evaluate a novel agent version
-CX-FWORK-0051,Future-Work,,LB-51,6–8,Builder,Retrieval I,Retrieval and sources (AG),,Build a novel Q&A over parish documents with sources
-CX-FWORK-0052,Future-Work,,LB-52,6–8,Builder,Guardrail I,Guardrails and overrides (AG),,Design guardrails for a novel task
-CX-FWORK-0053,Future-Work,,LB-53,6–8,Builder,Physical Verifier,Agents and the machine (AG),,Catch a novel wrong reading
-CX-FWORK-0054,Future-Work,,LB-54,6–8,Builder,Ethics I,"Ethics, privacy and the law (AG)",,Privacy review of a novel agent design
-CX-FWORK-0055,Future-Work,,LB-55,6–8,Builder,Swarm I,Multi-agent crews (AG),,Run a novel two-agent task
-CX-FWORK-0056,Future-Work,,LB-56,6–8,Builder,Agent Crew,Agent capstone for a partner (AG),,Partner accepts
-CX-FWORK-0057,Future-Work,,LB-57,9–10,Practitioner,Agent Developer I,Agent frameworks (Hermes runtime) (AG),,Ship a novel tool-using agent
-CX-FWORK-0058,Future-Work,,LB-58,9–10,Practitioner,Protocol I,Protocols: NANDA registry and x402 (AG),,Register and call a novel agent
-CX-FWORK-0059,Future-Work,,LB-59,9–10,Practitioner,Spec Writer,Prompt engineering and specification (AG),,Specify a novel task to ≥95% on its test set
-CX-FWORK-0060,Future-Work,,LB-60,9–10,Practitioner,Evaluator II,Evaluation engineering (AG),,Build a novel evaluation suite
-CX-FWORK-0061,Future-Work,,LB-61,9–10,Practitioner,Annotator,Data annotation and quality (AG),,Annotate a novel set to κ ≥ 0.7
-CX-FWORK-0062,Future-Work,,LB-62,9–10,Practitioner,Automation Analyst I,Automation for local business (AG),,Deploy a novel workflow behind an approval gate
-CX-FWORK-0063,Future-Work,,LB-63,9–10,Practitioner,Civic Automation,Agents in public service (AG),,Design a novel public-service agent with a human in the loop
-CX-FWORK-0064,Future-Work,,LB-64,9–10,Practitioner,Agent Security I,Security and adversarial inputs (AG),,Red-team a novel agent and fix it
-CX-FWORK-0065,Future-Work,,LB-65,9–10,Practitioner,AgentOps I,Agent operations (AG),,Run a novel incident drill
-CX-FWORK-0066,Future-Work,,LB-66,11–12,Lead,Orchestrator I,Hive memory and swarm orchestration (AG),,Orchestrate a novel three-agent job
-CX-FWORK-0067,Future-Work,,LB-67,11–12,Lead,Model Tuner I,Fine-tuning and small models (AG),,Fine-tune a novel small model to specification
-CX-FWORK-0068,Future-Work,,LB-68,11–12,Lead,Industrial Agent Placement,Agents for the data center and the mill (AG),,Site supervisor accepts a novel agent workflow
-CX-FWORK-0069,Future-Work,,LB-69,11–12,Lead,Governance I,AI governance and compliance (AG),,Produce a novel governance file
-CX-FWORK-0070,Future-Work,,LB-70,11–12,Lead,Human Factors I,Human factors and override design (AG),,User-test a novel override interface
-CX-FWORK-0071,Future-Work,,LB-71,11–12,Lead,Agent Product,Agent product studio (AG),,Client accepts
-CX-FWORK-0072,Future-Work,,LB-72,11–12,Lead,Research I,Research methods in AI (AG),,Replicate a novel result
-CX-FWORK-0073,Future-Work,,LB-73,11–12,Lead,Certification Prep,Certification and college on-ramp (AG),,Mock exam passed
-CX-FWORK-0074,Future-Work,,LB-74,11–12,Lead,Agents Capstone,Agents capstone and defense (AG),,Employer and Teacher Leader panel accepts
-CX-FWORK-0075,Future-Work,,LB-75,K–2,Explorer,Data Center Spotter,Where the internet lives (DC),,Label a novel picture of a data center
-CX-FWORK-0076,Future-Work,,LB-76,K–2,Explorer,Cooling Cadet,Hot and cold (DC),,Measure and compare a novel hot/cold pair
-CX-FWORK-0077,Future-Work,,LB-77,K–2,Explorer,Power Cadet,Power to the plug (DC),,Trace a novel path from plant to plug
-CX-FWORK-0078,Future-Work,,LB-78,K–2,Explorer,Data Center Mapper,The people of the data center (DC),,Match five people to five jobs
-CX-FWORK-0079,Future-Work,,LB-79,3–5,Explorer,Storage I,"Bits, bytes and storage (DC)",,Size a novel storage need
-CX-FWORK-0080,Future-Work,,LB-80,3–5,Explorer,Network Cadet,Networks: how messages travel (DC),,Route a novel message
-CX-FWORK-0081,Future-Work,,LB-81,3–5,Explorer,Cooling I,Keeping servers cool (DC),,Improve a novel rack's airflow
-CX-FWORK-0082,Future-Work,,LB-82,3–5,Explorer,Circuits I,Electricity and circuits (DC),,Wire a novel safe circuit
-CX-FWORK-0083,Future-Work,,LB-83,3–5,Explorer,Community Cadet,"Water, land and the big building (DC)",,Present a novel set of fair questions to a panel
-CX-FWORK-0084,Future-Work,,LB-84,3–5,Explorer,Builder I,Build a mini data center (DC),,Cluster serves a novel page
-CX-FWORK-0085,Future-Work,,LB-85,6–8,Builder,Hardware I,Server hardware (DC),,Identify and seat novel components
-CX-FWORK-0086,Future-Work,,LB-86,6–8,Builder,Cabling I,Structured cabling and fiber (DC),,Terminate and test a novel run
-CX-FWORK-0087,Future-Work,,LB-87,6–8,Builder,Network I,Networking fundamentals (DC),,Build a novel segment
-CX-FWORK-0088,Future-Work,,LB-88,6–8,Builder,Power I,Power distribution (DC),,Trace a novel single-line diagram
-CX-FWORK-0089,Future-Work,,LB-89,6–8,Builder,Cooling II,Cooling systems (DC),,Compute a novel PUE
-CX-FWORK-0090,Future-Work,,LB-90,6–8,Builder,Controls I,Monitoring and controls (DC),,Respond correctly to a novel alarm
-CX-FWORK-0091,Future-Work,,LB-91,6–8,Builder,Critical Safety I,Safety in the critical environment (DC),,Pass a novel safety scenario
-CX-FWORK-0092,Future-Work,,LB-92,6–8,Builder,Grid I,"Energy, gas and the grid (DC)",,Model a novel load case
-CX-FWORK-0093,Future-Work,,LB-93,6–8,Builder,Data Center Crew,Data center crew capstone (DC),,Teacher Leader panel accepts
-CX-FWORK-0094,Future-Work,,LB-94,9–10,Practitioner,Hardware Tech I,Hardware technician (A+ prep) (DC),,Pass a novel A+ practice set
-CX-FWORK-0095,Future-Work,,LB-95,9–10,Practitioner,Network Tech I,Network technician (Network+ prep) (DC),,Fix a novel network fault
-CX-FWORK-0096,Future-Work,,LB-96,9–10,Practitioner,DC Electrical I,Electrical for data centers (DC),,Diagnose a novel power fault safely
-CX-FWORK-0097,Future-Work,,LB-97,9–10,Practitioner,DC Cooling I,HVAC-R and liquid cooling (DC),,Chart a novel cooling fault
-CX-FWORK-0098,Future-Work,,LB-98,9–10,Practitioner,Fiber I,Fiber optics and construction (DC),,Splice and test a novel link
-CX-FWORK-0099,Future-Work,,LB-99,9–10,Practitioner,Systems I,Linux and systems administration (DC),,Automate a novel task
-CX-FWORK-0100,Future-Work,,LB-100,9–10,Practitioner,DC Security I,Security and physical access (DC),,Run a novel access drill
-CX-FWORK-0101,Future-Work,,LB-101,9–10,Practitioner,Critical Ops I,Critical facilities operations (DC),,Execute a novel MOP
-CX-FWORK-0102,Future-Work,,LB-102,9–10,Practitioner,Placement I,Site placement I (DC),,Supervisor accepts
-CX-FWORK-0103,Future-Work,,LB-103,11–12,Lead,Design I,Data center design and capacity (DC),,Design a novel small site
-CX-FWORK-0104,Future-Work,,LB-104,11–12,Lead,DC Electrical II,Power systems II (DC),,Commission a novel UPS (simulator or rig)
-CX-FWORK-0105,Future-Work,,LB-105,11–12,Lead,DC Cooling II,Cooling II and thermal management (DC),,Solve a novel hotspot
-CX-FWORK-0106,Future-Work,,LB-106,11–12,Lead,AI Infra I,Cloud and AI infrastructure (DC),,Size a novel cluster
-CX-FWORK-0107,Future-Work,,LB-107,11–12,Lead,Controls II,Controls and DCIM (DC),,Tune a novel setpoint schedule
-CX-FWORK-0108,Future-Work,,LB-108,11–12,Lead,Sustainability I,"Sustainability, water and community (DC)",,Audit a novel site report
-CX-FWORK-0109,Future-Work,,LB-109,11–12,Lead,Certification Prep,Certification prep (CDCP / Server+ / EPA 608) (DC),,Mock exam passed
-CX-FWORK-0110,Future-Work,,LB-110,11–12,Lead,Placement II,Site placement II (Learn and Earn) (DC),,Employer panel accepts
-CX-FWORK-0111,Future-Work,,LB-111,11–12,Lead,Data Center Capstone,Data center capstone and defense (DC),,Employer and Teacher Leader panel accepts
+CX-FWORK-0001,Future-Work,,LB-1,K–2,Explorer,Robot Spotter,Machines that move (RB),"Identify the sensor, brain and motor on a toy robot and say what each part does.","Identify sensor, brain and motor on a novel toy robot"
+CX-FWORK-0002,Future-Work,,LB-2,K–2,Explorer,Sequencer I,Follow the line (RB),Program a simple path with two turns for a robot to follow.,Program a novel path with two turns
+CX-FWORK-0003,Future-Work,,LB-3,K–2,Explorer,Gripper Builder,Grippers and hands (RB),Use a gripper to pick up an object without crushing it.,Gripper picks up a novel object without crushing it
+CX-FWORK-0004,Future-Work,,LB-4,K–2,Explorer,Robot Mapper,Robots in our parish (RB),Match three real robots to three real jobs and explain what each person there does.,Match three robots to three jobs and say what the person does
+CX-FWORK-0005,Future-Work,,LB-5,3–5,Explorer,Sensor Tech I,Sensors and decisions (RB),Program a robot to stop safely at the edge of a surface it has never seen.,Robot stops at a novel edge
+CX-FWORK-0006,Future-Work,,LB-6,3–5,Explorer,Gear Tech,"Gears, ratios and torque (RB)",Choose the right gear pair for a load the robot has never lifted before.,Pick the gear pair for a novel load
+CX-FWORK-0007,Future-Work,,LB-7,3–5,Explorer,Sorter Builder,Build a sorter (RB),Build a sorter that correctly separates a mixed batch of parts most of the time.,Sorter beats 90% on a novel mix
+CX-FWORK-0008,Future-Work,,LB-8,3–5,Explorer,Junior Pilot,Drones and the coast (RB),Plan a survey grid for a drone flying over an unfamiliar stretch of coastline.,Plan a novel survey grid
+CX-FWORK-0009,Future-Work,,LB-9,3–5,Explorer,Arm Operator I,The robot arm (RB),Program a robot arm to stack a pattern of blocks it has not stacked before.,Arm stacks a novel pattern
+CX-FWORK-0010,Future-Work,,LB-10,3–5,Explorer,Assistive Designer I,Robots help people (RB),Write a design brief for a robot that solves a real need for a real user.,Design brief for a novel user need
+CX-FWORK-0011,Future-Work,,LB-11,6–8,Builder,Embedded I,Microcontrollers (RB),"Wire and read a sensor a microcontroller has never seen, using its datasheet.",Wire and read a novel sensor from its datasheet
+CX-FWORK-0012,Future-Work,,LB-12,6–8,Builder,Motion I,Motors and drivers (RB),Drive an unfamiliar motor safely within its rated limits.,Drive a novel motor within its rating
+CX-FWORK-0013,Future-Work,,LB-13,6–8,Builder,Control I,Closed-loop control (RB),Tune a line-following robot's control loop until it stops oscillating.,Tune a novel line follower until it stops oscillating
+CX-FWORK-0014,Future-Work,,LB-14,6–8,Builder,Kinematics I,Kinematics in the plane (RB),Compute how far an arm can reach for a configuration it has not been given before.,Compute a novel reach
+CX-FWORK-0015,Future-Work,,LB-15,6–8,Builder,Vision I,Vision basics (RB),Get a vision system to detect a new class of object it hasn't been trained to see before.,Detect a novel object class
+CX-FWORK-0016,Future-Work,,LB-16,6–8,Builder,Mobile I,Mobile robots and mapping (RB),Map an unfamiliar room to within ten percent accuracy.,Map a novel room within 10%
+CX-FWORK-0017,Future-Work,,LB-17,6–8,Builder,Cell Safety,Safety and the cell (RB),Risk-assess a robot work cell laid out in a way not seen before.,Risk-assess a novel cell layout
+CX-FWORK-0018,Future-Work,,LB-18,6–8,Builder,Cobot I,Cobots on the line (RB),Program a collaborative robot to perform a pick-and-place task it hasn't done before.,Program a novel pick-and-place
+CX-FWORK-0019,Future-Work,,LB-19,6–8,Builder,Robotics Crew,Regional robot capstone (RB),Present a robotics project to a partner panel and have it accepted.,Partner panel accepts
+CX-FWORK-0020,Future-Work,,LB-20,9–10,Practitioner,Robot Programmer I,Industrial robot programming (RB),Program an industrial robot to weld or pick along a path it has not run before.,Program a novel weld or pick path
+CX-FWORK-0021,Future-Work,,LB-21,9–10,Practitioner,PLC I,PLCs and automation cells (RB),Program a PLC to sequence an automation cell it has not controlled before.,Program a novel cell sequence
+CX-FWORK-0022,Future-Work,,LB-22,9–10,Practitioner,Control II,"Sensors, PID and tuning (RB)",Tune a control loop to meet a specification it has not been tuned to before.,Tune a novel loop to specification
+CX-FWORK-0023,Future-Work,,LB-23,9–10,Practitioner,Vision II,Machine vision and inspection (RB),Build a machine-vision inspection for a part it has not inspected before.,Build a novel inspection
+CX-FWORK-0024,Future-Work,,LB-24,9–10,Practitioner,AMR I,Autonomous mobile robots (RB),Navigate an autonomous mobile robot through a course it has not run before.,Navigate a novel course
+CX-FWORK-0025,Future-Work,,LB-25,9–10,Practitioner,ROV I,Marine and subsea robotics (RB),Pilot a remotely operated vehicle through an inspection it has not performed before.,Pilot a novel inspection (pool or simulator)
+CX-FWORK-0026,Future-Work,,LB-26,9–10,Practitioner,Ag-Robotics I,Ag robotics and precision farming (RB),Plan a field pass for an agricultural robot over ground it has not covered before.,Plan a novel field pass
+CX-FWORK-0027,Future-Work,,LB-27,9–10,Practitioner,Robot Tech I,Robot maintenance and troubleshooting (RB),Diagnose a fault on a robot that has not failed in that way before.,Diagnose a novel fault
+CX-FWORK-0028,Future-Work,,LB-28,9–10,Practitioner,Health-Robotics I,Healthcare and surgical robotics (RB),Explain an unfamiliar clinical workflow that a surgical robot supports.,Explain a novel clinical workflow
+CX-FWORK-0029,Future-Work,,LB-29,11–12,Lead,Integrator I,Robot systems integration (RB),Integrate a robotic work cell that has not been assembled before.,Integrate a novel cell
+CX-FWORK-0030,Future-Work,,LB-30,11–12,Lead,Simulation I,Advanced control and simulation (RB),Validate a digital twin against a physical rig it has not been checked against.,Validate a novel twin against the rig
+CX-FWORK-0031,Future-Work,,LB-31,11–12,Lead,Robot Software I,ROS 2 and robot software (RB),Build a ROS 2 package to run a robot task it has not been programmed for before.,Build a novel ROS package
+CX-FWORK-0032,Future-Work,,LB-32,11–12,Lead,Advanced Mechanisms,Humanoids and legged robots (RB),Analyze a gait case for a legged robot it has not walked through before.,Analyze a novel gait case
+CX-FWORK-0033,Future-Work,,LB-33,11–12,Lead,Industrial Placement,Robotics for the mill and the port (RB),Complete a robotics task on site and have the supervisor accept the work.,Site supervisor accepts a novel task
+CX-FWORK-0034,Future-Work,,LB-34,11–12,Lead,Safety Cert Prep,Robot safety certification (RB),Produce a safety file for a robot system that has not been certified before.,Produce a novel safety file
+CX-FWORK-0035,Future-Work,,LB-35,11–12,Lead,Robotics Venture,Robotics venture (RB),Build a business case for a robotics client the venture has not served before.,Business case for a novel client
+CX-FWORK-0036,Future-Work,,LB-36,11–12,Lead,Certification Prep,Apprenticeship and certification on-ramp (RB),Pass a mock certification exam for a robotics apprenticeship.,Mock certification passed
+CX-FWORK-0037,Future-Work,,LB-37,11–12,Lead,Robotics Capstone,Robotics capstone and defense (RB),Defend a robotics capstone project before an employer and Teacher Leader panel.,Employer and Teacher Leader panel accepts
+CX-FWORK-0038,Future-Work,,LB-38,K–2,Explorer,Clear Briefer,Helpers that follow instructions (AG),Write a three-step instruction that another crew can follow without help.,Write a novel three-step instruction another crew can follow
+CX-FWORK-0039,Future-Work,,LB-39,K–2,Explorer,Checker I,Check the helper (AG),Find the wrong count hidden in an unfamiliar helper's answer.,Find the wrong count in a novel helper answer
+CX-FWORK-0040,Future-Work,,LB-40,K–2,Explorer,Decider,Who decides? (AG),Explain who actually decides in a story the learner has not read before.,Explain who decides in a novel story
+CX-FWORK-0041,Future-Work,,LB-41,K–2,Explorer,Agent Buddy,Our crew agent (AG),Show a family member how to ask the crew's agent a question.,Show a family member how to ask the agent
+CX-FWORK-0042,Future-Work,,LB-42,3–5,Explorer,Briefer I,Prompts and briefs (AG),Brief an unfamiliar task so an agent gets it right the first time.,Brief a novel task so the agent gets it right first time
+CX-FWORK-0043,Future-Work,,LB-43,3–5,Explorer,Verifier I,Verify and audit (AG),Audit an unfamiliar agent answer using two independent checks.,Audit a novel agent answer with two checks
+CX-FWORK-0044,Future-Work,,LB-44,3–5,Explorer,Planner I,Tools and steps (AG),Plan a chain of tools needed to complete an unfamiliar task.,Plan a novel tool chain
+CX-FWORK-0045,Future-Work,,LB-45,3–5,Explorer,Data Steward I,Data the agent learns from (AG),Spot the bias hidden in a dataset the learner has not seen before.,Spot a novel biased dataset
+CX-FWORK-0046,Future-Work,,LB-46,3–5,Explorer,Agent Mapper,Agents at work in our parish (AG),Interview a workplace the learner has not visited and report how agents are used there.,Interview report on a novel workplace
+CX-FWORK-0047,Future-Work,,LB-47,3–5,Explorer,Builder I,Build a helper (AG),"Build a helper that correctly answers an unfamiliar set of questions, with sources.","Helper answers a novel question set correctly, with sources"
+CX-FWORK-0048,Future-Work,,LB-48,6–8,Builder,LM Literacy,How language models work (AG),Explain why a language model failed on a case it has not seen before.,Explain a novel failure
+CX-FWORK-0049,Future-Work,,LB-49,6–8,Builder,Agent Ops I,"The agent loop: plan, act, observe (AG)","Trace an unfamiliar agent run through its plan, act and observe steps.",Trace a novel agent run
+CX-FWORK-0050,Future-Work,,LB-50,6–8,Builder,Evaluator I,Evaluation and test sets (AG),Evaluate a version of an agent the learner has not evaluated before.,Evaluate a novel agent version
+CX-FWORK-0051,Future-Work,,LB-51,6–8,Builder,Retrieval I,Retrieval and sources (AG),"Build a question-answering system over parish documents it has not indexed before, with sources.",Build a novel Q&A over parish documents with sources
+CX-FWORK-0052,Future-Work,,LB-52,6–8,Builder,Guardrail I,Guardrails and overrides (AG),Design guardrails for a task the learner has not guarded before.,Design guardrails for a novel task
+CX-FWORK-0053,Future-Work,,LB-53,6–8,Builder,Physical Verifier,Agents and the machine (AG),Catch a wrong sensor reading an agent has passed along uncritically.,Catch a novel wrong reading
+CX-FWORK-0054,Future-Work,,LB-54,6–8,Builder,Ethics I,"Ethics, privacy and the law (AG)",Run a privacy review on an agent design the learner has not reviewed before.,Privacy review of a novel agent design
+CX-FWORK-0055,Future-Work,,LB-55,6–8,Builder,Swarm I,Multi-agent crews (AG),Run a two-agent task the learner has not coordinated before.,Run a novel two-agent task
+CX-FWORK-0056,Future-Work,,LB-56,6–8,Builder,Agent Crew,Agent capstone for a partner (AG),Present an agent project to a partner and have it accepted.,Partner accepts
+CX-FWORK-0057,Future-Work,,LB-57,9–10,Practitioner,Agent Developer I,Agent frameworks (Hermes runtime) (AG),Ship a tool-using agent built on a runtime the learner has not shipped on before.,Ship a novel tool-using agent
+CX-FWORK-0058,Future-Work,,LB-58,9–10,Practitioner,Protocol I,Protocols: NANDA registry and x402 (AG),Register an agent and call another agent the learner has not called before.,Register and call a novel agent
+CX-FWORK-0059,Future-Work,,LB-59,9–10,Practitioner,Spec Writer,Prompt engineering and specification (AG),Specify an unfamiliar task so an agent passes at least ninety-five percent of its test set.,Specify a novel task to ≥95% on its test set
+CX-FWORK-0060,Future-Work,,LB-60,9–10,Practitioner,Evaluator II,Evaluation engineering (AG),Build an evaluation suite for an agent capability the learner has not evaluated before.,Build a novel evaluation suite
+CX-FWORK-0061,Future-Work,,LB-61,9–10,Practitioner,Annotator,Data annotation and quality (AG),Annotate an unfamiliar dataset to an agreement score of at least 0.7.,Annotate a novel set to κ ≥ 0.7
+CX-FWORK-0062,Future-Work,,LB-62,9–10,Practitioner,Automation Analyst I,Automation for local business (AG),Deploy an automated workflow behind an approval gate for a business need not seen before.,Deploy a novel workflow behind an approval gate
+CX-FWORK-0063,Future-Work,,LB-63,9–10,Practitioner,Civic Automation,Agents in public service (AG),"Design a public-service agent, with a human in the loop, for a case not seen before.",Design a novel public-service agent with a human in the loop
+CX-FWORK-0064,Future-Work,,LB-64,9–10,Practitioner,Agent Security I,Security and adversarial inputs (AG),Red-team an unfamiliar agent and fix the weakness that is found.,Red-team a novel agent and fix it
+CX-FWORK-0065,Future-Work,,LB-65,9–10,Practitioner,AgentOps I,Agent operations (AG),Run an incident drill on an agent failure the learner has not drilled before.,Run a novel incident drill
+CX-FWORK-0066,Future-Work,,LB-66,11–12,Lead,Orchestrator I,Hive memory and swarm orchestration (AG),Orchestrate a three-agent job the learner has not orchestrated before.,Orchestrate a novel three-agent job
+CX-FWORK-0067,Future-Work,,LB-67,11–12,Lead,Model Tuner I,Fine-tuning and small models (AG),Fine-tune a small model to a specification the learner has not tuned to before.,Fine-tune a novel small model to specification
+CX-FWORK-0068,Future-Work,,LB-68,11–12,Lead,Industrial Agent Placement,Agents for the data center and the mill (AG),Complete an agent workflow on site and have the supervisor accept the work.,Site supervisor accepts a novel agent workflow
+CX-FWORK-0069,Future-Work,,LB-69,11–12,Lead,Governance I,AI governance and compliance (AG),Produce a governance file for an AI system the learner has not governed before.,Produce a novel governance file
+CX-FWORK-0070,Future-Work,,LB-70,11–12,Lead,Human Factors I,Human factors and override design (AG),User-test an override interface with people who have not used it before.,User-test a novel override interface
+CX-FWORK-0071,Future-Work,,LB-71,11–12,Lead,Agent Product,Agent product studio (AG),Present an agent product to a client and have it accepted.,Client accepts
+CX-FWORK-0072,Future-Work,,LB-72,11–12,Lead,Research I,Research methods in AI (AG),Replicate a published AI result the learner has not replicated before.,Replicate a novel result
+CX-FWORK-0073,Future-Work,,LB-73,11–12,Lead,Certification Prep,Certification and college on-ramp (AG),Pass a mock certification exam for AI and automation work.,Mock exam passed
+CX-FWORK-0074,Future-Work,,LB-74,11–12,Lead,Agents Capstone,Agents capstone and defense (AG),Defend an agents capstone project before an employer and Teacher Leader panel.,Employer and Teacher Leader panel accepts
+CX-FWORK-0075,Future-Work,,LB-75,K–2,Explorer,Data Center Spotter,Where the internet lives (DC),Label the parts of an unfamiliar picture of a data center.,Label a novel picture of a data center
+CX-FWORK-0076,Future-Work,,LB-76,K–2,Explorer,Cooling Cadet,Hot and cold (DC),Measure and compare an unfamiliar hot and cold pair of readings.,Measure and compare a novel hot/cold pair
+CX-FWORK-0077,Future-Work,,LB-77,K–2,Explorer,Power Cadet,Power to the plug (DC),Trace the path electricity takes from an unfamiliar power plant to a plug.,Trace a novel path from plant to plug
+CX-FWORK-0078,Future-Work,,LB-78,K–2,Explorer,Data Center Mapper,The people of the data center (DC),Match five real jobs to five real people who work in a data center.,Match five people to five jobs
+CX-FWORK-0079,Future-Work,,LB-79,3–5,Explorer,Storage I,"Bits, bytes and storage (DC)",Size the storage a new need actually requires.,Size a novel storage need
+CX-FWORK-0080,Future-Work,,LB-80,3–5,Explorer,Network Cadet,Networks: how messages travel (DC),Route a message through a network it has not traveled before.,Route a novel message
+CX-FWORK-0081,Future-Work,,LB-81,3–5,Explorer,Cooling I,Keeping servers cool (DC),Improve the airflow of a server rack the learner has not cooled before.,Improve a novel rack's airflow
+CX-FWORK-0082,Future-Work,,LB-82,3–5,Explorer,Circuits I,Electricity and circuits (DC),Wire a safe circuit the learner has not wired before.,Wire a novel safe circuit
+CX-FWORK-0083,Future-Work,,LB-83,3–5,Explorer,Community Cadet,"Water, land and the big building (DC)",Present a fair set of questions about a data center to a panel that has not heard them before.,Present a novel set of fair questions to a panel
+CX-FWORK-0084,Future-Work,,LB-84,3–5,Explorer,Builder I,Build a mini data center (DC),Get a small cluster to serve a page it has not served before.,Cluster serves a novel page
+CX-FWORK-0085,Future-Work,,LB-85,6–8,Builder,Hardware I,Server hardware (DC),Identify and correctly seat components in a server the learner has not opened before.,Identify and seat novel components
+CX-FWORK-0086,Future-Work,,LB-86,6–8,Builder,Cabling I,Structured cabling and fiber (DC),Terminate and test a cable run the learner has not terminated before.,Terminate and test a novel run
+CX-FWORK-0087,Future-Work,,LB-87,6–8,Builder,Network I,Networking fundamentals (DC),Build a network segment the learner has not built before.,Build a novel segment
+CX-FWORK-0088,Future-Work,,LB-88,6–8,Builder,Power I,Power distribution (DC),Trace a single-line power diagram the learner has not traced before.,Trace a novel single-line diagram
+CX-FWORK-0089,Future-Work,,LB-89,6–8,Builder,Cooling II,Cooling systems (DC),Compute the power usage effectiveness of a cooling setup the learner has not measured before.,Compute a novel PUE
+CX-FWORK-0090,Future-Work,,LB-90,6–8,Builder,Controls I,Monitoring and controls (DC),Respond correctly to an alarm the learner has not seen before.,Respond correctly to a novel alarm
+CX-FWORK-0091,Future-Work,,LB-91,6–8,Builder,Critical Safety I,Safety in the critical environment (DC),Pass a safety scenario set in a critical environment the learner has not faced before.,Pass a novel safety scenario
+CX-FWORK-0092,Future-Work,,LB-92,6–8,Builder,Grid I,"Energy, gas and the grid (DC)",Model a load case for the grid the learner has not modeled before.,Model a novel load case
+CX-FWORK-0093,Future-Work,,LB-93,6–8,Builder,Data Center Crew,Data center crew capstone (DC),Present a data center crew project to a Teacher Leader panel and have it accepted.,Teacher Leader panel accepts
+CX-FWORK-0094,Future-Work,,LB-94,9–10,Practitioner,Hardware Tech I,Hardware technician (A+ prep) (DC),Pass a practice set of A+ hardware technician questions the learner has not seen before.,Pass a novel A+ practice set
+CX-FWORK-0095,Future-Work,,LB-95,9–10,Practitioner,Network Tech I,Network technician (Network+ prep) (DC),Fix a network fault the learner has not diagnosed before.,Fix a novel network fault
+CX-FWORK-0096,Future-Work,,LB-96,9–10,Practitioner,DC Electrical I,Electrical for data centers (DC),Diagnose a power fault safely in a system the learner has not diagnosed before.,Diagnose a novel power fault safely
+CX-FWORK-0097,Future-Work,,LB-97,9–10,Practitioner,DC Cooling I,HVAC-R and liquid cooling (DC),Chart a cooling fault the learner has not charted before.,Chart a novel cooling fault
+CX-FWORK-0098,Future-Work,,LB-98,9–10,Practitioner,Fiber I,Fiber optics and construction (DC),Splice and test a fiber link the learner has not spliced before.,Splice and test a novel link
+CX-FWORK-0099,Future-Work,,LB-99,9–10,Practitioner,Systems I,Linux and systems administration (DC),Automate a system administration task the learner has not automated before.,Automate a novel task
+CX-FWORK-0100,Future-Work,,LB-100,9–10,Practitioner,DC Security I,Security and physical access (DC),Run a physical access security drill the learner has not run before.,Run a novel access drill
+CX-FWORK-0101,Future-Work,,LB-101,9–10,Practitioner,Critical Ops I,Critical facilities operations (DC),Execute a method of procedure the learner has not executed before.,Execute a novel MOP
+CX-FWORK-0102,Future-Work,,LB-102,9–10,Practitioner,Placement I,Site placement I (DC),Complete a site placement task and have the supervisor accept the work.,Supervisor accepts
+CX-FWORK-0103,Future-Work,,LB-103,11–12,Lead,Design I,Data center design and capacity (DC),Design a small data center site the learner has not designed before.,Design a novel small site
+CX-FWORK-0104,Future-Work,,LB-104,11–12,Lead,DC Electrical II,Power systems II (DC),Commission a UPS system the learner has not commissioned before.,Commission a novel UPS (simulator or rig)
+CX-FWORK-0105,Future-Work,,LB-105,11–12,Lead,DC Cooling II,Cooling II and thermal management (DC),Solve a hotspot problem the learner has not solved before.,Solve a novel hotspot
+CX-FWORK-0106,Future-Work,,LB-106,11–12,Lead,AI Infra I,Cloud and AI infrastructure (DC),Size a compute cluster for a workload the learner has not sized before.,Size a novel cluster
+CX-FWORK-0107,Future-Work,,LB-107,11–12,Lead,Controls II,Controls and DCIM (DC),Tune a setpoint schedule the learner has not tuned before.,Tune a novel setpoint schedule
+CX-FWORK-0108,Future-Work,,LB-108,11–12,Lead,Sustainability I,"Sustainability, water and community (DC)",Audit a site sustainability report the learner has not audited before.,Audit a novel site report
+CX-FWORK-0109,Future-Work,,LB-109,11–12,Lead,Certification Prep,Certification prep (CDCP / Server+ / EPA 608) (DC),Pass a mock certification exam for data center technical work.,Mock exam passed
+CX-FWORK-0110,Future-Work,,LB-110,11–12,Lead,Placement II,Site placement II (Learn and Earn) (DC),Complete an employer-supervised placement and have the panel accept the work.,Employer panel accepts
+CX-FWORK-0111,Future-Work,,LB-111,11–12,Lead,Data Center Capstone,Data center capstone and defense (DC),Defend a data center capstone project before an employer and Teacher Leader panel.,Employer and Teacher Leader panel accepts
 CX-REGION-0001,Regional,,LB-1,K,Explorer,Region Explorer,Who works in Greater New Orleans?,,Match three workers to three tools
 CX-REGION-0002,Regional,,LB-2,1,Explorer,Machine Spotter,Machines of Greater New Orleans,,Explain a novel machine's job
 CX-REGION-0003,Regional,,LB-3,2,Explorer,Data Cadet,Counting our region,,Build a novel pictograph from regional data

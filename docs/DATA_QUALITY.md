@@ -15,7 +15,7 @@ authored descriptions. Neither is hidden — both are counted here.
 |---|---:|---:|---:|---:|---:|---:|---:|
 | K–12 | 64 | 0 | 0% | 0% | 100% | 0% | 34 |
 | Trade School | 47 | 0 | 0% | 0% | 100% | 0% | 17 |
-| Future-Work | 111 | 0 | 0% | 0% | 100% | 0% | 14 |
+| Future-Work | 111 | 0 | 100% | 0% | 100% | 0% | 14 |
 | Regional | 111 | 0 | 0% | 0% | 100% | 0% | 18 |
 | Civic & Leadership | 111 | 0 | 0% | 0% | 100% | 0% | 49 |
 | Health & Community | 111 | 0 | 0% | 0% | 100% | 0% | 45 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 64% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 65% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 

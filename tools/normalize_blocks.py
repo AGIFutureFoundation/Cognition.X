@@ -166,16 +166,37 @@ def override_description(row, bands):
     return str(bands[row["grade"]]).strip()
 
 
+def unbanded_description(desc):
+    """Validate a plain fill sentence for an `"unbanded": true` promotion
+    theme (see apply_promotions): the row is the only occurrence of its
+    theme at its grade, so the sentence stands alone with no per-band
+    suffix. Returns the trimmed sentence, or None if it fails the check."""
+    d = str(desc).strip()
+    if len(d) < 40 or not d.endswith(".") or " — at " in d:
+        return None
+    return d
+
+
 def apply_promotions(rows):
     """Fill empty track/code/level/description on legacy rows from
     data/promotions/*.json (keyed by exact theme text; empty fields only),
     and replace known-placeholder transfer checks with authored ones. A
     promotion declaring `"override": "band-suffix"` additionally replaces
     band-suffixed descriptions on rows that already carry a track — see
-    override_description() for the rule and the refusals."""
+    override_description() for the rule and the refusals.
+
+    A promotion declaring `"unbanded": true` is for a foundation pack where
+    each theme names exactly one row at one grade, not five rows spanning
+    the band ladder (Future-Work, Civic & Leadership, etc.). There, a
+    theme's `description` is filled in as the row's complete sentence with
+    no "— at <band>" suffix — appending one would be meaningless (the
+    grade is already the row's own column) and would recreate the exact
+    band-suffix content debt the override mechanism exists to remove. This
+    is still plain fill-empty, not a new counted exception: the field
+    starts empty and stays that way until a promotion supplies it."""
     if not PROMOTIONS.is_dir():
         return
-    promos, overriders, overmap = {}, {}, {}
+    promos, overriders, overmap, unbanded = {}, {}, {}, set()
     for path in sorted(PROMOTIONS.glob("*.json")):
         spec = json.loads(path.read_text(encoding="utf-8"))
         themap = {}
@@ -194,6 +215,10 @@ def apply_promotions(rows):
             if not all(th.get("bands") for t in spec["tracks"] for th in t["themes"]):
                 raise SystemExit(f"{path.name}: an override promotion must carry bands on every theme")
             overriders[spec["pack"]] = path.name
+        if spec.get("unbanded"):
+            if any(th.get("bands") for t in spec["tracks"] for th in t["themes"]):
+                raise SystemExit(f"{path.name}: an unbanded promotion may not carry bands (one row per theme already names the grade)")
+            unbanded.add(spec["pack"])
     filled = checks = creds = overrode = 0
     for r in rows:
         themap = promos.get(r["pack"])
@@ -207,9 +232,18 @@ def apply_promotions(rows):
             continue
         name, prefix, ti, desc, check, cred, bands = themap[r["theme"]]
         bi = BANDS.index(r["grade"])
-        r["track"] = name
-        r["code"] = r["code"] or f"{prefix}-{ti*5 + bi + 1}"
-        r["level"] = r["level"] or BAND_LEVEL[r["grade"]]
+        is_unbanded = r["pack"] in unbanded
+        if not is_unbanded:
+            # An unbanded promotion's themes are grouped for the file's own
+            # readability only: each names exactly one row, not a 10-theme,
+            # 50-block track, so filling `track`/`code` here would create a
+            # track that fails the tracked-shape check in test_dataset().
+            # Those two stay deferred; light_fill() still assigns `code` and
+            # `level` structurally, exactly as it does for every foundation
+            # row that receives no promotion at all.
+            r["track"] = name
+            r["code"] = r["code"] or f"{prefix}-{ti*5 + bi + 1}"
+            r["level"] = r["level"] or BAND_LEVEL[r["grade"]]
         # a promotion theme may carry per-band sentences (`bands`, the same
         # shape and rules as a pack spec's); otherwise the shared sentence
         # takes the documented "— at <band>" suffix
@@ -218,6 +252,11 @@ def apply_promotions(rows):
                 if sorted(bands) != sorted(BANDS) or len({str(bands[b]).strip() for b in BANDS}) != 5 or any(not str(bands[b]).strip() for b in BANDS):
                     raise SystemExit(f"promotion {r['pack']!r}, theme {r['theme']!r}: bands must name the five bands with five distinct non-empty sentences")
                 r["description"] = str(bands[r["grade"]]).strip()
+            elif is_unbanded:
+                d = unbanded_description(desc)
+                if d is None:
+                    raise SystemExit(f"unbanded promotion {r['pack']!r}, theme {r['theme']!r}: description must be a complete sentence with no suffix: {str(desc)[:60]!r}")
+                r["description"] = d
             else:
                 r["description"] = f"{desc} — at {r['grade']}"
         filled += 1

@@ -109,13 +109,30 @@ python3 tools/normalize_blocks.py && python3 tests/test_platform.py
 
 ---
 
-## 3 — The 6,200 empty descriptions, filled through promotions
+## 3 — The 6,200 empty descriptions, filled through promotions *(tranche one — Future-Work — done in v0.90.0, 111 rows)*
 
 **Why.** 36% of rows have no description at all: 5,200 in the sector-OS
 packs and 1,000 in the nine foundation packs (K–12, Trade School,
 Future-Work, Regional, Civic, Health, Language, Empathy, Community). A
 learner opening one sees a code, a level and a transfer check. Filling
 empty fields is what promotions are for; no override is needed.
+
+**Wrinkle found in v0.90.0.** Within Future-Work, Civic & Leadership,
+Language Culture & Communication, Empathy, Community & Relationship
+Practice, and most of Health & Community, each theme names exactly one
+row at one grade — not five rows spanning the band ladder like the
+community packs from prompt 2. The plain fill-empty fallback would
+append a "— at ‹band›" suffix, recreating the exact content debt prompt
+2 just eliminated. `tools/normalize_blocks.py` gained a small, tested
+extension: a promotion may declare `"unbanded": true`, filling a
+one-row theme's description as a single complete sentence with no
+suffix, and skipping `track`/`code` fill (those would create a track
+shape that fails the 50-block invariant in `tests/test_platform.py`
+`test_dataset()`; `light_fill()` still assigns `code` and `level`
+structurally, as before). K–12, Trade School, Regional, and Health &
+Community's two "—"-grade rows use single grades or adult bands rather
+than the five standard bands and are not yet reachable by this
+mechanism or the original one — a follow-up tranche.
 
 **Evidence.** `docs/DATA_QUALITY.md` (Desc % = 0% on the foundation
 packs; 43% on the sector OS); `data/promotions/basic-life-skills.json`
