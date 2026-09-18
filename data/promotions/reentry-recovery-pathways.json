@@ -1,0 +1,587 @@
+{
+  "pack": "Reentry & Recovery Pathways",
+  "override": "band-suffix",
+  "note": "Promotion to the tracked schema (v0.89.0). This pack's track and description were already non-empty in the raw source import, carrying the band-suffix content debt from the start (not a fill-empty case). \"override\": \"band-suffix\" replaces exactly those suffixed rows with authored band sentences, the same counted exception used for the sector-OS packs (v0.72.0) and Housing & Tenancy / Money, Benefits & Entitlements (v0.88.0). Track names, prefixes and the shared description text are copied verbatim from data/source/Cognition.X_all_blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "AR",
+      "name": "Arriving: the first thirty days out",
+      "themes": [
+        {
+          "theme": "The first day: what has to happen",
+          "description": "The first day out: the small number of things that must happen before the day ends.",
+          "bands": {
+            "K–2": "Ask an adult what has to happen on a big first day.",
+            "3–5": "Learn that a real first day out has a few must-do steps, with an adult.",
+            "6–8": "Identify the real must-do steps for a first day out, with a checker.",
+            "9–10": "Complete the real must-do steps of a first day out, on your own.",
+            "11–12": "Explain to someone else the real steps that must happen on a first day out."
+          }
+        },
+        {
+          "theme": "Where you sleep tonight",
+          "description": "Where you sleep tonight, arranged before release rather than after it.",
+          "bands": {
+            "K–2": "Ask an adult where you're going to sleep tonight.",
+            "3–5": "Learn why knowing where you'll sleep matters ahead of time, with an adult.",
+            "6–8": "Identify why a real sleeping arrangement should be set before release, checked.",
+            "9–10": "Arrange a real place to sleep before a real release date, on your own.",
+            "11–12": "Explain to someone else why arranging real housing before release matters."
+          }
+        },
+        {
+          "theme": "Reporting requirements and the calendar they create",
+          "description": "Reporting requirements and the calendar they create, written down in one place.",
+          "bands": {
+            "K–2": "Ask an adult why some grown-ups have to check in on certain days.",
+            "3–5": "Learn that a real reporting schedule creates a calendar, with an adult.",
+            "6–8": "Identify the real calendar a set of reporting requirements creates, checked.",
+            "9–10": "Track a real reporting schedule accurately across a full calendar, alone.",
+            "11–12": "Explain to someone else the real calendar that reporting requirements create."
+          }
+        },
+        {
+          "theme": "A parole or probation officer as a relationship",
+          "description": "A supervising officer as a working relationship with rules on both sides.",
+          "bands": {
+            "K–2": "Ask an adult who checks in on people after they come home.",
+            "3–5": "Learn that a real supervising officer has rules for both sides, with an adult.",
+            "6–8": "Identify the real rules that govern a supervising-officer relationship, checked.",
+            "9–10": "Manage a real relationship with a supervising officer effectively, alone.",
+            "11–12": "Explain to someone else the real rules that govern that working relationship."
+          }
+        },
+        {
+          "theme": "Curfew, geography and the map of what is allowed",
+          "description": "Curfew, exclusion zones and the map of where you may be.",
+          "bands": {
+            "K–2": "Ask an adult what places you're allowed to go.",
+            "3–5": "Learn that a real curfew and map of allowed places exist together, with an adult.",
+            "6–8": "Identify the real boundaries a curfew and exclusion zone set, with a checker.",
+            "9–10": "Navigate a real day within actual curfew and exclusion-zone boundaries, alone.",
+            "11–12": "Explain to someone else the real map of what a curfew actually allows."
+          }
+        },
+        {
+          "theme": "Phones, contact and the rules on both",
+          "description": "Phones and contact rules, which are the most commonly and accidentally breached.",
+          "bands": {
+            "K–2": "Ask an adult who you're allowed to call.",
+            "3–5": "Learn that a real phone and contact list can carry rules, with an adult.",
+            "6–8": "Identify the real rules attached to phones and approved contacts, checked.",
+            "9–10": "Manage a real phone and contact list within the actual rules, on your own.",
+            "11–12": "Explain to someone else the real rules on phones and contact that get missed."
+          }
+        },
+        {
+          "theme": "The first appointment you must not miss",
+          "description": "The first appointment that must not be missed, and the redundancy around it.",
+          "bands": {
+            "K–2": "Ask an adult which appointment is the most important one.",
+            "3–5": "Learn that one real appointment matters more than the rest, with an adult.",
+            "6–8": "Identify the real first appointment that must not be missed, with a checker.",
+            "9–10": "Build real redundancy so the first appointment is never missed, on your own.",
+            "11–12": "Explain to someone else the real redundancy that protects a first appointment."
+          }
+        },
+        {
+          "theme": "Asking for help on day two rather than day thirty",
+          "description": "Asking for help on day two rather than day thirty, and who to ask.",
+          "bands": {
+            "K–2": "Ask an adult who to ask for help on a hard day.",
+            "3–5": "Learn that asking for real help early is better than waiting, with an adult.",
+            "6–8": "Identify who real to ask for help on day two of a hard stretch, checked.",
+            "9–10": "Ask for real help on day two rather than waiting until day thirty, alone.",
+            "11–12": "Explain to someone else why asking for real help early beats waiting."
+          }
+        },
+        {
+          "theme": "What you tell people, and when",
+          "description": "What you tell people, to whom, and when — decided in advance, not in the moment.",
+          "bands": {
+            "K–2": "Ask an adult what to say if someone asks a hard question.",
+            "3–5": "Learn that deciding what real to say ahead of time helps, with an adult.",
+            "6–8": "Identify the real plan for what to tell people and when, with a checker.",
+            "9–10": "Decide in advance, for a real situation, what to tell people and when, alone.",
+            "11–12": "Explain to someone else why deciding real disclosure in advance matters."
+          }
+        },
+        {
+          "theme": "Thirty days: what should exist by then",
+          "description": "Thirty days out: the specific things that should exist by then.",
+          "bands": {
+            "K–2": "Ask an adult what should be true after a whole month.",
+            "3–5": "Learn one real thing that should exist after thirty days out, with an adult.",
+            "6–8": "Identify the real things that should exist by thirty days out, with a checker.",
+            "9–10": "Assess, at a real thirty-day mark, whether the right things exist, alone.",
+            "11–12": "Explain to someone else the real benchmarks that should exist by thirty days."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "ID",
+      "name": "Identity: the documents that unlock everything else",
+      "themes": [
+        {
+          "theme": "A birth certificate and how to get one",
+          "description": "A birth certificate: which state holds it, the form, the fee and the waiver.",
+          "bands": {
+            "K–2": "Ask an adult where your birth papers are kept.",
+            "3–5": "Learn one real step to get a copy of a birth certificate, with an adult.",
+            "6–8": "Identify the real state, form and fee needed for a birth certificate, checked.",
+            "9–10": "Obtain a real birth certificate using the actual form and fee, on your own.",
+            "11–12": "Explain to someone else the real process for obtaining a birth certificate."
+          }
+        },
+        {
+          "theme": "A state ID without an address",
+          "description": "A state ID without a fixed address, which is possible and routinely said not to be.",
+          "bands": {
+            "K–2": "Ask an adult how someone gets an ID card.",
+            "3–5": "Learn that a real ID can sometimes be gotten without a fixed address.",
+            "6–8": "Identify the real workaround for getting an ID without a fixed address, checked.",
+            "9–10": "Obtain a real state ID using the actual workaround for no fixed address, alone.",
+            "11–12": "Explain to someone else the real, routine way to get an ID with no address."
+          }
+        },
+        {
+          "theme": "A Social Security card, replaced",
+          "description": "Replacing a Social Security card, and the identity documents it requires first.",
+          "bands": {
+            "K–2": "Ask an adult what a Social Security card is for.",
+            "3–5": "Learn one real document needed to replace a Social Security card, with an adult.",
+            "6–8": "Identify the real documents required to replace a Social Security card, checked.",
+            "9–10": "Replace a real Social Security card using the actual required documents, alone.",
+            "11–12": "Explain to someone else the real documents a Social Security replacement needs."
+          }
+        },
+        {
+          "theme": "Immigration documents, and the office that holds them",
+          "description": "Immigration documents, which office holds them, and getting a copy safely.",
+          "bands": {
+            "K–2": "Ask an adult which office keeps important papers safe.",
+            "3–5": "Learn which real office might hold immigration documents, with an adult.",
+            "6–8": "Identify the real office that holds a given immigration document, with a checker.",
+            "9–10": "Obtain a real copy of an immigration document safely, on your own.",
+            "11–12": "Explain to someone else which real office holds which immigration document."
+          }
+        },
+        {
+          "theme": "A bank account with what you have",
+          "description": "Opening a bank account with the documents you actually have.",
+          "bands": {
+            "K–2": "Ask an adult what you need to open a bank account.",
+            "3–5": "Learn one real document that can open a bank account, with an adult.",
+            "6–8": "Identify what real documents actually suffice to open a bank account, checked.",
+            "9–10": "Open a real bank account using only the documents actually on hand, alone.",
+            "11–12": "Explain to someone else what real documents actually suffice for an account."
+          }
+        },
+        {
+          "theme": "A phone number that stays yours",
+          "description": "A phone number that stays yours, because it is the anchor for everything else.",
+          "bands": {
+            "K–2": "Ask an adult why keeping the same phone number matters.",
+            "3–5": "Learn that a real phone number can be an anchor for other things, with an adult.",
+            "6–8": "Identify why a real stable phone number anchors other paperwork, checked.",
+            "9–10": "Keep a real phone number stable as the anchor for other real paperwork, alone.",
+            "11–12": "Explain to someone else why a real stable phone number anchors everything else."
+          }
+        },
+        {
+          "theme": "An address when you have none",
+          "description": "An address when you have none: general delivery, a service address, a trusted third party.",
+          "bands": {
+            "K–2": "Ask an adult what to do if you don't have a mailing address.",
+            "3–5": "Learn one real option for an address when there isn't one, with an adult.",
+            "6–8": "Identify the real options for an address when none exists, with a checker.",
+            "9–10": "Set up a real address option when none currently exists, on your own.",
+            "11–12": "Explain to someone else the real options — general delivery, a service address."
+          }
+        },
+        {
+          "theme": "Proof of residence, assembled",
+          "description": "Assembling proof of residence from what exists rather than what is asked for.",
+          "bands": {
+            "K–2": "Ask an adult what proves where you live.",
+            "3–5": "Learn one real document that can prove where someone lives, with an adult.",
+            "6–8": "Identify what real documents can assemble into proof of residence, checked.",
+            "9–10": "Assemble real proof of residence from documents actually available, alone.",
+            "11–12": "Explain to someone else how to assemble real proof of residence from what exists."
+          }
+        },
+        {
+          "theme": "Keeping documents safe in a shared room",
+          "description": "Keeping documents safe in a shared room, including a copy that is not with you.",
+          "bands": {
+            "K–2": "Ask an adult where to keep important papers safe.",
+            "3–5": "Learn one real way to keep documents safe in a shared room, with an adult.",
+            "6–8": "Identify the real risk documents face in a shared living space, with a checker.",
+            "9–10": "Keep real important documents safe, including a backup copy, on your own.",
+            "11–12": "Advise someone else on real ways to keep documents safe in a shared room."
+          }
+        },
+        {
+          "theme": "Rebuilding a file that was lost",
+          "description": "Rebuilding a lost file, in the order that makes each next document obtainable.",
+          "bands": {
+            "K–2": "Ask an adult what to do if important papers get lost.",
+            "3–5": "Learn one real first step to rebuild a lost file, with an adult's help.",
+            "6–8": "Identify the real order in which to rebuild a lost document file, checked.",
+            "9–10": "Rebuild a real lost document file in the order that unlocks each next one, alone.",
+            "11–12": "Explain to someone else the real order that makes rebuilding a file possible."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "WK",
+      "name": "Work: what is open, what is barred, what is appealable",
+      "themes": [
+        {
+          "theme": "What the record actually shows",
+          "description": "What your record actually shows, obtained and read rather than assumed.",
+          "bands": {
+            "K–2": "Ask an adult what a record of past trouble might say.",
+            "3–5": "Learn that a real record should be read, not assumed, with an adult.",
+            "6–8": "Identify what a real record actually shows once obtained and read, checked.",
+            "9–10": "Obtain and read a real record for what it actually shows, on your own.",
+            "11–12": "Explain to someone else why reading the real record beats assuming it."
+          }
+        },
+        {
+          "theme": "Ban-the-box and what it changed",
+          "description": "Ban-the-box: what it changed, what it did not, and at what stage it applies.",
+          "bands": {
+            "K–2": "Ask an adult why a job form might not ask about the past right away.",
+            "3–5": "Learn one real thing ban-the-box changed about job forms, with an adult.",
+            "6–8": "Identify what real stage ban-the-box moves a record question to, checked.",
+            "9–10": "Apply real ban-the-box rules correctly to a given hiring process, on your own.",
+            "11–12": "Explain to someone else what real ban-the-box changed and what it did not."
+          }
+        },
+        {
+          "theme": "Answering the question honestly and well",
+          "description": "Answering the question honestly and well, which are compatible.",
+          "bands": {
+            "K–2": "Ask an adult how to answer a hard question honestly.",
+            "3–5": "Learn one real way to answer a hard question honestly, with an adult.",
+            "6–8": "Identify what real makes an honest answer to a hard question effective, checked.",
+            "9–10": "Answer a real hard interview question honestly and effectively, on your own.",
+            "11–12": "Advise someone else on answering a real hard question honestly and well."
+          }
+        },
+        {
+          "theme": "Occupational licences and the ones that are barred",
+          "description": "Occupational licences: which are barred, which are discretionary, and which are open.",
+          "bands": {
+            "K–2": "Ask an adult what a licence is needed for some jobs.",
+            "3–5": "Learn that a real licence can sometimes be barred by a record, with an adult.",
+            "6–8": "Identify which real licences are barred versus discretionary, with a checker.",
+            "9–10": "Determine, for a real case, whether a licence is barred or discretionary, alone.",
+            "11–12": "Explain to someone else the real difference between a barred and discretionary licence."
+          }
+        },
+        {
+          "theme": "Expungement and what it reaches",
+          "description": "Expungement: what it reaches, what it does not, and the process.",
+          "bands": {
+            "K–2": "Ask an adult what it means to clear an old record.",
+            "3–5": "Learn that a real expungement reaches some things but not all, with an adult.",
+            "6–8": "Identify what real an expungement reaches and what it leaves untouched, checked.",
+            "9–10": "Evaluate, for a real record, what expungement would and would not reach, alone.",
+            "11–12": "Explain to someone else what a real expungement reaches and the process for it."
+          }
+        },
+        {
+          "theme": "A certificate of rehabilitation",
+          "description": "A certificate of rehabilitation, what it does, and who it persuades.",
+          "bands": {
+            "K–2": "Ask an adult what a paper that shows someone has changed might do.",
+            "3–5": "Learn what a real certificate of rehabilitation is meant to do, with an adult.",
+            "6–8": "Identify who a real certificate of rehabilitation is meant to persuade, checked.",
+            "9–10": "Pursue a real certificate of rehabilitation for its actual intended effect, alone.",
+            "11–12": "Explain to someone else what a real certificate of rehabilitation does and persuades."
+          }
+        },
+        {
+          "theme": "Unions, halls and apprenticeships",
+          "description": "Unions, hiring halls and apprenticeships as a route that assesses differently.",
+          "bands": {
+            "K–2": "Ask an adult what a union hall does for workers.",
+            "3–5": "Learn one real way a union or apprenticeship assesses people, with an adult.",
+            "6–8": "Identify how a real union or apprenticeship route assesses differently, checked.",
+            "9–10": "Pursue a real union, hall or apprenticeship route as an assessment path, alone.",
+            "11–12": "Explain to someone else how a real union route assesses people differently."
+          }
+        },
+        {
+          "theme": "Disclosure: when, to whom, how much",
+          "description": "Disclosure: when, to whom, and how much, decided before the interview.",
+          "bands": {
+            "K–2": "Ask an adult what to tell a new boss about the past.",
+            "3–5": "Learn that deciding real disclosure ahead of time helps, with an adult.",
+            "6–8": "Identify the real plan for disclosure before a given interview, with a checker.",
+            "9–10": "Decide, before a real interview, when, to whom and how much to disclose, alone.",
+            "11–12": "Explain to someone else how to plan real disclosure before an interview."
+          }
+        },
+        {
+          "theme": "A job that ends badly and the next one",
+          "description": "A job that ends badly, and getting to the next one without a gap becoming a story.",
+          "bands": {
+            "K–2": "Ask an adult what to do if a job doesn't work out.",
+            "3–5": "Learn one real step to take after a job ends badly, with an adult's help.",
+            "6–8": "Identify the real steps to get to the next job without a lasting gap, checked.",
+            "9–10": "Move from a real job that ended badly to the next one without a gap, alone.",
+            "11–12": "Advise someone else on real steps after a job ends badly to avoid a gap."
+          }
+        },
+        {
+          "theme": "Work that leads somewhere in three years",
+          "description": "Work that leads somewhere in three years rather than work that is available on Monday.",
+          "bands": {
+            "K–2": "Ask an adult what job might lead to something bigger later.",
+            "3–5": "Learn the difference between real work that's available and work that leads on.",
+            "6–8": "Identify what real makes a job lead somewhere in three years, with a checker.",
+            "9–10": "Choose real work that leads somewhere in three years over merely available work.",
+            "11–12": "Explain to someone else the real difference between available work and work that leads."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SU",
+      "name": "Support: the people who hold a plan with you",
+      "themes": [
+        {
+          "theme": "A case manager and what they can do",
+          "description": "A case manager: what the role can do, what it cannot, and how to use it well.",
+          "bands": {
+            "K–2": "Ask an adult who helps people figure out what to do next.",
+            "3–5": "Learn one real thing a case manager can help with, with an adult's help.",
+            "6–8": "Identify what real a case manager can and cannot do, with a checker.",
+            "9–10": "Use a real case manager effectively for what the role can actually do, alone.",
+            "11–12": "Explain to someone else what a real case manager can and cannot do."
+          }
+        },
+        {
+          "theme": "A support group and what it is for",
+          "description": "A support group: what it is for, what it is not, and how to try one without committing.",
+          "bands": {
+            "K–2": "Ask an adult why some people meet in a group to talk.",
+            "3–5": "Learn what a real support group is actually for, with an adult's help.",
+            "6–8": "Identify what real a support group is for and is not for, with a checker.",
+            "9–10": "Try a real support group for what it is actually meant to provide, on your own.",
+            "11–12": "Explain to someone else what a real support group is for and how to try one."
+          }
+        },
+        {
+          "theme": "Sponsors, mentors and the difference",
+          "description": "Sponsors and mentors: different roles, different obligations, both useful.",
+          "bands": {
+            "K–2": "Ask an adult what a mentor does for someone.",
+            "3–5": "Learn one real difference between a sponsor and a mentor, with an adult.",
+            "6–8": "Identify the real different obligations of a sponsor versus a mentor, checked.",
+            "9–10": "Use both a real sponsor and mentor appropriately for their different roles, alone.",
+            "11–12": "Explain to someone else the real different obligations sponsors and mentors carry."
+          }
+        },
+        {
+          "theme": "Family: repair, distance and boundaries",
+          "description": "Family: repair where possible, distance where necessary, and the boundary either way.",
+          "bands": {
+            "K–2": "Ask an adult how families work things out after a hard time.",
+            "3–5": "Learn that real family repair sometimes needs distance too, with an adult.",
+            "6–8": "Identify the real boundary that should separate repair from harm, with a checker.",
+            "9–10": "Set a real boundary with family that allows repair without renewed harm, alone.",
+            "11–12": "Explain to someone else the real boundary that separates repair from distance."
+          }
+        },
+        {
+          "theme": "Medication and the appointments around it",
+          "description": "Medication and the appointments that keep it available, as a logistics problem.",
+          "bands": {
+            "K–2": "Ask an adult why some medicine needs a doctor visit first.",
+            "3–5": "Learn that real medication needs appointments to stay available, with an adult.",
+            "6–8": "Identify the real appointment schedule that keeps medication available, checked.",
+            "9–10": "Manage real medication and its appointments as a logistics problem, on your own.",
+            "11–12": "Explain to someone else why real medication access is a logistics problem."
+          }
+        },
+        {
+          "theme": "A crisis plan written when not in crisis",
+          "description": "A crisis plan written calmly, so it can be followed when you are not calm.",
+          "bands": {
+            "K–2": "Ask an adult to help make a plan for a hard day, ahead of time.",
+            "3–5": "Learn that a real crisis plan works best written calmly, with an adult.",
+            "6–8": "Identify what real a calm-written crisis plan should include, with a checker.",
+            "9–10": "Write a real crisis plan calmly so it holds up during an actual crisis, alone.",
+            "11–12": "Advise someone else on writing a real crisis plan before it's needed."
+          }
+        },
+        {
+          "theme": "The people who can be called at 2am",
+          "description": "The people who can be called at two in the morning, named in advance.",
+          "bands": {
+            "K–2": "Ask an adult who you could call in the middle of the night.",
+            "3–5": "Name one real person who could be called at 2am, with an adult's help.",
+            "6–8": "Identify who real should be named in advance for a 2am call, with a checker.",
+            "9–10": "Name and confirm real people who can be called at 2am, on your own.",
+            "11–12": "Explain to someone else why naming real 2am contacts in advance matters."
+          }
+        },
+        {
+          "theme": "Saying no to the people who cost you",
+          "description": "Saying no to the people who cost you, which is the hardest item in this track.",
+          "bands": {
+            "K–2": "Ask an adult how to say no to a friend who's a bad influence.",
+            "3–5": "Learn one real way to say no to someone who costs you, with an adult.",
+            "6–8": "Identify what real makes saying no to a costly person so hard, with a checker.",
+            "9–10": "Say no to a real person who costs you, even when it is hard, on your own.",
+            "11–12": "Advise someone else on the real difficulty and skill of saying no."
+          }
+        },
+        {
+          "theme": "Being someone else’s support",
+          "description": "Being somebody else’s support, and the limit that keeps you able to be.",
+          "bands": {
+            "K–2": "Ask an adult how you can help a friend who's struggling.",
+            "3–5": "Learn one real limit to keep when supporting someone else, with an adult.",
+            "6–8": "Identify the real limit that keeps a supporter able to keep supporting, checked.",
+            "9–10": "Support someone real else while keeping the limit that keeps you able, alone.",
+            "11–12": "Explain to someone else the real limit that protects a supporter's own capacity."
+          }
+        },
+        {
+          "theme": "When support ends",
+          "description": "When support ends — a worker leaves, a programme closes — and continuity planned for it.",
+          "bands": {
+            "K–2": "Ask an adult what happens when a helper isn't there anymore.",
+            "3–5": "Learn one real way to keep going when support ends, with an adult's help.",
+            "6–8": "Identify the real steps to take continuity when a worker leaves, with a checker.",
+            "9–10": "Maintain real continuity when a worker leaves or a programme closes, alone.",
+            "11–12": "Explain to someone else how to maintain real continuity when support ends."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "FW",
+      "name": "Forward: a year out, and the thing after that",
+      "themes": [
+        {
+          "theme": "A year out: what is different",
+          "description": "A year out: naming what is actually different rather than what should be.",
+          "bands": {
+            "K–2": "Ask an adult what changes after a whole year.",
+            "3–5": "Name one real thing that is different a year out, with an adult's help.",
+            "6–8": "Identify what real is actually different a year out, versus wished for, checked.",
+            "9–10": "Assess, for a real year mark, what is actually different, on your own.",
+            "11–12": "Explain to someone else how to name what a real year out actually changed."
+          }
+        },
+        {
+          "theme": "The plan that survives a bad month",
+          "description": "A plan that survives a bad month, because the bad month is the design case.",
+          "bands": {
+            "K–2": "Ask an adult how a plan can survive a hard month.",
+            "3–5": "Learn one real feature of a plan that survives a bad month, with an adult.",
+            "6–8": "Identify what real design makes a plan survive a bad month, with a checker.",
+            "9–10": "Build a real plan designed to survive a bad month, not just a good one, alone.",
+            "11–12": "Explain to someone else why a real plan should be designed around a bad month."
+          }
+        },
+        {
+          "theme": "Education that fits around reporting",
+          "description": "Education that fits around reporting requirements and irregular work.",
+          "bands": {
+            "K–2": "Ask an adult how to fit school around other appointments.",
+            "3–5": "Learn one real way education can fit around reporting duties, with an adult.",
+            "6–8": "Identify what real education options fit around reporting requirements, checked.",
+            "9–10": "Choose real education that fits around reporting and irregular work, alone.",
+            "11–12": "Advise someone else on real education choices that fit around reporting."
+          }
+        },
+        {
+          "theme": "Housing that is not transitional",
+          "description": "Housing that is not transitional, and the specific gap between the two.",
+          "bands": {
+            "K–2": "Ask an adult what it means to have a permanent home.",
+            "3–5": "Learn one real difference between transitional and permanent housing.",
+            "6–8": "Identify the real gap between transitional and non-transitional housing, checked.",
+            "9–10": "Plan a real path from transitional housing to something permanent, alone.",
+            "11–12": "Explain to someone else the real gap between transitional and permanent housing."
+          }
+        },
+        {
+          "theme": "Money that is not month to month",
+          "description": "Money that is not month to month, and the first structural change toward it.",
+          "bands": {
+            "K–2": "Ask an adult what it means to have money saved up.",
+            "3–5": "Learn one real step toward money that isn't just month to month.",
+            "6–8": "Identify the real first structural change toward non-month-to-month money, checked.",
+            "9–10": "Make a real structural change toward money that is not month to month, alone.",
+            "11–12": "Advise someone else on the real first change toward stable, non-monthly money."
+          }
+        },
+        {
+          "theme": "A record that recedes",
+          "description": "A record that recedes: what fades, what does not, and what can be acted on.",
+          "bands": {
+            "K–2": "Ask an adult if an old problem can matter less over time.",
+            "3–5": "Learn that a real record can fade in relevance over time, with an adult.",
+            "6–8": "Identify what real fades from a record and what does not, with a checker.",
+            "9–10": "Assess, for a real record, what has faded and what can still be acted on, alone.",
+            "11–12": "Explain to someone else what real fades from a record and what can be acted on."
+          }
+        },
+        {
+          "theme": "Giving back without being defined by it",
+          "description": "Giving back without being defined by the worst period of your life.",
+          "bands": {
+            "K–2": "Ask an adult how someone can help others after a hard time.",
+            "3–5": "Learn one real way to give back without it defining you, with an adult.",
+            "6–8": "Identify what real risk comes from being defined by giving back, with a checker.",
+            "9–10": "Give back in a real way without being defined by a past period, on your own.",
+            "11–12": "Explain to someone else how to give back without being defined by it."
+          }
+        },
+        {
+          "theme": "Relapse, return and the road again",
+          "description": "Relapse and return, planned for as a possibility rather than a failure.",
+          "bands": {
+            "K–2": "Ask an adult what happens if someone slips up after doing well.",
+            "3–5": "Learn that a real setback can be planned for, not just feared, with an adult.",
+            "6–8": "Identify why real relapse should be planned for as a possibility, with a checker.",
+            "9–10": "Plan for a real possible relapse as a possibility, not a failure, on your own.",
+            "11–12": "Explain to someone else why planning for a real relapse beats only fearing it."
+          }
+        },
+        {
+          "theme": "What you would tell yourself at day one",
+          "description": "What you would tell yourself at day one, written for somebody at day one.",
+          "bands": {
+            "K–2": "Ask an adult what they would tell themselves on a hard first day.",
+            "3–5": "Write one real thing you'd tell yourself at day one, with an adult's help.",
+            "6–8": "Identify what real advice would matter most at day one, with a checker.",
+            "9–10": "Write real advice for someone at day one, based on what actually mattered, alone.",
+            "11–12": "Share with someone else real advice written for a person at day one."
+          }
+        },
+        {
+          "theme": "The thing after the thing",
+          "description": "The thing after the thing: a goal that is not about recovery or reentry at all.",
+          "bands": {
+            "K–2": "Ask an adult what someone might want to do once things are okay.",
+            "3–5": "Learn that a real goal can exist beyond just getting through, with an adult.",
+            "6–8": "Identify what real goal exists beyond recovery or reentry itself, with a checker.",
+            "9–10": "Name and pursue a real goal that is not about recovery or reentry, on your own.",
+            "11–12": "Explain to someone else why naming a real goal beyond reentry itself matters."
+          }
+        }
+      ]
+    }
+  ]
+}
