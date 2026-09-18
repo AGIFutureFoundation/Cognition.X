@@ -4,6 +4,53 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.99.0] — 2026-09-18
+
+### Added — prompt 3 final piece, pilot pack: Sapient OS's 620 empty descriptions filled, apply_promotions() now merges multiple promotion files per pack
+- Investigated the remaining 5,200 prompt-3 empty descriptions (8
+  sector-OS/Education OS packs) and found a shape not seen in any
+  earlier prompt-3 pack: every empty row shares grade
+  `11–12 · adult` and empty `track`, and uses one of several hundred
+  distinct short generic action-phrase themes ("Track progress",
+  "Address bias", "Document methods") reused verbatim across dozens to
+  hundreds of different named credentials within the pack. Confirmed
+  the `unbanded` mechanism fits (one sentence per theme, applied to
+  every row sharing it, exactly as generalized for Regional's
+  cross-region themes in v0.97.0) by checking that rows sharing a
+  theme carry varying transfer-check wording (different verification
+  modes — track/document/verify/confirm — applied to the same
+  underlying action) but always the same action.
+- **Bug found and fixed while shipping the pilot**: `apply_promotions()`
+  built one themap per pack name, so a second promotion file targeting
+  a pack already covered by an earlier file (in glob order) silently
+  discarded the first file's themes. Every sector-OS pack already
+  carries a `"band-suffix"` override promotion from prompt 2, so a new
+  file adding `unbanded` fills for the same pack collided invisibly —
+  the new promotion parsed, validated and ran, but filled nothing.
+  `apply_promotions()` now merges themaps from multiple files per pack,
+  refusing loudly if two files ever promote the same theme.
+  `tests/test_platform.py`'s `test_unbanded_descriptions()` was
+  narrowed to match: it scopes each pack's checked rows to the ones an
+  `unbanded` promotion actually declared, not every row sharing the
+  pack, so it never conflates unbanded fills with unrelated
+  band-authored or override content.
+- **`data/promotions/sapient-os-practice-steps.json`** is a new
+  `unbanded` promotion (a second promotion file for a pack that
+  already had one): 357 themes, 620 rows, no suffix, `track`/`code`
+  left deferred like every other `unbanded` pack. No block id, code,
+  track, level, credential, or transfer check changed.
+- `tests/test_platform.py`'s `UNBANDED_FILLED_PACKS` gains Sapient OS;
+  `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 5,200 → 4,580. Dataset-wide
+  description coverage rises from 70% to 73% — the single largest jump
+  of prompt 3 so far.
+- This was the pilot pack for prompt 3's final piece (docs/DATA_REVIEW.md
+  Finding 2, task tracking): the mechanism, the merge fix, and the
+  authoring approach are now validated. Seven packs remain — Corporate
+  OS, Education OS, Global Health OS, Science OS, Multilateral OS,
+  Non-Profit Practice, Robotics OS — with roughly 2,570 more distinct
+  sentences to author across them (~415/336/394/349/352/378 themes
+  respectively, plus Education OS not yet individually scanned).
+
 ## [0.98.0] — 2026-09-18
 
 ### Added — prompt 3 close-out: Health & Community's last 2 empty descriptions filled — every pack reachable by `unbanded`/`partial_bands` is now complete

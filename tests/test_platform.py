@@ -769,7 +769,7 @@ def test_band_differentiated_descriptions():
 # exactly one row (not five spanning the band ladder), promoted with
 # `"unbanded": true` so the empty description fills in as one complete
 # sentence with no per-band suffix.
-UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture & Communication", "Health & Community", "K–12", "Trade School", "Regional"}
+UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture & Communication", "Health & Community", "K–12", "Trade School", "Regional", "Cognition.X : Sapient OS"}
 
 # Rows an unbanded promotion could not reach before v0.95.0 extended
 # apply_promotions()'s grade filter from BAND_LEVEL to GRADE_LEVEL: grade
@@ -780,7 +780,7 @@ UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture
 # genuine gap has a place to declare it without re-deriving the pattern.
 UNBANDED_KNOWN_GAPS = {}
 
-KNOWN_EMPTY_DESCRIPTION_ROWS = 5200  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); 5,758 after Health & Community (v0.92.0, prompt 3 tranche three, 109 of its 111 rows — the other 2 use grade "—" and are out of scope); 5,591 after Empathy & Emotional Intelligence (v0.93.0, prompt 3 tranche four, 167 rows, the first "partial_bands" promotion); 5,424 after Community & Relationship Practice (v0.94.0, prompt 3 tranche five, 167 rows); 5,360 after K–12 (v0.95.0, prompt 3 continuation, 64 rows, the first pack reached after extending apply_promotions()'s grade filter from BAND_LEVEL to GRADE_LEVEL); 5,313 after Trade School (v0.96.0, prompt 3 continuation, 47 rows, one row per theme at the single adult-route grade "11–12 · adult"); 5,202 after Regional (v0.97.0, prompt 3 continuation, 111 rows across 83 themes — 4 of them repeated verbatim across 8 rows each, one per named region); 5,200 after Health & Community's last 2 grade-"—" rows (v0.98.0, prompt 3 continuation) — this closes every pack reachable by the unbanded/partial_bands mechanisms; the ratchet only falls
+KNOWN_EMPTY_DESCRIPTION_ROWS = 4580  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); 5,758 after Health & Community (v0.92.0, prompt 3 tranche three, 109 of its 111 rows — the other 2 use grade "—" and are out of scope); 5,591 after Empathy & Emotional Intelligence (v0.93.0, prompt 3 tranche four, 167 rows, the first "partial_bands" promotion); 5,424 after Community & Relationship Practice (v0.94.0, prompt 3 tranche five, 167 rows); 5,360 after K–12 (v0.95.0, prompt 3 continuation, 64 rows, the first pack reached after extending apply_promotions()'s grade filter from BAND_LEVEL to GRADE_LEVEL); 5,313 after Trade School (v0.96.0, prompt 3 continuation, 47 rows, one row per theme at the single adult-route grade "11–12 · adult"); 5,202 after Regional (v0.97.0, prompt 3 continuation, 111 rows across 83 themes — 4 of them repeated verbatim across 8 rows each, one per named region); 5,200 after Health & Community's last 2 grade-"—" rows (v0.98.0, prompt 3 continuation) — this closes every pack reachable by the unbanded/partial_bands mechanisms; 4,580 after Sapient OS (v0.99.0, prompt 3 final piece, pilot pack, 620 rows across 357 generic-practice-step themes, each reused across many named credentials — apply_promotions() extended to merge multiple promotion files per pack, since Sapient OS already carried a "band-suffix" override promotion from prompt 2); the ratchet only falls
 
 
 def test_unbanded_descriptions():
@@ -799,8 +799,19 @@ def test_unbanded_descriptions():
     empty = [r for r in rows if not r["description"].strip()]
     check("unbanded fill: the empty-description count never rises", len(empty) <= KNOWN_EMPTY_DESCRIPTION_ROWS, f"{len(empty)} rows, baseline {KNOWN_EMPTY_DESCRIPTION_ROWS}")
     suffix = re.compile(r"— at .{1,20}$")
+    promo_specs = [json.loads(p.read_text(encoding="utf-8")) for p in (ROOT / "data" / "promotions").glob("*.json")]
     for pack in UNBANDED_FILLED_PACKS:
-        pr = [r for r in rows if r["pack"] == pack]
+        # A pack can carry more than one promotion file (v0.99.0: the
+        # sector-OS packs already have a "band-suffix" override promotion
+        # from prompt 2, and now also an unbanded one for prompt 3's
+        # generic-practice-step rows). Scope pr to the rows the unbanded
+        # promotion(s) actually declared, not every row in the pack, so
+        # this test never conflates unbanded fills with unrelated
+        # band-authored or override content that happens to share the pack.
+        unbanded_specs = [s for s in promo_specs if s["pack"] == pack and s.get("unbanded") is True]
+        check(f"unbanded fill: {pack} — declared as an unbanded promotion", bool(unbanded_specs))
+        unbanded_themes = {th["theme"] for s in unbanded_specs for t in s["tracks"] for th in t["themes"]}
+        pr = [r for r in rows if r["pack"] == pack and r["theme"] in unbanded_themes]
         known_gap = UNBANDED_KNOWN_GAPS.get(pack, 0)
         filled_pr = [r for r in pr if r["description"].strip()]
         check(f"unbanded fill: {pack} — no row is empty beyond the known gap", pr and len(pr) - len(filled_pr) == known_gap, f"{len(pr) - len(filled_pr)} empty, known gap {known_gap}")
@@ -818,8 +829,6 @@ def test_unbanded_descriptions():
         inconsistent = [t for t, descs in by_theme.items() if len(descs) != 1]
         check(f"unbanded fill: {pack} — every row of a theme shares that theme's one sentence", not inconsistent, str(inconsistent[:3]))
         check(f"unbanded fill: {pack} — filled descriptions are distinct (one sentence per theme)", len({next(iter(v)) for v in by_theme.values()}) == len(by_theme))
-        promo = [p for p in (ROOT / "data" / "promotions").glob("*.json") if json.loads(p.read_text(encoding="utf-8"))["pack"] == pack]
-        check(f"unbanded fill: {pack} — declared as an unbanded promotion", promo and json.loads(promo[0].read_text(encoding="utf-8")).get("unbanded") is True)
     check("normalize_blocks: unbanded_description accepts a full sentence",
           unbanded_description("Do the real task correctly, on your own, without any help at all.")
           == "Do the real task correctly, on your own, without any help at all.")
