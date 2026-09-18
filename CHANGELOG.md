@@ -4,6 +4,39 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.109.0] — 2026-09-18
+
+### Added — the Education OS template's second diet, close-out (prompt 7)
+- **`data/education_os/build_status.json`**, **`data/education_os/fx_authored.json`**
+  and **`data/education_os/fx_pack2.json`** are three new canonical
+  files, extracted from the Education OS app's template — the three
+  literals v0.108.0 identified but left unexamined. `DATA.buildStatus`
+  (the Build Status / Release Plan table, 56 dated entries) was 49.8
+  KB; `DATA.fxAuthored` (the authored Future-Work track content, keyed
+  by sector-OS edition) was 47.3 KB; `DATA.fxPack2` (a second
+  Future-Work pack merged in at runtime by the app's own
+  `fxPackMerge()`) was 47.9 KB. All three are pure runtime content
+  read only by client-side JS — no Python build tooling touches them —
+  so they extract through the same `__CXFACT:<name>__` mechanism as
+  `siteIndex`/`seEditions`: `tools/build_education_os.py` injects the
+  canonical JSON in place at build time, `tools/extract_fact_bases.py`
+  round-trips it back.
+- `apps/education-os/template.html` shrinks from 4.27 MB to 4.13 MB
+  (−145 KB), closing the 4.2 MB target set in `docs/NEXT_STEPS_2.md` #7.
+- **Cleanup found in the process:** `fxPackMerge()` carried a
+  defensive `DATA.fxAuthored=DATA.fxAuthored||{}` fallback for a load
+  order where the literal might not yet have run. Since the value is
+  now always injected before this script block executes, the
+  fallback can never fire — removed rather than kept.
+- Verified with `tools/view_sweep.js`: 8 of 149 views differ
+  before/after, and a control sweep of the *after* build against
+  itself reproduces the identical 8 — the same pre-existing
+  non-determinism (live timestamps, simulated data) v0.108.0 found,
+  not a regression.
+- Both suites pass: `python3 tests/test_platform.py` (1,934 checks)
+  and the browser smoke suite (223 assertions); checksums and the SBOM
+  regenerated.
+
 ## [0.108.0] — 2026-09-18
 
 ### Added — the Education OS template's second diet (prompt 7)

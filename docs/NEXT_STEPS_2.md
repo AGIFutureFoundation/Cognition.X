@@ -270,7 +270,7 @@ row moves to met.
 
 ---
 
-## 7 — The Education OS template's second diet — PARTIAL, v0.108.0
+## 7 — The Education OS template's second diet — DONE, v0.108.0–v0.109.0
 
 **Why.** The template is 4.6 MB after v0.63.0 and v0.68.0. Its two
 largest remaining literals, `DATA.siteIndex` (296 KB) and
@@ -310,6 +310,27 @@ file against itself, twice) reproduced the identical 8 of those 9,
 proving pre-existing non-determinism (live timestamps, simulated
 data) rather than a regression; the ninth was a one-off timeout in
 the baseline run.
+
+**Close-out, v0.109.0.** The remaining three literals — `buildStatus`
+(the Release Plan table, 49.8 KB), `fxAuthored` (the authored
+Future-Work track content, 47.3 KB) and `fxPack2` (the second
+Future-Work pack, 47.9 KB) — read cleanly as pure runtime content
+consumed only by client-side JS (a table renderer, and the app's own
+`fxPackMerge()`), with no Python build tooling touching them; safe to
+extract through the same mechanism as `siteIndex`/`seEditions`. Each
+now lives in `data/education_os/` and is injected in place at
+`__CXFACT:<name>__`. One dead line was found and removed in the
+process: `DATA.fxAuthored=DATA.fxAuthored||{}` inside `fxPackMerge()`
+was a defensive fallback for a load order where the literal might not
+have run yet — now that the value is always injected before this
+script block, the fallback can't fire and was deleted rather than
+kept. Template: 4.27 MB → 4.13 MB, under the 4.2 MB target. Verified
+with `tools/view_sweep.js`: 8 of 149 views differed before/after, and
+a control sweep of the *after* build against itself reproduced the
+identical 8 — the same pre-existing non-determinism this prompt found
+last tranche, not a regression. Both suites pass (1,934 Python checks,
+223 browser assertions); `tools/extract_fact_bases.py --check` round
+trips clean for all twelve fact-base layers.
 
 **Verify.**
 ```bash
