@@ -1,0 +1,1469 @@
+{
+  "pack": "Cognition.X : Multilateral OS",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema is out of scope (v0.102.0, prompt 3 final piece). Multilateral OS's 650 empty-description rows use 352 distinct short generic action-phrase themes at the single adult-route grade \"11–12 . adult\", the same shape as Sapient OS (v0.99.0), Robotics OS (v0.100.0) and Global Health OS (v0.101.0) -- 156 of these 352 themes are worded identically to ones already promoted for those three packs and share the same sentence verbatim; the other 196 are new to this pack and authored fresh for its multilateral/international-organization field-practice domain. track/code/level stay as they were (LB-<n> codes, level derived structurally by light_fill()).",
+  "tracks": [
+    {
+      "prefix": "PSA",
+      "name": "Practice Steps A–A",
+      "themes": [
+        {
+          "theme": "Activate when needed",
+          "description": "Be ready to trigger a real contingency plan and actually activate it when the moment comes."
+        },
+        {
+          "theme": "Adapt approaches",
+          "description": "Change a real field approach because the situation on the ground actually changed."
+        },
+        {
+          "theme": "Adapt programs",
+          "description": "Change a real health program based on what actually isn't working for the people it serves."
+        },
+        {
+          "theme": "Adapt strategies",
+          "description": "Revise a real multilateral strategy based on what's actually happening in the field."
+        },
+        {
+          "theme": "Address barriers",
+          "description": "Find the real thing stopping a mission or program from delivering, and remove it."
+        },
+        {
+          "theme": "Address concerns",
+          "description": "Respond to a real stakeholder's concern about an AI system with a specific action, not just reassurance."
+        },
+        {
+          "theme": "Address crises",
+          "description": "Respond to a real crisis with a specific action, not just a statement of concern."
+        },
+        {
+          "theme": "Address discrimination",
+          "description": "Act on a real, specific instance of discrimination affecting a program's beneficiaries."
+        },
+        {
+          "theme": "Address gaps",
+          "description": "Find a real gap in a multilateral response and fill it, not just note it."
+        },
+        {
+          "theme": "Address issues",
+          "description": "Fix a real, identified problem in a health program before it affects more people."
+        },
+        {
+          "theme": "Address root causes",
+          "description": "Trace a real health problem back to its actual root cause and act on that, not just the symptom."
+        },
+        {
+          "theme": "Address violations",
+          "description": "Investigate a real policy violation in an AI system and correct it."
+        },
+        {
+          "theme": "Adjust measures",
+          "description": "Change a real protective or program measure because it wasn't actually working as intended."
+        },
+        {
+          "theme": "Adjust strategies",
+          "description": "Revise a real strategy mid-course based on what's actually happening."
+        },
+        {
+          "theme": "Align activities",
+          "description": "Get real activities from different agencies actually pointing at the same outcome."
+        },
+        {
+          "theme": "Align strategies",
+          "description": "Get real partner organizations' strategies actually working toward the same goal."
+        },
+        {
+          "theme": "Allocate resources",
+          "description": "Decide how to split real resources across competing AI-practice needs and justify the split."
+        },
+        {
+          "theme": "Amplify impact",
+          "description": "Take a real, working intervention and extend its effect further than it reached alone."
+        },
+        {
+          "theme": "Analyze conflict",
+          "description": "Break down a real conflict's actual drivers and actors, not just its visible violence."
+        },
+        {
+          "theme": "Analyze context",
+          "description": "Understand the real political, social and security context a mission has to operate in."
+        },
+        {
+          "theme": "Analyze costs",
+          "description": "Break down the real costs of running an AI system and show where they go."
+        },
+        {
+          "theme": "Analyze data",
+          "description": "Turn raw sensor or operations data from a real robotic system into a specific finding."
+        },
+        {
+          "theme": "Analyze efficiency",
+          "description": "Break down where a real robotic process spends its time and find the slow step."
+        },
+        {
+          "theme": "Analyze feedback",
+          "description": "Turn real feedback from affected communities into a specific, actionable finding."
+        },
+        {
+          "theme": "Analyze findings",
+          "description": "Turn a set of raw findings from a real review into a conclusion someone else can act on."
+        },
+        {
+          "theme": "Analyze impacts",
+          "description": "Break down the real, different impacts a multilateral intervention had on different groups."
+        },
+        {
+          "theme": "Analyze input",
+          "description": "Turn real input from stakeholders into a conclusion that shapes an actual decision."
+        },
+        {
+          "theme": "Analyze learnings",
+          "description": "Draw a real, usable lesson from what a mission or program actually experienced."
+        },
+        {
+          "theme": "Analyze operations",
+          "description": "Review a real field operation and find what's actually working and what isn't."
+        },
+        {
+          "theme": "Arrange insurance",
+          "description": "Set up real insurance coverage a mission or its staff actually needs."
+        },
+        {
+          "theme": "Assess capacity",
+          "description": "Determine whether a real team or system can actually handle the AI workload asked of it."
+        },
+        {
+          "theme": "Assess cohesion",
+          "description": "Check whether a real community is actually holding together or fragmenting."
+        },
+        {
+          "theme": "Assess competency",
+          "description": "Check whether a real operator can actually run a robotic system safely and correctly."
+        },
+        {
+          "theme": "Assess conflict",
+          "description": "Determine the real, current state of a conflict before designing a response to it."
+        },
+        {
+          "theme": "Assess conflict dynamics",
+          "description": "Map how a real conflict's actors and drivers are actually shifting over time."
+        },
+        {
+          "theme": "Assess conflicts",
+          "description": "Identify a real conflict of interest or priority affecting a health program's partners."
+        },
+        {
+          "theme": "Assess context",
+          "description": "Understand the real local conditions a health program has to work within before designing it."
+        },
+        {
+          "theme": "Assess culture",
+          "description": "Understand the real local customs a program must actually work within."
+        },
+        {
+          "theme": "Assess effectiveness",
+          "description": "Determine whether a real intervention actually achieved what it was meant to."
+        },
+        {
+          "theme": "Assess fit",
+          "description": "Check whether a real program design actually fits the local context it's meant for."
+        }
+      ]
+    },
+    {
+      "prefix": "PSB",
+      "name": "Practice Steps A–C",
+      "themes": [
+        {
+          "theme": "Assess gender",
+          "description": "Understand how a real situation actually affects women and men differently."
+        },
+        {
+          "theme": "Assess gender needs",
+          "description": "Identify the real, specific needs a program must meet for women and girls."
+        },
+        {
+          "theme": "Assess impact",
+          "description": "Measure the real effect an AI system had after it was deployed, not just before."
+        },
+        {
+          "theme": "Assess impacts",
+          "description": "Work through the different real impacts an AI decision has on different groups of people."
+        },
+        {
+          "theme": "Assess needs",
+          "description": "Talk to real users to find out what they actually need from an AI system, not what was assumed."
+        },
+        {
+          "theme": "Assess performance",
+          "description": "Measure a real AI system's performance against a real, stated target."
+        },
+        {
+          "theme": "Assess protection",
+          "description": "Determine whether real civilians are actually protected from the harm a mission is meant to prevent."
+        },
+        {
+          "theme": "Assess risks",
+          "description": "List the real risks of an AI decision and rank them by how much they matter."
+        },
+        {
+          "theme": "Assess supply",
+          "description": "Check whether a real health facility actually has the supplies it needs on hand."
+        },
+        {
+          "theme": "Assess sustainability",
+          "description": "Check whether a real health program can keep running after outside funding ends."
+        },
+        {
+          "theme": "Assess threats",
+          "description": "Identify the real threats facing an AI system and rank which ones matter most."
+        },
+        {
+          "theme": "Assess vulnerabilities",
+          "description": "Identify which real groups are actually most at risk in a given situation."
+        },
+        {
+          "theme": "Assess wellbeing",
+          "description": "Check on the real physical and mental wellbeing of a team or affected population."
+        },
+        {
+          "theme": "Assess workloads",
+          "description": "Determine whether a real team is actually carrying more work than it can sustain."
+        },
+        {
+          "theme": "Audit compliance",
+          "description": "Check a real AI system against the rules it's supposed to follow and document any gap."
+        },
+        {
+          "theme": "Benchmark compensation",
+          "description": "Compare real staff pay against comparable roles to confirm it's fair and competitive."
+        },
+        {
+          "theme": "Build accountability",
+          "description": "Set up a real way for a mission to actually answer for its decisions to those it serves."
+        },
+        {
+          "theme": "Build bridges",
+          "description": "Create a real, working connection between groups that previously didn't trust each other."
+        },
+        {
+          "theme": "Build capacity",
+          "description": "Grow a real local team's ability to run a health program on their own."
+        },
+        {
+          "theme": "Build coalitions",
+          "description": "Bring together real, different organizations around one shared health goal."
+        },
+        {
+          "theme": "Build consensus",
+          "description": "Get real, different parties to actually agree on one course of action."
+        },
+        {
+          "theme": "Build culture",
+          "description": "Build a real, shared way of working within a team that actually holds under pressure."
+        },
+        {
+          "theme": "Build evidence",
+          "description": "Gather real evidence that actually supports or challenges a claimed program result."
+        },
+        {
+          "theme": "Build local capacity",
+          "description": "Train real local staff so a health program can be run without outside experts."
+        },
+        {
+          "theme": "Build partnerships",
+          "description": "Form a real, working partnership with an organization a health program needs."
+        },
+        {
+          "theme": "Build peace",
+          "description": "Take a real, concrete step that reduces actual violence or tension in a community."
+        },
+        {
+          "theme": "Build redundancy",
+          "description": "Build a real backup into a mission's plan so one failure doesn't stop everything."
+        },
+        {
+          "theme": "Build relationships",
+          "description": "Build a real working relationship with a supplier or partner that a robotics program depends on."
+        },
+        {
+          "theme": "Build resilience",
+          "description": "Strengthen a real health system so it can keep functioning through a shock."
+        },
+        {
+          "theme": "Build trust",
+          "description": "Take a concrete action that earns a real user or team's trust in an AI system, not just a claim."
+        },
+        {
+          "theme": "Calculate costs",
+          "description": "Work out the real, full cost of running a robotic system, not just the sticker price."
+        },
+        {
+          "theme": "Capture lessons",
+          "description": "Record the specific lessons from a real robotics deployment that didn't go as planned."
+        },
+        {
+          "theme": "Celebrate success",
+          "description": "Recognize a real, specific success to keep a team's morale up through hard work."
+        },
+        {
+          "theme": "Clarify expectations",
+          "description": "Make sure real partners and staff know exactly what's expected of them."
+        },
+        {
+          "theme": "Collect data",
+          "description": "Gather a real dataset for an AI purpose and document where each part came from."
+        },
+        {
+          "theme": "Collect evidence",
+          "description": "Gather real evidence in the field, following its intended method of collection."
+        },
+        {
+          "theme": "Collect learnings",
+          "description": "Gather real lessons from a mission's experience before they're lost."
+        },
+        {
+          "theme": "Communicate changes",
+          "description": "Tell real stakeholders about a real change to a program before it affects them."
+        },
+        {
+          "theme": "Communicate plans",
+          "description": "Share a real operational plan with the people who need to act on it."
+        },
+        {
+          "theme": "Communicate progress",
+          "description": "Give real stakeholders an honest, current update on a health program's progress."
+        }
+      ]
+    },
+    {
+      "prefix": "PSC",
+      "name": "Practice Steps C–D",
+      "themes": [
+        {
+          "theme": "Communicate responses",
+          "description": "Give real, honest responses to real stakeholder concerns about a mission."
+        },
+        {
+          "theme": "Conduct assessments",
+          "description": "Run a full assessment of a real robotic system or site and write up the findings."
+        },
+        {
+          "theme": "Conduct audits",
+          "description": "Run a real audit of an AI system from start to finish and produce the report."
+        },
+        {
+          "theme": "Conduct monitoring",
+          "description": "Run ongoing, real monitoring of a health program's activities and results."
+        },
+        {
+          "theme": "Conduct onboarding",
+          "description": "Bring a real new staff member up to speed on a mission's actual context and procedures."
+        },
+        {
+          "theme": "Conduct training",
+          "description": "Teach a real group the specific skill they need to safely operate a robotic system."
+        },
+        {
+          "theme": "Control access",
+          "description": "Manage who can actually reach a real site, resource, or piece of sensitive information."
+        },
+        {
+          "theme": "Control costs",
+          "description": "Take a specific action that measurably reduces the real cost of running an AI system."
+        },
+        {
+          "theme": "Control spending",
+          "description": "Keep a real mission's spending within its actual approved budget."
+        },
+        {
+          "theme": "Coordinate action",
+          "description": "Get more than one real actor working on a health issue to actually work together."
+        },
+        {
+          "theme": "Coordinate movements",
+          "description": "Align real convoy or personnel movements across more than one organization."
+        },
+        {
+          "theme": "Coordinate transport",
+          "description": "Align real transport logistics so supplies or people actually arrive when needed."
+        },
+        {
+          "theme": "Create channels",
+          "description": "Set up a real, working channel for communities to actually reach a mission with concerns."
+        },
+        {
+          "theme": "Create development plans",
+          "description": "Build a real, individual plan for growing a staff member's specific skills."
+        },
+        {
+          "theme": "Create knowledge products",
+          "description": "Turn real field experience into a usable document others can actually apply."
+        },
+        {
+          "theme": "Create opportunities",
+          "description": "Open a real, specific opportunity for someone a program is meant to serve."
+        },
+        {
+          "theme": "Create safety",
+          "description": "Change a real health environment so it's actually safer for patients or workers."
+        },
+        {
+          "theme": "Create systems",
+          "description": "Build a real, working system a mission needs for a recurring task."
+        },
+        {
+          "theme": "Deliver training",
+          "description": "Teach a real group how to use or oversee an AI system, and check that it landed."
+        },
+        {
+          "theme": "Design programs",
+          "description": "Design a real health program from a community's actual need through to a working plan."
+        },
+        {
+          "theme": "Design protocols",
+          "description": "Design a real, step-by-step protocol for how a specific field situation should be handled."
+        },
+        {
+          "theme": "Develop alternatives",
+          "description": "Work out more than one real option for a mission decision, with tradeoffs named."
+        },
+        {
+          "theme": "Develop budgets",
+          "description": "Build a real, working budget for a health program."
+        },
+        {
+          "theme": "Develop contingencies",
+          "description": "Write a real backup plan for what happens if a robotic system fails at a critical moment."
+        },
+        {
+          "theme": "Develop leaders",
+          "description": "Grow a real staff member's ability to actually lead a team or program."
+        },
+        {
+          "theme": "Develop mitigation",
+          "description": "Design a real measure that reduces a specific, identified risk to a mission."
+        },
+        {
+          "theme": "Develop mitigations",
+          "description": "Design a real fix for a specific risk an AI system poses."
+        },
+        {
+          "theme": "Develop partnerships",
+          "description": "Build a real, working partnership with an organization a mission actually needs."
+        },
+        {
+          "theme": "Develop plans",
+          "description": "Write a real plan for a specific AI initiative, with steps and a timeline."
+        },
+        {
+          "theme": "Develop programs",
+          "description": "Build a real program, from scratch, that trains or supports people working with robotics."
+        },
+        {
+          "theme": "Develop protocols",
+          "description": "Write a step-by-step protocol for a real recurring AI task."
+        },
+        {
+          "theme": "Develop relationships",
+          "description": "Build a real, working relationship with a partner a robotics program depends on."
+        },
+        {
+          "theme": "Develop response plans",
+          "description": "Write a real plan for how a mission will respond to a likely emergency."
+        },
+        {
+          "theme": "Develop safeguarding",
+          "description": "Build a real system that protects people a mission serves from exploitation or abuse."
+        },
+        {
+          "theme": "Develop sensitivity",
+          "description": "Build a real staff member's ability to work respectfully across cultural difference."
+        },
+        {
+          "theme": "Develop skills",
+          "description": "Build a real, specific skill in a health worker through practice and feedback."
+        },
+        {
+          "theme": "Develop solutions",
+          "description": "Work out a genuine solution to a specific, real AI problem."
+        },
+        {
+          "theme": "Develop strategies",
+          "description": "Set several real strategic options for an AI initiative and choose between them with reasons."
+        },
+        {
+          "theme": "Develop strategy",
+          "description": "Set the real strategic direction for an AI initiative and justify the choice."
+        },
+        {
+          "theme": "Develop systems",
+          "description": "Build a real, working system a mission or program needs from scratch."
+        }
+      ]
+    },
+    {
+      "prefix": "PSD",
+      "name": "Practice Steps D–E",
+      "themes": [
+        {
+          "theme": "Distribute resources",
+          "description": "Get a real resource to the people who actually need it, fairly and on time."
+        },
+        {
+          "theme": "Document agreements",
+          "description": "Write down a real agreement between parties clearly enough that both sides hold to it."
+        },
+        {
+          "theme": "Document incidents",
+          "description": "Record a real incident accurately and in enough detail to act on."
+        },
+        {
+          "theme": "Document learning",
+          "description": "Write down what a mission actually learned, including what didn't work."
+        },
+        {
+          "theme": "Document learnings",
+          "description": "Record what was actually learned from a real AI project, including what went wrong."
+        },
+        {
+          "theme": "Document lessons",
+          "description": "Write down what a real robotics project actually taught, including what went wrong."
+        },
+        {
+          "theme": "Document practices",
+          "description": "Write down a real, working practice so it can be repeated by someone else."
+        },
+        {
+          "theme": "Document results",
+          "description": "Record the real results of an AI test or initiative, as they actually came out."
+        },
+        {
+          "theme": "Document transactions",
+          "description": "Keep an accurate, real record of a mission's financial transactions."
+        },
+        {
+          "theme": "Drive improvement",
+          "description": "Push through a real, specific improvement to a robotic system, not just propose one."
+        },
+        {
+          "theme": "Drive prevention",
+          "description": "Push through a real preventive measure before a predictable problem actually occurs."
+        },
+        {
+          "theme": "Empower women",
+          "description": "Take a real, concrete action that gives women more actual say in a program's decisions."
+        },
+        {
+          "theme": "Enable adoption",
+          "description": "Help real staff or partners actually start using a new practice, not just hear about it."
+        },
+        {
+          "theme": "Enable recovery",
+          "description": "Put in place the real conditions that let a community actually start to recover."
+        },
+        {
+          "theme": "Enable success",
+          "description": "Remove a real, specific obstacle standing between a program and its intended result."
+        },
+        {
+          "theme": "Encrypt data",
+          "description": "Protect real sensitive data with encryption so it can't be read if it's intercepted."
+        },
+        {
+          "theme": "Engage communities",
+          "description": "Bring a real community into a health program's design, not just its delivery."
+        },
+        {
+          "theme": "Engage stakeholders",
+          "description": "Bring real stakeholders into a real AI decision early enough that their input actually shapes it."
+        },
+        {
+          "theme": "Engage youth",
+          "description": "Bring real young people into a program's design and delivery, not just as recipients."
+        },
+        {
+          "theme": "Ensure accountability",
+          "description": "Make sure a real AI decision has a specific named person answerable for it."
+        },
+        {
+          "theme": "Ensure compliance",
+          "description": "Confirm a real AI system actually meets the rule it's supposed to follow."
+        },
+        {
+          "theme": "Ensure connectivity",
+          "description": "Confirm a real field team actually has the communication link it needs to operate safely."
+        },
+        {
+          "theme": "Ensure continuity",
+          "description": "Make sure a real AI system keeps running through a planned or unplanned disruption."
+        },
+        {
+          "theme": "Ensure quality",
+          "description": "Confirm a real health service actually meets the quality standard it's supposed to."
+        },
+        {
+          "theme": "Ensure sharing",
+          "description": "Confirm real information actually gets shared with the people who need it, not held back."
+        },
+        {
+          "theme": "Establish channels",
+          "description": "Set up a real, working channel for people to raise concerns about an AI system."
+        },
+        {
+          "theme": "Establish coordination",
+          "description": "Set up a real, working coordination structure across more than one organization."
+        },
+        {
+          "theme": "Establish forums",
+          "description": "Set up a real, recurring space for health stakeholders to raise concerns."
+        },
+        {
+          "theme": "Establish mechanisms",
+          "description": "Put a real, working mechanism in place for a recurring mission need."
+        },
+        {
+          "theme": "Establish metrics",
+          "description": "Choose the real numbers that will actually tell you whether a robotic system is working."
+        },
+        {
+          "theme": "Establish monitoring",
+          "description": "Set up ongoing, real monitoring of an AI system's health and performance."
+        },
+        {
+          "theme": "Establish policies",
+          "description": "Put a real policy in place governing how an AI practice is run."
+        },
+        {
+          "theme": "Establish presence",
+          "description": "Set up a real, physical mission presence in a location that needs it."
+        },
+        {
+          "theme": "Establish programs",
+          "description": "Set up a real program from its design through to its first delivery."
+        },
+        {
+          "theme": "Establish protocols",
+          "description": "Put a real, agreed protocol in place for how an AI incident is handled."
+        },
+        {
+          "theme": "Establish relationships",
+          "description": "Set up a real, working relationship with a partner a robotics program will depend on."
+        },
+        {
+          "theme": "Establish reporting",
+          "description": "Build a real, reliable way for field data to actually reach decision-makers."
+        },
+        {
+          "theme": "Establish standards",
+          "description": "Put a real standard in place that a robotic system or its operators must meet."
+        },
+        {
+          "theme": "Establish systems",
+          "description": "Put a real, working system in place to support a recurring health-program need."
+        },
+        {
+          "theme": "Establish transparency",
+          "description": "Make a real mission's decisions and spending actually visible to those it's accountable to."
+        }
+      ]
+    },
+    {
+      "prefix": "PSE",
+      "name": "Practice Steps E–I",
+      "themes": [
+        {
+          "theme": "Evaluate growth",
+          "description": "Assess whether a real program or person actually grew, not just kept busy."
+        },
+        {
+          "theme": "Evaluate impact",
+          "description": "Judge the real, lasting effect a program had, not just its immediate activity."
+        },
+        {
+          "theme": "Evaluate results",
+          "description": "Judge whether a real health program's results actually met its goal."
+        },
+        {
+          "theme": "Facilitate coordination",
+          "description": "Help real, different organizations actually work together instead of past each other."
+        },
+        {
+          "theme": "Facilitate healing",
+          "description": "Create a real space where a community can actually begin to recover from harm."
+        },
+        {
+          "theme": "Facilitate meetings",
+          "description": "Run a real meeting between parties so it actually reaches a decision."
+        },
+        {
+          "theme": "Facilitate sharing",
+          "description": "Help real teams actually share information they'd otherwise keep to themselves."
+        },
+        {
+          "theme": "Forecast needs",
+          "description": "Predict the real future need for a robotics resource, with a number attached."
+        },
+        {
+          "theme": "Gather feedback",
+          "description": "Collect real feedback on an AI system directly from the people who use it."
+        },
+        {
+          "theme": "Gather input",
+          "description": "Collect real input from the people affected by an AI decision before it's finalized."
+        },
+        {
+          "theme": "Identify contingencies",
+          "description": "Name the real backup plan a mission would need if its main plan fails."
+        },
+        {
+          "theme": "Identify efficiencies",
+          "description": "Find a real place where an AI process is doing more work than it needs to."
+        },
+        {
+          "theme": "Identify funding",
+          "description": "Find a real funding source a program actually needs to keep running."
+        },
+        {
+          "theme": "Identify gaps",
+          "description": "Find a real gap between what an AI system is supposed to do and what it actually does."
+        },
+        {
+          "theme": "Identify inefficiencies",
+          "description": "Find a real place where a robotics process wastes time or resources."
+        },
+        {
+          "theme": "Identify innovations",
+          "description": "Spot a real, working new approach worth spreading to other health programs."
+        },
+        {
+          "theme": "Identify issues",
+          "description": "Find a real, concrete issue with an AI system before it causes harm."
+        },
+        {
+          "theme": "Identify needs",
+          "description": "Find out what a real team or site actually needs from a robotic system."
+        },
+        {
+          "theme": "Identify opportunities",
+          "description": "Spot a real place where an AI capability could genuinely help that isn't being used yet."
+        },
+        {
+          "theme": "Identify partners",
+          "description": "Find a real partner organization a robotics program actually needs to succeed."
+        },
+        {
+          "theme": "Identify problems",
+          "description": "Name a real, specific problem in a health program, not a vague concern."
+        },
+        {
+          "theme": "Identify risks",
+          "description": "Name a specific, real risk an AI system poses, not a generic category of risk."
+        },
+        {
+          "theme": "Identify savings",
+          "description": "Find a real place where a robotics program can cut cost without losing capability."
+        },
+        {
+          "theme": "Identify talent",
+          "description": "Spot a real person with the ability a mission needs, before a formal search begins."
+        },
+        {
+          "theme": "Implement changes",
+          "description": "Carry out a real, approved change to an AI system and confirm it worked as intended."
+        },
+        {
+          "theme": "Implement controls",
+          "description": "Put a real control in place that limits what an AI system is allowed to do on its own."
+        },
+        {
+          "theme": "Implement corrections",
+          "description": "Fix a real, identified problem in an AI system and confirm the fix held."
+        },
+        {
+          "theme": "Implement improvements",
+          "description": "Carry out a real, specific improvement to an AI system and measure the effect."
+        },
+        {
+          "theme": "Implement mitigation",
+          "description": "Carry out a real measure that reduces an identified mission risk."
+        },
+        {
+          "theme": "Implement protocols",
+          "description": "Put a real, written protocol into actual practice in the field."
+        },
+        {
+          "theme": "Implement savings",
+          "description": "Carry out a real change that measurably reduces a mission's cost."
+        },
+        {
+          "theme": "Implement solutions",
+          "description": "Carry out a real, working solution to a specific AI problem, not just propose one."
+        },
+        {
+          "theme": "Implement systems",
+          "description": "Put a real system into working use within a health program."
+        },
+        {
+          "theme": "Improve balance",
+          "description": "Adjust a real workload or resource split so it's actually fairer or more sustainable."
+        },
+        {
+          "theme": "Improve practice",
+          "description": "Change a real, everyday health-worker practice for the better, based on evidence."
+        },
+        {
+          "theme": "Improve programs",
+          "description": "Make a real, specific improvement to a program based on what wasn't working."
+        },
+        {
+          "theme": "Improve readiness",
+          "description": "Make a real, measurable improvement to how prepared a mission actually is."
+        },
+        {
+          "theme": "Incorporate insights",
+          "description": "Change a real program based on an insight actually drawn from its own data."
+        },
+        {
+          "theme": "Inform future work",
+          "description": "Use what a real mission learned to actually shape its next phase of work."
+        },
+        {
+          "theme": "Inform response",
+          "description": "Use real, current information to actually shape how a mission responds."
+        }
+      ]
+    },
+    {
+      "prefix": "PSF",
+      "name": "Practice Steps I–M",
+      "themes": [
+        {
+          "theme": "Inform strategy",
+          "description": "Use real field evidence to actually shape a mission's strategic direction."
+        },
+        {
+          "theme": "Investigate concerns",
+          "description": "Look into a real, raised concern and determine what actually happened."
+        },
+        {
+          "theme": "Investigate thoroughly",
+          "description": "Follow a real investigation through to a complete, evidence-based conclusion."
+        },
+        {
+          "theme": "Leverage resources",
+          "description": "Use a real existing resource more fully instead of asking for a new one."
+        },
+        {
+          "theme": "Maintain dialogue",
+          "description": "Keep a real, ongoing conversation open with a party a mission needs to stay engaged with."
+        },
+        {
+          "theme": "Maintain equipment",
+          "description": "Keep real mission equipment in working order through routine upkeep."
+        },
+        {
+          "theme": "Maintain quality",
+          "description": "Keep a real robotic system's output at the quality level it's supposed to hold."
+        },
+        {
+          "theme": "Maintain relationships",
+          "description": "Keep a real working relationship with a health partner active and useful over time."
+        },
+        {
+          "theme": "Maintain systems",
+          "description": "Keep a real AI system running correctly through routine, ongoing upkeep."
+        },
+        {
+          "theme": "Make adjustments",
+          "description": "Change a real, specific part of a health program based on what's actually happening."
+        },
+        {
+          "theme": "Manage budget",
+          "description": "Oversee a real mission's budget so it's spent as planned and accounted for."
+        },
+        {
+          "theme": "Manage budgets",
+          "description": "Oversee more than one real budget across a mission's different activities."
+        },
+        {
+          "theme": "Manage cases",
+          "description": "Track a real individual case through a program from intake to resolution."
+        },
+        {
+          "theme": "Manage conflicts",
+          "description": "Work through a real disagreement between parties a mission depends on."
+        },
+        {
+          "theme": "Manage coverage",
+          "description": "Make sure a real mission's staff coverage actually matches its operational needs."
+        },
+        {
+          "theme": "Manage data",
+          "description": "Handle real mission data so it's accurate, secure and usable when needed."
+        },
+        {
+          "theme": "Manage funds",
+          "description": "Oversee real mission funds so they're used for what they were intended for."
+        },
+        {
+          "theme": "Manage handover",
+          "description": "Hand a real health program over to local ownership without losing continuity."
+        },
+        {
+          "theme": "Manage inventory",
+          "description": "Keep an accurate, real count of the parts or units a robotics program has on hand."
+        },
+        {
+          "theme": "Manage procurement",
+          "description": "Oversee real purchasing for a health program from request through to delivery."
+        },
+        {
+          "theme": "Manage security",
+          "description": "Oversee the real, physical security of a mission's staff and operations."
+        },
+        {
+          "theme": "Manage stress",
+          "description": "Help a real team manage the real stress of doing difficult field work."
+        },
+        {
+          "theme": "Manage suppliers",
+          "description": "Oversee a real robotics supplier relationship to keep it delivering what's needed."
+        },
+        {
+          "theme": "Manage transitions",
+          "description": "Guide a real move from an old process to a robotics-based one without losing continuity."
+        },
+        {
+          "theme": "Manage trauma",
+          "description": "Support a real staff member or community member dealing with a traumatic experience."
+        },
+        {
+          "theme": "Map relationships",
+          "description": "Chart the real relationships and power dynamics between actors a mission works with."
+        },
+        {
+          "theme": "Measure collaboration",
+          "description": "Measure whether real partner organizations are actually working together effectively."
+        },
+        {
+          "theme": "Measure effectiveness",
+          "description": "Measure whether a real robotic system is actually achieving what it was built for."
+        },
+        {
+          "theme": "Measure growth",
+          "description": "Measure whether a real program or person actually grew over a defined period."
+        },
+        {
+          "theme": "Measure impact",
+          "description": "Measure the real, concrete effect an AI system had on the outcome it was meant to change."
+        },
+        {
+          "theme": "Measure outcomes",
+          "description": "Measure the real health outcome a program achieved, not just the activity delivered."
+        },
+        {
+          "theme": "Measure peace",
+          "description": "Measure whether a real health intervention actually reduced tension in a community."
+        },
+        {
+          "theme": "Measure progress",
+          "description": "Measure how far a real health program has actually gotten toward its goal."
+        },
+        {
+          "theme": "Measure recovery",
+          "description": "Measure whether a real community is actually recovering, with concrete indicators."
+        },
+        {
+          "theme": "Measure results",
+          "description": "Measure the real result a program produced against what it set out to do."
+        },
+        {
+          "theme": "Measure satisfaction",
+          "description": "Find out, with real data, how satisfied users actually are with an AI system."
+        },
+        {
+          "theme": "Measure spread",
+          "description": "Measure how a real condition or practice is spreading across a population."
+        },
+        {
+          "theme": "Minimize footprint",
+          "description": "Reduce a real mission's physical or resource footprint without cutting what it delivers."
+        },
+        {
+          "theme": "Minimize harm",
+          "description": "Change a real intervention so it causes less unintended harm to the people it's meant to help."
+        },
+        {
+          "theme": "Mitigate harms",
+          "description": "Take a real, specific action that reduces a harm a mission's presence might otherwise cause."
+        }
+      ]
+    },
+    {
+      "prefix": "PSG",
+      "name": "Practice Steps M–P",
+      "themes": [
+        {
+          "theme": "Monitor compliance",
+          "description": "Keep an ongoing check on whether a real AI system still meets the rule it's supposed to."
+        },
+        {
+          "theme": "Monitor context",
+          "description": "Keep an ongoing, real watch on how the situation around a mission is actually changing."
+        },
+        {
+          "theme": "Monitor distribution",
+          "description": "Track whether a real resource is actually reaching the people it's meant for."
+        },
+        {
+          "theme": "Monitor effectiveness",
+          "description": "Track, over time, whether a real AI system is actually achieving what it was built for."
+        },
+        {
+          "theme": "Monitor performance",
+          "description": "Keep an ongoing, real check on how well an AI system is performing."
+        },
+        {
+          "theme": "Monitor progress",
+          "description": "Keep an ongoing, real check on how a health program is progressing toward its goal."
+        },
+        {
+          "theme": "Monitor representation",
+          "description": "Track whether a real program's staff or leadership actually reflect the community served."
+        },
+        {
+          "theme": "Monitor risks",
+          "description": "Keep an ongoing, real watch on the risks a mission faces as they change."
+        },
+        {
+          "theme": "Monitor threats",
+          "description": "Watch for real threats to a robotic system's security or safety on an ongoing basis."
+        },
+        {
+          "theme": "Monitor usage",
+          "description": "Track how a real health service is actually being used over time."
+        },
+        {
+          "theme": "Monitor wellbeing",
+          "description": "Keep a real, ongoing check on the wellbeing of staff or the population a mission serves."
+        },
+        {
+          "theme": "Negotiate access",
+          "description": "Negotiate real access to a location or population a mission needs to reach."
+        },
+        {
+          "theme": "Offer support",
+          "description": "Give a real, specific form of support to a health worker or community facing a challenge."
+        },
+        {
+          "theme": "Optimize allocation",
+          "description": "Adjust how real resources are split across a health program so they do more good."
+        },
+        {
+          "theme": "Optimize budgets",
+          "description": "Adjust a real mission's budget so it delivers more for the same funding."
+        },
+        {
+          "theme": "Optimize delivery",
+          "description": "Improve how a real program actually gets its service to the people who need it."
+        },
+        {
+          "theme": "Optimize efficiency",
+          "description": "Make a real, measurable improvement to how efficiently an AI system uses its resources."
+        },
+        {
+          "theme": "Optimize incentives",
+          "description": "Adjust a real incentive so it actually encourages the behavior a program wants."
+        },
+        {
+          "theme": "Optimize lifespan",
+          "description": "Extend the real usable life of mission equipment through proper care."
+        },
+        {
+          "theme": "Optimize logistics",
+          "description": "Improve the real logistics chain that moves a health supply from source to use."
+        },
+        {
+          "theme": "Optimize processes",
+          "description": "Improve a real mission process so it takes less time or effort for the same result."
+        },
+        {
+          "theme": "Optimize protection",
+          "description": "Improve a real protection measure so it actually reduces risk more effectively."
+        },
+        {
+          "theme": "Optimize routes",
+          "description": "Improve a real transport or patrol route so it's safer or more efficient."
+        },
+        {
+          "theme": "Optimize scheduling",
+          "description": "Adjust a real schedule so mission activities actually fit together without conflict."
+        },
+        {
+          "theme": "Pilot approaches",
+          "description": "Try a real new approach on a small scale before rolling it out across a robotics program."
+        },
+        {
+          "theme": "Plan futures",
+          "description": "Plan a real, specific next step for a program or person beyond its current phase."
+        },
+        {
+          "theme": "Plan implementation",
+          "description": "Plan exactly how a real program will actually be carried out, step by step."
+        },
+        {
+          "theme": "Plan logistics",
+          "description": "Plan the real logistics a mission needs to move people and supplies reliably."
+        },
+        {
+          "theme": "Plan maintenance",
+          "description": "Schedule the real, ongoing maintenance a real AI system needs to keep running."
+        },
+        {
+          "theme": "Plan rotations",
+          "description": "Plan a real, working schedule for rotating staff through a demanding posting."
+        },
+        {
+          "theme": "Plan transition",
+          "description": "Plan how a real health program will move from one phase or owner to the next."
+        },
+        {
+          "theme": "Prepare audits",
+          "description": "Get a real robotic system and its records ready for an upcoming audit."
+        },
+        {
+          "theme": "Prepare resources",
+          "description": "Get the real resources a mission needs ready before they're actually needed."
+        },
+        {
+          "theme": "Prevent breakdowns",
+          "description": "Change a real process so a known kind of breakdown doesn't happen again."
+        },
+        {
+          "theme": "Prevent fraud",
+          "description": "Put a real control in place that would actually catch or stop mission fraud."
+        },
+        {
+          "theme": "Prevent harm",
+          "description": "Take a real, specific step that stops a foreseeable harm before it happens."
+        },
+        {
+          "theme": "Prioritize needs",
+          "description": "Decide which of several real needs a mission should address first, and justify the order."
+        },
+        {
+          "theme": "Promote equality",
+          "description": "Take a real, concrete step that reduces actual inequality within a program."
+        },
+        {
+          "theme": "Promote inclusion",
+          "description": "Change a real health program so an excluded group can actually take part."
+        },
+        {
+          "theme": "Promote resilience",
+          "description": "Strengthen a real community's own ability to withstand a future shock."
+        }
+      ]
+    },
+    {
+      "prefix": "PSH",
+      "name": "Practice Steps P–S",
+      "themes": [
+        {
+          "theme": "Promote stability",
+          "description": "Take a real action that reduces the chance of a situation escalating into instability."
+        },
+        {
+          "theme": "Provide counseling",
+          "description": "Give a real person facing a difficult situation actual, professional counseling support."
+        },
+        {
+          "theme": "Provide feedback",
+          "description": "Give a real, specific piece of feedback that actually helps improve a robotic system."
+        },
+        {
+          "theme": "Provide opportunities",
+          "description": "Open a real, concrete opportunity for a person a program serves."
+        },
+        {
+          "theme": "Provide services",
+          "description": "Deliver a real, specific service to the people a mission is meant to serve."
+        },
+        {
+          "theme": "Provide support",
+          "description": "Help a real user solve a real problem they're having with an AI system."
+        },
+        {
+          "theme": "Provide training",
+          "description": "Teach a real person or team a specific skill they need to work with an AI system."
+        },
+        {
+          "theme": "Receive complaints",
+          "description": "Take in a real complaint through a proper channel and log it for action."
+        },
+        {
+          "theme": "Receive feedback",
+          "description": "Take in real feedback from a community and log it for an actual response."
+        },
+        {
+          "theme": "Recruit candidates",
+          "description": "Find and bring in a real, qualified candidate a mission actually needs."
+        },
+        {
+          "theme": "Reduce delays",
+          "description": "Find and remove a real cause of delay in a mission process."
+        },
+        {
+          "theme": "Reduce tensions",
+          "description": "Take a real, concrete action that lowers actual tension between groups."
+        },
+        {
+          "theme": "Report back",
+          "description": "Report the real result of a mission activity back to the people who need to know it."
+        },
+        {
+          "theme": "Report outcomes",
+          "description": "Report the real result of an AI initiative, including where it fell short."
+        },
+        {
+          "theme": "Report results",
+          "description": "Share the real result of an AI test with the people who requested it."
+        },
+        {
+          "theme": "Resolve conflicts",
+          "description": "Work through a real disagreement between people or teams over a robotics decision."
+        },
+        {
+          "theme": "Respond crises",
+          "description": "Respond to a real crisis with the specific action the moment actually calls for."
+        },
+        {
+          "theme": "Respond incidents",
+          "description": "React to a real AI system incident as it's happening and bring it under control."
+        },
+        {
+          "theme": "Respond to breaches",
+          "description": "Act immediately on a real security or data breach to contain the damage."
+        },
+        {
+          "theme": "Respond to concerns",
+          "description": "Give a real, substantive response to a concern raised by a community or partner."
+        },
+        {
+          "theme": "Respond to disruptions",
+          "description": "Adjust a real mission plan when a real disruption actually occurs."
+        },
+        {
+          "theme": "Retain talent",
+          "description": "Keep a real, skilled health worker engaged and growing so they don't leave."
+        },
+        {
+          "theme": "Scale successes",
+          "description": "Take something that worked in one real robotics pilot and apply it somewhere else."
+        },
+        {
+          "theme": "Secure resources",
+          "description": "Get the real resources a health program needs lined up before work starts."
+        },
+        {
+          "theme": "Set expectations",
+          "description": "Make clear, up front, exactly what a real program or role will and won't deliver."
+        },
+        {
+          "theme": "Set targets",
+          "description": "Set a real, specific, checkable target a mission or program is aiming for."
+        },
+        {
+          "theme": "Share findings",
+          "description": "Share the real findings of a mission review with the people who need to act on them."
+        },
+        {
+          "theme": "Share information",
+          "description": "Pass real, relevant information to the people who actually need it to do their job."
+        },
+        {
+          "theme": "Share insights",
+          "description": "Share a real insight from field experience with a team that can act on it."
+        },
+        {
+          "theme": "Share knowledge",
+          "description": "Pass on something real you learned about an AI system to someone who needs to know it."
+        },
+        {
+          "theme": "Share learnings",
+          "description": "Pass on what was actually learned from a real health program to another team."
+        },
+        {
+          "theme": "Share resources",
+          "description": "Make a real resource one team has actually available to another that needs it."
+        },
+        {
+          "theme": "Strengthen benefits",
+          "description": "Improve a real benefit a mission offers its staff so it actually helps retention."
+        },
+        {
+          "theme": "Strengthen partnerships",
+          "description": "Deepen a real, existing partnership so it delivers more for both sides."
+        },
+        {
+          "theme": "Support independence",
+          "description": "Help a real community or program move toward standing on its own, not on outside aid."
+        },
+        {
+          "theme": "Support recovery",
+          "description": "Give real, practical support to a community actually working to recover from a crisis."
+        },
+        {
+          "theme": "Support reflection",
+          "description": "Create a real space for a team to actually think through what happened and why."
+        },
+        {
+          "theme": "Support survivors",
+          "description": "Give real, appropriate support to a real survivor of violence or crisis."
+        },
+        {
+          "theme": "Support wellbeing",
+          "description": "Take a real, concrete step that supports the wellbeing of staff or community members."
+        },
+        {
+          "theme": "Sustain commitment",
+          "description": "Keep real stakeholder support for a robotics initiative going past its initial launch."
+        }
+      ]
+    },
+    {
+      "prefix": "PSI",
+      "name": "Practice Steps S–V",
+      "themes": [
+        {
+          "theme": "Sustain involvement",
+          "description": "Keep real stakeholders actively engaged with a program past its initial launch."
+        },
+        {
+          "theme": "Test approaches",
+          "description": "Try a real new approach on a small scale before committing a mission to it fully."
+        },
+        {
+          "theme": "Test changes",
+          "description": "Test a real change to an AI system before it goes live, and document the result."
+        },
+        {
+          "theme": "Test readiness",
+          "description": "Confirm a real robotic system is actually ready before it's trusted with real work."
+        },
+        {
+          "theme": "Test systems",
+          "description": "Run a real AI system through its paces before trusting it with real use."
+        },
+        {
+          "theme": "Track claims",
+          "description": "Keep a real, accurate record of claims made against a mission and their status."
+        },
+        {
+          "theme": "Track competency",
+          "description": "Keep a real record of which real people have demonstrated a robotics competency."
+        },
+        {
+          "theme": "Track efficiency",
+          "description": "Measure, over time, whether a real AI process is using less effort to do the same work."
+        },
+        {
+          "theme": "Track expenses",
+          "description": "Keep a real, accurate record of what a mission is actually spending."
+        },
+        {
+          "theme": "Track improvements",
+          "description": "Keep a real record of every improvement made to an AI system and its measured effect."
+        },
+        {
+          "theme": "Track inventory",
+          "description": "Keep a real, accurate count of a robotics program's parts and equipment."
+        },
+        {
+          "theme": "Track outcomes",
+          "description": "Keep a real record of what actually happened after an AI system made a decision."
+        },
+        {
+          "theme": "Track performance",
+          "description": "Keep a real, ongoing record of how well an AI system is performing over time."
+        },
+        {
+          "theme": "Track progress",
+          "description": "Keep a real, ongoing record of how far an AI initiative has actually gotten."
+        },
+        {
+          "theme": "Track resolution",
+          "description": "Keep a real record of whether a reported problem was actually resolved."
+        },
+        {
+          "theme": "Track resources",
+          "description": "Keep a real, accurate account of the resources a health program is using."
+        },
+        {
+          "theme": "Track results",
+          "description": "Keep a real, ongoing record of the results a program is actually producing."
+        },
+        {
+          "theme": "Track satisfaction",
+          "description": "Keep a real record of how satisfied users actually are with a robotic system."
+        },
+        {
+          "theme": "Track savings",
+          "description": "Keep a real record of the cost savings a mission's changes have actually produced."
+        },
+        {
+          "theme": "Track spending",
+          "description": "Keep a real, accurate record of what an AI initiative is actually costing."
+        },
+        {
+          "theme": "Track trends",
+          "description": "Keep a real, ongoing record of how a situation is trending over time."
+        },
+        {
+          "theme": "Track usage",
+          "description": "Keep a real record of how an AI system is actually being used, not how it was intended to be used."
+        },
+        {
+          "theme": "Track wellbeing",
+          "description": "Keep a real, ongoing check on the wellbeing of staff or community members over time."
+        },
+        {
+          "theme": "Train staff",
+          "description": "Teach a real group of staff the skill they need to safely work with an AI system."
+        },
+        {
+          "theme": "Train successors",
+          "description": "Prepare a real person to actually take over a role before the current holder leaves."
+        },
+        {
+          "theme": "Train teams",
+          "description": "Teach a real team the specific skill they need to operate or oversee an AI system."
+        },
+        {
+          "theme": "Transfer authority",
+          "description": "Hand real decision-making authority to a local or successor body, not just in name."
+        },
+        {
+          "theme": "Transform relations",
+          "description": "Change a real, damaged relationship between groups into a genuinely working one."
+        },
+        {
+          "theme": "Triangulate sources",
+          "description": "Confirm a real finding against more than one independent source before acting on it."
+        },
+        {
+          "theme": "Understand dynamics",
+          "description": "Learn how a real situation's different forces and actors actually interact."
+        },
+        {
+          "theme": "Update regularly",
+          "description": "Keep a real AI system's data or model current on a fixed, working schedule."
+        },
+        {
+          "theme": "Verify compliance",
+          "description": "Confirm a real mission or partner actually meets the standard it's required to follow."
+        }
+      ]
+    }
+  ]
+}

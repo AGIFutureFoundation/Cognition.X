@@ -35,7 +35,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Cognition.X : Science OS | 1160 | 10 | 43% | 0% | 100% | 0% | 25 |
 | Cognition.X : Robotics OS | 1140 | 10 | 100% | 0% | 100% | 0% | 26 |
 | Cognition.X : Global Health OS | 1160 | 10 | 100% | 0% | 100% | 0% | 28 |
-| Cognition.X : Multilateral OS | 1150 | 10 | 43% | 0% | 100% | 0% | 28 |
+| Cognition.X : Multilateral OS | 1150 | 10 | 100% | 0% | 100% | 0% | 28 |
 | Cognition.X : Sapient OS | 1120 | 10 | 100% | 0% | 100% | 0% | 25 |
 | Non-Profit Practice | 1150 | 10 | 43% | 0% | 100% | 0% | 25 |
 | Cognition.X : Education OS | 660 | 0 | 0% | 0% | 100% | 0% | 113 |
@@ -61,7 +61,7 @@ authored descriptions. Neither is hidden — both are counted here.
 | Trades in the Classroom : Flipped & Gamified | 250 | 5 | 100% | 0% | 100% | 0% | 112 |
 | Transport & Mobility | 250 | 5 | 100% | 0% | 100% | 0% | 89 |
 
-**Dataset-wide:** descriptions 81% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
+**Dataset-wide:** descriptions 84% · band-suffix 0% · code+level 100% · shortest transfer check 14 chars.
 
 ## Standards and rubrics
 
