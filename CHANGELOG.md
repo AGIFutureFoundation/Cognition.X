@@ -4,6 +4,26 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.91.0] — 2026-09-18
+
+### Added — prompt 3, tranche two: Civic & Leadership and Language, Culture & Communication's 222 empty descriptions filled
+- **`data/promotions/civic-leadership.json`** and
+  **`data/promotions/language-culture-communication.json`** are new
+  `"unbanded": true` promotion files, following the mechanism shipped
+  in v0.90.0: 111 themes each (Civic Framework & Governance / Public
+  Service / Coalition Building; Language Documentation / Interpreting
+  / Media & Community Storytelling), one authored description per
+  theme, no suffix. `track`/`code` stay untouched, exactly as designed.
+  No block id, code, track, level, credential or transfer check
+  changed — description only, and only where it was empty.
+- `tests/test_platform.py`'s `UNBANDED_FILLED_PACKS` gains both packs;
+  `KNOWN_EMPTY_DESCRIPTION_ROWS` falls 6,089 → 5,867. Dataset-wide
+  description coverage rises from 65% to 66%.
+- Three more foundation packs (Empathy & Emotional Intelligence,
+  Community & Relationship Practice, and 109 of Health & Community's
+  111 rows — 443 rows in total) fit the same mechanism and are the
+  next tranche of prompt 3.
+
 ## [0.90.0] — 2026-09-18
 
 ### Added — prompt 3, tranche one: Future-Work's 111 empty descriptions filled, via a new "unbanded" promotion mechanism

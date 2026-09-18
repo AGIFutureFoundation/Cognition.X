@@ -1,0 +1,469 @@
+{
+  "pack": "Language, Culture & Communication",
+  "unbanded": true,
+  "note": "Promotion to the tracked schema (v0.91.0, prompt 3 tranche two). Each theme in this pack names exactly one row at one grade band, not five rows across the ladder, so \"unbanded\": true fills each row's empty description with its own complete sentence directly — no per-band suffix, since the row already names its own grade. track/code are not filled by this promotion (see tools/normalize_blocks.py apply_promotions): this pack's natural sub-groupings do not form the 50-block tracked shape. Theme text and grouping are copied verbatim from data/blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "LA",
+      "name": "Language Documentation",
+      "themes": [
+        {
+          "theme": "The languages in this room (LA)",
+          "description": "Name every language spoken in a classroom and one person who speaks each."
+        },
+        {
+          "theme": "Words that only exist here (LA)",
+          "description": "Collect five local words with the person who taught them to you."
+        },
+        {
+          "theme": "Say it, then write it (LA)",
+          "description": "Record a sentence spoken by a family member and write it down together."
+        },
+        {
+          "theme": "Whose name is it (LA)",
+          "description": "Pronounce every name in a classroom correctly, checked by their owners."
+        },
+        {
+          "theme": "A story from before you (LA)",
+          "description": "Retell a family story accurately to the person who told it to you."
+        },
+        {
+          "theme": "Two words for one thing (LA)",
+          "description": "Find five objects with names in two languages spoken at a school."
+        },
+        {
+          "theme": "Sounds a language has (LA)",
+          "description": "Identify three sounds one language has that another language does not."
+        },
+        {
+          "theme": "Writing a sound down (LA)",
+          "description": "Propose a spelling for an unwritten local word and test it on three readers."
+        },
+        {
+          "theme": "Asking permission for words (LA)",
+          "description": "Obtain and record consent before publishing a collected language item."
+        },
+        {
+          "theme": "Recording carefully (LA)",
+          "description": "Produce a clean recording that a reviewer accepts on the first pass."
+        },
+        {
+          "theme": "Transcribing honestly (LA)",
+          "description": "Transcribe two minutes of speech and mark every uncertain word."
+        },
+        {
+          "theme": "A glossary is a decision (LA)",
+          "description": "Build a ten-term glossary with a stated source for each entry."
+        },
+        {
+          "theme": "Reading aloud to someone (LA)",
+          "description": "Read to a younger learner who can then retell the passage back."
+        },
+        {
+          "theme": "The word for the thing at work (LA)",
+          "description": "Collect twenty trade terms from a working practitioner and verify them."
+        },
+        {
+          "theme": "Community authorship (LA)",
+          "description": "Explain why a machine translation is not an author, using a real example."
+        },
+        {
+          "theme": "Drafting a family signal (LA)",
+          "description": "Draft a family signal reviewed and corrected by two native speakers."
+        },
+        {
+          "theme": "Register and respect (LA)",
+          "description": "Rewrite a message in three registers and have each judged appropriate."
+        },
+        {
+          "theme": "What does not translate (LA)",
+          "description": "Document three untranslatable terms and the strategy chosen for each."
+        },
+        {
+          "theme": "Reviewing someone's draft (LA)",
+          "description": "Review a peer's draft to the author's stated satisfaction."
+        },
+        {
+          "theme": "The reviewer's seal (LA)",
+          "description": "Prepare a draft to seal-ready state and pass a reviewer's checklist."
+        },
+        {
+          "theme": "Archiving what you collected (LA)",
+          "description": "Deposit a collection with metadata a stranger could use in ten years."
+        },
+        {
+          "theme": "A language is not a costume (LA)",
+          "description": "Identify and correct a decorative misuse of language in real published material."
+        },
+        {
+          "theme": "Orthography and community decision (LA)",
+          "description": "Present a real orthography debate and the decision the community made."
+        },
+        {
+          "theme": "Corpus building (LA)",
+          "description": "Build and document a small consented corpus with provenance for every item."
+        },
+        {
+          "theme": "Language and the machine (LA)",
+          "description": "Test a language tool and publish where and how it fails."
+        },
+        {
+          "theme": "Teaching your language (LA)",
+          "description": "Teach a lesson that a non-speaker can pass a check on."
+        },
+        {
+          "theme": "Materials for a family, not a linguist (LA)",
+          "description": "Produce family materials that three families use without asking a question."
+        },
+        {
+          "theme": "Rights in what you collect (LA)",
+          "description": "Draft a consent and rights agreement a community lawyer approves."
+        },
+        {
+          "theme": "Working with elders (LA)",
+          "description": "Complete an elder collaboration the elder describes as respectful."
+        },
+        {
+          "theme": "The promotion file (LA)",
+          "description": "Assemble a complete promotion file for a language against the published criteria."
+        },
+        {
+          "theme": "Leading an authorship circle (LA)",
+          "description": "Convene a circle that produces reviewed material for a full block."
+        },
+        {
+          "theme": "Standards and disagreement (LA)",
+          "description": "Document a real divergence and produce a route that respects both sides."
+        },
+        {
+          "theme": "Training reviewers (LA)",
+          "description": "Train a reviewer who independently seals a draft you did not touch."
+        },
+        {
+          "theme": "Sustaining after the grant (LA)",
+          "description": "Produce a two-year sustainability plan a community board adopts."
+        },
+        {
+          "theme": "Publishing to Tier 0 (LA)",
+          "description": "Publish a Tier 0 pack in a language that prints correctly unaided."
+        },
+        {
+          "theme": "Refusing the shortcut (LA)",
+          "description": "Write the refusal memo for a real shortcut and defend it to a panel."
+        },
+        {
+          "theme": "The promotion, executed (LA)",
+          "description": "Present a complete promotion to a panel that includes the language's own reviewers."
+        }
+      ]
+    },
+    {
+      "prefix": "IN",
+      "name": "Interpreting",
+      "themes": [
+        {
+          "theme": "Helping someone understand (IN)",
+          "description": "Repeat an instruction for a classmate so they can act on it."
+        },
+        {
+          "theme": "Say it the way they said it (IN)",
+          "description": "Carry three messages between two people with no change of meaning."
+        },
+        {
+          "theme": "Wait for the whole sentence (IN)",
+          "description": "Complete a five-turn exchange without interrupting either speaker."
+        },
+        {
+          "theme": "Not your conversation (IN)",
+          "description": "Stay out of a scripted disagreement while carrying it accurately."
+        },
+        {
+          "theme": "Ask when you do not know (IN)",
+          "description": "Ask for a repeat three times in one exercise without hesitation."
+        },
+        {
+          "theme": "Some things are private (IN)",
+          "description": "Explain the privacy rule of interpreting in your own words to a younger child."
+        },
+        {
+          "theme": "Memory in short pieces (IN)",
+          "description": "Render five two-sentence turns with no omissions."
+        },
+        {
+          "theme": "Numbers and names (IN)",
+          "description": "Carry ten numbers and names with zero errors under observation."
+        },
+        {
+          "theme": "Taking a note that helps (IN)",
+          "description": "Use notes to carry a forty-second turn accurately."
+        },
+        {
+          "theme": "First person, not third (IN)",
+          "description": "Carry a full exchange in first person without slipping into third."
+        },
+        {
+          "theme": "Everything, including the hard part (IN)",
+          "description": "Carry three difficult sentences without softening any of them."
+        },
+        {
+          "theme": "The room, arranged (IN)",
+          "description": "Set up a three-person interpreted conversation correctly."
+        },
+        {
+          "theme": "When it goes too fast (IN)",
+          "description": "Manage pace in a fast exchange without losing content."
+        },
+        {
+          "theme": "Words you do not have (IN)",
+          "description": "Handle five unknown terms by the published strategy, not by guessing."
+        },
+        {
+          "theme": "The interpreter's boundary (IN)",
+          "description": "Refuse three scripted invitations to advise while staying helpful."
+        },
+        {
+          "theme": "Family interpreting, honestly (IN)",
+          "description": "Explain the harm of child interpreting and name the alternative in your area."
+        },
+        {
+          "theme": "Terminology by domain (IN)",
+          "description": "Prepare and use a domain glossary in a live simulation."
+        },
+        {
+          "theme": "School interpreting (IN)",
+          "description": "Interpret a full simulated conference and pass the observer's rubric."
+        },
+        {
+          "theme": "Written translation basics (IN)",
+          "description": "Translate a three-hundred-word document and pass a second reader's check."
+        },
+        {
+          "theme": "Sight translation (IN)",
+          "description": "Sight-translate a one-page form with no material error."
+        },
+        {
+          "theme": "Culture without stereotype (IN)",
+          "description": "Flag two real cultural mismatches without a single group generalisation."
+        },
+        {
+          "theme": "Recording and consent (IN)",
+          "description": "Complete a consent process a supervisor accepts."
+        },
+        {
+          "theme": "Medical interpreting, introduced (IN)",
+          "description": "Interpret a simulated clinical encounter under a qualified observer."
+        },
+        {
+          "theme": "Legal and administrative settings (IN)",
+          "description": "Interpret a simulated hearing with a verbatim record check."
+        },
+        {
+          "theme": "Remote interpreting (IN)",
+          "description": "Complete a remote assignment, including a handled technical failure."
+        },
+        {
+          "theme": "Quality and error (IN)",
+          "description": "Self-correct three seeded errors within the same turn."
+        },
+        {
+          "theme": "Working conditions (IN)",
+          "description": "Produce a staffing plan for a four-hour assignment and justify it."
+        },
+        {
+          "theme": "Certification pathways (IN)",
+          "description": "Map the real certification route for a language and produce a plan."
+        },
+        {
+          "theme": "Translating for Tier 0 (IN)",
+          "description": "Translate a Tier 0 sheet and test it with three families."
+        },
+        {
+          "theme": "The refusal (IN)",
+          "description": "Decline three scripted assignments correctly and offer the right referral."
+        },
+        {
+          "theme": "Leading a language-access service (IN)",
+          "description": "Design a language-access service a real administrator calls workable."
+        },
+        {
+          "theme": "Training interpreters (IN)",
+          "description": "Train an interpreter who passes an independent observation."
+        },
+        {
+          "theme": "Terminology management (IN)",
+          "description": "Deliver a maintained glossary that two departments adopt."
+        },
+        {
+          "theme": "Machine translation in the loop (IN)",
+          "description": "Publish a policy on machine assistance a review panel accepts."
+        },
+        {
+          "theme": "Interpreting in a crisis (IN)",
+          "description": "Complete a crisis simulation with accuracy verified against the record."
+        },
+        {
+          "theme": "Rates, contracts and dignity (IN)",
+          "description": "Negotiate a scripted contract to terms a practicing interpreter approves."
+        },
+        {
+          "theme": "The professional portfolio (IN)",
+          "description": "Present a portfolio to a panel that includes a certified interpreter."
+        }
+      ]
+    },
+    {
+      "prefix": "MC",
+      "name": "Media & Community Storytelling",
+      "themes": [
+        {
+          "theme": "Who made this (MC)",
+          "description": "Name the maker and the reason behind three things seen today."
+        },
+        {
+          "theme": "A photograph is a choice (MC)",
+          "description": "Take two photographs of one scene that tell different stories."
+        },
+        {
+          "theme": "True, funny, or both (MC)",
+          "description": "Sort ten items into three piles and defend the unsure pile."
+        },
+        {
+          "theme": "Asking before you post (MC)",
+          "description": "Obtain consent from three people before photographing them."
+        },
+        {
+          "theme": "Telling what happened (MC)",
+          "description": "Recount a real event that a witness confirms is accurate."
+        },
+        {
+          "theme": "Listening to a recording of yourself (MC)",
+          "description": "Record, listen to, and improve a thirty-second telling."
+        },
+        {
+          "theme": "Where did this come from (MC)",
+          "description": "Trace three claims to a source or mark them as untraceable."
+        },
+        {
+          "theme": "Interviewing someone (MC)",
+          "description": "Conduct an interview the subject says was comfortable and accurate."
+        },
+        {
+          "theme": "Sound before pictures (MC)",
+          "description": "Produce a recording a listener can follow with no visual at all."
+        },
+        {
+          "theme": "Editing without lying (MC)",
+          "description": "Edit an interview to half length and get the speaker's approval."
+        },
+        {
+          "theme": "Captions are not optional (MC)",
+          "description": "Caption a piece and have a deaf or hard-of-hearing reviewer approve it."
+        },
+        {
+          "theme": "The correction (MC)",
+          "description": "Publish a correction to your own work within a day of finding the error."
+        },
+        {
+          "theme": "A story about your street (MC)",
+          "description": "Publish an accurate local piece with two named sources."
+        },
+        {
+          "theme": "Who is not being asked (MC)",
+          "description": "Audit a published local story for missing voices and go get one."
+        },
+        {
+          "theme": "Verification (MC)",
+          "description": "Verify or debunk three circulating items and publish the method used."
+        },
+        {
+          "theme": "Oral history, properly (MC)",
+          "description": "Complete an archived oral history with signed consent and metadata."
+        },
+        {
+          "theme": "Public meetings, covered (MC)",
+          "description": "Cover three public meetings and publish accurate accounts of each."
+        },
+        {
+          "theme": "Data in a story (MC)",
+          "description": "Publish a data-led piece a statistician calls fairly stated."
+        },
+        {
+          "theme": "Photography with dignity (MC)",
+          "description": "Produce a photo set the subjects approve for publication."
+        },
+        {
+          "theme": "Design that communicates (MC)",
+          "description": "Produce a public notice a stranger acts on correctly at first reading."
+        },
+        {
+          "theme": "Archives and memory (MC)",
+          "description": "Add a documented item to a real local archive."
+        },
+        {
+          "theme": "Manipulation, recognised (MC)",
+          "description": "Identify manipulation in three real examples and state the check used."
+        },
+        {
+          "theme": "Local reporting (MC)",
+          "description": "Publish a four-part series on a local subject with named sources."
+        },
+        {
+          "theme": "Records and requests (MC)",
+          "description": "Obtain and report from a real records response."
+        },
+        {
+          "theme": "Ethics under pressure (MC)",
+          "description": "Resolve five scripted ethics cases and defend each to an editor."
+        },
+        {
+          "theme": "Synthetic media and labelling (MC)",
+          "description": "Produce a labelled synthetic piece and a matching detection write-up."
+        },
+        {
+          "theme": "Documentary short (MC)",
+          "description": "Deliver a five-minute documentary the subjects approve."
+        },
+        {
+          "theme": "Publishing for a place (MC)",
+          "description": "Deliver a piece through three channels and measure which one reached whom."
+        },
+        {
+          "theme": "Safety for storytellers (MC)",
+          "description": "Complete a risk assessment an experienced journalist signs off."
+        },
+        {
+          "theme": "Working across languages (MC)",
+          "description": "Publish a piece produced with an interpreter and credit them by name."
+        },
+        {
+          "theme": "Running a newsroom (MC)",
+          "description": "Run a publishing operation for a term with a published corrections log."
+        },
+        {
+          "theme": "Editing other people (MC)",
+          "description": "Edit five pieces to the writers' stated satisfaction."
+        },
+        {
+          "theme": "The correction policy (MC)",
+          "description": "Publish a corrections policy adopted by a real outlet or school publication."
+        },
+        {
+          "theme": "Funding without capture (MC)",
+          "description": "Produce a funding plan with written independence guarantees."
+        },
+        {
+          "theme": "Civic communication (MC)",
+          "description": "Deliver a public explanation an affected audience calls clear and honest."
+        },
+        {
+          "theme": "The archive you leave (MC)",
+          "description": "Deliver a documented archive a successor uses without instruction."
+        },
+        {
+          "theme": "A portfolio that stands up (MC)",
+          "description": "Present a full portfolio to a panel that includes a working editor."
+        }
+      ]
+    }
+  ]
+}

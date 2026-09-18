@@ -769,9 +769,9 @@ def test_band_differentiated_descriptions():
 # exactly one row (not five spanning the band ladder), promoted with
 # `"unbanded": true` so the empty description fills in as one complete
 # sentence with no per-band suffix.
-UNBANDED_FILLED_PACKS = {"Future-Work"}
+UNBANDED_FILLED_PACKS = {"Future-Work", "Civic & Leadership", "Language, Culture & Communication"}
 
-KNOWN_EMPTY_DESCRIPTION_ROWS = 6089  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); the ratchet only falls
+KNOWN_EMPTY_DESCRIPTION_ROWS = 5867  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); 5,867 after Civic & Leadership + Language, Culture & Communication (v0.91.0, prompt 3 tranche two, 222 rows); the ratchet only falls
 
 
 def test_unbanded_descriptions():

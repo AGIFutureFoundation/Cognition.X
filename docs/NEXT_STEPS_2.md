@@ -109,7 +109,7 @@ python3 tools/normalize_blocks.py && python3 tests/test_platform.py
 
 ---
 
-## 3 — The 6,200 empty descriptions, filled through promotions *(tranche one — Future-Work — done in v0.90.0, 111 rows)*
+## 3 — The 6,200 empty descriptions, filled through promotions *(tranche one — Future-Work — done in v0.90.0, 111 rows; tranche two — Civic & Leadership and Language, Culture & Communication — done in v0.91.0, 222 rows)*
 
 **Why.** 36% of rows have no description at all: 5,200 in the sector-OS
 packs and 1,000 in the nine foundation packs (K–12, Trade School,
