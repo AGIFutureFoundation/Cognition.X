@@ -270,7 +270,7 @@ row moves to met.
 
 ---
 
-## 7 — The Education OS template's second diet
+## 7 — The Education OS template's second diet — PARTIAL, v0.108.0
 
 **Why.** The template is 4.6 MB after v0.63.0 and v0.68.0. Its two
 largest remaining literals, `DATA.siteIndex` (296 KB) and
@@ -288,6 +288,28 @@ zero real differences.
 
 **Acceptance.** Template under 4.2 MB; 149 views hash-identical after
 normalisation; the extractor round-trips in CI.
+
+**Finding, v0.108.0.** `DATA.platformConformance` no longer exists as a
+data literal — somewhere since this prompt was written it was
+refactored into a live-computed function
+(`function platformConformance(){...}`, a self-check that reads the
+DOM, not content). Measuring every top-level `DATA.<name>=` literal by
+its actual matched-bracket byte span (not by distance to the next
+assignment, which double-counts intervening code) found the real
+ranking: `siteIndex` (296 KB, confirmed), then `seEditions` (54 KB,
+the Special Editions content — not 152 KB), then `buildStatus` (~50
+KB), `fxPack2` (~48 KB), `fxAuthored` (~47 KB). `siteIndex` and
+`seEditions` were extracted this tranche via the existing
+`__CXFACT:<name>__` mechanism: template 4.62 MB → 4.27 MB (−350 KB),
+short of the 4.2 MB target. The next three (~145 KB combined) would
+close the gap but are unexamined content whose consuming code wasn't
+read this tranche — left for a follow-up rather than extracted
+sight-unseen. Verified with `tools/view_sweep.js`: 9 of 149 views
+differed at first, but a control sweep (the same unchanged rebuilt
+file against itself, twice) reproduced the identical 8 of those 9,
+proving pre-existing non-determinism (live timestamps, simulated
+data) rather than a regression; the ninth was a one-off timeout in
+the baseline run.
 
 **Verify.**
 ```bash

@@ -53,9 +53,11 @@ below, and nothing runs until a person presses *Open in 3D / VR*.
 - **Flow Hub's 2.4 MB data payload** is the whole dataset (17,450
   blocks) in a compact array form; it compresses to 0.5 MB and parses in
   under 30 ms. Nothing to gain that a host's gzip does not already give.
-- **`DATA.siteIndex` (296 KB) and `platformConformance` (152 KB)** in the
-  Education OS are the next largest chunks; both are read by views, both
-  are legitimate content.
+- **`DATA.buildStatus`, `DATA.fxPack2`, `DATA.fxAuthored`** (~50 KB, ~48 KB,
+  ~47 KB) in the Education OS template — legitimate content, candidates
+  for the same `__CXFACT:` extraction `DATA.siteIndex` and
+  `DATA.seEditions` got at v0.108.0, not yet done (roadmap prompt 7,
+  `docs/NEXT_STEPS_2.md` #7).
 
 ## Budgets the tests hold
 

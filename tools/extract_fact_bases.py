@@ -6,9 +6,11 @@ fact base, the K-12 program and the Willie L. Brown Jr. Institute (WLB)
 fact base once lived as JS literals inside apps/education-os/template.html.
 This tool extracted them ONCE and wrote them as canonical repository data:
 
-    data/louisiana/fact_base.json   regions · regionHubs · parishes
-    data/louisiana/k12_program.json grades · threads
-    data/wlb/institute.json         name … seal · principles
+    data/louisiana/fact_base.json    regions · regionHubs · parishes
+    data/louisiana/k12_program.json  grades · threads
+    data/wlb/institute.json          name … seal · principles
+    data/education_os/site_index.json  the app's site-search index (v0.108.0)
+    data/education_os/se_editions.json the Special Editions content (v0.108.0)
 
 Since v0.63.0 the direction is reversed for the app as well: the template
 carries a `__CXFACT:<name>__` placeholder where each literal stood, and
@@ -35,7 +37,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = ROOT / "apps" / "education-os" / "template.html"
 BUILT = ROOT / "apps" / "education-os" / "index.html"
-LAYERS = ["regions", "regionHubs", "parishes", "wlb", "wlbPrinciples", "lak12", "lak12Threads"]
+LAYERS = ["regions", "regionHubs", "parishes", "wlb", "wlbPrinciples", "lak12", "lak12Threads",
+          "siteIndex", "seEditions"]
 
 
 def _literal_from_template(t, name):
@@ -85,7 +88,8 @@ def extract():
         "courses:wlb.courses,bridge:wlb.bridge,modules:wlb.modules,"
         "standards:wlb.standards,seal:wlb.seal},"
         "principles:wlbPrinciples.map(x=>({p:x.p,src:x.src,teach:x.teach,strands:x.strands})),"
-        "k12:{grades:lak12,threads:lak12Threads}}));")
+        "k12:{grades:lak12,threads:lak12Threads},"
+        "siteIndex:siteIndex,seEditions:seEditions}));")
     with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as f:
         f.write(js)
         path = f.name
@@ -130,6 +134,29 @@ def documents(fb):
                      "principles carry their source attribution and the strands they anchor."),
             **fb["wlb"],
             "principles": fb["principles"],
+        },
+        ROOT / "data" / "education_os" / "site_index.json": {
+            "note": ("The Education OS app's site-search index — canonical here since "
+                     "v0.108.0 (prompt 7, the template diet: this literal alone was 296 KB "
+                     "in apps/education-os/template.html; extracted once by hand and now "
+                     "round-tripped by tools/extract_fact_bases.py, injected in place by "
+                     "tools/build_education_os.py at the __CXFACT:siteIndex__ placeholder). "
+                     "Each entry is [view id, title, description, search keywords] for one "
+                     "of the app's views; the in-app search, the site guide's chatbot-style "
+                     "module list, and the automated 'every nav entry documented' "
+                     "conformance check all read this array."),
+            "entries": fb["siteIndex"],
+        },
+        ROOT / "data" / "education_os" / "se_editions.json": {
+            "note": ("The Education OS app's Special Editions (Enterprise/illustrative "
+                     "preset organizations) — canonical here since v0.108.0 (prompt 7, the "
+                     "template diet: this literal was 54 KB in "
+                     "apps/education-os/template.html; extracted once by hand and now "
+                     "round-tripped by tools/extract_fact_bases.py, injected in place by "
+                     "tools/build_education_os.py at the __CXFACT:seEditions__ placeholder). "
+                     "Illustrative presets only — no company relationships implied, per the "
+                     "app's own disclaimer text."),
+            "entries": fb["seEditions"],
         },
     }
 
