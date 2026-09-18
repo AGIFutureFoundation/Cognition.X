@@ -10,52 +10,122 @@
     {
      "theme": "Drawing to communicate",
      "description": "The sketch that gets built: drawing not as art but as the fastest way to show what you mean.",
-     "transfer_check": "Sketch an object or a plan clearly enough that a second person builds or finds it from the drawing alone."
+     "transfer_check": "Sketch an object or a plan clearly enough that a second person builds or finds it from the drawing alone.",
+     "bands": {
+      "K–2": "Draw a picture to show an adult what happened, instead of just telling them.",
+      "3–5": "Draw a simple diagram to explain an idea, with an adult's help.",
+      "6–8": "Draw a real diagram that clearly communicates an idea, with a checker.",
+      "9–10": "Draw a real diagram or sketch that communicates a real idea, on your own.",
+      "11–12": "Teach someone else how to draw something that communicates clearly, without words."
+     }
     },
     {
      "theme": "Proportion and measure",
      "description": "Scale, the ruler, the grid and the eye that checks them: drawing things the size they are.",
-     "transfer_check": "Draw a room or object to scale with measurements and produce a second drawing at a different scale that matches."
+     "transfer_check": "Draw a room or object to scale with measurements and produce a second drawing at a different scale that matches.",
+     "bands": {
+      "K–2": "Compare the size of two objects with an adult.",
+      "3–5": "Draw two objects at roughly the right sizes compared to each other, with an adult.",
+      "6–8": "Draw a real object with correct proportions, with a checker.",
+      "9–10": "Draw a real complex object with accurate proportions, on your own.",
+      "11–12": "Teach someone else how to judge and draw real proportions accurately."
+     }
     },
     {
      "theme": "Perspective",
      "description": "One point, two points and the horizon: making a flat page hold a real space.",
-     "transfer_check": "Draw a street or interior in two-point perspective with correct vanishing points, checked against a photograph."
+     "transfer_check": "Draw a street or interior in two-point perspective with correct vanishing points, checked against a photograph.",
+     "bands": {
+      "K–2": "Notice that far away things look smaller, with an adult.",
+      "3–5": "Draw a simple scene where far things are smaller, with an adult's help.",
+      "6–8": "Draw a real scene using basic perspective, with a checker.",
+      "9–10": "Draw a real scene using accurate perspective, on your own.",
+      "11–12": "Teach someone else how to draw a real scene using proper perspective."
+     }
     },
     {
      "theme": "Color",
      "description": "The wheel, mixing, value and the Louisiana palette of water, rust, iron and festival.",
-     "transfer_check": "Mix and chart twelve target colours from primaries and paint a small study using a limited palette."
+     "transfer_check": "Mix and chart twelve target colours from primaries and paint a small study using a limited palette.",
+     "bands": {
+      "K–2": "Mix two paint colors to make a new one, with an adult.",
+      "3–5": "Mix real colors to get a color you want, with an adult's help.",
+      "6–8": "Mix and use real color intentionally in a piece, with a checker.",
+      "9–10": "Use real color theory intentionally in a finished piece, on your own.",
+      "11–12": "Teach someone else how to use real color theory to create a mood."
+     }
     },
     {
      "theme": "Composition",
      "description": "Where the eye goes and why: balance, contrast, the rule you follow and the one you break.",
-     "transfer_check": "Produce three compositions of the same subject that lead the eye differently, and explain each."
+     "transfer_check": "Produce three compositions of the same subject that lead the eye differently, and explain each.",
+     "bands": {
+      "K–2": "Arrange a few objects nicely on a table, with an adult.",
+      "3–5": "Arrange elements in a drawing so it looks balanced, with an adult's help.",
+      "6–8": "Compose a real piece with balance and focus, with a checker.",
+      "9–10": "Compose a real finished piece with deliberate balance and focus, on your own.",
+      "11–12": "Teach someone else how to compose a real piece that draws the eye correctly."
+     }
     },
     {
      "theme": "Lettering and layout",
      "description": "The sign, the poster, the menu board: letters drawn by hand and set by rule.",
-     "transfer_check": "Hand-letter a legible sign and lay out a poster with a clear hierarchy that a stranger reads at a glance."
+     "transfer_check": "Hand-letter a legible sign and lay out a poster with a clear hierarchy that a stranger reads at a glance.",
+     "bands": {
+      "K–2": "Write your name neatly on a sign, with an adult.",
+      "3–5": "Make a simple sign with neat lettering, with an adult's help.",
+      "6–8": "Design a real sign with clear lettering and layout, with a checker.",
+      "9–10": "Design a real professional sign or poster layout, on your own.",
+      "11–12": "Teach someone else how to design real lettering and layout that reads clearly."
+     }
     },
     {
      "theme": "Drawing the figure",
      "description": "Gesture, proportion and the human form: the hardest subject and the most useful.",
-     "transfer_check": "Complete ten timed gesture drawings and one sustained figure study from a live model or a working person."
+     "transfer_check": "Complete ten timed gesture drawings and one sustained figure study from a live model or a working person.",
+     "bands": {
+      "K–2": "Draw a simple person shape, with an adult.",
+      "3–5": "Draw a person with correct basic body proportions, with an adult's help.",
+      "6–8": "Draw a real human figure with reasonable accuracy, with a checker.",
+      "9–10": "Draw a real human figure accurately from observation, on your own.",
+      "11–12": "Teach someone else how to draw a real human figure from life."
+     }
     },
     {
      "theme": "The design brief",
      "description": "Reading what a client needs, asking what they did not say, and drawing back to check.",
-     "transfer_check": "Take a brief from a real client, produce three sketched options, and get one approved."
+     "transfer_check": "Take a brief from a real client, produce three sketched options, and get one approved.",
+     "bands": {
+      "K–2": "Ask an adult what someone wants before making them a drawing.",
+      "3–5": "Ask what someone needs before making something for them, with an adult.",
+      "6–8": "Read and follow a real simple design brief, with a checker.",
+      "9–10": "Interpret and fulfil a real design brief on your own.",
+      "11–12": "Write a real clear design brief for someone else to follow."
+     }
     },
     {
      "theme": "Digital drawing",
      "description": "The tablet, layers, vector and raster, and the file a printer can use.",
-     "transfer_check": "Produce a digital drawing with layers and export it correctly for print and for screen."
+     "transfer_check": "Produce a digital drawing with layers and export it correctly for print and for screen.",
+     "bands": {
+      "K–2": "Draw a simple picture on a tablet with an adult.",
+      "3–5": "Use a real digital drawing tool for a simple picture, with an adult's help.",
+      "6–8": "Create a real piece using digital drawing tools, with a checker.",
+      "9–10": "Create a real finished piece using digital tools competently, on your own.",
+      "11–12": "Teach someone else the real basics of a digital drawing tool."
+     }
     },
     {
      "theme": "The sketchbook habit",
      "description": "Daily practice: the page a day that makes the hand fast and the eye honest.",
-     "transfer_check": "Keep a daily sketchbook for three weeks and present the first and last pages side by side."
+     "transfer_check": "Keep a daily sketchbook for three weeks and present the first and last pages side by side.",
+     "bands": {
+      "K–2": "Draw one small thing in a notebook each day, with an adult.",
+      "3–5": "Keep a simple sketchbook for a week, with an adult's help.",
+      "6–8": "Keep a real sketchbook practice for a month, with a checker.",
+      "9–10": "Maintain a real ongoing sketchbook practice on your own.",
+      "11–12": "Explain to someone else why a real sketchbook habit builds skill over time."
+     }
     }
    ]
   },
@@ -67,52 +137,122 @@
     {
      "theme": "Clay",
      "description": "Pinch, coil and wheel; the kiln, the glaze and the piece that survives the fire.",
-     "transfer_check": "Make a functional clay vessel by hand or wheel, glaze it, and fire it (or have it fired) to a usable finish."
+     "transfer_check": "Make a functional clay vessel by hand or wheel, glaze it, and fire it (or have it fired) to a usable finish.",
+     "bands": {
+      "K–2": "Shape a simple ball or coil from clay, with an adult.",
+      "3–5": "Shape a real simple clay object, with an adult's help.",
+      "6–8": "Shape and finish a real clay piece correctly, with a checker.",
+      "9–10": "Shape, fire and finish a real clay piece on your own.",
+      "11–12": "Teach someone else how to properly shape and finish a real clay piece."
+     }
     },
     {
      "theme": "Wood",
      "description": "Grain, joints, the saw and the finish: making a thing that stays square.",
-     "transfer_check": "Build a small joined wooden object — a box or frame — with a proper joint and a finished surface."
+     "transfer_check": "Build a small joined wooden object — a box or frame — with a proper joint and a finished surface.",
+     "bands": {
+      "K–2": "Sand a small piece of wood smooth, with an adult.",
+      "3–5": "Cut and sand a simple piece of wood, with an adult's help.",
+      "6–8": "Shape a real piece of wood into a useful object, with a checker.",
+      "9–10": "Build a real wooden object competently, on your own.",
+      "11–12": "Teach someone else real woodworking technique for a specific joint or cut."
+     }
     },
     {
      "theme": "Metal",
      "description": "Cutting, bending, the weld and the forge: shaping what will not be persuaded.",
-     "transfer_check": "Cut, bend and join metal into a small functional object under supervision, safely, with a clean result."
+     "transfer_check": "Cut, bend and join metal into a small functional object under supervision, safely, with a clean result.",
+     "bands": {
+      "K–2": "Watch an adult bend a piece of soft wire.",
+      "3–5": "Bend and shape a simple piece of wire, with an adult's help.",
+      "6–8": "Shape a real piece of metal safely, with a checker.",
+      "9–10": "Shape and finish a real metal piece competently, on your own.",
+      "11–12": "Teach someone else safe technique for shaping a real piece of metal."
+     }
     },
     {
      "theme": "Textile",
      "description": "The needle, the machine and the seam that holds: sewing as a working skill.",
-     "transfer_check": "Sew a wearable or usable textile item with straight seams, a hem and a fastening that lasts."
+     "transfer_check": "Sew a wearable or usable textile item with straight seams, a hem and a fastening that lasts.",
+     "bands": {
+      "K–2": "Practice a simple stitch on fabric, with an adult.",
+      "3–5": "Sew a simple textile piece, with an adult's help.",
+      "6–8": "Sew or weave a real textile piece correctly, with a checker.",
+      "9–10": "Create a real finished textile piece competently, on your own.",
+      "11–12": "Teach someone else a real textile technique from start to finish."
+     }
     },
     {
      "theme": "Paint",
      "description": "Surface preparation, media and the brush: paint that stays on and looks intended.",
-     "transfer_check": "Prepare a surface and paint it to a finished standard in two media, with edges a customer would accept."
+     "transfer_check": "Prepare a surface and paint it to a finished standard in two media, with edges a customer would accept.",
+     "bands": {
+      "K–2": "Paint a simple picture of something you like, with an adult.",
+      "3–5": "Paint a real picture using a real technique, with an adult's help.",
+      "6–8": "Paint a real piece using proper technique, with a checker.",
+      "9–10": "Paint a real finished piece competently, on your own.",
+      "11–12": "Teach someone else a real painting technique or method."
+     }
     },
     {
      "theme": "Print",
      "description": "Relief, screen and the edition: making one image many times, all the same.",
-     "transfer_check": "Cut or expose a block or screen and pull a consistent edition of ten prints."
+     "transfer_check": "Cut or expose a block or screen and pull a consistent edition of ten prints.",
+     "bands": {
+      "K–2": "Make a simple print with a stamp, with an adult.",
+      "3–5": "Make a real simple print using a basic method, with an adult's help.",
+      "6–8": "Make a real print using a proper printmaking method, with a checker.",
+      "9–10": "Create a real finished print using a printmaking method, on your own.",
+      "11–12": "Teach someone else a real printmaking technique from start to finish."
+     }
     },
     {
      "theme": "Glass and mosaic",
      "description": "Cutting, setting and grout: the fragile material made permanent.",
-     "transfer_check": "Cut glass or tile safely and set a small mosaic or leaded panel that holds together."
+     "transfer_check": "Cut glass or tile safely and set a small mosaic or leaded panel that holds together.",
+     "bands": {
+      "K–2": "Arrange small colored pieces into a pattern, with an adult.",
+      "3–5": "Make a simple mosaic pattern, with an adult's help.",
+      "6–8": "Make a real mosaic or glass piece safely, with a checker.",
+      "9–10": "Make a real finished mosaic or glass piece competently, on your own.",
+      "11–12": "Teach someone else real safe technique for working with glass or mosaic."
+     }
     },
     {
      "theme": "Found and reclaimed",
      "description": "Materials the river and the city bring: seeing the object inside the discard.",
-     "transfer_check": "Make a finished piece from reclaimed material, documenting the source and the transformation."
+     "transfer_check": "Make a finished piece from reclaimed material, documenting the source and the transformation.",
+     "bands": {
+      "K–2": "Make something from things you found outside, with an adult.",
+      "3–5": "Make a real object from found materials, with an adult's help.",
+      "6–8": "Make a real piece using found or reclaimed materials well, with a checker.",
+      "9–10": "Create a real finished piece from found or reclaimed materials, on your own.",
+      "11–12": "Teach someone else how to see and use real found materials well."
+     }
     },
     {
      "theme": "Tools and their care",
      "description": "Sharpening, safety and the shop: a maker is only as good as the edge.",
-     "transfer_check": "Sharpen an edge tool to working sharpness and demonstrate the safe use and storage of five shop tools."
+     "transfer_check": "Sharpen an edge tool to working sharpness and demonstrate the safe use and storage of five shop tools.",
+     "bands": {
+      "K–2": "Clean a tool after using it, with an adult.",
+      "3–5": "Clean and store a real craft tool properly, with an adult's help.",
+      "6–8": "Maintain real craft tools correctly, with a checker.",
+      "9–10": "Maintain your own real set of craft tools properly, on your own.",
+      "11–12": "Teach someone else a real tool-care routine for craft tools."
+     }
     },
     {
      "theme": "Finishing",
      "description": "The last ten percent that makes an object sellable: sanding, sealing, polishing, presenting.",
-     "transfer_check": "Take an unfinished object to a sellable finish and have a maker or buyer judge it ready."
+     "transfer_check": "Take an unfinished object to a sellable finish and have a maker or buyer judge it ready.",
+     "bands": {
+      "K–2": "Add a final touch to a project with an adult's help.",
+      "3–5": "Finish a real project to a neat standard, with an adult's help.",
+      "6–8": "Finish a real piece to a professional standard, with a checker.",
+      "9–10": "Finish a real piece to a professional standard, on your own.",
+      "11–12": "Teach someone else the real techniques for a professional finish."
+     }
     }
    ]
   },
@@ -124,52 +264,122 @@
     {
      "theme": "Beadwork and the suit",
      "description": "The Mardi Gras Indian tradition's craft — the patch, the stitch, the year of work — learned with the respect its keepers require.",
-     "transfer_check": "Complete a small beaded patch with a clean stitch and a finished edge, and describe the tradition's protocols as its keepers state them."
+     "transfer_check": "Complete a small beaded patch with a clean stitch and a finished edge, and describe the tradition's protocols as its keepers state them.",
+     "bands": {
+      "K–2": "String a few beads onto a thread, with an adult.",
+      "3–5": "Make a simple beaded pattern, with an adult's help.",
+      "6–8": "Bead a real small pattern using a traditional method, with a checker.",
+      "9–10": "Bead a real piece using traditional technique competently, on your own.",
+      "11–12": "Teach someone else the real traditional beadwork technique for a suit."
+     }
     },
     {
      "theme": "Float building",
      "description": "Papier-mâché, the den and the parade: the sculptural craft behind Carnival.",
-     "transfer_check": "Build a papier-mâché or foam prop figure to a design, painted and finished for a parade or display."
+     "transfer_check": "Build a papier-mâché or foam prop figure to a design, painted and finished for a parade or display.",
+     "bands": {
+      "K–2": "Decorate a small box to look like a float, with an adult.",
+      "3–5": "Build a simple model float, with an adult's help.",
+      "6–8": "Build a real small float model using real techniques, with a checker.",
+      "9–10": "Contribute real work to an actual float build, on your own.",
+      "11–12": "Teach someone else a real technique used in Louisiana float building."
+     }
     },
     {
      "theme": "Ironwork",
      "description": "The balcony, the gate and the scroll: the iron that gives the old cities their face.",
-     "transfer_check": "Form a scroll or simple bracket in metal, cold or hot under supervision, matching a traditional pattern."
+     "transfer_check": "Form a scroll or simple bracket in metal, cold or hot under supervision, matching a traditional pattern.",
+     "bands": {
+      "K–2": "Watch an adult show you a piece of decorative iron.",
+      "3–5": "Draw a simple ironwork pattern, with an adult's help.",
+      "6–8": "Identify a real ironwork technique and its use, with a checker.",
+      "9–10": "Explain or attempt a real basic ironwork technique, on your own.",
+      "11–12": "Teach someone else about a real traditional Louisiana ironwork style."
+     }
     },
     {
      "theme": "Basketry",
      "description": "Split cane, palmetto and pine needle: the Chitimacha, Houma and Coushatta traditions and the weave that carries them.",
-     "transfer_check": "Weave a small basket in one traditional technique, naming the tradition and the people it belongs to."
+     "transfer_check": "Weave a small basket in one traditional technique, naming the tradition and the people it belongs to.",
+     "bands": {
+      "K–2": "Weave a simple pattern with strips of paper, with an adult.",
+      "3–5": "Weave a simple basket shape, with an adult's help.",
+      "6–8": "Weave a real small basket using traditional technique, with a checker.",
+      "9–10": "Weave a real finished basket using traditional technique, on your own.",
+      "11–12": "Teach someone else a real traditional basketry technique."
+     }
     },
     {
      "theme": "Instrument making",
      "description": "The accordion, the fiddle and the triangle: Cajun country still builds its own music.",
-     "transfer_check": "Make a simple playable instrument — a triangle, a box drum, a cigar-box guitar — that holds tune or tone."
+     "transfer_check": "Make a simple playable instrument — a triangle, a box drum, a cigar-box guitar — that holds tune or tone.",
+     "bands": {
+      "K–2": "Make a simple noise-maker with an adult.",
+      "3–5": "Make a simple real instrument, with an adult's help.",
+      "6–8": "Build a real simple instrument that produces a clear sound, with a checker.",
+      "9–10": "Build a real instrument using proper technique, on your own.",
+      "11–12": "Teach someone else a real instrument-making technique."
+     }
     },
     {
      "theme": "Sign painting",
      "description": "The hand-lettered city: the brush, the enamel and the sign that outlives the shop.",
-     "transfer_check": "Paint a hand-lettered sign in enamel on a board with clean strokes, to a size a shop could hang."
+     "transfer_check": "Paint a hand-lettered sign in enamel on a board with clean strokes, to a size a shop could hang.",
+     "bands": {
+      "K–2": "Paint your name on a small sign, with an adult.",
+      "3–5": "Paint a simple sign with neat letters, with an adult's help.",
+      "6–8": "Paint a real sign using proper sign-painting technique, with a checker.",
+      "9–10": "Paint a real professional-quality sign, on your own.",
+      "11–12": "Teach someone else real traditional sign-painting technique."
+     }
     },
     {
      "theme": "Quilting and the sewn story",
      "description": "Piecing, the pattern and the story in the cloth.",
-     "transfer_check": "Piece and quilt a small block or panel with a traditional pattern and a straight, even stitch."
+     "transfer_check": "Piece and quilt a small block or panel with a traditional pattern and a straight, even stitch.",
+     "bands": {
+      "K–2": "Sew two pieces of fabric together, with an adult.",
+      "3–5": "Sew a simple quilt square, with an adult's help.",
+      "6–8": "Sew a real quilt piece that tells a story, with a checker.",
+      "9–10": "Sew a real finished quilt piece using traditional technique, on your own.",
+      "11–12": "Teach someone else the real tradition of quilting as storytelling."
+     }
     },
     {
      "theme": "Boat building",
      "description": "The pirogue and the Lafitte skiff: the boats the water taught people to build.",
-     "transfer_check": "Build a scale model of a Louisiana boat from plans, or complete one stage of a full-size build under a builder."
+     "transfer_check": "Build a scale model of a Louisiana boat from plans, or complete one stage of a full-size build under a builder.",
+     "bands": {
+      "K–2": "Build a simple boat shape from materials, with an adult.",
+      "3–5": "Build a real simple model boat, with an adult's help.",
+      "6–8": "Build a real model boat using proper technique, with a checker.",
+      "9–10": "Contribute real work to an actual small boat build, on your own.",
+      "11–12": "Teach someone else a real technique used in Louisiana boat building."
+     }
     },
     {
      "theme": "Decoy carving",
      "description": "The duck in wood: carving, painting and the hunter's eye for what a bird looks like.",
-     "transfer_check": "Carve and paint a decoy or small figure in wood that reads as its subject from across a room."
+     "transfer_check": "Carve and paint a decoy or small figure in wood that reads as its subject from across a room.",
+     "bands": {
+      "K–2": "Carve a simple shape from soft material, with an adult.",
+      "3–5": "Carve a simple decoy shape, with an adult's help.",
+      "6–8": "Carve a real decoy using traditional technique, with a checker.",
+      "9–10": "Carve a real finished decoy using traditional technique, on your own.",
+      "11–12": "Teach someone else the real traditional craft of decoy carving."
+     }
     },
     {
      "theme": "Pottery of the state",
      "description": "Newcomb and the state's clay: a tradition of form, glaze and the local ground.",
-     "transfer_check": "Make a piece in a Louisiana pottery tradition and write one paragraph on the tradition's history from a source."
+     "transfer_check": "Make a piece in a Louisiana pottery tradition and write one paragraph on the tradition's history from a source.",
+     "bands": {
+      "K–2": "Shape a simple clay pot with an adult's help.",
+      "3–5": "Shape a real simple pot from clay, with an adult's help.",
+      "6–8": "Shape and finish a real pot using local tradition, with a checker.",
+      "9–10": "Shape and finish a real pot using traditional Louisiana technique, on your own.",
+      "11–12": "Teach someone else about a real traditional pottery style of the state."
+     }
     }
    ]
   },
@@ -181,52 +391,122 @@
     {
      "theme": "Documenting the work",
      "description": "The photograph, the file and the portfolio: work no one can see does not exist.",
-     "transfer_check": "Photograph five pieces to a gallery standard — lit, square, colour-true — and assemble a portfolio."
+     "transfer_check": "Photograph five pieces to a gallery standard — lit, square, colour-true — and assemble a portfolio.",
+     "bands": {
+      "K–2": "Take a photo of something you made, with an adult.",
+      "3–5": "Photograph your real finished work clearly, with an adult's help.",
+      "6–8": "Document a real piece of work properly for a portfolio, with a checker.",
+      "9–10": "Document your own real body of work professionally, on your own.",
+      "11–12": "Teach someone else how to properly document real finished work."
+     }
     },
     {
      "theme": "The artist statement",
      "description": "Saying what the work is in plain words a stranger understands.",
-     "transfer_check": "Write a one-paragraph artist statement, test it on someone outside the arts, and revise it."
+     "transfer_check": "Write a one-paragraph artist statement, test it on someone outside the arts, and revise it.",
+     "bands": {
+      "K–2": "Tell an adult why you made something the way you did.",
+      "3–5": "Write a sentence about why you made something, with an adult's help.",
+      "6–8": "Write a real short artist statement about a piece, with a checker.",
+      "9–10": "Write a real professional artist statement about your work, on your own.",
+      "11–12": "Help someone else write a real artist statement that reflects their work."
+     }
     },
     {
      "theme": "The gallery",
      "description": "How a show happens: the approach, consignment, the split, the opening.",
-     "transfer_check": "Read a real gallery consignment agreement, explain its terms, and prepare a submission to a gallery's call."
+     "transfer_check": "Read a real gallery consignment agreement, explain its terms, and prepare a submission to a gallery's call.",
+     "bands": {
+      "K–2": "Visit a gallery or display of art with an adult.",
+      "3–5": "Notice how art is displayed in a real gallery, with an adult's help.",
+      "6–8": "Identify what a real gallery needs from an exhibiting artist, with a checker.",
+      "9–10": "Prepare a real piece for a real gallery exhibition, on your own.",
+      "11–12": "Guide someone else through preparing for a real gallery show."
+     }
     },
     {
      "theme": "The market and the festival booth",
      "description": "Selling in person: the display, the price tag, the conversation.",
-     "transfer_check": "Set up and run a market booth for one session with priced work and a sales record."
+     "transfer_check": "Set up and run a market booth for one session with priced work and a sales record.",
+     "bands": {
+      "K–2": "Help set up a table to show your work, with an adult.",
+      "3–5": "Set up a simple display of your work, with an adult's help.",
+      "6–8": "Set up a real booth display that sells work well, with a checker.",
+      "9–10": "Run a real market or festival booth on your own.",
+      "11–12": "Advise someone else on running a real successful festival booth."
+     }
     },
     {
      "theme": "Public art",
      "description": "The call, the proposal, the budget and the community that has to live with it.",
-     "transfer_check": "Answer a real or mock public-art call with a proposal, a budget and a community-consultation plan."
+     "transfer_check": "Answer a real or mock public-art call with a proposal, a budget and a community-consultation plan.",
+     "bands": {
+      "K–2": "Look at a piece of public art and ask an adult about it.",
+      "3–5": "Notice a real piece of public art in your area, with an adult's help.",
+      "6–8": "Identify what makes a real piece of public art work, with a checker.",
+      "9–10": "Propose a real public art concept for a real space, on your own.",
+      "11–12": "Explain to someone else the real process behind commissioning public art."
+     }
     },
     {
      "theme": "The mural",
      "description": "Wall preparation, scale, transfer and the neighbourhood's say.",
-     "transfer_check": "Scale a design onto a wall (or panel) with a grid or projector and paint a section to finish."
+     "transfer_check": "Scale a design onto a wall (or panel) with a grid or projector and paint a section to finish.",
+     "bands": {
+      "K–2": "Help paint a small part of a group mural, with an adult.",
+      "3–5": "Contribute to a real simple mural, with an adult's help.",
+      "6–8": "Contribute meaningfully to a real mural project, with a checker.",
+      "9–10": "Plan and contribute to a real mural project, on your own.",
+      "11–12": "Lead or co-lead a real mural project from concept to completion."
+     }
     },
     {
      "theme": "Installation",
      "description": "Hanging, lighting and the label: the show is made in the last two days.",
-     "transfer_check": "Hang and light a small exhibition with correct heights, spacing and labels."
+     "transfer_check": "Hang and light a small exhibition with correct heights, spacing and labels.",
+     "bands": {
+      "K–2": "Arrange objects to make a small scene, with an adult.",
+      "3–5": "Arrange a simple real installation of objects, with an adult's help.",
+      "6–8": "Create a real small installation with a clear concept, with a checker.",
+      "9–10": "Create a real finished installation piece, on your own.",
+      "11–12": "Teach someone else how to plan and execute a real installation piece."
+     }
     },
     {
      "theme": "The critique",
      "description": "Giving and taking it: describe, analyse, interpret, and only then judge.",
-     "transfer_check": "Run a structured critique of three works, and receive one on your own work and act on it."
+     "transfer_check": "Run a structured critique of three works, and receive one on your own work and act on it.",
+     "bands": {
+      "K–2": "Say one thing you like about a friend's drawing, with an adult.",
+      "3–5": "Give a kind, specific comment on real work, with an adult's help.",
+      "6–8": "Give and receive real useful feedback in a critique, with a checker.",
+      "9–10": "Give and receive real constructive critique on your own.",
+      "11–12": "Lead a real critique session that helps others improve their work."
+     }
     },
     {
      "theme": "Online",
      "description": "The portfolio site, the post and the shop: being found without losing the work.",
-     "transfer_check": "Build an online portfolio with priced work and a shop or contact path, checked by a buyer."
+     "transfer_check": "Build an online portfolio with priced work and a shop or contact path, checked by a buyer.",
+     "bands": {
+      "K–2": "Show your artwork to family using a screen, with an adult.",
+      "3–5": "Share a real piece of work online safely, with an adult's help.",
+      "6–8": "Present a real body of work online effectively, with a checker.",
+      "9–10": "Build a real online presence for your work, on your own.",
+      "11–12": "Advise someone else on building a real effective online art presence."
+     }
     },
     {
      "theme": "Museums and archives",
      "description": "How work is kept: conservation, the collection and the record of who made what.",
-     "transfer_check": "Visit a museum or archive and document how one Louisiana work is stored, labelled and attributed."
+     "transfer_check": "Visit a museum or archive and document how one Louisiana work is stored, labelled and attributed.",
+     "bands": {
+      "K–2": "Visit a museum and ask an adult about an object there.",
+      "3–5": "Notice how a real museum preserves and shows objects, with an adult.",
+      "6–8": "Identify what a real museum or archive does with a piece, with a checker.",
+      "9–10": "Research how a real piece might be preserved or archived, on your own.",
+      "11–12": "Explain to someone else the real role museums and archives play for artists."
+     }
     }
    ]
   },
@@ -238,52 +518,122 @@
     {
      "theme": "Pricing the work",
      "description": "Time, materials and the market: a price you can say aloud and stand behind.",
-     "transfer_check": "Price ten works using a stated formula and compare against three comparable sales."
+     "transfer_check": "Price ten works using a stated formula and compare against three comparable sales.",
+     "bands": {
+      "K–2": "Ask an adult why a painting costs money.",
+      "3–5": "Guess a fair price for something you made, with an adult's help.",
+      "6–8": "Set a real fair price for a real made piece, with a checker.",
+      "9–10": "Price your own real work fairly, accounting for time and materials, on your own.",
+      "11–12": "Advise someone else on real fair pricing for their creative work."
+     }
     },
     {
      "theme": "The commission",
      "description": "Brief, deposit, contract and delivery: the job that pays before the work is made.",
-     "transfer_check": "Take a commission from a real client with a written agreement, deposit and delivery, and complete it."
+     "transfer_check": "Take a commission from a real client with a written agreement, deposit and delivery, and complete it.",
+     "bands": {
+      "K–2": "Make something a friend asked for, with an adult.",
+      "3–5": "Make a real piece to someone else's request, with an adult's help.",
+      "6–8": "Take on a real commission and deliver it to specification, with a checker.",
+      "9–10": "Take on and complete a real commission on your own, professionally.",
+      "11–12": "Guide someone else through managing a real commission relationship."
+     }
     },
     {
      "theme": "Copyright and reproduction",
      "description": "What you keep when you sell: reproduction rights, licensing, and the print of the painting.",
-     "transfer_check": "Draft a sale receipt that reserves reproduction rights and license one image for a specific use."
+     "transfer_check": "Draft a sale receipt that reserves reproduction rights and license one image for a specific use.",
+     "bands": {
+      "K–2": "Ask an adult if you can copy someone else's drawing.",
+      "3–5": "Learn that copying someone's work needs permission, with an adult.",
+      "6–8": "Identify a real copyright issue in reproducing artwork, with a checker.",
+      "9–10": "Protect your own real work's copyright, on your own.",
+      "11–12": "Explain to someone else the real rules around copying and reproducing art."
+     }
     },
     {
      "theme": "Grants and residencies",
      "description": "The application: the budget, the statement, the deadline and the no.",
-     "transfer_check": "Complete a real grant or residency application to submission standard (submission at the artist's choice)."
+     "transfer_check": "Complete a real grant or residency application to submission standard (submission at the artist's choice).",
+     "bands": {
+      "K–2": "Ask an adult what it means to get help paying for art supplies.",
+      "3–5": "Learn that artists can apply for funding, with an adult's help.",
+      "6–8": "Identify a real grant or residency opportunity, with a checker.",
+      "9–10": "Apply for a real grant or residency on your own.",
+      "11–12": "Guide someone else through applying for a real grant or residency."
+     }
     },
     {
      "theme": "The studio",
      "description": "Space, rent, the co-op and the shared kiln: where the work gets made.",
-     "transfer_check": "Cost three studio options — home, shared, rented — and choose one with a year's budget."
+     "transfer_check": "Cost three studio options — home, shared, rented — and choose one with a year's budget.",
+     "bands": {
+      "K–2": "Set up a small space to make art, with an adult.",
+      "3–5": "Organise a simple real workspace for making art, with an adult's help.",
+      "6–8": "Set up a real functional studio space, with a checker.",
+      "9–10": "Set up and run a real working studio on your own.",
+      "11–12": "Advise someone else on setting up a real productive studio space."
+     }
     },
     {
      "theme": "Taxes and the business",
      "description": "Sole proprietor, the invoice, the ledger and the receipt you keep.",
-     "transfer_check": "Keep a three-month artist ledger with income, expenses and invoices, reconciled."
+     "transfer_check": "Keep a three-month artist ledger with income, expenses and invoices, reconciled.",
+     "bands": {
+      "K–2": "Ask an adult why grown-ups have to pay taxes on money they earn.",
+      "3–5": "Learn that selling art means keeping track of money, with an adult.",
+      "6–8": "Identify a real basic tax obligation for a working artist, with a checker.",
+      "9–10": "Track real income and expenses as a working artist, on your own.",
+      "11–12": "Advise someone else on the real basics of running an art business."
+     }
     },
     {
      "theme": "Teaching as income",
      "description": "The class, the workshop and the school residency: passing it on for a living.",
-     "transfer_check": "Plan and deliver a one-session workshop in your craft to real learners, with a costed budget."
+     "transfer_check": "Plan and deliver a one-session workshop in your craft to real learners, with a costed budget.",
+     "bands": {
+      "K–2": "Show a friend how to draw something you know, with an adult.",
+      "3–5": "Teach a friend a simple art skill, with an adult's help.",
+      "6–8": "Teach a real art skill to someone else for real payment, with a checker.",
+      "9–10": "Teach a real art class or workshop competently, on your own.",
+      "11–12": "Design and run a real paid teaching offering as an artist."
+     }
     },
     {
      "theme": "The arts-economy roles map",
      "description": "Artist, fabricator, curator, framer, art handler, arts administrator, gallerist, conservator: the jobs around the work.",
-     "transfer_check": "Map twelve arts-economy roles with what each does and who pays them, and interview one working person in any of them."
+     "transfer_check": "Map twelve arts-economy roles with what each does and who pays them, and interview one working person in any of them.",
+     "bands": {
+      "K–2": "Ask an adult what other jobs exist around making art.",
+      "3–5": "Name a job that supports artists besides making art, with an adult.",
+      "6–8": "Identify a real role in the arts economy besides the maker, with a checker.",
+      "9–10": "Map the real roles in a local arts economy, on your own.",
+      "11–12": "Explain to someone else the real range of roles that support working artists."
+     }
     },
     {
      "theme": "Louisiana's arts institutions",
      "description": "Councils, cultural districts, the state's programs and the folklife record: the support where you live.",
-     "transfer_check": "Produce a one-page map of your parish's arts institutions and programs — with what each offers — from sources."
+     "transfer_check": "Produce a one-page map of your parish's arts institutions and programs — with what each offers — from sources.",
+     "bands": {
+      "K–2": "Visit or learn about a real Louisiana art museum, with an adult.",
+      "3–5": "Name a real Louisiana arts institution, with an adult's help.",
+      "6–8": "Identify a real Louisiana arts institution and what it offers artists, with a checker.",
+      "9–10": "Engage with a real Louisiana arts institution as an artist, on your own.",
+      "11–12": "Guide someone else toward real Louisiana arts institutions relevant to their work."
+     }
     },
     {
      "theme": "A career in seasons",
      "description": "The long practice: the year's rhythm of making, showing, selling and resting.",
-     "transfer_check": "Write a one-year plan for a working art practice with income, making time and two shows, reviewed with a working artist."
+     "transfer_check": "Write a one-year plan for a working art practice with income, making time and two shows, reviewed with a working artist.",
+     "bands": {
+      "K–2": "Ask an adult if art careers change as people get older.",
+      "3–5": "Learn that an art career can change over time, with an adult's help.",
+      "6–8": "Identify a real stage of a working artist's career, with a checker.",
+      "9–10": "Plan your own real long-term arts career across its seasons, on your own.",
+      "11–12": "Advise someone else on navigating the real seasons of an arts career."
+     }
     }
    ]
   }
