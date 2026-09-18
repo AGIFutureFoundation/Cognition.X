@@ -1,6 +1,6 @@
 {
   "pack": "Preventive Health & Everyday Care",
-  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names. Empty fields (track, code, level, description) are filled; authored transfer_check values replace ONLY the two known generic placeholder sentences — real source checks are never overwritten (guard in tools/normalize_blocks.py).",
+  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names. Empty fields (track, code, level, description) are filled; authored transfer_check values replace ONLY the two known generic placeholder sentences — real source checks are never overwritten (guard in tools/normalize_blocks.py). v0.83.0 — every theme now carries `bands`, so the fill-empty path writes five authored sentences per theme (the same mechanism used for the community packs) instead of the shared sentence with its band suffix.",
   "credential_correction": "Credential correction (v0.52.0, proposed — not yet adopted by the review board): the v0.1.0 import named these tracks' credential with the bare band level 'Practitioner'. The `credential` on each track below replaces that level word only (real credential names are never overwritten); tools/normalize_blocks.py applies it as the one deliberate, counted exception to fill-empty-only and prints the count. Names follow the packs' own shape — a person and a capability, never a level word, never a job title the credential cannot confer.",
   "tracks": [
     {
@@ -9,43 +9,113 @@
       "themes": [
         {
           "theme": "Brushing that actually removes plaque (DC)",
-          "description": "The two-minute method that reaches every surface — angle, motion and the places every mouth misses."
+          "description": "The two-minute method that reaches every surface — angle, motion and the places every mouth misses.",
+          "bands": {
+            "K–2": "Brush your teeth for two minutes with an adult counting.",
+            "3–5": "Brush every surface of your teeth, not just the front, with an adult watching.",
+            "6–8": "Brush your own teeth for two full minutes reaching every surface, with a checker.",
+            "9–10": "Brush correctly on your own every day without being reminded.",
+            "11–12": "Teach a younger child the two-minute method that reaches every surface."
+          }
         },
         {
           "theme": "Why the toothbrush matters more than the toothpaste (DC)",
-          "description": "Bristles, replacement and technique as the working parts of oral care, with paste as the assistant."
+          "description": "Bristles, replacement and technique as the working parts of oral care, with paste as the assistant.",
+          "bands": {
+            "K–2": "Pick out a toothbrush with soft bristles with an adult's help.",
+            "3–5": "Explain why a worn-out toothbrush doesn't clean well, with an adult.",
+            "6–8": "Choose and replace a real toothbrush on the right schedule, with a checker.",
+            "9–10": "Judge your own toothbrush's condition and replace it on time, on your own.",
+            "11–12": "Explain to someone else why the brush and technique matter more than the paste."
+          }
         },
         {
           "theme": "The tooth that hurts is already late (DC)",
-          "description": "The decay timeline — white spot, cavity, ache — and the stages where it can still be stopped."
+          "description": "The decay timeline — white spot, cavity, ache — and the stages where it can still be stopped.",
+          "bands": {
+            "K–2": "Tell an adult right away if a tooth starts to hurt.",
+            "3–5": "Name the first sign a tooth might have a problem, with an adult.",
+            "6–8": "Identify a real early warning sign of tooth decay, with a checker.",
+            "9–10": "Recognise a real early decay sign in your own mouth and act on it.",
+            "11–12": "Explain to someone else the decay timeline and why waiting makes it worse."
+          }
         },
         {
           "theme": "Washing hands so it works (DC)",
-          "description": "The full handwash and the four moments that actually transmit illness — before food, after the toilet, after care, after coming in."
+          "description": "The full handwash and the four moments that actually transmit illness — before food, after the toilet, after care, after coming in.",
+          "bands": {
+            "K–2": "Wash your hands with soap while singing a song, with an adult.",
+            "3–5": "Wash your hands the full way before eating, with an adult checking.",
+            "6–8": "Wash your hands correctly at all four key moments, with a checker.",
+            "9–10": "Wash your hands properly at the right moments on your own, every time.",
+            "11–12": "Teach a younger child the full handwash and the four moments that matter."
+          }
         },
         {
           "theme": "Clean water, safely (DC)",
-          "description": "Your own household's water path from source to cup, and the points where it can be protected or contaminated."
+          "description": "Your own household's water path from source to cup, and the points where it can be protected or contaminated.",
+          "bands": {
+            "K–2": "Ask an adult before drinking water from somewhere new.",
+            "3–5": "Explain why some water needs to be boiled or filtered first, with an adult.",
+            "6–8": "Identify a real safe versus unsafe water source, with a checker.",
+            "9–10": "Judge a real water source's safety on your own before drinking it.",
+            "11–12": "Explain to someone else how to make water safe to drink in a real situation."
+          }
         },
         {
           "theme": "The nail, the cut, the scrape (DC)",
-          "description": "Cleaning, dressing and watching a small wound — and the redness, heat and swelling that mean infection."
+          "description": "Cleaning, dressing and watching a small wound — and the redness, heat and swelling that mean infection.",
+          "bands": {
+            "K–2": "Show an adult a scrape so they can clean it for you.",
+            "3–5": "Clean a small scrape with an adult's help and cover it.",
+            "6–8": "Clean and dress a real minor cut correctly, with a checker.",
+            "9–10": "Treat a real minor injury properly on your own, knowing when it needs more.",
+            "11–12": "Teach someone else how to clean and dress a real minor wound."
+          }
         },
         {
           "theme": "Sleep is not optional (DC)",
-          "description": "What sleep does for a body and mind, how much each age needs, and the habits that protect it."
+          "description": "What sleep does for a body and mind, how much each age needs, and the habits that protect it.",
+          "bands": {
+            "K–2": "Go to bed at the same time every night, with an adult.",
+            "3–5": "Explain why your body needs sleep every night, with an adult's help.",
+            "6–8": "Track your own real sleep for a week and note the pattern, with a checker.",
+            "9–10": "Manage your own real sleep schedule on your own, protecting it deliberately.",
+            "11–12": "Explain to someone else why sleep is not optional and what poor sleep costs."
+          }
         },
         {
           "theme": "Sun, heat and cold (DC)",
-          "description": "Protecting a body from your own climate — shade, water, layers — and reading heat exhaustion and hypothermia early."
+          "description": "Protecting a body from your own climate — shade, water, layers — and reading heat exhaustion and hypothermia early.",
+          "bands": {
+            "K–2": "Put on sunscreen or a coat when an adult tells you to.",
+            "3–5": "Explain one danger of too much sun or too much cold, with an adult.",
+            "6–8": "Dress and protect yourself correctly for a real hot or cold day, with a checker.",
+            "9–10": "Judge real weather conditions and protect yourself on your own.",
+            "11–12": "Teach a younger child how to dress and protect themselves in sun, heat or cold."
+          }
         },
         {
           "theme": "Shoes, feet and standing all day (DC)",
-          "description": "Foot care for people who work on their feet — fit, hygiene, and the small problems that disable when ignored."
+          "description": "Foot care for people who work on their feet — fit, hygiene, and the small problems that disable when ignored.",
+          "bands": {
+            "K–2": "Pick shoes that fit well with an adult's help.",
+            "3–5": "Explain why shoes that don't fit can hurt your feet, with an adult.",
+            "6–8": "Check your own real shoes fit and support a day of standing, with a checker.",
+            "9–10": "Choose real footwear for a real job or day that needs standing, on your own.",
+            "11–12": "Explain to someone else how foot care matters for a working life."
+          }
         },
         {
           "theme": "Keeping a body clean without much water (DC)",
-          "description": "Staying genuinely clean on a few litres — the priority areas, the method and the dignity of managing it."
+          "description": "Staying genuinely clean on a few litres — the priority areas, the method and the dignity of managing it.",
+          "bands": {
+            "K–2": "Wipe your face and hands clean when water is limited, with an adult.",
+            "3–5": "Name one way to stay clean when water is scarce, with an adult's help.",
+            "6–8": "Practice a real low-water hygiene method, with a checker.",
+            "9–10": "Keep yourself clean with limited real water on your own.",
+            "11–12": "Teach someone else practical hygiene methods for when water is scarce."
+          }
         }
       ]
     },
@@ -55,43 +125,113 @@
       "themes": [
         {
           "theme": "What a tooth is made of (MO)",
-          "description": "Enamel, dentine and pulp — the layers of a tooth and what each one can and cannot repair."
+          "description": "Enamel, dentine and pulp — the layers of a tooth and what each one can and cannot repair.",
+          "bands": {
+            "K–2": "Look at a tooth model with an adult and point to the hard part.",
+            "3–5": "Name one layer of a tooth, with an adult's help.",
+            "6–8": "Name the layers of a real tooth and what each does, with a checker.",
+            "9–10": "Explain, using a real diagram, what each layer of a tooth actually does.",
+            "11–12": "Teach a younger child what a tooth is made of, in simple terms."
+          }
         },
         {
           "theme": "Sugar and time, not sugar alone (MO)",
-          "description": "Why frequency of sugar exposure decays teeth faster than quantity, and what that changes about snacks and drinks."
+          "description": "Why frequency of sugar exposure decays teeth faster than quantity, and what that changes about snacks and drinks.",
+          "bands": {
+            "K–2": "Notice that eating candy for a long time is different from eating it fast, with an adult.",
+            "3–5": "Explain why sipping something sweet all day is worse than one treat, with an adult.",
+            "6–8": "Explain why sugar's contact time matters more than the amount, with a checker.",
+            "9–10": "Apply the real sugar-and-time rule to your own eating habits, on your own.",
+            "11–12": "Explain to someone else why frequency of sugar exposure, not amount, drives decay."
+          }
         },
         {
           "theme": "Gums bleed for a reason (MO)",
-          "description": "Healthy versus inflamed gums, the plaque line that causes the difference, and reversing early gum disease."
+          "description": "Healthy versus inflamed gums, the plaque line that causes the difference, and reversing early gum disease.",
+          "bands": {
+            "K–2": "Tell an adult if your gums bleed when you brush.",
+            "3–5": "Explain that bleeding gums can be a sign of a problem, with an adult.",
+            "6–8": "Identify a real sign of gum trouble and what to do, with a checker.",
+            "9–10": "Recognise a real early gum problem in your own mouth and act on it.",
+            "11–12": "Explain to someone else what bleeding gums usually mean and why it matters."
+          }
         },
         {
           "theme": "The permanent teeth arrive once (MO)",
-          "description": "The eruption order of the adult teeth and the six-year molar that is so often mistaken for a baby tooth."
+          "description": "The eruption order of the adult teeth and the six-year molar that is so often mistaken for a baby tooth.",
+          "bands": {
+            "K–2": "Notice when a wiggly tooth falls out, with an adult.",
+            "3–5": "Explain that grown-up teeth don't come back if they're lost, with an adult.",
+            "6–8": "Explain why permanent teeth need extra protection, with a checker.",
+            "9–10": "Protect your own real permanent teeth deliberately, on your own.",
+            "11–12": "Explain to a younger child why their adult teeth are the only set they get."
+          }
         },
         {
           "theme": "Fluoride, plainly and without argument (MO)",
-          "description": "What fluoride does to enamel, where it comes from, and the evidence stated plainly enough to repeat."
+          "description": "What fluoride does to enamel, where it comes from, and the evidence stated plainly enough to repeat.",
+          "bands": {
+            "K–2": "Use a pea-sized bit of toothpaste with an adult's help.",
+            "3–5": "Explain what fluoride does for teeth, with an adult's help.",
+            "6–8": "Explain the real evidence for fluoride's role in preventing decay, with a checker.",
+            "9–10": "Explain, using real evidence, what fluoride does and doesn't do.",
+            "11–12": "Explain to someone confused about fluoride what the actual evidence shows."
+          }
         },
         {
           "theme": "The dental visit nobody has had (MO)",
-          "description": "What actually happens in a dental check-up, step by step, for someone who has never been."
+          "description": "What actually happens in a dental check-up, step by step, for someone who has never been.",
+          "bands": {
+            "K–2": "Ask an adult when you'll next see a dentist.",
+            "3–5": "Explain why regular dentist visits matter, with an adult's help.",
+            "6–8": "Find a real low-cost dental clinic option, with a checker.",
+            "9–10": "Book or arrange your own real dental visit, on your own.",
+            "11–12": "Help someone else find and arrange a real first dental visit."
+          }
         },
         {
           "theme": "Pain, swelling and the face (MO)",
-          "description": "The dental emergencies — swelling, fever, a face changing shape — and how urgently each must be seen."
+          "description": "The dental emergencies — swelling, fever, a face changing shape — and how urgently each must be seen.",
+          "bands": {
+            "K–2": "Tell an adult right away if your face or mouth swells up.",
+            "3–5": "Name why facial swelling near a tooth is urgent, with an adult.",
+            "6–8": "Identify a real dental emergency needing urgent care, with a checker.",
+            "9–10": "Recognise a real dental emergency and get urgent care, on your own.",
+            "11–12": "Explain to someone else why facial swelling from a tooth is a real emergency."
+          }
         },
         {
           "theme": "A mouth after an injury (MO)",
-          "description": "The knocked-out or broken tooth — correct handling, storage in milk or saliva, and the clock that decides if it survives."
+          "description": "The knocked-out or broken tooth — correct handling, storage in milk or saliva, and the clock that decides if it survives.",
+          "bands": {
+            "K–2": "Show an adult right away if you hurt your mouth or lose a tooth.",
+            "3–5": "Know what to do first if a tooth gets knocked out, with an adult's help.",
+            "6–8": "Handle a real knocked-out tooth correctly in the first minutes, with a checker.",
+            "9–10": "Handle a real mouth injury correctly and get proper care, on your own.",
+            "11–12": "Teach someone else what to do in the critical first minutes after a real dental injury."
+          }
         },
         {
           "theme": "Tobacco, betel and the mouth (MO)",
-          "description": "What smoking and chewing do to gums and tissue, and the visible changes that need a clinician's eye."
+          "description": "What smoking and chewing do to gums and tissue, and the visible changes that need a clinician's eye.",
+          "bands": {
+            "K–2": "Ask an adult why some things are bad for your mouth.",
+            "3–5": "Name one substance that harms teeth and gums, with an adult's help.",
+            "6–8": "Explain the real oral health risks of tobacco or betel use, with a checker.",
+            "9–10": "Explain, with real evidence, the mouth risks of tobacco or betel on your own.",
+            "11–12": "Explain to someone else the real long-term oral health risks of these substances."
+          }
         },
         {
           "theme": "Caring for somebody else’s mouth (MO)",
-          "description": "Assisted brushing for a child, an elder or a patient — positioning, gentleness and doing it every day."
+          "description": "Assisted brushing for a child, an elder or a patient — positioning, gentleness and doing it every day.",
+          "bands": {
+            "K–2": "Help a younger sibling brush their teeth, with an adult watching.",
+            "3–5": "Brush a younger child's teeth carefully, with an adult's help.",
+            "6–8": "Help a real dependent with their oral care correctly, with a checker.",
+            "9–10": "Care for a real dependent's oral hygiene properly, on your own.",
+            "11–12": "Teach someone else how to help a dependent with their real oral care."
+          }
         }
       ],
       "credential": "Oral Health Peer"
@@ -102,43 +242,113 @@
       "themes": [
         {
           "theme": "The child who sits at the front (EE)",
-          "description": "The classroom signs of unseen vision problems — squinting, copying, avoiding the board — and what to do about them."
+          "description": "The classroom signs of unseen vision problems — squinting, copying, avoiding the board — and what to do about them.",
+          "bands": {
+            "K–2": "Tell an adult if you can't see the board clearly.",
+            "3–5": "Explain why sitting closer might help someone see better, with an adult.",
+            "6–8": "Identify a real sign a classmate might need a vision check, with a checker.",
+            "9–10": "Recognise a real vision struggle in yourself or others and act on it.",
+            "11–12": "Explain to a teacher or family the signs that suggest a vision check is needed."
+          }
         },
         {
           "theme": "Screening is not diagnosis (EE)",
-          "description": "What a screening can and cannot say, and why a failed screen is a referral, not a verdict."
+          "description": "What a screening can and cannot say, and why a failed screen is a referral, not a verdict.",
+          "bands": {
+            "K–2": "Ask an adult what happens at a school eye or ear check.",
+            "3–5": "Explain that a school check just flags a possible problem, with an adult.",
+            "6–8": "Explain the real difference between a screening and a diagnosis, with a checker.",
+            "9–10": "Explain, using a real screening result, why it isn't the same as a diagnosis.",
+            "11–12": "Explain to someone else why a screening result needs a real follow-up exam."
+          }
         },
         {
           "theme": "Glasses that never arrived (EE)",
-          "description": "The gap between prescription and wearing — cost, teasing, loss — and the local paths that close it."
+          "description": "The gap between prescription and wearing — cost, teasing, loss — and the local paths that close it.",
+          "bands": {
+            "K–2": "Ask an adult what happens if glasses are needed but haven't come yet.",
+            "3–5": "Name one reason a family might not have gotten glasses yet, with an adult.",
+            "6–8": "Identify a real barrier to getting glasses and a way around it, with a checker.",
+            "9–10": "Help a real family navigate getting glasses despite a real barrier.",
+            "11–12": "Explain to someone else the real barriers that keep needed glasses from arriving."
+          }
         },
         {
           "theme": "“He ignores me” (EE)",
-          "description": "Hearing loss mistaken for defiance — the behaviour pattern that should trigger a hearing referral instead of discipline."
+          "description": "Hearing loss mistaken for defiance — the behaviour pattern that should trigger a hearing referral instead of discipline.",
+          "bands": {
+            "K–2": "Tell an adult if a friend doesn't seem to hear you.",
+            "3–5": "Notice that not answering might be a hearing issue, not rudeness, with an adult.",
+            "6–8": "Distinguish a real hearing issue from real inattention, with a checker.",
+            "9–10": "Recognise a real hearing issue in someone rather than assuming rudeness.",
+            "11–12": "Explain to someone else why 'he ignores me' is often actually a hearing issue."
+          }
         },
         {
           "theme": "Noise that damages (EE)",
-          "description": "The volumes and durations that permanently damage hearing, and the protection that actually gets worn."
+          "description": "The volumes and durations that permanently damage hearing, and the protection that actually gets worn.",
+          "bands": {
+            "K–2": "Cover your ears near a loud sound with an adult.",
+            "3–5": "Name one sound that's too loud for your ears, with an adult's help.",
+            "6–8": "Identify a real noise level that risks hearing damage, with a checker.",
+            "9–10": "Protect your own hearing around a real loud noise source, on your own.",
+            "11–12": "Explain to someone else which real noise exposures actually damage hearing."
+          }
         },
         {
           "theme": "Ears, water and infection (EE)",
-          "description": "Ear infections and swimmer's ear — the signs that pass at home and the signs that need a clinician."
+          "description": "Ear infections and swimmer's ear — the signs that pass at home and the signs that need a clinician.",
+          "bands": {
+            "K–2": "Dry your ears carefully after swimming, with an adult.",
+            "3–5": "Explain why water in the ear can cause a problem, with an adult's help.",
+            "6–8": "Identify a real ear infection sign and what to do, with a checker.",
+            "9–10": "Recognise a real ear infection in yourself and get proper care.",
+            "11–12": "Explain to someone else how to prevent and recognise a real ear infection."
+          }
         },
         {
           "theme": "Light, reading and eye strain (EE)",
-          "description": "Lighting, distance and breaks — the reading conditions that tire eyes and the cheap changes that fix them."
+          "description": "Lighting, distance and breaks — the reading conditions that tire eyes and the cheap changes that fix them.",
+          "bands": {
+            "K–2": "Turn on a light when reading in the dark, with an adult.",
+            "3–5": "Explain why reading in dim light can strain your eyes, with an adult.",
+            "6–8": "Set up real proper lighting for reading or screen use, with a checker.",
+            "9–10": "Manage your own real reading and screen lighting to avoid eye strain.",
+            "11–12": "Explain to someone else the real evidence on lighting and eye strain."
+          }
         },
         {
           "theme": "The eye injury (EE)",
-          "description": "The correct first response to a struck, cut or splashed eye — and the instinctive responses that make it worse."
+          "description": "The correct first response to a struck, cut or splashed eye — and the instinctive responses that make it worse.",
+          "bands": {
+            "K–2": "Tell an adult right away if something gets in your eye.",
+            "3–5": "Know not to rub an eye that got hurt, with an adult's help.",
+            "6–8": "Respond correctly to a real minor eye injury, with a checker.",
+            "9–10": "Handle a real eye injury correctly and know when it needs urgent care.",
+            "11–12": "Teach someone else the correct first response to a real eye injury."
+          }
         },
         {
           "theme": "Living with a sense that works differently (EE)",
-          "description": "Practical adjustments for low vision or hearing — seating, light, phrasing — that a household can make tomorrow."
+          "description": "Practical adjustments for low vision or hearing — seating, light, phrasing — that a household can make tomorrow.",
+          "bands": {
+            "K–2": "Be kind to a friend who wears glasses or a hearing aid, with an adult.",
+            "3–5": "Explain that some people's eyes or ears work differently, with an adult.",
+            "6–8": "Describe how a real accommodation helps someone with a sensory difference, with a checker.",
+            "9–10": "Support a real person with a sensory difference appropriately, on your own.",
+            "11–12": "Explain to someone else how to make a real space more accessible for a sensory difference."
+          }
         },
         {
           "theme": "Explaining a referral to a family (EE)",
-          "description": "Delivering a screening result to a family clearly and kindly — what was found, what it means, what happens next."
+          "description": "Delivering a screening result to a family clearly and kindly — what was found, what it means, what happens next.",
+          "bands": {
+            "K–2": "Ask an adult what a doctor's note about your eyes might mean.",
+            "3–5": "Explain simply what a referral note says, with an adult's help.",
+            "6–8": "Explain a real referral letter's next steps to a family, with a checker.",
+            "9–10": "Explain a real referral and its next steps clearly to a family, on your own.",
+            "11–12": "Help someone else explain a real referral to a family that's confused by it."
+          }
         }
       ],
       "credential": "Sight and Hearing Peer"
@@ -149,50 +359,120 @@
       "themes": [
         {
           "theme": "What a body is doing with food (FW)",
-          "description": "Energy, building and protection — the three jobs food does, and the foods that serve each."
+          "description": "Energy, building and protection — the three jobs food does, and the foods that serve each.",
+          "bands": {
+            "K–2": "Name one food that helps your body grow, with an adult.",
+            "3–5": "Explain what food gives your body energy to do, with an adult's help.",
+            "6–8": "Explain what a real food group does for the body, with a checker.",
+            "9–10": "Explain, using a real meal, what each part is doing for your body.",
+            "11–12": "Teach someone else what a body actually does with the food it eats."
+          }
         },
         {
           "theme": "Cooking one meal properly (FW)",
-          "description": "One complete meal cooked safely from start to plate — heat, timing, hygiene and serving."
+          "description": "One complete meal cooked safely from start to plate — heat, timing, hygiene and serving.",
+          "bands": {
+            "K–2": "Help stir or measure for a simple meal, with an adult cooking.",
+            "3–5": "Help cook a simple real meal with an adult, following steps in order.",
+            "6–8": "Cook one real simple meal safely from start to finish, with a checker.",
+            "9–10": "Cook a real meal on your own, safely and correctly, start to finish.",
+            "11–12": "Teach someone else how to cook one real meal properly from scratch."
+          }
         },
         {
           "theme": "Food that does not spoil (FW)",
-          "description": "Storage that extends food — cool, dry, sealed, rotated — matched to what your household actually keeps."
+          "description": "Storage that extends food — cool, dry, sealed, rotated — matched to what your household actually keeps.",
+          "bands": {
+            "K–2": "Ask an adult why some food is kept in the fridge.",
+            "3–5": "Explain why some food needs to be kept cold, with an adult's help.",
+            "6–8": "Identify real safe storage for different foods, with a checker.",
+            "9–10": "Store real food safely on your own to prevent spoilage.",
+            "11–12": "Explain to someone else how to store food to avoid real spoilage and illness."
+          }
         },
         {
           "theme": "Reading what is on the packet (FW)",
           "description": "Dates, ingredients and per-portion numbers — extracting the three facts that matter from any label.",
-          "transfer_check": "From three real packets, extract date, first three ingredients and per-portion sugar, and rank them for a stated eater."
+          "transfer_check": "From three real packets, extract date, first three ingredients and per-portion sugar, and rank them for a stated eater.",
+          "bands": {
+            "K–2": "Point at the picture on a food label with an adult.",
+            "3–5": "Find the sugar amount on a real food label, with an adult's help.",
+            "6–8": "Read a real food label for ingredients and nutrition facts, with a checker.",
+            "9–10": "Read and compare real food labels to make an informed choice, on your own.",
+            "11–12": "Teach someone else how to read a real food label critically."
+          }
         },
         {
           "theme": "Water-borne illness (FW)",
           "description": "How dirty water makes people ill, the diarrhoea danger to small children, and rehydration done correctly.",
-          "transfer_check": "Prepare oral rehydration correctly from base ingredients and state the child-danger signs that mean a clinic now."
+          "transfer_check": "Prepare oral rehydration correctly from base ingredients and state the child-danger signs that mean a clinic now.",
+          "bands": {
+            "K–2": "Ask an adult before drinking water you're not sure about.",
+            "3–5": "Name one illness that can come from bad water, with an adult's help.",
+            "6–8": "Identify a real water-borne illness risk and how to avoid it, with a checker.",
+            "9–10": "Avoid a real water-borne illness risk on your own, using safe practices.",
+            "11–12": "Explain to someone else how water-borne illness spreads and how to prevent it."
+          }
         },
         {
           "theme": "Eating when money is short (FW)",
           "description": "The cheap foods that still build a body, and stretching a food budget without losing the protein.",
-          "transfer_check": "Plan and cost three days of body-building meals inside a set small budget, protein included, from real local prices."
+          "transfer_check": "Plan and cost three days of body-building meals inside a set small budget, protein included, from real local prices.",
+          "bands": {
+            "K–2": "Help pick a filling snack that isn't expensive, with an adult.",
+            "3–5": "Name one way to eat well on a smaller budget, with an adult's help.",
+            "6–8": "Plan a real affordable, filling meal on a budget, with a checker.",
+            "9–10": "Plan real meals on a real tight budget, on your own, staying well-fed.",
+            "11–12": "Help someone else plan real affordable meals on a limited budget."
+          }
         },
         {
           "theme": "Feeding a small child (FW)",
           "description": "What small children need at each stage, the foods that endanger them, and patience at the plate.",
-          "transfer_check": "Plan one day of meals for a named age of small child, excluding the danger foods, and demonstrate one safe feeding."
+          "transfer_check": "Plan one day of meals for a named age of small child, excluding the danger foods, and demonstrate one safe feeding.",
+          "bands": {
+            "K–2": "Help feed a younger sibling a bite at a time, with an adult.",
+            "3–5": "Name one food that's safe for a baby to eat, with an adult's help.",
+            "6–8": "Identify what's safe and unsafe to feed a real young child, with a checker.",
+            "9–10": "Feed a real young child appropriately and safely, on your own.",
+            "11–12": "Advise a family on what's safe and appropriate to feed a real young child."
+          }
         },
         {
           "theme": "The kitchen that makes people ill (FW)",
           "description": "Cross-contamination, temperature and the cloth that spreads — the kitchen habits behind most food poisoning.",
-          "transfer_check": "Audit a real kitchen against the cross-contamination and temperature rules and correct the two worst findings."
+          "transfer_check": "Audit a real kitchen against the cross-contamination and temperature rules and correct the two worst findings.",
+          "bands": {
+            "K–2": "Wash your hands before helping in the kitchen, with an adult.",
+            "3–5": "Name one kitchen habit that keeps food safe, with an adult's help.",
+            "6–8": "Identify a real kitchen practice that risks illness, with a checker.",
+            "9–10": "Run a real kitchen safely, avoiding practices that cause illness.",
+            "11–12": "Explain to someone else the real kitchen practices that most often cause illness."
+          }
         },
         {
           "theme": "Growing something you eat (FW)",
           "description": "One food plant from planting to plate — soil, water, care and the harvest that teaches the chain.",
-          "transfer_check": "Grow one edible plant from start to harvest, log its care, and serve what you grew."
+          "transfer_check": "Grow one edible plant from start to harvest, log its care, and serve what you grew.",
+          "bands": {
+            "K–2": "Plant a seed and water it with an adult.",
+            "3–5": "Grow a simple plant from seed and watch it, with an adult's help.",
+            "6–8": "Grow a real edible plant successfully, with a checker.",
+            "9–10": "Grow real food on your own, from planting to harvest.",
+            "11–12": "Teach someone else how to grow a real food plant successfully."
+          }
         },
         {
           "theme": "Sharing food safely at scale (FW)",
           "description": "Cooking for a crowd — the batch sizes, holding temperatures and serving hygiene that keep an event safe.",
-          "transfer_check": "Plan the safe service of one real large-group meal — batch, holding temperature, serving hygiene — and run or fully rehearse it."
+          "transfer_check": "Plan the safe service of one real large-group meal — batch, holding temperature, serving hygiene — and run or fully rehearse it.",
+          "bands": {
+            "K–2": "Help set out snacks for a class party, with an adult.",
+            "3–5": "Help serve food safely at a group event, with an adult's help.",
+            "6–8": "Serve food safely for a real group event, with a checker.",
+            "9–10": "Organise safe food service for a real group event, on your own.",
+            "11–12": "Teach someone else how to serve food safely for a real large group."
+          }
         }
       ],
       "credential": "Food and Water Peer"
@@ -204,52 +484,122 @@
         {
           "theme": "A body that is used (MR)",
           "description": "Movement as maintenance — what regular use does for muscles, joints, heart and mood at every age.",
-          "transfer_check": "Keep a two-week movement log against an age-appropriate target and demonstrate one exercise done with correct form."
+          "transfer_check": "Keep a two-week movement log against an age-appropriate target and demonstrate one exercise done with correct form.",
+          "bands": {
+            "K–2": "Notice you feel tired after playing hard, with an adult.",
+            "3–5": "Explain why your body feels tired after work or play, with an adult.",
+            "6–8": "Explain what real physical fatigue signals about the body, with a checker.",
+            "9–10": "Recognise real signs your body needs rest and respond, on your own.",
+            "11–12": "Explain to someone else how a used body signals what it needs."
+          }
         },
         {
           "theme": "Lifting without injuring yourself (MR)",
           "description": "The lift that spares the back — feet, knees, load close — and the loads that need two people or a tool.",
-          "transfer_check": "Demonstrate the correct lift on a real load — feet, knees, load close — and name two loads you would never lift alone."
+          "transfer_check": "Demonstrate the correct lift on a real load — feet, knees, load close — and name two loads you would never lift alone.",
+          "bands": {
+            "K–2": "Bend your knees to pick up a light toy, with an adult showing you.",
+            "3–5": "Practice lifting something light with a bent-knee technique, with an adult.",
+            "6–8": "Lift a real object using correct technique, with a checker.",
+            "9–10": "Lift real heavier objects safely on your own, every time.",
+            "11–12": "Teach someone else the correct real technique for lifting without injury."
+          }
         },
         {
           "theme": "Getting up off the floor (MR)",
           "description": "Getting down to and up from the ground in stages — the ability that predicts independence in later life.",
-          "transfer_check": "Demonstrate a safe, staged descent to the floor and return to standing, then coach another person through it."
+          "transfer_check": "Demonstrate a safe, staged descent to the floor and return to standing, then coach another person through it.",
+          "bands": {
+            "K–2": "Practice getting up off the floor safely, with an adult watching.",
+            "3–5": "Show a safe way to stand up from sitting on the floor, with an adult.",
+            "6–8": "Demonstrate a real safe way to get up off the floor, with a checker.",
+            "9–10": "Get up from the floor safely on your own, using good technique.",
+            "11–12": "Teach an older person a real safe technique for getting up off the floor."
+          }
         },
         {
           "theme": "Breathing, deliberately (MR)",
           "description": "Slow breathing as a tool — the technique, and when it genuinely helps with pain, panic and sleep.",
-          "transfer_check": "Demonstrate one slow-breathing technique correctly and use it in a real stressful moment, reporting what changed."
+          "transfer_check": "Demonstrate one slow-breathing technique correctly and use it in a real stressful moment, reporting what changed.",
+          "bands": {
+            "K–2": "Take three slow breaths with an adult when you feel upset.",
+            "3–5": "Practice slow breathing to feel calmer, with an adult's help.",
+            "6–8": "Use a real breathing technique to manage a stressful moment, with a checker.",
+            "9–10": "Use deliberate breathing on your own in a real stressful situation.",
+            "11–12": "Teach someone else a real breathing technique for managing stress."
+          }
         },
         {
           "theme": "Rest that is not sleep (MR)",
           "description": "Pauses, days off and the difference between rest and collapse — recovering before the body forces it.",
-          "transfer_check": "Design and keep one week of deliberate rest breaks in a real schedule and report the difference honestly."
+          "transfer_check": "Design and keep one week of deliberate rest breaks in a real schedule and report the difference honestly.",
+          "bands": {
+            "K–2": "Sit quietly for a minute after playing hard, with an adult.",
+            "3–5": "Take a quiet break during a busy day, with an adult's help.",
+            "6–8": "Take a real restorative break during a real busy day, with a checker.",
+            "9–10": "Build real rest breaks into your own day on purpose.",
+            "11–12": "Explain to someone else why rest that isn't sleep still matters."
+          }
         },
         {
           "theme": "When the mind is the thing that hurts (MR)",
           "description": "Recognising low mood, anxiety and overload in yourself, and the first steps that are actually available.",
-          "transfer_check": "Name the signs of overload in yourself, and identify the two real sources of help you could reach this week."
+          "transfer_check": "Name the signs of overload in yourself, and identify the two real sources of help you could reach this week.",
+          "bands": {
+            "K–2": "Tell an adult when you feel sad or worried inside.",
+            "3–5": "Name a feeling you're having and tell a trusted adult, with their help.",
+            "6–8": "Recognise a real sign that your mind needs support and ask for it, with a checker.",
+            "9–10": "Recognise a real mental health struggle in yourself and seek support, on your own.",
+            "11–12": "Support someone else recognising a real mental health struggle and finding help."
+          }
         },
         {
           "theme": "Helping somebody who is struggling (MR)",
           "description": "Asking directly, listening without fixing, and connecting a struggling person to real help.",
-          "transfer_check": "Role-play the ask-listen-connect conversation with a struggling person, ending with one real source of help offered."
+          "transfer_check": "Role-play the ask-listen-connect conversation with a struggling person, ending with one real source of help offered.",
+          "bands": {
+            "K–2": "Sit with a sad friend and tell an adult, together.",
+            "3–5": "Ask a struggling friend if they're okay and tell an adult, with help.",
+            "6–8": "Support a real friend who is struggling and know when to get an adult, with a checker.",
+            "9–10": "Support a real person who is struggling appropriately, on your own.",
+            "11–12": "Guide someone else on how to support a real person who is struggling."
+          }
         },
         {
           "theme": "Bodies change (MR)",
           "description": "Puberty, ageing and everything between — the changes that are normal and the ones worth a check.",
-          "transfer_check": "For a named life stage, sort a list of changes into normal and worth-a-check, and say where a check happens locally."
+          "transfer_check": "For a named life stage, sort a list of changes into normal and worth-a-check, and say where a check happens locally.",
+          "bands": {
+            "K–2": "Ask an adult why bodies grow and change.",
+            "3–5": "Explain that bodies change as people grow up, with an adult's help.",
+            "6–8": "Explain a real stage of body change and what's normal, with a checker.",
+            "9–10": "Understand and accept real body changes in yourself, on your own.",
+            "11–12": "Explain to a younger person the real body changes they can expect."
+          }
         },
         {
           "theme": "Pain that persists (MR)",
           "description": "The difference between new pain and persistent pain, what makes chronic pain worse, and pacing that helps.",
-          "transfer_check": "For a case-study persistent pain, distinguish it from new injury and produce a paced week that neither ignores nor obeys it."
+          "transfer_check": "For a case-study persistent pain, distinguish it from new injury and produce a paced week that neither ignores nor obeys it.",
+          "bands": {
+            "K–2": "Tell an adult if something hurts for a long time.",
+            "3–5": "Explain the difference between a quick hurt and pain that stays, with an adult.",
+            "6–8": "Identify a real sign that pain needs medical attention, with a checker.",
+            "9–10": "Recognise real persistent pain in yourself and seek proper care.",
+            "11–12": "Explain to someone else when real persistent pain needs medical attention."
+          }
         },
         {
           "theme": "The habit that sticks (MR)",
           "description": "Building one health habit that survives — small, anchored to a routine, and tracked without punishment.",
-          "transfer_check": "Run one small health habit anchored to an existing routine for two weeks, tracked without punishment, and report the streak honestly."
+          "transfer_check": "Run one small health habit anchored to an existing routine for two weeks, tracked without punishment, and report the streak honestly.",
+          "bands": {
+            "K–2": "Practice a healthy habit every day with an adult's reminder.",
+            "3–5": "Keep up a healthy habit for a week, with an adult's help.",
+            "6–8": "Build a real healthy habit that lasts a month, with a checker.",
+            "9–10": "Build and maintain a real healthy habit on your own, long term.",
+            "11–12": "Coach someone else on building a real habit that actually sticks."
+          }
         }
       ],
       "credential": "Recovery Peer"

@@ -4,6 +4,20 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.83.0] — 2026-09-18
+
+### Added — prompt 2, tranche five: Preventive Health and Care Across a Life across five bands
+- **`data/promotions/preventive-health.json`** and
+  **`data/promotions/care-across-a-life.json`** now carry `bands` on
+  every theme: five tracks each, ten themes, five distinct sentences on
+  the band ladder — 500 rows across the two packs; no block id, code,
+  credential or transfer check changed. These packs promote from a
+  legacy source whose track and description fields are empty, so
+  `bands` reaches them through the same fill-empty path as the
+  community packs — no override needed. Band-suffix rows 4,000 →
+  3,500. These are the first two of the life-skills family; the
+  remaining life-skills packs are the next tranches.
+
 ## [0.82.0] — 2026-09-18
 
 ### Added — prompt 2, tranche four: Digital Life and Law across five bands

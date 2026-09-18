@@ -1,6 +1,6 @@
 {
   "pack": "Care Across a Life",
-  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names. Empty fields (track, code, level, description) are filled; authored transfer_check values replace ONLY the two known generic placeholder sentences — real source checks are never overwritten (guard in tools/normalize_blocks.py).",
+  "note": "Promotion to the tracked schema (roadmap Phase 1 backfill). Track groups follow the (XX) prefixes already embedded in the source theme names. Empty fields (track, code, level, description) are filled; authored transfer_check values replace ONLY the two known generic placeholder sentences — real source checks are never overwritten (guard in tools/normalize_blocks.py). v0.83.0 — every theme now carries `bands`, so the fill-empty path writes five authored sentences per theme (the same mechanism used for the community packs) instead of the shared sentence with its band suffix.",
   "credential_correction": "Credential correction (v0.52.0, proposed — not yet adopted by the review board): the v0.1.0 import named these tracks' credential with the bare band level 'Practitioner'. The `credential` on each track below replaces that level word only (real credential names are never overwritten); tools/normalize_blocks.py applies it as the one deliberate, counted exception to fill-empty-only and prints the count. Names follow the packs' own shape — a person and a capability, never a level word, never a job title the credential cannot confer.",
   "tracks": [
     {
@@ -10,52 +10,122 @@
         {
           "theme": "Holding a baby safely (IN)",
           "description": "Supporting the head, the safe carries and the safe sleep position — handling an infant with confidence.",
-          "transfer_check": "Demonstrate safe holds, head support and the safe sleep position on a doll or supervised infant, faultlessly."
+          "transfer_check": "Demonstrate safe holds, head support and the safe sleep position on a doll or supervised infant, faultlessly.",
+          "bands": {
+            "K–2": "Practice holding a doll's head safely with an adult.",
+            "3–5": "Learn how to support a baby's head while holding, with an adult.",
+            "6–8": "Hold a real baby safely, supporting the head, with a checker.",
+            "9–10": "Hold and handle a real baby safely on your own, every time.",
+            "11–12": "Teach someone else how to safely hold and support a real baby."
+          }
         },
         {
           "theme": "Why a baby cries (IN)",
           "description": "The short list behind crying — hunger, wind, tiredness, discomfort — worked through in order before despair.",
-          "transfer_check": "Given a crying scenario, work the short list in order — hunger, wind, tiredness, discomfort — narrating each check."
+          "transfer_check": "Given a crying scenario, work the short list in order — hunger, wind, tiredness, discomfort — narrating each check.",
+          "bands": {
+            "K–2": "Guess why a baby doll might be crying, with an adult.",
+            "3–5": "Name one reason a real baby might cry, with an adult's help.",
+            "6–8": "Identify a real reason a baby is crying and respond, with a checker.",
+            "9–10": "Respond appropriately to a real crying baby's likely need, on your own.",
+            "11–12": "Explain to someone else the common real reasons babies cry and how to respond."
+          }
         },
         {
           "theme": "Feeding, without the argument (IN)",
           "description": "How infants are fed and the practicalities of each — hunger cues, hygiene, and support for the person feeding.",
-          "transfer_check": "Demonstrate one feeding method's full hygiene and technique, and state the support the feeding person needs."
+          "transfer_check": "Demonstrate one feeding method's full hygiene and technique, and state the support the feeding person needs.",
+          "bands": {
+            "K–2": "Help feed a baby doll with a pretend bottle, with an adult.",
+            "3–5": "Learn one safe way to help feed a real baby, with an adult's help.",
+            "6–8": "Feed a real baby safely and correctly, with a checker.",
+            "9–10": "Feed a real baby on your own, safely and calmly.",
+            "11–12": "Advise a new parent on real feeding basics, calmly and clearly."
+          }
         },
         {
           "theme": "Sleep in the first year (IN)",
           "description": "What infant sleep actually looks like, the safe sleep rules, and surviving the nights as a household.",
-          "transfer_check": "Set up a safe infant sleep space correctly and design a survivable night rota for a real or case-study household."
+          "transfer_check": "Set up a safe infant sleep space correctly and design a survivable night rota for a real or case-study household.",
+          "bands": {
+            "K–2": "Learn that babies sleep a lot, with an adult explaining why.",
+            "3–5": "Name one safe sleep rule for a real baby, with an adult's help.",
+            "6–8": "Identify real safe sleep practices for an infant, with a checker.",
+            "9–10": "Set up a real safe sleep space for an infant, on your own.",
+            "11–12": "Explain to a new parent the real safe sleep guidelines for infants."
+          }
         },
         {
           "theme": "Talking to somebody who cannot talk back (IN)",
           "description": "Why narration, songs and responses build a brain — serving conversation before there are words.",
-          "transfer_check": "Record ten minutes of narrated interaction with an infant — naming, responding, singing — and note each response you served."
+          "transfer_check": "Record ten minutes of narrated interaction with an infant — naming, responding, singing — and note each response you served.",
+          "bands": {
+            "K–2": "Talk and sing to a baby doll, with an adult.",
+            "3–5": "Talk to a real baby even though they can't answer, with an adult's help.",
+            "6–8": "Explain why talking to a real baby matters for development, with a checker.",
+            "9–10": "Engage a real baby in real talk and interaction on your own.",
+            "11–12": "Explain to someone else why talking to a baby who can't answer still matters."
+          }
         },
         {
           "theme": "When a parent is not coping (IN)",
           "description": "Exhaustion and low mood after a baby — the signs, the words to use, and the help that exists.",
-          "transfer_check": "Role-play the conversation with an exhausted parent: the signs named kindly, and one real source of help offered."
+          "transfer_check": "Role-play the conversation with an exhausted parent: the signs named kindly, and one real source of help offered.",
+          "bands": {
+            "K–2": "Tell an adult if a grown-up you know seems very tired or sad.",
+            "3–5": "Notice when a parent seems overwhelmed and tell a trusted adult, with help.",
+            "6–8": "Identify a real sign a parent needs support, with a checker.",
+            "9–10": "Recognise a real parent struggling and connect them to support, on your own.",
+            "11–12": "Guide someone else toward real support for a parent who isn't coping."
+          }
         },
         {
           "theme": "Play is the work (IN)",
           "description": "What play does for development at each stage, and playing with a baby using what a home already has.",
-          "transfer_check": "Run three age-matched play activities using only what a home already has, and say what each builds."
+          "transfer_check": "Run three age-matched play activities using only what a home already has, and say what each builds.",
+          "bands": {
+            "K–2": "Play a simple game with a younger child, with an adult.",
+            "3–5": "Explain why play helps a young child learn, with an adult's help.",
+            "6–8": "Plan a real play activity that helps a young child develop, with a checker.",
+            "9–10": "Plan and lead real play that supports a young child's development, on your own.",
+            "11–12": "Explain to a parent why play is a real baby's actual work."
+          }
         },
         {
           "theme": "Immunisation, plainly (IN)",
           "description": "What vaccines do, the schedule where you live, and answering a worried question with the evidence.",
-          "transfer_check": "Present the actual schedule where you live and answer one sceptical question with the evidence, calmly."
+          "transfer_check": "Present the actual schedule where you live and answer one sceptical question with the evidence, calmly.",
+          "bands": {
+            "K–2": "Ask an adult what a vaccine shot does to help your body.",
+            "3–5": "Explain simply what an immunisation protects against, with an adult.",
+            "6–8": "Explain the real evidence behind a childhood immunisation schedule, with a checker.",
+            "9–10": "Explain, using real evidence, what immunisation does and why the schedule matters.",
+            "11–12": "Explain to someone with questions the real evidence behind immunisation."
+          }
         },
         {
           "theme": "The home that is safe enough (IN)",
           "description": "The hazards at a crawling child's height — water, heat, poisons, falls — found and fixed room by room.",
-          "transfer_check": "Audit one real home at crawling height — water, heat, poisons, falls — and fix or flag every finding."
+          "transfer_check": "Audit one real home at crawling height — water, heat, poisons, falls — and fix or flag every finding.",
+          "bands": {
+            "K–2": "Point out one danger for a baby crawling around a room, with an adult.",
+            "3–5": "Find one real hazard for a baby in a home, with an adult's help.",
+            "6–8": "Identify and fix a real home hazard for a baby, with a checker.",
+            "9–10": "Baby-proof a real home on your own, catching real hazards.",
+            "11–12": "Help a family assess and fix real hazards in their home for a baby."
+          }
         },
         {
           "theme": "Being the older sibling (IN)",
           "description": "What an older child can genuinely do for a baby, and the jobs that stay with adults.",
-          "transfer_check": "List what an older child can genuinely do for a baby and what stays with adults, and demonstrate two of the child's jobs."
+          "transfer_check": "List what an older child can genuinely do for a baby and what stays with adults, and demonstrate two of the child's jobs.",
+          "bands": {
+            "K–2": "Help a grown-up with a small, safe task for a new baby, with an adult.",
+            "3–5": "Help care for a younger sibling in a small way, with an adult's help.",
+            "6–8": "Help with a real younger sibling's care appropriately, with a checker.",
+            "9–10": "Take real responsibility for a younger sibling's care, on your own.",
+            "11–12": "Mentor a younger sibling through a real family change, like a new baby."
+          }
         }
       ],
       "credential": "Infant Care Companion"
@@ -67,52 +137,122 @@
         {
           "theme": "Growing, described honestly (CH)",
           "description": "The ordinary range of growing up — bodies, moods, abilities — and the changes worth a professional look.",
-          "transfer_check": "For a named age, sort a list of behaviours and changes into ordinary range versus worth-a-check, with reasons."
+          "transfer_check": "For a named age, sort a list of behaviours and changes into ordinary range versus worth-a-check, with reasons.",
+          "bands": {
+            "K–2": "Ask an adult why you're taller than last year.",
+            "3–5": "Explain that everyone grows at a different pace, with an adult's help.",
+            "6–8": "Explain real growth patterns honestly, without comparing unfairly, with a checker.",
+            "9–10": "Explain your own real growth and development honestly, on your own.",
+            "11–12": "Explain to a younger person that growth varies and that's normal."
+          }
         },
         {
           "theme": "A child who is struggling at school (CH)",
           "description": "Reading the signs behind falling behind — sight, hearing, home, bullying — before concluding laziness.",
-          "transfer_check": "For a case-study struggling child, list the checks that come before the laziness conclusion, in order, with who does each."
+          "transfer_check": "For a case-study struggling child, list the checks that come before the laziness conclusion, in order, with who does each.",
+          "bands": {
+            "K–2": "Tell an adult if schoolwork feels too hard.",
+            "3–5": "Name one sign a classmate might be struggling, with an adult's help.",
+            "6–8": "Identify a real sign a student needs extra help, with a checker.",
+            "9–10": "Recognise a real struggle in yourself or a peer and seek support, on your own.",
+            "11–12": "Advocate for a real struggling student getting the help they need."
+          }
         },
         {
           "theme": "Screens and a young person (CH)",
           "description": "What screens give and take at each age, and household rules that are followed because they are fair.",
-          "transfer_check": "Draft household screen rules with the young people they bind, fair enough that they sign them."
+          "transfer_check": "Draft household screen rules with the young people they bind, fair enough that they sign them.",
+          "bands": {
+            "K–2": "Ask an adult how much screen time is okay for you.",
+            "3–5": "Follow a family screen-time rule, with an adult's help.",
+            "6–8": "Set a real healthy screen-time limit for yourself, with a checker.",
+            "9–10": "Manage your own real screen time deliberately, on your own.",
+            "11–12": "Advise a family on setting real, healthy screen limits for a young person."
+          }
         },
         {
           "theme": "Friendship, and its absence (CH)",
           "description": "How friendships form and fail through childhood, and helping a lonely child without engineering their life.",
-          "transfer_check": "For a case-study lonely child, propose support that creates chances without engineering, and the sign that it is working."
+          "transfer_check": "For a case-study lonely child, propose support that creates chances without engineering, and the sign that it is working.",
+          "bands": {
+            "K–2": "Tell an adult if you feel lonely at school.",
+            "3–5": "Notice when a classmate seems to have no friends, with an adult's help.",
+            "6–8": "Identify a real sign of social isolation in a peer, with a checker.",
+            "9–10": "Support a real isolated peer or seek support for yourself, on your own.",
+            "11–12": "Help build real inclusion for someone experiencing social isolation."
+          }
         },
         {
           "theme": "The body a teenager is getting used to (CH)",
           "description": "Puberty as it actually unfolds — timing, variation, feelings — and being askable when questions come.",
-          "transfer_check": "Answer three typical puberty questions accurately and comfortably at the level of the asker."
+          "transfer_check": "Answer three typical puberty questions accurately and comfortably at the level of the asker.",
+          "bands": {
+            "K–2": "Ask an adult why bodies change as people get older.",
+            "3–5": "Learn that puberty brings real body changes, with an adult's help.",
+            "6–8": "Explain real puberty changes factually and without embarrassment, with a checker.",
+            "9–10": "Understand and navigate your own real body changes, on your own.",
+            "11–12": "Explain to a younger person the real, factual changes puberty brings."
+          }
         },
         {
           "theme": "Risk, on purpose (CH)",
           "description": "Why adolescents seek risk, the difference between growth risks and harm, and steering without forbidding everything.",
-          "transfer_check": "Sort ten adolescent risks into growth-risk and harm-risk, and design one supervised growth-risk properly."
+          "transfer_check": "Sort ten adolescent risks into growth-risk and harm-risk, and design one supervised growth-risk properly.",
+          "bands": {
+            "K–2": "Ask an adult before trying something new that seems risky.",
+            "3–5": "Talk to an adult before taking on a new risky activity, with help.",
+            "6–8": "Weigh a real risky decision's costs and benefits, with a checker.",
+            "9–10": "Weigh a real risky decision on your own, thinking it through first.",
+            "11–12": "Coach a younger person on weighing a real risky decision responsibly."
+          }
         },
         {
           "theme": "A young person in trouble (CH)",
           "description": "When trouble arrives — school, police, substances — the adult response that helps in the first 24 hours.",
-          "transfer_check": "Walk the first 24 hours of a case-study trouble scenario — who is called, what is said, what is not — in order."
+          "transfer_check": "Walk the first 24 hours of a case-study trouble scenario — who is called, what is said, what is not — in order.",
+          "bands": {
+            "K–2": "Tell an adult if you or a friend broke a rule and feel scared.",
+            "3–5": "Talk to a trusted adult if a friend is in real trouble, with help.",
+            "6–8": "Identify the right adult to involve when a real peer is in trouble, with a checker.",
+            "9–10": "Support a real peer in trouble and involve the right adult, on your own.",
+            "11–12": "Guide a young person in real trouble toward the right kind of help."
+          }
         },
         {
           "theme": "Money, at fifteen (CH)",
           "description": "First earnings and spending — helping a teenager run real money with real mistakes at a survivable size.",
-          "transfer_check": "Design a real-money arrangement for a teenager — income, obligations, survivable mistakes — and review it with one."
+          "transfer_check": "Design a real-money arrangement for a teenager — income, obligations, survivable mistakes — and review it with one.",
+          "bands": {
+            "K–2": "Save a coin in a jar with an adult's help.",
+            "3–5": "Save part of an allowance toward a goal, with an adult's help.",
+            "6–8": "Budget a real small income for a real goal, with a checker.",
+            "9–10": "Manage your own real money — earning, saving, spending — on your own.",
+            "11–12": "Teach a younger teen real basic money management for their first income."
+          }
         },
         {
           "theme": "Leaving home (CH)",
           "description": "The skills audit before independence — cooking, money, paperwork — and the leaving that keeps the door open.",
-          "transfer_check": "Run the full skills audit on a real or case-study school-leaver and set the plan that closes the two worst gaps."
+          "transfer_check": "Run the full skills audit on a real or case-study school-leaver and set the plan that closes the two worst gaps.",
+          "bands": {
+            "K–2": "Ask an adult what happens when someone grows up and moves out.",
+            "3–5": "Name one thing you'd need to know to live on your own someday, with an adult.",
+            "6–8": "List real skills needed to live independently, with a checker.",
+            "9–10": "Assess your own real readiness to live independently, on your own.",
+            "11–12": "Help a younger person prepare for the real transition of leaving home."
+          }
         },
         {
           "theme": "Being trusted with something real (CH)",
           "description": "Giving a young person genuine responsibility — sized to stretch, supervised lightly, and owned by them.",
-          "transfer_check": "Hand a young person one genuine sized responsibility, supervise it lightly, and debrief what they owned."
+          "transfer_check": "Hand a young person one genuine sized responsibility, supervise it lightly, and debrief what they owned.",
+          "bands": {
+            "K–2": "Take care of a small responsibility, like a plant, with an adult's help.",
+            "3–5": "Handle a real small responsibility well, with an adult's help.",
+            "6–8": "Take on and handle a real meaningful responsibility, with a checker.",
+            "9–10": "Handle a real significant responsibility well, on your own.",
+            "11–12": "Mentor a younger person taking on their first real significant responsibility."
+          }
         }
       ],
       "credential": "Childhood Companion"
@@ -124,52 +264,122 @@
         {
           "theme": "The health you postpone (AD)",
           "description": "The checks and symptoms adults defer — and the short list that should never wait for a quiet month.",
-          "transfer_check": "List the checks adults defer, identify which are due for a real adult (yourself included), and book or diarise one."
+          "transfer_check": "List the checks adults defer, identify which are due for a real adult (yourself included), and book or diarise one.",
+          "bands": {
+            "K–2": "Ask an adult why grown-ups sometimes put off a doctor visit.",
+            "3–5": "Explain why checkups matter even when you feel fine, with an adult.",
+            "6–8": "Explain the real cost of postponing a health checkup, with a checker.",
+            "9–10": "Schedule and keep your own real health checkups on your own.",
+            "11–12": "Explain to someone else why postponed checkups become bigger real problems."
+          }
         },
         {
           "theme": "Working with a body that hurts (AD)",
           "description": "Working life with pain — pacing, adjustments and the difference between soreness and damage.",
-          "transfer_check": "For a real or case-study working adult in pain, produce the paced plan that distinguishes soreness from damage."
+          "transfer_check": "For a real or case-study working adult in pain, produce the paced plan that distinguishes soreness from damage.",
+          "bands": {
+            "K–2": "Tell an adult if your body hurts during an activity.",
+            "3–5": "Explain why you should rest an injury instead of pushing through, with an adult.",
+            "6–8": "Adjust a real activity to work around a real injury, with a checker.",
+            "9–10": "Manage a real chronic pain condition while working, on your own.",
+            "11–12": "Advise someone else on working safely and sustainably with a real chronic condition."
+          }
         },
         {
           "theme": "Being the person everybody depends on (AD)",
           "description": "Carrying a household, a job and other people's needs — the load named honestly and shared deliberately.",
-          "transfer_check": "Map one real adult's full load — work, care, household — and redistribute two items deliberately, with agreement."
+          "transfer_check": "Map one real adult's full load — work, care, household — and redistribute two items deliberately, with agreement.",
+          "bands": {
+            "K–2": "Notice when a grown-up does a lot for everyone, with an adult.",
+            "3–5": "Explain what it means to be relied on by a family, with an adult's help.",
+            "6–8": "Identify a real sign of being overextended and what to do, with a checker.",
+            "9–10": "Manage your own real load when many people depend on you.",
+            "11–12": "Support someone else who is the person everyone in their real life depends on."
+          }
         },
         {
           "theme": "A partner, a household, a plan (AD)",
           "description": "Running a shared life on purpose — money, work, care and the conversations that keep them agreed.",
-          "transfer_check": "Run the household planning conversation — money, work, care — to a written one-page agreement both keep."
+          "transfer_check": "Run the household planning conversation — money, work, care — to a written one-page agreement both keep.",
+          "bands": {
+            "K–2": "Ask an adult how two people share chores at home.",
+            "3–5": "Name one way a household divides up tasks fairly, with an adult.",
+            "6–8": "Plan a real fair division of household responsibilities, with a checker.",
+            "9–10": "Negotiate a real household plan with a partner, on your own.",
+            "11–12": "Mediate a real household planning disagreement fairly."
+          }
         },
         {
           "theme": "When work ends unexpectedly (AD)",
           "description": "Job loss handled in order — money triage, entitlements, the search — and the identity blow named as real.",
-          "transfer_check": "Produce the first-fortnight plan for a case-study job loss: money triage, entitlements checked, the search begun."
+          "transfer_check": "Produce the first-fortnight plan for a case-study job loss: money triage, entitlements checked, the search begun.",
+          "bands": {
+            "K–2": "Ask an adult what happens if a job suddenly ends.",
+            "3–5": "Explain that losing a job is scary but survivable, with an adult's help.",
+            "6–8": "Identify real first steps after an unexpected job loss, with a checker.",
+            "9–10": "Handle a real unexpected job loss on your own, with a plan.",
+            "11–12": "Support someone else through a real unexpected job loss with concrete steps."
+          }
         },
         {
           "theme": "The friend who has stopped answering (AD)",
           "description": "Noticing withdrawal in an adult friend and reaching them without ambush or retreat.",
-          "transfer_check": "Script and role-play the reach-out to a withdrawn friend — without ambush, without retreat — through to an offer made."
+          "transfer_check": "Script and role-play the reach-out to a withdrawn friend — without ambush, without retreat — through to an offer made.",
+          "bands": {
+            "K–2": "Ask an adult what to do if a friend seems to be avoiding you.",
+            "3–5": "Reach out kindly to a friend who's gone quiet, with an adult's help.",
+            "6–8": "Reach out to a real friend who's withdrawn, appropriately, with a checker.",
+            "9–10": "Check on a real friend who's stopped responding, on your own.",
+            "11–12": "Guide someone else on reaching a real withdrawn friend without pushing too hard."
+          }
         },
         {
           "theme": "Grief, at any age (AD)",
           "description": "What grief does to a person and a household, what helps, and the support that fits each age.",
-          "transfer_check": "For three ages, state what grief commonly looks like and what helps, and draft one real condolence done well."
+          "transfer_check": "For three ages, state what grief commonly looks like and what helps, and draft one real condolence done well.",
+          "bands": {
+            "K–2": "Tell an adult when you feel sad about a loss.",
+            "3–5": "Name that grief is a real feeling people have after a loss, with an adult.",
+            "6–8": "Recognise a real sign of grief in yourself or someone else, with a checker.",
+            "9–10": "Process a real loss in your own life, seeking support as needed.",
+            "11–12": "Support someone else through a real experience of grief, without rushing them."
+          }
         },
         {
           "theme": "The paperwork of a life (AD)",
           "description": "The documents an adult life runs on — ID, insurance, wills, records — organised so someone else could find them.",
-          "transfer_check": "Organise one real adult's document set — ID, insurance, records, wishes — findable by somebody else in ten minutes."
+          "transfer_check": "Organise one real adult's document set — ID, insurance, records, wishes — findable by somebody else in ten minutes.",
+          "bands": {
+            "K–2": "Watch an adult file an important paper and ask what it's for.",
+            "3–5": "Help an adult organise one important family document, with their help.",
+            "6–8": "Organise a real set of important personal documents, with a checker.",
+            "9–10": "Manage your own real important paperwork — records, forms, IDs — on your own.",
+            "11–12": "Help someone else organise the real paperwork of their life."
+          }
         },
         {
           "theme": "Changing direction at forty (AD)",
           "description": "Retraining and starting again mid-life — the routes that exist, the costs, and the transferable skills already held.",
-          "transfer_check": "Map one real mid-life retraining route — cost, duration, first step — against the skills already held."
+          "transfer_check": "Map one real mid-life retraining route — cost, duration, first step — against the skills already held.",
+          "bands": {
+            "K–2": "Ask an adult if grown-ups can learn new things later in life.",
+            "3–5": "Explain that people can change jobs or paths as adults, with an adult.",
+            "6–8": "Identify real steps for a real mid-life career change, with a checker.",
+            "9–10": "Plan your own real change of direction at any life stage, on your own.",
+            "11–12": "Advise someone else navigating a real mid-life change of direction."
+          }
         },
         {
           "theme": "Being somebody a young person can call (AD)",
           "description": "Mentoring without a program — being a safe, steady adult a young person can actually reach.",
-          "transfer_check": "Establish or rehearse the mentoring arrangement: the availability stated, the boundaries set, the first conversation held."
+          "transfer_check": "Establish or rehearse the mentoring arrangement: the availability stated, the boundaries set, the first conversation held.",
+          "bands": {
+            "K–2": "Be kind and listen when a younger child needs to talk, with an adult nearby.",
+            "3–5": "Listen to a younger person who needs to talk, with an adult's help.",
+            "6–8": "Be a real trusted adult figure for a younger person, with a checker.",
+            "9–10": "Serve as a real reliable person a younger person can call, on your own.",
+            "11–12": "Mentor someone else on being a dependable presence for young people."
+          }
         }
       ],
       "credential": "Adult Life Steward"
@@ -181,52 +391,122 @@
         {
           "theme": "The body at seventy (EL)",
           "description": "What ordinary ageing changes — strength, senses, speed — and what is illness rather than age.",
-          "transfer_check": "Sort a list of later-life changes into ordinary ageing versus illness-to-check, and say where the check happens locally."
+          "transfer_check": "Sort a list of later-life changes into ordinary ageing versus illness-to-check, and say where the check happens locally.",
+          "bands": {
+            "K–2": "Ask an adult how an older person's body is different from yours.",
+            "3–5": "Explain that older bodies move and heal differently, with an adult.",
+            "6–8": "Explain real common health changes in later life, with a checker.",
+            "9–10": "Support your own or a family member's real health needs in later life.",
+            "11–12": "Explain to someone else the real physical realities of ageing, without stereotype."
+          }
         },
         {
           "theme": "Falls (EL)",
           "description": "Why falls end independence, the home hazards behind most of them, and the strength work that prevents them.",
-          "transfer_check": "Audit one real older person's home for fall hazards, fix or flag each, and teach one strength exercise correctly."
+          "transfer_check": "Audit one real older person's home for fall hazards, fix or flag each, and teach one strength exercise correctly.",
+          "bands": {
+            "K–2": "Help clear a walkway of toys so nobody trips, with an adult.",
+            "3–5": "Name one way to make a home safer from falls, with an adult's help.",
+            "6–8": "Identify and fix a real fall hazard in a home, with a checker.",
+            "9–10": "Fall-proof a real home for an older resident, on your own.",
+            "11–12": "Advise a family on real fall-prevention steps for an older relative."
+          }
         },
         {
           "theme": "Staying in your own home (EL)",
           "description": "The adaptations, services and routines that keep an older person safely in their own home longer.",
-          "transfer_check": "Specify the adaptations and services that would keep a real or case-study elder home safely for another year, costed roughly."
+          "transfer_check": "Specify the adaptations and services that would keep a real or case-study elder home safely for another year, costed roughly.",
+          "bands": {
+            "K–2": "Ask an adult why some people want to stay in their own house.",
+            "3–5": "Name one thing that helps an older person live at home safely, with an adult.",
+            "6–8": "Identify a real home modification that supports independent living, with a checker.",
+            "9–10": "Plan real support that helps someone stay in their own home, on your own.",
+            "11–12": "Help a family plan for a real relative staying independently at home."
+          }
         },
         {
           "theme": "Memory that is changing (EL)",
           "description": "Ordinary forgetting versus concerning change, the assessment path, and living well alongside dementia.",
-          "transfer_check": "For a case-study memory change, distinguish ordinary forgetting from concerning signs and map the local assessment path."
+          "transfer_check": "For a case-study memory change, distinguish ordinary forgetting from concerning signs and map the local assessment path.",
+          "bands": {
+            "K–2": "Be patient if a grandparent forgets something, with an adult's help.",
+            "3–5": "Explain that memory can change as people get older, with an adult.",
+            "6–8": "Identify a real sign of memory change worth mentioning to a doctor, with a checker.",
+            "9–10": "Support a real person experiencing memory changes, on your own.",
+            "11–12": "Guide a family through recognising and responding to real memory changes."
+          }
         },
         {
           "theme": "Loneliness is a health risk (EL)",
           "description": "What isolation does to health, and the contact — visits, calls, groups — that measurably protects.",
-          "transfer_check": "Establish one real recurring contact for an isolated older person — visit, call, group — and keep it for a month."
+          "transfer_check": "Establish one real recurring contact for an isolated older person — visit, call, group — and keep it for a month.",
+          "bands": {
+            "K–2": "Visit or call an older relative to say hello, with an adult.",
+            "3–5": "Explain why visiting older people matters, with an adult's help.",
+            "6–8": "Identify a real sign of isolation in an older person, with a checker.",
+            "9–10": "Take real action to reduce isolation for an older person, on your own.",
+            "11–12": "Explain to someone else the real health evidence linking loneliness and illness."
+          }
         },
         {
           "theme": "Money in later life (EL)",
           "description": "Pensions, entitlements and the scams aimed at older people — later-life money protected and claimed.",
-          "transfer_check": "Check one real or case-study elder's entitlements against what is actually claimed, and flag the two scams most aimed at them."
+          "transfer_check": "Check one real or case-study elder's entitlements against what is actually claimed, and flag the two scams most aimed at them.",
+          "bands": {
+            "K–2": "Ask an adult how grown-ups save money for later.",
+            "3–5": "Explain what it means to save for when you're older, with an adult.",
+            "6–8": "Identify a real income source available in later life, with a checker.",
+            "9–10": "Help plan real finances for later life, on your own.",
+            "11–12": "Advise someone else on real financial planning for later life."
+          }
         },
         {
           "theme": "Being cared for, with dignity (EL)",
           "description": "Receiving care while keeping choice and privacy — what dignity in care concretely requires.",
-          "transfer_check": "Observe or role-play one care interaction and mark where choice and privacy were kept or lost, with the fix for each loss."
+          "transfer_check": "Observe or role-play one care interaction and mark where choice and privacy were kept or lost, with the fix for each loss.",
+          "bands": {
+            "K–2": "Help an older relative with a small task kindly, with an adult.",
+            "3–5": "Help care for an older person respectfully, with an adult's help.",
+            "6–8": "Provide real care to an older person with dignity, with a checker.",
+            "9–10": "Provide real care for someone older, respecting their dignity, on your own.",
+            "11–12": "Train someone else on providing real dignified care to an older person."
+          }
         },
         {
           "theme": "The conversation about driving (EL)",
           "description": "Raising driving, safely and kindly, with evidence — and the alternatives that keep a life mobile.",
-          "transfer_check": "Role-play the driving conversation with evidence and kindness, ending with two real mobility alternatives arranged."
+          "transfer_check": "Role-play the driving conversation with evidence and kindness, ending with two real mobility alternatives arranged.",
+          "bands": {
+            "K–2": "Ask an adult why some older people stop driving.",
+            "3–5": "Explain one reason driving might become unsafe later in life, with an adult.",
+            "6–8": "Identify a real sign that a driving conversation is needed, with a checker.",
+            "9–10": "Have a real respectful conversation about driving safety, on your own.",
+            "11–12": "Guide a family through a real difficult conversation about an older relative's driving."
+          }
         },
         {
           "theme": "What an older person knows (EL)",
           "description": "Drawing out and recording the skills and stories an older person holds before they are lost.",
-          "transfer_check": "Record one older person's skill or story properly — audio or written — and archive it where the family can reach it."
+          "transfer_check": "Record one older person's skill or story properly — audio or written — and archive it where the family can reach it.",
+          "bands": {
+            "K–2": "Ask a grandparent to tell you a story from long ago, with an adult.",
+            "3–5": "Learn something an older relative knows how to do, with an adult's help.",
+            "6–8": "Learn and record a real skill or story from an older person, with a checker.",
+            "9–10": "Seek out and value real knowledge from an older person, on your own.",
+            "11–12": "Help preserve and pass on a real older person's knowledge or story."
+          }
         },
         {
           "theme": "Still working (EL)",
           "description": "Working past pension age — the rights, the adjustments and the roles where experience outweighs speed.",
-          "transfer_check": "For one real or case-study older worker, list the rights and adjustments that apply and draft the request for one."
+          "transfer_check": "For one real or case-study older worker, list the rights and adjustments that apply and draft the request for one.",
+          "bands": {
+            "K–2": "Ask an adult if older people can still have jobs.",
+            "3–5": "Name a job an older person you know still does, with an adult's help.",
+            "6–8": "Identify a real accommodation that supports an older worker, with a checker.",
+            "9–10": "Support your own or someone else's real continued work in later life.",
+            "11–12": "Advise an employer on real accommodations that support older workers well."
+          }
         }
       ],
       "credential": "Elder Care Companion"
@@ -238,52 +518,122 @@
         {
           "theme": "Being an unpaid carer (CR)",
           "description": "Recognising yourself as a carer — the role named, the entitlements it unlocks, and the support registered for.",
-          "transfer_check": "Complete the carer self-identification: the role named, the local register or support service found, the first contact made."
+          "transfer_check": "Complete the carer self-identification: the role named, the local register or support service found, the first contact made.",
+          "bands": {
+            "K–2": "Help a family member with a small kind task, with an adult.",
+            "3–5": "Help care for a family member regularly, with an adult's help.",
+            "6–8": "Take on a real caring task for a family member, with a checker.",
+            "9–10": "Provide real regular unpaid care for a family member, on your own.",
+            "11–12": "Explain to someone else what unpaid caring work really involves."
+          }
         },
         {
           "theme": "Lifting and moving a person (CR)",
           "description": "Moving a person safely for both of you — technique, aids and the moves never done alone.",
-          "transfer_check": "Demonstrate one safe assisted transfer with correct technique on a consenting partner, and name the moves never done alone."
+          "transfer_check": "Demonstrate one safe assisted transfer with correct technique on a consenting partner, and name the moves never done alone.",
+          "bands": {
+            "K–2": "Watch an adult help someone stand up safely.",
+            "3–5": "Learn one safe way to help someone stand, with an adult's help.",
+            "6–8": "Help move a real person safely using correct technique, with a checker.",
+            "9–10": "Move or transfer a real person safely on your own, using proper technique.",
+            "11–12": "Teach someone else the correct real technique for safely moving a person."
+          }
         },
         {
           "theme": "Medication in a household (CR)",
           "description": "Managing another person's medicines — schedule, storage, records — and the errors the system must prevent.",
-          "transfer_check": "Set up a real or simulated medication system — schedule, storage, record — that catches a deliberately planted error."
+          "transfer_check": "Set up a real or simulated medication system — schedule, storage, record — that catches a deliberately planted error.",
+          "bands": {
+            "K–2": "Never touch medicine without an adult, and know to tell them if you see it.",
+            "3–5": "Understand that medicine has rules about timing and amount, with an adult.",
+            "6–8": "Help track a real household's medication schedule correctly, with a checker.",
+            "9–10": "Manage a real medication schedule for someone else, accurately, on your own.",
+            "11–12": "Set up a real safe, accurate medication system for a household."
+          }
         },
         {
           "theme": "The carer who is not sleeping (CR)",
           "description": "Care that breaks the carer's nights — the risks of running empty and the fixes worth fighting for.",
-          "transfer_check": "For a real or case-study carer, chart a fortnight of actual rest and secure one concrete change that protects a night."
+          "transfer_check": "For a real or case-study carer, chart a fortnight of actual rest and secure one concrete change that protects a night.",
+          "bands": {
+            "K–2": "Tell an adult if you notice someone in your family seems very tired.",
+            "3–5": "Notice when a caring family member seems exhausted, with an adult's help.",
+            "6–8": "Identify a real sign of carer burnout, with a checker.",
+            "9–10": "Recognise real carer exhaustion in yourself and seek support, on your own.",
+            "11–12": "Connect someone else showing real signs of carer burnout to actual support."
+          }
         },
         {
           "theme": "Respite that is real (CR)",
           "description": "Breaks that actually restore — arranging cover you trust and taking the time without guilt.",
-          "transfer_check": "Arrange or fully plan one genuine respite break — cover trusted, handover written, the time actually taken."
+          "transfer_check": "Arrange or fully plan one genuine respite break — cover trusted, handover written, the time actually taken.",
+          "bands": {
+            "K–2": "Ask an adult what happens when a tired grown-up gets a break.",
+            "3–5": "Explain why a carer sometimes needs a break too, with an adult's help.",
+            "6–8": "Identify a real respite option for a family carer, with a checker.",
+            "9–10": "Arrange real respite care for yourself or a family carer, on your own.",
+            "11–12": "Help a family find and arrange real respite care."
+          }
         },
         {
           "theme": "Caring for somebody who does not want it (CR)",
           "description": "Refusal, pride and risk — caring within another adult's right to decide, and when safety overrides.",
-          "transfer_check": "Role-play care within refusal: the person's right to decide respected, the safety line named, the compromise found."
+          "transfer_check": "Role-play care within refusal: the person's right to decide respected, the safety line named, the compromise found.",
+          "bands": {
+            "K–2": "Be patient if someone doesn't want help right away, with an adult.",
+            "3–5": "Explain why someone might resist help even when they need it, with an adult.",
+            "6–8": "Navigate a real situation where care is resisted, respectfully, with a checker.",
+            "9–10": "Provide real care respectfully to someone who resists it, on your own.",
+            "11–12": "Guide someone else through the real, hard work of caring for a resistant person."
+          }
         },
         {
           "theme": "The end of a life (CR)",
           "description": "What dying looks like, what comfort care does, and being present in the last days without panic.",
-          "transfer_check": "Describe what dying commonly looks like and demonstrate two comfort measures, staying present through a role-played hour."
+          "transfer_check": "Describe what dying commonly looks like and demonstrate two comfort measures, staying present through a role-played hour.",
+          "bands": {
+            "K–2": "Ask an adult a question if you're wondering about someone very sick.",
+            "3–5": "Learn that some illnesses mean a person is nearing the end of life, with an adult.",
+            "6–8": "Understand real end-of-life care basics and what comfort means, with a checker.",
+            "9–10": "Support a real family member through end-of-life care, on your own.",
+            "11–12": "Guide someone else through the real practical and emotional work of end-of-life care."
+          }
         },
         {
           "theme": "After somebody dies (CR)",
           "description": "The first week's duties — certification, notification, the funeral — and the support for the person left.",
-          "transfer_check": "Produce the first-week checklist — certification, notifications, the funeral, the person left — for a case-study death, in order."
+          "transfer_check": "Produce the first-week checklist — certification, notifications, the funeral, the person left — for a case-study death, in order.",
+          "bands": {
+            "K–2": "Tell an adult how you feel if someone you love has died.",
+            "3–5": "Name a feeling you have after a loss and tell a trusted adult, with help.",
+            "6–8": "Recognise real grief responses in yourself or family after a death, with a checker.",
+            "9–10": "Handle the real practical steps that follow a death, on your own.",
+            "11–12": "Support a family through the real practical and emotional steps after a death."
+          }
         },
         {
           "theme": "Care work as a job (CR)",
           "description": "Paid care as skilled work — the training, the standards and the routes into it locally.",
-          "transfer_check": "Map the real local routes into paid care work — training, certification, starting pay — from actual providers."
+          "transfer_check": "Map the real local routes into paid care work — training, certification, starting pay — from actual providers.",
+          "bands": {
+            "K–2": "Ask an adult what a person who helps sick people does at work.",
+            "3–5": "Name one job where people help care for others, with an adult's help.",
+            "6–8": "Identify a real paid care role and what it involves, with a checker.",
+            "9–10": "Evaluate a real paid care job as a possible path, on your own.",
+            "11–12": "Explain to someone else what real professional care work actually involves."
+          }
         },
         {
           "theme": "Who cares for the carer (CR)",
           "description": "The carer's own health, network and plan — kept deliberately, because the caring depends on it.",
-          "transfer_check": "Write your own or a case-study carer's support plan — health, network, backup — and activate one element of it."
+          "transfer_check": "Write your own or a case-study carer's support plan — health, network, backup — and activate one element of it.",
+          "bands": {
+            "K–2": "Ask an adult who helps the grown-up who helps everyone else.",
+            "3–5": "Name one way a tired carer can get support, with an adult's help.",
+            "6–8": "Identify a real support resource for family carers, with a checker.",
+            "9–10": "Seek out real support for yourself as a carer, on your own.",
+            "11–12": "Connect a real carer to the support resources they need."
+          }
         }
       ],
       "credential": "Family Carer"
