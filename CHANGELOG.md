@@ -4,6 +4,37 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.111.0] — 2026-09-18
+
+### Added — XR round three: stations against the room, AR placement (prompt 8)
+- `tools/xr/engine.js`: **`CXXR.wallStations(size, n)`** (new, pure,
+  Node-testable) walks a room's floor perimeter and returns `n` station
+  placements along its walls, each yawed to face the room's centre —
+  the same convention the fixed arc already used, which turns out to be
+  this formula's degenerate circular case.
+- `CXXR.scene(sc, site, plan, room)` takes an optional 4th argument: with
+  a room present and large enough (≥1.5 m either horizontal dimension),
+  stations move onto its walls instead of the 2.4 m arc; with none, or a
+  room too small to place them on, the original arc code path runs
+  untouched — called with no 4th argument at all (every pre-existing
+  caller), output is byte-identical.
+- **AR surface placement.** Entering `immersive-ar` now also requests the
+  `hit-test` optional feature (VR requests nothing new). The session's
+  first `select` reads one hit-test result, builds a placement transform
+  from it, and never reads another — the room (not just the device) is
+  now anchored to a real surface the learner tapped, rather than always
+  standing at the device's own origin. Every `select` after the first
+  picks a slab, as before. A runtime that refuses or ignores hit-test
+  behaves exactly as v0.70.0 did.
+- The privacy notice, `PL-21` and the in-panel note now name hit-testing
+  explicitly: read once per frame to place the room, then dropped,
+  exactly like the pose.
+- Both suites pass: `python3 tests/test_platform.py` (1,954 checks, +8
+  from this change) and the browser smoke suite (223 assertions). The
+  AR hit-test path itself has no headless WebXR runtime to exercise it
+  in either suite — covered by static checks and manual review instead,
+  named as such rather than left implicit.
+
 ## [0.110.0] — 2026-09-18
 
 ### Added — the board's decisions as data (prompt 9)

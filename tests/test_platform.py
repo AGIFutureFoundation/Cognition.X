@@ -965,7 +965,10 @@ def test_xr_integration():
     check("xr: engine is deterministic (no Math.random)", "Math.random" not in xr)
     check("xr: engine requests no hand, eye or face tracking feature", '"hand-tracking"' not in xr and "eye-tracking" not in xr and "face-tracking" not in xr)
     check("xr: only the viewer pose is used, per frame, and the note says so", "getViewerPose" in xr and "nothing about where you look or move is recorded" in xr)
-    check("xr: optionalFeatures ask for the floor reference only", 'optionalFeatures: ["local-floor"]' in xr and "hand-tracking" not in xr)
+    check("xr: VR asks for the floor reference only; AR alone also asks for hit-test (surface geometry, one frame, to place the room)",
+          'optionalFeatures: wantsHitTest ? ["local-floor", "hit-test"] : ["local-floor"]' in xr and "hand-tracking" not in xr)
+    check("xr: a hit-test result places the room on the first AR tap and is then dropped, exactly like the pose",
+          "getHitTestResults" in xr and "state.arPlaced = true" in xr and "one hit-test reading" in xr and "dropped the same frame it arrives" in xr)
     for app in ("education-os", "flow-hub", "louisiana", "trades-network", "states", "platform"):
         t = app_html(app)
         check(f"xr: {app} carries the XR engine and the studio offers it", "Cognition.X Studio in space" in t and "Open in 3D / VR" in t)
@@ -996,10 +999,36 @@ def test_xr_integration():
         o2 = json.loads(r2.stdout.strip().splitlines()[-1])
         check("xr: a trades scenario's room carries the law, the simulated and live lists and the under-18 line as signs", set(o2["signs"]) >= {"sign", "sign-simulated", "sign-live", "sign-youth"})
         check("xr: every exported node comes back as a 12-triangle mesh from both containers", o2["m1"] == o2["n"] and o2["t1"] == o2["n"] * 12 and o2["m2"] == o2["n"] and o2["t2"] == o2["n"] * 12 and o2["refused"])
+    # v0.111.0 (roadmap prompt 8): stations move onto a loaded room's own walls
+    # instead of the fixed arc; a Node test since neither WebXR nor the DOM is
+    # needed for it — CXXR.scene()'s room branch and CXXR.wallStations() are
+    # pure geometry.
+    js3 = ("require(process.argv[1]); require(process.argv[2]); const fb = require(process.argv[3]); CXSIM.configure(fb);"
+           "const sc = fb.scenarios[0]; const plan = CXSIM.plan(CXSIM.localize(sc, 'the yard'), 4, 'seed-1');"
+           "const noRoomA = CXXR.scene(sc, 'the yard', plan); const noRoomB = CXXR.scene(sc, 'the yard', plan, null);"
+           "const size = [6, 2.5, 5], margin = 0.35, hx = size[0]/2 - margin, hz = size[2]/2 - margin;"
+           "const room = CXXR.scene(sc, 'the yard', plan, { size });"
+           "const onWall = p => (Math.abs(Math.abs(p[0]) - hx) < 1e-9 && p[2] >= -hz - 1e-9 && p[2] <= hz + 1e-9) || (Math.abs(Math.abs(p[2]) - hz) < 1e-9 && p[0] >= -hx - 1e-9 && p[0] <= hx + 1e-9);"
+           "const roomStations = room.nodes.filter(n => n.kind === 'station');"
+           "const tiny = CXXR.scene(sc, 'the yard', plan, { size: [0.5, 2, 0.5] });"
+           "console.log(JSON.stringify({byteIdentical: JSON.stringify(noRoomA) === JSON.stringify(noRoomB), allOnWalls: roomStations.every(n => onWall(n.position)), n: roomStations.length, planLen: plan.length,"
+           " differsFromArc: JSON.stringify(roomStations.map(n=>n.position)) !== JSON.stringify(noRoomA.nodes.filter(n=>n.kind==='station').map(n=>n.position)),"
+           " tinyRoomIsArc: JSON.stringify(tiny) === JSON.stringify(noRoomA)}));")
+    r3 = subprocess.run(["node", "-e", js3, str(ROOT / "tools" / "sim" / "engine.js"), str(ROOT / "tools" / "xr" / "engine.js"), str(ROOT / "data" / "simulations" / "scenarios.json")], capture_output=True, text=True, cwd=ROOT)
+    check("xr: wall placement runs in node", r3.returncode == 0, r3.stderr[-300:])
+    if r3.returncode == 0:
+        o3 = json.loads(r3.stdout.strip().splitlines()[-1])
+        check("xr: the no-room path is byte-identical whether `room` is omitted or explicitly null", o3["byteIdentical"])
+        check("xr: with a known box room, every station lands on one of its four walls", o3["allOnWalls"] and o3["n"] == o3["planLen"] and o3["n"] > 0)
+        check("xr: a loaded room's stations differ from the fixed arc", o3["differsFromArc"])
+        check("xr: a room too small to place stations on falls back to the arc, unchanged", o3["tinyRoomIsArc"])
     priv = json.loads((ROOT / "data" / "policy" / "privacy.json").read_text(encoding="utf-8"))
     check("privacy: the notice covers XR sessions", "WebXR" in priv["security"] and "never records it" in priv["security"] and "no hand, eye or face tracking" in priv["security"])
+    check("privacy: the notice covers AR hit-testing as per-frame and dropped", "hit-test" in priv["security"] and "dropped" in priv["security"])
     reg = json.loads((ROOT / "data" / "policy" / "controls.json").read_text(encoding="utf-8"))
     check("register: PL-21 holds the XR control as met", any(c["id"] == "PL-21" and c["status"] == "met" for c in reg["controls"]))
+    check("register: PL-21's requirement names hit-testing as per-frame and dropped",
+          any(c["id"] == "PL-21" and "hit-test" in c["requirement"] and "dropped" in c["requirement"] for c in reg["controls"]))
     hosting = (ROOT / "docs" / "HOSTING.md").read_text(encoding="utf-8")
     check("hosting: xr-spatial-tracking allowed to self, camera still denied by policy", hosting.count("xr-spatial-tracking=(self)") >= 4 and "camera=()" in hosting)
     review = (ROOT / "docs" / "XR_REVIEW.md").read_text(encoding="utf-8")
