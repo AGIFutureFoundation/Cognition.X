@@ -765,6 +765,46 @@ def test_band_differentiated_descriptions():
     check("core spine: every core-spine pack is band-authored (v0.67.0)", spine <= BAND_AUTHORED_PACKS, str(sorted(spine - BAND_AUTHORED_PACKS)))
 
 
+# v0.90.0 — prompt 3 tranche one: foundation packs where each theme names
+# exactly one row (not five spanning the band ladder), promoted with
+# `"unbanded": true` so the empty description fills in as one complete
+# sentence with no per-band suffix.
+UNBANDED_FILLED_PACKS = {"Future-Work"}
+
+KNOWN_EMPTY_DESCRIPTION_ROWS = 6089  # 6,200 before prompt 3 (docs/NEXT_STEPS_2.md #3); 6,089 after Future-Work (v0.90.0, prompt 3 tranche one, 111 rows); the ratchet only falls
+
+
+def test_unbanded_descriptions():
+    """v0.90.0 — prompt 3 tranche one: a foundation pack where each theme
+    names exactly one row (not five spanning the band ladder) is promoted
+    with `"unbanded": true` (tools/normalize_blocks.py `apply_promotions`,
+    `unbanded_description`); its description fills in as one complete
+    sentence, never a per-band suffix, since the row's own grade column
+    already says which band it is. Plain fill-empty, not a new counted
+    exception: the field starts empty and stays that way until a
+    promotion supplies it — so the dataset's empty-description count only
+    falls, and it is never overwritten once filled."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from normalize_blocks import unbanded_description
+    rows = list(csv.DictReader(open(ROOT / "data" / "blocks.csv", newline="", encoding="utf-8")))
+    empty = [r for r in rows if not r["description"].strip()]
+    check("unbanded fill: the empty-description count never rises", len(empty) <= KNOWN_EMPTY_DESCRIPTION_ROWS, f"{len(empty)} rows, baseline {KNOWN_EMPTY_DESCRIPTION_ROWS}")
+    suffix = re.compile(r"— at .{1,20}$")
+    for pack in UNBANDED_FILLED_PACKS:
+        pr = [r for r in rows if r["pack"] == pack]
+        check(f"unbanded fill: {pack} — no row is empty", pr and all(r["description"].strip() for r in pr))
+        check(f"unbanded fill: {pack} — no row carries the band suffix", not [r for r in pr if suffix.search(r["description"])])
+        check(f"unbanded fill: {pack} — every description is a full sentence", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in pr))
+        check(f"unbanded fill: {pack} — descriptions are distinct (one row per theme)", len({r["description"] for r in pr}) == len(pr))
+        promo = [p for p in (ROOT / "data" / "promotions").glob("*.json") if json.loads(p.read_text(encoding="utf-8"))["pack"] == pack]
+        check(f"unbanded fill: {pack} — declared as an unbanded promotion", promo and json.loads(promo[0].read_text(encoding="utf-8")).get("unbanded") is True)
+    check("normalize_blocks: unbanded_description accepts a full sentence",
+          unbanded_description("Do the real task correctly, on your own, without any help at all.")
+          == "Do the real task correctly, on your own, without any help at all.")
+    for bad in ("too short.", "No trailing period", "A sentence with a suffix that is long enough — at 6–8"):
+        check(f"normalize_blocks: unbanded_description refuses {bad!r}", unbanded_description(bad) is None)
+
+
 FOOTPRINT_BUDGET_MB = {"education-os": 6.5, "flow-hub": 2.6, "louisiana": 1.0, "platform": 0.3, "states": 0.65, "trades-network": 0.5}
 
 

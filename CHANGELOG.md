@@ -4,6 +4,43 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.90.0] — 2026-09-18
+
+### Added — prompt 3, tranche one: Future-Work's 111 empty descriptions filled, via a new "unbanded" promotion mechanism
+- `tools/normalize_blocks.py` gains a small, deliberate extension for
+  packs where each theme names exactly one row at one grade, not five
+  spanning the band ladder: a promotion may declare `"unbanded": true`
+  (new `unbanded_description()` helper), filling that theme's empty
+  description as a single complete sentence with no "— at ‹band›"
+  suffix — appending one would be meaningless (the row's own grade
+  column already says which band it is) and would recreate the exact
+  band-suffix content debt prompt 2 (v0.72.0–v0.89.0) just eliminated
+  to zero. This is still plain fill-empty, not a new counted exception:
+  the field starts empty and only a promotion can supply it. An
+  unbanded promotion also skips filling `track`/`code`, since these
+  packs' natural sub-groupings (37 rows each in Future-Work) don't form
+  the 50-block/10-theme tracked shape that `test_dataset()` requires of
+  any non-empty `track`; `light_fill()` still assigns `code` and
+  `level` structurally, exactly as before.
+- **`data/promotions/future-work.json`** is a new promotion file: 111
+  themes (Robotics, Agents & Automation, Data Centers & Infrastructure)
+  each with one authored description, copied from the pack's own
+  theme names and transfer checks. No block id, code, track, level,
+  credential or transfer check changed — description only, and only
+  where it was empty.
+- `tests/test_platform.py` gains `test_unbanded_descriptions()`
+  covering the new mechanism (fill correctness, refusal of short/
+  unpunctuated/suffixed sentences) and `KNOWN_EMPTY_DESCRIPTION_ROWS`
+  (6,200 → 6,089). Dataset-wide description coverage rises from 64% to
+  65%.
+- Five more foundation packs (Civic & Leadership, Language Culture &
+  Communication, Empathy & Emotional Intelligence, Community &
+  Relationship Practice, and most of Health & Community — 776 rows in
+  total across all six) fit the same mechanism and are the next
+  tranche; K–12, Trade School, Regional, and Health & Community's two
+  "—"-grade rows use single grades or adult bands and need a further
+  extension.
+
 ## [0.89.0] — 2026-09-18
 
 ### Added — prompt 2, tranche eleven: Reentry & Recovery Pathways and Neighbourhood, Safety & Civic Voice across five bands — prompt 2 closed

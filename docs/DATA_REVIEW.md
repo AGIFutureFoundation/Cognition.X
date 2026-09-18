@@ -40,7 +40,16 @@ sections; the only other diff is the fonts `<link>`).
    requiring both dataset-wide. Their shapes are irregular by design
    and are not forced into 10×5; authored `description` (and `track`
    where genuine groupings exist) is the remaining content work — see
-   the [roadmap](ROADMAP.md).
+   the [roadmap](ROADMAP.md). *Update (v0.90.0):* Future-Work's 111
+   rows now carry an authored `description` (one complete sentence per
+   theme, since each theme names exactly one row, not five spanning a
+   band ladder), filled through a new `"unbanded": true` promotion
+   (`tools/normalize_blocks.py`); `track`/`code` are left as they were
+   (`LB-<n>` codes), since these packs' natural sub-groupings don't
+   form the tracked 50-block shape. Five more foundation packs fit the
+   same mechanism and are the next tranche of `docs/NEXT_STEPS_2.md`
+   prompt 3; K–12, Trade School and Regional use single grades or adult
+   bands and need a further extension.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic
