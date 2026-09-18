@@ -747,8 +747,14 @@ def test_band_differentiated_descriptions():
         check(f"override: {pack} — {themes_n} themes with five distinct sentences", len(by_theme) == themes_n and all(len(v) == 5 and len(set(v)) == 5 for v in by_theme.values()), str(len(by_theme)))
         check(f"override: {pack} — every sentence is a full sentence that says what the learner does", all(len(r["description"]) >= 40 and r["description"].endswith(".") for r in pr))
         check(f"override: {pack} — the rows' track, code and credential are untouched", all(r["code"] and r["credential"] for r in pr) and len(pr) == rows_n, str(len(pr)))
-        promo = [p for p in (ROOT / "data" / "promotions").glob("*.json") if json.loads(p.read_text(encoding="utf-8"))["pack"] == pack]
-        check(f"override: {pack} — declared as an override promotion with bands on every theme", promo and json.loads(promo[0].read_text(encoding="utf-8")).get("override") == "band-suffix")
+        # A pack can carry more than one promotion file (v0.99.0: the
+        # sector-OS packs now also carry a second, unbanded promotion for
+        # prompt 3's generic-practice-step rows) — check that at least one
+        # file declares the override, not that the first glob match does;
+        # glob() order isn't guaranteed, so picking promo[0] here would
+        # pass or fail by filesystem accident once a pack has two files.
+        promo = [json.loads(p.read_text(encoding="utf-8")) for p in (ROOT / "data" / "promotions").glob("*.json")]
+        check(f"override: {pack} — declared as an override promotion with bands on every theme", any(s["pack"] == pack and s.get("override") == "band-suffix" for s in promo))
         total_over += rows_n
     check("override: the dashboard counts the exception", f"replaced by an authored band sentence: **{total_over:,}**" in dq)
     good = {b: f"Do the {i} thing for real." for i, b in enumerate(BANDS)}
@@ -867,8 +873,13 @@ def test_partial_band_descriptions():
             by_theme.setdefault(r["theme"], []).append(r["description"])
         check(f"partial_bands fill: {pack} — sentences are distinct within each theme", all(len(set(v)) == len(v) for v in by_theme.values()))
         check(f"partial_bands fill: {pack} — no theme spans all five bands", all(1 <= len(v) < 5 for v in by_theme.values()))
-        promo = [p for p in (ROOT / "data" / "promotions").glob("*.json") if json.loads(p.read_text(encoding="utf-8"))["pack"] == pack]
-        check(f"partial_bands fill: {pack} — declared as a partial_bands promotion", promo and json.loads(promo[0].read_text(encoding="utf-8")).get("partial_bands") is True)
+        # Checked by "any file declares it", not promo[0]: see the same fix
+        # in test_unbanded_descriptions() and test_band_differentiated_descriptions()
+        # (v0.99.0) — glob() order isn't guaranteed, so a pack that ever
+        # gains a second promotion file must not depend on which one glob()
+        # happens to return first.
+        promo = [json.loads(p.read_text(encoding="utf-8")) for p in (ROOT / "data" / "promotions").glob("*.json")]
+        check(f"partial_bands fill: {pack} — declared as a partial_bands promotion", any(s["pack"] == pack and s.get("partial_bands") is True for s in promo))
     good = {"K–2": "Do the small version with an adult, start to finish, and say what you noticed.",
             "3–5": "Do the small version with an adult's help, and explain your choice."}
     check("normalize_blocks: partial_band_description returns the sentence for an authored grade",
