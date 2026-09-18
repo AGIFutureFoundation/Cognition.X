@@ -61,7 +61,14 @@ sections; the only other diff is the fonts `<link>`).
    Community & Relationship Practice (the same pattern) is the next
    tranche. K–12, Trade School, Regional and Health & Community's two
    `—`-grade rows remain out of scope until the grade filter extends
-   from `BAND_LEVEL` to `GRADE_LEVEL`.
+   from `BAND_LEVEL` to `GRADE_LEVEL`. *Update (v0.94.0):* Community &
+   Relationship Practice's 167 rows filled the same way, closing every
+   foundation pack reachable by the `unbanded` and `partial_bands`
+   mechanisms. What remains of prompt 3: K–12, Trade School, Regional
+   and Health & Community's two `—`-grade rows (needing the
+   `BAND_LEVEL`→`GRADE_LEVEL` extension), then the sector-OS and
+   Education OS empty descriptions, whose theme/grade structure has not
+   yet been verified.
 
 2b. **Placeholder transfer checks (found during promotion — resolved
    in v0.13.0).** Most pre-promotion legacy rows carried a generic

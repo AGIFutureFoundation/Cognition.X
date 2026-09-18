@@ -1,0 +1,479 @@
+{
+  "pack": "Community & Relationship Practice",
+  "partial_bands": true,
+  "note": "Promotion to the tracked schema (v0.94.0, prompt 3 tranche five). Each theme in this pack names rows spanning only some of the five bands — a sliding, sometimes wrap-around window of three or four — not all five (the original bands mechanism) and not exactly one (unbanded). \"partial_bands\": true fills each row's empty description from its theme's own per-grade sentence, authored only for the grades that theme actually has. track/code are not filled by this promotion (see tools/normalize_blocks.py apply_promotions): this pack's natural sub-groupings do not form the 50-block tracked shape. Theme text, grouping and grade spans are copied verbatim from data/blocks.csv; nothing else is touched.",
+  "tracks": [
+    {
+      "prefix": "FR",
+      "name": "Forming Relationships",
+      "themes": [
+        {
+          "theme": "Learning a name and using it (FR)",
+          "bands": {
+            "K–2": "Ask an adult to help you learn a new person's name and use it.",
+            "3–5": "Learn several names in a week and use each one, with an adult's help.",
+            "6–8": "Learn twenty names in a week and use each once, checked by someone.",
+            "9–10": "Learn and use names for a large group of new people, on your own."
+          }
+        },
+        {
+          "theme": "The first five minutes with a stranger (FR)",
+          "bands": {
+            "3–5": "Try one way to open a conversation with someone new, with an adult's help.",
+            "6–8": "Describe an opening that worked and one that didn't, checked by someone.",
+            "9–10": "Try several openings with strangers and describe what worked, on your own.",
+            "11–12": "Teach someone else what makes a strong first five minutes with a stranger."
+          }
+        },
+        {
+          "theme": "Being reliable in small things (FR)",
+          "bands": {
+            "6–8": "Keep a small promise for a week, checked by someone.",
+            "9–10": "Keep a small promise every week for a term, on your own.",
+            "11–12": "Teach someone else why being reliable in small things matters."
+          }
+        },
+        {
+          "theme": "The adult who is not paid to be there (FR)",
+          "bands": {
+            "9–10": "Name an adult who shows up for you without being paid to, on your own.",
+            "11–12": "Be that person for someone younger and describe what it took.",
+            "K–2": "Ask an adult who shows up for you just because they care."
+          }
+        },
+        {
+          "theme": "Warmth with a boundary (FR)",
+          "bands": {
+            "11–12": "Teach someone else how to hold warmth and a boundary at once.",
+            "K–2": "Ask an adult how to be kind while still saying no sometimes.",
+            "3–5": "Describe a line you hold and a time you had to restate it, with an adult's help."
+          }
+        },
+        {
+          "theme": "When somebody does not want a relationship (FR)",
+          "bands": {
+            "K–2": "Ask an adult what to do if someone doesn't want to be friends.",
+            "3–5": "Describe an offer that was refused and what you did next, with an adult's help.",
+            "6–8": "Describe a real refused offer and what you did next, checked by someone."
+          }
+        },
+        {
+          "theme": "Consistency across a bad week (FR)",
+          "bands": {
+            "3–5": "Try to keep showing up during a hard week, with an adult's help.",
+            "6–8": "Describe a hard week you held it together and what it cost, checked by someone.",
+            "9–10": "Stay consistent through a real bad week and describe the cost, on your own."
+          }
+        },
+        {
+          "theme": "Two adults, not one (FR)",
+          "bands": {
+            "6–8": "Check a group for whether it has more than one trusted adult, with a checker.",
+            "9–10": "Check a real group and name who has only one trusted adult, on your own.",
+            "11–12": "Teach someone else why every group needs more than one trusted adult."
+          }
+        },
+        {
+          "theme": "Ending a relationship well (FR)",
+          "bands": {
+            "9–10": "Describe an ending you handled deliberately, on your own.",
+            "11–12": "Teach someone else how to end a relationship well.",
+            "K–2": "Ask an adult how to say goodbye to a friend who's moving away."
+          }
+        },
+        {
+          "theme": "Being known yourself (FR)",
+          "bands": {
+            "11–12": "Teach someone else your own rule for letting yourself be known.",
+            "K–2": "Ask an adult what it means to really know someone.",
+            "3–5": "State your own rule for being known and a time you applied it, with an adult's help."
+          }
+        },
+        {
+          "theme": "The person nobody has chosen (FR)",
+          "bands": {
+            "K–2": "Ask an adult to help you notice someone nobody's picked for a team.",
+            "3–5": "Identify someone nobody has chosen and describe what you did, with an adult's help.",
+            "6–8": "Identify a real unchosen person and describe what you did, checked by someone."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "FC",
+      "name": "Family Connection",
+      "themes": [
+        {
+          "theme": "The good call, first (FC)",
+          "bands": {
+            "3–5": "Make a good-news call to a family, with an adult's help.",
+            "6–8": "Make five good calls and record what each family said, checked by someone.",
+            "9–10": "Make good-news calls to families and record the responses, on your own."
+          }
+        },
+        {
+          "theme": "The conversation at the door (FC)",
+          "bands": {
+            "6–8": "Describe a doorstep conversation you handled, checked by someone.",
+            "9–10": "Handle a real doorstep conversation and describe one you didn't, on your own.",
+            "11–12": "Teach someone else how to handle a hard conversation at the door."
+          }
+        },
+        {
+          "theme": "The family who is frightened of institutions (FC)",
+          "bands": {
+            "9–10": "Describe what you didn't ask a frightened family for, and why, on your own.",
+            "11–12": "Teach someone else how to work with a family frightened of institutions.",
+            "K–2": "Ask an adult why some families might feel nervous about school or offices."
+          }
+        },
+        {
+          "theme": "When a family asks for something you cannot give (FC)",
+          "bands": {
+            "11–12": "Teach someone else three local routes for what you personally can't give.",
+            "K–2": "Ask an adult what to do when you can't give someone what they need.",
+            "3–5": "Name a local route for help and use it, with an adult's help."
+          }
+        },
+        {
+          "theme": "Grandparents, kin and whoever actually turns up (FC)",
+          "bands": {
+            "K–2": "Ask an adult who actually looks after kids in different families.",
+            "3–5": "Describe a household as it actually is, with an adult's help.",
+            "6–8": "Describe a real household as it actually is, checked by someone."
+          }
+        },
+        {
+          "theme": "Talking about a child without labelling them (FC)",
+          "bands": {
+            "3–5": "Rewrite a labelling sentence into an observable one, with an adult's help.",
+            "6–8": "Rewrite three labelling sentences into observable ones, checked by someone.",
+            "9–10": "Rewrite real labelling language into observable language, on your own."
+          }
+        },
+        {
+          "theme": "The parent who disagrees with you (FC)",
+          "bands": {
+            "6–8": "Describe a disagreement with a parent that stayed a relationship, checked by someone.",
+            "9–10": "Handle a real disagreement with a parent and keep the relationship, on your own.",
+            "11–12": "Teach someone else how to disagree with a parent and stay in relationship."
+          }
+        },
+        {
+          "theme": "Language, without the child interpreting (FC)",
+          "bands": {
+            "9–10": "Describe a conversation and what you used instead of the child, on your own.",
+            "11–12": "Teach someone else why a child should never interpret for their family.",
+            "K–2": "Ask an adult why a child shouldn't have to translate for grown-ups."
+          }
+        },
+        {
+          "theme": "What families are never asked (FC)",
+          "bands": {
+            "11–12": "Teach someone else a question families are rarely asked, and why it matters.",
+            "K–2": "Ask an adult a question nobody usually asks families.",
+            "3–5": "Ask a family a question they're rarely asked and record the answer, with help."
+          }
+        },
+        {
+          "theme": "A family in crisis (FC)",
+          "bands": {
+            "K–2": "Ask an adult what a small kind thing looks like when a family is struggling.",
+            "3–5": "Describe a small thing you did that mattered to a family in crisis, with help.",
+            "6–8": "Describe a real small thing you did that mattered, checked by someone."
+          }
+        },
+        {
+          "theme": "Handing a family to a colleague (FC)",
+          "bands": {
+            "3–5": "Describe a warm handover with an adult's help.",
+            "6–8": "Describe a warm handover you made, checked by someone.",
+            "9–10": "Make a real warm handover of a family to a colleague, on your own."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "CC",
+      "name": "Conflict & Community Repair",
+      "themes": [
+        {
+          "theme": "The dispute that is really about something else (CC)",
+          "bands": {
+            "6–8": "Take a dispute and state the real question underneath it, checked by someone.",
+            "9–10": "Find the real question inside a real dispute, on your own.",
+            "11–12": "Teach someone else how to find the real question inside a dispute."
+          }
+        },
+        {
+          "theme": "Two people who both feel wronged (CC)",
+          "bands": {
+            "9–10": "Describe two people who both feel wronged and how you avoided deciding first, on your own.",
+            "11–12": "Teach someone else how to avoid deciding who's right too early.",
+            "K–2": "Ask an adult what to do when two friends both feel hurt."
+          }
+        },
+        {
+          "theme": "Repair with an audience (CC)",
+          "bands": {
+            "11–12": "Teach someone else how to manage a repair that has an audience.",
+            "K–2": "Ask an adult what to do when a disagreement happens in front of others.",
+            "3–5": "Describe a repair that had an audience and what you did about it, with help."
+          }
+        },
+        {
+          "theme": "When exclusion is on the table (CC)",
+          "bands": {
+            "K–2": "Ask an adult what happens when someone might get left out.",
+            "3–5": "Describe a decision about exclusion and the route back you built, with help.",
+            "6–8": "Describe a real exclusion decision and the route back you built, checked by someone."
+          }
+        },
+        {
+          "theme": "Harm that cannot be repaired (CC)",
+          "bands": {
+            "3–5": "Name a case where harm can't simply be fixed, with an adult's help.",
+            "6–8": "Name three such cases and what you would do instead, checked by someone.",
+            "9–10": "Identify real unrepairable harm and plan what to do instead, on your own."
+          }
+        },
+        {
+          "theme": "The long tail after an incident (CC)",
+          "bands": {
+            "6–8": "Describe the aftermath of one event you lived through, checked by someone.",
+            "9–10": "Track the long tail of a real incident on your own.",
+            "11–12": "Teach someone else how to manage the long tail after an incident."
+          }
+        },
+        {
+          "theme": "Rumour (CC)",
+          "bands": {
+            "9–10": "Describe a rumour and how you handled it without feeding it, on your own.",
+            "11–12": "Teach someone else how to handle a rumour without feeding it.",
+            "K–2": "Ask an adult what to do when you hear something that might not be true."
+          }
+        },
+        {
+          "theme": "Institutional apology (CC)",
+          "bands": {
+            "11–12": "Draft an organisational repair without legal language, and defend it.",
+            "K–2": "Ask an adult what a good apology from a big group looks like.",
+            "3–5": "Draft a simple organisational apology with an adult's help."
+          }
+        },
+        {
+          "theme": "The person who will not be repaired with (CC)",
+          "bands": {
+            "K–2": "Ask an adult what to do if someone doesn't want to make up.",
+            "3–5": "Describe a refusal to repair that you accepted, with an adult's help.",
+            "6–8": "Describe a real refusal you accepted, checked by someone."
+          }
+        },
+        {
+          "theme": "Conflict across a power difference (CC)",
+          "bands": {
+            "3–5": "Notice an imbalance in a conflict, with an adult's help.",
+            "6–8": "Name the imbalance in a case and what you changed, checked by someone.",
+            "9–10": "Name a real power imbalance in a conflict and change it, on your own."
+          }
+        },
+        {
+          "theme": "Keeping the community after the conflict (CC)",
+          "bands": {
+            "6–8": "Describe what you did for a group after a conflict, checked by someone.",
+            "9–10": "Keep a real community together after conflict, on your own.",
+            "11–12": "Teach someone else how to keep a community together after conflict."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "BE",
+      "name": "Belonging",
+      "themes": [
+        {
+          "theme": "Who is not here (BE)",
+          "bands": {
+            "9–10": "Name three absent groups and one reason each, on your own.",
+            "11–12": "Teach someone else how to notice who is missing from a room.",
+            "K–2": "Ask an adult who might be missing from a group you're in."
+          }
+        },
+        {
+          "theme": "The cost of entry (BE)",
+          "bands": {
+            "11–12": "List the real costs of joining something and remove one.",
+            "K–2": "Ask an adult what makes it hard for some kids to join a group.",
+            "3–5": "List a real cost of joining and think how to remove it, with an adult's help."
+          }
+        },
+        {
+          "theme": "Being the only one (BE)",
+          "bands": {
+            "K–2": "Ask an adult what it might feel like to be the only one like you in a room.",
+            "3–5": "Describe a room where you were the only one, or ask someone who was, with help.",
+            "6–8": "Describe a real room where someone was the only one, checked by someone."
+          }
+        },
+        {
+          "theme": "Belonging is not the same as attendance (BE)",
+          "bands": {
+            "3–5": "Notice someone who shows up but doesn't seem to belong, with an adult's help.",
+            "6–8": "Describe a real person who attends but doesn't belong, checked by someone.",
+            "9–10": "Identify the real difference between attending and belonging, on your own."
+          }
+        },
+        {
+          "theme": "Rituals that include (BE)",
+          "bands": {
+            "6–8": "Design a small ritual that includes people, checked by someone.",
+            "9–10": "Design and run an inclusive ritual for a term, on your own.",
+            "11–12": "Teach someone else how to design a ritual that actually includes people."
+          }
+        },
+        {
+          "theme": "The in-group you did not notice you were in (BE)",
+          "bands": {
+            "9–10": "Describe an advantage you hadn't counted, on your own.",
+            "11–12": "Teach someone else how to notice an in-group they belong to.",
+            "K–2": "Ask an adult about a group you belong to without even trying."
+          }
+        },
+        {
+          "theme": "Accessibility as a design decision (BE)",
+          "bands": {
+            "11–12": "Teach someone else how accessibility is a design decision, not an afterthought.",
+            "K–2": "Ask an adult what makes a place easy or hard for everyone to use.",
+            "3–5": "Change one thing structurally to make a space more accessible, with an adult's help."
+          }
+        },
+        {
+          "theme": "Who gets to decide what is normal here (BE)",
+          "bands": {
+            "K–2": "Ask an adult who decides the rules for what's normal in a group.",
+            "3–5": "Name a norm and who set it, with an adult's help.",
+            "6–8": "Name three norms and who set them, checked by someone."
+          }
+        },
+        {
+          "theme": "Bringing someone in without a spotlight (BE)",
+          "bands": {
+            "3–5": "Include someone quietly, with an adult's help.",
+            "6–8": "Describe a quiet inclusion you managed, checked by someone.",
+            "9–10": "Bring someone in without putting them on the spot, on your own."
+          }
+        },
+        {
+          "theme": "When belonging is used as a reward (BE)",
+          "bands": {
+            "6–8": "Notice a place where belonging is used as a reward, checked by someone.",
+            "9–10": "Describe where belonging is used as a reward and what you'd change, on your own.",
+            "11–12": "Teach someone else why belonging should never be a reward."
+          }
+        },
+        {
+          "theme": "Leaving and coming back (BE)",
+          "bands": {
+            "9–10": "Describe someone who left and returned, and what made it possible, on your own.",
+            "11–12": "Teach someone else what makes it possible for someone to come back.",
+            "K–2": "Ask an adult what it's like when someone leaves a group and comes back."
+          }
+        }
+      ]
+    },
+    {
+      "prefix": "SU",
+      "name": "Serving Communities Unlike Your Own",
+      "themes": [
+        {
+          "theme": "The limits of your own experience (SU)",
+          "bands": {
+            "11–12": "Teach someone else why your own experience has limits in a community.",
+            "K–2": "Ask an adult something about your community you didn't already know.",
+            "3–5": "Name a thing about your community you had to be told, with an adult's help."
+          }
+        },
+        {
+          "theme": "Asking the community rather than about it (SU)",
+          "bands": {
+            "K–2": "Ask an adult why it matters to ask people, not just about them.",
+            "3–5": "Run a small consultation and describe what it changed, with an adult's help.",
+            "6–8": "Run a real consultation with a community and describe what it changed, checked by someone."
+          }
+        },
+        {
+          "theme": "Working with an interpreter (SU)",
+          "bands": {
+            "3–5": "Take part in an interpreted conversation, with an adult's help.",
+            "6–8": "Describe an interpreted conversation and your own errors, checked by someone.",
+            "9–10": "Work with an interpreter in a real conversation and reflect on your errors, on your own."
+          }
+        },
+        {
+          "theme": "Poverty without pity (SU)",
+          "bands": {
+            "6–8": "Rewrite a description to remove pity from it, checked by someone.",
+            "9–10": "Rewrite three descriptions to remove the pity, on your own.",
+            "11–12": "Teach someone else how to talk about poverty without pity."
+          }
+        },
+        {
+          "theme": "Faith you do not share (SU)",
+          "bands": {
+            "9–10": "Describe an accommodation you made and how you learned it was needed, on your own.",
+            "11–12": "Teach someone else how to accommodate a faith you don't share.",
+            "K–2": "Ask an adult about a belief different from your own."
+          }
+        },
+        {
+          "theme": "Disability, from the person’s account (SU)",
+          "bands": {
+            "11–12": "Teach someone else how to listen to a disabled person's own account.",
+            "K–2": "Ask an adult what it means to ask someone what they need.",
+            "3–5": "Describe an adjustment someone asked for and you made, with an adult's help."
+          }
+        },
+        {
+          "theme": "People who have been failed before (SU)",
+          "bands": {
+            "K–2": "Ask an adult what it means to earn someone's trust again.",
+            "3–5": "Describe a relationship you rebuilt after trust was broken, with an adult's help.",
+            "6–8": "Rebuild a real relationship with someone who's been failed before, checked by someone."
+          }
+        },
+        {
+          "theme": "The community that does not want your help (SU)",
+          "bands": {
+            "3–5": "Describe a refusal you respected, with an adult's help.",
+            "6–8": "Describe a real refusal of help that you respected, checked by someone.",
+            "9–10": "Respect a real community's refusal of help, on your own."
+          }
+        },
+        {
+          "theme": "Hiring from the community you serve (SU)",
+          "bands": {
+            "6–8": "Notice who gets hired to help a community, checked by someone.",
+            "9–10": "Describe a real change to how a team recruits from its community, on your own.",
+            "11–12": "Teach someone else why hiring from the community served matters."
+          }
+        },
+        {
+          "theme": "Giving the work away (SU)",
+          "bands": {
+            "9–10": "Describe something you handed over and what you stopped doing, on your own.",
+            "11–12": "Teach someone else how to give real work away, not just delegate tasks.",
+            "K–2": "Ask an adult what it means to let someone else take over a job."
+          }
+        },
+        {
+          "theme": "Being accountable to people with no power over you (SU)",
+          "bands": {
+            "11–12": "Teach someone else how to build accountability to people with no power over you.",
+            "K–2": "Ask an adult what it means to listen to someone who can't make you.",
+            "3–5": "Build a small channel for feedback and describe what came through it, with help."
+          }
+        }
+      ]
+    }
+  ]
+}
