@@ -1154,7 +1154,7 @@ function swarmBase(v){
  const edges=DATA.edges.map(e=>{const a=DATA.agents.find(x=>x.id===e[0]),b=DATA.agents.find(x=>x.id===e[1]);const p=pos(a),q=pos(b);return `<g class="edge-g" data-a="${e[0]}" data-b="${e[1]}"><line class="edge" x1="${p.x}" y1="${p.y}" x2="${q.x}" y2="${q.y}"/><text class="edgelabel" x="${p.x+(q.x-p.x)*0.62}" y="${p.y+(q.y-p.y)*0.62-4}" text-anchor="middle">${esc(e[2])}</text></g>`;}).join('');
  const nodes=DATA.agents.map(a=>`<g class="node ${a.kind}" data-id="${a.id}" tabindex="0" role="button" aria-label="${esc(a.name)}"><rect x="${a.x}" y="${a.y}" width="${bw}" height="${bh}"/><text x="${a.x+10}" y="${a.y+19}" class="code">${a.id} · ${a.kind==='core'?'learner-facing':'governance'}</text><text x="${a.x+10}" y="${a.y+36}">${esc(a.name.replace(' Agent','').replace('Gamification ','').replace('On-Chain ','').slice(0,26))}</text></g>`).join('');
  v.innerHTML=`<div class="vhead"><div class="eyebrow">Multi-agent educational swarm · open protocols · human in every loop</div><h1>Nine agents, one crew, one teacher</h1><p class="lede">Five agents face the learner; four govern the system. They interoperate over LTI 1.3 to the LMS, MCP for tools, A2A-style messaging between agents, xAPI for telemetry, and are registered with signed capability cards so a state can see exactly what runs in its classrooms. Click a node.</p></div>
- <div class="swarm"><div class="card" style="padding:10px"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Agent swarm diagram">${edges}${nodes}</svg><div class="legend"><span><i style="background:var(--teal)"></i>Learner-facing (core)</span><span><i style="background:var(--gold)"></i>Governance</span></div></div><div id="agentdetail" class="card"></div></div>
+ <div class="swarm"><div class="card" style="padding:10px"><svg viewBox="0 0 ${W} ${H}" role="group" aria-label="Agent swarm diagram">${edges}${nodes}</svg><div class="legend"><span><i style="background:var(--teal)"></i>Learner-facing (core)</span><span><i style="background:var(--gold)"></i>Governance</span></div></div><div id="agentdetail" class="card"></div></div>
  <div class="section"><h2>Swarm data flow</h2><div class="cycle" style="grid-template-columns:repeat(5,1fr)">${[['1','LPAA','Parses telemetry into the ZPD vector and λ'],['2','GQDA','Selects standards, builds the micro-mission'],['3','DTA','Scaffolds at the barrier; never reveals'],['4','TAA','Populates the teacher dashboard; flags'],['5','OCCA','Verifies transfer; issues the credential']].map(s=>`<div><div class="when">Step ${s[0]}</div><h3>${s[1]}</h3><p>${esc(s[2])}</p></div>`).join('')}</div></div>
  <div class="section"><h2>Capability card (example)</h2><div class="term" style="min-height:0;max-height:none">${esc(JSON.stringify({agent:'DTA',version:'1.0.0',registry:'nanda://aff.education/agents/dta',protocols:['a2a','mcp','lti-1.3','xapi-1.0.3'],inputs:['mission_state','learner_attempt','misconception_taxonomy','lambda'],outputs:['scaffold_text','lambda_delta','escalation'],guardrails:{reveal_answer_in_flow_band:false,log_every_scaffold:true,escalate_on:['distress_flag','3_consecutive_failures','learner_requests_human','safety_gated_action']},model:{provider:'state-approved',version:'pinned-per-school-year',trains_on_student_data:false},human_owner:'Teacher Leader, pilot parish'},null,2))}</div></div>`;
  function show(id){const a=DATA.agents.find(x=>x.id===id);v.querySelectorAll('.node').forEach(n=>n.classList.toggle('on',n.dataset.id===id));v.querySelectorAll('.edge-g').forEach(g=>{const on=g.dataset.a===id||g.dataset.b===id;g.querySelector('.edge').classList.toggle('on',on);});$('#agentdetail').innerHTML=`<div class="eyebrow">${esc(a.id)} · ${a.kind==='core'?'learner-facing':'governance'}</div><h2 style="margin:6px 0 12px">${esc(a.name)}</h2><dl class="kv"><dt>Purpose</dt><dd>${esc(a.purpose)}</dd><dt>Inputs</dt><dd>${esc(a.inputs)}</dd><dt>Outputs</dt><dd>${esc(a.outputs)}</dd><dt>Guardrails</dt><dd>${esc(a.guard)}</dd></dl>`;}
@@ -8813,9 +8813,9 @@ DATA.figRule='Every large number on this platform is derived, so every large num
 DATA.seqRamp={light:['#5FC0B3','#33A093','#1B7F76','#115B54','#093B36'],dark:['#2A7F76','#3FA89B','#63CEC1','#96E4DA','#CDF4EF'],
  note:'A five-step sequential ramp in the platform’s own teal, ordered by magnitude and monotone in perceptual lightness in both themes (light 0.75→0.32, dark 0.54→0.94) and readable at every step — the lightest light-mode step clears 2.1:1 against white and the faintest dark-mode step clears 3.2:1 against the dark surface, so no rung of the ladder is a whisper. It is sequential rather than categorical because the scale ladder measures magnitude, not identity — four different hues would say these are four kinds of thing, and they are four sizes of one.'};
 (function(){const s=document.createElement('style');s.textContent=`
-:root{--seq1:#5FC0B3;--seq2:#33A093;--seq3:#176E66;--seq4:#115B54;--seq5:#093B36;--seq-ink:#176E66;--seq-wash:#E4F5F2;--gold-ink:#8A6210;--mark-line:#8FA2B1}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--seq1:#2A7F76;--seq2:#3FA89B;--seq3:#63CEC1;--seq4:#96E4DA;--seq5:#CDF4EF;--seq-ink:#63CEC1;--seq-wash:#123832;--gold-ink:#EFC65E;--mark-line:#46617A}}
-:root[data-theme="dark"]{--seq1:#2A7F76;--seq2:#3FA89B;--seq3:#63CEC1;--seq4:#96E4DA;--seq5:#CDF4EF;--seq-ink:#63CEC1;--seq-wash:#123832;--gold-ink:#EFC65E;--mark-line:#46617A}
+:root{--seq1:#5FC0B3;--seq2:#33A093;--seq3:#176E66;--seq4:#115B54;--seq5:#093B36;--seq-ink:#176E66;--seq-wash:#E4F5F2;--gold-ink:#8A6210;--teal-ink:#1C716A;--mark-line:#8FA2B1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--seq1:#2A7F76;--seq2:#3FA89B;--seq3:#63CEC1;--seq4:#96E4DA;--seq5:#CDF4EF;--seq-ink:#63CEC1;--seq-wash:#123832;--gold-ink:#EFC65E;--teal-ink:#4FC3B6;--mark-line:#46617A}}
+:root[data-theme="dark"]{--seq1:#2A7F76;--seq2:#3FA89B;--seq3:#63CEC1;--seq4:#96E4DA;--seq5:#CDF4EF;--seq-ink:#63CEC1;--seq-wash:#123832;--gold-ink:#EFC65E;--teal-ink:#4FC3B6;--mark-line:#46617A}
 /* the figure lockup: value, factorisation, unit */
 .fig{display:flex;flex-direction:column;gap:5px;min-width:0}
 .fig .fv{font-family:var(--display);font-stretch:125%;font-weight:800;line-height:.95;letter-spacing:-.015em;font-size:38px;color:var(--ink);font-variant-numeric:proportional-nums}
@@ -18209,7 +18209,7 @@ renderers.laos=function(){var v=view('laos');
    return ['<b class="small">'+esc(r[0])+'</b>','<b class="small mono">'+esc(r[1])+'</b>','<span class="small muted">'+esc(r[2])+'</span>',
     reach(r[4])?'<button class="btn ghost small" data-go="'+esc(r[4])+'" style="white-space:normal;text-align:left">'+esc(r[3])+'</button>'
      :(function(){var lk=(typeof DATA.crossLink==='function')?DATA.crossLink(r[4]):null;
-       return lk?'<span class="small">'+esc(r[3])+' <a class="mono" style="opacity:.85" href="'+esc(lk.url)+'" target="_blank" rel="noopener">· open in '+esc(lk.name.replace('Cognition.X : ',''))+'</a></span>'
+       return lk?'<span class="small">'+esc(r[3])+' <a class="mono" href="'+esc(lk.url)+'" target="_blank" rel="noopener">· open in '+esc(lk.name.replace('Cognition.X : ',''))+'</a></span>'
                 :'<span class="small muted">'+esc(r[3])+(r[4]&&r[4]!=='—'?' <span class="mono" style="opacity:.7">· separate build</span>':'')+'</span>';})()];}),{id:'la-router'})+'</div>'
  +'<div class="section"><h2>Programme status</h2>'+DATA.artSection('la-status','Programme status')
  +'<p class="small" style="max-width:94ch">'+esc(DATA.laStatusWhy)+'</p>'
@@ -18407,7 +18407,7 @@ renderers.cognitionx=function(){var v=view('cognitionx');
    return '<div class="card" style="padding:0;overflow:hidden;border-left:3px solid '+I.accent+'">'
     +(plate?'<div style="line-height:0">'+plate+'</div>':'')
     +'<div style="padding:14px;background:'+I.wash+'">'
-    +'<div class="eyebrow" style="margin:0;color:'+I.accent+'">'+String(x.order).padStart(2,'0')+' · layer '+esc(x.layer)+(I.open?' · '+esc(I.open):'')+'</div>'
+    +'<div class="eyebrow" style="margin:0;color:'+I.ink+'">'+String(x.order).padStart(2,'0')+' · layer '+esc(x.layer)+(I.open?' · '+esc(I.open):'')+'</div>'
     +'<h3 style="font-size:16.5px;margin:5px 0 0">'+esc(x.name)+'<span class="small muted" style="font-weight:400">'+esc(DATA.osSuffix)+'</span></h3>'
     +'<p class="small" style="margin:6px 0 0">'+esc(x.tag)+'</p>'
     +'<p class="small muted" style="margin:8px 0 0"><b>Who it is for:</b> '+esc(x.who)+'</p>'
@@ -18496,7 +18496,7 @@ DATA.osPage=function(x){
   +'<div style="margin-top:8px"><button class="btn ghost small" data-go="'+esc(x.flagView)+'">Open it</button></div></div>'
  +(tracks?'<div class="section">'+DATA.artSection('ed-'+x.key,'Ten tracks')+'<h2>The ten tracks</h2><div class="grid g2" style="gap:10px">'
    +tracks.map(function(t){var au=A[t[0]]||[];
-          return '<div class="card" style="border-top:2px solid '+I.accent+'"><div class="eyebrow" style="margin:0;color:'+I.accent+'">'+esc(x.layer)+'\u00b7'+esc(t[0])+(au[0]?' \u00b7 '+esc(au[0]):'')+'</div>'
+          return '<div class="card" style="border-top:2px solid '+I.accent+'"><div class="eyebrow" style="margin:0;color:'+I.ink+'">'+esc(x.layer)+'\u00b7'+esc(t[0])+(au[0]?' \u00b7 '+esc(au[0]):'')+'</div>'
       +'<h3 style="font-size:14.5px;margin:4px 0 0">'+esc(t[1])+'</h3>'
       +'<p class="small muted" style="margin:5px 0 0">'+esc(t[2].slice(0,3).join('; '))+'…</p>'
       +'<p class="small mono muted" style="margin:5px 0 0">10 themes · 50 blocks</p></div>';}).join('')
@@ -18874,7 +18874,7 @@ renderers.adopt=function(){var v=view('adopt');
    var x=F.filter(function(y){return y.key===a.key;})[0]||{name:a.key,layer:'?'};
    var id=I[a.key]||{accent:'var(--seq3)',wash:'transparent'};
    return '<div class="card" style="border-left:3px solid '+id.accent+';background:'+id.wash+'">'
-    +'<div class="eyebrow" style="margin:0;color:'+id.accent+'">'+esc(x.name||'')+' · layer '+esc(x.layer||'')+'</div>'
+    +'<div class="eyebrow" style="margin:0;color:'+id.ink+'">'+esc(x.name||'')+' · layer '+esc(x.layer||'')+'</div>'
     +'<div style="overflow-x:auto;margin-top:8px">'+phTbl(['','What'],[
       ['<b class="small">Who signs</b>','<span class="small">'+esc(a.signer)+'</span>'],
       ['<b class="small">What the site supplies</b>','<span class="small">'+esc(a.supply)+'</span>'],
@@ -18985,7 +18985,7 @@ DATA.xwCompare=function(){
   var present=!(blocks===undefined||blocks===null);
   return {key:x.key,name:x.name.replace('Cognition.X : ',''),full:x.name,layer:x.layer,
    present:present&&blocks>0,blocks:blocks||0,tracks:tracks||0,built:!!built[x.key],
-   accent:(I[x.key]||{}).accent||'var(--seq3)'};});};
+   accent:(I[x.key]||{}).accent||'var(--seq3)',ink:(I[x.key]||{}).ink||'var(--seq-ink)'};});};
 
 renderers.crosswalk=function(){var v=view('crosswalk');
  var C=DATA.xwCount(),M=DATA.xwMoves,X=DATA.xwCompare();
@@ -19008,7 +19008,7 @@ renderers.crosswalk=function(){var v=view('crosswalk');
  +'<p class="small muted" style="max-width:94ch">'+esc(DATA.xwChartNote)+'</p>'
  +'<div id="vz-xw-wrap" style="margin-top:10px"></div>'
  +'<div style="overflow-x:auto;margin-top:12px">'+phTbl(['System','Layer','Authored blocks','Tracks','Built as its own file'],X.map(function(x){
-   return ['<b class="small" style="color:'+x.accent+'">'+esc(x.name)+'</b>','<span class="small mono muted">'+esc(x.layer)+'</span>',
+   return ['<b class="small" style="color:'+x.ink+'">'+esc(x.name)+'</b>','<span class="small mono muted">'+esc(x.layer)+'</span>',
     x.present?'<b class="small mono">'+n(x.blocks)+'</b>':'<span class="small muted">not in this build</span>','<span class="small mono">'+(x.tracks||'—')+'</span>',
     x.built?'<span class="pill teal">yes</span>':'<span class="pill" style="background:rgba(150,83,10,.14);color:var(--warn)">no — a layer and a nav inside another build</span>'];}),{id:'xw-cmp'})+'</div></div>'
  +'<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><button class="btn ghost" data-go="cognitionx">The eight systems</button><button class="btn ghost" data-go="network">The shared network</button><button class="btn ghost" data-go="adopt">Adoption packages</button><button class="btn ghost" data-go="packs">The pack registry</button></div>';
@@ -19259,7 +19259,7 @@ renderers.crossedition=function(){var v=view('crossedition');
  +'<div style="overflow-x:auto">'+phTbl(['Edition','Inherited','Added by this edition'],F.map(function(x){
    var add=(DATA.ceAdded||{})[x.key]||[];
    var acc=(DATA.osIdent||{})[x.key];
-   return ['<b class="small"'+(acc?' style="color:'+acc.accent+'"':'')+'>'+esc(x.name.replace('Cognition.X : ',''))+'</b>',
+   return ['<b class="small"'+(acc?' style="color:'+acc.ink+'"':'')+'>'+esc(x.name.replace('Cognition.X : ',''))+'</b>',
     '<span class="small mono">'+DATA.ceInherited.length+' / '+DATA.ceInherited.length+'</span>',
     add.length?'<span class="small">'+add.map(function(r){return esc(r[1]);}).join(' · ')+'</span>':'<span class="small muted">none — it inherits and adds nothing</span>'];}),{id:'ce-ref'})+'</div></div>'
  +'<div class="section">'+DATA.artSection('ce-run','Resolved on this load')+'<h2>Four real blocks, moved</h2>'
@@ -20408,8 +20408,8 @@ renderers.robotrain=function(){var v=view('robotrain');
 
  +'<div class="section">'+DATA.artSection('rt-rank','Ranked honestly')+'<h2>Six candidate contributions, strongest first</h2>'
  +'<div style="display:grid;gap:10px">'+DATA.rtRank.map(function(r){
-   var s=r[1],col=/STRONG/.test(s)?'var(--teal)':/MODERATE/.test(s)?'var(--gold)':'var(--crit)';
-   return '<div class="card" style="border-left:3px solid '+col+'"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:baseline"><b class="small">'+esc(r[0])+'</b><span class="pill" style="background:rgba(0,0,0,.05);color:'+col+'">'+esc(s)+'</span></div>'
+   var s=r[1],col=/STRONG/.test(s)?'var(--teal)':/MODERATE/.test(s)?'var(--gold)':'var(--crit)',colInk=/STRONG/.test(s)?'var(--teal-ink)':/MODERATE/.test(s)?'var(--gold-ink)':'var(--crit)';
+   return '<div class="card" style="border-left:3px solid '+col+'"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:baseline"><b class="small">'+esc(r[0])+'</b><span class="pill" style="background:rgba(0,0,0,.05);color:'+colInk+'">'+esc(s)+'</span></div>'
    +'<p class="small muted" style="margin:6px 0 0;max-width:100ch">'+esc(r[2])+'</p></div>';}).join('')+'</div></div>'
 
  +'<div class="section">'+DATA.artSection('rt-fmt','Where it would go')+'<h2>Formats and benchmarks, and the shortest real path</h2>'
@@ -21684,6 +21684,7 @@ DATA.rnMethod='Five mechanisms, five separate research passes rather than one pa
 renderers.robonet=function(){var v=view('robonet');
  var arts='';try{arts=DATA.artHero('robonet',{h:170});}catch(e){}
  var vcolor=function(s){return /STRONG/.test(s)&&!/MODERATE/.test(s)?'var(--teal)':/MODERATE/.test(s)?'var(--gold)':/ABSENT/.test(s)?'var(--crit)':'var(--crit)';};
+ var vcolorInk=function(s){return /STRONG/.test(s)&&!/MODERATE/.test(s)?'var(--teal-ink)':/MODERATE/.test(s)?'var(--gold-ink)':'var(--crit)';};
  v.innerHTML=(arts?'<div style="margin-bottom:14px">'+arts+'</div>':'')
  +'<div class="vhead"><div class="eyebrow">5 mechanisms researched &middot; 1 strong methods parallel &middot; 2 moderate &middot; 1 absent crossover &middot; 0 data-reuse precedent found anywhere</div>'
   +'<h1>Not the curriculum. The network it runs on.</h1>'
@@ -21692,11 +21693,11 @@ renderers.robonet=function(){var v=view('robonet');
 
  +'<div class="section">'+DATA.artSection('rn-mech','Mechanism by mechanism')+'<h2>Five parts of the network, checked against the literature separately</h2>'
  +'<div style="display:grid;gap:14px;margin-top:10px">'+DATA.rnMechanisms.map(function(m){
-   var col=vcolor(m.verdict);
+   var col=vcolor(m.verdict),colInk=vcolorInk(m.verdict);
    return '<div class="card" style="border-left:3px solid '+col+'">'
    +'<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:baseline;justify-content:space-between">'
    +'<b class="small" style="font-size:14.5px">'+esc(m.name)+'</b>'
-   +'<span class="pill" style="background:rgba(0,0,0,.05);color:'+col+'">'+esc(m.verdict)+'</span></div>'
+   +'<span class="pill" style="background:rgba(0,0,0,.05);color:'+colInk+'">'+esc(m.verdict)+'</span></div>'
    +'<p class="small muted" style="margin:6px 0 8px;font-style:italic">'+esc(m.behavior)+'</p>'
    +'<p class="small" style="margin:0 0 10px;max-width:100ch">'+esc(m.lede)+'</p>'
    +'<details><summary class="small" style="cursor:pointer;color:var(--teal)">Sources ('+m.sources.length+')</summary>'
@@ -22006,7 +22007,8 @@ renderers.gamesim=function(){var v=view('gamesim');
  +'<div style="display:grid;gap:12px">'+DATA.gsEngines.map(function(e){
    var real=/GENUINELY REPURPOSED/.test(e[2]);
    var col=real?'var(--teal)':/NOT A GAME ENGINE, AND ONE HEADLINE/.test(e[2])?'var(--crit)':/BUILT ON GAME-ADJACENT/.test(e[2])?'var(--gold)':'var(--crit)';
-   return '<div class="card" style="border-left:3px solid '+col+'"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:baseline"><b class="small">'+esc(e[0])+'</b><span class="pill" style="background:rgba(0,0,0,.05);color:'+col+'">'+esc(e[2])+'</span></div>'
+   var colInk=real?'var(--teal-ink)':/NOT A GAME ENGINE, AND ONE HEADLINE/.test(e[2])?'var(--crit)':/BUILT ON GAME-ADJACENT/.test(e[2])?'var(--gold-ink)':'var(--crit)';
+   return '<div class="card" style="border-left:3px solid '+col+'"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:baseline"><b class="small">'+esc(e[0])+'</b><span class="pill" style="background:rgba(0,0,0,.05);color:'+colInk+'">'+esc(e[2])+'</span></div>'
    +'<p class="small mono muted" style="margin:6px 0 0">'+esc(e[1])+'</p>'
    +'<p class="small" style="margin:8px 0 0;max-width:100ch">'+esc(e[3])+'</p></div>';}).join('')+'</div></div>'
 
@@ -22102,7 +22104,8 @@ renderers.roboroad=function(){var v=view('roboroad');
  +'<div style="display:grid;gap:10px">'+DATA.rrStepAuto.map(function(s){
    var strong=/LARGELY AUTOMATABLE|AUTOMATABLE WHERE/.test(s[1]);
    var col=strong?'var(--teal)':/WEAKEST LINK/.test(s[1])?'var(--crit)':'var(--gold)';
-   return '<div class="card" style="border-left:3px solid '+col+'"><b class="small">'+esc(s[0])+'</b> &middot; <span class="small" style="color:'+col+'">'+esc(s[1])+'</span><p class="small muted" style="margin:6px 0 0;max-width:100ch">'+esc(s[2])+'</p></div>';}).join('')+'</div></div>'
+   var colInk=strong?'var(--teal-ink)':/WEAKEST LINK/.test(s[1])?'var(--crit)':'var(--gold-ink)';
+   return '<div class="card" style="border-left:3px solid '+col+'"><b class="small">'+esc(s[0])+'</b> &middot; <span class="small" style="color:'+colInk+'">'+esc(s[1])+'</span><p class="small muted" style="margin:6px 0 0;max-width:100ch">'+esc(s[2])+'</p></div>';}).join('')+'</div></div>'
 
  +'<div class="section">'+DATA.artSection('rr-phase','A staged roadmap, none of it started')+'<h2>Phase 0 through 3</h2>'
  +'<div style="display:grid;gap:10px">'+DATA.rrPhases.map(function(p,i){
@@ -23737,7 +23740,7 @@ renderers.compare=function(){
   <div><div class="card" id="cmpdetail"></div></div></div>
  <div class="section"><h2>Spending against results</h2><p class="lede">Current spending per pupil (FY2024) against the average NAEP gap. Money matters, but the chart shows how much of the variance it does not explain.</p><div class="card"><svg id="scatter" viewBox="0 0 720 380" style="width:100%;height:auto" role="img" aria-label="Scatter of spending per pupil against NAEP composite"></svg></div></div>
  <div class="section"><h2>What the data says about the standard</h2><div class="grid g3">${[['Reading laws travel; math laws don\'t','43 states have a science-of-reading law. Not one has an equivalent numeracy law with universal middle-school teacher training. Grade 8 math is the weakest measure in most profiles — the gap the Mechatronic-Math Block is built for.'],['Requirements are converging on 22–24 credits','Most states require four ELA and three or four math credits; nine require Algebra II; seven still require passing an exit exam. A mastery-block calendar can satisfy every one of these — the G2FC maps transfer checks to course codes rather than replacing them.'],['Own-standards states crosswalk fastest','Thirteen states own their standards outright (TEKS, B.E.S.T., SOL, Louisiana Student Standards among them). The SSCA crosswalk is authored once from the state\'s documents; Common Core states share a common mission library.']].map(c=>`<div class="card"><h3>${esc(c[0])}</h3><p class="small" style="color:var(--ink2);margin:0">${esc(c[1])}</p></div>`).join('')}</div></div>
- <div class="section"><h2>Sources and definitions</h2><div class="card"><dl class="kv" style="grid-template-columns:130px 1fr">${Object.entries(DATA.cmpNotes).map(([k,t])=>`<dt>${esc(k)}</dt><dd class="small">${esc(t)}</dd>`).join('')}</dl><ul class="small" style="margin:12px 0 0;padding-left:18px">${DATA.cmpSources.map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a></li>`).join('')}</ul></div></div>`;
+ <div class="section"><h2>Sources and definitions</h2><div class="card"><dl class="kv" style="grid-template-columns:130px 1fr">${Object.entries(DATA.cmpNotes).map(([k,t])=>`<dt>${esc(k)}</dt><dd class="small">${esc(t)}</dd>`).join('')}</dl><ul class="small" style="margin:12px 0 0;padding-left:18px">${DATA.cmpSources.map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener" style="display:inline-block;padding:4px 0">${esc(s[0])}</a></li>`).join('')}</ul></div></div>`;
  const fmt={alg2:x=>x?'<span class="pill good">yes</span>':'<span class="pill">no</span>',exit:x=>x==='yes'?'<span class="pill gold">yes</span>':x==='phasing out'?'<span class="pill warn">phasing out</span>':'<span class="pill">no</span>',ccss:x=>`<span class="pill ${x==='own'?'teal':''}">${x}</span>`,sor:x=>x?'<span class="pill good">yes</span>':'<span class="pill crit">no</span>',ret:x=>x==='mandatory'?'<span class="pill gold">mandatory</span>':x==='parent_choice'?'<span class="pill">parent choice</span>':x==='pending'?'<span class="pill warn">enacted</span>':'<span class="pill">none</span>',cursive:x=>x?'<span class="pill good">yes</span>':'<span class="pill">no</span>',cs:x=>x?'<span class="pill good">yes</span>':'<span class="pill">no</span>',phone:x=>x?'<span class="pill good">yes</span>':'<span class="pill">no</span>'};
  function gapCell(v,n){const d=v-n;return `<span style="color:${d>=3?'var(--good)':d<=-3?'var(--crit)':'var(--ink)'}">${v}</span>`;}
  function table(){const list=rows.slice().sort((a,b)=>{let x=a[sortKey],y=b[sortKey];if(x==null)return 1;if(y==null)return -1;if(typeof x==='string'&&typeof y==='string')return sortDir*x.localeCompare(y);if(typeof x==='boolean')x=+x;if(typeof y==='boolean')y=+y;if(x==='local')x=-1;if(y==='local')y=-1;return sortDir*((x>y)-(x<y));});
@@ -23749,7 +23752,7 @@ renderers.compare=function(){
   <dl class="kv" style="grid-template-columns:120px 1fr"><dt>Diploma</dt><dd>${r.credits} credits · ELA ${r.ela??'—'} · math ${r.math??'—'} · Algebra II ${r.alg2?'required':'not required'} · exit exam ${esc(r.exit)}</dd><dt>Standards</dt><dd>${esc(r.standards)} <span class="pill">${r.ccss}</span></dd><dt>Graduation</dt><dd>${r.acgr==null?'not published':r.acgr+'% (U.S. '+N.acgr+'%)'}</dd><dt>Spending</dt><dd>$${r.ppe.toLocaleString()} per pupil (U.S. $${N.ppe.toLocaleString()})</dd><dt>Policy</dt><dd>SoR ${r.sor?'yes'+(r.sor_year?' · '+r.sor_year:''):'no'} · grade-3 gate ${esc(r.ret.replace('_',' '))} · cursive ${r.cursive?'yes':'no'} · CS ${r.cs?'yes':'no'} · phone ${r.phone?'yes':'no'}</dd></dl>
   <h3 style="margin-top:14px;color:var(--good)">Strengths</h3><ul class="small" style="margin:0;padding-left:18px">${a.S.length?a.S.map(s=>`<li>${esc(s)}</li>`).join(''):'<li>At or near the national line on every measure</li>'}</ul>
   <h3 style="margin-top:12px;color:var(--crit)">Weaknesses</h3><ul class="small" style="margin:0;padding-left:18px">${a.W.length?a.W.map(s=>`<li>${esc(s)}</li>`).join(''):'<li>No measure more than two points below the national line</li>'}</ul>
-  <h3 style="margin-top:12px;color:var(--gold2)">Needs roadmap</h3><ol class="small" style="margin:0;padding-left:18px">${a.Nd.map(s=>`<li style="margin-bottom:4px">${esc(s)}</li>`).join('')}</ol>
+  <h3 style="margin-top:12px;color:var(--gold-ink)">Needs roadmap</h3><ol class="small" style="margin:0;padding-left:18px">${a.Nd.map(s=>`<li style="margin-bottom:4px">${esc(s)}</li>`).join('')}</ol>
   <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><button class="btn" onclick="location.hash='#/states'">Open the ${esc(r.name)} edition</button>${sel==='LA'?'<button class="btn primary" onclick="location.hash=\'#/flagship\'">Louisiana reference program</button>':''}</div>`;}
  function scatter(){const cs=getComputedStyle(document.documentElement);const c=n=>cs.getPropertyValue(n).trim();const W=720,H=380,L=60,R=20,T=20,B=44;const xs=rows.map(r=>r.ppe),ys=rows.map(r=>r.comp);const x0=10000,x1=33000,y0=-14,y1=12;const X=x=>L+(x-x0)/(x1-x0)*(W-L-R),Y=y=>T+(y1-y)/(y1-y0)*(H-T-B);
   let g='';for(let x=10000;x<=32000;x+=4000)g+=`<line x1="${X(x)}" y1="${T}" x2="${X(x)}" y2="${H-B}" stroke="${c('--line')}"/><text x="${X(x)}" y="${H-B+16}" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="${c('--ink3')}">$${(x/1000)}k</text>`;for(let y=-12;y<=12;y+=4)g+=`<line x1="${L}" y1="${Y(y)}" x2="${W-R}" y2="${Y(y)}" stroke="${c('--line')}"/><text x="${L-8}" y="${Y(y)+3}" text-anchor="end" font-family="IBM Plex Mono" font-size="10" fill="${c('--ink3')}">${y>0?'+':''}${y}</text>`;g+=`<line x1="${L}" y1="${Y(0)}" x2="${W-R}" y2="${Y(0)}" stroke="${c('--ink3')}" stroke-dasharray="3 3"/><line x1="${X(N.ppe)}" y1="${T}" x2="${X(N.ppe)}" y2="${H-B}" stroke="${c('--ink3')}" stroke-dasharray="3 3"/><text x="${X(N.ppe)+4}" y="${T+10}" font-family="IBM Plex Mono" font-size="10" fill="${c('--ink3')}">U.S. $${N.ppe.toLocaleString()}</text>`;
@@ -23770,7 +23773,7 @@ renderers.flagship=function(){
  <div class="section grid" style="grid-template-columns:1.2fr 1fr;gap:20px;align-items:start"><div class="card"><h3>Statewide KPI ladder</h3><div class="tablewrap" style="border:0"><table><thead><tr><th>Measure</th><th>Today</th><th>2028</th><th>2030</th><th>2035</th></tr></thead><tbody>${F.kpis.map(k=>`<tr><td><b>${esc(k[0])}</b></td><td class="tabular">${esc(k[1])}</td><td class="tabular">${esc(k[2])}</td><td class="tabular">${esc(k[3])}</td><td class="tabular">${esc(k[4])}</td></tr>`).join('')}</tbody></table></div></div>
  <div class="card"><h3>School-system playbook</h3><p class="small muted">Pick a system to generate its year-one program from the statewide baselines and its parish profile.</p><div class="field"><label for="fs-parish">School system</label><select id="fs-parish">${DATA.parishes.map(p=>`<option value="${esc(p[0])}">${esc(p[0])} Parish${p[5]?' (+ '+esc(p[5])+')':''}</option>`).join('')}</select></div><div id="fs-out"></div></div></div>
  <div class="section"><h2>Roadmap to the next century</h2><div class="tl">${F.horizons.map((h,i)=>`<div class="${i===0?'done':''}"><h3>${esc(h[0])}</h3><p>${esc(h[1])}</p></div>`).join('')}</div></div>
- <div class="section"><h2>Sources</h2><div class="card"><ul class="small" style="margin:0;padding-left:18px">${F.sources.map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a></li>`).join('')}</ul><p class="small muted" style="margin:10px 0 0">NAEP ranks are among the 50 states plus DC as reported by the LDOE. ACGR is the class of 2022-23 as published by the LDOE; the NCES state table used in the comparison is the class of 2021-22. Spending is FY2024 Census current spending per pupil. Teacher workforce figures are from the Learning Policy Institute's 2024-25 data and the LSU/CAEP 2023-24 snapshot. Confirm each figure against the live source before it is cited in a BESE filing.</p></div></div>`;
+ <div class="section"><h2>Sources</h2><div class="card"><ul class="small" style="margin:0;padding-left:18px">${F.sources.map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener" style="display:inline-block;padding:4px 0">${esc(s[0])}</a></li>`).join('')}</ul><p class="small muted" style="margin:10px 0 0">NAEP ranks are among the 50 states plus DC as reported by the LDOE. ACGR is the class of 2022-23 as published by the LDOE; the NCES state table used in the comparison is the class of 2021-22. Spending is FY2024 Census current spending per pupil. Teacher workforce figures are from the Learning Policy Institute's 2024-25 data and the LSU/CAEP 2023-24 snapshot. Confirm each figure against the live source before it is cited in a BESE filing.</p></div></div>`;
  function playbook(){const name=$('#fs-parish').value;const p=DATA.parishes.find(x=>x[0]===name);const yr=['','2026–27','2027–28','2028–29','2029–30'][p[4]];const trades=tradesForParish(p,4);const hall=DATA.regionHubs[p[1]];
   $('#fs-out').innerHTML=`<div class="eyebrow" style="margin-top:8px">${esc(DATA.waves[p[4]])} · Region ${p[1]} · hall at ${esc(hall)}</div><h3 style="margin:4px 0 8px">${esc(name)} year-one program · ${yr}</h3>
   ${[['Literacy Ascent','Ignite Era live K-5; Act 422 gate data reviewed monthly; HB 316 reading plans for every grade 4-8 learner below benchmark, DTA tutoring with a human tutor on escalation.'],['Numeracy Surge','Applied Mechanics 6-8 on every middle-school math seat; Mechatronic-Math Block as the default grade 9-10 math; every 4-8 math teacher in the 30-hour numeracy track by spring.'],['Show Up','Role identities assigned in week one; TAA absence flags to the family liaison before day 5; Trade Hall days for 11-12 at '+hall+'.'],['Graduate Ready','Jump Start pathway seats matched to '+trades.map(t=>t[0]).join(', ')+'; CS course offered from 2026-27 and required for the 2027-28 ninth-grade cohort, delivered through Bulletin 104 modules.'],['Teacher Capacity','Temporal wealth reported per teacher; Agent Steward and Shop Mentor roles posted; uncertified staff placed on the applied floor with a certified Teacher Leader of record.'],['Every Family','Home study families in the parish linked to the '+hall+' hall; '+(p[8]?'edge devices issued to every offline-tier campus; hall transport budgeted.':'GATOR-eligible tutoring offered through the platform.')]].map(x=>`<div style="padding:6px 0;border-bottom:1px dashed var(--line)"><b>${esc(x[0])}</b><div class="small" style="color:var(--ink2)">${esc(x[1])}</div></div>`).join('')}

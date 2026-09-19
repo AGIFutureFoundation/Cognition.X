@@ -77,10 +77,12 @@ SHELL_CSS = """
      ink and field values are the ones the app documents in its own brand
      view ("Gold — first contact", "Teal — application", "Ink — the
      keystone"); the status and rail values come from its DATA.vizTok
-     fallbacks; the sequential scale, --seq-ink, --seq-wash, --gold-ink
-     and --mark-line are already defined by the app's own injected
-     stylesheet and are deliberately NOT redefined here. Only the tones
-     between the documented anchors (--ink2, --bg3) are derived.
+     fallbacks; the sequential scale, --seq-ink, --seq-wash, --gold-ink,
+     --teal-ink (a11y, v0.113.0: the text-safe pair for --gold/--teal,
+     which read at 2.8-4.5:1 as text and were only ever meant as marks
+     and borders) and --mark-line are already defined by the app's own
+     injected stylesheet and are deliberately NOT redefined here. Only
+     the tones between the documented anchors (--ink2, --bg3) are derived.
      The app's stated rule is honoured throughout: never decorated —
      flat ground or its own field, no gradients, no decorative shadow. */
   :root{
@@ -88,7 +90,11 @@ SHELL_CSS = """
     --bg:#F4F7F9; --bg2:#FFFFFF; --bg3:#EEF3F6; --card:#FFFFFF;
     --line:#DFE5EA; --line2:#C9D3D9;
     --gold:#B8871F; --gold2:#B8860B; --gold-soft:rgba(184,135,31,.10);
-    --teal:#1E7A72; --term-teal:#176E66;
+    --teal:#1E7A72; --term-teal:#1F968B;
+    /* a11y (v0.113.0): .term's own ground is --ink, not --bg -- an
+       inverted terminal surface in both themes -- so text painted inside
+       it needs its own contrast-checked tokens, not the page's */
+    --term-dim:#6B89A5; --term-ok:#279860; --term-warn:#C96F0D;
     --ok:#1F7A4D; --good:#1F7A4D; --warn:#96530A; --crit:#B22B2B;
     --osa:#176E66; --osw:#F0F6F6; --s:#176E66;
     --radius:10px; --shadow:0 1px 2px rgba(14,30,46,.06);
@@ -101,7 +107,8 @@ SHELL_CSS = """
     --bg:#0B1B2B; --bg2:#122536; --bg3:#17293A; --card:#10263A;
     --line:#24394C; --line2:#2F4759;
     --gold:#E7C56A; --gold2:#E7C56A; --gold-soft:rgba(231,197,106,.14);
-    --teal:#4FC3B6; --term-teal:#63CEC1;
+    --teal:#4FC3B6; --term-teal:#37736C;
+    --term-dim:#606B75; --term-ok:#3A754C; --term-warn:#896231;
     --ok:#5FBF7C; --good:#5FBF7C; --warn:#E0A050; --crit:#E66767;
     --osa:#63CEC1; --osw:#123832; --s:#63CEC1;
     --shadow:0 1px 2px rgba(0,0,0,.4);
@@ -111,7 +118,8 @@ SHELL_CSS = """
     --bg:#0B1B2B; --bg2:#122536; --bg3:#17293A; --card:#10263A;
     --line:#24394C; --line2:#2F4759;
     --gold:#E7C56A; --gold2:#E7C56A; --gold-soft:rgba(231,197,106,.14);
-    --teal:#4FC3B6; --term-teal:#63CEC1;
+    --teal:#4FC3B6; --term-teal:#37736C;
+    --term-dim:#606B75; --term-ok:#3A754C; --term-warn:#896231;
     --ok:#5FBF7C; --good:#5FBF7C; --warn:#E0A050; --crit:#E66767;
     --osa:#63CEC1; --osw:#123832; --s:#63CEC1;
     --shadow:0 1px 2px rgba(0,0,0,.4);
@@ -202,6 +210,11 @@ SHELL_CSS = """
         color:var(--term-teal);border-radius:var(--radius);padding:12px 14px;
         overflow:auto;min-height:120px;max-height:340px;white-space:pre-wrap;
         word-break:break-word}
+  /* a11y (v0.113.0): overrides the page-level .dim/.good/.warn colours,
+     which are tuned for --bg and fail against .term's own --ink ground */
+  .term .dim{color:var(--term-dim)}
+  .term .good{color:var(--term-ok)}
+  .term .warn{color:var(--term-warn)}
 
   /* ---- the stat tile: .v is the value, .l the label ----------------- */
   .stat{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);
@@ -234,10 +247,13 @@ SHELL_CSS = """
         border-radius:999px;padding:2px 10px;color:var(--ink2);margin:2px 4px 2px 0;
         white-space:nowrap}
   .pill.gold,.gold{color:var(--gold-ink);border-color:var(--gold2)}
-  .pill.teal,.teal{color:var(--teal);border-color:var(--teal)}
+  .pill.teal,.teal{color:var(--teal-ink);border-color:var(--teal)}
   .pill.good,.good{color:var(--ok);border-color:var(--ok)}
   .pill.warn,.warn{color:var(--warn);border-color:var(--warn)}
   .pill.crit,.crit{color:var(--crit);border-color:var(--crit)}
+  /* a11y (v0.113.0, WCAG 2.2 · 2.5.8): unstyled score/rating buttons
+     rendered at the browser default (~19px tall) */
+  .opts button{min-width:24px;min-height:24px}
   .field{display:block;margin:0 0 10px;min-width:0}
   .field label,.slider label{display:block;font-size:.78rem;color:var(--ink2);margin:0 0 4px}
   .field input,.field select,.field textarea,.slider input[type=range]{

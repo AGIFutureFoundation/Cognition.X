@@ -16,6 +16,12 @@
  * bundle 50-150 near-identical map-label nodes sharing the same computed
  * colours; sampling all of them measures nothing a handful doesn't already
  * show). Needs Playwright + Chromium + axe-core, same as audit.js.
+ *
+ * Replays a run's `url`, `style` and `click` (all serialisable data in
+ * docs/ACCESSIBILITY.json); it cannot replay audit.js's in-page `steps`
+ * closures (the Trades Network studio/XR views), so a flagged instance
+ * that only appears after such a step is silently skipped rather than
+ * measured against the wrong page state.
  */
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path');
