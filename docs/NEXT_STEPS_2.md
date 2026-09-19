@@ -221,7 +221,7 @@ NODE_PATH=$(npm root -g) node tests/browser/smoke.js
 
 ---
 
-## 5 — A faster browser suite, evenly spread, with the audit in CI
+## 5 — A faster browser suite, evenly spread, with the audit in CI — DONE in v0.112.0
 
 **Why.** The browser suite is 223 assertions in 135 s, run one page at a
 time; the Platform app is opened twice and the Education OS three times
@@ -242,6 +242,55 @@ on changes under `apps/` and `tools/`, comparing to the committed
 **Acceptance.** Browser suite under 60 s with the same assertions;
 every app opened at least five times; the audit runs in CI and fails on
 a WCAG-tagged violation.
+
+**Finding, v0.112.0.** The 24 suites already ran in isolated Playwright
+pages (`browser.newPage()`), so parallelizing needed no change to the
+~900 lines of assertion bodies: an `AsyncLocalStorage` scopes `check()`'s
+console buffering per suite across every `await` in its call chain, and
+a small `runPool(items, limit, worker)` runs the suites eight at a time,
+printed back in original order after `Promise.all` resolves
+(`CX_SMOKE_SERIAL=1` still runs the old serial loop for debugging;
+`CX_SMOKE_CONCURRENCY` overrides the pool width). 135 s → 42 s, measured
+five times at concurrencies 4/6/8/10 with zero flakiness. Depth was
+added, not padding: Platform gained a system-map click-to-detail and its
+apps/stack views (2→5 opens), Education OS gained a live check of its
+Build Status table against `DATA.buildStatus.length` and a site-guide
+search round-trip (3→5 opens), Flow Hub gained a pack-search and ledger
+check (5→7 opens) — 223 assertions became 234, exceeding the letter of
+"the same assertions" to actually close the depth gap the prompt named.
+Every app now opens at least five times (`platform` 5, `education-os` 5,
+`flow-hub` 5, `trades-network` 5, `states` 5, `louisiana` 20).
+
+For the audit: `tests/test_platform.py` already failed on a *committed*
+WCAG-tagged violation, but nothing re-ran `tools/a11y/audit.js` against
+current builds — a regression only surfaced if someone remembered to run
+it and commit the result. Neither it nor `tests/browser/smoke.js` was
+actually in `.github/workflows/validate.yml` at all; `smoke.js`'s own
+top-of-file comment says why ("It needs a browser, so it is NOT part of
+the Python-only CI gate") — a real design choice, kept as-is, though it
+means `docs/SYSTEM_REVIEW_2.md`'s "In CI: yes" for that suite records
+this session's practice of always running it before a release, not a
+GitHub Actions step. Rather than force the audit into the existing
+Python-only jobs, it gets its own workflow,
+`.github/workflows/accessibility.yml`, triggered only on `apps/**` or
+`tools/**` changes: install Node + Playwright + axe-core, locate the
+installed Chromium, re-run `tools/a11y/audit.js` fresh, normalize the
+regenerated file's `generated` date to the committed one (otherwise
+every run would diff on the date alone), `git diff --exit-code` the
+result against the committed `docs/ACCESSIBILITY.json`, then
+independently fail on any WCAG-tagged violation regardless of whether
+the diff was clean — so a regression fails even if someone remembered to
+re-commit the (now also wrong) JSON. Verified locally: a fresh run
+reproduces the committed file byte-for-byte once the date is normalized
+(0 WCAG-tagged violations across 47 views, matching the committed
+baseline).
+
+**Verify.**
+```bash
+NODE_PATH=$(npm root -g) node tests/browser/smoke.js   # 234 assertions, ~42s
+NODE_PATH=$(npm root -g) node tools/a11y/audit.js       # 47 views, ~2 min
+git diff --stat docs/ACCESSIBILITY.json                 # only `generated` moves
+```
 
 ---
 
