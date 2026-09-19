@@ -1,38 +1,69 @@
 # Accessibility audit — WCAG 2.2 AA
 
-*Prompt 4 of the ranked next steps. First full audit: v0.53.0 (2026-09-15);
-re-run at v0.71.0 (2026-09-17) with the Simulation Studio and its WebXR
-room added as views. Re-run any time with `node tools/a11y/audit.js`; the
+*Prompt 4 of the first ranked next steps. First full audit: v0.53.0
+(2026-09-15); re-run at v0.71.0 (2026-09-17) with the Simulation Studio and
+its WebXR room added; round two at v0.113.0 (2026-09-19) — prompt 10 of
+`docs/NEXT_STEPS_2.md`. Re-run any time with `node tools/a11y/audit.js`; the
 committed result is [`docs/ACCESSIBILITY.json`](ACCESSIBILITY.json) and
 `tests/test_platform.py` fails if it carries a WCAG-tagged violation.*
 
-**At v0.71.0: 47 views, 0 WCAG-tagged violations, 5,309 focusable
-elements, 0 without a name, 0 click-only controls.** The two views added
-are the studio open on a scenario and the same studio with *Open in 3D /
-VR* pressed: the 3D panel's buttons, file input and canvas all carry
-names, the canvas is described, and the only finding on either is the
-documented `heading-order` deviation below (38 nodes across the run).
+**At v0.113.0: 304 runs — the Education OS's full 149-view route table plus
+39 views across the other five apps, each of the 39 audited in all five
+styles (149 + 39 × 5 = 304) — 0 WCAG-tagged violations, 42,767 focusable
+elements, 0 without a name, 0 click-only controls.** Round two closed three
+of the four things the v0.71.0 audit could not do on its own: every
+Education OS view, every style, and a pixel measurement of the axe "needs
+review" contrast items. The fourth — a screen-reader pass — needs a person
+and is not done; see "What remains" below.
 
 ## What was tested
 
 - **Automated rules.** axe-core 4.13.0 with the `wcag2a`, `wcag2aa`,
   `wcag21a`, `wcag21aa`, `wcag22aa` and `best-practice` tags, run over
-  **45 views**: every hash route of the Louisiana, States and Platform apps
-  (the Louisiana *Dashboards* view once per role, seven times), every
-  in-app view of Flow Hub and the Trades Network, and eight sampled views
-  of the 149-view Education OS. Default style (*Enterprise*), light and
-  dark themes for the contrast pass.
+  **304 views**: all 149 Education OS routes (read from the app's own
+  `VIEWS` table, `tools/a11y/audit.js`'s `educationOsRoutes()`, so the
+  count tracks the app rather than a hand-picked sample), and 39 views
+  across Louisiana, States, Trades Network, Flow Hub and the Platform app.
+  The 29 of those 39 that carry style variants (14 Louisiana, 8 Trades
+  Network, 7 States) were each audited in all five styles — *Enterprise*,
+  *Parade*, *Classic*, *Bayou*, *Gallery* — the other 10 (Flow Hub,
+  Platform) have none. Light theme for the contrast pass, as before.
 - **Keyboard sweep** (same runner): every focusable element per view is
   counted and checked for an accessible name (aria-label, labelledby,
   text, title, placeholder or an associated label); click-only `div`/`span`
-  controls are counted. Totals: **4,849 focusable elements, 0 without a
+  controls are counted. Totals: **42,767 focusable elements, 0 without a
   name, 0 click-only controls.**
-- **Focus survival under re-render.** Verified in v0.47.0 and held by the
-  browser suite: `focusMark()/focusRestore()` around every full
-  re-render; the Network OS (20 s) and swarm (10 s) pulses skip any board
-  containing `document.activeElement`.
+- **Pixel-sampled contrast.** `tools/a11y/contrast_sample.js` re-runs
+  every recorded view, re-derives each axe "needs review" `color-contrast`
+  node's real foreground colour from the live page, screenshots it, and
+  samples the actually rendered background pixels around it (up to 5 nodes
+  per rule instance) — the same method axe itself cannot use, because it
+  cannot compute a single background colour for a gradient, image or
+  composited element. **375 nodes measured, 0 below their WCAG threshold**
+  after the fixes below; 194 more were unresolved (their bounding box fell
+  outside the screenshot — mostly content below the fold on views the
+  sampler doesn't scroll, or a node that only appears after one of
+  `audit.js`'s in-page `steps` closures, which the sampler cannot replay).
+- **Focus survival under re-render.** Unchanged since v0.47.0, held by the
+  browser suite.
 
-## What was found, and fixed
+## What was found, and fixed (round two)
+
+The pixel sampler measured 259 axe "needs review" color-contrast
+instances (up to 5 nodes each, 375 nodes) and found **22 below their WCAG
+threshold**, all tracing to three root causes:
+
+| Finding | Cause | Fix |
+|---|---|---|
+| `color-contrast` (Trades Network city-map hint labels, × 15 across 5 styles) | `--faint` text drawn over the water overlay's chart-tinted, 18%-opacity fill reads 3.36–3.73:1 against that composited background, not the 4.6:1+ it gets on plain `surface-2` | new `--faint-ink` token (#3C4658 light; identical to `--faint`'s existing dark value, since dark wasn't measured and isn't changing) for this one use, leaving `--faint`'s many other, already-passing uses alone |
+| `color-contrast` (Trades Network flipped-cycle diagram, × 5 across 5 styles) | the white "2" on the `--w2` wave circle measured 4.42:1, just under 4.5 | darkened `--w2` to `#257A55` (light only) — the same value already used for the equivalent token in the sibling Louisiana/States apps |
+| `color-contrast` (Education OS state-flag icons, MA) | the simplified-flag `sealLight` renderer draws its two-letter code in whichever colour a state's brand array puts third; Massachusetts's array happened to put its light gold accent there, giving 2.28:1 on white | swapped MA's array order to put its navy in that slot, matching how Illinois's and New Jersey's `sealLight` entries already work |
+| `color-contrast` (Education OS state-flag icons, NH) | measured 3.55:1, but the underlying colours (white text on navy) compute to ~14:1 — a synthetic test confirmed the drop was anti-aliasing blending the text with a nearby gold ring at the icon's 14–22px render size, not a colour choice | drew every `flagSVG()` call under 28px at 28px instead (5 call sites); re-measured at 0 below threshold |
+
+Re-sampling after every fix confirmed **0 of 375 measured nodes below
+their WCAG threshold.**
+
+## What was found, and fixed (round one, v0.53.0)
 
 The first run reported **1,182 colour-contrast nodes, 82 target-size, 16
 nested-interactive, 12 select-name, 4 scrollable-region-focusable and 36
@@ -55,41 +86,64 @@ products are never edited):
 | `select-name` × 12 | selects generated inside widget `innerHTML` without labels (`ppick`, `custpick`, `ls-me`, `ls-track`, `fs-track`, `lc-band`, `lc-track`, `rt-unit`, `lp-child`, `ro-pick`, `rh-band`; Trades `uregion`/`ukind`; States `sregion`) | `aria-label` on each; the shared `parishSelect()`/`bandSelect()` helpers name every select they emit |
 | `scrollable-region-focusable` × 4 | Platform `.artifact` output boxes; Education OS `.tablewrap` and `#fg-out` | Platform boxes are `tabindex="0" role="region"`; the Education OS shell marks any region that actually scrolls focusable after each render |
 
-Result after the fixes: **0 WCAG-tagged violations across all 45 views**,
-light and dark.
+Result after round one: **0 WCAG-tagged violations across all 45 views**,
+light and dark. Extended at v0.71.0 to 47 views (the Simulation Studio and
+its WebXR room), same result.
 
 ## What remains, and why
 
-- **`heading-order` (36, best-practice, not a WCAG success criterion).**
-  Every view is one `<h1>` followed by panels whose headings are `<h3>`
-  (and `<h4>` on state cards); axe expects an `<h2>` in between. The
-  outline is consistent — view title, then component headings — and
-  changing the component heading level would touch several hundred
-  generated strings for no reading benefit. Left as a documented
-  deviation; a future pass could restyle `.panel h3` as `h2`.
-- **axe “needs review” items (23).** Mostly `color-contrast` on elements
-  with gradient or image backgrounds (title cards, the Voronoi canvas)
-  that axe cannot compute. Spot-checked by hand in v0.46.0 (≥4.5:1);
-  not re-measured mechanically here.
-- **Non-default styles.** The Parade, Classic, Bayou and Gallery style
-  variants were token-fixed for `--faint` and `--gold` but not audited
-  view by view; the audit runs the Enterprise default.
-- **Screen-reader pass.** This audit is mechanical plus a keyboard
-  sweep. A human pass with NVDA/VoiceOver has not been done; live regions
-  (`#ro-result`, the toast, the assessor queue) are wired but their
-  announcement behaviour has only been checked by reading the markup.
-- **The Education OS** was sampled (8 of 149 views); the shell fixes
-  apply everywhere, but the unsampled views may carry their own
-  app-CSS colours.
+- **`heading-order` (162), `empty-table-header` (66), `landmark-unique`
+  (1) — all best-practice, not WCAG success criteria.** The heading
+  deviation is the same one documented since v0.53.0 (view title `<h1>`,
+  panel headings `<h3>`, no `<h2>` between — consistent, not worth
+  touching several hundred generated strings for no reading benefit). The
+  other two are new at this scale and worth a look in a future pass, but
+  neither is a WCAG violation.
+- **194 pixel-sample nodes unresolved.** Their bounding box fell outside
+  the sampler's screenshot — content below the fold, or a node that only
+  appears after an in-page `steps` closure (the Trades Network studio/XR
+  views) the sampler cannot replay. Not evidence of a problem; just outside
+  what this tool measures. A future pass could scroll each flagged node
+  into view before sampling.
+- **Screen-reader pass — not done.** This audit is mechanical (axe),
+  pixel-based (the contrast sampler) and keyboard (the focusable/name
+  sweep). No one has run NVDA, JAWS or VoiceOver against these apps. Live
+  regions (`#ro-result`, the toast, the assessor queue) are wired but
+  their announcement behaviour has only been checked by reading the
+  markup. This needs a person; the checklist below is ready for one to
+  run, dated and signed when it happens.
+- **Dark theme.** All of the above is light theme, as it always has been;
+  round-one's dark-theme token fixes were verified by hand at the time,
+  not re-measured by either tool here.
 - **The 2024 ADA Title II rule** (WCAG 2.1 AA for public entities from
   April 2026/2027) is met on the automated criteria above; a procurement
   should still commission an external audit — the compliance layer
   budgets one.
 
+### Screen-reader checklist (not yet run)
+
+One pass per app: open the view, navigate by heading and by Tab, and
+confirm (a) every heading and landmark announces in a sensible order, (b)
+every control's name is read before its role, (c) the app's live region
+(where it has one) announces a change without moving focus, (d) no
+keyboard trap.
+
+| App | View(s) to check | Live region | Date | Run by |
+|---|---|---|---|---|
+| Louisiana | Dashboards (each role), Simulation Studio + WebXR | assessor queue toast | — not yet run — | — |
+| States | Compliance tab, State Curriculum | — | — not yet run — | — |
+| Trades Network | Regions (all 5 styles), Flipped Classroom | — | — not yet run — | — |
+| Flow Hub | Studio | — | — not yet run — | — |
+| Platform | Simulation Studio + WebXR room | — | — not yet run — | — |
+| Education OS | `#/states`, `#/compare` | — | — not yet run — | — |
+| Education OS | Robotics sector (`#/ed_rob`) | — | — not yet run — | — |
+| Education OS | Records Office / credential issue | `#ro-result` | — not yet run — | — |
+
 ## How to re-run
 
 ```
-node tools/a11y/audit.js            # every app → docs/ACCESSIBILITY.json
-node tools/a11y/audit.js louisiana  # one app (does not replace the committed file — commit only full runs)
-python3 tests/test_platform.py      # holds: zero WCAG-tagged violations, every control named
+node tools/a11y/audit.js               # every app → docs/ACCESSIBILITY.json
+node tools/a11y/audit.js louisiana     # one app, prints only — never commit this over the full file
+node tools/a11y/contrast_sample.js     # pixel-samples the "needs review" items → docs/ACCESSIBILITY_CONTRAST.json
+python3 tests/test_platform.py         # holds: zero WCAG-tagged violations, every control named
 ```

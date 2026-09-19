@@ -4,6 +4,38 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.113.0] — 2026-09-19
+
+### Added — accessibility round two: full coverage, every style, measured contrast (prompt 10)
+- `tools/a11y/audit.js`: the Education OS is now audited over its **full
+  149-view route table**, read from the app's own generated `VIEWS`
+  array instead of an 8-view sample. Louisiana, States and Trades
+  Network are each re-run in all five styles (Enterprise, Parade,
+  Classic, Bayou, Gallery). `docs/ACCESSIBILITY.json` grew from 47 to
+  **304 runs**; still **0 WCAG-tagged violations, 42,767 focusable
+  elements, 0 without a name, 0 click-only controls.**
+- `tools/a11y/contrast_sample.js` (new): pixel-samples the axe "needs
+  review" `color-contrast` instances the mechanical audit cannot resolve
+  on its own — re-derives each flagged node's real foreground colour,
+  screenshots the page and samples the actually rendered background
+  around it, then computes the WCAG ratio itself. Found **22 of 375
+  measured nodes below their WCAG threshold**, all three token- or
+  icon-size-level bugs (a translucent map overlay, one wave colour 0.08
+  short of 4.5:1, and two state-flag icons — one a real gold-on-white
+  bug, one an anti-aliasing artifact at 22px fixed by drawing the icon
+  at 28px); fixed and re-measured at 0 below threshold. Writes
+  `docs/ACCESSIBILITY_CONTRAST.json`.
+- `apps/trades-network/template.html`: new `--faint-ink` token for text
+  drawn over the city-map water overlay; `--w2` darkened to `#257A55`
+  (light).
+- `apps/education-os/template.html`: Massachusetts's flag-icon brand
+  colours reordered to fix a real contrast bug; every `flagSVG()` call
+  under 28px raised to 28px.
+- `docs/ACCESSIBILITY.md`: rewritten with the round-two numbers, the
+  three fixes, and a dated, unsigned per-app screen-reader checklist —
+  the one item in prompt 10 no audit tool can produce, since it needs a
+  person.
+
 ## [0.112.0] — 2026-09-19
 
 ### Added — faster browser suite, evenly spread, with the audit in CI (prompt 5)

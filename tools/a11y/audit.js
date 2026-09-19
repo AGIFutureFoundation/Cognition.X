@@ -15,15 +15,31 @@ const ROOT = path.resolve(__dirname, '..', '..');
 const AXE = process.env.AXE_PATH || (() => { try { return require.resolve('axe-core/axe.min.js'); } catch (e) { return path.join(require('child_process').execSync('npm root -g').toString().trim(), 'axe-core', 'axe.min.js'); } })();
 const url = (app, hash = '') => 'file://' + path.join(ROOT, 'apps', app, 'index.html') + hash;
 
-// every route of every app (hash routes; the Education OS is sampled)
+// the Education OS's 149 views are a literal `const VIEWS=[[id,title,group,
+// section],...]` array in the built app, not a route table this file can
+// hand-list; read it directly (was sampled at 8 of 149 through v0.112.0)
+function educationOsRoutes() {
+  const html = fs.readFileSync(path.join(ROOT, 'apps', 'education-os', 'index.html'), 'utf8');
+  const m = html.match(/const VIEWS=(\[\[.*?\]\]);/s);
+  if (!m) throw new Error('education-os: could not find the VIEWS array to enumerate routes');
+  const arr = JSON.parse(m[1].replace(/'/g, '"')); // safe: no apostrophe appears in any VIEWS string (checked)
+  if (arr.length < 100) throw new Error(`education-os: parsed only ${arr.length} views, expected ~149 — an apostrophe may have broken the quote swap`);
+  return arr.map(v => '#/' + v[0]);
+}
+// every route of every app (hash routes)
 const VIEWS = {
   'louisiana': ['#/state', '#/parish/east-baton-rouge', '#/regions', '#/roles', '#/institute', '#/makers', '#/machines', '#/curriculum'],
   'flow-hub': ['#'],
   'trades-network': ['#'],
   'states': ['#/nation', '#/states', '#/state/LA', '#/blueprint', '#/institute', '#/adoption', '#/compliance'],
   'platform': ['#/model', '#/loop', '#/apps', '#/stack'],
-  'education-os': ['#/overview', '#/learners', '#/training', '#/guides', '#/standard', '#/parishes', '#/trades', '#/home'],
+  'education-os': educationOsRoutes(),
 };
+// the three Louisiana-family apps carry five visual styles (Enterprise
+// default plus Parade, Classic, Bayou, Gallery) as a `data-style` attribute
+// on <html>, switched instantly with no reload; the rest ship one style
+const STYLE_NAMES = ['parade', 'classic', 'bayou', 'gallery'];
+const STYLES = { 'louisiana': STYLE_NAMES, 'states': STYLE_NAMES, 'trades-network': STYLE_NAMES };
 // in-app view switches that are not hash routes
 const CLICKS = {
   'flow-hub': ['.navbtn[data-view="packs"]', '.navbtn[data-view="flow"]', '.navbtn[data-view="agents"]', '.navbtn[data-view="ledger"]', '.navbtn[data-view="author"]'],
@@ -44,8 +60,9 @@ const only = process.argv[2];
   const b = await chromium.launch({ executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium' });
   const page = await b.newPage({ viewport: { width: 1280, height: 900 } });
   const report = { generated: new Date().toISOString().slice(0, 10), axe: null, runs: [] };
-  async function run(label, u, click, steps) {
+  async function run(label, u, click, steps, style) {
     await page.goto('about:blank'); await page.goto(u); await page.waitForTimeout(u.includes('education-os') ? 2500 : 900);
+    if (style) { await page.evaluate(s => { document.documentElement.dataset.style = s; }, style); await page.waitForTimeout(150); }
     if (click) { await page.click(click); await page.waitForTimeout(700); }
     if (steps) { await steps(page); await page.waitForTimeout(700); }
     await page.addScriptTag({ content: axeSrc });
@@ -64,7 +81,7 @@ const only = process.argv[2];
     // stored relative to ROOT: an absolute file:// URL bakes in the checkout
     // path, which differs between a local clone and a CI runner and would
     // make every CI re-run diff against the committed file on that alone.
-    report.runs.push({ label, url: u.replace('file://' + ROOT, ''), click: click || null, violations: r.violations, incomplete: r.incomplete, keyboard: kb });
+    report.runs.push({ label, url: u.replace('file://' + ROOT, ''), click: click || null, style: style || 'enterprise', violations: r.violations, incomplete: r.incomplete, keyboard: kb });
     const crit = r.violations.filter(v => v.impact === 'critical' || v.impact === 'serious').length;
     console.log(`${label.padEnd(44)} violations ${String(r.violations.length).padStart(2)} (serious+ ${crit}) · focusable ${kb.focusable} · unnamed ${kb.noName.length}`);
   }
@@ -75,6 +92,14 @@ const only = process.argv[2];
       for (const c of (CLICKS[app + h] || (h === '#' ? CLICKS[app] : null) || [])) await run(`${app} ${h} → ${c}`, url(app, h), c);
     }
     for (const [name, steps] of (STEPS[app] || [])) await run(`${app} ${name}`, url(app, '#/sims'), null, steps);
+    // every route (and its clicks/steps) again under each non-default style
+    for (const style of (STYLES[app] || [])) {
+      for (const h of hashes) {
+        await run(`${app} ${h} [${style}]`, url(app, h), null, null, style);
+        for (const c of (CLICKS[app + h] || (h === '#' ? CLICKS[app] : null) || [])) await run(`${app} ${h} → ${c} [${style}]`, url(app, h), c, null, style);
+      }
+      for (const [name, steps] of (STEPS[app] || [])) await run(`${app} ${name} [${style}]`, url(app, '#/sims'), null, steps, style);
+    }
   }
   await b.close();
   const out = path.join(ROOT, 'docs', 'ACCESSIBILITY.json');

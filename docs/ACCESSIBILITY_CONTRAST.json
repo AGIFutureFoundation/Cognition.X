@@ -1,0 +1,7354 @@
+{
+ "generated": "2026-09-19",
+ "maxPerInstance": 5,
+ "measured": 375,
+ "below": 0,
+ "unresolved": 194,
+ "results": [
+  {
+   "label": "louisiana #/state",
+   "sel": "text[y=\"349\"][x=\"159\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state",
+   "sel": "text[y=\"363\"][x=\"159\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state",
+   "sel": "text[y=\"286\"][x=\"96\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state",
+   "sel": "text[y=\"300\"][x=\"96\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state",
+   "sel": "text[y=\"412\"][x=\"348\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions",
+   "sel": "button[data-sec=\"Flow Keeper\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions",
+   "sel": "button[data-sec=\"Break Caller\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions",
+   "sel": "button[data-sec=\"Step Tuner\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions",
+   "sel": "button[data-sec=\"Credential Clerk\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions",
+   "sel": "button[data-sec=\"Cohort Watch\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers",
+   "sel": "text[x=\"104\"][y=\"60\"][font-weight=\"700\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers",
+   "sel": ".sm[x=\"104\"][y=\"79\"]",
+   "fg": [
+    78,
+    90,
+    107
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.59,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers",
+   "sel": ".n[x=\"104\"][y=\"116\"]",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers",
+   "sel": ".n[x=\"104\"][y=\"134\"]",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers",
+   "sel": "text[x=\"302\"][y=\"60\"][font-weight=\"700\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines",
+   "sel": "text[y=\"164\"]",
+   "fg": [
+    36,
+    86,
+    166
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.69,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines",
+   "sel": "text[y=\"182\"]",
+   "fg": [
+    36,
+    86,
+    166
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.69,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines",
+   "sel": "text[y=\"47\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    232,
+    232,
+    248
+   ],
+   "ratio": 12.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines",
+   "sel": "text[y=\"65\"]",
+   "fg": [
+    78,
+    90,
+    107
+   ],
+   "bg": [
+    232,
+    232,
+    248
+   ],
+   "ratio": 5.78,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines",
+   "sel": "text[x=\"606.3514508782465\"][y=\"128.5359946637562\"][font-size=\"12.5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    232,
+    232,
+    248
+   ],
+   "ratio": 12.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/state [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/state [parade]",
+   "sel": "text[y=\"349\"][x=\"159\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [parade]",
+   "sel": "text[y=\"363\"][x=\"159\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [parade]",
+   "sel": "text[y=\"286\"][x=\"96\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [parade]",
+   "sel": "text[y=\"300\"][x=\"96\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [parade]",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [parade]",
+   "sel": ".worldcard > .k",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [parade]",
+   "sel": ".worldcard > p",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/regions [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [parade]",
+   "sel": "button[data-sec=\"Flow Keeper\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [parade]",
+   "sel": "button[data-sec=\"Break Caller\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [parade]",
+   "sel": "button[data-sec=\"Step Tuner\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [parade]",
+   "sel": "button[data-sec=\"Credential Clerk\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"teacher\"] [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"assessor\"] [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"parent\"] [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"homeschool\"] [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"parishadmin\"] [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"stateadmin\"] [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/institute [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [parade]",
+   "sel": "text[x=\"104\"][y=\"60\"][font-weight=\"700\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [parade]",
+   "sel": ".sm[x=\"104\"][y=\"79\"]",
+   "fg": [
+    91,
+    86,
+    110
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.59,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [parade]",
+   "sel": ".n[x=\"104\"][y=\"116\"]",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [parade]",
+   "sel": ".n[x=\"104\"][y=\"134\"]",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [parade]",
+   "sel": "text[y=\"164\"]",
+   "fg": [
+    107,
+    63,
+    160
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.95,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [parade]",
+   "sel": "text[y=\"182\"]",
+   "fg": [
+    107,
+    63,
+    160
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.95,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [parade]",
+   "sel": "text[y=\"47\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    232,
+    232,
+    232
+   ],
+   "ratio": 13.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [parade]",
+   "sel": "text[y=\"65\"]",
+   "fg": [
+    91,
+    86,
+    110
+   ],
+   "bg": [
+    232,
+    232,
+    232
+   ],
+   "ratio": 5.71,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/curriculum [parade]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/state [classic]",
+   "sel": "text[y=\"349\"][x=\"159\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [classic]",
+   "sel": "text[y=\"363\"][x=\"159\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [classic]",
+   "sel": "text[y=\"286\"][x=\"96\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [classic]",
+   "sel": "text[y=\"300\"][x=\"96\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [classic]",
+   "sel": "text[y=\"412\"][x=\"348\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [classic]",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [classic]",
+   "sel": "button[data-sec=\"Flow Keeper\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [classic]",
+   "sel": "button[data-sec=\"Break Caller\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [classic]",
+   "sel": "button[data-sec=\"Step Tuner\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [classic]",
+   "sel": "button[data-sec=\"Credential Clerk\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [classic]",
+   "sel": "button[data-sec=\"Cohort Watch\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [classic]",
+   "sel": "text[x=\"104\"][y=\"60\"][font-weight=\"700\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [classic]",
+   "sel": ".sm[x=\"104\"][y=\"79\"]",
+   "fg": [
+    91,
+    86,
+    110
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.59,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [classic]",
+   "sel": ".n[x=\"104\"][y=\"116\"]",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [classic]",
+   "sel": ".n[x=\"104\"][y=\"134\"]",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [classic]",
+   "sel": "text[x=\"302\"][y=\"60\"][font-weight=\"700\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [classic]",
+   "sel": "text[y=\"164\"]",
+   "fg": [
+    107,
+    63,
+    160
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.95,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [classic]",
+   "sel": "text[y=\"182\"]",
+   "fg": [
+    107,
+    63,
+    160
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.95,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [classic]",
+   "sel": "text[y=\"47\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    232,
+    232,
+    232
+   ],
+   "ratio": 13.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [classic]",
+   "sel": "text[y=\"65\"]",
+   "fg": [
+    91,
+    86,
+    110
+   ],
+   "bg": [
+    232,
+    232,
+    232
+   ],
+   "ratio": 5.71,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [classic]",
+   "sel": "text[x=\"606.3514508782465\"][y=\"128.5359946637562\"][font-size=\"12.5\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    232,
+    232,
+    232
+   ],
+   "ratio": 13.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/state [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/state [bayou]",
+   "sel": "text[y=\"349\"][x=\"159\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [bayou]",
+   "sel": "text[y=\"363\"][x=\"159\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [bayou]",
+   "sel": "text[y=\"286\"][x=\"96\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [bayou]",
+   "sel": "text[y=\"300\"][x=\"96\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [bayou]",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [bayou]",
+   "sel": ".worldcard > .k",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [bayou]",
+   "sel": ".worldcard > p",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/regions [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [bayou]",
+   "sel": "button[data-sec=\"Flow Keeper\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [bayou]",
+   "sel": "button[data-sec=\"Break Caller\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [bayou]",
+   "sel": "button[data-sec=\"Step Tuner\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [bayou]",
+   "sel": "button[data-sec=\"Credential Clerk\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"teacher\"] [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"assessor\"] [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"parent\"] [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"homeschool\"] [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"parishadmin\"] [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/roles → #rolechips [data-role=\"stateadmin\"] [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/institute [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [bayou]",
+   "sel": "text[x=\"104\"][y=\"60\"][font-weight=\"700\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [bayou]",
+   "sel": ".sm[x=\"104\"][y=\"79\"]",
+   "fg": [
+    91,
+    86,
+    110
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.59,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [bayou]",
+   "sel": ".n[x=\"104\"][y=\"116\"]",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [bayou]",
+   "sel": ".n[x=\"104\"][y=\"134\"]",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [bayou]",
+   "sel": "text[y=\"164\"]",
+   "fg": [
+    62,
+    107,
+    52
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.89,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [bayou]",
+   "sel": "text[y=\"182\"]",
+   "fg": [
+    62,
+    107,
+    52
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.89,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [bayou]",
+   "sel": "text[y=\"47\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    232,
+    232,
+    216
+   ],
+   "ratio": 12.93,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [bayou]",
+   "sel": "text[y=\"65\"]",
+   "fg": [
+    91,
+    86,
+    110
+   ],
+   "bg": [
+    232,
+    232,
+    216
+   ],
+   "ratio": 5.65,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/curriculum [bayou]",
+   "sel": ".la",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/state [gallery]",
+   "sel": "text[y=\"349\"][x=\"159\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [gallery]",
+   "sel": "text[y=\"363\"][x=\"159\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [gallery]",
+   "sel": "text[y=\"286\"][x=\"96\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [gallery]",
+   "sel": "text[y=\"300\"][x=\"96\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/state [gallery]",
+   "sel": "text[y=\"412\"][x=\"348\"][font-size=\"13\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [gallery]",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [gallery]",
+   "sel": ".worldcard > .k",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/parish/east-baton-rouge [gallery]",
+   "sel": ".worldcard > p",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "louisiana #/regions [gallery]",
+   "sel": "button[data-sec=\"Flow Keeper\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [gallery]",
+   "sel": "button[data-sec=\"Break Caller\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [gallery]",
+   "sel": "button[data-sec=\"Step Tuner\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [gallery]",
+   "sel": "button[data-sec=\"Credential Clerk\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/regions [gallery]",
+   "sel": "button[data-sec=\"Cohort Watch\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [gallery]",
+   "sel": "text[x=\"104\"][y=\"60\"][font-weight=\"700\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [gallery]",
+   "sel": ".sm[x=\"104\"][y=\"79\"]",
+   "fg": [
+    91,
+    86,
+    110
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 6.59,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [gallery]",
+   "sel": ".n[x=\"104\"][y=\"116\"]",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [gallery]",
+   "sel": ".n[x=\"104\"][y=\"134\"]",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/makers [gallery]",
+   "sel": "text[x=\"302\"][y=\"60\"][font-weight=\"700\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [gallery]",
+   "sel": "text[y=\"164\"]",
+   "fg": [
+    138,
+    30,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.54,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [gallery]",
+   "sel": "text[y=\"182\"]",
+   "fg": [
+    138,
+    30,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.54,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [gallery]",
+   "sel": "text[y=\"47\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    232,
+    232
+   ],
+   "ratio": 13.49,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [gallery]",
+   "sel": "text[y=\"65\"]",
+   "fg": [
+    91,
+    86,
+    110
+   ],
+   "bg": [
+    248,
+    232,
+    232
+   ],
+   "ratio": 5.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "louisiana #/machines [gallery]",
+   "sel": "text[x=\"606.3514508782465\"][y=\"128.5359946637562\"][font-size=\"12.5\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    232,
+    232
+   ],
+   "ratio": 13.49,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "flow-hub # → .navbtn[data-view=\"flow\"]",
+   "sel": "text[x=\"70.6\"]",
+   "fg": [
+    95,
+    106,
+    133
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.09,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "flow-hub # → .navbtn[data-view=\"flow\"]",
+   "sel": "text[y=\"242\"]",
+   "fg": [
+    95,
+    106,
+    133
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.09,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "flow-hub # → .navbtn[data-view=\"flow\"]",
+   "sel": "text[x=\"127.8\"]",
+   "fg": [
+    95,
+    106,
+    133
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.09,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "flow-hub # → .navbtn[data-view=\"flow\"]",
+   "sel": "text[y=\"192\"]",
+   "fg": [
+    95,
+    106,
+    133
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.09,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "flow-hub # → .navbtn[data-view=\"flow\"]",
+   "sel": "text[x=\"185\"][y=\"280\"][text-anchor=\"middle\"]",
+   "fg": [
+    95,
+    106,
+    133
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.09,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network #",
+   "sel": "text[x=\"140\"]",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network #",
+   "sel": "text[y=\"22\"][font-size=\"10\"][fill=\"var(--faint)\"]:nth-child(2)",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network #",
+   "sel": "text[y=\"118\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network #",
+   "sel": "text[y=\"134\"][x=\"100\"][fill=\"rgba(255,255,255,.9)\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network #",
+   "sel": "text[x=\"100\"][y=\"172\"][font-size=\"12\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"]",
+   "sel": "text[y=\"18\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    200,
+    216,
+    232
+   ],
+   "ratio": 6.54,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"]",
+   "sel": "text[transform=\"rotate(-90 416 160)\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    200,
+    216,
+    232
+   ],
+   "ratio": 6.54,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"]",
+   "sel": "text[x=\"30\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    200,
+    216,
+    232
+   ],
+   "ratio": 6.54,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"]",
+   "sel": "text[x=\"288\"][y=\"136\"][font-size=\"11\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"]",
+   "sel": "text[x=\"288\"][y=\"162\"][font-size=\"9.5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    232,
+    232,
+    248
+   ],
+   "ratio": 12.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"]",
+   "sel": "text[x=\"110\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"]",
+   "sel": "text[x=\"110\"][y=\"55\"][font-size=\"11.5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"]",
+   "sel": "text[y=\"49\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"]",
+   "sel": "text[y=\"5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"]",
+   "sel": "text[x=\"530\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    152,
+    88,
+    184
+   ],
+   "ratio": 4.75,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [parade]",
+   "sel": "text[x=\"140\"]",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [parade]",
+   "sel": "text[y=\"22\"][font-size=\"10\"][fill=\"var(--faint)\"]:nth-child(2)",
+   "fg": [
+    111,
+    108,
+    124
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 4.81,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [parade]",
+   "sel": "text[y=\"118\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [parade]",
+   "sel": "text[y=\"134\"][x=\"100\"][fill=\"rgba(255,255,255,.9)\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [parade]",
+   "sel": "text[x=\"100\"][y=\"172\"][font-size=\"12\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [parade]",
+   "sel": "text[y=\"18\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    200,
+    216,
+    232
+   ],
+   "ratio": 6.54,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [parade]",
+   "sel": "text[transform=\"rotate(-90 416 160)\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    200,
+    216,
+    232
+   ],
+   "ratio": 6.54,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [parade]",
+   "sel": "text[x=\"30\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    200,
+    216,
+    232
+   ],
+   "ratio": 6.54,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [parade]",
+   "sel": "text[x=\"288\"][y=\"136\"][font-size=\"11\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [parade]",
+   "sel": "text[x=\"288\"][y=\"162\"][font-size=\"9.5\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    232,
+    232,
+    232
+   ],
+   "ratio": 13.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [parade]",
+   "sel": "text[x=\"110\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [parade]",
+   "sel": "text[x=\"110\"][y=\"55\"][font-size=\"11.5\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [parade]",
+   "sel": "text[y=\"49\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [parade]",
+   "sel": "text[y=\"5\"]",
+   "fg": [
+    34,
+    31,
+    51
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [parade]",
+   "sel": "text[x=\"530\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    152,
+    88,
+    184
+   ],
+   "ratio": 4.75,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [classic]",
+   "sel": "text[x=\"140\"]",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [classic]",
+   "sel": "text[y=\"22\"][font-size=\"10\"][fill=\"var(--faint)\"]:nth-child(2)",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [classic]",
+   "sel": "text[y=\"118\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [classic]",
+   "sel": "text[y=\"134\"][x=\"100\"][fill=\"rgba(255,255,255,.9)\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [classic]",
+   "sel": "text[x=\"100\"][y=\"172\"][font-size=\"12\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [classic]",
+   "sel": "text[y=\"18\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    216,
+    200,
+    200
+   ],
+   "ratio": 5.89,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [classic]",
+   "sel": "text[transform=\"rotate(-90 416 160)\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    216,
+    200,
+    200
+   ],
+   "ratio": 5.89,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [classic]",
+   "sel": "text[x=\"30\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    216,
+    200,
+    200
+   ],
+   "ratio": 5.89,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [classic]",
+   "sel": "text[x=\"288\"][y=\"136\"][font-size=\"11\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [classic]",
+   "sel": "text[x=\"288\"][y=\"162\"][font-size=\"9.5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    232,
+    232,
+    232
+   ],
+   "ratio": 12.76,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [classic]",
+   "sel": "text[x=\"110\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [classic]",
+   "sel": "text[x=\"110\"][y=\"55\"][font-size=\"11.5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [classic]",
+   "sel": "text[y=\"49\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [classic]",
+   "sel": "text[y=\"5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [classic]",
+   "sel": "text[x=\"530\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    152,
+    88,
+    184
+   ],
+   "ratio": 4.75,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [bayou]",
+   "sel": "text[x=\"140\"]",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [bayou]",
+   "sel": "text[y=\"22\"][font-size=\"10\"][fill=\"var(--faint)\"]:nth-child(2)",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [bayou]",
+   "sel": "text[y=\"118\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [bayou]",
+   "sel": "text[y=\"134\"][x=\"100\"][fill=\"rgba(255,255,255,.9)\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [bayou]",
+   "sel": "text[x=\"100\"][y=\"172\"][font-size=\"12\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [bayou]",
+   "sel": "text[y=\"18\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    200,
+    216,
+    200
+   ],
+   "ratio": 6.39,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [bayou]",
+   "sel": "text[transform=\"rotate(-90 416 160)\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    200,
+    216,
+    200
+   ],
+   "ratio": 6.39,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [bayou]",
+   "sel": "text[x=\"30\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    200,
+    216,
+    200
+   ],
+   "ratio": 6.39,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [bayou]",
+   "sel": "text[x=\"288\"][y=\"136\"][font-size=\"11\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [bayou]",
+   "sel": "text[x=\"288\"][y=\"162\"][font-size=\"9.5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    232,
+    232,
+    216
+   ],
+   "ratio": 12.63,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [bayou]",
+   "sel": "text[x=\"110\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [bayou]",
+   "sel": "text[x=\"110\"][y=\"55\"][font-size=\"11.5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [bayou]",
+   "sel": "text[y=\"49\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [bayou]",
+   "sel": "text[y=\"5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [bayou]",
+   "sel": "text[x=\"530\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    152,
+    88,
+    184
+   ],
+   "ratio": 4.75,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [gallery]",
+   "sel": "text[x=\"140\"]",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [gallery]",
+   "sel": "text[y=\"22\"][font-size=\"10\"][fill=\"var(--faint)\"]:nth-child(2)",
+   "fg": [
+    95,
+    107,
+    122
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [gallery]",
+   "sel": "text[y=\"118\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [gallery]",
+   "sel": "text[y=\"134\"][x=\"100\"][fill=\"rgba(255,255,255,.9)\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # [gallery]",
+   "sel": "text[x=\"100\"][y=\"172\"][font-size=\"12\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [gallery]",
+   "sel": "text[y=\"18\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    216,
+    200,
+    200
+   ],
+   "ratio": 5.89,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [gallery]",
+   "sel": "text[transform=\"rotate(-90 416 160)\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    216,
+    200,
+    200
+   ],
+   "ratio": 5.89,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [gallery]",
+   "sel": "text[x=\"30\"]",
+   "fg": [
+    60,
+    70,
+    88
+   ],
+   "bg": [
+    216,
+    200,
+    200
+   ],
+   "ratio": 5.89,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [gallery]",
+   "sel": "text[x=\"288\"][y=\"136\"][font-size=\"11\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"regions\"] [gallery]",
+   "sel": "text[x=\"288\"][y=\"162\"][font-size=\"9.5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    232,
+    232
+   ],
+   "ratio": 13.18,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [gallery]",
+   "sel": "text[x=\"110\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [gallery]",
+   "sel": "text[x=\"110\"][y=\"55\"][font-size=\"11.5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [gallery]",
+   "sel": "text[y=\"49\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [gallery]",
+   "sel": "text[y=\"5\"]",
+   "fg": [
+    27,
+    36,
+    49
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 14.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "trades-network # → .tab[data-r=\"flipped\"] [gallery]",
+   "sel": "text[x=\"530\"][y=\"99\"][font-size=\"10.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    152,
+    88,
+    184
+   ],
+   "ratio": 4.75,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation",
+   "sel": "text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation",
+   "sel": "text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation",
+   "sel": "text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation",
+   "sel": "text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation",
+   "sel": "text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance",
+   "sel": "g[aria-label=\"Alaska: no notice\"] > text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance",
+   "sel": "g[aria-label=\"Maine: moderate\"] > text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance",
+   "sel": "g[aria-label=\"Washington: moderate\"] > text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance",
+   "sel": "g[aria-label=\"Idaho: no notice\"] > text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance",
+   "sel": "g[aria-label=\"Montana: low\"] > text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [parade]",
+   "sel": "text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [parade]",
+   "sel": "text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [parade]",
+   "sel": "text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [parade]",
+   "sel": "text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [parade]",
+   "sel": "text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [parade]",
+   "sel": "g[aria-label=\"Alaska: no notice\"] > text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [parade]",
+   "sel": "g[aria-label=\"Maine: moderate\"] > text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [parade]",
+   "sel": "g[aria-label=\"Washington: moderate\"] > text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [parade]",
+   "sel": "g[aria-label=\"Idaho: no notice\"] > text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [parade]",
+   "sel": "g[aria-label=\"Montana: low\"] > text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [classic]",
+   "sel": "text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [classic]",
+   "sel": "text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [classic]",
+   "sel": "text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [classic]",
+   "sel": "text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [classic]",
+   "sel": "text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [classic]",
+   "sel": "g[aria-label=\"Alaska: no notice\"] > text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [classic]",
+   "sel": "g[aria-label=\"Maine: moderate\"] > text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [classic]",
+   "sel": "g[aria-label=\"Washington: moderate\"] > text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [classic]",
+   "sel": "g[aria-label=\"Idaho: no notice\"] > text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [classic]",
+   "sel": "g[aria-label=\"Montana: low\"] > text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [bayou]",
+   "sel": "text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [bayou]",
+   "sel": "text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [bayou]",
+   "sel": "text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [bayou]",
+   "sel": "text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [bayou]",
+   "sel": "text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [bayou]",
+   "sel": "g[aria-label=\"Alaska: no notice\"] > text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [bayou]",
+   "sel": "g[aria-label=\"Maine: moderate\"] > text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [bayou]",
+   "sel": "g[aria-label=\"Washington: moderate\"] > text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [bayou]",
+   "sel": "g[aria-label=\"Idaho: no notice\"] > text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [bayou]",
+   "sel": "g[aria-label=\"Montana: low\"] > text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [gallery]",
+   "sel": "text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [gallery]",
+   "sel": "text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    216
+   ],
+   "ratio": 5.07,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [gallery]",
+   "sel": "text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [gallery]",
+   "sel": "text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/nation [gallery]",
+   "sel": "text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    184,
+    88,
+    56
+   ],
+   "ratio": 4.68,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [gallery]",
+   "sel": "g[aria-label=\"Alaska: no notice\"] > text[y=\"36\"][x=\"31\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [gallery]",
+   "sel": "g[aria-label=\"Maine: moderate\"] > text[y=\"36\"][x=\"621\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [gallery]",
+   "sel": "g[aria-label=\"Washington: moderate\"] > text[x=\"31\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [gallery]",
+   "sel": "g[aria-label=\"Idaho: no notice\"] > text[x=\"90\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    120,
+    72
+   ],
+   "ratio": 5.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "states #/compliance [gallery]",
+   "sel": "g[aria-label=\"Montana: low\"] > text[x=\"149\"][y=\"95\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    120,
+    88
+   ],
+   "ratio": 5.36,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "platform #/model",
+   "sel": "text[x=\"420\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "platform #/model",
+   "sel": "text[y=\"170\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    88,
+    168
+   ],
+   "ratio": 6.88,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "platform #/model",
+   "sel": "text[y=\"185\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    88,
+    168
+   ],
+   "ratio": 6.88,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "platform #/model",
+   "sel": "text[y=\"280\"][x=\"120\"][font-size=\"12.5\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    88,
+    168
+   ],
+   "ratio": 6.88,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "platform #/model",
+   "sel": "text[y=\"295\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    40,
+    88,
+    168
+   ],
+   "ratio": 6.88,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/overview",
+   "sel": "a[href$=\"#/curriculum\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/overview",
+   "sel": "a[href$=\"#/courses\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/overview",
+   "sel": "a[href$=\"#/ways\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/overview",
+   "sel": "a[href$=\"#/readiness\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/overview",
+   "sel": "a[href$=\"#/engine\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/homes",
+   "sel": ".card:nth-child(1) > .eyebrow",
+   "fg": [
+    31,
+    150,
+    139
+   ],
+   "bg": [
+    8,
+    24,
+    40
+   ],
+   "ratio": 4.94,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/homes",
+   "sel": "h2",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    8,
+    24,
+    40
+   ],
+   "ratio": 17.92,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/homes",
+   "sel": "div:nth-child(1) > .card:nth-child(1) > .small",
+   "fg": [
+    201,
+    214,
+    224
+   ],
+   "bg": [
+    8,
+    40,
+    56
+   ],
+   "ratio": 10.34,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/homes",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/learners",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/training",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/guides",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/empathy",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/ei",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/standard",
+   "sel": "a[href$=\"#/curriculum\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/standard",
+   "sel": "a[href$=\"#/courses\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/standard",
+   "sel": "a[href$=\"#/ways\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/standard",
+   "sel": "a[href$=\"#/readiness\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/standard",
+   "sel": "a[href$=\"#/engine\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/core",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/model",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/outcomes",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/status",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/next",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/readiness",
+   "sel": "a[href$=\"#/curriculum\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/readiness",
+   "sel": "a[href$=\"#/courses\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/readiness",
+   "sel": "a[href$=\"#/ways\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/readiness",
+   "sel": "a[href$=\"#/readiness\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    232,
+    248,
+    248
+   ],
+   "ratio": 8.34,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/readiness",
+   "sel": "a[href$=\"#/engine\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/review",
+   "sel": "text[x=\"77.125\"][y=\"140\"][fill=\"var(--muted)\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/review",
+   "sel": "text[y=\"22\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/review",
+   "sel": "text[x=\"165.375\"][y=\"140\"][fill=\"var(--muted)\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/review",
+   "sel": "text[y=\"83\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/review",
+   "sel": "text[x=\"253.625\"][y=\"140\"][fill=\"var(--muted)\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/guard",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/waves",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/fit",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/compliance",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/trust",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/security",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/access",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/curriculum",
+   "sel": "a[href$=\"#/curriculum\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    232,
+    248,
+    248
+   ],
+   "ratio": 8.34,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/curriculum",
+   "sel": "a[href$=\"#/courses\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/curriculum",
+   "sel": "a[href$=\"#/ways\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/curriculum",
+   "sel": "a[href$=\"#/readiness\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/curriculum",
+   "sel": "a[href$=\"#/engine\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ladder",
+   "sel": "a[href$=\"#/curriculum\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ladder",
+   "sel": "a[href$=\"#/courses\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ladder",
+   "sel": "a[href$=\"#/ways\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ladder",
+   "sel": "a[href$=\"#/readiness\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ladder",
+   "sel": "a[href$=\"#/engine\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/network",
+   "sel": "text[y=\"32\"][x=\"240\"][text-anchor=\"end\"]",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/network",
+   "sel": "text[y=\"32\"][x=\"650\"][font-size=\"11\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/network",
+   "sel": "text[y=\"58\"][x=\"240\"][text-anchor=\"end\"]",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/network",
+   "sel": "text[y=\"58\"][x=\"650\"][font-size=\"11\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/network",
+   "sel": "text[y=\"84\"][x=\"240\"][text-anchor=\"end\"]",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/scale8",
+   "sel": "svg[aria-label=\"Generated plate for layer A\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/scale8",
+   "sel": "svg[aria-label=\"Generated plate for layer B\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/scale8",
+   "sel": "svg[aria-label=\"Generated plate for layer C\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/scale8",
+   "sel": "svg[aria-label=\"Generated plate for layer D\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/scale8",
+   "sel": "svg[aria-label=\"Generated plate for layer E\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/health10",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/langstack",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/growth",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/swarm",
+   "sel": ".edgelabel[x=\"360\"][y=\"140.6\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/swarm",
+   "sel": "text[x=\"211.2\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/swarm",
+   "sel": ".edgelabel[y=\"190\"][x=\"508.8\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/swarm",
+   "sel": "text[y=\"270.6\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/swarm",
+   "sel": ".edgelabel[x=\"268.8\"][y=\"140.6\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/swarm2",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/agentdebug",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/voicespec",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/ledger",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/gov",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/deploy",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/daogov",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/mission",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/treasury",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/thc",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/atlas2",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/nbc",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/states51",
+   "sel": ".section:nth-child(5) > div:nth-child(3) > .tablewrap > table > thead > tr > th:nth-child(1)",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/states51",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/cities88",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/guides51",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/laos",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/packs",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/cognitionx",
+   "sel": ".card:nth-child(4) > div:nth-child(2) > .eyebrow",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/cognitionx",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/ed_corp",
+   "sel": "text",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ed_corp",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/ed_sci",
+   "sel": "text",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ed_sci",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/ed_rob",
+   "sel": "text",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ed_rob",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/ed_gh",
+   "sel": "text",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ed_gh",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/ed_mlt",
+   "sel": "text",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ed_mlt",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/ed_sap",
+   "sel": "text",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ed_sap",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/frameworks",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/modules",
+   "sel": ".card:nth-child(2) > .grid > .figrail[data-rung=\"Mastery blocks\"][role=\"button\"] > .v.tabular > small",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/modules",
+   "sel": "div[data-rung=\"Served modules\"] > .v.tabular > small",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/modules",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/adopt",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/crosswalk",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/crossedition",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/graphhealth",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/integrity",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/dataviz",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/levels",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/robotrain",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/robosim",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/virtuals",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/linkage",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/cycles",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/a11y2",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/robonet",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/gamesim",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/roboroad",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/sector8",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/family",
+   "sel": "svg[aria-label=\"Mark for edS, layer S\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/family",
+   "sel": "svg[aria-label=\"Mark for edT, layer T\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/family",
+   "sel": "svg[aria-label=\"Mark for edU, layer U\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/family",
+   "sel": "svg[aria-label=\"Mark for edV, layer V\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/family",
+   "sel": "svg[aria-label=\"Mark for edW, layer W\"] > text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/art",
+   "sel": "svg[aria-label=\"Generated plate for layer A\"] > text[x=\"284\"][y=\"136\"][text-anchor=\"end\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/art",
+   "sel": "svg[aria-label=\"Generated plate for layer G\"] > text[x=\"284\"][y=\"136\"][text-anchor=\"end\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/art",
+   "sel": "svg[aria-label=\"Generated plate for layer K\"] > text[x=\"284\"][y=\"136\"][text-anchor=\"end\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/art",
+   "sel": ".g4 > div:nth-child(3) > p",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/art",
+   "sel": "svg[aria-label=\"Generated plate for layer N\"] > text[x=\"284\"][y=\"136\"][text-anchor=\"end\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/fx_corp",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_corp",
+   "sel": "svg[aria-label=\"Generated plate for layer S·ON\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    88,
+    120,
+    120
+   ],
+   "ratio": 4.8,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_corp",
+   "sel": "svg[aria-label=\"Generated plate for layer S·SK\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    72,
+    136,
+    136
+   ],
+   "ratio": 4.08,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_corp",
+   "sel": "svg[aria-label=\"Generated plate for layer S·SF\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    88,
+    152,
+    136
+   ],
+   "ratio": 3.35,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_corp",
+   "sel": "svg[aria-label=\"Generated plate for layer S·VO\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    72,
+    136,
+    136
+   ],
+   "ratio": 4.08,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sci",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sci",
+   "sel": "svg[aria-label=\"Generated plate for layer T·QU\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    72,
+    120,
+    120
+   ],
+   "ratio": 4.96,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sci",
+   "sel": "svg[aria-label=\"Generated plate for layer T·ME\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    72,
+    120,
+    120
+   ],
+   "ratio": 4.96,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sci",
+   "sel": "svg[aria-label=\"Generated plate for layer T·DA\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    88,
+    136,
+    136
+   ],
+   "ratio": 3.97,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sci",
+   "sel": "svg[aria-label=\"Generated plate for layer T·RP\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    104
+   ],
+   "ratio": 6.27,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_rob",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_rob",
+   "sel": "svg[aria-label=\"Generated plate for layer U·MC\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    88,
+    136,
+    120
+   ],
+   "ratio": 4.03,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_rob",
+   "sel": "svg[aria-label=\"Generated plate for layer U·SA\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    104
+   ],
+   "ratio": 6.27,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_rob",
+   "sel": "svg[aria-label=\"Generated plate for layer U·CT\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    104
+   ],
+   "ratio": 6.27,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_rob",
+   "sel": "svg[aria-label=\"Generated plate for layer U·DT\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    72,
+    120,
+    120
+   ],
+   "ratio": 4.96,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_gh",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_gh",
+   "sel": "svg[aria-label=\"Generated plate for layer V·PC\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    72,
+    120,
+    120
+   ],
+   "ratio": 4.96,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_gh",
+   "sel": "svg[aria-label=\"Generated plate for layer V·MN\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    72,
+    120,
+    120
+   ],
+   "ratio": 4.96,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_gh",
+   "sel": "svg[aria-label=\"Generated plate for layer V·IN\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    72,
+    120,
+    120
+   ],
+   "ratio": 4.96,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_gh",
+   "sel": "svg[aria-label=\"Generated plate for layer V·NC\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    104
+   ],
+   "ratio": 6.27,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_mlt",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_mlt",
+   "sel": "svg[aria-label=\"Generated plate for layer W·NE\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    136,
+    120
+   ],
+   "ratio": 4.23,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_mlt",
+   "sel": "svg[aria-label=\"Generated plate for layer W·CD\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    104
+   ],
+   "ratio": 6.27,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_mlt",
+   "sel": ".card:nth-child(2) > .mono.small:nth-child(2)",
+   "fg": [
+    138,
+    98,
+    16
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.16,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_mlt",
+   "sel": ".card:nth-child(2) > h3",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sap",
+   "sel": "text[x=\"32\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    136,
+    104,
+    24
+   ],
+   "ratio": 5.2,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sap",
+   "sel": "svg[aria-label=\"Generated plate for layer X·UN\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    72,
+    120,
+    104
+   ],
+   "ratio": 5.05,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sap",
+   "sel": "svg[aria-label=\"Generated plate for layer X·US\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    136,
+    120
+   ],
+   "ratio": 4.23,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sap",
+   "sel": "svg[aria-label=\"Generated plate for layer X·HA\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    104,
+    104
+   ],
+   "ratio": 6.27,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/fx_sap",
+   "sel": "svg[aria-label=\"Generated plate for layer X·GV\"] > text[x=\"304\"][y=\"82\"][text-anchor=\"end\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    56,
+    136,
+    120
+   ],
+   "ratio": 4.23,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/observatory",
+   "sel": "text[font-size=\"15\"]",
+   "fg": [
+    217,
+    170,
+    62
+   ],
+   "bg": [
+    24,
+    40,
+    72
+   ],
+   "ratio": 6.8,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/observatory",
+   "sel": "text[y=\"48\"]",
+   "fg": [
+    159,
+    177,
+    193
+   ],
+   "bg": [
+    24,
+    40,
+    72
+   ],
+   "ratio": 6.64,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/observatory",
+   "sel": "text[y=\"420\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/observatory",
+   "sel": "text[y=\"360\"][x=\"167\"][fill=\"#4FC3B6\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/observatory",
+   "sel": "text[y=\"372\"][x=\"167\"][font-size=\"8\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/comprehension",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/flow",
+   "sel": ".figrail > .v.tabular > small",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/flow",
+   "sel": "text[y=\"181.0\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/flow",
+   "sel": "text[y=\"139.0\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/flow",
+   "sel": "text[y=\"97.0\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/flow",
+   "sel": "text[y=\"55.0\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/flowdesk",
+   "sel": "text[x=\"259\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/flowdesk",
+   "sel": "text[x=\"661\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/flowdesk",
+   "sel": "text[x=\"460\"]",
+   "fg": [
+    23,
+    110,
+    102
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 5.72,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/flowdesk",
+   "sel": "text[y=\"54\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/flowdesk",
+   "sel": "text[y=\"106.66666666666666\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/everyone",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/trackpilot",
+   "sel": "text[x=\"26\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/trackpilot",
+   "sel": "text[x=\"120.44444444444444\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/trackpilot",
+   "sel": "text[x=\"262.1111111111111\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/trackpilot",
+   "sel": "text[x=\"474.6111111111111\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/trackpilot",
+   "sel": "text[x=\"687.1111111111111\"]",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 19.77,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/engine",
+   "sel": "#v-engine > div:nth-child(2) > .sstrip[aria-label=\"The scale ladder\"] > a[href$=\"#/curriculum\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/engine",
+   "sel": "#v-engine > div:nth-child(2) > .sstrip[aria-label=\"The scale ladder\"] > a[href$=\"#/courses\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/engine",
+   "sel": "#v-engine > div:nth-child(2) > .sstrip[aria-label=\"The scale ladder\"] > a[href$=\"#/ways\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/engine",
+   "sel": "#v-engine > div:nth-child(2) > .sstrip[aria-label=\"The scale ladder\"] > a[href$=\"#/readiness\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/engine",
+   "sel": "#v-engine > div:nth-child(2) > .sstrip[aria-label=\"The scale ladder\"] > a[href$=\"#/engine\"][aria-current=\"true\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    232,
+    248,
+    248
+   ],
+   "ratio": 8.34,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/quest",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/labs",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/agentic",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/immersion",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/dashboard",
+   "sel": ".hd:nth-child(13)",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/dashboard",
+   "sel": "div[title=\"Ravi · 0.37\"]",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/dashboard",
+   "sel": "div[title=\"Amara · 0.65\"]",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/dashboard",
+   "sel": "div[title=\"Jaxon · 0.24\"]",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/dashboard",
+   "sel": "div[title=\"Camille · 0.41\"]",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 15.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/relations",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/students",
+   "sel": "b",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/students",
+   "sel": ".muted.small",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/students",
+   "sel": ".warn.pill",
+   "fg": [
+    150,
+    83,
+    10
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 5.53,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/students",
+   "sel": "b",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/students",
+   "sel": ".muted.small",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/automations",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/portfolio",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/placement",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/verify",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/robodata",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/oral",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/club",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/clubadmin",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/library",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/transition",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/programs",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/sectors",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/pack",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/twin",
+   "sel": "text[x=\"34\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/twin",
+   "sel": "text[x=\"136\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/twin",
+   "sel": "text[x=\"272\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/twin",
+   "sel": "text[x=\"408\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/twin",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/partner",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/cohort",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/ways",
+   "sel": "a[href$=\"#/curriculum\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ways",
+   "sel": "a[href$=\"#/courses\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ways",
+   "sel": "a[href$=\"#/ways\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    232,
+    248,
+    248
+   ],
+   "ratio": 8.34,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ways",
+   "sel": "a[href$=\"#/readiness\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/ways",
+   "sel": "a[href$=\"#/engine\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/studio",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/exchange",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/golive",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/flagship",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/policy",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/lak12",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/phases",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/advanced",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/courses",
+   "sel": "a[href$=\"#/curriculum\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/courses",
+   "sel": "a[href$=\"#/courses\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    232,
+    248,
+    248
+   ],
+   "ratio": 8.34,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/courses",
+   "sel": "a[href$=\"#/ways\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/courses",
+   "sel": "a[href$=\"#/readiness\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/courses",
+   "sel": "a[href$=\"#/engine\"] > .sl",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/louisiana",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/system",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/parishes",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/trades",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/futurework",
+   "sel": ".figrail > .v.tabular > small",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/futurework",
+   "sel": "#fw-track > div:nth-child(1) > div > .eyebrow",
+   "fg": [
+    255,
+    225,
+    168
+   ],
+   "bg": [
+    88,
+    56,
+    24
+   ],
+   "ratio": 8.32,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/futurework",
+   "sel": "#fw-track > div:nth-child(1) > div > div:nth-child(2)",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    88,
+    56,
+    24
+   ],
+   "ratio": 10.53,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/futurework",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/regions",
+   "sel": "#rg-body > div:nth-child(1) > div > .eyebrow",
+   "fg": [
+    255,
+    225,
+    168
+   ],
+   "bg": [
+    8,
+    8,
+    24
+   ],
+   "ratio": 15.67,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/regions",
+   "sel": "#rg-body > div:nth-child(1) > div > div:nth-child(2)",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    24,
+    40,
+    56
+   ],
+   "ratio": 15.01,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/regions",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/home",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/console",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/deptlive",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/edregions",
+   "sel": "#v-edregions > div:nth-child(1) > div > .eyebrow",
+   "fg": [
+    255,
+    225,
+    168
+   ],
+   "bg": [
+    8,
+    8,
+    24
+   ],
+   "ratio": 15.67,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/edregions",
+   "sel": "#v-edregions > div:nth-child(1) > div > div:nth-child(2)",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    8,
+    8,
+    8
+   ],
+   "ratio": 20.03,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/edregions",
+   "sel": "#edr-body > div:nth-child(1) > div > .eyebrow",
+   "fg": [
+    255,
+    225,
+    168
+   ],
+   "bg": [
+    24,
+    8,
+    24
+   ],
+   "ratio": 15.26,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/edregions",
+   "sel": "#edr-body > div:nth-child(1) > div > div:nth-child(2)",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    8,
+    8,
+    24
+   ],
+   "ratio": 19.84,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/edregions",
+   "sel": "text",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/enterprise",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/board360",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/atlas",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/compare",
+   "sel": "svg[aria-label=\"MA flag (simplified)\"] > text[fill=\"#0B2A5B\"][y=\"23.5\"][font-size=\"8.5\"]",
+   "fg": [
+    11,
+    42,
+    91
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 13.21,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/compare",
+   "sel": "svg[aria-label=\"NJ flag (simplified)\"] > text[fill=\"#0B2A5B\"][y=\"23.5\"][font-size=\"8.5\"]",
+   "fg": [
+    11,
+    42,
+    91
+   ],
+   "bg": [
+    232,
+    216,
+    168
+   ],
+   "ratio": 9.9,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/compare",
+   "sel": "svg[aria-label=\"NH flag (simplified)\"] > text[y=\"23.5\"][font-size=\"8.5\"][font-weight=\"800\"]",
+   "fg": [
+    255,
+    255,
+    255
+   ],
+   "bg": [
+    8,
+    40,
+    104
+   ],
+   "ratio": 13.87,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/compare",
+   "sel": "svg[aria-label=\"CT flag (simplified)\"] > text[fill=\"#C9A227\"][y=\"23.5\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/compare",
+   "sel": "svg[aria-label=\"WI flag (simplified)\"] > text[y=\"23.5\"][font-size=\"8.5\"][font-weight=\"800\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/states",
+   "sel": "svg[aria-label=\"CT flag (simplified)\"] > text[fill=\"#C9A227\"][y=\"23.5\"][text-anchor=\"middle\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/states",
+   "sel": "svg[aria-label=\"ID flag (simplified)\"] > text[y=\"23.5\"][text-anchor=\"middle\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/states",
+   "sel": "svg[aria-label=\"IL flag (simplified)\"] > text[fill=\"#0B2A5B\"][y=\"23.5\"][text-anchor=\"middle\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/states",
+   "sel": "text[fill=\"#FDB913\"][y=\"23.5\"][text-anchor=\"middle\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/states",
+   "sel": "svg[aria-label=\"KY flag (simplified)\"] > text[y=\"23.5\"][text-anchor=\"middle\"][font-size=\"8.5\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/heritage",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/history",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/wlb",
+   "sel": "#wlb-top > .card:nth-child(2) > .eyebrow",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 8.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/wlb",
+   "sel": ".card:nth-child(2) > h2",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 15.74,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/wlb",
+   "sel": "#wlb-top > .card:nth-child(2) > div:nth-child(3)",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 8.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/wlb",
+   "sel": "#wlb-top > .card:nth-child(2) > p",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 8.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/wlb",
+   "sel": ".gold",
+   "fg": [
+    138,
+    98,
+    16
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 5.11,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/civic",
+   "sel": ".card:nth-child(1) > div > svg[viewBox=\"0 0 640 671\"] > g:nth-child(1) > text[y=\"13\"][font-weight=\"400\"][x=\"0\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/civic",
+   "sel": ".card:nth-child(1) > div > svg[viewBox=\"0 0 640 671\"] > g:nth-child(1) > text[x=\"550.0\"][y=\"13\"][fill=\"var(--ink2)\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/civic",
+   "sel": ".card:nth-child(1) > div > svg[viewBox=\"0 0 640 671\"] > g:nth-child(2) > text[y=\"26\"][font-weight=\"400\"][x=\"0\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/civic",
+   "sel": ".card:nth-child(1) > div > svg[viewBox=\"0 0 640 671\"] > g:nth-child(3) > text[y=\"39\"][font-weight=\"400\"][x=\"0\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    248
+   ],
+   "ratio": 8.58,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/civic",
+   "sel": ".card:nth-child(1) > div > svg[viewBox=\"0 0 640 671\"] > g:nth-child(4) > text[y=\"52\"][font-weight=\"400\"][x=\"0\"]",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    232,
+    232,
+    232
+   ],
+   "ratio": 7.44,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/global",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/globalx",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/roadmap",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/plan",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/upgrades",
+   "sel": "#sustain > .tablewrap > table > tbody > tr:nth-child(1) > td:nth-child(2) > .pill.teal",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/upgrades",
+   "sel": "tr:nth-child(1) > td:nth-child(3) > .pill.teal",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/upgrades",
+   "sel": "tr:nth-child(1) > td:nth-child(4) > .pill.teal",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/upgrades",
+   "sel": "tr:nth-child(1) > td:nth-child(5) > .pill.teal",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/upgrades",
+   "sel": "tr:nth-child(1) > td:nth-child(6) > .pill.teal",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/packages",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/signin",
+   "sel": ".ob3-kick",
+   "fg": [
+    30,
+    122,
+    114
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 4.8,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/signin",
+   "sel": "h1",
+   "fg": [
+    14,
+    30,
+    46
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 15.74,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/signin",
+   "sel": "em",
+   "fg": [
+    0,
+    0,
+    0
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 19.58,
+   "threshold": 3,
+   "pass": true
+  },
+  {
+   "label": "education-os #/signin",
+   "sel": "p",
+   "fg": [
+    58,
+    74,
+    89
+   ],
+   "bg": [
+    248,
+    248,
+    232
+   ],
+   "ratio": 8.5,
+   "threshold": 4.5,
+   "pass": true
+  },
+  {
+   "label": "education-os #/signin",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/contact",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  },
+  {
+   "label": "education-os #/support",
+   "sel": "span[aria-hidden=\"true\"]",
+   "error": "clip out of bounds"
+  }
+ ]
+}

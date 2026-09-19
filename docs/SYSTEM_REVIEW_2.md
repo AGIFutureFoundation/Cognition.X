@@ -134,6 +134,16 @@ no screen-reader pass, the four non-default styles not audited view by
 view, the Education OS sampled at 8 of 149 views, 23 axe "needs review"
 items on gradient backgrounds. Prompt 10.
 
+**Update, v0.113.0 (prompt 10).** Re-run over the Education OS's full
+route table and all five styles: **304 views**, 0 WCAG-tagged violations,
+42,767 focusable elements, 0 without a name, 0 click-only controls. A new
+pixel sampler measured the "needs review" contrast items mechanically
+(375 nodes across 259 flagged instances) instead of leaving them
+spot-checked by hand; it found 22 genuinely below threshold, all three
+token- or icon-size-level bugs, all fixed. What remains, unchanged: no
+screen-reader pass — it needs a person, and `docs/ACCESSIBILITY.md` now
+carries a dated, unsigned checklist rather than a fabricated result.
+
 ## 6. Performance
 
 Measured and budgeted in v0.68.0 (`docs/PERFORMANCE.md`); nothing has
