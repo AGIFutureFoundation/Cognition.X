@@ -7,14 +7,18 @@ __CXHEAD__
     --ink:#1B2431; --muted:#4E5A6B; --faint:#5F6B7A;
     --purple:#2456A6; --gold:#7F5A00; --green:#1F7A5C;
     --gold-soft:rgba(127,90,0,.10); --purple-soft:rgba(36,86,166,.10);
-    --w1:#3B6FD4; --w2:#2A835B; --w3:#9552BD; --w4:#BA5637;
+    /* --faint-ink: for --faint text drawn over the city-map water overlay
+       (chart colour at .18 opacity over surface-2) — --faint itself reads
+       fine on plain surface-2 but not on that composited tint; a11y round two */
+    --faint-ink:#3C4658;
+    --w1:#3B6FD4; --w2:#257A55; --w3:#9552BD; --w4:#BA5637;
     --chart:#2456A6; --ring:rgba(36,86,166,.45);
     --shadow:0 8px 22px rgba(27,36,49,.08);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
+      --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --faint-ink:#8B97A6; --on-gold:#12161C;
       --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
       --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
       --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
@@ -24,7 +28,7 @@ __CXHEAD__
   }
   :root[data-theme="dark"]{
     --bg:#12161C; --surface:#1A2029; --surface-2:#232B37; --line:#33404F;
-    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --on-gold:#12161C;
+    --ink:#E9EDF3; --muted:#A6B0BE; --faint:#8B97A6; --faint-ink:#8B97A6; --on-gold:#12161C;
     --purple:#7AA7EA; --gold:#C9A24B; --green:#47A07E;
     --gold-soft:rgba(201,162,75,.14); --purple-soft:rgba(122,167,234,.14);
     --w1:#4970BC; --w2:#32815F; --w3:#9460B0; --w4:#B05C42;
@@ -609,7 +613,7 @@ function cityMapSVG(r){
   return `<svg viewBox="0 0 460 300" width="100%" role="group" aria-label="Stylized city map of ${esc(r.name)}">`+
     `<rect x="0" y="0" width="460" height="300" rx="10" fill="var(--surface-2)"/>`+
     `<g fill="var(--chart)" opacity="0.18">${g.water.join("")}</g>`+
-    g.hint.map(([t,x,y,vert])=>`<text x="${x}" y="${y}" text-anchor="middle" font-size="9" fill="var(--faint)"`+
+    g.hint.map(([t,x,y,vert])=>`<text x="${x}" y="${y}" text-anchor="middle" font-size="9" fill="var(--faint-ink)"`+
       (vert?` transform="rotate(-90 ${x} ${y})"`:"")+`>${esc(t)}</text>`).join("")+
     nodes + `</svg>`;
 }

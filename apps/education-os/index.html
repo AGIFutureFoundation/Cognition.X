@@ -2128,7 +2128,7 @@ KY:['#002F6C','#C9A227','#FFFFFF','seal','Kentucky Department of Education'],
 LA:['#0D3B7A','#E8B326','#FFFFFF','pelican','Louisiana Department of Education'],
 ME:['#002868','#C9A227','#FFFFFF','seal','Maine Department of Education'],
 MD:['#000000','#FFC000','#BF0A30','maryland','Maryland State Department of Education'],
-MA:['#FFFFFF','#0B2A5B','#C9A227','sealLight','Massachusetts Department of Elementary and Secondary Education'],
+MA:['#FFFFFF','#C9A227','#0B2A5B','sealLight','Massachusetts Department of Elementary and Secondary Education'],
 MI:['#002868','#C9A227','#FFFFFF','seal','Michigan Department of Education'],
 MN:['#003865','#4AA8E0','#FFFFFF','minnesota','Minnesota Department of Education'],
 MS:['#002868','#C9A227','#BF0A30','mississippi','Mississippi Department of Education'],
@@ -2784,7 +2784,7 @@ renderers.states=function(){
  const v=view('states');
  v.innerHTML=`<div class="vhead"><div class="eyebrow">National scale-out · G2FC-13 state localization profile · one mission library, 51 editions</div><h1>State editions</h1><p class="lede">Each state edition is a single machine-readable profile: its standards crosswalk, CTE and safety governance, narrative worlds drawn from its own economy, credential registry, language set and offline need. The national mission library re-targets to the profile without re-authoring. Pick a state to generate its starting profile.</p></div>
  <div class="legend" style="margin:0 0 12px">${DATA.phases.map((p,i)=>`<span><i class="ph${i}" style="background:currentColor"></i>${esc(p)}</span>`).join('')}</div>
- <div class="states" id="stgrid">${DATA.states.map(s=>`<button class="st${s[0]===stateCode?' on':''}" data-s="${s[0]}"><span style="display:flex;gap:6px;align-items:center">${flagSVG(s[0],22)}<span>${esc(s[1])}</span></span><span class="ph ph${s[2]}">${s[2]===0?'reference':'phase '+s[2]}</span></button>`).join('')}</div>
+ <div class="states" id="stgrid">${DATA.states.map(s=>`<button class="st${s[0]===stateCode?' on':''}" data-s="${s[0]}"><span style="display:flex;gap:6px;align-items:center">${flagSVG(s[0],28)}<span>${esc(s[1])}</span></span><span class="ph ph${s[2]}">${s[2]===0?'reference':'phase '+s[2]}</span></button>`).join('')}</div>
  <div class="section cfg"><div class="card" id="stform"></div><div class="card"><h3>Generated state profile</h3><p class="small muted">Edit the form; the JSON re-generates. This is the file G2FC-13.2 requires.</p><textarea class="json" id="stjson" readonly></textarea><div style="display:flex;gap:8px;margin-top:10px"><button class="btn" id="stcopy">Copy JSON</button><button class="btn primary" id="stuse">Set as active edition</button></div></div></div><div id="stprogram"></div>`;
  let cur=stateByCode(stateCode);
  function form(){const s=cur;const isLA=s[0]==='LA';stateProgram(s[0],$('#stprogram'));$('#stform').innerHTML=`<div style="display:flex;gap:12px;align-items:center">${flagSVG(s[0],48)}<div><div class="eyebrow">${esc(DATA.brand[s[0]][4])} · ${esc(DATA.phases[s[2]])}</div><h2 style="margin:4px 0 0">${esc(s[1])} edition</h2></div></div><div style="display:flex;gap:4px;margin:10px 0 14px">${DATA.brand[s[0]].slice(0,3).map(c=>`<span style="flex:1;height:8px;border-radius:2px;background:${c};box-shadow:0 0 0 1px rgba(0,0,0,.1)"></span>`).join('')}</div>
