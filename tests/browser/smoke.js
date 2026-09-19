@@ -22,22 +22,55 @@
 
 const { chromium } = require('playwright');
 const path = require('path');
+const { AsyncLocalStorage } = require('async_hooks');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const url = app => 'file://' + path.join(ROOT, 'apps', app, 'index.html');
+
+// Suites run concurrently (see the driver at the bottom); AsyncLocalStorage
+// tracks which suite a given check() call belongs to across every await in
+// that suite's whole call chain, even while other suites' chains interleave
+// on the same event loop. Outside a suite (or run serially, CX_SMOKE_SERIAL=1)
+// there is no store and check() prints immediately, exactly as it always has.
+const suiteContext = new AsyncLocalStorage();
 
 const results = [];
 let failed = 0;
 function check(name, ok, detail) {
   results.push({ name, ok, detail });
   if (!ok) failed++;
-  console.log(`${ok ? '  ok  ' : '  FAIL'} ${name}${ok || !detail ? '' : ' — ' + detail}`);
+  const line = `${ok ? '  ok  ' : '  FAIL'} ${name}${ok || !detail ? '' : ' — ' + detail}`;
+  const store = suiteContext.getStore();
+  if (store) store.lines.push(line);
+  else console.log(line);
 }
 
 async function newPage(browser, label, errs) {
   const page = await browser.newPage();
   page.on('pageerror', e => errs.push(`${label}: ${e.message}`));
   return page;
+}
+
+// Bounded concurrency (roadmap prompt 5): each suite already opens its own
+// page(s) via newPage() — a fresh isolated context per Playwright's own
+// contract for browser.newPage(), so no two suites ever share localStorage,
+// IndexedDB or cookies — and no suite reads or writes module state besides
+// check()'s results/failed (safe: JS is single-threaded, no torn writes).
+// The only thing that ever needed isolating was the errs array and the
+// console output, both handled by the caller. limit bounds how many Chromium
+// contexts run at once, so this stays a laptop-friendly headless run rather
+// than a resource fight.
+async function runPool(items, limit, worker) {
+  const out = new Array(items.length);
+  let next = 0;
+  async function lane() {
+    while (next < items.length) {
+      const i = next++;
+      out[i] = await worker(items[i], i);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.max(1, Math.min(limit, items.length)) }, lane));
+  return out;
 }
 
 /* ---------------------------------------------- every app loads cleanly */
@@ -404,6 +437,40 @@ async function testPlatformLoop(browser, errs) {
   await page.close();
 }
 
+/* -------------------------- platform: the other three views (roadmap prompt 5) */
+async function testPlatformViews(browser, errs) {
+  const model = await newPage(browser, 'platform/model', errs);
+  await model.goto(url('platform'));
+  await model.waitForTimeout(700);
+  await model.click('.sysnode[data-n="records"]');
+  const detail = await model.$eval('#nodedetail', el => el.textContent);
+  check('platform: the system map is real — clicking a node shows its own detail, not a placeholder',
+    detail.includes('records office') && detail.includes('ECDSA P-256'), detail.slice(0, 80));
+  const tiles = await model.$$eval('#pxtiles .tile b', els => els.map(e => e.textContent));
+  check('platform: the tiles report the real dataset totals, not sample numbers',
+    tiles.length === 6 && /^\d[\d,]*$/.test(tiles[0]) && tiles[0] === (await model.evaluate(() => D.totals.blocks.toLocaleString())),
+    JSON.stringify(tiles));
+  await model.close();
+
+  const appsPage = await newPage(browser, 'platform/apps', errs);
+  await appsPage.goto(url('platform') + '#/apps');
+  await appsPage.waitForTimeout(700);
+  const appNames = await appsPage.$eval('#appgrid', el => el.textContent);
+  check('platform: the apps view names all six real apps with working links',
+    ['Education OS', 'Flow Hub', 'Louisiana', 'Trades Network', 'States'].every(n => appNames.includes(n)));
+  const hrefs = await appsPage.$$eval('#appgrid a', els => els.map(e => e.getAttribute('href')));
+  check('platform: every app card links to its own app', hrefs.length === 6 && hrefs.some(h => h.includes('education-os')));
+  await appsPage.close();
+
+  const stack = await newPage(browser, 'platform/stack', errs);
+  await stack.goto(url('platform') + '#/stack');
+  await stack.waitForTimeout(700);
+  const stackText = await stack.$eval('#view-stack', el => el.textContent);
+  check('platform: the stack view names the real build pipeline, not an abstraction',
+    stackText.includes('normalize_blocks') && stackText.includes('generate_pack') && stackText.includes('Simulation ≠ certification'));
+  await stack.close();
+}
+
 /* ------- regressions: the defects the v0.44.0 review confirmed, fixed ---- */
 async function testReviewRegressions(browser, errs) {
   const page = await newPage(browser, 'regressions', errs);
@@ -548,6 +615,41 @@ async function testEducationOsBoots(browser, errs) {
   await page.close();
 }
 
+/* --------------------- education-os: build status + the site guide search (roadmap prompt 5) */
+async function testEducationOsDepth(browser, errs) {
+  const status = await newPage(browser, 'education-os/status', errs);
+  await status.goto(url('education-os') + '#/status');
+  await status.waitForTimeout(2000);
+  // #v-status carries several tables — the buildStatus ledger first, then brand/voice
+  // cards later renderers append onto the same view — so target the first table by name.
+  const rows = await status.$$eval('#v-status table', tables =>
+    tables.find(t => (t.querySelector('thead') || {}).textContent.includes('Production step')).querySelectorAll('tbody tr').length);
+  const rowsMatchData = await status.evaluate(() => DATA.buildStatus.length);
+  check('education-os: the Build Status view renders every row of the canonical extraction (v0.109.0)',
+    rows === rowsMatchData && rows > 40, `${rows} rows vs ${rowsMatchData} in DATA.buildStatus`);
+  const firstCell = await status.$eval('#v-status table tbody tr td b', el => el.textContent);
+  check('education-os: the Build Status table shows real authored text, not a placeholder',
+    firstCell.length > 10 && !firstCell.includes('undefined'), firstCell.slice(0, 60));
+  await status.close();
+
+  const guide = await newPage(browser, 'education-os/guide', errs);
+  await guide.goto(url('education-os'));
+  await guide.waitForTimeout(2000);
+  // the fab sits under floating chrome (command palette, privacy control) in some
+  // layouts; its own click handler is what matters here, not the pointer geometry
+  await guide.evaluate(() => document.getElementById('guide-fab').click());
+  await guide.waitForTimeout(200);
+  await guide.fill('#gp-q', 'Build Status');
+  await guide.press('#gp-q', 'Enter');
+  await guide.waitForTimeout(200);
+  const out = await guide.$eval('#gp-out', el => el.textContent);
+  check('education-os: the site guide answers from the real siteIndex, not a canned response',
+    out.includes('Build Status'), out.slice(0, 120));
+  const goLink = await guide.$('#gp-out [data-go="status"]');
+  check('education-os: the guide result links to the actual view it names', goLink !== null);
+  await guide.close();
+}
+
 /* ------------------------------------------- the other apps' key surfaces */
 async function testOtherApps(browser, errs) {
   const fh = await newPage(browser, 'flow-hub', errs);
@@ -556,6 +658,23 @@ async function testOtherApps(browser, errs) {
   check('flow hub: dataset payload present',
     await fh.evaluate(() => typeof DATA === 'object' && DATA.packs && Object.keys(DATA.packs).length > 20));
   await fh.close();
+
+  // roadmap prompt 5: packs search and the ledger's credential rule, for real
+  const fh2 = await newPage(browser, 'flow-hub/packs+ledger', errs);
+  await fh2.goto(url('flow-hub'));
+  await fh2.waitForTimeout(900);
+  await fh2.click('.navbtn[data-view="packs"]');
+  await fh2.fill('#packsearch', 'oral health');
+  await fh2.waitForTimeout(300);
+  const packsResult = await fh2.$eval('#packbody', el => el.textContent);
+  check('flow hub: the pack search filters to real dataset content, not a static list',
+    packsResult.includes('Oral Health Peer') || packsResult.toLowerCase().includes('oral health'), packsResult.slice(0, 120));
+  await fh2.click('.navbtn[data-view="ledger"]');
+  await fh2.waitForTimeout(300);
+  const ledgerText = await fh2.$eval('#view-ledger', el => el.textContent);
+  check('flow hub: the ledger states the real credential rule (all ten themes, one witnessed check each)',
+    ledgerText.includes('all ten of its themes') && ledgerText.includes('transfer check'), ledgerText.slice(0, 120));
+  await fh2.close();
 
   const tn = await newPage(browser, 'trades-network', errs);
   await tn.goto(url('trades-network'));
@@ -1052,34 +1171,63 @@ async function testDurableListsAndRestore(browser, errs) {
   const browser = await chromium.launch({
     executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium',
   });
+  const suites = [
+    ['all apps load', testAllAppsLoad],
+    ['credential threshold', testCredentialThreshold],
+    ['records office grades', testRecordsOfficeGrades],
+    ['evidence consent gate', testEvidenceConsentGate],
+    ['flow engine and swarm', testFlowAndSwarm],
+    ['network OS drill-downs', testNetworkOS],
+    ['makers hall', testMakersHall],
+    ['compliance layer', testComplianceLayer],
+    ['platform loop', testPlatformLoop],
+    ['platform views', testPlatformViews],
+    ['review regressions', testReviewRegressions],
+    ['education os boots', testEducationOsBoots],
+    ['education os depth', testEducationOsDepth],
+    ['other apps', testOtherApps],
+    ['simulation studio', testSimulationStudio],
+    ['compliance review', testComplianceReview],
+    ['standards and rubrics', testStandardsAndRubrics],
+    ['office key and wave one', testOfficeKeyNonExtractable],
+    ['durable ledger and custody bundle', testDurableLedger],
+    ['hosted copy', testHostedCopy],
+    ['open badge envelope', testOpenBadgeEnvelope],
+    ['durable lists and custody restore', testDurableListsAndRestore],
+    ['performance pass', testPerformancePass],
+    ['xr view', testXrView],
+  ];
   const errs = [];
   try {
-    for (const [name, fn] of [
-      ['all apps load', testAllAppsLoad],
-      ['credential threshold', testCredentialThreshold],
-      ['records office grades', testRecordsOfficeGrades],
-      ['evidence consent gate', testEvidenceConsentGate],
-      ['flow engine and swarm', testFlowAndSwarm],
-      ['network OS drill-downs', testNetworkOS],
-      ['makers hall', testMakersHall],
-      ['compliance layer', testComplianceLayer],
-      ['platform loop', testPlatformLoop],
-      ['review regressions', testReviewRegressions],
-      ['education os boots', testEducationOsBoots],
-      ['other apps', testOtherApps],
-      ['simulation studio', testSimulationStudio],
-      ['compliance review', testComplianceReview],
-      ['standards and rubrics', testStandardsAndRubrics],
-      ['office key and wave one', testOfficeKeyNonExtractable],
-      ['durable ledger and custody bundle', testDurableLedger],
-      ['hosted copy', testHostedCopy],
-      ['open badge envelope', testOpenBadgeEnvelope],
-      ['durable lists and custody restore', testDurableListsAndRestore],
-      ['performance pass', testPerformancePass],
-      ['xr view', testXrView],
-    ]) {
-      console.log(`\n▸ ${name}`);
-      await fn(browser, errs);
+    if (process.env.CX_SMOKE_SERIAL) {
+      // the pre-parallel path, kept for bisecting a suite in isolation
+      for (const [name, fn] of suites) {
+        console.log(`\n▸ ${name}`);
+        await fn(browser, errs);
+      }
+    } else {
+      const concurrency = Number(process.env.CX_SMOKE_CONCURRENCY) || 8;
+      const outcomes = await runPool(suites, concurrency, async ([name, fn]) => {
+        const suiteErrs = [];
+        const store = { lines: [] };
+        try {
+          await suiteContext.run(store, () => fn(browser, suiteErrs));
+          return { name, suiteErrs, lines: store.lines, thrown: null };
+        } catch (e) {
+          return { name, suiteErrs, lines: store.lines, thrown: e };
+        }
+      });
+      // printed in the suite list's own order, not completion order, so a
+      // rerun's log reads the same regardless of how the pool interleaved
+      for (const { name, suiteErrs, lines, thrown } of outcomes) {
+        console.log(`\n▸ ${name}`);
+        lines.forEach(l => console.log(l));
+        errs.push(...suiteErrs);
+        if (thrown) {
+          failed++;
+          console.log(`  FAIL  ${name}: the suite itself threw — ${thrown.message}`);
+        }
+      }
     }
   } finally {
     await browser.close();

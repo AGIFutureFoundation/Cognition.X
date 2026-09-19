@@ -1,0 +1,53 @@
+name: accessibility
+
+# Runs only on changes under apps/ or tools/ — a template or an audit-tool
+# change is exactly what could move the accessibility result. Everything
+# else (data authoring, docs) never touches a rendered page.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps/**"
+      - "tools/**"
+  pull_request:
+    paths:
+      - "apps/**"
+      - "tools/**"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install Playwright and axe-core
+        run: |
+          npm install -g playwright axe-core
+          echo "NODE_PATH=$(npm root -g)" >> "$GITHUB_ENV"
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Re-run the accessibility audit over every view of every app
+        run: |
+          export CX_CHROMIUM="$(node -e "console.log(require('playwright').chromium.executablePath())")"
+          node tools/a11y/audit.js
+      - name: Audit must agree with the committed docs/ACCESSIBILITY.json (date aside)
+        run: |
+          node -e "
+            const fs = require('fs');
+            const fresh = JSON.parse(fs.readFileSync('docs/ACCESSIBILITY.json', 'utf8'));
+            const committed = JSON.parse(require('child_process').execSync('git show HEAD:docs/ACCESSIBILITY.json').toString());
+            fresh.generated = committed.generated;
+            fs.writeFileSync('docs/ACCESSIBILITY.json', JSON.stringify(fresh, null, 1));
+          "
+          git diff --exit-code docs/ACCESSIBILITY.json
+      - name: Fail on any WCAG-tagged violation
+        run: |
+          node -e "
+            const d = require('./docs/ACCESSIBILITY.json');
+            const wcag = [];
+            for (const r of d.runs) for (const v of r.violations) if (v.tags.some(t => t.startsWith('wcag'))) wcag.push([r.label, v.id]);
+            if (wcag.length) { console.error('WCAG-tagged violations:', JSON.stringify(wcag.slice(0, 5))); process.exit(1); }
+            console.log('0 WCAG-tagged violations across', d.runs.length, 'views');
+          "

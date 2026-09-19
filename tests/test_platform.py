@@ -1100,6 +1100,23 @@ def test_system_review_2():
     r = subprocess.run([sys.executable, str(ROOT / "tools" / "release_tags.py"), "--backfill", "--dry-run"], capture_output=True, text=True, cwd=ROOT)
     check("release-tag backfill runs", r.returncode == 0 and "tags" in r.stdout, r.stdout[-120:] + r.stderr[-120:])
     check("versioning wiki still documents the tag step", "git tag -a vX.Y.Z" in (ROOT / "docs" / "wiki" / "Versioning-and-Releases.md").read_text(encoding="utf-8"))
+    # prompt 5: the browser suite runs its suites concurrently, and every app
+    # is opened at least five times (the roadmap's own evidence command)
+    smoke = (ROOT / "tests" / "browser" / "smoke.js").read_text(encoding="utf-8")
+    check("browser suite runs suites through a concurrency pool", "runPool" in smoke and "AsyncLocalStorage" in smoke)
+    opens = re.findall(r"url\('([a-z-]+)'\)", smoke)
+    counts = Counter(opens)
+    thin = {app: n for app, n in counts.items() if n < 5}
+    check("browser suite opens every app at least five times", len(counts) == 6 and not thin, str(thin or counts))
+    # prompt 5: the accessibility audit re-runs in CI on apps/tools changes
+    # and fails on drift or a WCAG-tagged violation, not just on whatever is
+    # committed (test_system_review_2's own a11y checks above only look at
+    # the committed docs/ACCESSIBILITY.json).
+    a11y_ci = (ROOT / ".github" / "workflows" / "accessibility.yml").read_text(encoding="utf-8")
+    check("accessibility CI triggers on apps/ and tools/ changes", '"apps/**"' in a11y_ci and '"tools/**"' in a11y_ci)
+    check("accessibility CI re-runs the live audit", "tools/a11y/audit.js" in a11y_ci)
+    check("accessibility CI fails on a WCAG-tagged violation", "startsWith('wcag')" in a11y_ci and "process.exit(1)" in a11y_ci)
+    check("accessibility CI compares the re-run to the committed result", "git diff --exit-code docs/ACCESSIBILITY.json" in a11y_ci)
 
 
 def main():

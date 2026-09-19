@@ -61,7 +61,10 @@ const only = process.argv[2];
       return { focusable: els.length, noName, clickOnly };
     });
     report.axe = r.version;
-    report.runs.push({ label, url: u, click: click || null, violations: r.violations, incomplete: r.incomplete, keyboard: kb });
+    // stored relative to ROOT: an absolute file:// URL bakes in the checkout
+    // path, which differs between a local clone and a CI runner and would
+    // make every CI re-run diff against the committed file on that alone.
+    report.runs.push({ label, url: u.replace('file://' + ROOT, ''), click: click || null, violations: r.violations, incomplete: r.incomplete, keyboard: kb });
     const crit = r.violations.filter(v => v.impact === 'critical' || v.impact === 'serious').length;
     console.log(`${label.padEnd(44)} violations ${String(r.violations.length).padStart(2)} (serious+ ${crit}) · focusable ${kb.focusable} · unnamed ${kb.noName.length}`);
   }

@@ -4,6 +4,34 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.112.0] — 2026-09-19
+
+### Added — faster browser suite, evenly spread, with the audit in CI (prompt 5)
+- `tests/browser/smoke.js`: the 24 suites now run through a bounded
+  concurrency pool (`runPool`, default width 8, `CX_SMOKE_CONCURRENCY`
+  to override, `CX_SMOKE_SERIAL=1` for the old serial loop) instead of
+  one page at a time; an `AsyncLocalStorage` scopes each suite's
+  `check()` output across every `await` in its chain so suites can
+  interleave safely. 135 s → 42 s for the same run, no code in the
+  ~900 lines of existing assertion bodies touched.
+- New depth: Platform's system-map click-to-detail plus its apps/stack
+  views (2 → 5 opens); Education OS's Build Status table checked
+  against `DATA.buildStatus.length` plus a site-guide search
+  round-trip (3 → 5 opens); Flow Hub's pack search and ledger credential
+  text (5 → 7 opens). 223 → 234 assertions; every app now opens at
+  least five times.
+- `.github/workflows/accessibility.yml` (new): on any change under
+  `apps/**` or `tools/**`, installs Playwright + axe-core, re-runs
+  `tools/a11y/audit.js` against the current builds, normalizes the
+  regenerated file's date to the committed one before diffing (so the
+  date field alone never fails the job), fails on drift from the
+  committed `docs/ACCESSIBILITY.json`, and independently fails on any
+  WCAG-tagged violation regardless of the diff outcome.
+- `tests/test_platform.py`: five new checks hold the above — the
+  concurrency pool exists, every app is opened at least five times, and
+  the new workflow triggers on the right paths, re-runs the live audit,
+  and fails on a WCAG-tagged violation.
+
 ## [0.111.0] — 2026-09-18
 
 ### Added — XR round three: stations against the room, AR placement (prompt 8)
