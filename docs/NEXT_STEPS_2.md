@@ -488,7 +488,7 @@ byte-for-byte unchanged.
 
 ---
 
-## 10 — Accessibility round two
+## 10 — Accessibility round two — DONE in v0.113.0 except the screen-reader pass (needs a person)
 
 **Why.** The automated result is clean at 47 views, and the four things
 the audit cannot do are still undone: a screen-reader pass, the four
@@ -506,6 +506,24 @@ screen-reader pass with a checklist per app, recorded by a person.
 styles with zero WCAG-tagged violations; the 23 items are measured and
 either fixed or documented with their ratios; the screen-reader
 checklist is in the doc with its date and who ran it.
+
+**Finding, v0.113.0.** `tools/a11y/audit.js` now reads the Education OS's
+own `VIEWS` route table instead of an 8-view sample, and re-runs every
+view of Louisiana, States and Trades Network in all five styles.
+`docs/ACCESSIBILITY.json` grew from 47 to **304 runs** (149 Education OS
++ 39 other views, 29 of them × 5 styles) with **0 WCAG-tagged violations,
+42,767 focusable elements, 0 without a name, 0 click-only controls**. A
+new `tools/a11y/contrast_sample.js` pixel-samples the axe "needs review"
+color-contrast instances axe cannot resolve on its own (375 measured
+across the 259 flagged instances); it found 22 genuinely below their WCAG
+threshold — not the estimated 23, and not the same ones (this is a new,
+mechanical measurement, not a re-check of the old hand-spot-check) — all
+three token- or icon-size-level bugs, all fixed and re-measured at 0
+below. The one item the acceptance criterion asks for that no audit tool
+can produce is the screen-reader pass: it needs a person, so
+`docs/ACCESSIBILITY.md` now carries a dated, unsigned checklist instead
+of a fabricated result — that line item stays open until someone runs
+it.
 
 ---
 

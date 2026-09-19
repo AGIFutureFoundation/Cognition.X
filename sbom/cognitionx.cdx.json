@@ -2,13 +2,13 @@
  "bomFormat": "CycloneDX",
  "specVersion": "1.5",
  "version": 1,
- "serialNumber": "urn:uuid:97f913ce-804c-5202-92d1-ef6ea995f90e",
+ "serialNumber": "urn:uuid:611b5582-bb61-5ab1-a88e-5e6004e596ac",
  "metadata": {
   "component": {
    "type": "application",
    "bom-ref": "cx:release",
    "name": "Cognition.X",
-   "version": "0.112.0",
+   "version": "0.113.0",
    "supplier": {
     "name": "AGI Future Foundation PBC"
    },
@@ -40,12 +40,12 @@
    "type": "application",
    "bom-ref": "cx:app:education-os",
    "name": "Cognition.X education-os",
-   "version": "0.112.0",
+   "version": "0.113.0",
    "description": "single-file offline HTML application; no runtime dependencies",
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "7637db61377efa259f3affa8fa41aa2362570e4d9fbb16d3dc0f69beba23bb4e"
+     "content": "968e4462c459436487afb90f52b8c43b9e324ab95cbb44cd21fdf4263cedc627"
     }
    ],
    "licenses": [
@@ -76,12 +76,12 @@
    "type": "application",
    "bom-ref": "cx:app:flow-hub",
    "name": "Cognition.X flow-hub",
-   "version": "0.112.0",
+   "version": "0.113.0",
    "description": "single-file offline HTML application; no runtime dependencies",
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "787309a659545404df3192ce0c8ce4a39b21eefa2156c09ca3168625d5c0b8f6"
+     "content": "0397e80872647d1cd38bf2c6145f0f3847d0f616de90208f5044f060a8a28836"
     }
    ],
    "licenses": [
@@ -112,12 +112,12 @@
    "type": "application",
    "bom-ref": "cx:app:louisiana",
    "name": "Cognition.X louisiana",
-   "version": "0.112.0",
+   "version": "0.113.0",
    "description": "single-file offline HTML application; no runtime dependencies",
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "fcbd68efc6b236a59441b0fb7d5bdd752a13ef63d5209f4ff4a810047a6f42f3"
+     "content": "4d97b3185e1ef39c68e49dffc30c8689f4514813236f7cf3c1bd9df7af54e847"
     }
    ],
    "licenses": [
@@ -148,12 +148,12 @@
    "type": "application",
    "bom-ref": "cx:app:platform",
    "name": "Cognition.X platform",
-   "version": "0.112.0",
+   "version": "0.113.0",
    "description": "single-file offline HTML application; no runtime dependencies",
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "7f256ae7d42651e446f73dea2ded564e34b950cd74f0e946158ef7009025b233"
+     "content": "2c46cdbedf2aa3338e52b1fdb2cea17cf5354e0a20d00545106ef442e1d445c4"
     }
    ],
    "licenses": [
@@ -184,12 +184,12 @@
    "type": "application",
    "bom-ref": "cx:app:states",
    "name": "Cognition.X states",
-   "version": "0.112.0",
+   "version": "0.113.0",
    "description": "single-file offline HTML application; no runtime dependencies",
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "a270e83f5257e26cc0ed5ac3cce57e1f6ec1c2ab62ceaf8d93034e5a290aee8e"
+     "content": "b40eef827312e82d5d21783d535bfc71a7e18ffca2f32063f6d9ded4857bfa62"
     }
    ],
    "licenses": [
@@ -220,12 +220,12 @@
    "type": "application",
    "bom-ref": "cx:app:trades-network",
    "name": "Cognition.X trades-network",
-   "version": "0.112.0",
+   "version": "0.113.0",
    "description": "single-file offline HTML application; no runtime dependencies",
    "hashes": [
     {
      "alg": "SHA-256",
-     "content": "f287ce8859aeede1ec0a7c7b8dc6ef29bb5b70899a6a33fd9180c623dc3bac04"
+     "content": "cdd518acc4e2e39bdbf9f32561ff797fb85215b15ec1ad9f0bba0706291d7517"
     }
    ],
    "licenses": [
