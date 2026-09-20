@@ -41,7 +41,7 @@ device to reach a service in the first place.
 | Criterion | What it asks of a service organization | Cognition.X today | Register |
 |---|---|---|---|
 | **Security** (the Common Criteria; required in every SOC 2 report) | Logical and physical access controls, system monitoring, incident response, change management, and risk mitigation over the operated system | No accounts to protect, no server to monitor, no infrastructure to change-manage. What *does* transfer — the release itself — is checksummed, rebuilt byte-for-byte from source in CI, and has a published vulnerability-disclosure channel and response commitment | PL-01, PL-03, PL-05, PL-06, PL-07, PL-08, PL-13 |
-| **Availability** | The system is available for operation and use as committed (uptime, capacity, disaster recovery) | No uptime commitment exists because nothing is hosted by the platform; a file either opens in a browser or it doesn't. A district that self-hosts owns its own availability, same as any static file it serves | PL-06, PL-20 |
+| **Availability** | The system is available for operation and use as committed (uptime, capacity, disaster recovery) | No uptime commitment exists because nothing is hosted by the platform; a file either opens in a browser or it doesn't. A district that self-hosts owns its own availability, same as any static file it serves | none — no control evidences uptime, capacity or disaster recovery, because the software makes no availability commitment to evidence |
 | **Processing Integrity** | System processing is complete, valid, accurate, timely and authorized | The only "processing" is client-side JavaScript computing from what a person entered; the credential-signing and threshold logic is deterministic and covered by the test suite, but there is no server-side transaction pipeline for a SOC 2 engagement to test | PL-15, PL-18 |
 | **Confidentiality** | Information designated confidential is protected from unauthorized disclosure | Nothing designated confidential is transmitted anywhere by the software; it stays in the browser's local storage under a namespaced key until a person exports or erases it | PL-02, PL-09, PL-13 |
 | **Privacy** | Personal information is collected, used, retained, disclosed and disposed of per the entity's privacy commitments (this criterion maps closely to FERPA/COPPA intent) | Covered in full by the FERPA and COPPA analysis already in `COMPLIANCE_REVIEW.md`: no online collection, in-app disclosure of every key stored, consent-gated aggregate export, access/correction/erasure all in the reader's own hands | PL-09, PL-10, PL-11, PL-12, FD-01, FD-02 |
@@ -86,12 +86,11 @@ but paperwork with no system to test against.
 `COMPLIANCE_REVIEW.md` and control FD-02 already establish that no
 operator collects anything online today, so COPPA's
 verifiable-parental-consent (VPC) requirement is not triggered. If a
-future hosted tier adds
-any collection from a user the operator has actual knowledge is under
-13 — a login, a hosted ledger, cloud sync — VPC would become a real
-requirement before that collection could occur. The FTC's currently
-accepted VPC methods (16 CFR 312.5(b)) are, so this is scoped correctly
-if that day comes:
+future hosted tier adds any collection from a user the operator has
+actual knowledge is under 13 — a login, a hosted ledger, cloud sync —
+VPC would become a real requirement before that collection could occur.
+The FTC's currently accepted VPC methods (16 CFR 312.5(b)) are listed
+here so that day is scoped correctly if it comes:
 
 | Method | Shape |
 |---|---|
