@@ -4,6 +4,19 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.114.1] — 2026-09-20
+
+### Fixed
+- `docs/SOC2_READINESS.md`: a third-party review bot on PR #117 (merged
+  after the check passed but before its review finished) found two real
+  issues in the new doc, both fixed here. The COPPA paragraph's closing
+  sentence was grammatically broken from an earlier line-wrap edit.
+  The Availability criterion's register-id column cited `PL-06`
+  (reproducible builds) and `PL-20` (hosting hardening), neither of
+  which evidences uptime, capacity or disaster recovery; changed to
+  state plainly that no control does, because the software makes no
+  availability commitment to evidence.
+
 ## [0.114.0] — 2026-09-20
 
 ### Added — SOC 2 / COPPA enterprise-readiness crosswalk
