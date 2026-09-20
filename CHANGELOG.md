@@ -4,6 +4,32 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.114.0] — 2026-09-20
+
+### Added — SOC 2 / COPPA enterprise-readiness crosswalk
+- `docs/SOC2_READINESS.md` (new): maps the AICPA's five Trust Services
+  Criteria (Security, Availability, Processing Integrity,
+  Confidentiality, Privacy) to the existing control register, states
+  plainly that SOC 2 has no scope today because there is no operated
+  service for an auditor to draw a boundary around, and names exactly
+  what a hosted tier would need before a CPA firm could be engaged
+  (a hosted service, formal policies, an observation period, the firm
+  itself, a scope decision) — never claims compliance the software
+  cannot self-certify. Adds a COPPA appendix on verifiable-parental-consent
+  methods and the school-consent exception, for the day a hosted tier
+  ever adds collection.
+- Cross-linked from `docs/COMPLIANCE_REVIEW.md` (new "SOC 2" paragraph),
+  `docs/CONTROL_REGISTER.md` (generator template updated so the link
+  survives regeneration), and `docs/INVESTOR_BRIEF.md`'s existing "not
+  yet built" table row.
+- `tests/test_platform.py`: two new checks hold the new doc to never
+  claiming compliance, covering all five criteria and both register ids
+  it should, and being linked from the two docs above.
+
+Both suites re-verified clean before this release: 1962/1962 platform
+checks, 234/234 browser assertions, 304-run accessibility audit still at
+0 WCAG-tagged violations.
+
 ## [0.113.0] — 2026-09-19
 
 ### Added — accessibility round two: full coverage, every style, measured contrast (prompt 10)
