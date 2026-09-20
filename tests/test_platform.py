@@ -628,6 +628,14 @@ def test_security_compliance_register():
     check("HOSTING.md carries the exact CSP as a header", _CSP in hosting and "Strict-Transport-Security" in hosting and "no-referrer" in hosting)
     cisa = (ROOT / "docs" / "CISA_K12_SUMMARY.md").read_text(encoding="utf-8")
     check("CISA summary maps to register ids", "PL-01" in cisa and "ST-02" in cisa and "Not legal advice" in cisa)
+    soc2 = (ROOT / "docs" / "SOC2_READINESS.md").read_text(encoding="utf-8")
+    check("SOC2_READINESS.md never claims compliance, maps all five TSC to register ids, and covers COPPA VPC",
+          "not a SOC 2 report" in soc2 and "Security" in soc2 and "Availability" in soc2
+          and "Processing Integrity" in soc2 and "Confidentiality" in soc2 and "Privacy" in soc2
+          and "PL-01" in soc2 and "FD-02" in soc2 and "verifiable-parental-consent" in soc2.lower())
+    check("COMPLIANCE_REVIEW.md and CONTROL_REGISTER.md point to the SOC 2 crosswalk",
+          "SOC2_READINESS.md" in (ROOT / "docs" / "COMPLIANCE_REVIEW.md").read_text(encoding="utf-8")
+          and "SOC2_READINESS.md" in (ROOT / "docs" / "CONTROL_REGISTER.md").read_text(encoding="utf-8"))
     road = (ROOT / "docs" / "COMPLIANCE_ROADMAP.md").read_text(encoding="utf-8")
     check("COMPLIANCE_ROADMAP.md states the register counts", f"{len(reg['controls'])} controls" in road)
 

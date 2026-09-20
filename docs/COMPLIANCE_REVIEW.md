@@ -105,6 +105,14 @@ the record; pasted ledgers, trust lists and revocation lists sanitized
 before use (`llSanitize`); the studio engine and the notice are shared
 code reviewed once and injected everywhere.
 
+**SOC 2.** Out of scope today by design: SOC 2 audits a service
+organization's operated system, and this software has no server or
+hosted service for a boundary to be drawn around. What the five Trust
+Services Criteria ask for is answered, criterion by criterion, against
+the controls above in [`SOC2_READINESS.md`](SOC2_READINESS.md), which
+also names exactly what a hosted tier would need before an auditor could
+be engaged.
+
 **Claims about AI.** No model runs in any app. The "agents", "swarm" and
 "tutor" are rule-based automations over the flow state and the ledger;
 the Education OS's pages on model-backed coaching and agent
