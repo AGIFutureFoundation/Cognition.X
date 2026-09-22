@@ -54,6 +54,20 @@ All notable changes to Cognition.X are documented here. The format follows
   template, where it lands inside the first 1024 bytes the parser reads,
   and both apps were rebuilt. Education OS already had one. Caught by
   looking at a screenshot of the running app, not by any test.
+- **Education OS did not work, and now does.** It threw two errors on
+  load and rendered almost nothing. Three faults, all in its template: a
+  fragment of an older build's data sat in the body outside any
+  `<script>` and rendered as visible page text; the body was that older
+  build's shell (`#stats`, `#blocks`) while the real script addressed
+  `#nav`, `#views`, `#toast`, `#stateSel`, `#stateflag` and `#crumb`,
+  none of which existed, so `buildNav()`, `buildState()` and `route()`
+  each threw in turn; and the doctype was declared twice. The stray
+  fragment could not be wrapped in a script — the real app declares its
+  own `const DATA` and the two would have collided — so it was deleted.
+  The app now loads with **zero page errors**, 149 navigation buttons
+  and 5,200 canonical sector blocks. `tools/build_education_os.py` now
+  refuses to write a page missing any of the six boot mounts, carrying a
+  duplicate doctype, or carrying a bare `var DATA = {` outside a script.
 
 ## [0.21.0] — 2026-09-10
 
