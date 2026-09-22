@@ -6,6 +6,13 @@ structure — 64 parishes, 8 regions, 8 Trade Halls — with an
 [`apps/louisiana/index.html`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/apps/louisiana/index.html)
 (~42 KB single file; opens locally).
 
+![The Louisiana platform: 64 independent parish dashboards.](images/louisiana-platform.png)
+
+*The Louisiana platform: 64 independent parish dashboards.*
+
+> Screenshots taken from the running app on 2026-09-22 at 1280x800.
+
+
 ## Surfaces
 
 - **The State** — live totals, an interactive **stylized tile

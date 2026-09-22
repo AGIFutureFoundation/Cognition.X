@@ -4,6 +4,25 @@ The interactive hub across the whole Cognition.X series:
 [`apps/flow-hub/index.html`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/apps/flow-hub/index.html)
 (~0.6 MB, single file, opens locally; fonts degrade gracefully offline).
 
+![The Flow Hub system view: every pack in the series, counted from the dataset it is built from.](images/flow-hub-system.png)
+
+*The Flow Hub system view: every pack in the series, counted from the dataset it is built from.*
+
+![Packs, tracks and blocks, filterable by family.](images/flow-hub-packs.png)
+
+*Packs, tracks and blocks, filterable by family.*
+
+![The flow view, which serves the next challenge just above current skill.](images/flow-hub-flow.png)
+
+*The flow view, which serves the next challenge just above current skill.*
+
+![The tutor swarm: eight agents sharing one session blackboard.](images/flow-hub-agents.png)
+
+*The tutor swarm: eight agents sharing one session blackboard.*
+
+> Screenshots taken from the running app on 2026-09-22 at 1280x800.
+
+
 Unlike the Education OS app, Flow Hub is a **build product of the
 dataset**: `tools/build_flow_hub.py` compacts `data/blocks.csv` and
 injects it into `apps/flow-hub/template.html`. Never edit `index.html`
