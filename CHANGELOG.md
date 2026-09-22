@@ -42,6 +42,19 @@ All notable changes to Cognition.X are documented here. The format follows
   counts as equipment certification. Transfer checks are phrased
   against the learner's own parish and stay observation-safe.
 
+### Fixed
+- **Flow Hub and the Louisiana platform declared no character encoding.**
+  Both files are UTF-8, but neither carried a `<meta charset>`, so a
+  browser fell back to a legacy encoding and every non-ASCII character
+  rendered as mojibake — `FLOW ZONE Â· LEARNING`, `the series â€" the OS
+  editions`, `ðŸ§ Guide me`. It is worse than a server misconfiguration
+  for these two in particular: they are single-file offline-capable apps,
+  so opened from `file://` there is no response header to rescue them and
+  the text is always wrong. The declaration is prepended in each
+  template, where it lands inside the first 1024 bytes the parser reads,
+  and both apps were rebuilt. Education OS already had one. Caught by
+  looking at a screenshot of the running app, not by any test.
+
 ## [0.21.0] — 2026-09-10
 
 ### Added
