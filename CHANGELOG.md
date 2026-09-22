@@ -68,6 +68,24 @@ All notable changes to Cognition.X are documented here. The format follows
   and 5,200 canonical sector blocks. `tools/build_education_os.py` now
   refuses to write a page missing any of the six boot mounts, carrying a
   duplicate doctype, or carrying a bare `var DATA = {` outside a script.
+- **`tools/lint_pages.py`** — every fault above, generalised into a check
+  that runs over every app page, wired into CI beside the dataset
+  validation. Stdlib only, no browser, no network. It tokenises the way
+  a browser does, so a `<script` inside a JavaScript regex literal is
+  not a tag, a `</script>` inside a template literal *is* one, and the
+  deliberate NUL bytes in the Education OS template are never reported.
+  Checks: valid UTF-8, exactly one doctype first in the file, a
+  `<meta charset>` that closes inside the first 1024 bytes browsers
+  prescan, balanced script/style/comment tags, code rendering as visible
+  text, ids a script addresses that nothing provides, unresolved build
+  placeholders, duplicate ids, and double-encoding signatures. Each
+  check was mutation-tested against a copy and each has a named false
+  positive it deliberately does not flag. 32 mutations watched fail;
+  7 negative controls confirmed silent.
+- **Flow Hub and the Louisiana platform had no `<!DOCTYPE html>`**, so
+  both rendered in quirks mode. Found by the new linter, and a direct
+  follow-on to the charset fix above: that change gave both templates an
+  encoding but not a doctype, which was an incomplete repair.
 
 ## [0.21.0] — 2026-09-10
 

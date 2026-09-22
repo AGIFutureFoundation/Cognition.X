@@ -19,3 +19,13 @@ jobs:
         run: git diff --exit-code data/blocks.csv data/manifest.json
       - name: Validate dataset
         run: python3 tools/validate_blocks.py
+
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Lint shipped HTML pages (doctype, charset, script balance, dangling ids, code-in-text)
+        run: python3 tools/lint_pages.py
