@@ -1,6 +1,6 @@
 {
   "dataset": "Cognition.X blocks",
-  "total_blocks": 15450,
+  "total_blocks": 15700,
   "packs": [
     {
       "name": "K–12",
@@ -731,6 +731,26 @@
         "The storm and the long memory"
       ],
       "credentials": 10,
+      "grade_bands": [
+        "K–2",
+        "3–5",
+        "6–8",
+        "9–10",
+        "11–12"
+      ]
+    },
+    {
+      "name": "SmartCiti.X : First Responder",
+      "slug": "RESPOND",
+      "blocks": 250,
+      "tracks": [
+        "The fire service: reading a building before it burns",
+        "Law enforcement: authority, limits and accountability",
+        "Emergency medical services: the first ten minutes",
+        "Emergency management: before, during and after",
+        "Social work and crisis response: the part nobody photographs"
+      ],
+      "credentials": 5,
       "grade_bands": [
         "K–2",
         "3–5",

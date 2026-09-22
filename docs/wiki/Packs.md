@@ -1,6 +1,6 @@
 # Packs
 
-Catalog of all 39 packs — 15,450 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
+Catalog of all 40 packs — 15,700 blocks total. Machine-readable version: [`data/manifest.json`](https://github.com/AGIFutureFoundation/Cognition.X/blob/main/data/manifest.json).
 
 | Pack | Slug | Blocks | Tracks | Credentials |
 |---|---|---:|---:|---:|
@@ -42,6 +42,7 @@ Catalog of all 39 packs — 15,450 blocks total. Machine-readable version: [`dat
 | Law, Contracts & Everyday Rights | `LAW` | 250 | 5 | 5 |
 | Cognition.X : Louisiana OS | `LAOS` | 500 | 10 | 10 |
 | SmartCiti.X : New Orleans Trades | `NOLATRADES` | 250 | 5 | 5 |
+| SmartCiti.X : First Responder | `RESPOND` | 250 | 5 | 5 |
 | Transport & Mobility | `TRANSPORT` | 250 | 5 | 5 |
 
 ## Tracks by pack

@@ -14,6 +14,7 @@ Exits non-zero on any failure; prints a census either way.
 """
 
 import csv
+import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -74,6 +75,55 @@ def main():
             if n > 1:
                 err(f"{pack}: code {c} appears {n} times")
 
+    # --- observation-safe transfer checks -------------------------------
+    #
+    # Some packs teach work that is dangerous to rehearse. Their specs say
+    # so: the New Orleans Trades pack refuses contact with energized,
+    # suspended or moving equipment, and the First Responder pack refuses
+    # to send a learner toward an incident or into a clinical, tactical or
+    # rescue act. Those are stated as prose in the spec's `notes`, and
+    # prose is not a check. This is.
+    #
+    # A transfer check is a thing a learner is told to GO AND DO, often a
+    # child. A pack can carry a careful safety sentence in its notes and a
+    # check that contradicts it, and nothing here would have noticed. The
+    # guard runs over every pack, not only the two, because the next pack
+    # written from a spec is the one nobody re-reads.
+    UNSAFE = [
+        # `administer` alone is NOT enough. The Education OS pack has a
+        # legitimate theme called "Administer tests", meaning an
+        # assessment, and the first draft of this guard flagged two of its
+        # blocks. A guard that cries wolf on real content is a guard
+        # somebody switches off, so the clinical patterns all require a
+        # clinical OBJECT rather than a verb that has an everyday sense.
+        (r"\badminister(?:ing)?\s+(?:a\s+|an\s+|the\s+)?"
+         r"(?:medication|medicine|drug|dose|injection|epinephrine|"
+         r"naloxone|oxygen|insulin|aspirin)\b", "a clinical act"),
+        (r"\b(?:dosage|dose of|perform cpr|apply a tourniquet|"
+         r"triage (?:the )?(?:patients|casualties))\b", "a clinical act"),
+        (r"\b(?:forced entry|breach the|restrain|handcuff|takedown)\b",
+         "a tactical act"),
+        (r"\bapproach(?:ing)? (?:the |an |a )?"
+         r"(?:incident|scene|fire|apparatus|crash|wreck)\b",
+         "approaching an incident"),
+        (r"\b(?:climb|enter) (?:the |a |an )?"
+         r"(?:scaffold|excavation|trench|confined space|roof)\b",
+         "entering a hazardous space"),
+        (r"\b(?:touch|operate|start) (?:the |a |an )?"
+         r"(?:crane|hydrant|apparatus|energized|live )\b",
+         "handling equipment"),
+    ]
+    unsafe_hits = 0
+    for r in rows:
+        chk = (r.get("transfer_check") or "")
+        for pat, why in UNSAFE:
+            if re.search(pat, chk, re.I):
+                unsafe_hits += 1
+                err(f"{r['block_id']}: transfer check asks for {why} — "
+                    f"checks are read, map, plan and compare, never do: "
+                    f"{chk[:90]!r}")
+                break
+
     packs = Counter(r["pack"] for r in rows)
     print(f"{len(rows)} blocks, {len(packs)} packs, {len(per_track)} tracks, "
           f"{len(set(r['credential'] for r in rows))} credentials")
@@ -87,6 +137,8 @@ def main():
         if len(errors) > 50:
             print(f"  ... and {len(errors) - 50} more", file=sys.stderr)
         sys.exit(1)
+    print(f"\nobservation-safe guard: {len(rows)} transfer checks scanned "
+          f"against {len(UNSAFE)} unsafe patterns, {unsafe_hits} flagged")
     print("\nOK: all checks passed")
 
 

@@ -7,6 +7,31 @@ All notable changes to Cognition.X are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- **SmartCiti.X : First Responder** (`RESPOND`, 250 blocks) — the
+  Cognition.X companion to the SmartCiti.X first-responder series,
+  covering the five services that series names: fire, law enforcement,
+  emergency medical services, emergency management and disaster relief,
+  and social work and crisis response. Five tracks of ten themes, each
+  mirroring one service's competency domains as SmartCiti.X states them.
+  The standards bodies named there — NFPA, NREMT, FEMA/NIMS, state POST,
+  the NASW code, and the authority having jurisdiction — remain the
+  owners of every real standard and **none is reproduced**: the pack
+  teaches what responders manage and why, never how to perform a
+  response. No serving firefighter, officer, paramedic, emergency
+  manager or licensed social worker has reviewed it.
+- **Observation-safe guard in `tools/validate_blocks.py`.** Two packs
+  now carry a safety stance in their spec notes — New Orleans Trades
+  refuses contact with energized, suspended or moving equipment, First
+  Responder refuses to send a learner toward an incident or into a
+  clinical, tactical or rescue act — and prose in a spec is not a check.
+  Every transfer check in the dataset is now scanned against six unsafe
+  patterns, because a transfer check is a thing a learner is told to go
+  and DO, often a child, and a pack can carry a careful safety sentence
+  beside a check that contradicts it. The guard's first draft flagged
+  two real Education OS blocks whose theme is *Administer tests* — an
+  assessment, not a medication — so every clinical pattern now requires
+  a clinical object. A guard that cries wolf on real content is a guard
+  somebody switches off.
 - **SmartCiti.X : New Orleans Trades** (`NOLATRADES`, 250 blocks) — a
   community pack supplementing the Louisiana OS edition as the
   Cognition.X companion to the SmartCiti.X New Orleans Trades Edition.
