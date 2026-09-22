@@ -82,6 +82,17 @@ All notable changes to Cognition.X are documented here. The format follows
   check was mutation-tested against a copy and each has a named false
   positive it deliberately does not flag. 32 mutations watched fail;
   7 negative controls confirmed silent.
+- **The First Responder pack is cross-checked against the registry it
+  companions.** Each of its five tracks declares
+  `mirrors_smartcitix_service`, and `tools/validate_blocks.py` resolves
+  those against `respond/registry/respond.json` whenever the SmartCiti.X
+  checkout sits beside this one — the same pattern SmartCiti.X's `geo/`
+  pack uses against the Locator.X checkout, in the other direction. It
+  fails if a track mirrors a service that does not exist, if a track
+  stops declaring one, or if the registry grows a service no track
+  mirrors. It prints which of the two happened, because a check that
+  silently does nothing when a path is missing reads exactly like a
+  check that passed.
 - **Flow Hub and the Louisiana platform had no `<!DOCTYPE html>`**, so
   both rendered in quirks mode. Found by the new linter, and a direct
   follow-on to the charset fix above: that change gave both templates an

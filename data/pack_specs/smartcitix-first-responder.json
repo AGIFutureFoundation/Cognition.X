@@ -1,91 +1,296 @@
 {
   "pack": "SmartCiti.X : First Responder",
-  "notes": "The Cognition.X companion to the SmartCiti.X first-responder series (respond/), covering the five services that series names: fire, law enforcement, emergency medical services, emergency management and disaster relief, and social work and crisis response. Each track mirrors one service's competency domains as SmartCiti.X states them; the standards bodies named there — NFPA, NREMT, FEMA/NIMS, state POST, the NASW code, and the authority having jurisdiction — remain the owners of every real standard, and NOTHING here reproduces one. This pack teaches what responders manage and why, never how to perform a response. SAFETY RULE, applied to every transfer check without exception: no check sends a learner toward an incident, near apparatus, into contact with a working responder, or into rehearsing a clinical, tactical or rescue act. Checks are reading, mapping, planning at home, and comparing published documents — the same observation-safe stance the New Orleans Trades pack takes with energized and suspended equipment. Facts are public record; checks are phrased against the learner's own household and jurisdiction. No serving firefighter, officer, paramedic, emergency manager or licensed social worker has reviewed this pack.",
+  "notes": "The Cognition.X companion to the SmartCiti.X first-responder series (respond/), covering the five services that series names: fire, law enforcement, emergency medical services, emergency management and disaster relief, and social work and crisis response. Each track mirrors one service's competency domains as SmartCiti.X states them; the standards bodies named there — NFPA, NREMT, FEMA/NIMS, state POST, the NASW code, and the authority having jurisdiction — remain the owners of every real standard, and NOTHING here reproduces one. This pack teaches what responders manage and why, never how to perform a response. SAFETY RULE, applied to every transfer check without exception: no check sends a learner toward an incident, near apparatus, into contact with a working responder, or into rehearsing a clinical, tactical or rescue act. Checks are reading, mapping, planning at home, and comparing published documents — the same observation-safe stance the New Orleans Trades pack takes with energized and suspended equipment. Facts are public record; checks are phrased against the learner's own household and jurisdiction. No serving firefighter, officer, paramedic, emergency manager or licensed social worker has reviewed this pack. Each track declares the SmartCiti.X service it mirrors in `mirrors_smartcitix_service`; tools/validate_blocks.py checks those against respond/registry/respond.json whenever the SmartCiti.X checkout sits beside this one, so the two cannot drift apart unnoticed.",
   "tracks": [
     {
       "name": "The fire service: reading a building before it burns",
       "prefix": "FS",
       "credential": "Fire Service Reader",
       "themes": [
-        {"theme": "Reading a scene before anyone touches it", "description": "The first thing a fire officer does is look, and say out loud what they see — how big, what is burning, what is threatened, what is needed. Naming a situation accurately is the skill under every decision that follows.", "transfer_check": "From the public sidewalk, describe one building near your home in four sentences: how many floors, how many ways out that you can see, what is next to it, and what would be hard about it. Do not enter or approach."},
-        {"theme": "Somebody is in charge, and you can tell who", "description": "Every incident has one person holding command, and command gets handed over out loud so nobody is ever unsure. The point is not rank; it is that the answer to 'who decides' is never ambiguous.", "transfer_check": "Find your fire department's published organisation chart or annual report and write down who would be in charge of a large incident, and who takes over if that person hands off."},
-        {"theme": "Nobody goes in alone, and everybody comes out", "description": "Crews stay together and are counted. A head-count that happens on a schedule, not when somebody feels uneasy, is what turns a missing person into a known fact within minutes.", "transfer_check": "Agree a meeting point outside your home with everyone who lives there, and walk to it together from two different rooms. Write down how long the second route took."},
-        {"theme": "Air is a countdown", "description": "A firefighter's breathing air is a consumable measured in minutes, and the minutes spend faster when the work is harder. Treating a resource as a clock rather than a supply changes when you decide to leave.", "transfer_check": "Set a timer for eight minutes and do a physical household chore without stopping. Write down what you had left to do when it rang, and what you would have cut."},
-        {"theme": "What a building is made of decides what it does", "description": "A building's construction type predicts how it behaves under fire — what holds, what fails, and how fast. The material is not a detail; it is the forecast.", "transfer_check": "From public ground, identify three buildings near you and write what each looks like it is built from. Then find one published source describing construction in your area and note where you agreed or were wrong."},
-        {"theme": "Where you park decides what you can do next", "description": "Positioning is a commitment. An apparatus placed for one tactic forecloses others, and the decision has to be made early with incomplete information.", "transfer_check": "Find the fire hydrant nearest your home on a map, then check from the pavement whether anything is parked or grown in front of it. Write what you found."},
-        {"theme": "Water has to come from somewhere", "description": "Supply is finite and arrives through a chain — hydrant, tank, relay, drafting. Reasoning about a constraint you cannot see is a habit that transfers well beyond fire.", "transfer_check": "Using your water utility's published material, write down where your household's water comes from before it reaches your tap, in as many steps as you can name."},
-        {"theme": "Say it back: making sure you were heard", "description": "Closed-loop communication means the receiver repeats the instruction and the sender confirms it. It is slower by design, because the failure it prevents is silent.", "transfer_check": "Give a three-part instruction to someone at home and have them repeat it back before acting. Do it twice more. Write down what changed between the first and third try."},
-        {"theme": "What is worth risking, and for what", "description": "Risk is spent deliberately against what can still be saved — a lot for a savable life, little for property, nothing for what is already lost. Saying the frame out loud is what keeps it honest.", "transfer_check": "Write down a decision your household made where safety and convenience pulled against each other, and state plainly what was risked and what was gained."},
-        {"theme": "The danger that arrives years later", "description": "Smoke leaves contaminants on gear, skin and equipment, and the harm shows up decades after the fire. Reducing exposure is a routine habit, not an emergency measure.", "transfer_check": "Check the smoke alarms where you live: how many, where, and when each was last tested. Compare what you find against your fire department's published guidance."}
-      ]
+        {
+          "theme": "Reading a scene before anyone touches it",
+          "description": "The first thing a fire officer does is look, and say out loud what they see — how big, what is burning, what is threatened, what is needed. Naming a situation accurately is the skill under every decision that follows.",
+          "transfer_check": "From the public sidewalk, describe one building near your home in four sentences: how many floors, how many ways out that you can see, what is next to it, and what would be hard about it. Do not enter or approach."
+        },
+        {
+          "theme": "Somebody is in charge, and you can tell who",
+          "description": "Every incident has one person holding command, and command gets handed over out loud so nobody is ever unsure. The point is not rank; it is that the answer to 'who decides' is never ambiguous.",
+          "transfer_check": "Find your fire department's published organisation chart or annual report and write down who would be in charge of a large incident, and who takes over if that person hands off."
+        },
+        {
+          "theme": "Nobody goes in alone, and everybody comes out",
+          "description": "Crews stay together and are counted. A head-count that happens on a schedule, not when somebody feels uneasy, is what turns a missing person into a known fact within minutes.",
+          "transfer_check": "Agree a meeting point outside your home with everyone who lives there, and walk to it together from two different rooms. Write down how long the second route took."
+        },
+        {
+          "theme": "Air is a countdown",
+          "description": "A firefighter's breathing air is a consumable measured in minutes, and the minutes spend faster when the work is harder. Treating a resource as a clock rather than a supply changes when you decide to leave.",
+          "transfer_check": "Set a timer for eight minutes and do a physical household chore without stopping. Write down what you had left to do when it rang, and what you would have cut."
+        },
+        {
+          "theme": "What a building is made of decides what it does",
+          "description": "A building's construction type predicts how it behaves under fire — what holds, what fails, and how fast. The material is not a detail; it is the forecast.",
+          "transfer_check": "From public ground, identify three buildings near you and write what each looks like it is built from. Then find one published source describing construction in your area and note where you agreed or were wrong."
+        },
+        {
+          "theme": "Where you park decides what you can do next",
+          "description": "Positioning is a commitment. An apparatus placed for one tactic forecloses others, and the decision has to be made early with incomplete information.",
+          "transfer_check": "Find the fire hydrant nearest your home on a map, then check from the pavement whether anything is parked or grown in front of it. Write what you found."
+        },
+        {
+          "theme": "Water has to come from somewhere",
+          "description": "Supply is finite and arrives through a chain — hydrant, tank, relay, drafting. Reasoning about a constraint you cannot see is a habit that transfers well beyond fire.",
+          "transfer_check": "Using your water utility's published material, write down where your household's water comes from before it reaches your tap, in as many steps as you can name."
+        },
+        {
+          "theme": "Say it back: making sure you were heard",
+          "description": "Closed-loop communication means the receiver repeats the instruction and the sender confirms it. It is slower by design, because the failure it prevents is silent.",
+          "transfer_check": "Give a three-part instruction to someone at home and have them repeat it back before acting. Do it twice more. Write down what changed between the first and third try."
+        },
+        {
+          "theme": "What is worth risking, and for what",
+          "description": "Risk is spent deliberately against what can still be saved — a lot for a savable life, little for property, nothing for what is already lost. Saying the frame out loud is what keeps it honest.",
+          "transfer_check": "Write down a decision your household made where safety and convenience pulled against each other, and state plainly what was risked and what was gained."
+        },
+        {
+          "theme": "The danger that arrives years later",
+          "description": "Smoke leaves contaminants on gear, skin and equipment, and the harm shows up decades after the fire. Reducing exposure is a routine habit, not an emergency measure.",
+          "transfer_check": "Check the smoke alarms where you live: how many, where, and when each was last tested. Compare what you find against your fire department's published guidance."
+        }
+      ],
+      "mirrors_smartcitix_service": "fire"
     },
     {
       "name": "Law enforcement: authority, limits and accountability",
       "prefix": "PS",
       "credential": "Public Safety Civics Reader",
       "themes": [
-        {"theme": "Where the authority comes from, and where it stops", "description": "Police powers are granted by law and bounded by it. Knowing the source of an authority and its edge is the beginning of civic literacy, for officers and for everyone else.", "transfer_check": "Find the published law or charter that establishes the police agency serving your area, and write down one power it grants and one limit it places."},
-        {"theme": "Time as a resource, not a shortage", "description": "Slowing an encounter down often changes its outcome. Distance, cover and patience buy the time in which a situation can resolve without force.", "transfer_check": "Find your agency's published policy on de-escalation and write down, in its own words, one thing it says an officer should do before using force."},
-        {"theme": "The call that is not a crime", "description": "Many calls are a health crisis wearing an emergency's clothes. Recognising that early and routing it to the right responder is a decision made in the first minute.", "transfer_check": "Find out which number or service in your area handles a mental-health crisis, and whether it is the same as the emergency number. Write down both."},
-        {"theme": "Force gets written down and reviewed", "description": "Where force is used it is reported, reviewed and counted. An accountability practice only works if it happens every time, including when nothing went wrong.", "transfer_check": "Find whether your agency publishes a use-of-force report or annual statistics. Write down what it publishes, or write down that it publishes none."},
-        {"theme": "Procedural justice in an ordinary stop", "description": "Whether people accept an outcome depends heavily on whether they were told why, given a voice, and treated with respect. Most encounters are ordinary, and that is precisely where it is decided.", "transfer_check": "Write four things you would want said to you in a routine encounter with any authority, then compare them against your agency's published expectations for officer conduct."},
-        {"theme": "Who watches, from outside", "description": "Independent review — a board, an inspector, an ombudsman, a court — exists so that an institution is not the only judge of itself.", "transfer_check": "Find whether your area has a civilian oversight body for policing. Write down its name and what it can actually do, or write down that there is none."},
-        {"theme": "The report is the record", "description": "What happened becomes what was written. Evidence integrity and accurate reporting are the difference between a case and a story.", "transfer_check": "Write a factual account of something that happened at home today in under 120 words, using only what you directly observed. Mark every sentence that was actually an assumption."},
-        {"theme": "Bias is a thing you check for, not a thing you deny", "description": "Impartial policing treats bias as a normal human failure mode to be designed against, with data, review and habit — not as an accusation to be rebutted.", "transfer_check": "Find whether your agency publishes stop or arrest data broken down by demographic. Write down what is published, and one question the published data cannot answer."},
-        {"theme": "Your role inside somebody else's incident", "description": "At a fire, a flood or a medical emergency the police officer is not in charge. Knowing which incidents are yours and which you support is a professional skill.", "transfer_check": "Using published local material, write down who holds command at a structure fire, at a flood, and at a large public event in your area."},
-        {"theme": "The cost carried home", "description": "Cumulative exposure to other people's worst days has a measurable toll. Peer support and a culture that permits using it are part of the job, not an admission about it.", "transfer_check": "Find out whether your local agency publishes anything about peer support or employee assistance for its staff. Write down what you found, and what you could not find."}
-      ]
+        {
+          "theme": "Where the authority comes from, and where it stops",
+          "description": "Police powers are granted by law and bounded by it. Knowing the source of an authority and its edge is the beginning of civic literacy, for officers and for everyone else.",
+          "transfer_check": "Find the published law or charter that establishes the police agency serving your area, and write down one power it grants and one limit it places."
+        },
+        {
+          "theme": "Time as a resource, not a shortage",
+          "description": "Slowing an encounter down often changes its outcome. Distance, cover and patience buy the time in which a situation can resolve without force.",
+          "transfer_check": "Find your agency's published policy on de-escalation and write down, in its own words, one thing it says an officer should do before using force."
+        },
+        {
+          "theme": "The call that is not a crime",
+          "description": "Many calls are a health crisis wearing an emergency's clothes. Recognising that early and routing it to the right responder is a decision made in the first minute.",
+          "transfer_check": "Find out which number or service in your area handles a mental-health crisis, and whether it is the same as the emergency number. Write down both."
+        },
+        {
+          "theme": "Force gets written down and reviewed",
+          "description": "Where force is used it is reported, reviewed and counted. An accountability practice only works if it happens every time, including when nothing went wrong.",
+          "transfer_check": "Find whether your agency publishes a use-of-force report or annual statistics. Write down what it publishes, or write down that it publishes none."
+        },
+        {
+          "theme": "Procedural justice in an ordinary stop",
+          "description": "Whether people accept an outcome depends heavily on whether they were told why, given a voice, and treated with respect. Most encounters are ordinary, and that is precisely where it is decided.",
+          "transfer_check": "Write four things you would want said to you in a routine encounter with any authority, then compare them against your agency's published expectations for officer conduct."
+        },
+        {
+          "theme": "Who watches, from outside",
+          "description": "Independent review — a board, an inspector, an ombudsman, a court — exists so that an institution is not the only judge of itself.",
+          "transfer_check": "Find whether your area has a civilian oversight body for policing. Write down its name and what it can actually do, or write down that there is none."
+        },
+        {
+          "theme": "The report is the record",
+          "description": "What happened becomes what was written. Evidence integrity and accurate reporting are the difference between a case and a story.",
+          "transfer_check": "Write a factual account of something that happened at home today in under 120 words, using only what you directly observed. Mark every sentence that was actually an assumption."
+        },
+        {
+          "theme": "Bias is a thing you check for, not a thing you deny",
+          "description": "Impartial policing treats bias as a normal human failure mode to be designed against, with data, review and habit — not as an accusation to be rebutted.",
+          "transfer_check": "Find whether your agency publishes stop or arrest data broken down by demographic. Write down what is published, and one question the published data cannot answer."
+        },
+        {
+          "theme": "Your role inside somebody else's incident",
+          "description": "At a fire, a flood or a medical emergency the police officer is not in charge. Knowing which incidents are yours and which you support is a professional skill.",
+          "transfer_check": "Using published local material, write down who holds command at a structure fire, at a flood, and at a large public event in your area."
+        },
+        {
+          "theme": "The cost carried home",
+          "description": "Cumulative exposure to other people's worst days has a measurable toll. Peer support and a culture that permits using it are part of the job, not an admission about it.",
+          "transfer_check": "Find out whether your local agency publishes anything about peer support or employee assistance for its staff. Write down what you found, and what you could not find."
+        }
+      ],
+      "mirrors_smartcitix_service": "law"
     },
     {
       "name": "Emergency medical services: the first ten minutes",
       "prefix": "MR",
       "credential": "Medical Response Reader",
       "themes": [
-        {"theme": "Is it safe to be here at all", "description": "The first assessment is not of the patient but of the scene. A responder who becomes a second patient has made the situation worse, not better.", "transfer_check": "Walk through your home and write down three things that would make it hard or unsafe for a stretcher crew to reach a bedroom — stairs, clutter, a narrow turn, a locked gate."},
-        {"theme": "A framework beats a hunch", "description": "Assessment follows a fixed order every time, so that nothing important is skipped when attention narrows under stress. The order is the point.", "transfer_check": "Write down the order in which you check a household problem — a leak, a smell, a power cut. Then do it in that order next time and note where the written order was wrong."},
-        {"theme": "The edge of your own certification", "description": "Every level of EMS certification has a defined scope, and the professional skill is knowing where yours ends and saying so out loud rather than reaching past it.", "transfer_check": "Find your state's published scope-of-practice summary and write down two things a paramedic may do that an EMT may not."},
-        {"theme": "Somebody else's licence, somebody else's protocol", "description": "Much of what EMS does is performed under the authority of a physician medical director. Working inside someone else's clinical authority is a structural feature of the job.", "transfer_check": "Find who provides medical direction for the EMS agency serving your area, or write down that the information is not published."},
-        {"theme": "The handover", "description": "Care transfers through a short, structured spoken summary and the record behind it. Most information lost in a hospital corridor is lost right there.", "transfer_check": "Summarise a complicated household situation to someone in exactly 30 seconds, in a fixed order, then have them repeat it back. Note what they dropped."},
-        {"theme": "Consent, capacity and the right to refuse", "description": "An adult who understands the consequences may refuse care. Recognising and respecting that is a legal and ethical duty, and it is uncomfortable by design.", "transfer_check": "Find your state's published Good Samaritan provision and write down, in plain words, what it does and does not protect."},
-        {"theme": "When there are more patients than hands", "description": "A mass casualty incident changes the goal from doing everything for one person to doing the most good across many. The role each responder holds is assigned, not chosen.", "transfer_check": "Find one published description of how your region organises a multiple-casualty incident and write down the roles it names. Do not attempt any sorting method yourself."},
-        {"theme": "Two people are a crew", "description": "A two-person team has no spare capacity, so its communication has to be deliberate: state what you are doing, say when you are stuck, speak up when something looks wrong.", "transfer_check": "Do a two-person household task where each person must say aloud what they are doing before doing it. Write what that changed and what it cost in time."},
-        {"theme": "Routine protection, not emergency protection", "description": "Infection and exposure control works because it is done every time, on ordinary calls, long before anyone knows a call was dangerous.", "transfer_check": "Write down what your household does routinely, not occasionally, to prevent illness spreading, and one thing it only does when somebody is already ill."},
-        {"theme": "Tired people make different decisions", "description": "Fatigue and accumulated distress change judgement measurably. Systems that acknowledge this build in relief and supervision rather than relying on individual toughness.", "transfer_check": "Track your own sleep for three days and write down one decision you made while tired that you would have made differently rested."}
-      ]
+        {
+          "theme": "Is it safe to be here at all",
+          "description": "The first assessment is not of the patient but of the scene. A responder who becomes a second patient has made the situation worse, not better.",
+          "transfer_check": "Walk through your home and write down three things that would make it hard or unsafe for a stretcher crew to reach a bedroom — stairs, clutter, a narrow turn, a locked gate."
+        },
+        {
+          "theme": "A framework beats a hunch",
+          "description": "Assessment follows a fixed order every time, so that nothing important is skipped when attention narrows under stress. The order is the point.",
+          "transfer_check": "Write down the order in which you check a household problem — a leak, a smell, a power cut. Then do it in that order next time and note where the written order was wrong."
+        },
+        {
+          "theme": "The edge of your own certification",
+          "description": "Every level of EMS certification has a defined scope, and the professional skill is knowing where yours ends and saying so out loud rather than reaching past it.",
+          "transfer_check": "Find your state's published scope-of-practice summary and write down two things a paramedic may do that an EMT may not."
+        },
+        {
+          "theme": "Somebody else's licence, somebody else's protocol",
+          "description": "Much of what EMS does is performed under the authority of a physician medical director. Working inside someone else's clinical authority is a structural feature of the job.",
+          "transfer_check": "Find who provides medical direction for the EMS agency serving your area, or write down that the information is not published."
+        },
+        {
+          "theme": "The handover",
+          "description": "Care transfers through a short, structured spoken summary and the record behind it. Most information lost in a hospital corridor is lost right there.",
+          "transfer_check": "Summarise a complicated household situation to someone in exactly 30 seconds, in a fixed order, then have them repeat it back. Note what they dropped."
+        },
+        {
+          "theme": "Consent, capacity and the right to refuse",
+          "description": "An adult who understands the consequences may refuse care. Recognising and respecting that is a legal and ethical duty, and it is uncomfortable by design.",
+          "transfer_check": "Find your state's published Good Samaritan provision and write down, in plain words, what it does and does not protect."
+        },
+        {
+          "theme": "When there are more patients than hands",
+          "description": "A mass casualty incident changes the goal from doing everything for one person to doing the most good across many. The role each responder holds is assigned, not chosen.",
+          "transfer_check": "Find one published description of how your region organises a multiple-casualty incident and write down the roles it names. Do not attempt any sorting method yourself."
+        },
+        {
+          "theme": "Two people are a crew",
+          "description": "A two-person team has no spare capacity, so its communication has to be deliberate: state what you are doing, say when you are stuck, speak up when something looks wrong.",
+          "transfer_check": "Do a two-person household task where each person must say aloud what they are doing before doing it. Write what that changed and what it cost in time."
+        },
+        {
+          "theme": "Routine protection, not emergency protection",
+          "description": "Infection and exposure control works because it is done every time, on ordinary calls, long before anyone knows a call was dangerous.",
+          "transfer_check": "Write down what your household does routinely, not occasionally, to prevent illness spreading, and one thing it only does when somebody is already ill."
+        },
+        {
+          "theme": "Tired people make different decisions",
+          "description": "Fatigue and accumulated distress change judgement measurably. Systems that acknowledge this build in relief and supervision rather than relying on individual toughness.",
+          "transfer_check": "Track your own sleep for three days and write down one decision you made while tired that you would have made differently rested."
+        }
+      ],
+      "mirrors_smartcitix_service": "ems"
     },
     {
       "name": "Emergency management: before, during and after",
       "prefix": "EM",
       "credential": "Emergency Management Reader",
       "themes": [
-        {"theme": "Hold your position, and only your position", "description": "In an incident command structure every person has one job and one person they report to. Freelancing outside your position is the failure the whole structure exists to prevent.", "transfer_check": "Find your county or parish emergency management office and write down the positions its published plan names."},
-        {"theme": "The room where the coordination happens", "description": "An emergency operations centre coordinates; it does not command the scene. Knowing the difference between coordinating resources and directing responders is the core of the discipline.", "transfer_check": "Find whether your jurisdiction publishes the location or function of its emergency operations centre, and write down what it says the centre does."},
-        {"theme": "Asking for help correctly", "description": "Mutual aid moves people and equipment between jurisdictions through agreements signed long before the emergency. The paperwork is the reason help arrives.", "transfer_check": "Find one published mutual aid agreement or compact your state participates in and write down what it covers."},
-        {"theme": "The clock everyone works to", "description": "Response is organised into operational periods with a planning cycle, so that a long emergency becomes a series of manageable shifts with written objectives.", "transfer_check": "Plan a household task in two blocks with written objectives for each. Write what changed between block one and block two."},
-        {"theme": "Warning people so they act", "description": "A warning that does not reach people, or does not tell them what to do, has not worked. Public information is a response function, not a press function.", "transfer_check": "Sign up for your jurisdiction's emergency alert system, or if you already have, find what channels it uses and write down which ones would reach you at 3am."},
-        {"theme": "Where people go", "description": "Mass care and sheltering is a coordinated operation with real constraints — capacity, accessibility, pets, medication, food. Most of its problems are logistics.", "transfer_check": "Find the designated shelter nearest you and write down whether the published material says anything about accessibility, pets, or medical needs."},
-        {"theme": "Counting the damage", "description": "Damage assessment turns a disaster into numbers that unlock assistance. It is slow, unglamorous, and determines what a community can rebuild.", "transfer_check": "Find one published damage assessment or after-action report from a past event in your state, and write down two categories it counted."},
-        {"theme": "The responder's own organisation has to keep working", "description": "Continuity of operations means the agency itself — payroll, dispatch, records — survives the event it is responding to.", "transfer_check": "Write down three things your household depends on that would stop working in a three-day power outage, and what the substitute would be."},
-        {"theme": "Helping without getting in the way", "description": "Spontaneous volunteers and unrequested donations can consume more capacity than they add. Affiliating in advance is what makes willingness useful.", "transfer_check": "Find one organisation in your area that registers disaster volunteers before an event, and write down what it asks of them."},
-        {"theme": "Planning for everyone who is actually there", "description": "A plan that works only for people who can walk, see, hear, read the language and travel by car does not work. Access and functional needs are designed in or they are absent.", "transfer_check": "Re-read your household's emergency plan as if one member could not walk or could not read the local language, and write down the first thing that breaks."}
-      ]
+        {
+          "theme": "Hold your position, and only your position",
+          "description": "In an incident command structure every person has one job and one person they report to. Freelancing outside your position is the failure the whole structure exists to prevent.",
+          "transfer_check": "Find your county or parish emergency management office and write down the positions its published plan names."
+        },
+        {
+          "theme": "The room where the coordination happens",
+          "description": "An emergency operations centre coordinates; it does not command the scene. Knowing the difference between coordinating resources and directing responders is the core of the discipline.",
+          "transfer_check": "Find whether your jurisdiction publishes the location or function of its emergency operations centre, and write down what it says the centre does."
+        },
+        {
+          "theme": "Asking for help correctly",
+          "description": "Mutual aid moves people and equipment between jurisdictions through agreements signed long before the emergency. The paperwork is the reason help arrives.",
+          "transfer_check": "Find one published mutual aid agreement or compact your state participates in and write down what it covers."
+        },
+        {
+          "theme": "The clock everyone works to",
+          "description": "Response is organised into operational periods with a planning cycle, so that a long emergency becomes a series of manageable shifts with written objectives.",
+          "transfer_check": "Plan a household task in two blocks with written objectives for each. Write what changed between block one and block two."
+        },
+        {
+          "theme": "Warning people so they act",
+          "description": "A warning that does not reach people, or does not tell them what to do, has not worked. Public information is a response function, not a press function.",
+          "transfer_check": "Sign up for your jurisdiction's emergency alert system, or if you already have, find what channels it uses and write down which ones would reach you at 3am."
+        },
+        {
+          "theme": "Where people go",
+          "description": "Mass care and sheltering is a coordinated operation with real constraints — capacity, accessibility, pets, medication, food. Most of its problems are logistics.",
+          "transfer_check": "Find the designated shelter nearest you and write down whether the published material says anything about accessibility, pets, or medical needs."
+        },
+        {
+          "theme": "Counting the damage",
+          "description": "Damage assessment turns a disaster into numbers that unlock assistance. It is slow, unglamorous, and determines what a community can rebuild.",
+          "transfer_check": "Find one published damage assessment or after-action report from a past event in your state, and write down two categories it counted."
+        },
+        {
+          "theme": "The responder's own organisation has to keep working",
+          "description": "Continuity of operations means the agency itself — payroll, dispatch, records — survives the event it is responding to.",
+          "transfer_check": "Write down three things your household depends on that would stop working in a three-day power outage, and what the substitute would be."
+        },
+        {
+          "theme": "Helping without getting in the way",
+          "description": "Spontaneous volunteers and unrequested donations can consume more capacity than they add. Affiliating in advance is what makes willingness useful.",
+          "transfer_check": "Find one organisation in your area that registers disaster volunteers before an event, and write down what it asks of them."
+        },
+        {
+          "theme": "Planning for everyone who is actually there",
+          "description": "A plan that works only for people who can walk, see, hear, read the language and travel by car does not work. Access and functional needs are designed in or they are absent.",
+          "transfer_check": "Re-read your household's emergency plan as if one member could not walk or could not read the local language, and write down the first thing that breaks."
+        }
+      ],
+      "mirrors_smartcitix_service": "em"
     },
     {
       "name": "Social work and crisis response: the part nobody photographs",
       "prefix": "CR",
       "credential": "Crisis Response Reader",
       "themes": [
-        {"theme": "Ethics when the ground is moving", "description": "Professional boundaries are hardest and most necessary under disaster conditions, when everyone is improvising and the usual structures are gone.", "transfer_check": "Find the published social work code of ethics and write down two obligations it states that would be hard to hold during a disaster."},
-        {"theme": "Assume there is a history you cannot see", "description": "Trauma-informed practice is a default posture, not a special mode: it assumes people's reactions have causes you do not know and are not entitled to.", "transfer_check": "Write down three ways a person might behave when frightened that could easily be mistaken for rudeness or non-cooperation."},
-        {"theme": "The first thing you say", "description": "Engagement in a crisis contact is about lowering threat and establishing that the person is being treated as a person. It is mostly listening and time.", "transfer_check": "Find published guidance on psychological first aid and write down three things it says NOT to do. Do not practise any technique on anyone."},
-        {"theme": "Knowing where to send somebody", "description": "A referral is only as good as the pathway behind it. Screening identifies a need; the pathway is what turns it into help that actually arrives.", "transfer_check": "Map three real services in your area — food, housing, behavioural health — and write down, for each, how a person would actually reach it and what it costs."},
-        {"theme": "When you are required to report", "description": "Mandated reporting is a legal duty with defined triggers. Knowing whether you are a mandated reporter, and on what, is not optional knowledge.", "transfer_check": "Find your state's published list of mandated reporters and write down whether a teacher, a coach and a volunteer are included."},
-        {"theme": "Two professions, one call", "description": "Co-response pairs a clinician with another service. It works when each knows exactly which decisions are theirs and says so before the door opens.", "transfer_check": "Find whether your area runs any co-response or crisis team, and write down which professions it pairs, or that none is published."},
-        {"theme": "You are not the default", "description": "Cultural humility means treating your own assumptions as the unusual case, and language access as a requirement rather than a courtesy.", "transfer_check": "Find out what languages emergency information is published in for your area, and write down what a household speaking a fourth language would actually do."},
-        {"theme": "Writing it down, and who may read it", "description": "Documentation is care, and confidentiality is a duty with specific legal limits. Both matter most when a situation is chaotic.", "transfer_check": "Find one published privacy notice from a health or social service and write down two situations where it says information may be shared without consent."},
-        {"theme": "Psychological first aid is not therapy", "description": "In a disaster the immediate work is safety, calm, connection and practical help — not treatment. Knowing the difference protects people from well-meant harm.", "transfer_check": "Write down, from the published guidance you found earlier, the boundary between what psychological first aid offers and what requires a licensed professional."},
-        {"theme": "The harm that accumulates in the helper", "description": "Vicarious trauma is an occupational exposure with a known shape. Supervision exists to catch it in people who will not report it about themselves.", "transfer_check": "Write down who would notice if you were not coping, and whether they would say so to you. Then write down who you would notice, and whether you would say so."}
-      ]
+        {
+          "theme": "Ethics when the ground is moving",
+          "description": "Professional boundaries are hardest and most necessary under disaster conditions, when everyone is improvising and the usual structures are gone.",
+          "transfer_check": "Find the published social work code of ethics and write down two obligations it states that would be hard to hold during a disaster."
+        },
+        {
+          "theme": "Assume there is a history you cannot see",
+          "description": "Trauma-informed practice is a default posture, not a special mode: it assumes people's reactions have causes you do not know and are not entitled to.",
+          "transfer_check": "Write down three ways a person might behave when frightened that could easily be mistaken for rudeness or non-cooperation."
+        },
+        {
+          "theme": "The first thing you say",
+          "description": "Engagement in a crisis contact is about lowering threat and establishing that the person is being treated as a person. It is mostly listening and time.",
+          "transfer_check": "Find published guidance on psychological first aid and write down three things it says NOT to do. Do not practise any technique on anyone."
+        },
+        {
+          "theme": "Knowing where to send somebody",
+          "description": "A referral is only as good as the pathway behind it. Screening identifies a need; the pathway is what turns it into help that actually arrives.",
+          "transfer_check": "Map three real services in your area — food, housing, behavioural health — and write down, for each, how a person would actually reach it and what it costs."
+        },
+        {
+          "theme": "When you are required to report",
+          "description": "Mandated reporting is a legal duty with defined triggers. Knowing whether you are a mandated reporter, and on what, is not optional knowledge.",
+          "transfer_check": "Find your state's published list of mandated reporters and write down whether a teacher, a coach and a volunteer are included."
+        },
+        {
+          "theme": "Two professions, one call",
+          "description": "Co-response pairs a clinician with another service. It works when each knows exactly which decisions are theirs and says so before the door opens.",
+          "transfer_check": "Find whether your area runs any co-response or crisis team, and write down which professions it pairs, or that none is published."
+        },
+        {
+          "theme": "You are not the default",
+          "description": "Cultural humility means treating your own assumptions as the unusual case, and language access as a requirement rather than a courtesy.",
+          "transfer_check": "Find out what languages emergency information is published in for your area, and write down what a household speaking a fourth language would actually do."
+        },
+        {
+          "theme": "Writing it down, and who may read it",
+          "description": "Documentation is care, and confidentiality is a duty with specific legal limits. Both matter most when a situation is chaotic.",
+          "transfer_check": "Find one published privacy notice from a health or social service and write down two situations where it says information may be shared without consent."
+        },
+        {
+          "theme": "Psychological first aid is not therapy",
+          "description": "In a disaster the immediate work is safety, calm, connection and practical help — not treatment. Knowing the difference protects people from well-meant harm.",
+          "transfer_check": "Write down, from the published guidance you found earlier, the boundary between what psychological first aid offers and what requires a licensed professional."
+        },
+        {
+          "theme": "The harm that accumulates in the helper",
+          "description": "Vicarious trauma is an occupational exposure with a known shape. Supervision exists to catch it in people who will not report it about themselves.",
+          "transfer_check": "Write down who would notice if you were not coping, and whether they would say so to you. Then write down who you would notice, and whether you would say so."
+        }
+      ],
+      "mirrors_smartcitix_service": "social"
     }
   ]
 }

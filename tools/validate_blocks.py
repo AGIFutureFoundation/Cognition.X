@@ -14,12 +14,14 @@ Exits non-zero on any failure; prints a census either way.
 """
 
 import csv
+import json
 import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-BLOCKS = Path(__file__).resolve().parent.parent / "data" / "blocks.csv"
+ROOT = Path(__file__).resolve().parent.parent
+BLOCKS = ROOT / "data" / "blocks.csv"
 BAND_LEVEL = {"K–2": "Explorer", "3–5": "Explorer", "6–8": "Builder",
               "9–10": "Practitioner", "11–12": "Lead"}
 # code and level are guaranteed dataset-wide since v0.14.0 (light fill);
@@ -123,6 +125,47 @@ def main():
                     f"checks are read, map, plan and compare, never do: "
                     f"{chk[:90]!r}")
                 break
+
+    # --- the sibling cross-check ------------------------------------------
+    #
+    # The First Responder pack mirrors the five services SmartCiti.X's
+    # respond/ registry describes, and the two live in different
+    # repositories. A pack that cites a sibling and is never compared
+    # against it is a citation nobody checks; the same pattern is used the
+    # other way round, where SmartCiti.X's geo/ pack cross-checks its
+    # RECORDED coordinates against the Locator.X checkout.
+    #
+    # It runs only when the sibling is actually there, and says which
+    # happened, because a check that silently does nothing when a path is
+    # missing reads exactly like a check that passed.
+    spec_path = ROOT / "data" / "pack_specs" / "smartcitix-first-responder.json"
+    sibling = ROOT.parent / "SmartCiti.X" / "respond" / "registry" / "respond.json"
+    if spec_path.exists():
+        spec = json.loads(spec_path.read_text(encoding="utf-8"))
+        declared = {t["prefix"]: t.get("mirrors_smartcitix_service")
+                    for t in spec["tracks"]}
+        missing = [k for k, v in declared.items() if not v]
+        if missing:
+            err(f"first-responder spec: tracks {missing} declare no "
+                "mirrors_smartcitix_service")
+        if sibling.exists():
+            resp = json.loads(sibling.read_text(encoding="utf-8"))
+            svc = resp["services"]
+            ids = set(svc) if isinstance(svc, dict) else {x["id"] for x in svc}
+            named = {v for v in declared.values() if v}
+            for bad in sorted(named - ids):
+                err(f"first-responder spec: a track mirrors service {bad!r}, "
+                    f"which respond/registry/respond.json does not have "
+                    f"(it has {sorted(ids)})")
+            for gone in sorted(ids - named):
+                err(f"first-responder spec: respond/ describes service "
+                    f"{gone!r} and no track mirrors it - the pack has fallen "
+                    "behind the registry it companions")
+            print(f"cross-check: SmartCiti.X checkout present, "
+                  f"{len(named)} tracks mirror {len(ids)} services, held")
+        else:
+            print("cross-check: SmartCiti.X checkout not present beside this "
+                  "one, the first-responder mirror check was skipped")
 
     packs = Counter(r["pack"] for r in rows)
     print(f"{len(rows)} blocks, {len(packs)} packs, {len(per_track)} tracks, "
