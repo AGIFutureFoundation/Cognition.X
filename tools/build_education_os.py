@@ -75,6 +75,36 @@ def main():
         "}catch(e){}})();\n</script>\n"
     )
     html = TEMPLATE.read_text(encoding="utf-8", errors="replace") + overlay
+
+    # --- structural guard -------------------------------------------------
+    # This app shipped broken and no check noticed, because the DATASET was
+    # never wrong — only the page around it. It rendered a fragment of an
+    # older build's data as visible text, and its script addressed mount
+    # points that existed in neither the template nor the output, so
+    # buildNav(), buildState() and route() all threw on load. The dataset
+    # validated clean throughout.
+    #
+    # These are the four things the script needs before any renderer runs,
+    # plus the two ways the page was structurally malformed. None of it is
+    # a matter of taste; each one was an observed failure.
+    for mount in ('id="nav"', 'id="views"', 'id="toast"', 'id="stateSel"',
+                  'id="stateflag"', 'id="crumb"'):
+        if mount not in html:
+            raise SystemExit(
+                f"education-os: the built page has no element with {mount}. "
+                "The script addresses it at boot and will throw on load. "
+                "Add it to template.html rather than removing this check.")
+    if html.count("<!DOCTYPE") + html.count("<!doctype") != 1:
+        raise SystemExit("education-os: the page declares its doctype "
+                         f"{html.count('<!DOCTYPE') + html.count('<!doctype')} "
+                         "times; exactly one is correct")
+    if "\nvar DATA = {" in html:
+        raise SystemExit(
+            "education-os: a bare `var DATA = {` sits outside a <script>. "
+            "That is the older build's data fragment; it renders as visible "
+            "text and would collide with the real `const DATA` if wrapped. "
+            "Delete it.")
+
     OUT.write_text(html, encoding="utf-8")
     print(f"wrote {OUT.relative_to(ROOT)}: {len(html)/1e6:.2f} MB — "
           f"{len(out)} canonical sector blocks injected ({kept} with original "

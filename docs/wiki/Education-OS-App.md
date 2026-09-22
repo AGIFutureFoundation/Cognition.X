@@ -42,32 +42,36 @@ Phase 2 introduces a build pipeline (dataset injected from
 `data/blocks.csv`) but the shipped artifact stays single-file and
 offline-first for low-connectivity deployments.
 
-## Known breakage (found 2026-09-22, not yet fixed)
+## Fixed 2026-09-22
 
-**The built app does not work.** Driven headlessly in Chromium it throws
-two errors on load and renders almost nothing:
+The built app threw two errors on load and rendered almost nothing. It
+now loads with **zero page errors**: 149 navigation buttons across its
+groups, the state picker filled from `DATA.states`, and 5,200 canonical
+sector blocks injected from `data/blocks.csv`.
 
-```
-TypeError: Cannot read properties of null (reading 'appendChild')
-    at buildNav (apps/education-os/index.html:1184)
-TypeError: Cannot set properties of null (setting 'textContent')
-    at toast  (apps/education-os/index.html:1170)
-```
+![The Education OS app after the repair: grouped navigation, state picker and brand strip.](images/education-os.png)
 
-Three symptoms, all reproducible from `apps/education-os/index.html`:
+*The Education OS app after the repair.*
 
-1. `buildNav()` does `$('#nav').appendChild(...)` and `toast()` does
-   `$('#toast').textContent = m`, but **no element with `id="nav"`,
-   `id="toast"` or `id="app"` exists** — in the built file or in
-   `template.html`. The script addresses markup that is not there.
-2. Part of the script leaks onto the page as visible text, beginning
-   `var DATA = { sectorTax: [ ['corp', 'Corporate', []], ...`.
-3. In that leaked text every sector array is **empty** — `sectorBlocks:
-   []` — so the dataset was not injected.
+Three faults, all in `apps/education-os/template.html`:
 
-The Flow Hub and the Louisiana platform were driven the same way in the
-same session and threw **zero** errors, so this is specific to this app.
+1. **A fragment of an older build's data sat in the body outside any
+   `<script>`**, so `var DATA = { sectorTax: ... }` rendered as visible
+   text on the page. It could not simply be wrapped — the real app
+   declares its own `const DATA = {}` further down and a second
+   declaration would have collided — so it was deleted.
+2. **The body was the older, simpler build's shell** (`#stats`,
+   `#blocks`), whose script is gone and which nothing filled, while the
+   real script addressed `#nav`, `#views`, `#toast`, `#stateSel`,
+   `#stateflag` and `#crumb` — none of which existed. `buildNav()`,
+   `buildState()` and `route()` each threw in turn. The shell now carries
+   exactly those six mounts; every other element the script addresses is
+   produced by a renderer's own markup, and `view(id)` appends each
+   section into `#views` on demand.
+3. **The doctype was declared twice.**
 
-No screenshot of this app is included in this wiki, because a screenshot
-of it would show a broken page presented as a product. One will be added
-when it runs.
+`tools/build_education_os.py` now refuses to write a page missing any of
+the six mounts, carrying a duplicate doctype, or carrying a bare
+`var DATA = {` outside a script.
+
+> Screenshot taken from the running app on 2026-09-22 at 1280x800.

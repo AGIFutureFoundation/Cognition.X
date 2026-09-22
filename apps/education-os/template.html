@@ -1,4 +1,3 @@
-<!doctype html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +30,21 @@
     .sector-sap { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
     .sector-edu { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
     .sector-npo { background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%); }
+    .cx-top { display: flex; align-items: center; gap: .6rem; padding: .75rem 0; font-size: .9rem; }
+    .cx-crumb { font-size: .8rem; color: #666; margin-bottom: 1rem; }
+    .cx-chip { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; }
+    .cx-flag { color: #666; font-size: .82rem; }
+    .cx-strip { display: inline-flex; gap: 3px; margin-left: auto; }
+    .cx-strip i { width: 22px; height: 8px; border-radius: 2px; display: inline-block; }
+    .cx-top select { padding: .35rem .5rem; border: 1px solid #ccc; border-radius: 6px; background: #fff; }
+    #nav { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: 1rem; }
+    #nav .grp { width: 100%; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: #777; margin-top: .5rem; }
+    #nav .navbtn { display: inline-flex; align-items: center; gap: .4rem; padding: .3rem .6rem; border: 1px solid #ddd; border-radius: 999px; background: #fff; cursor: pointer; font: inherit; font-size: .82rem; }
+    #nav .navbtn .k { font-family: monospace; color: #0066cc; font-size: .72rem; }
+    .view { display: none; }
+    .view.active { display: block; }
+    #toast { position: fixed; left: 50%; bottom: 1.25rem; transform: translateX(-50%); background: #222; color: #fff; padding: .5rem .9rem; border-radius: 8px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+    #toast.show { opacity: 1; }
   </style>
 </head>
 <body>
@@ -38,23 +52,28 @@
   <h1>Cognition.X Education Operating System</h1>
   <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem;">Comprehensive framework for sector-specialized master blocks across 8 domains: Corporate, Science, Robotics, Global Health, Multilateral, Sapient, Education, and Non Profit.</p>
 
-  <div id="stats" class="stats"></div>
-  <div id="blocks" class="blocks-list"></div>
+  <!-- Mount points the app actually addresses. buildNav() fills #nav,
+       toast() writes into #toast, and view(id) appends each <section
+       class="view"> into #views on demand, so no view markup is needed
+       here. The previous shell was #stats/#blocks — the containers of an
+       earlier, simpler build whose script is gone; nothing filled them. -->
+  <!-- buildState() runs at boot, before any renderer exists, and fills
+       this picker from DATA.states. Every other id the script addresses
+       is produced by a renderer's own innerHTML, so the shell only needs
+       the four boot-time mounts. -->
+  <header class="cx-top">
+    <span id="brandchip" class="cx-chip"></span>
+    <label for="stateSel">State</label>
+    <select id="stateSel"></select>
+    <span id="stateflag" class="cx-flag"></span>
+    <span id="brandstrip" class="cx-strip"></span>
+  </header>
+  <nav id="nav"></nav>
+  <div id="crumb" class="cx-crumb"></div>
+  <main id="views"></main>
+  <div id="toast" role="status" aria-live="polite"></div>
 </div>
 
-var DATA = {
-  sectorTax: [
-    ['corp', 'Corporate', []],
-    ['sci', 'Science', []],
-    ['rob', 'Robotics', []],
-    ['gh', 'Global Health', []],
-    ['mlt', 'Multilateral', []],
-    ['sap', 'Sapient', []],
-    ['edu', 'Education', []],
-    ['npo', 'Non Profit', []]
-  ],
-  sectorBlocks: []
-};
 <script>
 const DATA = {};
 
