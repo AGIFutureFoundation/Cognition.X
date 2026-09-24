@@ -4,6 +4,25 @@ All notable changes to Cognition.X are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org).
 
+## [0.114.2] — 2026-09-20
+
+### Fixed
+- `tools/data_quality.py`: the "Credential naming" section computed the
+  bare-level-word pack count from a set filtered to rows with a
+  non-empty `track` field, so the 33 "Practitioner" rows — all in
+  Empathy & Emotional Intelligence, a pack with no track subdivisions
+  (`track` empty on every row) — reported as spanning "0 tracks in 0
+  packs" in `docs/DATA_QUALITY.md`, even though the pack is real and
+  named elsewhere in the same document. Pack count is now derived
+  independently of the track filter; the line now correctly reads "0
+  tracks in 1 pack(s) (Empathy & Emotional Intelligence)". Found by a
+  6-agent independent re-verification workflow (each agent blind to
+  any prior review's conclusions, digging into dataset, security,
+  accessibility, build reproducibility, tests and roadmap-doc accuracy
+  from scratch), and confirmed real by a 3-skeptic adversarial
+  refute pass before this fix — the only finding to survive out of the
+  full sweep, and a reporting-script bug rather than a dataset defect.
+
 ## [0.114.1] — 2026-09-20
 
 ### Fixed
