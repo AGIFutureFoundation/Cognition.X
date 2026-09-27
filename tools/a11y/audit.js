@@ -59,6 +59,21 @@ const only = process.argv[2];
   const axeSrc = fs.readFileSync(AXE, 'utf8');
   const b = await chromium.launch({ executablePath: process.env.CX_CHROMIUM || '/opt/pw-browsers/chromium' });
   const page = await b.newPage({ viewport: { width: 1280, height: 900 } });
+  // the Education OS's Today view (#/homes) picks its mock day-of-week
+  // decision set from the real wall clock (new Date().getDay()), so an
+  // unpinned audit's focusable count for that one view drifts with
+  // whatever day it happens to run on. Freezing `Date` (not timers, so
+  // the app's own setTimeout/setInterval-driven content still renders)
+  // to the day the last full audit was actually captured keeps every
+  // run reproducible regardless of when CI executes.
+  const FIXED_NOW = new Date('2026-09-19T12:00:00Z').getTime();
+  await page.addInitScript((fixedMs) => {
+    class FixedDate extends Date {
+      constructor(...args) { super(...(args.length ? args : [fixedMs])); }
+      static now() { return fixedMs; }
+    }
+    Object.defineProperty(window, 'Date', { value: FixedDate });
+  }, FIXED_NOW);
   const report = { generated: new Date().toISOString().slice(0, 10), axe: null, runs: [] };
   async function run(label, u, click, steps, style) {
     await page.goto('about:blank'); await page.goto(u); await page.waitForTimeout(u.includes('education-os') ? 2500 : 900);
