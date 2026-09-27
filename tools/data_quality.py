@@ -90,6 +90,7 @@ def main():
                 override_packs.add(r["pack"])
     lw_rows = [r for r in rows if r["credential"].strip() in LEVEL_WORDS]
     lw_tracks = {(r["pack"], r["track"]) for r in lw_rows if r["track"]}
+    lw_packs = {r["pack"] for r in lw_rows}
     creds = {r["credential"] for r in rows}
     lines += [
         "",
@@ -134,7 +135,8 @@ def main():
         "",
         f"- Rows whose credential is a bare level word: **{len(lw_rows):,}** "
         f"({100*len(lw_rows)//len(rows)}% of the dataset), across "
-        f"**{len(lw_tracks)} tracks** in {len({p for p, _ in lw_tracks})} packs.",
+        f"**{len(lw_tracks)} tracks** in {len(lw_packs)} pack(s)"
+        + (f" ({', '.join(sorted(lw_packs))})" if lw_packs else "") + ".",
         f"- Distinct credential strings: **{len(creds):,}** — of which "
         f"**{len(creds & LEVEL_WORDS)}** {'is a level word' if len(creds & LEVEL_WORDS) == 1 else 'are level words'} "
         f"({', '.join(sorted(creds & LEVEL_WORDS)) or 'none'}), leaving "

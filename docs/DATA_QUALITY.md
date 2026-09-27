@@ -95,7 +95,7 @@ if it were a credential. Authoring real names for these tracks is review-
 board work (see `docs/GOVERNANCE.md`); `tests/test_platform.py` pins the
 scope so it can only shrink.
 
-- Rows whose credential is a bare level word: **33** (0% of the dataset), across **0 tracks** in 0 packs.
+- Rows whose credential is a bare level word: **33** (0% of the dataset), across **0 tracks** in 1 pack(s) (Empathy & Emotional Intelligence).
 - Distinct credential strings: **1,431** — of which **1** is a level word (Practitioner), leaving **1,430** real credentials.
 
 ## Board decisions
